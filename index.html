@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/app.css" rel="stylesheet" />
+    <title>DFS App</title>
+  </head>
+  <body>
+    <div class="game__container">
+      <p class="game__container--game">game</p>
+    </div>
+    <div class="vegas__container">
+      <p class="vegas__overunder">odds</p>
+    </div>
+    <div class="qb__label">QB</div>
+    <div class="qb__item">
+      <p class="qb__item--def">DEF:</p>
+      <p class="qb__item--ppp">PPP:</p>
+      <p class="qb__item--totalQBScore">Total QB score(def + PPP):</p>
+      <p class="qb__item--totalQBScore2X">2X()</p>
+      <p class="qb__item--gamescore">Game score (both teams scores added):</p>
+      <p class="qb__item--gamescore2X">2X()</p>
+      <p class="qb__item--IPS">
+        IPS(individual player score, is PPP + def + all relevant QB bonuses):
+      </p>
+    </div>
+
+    <div class="rb__label">RB</div>
+    <div class="rb__item">
+      <p class="rb__item--def">DEF:</p>
+      <p class="rb__item--ppp">PPP:</p>
+      <p class="rb__item--totalRBScore">Total RB score(def + PPP):</p>
+      <p class="rb__item--totalRBScore2X">2X()</p>
+      <p class="rb__item--gamescore">Game score (both teams scores added):</p>
+      <p class="rb__item--gamescore2X">2X()</p>
+      <p class="rb__item--IPS">
+        IPS(individual player score, is PPP + def + all relevant RB bonuses):
+      </p>
+    </div>
+
+    <div class="wr__label">WR</div>
+    <div class="wr__item">
+      <p class="wr__item--def">DEF:</p>
+      <p class="wr__item--ppp">PPP:</p>
+      <p class="wr__item--totalWRScore">Total WR score(def + PPP):</p>
+      <p class="wr__item--totalWRScore2X">2X()</p>
+      <p class="wr__item--gamescore">Game score (both teams scores added):</p>
+      <p class="wr__item--gamescore2X">2X()</p>
+      <p class="wr__item--IPS">
+        IPS(individual player score, is PPP + def + all relevant WR bonuses):
+      </p>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

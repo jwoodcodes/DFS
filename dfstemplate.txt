@@ -1,0 +1,371 @@
+Blank template:
+
+ Vegas total game score: 
+
+QB:
+
+Def: 
+
+ PPP(players projections score):
+
+ 
+Total QB score(def + PPP):   
+
+
+2x(just for individual team game score):  
+
+Game score:  
+
+
+  (2x: )
+
+ IPS(individual player score, is PPP + def + all relevant QB bonuses):
+
+
+
+RB:
+
+def: 
+
+
+ PPP(player projection score):
+
+
+team RB offensive sucesss score (player projection score + def):  
+
+
+Game score ( both teams scores added): 
+
+
+
+ IPS(individual player score, is def + PPP + all relevant RB bonuses):
+
+       
+
+WR: 
+
+Def: 
+
+#1 PPP: 
+
+#2 bonus?  
+
+ 
+
+Team Total score(def + #1 + #2):
+
+ 
+
+Game score(both total team scores added together): 
+
+
+
+ IPS(individual player score, is PPP + def + all relevant WR bonuses):
+
+ 
+
+ 
+
+TE:
+
+Def: 
+
+Player PPP: 
+
+Team total score(def + player PPP):    
+
+   (.5x:  )
+
+Game score:  (.5x: )
+
+TE bonus for QBSR?:
+
+ IPS(individual player score, is PPP + def + all relevant TE bonuses):
+
+ 
+
+ 
+
+Advanced Stacking metrics:
+
+Best RB + WR stack:
+
+QBSR(QB total  + WR total team score + TE bonus):
+
+QBSR+(QB total  + WR total team score + TE bonus + bring back WR):
+
+ 
+
+Advanced Game environment metrics:
+
+
+
+Individual total team game score (includes team Vegas projection bonus if any):
+
+
+
+ Favor: 
+
+ 
+
+Total game score (includes Vegas total game score): 
+
+
+
+
+
+
+
+QB:
+
+          proj’s: over 21.6 gets +20
+
+                        Over 19.6 gets +15
+
+                       Over  18.6 gets +10
+
+                       Over  17.6 gets +5
+
+                       Over 16.6 gets 0
+
+                       Over 14.6 gets -5
+
+                      Below 14.7 gets -10
+
+
+
+Matchup can be -2.5, 0, +2.5
+
+
+
+
+
+High offensive success bonus( if players team game score is:
+
+                  25 or higher gets +2.5
+
+                50 or higher gets +5
+
+
+
+Potential shootout bonus(if both player team and opposing team have team game scores:
+
+                  over +10 gets +2.5
+
+                  Over 25 gets +5
+
+                     
+
+
+
+RB:
+
+          proj’s: over 20 gets +20
+
+                        Over 17.5 gets +15
+
+                       Over  15 gets +10
+
+                       Over  14 gets +5
+
+                       13.5-14 gets 0
+
+                       13-13.5 gets -5
+
+                      Below 13 gets -10
+
+
+
+Matchup can be  -2.5, 0, +2.5 
+
+
+
+RB bonuses: 
+
+
+
+favorite(team game score + 20 or more of opp team game score: 
+
+                   +2.5 if on away team
+
+                    +5 if on home team
+
+
+
+High offensive success, likely green zone touches bonus( if players team game score is:
+
+                  25 or higher gets +2.5
+
+                50 or higher gets +5
+
+
+
+Likely high Targets bonus(If players team game score is positive && opposing team game score is more than 20 points higher && player is projected at least 10 carries && player is projected receptions of:
+
+           3.5 or higher gets +2.5
+
+              4 or higher gets +5
+
+              5 or higher gets +7.5
+
+
+
+
+
+WR: 
+
+         Proj’s: over 18 gets +20
+
+                    Over 16 gets +15
+
+                    Over 14 gets +10
+
+                   Over 13 gets +7.5
+
+                   Over 12 gets +5
+
+                   Over 11 gets 0
+
+                   Over 10 gets -2.5
+
+                   Over 9 gets -5
+
+                   Over 8 gets -7.5
+
+                   Under 8 gets -10
+
+
+
+    #2 bonus: over 14  gets +15
+
+                      Over 13 gets +10
+
+                      Over 12 gets +5
+
+
+
+Matchup can be -2.5, 0, +2.5
+
+
+
+WR bonuses
+
+
+
+High QB success bonus (if players Total QB score is:
+
+                   +15 or higher gets +2.5
+
+
+
+High offensive success bonus( if players team game score is:
+
+                  25 or higher gets +2.5
+
+                50 or higher gets +5
+
+
+
+Elite projected receptions :
+
+          5.5 and higher gets +2.5
+
+          7 and higher gets +5
+
+          8 and higher gets +7.5
+
+             ——or——
+
+   If players team game score is positive && opposing team game score is more than 20 points higher && player is projected receptions of:
+
+           5.5 or higher gets +5
+
+              7 or higher gets +7.5
+
+              8 or higher gets +10
+
+                   
+
+TE: 
+
+         Proj’s: over 15 gets +20
+
+                    Over 13 gets +15
+
+                    Over 12 gets +10
+
+                   Over 10 gets +7.5
+
+                   Over 9 gets +5
+
+                   Over 8 gets 0
+
+                   Over 7 gets -5
+
+                 Below 7 gets -10
+
+                  
+
+Matchup can be -2.5, 0, +2.5
+
+
+
+TE bonuses
+
+ 
+
+High offensive success bonus( if players team game score is:
+
+                  25 or higher gets +2.5
+
+                50 or higher gets +5
+
+
+
+Elite projected receptions :
+
+          4.1 and higher gets +2.5
+
+          5 and higher gets +5
+
+             ——or——
+
+   If players team game score is positive && opposing team game score is more than 20 points higher && player is projected receptions of:
+
+           4.1 or higher gets +5
+
+              5 or higher gets +7.5
+
+
+
+TE bonus(is for QB’s QBSR only, does not effect TE score at all):
+
+                TE 15 or higher gets +5
+
+                           Over 10 gets +2.5
+
+
+
+             
+
+
+
+Team Vegas projection (this is only used for individual team game score): if team is projected to score:
+
+              25 and up gets +5 to individual team game score
+
+              30 and up gets +10 to individual team game score
+
+
+
+Vegas game total (this number is only used when calculating total game score
+
+              Above 50 gets +10
+
+              Above 47 gets +5
+
+              Above 45 gets 0
+
+              Above 43 gets -5
+
+             Below 43 gets -10
