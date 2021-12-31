@@ -9,9 +9,12 @@
     padding-top: 3rem;
   }
 }
-.vegas__overunder {
+.vegas__overunder,
+.vegas__favoredby {
   font-size: 3rem;
   padding-top: 1rem;
+  text-align: center;
+  width: 50%;
 }
 
 .qb__label,
