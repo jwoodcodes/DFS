@@ -1,3 +1,491 @@
+QB:
+
+
+
+          proj’s: over 22 gets +25
+
+                       Over 21 gets +22.5
+
+                        Over 20 gets +20
+
+                        Over  19 gets +17.5
+
+                        Over 18 gets +15
+
+                       Over  17.5 gets +12.5
+
+                       Over  17 gets +10
+
+                       Over 16 gets 0
+
+                       Over 14.6 gets -5
+
+                      Over 13 gets -10
+
+                    Below 13 gets -15
+
+                      
+
+
+
+Matchup can be -5, 0, +5
+
+
+
+
+
+Vegas team total(VTT) when vtt is:
+
+
+
+                 30 or higher gets:  +15
+
+                 27.5 or higher gets +10
+
+                  25 or higher gets +5
+
+                  20 or higher Gets 0
+
+                17.5 or higher gets -5
+
+                 15 or higher gets -10
+
+                   Below 15 gets -15
+
+
+
+
+
+team game score  circle back to this and rework the team offensive success number tiers when you see the new ranges!)
+
+( if players team game score is:
+
+                
+
+              200 or higher gets +20
+
+              180 or higher gets +17.5
+
+              160 or higher gets +15
+
+              140 or higher gets +7.5
+
+              120 or higher gets +5
+
+              100 or higher gets +2.5
+
+                80 or higher gets 0
+
+                60 or higher gets -5
+
+                40 or higher gets -10
+
+                20 or higher gets -15
+
+                Below 20 gets -20
+
+
+
+Yards per attempt last five week:
+
+                   Over 9 Gets +10
+
+                   Over 8.5 gets +7.5
+
+                   Over 8 gets +5
+
+                   Over 7.5 gets +2.5
+
+
+
+Touchdown rate last five games: 
+
+                   Over 7% gets +10
+
+                  Over 6.5% gets +7.5
+
+                  Over 6% gets +5
+
+                  Over 5.5% gets +2.5
+
+
+
+
+
+Second highly projected WR bonus,
+
+(This is by just 4for4 projection but can play around with doing it by WR IPS as well)
+
+ Second WR is projected:
+
+                 13 or more gets +20
+
+                 12 or more gets +15
+
+                 11 or more gets +10
+
+
+
+efficiency numbers—touchdown rate and yards per attempt—over the last five weeks best predicted how a quarterback would perform in his upcoming contest
+
+Potential for +85 IPS w/o second WR bonus after tgs is calculated and factored in 
+
+
+
+Total QB score(player score with all factors that don’t need tgs factored in which include projection, matchup, vtt(Vegas team total), past five game yards per attempt, last five games touchdown rate, and technically second WR bonus although not factored in here as I want it to truly be a bonus as it only applies at all to so few a week) can possible be +65.  This should be multiplied by 1.5 when calculating tgs. Very important to use the unmodified total QB score when calculating QB IPS!!!
+
+
+
+                    
+
+RB:
+
+          proj’s: over 20 gets +20
+
+                        Over 18 gets 17.5
+
+                        Over 17 gets +15
+
+                       Over 16 gets +12.5
+
+                       Over  15 gets +10
+
+                       Over  14 gets +5
+
+                       Over 13 gets 0
+
+                       Over 12 gets -5
+
+                      Over 11 gets -10
+
+                      Below 10 gets -15
+
+
+
+Matchup can be  -5, 0, +5
+
+
+
+favorite(team game score +20 or more of opp team game score && favored by Vegas)
+
+                   Gets +2.5 if road team
+
+                    Gets +10 if home team
+
+
+
+Road underdog(potential increased targets)(road team game score is positive && -20 or more points of opp team game score && underdogs by Vegas)
+
+                        Gets +7.5
+
+
+
+High projected volume(RB is projected for Carries:
+
+                   Over 15 gets +7.5
+
+                    Over 17 gets +10
+
+                    Over 19 gets +12.5
+
+                   Over 22 gets +15
+
+                   
+
+team game score  circle back to this and rework the team offensive success number tiers when you see the new ranges!)
+
+( if players team game score is:
+
+                
+
+              200 or higher gets +20
+
+              180 or higher gets +17.5
+
+              160 or higher gets +15
+
+              140 or higher gets +7.5
+
+              120 or higher gets +5
+
+              100 or higher gets +2.5
+
+                80 or higher gets 0
+
+                60 or higher gets -5
+
+                40 or higher gets -10
+
+                20 or higher gets -15
+
+                Below 20 gets -20
+
+
+
+
+
+
+
+Likely high Targets bonus(If player is projected at least 10 carries && player is projected receptions of:
+
+           3.5 or higher gets +5
+
+              4 or higher gets +10
+
+             4.5 or higher gets +12.5
+
+
+
+Potential IPS is out of +82.5
+
+
+
+Pre tgs total RB score, which includes projectio, matchup,projected volume, and high target projection is out of a possible +62.5
+
+
+
+WR: 
+
+         Proj’s: over 18 gets +15
+
+                    Over 17 gets 12.5
+
+                    Over 16 gets +10
+
+                    Over 15 gets +7.5
+
+                    Over 14 gets +5
+
+                   Over 13 gets +2.5
+
+                   Over 11 gets 0
+
+                   Over 10 gets -2.5
+
+                   Over 9 gets -5
+
+                   Over 8 gets -7.5
+
+                   Over 7 gets -10
+
+                   Under 7 gets -15
+
+
+
+
+
+Matchup can be -2.5, 0, +2.5
+
+
+
+Home favorite or road underdog( by vtt)
+
+            Gets +5
+
+
+
+Vtt is:
+
+        28 and up gets +5
+
+        25 and up gets +2.5
+
+        20 and up gets 0
+
+        17.5 and up gets -2.5
+
+         Below 17.5 gets -5
+
+
+
+High QB success bonus (if players Total QB score(not their IPS, just QB score before tgs is calculated ) is:circle back to this and rework the QB scores tiers when you see the new ranges!)
+
+
+
+                   +20 or higher gets +7.5
+
+                   +25 or higher gets +10
+
+                   +30 or higher gets +12.5
+
+                   +35 or higher gets +15
+
+                   +40 or higher gets +17.5
+
+
+
+
+
+team game score  circle back to this and rework the team offensive success number tiers when you see the new ranges!)
+
+( if players team game score is:
+
+                
+
+              200 or higher gets +20
+
+              180 or higher gets +17.5
+
+              160 or higher gets +15
+
+              140 or higher gets +7.5
+
+              120 or higher gets +5
+
+              100 or higher gets +2.5
+
+                80 or higher gets 0
+
+                60 or higher gets -5
+
+                40 or higher gets -10
+
+                20 or higher gets -15
+
+                Below 20 gets -20
+
+
+
+
+
+Elite projected receptions :
+
+          5.5 and higher gets +7.5
+
+          6 and higher gets +12.5
+
+          7 and higher gets +15
+
+          8 and higher gets +17.5
+
+
+
+Game environment induced high target volume for high target share WR’s: if team is a road underdog(their tgs is -50 or more of the home team) && their team pass attempts per game is less than 36 && a WR has a target share of:
+
+                    20 or greater gets +2.5
+
+                    22 or greater gets +5
+
+                    24 or greater gets +7.5
+
+                   26 or greater gets +10
+
+                   28 or greater gets +12.5
+
+                   30 or greater gets +15
+
+
+
+
+
+
+
+IPS is out of a possible +82.5
+
+
+
+Pre tgs total WR score which includes projection, matchup, home favorite or road dog, vtt, high QB success, and projected receptions is out of a possible 
+
++62.5. This does not include
+
+Game environment induced high target volume for high target share WR’s because that will only apply at all to a couple WR’s at most each week                      
+
+
+
+TE: 
+
+         Proj’s: over 15 gets +17.5
+
+                    Over 14 gets +15
+
+                    Over 13 gets +12.5
+
+                    Over 12 gets +10
+
+                    Over 11 gets +7.5
+
+                   Over 10 gets +5
+
+                   Over 9 gets +2.5
+
+                   Over 7 gets 0
+
+                 Below 7 gets -5
+
+                  
+
+Matchup can be -2.5, 0, +2.5
+
+
+
+Home favorite or road underdog(if players team is a Vegas home favorite or road underdog:
+
+                  Gets +5
+
+
+
+
+
+team game score  circle back to this and rework the team offensive success number tiers when you see the new ranges!)
+
+( if players team game score is:
+
+                
+
+              200 or higher gets +20
+
+              180 or higher gets +17.5
+
+              160 or higher gets +15
+
+              140 or higher gets +7.5
+
+              120 or higher gets +5
+
+              100 or higher gets +2.5
+
+                80 or higher gets 0
+
+                60 or higher gets -5
+
+                40 or higher gets -10
+
+                20 or higher gets -15
+
+                Below 20 gets -20
+
+
+
+
+
+Elite projected receptions:
+
+          4.1 and higher gets +5
+
+          4.5 and higher gets 7.5
+
+          5 and higher gets +10
+
+          5.5 and higher gets +12.5
+
+
+
+
+
+Potential IPS is out of 57.5
+
+
+
+Total TE score which includes projection, matchup, home favorite or road dog, and projected receptions is out of 37.5.
+
+
+
+
+************************************************************************
+
+
+
+
 Blank template:
 
  Vegas total game score: 
@@ -87,6 +575,7 @@ TE bonus for QBSR?:
  
 
 Advanced Stacking metrics:
+
 
 Best RB + WR stack:
 

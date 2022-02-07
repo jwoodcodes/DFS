@@ -1,0 +1,22 @@
+<li class="card vegas">
+  <p class="vegas">
+    <%= allTeams[2].teamName%>(<%=allTeams[2].projectedPoints%>)H vs <%=
+    allTeams[3].teamName%>(<%= allTeams[3].projectedPoints%>)R
+  </p>
+  <p class="vegas__overunder">
+    over/under <%= allTeams[2].projectedPoints + allTeams[3].projectedPoints%>
+  </p>
+  <p class="vegas__favored">
+    <% if(allTeams[2].projectedPoints > allTeams[3].projectedPoints) {%>
+    <%=allTeams[2].teamName%> favored by <%=allTeams[2].projectedPoints -
+    allTeams[3].projectedPoints %> <%}%> <% if(allTeams[3].projectedPoints >
+    allTeams[2].projectedPoints) {%> <%=allTeams[3].teamName%> favored by
+    <%=allTeams[3].projectedPoints - allTeams[2].projectedPoints %> <%}%>
+  </p>
+
+  <div class="qb">QB</div>
+  <div class="qb__names">
+    <div class="qb__names--1"><%=allTeams[2].QB.qbName%></div>
+    <div class="qb__names--2"><%=allTeams[3].QB.qbName%></div>
+  </div>
+</li>

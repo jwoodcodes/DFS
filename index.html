@@ -8,52 +8,29 @@
     <title>DFS App</title>
   </head>
   <body>
-    <div class="game__container">
-      <p class="game__container--game">game</p>
-    </div>
-    <div class="vegas__container">
-      <p class="vegas__overunder">odds</p>
-      <p class="vegas__favoredby">favorite</p>
-    </div>
-    <div class="qb__label">QB</div>
-    <div class="qb__item">
-      <p class="qb__item--def">DEF:</p>
-      <p class="qb__item--ppp">PPP:</p>
-      <p class="qb__item--totalQBScore">Total QB score(def + PPP):</p>
-      <p class="qb__item--totalQBScore2X">2X()</p>
-      <p class="qb__item--gamescore">Game score (both teams scores added):</p>
-      <p class="qb__item--gamescore2X">2X()</p>
-      <p class="qb__item--IPS">
-        IPS(individual player score, is PPP + def + all relevant QB bonuses):
-      </p>
-    </div>
+    <div class="game__container" id="vegas1"></div>
+    <div id="vegasou1"></div>
+    <div id="vegasfavor1"></div>
 
-    <div class="rb__label">RB</div>
-    <div class="rb__item">
-      <p class="rb__item--def">DEF:</p>
-      <p class="rb__item--ppp">PPP:</p>
-      <p class="rb__item--totalRBScore">Total RB score(def + PPP):</p>
-      <p class="rb__item--totalRBScore2X">2X()</p>
-      <p class="rb__item--gamescore">Game score (both teams scores added):</p>
-      <p class="rb__item--gamescore2X">2X()</p>
-      <p class="rb__item--IPS">
-        IPS(individual player score, is PPP + def + all relevant RB bonuses):
-      </p>
-    </div>
+    <div class="qb__label" id="qb1label"></div>
+    <div class="qb1" id="qb1"></div>
 
-    <div class="wr__label">WR</div>
-    <div class="wr__item">
-      <p class="wr__item--def">DEF:</p>
-      <p class="wr__item--ppp">PPP:</p>
-      <p class="wr__item--totalWRScore">Total WR score(def + PPP):</p>
-      <p class="wr__item--totalWRScore2X">2X()</p>
-      <p class="wr__item--gamescore">Game score (both teams scores added):</p>
-      <p class="wr__item--gamescore2X">2X()</p>
-      <p class="wr__item--IPS">
-        IPS(individual player score, is PPP + def + all relevant WR bonuses):
-      </p>
-    </div>
+    <div class="rb__label"></div>
+    <div class="rb1" id="rb1"></div>
 
-    <script src="index.js"></script>
+    <div class="wr__label"></div>
+    <div class="wr1" id="wr1"></div>
+
+    <div class="te__label"></div>
+    <div class="te1"></div>
+
+    <div class="game__container" id="vegas2"></div>
+    <div id="vegasou2"></div>
+    <div id="vegasfavor2"></div>
+
+    <div class="qb__label"></div>
+    <div class="qb2" id="qb2"></div>
+
+    <script src="index.js" type="commonjs"></script>
   </body>
 </html>
