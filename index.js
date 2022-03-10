@@ -1,340 +1,37 @@
 'use strict';
+const { EPROTO } = require('constants');
 const express = require('express');
 const app = express();
 const path = require('path');
 
+const gameInfo = require('./gameinfo');
+const QBValuesCalcs = require('./dfs_positions_calc_funcs/qbscalcfuncs');
+const RBValuesCalcs = require('./dfs_positions_calc_funcs/rbscalcfuncs');
+const WRValuesCalcs = require('./dfs_positions_calc_funcs/wrscalcfuncs');
+const TEValuesCalcs = require('./dfs_positions_calc_funcs/tescalcfuncs');
+const { clearCache } = require('ejs');
+
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'));
 
-const gameInfo = {
-  saints: {
-    teamName: 'Saints',
-    projectedPoints: 24.25,
-    homeOrRoad: 'home',
-    QB: {
-      qbName: 'Hill',
-      matchup: 0,
-      prjpoints: 17.3,
-      vtt: 23,
-      ypa: [6.8, 9.5, 7.4, 6.7, 6.5],
-      TDrate: [5.7, 6.3, 4.8, 5.1, 5.7],
-    },
-    RB: {
-      rbName: 'Kamara',
-      matchup: 5,
-      prjpoints: 15.9,
-      prjCarries: 20.5,
-      prjTargets: 4.7,
-    },
-    WROne: {
-      Name: 'Callaway',
-      matchup: 0,
-      prjpoints: 7.2,
-    },
-
-    WRTwo: {
-      Name: 'Harris',
-      matchup: 0,
-      prjpoints: 7.1,
-    },
-
-    TE: {
-      Name: 'Troutman',
-      matchup: 0,
-      prjpoints: 3.6,
-    },
-  },
-  jets: {
-    teamName: 'Jets',
-    projectedPoints: 16.75,
-    homeOrRoad: 'road',
-
-    QB: {
-      qbName: 'Wilson',
-      matchup: 0,
-      prjpoints: 12.9,
-      vtt: 18,
-      ypa: [5.2, 7.2, 7.0, 6.6, 6.0],
-      TDrate: [5.5, 6.1, 4.6, 4.9, 5.5],
-    },
-    RB: {
-      rbName: 'Carter',
-      matchup: 0,
-      prjpoints: 11.8,
-      prjCarries: 14,
-      prjTargets: 3.2,
-    },
-    WROne: {
-      wrName: 'Berrios',
-      matchup: 0,
-      prjpoints: 9.3,
-    },
-
-    WRTwo: {
-      Name: 'Cole',
-      matchup: 0,
-      prjpoints: 6.4,
-    },
-
-    TE: {
-      Name: 'Kroft',
-      matchup: 0,
-      prjpoints: 5.5,
-    },
-  },
-
-  chiefs: {
-    teamName: 'Chiefs',
-    projectedPoints: 27.25,
-    homeOrRoad: 'road',
-
-    QB: {
-      qbName: 'Mahomes',
-      matchup: 5,
-      prjpoints: 21.0,
-      vtt: 31,
-      ypa: [7.2, 8.2, 7.9, 7.5, 9.3],
-      TDrate: [8.3, 7.0, 5.9, 8.0, 6.5],
-    },
-    RB: {
-      rbName: 'Williams',
-      matchup: 0,
-      prjpoints: 13.1,
-      prjCarries: 18.3,
-      prjTargets: 4.2,
-    },
-    WROne: {
-      wrName: 'Hill',
-      matchup: 2.5,
-      prjpoints: 15.8,
-    },
-
-    WRTwo: {
-      Name: 'Pringle',
-      matchup: 2.5,
-      prjpoints: 6.7,
-    },
-
-    TE: {
-      teName: 'Kelce',
-      matchup: 2.5,
-      prjpoints: 13.6,
-    },
-  },
-
-  bengals: {
-    teamName: 'Bengals',
-    projectedPoints: 23.75,
-    homeOrRoad: 'home',
-
-    QB: {
-      qbName: 'Burrow',
-      matchup: 0,
-      prjpoints: 17.5,
-      vtt: 23,
-      ypa: [7.2, 7.3, 7.2, 6.5, 7.3],
-      TDrate: [7.8, 6.8, 5.4, 7.0, 6.2],
-    },
-    RB: {
-      rbName: 'Mixon',
-      matchup: -5,
-      prjpoints: 15.7,
-      prjCarries: 22.2,
-      prjTargets: 3.7,
-    },
-    WROne: {
-      wrName: 'Chase',
-      matchup: 0,
-      prjpoints: 13.5,
-    },
-
-    WRTwo: {
-      Name: 'Higgins',
-      matchup: 0,
-      prjpoints: 13.6,
-    },
-
-    TE: {
-      teName: 'Uzomah',
-      matchup: 0,
-      prjpoints: 6,
-    },
-  },
-
-  //QB
-
-  calcQBppps(team) {
-    let gameqbPPPs = team.QB.prjpoints;
-
-    if (gameqbPPPs >= 22) {
-      gameqbPPPs = 25;
-    } else if (gameqbPPPs > 20.9 && gameqbPPPs < 22) {
-      gameqbPPPs = 22.5;
-    } else if (gameqbPPPs > 19.9 && gameqbPPPs < 21) {
-      gameqbPPPs = 20;
-    } else if (gameqbPPPs > 18.9 && gameqbPPPs < 20) {
-      gameqbPPPs = 17.5;
-    } else if (gameqbPPPs > 17.9 && gameqbPPPs < 19) {
-      gameqbPPPs = 15;
-    } else if (gameqbPPPs > 17.4 && gameqbPPPs < 18) {
-      gameqbPPPs = 12.5;
-    } else if (gameqbPPPs > 16.9 && gameqbPPPs < 17.5) {
-      gameqbPPPs = 10;
-    } else if (gameqbPPPs > 15.9 && gameqbPPPs < 17) {
-      gameqbPPPs = 0;
-    } else if (gameqbPPPs > 14.6 && gameqbPPPs < 16) {
-      gameqbPPPs = -5;
-    } else if (gameqbPPPs > 12.9 && gameqbPPPs < 14.7) {
-      gameqbPPPs = -10;
-    } else {
-      gameqbPPPs = -15;
-    }
-
-    let qbPPP = gameqbPPPs;
-    return qbPPP;
-  }, //closing calcQBppps tag
-
-  calcQBmatchup(team) {
-    let qbmatchup = team.QB.matchup;
-    return qbmatchup;
-  },
-
-  calcQBvtt(team) {
-    let qbvtt = team.QB.vtt;
-
-    if (qbvtt >= 30) {
-      qbvtt = 15;
-    } else if (qbvtt >= 27.5 && qbvtt < 30) {
-      qbvtt = 10;
-    } else if (qbvtt >= 25 && qbvtt < 27.5) {
-      qbvtt = 5;
-    } else if (qbvtt >= 20 && qbvtt < 25) {
-      qbvtt = 0;
-    } else if (qbvtt >= 17.5 && qbvtt < 20) {
-      qbvtt = -5;
-    } else if (qbvtt >= 15 && qbvtt < 17.5) {
-      qbvtt = -10;
-    } else {
-      qbvtt = -15;
-    }
-
-    return qbvtt;
-  }, //closing calcQBvtt tag
-
-  calcQBavgypa(...team) {
-    let ypa = 0;
-    let ypaavg = 0;
-
-    for (const num of team) {
-      ypa += num;
-      ypaavg = ypa / team.length;
-    }
-    return ypaavg;
-  }, //closing calcQBavgypa tag
-
-  calcQBavgTDrate(...team) {
-    let TDrate = 0;
-    let TDrateavg = 0;
-
-    for (const num of team) {
-      TDrate += num;
-      TDrateavg = TDrate / team.length;
-    }
-    return TDrateavg;
-  }, //closing calcQBavgypa tag
-
-  //RB
-
-  calcRBppps(team) {
-    let gameRBppps = team.RB.prjpoints;
-
-    if (gameRBppps > 20) {
-      gameRBppps = 20;
-    } else if (gameRBppps > 17.9 && gameRBppps < 20) {
-      gameRBppps = 17.5;
-    } else if (gameRBppps > 16.9 && gameRBppps < 18) {
-      gameRBppps = 15;
-    } else if (gameRBppps > 15.9 && gameRBppps < 17) {
-      gameRBppps = 12.5;
-    } else if (gameRBppps > 14.9 && gameRBppps < 16) {
-      gameRBppps = 10;
-    } else if (gameRBppps > 13.9 && gameRBppps < 16) {
-      gameRBppps = 5;
-    } else if (gameRBppps > 12.9 && gameRBppps < 15) {
-      gameRBppps = 0;
-    } else if (gameRBppps > 11.9 && gameRBppps < 14) {
-      gameRBppps = -5;
-    } else if (gameRBppps > 10.9 && gameRBppps < 13) {
-      gameRBppps = -10;
-    } else {
-      gameRBppps = -15;
-    }
-
-    let rbPPP = gameRBppps;
-    return rbPPP;
-  }, //closing calcRBppps tag
-
-  calcRBmatchup(team) {
-    let rbmatchup = team.RB.matchup;
-    return rbmatchup;
-  },
-
-  calcRBcarries(team) {
-    let RBprjcarries = team.RB.prjCarries;
-
-    if (RBprjcarries > 22) {
-      RBprjcarries = 15;
-    } else if (RBprjcarries > 18.9 && RBprjcarries < 22) {
-      RBprjcarries = 12.5;
-    } else if (RBprjcarries > 16.9 && RBprjcarries < 19) {
-      RBprjcarries = 10;
-    } else if (RBprjcarries > 14.9 && RBprjcarries < 17) {
-      RBprjcarries = 7.5;
-    } else {
-      RBprjcarries = 0;
-    }
-
-    return RBprjcarries;
-  },
-
-  calcRBtargets(team) {
-    let RBPrjTargets = team.RB.prjTargets;
-
-    if (team.RB.prjCarries > 9.9) {
-      if (RBPrjTargets > 4.4) {
-        RBPrjTargets = 12.5;
-      } else if (RBPrjTargets > 3.9 && RBPrjTargets < 4.5) {
-        RBPrjTargets = 10;
-      } else if (RBPrjTargets > 3.4 && RBPrjTargets < 4) {
-        RBPrjTargets = 5;
-      } else if (RBPrjTargets > 1.9 && RBPrjTargets < 3.5) {
-        RBPrjTargets = 0;
-      } else {
-        RBPrjTargets = -5;
-      }
-    } else {
-      RBPrjTargets = 0;
-    }
-    return RBPrjTargets;
-  },
-}; //closing gameInfo object tag
+//AllTeam variables and allTeams array
 
 const saints = gameInfo.saints;
 const jets = gameInfo.jets;
 const chiefs = gameInfo.chiefs;
 const bengals = gameInfo.bengals;
 
+//allTeams array
 //list all teams playing that week in allTeams, teams playing each other always
 //next to each other and home team always first, road team second!!!!!!
 const allTeams = [saints, jets, bengals, chiefs];
-const allGames = [
-  [saints, jets],
-  [bengals, chiefs],
-];
 
-//QB
+module.exports = allTeams;
 
-//calculating relevant QB values and saving to arrays of all for the week
+// QB
+
+//QB values being calculated and populated into relevant arrays
+
 let allqbppps = [];
 let allqbmatchups = [];
 let allqbvtts = [];
@@ -342,26 +39,34 @@ let allqbypas = [];
 let allqbypavalues = [];
 let allqbTDrates = [];
 let allqbTDratevalues = [];
+let allqbSecondWRBonus = [];
+
+let allQbTQBS = [];
 
 for (let i = 0; i < allTeams.length; i++) {
-  let qbppps = gameInfo.calcQBppps(allTeams[i]);
-  allqbppps.push(qbppps);
-
-  let qbmatchups = gameInfo.calcQBmatchup(allTeams[i]);
-  allqbmatchups.push(qbmatchups);
-
-  let qbvtts = gameInfo.calcQBvtt(allTeams[i]);
-  allqbvtts.push(qbvtts);
-
-  let qbypa = gameInfo.calcQBavgypa(...allTeams[i].QB.ypa);
+  let qbypa = QBValuesCalcs.calcQBavgypa(...allTeams[i].QB.ypa);
   allqbypas.push(qbypa);
 
-  let qbTDrate = gameInfo.calcQBavgTDrate(...allTeams[i].QB.TDrate);
+  let qbTDrate = QBValuesCalcs.calcQBavgTDrate(...allTeams[i].QB.TDrate);
   allqbTDrates.push(qbTDrate);
 }
 
-for (const [key, value] of allqbypas.entries()) {
-  let qbypavalue = value;
+for (let i = 0; i < allTeams.length; i++) {
+  let TQBS = 0;
+  let qbypavalue = allqbypas[i];
+  let qbTDratevalue = allqbTDrates[i];
+
+  let qbppps = QBValuesCalcs.calcQBppps(allTeams[i]);
+  allqbppps.push(qbppps);
+  TQBS += qbppps;
+
+  let qbmatchups = QBValuesCalcs.calcQBmatchup(allTeams[i]);
+  allqbmatchups.push(qbmatchups);
+  TQBS += qbmatchups;
+
+  let qbvtts = QBValuesCalcs.calcQBvtt(allTeams[i]);
+  allqbvtts.push(qbvtts);
+  TQBS += qbvtts;
 
   if (qbypavalue > 8.9) {
     qbypavalue = 10;
@@ -376,10 +81,7 @@ for (const [key, value] of allqbypas.entries()) {
   }
 
   allqbypavalues.push(qbypavalue);
-}
-
-for (const [key, value] of allqbTDrates.entries()) {
-  let qbTDratevalue = value;
+  TQBS += qbypavalue;
 
   if (qbTDratevalue > 7) {
     qbTDratevalue = 10;
@@ -394,9 +96,20 @@ for (const [key, value] of allqbTDrates.entries()) {
   }
 
   allqbTDratevalues.push(qbTDratevalue);
+  TQBS += qbTDratevalue;
+
+  let qbsSecondWRBonus = QBValuesCalcs.calcQBSecondHighlyPRojectedWRBonus(
+    allTeams[i]
+  );
+  allqbSecondWRBonus.push(qbsSecondWRBonus);
+  TQBS += qbsSecondWRBonus;
+
+  allQbTQBS.push(TQBS);
 }
 
 //RB
+
+//RB values being calculated and populated into relevant arrays
 
 let allrbppps = [];
 let allrbmatchups = [];
@@ -408,21 +121,357 @@ let allRbTRBSs = [];
 for (let i = 0; i < allTeams.length; i++) {
   let TRBS = 0;
 
-  let rbppps = gameInfo.calcRBppps(allTeams[i]);
+  let rbppps = RBValuesCalcs.calcRBppps(allTeams[i]);
   allrbppps.push(rbppps);
   TRBS += rbppps;
-  let rbmatchups = gameInfo.calcRBmatchup(allTeams[i]);
+  let rbmatchups = RBValuesCalcs.calcRBmatchup(allTeams[i]);
   allrbmatchups.push(rbmatchups);
   TRBS += rbmatchups;
-  let rbcarries = gameInfo.calcRBcarries(allTeams[i]);
+  let rbcarries = RBValuesCalcs.calcRBcarries(allTeams[i]);
   allrbprjcarries.push(rbcarries);
   TRBS += rbcarries;
-  let rbtargets = gameInfo.calcRBtargets(allTeams[i]);
+  let rbtargets = RBValuesCalcs.calcRBtargets(allTeams[i]);
   allrbprjtargets.push(rbtargets);
   TRBS += rbtargets;
 
   allRbTRBSs.push(TRBS);
 }
+
+//WR
+
+let allWROnesppps = [];
+let allWRTwosppps = [];
+let allWROneMatchups = [];
+let allWRTwoMatuchups = [];
+let allTeamHFRD = [];
+let allTeamsVTTs = [];
+let allWRTeamQBbonus = [];
+let allWROneHighReceptions = [];
+let allWRTwoHighReceptions = [];
+
+let allWROnesTWRS = [];
+let allWRTwosTWRS = [];
+
+//getting WR average target shares
+let allWROneTargetShares = [];
+let allWRTwoTargetShares = [];
+
+let calcWROneTargetShare = function (team) {
+  let WROneTS = team.WROne.targetShare;
+  let WRTwoTS = team.WRTwo.targetShare;
+
+  let WROneTargetShareSum = WROneTS.reduce(function (acc, cur) {
+    return acc + cur;
+  }, 0);
+
+  let WRTwoTargetShareSum = WRTwoTS.reduce(function (acc, cur) {
+    return acc + cur;
+  }, 0);
+
+  let WROneTargetShareAVG = Math.round(
+    WROneTargetShareSum / team.WROne.targetShare.length
+  );
+  let WRTwoTargetShareAVG = Math.round(
+    WRTwoTargetShareSum / team.WRTwo.targetShare.length
+  );
+  allWROneTargetShares.push(WROneTargetShareAVG);
+  allWRTwoTargetShares.push(WRTwoTargetShareAVG);
+};
+
+for (let i = 0; i < allTeams.length; i++) {
+  let TWROneS = 0;
+  let TWRTwoS = 0;
+  let teamHFRD = 0;
+  let WRsteamTQBS = allQbTQBS[i];
+
+  let WROnesppps = WRValuesCalcs.calcWRppps(allTeams[i].WROne);
+  allWROnesppps.push(WROnesppps);
+  TWROneS += WROnesppps;
+
+  let WRTwosppps = WRValuesCalcs.calcWRppps(allTeams[i].WRTwo);
+  allWRTwosppps.push(WRTwosppps);
+  TWRTwoS += WRTwosppps;
+
+  let WRmatchups = WRValuesCalcs.calcWRmatchup(allTeams[i]);
+  allWROneMatchups.push(WRmatchups);
+  allWRTwoMatuchups.push(WRmatchups);
+  TWROneS += WRmatchups;
+  TWRTwoS += WRmatchups;
+
+  //home favorite or road dog
+  if (
+    (i - 1) % 2 &&
+    allTeams[i].projectedPoints > allTeams[i + 1].projectedPoints
+  ) {
+    teamHFRD = 5;
+  }
+
+  if (i % 2 && allTeams[i].projectedPoints < allTeams[i - 1].projectedPoints) {
+    teamHFRD = 5;
+  }
+  allTeamHFRD.push(teamHFRD);
+  TWROneS += teamHFRD;
+  TWRTwoS += teamHFRD;
+  //end home favorite or road dog
+
+  let WRTeamVTT = WRValuesCalcs.calcWRVTT(allTeams[i]);
+  allTeamsVTTs.push(WRTeamVTT);
+  TWROneS += WRTeamVTT;
+  TWRTwoS += WRTeamVTT;
+
+  // high QB score bonus
+  if (WRsteamTQBS > 50) {
+    WRsteamTQBS = 15;
+  } else if (WRsteamTQBS > 39.9 && WRsteamTQBS < 50) {
+    WRsteamTQBS = 12.5;
+  } else if (WRsteamTQBS > 29.9 && WRsteamTQBS < 40) {
+    WRsteamTQBS = 10;
+  } else if (WRsteamTQBS > 19.9 && WRsteamTQBS < 30) {
+    WRsteamTQBS = 7.5;
+  } else if (WRsteamTQBS > 9.9 && WRsteamTQBS < 20) {
+    WRsteamTQBS = 5;
+  } else if (WRsteamTQBS > 0 && WRsteamTQBS < 10) {
+    WRsteamTQBS = 0;
+  } else {
+    WRsteamTQBS = -5;
+  }
+
+  TWROneS += WRsteamTQBS;
+  TWRTwoS += WRsteamTQBS;
+  allWRTeamQBbonus.push(WRsteamTQBS);
+
+  let WROnePrjReceptions = WRValuesCalcs.calcWRprjReceptions(allTeams[i].WROne);
+  allWROneHighReceptions.push(WROnePrjReceptions);
+
+  let WRTwoPrjReceptions = WRValuesCalcs.calcWRprjReceptions(allTeams[i].WRTwo);
+  allWRTwoHighReceptions.push(WRTwoPrjReceptions);
+  TWROneS += WROnePrjReceptions;
+  TWRTwoS += WRTwoPrjReceptions;
+
+  calcWROneTargetShare(allTeams[i]);
+
+  allWROnesTWRS.push(TWROneS);
+  allWRTwosTWRS.push(TWRTwoS);
+}
+
+const adjTWRTwoS = allWRTwosTWRS.map(function (val, i) {
+  if (val >= 0) {
+    return val;
+  } else {
+    return 0;
+  }
+});
+
+//TE
+
+let allTEPPPs = [];
+let allTEmatchups = [];
+let allTeamTEHFRD = [];
+let allTEPrjreceptions = [];
+
+let allTETTES = [];
+
+for (let i = 0; i < allTeams.length; i++) {
+  let TETS = 0;
+  let teamTEHFRD = 0;
+
+  let TEppp = TEValuesCalcs.calcTEppps(allTeams[i]);
+  allTEPPPs.push(TEppp);
+  TETS += TEppp;
+
+  let TEmatchups = TEValuesCalcs.calcTEmatchup(allTeams[i]);
+  allTEmatchups.push(TEmatchups);
+  TETS += TEmatchups;
+
+  if (
+    (i - 1) % 2 &&
+    allTeams[i].projectedPoints > allTeams[i + 1].projectedPoints
+  ) {
+    teamTEHFRD = 5;
+  }
+
+  if (i % 2 && allTeams[i].projectedPoints < allTeams[i - 1].projectedPoints) {
+    teamTEHFRD = 5;
+  }
+
+  allTeamTEHFRD.push(teamTEHFRD);
+  TETS += teamTEHFRD;
+
+  let TEPrjreceptions = TEValuesCalcs.calcTEPrjReceptions(allTeams[i]);
+  allTEPrjreceptions.push(TEPrjreceptions);
+  TETS += TEPrjreceptions;
+
+  allTETTES.push(TETS);
+}
+
+//calculating TGS
+
+let allQBScoresForTGSAfterMultiplyByOnePointFive = [];
+
+const allQBMultipliedByOnePointFiveForTGS = function (array) {
+  array.map(function (ts, i) {
+    let QBForTGSScore = ts * 1.5;
+    allQBScoresForTGSAfterMultiplyByOnePointFive.push(QBForTGSScore);
+  });
+};
+
+allQBMultipliedByOnePointFiveForTGS(allQbTQBS);
+
+const allTotalScores = [
+  allQBScoresForTGSAfterMultiplyByOnePointFive,
+  allRbTRBSs,
+  allWROnesTWRS,
+  adjTWRTwoS,
+  allTETTES,
+];
+
+const allTGS = allTotalScores[0].map((x, i) =>
+  allTotalScores.reduce((sum, curr) => sum + curr[i], 0)
+);
+
+//calculating TGS bonus by team
+
+const IPSArray = allTGS.map(function (team, i) {
+  if (team > 199) {
+    return 20;
+  } else if (team > 179 && team < 200) {
+    return 17.5;
+  } else if (team > 159 && team < 180) {
+    return 15;
+  } else if (team > 139 && team < 160) {
+    return 10;
+  } else if (team > 119 && team < 140) {
+    return 5;
+  } else if (team > 99 && team < 120) {
+    return 2.5;
+  } else if (team > 79 && team < 100) {
+    return 0;
+  } else if (team > 59 && team < 80) {
+    return -5;
+  } else if (team > 39 && team < 60) {
+    return -10;
+  } else if (team > 19 && team < 40) {
+    return -15;
+  } else {
+    return -20;
+  }
+});
+
+// console.log(IPSArray);
+
+//calculating IPS
+
+//QB IPS
+const QBTotalScoresAndTGSBonus = [allQbTQBS, IPSArray];
+
+const QBIPS = QBTotalScoresAndTGSBonus[0].map((x, i) =>
+  QBTotalScoresAndTGSBonus.reduce((sum, curr) => sum + curr[i], 0)
+);
+
+//RB IPS
+
+const RBHFRD = allTGS.map(function (mov, i, array) {
+  if (!(i % 2) && array[i + 1] - array[i] >= 40) {
+    return 10;
+  } else if (i % 2 && array[i] - array[i - 1] >= 40) {
+    return 2.5;
+  } else if (i % 2 && mov >= 50 && array[i - 1] - array[i] >= 40) {
+    return 7.5;
+  } else {
+    return 0;
+  }
+});
+
+const RBValuesForIPS = [RBHFRD, IPSArray, allRbTRBSs];
+
+const RBIPS = RBValuesForIPS[0].map((x, i) =>
+  RBValuesForIPS.reduce((sum, curr) => sum + curr[i], 0)
+);
+
+//WR IPS
+
+let allWROneGameInducedHighTargetsBonus = [];
+let allWRTwoGameInducedHighTargetsBonus = [];
+
+const calcWRGameInducedHighTargets = function (TargetShareArray, TSA2) {
+  TargetShareArray.map(function (ts, i, array) {
+    // console.log(array[i]);
+    // console.log(allTGS[i]);
+    let TargetShareBonus = 0;
+    allWROneGameInducedHighTargetsBonus.push(TargetShareBonus);
+    if (i % 2) {
+      if (allTGS[i - 1] - allTGS[i] >= 75) {
+        let TargetShareBonus = 0;
+        // console.log(ts);
+        if (ts >= 28) {
+          TargetShareBonus = 15;
+        } else if (ts >= 26 && ts < 28) {
+          TargetShareBonus = 10;
+        } else if (ts >= 24 && ts < 26) {
+          TargetShareBonus = 7.5;
+        } else if (ts >= 22 && ts < 24) {
+          TargetShareBonus = 2.5;
+        }
+
+        // console.log(TargetShareBonus);
+        allWROneGameInducedHighTargetsBonus.splice(i, 1, TargetShareBonus);
+      }
+    }
+  });
+
+  TSA2.map(function (ts2, i2) {
+    let targetShareBonus2 = 0;
+    allWRTwoGameInducedHighTargetsBonus.push(targetShareBonus2);
+    if (i2 % 2) {
+      if (allTGS[i2 - 1] - allTGS[i2] >= 75) {
+        let targetShareBonus2 = 0;
+        if (ts2 >= 28) {
+          targetShareBonus2 = 15;
+        } else if (ts2 >= 26 && ts2 < 28) {
+          targetShareBonus2 = 10;
+        } else if (ts2 >= 24 && ts2 < 26) {
+          targetShareBonus2 = 7.5;
+        } else if (ts2 >= 22 && ts2 < 24) {
+          targetShareBonus2 = 2.5;
+        }
+
+        allWRTwoGameInducedHighTargetsBonus.splice(i2, 1, targetShareBonus2);
+      }
+    }
+  });
+};
+
+calcWRGameInducedHighTargets(allWROneTargetShares, allWRTwoTargetShares);
+
+const WROneValuesForIPS = [
+  IPSArray,
+  allWROnesTWRS,
+  allWROneGameInducedHighTargetsBonus,
+];
+
+const WRTwoValuesForIPS = [
+  IPSArray,
+  allWRTwosTWRS,
+  allWRTwoGameInducedHighTargetsBonus,
+];
+
+const WROneIPS = WROneValuesForIPS[0].map((x, i) =>
+  WROneValuesForIPS.reduce((sum, curr) => sum + curr[i], 0)
+);
+
+const WRTwoIPS = WRTwoValuesForIPS[0].map((x, i) =>
+  WRTwoValuesForIPS.reduce((sum, curr) => sum + curr[i], 0)
+);
+
+//TE IPS
+
+const TEValuesForIPS = [IPSArray, allTETTES];
+
+const TEIPS = TEValuesForIPS[0].map((x, i) =>
+  TEValuesForIPS.reduce((sum, curr) => sum + curr[i], 0)
+);
+
+//all calculated values for all positions
 
 const allValues = {
   qb: {
@@ -431,6 +480,8 @@ const allValues = {
     qbvtts: allqbvtts,
     qbypas: allqbypavalues,
     qbTDrates: allqbTDratevalues,
+    qbSecondWRBonuses: allqbSecondWRBonus,
+    TotalQBScores: allQbTQBS,
   },
 
   rb: {
@@ -439,6 +490,47 @@ const allValues = {
     rbPrjCarryVolume: allrbprjcarries,
     rbPrjTargetVolume: allrbprjtargets,
     TotalRBScores: allRbTRBSs,
+  },
+
+  WR: {
+    WROnePpps: allWROnesppps,
+    WROneMatchups: allWROneMatchups,
+    WROneHomeFavOrRoadDog: allTeamHFRD,
+    WROneTeamVTTs: allTeamsVTTs,
+    WROneQBBonus: allWRTeamQBbonus,
+    WROneHighReceptionsBonus: allWROneHighReceptions,
+    WROneTargetShares: allWROneTargetShares,
+    WROneGameInducedHighTargetsBonus: allWROneGameInducedHighTargetsBonus,
+
+    WRTwoPpps: allWRTwosppps,
+    WRTwoMatchups: allWRTwoMatuchups,
+    WRTwoHomeFavOrRoadDog: allTeamHFRD,
+    WRTwoTeamVTTs: allTeamsVTTs,
+    WRTwoQBBonus: allWRTeamQBbonus,
+    WRTwoHighReceptionsBonus: allWRTwoHighReceptions,
+    WRTwoTargetShares: allWRTwoTargetShares,
+    WRTwoGameInducedHighTargetsBonus: allWRTwoGameInducedHighTargetsBonus,
+
+    TotalWROneScores: allWROnesTWRS,
+    TotalWRTwoSCores: adjTWRTwoS,
+  },
+
+  TE: {
+    tePPPs: allTEPPPs,
+    tematchups: allTEmatchups,
+    TEHFRD: allTeamTEHFRD,
+    TEHighReceptionsBonus: allTEPrjreceptions,
+
+    TotalTEScore: allTETTES,
+  },
+
+  TGSAndIPS: {
+    allTeamsTGS: allTGS,
+    allQBIPS: QBIPS,
+    allRBIPS: RBIPS,
+    allWROneIPS: WROneIPS,
+    allWRTwoIPS: WRTwoIPS,
+    allTEIPS: TEIPS,
   },
 };
 
