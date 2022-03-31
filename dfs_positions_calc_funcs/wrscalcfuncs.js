@@ -56,23 +56,25 @@ const WRValuesCalcs = {
     return teamVTT;
   },
 
-  calcWRprjReceptions(team) {
-    let WRPrjTargets = team.prjReceptions;
+  // calcWRprjReceptions(team) {
+  //   let WRPrjTargets = team.prjReceptions;
 
-    if (WRPrjTargets > 8) {
-      WRPrjTargets = 17.5;
-    } else if (WRPrjTargets > 6.9 && WRPrjTargets < 8) {
-      WRPrjTargets = 15;
-    } else if (WRPrjTargets > 5.9 && WRPrjTargets < 7) {
-      WRPrjTargets = 12.5;
-    } else if (WRPrjTargets > 5.4 && WRPrjTargets < 6) {
-      WRPrjTargets = 7.5;
-    } else {
-      WRPrjTargets = 0;
-    }
+  //   if (WRPrjTargets > 8) {
+  //     WRPrjTargets = 17.5;
+  //   } else if (WRPrjTargets > 6.9 && WRPrjTargets < 8) {
+  //     WRPrjTargets = 15;
+  //   } else if (WRPrjTargets > 5.9 && WRPrjTargets < 7) {
+  //     WRPrjTargets = 12.5;
+  //   } else if (WRPrjTargets > 5.4 && WRPrjTargets < 6) {
+  //     WRPrjTargets = 7.5;
+  //   } else {
+  //     WRPrjTargets = 0;
+  //   }
 
-    return WRPrjTargets;
-  },
+  //   return WRPrjTargets;
+  // },
+
+  // calcWRPrjReceptions
 }; //closing WRValuesCalcs tag
 
 module.exports = WRValuesCalcs;

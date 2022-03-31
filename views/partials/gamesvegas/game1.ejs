@@ -13,6 +13,28 @@
     allTeams[0].projectedPoints) {%> <%=allTeams[1].teamName%> favored by
     <%=allTeams[1].projectedPoints - allTeams[0].projectedPoints %> <%}%>
   </p>
+  <p class="TGS">
+    TGS <%=allTeams[0].teamName%>: <%=allValues.TGSAndIPS.allTeamsTGS[0]%>
+    <%=allTeams[1].teamName%>: <%=allValues.TGSAndIPS.allTeamsTGS[1]%>
+  </p>
+  <p class="TGS__favored">
+    <% if(allValues.TGSAndIPS.allTeamsTGS[0] >
+    allValues.TGSAndIPS.allTeamsTGS[1]) {%>
+    <%if(allValues.TGSAndIPS.allTeamsTGS[1] > 0) {%> <%=allTeams[0].teamName%>
+    TGS favored by <%= allValues.TGSAndIPS.allTeamsTGS[0] -
+    allValues.TGSAndIPS.allTeamsTGS[1] %> <%}%>
+    <%if(allValues.TGSAndIPS.allTeamsTGS[1] < 0) {%> <%=allTeams[0].teamName%>
+    TGS favored by <%= allValues.TGSAndIPS.allTeamsTGS[0] +
+    allValues.TGSAndIPS.allTeamsTGS[1] %> <%}%> <%}%> <%
+    if(allValues.TGSAndIPS.allTeamsTGS[1] > allValues.TGSAndIPS.allTeamsTGS[0])
+    {%> <%if(allValues.TGSAndIPS.allTeamsTGS[0] > 0) {%>
+    <%=allTeams[0].teamName%> TGS favored by <%=
+    allValues.TGSAndIPS.allTeamsTGS[1] - allValues.TGSAndIPS.allTeamsTGS[0] %>
+    <%}%> <%if(allValues.TGSAndIPS.allTeamsTGS[0] < 0) {%>
+    <%=allTeams[1].teamName%> TGS favored by <%=
+    allValues.TGSAndIPS.allTeamsTGS[1] + allValues.TGSAndIPS.allTeamsTGS[0] %>
+    <%}%> <%}%>
+  </p>
   <div class="qb">QB</div>
   <div class="qb__names">
     <div class="qb__names--1"><%=allTeams[0].QB.qbName%></div>
