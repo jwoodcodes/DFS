@@ -2,7 +2,7 @@ const allTeams = require('../index');
 
 const RBValuesCalcs = {
   calcRBppps(team) {
-    let gameRBppps = team.RB.prjpoints;
+    let gameRBppps = team.RBOne.fiftyithPercentProjectedPoints;
 
     if (gameRBppps > 20) {
       gameRBppps = 20;
@@ -30,13 +30,8 @@ const RBValuesCalcs = {
     return rbPPP;
   }, //closing calcRBppps tag
 
-  calcRBmatchup(team) {
-    let rbmatchup = team.RB.matchup;
-    return rbmatchup;
-  },
-
   calcRBcarries(team) {
-    let RBprjcarries = team.RB.prjCarries;
+    let RBprjcarries = team.RBOne.prjCarries;
 
     if (RBprjcarries > 22) {
       RBprjcarries = 17.5;
@@ -54,7 +49,7 @@ const RBValuesCalcs = {
   },
 
   calcRBtargets(team) {
-    let RBPrjTargets = team.RB.prjTargets;
+    let RBPrjTargets = team.RBOne.prjTargets;
 
     if (RBPrjTargets > 4.4) {
       RBPrjTargets = 15;
