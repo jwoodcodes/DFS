@@ -1,274 +1,479 @@
 'use strict';
+// const { EPROTO } = require('constants');
 
-const gameVegas = document.querySelector('.game__container--game');
-const gameVegasOdds = document.querySelector('.vegas__overunder');
+const express = require('express');
+const app = express();
+const path = require('path');
 
-//QB
-const qbDef = document.querySelector('.qb__item--def');
-const qbPPP = document.querySelector('.qb__item--ppp');
-const qbTotalScoreItem = document.querySelector('.qb__item--totalQBScore');
-const qbTotalScoreItem2X = document.querySelector('.qb__item--totalQBScore2X');
-const qbGameScore = document.querySelector('.qb__item--gamescore');
-const qbGameScore2X = document.querySelector('.qb__item--gamescore2X');
-const qbIPS = document.querySelector('.qb__item--IPS');
+// const console = require('console');
 
-//RB
-const rbDef = document.querySelector('.rb__item--def');
-const rbPPP = document.querySelector('.rb__item--ppp');
-const rbTotalScoreItem = document.querySelector('.rb__item--totalRBScore');
-const rbTotalScoreItem2X = document.querySelector('.rb__item--totalRBScore2X');
-const rbGameScore = document.querySelector('.rb__item--gamescore');
-const rbGameScore2X = document.querySelector('.rb__item--gamescore2X');
-const rbIPS = document.querySelector('.rb__item--IPS');
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, '/views'));
 
-//WR
-const wrDef = document.querySelector('.wr__item--def');
-const wrPPP = document.querySelector('.wr__item--ppp');
-const wrTotalScoreItem = document.querySelector('.wr__item--totalWRScore');
-const wrTotalScoreItem2X = document.querySelector('.wr__item--totalWRScore2X');
-const wrGameScore = document.querySelector('.wr__item--gamescore');
-const wrGameScore2X = document.querySelector('.wr__item--gamescore2X');
-const wrIPS = document.querySelector('.wr__item--IPS');
+app.use(express.static(path.join(__dirname, 'public')));
 
-const gameInfo = {
-  saints: {
-    teamName: 'saints',
-    projectedPoints: 24.25,
-    QB: {
-      qbName: 'Hill',
-      def: 2.5,
-      ppp: 18.4,
-    },
-    RB: {
-      rbName: 'Kamara',
-      def: 0,
-      ppp: 17.6,
-    },
-    WR: {
-      wrName: 'Callaway',
-      def: 2.5,
-      ppp: 7.5,
-    },
-    TE: '7.5, -10',
-  },
-  jets: {
-    teamName: 'jets',
-    projectedPoints: 16.75,
-    QB: {
-      qbName: 'Wilson',
-      def: 2.5,
-      ppp: 12.9,
-    },
-    RB: {
-      rbName: 'Carter',
-      def: 0,
-      ppp: 14.2,
-    },
-    WR: {
-      wrName: 'Crowder',
-      def: 0,
-      ppp: 9.0,
-    },
-    TE: '-5, -10',
-  },
-};
+// import mongoose from 'mongoose';
+const mongoose = require('mongoose');
+mongoose
+  .connect('mongodb://localhost:27017/DFS-2021-Week_16')
+  .then(() => {
+    console.log('Mongo connection open!!!');
+  })
+  .catch(err => {
+    console.log('Mongo Connection error');
+    console.log(err);
+  });
 
-const saints = gameInfo.saints;
-const jets = gameInfo.jets;
+////////scraper
 
-const getData = function (teamOne, teamTwo) {
-  const renderGameInfo = function () {
-    gameVegas.textContent = `${teamOne.teamName}(${gameInfo.saints.projectedPoints}) at ${teamTwo.teamName}(${gameInfo.jets.projectedPoints})`;
+// const browserObject = require('./scraper');
+// const scraperController = require('./pageController');
 
-    gameVegasOdds.textContent = `over/under ${
-      teamOne.projectedPoints + teamTwo.projectedPoints
-    }`;
+// //Start the browser and create a browser instance
+// let browserInstance = browserObject.startBrowser();
 
-    qbDef.textContent = `DEF: ${teamOne.teamName}: ${teamOne.QB.def}, ${teamTwo.teamName}: ${teamTwo.QB.def}`;
+// // Pass the browser instance to the scraper controller
+// scraperController(browserInstance);
 
-    rbDef.textContent = `DEF: ${teamOne.teamName}: ${teamOne.RB.def}, ${teamTwo.teamName}: ${teamTwo.RB.def}`;
+const allQBData = require('./dfs_positions_calc_funcs/qbValuesCalcs');
+// import allQBData from './dfs_positions_calc_funcs/qbValuesCalcs';
+const allRBData = require('./dfs_positions_calc_funcs/rbValuesCalcs');
 
-    wrDef.textContent = `DEF: ${teamOne.teamName}: ${teamOne.WR.def}, ${teamTwo.teamName}: ${teamTwo.WR.def}`;
-  };
+const allWRData = require('./dfs_positions_calc_funcs/wrValuesCalcs');
 
-  renderGameInfo();
+const allTEData = require('./dfs_positions_calc_funcs/teValuesCalcs');
 
-  const getQBdata = function () {
-    let gameqbPPPs = [teamOne.QB.ppp, teamTwo.QB.ppp];
-    for (let i = 0; i < gameqbPPPs.length; i++) {
-      if (gameqbPPPs[i] >= 21.7) {
-        gameqbPPPs[i] = 20;
-      } else if (gameqbPPPs[i] > 19.6 && gameqbPPPs[i] < 21.7) {
-        gameqbPPPs[i] = 15;
-      } else if (gameqbPPPs[i] > 18.6 && gameqbPPPs[i] < 19.7) {
-        gameqbPPPs[i] = 10;
-      } else if (gameqbPPPs[i] > 17.6 && gameqbPPPs[i] < 18.7) {
-        gameqbPPPs[i] = 5;
-      } else if (gameqbPPPs[i] > 16.6 && gameqbPPPs[i] < 17.7) {
-        gameqbPPPs[i] = 0;
-      } else if (gameqbPPPs[i] > 14.6 && gameqbPPPs[i] < 16.7) {
-        gameqbPPPs[i] = -5;
-      } else {
-        gameqbPPPs[i] = -10;
-      }
+const allStackData = require('./dfs_positions_calc_funcs/stackingValuesCalcs');
+const allDefData = require('./dfs_positions_calc_funcs/defValuesCalcs');
 
-      let t1qbPPP = gameqbPPPs[0];
-      let t2qbPPP = gameqbPPPs[1];
-      // console.log(t1qbPPP);
-      // console.log(t2qbPPP);
+const { clearCache } = require('ejs');
+const { getSystemErrorName } = require('util');
+const { CommandStartedEvent, ConnectionClosedEvent } = require('mongodb');
+const { all } = require('express/lib/application');
+const { data } = require('autoprefixer');
 
-      const t1QBGameScore = t1qbPPP + teamOne.QB.def;
-      const t2QBGameScore = t2qbPPP + teamTwo.QB.def;
-      const t1QBGameScore2X = t1QBGameScore * 2;
-      const t2QBGameScore2X = t2QBGameScore * 2;
-      const QBGameScoreValue = t1QBGameScore + t2QBGameScore;
-      const QBGameScoreValue2X = QBGameScoreValue * 2;
+// console.log(allQBData);
+// console.log(allRBData);
+// console.log(allWRData);
+// console.log(allTEData);
+// console.log(allStackData);
+// console.log(allDefData);
 
-      const renderqbdata = function () {
-        qbPPP.textContent = `PPP: ${teamOne.QB.qbName}: ${t1qbPPP}, ${teamTwo.QB.qbName}: ${t2qbPPP}`;
+const qbSchema = new mongoose.Schema({
+  position: String,
+  allQBVttArrays: Array,
+  allQBYPALastFiveGamesPlayedArrays: Array,
+  allQBTDRateLastFiveGamesPlayedArrays: Array,
+  allQBHomeOrAwayFavoriteOrUnderdogArrays: Array,
+  allQBSecondHighlyProjectedPassCatcherArrays: Array,
+  allQBTotalScoreArrays: Array,
+  allQBFinalProjectedPointsValueArrays: Array,
+  allQBFinalProjectedPointsValuesPlusNamesArray: Array,
+});
 
-        qbTotalScoreItem.textContent = `Total QB score(def + PPP): ${teamOne.QB.qbName}: ${t1QBGameScore}, ${teamTwo.QB.qbName}: ${t2QBGameScore}`;
+const QB = mongoose.model('QB', qbSchema);
 
-        qbTotalScoreItem2X.textContent = `2X(${teamOne.QB.qbName}: ${t1QBGameScore2X}, ${teamTwo.QB.qbName}: ${t2QBGameScore2X}), just for individual team game score`;
-
-        qbGameScore.textContent = `Game score (both teams scores added): ${QBGameScoreValue} `;
-
-        qbGameScore2X.textContent = `2x(${QBGameScoreValue2X})`;
-      };
-      renderqbdata();
-    }
-  };
-  getQBdata();
-};
-
-const getRBPPP = function (ppp1, ppp2) {
-  let t1rbPPP = teamOne.RB.ppp;
-  let t2rbPPP = teamTwo.RB.ppp;
-  if (t1rbPPP >= 20) {
-    t1rbPPP = 20;
-  } else if (t1rbPPP > 17.4 && t1rbPPP < 20) {
-    t1rbPPP = 15;
-  } else if (t1rbPPP > 14.9 && t1rbPPP < 17.5) {
-    t1rbPPP = 10;
-  } else if (t1rbPPP > 13.9 && t1rbPPP < 15) {
-    t1rbPPP = 5;
-  } else if (t1rbPPP > 13.4 && t1rbPPP < 14) {
-    t1rbPPP = 0;
-  } else if (t1rbPPP > 12.9 && t1rbPPP < 13.5) {
-    t1rbPPP = -5;
-  } else {
-    t1rbPPP = -10;
+QB.deleteMany({ position: 'QB' }, function (err) {
+  if (err) {
+    console.log(`${err} error at QB delete`);
   }
+  console.log('successful QB delete');
+});
 
-  if (t2rbPPP >= 20) {
-    t2rbPPP = 20;
-  } else if (t2rbPPP > 17.4 && t2rbPPP < 20) {
-    t2rbPPP = 15;
-  } else if (t2rbPPP > 14.9 && t2rbPPP < 17.5) {
-    t2rbPPP = 10;
-  } else if (t2rbPPP > 13.9 && t2rbPPP < 15) {
-    t2rbPPP = 5;
-  } else if (t2rbPPP > 13.4 && t2rbPPP < 14) {
-    t2rbPPP = 0;
-  } else if (t2rbPPP > 12.9 && t2rbPPP < 13.5) {
-    t2rbPPP = -5;
-  } else {
-    t2rbPPP = -10;
+QB.insertMany({
+  position: 'QB',
+
+  allQBVttArrays: allQBData.allQBVtts,
+  allQBYPALastFiveGamesPlayedArrays: allQBData.allQBYPALastFiveGamesPlayeds,
+  allQBTDRateLastFiveGamesPlayedArrays:
+    allQBData.allQBTDRateLastFiveGamesPlayeds,
+
+  allQBHomeOrAwayFavoriteOrUnderdogArrays:
+    allQBData.allQBHomeOrAwayFavoriteOrUnderdogs,
+
+  allQBSecondHighlyProjectedPassCatcherArrays:
+    allQBData.allQBSecondHighlyProjectedPassCatchers,
+
+  allQBTotalScoreArrays: allQBData.allQBTotalScores,
+  allQBFinalProjectedPointsValueArrays:
+    allQBData.allQBFinalProjectedPointsValues,
+
+  allQBFinalProjectedPointsValuesPlusNamesArray:
+    allQBData.allQBFinalProjectedPointsValuesPlusNames,
+}).then(data => {
+  console.log('QB Data Inserted Successfully');
+  // console.log(data);
+});
+
+const rbSchema = new mongoose.Schema({
+  position: String,
+  allRBOneHalfPPRProjectedPointsValues: Array,
+  allRBOneFullPPRProjectedPointsValues: Array,
+  allRBTwoHalfPPRProjectedPointsValues: Array,
+  allRBTwoFullPPRProjectedPointsValues: Array,
+  allRBOneHalfPPRProjectedPointsValuesPlusNames: Array,
+  allRBTwoHalfPPRProjectedPointsValuesPlusNames: Array,
+  allRBOneFullPPRProjectedPointsValuesPlusNames: Array,
+  allRBTwoFullPPRProjectedPointsValuesPlusNames: Array,
+  allRBHalfPPRProjectedPointsValues: Array,
+  allRBFullPPRProjectedPointsValues: Array,
+  allRBHalfPPRProjectedPointsValuesPlusNames: Array,
+  allRBFullPPRProjectedPointsValuesPlusNames: Array,
+});
+
+const RB = mongoose.model('RB', rbSchema);
+
+RB.deleteMany({ position: 'RB' }, function (err) {
+  if (err) {
+    console.log(`${err} error at RB delete`);
   }
+  console.log('successful RB delete');
+});
 
-  // console.log(t1rbPPP);
-  // console.log(t2rbPPP);
+RB.insertMany({
+  position: 'RB',
+  allRBOneHalfPPRProjectedPointsValues:
+    allRBData.allRBOneHalfPPRProjectedPointsValues,
 
-  const t1RBGameScore = t1rbPPP + teamOne.RB.def;
-  const t2RBGameScore = t2rbPPP + teamTwo.RB.def;
-  const t1RBGameScore2X = t1RBGameScore * 2;
-  const t2RBGameScore2X = t2RBGameScore * 2;
-  const RBGameScoreValue = t1RBGameScore + t2RBGameScore;
-  const RBGameScoreValue2X = RBGameScoreValue * 2;
+  allRBOneFullPPRProjectedPointsValues:
+    allRBData.allRBOneFullPPRProjectedPointsValues,
 
-  rbPPP.textContent = `PPP: ${teamOne.RB.rbName}: ${t1rbPPP}, ${teamTwo.RB.rbName}: ${t2rbPPP}`;
+  allRBTwoHalfPPRProjectedPointsValues:
+    allRBData.allRBTwoHalfPPRProjectedPointsValues,
 
-  rbTotalScoreItem.textContent = `Total RB score(def + PPP): ${teamOne.RB.rbName}: ${t1RBGameScore}, ${teamTwo.RB.rbName}: ${t2RBGameScore}`;
+  allRBTwoFullPPRProjectedPointsValues:
+    allRBData.allRBTwoFullPPRProjectedPointsValues,
 
-  rbTotalScoreItem2X.textContent = `2X(${teamOne.RB.rbName}: ${t1RBGameScore2X}, ${teamTwo.RB.rbName}: ${t2RBGameScore2X}), just for individual team game score`;
+  allRBOneHalfPPRProjectedPointsValuesPlusNames:
+    allRBData.allRBOneHalfPPRProjectedPointsValuesPlusNames,
 
-  rbGameScore.textContent = `Game score (both teams scores added): ${RBGameScoreValue} `;
+  allRBTwoHalfPPRProjectedPointsValuesPlusNames:
+    allRBData.allRBTwoHalfPPRProjectedPointsValuesPlusNames,
 
-  rbGameScore2X.textContent = `2x(${RBGameScoreValue2X})`;
-};
+  allRBOneFullPPRProjectedPointsValuesPlusNames:
+    allRBData.allRBOneFullPPRProjectedPointsValuesPlusNames,
 
-const getWRPPP = function (ppp1, ppp2) {
-  let t1wrPPP = teamOne.WR.ppp;
-  let t2wrPPP = teamTwo.WR.ppp;
-  if (t1wrPPP >= 17.9) {
-    t1wrPPP = 20;
-  } else if (t1wrPPP > 19.6 && t1wrPPP < 21.7) {
-    t1qbPPP = 15;
-  } else if (t1wrPPP > 18.6 && t1wrPPP < 19.7) {
-    t1qbPPP = 10;
-  } else if (t1wrPPP > 17.6 && t1wrPPP < 18.7) {
-    t1qbPPP = 5;
-  } else if (t1wrPPP > 16.6 && t1wrPPP < 17.7) {
-    t1qbPPP = 0;
-  } else if (t1wrPPP > 14.6 && t1wrPPP < 16.7) {
-    t1wrPPP = -5;
-  } else {
-    t1wrPPP = -10;
+  allRBTwoFullPPRProjectedPointsValuesPlusNames:
+    allRBData.allRBTwoFullPPRProjectedPointsValuesPlusNames,
+
+  allRBHalfPPRProjectedPointsValues:
+    allRBData.allRBHalfPPRProjectedPointsValues,
+
+  allRBFullPPRProjectedPointsValues:
+    allRBData.allRBFullPPRProjectedPointsValues,
+
+  allRBHalfPPRProjectedPointsValuesPlusNames:
+    allRBData.allRBHalfPPRProjectedPointsValuesPlusNames,
+
+  allRBFullPPRProjectedPointsValuesPlusNames:
+    allRBData.allRBFullPPRProjectedPointsValuesPlusNames,
+}).then(data => {
+  console.log('RB Data Inserted Successfully');
+  // console.log(data);
+});
+
+const wrSchema = new mongoose.Schema({
+  position: String,
+  allWROneHomeOrAwayFavoriteOrUnderdogs: Array,
+  allWRTwoHomeOrAwayFavoriteOrUnderdogs: Array,
+  allWROneVTTs: Array,
+  allWRTwoVTTs: Array,
+  allWROneEliteProjectedTargetsBonuss: Array,
+  allWRTwoEliteProjectedTargetsBonuss: Array,
+  allWROneGameEnvironmentInducedHighTargetVolume: Array,
+  allWRTwoGameEnvironmentInducedHighTargetVolume: Array,
+  allWROneIfTopTwelveTargetShareLasThreeWeeks: Array,
+  allWRTwoIfTopTwelveTargetShareLasThreeWeeks: Array,
+  allWROneTotalScores: Array,
+  allWRTwoTotalScores: Array,
+  allHalfWROneFinalProjectedPointsValues: Array,
+  allHalfWROneFinalProjectedPointsValuesPlusNames: Array,
+  allFullWROneFinalProjectedPointsValues: Array,
+  allFullWROneFinalProjectedPointsValuesPlusNames: Array,
+  allHalfWRTwoFinalProjectedPointsValues: Array,
+  allHalfWRTwoFinalProjectedPointsValuesPlusNames: Array,
+  allFullWRTwoFinalProjectedPointsValues: Array,
+  allFullWRTwoFinalProjectedPointsValuesPlusNames: Array,
+  allWRsHalfProjectedPointsValues: Array,
+  allWRsFullProjectedPointsValues: Array,
+  allWRsHalfProjectedPointsValuesPlusNames: Array,
+  allWRsFullProjectedPointsValuesPlusNames: Array,
+});
+
+const WR = mongoose.model('WR', wrSchema);
+
+WR.deleteMany({ position: 'WR' }, function (err) {
+  if (err) {
+    console.log(`${err} error at WR delete`);
   }
+  console.log('successful WR delete');
+});
 
-  if (t2wrPPP >= 17.9) {
-    t2wrPPP = 20;
-  } else if (t2wrPPP > 15.9 && t2wrPPP < 18) {
-    t2wrPPP = 15;
-  } else if (t2wrPPP > 13.9 && t2wrPPP < 16) {
-    t2wrPPP = 10;
-  } else if (t2wrPPP > 12.9 && t2wrPPP < 14) {
-    t2wrPPP = 7.5;
-  } else if (t2wrPPP > 11.9 && t2wrPPP < 13) {
-    t2wrPPP = 5;
-  } else if (t2wrPPP > 10.9 && t2wrPPP < 12) {
-    t2wrPPP = 0;
-  } else if (t2wrPPP > 9.9 && t2wrPPP < 11) {
-    t2wrPPP = -2.5;
-  } else if (t2wrPPP > 8.9 && t2wrPPP < 10) {
-    t2wrPPP = -5;
-  } else if (t2wrPPP > 7.9 && t2wrPPP < 8) {
-    t2wrPPP = -7.5;
-  } else {
-    t2wrPPP = -10;
+WR.insertMany({
+  position: 'WR',
+  allWROneHomeOrAwayFavoriteOrUnderdogs:
+    allWRData.allWROneHomeOrAwayFavoriteOrUnderdogs,
+  allWRTwoHomeOrAwayFavoriteOrUnderdogs:
+    allWRData.allWRTwoHomeOrAwayFavoriteOrUnderdogs,
+  allWROneVTTs: allWRData.allWROneVTTs,
+  allWRTwoVTTs: allWRData.allWRTwoVTTs,
+  allWROneEliteProjectedTargetsBonuss:
+    allWRData.allWROneEliteProjectedTargetsBonuss,
+  allWRTwoEliteProjectedTargetsBonuss:
+    allWRData.allWRTwoEliteProjectedTargetsBonuss,
+  allWROneGameEnvironmentInducedHighTargetVolume:
+    allWRData.allWROneGameEnvironmentInducedHighTargetVolume,
+  allWRTwoGameEnvironmentInducedHighTargetVolume:
+    allWRData.allWRTwoGameEnvironmentInducedHighTargetVolume,
+  allWROneIfTopTwelveTargetShareLasThreeWeeks:
+    allWRData.allWROneIfTopTwelveTargetShareLasThreeWeeks,
+  allWRTwoIfTopTwelveTargetShareLasThreeWeeks:
+    allWRData.allWRTwoIfTopTwelveTargetShareLasThreeWeeks,
+  allWROneTotalScores: allWRData.allWROneTotalScores,
+  allWRTwoTotalScores: allWRData.allWRTwoTotalScores,
+  allHalfWROneFinalProjectedPointsValues:
+    allWRData.allHalfWROneFinalProjectedPointsValues,
+  allHalfWROneFinalProjectedPointsValuesPlusNames:
+    allWRData.allHalfWROneFinalProjectedPointsValuesPlusNames,
+  allFullWROneFinalProjectedPointsValues:
+    allWRData.allFullWROneFinalProjectedPointsValues,
+  allFullWROneFinalProjectedPointsValuesPlusNames:
+    allWRData.allFullWROneFinalProjectedPointsValuesPlusNames,
+  allHalfWRTwoFinalProjectedPointsValues:
+    allWRData.allHalfWRTwoFinalProjectedPointsValues,
+  allHalfWRTwoFinalProjectedPointsValuesPlusNames:
+    allWRData.allHalfWRTwoFinalProjectedPointsValuesPlusNames,
+  allFullWRTwoFinalProjectedPointsValues:
+    allWRData.allFullWRTwoFinalProjectedPointsValues,
+  allFullWRTwoFinalProjectedPointsValuesPlusNames:
+    allWRData.allFullWRTwoFinalProjectedPointsValuesPlusNames,
+  allWRsHalfProjectedPointsValues: allWRData.allWRsHalfProjectedPointsValues,
+  allWRsFullProjectedPointsValues: allWRData.allWRsFullProjectedPointsValues,
+  allWRsHalfProjectedPointsValuesPlusNames:
+    allWRData.allWRsHalfProjectedPointsValuesPlusNames,
+  allWRsFullProjectedPointsValuesPlusNames:
+    allWRData.allWRsFullProjectedPointsValuesPlusNames,
+}).then(data => {
+  console.log('WR Data Inserted Successfully');
+  // console.log(data);
+});
+
+const teSchema = new mongoose.Schema({
+  position: String,
+  allTEVTTs: Array,
+  allTEHighProjectedTargetsBonus: Array,
+  allTEPPRPointsPerGameLastThreeGamesPlayed: Array,
+  allTEProjectedReceptions: Array,
+  allTETotalScores: Array,
+  allHalfTEFinalProjectedPointsValues: Array,
+  allHalfTEFinalProjectedPointsValuesPlusNames: Array,
+  allFullTEFinalProjectedPointsValues: Array,
+  allFullTEFinalProjectedPointsValuesPlusNames: Array,
+  allTEPremiuimFinalProjectedPointsValues: Array,
+  allTEPremiuimFinalProjectedPointsValuesPlusNames: Array,
+});
+
+const TE = mongoose.model('TE', teSchema);
+
+TE.deleteMany({ position: 'TE' }, function (err) {
+  if (err) {
+    console.log(`${err} error at TE delete`);
   }
+  console.log('successful TE delete');
+});
 
-  // console.log(t1wrPPP);
-  // console.log(t2wrPPP);
+TE.insertMany({
+  position: 'TE',
+  allTEVTTs: allTEData.allTEVTTs,
+  allTEHighProjectedTargetsBonus: allTEData.allTEHighProjectedTargetsBonus,
+  allTEPPRPointsPerGameLastThreeGamesPlayed:
+    allTEData.allTEPPRPointsPerGameLastThreeGamesPlayed,
+  allTEProjectedReceptions: allTEData.allTEProjectedReceptions,
+  allTETotalScores: allTEData.allTETotalScores,
+  allHalfTEFinalProjectedPointsValues:
+    allTEData.allHalfTEFinalProjectedPointsValues,
+  allHalfTEFinalProjectedPointsValuesPlusNames:
+    allTEData.allHalfTEFinalProjectedPointsValuesPlusNames,
+  allFullTEFinalProjectedPointsValues:
+    allTEData.allFullTEFinalProjectedPointsValues,
+  allFullTEFinalProjectedPointsValuesPlusNames:
+    allTEData.allFullTEFinalProjectedPointsValuesPlusNames,
+  allTEPremiuimFinalProjectedPointsValues:
+    allTEData.allTEPremiuimFinalProjectedPointsValues,
+  allTEPremiuimFinalProjectedPointsValuesPlusNames:
+    allTEData.allTEPremiuimFinalProjectedPointsValuesPlusNames,
+}).then(data => {
+  console.log('TE Data Inserted Successfully');
+  // console.log(data);
+});
 
-  const t1WRGameScore = t1wrPPP + teamOne.WR.def;
-  const t2WRGameScore = t2wrPPP + teamTwo.WR.def;
-  const t1WRGameScore2X = t1WRGameScore * 2;
-  const t2WRGameScore2X = t2WRGameScore * 2;
-  const WRGameScoreValue = t1WRGameScore + t2WRGameScore;
-  const WRGameScoreValue2X = WRGameScoreValue * 2;
+const flexSchema = new mongoose.Schema({
+  position: String,
+  allHalfFlexValues: Array,
+  allHalfFlexValuesWithNames: Array,
+  allPPRFlexValues: Array,
+  allPPRFlexValuesWithNames: Array,
+  allTEPFlexValues: Array,
+  allTEPFlexValuesWithNames: Array,
+});
 
-  wrPPP.textContent = `PPP: ${teamOne.WR.wrName}: ${t1wrPPP}, ${teamTwo.WR.wrName}: ${t2wrPPP}`;
+const flex = mongoose.model('flex', flexSchema);
 
-  wrTotalScoreItem.textContent = `Total WR score(def + PPP): ${teamOne.WR.wrName}: ${t1WRGameScore}, ${teamTwo.WR.wrName}: ${t2WRGameScore}`;
+flex.deleteMany({ position: 'flex' }, function (err) {
+  if (err) {
+    console.log(`${err} error at flex delete`);
+  }
+  console.log('successful flex delete');
+});
 
-  wrTotalScoreItem2X.textContent = `2X(${teamOne.WR.wrName}: ${t1WRGameScore2X}, ${teamTwo.WR.wrName}: ${t2WRGameScore2X}), just for individual team game score`;
+flex
+  .insertMany({
+    position: 'flex',
+    allHalfFlexValues: allStackData.allHalfFlexValues,
+    allHalfFlexValuesWithNames: allStackData.allHalfFlexValuesWithNames,
+    allPPRFlexValues: allStackData.allPPRFlexValues,
+    allPPRFlexValuesWithNames: allStackData.allPPRFlexValuesWithNames,
+    allTEPFlexValues: allStackData.allTEPFlexValues,
+    allTEPFlexValuesWithNames: allStackData.allTEPFlexValuesWithNames,
+  })
+  .then(data => {
+    console.log('flex Data Iserted Successfully');
+    // console.log(data);
+  });
 
-  wrGameScore.textContent = `Game score (both teams scores added): ${WRGameScoreValue} `;
+const stackingSchema = new mongoose.Schema({
+  position: String,
+  allHalfQBWROneStacks: Array,
+  allPPRQBWROneStacks: Array,
+  allHalfQBWROneStackWithNames: Array,
+  allPPRQBWROneStacksWithNames: Array,
+  allTeamsBestHalfSingleStackWithQBWithNames: Array,
+  sortedAllHalfQBWROneStacks: Array,
+  allTeamsBestPPRSingleStackWithQB: Array,
+  allTeamsBestPPRSingleStackWithQBWithNames: Array,
+  allTEPremiumBestSingleStackWithQB: Array,
+  allTEPremiumBestSingleStackWithQBWithNames: Array,
+  allTeamsBestHalfDoubleStackWithQBAndWROne: Array,
+  allTeamsBestHalfDoubleStackWithQBAndWROneWithNames: Array,
+  allTeamsBestPPRDoubleStackWithQBAndWROne: Array,
+  allTeamsBestPPRDoubleStackWithQBAndWROneWithNames: Array,
+  allTEPremiumBestDoubleStackWithQBAndWROne: Array,
+  allTEPremiumBestDoubleStackWithQBAndWROneWithNames: Array,
+  allTeamsBestHalfTripleStackWithQBAndWROne: Array,
+  allTeamsBestPPRTripleStackWithQBAndWROne: Array,
+  allTEPremiumBestTripleStackWithQBAndWROne: Array,
+  allTeamsBestHalfTripleStackWithQBAndWROneWithNames: Array,
+  allTeamsBestPPRTripleStackWithQBAndWROneWithNames: Array,
+  allTEPremiumBestTripleStackWithQBAndWROneWithNames: Array,
+});
 
-  wrGameScore2X.textContent = `2x(${WRGameScoreValue2X})`;
+const bestStacks = mongoose.model('bestStacks', stackingSchema);
 
-  //WR should look like
+bestStacks.deleteMany({ position: 'stacks' }, function (err) {
+  if (err) {
+    console.log(`${err} error at stacking delete`);
+  }
+  console.log('successful stacks delete');
+});
 
-  // Def:
-  // #1 PPP:
-  // #2 bonus?
-  // Team Total score(def + #1 + #2):
-  // Game score(both total team scores added together):
-  //  IPS(individual player score, is PPP + def + all relevant WR bonuses):
+bestStacks
+  .insertMany({
+    position: 'stacks',
+    allHalfQBWROneStacks: allStackData.allHalfQBWROneStacks,
+    allPPRQBWROneStacks: allStackData.allPPRQBWROneStacks,
+    allHalfQBWROneStackWithNames: allStackData.allHalfQBWROneStackWithNames,
+    allPPRQBWROneStacksWithNames: allStackData.allPPRQBWROneStacksWithNames,
+    allTeamsBestHalfSingleStackWithQBWithNames:
+      allStackData.allTeamsBestHalfSingleStackWithQBWithNames,
+    sortedAllHalfQBWROneStacks: allStackData.sortedAllHalfQBWROneStacks,
+    allTeamsBestPPRSingleStackWithQB:
+      allStackData.allTeamsBestPPRSingleStackWithQB,
+    allTeamsBestPPRSingleStackWithQBWithNames:
+      allStackData.allTeamsBestPPRSingleStackWithQBWithNames,
+    allTEPremiumBestSingleStackWithQB:
+      allStackData.allTEPremiumBestSingleStackWithQB,
+    allTEPremiumBestSingleStackWithQBWithNames:
+      allStackData.allTEPremiumBestSingleStackWithQBWithNames,
+    allTeamsBestHalfDoubleStackWithQBAndWROne:
+      allStackData.allTeamsBestHalfDoubleStackWithQBAndWROne,
+    allTeamsBestHalfDoubleStackWithQBAndWROneWithNames:
+      allStackData.allTeamsBestHalfDoubleStackWithQBAndWROneWithNames,
+    allTeamsBestPPRDoubleStackWithQBAndWROne:
+      allStackData.allTeamsBestPPRDoubleStackWithQBAndWROne,
+    allTeamsBestPPRDoubleStackWithQBAndWROneWithNames:
+      allStackData.allTeamsBestPPRDoubleStackWithQBAndWROneWithNames,
+    allTEPremiumBestDoubleStackWithQBAndWROne:
+      allStackData.allTEPremiumBestDoubleStackWithQBAndWROne,
+    allTEPremiumBestDoubleStackWithQBAndWROneWithNames:
+      allStackData.allTEPremiumBestDoubleStackWithQBAndWROneWithNames,
+    allTeamsBestHalfTripleStackWithQBAndWROne:
+      allStackData.allTeamsBestHalfTripleStackWithQBAndWROne,
+    allTeamsBestPPRTripleStackWithQBAndWROne:
+      allStackData.allTeamsBestPPRTripleStackWithQBAndWROne,
+    allTEPremiumBestTripleStackWithQBAndWROne:
+      allStackData.allTEPremiumBestTripleStackWithQBAndWROne,
+    allTeamsBestHalfTripleStackWithQBAndWROneWithNames:
+      allStackData.allTeamsBestHalfTripleStackWithQBAndWROneWithNames,
+    allTeamsBestPPRTripleStackWithQBAndWROneWithNames:
+      allStackData.allTeamsBestPPRTripleStackWithQBAndWROneWithNames,
+    allTEPremiumBestTripleStackWithQBAndWROneWithNames:
+      allStackData.allTEPremiumBestTripleStackWithQBAndWROneWithNames,
+  })
+  .then(data => {
+    console.log('Stacks Data Inserted Successfully');
+    // console.log(data);
+  });
 
-  getRBPPP();
-  getWRPPP();
-};
+const defSchema = new mongoose.Schema({
+  position: String,
+  scoreFromProjectedPointsForDef: Array,
+  ScoreFromOwnOff: Array,
+  ScoreFromOppOff: Array,
+  TeamDefProjPoints: Array,
+  allTeamDefensesMap: Map,
+});
 
-getData(saints, jets);
+const teamDef = mongoose.model('teamDef', defSchema);
+
+teamDef.deleteMany({ position: 'def' }, function (err) {
+  if (err) {
+    console.log(`${err} error at defense delete`);
+  }
+  console.log('successful defense delete');
+});
+
+teamDef
+  .insertMany({
+    position: 'def',
+    scoreFromProjectedPointsForDef: allDefData.scoreFromProjectedPointsForDef,
+    ScoreFromOwnOff: allDefData.ScoreFromOwnOff,
+    ScoreFromOppOff: allDefData.ScoreFromOppOff,
+    TeamDefProjPoints: allDefData.TeamDefProjPoints,
+    allTeamDefensesMap: allDefData.allTeamDefensesMap,
+  })
+  .then(data => {
+    console.log('def Data Inserted Successfully');
+    // console.log(data);
+  });
+
+app.get('/', (req, res) => {
+  console.log('we got a new request');
+  res.render('home');
+});
+
+app.get('/pos/:position', (req, res) => {
+  const group = req.params.position;
+  // console.log(group);
+  res.render('positions', {
+    group,
+    allQBData,
+    allRBData,
+    allWRData,
+    allTEData,
+    allStackData,
+  });
+});
+
+app.listen(3000, () => {
+  console.log('listening on port 3000');
+});

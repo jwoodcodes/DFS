@@ -1,0 +1,46 @@
+.gridcontainer {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  grid-gap: 2rem;
+  list-style-type: none;
+}
+
+.card {
+  margin: 5rem 0;
+  /* background-image: linear-gradient(to right bottom, #f5c86c, #a87f26); */
+  background: linear-gradient(to bottom right, #0c6fe9, #0a2342);
+  box-shadow: 0 1.5rem 4rem rgba(#000, 0.35);
+  border-radius: 4px;
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.vegas {
+  padding-top: 1.5rem;
+  padding-bottom: 0.25rem;
+  font-size: 2.5rem;
+
+  &__overunder {
+  }
+
+  &__favored {
+    padding-bottom: 2rem;
+  }
+}
+
+.qb {
+  &__names {
+    display: flex;
+    &--1,
+    &--2 {
+      padding: 2rem;
+    }
+  }
+}

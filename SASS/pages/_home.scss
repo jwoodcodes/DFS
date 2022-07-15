@@ -1,39 +1,4 @@
-.game__container,
-.vegas__overunder {
-  display: flex;
-  width: 50%;
-  justify-content: center;
-
-  &--game {
-    font-size: 3rem;
-    padding-top: 3rem;
-  }
-}
-.vegas__overunder {
+.vegas {
+  padding-top: 4rem;
   font-size: 3rem;
-  padding-top: 1rem;
-}
-
-.qb__label,
-.rb__label,
-.wr__label {
-  color: #006466;
-  font-size: 3rem;
-  list-style-type: none;
-  padding-top: 3rem;
-  width: 50%;
-  display: flex;
-  justify-content: space-around;
-}
-
-.qb__item,
-.rb__item,
-.wr__item {
-  font-size: 2rem;
-  padding: 2rem;
-
-  &--totalQBScore2X,
-  &--gamescore2X {
-    padding-left: 4rem;
-  }
 }
