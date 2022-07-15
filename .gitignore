@@ -1,4 +1,4 @@
-# Local Netlify folder
+git # Local Netlify folder
 .netlify
 node_modules/puppeteer/lib/esm/puppeteer/api-docs-entry.d.ts
 node_modules/puppeteer/lib/esm/puppeteer/api-docs-entry.d.ts.map
@@ -250,3 +250,6 @@ node_modules/puppeteer/lib/esm/puppeteer/node/Puppeteer.d.ts
 node_modules/puppeteer/lib/esm/puppeteer/node/Puppeteer.d.ts.map
 node_modules/puppeteer/lib/esm/puppeteer/node/Puppeteer.js
 node_modules/puppeteer/lib/esm/puppeteer/node/Puppeteer.js.map
+pageScraper.js
+scraper.js
+pageController.js

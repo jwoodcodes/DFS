@@ -5,7 +5,7 @@
 const qbrawdata = {
   SF49ers: {
     teamVTT: 0,
-    name: 'Placeholder',
+    name: 'Jimmy Garoppolo',
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
     seventyFifthPercentProjectedPoints: 0,
@@ -13,10 +13,14 @@ const qbrawdata = {
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    yahooSalary: 24,
+    fanduelSalary: 7100,
+    draftkingsSalary: 5700,
   },
   bears: {
-    teamVTT: 0,
-    name: 'Placeholder',
+    teamVTT: 17,
+    name: 'Justin Fields',
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
     seventyFifthPercentProjectedPoints: 0,
@@ -24,10 +28,14 @@ const qbrawdata = {
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    yahooSalary: 23,
+    fanduelSalary: 6300,
+    draftkingsSalary: 4800,
   },
   bengals: {
     teamVTT: 25,
-    name: 'Burrow',
+    name: 'Joe Burrow',
     twentyFifthPercentProjectedPoints: 12,
     fiftyithPercentProjectedPoints: 16,
     seventyFifthPercentProjectedPoints: 23,
@@ -35,10 +43,14 @@ const qbrawdata = {
     ypaLastFiveGames: 7.7,
     TDrateLastFiveGames: 4.0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 15,
+
+    yahooSalary: 30,
+    fanduelSalary: 7700,
+    draftkingsSalary: 6900,
   },
   bills: {
     teamVTT: 0,
-    name: 'Placeholder',
+    name: 'Josh Allen',
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
     seventyFifthPercentProjectedPoints: 0,
@@ -46,10 +58,14 @@ const qbrawdata = {
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    yahooSalary: 37,
+    fanduelSalary: 8800,
+    draftkingsSalary: 8000,
   },
   broncos: {
     teamVTT: 0,
-    name: 'Placeholder',
+    name: 'Teddy Bridgewater',
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
     seventyFifthPercentProjectedPoints: 0,
@@ -57,10 +73,14 @@ const qbrawdata = {
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    yahooSalary: 23,
+    fanduelSalary: 6500,
+    draftkingsSalary: 5100,
   },
   browns: {
     teamVTT: 0,
-    name: 'Placeholder',
+    name: 'Baker Mayfield',
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
     seventyFifthPercentProjectedPoints: 0,
@@ -68,10 +88,14 @@ const qbrawdata = {
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    yahooSalary: 20,
+    fanduelSalary: 6700,
+    draftkingsSalary: 5300,
   },
   buccaneers: {
-    teamVTT: 0,
-    name: 'Placeholder',
+    teamVTT: 27.25,
+    name: 'Tom Brady',
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
     seventyFifthPercentProjectedPoints: 0,
@@ -79,10 +103,14 @@ const qbrawdata = {
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    yahooSalary: 34,
+    fanduelSalary: 8300,
+    draftkingsSalary: 7600,
   },
   cardinals: {
-    teamVTT: 0,
-    name: 'BPlaceholder',
+    teamVTT: 25.5,
+    name: 'Kyler Murray',
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
     seventyFifthPercentProjectedPoints: 0,
@@ -90,10 +118,14 @@ const qbrawdata = {
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    yahooSalary: 35,
+    fanduelSalary: 8200,
+    draftkingsSalary: 7300,
   },
   chargers: {
-    teamVTT: 0,
-    name: 'BPlaceholder',
+    teamVTT: 29,
+    name: 'Justin Herbert',
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
     seventyFifthPercentProjectedPoints: 0,
@@ -101,6 +133,10 @@ const qbrawdata = {
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    yahooSalary: 0,
+    fanduelSalary: 0,
+    draftkingsSalary: 0,
   },
   chiefs: {
     teamVTT: 27.5,
@@ -112,6 +148,10 @@ const qbrawdata = {
     ypaLastFiveGames: 8.1,
     TDrateLastFiveGames: 5.3,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 13,
+
+    yahooSalary: 0,
+    fanduelSalary: 0,
+    draftkingsSalary: 0,
   },
   colts: {
     teamVTT: 0,
@@ -123,6 +163,10 @@ const qbrawdata = {
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    yahooSalary: 0,
+    fanduelSalary: 0,
+    draftkingsSalary: 0,
   },
   comanders: {
     teamVTT: 0,
@@ -134,6 +178,10 @@ const qbrawdata = {
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    yahooSalary: 0,
+    fanduelSalary: 0,
+    draftkingsSalary: 0,
   },
   cowboys: {
     teamVTT: 0,
@@ -145,6 +193,10 @@ const qbrawdata = {
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    yahooSalary: 0,
+    fanduelSalary: 0,
+    draftkingsSalary: 0,
   },
   dolphins: {
     teamVTT: 20.25,
@@ -156,6 +208,10 @@ const qbrawdata = {
     ypaLastFiveGames: 7.1,
     TDrateLastFiveGames: 5.3,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 8,
+
+    yahooSalary: 0,
+    fanduelSalary: 0,
+    draftkingsSalary: 0,
   },
   eagles: {
     teamVTT: 0,
@@ -167,6 +223,10 @@ const qbrawdata = {
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    yahooSalary: 0,
+    fanduelSalary: 0,
+    draftkingsSalary: 0,
   },
   falcons: {
     teamVTT: 0,
@@ -178,6 +238,10 @@ const qbrawdata = {
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    yahooSalary: 0,
+    fanduelSalary: 0,
+    draftkingsSalary: 0,
   },
   giants: {
     teamVTT: 0,
@@ -189,6 +253,10 @@ const qbrawdata = {
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    yahooSalary: 0,
+    fanduelSalary: 0,
+    draftkingsSalary: 0,
   },
   jaguars: {
     teamVTT: 20.25,
@@ -201,6 +269,10 @@ const qbrawdata = {
     ypaLastFiveGames: 5.6,
     TDrateLastFiveGames: 1,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 7,
+
+    yahooSalary: 0,
+    fanduelSalary: 0,
+    draftkingsSalary: 0,
   },
   jets: {
     teamVTT: 15,
@@ -213,6 +285,10 @@ const qbrawdata = {
     ypaLastFiveGames: 5.8,
     TDrateLastFiveGames: 1.5,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 9,
+
+    yahooSalary: 0,
+    fanduelSalary: 0,
+    draftkingsSalary: 0,
   },
   lions: {
     teamVTT: 0,
@@ -224,6 +300,10 @@ const qbrawdata = {
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    yahooSalary: 0,
+    fanduelSalary: 0,
+    draftkingsSalary: 0,
   },
   packers: {
     teamVTT: 0,
@@ -235,6 +315,10 @@ const qbrawdata = {
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    yahooSalary: 0,
+    fanduelSalary: 0,
+    draftkingsSalary: 0,
   },
   panthers: {
     teamVTT: 0,
@@ -246,6 +330,25 @@ const qbrawdata = {
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    yahooSalary: 0,
+    fanduelSalary: 0,
+    draftkingsSalary: 0,
+  },
+  patriots: {
+    teamVTT: 0,
+    name: 'Placeholder',
+    twentyFifthPercentProjectedPoints: 0,
+    fiftyithPercentProjectedPoints: 0,
+    seventyFifthPercentProjectedPoints: 0,
+    prjpassattempts: 0,
+    ypaLastFiveGames: 0,
+    TDrateLastFiveGames: 0,
+    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    yahooSalary: 0,
+    fanduelSalary: 0,
+    draftkingsSalary: 0,
   },
   raiders: {
     teamVTT: 0,
@@ -257,6 +360,10 @@ const qbrawdata = {
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    yahooSalary: 0,
+    fanduelSalary: 0,
+    draftkingsSalary: 0,
   },
   rams: {
     teamVTT: 0,
@@ -268,6 +375,10 @@ const qbrawdata = {
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    yahooSalary: 0,
+    fanduelSalary: 0,
+    draftkingsSalary: 0,
   },
   ravens: {
     teamVTT: 18.25,
@@ -279,6 +390,10 @@ const qbrawdata = {
     ypaLastFiveGames: 6.2,
     TDrateLastFiveGames: 2.6,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 7,
+
+    yahooSalary: 0,
+    fanduelSalary: 0,
+    draftkingsSalary: 0,
   },
   saints: {
     teamVTT: 17.25,
@@ -290,6 +405,10 @@ const qbrawdata = {
     ypaLastFiveGames: 6.6,
     TDrateLastFiveGames: 2.2,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 7,
+
+    yahooSalary: 0,
+    fanduelSalary: 0,
+    draftkingsSalary: 0,
   },
   seahawks: {
     teamVTT: 0,
@@ -301,6 +420,10 @@ const qbrawdata = {
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    yahooSalary: 0,
+    fanduelSalary: 0,
+    draftkingsSalary: 0,
   },
   steelers: {
     teamVTT: 17,
@@ -312,6 +435,10 @@ const qbrawdata = {
     ypaLastFiveGames: 6.8,
     TDrateLastFiveGames: 5,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 9,
+
+    yahooSalary: 0,
+    fanduelSalary: 0,
+    draftkingsSalary: 0,
   },
   texans: {
     teamVTT: 0,
@@ -323,6 +450,10 @@ const qbrawdata = {
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    yahooSalary: 0,
+    fanduelSalary: 0,
+    draftkingsSalary: 0,
   },
   titans: {
     teamVTT: 0,
@@ -334,6 +465,10 @@ const qbrawdata = {
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    yahooSalary: 0,
+    fanduelSalary: 0,
+    draftkingsSalary: 0,
   },
   vikings: {
     teamVTT: 0,
@@ -345,6 +480,10 @@ const qbrawdata = {
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    yahooSalary: 0,
+    fanduelSalary: 0,
+    draftkingsSalary: 0,
   },
 };
 
