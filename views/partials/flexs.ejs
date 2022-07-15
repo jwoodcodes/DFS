@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <%if(group === 'flexs') {%>
+
+    <div class="list__container">
+      <ul class="list">
+        <h2 class="scoringtype__label">Half PPR</h2>
+        <%allStackData.allHalfFlexValuesWithNames.forEach(function(player) {%>
+        <li class="list__item"><%=player%></li>
+        <%})%>
+      </ul>
+
+      <ul class="list">
+        <h2 class="scoringtype__label">Full PPR</h2>
+        <%allStackData.allPPRFlexValuesWithNames.forEach(function(player) {%>
+        <li class="list__item"><%=player%></li>
+        <%})%>
+      </ul>
+
+      <ul class="list">
+        <h2 class="scoringtype__label">TE Premium</h2>
+        <%allStackData.allTEPFlexValuesWithNames.forEach(function(player) {%>
+        <li class="list__item"><%=player%></li>
+        <%})%>
+      </ul>
+    </div>
+    <%}%>
+  </body>
+</html>
