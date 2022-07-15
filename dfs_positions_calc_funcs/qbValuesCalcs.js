@@ -1,7 +1,8 @@
 // const gameInfo = require('../gameinfo');
-const allTeams = require('../teamAndPositionVariables');
-const allQBs = require('../teamAndPositionVariables');
+const allTeams = require('../teamandpositionvariables/allTeamLevelVariables');
+const allQBs = require('../teamandpositionvariables/allQBVariables');
 const qbrawdata = require('../teamandpostionsrawdata/qbrawdata');
+const wrrawdata = require('../teamandpostionsrawdata/wrrawdata');
 
 const allQBTotalScores = [];
 
@@ -83,7 +84,6 @@ const allQBCalcFunctions = {
 
   calcQBHomeOrAwayFavoriteOrUnderdogs(team, i) {
     let QBHOAFOU = 0;
-    // console.log(allQBs[i].teamVTT);
 
     if ((i - 1) % 2 && team.teamVTT > allQBs[i + 1].teamVTT) {
       QBHOAFOU = 10;
@@ -204,7 +204,7 @@ const allQBData = {
     allQBFinalProjectedPointsValuesPlusNames,
 };
 
-console.log(allQBData);
+// console.log(allQBData);
 
 module.exports = allQBCalcFunctions;
 module.exports = allQBData;
