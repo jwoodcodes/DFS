@@ -1,4 +1,8 @@
 const gameInfo = {
+  week: {
+    currentWeek: 16,
+  },
+
   SF49ers: {
     teamName: '49ers',
     homeOrRoad: 'road',
