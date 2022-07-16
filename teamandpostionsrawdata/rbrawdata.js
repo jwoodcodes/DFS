@@ -5,6 +5,9 @@ const rbrawdata = {
     RBOne: {
       name: 'Placeholder',
       RBOneOrTwo: 1,
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -14,6 +17,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -21,6 +27,9 @@ const rbrawdata = {
     },
     RBTwo: {
       name: 'Placeholder',
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -30,6 +39,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -42,6 +54,9 @@ const rbrawdata = {
     RBOne: {
       name: 'Placeholder',
       RBOneOrTwo: 1,
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -51,6 +66,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -58,6 +76,9 @@ const rbrawdata = {
     },
     RBTwo: {
       name: 'Placeholder',
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -67,6 +88,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -80,6 +104,9 @@ const rbrawdata = {
     RBOne: {
       name: 'Mixon',
       RBOneOrTwo: 1,
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
       halfTwentyFifthPercentProjectedPoints: 9.3,
       halfFiftyithPercentProjectedPoints: 12.8,
       halfSeventyFifthPercentProjectedPoints: 17.3,
@@ -90,12 +117,18 @@ const rbrawdata = {
       prjCarries: 22.4,
       prjTargets: 1.6,
 
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
     },
     RBTwo: {
       name: 'Evans',
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
       halfTwentyFifthPercentProjectedPoints: 0.7,
       halfFiftyithPercentProjectedPoints: 2.3,
       halfSeventyFifthPercentProjectedPoints: 5,
@@ -105,6 +138,9 @@ const rbrawdata = {
 
       prjCarries: 1,
       prjTargets: 0.4,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -117,6 +153,9 @@ const rbrawdata = {
     RBOne: {
       name: 'Placeholder',
       RBOneOrTwo: 1,
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -126,6 +165,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -133,6 +175,9 @@ const rbrawdata = {
     },
     RBTwo: {
       name: 'Placeholder',
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -142,6 +187,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -154,6 +202,9 @@ const rbrawdata = {
     RBOne: {
       name: 'Placeholder',
       RBOneOrTwo: 1,
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -163,6 +214,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -170,6 +224,9 @@ const rbrawdata = {
     },
     RBTwo: {
       name: 'Placeholder',
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -179,6 +236,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -191,6 +251,9 @@ const rbrawdata = {
     RBOne: {
       name: 'Placeholder',
       RBOneOrTwo: 1,
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -200,6 +263,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -207,6 +273,9 @@ const rbrawdata = {
     },
     RBTwo: {
       name: 'Placeholder',
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -216,6 +285,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -228,6 +300,9 @@ const rbrawdata = {
     RBOne: {
       name: 'Placeholder',
       RBOneOrTwo: 1,
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -237,6 +312,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -244,6 +322,9 @@ const rbrawdata = {
     },
     RBTwo: {
       name: 'Placeholder',
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -253,6 +334,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -265,6 +349,9 @@ const rbrawdata = {
     RBOne: {
       name: 'Placeholder',
       RBOneOrTwo: 1,
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -274,6 +361,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -281,6 +371,9 @@ const rbrawdata = {
     },
     RBTwo: {
       name: 'Placeholder',
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -290,6 +383,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -302,6 +398,9 @@ const rbrawdata = {
     RBOne: {
       name: 'Placeholder',
       RBOneOrTwo: 1,
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -311,6 +410,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -318,6 +420,9 @@ const rbrawdata = {
     },
     RBTwo: {
       name: 'Placeholder',
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -327,6 +432,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -339,6 +447,9 @@ const rbrawdata = {
     RBOne: {
       name: 'Edwards-Helaire',
       RBOneOrTwo: 1,
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
       halfTwentyFifthPercentProjectedPoints: 6.3,
       halfFiftyithPercentProjectedPoints: 9.8,
       halfSeventyFifthPercentProjectedPoints: 13.3,
@@ -349,12 +460,17 @@ const rbrawdata = {
       prjCarries: 11.25,
       prjTargets: 3,
 
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
     },
     RBTwo: {
       name: 'Darrell Williams',
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
 
       halfTwentyFifthPercentProjectedPoints: 5,
       halfFiftyithPercentProjectedPoints: 7,
@@ -365,6 +481,9 @@ const rbrawdata = {
 
       prjCarries: 5.6,
       prjTargets: 3.8,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -377,6 +496,9 @@ const rbrawdata = {
     RBOne: {
       name: 'Placeholder',
       RBOneOrTwo: 1,
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -386,6 +508,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -393,6 +518,9 @@ const rbrawdata = {
     },
     RBTwo: {
       name: 'Placeholder',
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -402,6 +530,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -414,6 +545,9 @@ const rbrawdata = {
     RBOne: {
       name: 'Placeholder',
       RBOneOrTwo: 1,
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -423,6 +557,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -430,6 +567,9 @@ const rbrawdata = {
     },
     RBTwo: {
       name: 'Placeholder',
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -439,6 +579,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -451,6 +594,9 @@ const rbrawdata = {
     RBOne: {
       name: 'Placeholder',
       RBOneOrTwo: 1,
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -460,6 +606,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -467,6 +616,9 @@ const rbrawdata = {
     },
     RBTwo: {
       name: 'Placeholder',
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -476,6 +628,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -488,6 +643,9 @@ const rbrawdata = {
     RBOne: {
       name: 'Myles Gaskin',
       RBOneOrTwo: 1,
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
       halfTwentyFifthPercentProjectedPoints: 8.3,
       halfFiftyithPercentProjectedPoints: 10.32,
       halfSeventyFifthPercentProjectedPoints: 12.5,
@@ -498,12 +656,18 @@ const rbrawdata = {
       prjCarries: 15.6,
       prjTargets: 2,
 
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
     },
     RBTwo: {
       name: 'Duke Johnson',
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
       halfTwentyFifthPercentProjectedPoints: 6,
       halfFiftyithPercentProjectedPoints: 8.3,
       halfSeventyFifthPercentProjectedPoints: 10,
@@ -513,6 +677,9 @@ const rbrawdata = {
 
       prjCarries: 13,
       prjTargets: 0.5,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -525,6 +692,9 @@ const rbrawdata = {
     RBOne: {
       name: 'Placeholder',
       RBOneOrTwo: 1,
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -534,6 +704,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -541,6 +714,9 @@ const rbrawdata = {
     },
     RBTwo: {
       name: 'Placeholder',
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -550,6 +726,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -562,6 +741,9 @@ const rbrawdata = {
     RBOne: {
       name: 'Placeholder',
       RBOneOrTwo: 1,
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -571,6 +753,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -578,6 +763,9 @@ const rbrawdata = {
     },
     RBTwo: {
       name: 'Placeholder',
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -587,6 +775,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -599,6 +790,9 @@ const rbrawdata = {
     RBOne: {
       name: 'Placeholder',
       RBOneOrTwo: 1,
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -608,6 +802,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -615,6 +812,9 @@ const rbrawdata = {
     },
     RBTwo: {
       name: 'Placeholder',
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -624,6 +824,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -636,6 +839,9 @@ const rbrawdata = {
     RBOne: {
       name: 'James Robinson',
       RBOneOrTwo: 1,
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
       halfTwentyFifthPercentProjectedPoints: 8.3,
       halfFiftyithPercentProjectedPoints: 10.15,
       halfSeventyFifthPercentProjectedPoints: 12.5,
@@ -646,12 +852,18 @@ const rbrawdata = {
       prjCarries: 12.2,
       prjTargets: 3.4,
 
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
     },
     RBTwo: {
       name: 'Carlos Hyde',
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
       halfTwentyFifthPercentProjectedPoints: 1,
       halfFiftyithPercentProjectedPoints: 2.52,
       halfSeventyFifthPercentProjectedPoints: 4,
@@ -661,6 +873,9 @@ const rbrawdata = {
 
       prjCarries: 4,
       prjTargets: 1.25,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -673,6 +888,9 @@ const rbrawdata = {
     RBOne: {
       name: 'Michael Carter',
       RBOneOrTwo: 1,
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
       halfTwentyFifthPercentProjectedPoints: 6,
       halfFiftyithPercentProjectedPoints: 9.78,
       halfSeventyFifthPercentProjectedPoints: 12,
@@ -683,12 +901,18 @@ const rbrawdata = {
       prjCarries: 11,
       prjTargets: 3,
 
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
     },
     RBTwo: {
       name: 'Tevin Coleman',
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
       halfTwentyFifthPercentProjectedPoints: 3.5,
       halfFiftyithPercentProjectedPoints: 5.9,
       halfSeventyFifthPercentProjectedPoints: 8,
@@ -698,6 +922,9 @@ const rbrawdata = {
 
       prjCarries: 8.8,
       prjTargets: 2.2,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -710,6 +937,9 @@ const rbrawdata = {
     RBOne: {
       name: 'Placeholder',
       RBOneOrTwo: 1,
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -719,6 +949,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -726,6 +959,9 @@ const rbrawdata = {
     },
     RBTwo: {
       name: 'Placeholder',
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -735,6 +971,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -747,6 +986,9 @@ const rbrawdata = {
     RBOne: {
       name: 'Placeholder',
       RBOneOrTwo: 1,
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -756,6 +998,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -763,6 +1008,9 @@ const rbrawdata = {
     },
     RBTwo: {
       name: 'Placeholder',
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -772,6 +1020,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -784,6 +1035,9 @@ const rbrawdata = {
     RBOne: {
       name: 'Placeholder',
       RBOneOrTwo: 1,
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -793,6 +1047,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -800,6 +1057,9 @@ const rbrawdata = {
     },
     RBTwo: {
       name: 'Placeholder',
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -809,6 +1069,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -821,6 +1084,9 @@ const rbrawdata = {
     RBOne: {
       name: 'Placeholder',
       RBOneOrTwo: 1,
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -830,6 +1096,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -837,6 +1106,9 @@ const rbrawdata = {
     },
     RBTwo: {
       name: 'Placeholder',
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -846,6 +1118,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -858,6 +1133,9 @@ const rbrawdata = {
     RBOne: {
       name: 'Placeholder',
       RBOneOrTwo: 1,
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -867,6 +1145,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -874,6 +1155,9 @@ const rbrawdata = {
     },
     RBTwo: {
       name: 'Placeholder',
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -883,6 +1167,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -895,6 +1182,9 @@ const rbrawdata = {
     RBOne: {
       name: 'Placeholder',
       RBOneOrTwo: 1,
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -904,6 +1194,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -911,6 +1204,9 @@ const rbrawdata = {
     },
     RBTwo: {
       name: 'Placeholder',
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -920,6 +1216,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -932,6 +1231,9 @@ const rbrawdata = {
     RBOne: {
       name: 'Devonta Freeman',
       RBOneOrTwo: 1,
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
       halfTwentyFifthPercentProjectedPoints: 7,
       halfFiftyithPercentProjectedPoints: 10,
       halfSeventyFifthPercentProjectedPoints: 13,
@@ -942,12 +1244,18 @@ const rbrawdata = {
       prjCarries: 12.5,
       prjTargets: 4.16,
 
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
     },
     RBTwo: {
       name: 'Latavius Murray',
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
       halfTwentyFifthPercentProjectedPoints: 2,
       halfFiftyithPercentProjectedPoints: 4,
       halfSeventyFifthPercentProjectedPoints: 6,
@@ -957,6 +1265,9 @@ const rbrawdata = {
 
       prjCarries: 5.6,
       prjTargets: 1.4,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -969,6 +1280,9 @@ const rbrawdata = {
     RBOne: {
       name: 'Alvin Kamara',
       RBOneOrTwo: 1,
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
       halfTwentyFifthPercentProjectedPoints: 11,
       halfFiftyithPercentProjectedPoints: 13.4,
       halfSeventyFifthPercentProjectedPoints: 15,
@@ -979,12 +1293,18 @@ const rbrawdata = {
       prjCarries: 17.5,
       prjTargets: 5.5,
 
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
     },
     RBTwo: {
       name: 'Mark Ingram',
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
       halfTwentyFifthPercentProjectedPoints: 6,
       halfFiftyithPercentProjectedPoints: 8,
       halfSeventyFifthPercentProjectedPoints: 10,
@@ -994,6 +1314,9 @@ const rbrawdata = {
 
       prjCarries: 10.6,
       prjTargets: 4.3,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1006,6 +1329,9 @@ const rbrawdata = {
     RBOne: {
       name: 'Placeholder',
       RBOneOrTwo: 1,
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -1015,6 +1341,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1022,6 +1351,9 @@ const rbrawdata = {
     },
     RBTwo: {
       name: 'Placeholder',
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -1031,6 +1363,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1043,6 +1378,9 @@ const rbrawdata = {
     RBOne: {
       name: 'Najee Harris',
       RBOneOrTwo: 1,
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
       halfTwentyFifthPercentProjectedPoints: 10,
       halfFiftyithPercentProjectedPoints: 12.73,
       halfSeventyFifthPercentProjectedPoints: 15,
@@ -1053,12 +1391,18 @@ const rbrawdata = {
       prjCarries: 16.5,
       prjTargets: 4.6,
 
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
     },
     RBTwo: {
       name: 'Benny Snell',
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
       halfTwentyFifthPercentProjectedPoints: 0.5,
       halfFiftyithPercentProjectedPoints: 1,
       halfSeventyFifthPercentProjectedPoints: 2,
@@ -1068,6 +1412,9 @@ const rbrawdata = {
 
       prjCarries: 1,
       prjTargets: 1,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1080,6 +1427,9 @@ const rbrawdata = {
     RBOne: {
       name: 'Placeholder',
       RBOneOrTwo: 1,
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -1089,6 +1439,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1096,6 +1449,9 @@ const rbrawdata = {
     },
     RBTwo: {
       name: 'Placeholder',
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -1105,6 +1461,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1117,6 +1476,9 @@ const rbrawdata = {
     RBOne: {
       name: 'Placeholder',
       RBOneOrTwo: 1,
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -1126,6 +1488,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1133,6 +1498,9 @@ const rbrawdata = {
     },
     RBTwo: {
       name: 'Placeholder',
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -1142,6 +1510,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1155,6 +1526,9 @@ const rbrawdata = {
     RBOne: {
       name: 'Placeholder',
       RBOneOrTwo: 1,
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -1164,6 +1538,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1171,6 +1548,9 @@ const rbrawdata = {
     },
     RBTwo: {
       name: 'Placeholder',
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -1180,6 +1560,9 @@ const rbrawdata = {
 
       prjCarries: 0,
       prjTargets: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
