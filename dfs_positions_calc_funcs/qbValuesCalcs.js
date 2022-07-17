@@ -3,6 +3,10 @@ const allTeams = require('../teamandpositionvariables/allTeamLevelVariables');
 const allQBs = require('../teamandpositionvariables/allQBVariables');
 const qbrawdata = require('../teamandpostionsrawdata/qbrawdata');
 const wrrawdata = require('../teamandpostionsrawdata/wrrawdata');
+const gameInfo = require('../teamandpostionsrawdata/gameinfo');
+const {
+  allTeamsBestHalfDoubleStackWithQBAndWROneWithNames,
+} = require('./stackingValuesCalcs');
 
 const allQBTotalScores = [];
 
@@ -173,6 +177,7 @@ allQBTotalScores.map(function (score, i, array) {
 
   let QBProjectedPoints = 0;
 
+  // if (gameInfo.week.currentWeek !== 1 || gameInfo.week.currentWeek !== 2) {
   if (score >= 35) {
     QBProjectedPoints = seventyFifthPercentProjection;
   } else if (score >= -25) {
@@ -180,6 +185,13 @@ allQBTotalScores.map(function (score, i, array) {
   } else {
     QBProjectedPoints = twentyFifthPercentProjection;
   }
+  // }
+  // if (gameInfo.week.currentWeek === 1 || gameInfo.week.currentWeek === 2) {
+  //   allQBs.forEach(function (team) {
+  //     console.log(team);
+  //     // QBProjectedPoints = team.fourForFourHalfPPRProjectedPoints;
+  //   });
+  // }
 
   allQBFinalProjectedPointsValues.push(QBProjectedPoints);
   allQBFinalProjectedPointsValuesPlusNames.push(
