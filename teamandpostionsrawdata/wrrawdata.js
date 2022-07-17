@@ -21,6 +21,12 @@ const wrrawdata = {
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -39,6 +45,12 @@ const wrrawdata = {
 
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
+
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -64,6 +76,12 @@ const wrrawdata = {
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -82,6 +100,12 @@ const wrrawdata = {
 
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
+
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -107,6 +131,12 @@ const wrrawdata = {
       targetShareLastThreeGamesPlayed: 25.8,
       projectedTargets4For4: 8,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -125,6 +155,12 @@ const wrrawdata = {
 
       targetShareLastThreeGamesPlayed: 21.5,
       projectedTargets4For4: 6.67,
+
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -150,6 +186,12 @@ const wrrawdata = {
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -168,6 +210,12 @@ const wrrawdata = {
 
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
+
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -193,6 +241,12 @@ const wrrawdata = {
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -211,6 +265,12 @@ const wrrawdata = {
 
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
+
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -236,6 +296,12 @@ const wrrawdata = {
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -254,6 +320,12 @@ const wrrawdata = {
 
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
+
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -280,6 +352,12 @@ const wrrawdata = {
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -298,6 +376,12 @@ const wrrawdata = {
 
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
+
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -323,6 +407,12 @@ const wrrawdata = {
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -341,6 +431,12 @@ const wrrawdata = {
 
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
+
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -366,6 +462,12 @@ const wrrawdata = {
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -384,6 +486,12 @@ const wrrawdata = {
 
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
+
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -409,6 +517,12 @@ const wrrawdata = {
       targetShareLastThreeGamesPlayed: 23.4,
       projectedTargets4For4: 7.3,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -427,6 +541,12 @@ const wrrawdata = {
 
       targetShareLastThreeGamesPlayed: 9.6,
       projectedTargets4For4: 3,
+
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -452,6 +572,12 @@ const wrrawdata = {
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -470,6 +596,12 @@ const wrrawdata = {
 
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
+
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -495,6 +627,12 @@ const wrrawdata = {
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -513,6 +651,12 @@ const wrrawdata = {
 
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
+
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -538,6 +682,12 @@ const wrrawdata = {
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -556,6 +706,12 @@ const wrrawdata = {
 
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
+
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -581,6 +737,12 @@ const wrrawdata = {
       targetShareLastThreeGamesPlayed: 22.75,
       projectedTargets4For4: 10,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -599,6 +761,12 @@ const wrrawdata = {
 
       targetShareLastThreeGamesPlayed: 9.8,
       projectedTargets4For4: 6.5,
+
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -624,6 +792,12 @@ const wrrawdata = {
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -642,6 +816,12 @@ const wrrawdata = {
 
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
+
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -667,6 +847,12 @@ const wrrawdata = {
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -685,6 +871,12 @@ const wrrawdata = {
 
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
+
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -710,6 +902,12 @@ const wrrawdata = {
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -728,6 +926,12 @@ const wrrawdata = {
 
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
+
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -753,6 +957,12 @@ const wrrawdata = {
       targetShareLastThreeGamesPlayed: 19.8,
       projectedTargets4For4: 6.67,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -771,6 +981,12 @@ const wrrawdata = {
 
       targetShareLastThreeGamesPlayed: 18.8,
       projectedTargets4For4: 6.34,
+
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -796,6 +1012,12 @@ const wrrawdata = {
       targetShareLastThreeGamesPlayed: 19.9,
       projectedTargets4For4: 10.3,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -814,6 +1036,12 @@ const wrrawdata = {
 
       targetShareLastThreeGamesPlayed: 17.9,
       projectedTargets4For4: 5.6,
+
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -839,6 +1067,12 @@ const wrrawdata = {
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -857,6 +1091,12 @@ const wrrawdata = {
 
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
+
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -882,6 +1122,12 @@ const wrrawdata = {
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -900,6 +1146,12 @@ const wrrawdata = {
 
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
+
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -925,6 +1177,12 @@ const wrrawdata = {
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -943,6 +1201,12 @@ const wrrawdata = {
 
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
+
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -968,6 +1232,12 @@ const wrrawdata = {
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -986,6 +1256,12 @@ const wrrawdata = {
 
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
+
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1012,6 +1288,12 @@ const wrrawdata = {
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -1030,6 +1312,12 @@ const wrrawdata = {
 
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
+
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1055,6 +1343,12 @@ const wrrawdata = {
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -1073,6 +1367,12 @@ const wrrawdata = {
 
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
+
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1098,6 +1398,12 @@ const wrrawdata = {
       targetShareLastThreeGamesPlayed: 25,
       projectedTargets4For4: 9.66,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -1116,6 +1422,12 @@ const wrrawdata = {
 
       targetShareLastThreeGamesPlayed: 9.5,
       projectedTargets4For4: 3.66,
+
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1141,6 +1453,12 @@ const wrrawdata = {
       targetShareLastThreeGamesPlayed: 16.6,
       projectedTargets4For4: 5,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -1159,6 +1477,12 @@ const wrrawdata = {
 
       targetShareLastThreeGamesPlayed: 5.3,
       projectedTargets4For4: 2.67,
+
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1184,6 +1508,12 @@ const wrrawdata = {
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -1202,6 +1532,12 @@ const wrrawdata = {
 
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
+
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1227,6 +1563,12 @@ const wrrawdata = {
       targetShareLastThreeGamesPlayed: 27.7,
       projectedTargets4For4: 8.67,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -1245,6 +1587,12 @@ const wrrawdata = {
 
       targetShareLastThreeGamesPlayed: 14.9,
       projectedTargets4For4: 4.67,
+
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1270,6 +1618,12 @@ const wrrawdata = {
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -1288,6 +1642,12 @@ const wrrawdata = {
 
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
+
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1313,6 +1673,12 @@ const wrrawdata = {
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -1331,6 +1697,12 @@ const wrrawdata = {
 
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
+
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1356,6 +1728,12 @@ const wrrawdata = {
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -1374,6 +1752,12 @@ const wrrawdata = {
 
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
+
+      roleThisWeek: 2,
+      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
