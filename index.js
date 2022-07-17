@@ -457,8 +457,9 @@ teamDef
   });
 
 app.get('/', (req, res) => {
+  const group = 'home';
   console.log('we got a new request');
-  res.render('home');
+  res.render('home', { group });
 });
 
 app.get('/pos/:position', (req, res) => {

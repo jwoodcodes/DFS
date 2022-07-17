@@ -19,6 +19,12 @@ const terawdata = {
 
       catchRateLastFiveGames: 0,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -43,6 +49,12 @@ const terawdata = {
       projectedTargets4For4: 0,
 
       catchRateLastFiveGames: 0,
+
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -69,6 +81,12 @@ const terawdata = {
 
       catchRateLastFiveGames: 0.682,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -93,6 +111,12 @@ const terawdata = {
       projectedTargets4For4: 0,
 
       catchRateLastFiveGames: 0,
+
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -119,6 +143,12 @@ const terawdata = {
 
       catchRateLastFiveGames: 0,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -143,6 +173,12 @@ const terawdata = {
       projectedTargets4For4: 0,
 
       catchRateLastFiveGames: 0,
+
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -169,6 +205,12 @@ const terawdata = {
 
       catchRateLastFiveGames: 0,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -193,6 +235,12 @@ const terawdata = {
       projectedTargets4For4: 0,
 
       catchRateLastFiveGames: 0,
+
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -219,6 +267,12 @@ const terawdata = {
 
       catchRateLastFiveGames: 0,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -243,6 +297,12 @@ const terawdata = {
       projectedTargets4For4: 8.2,
 
       catchRateLastFiveGames: 0.636,
+
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -269,6 +329,12 @@ const terawdata = {
 
       catchRateLastFiveGames: 0,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -293,6 +359,12 @@ const terawdata = {
       projectedTargets4For4: 0,
 
       catchRateLastFiveGames: 0,
+
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -319,6 +391,12 @@ const terawdata = {
 
       catchRateLastFiveGames: 0,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -343,6 +421,12 @@ const terawdata = {
       projectedTargets4For4: 7.3,
 
       catchRateLastFiveGames: 0.714,
+
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -369,6 +453,12 @@ const terawdata = {
 
       catchRateLastFiveGames: 0,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -393,6 +483,12 @@ const terawdata = {
       projectedTargets4For4: 0,
 
       catchRateLastFiveGames: 0,
+
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -419,6 +515,12 @@ const terawdata = {
 
       catchRateLastFiveGames: 0,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -443,6 +545,12 @@ const terawdata = {
       projectedTargets4For4: 5.33,
 
       catchRateLastFiveGames: 0.619,
+
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -469,6 +577,12 @@ const terawdata = {
 
       catchRateLastFiveGames: 0.8,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -493,6 +607,12 @@ const terawdata = {
       projectedTargets4For4: 0,
 
       catchRateLastFiveGames: 0,
+
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -519,6 +639,12 @@ const terawdata = {
 
       catchRateLastFiveGames: 0,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -543,6 +669,12 @@ const terawdata = {
       projectedTargets4For4: 0,
 
       catchRateLastFiveGames: 0,
+
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -569,6 +701,12 @@ const terawdata = {
 
       catchRateLastFiveGames: 0,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -593,6 +731,12 @@ const terawdata = {
       projectedTargets4For4: 0,
 
       catchRateLastFiveGames: 0,
+
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -619,6 +763,12 @@ const terawdata = {
 
       catchRateLastFiveGames: 0,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -643,6 +793,18 @@ const terawdata = {
       projectedTargets4For4: 11,
 
       catchRateLastFiveGames: 0.698,
+
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -669,6 +831,12 @@ const terawdata = {
 
       catchRateLastFiveGames: 0.615,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -693,6 +861,12 @@ const terawdata = {
       projectedTargets4For4: 0,
 
       catchRateLastFiveGames: 0,
+
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -719,6 +893,12 @@ const terawdata = {
 
       catchRateLastFiveGames: 0.773,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -743,6 +923,12 @@ const terawdata = {
       projectedTargets4For4: 0,
 
       catchRateLastFiveGames: 0,
+
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -769,6 +955,12 @@ const terawdata = {
 
       catchRateLastFiveGames: 0,
 
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
@@ -793,6 +985,12 @@ const terawdata = {
       projectedTargets4For4: 0,
 
       catchRateLastFiveGames: 0,
+
+      roleThisWeek: 1,
+      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
