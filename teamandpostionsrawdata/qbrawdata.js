@@ -6,6 +6,9 @@ const qbrawdata = {
   SF49ers: {
     teamVTT: 0,
     name: 'Jimmy Garoppolo',
+    roleThisWeek: 1,
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
     seventyFifthPercentProjectedPoints: 0,
@@ -13,6 +16,9 @@ const qbrawdata = {
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    fourForFourHalfPPRProjectedPoints: 0,
+    fourForFourFullPPRProjectedPoints: 0,
 
     yahooSalary: 24,
     fanduelSalary: 7100,
@@ -21,6 +27,9 @@ const qbrawdata = {
   bears: {
     teamVTT: 17,
     name: 'Justin Fields',
+    roleThisWeek: 1,
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
     seventyFifthPercentProjectedPoints: 0,
@@ -28,6 +37,9 @@ const qbrawdata = {
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    fourForFourHalfPPRProjectedPoints: 0,
+    fourForFourFullPPRProjectedPoints: 0,
 
     yahooSalary: 23,
     fanduelSalary: 6300,
@@ -36,6 +48,9 @@ const qbrawdata = {
   bengals: {
     teamVTT: 25,
     name: 'Joe Burrow',
+    roleThisWeek: 1,
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
     twentyFifthPercentProjectedPoints: 12,
     fiftyithPercentProjectedPoints: 16,
     seventyFifthPercentProjectedPoints: 23,
@@ -44,6 +59,9 @@ const qbrawdata = {
     TDrateLastFiveGames: 4.0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 15,
 
+    fourForFourHalfPPRProjectedPoints: 0,
+    fourForFourFullPPRProjectedPoints: 0,
+
     yahooSalary: 30,
     fanduelSalary: 7700,
     draftkingsSalary: 6900,
@@ -51,6 +69,9 @@ const qbrawdata = {
   bills: {
     teamVTT: 0,
     name: 'Josh Allen',
+    roleThisWeek: 1,
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
     seventyFifthPercentProjectedPoints: 0,
@@ -58,6 +79,9 @@ const qbrawdata = {
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    fourForFourHalfPPRProjectedPoints: 0,
+    fourForFourFullPPRProjectedPoints: 0,
 
     yahooSalary: 37,
     fanduelSalary: 8800,
@@ -66,6 +90,9 @@ const qbrawdata = {
   broncos: {
     teamVTT: 0,
     name: 'Teddy Bridgewater',
+    roleThisWeek: 1,
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
     seventyFifthPercentProjectedPoints: 0,
@@ -73,6 +100,9 @@ const qbrawdata = {
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    fourForFourHalfPPRProjectedPoints: 0,
+    fourForFourFullPPRProjectedPoints: 0,
 
     yahooSalary: 23,
     fanduelSalary: 6500,
@@ -81,6 +111,9 @@ const qbrawdata = {
   browns: {
     teamVTT: 0,
     name: 'Baker Mayfield',
+    roleThisWeek: 1,
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
     seventyFifthPercentProjectedPoints: 0,
@@ -88,6 +121,9 @@ const qbrawdata = {
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    fourForFourHalfPPRProjectedPoints: 0,
+    fourForFourFullPPRProjectedPoints: 0,
 
     yahooSalary: 20,
     fanduelSalary: 6700,
@@ -96,6 +132,9 @@ const qbrawdata = {
   buccaneers: {
     teamVTT: 27.25,
     name: 'Tom Brady',
+    roleThisWeek: 1,
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
     seventyFifthPercentProjectedPoints: 0,
@@ -103,6 +142,9 @@ const qbrawdata = {
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    fourForFourHalfPPRProjectedPoints: 0,
+    fourForFourFullPPRProjectedPoints: 0,
 
     yahooSalary: 34,
     fanduelSalary: 8300,
@@ -111,6 +153,9 @@ const qbrawdata = {
   cardinals: {
     teamVTT: 25.5,
     name: 'Kyler Murray',
+    roleThisWeek: 1,
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
     seventyFifthPercentProjectedPoints: 0,
@@ -118,6 +163,9 @@ const qbrawdata = {
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    fourForFourHalfPPRProjectedPoints: 0,
+    fourForFourFullPPRProjectedPoints: 0,
 
     yahooSalary: 35,
     fanduelSalary: 8200,
@@ -126,6 +174,9 @@ const qbrawdata = {
   chargers: {
     teamVTT: 29,
     name: 'Justin Herbert',
+    roleThisWeek: 1,
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
     seventyFifthPercentProjectedPoints: 0,
@@ -133,6 +184,9 @@ const qbrawdata = {
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    fourForFourHalfPPRProjectedPoints: 0,
+    fourForFourFullPPRProjectedPoints: 0,
 
     yahooSalary: 0,
     fanduelSalary: 0,
@@ -141,6 +195,9 @@ const qbrawdata = {
   chiefs: {
     teamVTT: 27.5,
     name: 'Mahomes',
+    roleThisWeek: 1,
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
     twentyFifthPercentProjectedPoints: 13,
     fiftyithPercentProjectedPoints: 17,
     seventyFifthPercentProjectedPoints: 24,
@@ -149,6 +206,9 @@ const qbrawdata = {
     TDrateLastFiveGames: 5.3,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 13,
 
+    fourForFourHalfPPRProjectedPoints: 0,
+    fourForFourFullPPRProjectedPoints: 0,
+
     yahooSalary: 0,
     fanduelSalary: 0,
     draftkingsSalary: 0,
@@ -156,6 +216,9 @@ const qbrawdata = {
   colts: {
     teamVTT: 0,
     name: 'Placeholder',
+    roleThisWeek: 1,
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
     seventyFifthPercentProjectedPoints: 0,
@@ -163,6 +226,9 @@ const qbrawdata = {
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    fourForFourHalfPPRProjectedPoints: 0,
+    fourForFourFullPPRProjectedPoints: 0,
 
     yahooSalary: 0,
     fanduelSalary: 0,
@@ -171,6 +237,9 @@ const qbrawdata = {
   comanders: {
     teamVTT: 0,
     name: 'Placeholder',
+    roleThisWeek: 1,
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
     seventyFifthPercentProjectedPoints: 0,
@@ -178,6 +247,9 @@ const qbrawdata = {
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    fourForFourHalfPPRProjectedPoints: 0,
+    fourForFourFullPPRProjectedPoints: 0,
 
     yahooSalary: 0,
     fanduelSalary: 0,
@@ -186,6 +258,9 @@ const qbrawdata = {
   cowboys: {
     teamVTT: 0,
     name: 'Placeholder',
+    roleThisWeek: 1,
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
     seventyFifthPercentProjectedPoints: 0,
@@ -193,6 +268,9 @@ const qbrawdata = {
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    fourForFourHalfPPRProjectedPoints: 0,
+    fourForFourFullPPRProjectedPoints: 0,
 
     yahooSalary: 0,
     fanduelSalary: 0,
@@ -201,6 +279,9 @@ const qbrawdata = {
   dolphins: {
     teamVTT: 20.25,
     name: 'Tagovailoa',
+    roleThisWeek: 1,
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
     twentyFifthPercentProjectedPoints: 11,
     fiftyithPercentProjectedPoints: 15,
     seventyFifthPercentProjectedPoints: 17.5,
@@ -209,6 +290,9 @@ const qbrawdata = {
     TDrateLastFiveGames: 5.3,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 8,
 
+    fourForFourHalfPPRProjectedPoints: 0,
+    fourForFourFullPPRProjectedPoints: 0,
+
     yahooSalary: 0,
     fanduelSalary: 0,
     draftkingsSalary: 0,
@@ -216,6 +300,9 @@ const qbrawdata = {
   eagles: {
     teamVTT: 0,
     name: 'Placeholder',
+    roleThisWeek: 1,
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
     seventyFifthPercentProjectedPoints: 0,
@@ -223,6 +310,9 @@ const qbrawdata = {
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    fourForFourHalfPPRProjectedPoints: 0,
+    fourForFourFullPPRProjectedPoints: 0,
 
     yahooSalary: 0,
     fanduelSalary: 0,
@@ -231,6 +321,9 @@ const qbrawdata = {
   falcons: {
     teamVTT: 0,
     name: 'Placeholder',
+    roleThisWeek: 1,
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
     seventyFifthPercentProjectedPoints: 0,
@@ -238,6 +331,9 @@ const qbrawdata = {
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    fourForFourHalfPPRProjectedPoints: 0,
+    fourForFourFullPPRProjectedPoints: 0,
 
     yahooSalary: 0,
     fanduelSalary: 0,
@@ -246,6 +342,9 @@ const qbrawdata = {
   giants: {
     teamVTT: 0,
     name: 'Placeholder',
+    roleThisWeek: 1,
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
     seventyFifthPercentProjectedPoints: 0,
@@ -254,14 +353,19 @@ const qbrawdata = {
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
 
+    fourForFourHalfPPRProjectedPoints: 0,
+    fourForFourFullPPRProjectedPoints: 0,
+
     yahooSalary: 0,
     fanduelSalary: 0,
     draftkingsSalary: 0,
   },
   jaguars: {
     teamVTT: 20.25,
-
     name: 'Lawrence',
+    roleThisWeek: 1,
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
     twentyFifthPercentProjectedPoints: 10,
     fiftyithPercentProjectedPoints: 14,
     seventyFifthPercentProjectedPoints: 18,
@@ -270,14 +374,19 @@ const qbrawdata = {
     TDrateLastFiveGames: 1,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 7,
 
+    fourForFourHalfPPRProjectedPoints: 0,
+    fourForFourFullPPRProjectedPoints: 0,
+
     yahooSalary: 0,
     fanduelSalary: 0,
     draftkingsSalary: 0,
   },
   jets: {
     teamVTT: 15,
-
     name: 'Wilson',
+    roleThisWeek: 1,
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
     twentyFifthPercentProjectedPoints: 9,
     fiftyithPercentProjectedPoints: 14,
     seventyFifthPercentProjectedPoints: 19,
@@ -286,6 +395,9 @@ const qbrawdata = {
     TDrateLastFiveGames: 1.5,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 9,
 
+    fourForFourHalfPPRProjectedPoints: 0,
+    fourForFourFullPPRProjectedPoints: 0,
+
     yahooSalary: 0,
     fanduelSalary: 0,
     draftkingsSalary: 0,
@@ -293,6 +405,9 @@ const qbrawdata = {
   lions: {
     teamVTT: 0,
     name: 'Placeholder',
+    roleThisWeek: 1,
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
     seventyFifthPercentProjectedPoints: 0,
@@ -300,6 +415,9 @@ const qbrawdata = {
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    fourForFourHalfPPRProjectedPoints: 0,
+    fourForFourFullPPRProjectedPoints: 0,
 
     yahooSalary: 0,
     fanduelSalary: 0,
@@ -308,6 +426,9 @@ const qbrawdata = {
   packers: {
     teamVTT: 0,
     name: 'Placeholder',
+    roleThisWeek: 1,
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
     seventyFifthPercentProjectedPoints: 0,
@@ -315,6 +436,9 @@ const qbrawdata = {
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    fourForFourHalfPPRProjectedPoints: 0,
+    fourForFourFullPPRProjectedPoints: 0,
 
     yahooSalary: 0,
     fanduelSalary: 0,
@@ -323,6 +447,9 @@ const qbrawdata = {
   panthers: {
     teamVTT: 0,
     name: 'Placeholder',
+    roleThisWeek: 1,
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
     seventyFifthPercentProjectedPoints: 0,
@@ -330,6 +457,9 @@ const qbrawdata = {
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    fourForFourHalfPPRProjectedPoints: 0,
+    fourForFourFullPPRProjectedPoints: 0,
 
     yahooSalary: 0,
     fanduelSalary: 0,
@@ -338,6 +468,9 @@ const qbrawdata = {
   patriots: {
     teamVTT: 0,
     name: 'Placeholder',
+    roleThisWeek: 1,
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
     seventyFifthPercentProjectedPoints: 0,
@@ -345,6 +478,9 @@ const qbrawdata = {
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    fourForFourHalfPPRProjectedPoints: 0,
+    fourForFourFullPPRProjectedPoints: 0,
 
     yahooSalary: 0,
     fanduelSalary: 0,
@@ -353,6 +489,9 @@ const qbrawdata = {
   raiders: {
     teamVTT: 0,
     name: 'Placeholder',
+    roleThisWeek: 1,
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
     seventyFifthPercentProjectedPoints: 0,
@@ -360,6 +499,9 @@ const qbrawdata = {
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    fourForFourHalfPPRProjectedPoints: 0,
+    fourForFourFullPPRProjectedPoints: 0,
 
     yahooSalary: 0,
     fanduelSalary: 0,
@@ -368,6 +510,9 @@ const qbrawdata = {
   rams: {
     teamVTT: 0,
     name: 'Placeholder',
+    roleThisWeek: 1,
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
     seventyFifthPercentProjectedPoints: 0,
@@ -375,6 +520,9 @@ const qbrawdata = {
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    fourForFourHalfPPRProjectedPoints: 0,
+    fourForFourFullPPRProjectedPoints: 0,
 
     yahooSalary: 0,
     fanduelSalary: 0,
@@ -383,6 +531,9 @@ const qbrawdata = {
   ravens: {
     teamVTT: 18.25,
     name: 'Huntley',
+    roleThisWeek: 1,
+    roleLastXNumOfWeeksUpToFive: [1],
+
     twentyFifthPercentProjectedPoints: 10,
     fiftyithPercentProjectedPoints: 13,
     seventyFifthPercentProjectedPoints: 16,
@@ -391,6 +542,9 @@ const qbrawdata = {
     TDrateLastFiveGames: 2.6,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 7,
 
+    fourForFourHalfPPRProjectedPoints: 0,
+    fourForFourFullPPRProjectedPoints: 0,
+
     yahooSalary: 0,
     fanduelSalary: 0,
     draftkingsSalary: 0,
@@ -398,6 +552,9 @@ const qbrawdata = {
   saints: {
     teamVTT: 17.25,
     name: 'Hill',
+    roleThisWeek: 1,
+    roleLastXNumOfWeeksUpToFive: [1, 1],
+
     twentyFifthPercentProjectedPoints: 10,
     fiftyithPercentProjectedPoints: 14,
     seventyFifthPercentProjectedPoints: 18,
@@ -406,6 +563,9 @@ const qbrawdata = {
     TDrateLastFiveGames: 2.2,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 7,
 
+    fourForFourHalfPPRProjectedPoints: 0,
+    fourForFourFullPPRProjectedPoints: 0,
+
     yahooSalary: 0,
     fanduelSalary: 0,
     draftkingsSalary: 0,
@@ -413,6 +573,9 @@ const qbrawdata = {
   seahawks: {
     teamVTT: 0,
     name: 'Placeholder',
+    roleThisWeek: 1,
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
     seventyFifthPercentProjectedPoints: 0,
@@ -420,6 +583,9 @@ const qbrawdata = {
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    fourForFourHalfPPRProjectedPoints: 0,
+    fourForFourFullPPRProjectedPoints: 0,
 
     yahooSalary: 0,
     fanduelSalary: 0,
@@ -428,6 +594,9 @@ const qbrawdata = {
   steelers: {
     teamVTT: 17,
     name: 'Roethlisberger',
+    roleThisWeek: 1,
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
     twentyFifthPercentProjectedPoints: 9,
     fiftyithPercentProjectedPoints: 12,
     seventyFifthPercentProjectedPoints: 15,
@@ -436,6 +605,9 @@ const qbrawdata = {
     TDrateLastFiveGames: 5,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 9,
 
+    fourForFourHalfPPRProjectedPoints: 0,
+    fourForFourFullPPRProjectedPoints: 0,
+
     yahooSalary: 0,
     fanduelSalary: 0,
     draftkingsSalary: 0,
@@ -443,6 +615,9 @@ const qbrawdata = {
   texans: {
     teamVTT: 0,
     name: 'Placeholder',
+    roleThisWeek: 1,
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
     seventyFifthPercentProjectedPoints: 0,
@@ -450,6 +625,9 @@ const qbrawdata = {
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    fourForFourHalfPPRProjectedPoints: 0,
+    fourForFourFullPPRProjectedPoints: 0,
 
     yahooSalary: 0,
     fanduelSalary: 0,
@@ -458,6 +636,9 @@ const qbrawdata = {
   titans: {
     teamVTT: 0,
     name: 'Placeholder',
+    roleThisWeek: 1,
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
     seventyFifthPercentProjectedPoints: 0,
@@ -466,6 +647,9 @@ const qbrawdata = {
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
 
+    fourForFourHalfPPRProjectedPoints: 0,
+    fourForFourFullPPRProjectedPoints: 0,
+
     yahooSalary: 0,
     fanduelSalary: 0,
     draftkingsSalary: 0,
@@ -473,6 +657,9 @@ const qbrawdata = {
   vikings: {
     teamVTT: 0,
     name: 'Placeholder',
+    roleThisWeek: 1,
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
     seventyFifthPercentProjectedPoints: 0,
@@ -480,6 +667,9 @@ const qbrawdata = {
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    fourForFourHalfPPRProjectedPoints: 0,
+    fourForFourFullPPRProjectedPoints: 0,
 
     yahooSalary: 0,
     fanduelSalary: 0,
