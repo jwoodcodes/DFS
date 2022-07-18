@@ -3,6 +3,7 @@ const allTeams = require('../teamandpositionvariables/allTeamLevelVariables');
 const allQBs = require('../teamandpositionvariables/allQBVariables');
 const qbrawdata = require('../teamandpostionsrawdata/qbrawdata');
 const wrrawdata = require('../teamandpostionsrawdata/wrrawdata');
+const gameInfo = require('../teamandpostionsrawdata/gameinfo');
 
 const allQBTotalScores = [];
 
@@ -173,14 +174,24 @@ allQBTotalScores.map(function (score, i, array) {
 
   let QBProjectedPoints = 0;
 
-  if (score >= 35) {
-    QBProjectedPoints = seventyFifthPercentProjection;
-  } else if (score >= -25) {
-    QBProjectedPoints = fiftyithPercentProjection;
-  } else {
-    QBProjectedPoints = twentyFifthPercentProjection;
+  console.log(gameInfo.week.currentWeek);
+
+  if (gameInfo.week.currentWeek < 3) {
+    allQBs.map(function (team, i) {
+      // console.log(team.fourForFourHalfPPRProjectedPoints);
+      QBProjectedPoints = team.fourForFourHalfPPRProjectedPoints;
+    });
   }
 
+  if (gameInfo.week.currentWeek > 2) {
+    if (score >= 35) {
+      QBProjectedPoints = seventyFifthPercentProjection;
+    } else if (score >= -25) {
+      QBProjectedPoints = fiftyithPercentProjection;
+    } else {
+      QBProjectedPoints = twentyFifthPercentProjection;
+    }
+  }
   allQBFinalProjectedPointsValues.push(QBProjectedPoints);
   allQBFinalProjectedPointsValuesPlusNames.push(
     `${allQBs[i].name}: ${QBProjectedPoints}`
