@@ -7,6 +7,7 @@ const qbrawdata = {
     teamVTT: 0,
     name: 'Jimmy Garoppolo',
     roleThisWeek: 1,
+    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS WEEK!!!!!!!!!!!!!!
     roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
 
     twentyFifthPercentProjectedPoints: 0,
@@ -28,6 +29,7 @@ const qbrawdata = {
     teamVTT: 17,
     name: 'Justin Fields',
     roleThisWeek: 1,
+    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS WEEK!!!!!!!!!!!!!!
     roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
 
     twentyFifthPercentProjectedPoints: 0,
@@ -49,7 +51,8 @@ const qbrawdata = {
     teamVTT: 25,
     name: 'Joe Burrow',
     roleThisWeek: 1,
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1],
+    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
 
     twentyFifthPercentProjectedPoints: 12,
     fiftyithPercentProjectedPoints: 16,
@@ -70,6 +73,7 @@ const qbrawdata = {
     teamVTT: 0,
     name: 'Josh Allen',
     roleThisWeek: 1,
+    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
     roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
 
     twentyFifthPercentProjectedPoints: 0,
@@ -91,6 +95,7 @@ const qbrawdata = {
     teamVTT: 0,
     name: 'Teddy Bridgewater',
     roleThisWeek: 1,
+    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
     roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
 
     twentyFifthPercentProjectedPoints: 0,
@@ -112,6 +117,7 @@ const qbrawdata = {
     teamVTT: 0,
     name: 'Baker Mayfield',
     roleThisWeek: 1,
+    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
     roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
 
     twentyFifthPercentProjectedPoints: 0,
@@ -133,6 +139,7 @@ const qbrawdata = {
     teamVTT: 27.25,
     name: 'Tom Brady',
     roleThisWeek: 1,
+    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
     roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
 
     twentyFifthPercentProjectedPoints: 0,
@@ -154,6 +161,7 @@ const qbrawdata = {
     teamVTT: 25.5,
     name: 'Kyler Murray',
     roleThisWeek: 1,
+    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
     roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
 
     twentyFifthPercentProjectedPoints: 0,
@@ -175,6 +183,7 @@ const qbrawdata = {
     teamVTT: 29,
     name: 'Justin Herbert',
     roleThisWeek: 1,
+    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
     roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
 
     twentyFifthPercentProjectedPoints: 0,
@@ -196,7 +205,8 @@ const qbrawdata = {
     teamVTT: 27.5,
     name: 'Mahomes',
     roleThisWeek: 1,
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1],
+    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
 
     twentyFifthPercentProjectedPoints: 13,
     fiftyithPercentProjectedPoints: 17,
@@ -217,6 +227,7 @@ const qbrawdata = {
     teamVTT: 0,
     name: 'Placeholder',
     roleThisWeek: 1,
+    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
     roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
 
     twentyFifthPercentProjectedPoints: 0,
@@ -238,6 +249,7 @@ const qbrawdata = {
     teamVTT: 0,
     name: 'Placeholder',
     roleThisWeek: 1,
+    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
     roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
 
     twentyFifthPercentProjectedPoints: 0,
@@ -259,6 +271,7 @@ const qbrawdata = {
     teamVTT: 0,
     name: 'Placeholder',
     roleThisWeek: 1,
+    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
     roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
 
     twentyFifthPercentProjectedPoints: 0,
@@ -280,7 +293,8 @@ const qbrawdata = {
     teamVTT: 20.25,
     name: 'Tagovailoa',
     roleThisWeek: 1,
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1],
+    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS WEEK!!!!!!!!!!!!!!
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
 
     twentyFifthPercentProjectedPoints: 11,
     fiftyithPercentProjectedPoints: 15,
@@ -301,6 +315,7 @@ const qbrawdata = {
     teamVTT: 0,
     name: 'Placeholder',
     roleThisWeek: 1,
+    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
     roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
 
     twentyFifthPercentProjectedPoints: 0,
@@ -322,6 +337,7 @@ const qbrawdata = {
     teamVTT: 0,
     name: 'Placeholder',
     roleThisWeek: 1,
+    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
     roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
 
     twentyFifthPercentProjectedPoints: 0,
@@ -343,6 +359,7 @@ const qbrawdata = {
     teamVTT: 0,
     name: 'Placeholder',
     roleThisWeek: 1,
+    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
     roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
 
     twentyFifthPercentProjectedPoints: 0,
@@ -364,7 +381,8 @@ const qbrawdata = {
     teamVTT: 20.25,
     name: 'Lawrence',
     roleThisWeek: 1,
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1],
+    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
 
     twentyFifthPercentProjectedPoints: 10,
     fiftyithPercentProjectedPoints: 14,
@@ -385,7 +403,8 @@ const qbrawdata = {
     teamVTT: 15,
     name: 'Wilson',
     roleThisWeek: 1,
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1],
+    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
 
     twentyFifthPercentProjectedPoints: 9,
     fiftyithPercentProjectedPoints: 14,
@@ -406,6 +425,7 @@ const qbrawdata = {
     teamVTT: 0,
     name: 'Placeholder',
     roleThisWeek: 1,
+    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
     roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
 
     twentyFifthPercentProjectedPoints: 0,
@@ -427,6 +447,7 @@ const qbrawdata = {
     teamVTT: 0,
     name: 'Placeholder',
     roleThisWeek: 1,
+    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
     roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
 
     twentyFifthPercentProjectedPoints: 0,
@@ -448,6 +469,7 @@ const qbrawdata = {
     teamVTT: 0,
     name: 'Placeholder',
     roleThisWeek: 1,
+    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
     roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
 
     twentyFifthPercentProjectedPoints: 0,
@@ -469,6 +491,7 @@ const qbrawdata = {
     teamVTT: 0,
     name: 'Placeholder',
     roleThisWeek: 1,
+    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
     roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
 
     twentyFifthPercentProjectedPoints: 0,
@@ -490,6 +513,7 @@ const qbrawdata = {
     teamVTT: 0,
     name: 'Placeholder',
     roleThisWeek: 1,
+    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
     roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
 
     twentyFifthPercentProjectedPoints: 0,
@@ -511,6 +535,7 @@ const qbrawdata = {
     teamVTT: 0,
     name: 'Placeholder',
     roleThisWeek: 1,
+    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
     roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
 
     twentyFifthPercentProjectedPoints: 0,
@@ -532,7 +557,8 @@ const qbrawdata = {
     teamVTT: 18.25,
     name: 'Huntley',
     roleThisWeek: 1,
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1],
+    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
 
     twentyFifthPercentProjectedPoints: 10,
     fiftyithPercentProjectedPoints: 13,
@@ -553,7 +579,8 @@ const qbrawdata = {
     teamVTT: 17.25,
     name: 'Hill',
     roleThisWeek: 1,
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1],
+    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
 
     twentyFifthPercentProjectedPoints: 10,
     fiftyithPercentProjectedPoints: 14,
@@ -574,6 +601,7 @@ const qbrawdata = {
     teamVTT: 0,
     name: 'Placeholder',
     roleThisWeek: 1,
+    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
     roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
 
     twentyFifthPercentProjectedPoints: 0,
@@ -595,7 +623,8 @@ const qbrawdata = {
     teamVTT: 17,
     name: 'Roethlisberger',
     roleThisWeek: 1,
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1],
+    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
 
     twentyFifthPercentProjectedPoints: 9,
     fiftyithPercentProjectedPoints: 12,
@@ -616,6 +645,7 @@ const qbrawdata = {
     teamVTT: 0,
     name: 'Placeholder',
     roleThisWeek: 1,
+    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
     roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
 
     twentyFifthPercentProjectedPoints: 0,
@@ -637,6 +667,7 @@ const qbrawdata = {
     teamVTT: 0,
     name: 'Placeholder',
     roleThisWeek: 1,
+    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
     roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
 
     twentyFifthPercentProjectedPoints: 0,
@@ -658,6 +689,7 @@ const qbrawdata = {
     teamVTT: 0,
     name: 'Placeholder',
     roleThisWeek: 1,
+    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
     roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
 
     twentyFifthPercentProjectedPoints: 0,
