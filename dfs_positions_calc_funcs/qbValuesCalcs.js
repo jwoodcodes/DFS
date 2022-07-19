@@ -4,6 +4,7 @@ const allQBs = require('../teamandpositionvariables/allQBVariables');
 const qbrawdata = require('../teamandpostionsrawdata/qbrawdata');
 const wrrawdata = require('../teamandpostionsrawdata/wrrawdata');
 const gameInfo = require('../teamandpostionsrawdata/gameinfo');
+const { match } = require('assert');
 
 const allQBTotalScores = [];
 
@@ -165,6 +166,19 @@ allQBs.map(function (team, i) {
 const allQBFinalProjectedPointsValues = [];
 const allQBFinalProjectedPointsValuesPlusNames = [];
 
+const numOfMatchingRoleWeeks = [];
+
+allQBs.map(function (team, i) {
+  let matchingWeeks = 0;
+
+  team.roleLastXNumOfWeeksUpToFive.forEach(function (week) {
+    if (week === allQBs[i].roleThisWeek) {
+      matchingWeeks = matchingWeeks + 1;
+    }
+  });
+  numOfMatchingRoleWeeks.push(matchingWeeks);
+});
+
 if (gameInfo.week.currentWeek < 3) {
   allQBs.map(function (team, i) {
     let QBProjectedPoints = 0;
@@ -188,7 +202,7 @@ if (gameInfo.week.currentWeek === 3) {
     // console.log(team.roleLastXNumOfWeeksUpToFive[1]);
 
     if (
-      team.roleLastXNumOfWeeksUpToFive.length === 3 &&
+      team.roleLastXNumOfWeeksUpToFive.length === 2 &&
       team.roleThisWeek === team.roleLastXNumOfWeeksUpToFive[0] &&
       team.roleThisWeek === team.roleLastXNumOfWeeksUpToFive[1]
     ) {
@@ -215,19 +229,32 @@ if (gameInfo.week.currentWeek > 3) {
       allQBs[i].seventyFifthPercentProjectedPoints;
 
     let QBProjectedPoints = 0;
+    let matchingWeeksPercentage =
+      numOfMatchingRoleWeeks[i] / allQBs[i].roleLastXNumOfWeeksUpToFive.length;
 
-    if (score >= 35) {
-      QBProjectedPoints = seventyFifthPercentProjection;
-    } else if (score >= -25) {
-      QBProjectedPoints = fiftyithPercentProjection;
+    if (
+      allQBs[i].roleLastXNumOfWeeksUpToFive.length > 3 &&
+      matchingWeeksPercentage > 0.74
+    ) {
+      if (score >= 35) {
+        QBProjectedPoints = seventyFifthPercentProjection;
+      } else if (score >= -25) {
+        QBProjectedPoints = fiftyithPercentProjection;
+      } else {
+        QBProjectedPoints = twentyFifthPercentProjection;
+      }
+
+      allQBFinalProjectedPointsValues.push(QBProjectedPoints);
+      allQBFinalProjectedPointsValuesPlusNames.push(
+        `${allQBs[i].name}: ${QBProjectedPoints}`
+      );
     } else {
-      QBProjectedPoints = twentyFifthPercentProjection;
+      QBProjectedPoints = allQBs[i].fourForFourHalfPPRProjectedPoints;
+      allQBFinalProjectedPointsValues.push(QBProjectedPoints);
+      allQBFinalProjectedPointsValuesPlusNames.push(
+        `${allQBs[i].name}: ${QBProjectedPoints}`
+      );
     }
-
-    allQBFinalProjectedPointsValues.push(QBProjectedPoints);
-    allQBFinalProjectedPointsValuesPlusNames.push(
-      `${allQBs[i].name}: ${QBProjectedPoints}`
-    );
   });
 }
 
