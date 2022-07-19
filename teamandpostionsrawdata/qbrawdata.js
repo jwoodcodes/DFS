@@ -59,8 +59,8 @@ const qbrawdata = {
     TDrateLastFiveGames: 4.0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 15,
 
-    fourForFourHalfPPRProjectedPoints: 0,
-    fourForFourFullPPRProjectedPoints: 0,
+    fourForFourHalfPPRProjectedPoints: 16,
+    fourForFourFullPPRProjectedPoints: 16,
 
     yahooSalary: 30,
     fanduelSalary: 7700,
@@ -206,8 +206,8 @@ const qbrawdata = {
     TDrateLastFiveGames: 5.3,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 13,
 
-    fourForFourHalfPPRProjectedPoints: 0,
-    fourForFourFullPPRProjectedPoints: 0,
+    fourForFourHalfPPRProjectedPoints: 18,
+    fourForFourFullPPRProjectedPoints: 18,
 
     yahooSalary: 0,
     fanduelSalary: 0,

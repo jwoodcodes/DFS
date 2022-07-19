@@ -165,25 +165,43 @@ allQBs.map(function (team, i) {
 const allQBFinalProjectedPointsValues = [];
 const allQBFinalProjectedPointsValuesPlusNames = [];
 
-allQBTotalScores.map(function (score, i, array) {
-  let twentyFifthPercentProjection =
-    allQBs[i].twentyFifthPercentProjectedPoints;
-  let fiftyithPercentProjection = allQBs[i].fiftyithPercentProjectedPoints;
-  let seventyFifthPercentProjection =
-    allQBs[i].seventyFifthPercentProjectedPoints;
+if (gameInfo.week.currentWeek < 3) {
+  allQBs.map(function (team, i) {
+    let QBProjectedPoints = 0;
 
-  let QBProjectedPoints = 0;
+    QBProjectedPoints = team.fourForFourHalfPPRProjectedPoints;
 
-  console.log(gameInfo.week.currentWeek);
+    allQBFinalProjectedPointsValues.push(QBProjectedPoints);
+    allQBFinalProjectedPointsValuesPlusNames.push(
+      `${allQBs[i].name}: ${QBProjectedPoints}`
+    );
+  });
+}
 
-  if (gameInfo.week.currentWeek < 3) {
-    allQBs.map(function (team, i) {
-      // console.log(team.fourForFourHalfPPRProjectedPoints);
-      QBProjectedPoints = team.fourForFourHalfPPRProjectedPoints;
-    });
-  }
+if (gameInfo.week.currentWeek === 3) {
+  allQBs.map(function (team, i) {
+    let GLSPProjectedPoints = team.fiftyithPercentProjectedPoints;
+    let fourForFour = team.fourForFourHalfPPRProjectedPoints;
+    let total = GLSPProjectedPoints + fourForFour;
+    let QBProjectedPoints = total / 2;
 
-  if (gameInfo.week.currentWeek > 2) {
+    allQBFinalProjectedPointsValues.push(QBProjectedPoints);
+    allQBFinalProjectedPointsValuesPlusNames.push(
+      `${allQBs[i].name}: ${QBProjectedPoints}`
+    );
+  });
+}
+
+if (gameInfo.week.currentWeek > 3) {
+  allQBTotalScores.map(function (score, i, array) {
+    let twentyFifthPercentProjection =
+      allQBs[i].twentyFifthPercentProjectedPoints;
+    let fiftyithPercentProjection = allQBs[i].fiftyithPercentProjectedPoints;
+    let seventyFifthPercentProjection =
+      allQBs[i].seventyFifthPercentProjectedPoints;
+
+    let QBProjectedPoints = 0;
+
     if (score >= 35) {
       QBProjectedPoints = seventyFifthPercentProjection;
     } else if (score >= -25) {
@@ -191,12 +209,13 @@ allQBTotalScores.map(function (score, i, array) {
     } else {
       QBProjectedPoints = twentyFifthPercentProjection;
     }
-  }
-  allQBFinalProjectedPointsValues.push(QBProjectedPoints);
-  allQBFinalProjectedPointsValuesPlusNames.push(
-    `${allQBs[i].name}: ${QBProjectedPoints}`
-  );
-});
+
+    allQBFinalProjectedPointsValues.push(QBProjectedPoints);
+    allQBFinalProjectedPointsValuesPlusNames.push(
+      `${allQBs[i].name}: ${QBProjectedPoints}`
+    );
+  });
+}
 
 /////////all QB data////////////
 
