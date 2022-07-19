@@ -49,7 +49,7 @@ const qbrawdata = {
     teamVTT: 25,
     name: 'Joe Burrow',
     roleThisWeek: 1,
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1],
 
     twentyFifthPercentProjectedPoints: 12,
     fiftyithPercentProjectedPoints: 16,
@@ -196,7 +196,7 @@ const qbrawdata = {
     teamVTT: 27.5,
     name: 'Mahomes',
     roleThisWeek: 1,
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1],
 
     twentyFifthPercentProjectedPoints: 13,
     fiftyithPercentProjectedPoints: 17,
@@ -280,7 +280,7 @@ const qbrawdata = {
     teamVTT: 20.25,
     name: 'Tagovailoa',
     roleThisWeek: 1,
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1],
 
     twentyFifthPercentProjectedPoints: 11,
     fiftyithPercentProjectedPoints: 15,
@@ -364,7 +364,7 @@ const qbrawdata = {
     teamVTT: 20.25,
     name: 'Lawrence',
     roleThisWeek: 1,
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1],
 
     twentyFifthPercentProjectedPoints: 10,
     fiftyithPercentProjectedPoints: 14,
@@ -385,7 +385,7 @@ const qbrawdata = {
     teamVTT: 15,
     name: 'Wilson',
     roleThisWeek: 1,
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1],
 
     twentyFifthPercentProjectedPoints: 9,
     fiftyithPercentProjectedPoints: 14,
@@ -532,7 +532,7 @@ const qbrawdata = {
     teamVTT: 18.25,
     name: 'Huntley',
     roleThisWeek: 1,
-    roleLastXNumOfWeeksUpToFive: [1],
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1],
 
     twentyFifthPercentProjectedPoints: 10,
     fiftyithPercentProjectedPoints: 13,
@@ -553,7 +553,7 @@ const qbrawdata = {
     teamVTT: 17.25,
     name: 'Hill',
     roleThisWeek: 1,
-    roleLastXNumOfWeeksUpToFive: [1, 1],
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1],
 
     twentyFifthPercentProjectedPoints: 10,
     fiftyithPercentProjectedPoints: 14,
@@ -595,7 +595,7 @@ const qbrawdata = {
     teamVTT: 17,
     name: 'Roethlisberger',
     roleThisWeek: 1,
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1],
 
     twentyFifthPercentProjectedPoints: 9,
     fiftyithPercentProjectedPoints: 12,

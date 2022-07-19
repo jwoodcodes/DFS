@@ -185,10 +185,24 @@ if (gameInfo.week.currentWeek === 3) {
     let total = GLSPProjectedPoints + fourForFour;
     let QBProjectedPoints = total / 2;
 
-    allQBFinalProjectedPointsValues.push(QBProjectedPoints);
-    allQBFinalProjectedPointsValuesPlusNames.push(
-      `${allQBs[i].name}: ${QBProjectedPoints}`
-    );
+    // console.log(team.roleLastXNumOfWeeksUpToFive[1]);
+
+    if (
+      team.roleLastXNumOfWeeksUpToFive.length === 3 &&
+      team.roleThisWeek === team.roleLastXNumOfWeeksUpToFive[0] &&
+      team.roleThisWeek === team.roleLastXNumOfWeeksUpToFive[1]
+    ) {
+      allQBFinalProjectedPointsValues.push(QBProjectedPoints);
+      allQBFinalProjectedPointsValuesPlusNames.push(
+        `${allQBs[i].name}: ${QBProjectedPoints}`
+      );
+    } else {
+      QBProjectedPoints = team.fourForFourHalfPPRProjectedPoints;
+      allQBFinalProjectedPointsValues.push(QBProjectedPoints);
+      allQBFinalProjectedPointsValuesPlusNames.push(
+        `${allQBs[i].name}: ${QBProjectedPoints}`
+      );
+    }
   });
 }
 
