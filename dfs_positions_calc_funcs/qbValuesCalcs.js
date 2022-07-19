@@ -3,6 +3,8 @@ const allTeams = require('../teamandpositionvariables/allTeamLevelVariables');
 const allQBs = require('../teamandpositionvariables/allQBVariables');
 const qbrawdata = require('../teamandpostionsrawdata/qbrawdata');
 const wrrawdata = require('../teamandpostionsrawdata/wrrawdata');
+const gameInfo = require('../teamandpostionsrawdata/gameinfo');
+const { match } = require('assert');
 
 const allQBTotalScores = [];
 
@@ -164,28 +166,97 @@ allQBs.map(function (team, i) {
 const allQBFinalProjectedPointsValues = [];
 const allQBFinalProjectedPointsValuesPlusNames = [];
 
-allQBTotalScores.map(function (score, i, array) {
-  let twentyFifthPercentProjection =
-    allQBs[i].twentyFifthPercentProjectedPoints;
-  let fiftyithPercentProjection = allQBs[i].fiftyithPercentProjectedPoints;
-  let seventyFifthPercentProjection =
-    allQBs[i].seventyFifthPercentProjectedPoints;
+const numOfMatchingRoleWeeks = [];
 
-  let QBProjectedPoints = 0;
+allQBs.map(function (team, i) {
+  let matchingWeeks = 0;
 
-  if (score >= 35) {
-    QBProjectedPoints = seventyFifthPercentProjection;
-  } else if (score >= -25) {
-    QBProjectedPoints = fiftyithPercentProjection;
-  } else {
-    QBProjectedPoints = twentyFifthPercentProjection;
-  }
-
-  allQBFinalProjectedPointsValues.push(QBProjectedPoints);
-  allQBFinalProjectedPointsValuesPlusNames.push(
-    `${allQBs[i].name}: ${QBProjectedPoints}`
-  );
+  team.roleLastXNumOfWeeksUpToFive.forEach(function (week) {
+    if (week === allQBs[i].roleThisWeek) {
+      matchingWeeks = matchingWeeks + 1;
+    }
+  });
+  numOfMatchingRoleWeeks.push(matchingWeeks);
 });
+
+if (gameInfo.week.currentWeek < 3) {
+  allQBs.map(function (team, i) {
+    let QBProjectedPoints = 0;
+
+    QBProjectedPoints = team.fourForFourHalfPPRProjectedPoints;
+
+    allQBFinalProjectedPointsValues.push(QBProjectedPoints);
+    allQBFinalProjectedPointsValuesPlusNames.push(
+      `${allQBs[i].name}: ${QBProjectedPoints}`
+    );
+  });
+}
+
+if (gameInfo.week.currentWeek === 3) {
+  allQBs.map(function (team, i) {
+    let GLSPProjectedPoints = team.fiftyithPercentProjectedPoints;
+    let fourForFour = team.fourForFourHalfPPRProjectedPoints;
+    let total = GLSPProjectedPoints + fourForFour;
+    let QBProjectedPoints = total / 2;
+
+    // console.log(team.roleLastXNumOfWeeksUpToFive[1]);
+
+    if (
+      team.roleLastXNumOfWeeksUpToFive.length === 2 &&
+      team.roleThisWeek === team.roleLastXNumOfWeeksUpToFive[0] &&
+      team.roleThisWeek === team.roleLastXNumOfWeeksUpToFive[1]
+    ) {
+      allQBFinalProjectedPointsValues.push(QBProjectedPoints);
+      allQBFinalProjectedPointsValuesPlusNames.push(
+        `${allQBs[i].name}: ${QBProjectedPoints}`
+      );
+    } else {
+      QBProjectedPoints = team.fourForFourHalfPPRProjectedPoints;
+      allQBFinalProjectedPointsValues.push(QBProjectedPoints);
+      allQBFinalProjectedPointsValuesPlusNames.push(
+        `${allQBs[i].name}: ${QBProjectedPoints}`
+      );
+    }
+  });
+}
+
+if (gameInfo.week.currentWeek > 3) {
+  allQBTotalScores.map(function (score, i, array) {
+    let twentyFifthPercentProjection =
+      allQBs[i].twentyFifthPercentProjectedPoints;
+    let fiftyithPercentProjection = allQBs[i].fiftyithPercentProjectedPoints;
+    let seventyFifthPercentProjection =
+      allQBs[i].seventyFifthPercentProjectedPoints;
+
+    let QBProjectedPoints = 0;
+    let matchingWeeksPercentage =
+      numOfMatchingRoleWeeks[i] / allQBs[i].roleLastXNumOfWeeksUpToFive.length;
+
+    if (
+      allQBs[i].roleLastXNumOfWeeksUpToFive.length > 3 &&
+      matchingWeeksPercentage > 0.74
+    ) {
+      if (score >= 35) {
+        QBProjectedPoints = seventyFifthPercentProjection;
+      } else if (score >= -25) {
+        QBProjectedPoints = fiftyithPercentProjection;
+      } else {
+        QBProjectedPoints = twentyFifthPercentProjection;
+      }
+
+      allQBFinalProjectedPointsValues.push(QBProjectedPoints);
+      allQBFinalProjectedPointsValuesPlusNames.push(
+        `${allQBs[i].name}: ${QBProjectedPoints}`
+      );
+    } else {
+      QBProjectedPoints = allQBs[i].fourForFourHalfPPRProjectedPoints;
+      allQBFinalProjectedPointsValues.push(QBProjectedPoints);
+      allQBFinalProjectedPointsValuesPlusNames.push(
+        `${allQBs[i].name}: ${QBProjectedPoints}`
+      );
+    }
+  });
+}
 
 /////////all QB data////////////
 
