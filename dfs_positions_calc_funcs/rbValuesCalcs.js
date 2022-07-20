@@ -40,18 +40,23 @@ const allRBCalcFunctions = {
     let rbHalfPorjectedPoints = 0;
     let rbPPRProjectedPoints = 0;
 
-    if (rbTotalTouches >= totalTeamBackfieldMArket * 0.65) {
-      rbHalfPorjectedPoints = halfSeventyFifthPercentProjectedPoints;
-      rbPPRProjectedPoints = PPRSeventyFifthPercentProjectedPoints;
-    } else if (
-      rbTotalTouches > totalTeamBackfieldMArket * 0.35 &&
-      rbTotalTouches < totalTeamBackfieldMArket * 0.65
-    ) {
-      rbHalfPorjectedPoints = halfFiftyithPercentProjectedPoints;
-      rbPPRProjectedPoints = PPRFiftyithPercentProjectedPoints;
+    if (gameInfo.week.currentWeek > 3) {
+      if (rbTotalTouches >= totalTeamBackfieldMArket * 0.65) {
+        rbHalfPorjectedPoints = halfSeventyFifthPercentProjectedPoints;
+        rbPPRProjectedPoints = PPRSeventyFifthPercentProjectedPoints;
+      } else if (
+        rbTotalTouches > totalTeamBackfieldMArket * 0.35 &&
+        rbTotalTouches < totalTeamBackfieldMArket * 0.65
+      ) {
+        rbHalfPorjectedPoints = halfFiftyithPercentProjectedPoints;
+        rbPPRProjectedPoints = PPRFiftyithPercentProjectedPoints;
+      } else {
+        rbHalfPorjectedPoints = halfTwentyFifthPercentProjectedPoints;
+        rbPPRProjectedPoints = PPRTwentyFifthPercentProjectedPoints;
+      }
     } else {
-      rbHalfPorjectedPoints = halfTwentyFifthPercentProjectedPoints;
-      rbPPRProjectedPoints = PPRTwentyFifthPercentProjectedPoints;
+      rbHalfPorjectedPoints = rb.fourForFourHalfPPRProjectedPoints;
+      rbPPRProjectedPoints = rb.fourForFourFullPPRProjectedPoints;
     }
 
     // console.log(rb);
