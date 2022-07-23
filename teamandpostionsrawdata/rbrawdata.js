@@ -139,8 +139,8 @@ const rbrawdata = {
       prjCarries: 1,
       prjTargets: 0.4,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      fourForFourHalfPPRProjectedPoints: 4,
+      fourForFourFullPPRProjectedPoints: 2,
 
       yahooSalary: 0,
       fanduelSalary: 0,
