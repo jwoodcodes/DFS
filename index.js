@@ -102,7 +102,7 @@ QB.insertMany({
     allQBData.allQBFinalProjectedPointsValuesPlusNames,
 }).then(data => {
   console.log('QB Data Inserted Successfully');
-  console.log(data);
+  // console.log(data);
 });
 
 const rbSchema = new mongoose.Schema({
@@ -255,7 +255,7 @@ WR.insertMany({
     allWRData.allWRsFullProjectedPointsValuesPlusNames,
 }).then(data => {
   console.log('WR Data Inserted Successfully');
-  // console.log(data);
+  console.log(data);
 });
 
 const teSchema = new mongoose.Schema({

@@ -40,10 +40,11 @@ const vikingsRB = rbrawdata.vikings;
 const allRBs = [
   bengalsRB,
   ravensRB,
-  chiefsRB,
-  steelersRB,
   jetsRB,
   jaguarsRB,
+
+  chiefsRB,
+  steelersRB,
 
   saintsRB,
   dolphinsRB,
