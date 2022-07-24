@@ -254,6 +254,8 @@ allWRs.map(function (team, i) {
 
 /////////assigning WR's their projected points for the week using totalScore from above///////////
 
+////////////////////WR1's- calculaing and assigning projections for all WR1s
+
 const allHalfWROneFinalProjectedPointsValues = [];
 const allHalfWROneFinalProjectedPointsValuesPlusNames = [];
 
@@ -279,15 +281,36 @@ allWROneTotalScores.map(function (score, i, array) {
 
   //   console.log(`${score}: ${allWRs[i].WROne.name}`);
 
-  if (score >= 45) {
-    WRHalfProjectedPoints = halfSeventyFifthPercentProjection;
-    WRFullProjectedPoints = PPRSeventyFifthPercentProjection;
-  } else if (score >= -5) {
-    WRHalfProjectedPoints = halfFiftyithPercentProjection;
-    WRFullProjectedPoints = PPRFiftyithPercentProjection;
-  } else {
-    WRHalfProjectedPoints = halfTwentyFifthPercentProjection;
-    WRFullProjectedPoints = PPRTwentyFifthPercentProjection;
+  if (gameInfo.week.currentWeek > 3) {
+    if (score >= 45) {
+      WRHalfProjectedPoints = halfSeventyFifthPercentProjection;
+      WRFullProjectedPoints = PPRSeventyFifthPercentProjection;
+    } else if (score >= -5) {
+      WRHalfProjectedPoints = halfFiftyithPercentProjection;
+      WRFullProjectedPoints = PPRFiftyithPercentProjection;
+    } else {
+      WRHalfProjectedPoints = halfTwentyFifthPercentProjection;
+      WRFullProjectedPoints = PPRTwentyFifthPercentProjection;
+    }
+  }
+
+  if (gameInfo.week.currentWeek === 3) {
+    let totalHalfAvg =
+      (allWRs[i].WROne.fourForFourHalfPPRProjectedPoints +
+        halfFiftyithPercentProjection) /
+      2;
+    let totalFullAvg =
+      (allWRs[i].WROne.fourForFourFullPPRProjectedPoints +
+        PPRFiftyithPercentProjection) /
+      2;
+
+    WRHalfProjectedPoints = +totalHalfAvg.toFixed(2);
+    WRFullProjectedPoints = +totalFullAvg.toFixed(2);
+  }
+
+  if (gameInfo.week.currentWeek < 3) {
+    WRHalfProjectedPoints = allWRs[i].WROne.fourForFourHalfPPRProjectedPoints;
+    WRFullProjectedPoints = allWRs[i].WROne.fourForFourFullPPRProjectedPoints;
   }
 
   allHalfWROneFinalProjectedPointsValues.push(WRHalfProjectedPoints);
@@ -300,6 +323,8 @@ allWROneTotalScores.map(function (score, i, array) {
     `${allWRs[i].WROne.name}: ${WRFullProjectedPoints}`
   );
 });
+
+////////////////////WR2's- calculaing and assigning projections for all WR2s
 
 const allHalfWRTwoFinalProjectedPointsValues = [];
 const allHalfWRTwoFinalProjectedPointsValuesPlusNames = [];
@@ -326,15 +351,36 @@ allWRTwoTotalScores.map(function (score, i, array) {
 
   //   console.log(`${score}: ${allWRs[i].WRTwo.name}`);
 
-  if (score >= 45) {
-    WRHalfProjectedPoints = halfSeventyFifthPercentProjection;
-    WRFullProjectedPoints = PPRSeventyFifthPercentProjection;
-  } else if (score >= -5) {
-    WRHalfProjectedPoints = halfFiftyithPercentProjection;
-    WRFullProjectedPoints = PPRFiftyithPercentProjection;
-  } else {
-    WRHalfProjectedPoints = halfTwentyFifthPercentProjection;
-    WRFullProjectedPoints = PPRTwentyFifthPercentProjection;
+  if (gameInfo.week.currentWeek > 3) {
+    if (score >= 45) {
+      WRHalfProjectedPoints = halfSeventyFifthPercentProjection;
+      WRFullProjectedPoints = PPRSeventyFifthPercentProjection;
+    } else if (score >= -5) {
+      WRHalfProjectedPoints = halfFiftyithPercentProjection;
+      WRFullProjectedPoints = PPRFiftyithPercentProjection;
+    } else {
+      WRHalfProjectedPoints = halfTwentyFifthPercentProjection;
+      WRFullProjectedPoints = PPRTwentyFifthPercentProjection;
+    }
+  }
+
+  if (gameInfo.week.currentWeek === 3) {
+    let totalHalfAvg =
+      (allWRs[i].WRTwo.fourForFourHalfPPRProjectedPoints +
+        halfFiftyithPercentProjection) /
+      2;
+    let totalFullAvg =
+      (allWRs[i].WRTwo.fourForFourFullPPRProjectedPoints +
+        PPRFiftyithPercentProjection) /
+      2;
+
+    WRHalfProjectedPoints = +totalHalfAvg.toFixed(2);
+    WRFullProjectedPoints = +totalFullAvg.toFixed(2);
+  }
+
+  if (gameInfo.week.currentWeek < 3) {
+    WRHalfProjectedPoints = allWRs[i].WRTwo.fourForFourHalfPPRProjectedPoints;
+    WRFullProjectedPoints = allWRs[i].WRTwo.fourForFourFullPPRProjectedPoints;
   }
 
   allHalfWRTwoFinalProjectedPointsValues.push(WRHalfProjectedPoints);
