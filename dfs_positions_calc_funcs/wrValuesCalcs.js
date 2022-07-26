@@ -254,11 +254,57 @@ allWRs.map(function (team, i) {
 
 /////////assigning WR's their projected points for the week using totalScore from above///////////
 
+////////////////////WR1's- calculaing and assigning projections for all WR1s
+
 const allHalfWROneFinalProjectedPointsValues = [];
 const allHalfWROneFinalProjectedPointsValuesPlusNames = [];
 
 const allFullWROneFinalProjectedPointsValues = [];
 const allFullWROneFinalProjectedPointsValuesPlusNames = [];
+
+const wrOnenumOfMatchingRoleWeeks = [];
+const wrTwonumOfMatchingRoleWeeks = [];
+
+allWRs.forEach(function (wr, i) {
+  wrOneRoleThisWeek = wr.WROne.roleThisWeek;
+  wrTwoRoleThisWeek = wr.WRTwo.roleThisWeek;
+  wrOneroleLastXNumOfWeeksUpToFiveArray = wr.WROne.roleLastXNumOfWeeksUpToFive;
+  wrTworoleLastXNumOfWeeksUpToFiveArray = wr.WRTwo.roleLastXNumOfWeeksUpToFive;
+
+  let wrOnematchingWeeks = 0;
+  let wrTwomatchingWeeks = 0;
+
+  wrOneroleLastXNumOfWeeksUpToFiveArray.forEach(function (role) {
+    if (role === wrOneRoleThisWeek) {
+      wrOnematchingWeeks = wrOnematchingWeeks + 1;
+    }
+  });
+  wrOnenumOfMatchingRoleWeeks.push(wrOnematchingWeeks);
+
+  wrTworoleLastXNumOfWeeksUpToFiveArray.forEach(function (role) {
+    if (role === wrTwoRoleThisWeek) {
+      wrTwomatchingWeeks = wrTwomatchingWeeks + 1;
+    }
+  });
+  wrTwonumOfMatchingRoleWeeks.push(wrTwomatchingWeeks);
+});
+
+const wrOnePercentageOfMatchingRoleWeeks = [];
+const wrTwoPercentageOfMatchingRoleWeeks = [];
+
+allWRs.map(function (team, i) {
+  let wrOnematchingWeeksPercentage =
+    wrOnenumOfMatchingRoleWeeks[i] /
+    team.WROne.roleLastXNumOfWeeksUpToFive.length;
+
+  wrOnePercentageOfMatchingRoleWeeks.push(wrOnematchingWeeksPercentage);
+
+  let wrTwomatchingWeeksPercentage =
+    wrTwonumOfMatchingRoleWeeks[i] /
+    team.WRTwo.roleLastXNumOfWeeksUpToFive.length;
+
+  wrTwoPercentageOfMatchingRoleWeeks.push(wrTwomatchingWeeksPercentage);
+});
 
 allWROneTotalScores.map(function (score, i, array) {
   let halfTwentyFifthPercentProjection =
@@ -279,15 +325,54 @@ allWROneTotalScores.map(function (score, i, array) {
 
   //   console.log(`${score}: ${allWRs[i].WROne.name}`);
 
-  if (score >= 45) {
-    WRHalfProjectedPoints = halfSeventyFifthPercentProjection;
-    WRFullProjectedPoints = PPRSeventyFifthPercentProjection;
-  } else if (score >= -5) {
-    WRHalfProjectedPoints = halfFiftyithPercentProjection;
-    WRFullProjectedPoints = PPRFiftyithPercentProjection;
-  } else {
-    WRHalfProjectedPoints = halfTwentyFifthPercentProjection;
-    WRFullProjectedPoints = PPRTwentyFifthPercentProjection;
+  if (
+    gameInfo.week.currentWeek > 3 &&
+    wrOnePercentageOfMatchingRoleWeeks[i] > 0.74
+  ) {
+    if (score >= 45) {
+      WRHalfProjectedPoints = halfSeventyFifthPercentProjection;
+      WRFullProjectedPoints = PPRSeventyFifthPercentProjection;
+    } else if (score >= -5) {
+      WRHalfProjectedPoints = halfFiftyithPercentProjection;
+      WRFullProjectedPoints = PPRFiftyithPercentProjection;
+    } else {
+      WRHalfProjectedPoints = halfTwentyFifthPercentProjection;
+      WRFullProjectedPoints = PPRTwentyFifthPercentProjection;
+    }
+  } else if (
+    gameInfo.week.currentWeek > 3 &&
+    wrOnePercentageOfMatchingRoleWeeks[i] < 0.75
+  ) {
+    WRHalfProjectedPoints = allWRs[i].WROne.fourForFourHalfPPRProjectedPoints;
+    WRFullProjectedPoints = allWRs[i].WROne.fourForFourFullPPRProjectedPoints;
+  }
+
+  if (
+    gameInfo.week.currentWeek === 3 &&
+    wrOnePercentageOfMatchingRoleWeeks[i] === 1
+  ) {
+    let totalHalfAvg =
+      (allWRs[i].WROne.fourForFourHalfPPRProjectedPoints +
+        halfFiftyithPercentProjection) /
+      2;
+    let totalFullAvg =
+      (allWRs[i].WROne.fourForFourFullPPRProjectedPoints +
+        PPRFiftyithPercentProjection) /
+      2;
+
+    WRHalfProjectedPoints = +totalHalfAvg.toFixed(2);
+    WRFullProjectedPoints = +totalFullAvg.toFixed(2);
+  } else if (
+    gameInfo.week.currentWeek === 3 &&
+    wrOnePercentageOfMatchingRoleWeeks[i] !== 1
+  ) {
+    WRHalfProjectedPoints = allWRs[i].WROne.fourForFourHalfPPRProjectedPoints;
+    WRFullProjectedPoints = allWRs[i].WROne.fourForFourFullPPRProjectedPoints;
+  }
+
+  if (gameInfo.week.currentWeek < 3) {
+    WRHalfProjectedPoints = allWRs[i].WROne.fourForFourHalfPPRProjectedPoints;
+    WRFullProjectedPoints = allWRs[i].WROne.fourForFourFullPPRProjectedPoints;
   }
 
   allHalfWROneFinalProjectedPointsValues.push(WRHalfProjectedPoints);
@@ -300,6 +385,8 @@ allWROneTotalScores.map(function (score, i, array) {
     `${allWRs[i].WROne.name}: ${WRFullProjectedPoints}`
   );
 });
+
+////////////////////WR2's- calculaing and assigning projections for all WR2s
 
 const allHalfWRTwoFinalProjectedPointsValues = [];
 const allHalfWRTwoFinalProjectedPointsValuesPlusNames = [];
@@ -326,15 +413,55 @@ allWRTwoTotalScores.map(function (score, i, array) {
 
   //   console.log(`${score}: ${allWRs[i].WRTwo.name}`);
 
-  if (score >= 45) {
-    WRHalfProjectedPoints = halfSeventyFifthPercentProjection;
-    WRFullProjectedPoints = PPRSeventyFifthPercentProjection;
-  } else if (score >= -5) {
-    WRHalfProjectedPoints = halfFiftyithPercentProjection;
-    WRFullProjectedPoints = PPRFiftyithPercentProjection;
-  } else {
-    WRHalfProjectedPoints = halfTwentyFifthPercentProjection;
-    WRFullProjectedPoints = PPRTwentyFifthPercentProjection;
+  if (
+    gameInfo.week.currentWeek > 3 &&
+    wrTwoPercentageOfMatchingRoleWeeks[i] > 0.74
+  ) {
+    if (score >= 45) {
+      WRHalfProjectedPoints = halfSeventyFifthPercentProjection;
+      WRFullProjectedPoints = PPRSeventyFifthPercentProjection;
+    } else if (score >= -5) {
+      WRHalfProjectedPoints = halfFiftyithPercentProjection;
+      WRFullProjectedPoints = PPRFiftyithPercentProjection;
+    } else {
+      WRHalfProjectedPoints = halfTwentyFifthPercentProjection;
+      WRFullProjectedPoints = PPRTwentyFifthPercentProjection;
+    }
+  } else if (
+    gameInfo.week.currentWeek > 3 &&
+    wrTwoPercentageOfMatchingRoleWeeks[i] < 0.75
+  ) {
+    WRHalfProjectedPoints = allWRs[i].WRTwo.fourForFourHalfPPRProjectedPoints;
+    WRFullProjectedPoints = allWRs[i].WRTwo.fourForFourFullPPRProjectedPoints;
+  }
+
+  if (
+    gameInfo.week.currentWeek === 3 &&
+    wrTwoPercentageOfMatchingRoleWeeks[i] === 1
+  ) {
+    let totalHalfAvg =
+      (allWRs[i].WRTwo.fourForFourHalfPPRProjectedPoints +
+        halfFiftyithPercentProjection) /
+      2;
+
+    let totalFullAvg =
+      (allWRs[i].WRTwo.fourForFourFullPPRProjectedPoints +
+        PPRFiftyithPercentProjection) /
+      2;
+
+    WRHalfProjectedPoints = +totalHalfAvg.toFixed(2);
+    WRFullProjectedPoints = +totalFullAvg.toFixed(2);
+  } else if (
+    gameInfo.week.currentWeek === 3 &&
+    wrTwoPercentageOfMatchingRoleWeeks[i] !== 1
+  ) {
+    WRHalfProjectedPoints = allWRs[i].WRTwo.fourForFourHalfPPRProjectedPoints;
+    WRFullProjectedPoints = allWRs[i].WRTwo.fourForFourFullPPRProjectedPoints;
+  }
+
+  if (gameInfo.week.currentWeek < 3) {
+    WRHalfProjectedPoints = allWRs[i].WRTwo.fourForFourHalfPPRProjectedPoints;
+    WRFullProjectedPoints = allWRs[i].WRTwo.fourForFourFullPPRProjectedPoints;
   }
 
   allHalfWRTwoFinalProjectedPointsValues.push(WRHalfProjectedPoints);

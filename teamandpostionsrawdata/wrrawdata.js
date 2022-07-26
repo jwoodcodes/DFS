@@ -134,8 +134,8 @@ const wrrawdata = {
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      fourForFourHalfPPRProjectedPoints: 16,
+      fourForFourFullPPRProjectedPoints: 19,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -159,8 +159,8 @@ const wrrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      fourForFourHalfPPRProjectedPoints: 12,
+      fourForFourFullPPRProjectedPoints: 14,
 
       yahooSalary: 0,
       fanduelSalary: 0,
