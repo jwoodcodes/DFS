@@ -113,6 +113,34 @@ allTEs.map(function (team, i) {
   allTETotalScores.push(TETotalScore);
 });
 
+const tenumOfMatchingRoleWeeks = [];
+
+allTEs.forEach(function (te, i) {
+  teRoleThisWeek = te.TE.roleThisWeek;
+
+  teroleLastXNumOfWeeksUpToFiveArray = te.TE.roleLastXNumOfWeeksUpToFive;
+
+  let tematchingWeeks = 0;
+
+  teroleLastXNumOfWeeksUpToFiveArray.forEach(function (role) {
+    if (role === teRoleThisWeek) {
+      tematchingWeeks = tematchingWeeks + 1;
+    }
+  });
+  tenumOfMatchingRoleWeeks.push(tematchingWeeks);
+});
+
+// console.log(tenumOfMatchingRoleWeeks);
+
+const tePercentageOfMatchingRoleWeeks = [];
+
+allTEs.map(function (team, i) {
+  let tematchingWeeksPercentage =
+    tenumOfMatchingRoleWeeks[i] / team.TE.roleLastXNumOfWeeksUpToFive.length;
+
+  tePercentageOfMatchingRoleWeeks.push(tematchingWeeksPercentage);
+});
+
 const allHalfTEFinalProjectedPointsValues = [];
 const allHalfTEFinalProjectedPointsValuesPlusNames = [];
 
@@ -135,27 +163,104 @@ allTETotalScores.map(function (score, i, array) {
     allTEs[i].TE.PPRFiftyithPercentProjectedPoints;
   let PPRSeventyFifthPercentProjection =
     allTEs[i].TE.PPRSeventyFifthPercentProjectedPoints;
+  let HalfFourForFour = allTEs[i].TE.fourForFourHalfPPRProjectedPoints;
+  let FullFourForFour = allTEs[i].TE.fourForFourFullPPRProjectedPoints;
+
+  let TEPremiuimAddedProjectedPoints = allTEProjectedReceptions[i] / 2;
 
   let TEHalfProjectedPoints = 0;
   let TEFullProjectedPoints = 0;
+  let TEPremiuimPorjectedPoints = 0;
 
   //   console.log(`${score}: ${allTEs[i].TE.name}`);
 
-  if (score >= 40) {
-    TEHalfProjectedPoints = halfSeventyFifthPercentProjection;
-    TEFullProjectedPoints = PPRSeventyFifthPercentProjection;
-  } else if (score >= 10) {
-    TEHalfProjectedPoints = halfFiftyithPercentProjection;
-    TEFullProjectedPoints = PPRFiftyithPercentProjection;
-  } else {
-    TEHalfProjectedPoints = halfTwentyFifthPercentProjection;
-    TEFullProjectedPoints = PPRTwentyFifthPercentProjection;
+  if (
+    gameInfo.week.currentWeek > 3 &&
+    tePercentageOfMatchingRoleWeeks[i] > 0.74
+  ) {
+    if (score >= 40) {
+      TEHalfProjectedPoints = halfSeventyFifthPercentProjection;
+      TEFullProjectedPoints = PPRSeventyFifthPercentProjection;
+      TEPremiuimPorjectedPoints = +(
+        PPRSeventyFifthPercentProjection + TEPremiuimAddedProjectedPoints
+      ).toFixed(2);
+    } else if (score >= 10) {
+      TEHalfProjectedPoints = halfFiftyithPercentProjection;
+      TEFullProjectedPoints = PPRFiftyithPercentProjection;
+      TEPremiuimPorjectedPoints = +(
+        PPRFiftyithPercentProjection + TEPremiuimAddedProjectedPoints
+      ).toFixed(2);
+    } else {
+      TEHalfProjectedPoints = halfTwentyFifthPercentProjection;
+      TEFullProjectedPoints = PPRTwentyFifthPercentProjection;
+      TEPremiuimPorjectedPoints = +(
+        PPRTwentyFifthPercentProjection + TEPremiuimAddedProjectedPoints
+      ).toFixed(2);
+    }
+  } else if (
+    gameInfo.week.currentWeek > 3 &&
+    tePercentageOfMatchingRoleWeeks[i] < 0.75
+  ) {
+    TEHalfProjectedPoints = HalfFourForFour;
+    TEFullProjectedPoints = FullFourForFour;
+    TEPremiuimPorjectedPoints = +(
+      FullFourForFour + TEPremiuimAddedProjectedPoints
+    ).toFixed(2);
   }
 
-  let TEPremiuimAddedProjectedPoints = allTEProjectedReceptions[i] / 2;
-  let TEPremiuimPorjectedPoints = +(
-    TEFullProjectedPoints + TEPremiuimAddedProjectedPoints
-  ).toFixed(2);
+  if (
+    gameInfo.week.currentWeek === 3 &&
+    tePercentageOfMatchingRoleWeeks[i] === 1
+  ) {
+    if (score >= 40) {
+      TEHalfProjectedPoints =
+        (halfSeventyFifthPercentProjection + HalfFourForFour) / 2;
+      TEFullProjectedPoints =
+        (PPRSeventyFifthPercentProjection + FullFourForFour) / 2;
+      TEPremiuimPorjectedPointsTotal = +(
+        PPRSeventyFifthPercentProjection + TEPremiuimAddedProjectedPoints
+      ).toFixed(2);
+      TEPremiuimPorjectedPoints =
+        (TEPremiuimPorjectedPointsTotal + FullFourForFour) / 2;
+    } else if (score >= 10) {
+      TEHalfProjectedPoints =
+        (halfFiftyithPercentProjection + HalfFourForFour) / 2;
+      TEFullProjectedPoints =
+        (PPRFiftyithPercentProjection + FullFourForFour) / 2;
+      TEPremiuimPorjectedPointsTotal = +(
+        PPRFiftyithPercentProjection + TEPremiuimAddedProjectedPoints
+      ).toFixed(2);
+      TEPremiuimPorjectedPoints =
+        (TEPremiuimPorjectedPointsTotal + FullFourForFour) / 2;
+    } else {
+      TEHalfProjectedPoints =
+        (halfTwentyFifthPercentProjection + HalfFourForFour) / 2;
+      TEFullProjectedPoints =
+        (PPRTwentyFifthPercentProjection + FullFourForFour) / 2;
+      TEPremiuimPorjectedPointsTotal = +(
+        PPRTwentyFifthPercentProjection + TEPremiuimAddedProjectedPoints
+      ).toFixed(2);
+      TEPremiuimPorjectedPoints =
+        (TEPremiuimPorjectedPointsTotal + FullFourForFour) / 2;
+    }
+  } else if (
+    gameInfo.week.currentWeek === 3 &&
+    tePercentageOfMatchingRoleWeeks[i] !== 1
+  ) {
+    TEHalfProjectedPoints = HalfFourForFour;
+    TEFullProjectedPoints = FullFourForFour;
+    TEPremiuimPorjectedPoints = +(
+      FullFourForFour + TEPremiuimAddedProjectedPoints
+    ).toFixed(2);
+  }
+
+  if (gameInfo.week.currentWeek < 3) {
+    TEHalfProjectedPoints = HalfFourForFour;
+    TEFullProjectedPoints = FullFourForFour;
+    TEPremiuimPorjectedPoints = +(
+      FullFourForFour + TEPremiuimAddedProjectedPoints
+    ).toFixed(2);
+  }
 
   allHalfTEFinalProjectedPointsValues.push(TEHalfProjectedPoints);
   allHalfTEFinalProjectedPointsValuesPlusNames.push(
