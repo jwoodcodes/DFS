@@ -255,7 +255,7 @@ WR.insertMany({
     allWRData.allWRsFullProjectedPointsValuesPlusNames,
 }).then(data => {
   console.log('WR Data Inserted Successfully');
-  console.log(data);
+  // console.log(data);
 });
 
 const teSchema = new mongoose.Schema({
@@ -304,7 +304,7 @@ TE.insertMany({
     allTEData.allTEPremiuimFinalProjectedPointsValuesPlusNames,
 }).then(data => {
   console.log('TE Data Inserted Successfully');
-  // console.log(data);
+  console.log(data);
 });
 
 const flexSchema = new mongoose.Schema({

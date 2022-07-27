@@ -84,8 +84,8 @@ const terawdata = {
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      fourForFourHalfPPRProjectedPoints: 9,
+      fourForFourFullPPRProjectedPoints: 11,
 
       yahooSalary: 0,
       fanduelSalary: 0,
