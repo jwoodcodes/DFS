@@ -258,6 +258,25 @@ if (gameInfo.week.currentWeek > 3) {
   });
 }
 
+////////////Calculating projected points per dollar, PP/d
+
+const projectedPointsPerDollarDraftkings = [];
+const projectedPointsPerDollarFanduel = [];
+const projectedPointsPerDollarYahoo = [];
+
+allQBs.forEach(function (team, i) {
+  // console.log(team.draftkingsSalary);
+  // console.log(allQBFinalProjectedPointsValues[i]);
+  let pppddraftkings =
+    allQBFinalProjectedPointsValues[i] / team.draftkingsSalary;
+  let pppdfanduel = allQBFinalProjectedPointsValues[i] / team.fanduelSalary;
+  let pppdyahoo = allQBFinalProjectedPointsValues[i] / team.yahooSalary;
+
+  projectedPointsPerDollarDraftkings.push(pppddraftkings);
+  projectedPointsPerDollarFanduel.push(pppdfanduel);
+  projectedPointsPerDollarYahoo.push(pppdyahoo);
+});
+
 /////////all QB data////////////
 
 const allQBData = {
@@ -273,6 +292,10 @@ const allQBData = {
   allQBFinalProjectedPointsValues: allQBFinalProjectedPointsValues,
   allQBFinalProjectedPointsValuesPlusNames:
     allQBFinalProjectedPointsValuesPlusNames,
+
+  projectedPointsPerDollarDraftkings: projectedPointsPerDollarDraftkings,
+  projectedPointsPerDollarFanduel: projectedPointsPerDollarFanduel,
+  projectedPointsPerDollarYahoo: projectedPointsPerDollarYahoo,
 };
 
 // console.log(allQBData);

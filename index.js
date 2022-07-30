@@ -69,6 +69,9 @@ const qbSchema = new mongoose.Schema({
   allQBTotalScoreArrays: Array,
   allQBFinalProjectedPointsValueArrays: Array,
   allQBFinalProjectedPointsValuesPlusNamesArray: Array,
+  projectedPointsPerDollarDraftkings: Array,
+  projectedPointsPerDollarFanduel: Array,
+  projectedPointsPerDollarYahoo: Array,
 });
 
 const QB = mongoose.model('QB', qbSchema);
@@ -100,6 +103,10 @@ QB.insertMany({
 
   allQBFinalProjectedPointsValuesPlusNamesArray:
     allQBData.allQBFinalProjectedPointsValuesPlusNames,
+  projectedPointsPerDollarDraftkings:
+    allQBData.projectedPointsPerDollarDraftkings,
+  projectedPointsPerDollarFanduel: allQBData.projectedPointsPerDollarFanduel,
+  projectedPointsPerDollarYahoo: allQBData.projectedPointsPerDollarYahoo,
 }).then(data => {
   console.log('QB Data Inserted Successfully');
   // console.log(data);
