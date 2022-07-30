@@ -854,23 +854,66 @@ allQBData.allQBFinalProjectedPointsValues.map(function (value, i) {
     );
 });
 
-//////////builing flex arrays, not stacks here
+//////////builing flex and superflex arrays, not stacks here
 //
 
+const allHalfSuperflexValues = [];
+const allHalfSuperflexValuesWithNames = [];
+const allPPRSuperflexValues = [];
+const allPPRSuperflexValuesWithNames = [];
+const allTEPremiumSuperflexValues = [];
+const allTEPremiumSuperflexValuesWithNames = [];
+
 allRBData.allRBHalfPPRProjectedPointsValues.forEach(function (player, i) {
+  // console.log(allQBData.allQBFinalProjectedPointsValues[i]);
+  if (i < allQBData.allQBFinalProjectedPointsValues.length) {
+    allHalfSuperflexValues.push(allQBData.allQBFinalProjectedPointsValues[i]);
+    allPPRSuperflexValues.push(allQBData.allQBFinalProjectedPointsValues[i]);
+    allTEPremiumSuperflexValues.push(
+      allQBData.allQBFinalProjectedPointsValues[i]
+    );
+    allHalfSuperflexValuesWithNames.push(
+      allQBData.allQBFinalProjectedPointsValuesPlusNames[i]
+    );
+    allPPRSuperflexValuesWithNames.push(
+      allQBData.allQBFinalProjectedPointsValuesPlusNames[i]
+    );
+    allTEPremiumSuperflexValuesWithNames.push(
+      allQBData.allQBFinalProjectedPointsValuesPlusNames[i]
+    );
+  }
+
   allHalfFlexValues.push(player);
-  allHalfFlexValues.push(allWRData.allWRsHalfProjectedPointsValues[i]);
+  allHalfSuperflexValues.push(player);
+  if (i < allWRData.allWRsHalfProjectedPointsValues.length) {
+    allHalfFlexValues.push(allWRData.allWRsHalfProjectedPointsValues[i]);
+    allHalfSuperflexValues.push(allWRData.allWRsHalfProjectedPointsValues[i]);
+    allHalfFlexValuesWithNames.push(
+      allWRData.allWRsHalfProjectedPointsValuesPlusNames[i]
+    );
+    allHalfSuperflexValuesWithNames.push(
+      allWRData.allWRsHalfProjectedPointsValuesPlusNames[i]
+    );
+  }
   if (i < allTEData.allHalfTEFinalProjectedPointsValues.length) {
     allHalfFlexValues.push(allTEData.allHalfTEFinalProjectedPointsValues[i]);
+    allHalfSuperflexValues.push(
+      allTEData.allHalfTEFinalProjectedPointsValues[i]
+    );
   }
+
   allHalfFlexValuesWithNames.push(
     allRBData.allRBHalfPPRProjectedPointsValuesPlusNames[i]
   );
-  allHalfFlexValuesWithNames.push(
-    allWRData.allWRsHalfProjectedPointsValuesPlusNames[i]
+  allHalfSuperflexValuesWithNames.push(
+    allRBData.allRBHalfPPRProjectedPointsValuesPlusNames[i]
   );
+
   if (i < allTEData.allHalfTEFinalProjectedPointsValues.length) {
     allHalfFlexValuesWithNames.push(
+      allTEData.allHalfTEFinalProjectedPointsValuesPlusNames[i]
+    );
+    allHalfSuperflexValuesWithNames.push(
       allTEData.allHalfTEFinalProjectedPointsValuesPlusNames[i]
     );
   }
@@ -878,25 +921,59 @@ allRBData.allRBHalfPPRProjectedPointsValues.forEach(function (player, i) {
 
 allRBData.allRBFullPPRProjectedPointsValues.forEach(function (player, i) {
   allPPRFlexValues.push(player);
-  allPPRFlexValues.push(allWRData.allWRsFullProjectedPointsValues[i]);
+  allPPRSuperflexValues.push(player);
+  allTEPremiumSuperflexValues.push(player);
+  if (i < allWRData.allWRsFullProjectedPointsValues.length) {
+    allPPRFlexValues.push(allWRData.allWRsFullProjectedPointsValues[i]);
+    allTEPFlexValues.push(allWRData.allWRsFullProjectedPointsValues[i]);
+    allPPRSuperflexValues.push(allWRData.allWRsFullProjectedPointsValues[i]);
+    allTEPremiumSuperflexValues.push(
+      allWRData.allWRsFullProjectedPointsValues[i]
+    );
+    allPPRFlexValuesWithNames.push(
+      allWRData.allWRsFullProjectedPointsValuesPlusNames[i]
+    );
+    allTEPFlexValuesWithNames.push(
+      allWRData.allWRsFullProjectedPointsValuesPlusNames[i]
+    );
+    allPPRSuperflexValuesWithNames.push(
+      allWRData.allWRsFullProjectedPointsValuesPlusNames[i]
+    );
+    allTEPremiumSuperflexValuesWithNames.push(
+      allWRData.allWRsFullProjectedPointsValuesPlusNames[i]
+    );
+  }
   if (i < allTEData.allFullTEFinalProjectedPointsValues.length) {
     allPPRFlexValues.push(allTEData.allFullTEFinalProjectedPointsValues[i]);
+    allPPRSuperflexValues.push(
+      allTEData.allFullTEFinalProjectedPointsValues[i]
+    );
   }
 
   allTEPFlexValues.push(player);
-  allTEPFlexValues.push(allWRData.allWRsFullProjectedPointsValues[i]);
+
   if (i < allTEData.allFullTEFinalProjectedPointsValues.length) {
     allTEPFlexValues.push(allTEData.allTEPremiuimFinalProjectedPointsValues[i]);
+    allTEPremiumSuperflexValues.push(
+      allTEData.allTEPremiuimFinalProjectedPointsValues[i]
+    );
   }
 
   allPPRFlexValuesWithNames.push(
     allRBData.allRBFullPPRProjectedPointsValuesPlusNames[i]
   );
-  allPPRFlexValuesWithNames.push(
-    allWRData.allWRsFullProjectedPointsValuesPlusNames[i]
+  allPPRSuperflexValuesWithNames.push(
+    allRBData.allRBFullPPRProjectedPointsValuesPlusNames[i]
   );
+  allTEPremiumSuperflexValuesWithNames.push(
+    allRBData.allRBFullPPRProjectedPointsValuesPlusNames[i]
+  );
+
   if (i < allTEData.allFullTEFinalProjectedPointsValues.length) {
     allPPRFlexValuesWithNames.push(
+      allTEData.allFullTEFinalProjectedPointsValuesPlusNames[i]
+    );
+    allPPRSuperflexValuesWithNames.push(
       allTEData.allFullTEFinalProjectedPointsValuesPlusNames[i]
     );
   }
@@ -904,11 +981,12 @@ allRBData.allRBFullPPRProjectedPointsValues.forEach(function (player, i) {
   allTEPFlexValuesWithNames.push(
     allRBData.allRBFullPPRProjectedPointsValuesPlusNames[i]
   );
-  allTEPFlexValuesWithNames.push(
-    allWRData.allWRsFullProjectedPointsValuesPlusNames[i]
-  );
+
   if (i < allTEData.allFullTEFinalProjectedPointsValues.length) {
     allTEPFlexValuesWithNames.push(
+      allTEData.allTEPremiuimFinalProjectedPointsValuesPlusNames[i]
+    );
+    allTEPremiumSuperflexValuesWithNames.push(
       allTEData.allTEPremiuimFinalProjectedPointsValuesPlusNames[i]
     );
   }
@@ -1047,6 +1125,13 @@ const allStackData = {
   allPPRFlexValuesWithNames: allPPRFlexValuesWithNames,
   allTEPFlexValues: allTEPFlexValues,
   allTEPFlexValuesWithNames: allTEPFlexValuesWithNames,
+  //superflex data
+  allHalfSuperflexValues: allHalfSuperflexValues,
+  allHalfSuperflexValuesWithNames: allHalfSuperflexValuesWithNames,
+  allPPRSuperflexValues: allPPRSuperflexValues,
+  allPPRSuperflexValuesWithNames: allPPRSuperflexValuesWithNames,
+  allTEPremiumSuperflexValues: allTEPremiumSuperflexValues,
+  allTEPremiumSuperflexValuesWithNames: allTEPremiumSuperflexValuesWithNames,
   //stack data
   allHalfQBWROneStacks: allHalfQBWROneStacks,
   allPPRQBWROneStacks: allPPRQBWROneStacks,
@@ -1087,6 +1172,8 @@ const allStackData = {
   allTEPremiumBestTripleStackWithQBAndWROneWithNames:
     allTEPremiumBestTripleStackWithQBAndWROneWithNames,
 };
+
+// console.log(allStackData);
 
 module.exports = allStackingCalcFuncs;
 module.exports = allStackData;

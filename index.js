@@ -304,7 +304,7 @@ TE.insertMany({
     allTEData.allTEPremiuimFinalProjectedPointsValuesPlusNames,
 }).then(data => {
   console.log('TE Data Inserted Successfully');
-  console.log(data);
+  // console.log(data);
 });
 
 const flexSchema = new mongoose.Schema({
@@ -315,6 +315,12 @@ const flexSchema = new mongoose.Schema({
   allPPRFlexValuesWithNames: Array,
   allTEPFlexValues: Array,
   allTEPFlexValuesWithNames: Array,
+  allHalfSuperflexValues: Array,
+  allHalfSuperflexValuesWithNames: Array,
+  allPPRSuperflexValues: Array,
+  allPPRSuperflexValuesWithNames: Array,
+  allTEPremiumSuperflexValues: Array,
+  allTEPremiumSuperflexValuesWithNames: Array,
 });
 
 const flex = mongoose.model('flex', flexSchema);
@@ -335,6 +341,14 @@ flex
     allPPRFlexValuesWithNames: allStackData.allPPRFlexValuesWithNames,
     allTEPFlexValues: allStackData.allTEPFlexValues,
     allTEPFlexValuesWithNames: allStackData.allTEPFlexValuesWithNames,
+    allHalfSuperflexValues: allStackData.allHalfSuperflexValues,
+    allHalfSuperflexValuesWithNames:
+      allStackData.allHalfSuperflexValuesWithNames,
+    allPPRSuperflexValues: allStackData.allPPRSuperflexValues,
+    allPPRSuperflexValuesWithNames: allStackData.allPPRSuperflexValuesWithNames,
+    allTEPremiumSuperflexValues: allStackData.allTEPremiumSuperflexValues,
+    allTEPremiumSuperflexValuesWithNames:
+      allStackData.allTEPremiumSuperflexValuesWithNames,
   })
   .then(data => {
     console.log('flex Data Iserted Successfully');
