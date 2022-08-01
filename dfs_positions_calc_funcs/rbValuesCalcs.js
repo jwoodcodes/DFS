@@ -171,13 +171,6 @@ const allRBCalcFunctions = {
       rbPPRProjectedPoints = rb.fourForFourFullPPRProjectedPoints;
     }
 
-    // console.log(rb);
-    // console.log(rb.name);
-    // console.log(PPRSeventyFifthPercentProjectedPoints);
-    // console.log(totalTeamBackfieldMArket);
-    // console.log(rbTotalTouches);
-    // console.log(rbHalfPorjectedPoints);
-    // console.log(rbPPRProjectedPoints);
     allRBHalfPPRProjectedPointsValues.push(rbHalfPorjectedPoints);
     allRBFullPPRProjectedPointsValues.push(rbPPRProjectedPoints);
     allRBHalfPPRProjectedPointsValuesPlusNames.push(
@@ -222,6 +215,8 @@ allRBs.map(function (rb, i) {
     i
   );
 });
+
+//////////////calculating projected points per dollar
 
 const allRBData = {
   allRBOneHalfPPRProjectedPointsValues: allRBOneHalfPPRProjectedPointsValues,
