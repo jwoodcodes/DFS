@@ -508,6 +508,75 @@ allFullWROneFinalProjectedPointsValuesPlusNames.map(function (proj, i) {
   );
 });
 
+/////////////////////////projected points per dollar
+
+const halfProjectedPointsPerDollarDraftkings = [];
+const halfProjectedPointsPerDollarFanduel = [];
+const halfProjectedPointsPerDollarYahoo = [];
+
+const fullProjectedPointsPerDollarDraftkings = [];
+const fullProjectedPointsPerDollarFanduel = [];
+const fullProjectedPointsPerDollarYahoo = [];
+
+// allRBs.forEach(function (team, i) {
+//   let RBOnes = team.RBOne;
+//   let RBTwos = team.RBTwo;
+
+//   let rbOnehalfdraftkings = +(
+//     allRBOneHalfPPRProjectedPointsValues[i] / RBOnes.draftkingsSalary
+//   ).toFixed(4);
+//   let rbOnehalfFanduel = +(
+//     allRBOneHalfPPRProjectedPointsValues[i] / RBOnes.fanduelSalary
+//   ).toFixed(4);
+//   let rbOnehalfYahoo = +(
+//     allRBOneHalfPPRProjectedPointsValues[i] / RBOnes.yahooSalary
+//   ).toFixed(4);
+
+//   let rbTwohalfdraftkings = +(
+//     allRBTwoHalfPPRProjectedPointsValues[i] / RBTwos.draftkingsSalary
+//   ).toFixed(4);
+//   let rbTwohalfFanduel = +(
+//     allRBTwoHalfPPRProjectedPointsValues[i] / RBTwos.fanduelSalary
+//   ).toFixed(4);
+//   let rbTwohalfYahoo = +(
+//     allRBTwoHalfPPRProjectedPointsValues[i] / RBTwos.yahooSalary
+//   ).toFixed(4);
+
+//   halfProjectedPointsPerDollarDraftkings.push(rbOnehalfdraftkings);
+//   halfProjectedPointsPerDollarFanduel.push(rbOnehalfFanduel);
+//   halfProjectedPointsPerDollarYahoo.push(rbOnehalfYahoo);
+//   halfProjectedPointsPerDollarDraftkings.push(rbTwohalfdraftkings);
+//   halfProjectedPointsPerDollarFanduel.push(rbTwohalfFanduel);
+//   halfProjectedPointsPerDollarYahoo.push(rbTwohalfYahoo);
+
+//   let rbOneFulldraftkings = +(
+//     allRBOneFullPPRProjectedPointsValues[i] / RBOnes.draftkingsSalary
+//   ).toFixed(4);
+//   let rbOneFullFanduel = +(
+//     allRBOneFullPPRProjectedPointsValues[i] / RBOnes.fanduelSalary
+//   ).toFixed(4);
+//   let rbOneFullYahoo = +(
+//     allRBOneFullPPRProjectedPointsValues[i] / RBOnes.yahooSalary
+//   ).toFixed(4);
+
+//   let rbTwoFulldraftkings = +(
+//     allRBTwoFullPPRProjectedPointsValues[i] / RBTwos.draftkingsSalary
+//   ).toFixed(4);
+//   let rbTwoFullFanduel = +(
+//     allRBTwoFullPPRProjectedPointsValues[i] / RBTwos.fanduelSalary
+//   ).toFixed(4);
+//   let rbTwoFullYahoo = +(
+//     allRBTwoFullPPRProjectedPointsValues[i] / RBTwos.yahooSalary
+//   ).toFixed(4);
+
+//   fullProjectedPointsPerDollarDraftkings.push(rbOneFulldraftkings);
+//   fullProjectedPointsPerDollarFanduel.push(rbOneFullFanduel);
+//   fullProjectedPointsPerDollarYahoo.push(rbOneFullYahoo);
+//   fullProjectedPointsPerDollarDraftkings.push(rbTwoFulldraftkings);
+//   fullProjectedPointsPerDollarFanduel.push(rbTwoFullFanduel);
+//   fullProjectedPointsPerDollarYahoo.push(rbTwoFullYahoo);
+// });
+
 const allWRData = {
   allWROneHomeOrAwayFavoriteOrUnderdogs: allWROneHomeOrAwayFavoriteOrUnderdogs,
   allWRTwoHomeOrAwayFavoriteOrUnderdogs: allWRTwoHomeOrAwayFavoriteOrUnderdogs,

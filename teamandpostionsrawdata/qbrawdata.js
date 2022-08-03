@@ -219,7 +219,7 @@ const qbrawdata = {
     fourForFourHalfPPRProjectedPoints: 18,
     fourForFourFullPPRProjectedPoints: 18,
 
-    yahooSalary: 0,
+    yahooSalary: 37,
     fanduelSalary: 0,
     draftkingsSalary: 0,
   },
@@ -307,7 +307,7 @@ const qbrawdata = {
     fourForFourHalfPPRProjectedPoints: 0,
     fourForFourFullPPRProjectedPoints: 0,
 
-    yahooSalary: 0,
+    yahooSalary: 28,
     fanduelSalary: 0,
     draftkingsSalary: 0,
   },
@@ -395,7 +395,7 @@ const qbrawdata = {
     fourForFourHalfPPRProjectedPoints: 0,
     fourForFourFullPPRProjectedPoints: 0,
 
-    yahooSalary: 0,
+    yahooSalary: 23,
     fanduelSalary: 0,
     draftkingsSalary: 0,
   },
@@ -417,7 +417,7 @@ const qbrawdata = {
     fourForFourHalfPPRProjectedPoints: 0,
     fourForFourFullPPRProjectedPoints: 0,
 
-    yahooSalary: 0,
+    yahooSalary: 20,
     fanduelSalary: 0,
     draftkingsSalary: 0,
   },
@@ -571,7 +571,7 @@ const qbrawdata = {
     fourForFourHalfPPRProjectedPoints: 0,
     fourForFourFullPPRProjectedPoints: 0,
 
-    yahooSalary: 0,
+    yahooSalary: 20,
     fanduelSalary: 0,
     draftkingsSalary: 0,
   },
@@ -593,7 +593,7 @@ const qbrawdata = {
     fourForFourHalfPPRProjectedPoints: 0,
     fourForFourFullPPRProjectedPoints: 0,
 
-    yahooSalary: 0,
+    yahooSalary: 25,
     fanduelSalary: 0,
     draftkingsSalary: 0,
   },
@@ -637,7 +637,7 @@ const qbrawdata = {
     fourForFourHalfPPRProjectedPoints: 0,
     fourForFourFullPPRProjectedPoints: 0,
 
-    yahooSalary: 0,
+    yahooSalary: 26,
     fanduelSalary: 0,
     draftkingsSalary: 0,
   },

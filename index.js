@@ -69,6 +69,9 @@ const qbSchema = new mongoose.Schema({
   allQBTotalScoreArrays: Array,
   allQBFinalProjectedPointsValueArrays: Array,
   allQBFinalProjectedPointsValuesPlusNamesArray: Array,
+  projectedPointsPerDollarDraftkings: Array,
+  projectedPointsPerDollarFanduel: Array,
+  projectedPointsPerDollarYahoo: Array,
 });
 
 const QB = mongoose.model('QB', qbSchema);
@@ -100,6 +103,10 @@ QB.insertMany({
 
   allQBFinalProjectedPointsValuesPlusNamesArray:
     allQBData.allQBFinalProjectedPointsValuesPlusNames,
+  projectedPointsPerDollarDraftkings:
+    allQBData.projectedPointsPerDollarDraftkings,
+  projectedPointsPerDollarFanduel: allQBData.projectedPointsPerDollarFanduel,
+  projectedPointsPerDollarYahoo: allQBData.projectedPointsPerDollarYahoo,
 }).then(data => {
   console.log('QB Data Inserted Successfully');
   // console.log(data);
@@ -119,6 +126,13 @@ const rbSchema = new mongoose.Schema({
   allRBFullPPRProjectedPointsValues: Array,
   allRBHalfPPRProjectedPointsValuesPlusNames: Array,
   allRBFullPPRProjectedPointsValuesPlusNames: Array,
+  halfProjectedPointsPerDollarDraftkings: Array,
+  halfProjectedPointsPerDollarFanduel: Array,
+  halfProjectedPointsPerDollarYahoo: Array,
+
+  fullProjectedPointsPerDollarDraftkings: Array,
+  fullProjectedPointsPerDollarFanduel: Array,
+  fullProjectedPointsPerDollarYahoo: Array,
 });
 
 const RB = mongoose.model('RB', rbSchema);
@@ -167,6 +181,19 @@ RB.insertMany({
 
   allRBFullPPRProjectedPointsValuesPlusNames:
     allRBData.allRBFullPPRProjectedPointsValuesPlusNames,
+  halfProjectedPointsPerDollarDraftkings:
+    allRBData.halfProjectedPointsPerDollarDraftkings,
+  halfProjectedPointsPerDollarFanduel:
+    allRBData.halfProjectedPointsPerDollarFanduel,
+  halfProjectedPointsPerDollarYahoo:
+    allRBData.halfProjectedPointsPerDollarYahoo,
+
+  fullProjectedPointsPerDollarDraftkings:
+    allRBData.fullProjectedPointsPerDollarDraftkings,
+  fullProjectedPointsPerDollarFanduel:
+    allRBData.fullProjectedPointsPerDollarFanduel,
+  fullProjectedPointsPerDollarYahoo:
+    allRBData.fullProjectedPointsPerDollarYahoo,
 }).then(data => {
   console.log('RB Data Inserted Successfully');
   // console.log(data);

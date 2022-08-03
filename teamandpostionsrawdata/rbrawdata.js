@@ -120,9 +120,9 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 15,
       fourForFourFullPPRProjectedPoints: 18,
 
-      yahooSalary: 0,
-      fanduelSalary: 0,
-      draftkingsSalary: 0,
+      yahooSalary: 28,
+      fanduelSalary: 6200,
+      draftkingsSalary: 7000,
     },
     RBTwo: {
       name: 'Evans',
@@ -142,9 +142,9 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 4,
       fourForFourFullPPRProjectedPoints: 2,
 
-      yahooSalary: 0,
-      fanduelSalary: 0,
-      draftkingsSalary: 0,
+      yahooSalary: 10,
+      fanduelSalary: 3000,
+      draftkingsSalary: 4000,
     },
   },
   bills: {
