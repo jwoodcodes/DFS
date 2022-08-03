@@ -56,6 +56,30 @@ const wrrawdata = {
       fanduelSalary: 0,
       draftkingsSalary: 0,
     },
+    WRThree: {
+      name: 'placeholder',
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+
+      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
+
+      targetShareLastThreeGamesPlayed: 0,
+      projectedTargets4For4: 0,
+
+      roleThisWeek: 3,
+      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
+      yahooSalary: 0,
+      fanduelSalary: 0,
+      draftkingsSalary: 0,
+    },
   },
   bears: {
     teamName: 'bears',
@@ -103,6 +127,30 @@ const wrrawdata = {
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
+      yahooSalary: 0,
+      fanduelSalary: 0,
+      draftkingsSalary: 0,
+    },
+    WRThree: {
+      name: 'placeholder',
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+
+      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
+
+      targetShareLastThreeGamesPlayed: 0,
+      projectedTargets4For4: 0,
+
+      roleThisWeek: 3,
+      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
 
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
@@ -166,6 +214,30 @@ const wrrawdata = {
       fanduelSalary: 0,
       draftkingsSalary: 0,
     },
+    WRThree: {
+      name: 'placeholder',
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+
+      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
+
+      targetShareLastThreeGamesPlayed: 0,
+      projectedTargets4For4: 0,
+
+      roleThisWeek: 3,
+      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
+      yahooSalary: 0,
+      fanduelSalary: 0,
+      draftkingsSalary: 0,
+    },
   },
   bills: {
     teamName: 'bills',
@@ -213,6 +285,30 @@ const wrrawdata = {
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
+      yahooSalary: 0,
+      fanduelSalary: 0,
+      draftkingsSalary: 0,
+    },
+    WRThree: {
+      name: 'placeholder',
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+
+      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
+
+      targetShareLastThreeGamesPlayed: 0,
+      projectedTargets4For4: 0,
+
+      roleThisWeek: 3,
+      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
 
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
@@ -276,6 +372,30 @@ const wrrawdata = {
       fanduelSalary: 0,
       draftkingsSalary: 0,
     },
+    WRThree: {
+      name: 'placeholder',
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+
+      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
+
+      targetShareLastThreeGamesPlayed: 0,
+      projectedTargets4For4: 0,
+
+      roleThisWeek: 3,
+      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
+      yahooSalary: 0,
+      fanduelSalary: 0,
+      draftkingsSalary: 0,
+    },
   },
   browns: {
     teamName: 'browns',
@@ -323,6 +443,30 @@ const wrrawdata = {
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
+      yahooSalary: 0,
+      fanduelSalary: 0,
+      draftkingsSalary: 0,
+    },
+    WRThree: {
+      name: 'placeholder',
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+
+      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
+
+      targetShareLastThreeGamesPlayed: 0,
+      projectedTargets4For4: 0,
+
+      roleThisWeek: 3,
+      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
 
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
@@ -387,6 +531,30 @@ const wrrawdata = {
       fanduelSalary: 0,
       draftkingsSalary: 0,
     },
+    WRThree: {
+      name: 'placeholder',
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+
+      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
+
+      targetShareLastThreeGamesPlayed: 0,
+      projectedTargets4For4: 0,
+
+      roleThisWeek: 3,
+      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
+      yahooSalary: 0,
+      fanduelSalary: 0,
+      draftkingsSalary: 0,
+    },
   },
   cardinals: {
     teamName: 'cardinals',
@@ -434,6 +602,30 @@ const wrrawdata = {
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
+      yahooSalary: 0,
+      fanduelSalary: 0,
+      draftkingsSalary: 0,
+    },
+    WRThree: {
+      name: 'placeholder',
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+
+      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
+
+      targetShareLastThreeGamesPlayed: 0,
+      projectedTargets4For4: 0,
+
+      roleThisWeek: 3,
+      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
 
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
@@ -497,6 +689,30 @@ const wrrawdata = {
       fanduelSalary: 0,
       draftkingsSalary: 0,
     },
+    WRThree: {
+      name: 'placeholder',
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+
+      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
+
+      targetShareLastThreeGamesPlayed: 0,
+      projectedTargets4For4: 0,
+
+      roleThisWeek: 3,
+      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
+      yahooSalary: 0,
+      fanduelSalary: 0,
+      draftkingsSalary: 0,
+    },
   },
   chiefs: {
     teamName: 'chiefs',
@@ -544,6 +760,30 @@ const wrrawdata = {
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
+      yahooSalary: 0,
+      fanduelSalary: 0,
+      draftkingsSalary: 0,
+    },
+    WRThree: {
+      name: 'placeholder',
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+
+      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
+
+      targetShareLastThreeGamesPlayed: 0,
+      projectedTargets4For4: 0,
+
+      roleThisWeek: 3,
+      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
 
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
@@ -607,6 +847,30 @@ const wrrawdata = {
       fanduelSalary: 0,
       draftkingsSalary: 0,
     },
+    WRThree: {
+      name: 'placeholder',
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+
+      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
+
+      targetShareLastThreeGamesPlayed: 0,
+      projectedTargets4For4: 0,
+
+      roleThisWeek: 3,
+      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
+      yahooSalary: 0,
+      fanduelSalary: 0,
+      draftkingsSalary: 0,
+    },
   },
   comanders: {
     teamName: 'commanders',
@@ -654,6 +918,30 @@ const wrrawdata = {
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
+      yahooSalary: 0,
+      fanduelSalary: 0,
+      draftkingsSalary: 0,
+    },
+    WRThree: {
+      name: 'placeholder',
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+
+      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
+
+      targetShareLastThreeGamesPlayed: 0,
+      projectedTargets4For4: 0,
+
+      roleThisWeek: 3,
+      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
 
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
@@ -717,6 +1005,30 @@ const wrrawdata = {
       fanduelSalary: 0,
       draftkingsSalary: 0,
     },
+    WRThree: {
+      name: 'placeholder',
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+
+      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
+
+      targetShareLastThreeGamesPlayed: 0,
+      projectedTargets4For4: 0,
+
+      roleThisWeek: 3,
+      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
+      yahooSalary: 0,
+      fanduelSalary: 0,
+      draftkingsSalary: 0,
+    },
   },
   dolphins: {
     teamName: 'dolphins',
@@ -764,6 +1076,30 @@ const wrrawdata = {
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
+      yahooSalary: 0,
+      fanduelSalary: 0,
+      draftkingsSalary: 0,
+    },
+    WRThree: {
+      name: 'placeholder',
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+
+      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
+
+      targetShareLastThreeGamesPlayed: 0,
+      projectedTargets4For4: 0,
+
+      roleThisWeek: 3,
+      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
 
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
@@ -827,6 +1163,30 @@ const wrrawdata = {
       fanduelSalary: 0,
       draftkingsSalary: 0,
     },
+    WRThree: {
+      name: 'placeholder',
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+
+      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
+
+      targetShareLastThreeGamesPlayed: 0,
+      projectedTargets4For4: 0,
+
+      roleThisWeek: 3,
+      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
+      yahooSalary: 0,
+      fanduelSalary: 0,
+      draftkingsSalary: 0,
+    },
   },
   falcons: {
     teamName: 'falcons',
@@ -874,6 +1234,30 @@ const wrrawdata = {
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
+      yahooSalary: 0,
+      fanduelSalary: 0,
+      draftkingsSalary: 0,
+    },
+    WRThree: {
+      name: 'placeholder',
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+
+      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
+
+      targetShareLastThreeGamesPlayed: 0,
+      projectedTargets4For4: 0,
+
+      roleThisWeek: 3,
+      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
 
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
@@ -937,6 +1321,30 @@ const wrrawdata = {
       fanduelSalary: 0,
       draftkingsSalary: 0,
     },
+    WRThree: {
+      name: 'placeholder',
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+
+      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
+
+      targetShareLastThreeGamesPlayed: 0,
+      projectedTargets4For4: 0,
+
+      roleThisWeek: 3,
+      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
+      yahooSalary: 0,
+      fanduelSalary: 0,
+      draftkingsSalary: 0,
+    },
   },
   jaguars: {
     teamName: 'jaguars',
@@ -984,6 +1392,30 @@ const wrrawdata = {
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
+      yahooSalary: 0,
+      fanduelSalary: 0,
+      draftkingsSalary: 0,
+    },
+    WRThree: {
+      name: 'placeholder',
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+
+      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
+
+      targetShareLastThreeGamesPlayed: 0,
+      projectedTargets4For4: 0,
+
+      roleThisWeek: 3,
+      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
 
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
@@ -1047,6 +1479,30 @@ const wrrawdata = {
       fanduelSalary: 0,
       draftkingsSalary: 0,
     },
+    WRThree: {
+      name: 'placeholder',
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+
+      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
+
+      targetShareLastThreeGamesPlayed: 0,
+      projectedTargets4For4: 0,
+
+      roleThisWeek: 3,
+      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
+      yahooSalary: 0,
+      fanduelSalary: 0,
+      draftkingsSalary: 0,
+    },
   },
   lions: {
     teamName: 'lions',
@@ -1094,6 +1550,30 @@ const wrrawdata = {
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
+      yahooSalary: 0,
+      fanduelSalary: 0,
+      draftkingsSalary: 0,
+    },
+    WRThree: {
+      name: 'placeholder',
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+
+      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
+
+      targetShareLastThreeGamesPlayed: 0,
+      projectedTargets4For4: 0,
+
+      roleThisWeek: 3,
+      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
 
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
@@ -1157,6 +1637,30 @@ const wrrawdata = {
       fanduelSalary: 0,
       draftkingsSalary: 0,
     },
+    WRThree: {
+      name: 'placeholder',
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+
+      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
+
+      targetShareLastThreeGamesPlayed: 0,
+      projectedTargets4For4: 0,
+
+      roleThisWeek: 3,
+      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
+      yahooSalary: 0,
+      fanduelSalary: 0,
+      draftkingsSalary: 0,
+    },
   },
   panthers: {
     teamName: 'panthers',
@@ -1212,6 +1716,30 @@ const wrrawdata = {
       fanduelSalary: 0,
       draftkingsSalary: 0,
     },
+    WRThree: {
+      name: 'placeholder',
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+
+      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
+
+      targetShareLastThreeGamesPlayed: 0,
+      projectedTargets4For4: 0,
+
+      roleThisWeek: 3,
+      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
+      yahooSalary: 0,
+      fanduelSalary: 0,
+      draftkingsSalary: 0,
+    },
   },
   patriots: {
     teamName: 'patriots',
@@ -1259,6 +1787,30 @@ const wrrawdata = {
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
+      yahooSalary: 0,
+      fanduelSalary: 0,
+      draftkingsSalary: 0,
+    },
+    WRThree: {
+      name: 'placeholder',
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+
+      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
+
+      targetShareLastThreeGamesPlayed: 0,
+      projectedTargets4For4: 0,
+
+      roleThisWeek: 3,
+      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
 
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
@@ -1323,6 +1875,30 @@ const wrrawdata = {
       fanduelSalary: 0,
       draftkingsSalary: 0,
     },
+    WRThree: {
+      name: 'placeholder',
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+
+      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
+
+      targetShareLastThreeGamesPlayed: 0,
+      projectedTargets4For4: 0,
+
+      roleThisWeek: 3,
+      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
+      yahooSalary: 0,
+      fanduelSalary: 0,
+      draftkingsSalary: 0,
+    },
   },
   rams: {
     teamName: 'rams',
@@ -1370,6 +1946,30 @@ const wrrawdata = {
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
+      yahooSalary: 0,
+      fanduelSalary: 0,
+      draftkingsSalary: 0,
+    },
+    WRThree: {
+      name: 'placeholder',
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+
+      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
+
+      targetShareLastThreeGamesPlayed: 0,
+      projectedTargets4For4: 0,
+
+      roleThisWeek: 3,
+      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
 
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
@@ -1433,6 +2033,30 @@ const wrrawdata = {
       fanduelSalary: 0,
       draftkingsSalary: 0,
     },
+    WRThree: {
+      name: 'placeholder',
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+
+      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
+
+      targetShareLastThreeGamesPlayed: 0,
+      projectedTargets4For4: 0,
+
+      roleThisWeek: 3,
+      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
+      yahooSalary: 0,
+      fanduelSalary: 0,
+      draftkingsSalary: 0,
+    },
   },
   saints: {
     teamName: 'saints',
@@ -1480,6 +2104,30 @@ const wrrawdata = {
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
+      yahooSalary: 0,
+      fanduelSalary: 0,
+      draftkingsSalary: 0,
+    },
+    WRThree: {
+      name: 'placeholder',
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+
+      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
+
+      targetShareLastThreeGamesPlayed: 0,
+      projectedTargets4For4: 0,
+
+      roleThisWeek: 3,
+      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
 
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
@@ -1543,6 +2191,30 @@ const wrrawdata = {
       fanduelSalary: 0,
       draftkingsSalary: 0,
     },
+    WRThree: {
+      name: 'placeholder',
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+
+      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
+
+      targetShareLastThreeGamesPlayed: 0,
+      projectedTargets4For4: 0,
+
+      roleThisWeek: 3,
+      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
+      yahooSalary: 0,
+      fanduelSalary: 0,
+      draftkingsSalary: 0,
+    },
   },
   steelers: {
     teamName: 'steelers',
@@ -1598,6 +2270,30 @@ const wrrawdata = {
       fanduelSalary: 0,
       draftkingsSalary: 0,
     },
+    WRThree: {
+      name: 'placeholder',
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+
+      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
+
+      targetShareLastThreeGamesPlayed: 0,
+      projectedTargets4For4: 0,
+
+      roleThisWeek: 3,
+      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
+      yahooSalary: 0,
+      fanduelSalary: 0,
+      draftkingsSalary: 0,
+    },
   },
   texans: {
     teamName: 'texans',
@@ -1645,6 +2341,30 @@ const wrrawdata = {
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
+      yahooSalary: 0,
+      fanduelSalary: 0,
+      draftkingsSalary: 0,
+    },
+    WRThree: {
+      name: 'placeholder',
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+
+      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
+
+      targetShareLastThreeGamesPlayed: 0,
+      projectedTargets4For4: 0,
+
+      roleThisWeek: 3,
+      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
 
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
@@ -1755,6 +2475,30 @@ const wrrawdata = {
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
+      yahooSalary: 0,
+      fanduelSalary: 0,
+      draftkingsSalary: 0,
+    },
+    WRThree: {
+      name: 'placeholder',
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+
+      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
+
+      targetShareLastThreeGamesPlayed: 0,
+      projectedTargets4For4: 0,
+
+      roleThisWeek: 3,
+      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
 
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
