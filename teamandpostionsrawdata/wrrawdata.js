@@ -185,7 +185,7 @@ const wrrawdata = {
       fourForFourHalfPPRProjectedPoints: 16,
       fourForFourFullPPRProjectedPoints: 19,
 
-      yahooSalary: 0,
+      yahooSalary: 22,
       fanduelSalary: 0,
       draftkingsSalary: 0,
     },
@@ -210,7 +210,7 @@ const wrrawdata = {
       fourForFourHalfPPRProjectedPoints: 12,
       fourForFourFullPPRProjectedPoints: 14,
 
-      yahooSalary: 0,
+      yahooSalary: 28,
       fanduelSalary: 0,
       draftkingsSalary: 0,
     },
@@ -234,7 +234,7 @@ const wrrawdata = {
       fourForFourHalfPPRProjectedPoints: 8,
       fourForFourFullPPRProjectedPoints: 10,
 
-      yahooSalary: 0,
+      yahooSalary: 15,
       fanduelSalary: 0,
       draftkingsSalary: 0,
     },
@@ -770,12 +770,12 @@ const wrrawdata = {
     },
     WRThree: {
       name: 'placeholder',
-      halfTwentyFifthPercentProjectedPoints: 0,
-      halfFiftyithPercentProjectedPoints: 0,
-      halfSeventyFifthPercentProjectedPoints: 0,
-      PPRTwentyFifthPercentProjectedPoints: 0,
-      PPRFiftyithPercentProjectedPoints: 0,
-      PPRSeventyFifthPercentProjectedPoints: 0,
+      halfTwentyFifthPercentProjectedPoints: 3,
+      halfFiftyithPercentProjectedPoints: 4,
+      halfSeventyFifthPercentProjectedPoints: 6,
+      PPRTwentyFifthPercentProjectedPoints: 4,
+      PPRFiftyithPercentProjectedPoints: 6,
+      PPRSeventyFifthPercentProjectedPoints: 7,
 
       top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
 
@@ -788,7 +788,7 @@ const wrrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      yahooSalary: 0,
+      yahooSalary: 12,
       fanduelSalary: 0,
       draftkingsSalary: 0,
     },
