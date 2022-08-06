@@ -221,6 +221,12 @@ const wrSchema = new mongoose.Schema({
   allHalfWRTwoFinalProjectedPointsValuesPlusNames: Array,
   allFullWRTwoFinalProjectedPointsValues: Array,
   allFullWRTwoFinalProjectedPointsValuesPlusNames: Array,
+  allHalfWRThreeFinalProjectedPointsValues: Array,
+
+  allHalfWRThreeFinalProjectedPointsValuesPlusNames: Array,
+
+  allFullWRThreeFinalProjectedPointsValues: Array,
+  allFullWRThreeFinalProjectedPointsValuesPlusNames: Array,
   allWRsHalfProjectedPointsValues: Array,
   allWRsFullProjectedPointsValues: Array,
   allWRsHalfProjectedPointsValuesPlusNames: Array,
@@ -274,6 +280,15 @@ WR.insertMany({
     allWRData.allFullWRTwoFinalProjectedPointsValues,
   allFullWRTwoFinalProjectedPointsValuesPlusNames:
     allWRData.allFullWRTwoFinalProjectedPointsValuesPlusNames,
+  allHalfWRThreeFinalProjectedPointsValues:
+    allWRData.allHalfWRThreeFinalProjectedPointsValues,
+  allHalfWRThreeFinalProjectedPointsValuesPlusNames:
+    allWRData.allHalfWRThreeFinalProjectedPointsValuesPlusNames,
+
+  allFullWRThreeFinalProjectedPointsValues:
+    allWRData.allFullWRThreeFinalProjectedPointsValues,
+  allFullWRThreeFinalProjectedPointsValuesPlusNames:
+    allWRData.allFullWRThreeFinalProjectedPointsValuesPlusNames,
   allWRsHalfProjectedPointsValues: allWRData.allWRsHalfProjectedPointsValues,
   allWRsFullProjectedPointsValues: allWRData.allWRsFullProjectedPointsValues,
   allWRsHalfProjectedPointsValuesPlusNames:

@@ -215,24 +215,24 @@ const wrrawdata = {
       draftkingsSalary: 0,
     },
     WRThree: {
-      name: 'placeholder',
-      halfTwentyFifthPercentProjectedPoints: 0,
-      halfFiftyithPercentProjectedPoints: 0,
-      halfSeventyFifthPercentProjectedPoints: 0,
-      PPRTwentyFifthPercentProjectedPoints: 0,
-      PPRFiftyithPercentProjectedPoints: 0,
-      PPRSeventyFifthPercentProjectedPoints: 0,
+      name: 'Tyler Boyd',
+      halfTwentyFifthPercentProjectedPoints: 5,
+      halfFiftyithPercentProjectedPoints: 7,
+      halfSeventyFifthPercentProjectedPoints: 9,
+      PPRTwentyFifthPercentProjectedPoints: 8,
+      PPRFiftyithPercentProjectedPoints: 10,
+      PPRSeventyFifthPercentProjectedPoints: 12,
 
       top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
 
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastThreeGamesPlayed: 15,
+      projectedTargets4For4: 4.5,
 
       roleThisWeek: 3,
       roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      fourForFourHalfPPRProjectedPoints: 8,
+      fourForFourFullPPRProjectedPoints: 10,
 
       yahooSalary: 0,
       fanduelSalary: 0,
