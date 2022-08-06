@@ -221,10 +221,23 @@ const wrSchema = new mongoose.Schema({
   allHalfWRTwoFinalProjectedPointsValuesPlusNames: Array,
   allFullWRTwoFinalProjectedPointsValues: Array,
   allFullWRTwoFinalProjectedPointsValuesPlusNames: Array,
+  allHalfWRThreeFinalProjectedPointsValues: Array,
+
+  allHalfWRThreeFinalProjectedPointsValuesPlusNames: Array,
+
+  allFullWRThreeFinalProjectedPointsValues: Array,
+  allFullWRThreeFinalProjectedPointsValuesPlusNames: Array,
   allWRsHalfProjectedPointsValues: Array,
   allWRsFullProjectedPointsValues: Array,
   allWRsHalfProjectedPointsValuesPlusNames: Array,
   allWRsFullProjectedPointsValuesPlusNames: Array,
+  halfProjectedPointsPerDollarDraftkings: Array,
+  halfProjectedPointsPerDollarFanduel: Array,
+  halfProjectedPointsPerDollarYahoo: Array,
+
+  fullProjectedPointsPerDollarDraftkings: Array,
+  fullProjectedPointsPerDollarFanduel: Array,
+  fullProjectedPointsPerDollarYahoo: Array,
 });
 
 const WR = mongoose.model('WR', wrSchema);
@@ -274,12 +287,34 @@ WR.insertMany({
     allWRData.allFullWRTwoFinalProjectedPointsValues,
   allFullWRTwoFinalProjectedPointsValuesPlusNames:
     allWRData.allFullWRTwoFinalProjectedPointsValuesPlusNames,
+  allHalfWRThreeFinalProjectedPointsValues:
+    allWRData.allHalfWRThreeFinalProjectedPointsValues,
+  allHalfWRThreeFinalProjectedPointsValuesPlusNames:
+    allWRData.allHalfWRThreeFinalProjectedPointsValuesPlusNames,
+
+  allFullWRThreeFinalProjectedPointsValues:
+    allWRData.allFullWRThreeFinalProjectedPointsValues,
+  allFullWRThreeFinalProjectedPointsValuesPlusNames:
+    allWRData.allFullWRThreeFinalProjectedPointsValuesPlusNames,
   allWRsHalfProjectedPointsValues: allWRData.allWRsHalfProjectedPointsValues,
   allWRsFullProjectedPointsValues: allWRData.allWRsFullProjectedPointsValues,
   allWRsHalfProjectedPointsValuesPlusNames:
     allWRData.allWRsHalfProjectedPointsValuesPlusNames,
   allWRsFullProjectedPointsValuesPlusNames:
     allWRData.allWRsFullProjectedPointsValuesPlusNames,
+  halfProjectedPointsPerDollarDraftkings:
+    allWRData.halfProjectedPointsPerDollarDraftkings,
+  halfProjectedPointsPerDollarFanduel:
+    allWRData.halfProjectedPointsPerDollarFanduel,
+  halfProjectedPointsPerDollarYahoo:
+    allWRData.halfProjectedPointsPerDollarYahoo,
+
+  fullProjectedPointsPerDollarDraftkings:
+    allWRData.fullProjectedPointsPerDollarDraftkings,
+  fullProjectedPointsPerDollarFanduel:
+    allWRData.fullProjectedPointsPerDollarFanduel,
+  fullProjectedPointsPerDollarYahoo:
+    allWRData.fullProjectedPointsPerDollarYahoo,
 }).then(data => {
   console.log('WR Data Inserted Successfully');
   // console.log(data);
