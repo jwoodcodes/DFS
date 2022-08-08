@@ -87,9 +87,9 @@ const terawdata = {
       fourForFourHalfPPRProjectedPoints: 9,
       fourForFourFullPPRProjectedPoints: 11,
 
-      yahooSalary: 0,
-      fanduelSalary: 0,
-      draftkingsSalary: 0,
+      yahooSalary: 14,
+      fanduelSalary: 4500,
+      draftkingsSalary: 5000,
     },
   },
   bills: {

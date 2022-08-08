@@ -36,12 +36,16 @@ mongoose
 // scraperController(browserInstance);
 
 const allQBData = require('./dfs_positions_calc_funcs/qbValuesCalcs');
+const qbrawdata = require('./teamandpostionsrawdata/qbrawdata');
 // import allQBData from './dfs_positions_calc_funcs/qbValuesCalcs';
 const allRBData = require('./dfs_positions_calc_funcs/rbValuesCalcs');
+const rbrawdata = require('./teamandpostionsrawdata/rbrawdata');
 
 const allWRData = require('./dfs_positions_calc_funcs/wrValuesCalcs');
+const wrrawdata = require('./teamandpostionsrawdata/wrrawdata');
 
 const allTEData = require('./dfs_positions_calc_funcs/teValuesCalcs');
+const terawdata = require('./teamandpostionsrawdata/terawdata');
 
 const allStackData = require('./dfs_positions_calc_funcs/stackingValuesCalcs');
 const allDefData = require('./dfs_positions_calc_funcs/defValuesCalcs');
@@ -72,6 +76,7 @@ const qbSchema = new mongoose.Schema({
   projectedPointsPerDollarDraftkings: Array,
   projectedPointsPerDollarFanduel: Array,
   projectedPointsPerDollarYahoo: Array,
+  qbrawdata: Object,
 });
 
 const QB = mongoose.model('QB', qbSchema);
@@ -107,6 +112,7 @@ QB.insertMany({
     allQBData.projectedPointsPerDollarDraftkings,
   projectedPointsPerDollarFanduel: allQBData.projectedPointsPerDollarFanduel,
   projectedPointsPerDollarYahoo: allQBData.projectedPointsPerDollarYahoo,
+  qbrawdata: qbrawdata,
 }).then(data => {
   console.log('QB Data Inserted Successfully');
   // console.log(data);
@@ -133,6 +139,7 @@ const rbSchema = new mongoose.Schema({
   fullProjectedPointsPerDollarDraftkings: Array,
   fullProjectedPointsPerDollarFanduel: Array,
   fullProjectedPointsPerDollarYahoo: Array,
+  rbrawdata: Object,
 });
 
 const RB = mongoose.model('RB', rbSchema);
@@ -194,6 +201,7 @@ RB.insertMany({
     allRBData.fullProjectedPointsPerDollarFanduel,
   fullProjectedPointsPerDollarYahoo:
     allRBData.fullProjectedPointsPerDollarYahoo,
+  rbrawdata: rbrawdata,
 }).then(data => {
   console.log('RB Data Inserted Successfully');
   // console.log(data);
@@ -238,6 +246,7 @@ const wrSchema = new mongoose.Schema({
   fullProjectedPointsPerDollarDraftkings: Array,
   fullProjectedPointsPerDollarFanduel: Array,
   fullProjectedPointsPerDollarYahoo: Array,
+  wrrawdata: Object,
 });
 
 const WR = mongoose.model('WR', wrSchema);
@@ -315,6 +324,7 @@ WR.insertMany({
     allWRData.fullProjectedPointsPerDollarFanduel,
   fullProjectedPointsPerDollarYahoo:
     allWRData.fullProjectedPointsPerDollarYahoo,
+  wrrawdata: wrrawdata,
 }).then(data => {
   console.log('WR Data Inserted Successfully');
   // console.log(data);
@@ -333,6 +343,16 @@ const teSchema = new mongoose.Schema({
   allFullTEFinalProjectedPointsValuesPlusNames: Array,
   allTEPremiuimFinalProjectedPointsValues: Array,
   allTEPremiuimFinalProjectedPointsValuesPlusNames: Array,
+  halfProjectedPointsPerDollarDraftkings: Array,
+  halfProjectedPointsPerDollarFanduel: Array,
+  halfProjectedPointsPerDollarYahoo: Array,
+  fullProjectedPointsPerDollarDraftkings: Array,
+  fullProjectedPointsPerDollarFanduel: Array,
+  fullProjectedPointsPerDollarYahoo: Array,
+  tePremiumProjectedPointsPerDollarDraftkings: Array,
+  tePremiumProjectedPointsPerDollarFanduel: Array,
+  tePremiumProjectedPointsPerDollarYahoo: Array,
+  terawdata: Object,
 });
 
 const TE = mongoose.model('TE', teSchema);
@@ -364,6 +384,25 @@ TE.insertMany({
     allTEData.allTEPremiuimFinalProjectedPointsValues,
   allTEPremiuimFinalProjectedPointsValuesPlusNames:
     allTEData.allTEPremiuimFinalProjectedPointsValuesPlusNames,
+  halfProjectedPointsPerDollarDraftkings:
+    allTEData.halfProjectedPointsPerDollarDraftkings,
+  halfProjectedPointsPerDollarFanduel:
+    allTEData.halfProjectedPointsPerDollarFanduel,
+  halfProjectedPointsPerDollarYahoo:
+    allTEData.halfProjectedPointsPerDollarYahoo,
+  fullProjectedPointsPerDollarDraftkings:
+    allTEData.fullProjectedPointsPerDollarDraftkings,
+  fullProjectedPointsPerDollarFanduel:
+    allTEData.fullProjectedPointsPerDollarFanduel,
+  fullProjectedPointsPerDollarYahoo:
+    allTEData.fullProjectedPointsPerDollarYahoo,
+  tePremiumProjectedPointsPerDollarDraftkings:
+    allTEData.tePremiumProjectedPointsPerDollarDraftkings,
+  tePremiumProjectedPointsPerDollarFanduel:
+    allTEData.tePremiumProjectedPointsPerDollarFanduel,
+  tePremiumProjectedPointsPerDollarYahoo:
+    allTEData.tePremiumProjectedPointsPerDollarYahoo,
+  terawdata: terawdata,
 }).then(data => {
   console.log('TE Data Inserted Successfully');
   // console.log(data);
