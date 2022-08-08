@@ -278,6 +278,57 @@ allTETotalScores.map(function (score, i, array) {
   );
 });
 
+////////////Calculating projected points per dollar, PP/d
+
+const halfProjectedPointsPerDollarDraftkings = [];
+const halfProjectedPointsPerDollarFanduel = [];
+const halfProjectedPointsPerDollarYahoo = [];
+
+const fullProjectedPointsPerDollarDraftkings = [];
+const fullProjectedPointsPerDollarFanduel = [];
+const fullProjectedPointsPerDollarYahoo = [];
+
+const tePremiumProjectedPointsPerDollarDraftkings = [];
+const tePremiumProjectedPointsPerDollarFanduel = [];
+const tePremiumProjectedPointsPerDollarYahoo = [];
+
+allTEs.forEach(function (team, i) {
+  let halfpppddraftkings =
+    allHalfTEFinalProjectedPointsValues[i] / team.TE.draftkingsSalary;
+  let halfpppdfanduel =
+    allHalfTEFinalProjectedPointsValues[i] / team.TE.fanduelSalary;
+  let halfpppdyahoo =
+    allHalfTEFinalProjectedPointsValues[i] / team.TE.yahooSalary;
+
+  let fullpppddraftkings =
+    allFullTEFinalProjectedPointsValues[i] / team.TE.draftkingsSalary;
+  let fullpppdfanduel =
+    allFullTEFinalProjectedPointsValues[i] / team.TE.fanduelSalary;
+  let fullpppdyahoo =
+    allFullTEFinalProjectedPointsValues[i] / team.TE.yahooSalary;
+
+  let teppppddraftkings =
+    allTEPremiuimFinalProjectedPointsValues[i] / team.TE.draftkingsSalary;
+  let teppppdfanduel =
+    allTEPremiuimFinalProjectedPointsValues[i] / team.TE.fanduelSalary;
+  let teppppdyahoo =
+    allTEPremiuimFinalProjectedPointsValues[i] / team.TE.yahooSalary;
+
+  halfProjectedPointsPerDollarDraftkings.push(+halfpppddraftkings.toFixed(5));
+  halfProjectedPointsPerDollarFanduel.push(+halfpppdfanduel.toFixed(5));
+  halfProjectedPointsPerDollarYahoo.push(+halfpppdyahoo.toFixed(4));
+
+  fullProjectedPointsPerDollarDraftkings.push(+fullpppddraftkings.toFixed(5));
+  fullProjectedPointsPerDollarFanduel.push(+fullpppdfanduel.toFixed(5));
+  fullProjectedPointsPerDollarYahoo.push(+fullpppdyahoo.toFixed(4));
+
+  tePremiumProjectedPointsPerDollarDraftkings.push(
+    +teppppddraftkings.toFixed(5)
+  );
+  tePremiumProjectedPointsPerDollarFanduel.push(+teppppdfanduel.toFixed(5));
+  tePremiumProjectedPointsPerDollarYahoo.push(+teppppdyahoo.toFixed(4));
+});
+
 const allTEData = {
   allTEVTTs: allTEVTTs,
   allTEHighProjectedTargetsBonus: allTEHighProjectedTargetsBonus,
@@ -295,6 +346,21 @@ const allTEData = {
     allTEPremiuimFinalProjectedPointsValues,
   allTEPremiuimFinalProjectedPointsValuesPlusNames:
     allTEPremiuimFinalProjectedPointsValuesPlusNames,
+
+  halfProjectedPointsPerDollarDraftkings:
+    halfProjectedPointsPerDollarDraftkings,
+  halfProjectedPointsPerDollarFanduel: halfProjectedPointsPerDollarFanduel,
+  halfProjectedPointsPerDollarYahoo: halfProjectedPointsPerDollarYahoo,
+  fullProjectedPointsPerDollarDraftkings:
+    fullProjectedPointsPerDollarDraftkings,
+  fullProjectedPointsPerDollarFanduel: fullProjectedPointsPerDollarFanduel,
+  fullProjectedPointsPerDollarYahoo: fullProjectedPointsPerDollarYahoo,
+  tePremiumProjectedPointsPerDollarDraftkings:
+    tePremiumProjectedPointsPerDollarDraftkings,
+  tePremiumProjectedPointsPerDollarFanduel:
+    tePremiumProjectedPointsPerDollarFanduel,
+  tePremiumProjectedPointsPerDollarYahoo:
+    tePremiumProjectedPointsPerDollarYahoo,
 };
 
 module.exports = allTECalcFunctions;
