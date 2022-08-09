@@ -107,6 +107,4 @@ const QBWROneSingleStackData = {
     fullYahooBestQBWROneStackspointsperdollar,
 };
 
-console.log(fullDKBestQBWROneStackspointsperdollar);
-
 module.exports = QBWROneSingleStackData;
