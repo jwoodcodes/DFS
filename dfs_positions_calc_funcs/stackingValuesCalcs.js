@@ -7,10 +7,7 @@ const allRBs = require('../teamandpositionvariables/allRBVariables');
 const allWRs = require('../teamandpositionvariables/allWRVariables');
 const allTEs = require('../teamandpositionvariables/allTEVariables');
 
-const allHalfQBWROneStacks = [];
-const allHalfQBWROneStackWithNames = [];
-const allPPRQBWROneStacks = [];
-const allPPRQBWROneStacksWithNames = [];
+const QBWROneSingleStackData = require('./stackingValuesCalcs/bestQBWROneStacks');
 
 const allTeamsBestHalfSingleStackWithQB = [];
 const allTeamsBestHalfSingleStackWithQBWithNames = [];
@@ -47,81 +44,7 @@ const allHalfFlexValuesWithNames = [];
 const allPPRFlexValuesWithNames = [];
 const allTEPFlexValuesWithNames = [];
 
-const halfDKBestQBWROneStackspointsperdollar = [];
-const halfFDBestQBWROneStackspointsperdollar = [];
-const halfYahooBestQBWROneStackspointsperdollar = [];
-
-const fullDKBestQBWROneStackspointsperdollar = [];
-const fullFDBestQBWROneStackspointsperdollar = [];
-const fullYahooBestQBWROneStackspointsperdollar = [];
-
 const allStackingCalcFuncs = {
-  calcTeamsBestQBWROneStacks(team, i) {
-    let qb = team;
-    let wrOneHalf = allWRData.allHalfWROneFinalProjectedPointsValues[i];
-    let wrOneFull = allWRData.allFullWROneFinalProjectedPointsValues[i];
-
-    let qbwrOneHalf = qb + wrOneHalf;
-    let qbwrOneHalfWithNames = `${qbwrOneHalf}: ${allQBs[i].name}-${allWRs[i].WROne.name}`;
-    let qbwrOneFull = qb + wrOneFull;
-    let qbwrOneFullWithNames = `${qbwrOneFull}: ${allQBs[i].name}-${allWRs[i].WROne.name}`;
-
-    allHalfQBWROneStacks.push(qbwrOneHalf);
-    allHalfQBWROneStackWithNames.push(qbwrOneHalfWithNames);
-
-    allPPRQBWROneStacks.push(qbwrOneFull);
-    allPPRQBWROneStacksWithNames.push(qbwrOneFullWithNames);
-
-    /////points per doller
-
-    let qbDKSalary = allQBs[i].draftkingsSalary;
-    let qbFDSalary = allQBs[i].fanduelSalary;
-    let qbYahooSalary = allQBs[i].yahooSalary;
-
-    let wrOneDKSalary = allWRs[i].WROne.draftkingsSalary;
-    let wrOneFDSalary = allWRs[i].WROne.fanduelSalary;
-    let wrOneYahooSalary = allWRs[i].WROne.yahooSalary;
-
-    /////half ppr p/d
-
-    let halfDKtotalprojpointsperdollar =
-      qbwrOneHalf / (qbDKSalary + wrOneDKSalary);
-    let halfFDtotalprojpointsperdollar =
-      qbwrOneHalf / (qbFDSalary + wrOneFDSalary);
-    let halfYahoototalprojpointsperdollar =
-      qbwrOneHalf / (qbYahooSalary + wrOneYahooSalary);
-
-    halfDKBestQBWROneStackspointsperdollar.push(
-      +halfDKtotalprojpointsperdollar.toFixed(5)
-    );
-    halfFDBestQBWROneStackspointsperdollar.push(
-      +halfFDtotalprojpointsperdollar.toFixed(5)
-    );
-    halfYahooBestQBWROneStackspointsperdollar.push(
-      +halfYahoototalprojpointsperdollar.toFixed(4)
-    );
-
-    ///Full PPR p/d
-    let fullDKtotalprojpointsperdollar =
-      qbwrOneFull / (qbDKSalary + wrOneDKSalary);
-    let fullFDtotalprojpointsperdollar =
-      qbwrOneFull / (qbFDSalary + wrOneFDSalary);
-    let fullYahoototalprojpointsperdollar =
-      qbwrOneFull / (qbYahooSalary + wrOneYahooSalary);
-
-    fullDKBestQBWROneStackspointsperdollar.push(
-      +fullDKtotalprojpointsperdollar.toFixed(5)
-    );
-    fullFDBestQBWROneStackspointsperdollar.push(
-      +fullFDtotalprojpointsperdollar.toFixed(5)
-    );
-    fullYahooBestQBWROneStackspointsperdollar.push(
-      +fullYahoototalprojpointsperdollar.toFixed(4)
-    );
-
-    return qbwrOneHalf;
-  },
-
   CalcTeamBestSingleStackWithQB(array, i) {
     // console.log(array);
     let [qb, rbOne, rbTwo, wrOne, wrTwo, te] = array;
@@ -876,11 +799,6 @@ allQBData.allQBFinalProjectedPointsValues.map(function (value, i) {
     oppteName,
   ];
 
-  const bestQBWROneStacks = allStackingCalcFuncs.calcTeamsBestQBWROneStacks(
-    value,
-    i
-  );
-
   const bestHalfTeamSingleStackWithQB =
     allStackingCalcFuncs.CalcTeamBestSingleStackWithQB(halfArray, i);
 
@@ -1190,10 +1108,12 @@ const allStackData = {
   allTEPremiumSuperflexValues: allTEPremiumSuperflexValues,
   allTEPremiumSuperflexValuesWithNames: allTEPremiumSuperflexValuesWithNames,
   //single stack data
-  allHalfQBWROneStacks: allHalfQBWROneStacks,
-  allPPRQBWROneStacks: allPPRQBWROneStacks,
-  allHalfQBWROneStackWithNames: allHalfQBWROneStackWithNames,
-  allPPRQBWROneStacksWithNames: allPPRQBWROneStacksWithNames,
+  allHalfQBWROneStacks: QBWROneSingleStackData.allHalfQBWROneStacks,
+  allPPRQBWROneStacks: QBWROneSingleStackData.allPPRQBWROneStacks,
+  allHalfQBWROneStackWithNames:
+    QBWROneSingleStackData.allHalfQBWROneStackWithNames,
+  allPPRQBWROneStacksWithNames:
+    QBWROneSingleStackData.allPPRQBWROneStacksWithNames,
   allTeamsBestHalfSingleStackWithQB: allTeamsBestHalfSingleStackWithQB,
   allTeamsBestHalfSingleStackWithQBWithNames:
     allTeamsBestHalfSingleStackWithQBWithNames,
@@ -1206,17 +1126,17 @@ const allStackData = {
     allTEPremiumBestSingleStackWithQBWithNames,
 
   halfDKBestQBWROneStackspointsperdollar:
-    halfDKBestQBWROneStackspointsperdollar,
+    QBWROneSingleStackData.halfDKBestQBWROneStackspointsperdollar,
   halfFDBestQBWROneStackspointsperdollar:
-    halfFDBestQBWROneStackspointsperdollar,
+    QBWROneSingleStackData.halfFDBestQBWROneStackspointsperdollar,
   halfYahooBestQBWROneStackspointsperdollar:
-    halfYahooBestQBWROneStackspointsperdollar,
+    QBWROneSingleStackData.halfYahooBestQBWROneStackspointsperdollar,
   fullDKBestQBWROneStackspointsperdollar:
-    fullDKBestQBWROneStackspointsperdollar,
+    QBWROneSingleStackData.fullDKBestQBWROneStackspointsperdollar,
   fullFDBestQBWROneStackspointsperdollar:
-    fullFDBestQBWROneStackspointsperdollar,
+    QBWROneSingleStackData.fullFDBestQBWROneStackspointsperdollar,
   fullYahooBestQBWROneStackspointsperdollar:
-    fullYahooBestQBWROneStackspointsperdollar,
+    QBWROneSingleStackData.fullYahooBestQBWROneStackspointsperdollar,
   //double stack data
   allTeamsBestHalfDoubleStackWithQBAndWROne:
     allTeamsBestHalfDoubleStackWithQBAndWROne,
