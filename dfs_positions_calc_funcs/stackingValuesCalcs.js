@@ -47,6 +47,14 @@ const allHalfFlexValuesWithNames = [];
 const allPPRFlexValuesWithNames = [];
 const allTEPFlexValuesWithNames = [];
 
+const halfDKBestQBWROneStackspointsperdollar = [];
+const halfFDBestQBWROneStackspointsperdollar = [];
+const halfYahooBestQBWROneStackspointsperdollar = [];
+
+const fullDKBestQBWROneStackspointsperdollar = [];
+const fullFDBestQBWROneStackspointsperdollar = [];
+const fullYahooBestQBWROneStackspointsperdollar = [];
+
 const allStackingCalcFuncs = {
   calcTeamsBestQBWROneStacks(team, i) {
     let qb = team;
@@ -63,6 +71,53 @@ const allStackingCalcFuncs = {
 
     allPPRQBWROneStacks.push(qbwrOneFull);
     allPPRQBWROneStacksWithNames.push(qbwrOneFullWithNames);
+
+    /////points per doller
+
+    let qbDKSalary = allQBs[i].draftkingsSalary;
+    let qbFDSalary = allQBs[i].fanduelSalary;
+    let qbYahooSalary = allQBs[i].yahooSalary;
+
+    let wrOneDKSalary = allWRs[i].WROne.draftkingsSalary;
+    let wrOneFDSalary = allWRs[i].WROne.fanduelSalary;
+    let wrOneYahooSalary = allWRs[i].WROne.yahooSalary;
+
+    /////half ppr p/d
+
+    let halfDKtotalprojpointsperdollar =
+      qbwrOneHalf / (qbDKSalary + wrOneDKSalary);
+    let halfFDtotalprojpointsperdollar =
+      qbwrOneHalf / (qbFDSalary + wrOneFDSalary);
+    let halfYahoototalprojpointsperdollar =
+      qbwrOneHalf / (qbYahooSalary + wrOneYahooSalary);
+
+    halfDKBestQBWROneStackspointsperdollar.push(
+      +halfDKtotalprojpointsperdollar.toFixed(5)
+    );
+    halfFDBestQBWROneStackspointsperdollar.push(
+      +halfFDtotalprojpointsperdollar.toFixed(5)
+    );
+    halfYahooBestQBWROneStackspointsperdollar.push(
+      +halfYahoototalprojpointsperdollar.toFixed(4)
+    );
+
+    ///Full PPR p/d
+    let fullDKtotalprojpointsperdollar =
+      qbwrOneFull / (qbDKSalary + wrOneDKSalary);
+    let fullFDtotalprojpointsperdollar =
+      qbwrOneFull / (qbFDSalary + wrOneFDSalary);
+    let fullYahoototalprojpointsperdollar =
+      qbwrOneFull / (qbYahooSalary + wrOneYahooSalary);
+
+    fullDKBestQBWROneStackspointsperdollar.push(
+      +fullDKtotalprojpointsperdollar.toFixed(5)
+    );
+    fullFDBestQBWROneStackspointsperdollar.push(
+      +fullFDtotalprojpointsperdollar.toFixed(5)
+    );
+    fullYahooBestQBWROneStackspointsperdollar.push(
+      +fullYahoototalprojpointsperdollar.toFixed(4)
+    );
 
     return qbwrOneHalf;
   },
@@ -999,123 +1054,125 @@ allRBData.allRBFullPPRProjectedPointsValues.forEach(function (player, i) {
 //   }
 // );
 
-let sortedAllHalfQBWROneStacks = allHalfQBWROneStackWithNames.sort((a, b) => {
-  if (a > b) return -1;
-  if (a < b) return 1;
-});
+// let sortedAllHalfQBWROneStacks = allHalfQBWROneStackWithNames.sort((a, b) => {
+//   if (a > b) return -1;
+//   if (a < b) return 1;
+// });
 
-let sortedAllFullQBWROneStacks = allPPRQBWROneStacksWithNames.sort((a, b) => {
-  if (a > b) return -1;
-  if (a < b) return 1;
-});
+// let sortedAllFullQBWROneStacks = allPPRQBWROneStacksWithNames.sort((a, b) => {
+//   if (a > b) return -1;
+//   if (a < b) return 1;
+// });
 
-let sortedallTeamsBestHalfSingleStackWithQBWithNames =
-  allTeamsBestHalfSingleStackWithQBWithNames.sort((a, b) => {
-    if (a > b) return -1;
-    if (a < b) return 1;
-  });
+// let sortedallTeamsBestHalfSingleStackWithQBWithNames =
+//   allTeamsBestHalfSingleStackWithQBWithNames.sort((a, b) => {
+//     if (a > b) return -1;
+//     if (a < b) return 1;
+//   });
 
-let sortedallTeamsBestHalfSingleStackWithQB =
-  allTeamsBestHalfSingleStackWithQB.sort((a, b) => {
-    if (a > b) return -1;
-    if (a < b) return 1;
-  });
+// let sortedallTeamsBestHalfSingleStackWithQB =
+//   allTeamsBestHalfSingleStackWithQB.sort((a, b) => {
+//     if (a > b) return -1;
+//     if (a < b) return 1;
+//   });
 
-let sortedallTeamsBestPPRSingleStackWithQBWithNames =
-  allTeamsBestPPRSingleStackWithQBWithNames.sort((a, b) => {
-    if (a > b) return -1;
-    if (a < b) return 1;
-  });
+// let sortedallTeamsBestPPRSingleStackWithQBWithNames =
+//   allTeamsBestPPRSingleStackWithQBWithNames.sort((a, b) => {
+//     if (a > b) return -1;
+//     if (a < b) return 1;
+//   });
 
-let sortedallTeamsBestPPRSingleStackWithQB =
-  allTeamsBestPPRSingleStackWithQB.sort((a, b) => {
-    if (a > b) return -1;
-    if (a < b) return 1;
-  });
+// let sortedallTeamsBestPPRSingleStackWithQB =
+//   allTeamsBestPPRSingleStackWithQB.sort((a, b) => {
+//     if (a > b) return -1;
+//     if (a < b) return 1;
+//   });
 
-let sortedallTEPremiumBestSingleStackWithQBWithNames =
-  allTEPremiumBestSingleStackWithQBWithNames.sort((a, b) => {
-    if (a > b) return -1;
-    if (a < b) return 1;
-  });
+// let sortedallTEPremiumBestSingleStackWithQBWithNames =
+//   allTEPremiumBestSingleStackWithQBWithNames.sort((a, b) => {
+//     if (a > b) return -1;
+//     if (a < b) return 1;
+//   });
 
-let sortedallTEPremiumBestSingleStackWithQB =
-  allTEPremiumBestSingleStackWithQB.sort((a, b) => {
-    if (a > b) return -1;
-    if (a < b) return 1;
-  });
+// let sortedallTEPremiumBestSingleStackWithQB =
+//   allTEPremiumBestSingleStackWithQB.sort((a, b) => {
+//     if (a > b) return -1;
+//     if (a < b) return 1;
+//   });
 
-let sortedallTeamsBestHalfDoubleStackWithQBAndWROneWithNames =
-  allTeamsBestHalfDoubleStackWithQBAndWROneWithNames.sort((a, b) => {
-    if (a > b) return -1;
-    if (a < b) return 1;
-  });
+// let sortedallTeamsBestHalfDoubleStackWithQBAndWROneWithNames =
+//   allTeamsBestHalfDoubleStackWithQBAndWROneWithNames.sort((a, b) => {
+//     if (a > b) return -1;
+//     if (a < b) return 1;
+//   });
 
-let sortedallTeamsBestHalfDoubleStackWithQBAndWROne =
-  allTeamsBestHalfDoubleStackWithQBAndWROne.sort((a, b) => {
-    if (a > b) return -1;
-    if (a < b) return 1;
-  });
+// let sortedallTeamsBestHalfDoubleStackWithQBAndWROne =
+//   allTeamsBestHalfDoubleStackWithQBAndWROne.sort((a, b) => {
+//     if (a > b) return -1;
+//     if (a < b) return 1;
+//   });
 
-let sortedallTeamsBestPPRDoubleStackWithQBAndWROneWithNames =
-  allTeamsBestPPRDoubleStackWithQBAndWROneWithNames.sort((a, b) => {
-    if (a > b) return -1;
-    if (a < b) return 1;
-  });
+// let sortedallTeamsBestPPRDoubleStackWithQBAndWROneWithNames =
+//   allTeamsBestPPRDoubleStackWithQBAndWROneWithNames.sort((a, b) => {
+//     if (a > b) return -1;
+//     if (a < b) return 1;
+//   });
 
-let sortedallTeamsBestPPRDoubleStackWithQBAndWROne =
-  allTeamsBestPPRDoubleStackWithQBAndWROne.sort((a, b) => {
-    if (a > b) return -1;
-    if (a < b) return 1;
-  });
+// let sortedallTeamsBestPPRDoubleStackWithQBAndWROne =
+//   allTeamsBestPPRDoubleStackWithQBAndWROne.sort((a, b) => {
+//     if (a > b) return -1;
+//     if (a < b) return 1;
+//   });
 
-let sortedallTEPremiumBestDoubleStackWithQBAndWROneWithNames =
-  allTEPremiumBestDoubleStackWithQBAndWROneWithNames.sort((a, b) => {
-    if (a > b) return -1;
-    if (a < b) return 1;
-  });
+// let sortedallTEPremiumBestDoubleStackWithQBAndWROneWithNames =
+//   allTEPremiumBestDoubleStackWithQBAndWROneWithNames.sort((a, b) => {
+//     if (a > b) return -1;
+//     if (a < b) return 1;
+//   });
 
-let sortedallTEPremiumBestDoubleStackWithQBAndWROne =
-  allTEPremiumBestDoubleStackWithQBAndWROne.sort((a, b) => {
-    if (a > b) return -1;
-    if (a < b) return 1;
-  });
+// let sortedallTEPremiumBestDoubleStackWithQBAndWROne =
+//   allTEPremiumBestDoubleStackWithQBAndWROne.sort((a, b) => {
+//     if (a > b) return -1;
+//     if (a < b) return 1;
+//   });
 
-let sortedallTeamsBestHalfTripleStackWithQBAndWROneWithNames =
-  allTeamsBestHalfTripleStackWithQBAndWROneWithNames.sort((a, b) => {
-    if (a > b) return -1;
-    if (a < b) return 1;
-  });
+// let sortedallTeamsBestHalfTripleStackWithQBAndWROneWithNames =
+//   allTeamsBestHalfTripleStackWithQBAndWROneWithNames.sort((a, b) => {
+//     if (a > b) return -1;
+//     if (a < b) return 1;
+//   });
 
-let sortedallTeamsBestHalfTripleStackWithQBAndWROne =
-  allTeamsBestHalfTripleStackWithQBAndWROne.sort((a, b) => {
-    if (a > b) return -1;
-    if (a < b) return 1;
-  });
+// let sortedallTeamsBestHalfTripleStackWithQBAndWROne =
+//   allTeamsBestHalfTripleStackWithQBAndWROne.sort((a, b) => {
+//     if (a > b) return -1;
+//     if (a < b) return 1;
+//   });
 
-let sortedallTeamsBestPPRTripleStackWithQBAndWROneWithNames =
-  allTeamsBestPPRTripleStackWithQBAndWROneWithNames.sort((a, b) => {
-    if (a > b) return -1;
-    if (a < b) return 1;
-  });
+// let sortedallTeamsBestPPRTripleStackWithQBAndWROneWithNames =
+//   allTeamsBestPPRTripleStackWithQBAndWROneWithNames.sort((a, b) => {
+//     if (a > b) return -1;
+//     if (a < b) return 1;
+//   });
 
-let sortedallTeamsBestPPRTripleStackWithQBAndWROne =
-  allTeamsBestPPRTripleStackWithQBAndWROne.sort((a, b) => {
-    if (a > b) return -1;
-    if (a < b) return 1;
-  });
+// let sortedallTeamsBestPPRTripleStackWithQBAndWROne =
+//   allTeamsBestPPRTripleStackWithQBAndWROne.sort((a, b) => {
+//     if (a > b) return -1;
+//     if (a < b) return 1;
+//   });
 
-let sortedallTEPremiumBestTripleStackWithQBAndWROne =
-  allTEPremiumBestTripleStackWithQBAndWROne.sort((a, b) => {
-    if (a > b) return -1;
-    if (a < b) return 1;
-  });
+// let sortedallTEPremiumBestTripleStackWithQBAndWROne =
+//   allTEPremiumBestTripleStackWithQBAndWROne.sort((a, b) => {
+//     if (a > b) return -1;
+//     if (a < b) return 1;
+//   });
 
-let sortedallTEPremiumBestTripleStackWithQBAndWROneWithNames =
-  allTEPremiumBestTripleStackWithQBAndWROneWithNames.sort((a, b) => {
-    if (a > b) return -1;
-    if (a < b) return 1;
-  });
+// let sortedallTEPremiumBestTripleStackWithQBAndWROneWithNames =
+//   allTEPremiumBestTripleStackWithQBAndWROneWithNames.sort((a, b) => {
+//     if (a > b) return -1;
+//     if (a < b) return 1;
+//   });
+
+///////////////calculting total projected points per total projected dollars for stacks
 
 const allStackData = {
   //flex data
@@ -1132,7 +1189,7 @@ const allStackData = {
   allPPRSuperflexValuesWithNames: allPPRSuperflexValuesWithNames,
   allTEPremiumSuperflexValues: allTEPremiumSuperflexValues,
   allTEPremiumSuperflexValuesWithNames: allTEPremiumSuperflexValuesWithNames,
-  //stack data
+  //single stack data
   allHalfQBWROneStacks: allHalfQBWROneStacks,
   allPPRQBWROneStacks: allPPRQBWROneStacks,
   allHalfQBWROneStackWithNames: allHalfQBWROneStackWithNames,
@@ -1140,13 +1197,27 @@ const allStackData = {
   allTeamsBestHalfSingleStackWithQB: allTeamsBestHalfSingleStackWithQB,
   allTeamsBestHalfSingleStackWithQBWithNames:
     allTeamsBestHalfSingleStackWithQBWithNames,
-  sortedAllHalfQBWROneStacks: sortedAllHalfQBWROneStacks,
+  // sortedAllHalfQBWROneStacks: sortedAllHalfQBWROneStacks,
   allTeamsBestPPRSingleStackWithQB: allTeamsBestPPRSingleStackWithQB,
   allTeamsBestPPRSingleStackWithQBWithNames:
     allTeamsBestPPRSingleStackWithQBWithNames,
   allTEPremiumBestSingleStackWithQB: allTEPremiumBestSingleStackWithQB,
   allTEPremiumBestSingleStackWithQBWithNames:
     allTEPremiumBestSingleStackWithQBWithNames,
+
+  halfDKBestQBWROneStackspointsperdollar:
+    halfDKBestQBWROneStackspointsperdollar,
+  halfFDBestQBWROneStackspointsperdollar:
+    halfFDBestQBWROneStackspointsperdollar,
+  halfYahooBestQBWROneStackspointsperdollar:
+    halfYahooBestQBWROneStackspointsperdollar,
+  fullDKBestQBWROneStackspointsperdollar:
+    fullDKBestQBWROneStackspointsperdollar,
+  fullFDBestQBWROneStackspointsperdollar:
+    fullFDBestQBWROneStackspointsperdollar,
+  fullYahooBestQBWROneStackspointsperdollar:
+    fullYahooBestQBWROneStackspointsperdollar,
+  //double stack data
   allTeamsBestHalfDoubleStackWithQBAndWROne:
     allTeamsBestHalfDoubleStackWithQBAndWROne,
   allTeamsBestHalfDoubleStackWithQBAndWROneWithNames:
@@ -1159,6 +1230,7 @@ const allStackData = {
     allTEPremiumBestDoubleStackWithQBAndWROne,
   allTEPremiumBestDoubleStackWithQBAndWROneWithNames:
     allTEPremiumBestDoubleStackWithQBAndWROneWithNames,
+  //triple stack data
   allTeamsBestHalfTripleStackWithQBAndWROne:
     allTeamsBestHalfTripleStackWithQBAndWROne,
   allTeamsBestPPRTripleStackWithQBAndWROne:
