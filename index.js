@@ -463,7 +463,7 @@ const stackingSchema = new mongoose.Schema({
   allHalfQBWROneStackWithNames: Array,
   allPPRQBWROneStacksWithNames: Array,
   allTeamsBestHalfSingleStackWithQBWithNames: Array,
-  sortedAllHalfQBWROneStacks: Array,
+  // sortedAllHalfQBWROneStacks: Array,
   allTeamsBestPPRSingleStackWithQB: Array,
   allTeamsBestPPRSingleStackWithQBWithNames: Array,
   allTEPremiumBestSingleStackWithQB: Array,
@@ -500,7 +500,7 @@ bestStacks
     allPPRQBWROneStacksWithNames: allStackData.allPPRQBWROneStacksWithNames,
     allTeamsBestHalfSingleStackWithQBWithNames:
       allStackData.allTeamsBestHalfSingleStackWithQBWithNames,
-    sortedAllHalfQBWROneStacks: allStackData.sortedAllHalfQBWROneStacks,
+    // sortedAllHalfQBWROneStacks: allStackData.sortedAllHalfQBWROneStacks,
     allTeamsBestPPRSingleStackWithQB:
       allStackData.allTeamsBestPPRSingleStackWithQB,
     allTeamsBestPPRSingleStackWithQBWithNames:

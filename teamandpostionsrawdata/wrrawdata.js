@@ -186,8 +186,8 @@ const wrrawdata = {
       fourForFourFullPPRProjectedPoints: 19,
 
       yahooSalary: 22,
-      fanduelSalary: 0,
-      draftkingsSalary: 0,
+      fanduelSalary: 6500,
+      draftkingsSalary: 7000,
     },
 
     WRTwo: {
@@ -211,8 +211,8 @@ const wrrawdata = {
       fourForFourFullPPRProjectedPoints: 14,
 
       yahooSalary: 28,
-      fanduelSalary: 0,
-      draftkingsSalary: 0,
+      fanduelSalary: 7000,
+      draftkingsSalary: 7500,
     },
     WRThree: {
       name: 'Tyler Boyd',
