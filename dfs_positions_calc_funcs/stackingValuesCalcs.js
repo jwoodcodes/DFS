@@ -194,6 +194,8 @@ const allStackingCalcFuncs = {
 
     //////////triple stacks values with names variables
 
+    //in the new refactored on define all of these with names variables in a seperate file and populate an object witht them and export the object and import it into the allStackingVAriablesFunc.js
+
     let rbOneAndrbTwoWithNames = `${+rbOneAndrbTwo.toFixed(
       2
     )}: QB-WR1-RB1-RB2 ${allQBs[i].name}(${qb})-${
