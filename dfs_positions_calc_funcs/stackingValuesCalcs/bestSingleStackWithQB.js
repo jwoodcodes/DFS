@@ -18,6 +18,18 @@ const allTeamsBestPPRSingleStackWithQBWithNames = [];
 const allTEPremiumBestSingleStackWithQB = [];
 const allTEPremiumBestSingleStackWithQBWithNames = [];
 
+const halfDKBestTeamQBWROneStackspointsperdollar = [];
+const halfFDBestTeamQBWROneStackspointsperdollar = [];
+const halfYahooBestTeamQBWROneStackspointsperdollar = [];
+
+const fullDKBestTeamQBWROneStackspointsperdollar = [];
+const fullFDBestTeamQBWROneStackspointsperdollar = [];
+const fullYahooBestTeamQBWROneStackspointsperdollar = [];
+
+const TEPDKBestTeamQBWROneStackspointsperdollar = [];
+const TEPFDBestTeamQBWROneStackspointsperdollar = [];
+const TEPYahooBestTeamQBWROneStackspointsperdollar = [];
+
 const CalcTeamBestSingleStackWithQB = function (array, i) {
   // console.log(array);
   let [qb, rbOne, rbTwo, wrOne, wrTwo, te] = array;
@@ -56,6 +68,26 @@ const CalcTeamBestSingleStackWithQB = function (array, i) {
     bestSingleStackWithQB = qbte;
     bestSingleStackWithQBAndNames = qbteWithNames;
   }
+
+  //projected points per dollar
+
+  let qbDKSalary = allQBs[i].draftkingsSalary;
+  let qbFDSalary = allQBs[i].fanduelSalary;
+  let qbYahooSalary = allQBs[i].yahooSalary;
+
+  let rbOneDKSalary = allRBs[i].RBOne.draftkingsSalary;
+  let rbOneFDSalary = allRBs[i].RBOne.fanduelSalary;
+  let rbOneYahooSalary = allRBs[i].RBOne.yahooSalary;
+
+  let rbTwoDKSalary = allRBs[i].RBTwo.draftkingsSalary;
+  let rbTwoFDSalary = allRBs[i].RBTwo.fanduelSalary;
+  let rbTwoYahooSalary = allRBs[i].RBTwo.yahooSalary;
+
+  let wrOneDKSalary = allWRs[i].WROne.draftkingsSalary;
+  let wrOneFDSalary = allWRs[i].WROne.fanduelSalary;
+  let wrOneYahooSalary = allWRs[i].WROne.yahooSalary;
+
+  //   console.log(wrOneYahooSalary);
 
   if (rbOne === allRBData.allRBOneHalfPPRProjectedPointsValues[i]) {
     allTeamsBestHalfSingleStackWithQB.push(bestSingleStackWithQB);
