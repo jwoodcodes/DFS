@@ -151,7 +151,10 @@ class FullTeamObjectWithAllStacks {
     oppwrOneOwnershipProjectionYahoo,
     oppwrTwoOwnershipProjectionYahoo,
     oppwrThreeOwnershipProjectionYahoo,
-    oppteOwnershipProjectionYahoo
+    oppteOwnershipProjectionYahoo,
+    halfStackArray,
+    PPRArray,
+    TEPArray
   ) {
     this.teamName = teamName;
     this.vegasTeamTotal = vtt;
@@ -304,15 +307,55 @@ class FullTeamObjectWithAllStacks {
     this.oppwrThreeOwnershipProjectionYahoo =
       oppwrThreeOwnershipProjectionYahoo;
     this.oppteOwnershipProjectionYahoo = oppteOwnershipProjectionYahoo;
+    this.halfStackArray = halfStackArray;
+    this.PPRArray = PPRArray;
+    this.TEPArray = TEPArray;
   }
 
   //add methods here
 }
 
-allTeams.forEach(function (team, i) {
-  // console.log(team);
+//////
+//looping over the constructor function and building all team objects and all stakcs arrays
+//////
 
-  let teamObject = new FullTeamObjectWithAllStacks(team.teamName);
+allTeams.forEach(function (team, i) {
+  let qbName = allQBs[i].name;
+  let rbOneName = allRBs[i].RBOne.name;
+  let rbTwoName = allRBs[i].RBTwo.name;
+  let wrOneName = allWRs[i].WROne.name;
+  let wrTwoName = allWRs[i].WRTwo.name;
+  let wrThreeName = allWRs[i].WRThree.name;
+  let teName = allTEs[i].TE.name;
+  let qbProjPoints = allQBData.allQBFinalProjectedPointsValues[i];
+  let rbOneHalfProjPoints = allRBData.allRBOneHalfPPRProjectedPointsValues[i];
+  let rbTwoHalfProjPoints = allRBData.allRBTwoHalfPPRProjectedPointsValues[i];
+  let wrOneHalfProjPoints = allWRData.allHalfWROneFinalProjectedPointsValues[i];
+  let wrTwoHalfProjPoints = allWRData.allHalfWRTwoFinalProjectedPointsValues[i];
+  let wrThreeHalfProjPoints =
+    allWRData.allHalfWRThreeFinalProjectedPointsValues[i];
+  let teHalfProjPoints = allTEData.allHalfTEFinalProjectedPointsValues[i];
+  // console.log(qbProjPoints);
+  // console.log(allTEs[i].TE.name);
+
+  let teamObject = new FullTeamObjectWithAllStacks(
+    team.teamName,
+    team.vtt,
+    qbName,
+    rbOneName,
+    rbTwoName,
+    wrOneName,
+    wrTwoName,
+    wrThreeName,
+    teName,
+    qbProjPoints,
+    rbOneHalfProjPoints,
+    rbTwoHalfProjPoints,
+    wrOneHalfProjPoints,
+    wrTwoHalfProjPoints,
+    wrThreeHalfProjPoints,
+    teHalfProjPoints
+  );
 
   allTeamObjectsArray.push(teamObject);
 });

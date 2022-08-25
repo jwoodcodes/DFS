@@ -38,10 +38,10 @@ const vikingsWR = wrrawdata.vikings;
 const allWRs = [
   bengalsWR,
   ravensWR,
-  chiefsWR,
-  steelersWR,
   jetsWR,
   jaguarsWR,
+  chiefsWR,
+  steelersWR,
 
   saintsWR,
   dolphinsWR,
