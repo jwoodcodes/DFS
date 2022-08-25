@@ -15,13 +15,316 @@ const allTeams = require('../../teamandpositionvariables/allTeamLevelVariables')
 //first thing you should do is look to your old stackingValuesCalcs.js file and go ahead and define all possible triple stack combinations to their variables and construct and define all triple stack arrays in the allQBData.allQBFinalProjectedPointsValues.map below so that all you have to do in the calcAllStackData function is destructure the arrays that are being passed into it as params. more on how to do this and what to do in the top comment of the allQBData.allQBFinalProjectedPointsValues.map
 
 // below is the function that will contain the destructureing of the arrays passed into it, create/define the constructor function then loop over it
-const allTeamsHalfSingleStacks = [];
+const allTeamObjectsArray = [];
 
-const calcAllStackData = function (array, scoring, i) {
-  // const arr = [2, 6, 4, 3];
+class FullTeamObjectWithAllStacks {
+  constructor(
+    teamName,
+    vtt,
+    qbName,
+    rbOneName,
+    rbTwoName,
+    wrOneName,
+    wrTwoName,
+    wrThreeName,
+    teName,
+    qbProjPoints,
+    rbOneHalfProjPoints,
+    rbTwoHalfProjPoints,
+    wrOneHalfProjPoints,
+    wrTwoHalfProjPoints,
+    wrThreeHalfProjPoints,
+    teHalfProjPoints,
+    rbOneFullProjPoints,
+    rbTwoFullProjPoints,
+    wrOneFullProjPoints,
+    wrTwoFullProjPoints,
+    wrThreeFullProjPoints,
+    teFullProjPoints,
+    teTEPProjPoints,
+    teamDefProjPoints,
+    qbDraftkingsSalary,
+    rbOneDraftkingsSalary,
+    rbTwoDraftkingsSalary,
+    wrOneDraftkingsSalary,
+    wrTwoDraftkingsSalary,
+    wrThreeDraftkingsSalary,
+    teDraftkingsSalary,
+    qbFanduelSalary,
+    rbOneFanduelSalary,
+    rbTwoFanduelSalary,
+    wrOneFanduelSalary,
+    wrTwoFanduelSalary,
+    wrThreeFanduelSalary,
+    teFanduelSalary,
+    qbYahooSalary,
+    rbOnwYahooSalary,
+    rbTwoYahooSalary,
+    wrOneYahooSalary,
+    wrTwoYahooSalary,
+    wrThreeYahooSalary,
+    teYahooSalary,
+    qbOwnershipProjectionDraftkings,
+    rbOneOwnershipProjectionDraftkings,
+    rbTwoOwnershipProjectionDraftkings,
+    wrOneOwnershipProjectionDraftkings,
+    wrTwoOwnershipProjectionDraftkings,
+    wrThreeOwnershipProjectionDraftkings,
+    teOwnershipProjectionDraftkings,
+    qbOwnershipProjectionFanduel,
+    rbOneOwnershipProjectionFanduel,
+    rbTwoOwnershipProjectionFanduel,
+    wrOneOwnershipProjectionFanduel,
+    wrTwoOwnershipProjectionFanduel,
+    wrThreeOwnershipProjectionFanduel,
+    teOwnershipProjectionFanduel,
+    qbOwnershipProjectionYahoo,
+    rbOneOwnershipProjectionYahoo,
+    rbTwoOwnershipProjectionYahoo,
+    wrOneOwnershipProjectionYahoo,
+    wrTwoOwnershipProjectionYahoo,
+    wrThreeOwnershipProjectionYahoo,
+    teOwnershipProjectionYahoo,
+    //opposing team
+    oppteamName,
+    oppvtt,
+    oppqbName,
+    opprbOneName,
+    opprbTwoName,
+    oppwrOneName,
+    oppwrTwoName,
+    oppwrThreeName,
+    oppteName,
+    oppqbProjPoints,
+    opprbOneHalfProjPoints,
+    opprbTwoHalfProjPoints,
+    oppwrOneHalfProjPoints,
+    oppwrTwoHalfProjPoints,
+    oppwrThreeHalfProjPoints,
+    oppteHalfProjPoints,
+    opprbOneFullProjPoints,
+    opprbTwoFullProjPoints,
+    oppwrOneFullProjPoints,
+    oppwrTwoFullProjPoints,
+    oppwrThreeFullProjPoints,
+    oppteFullProjPoints,
+    oppteTEPProjPoints,
+    oppteamDefProjPoints,
+    oppqbDraftkingsSalary,
+    opprbOneDraftkingsSalary,
+    opprbTwoDraftkingsSalary,
+    oppwrOneDraftkingsSalary,
+    oppwrTwoDraftkingsSalary,
+    oppwrThreeDraftkingsSalary,
+    oppteDraftkingsSalary,
+    oppqbFanduelSalary,
+    opprbOneFanduelSalary,
+    opprbTwoFanduelSalary,
+    oppwrOneFanduelSalary,
+    oppwrTwoFanduelSalary,
+    oppwrThreeFanduelSalary,
+    oppteFanduelSalary,
+    oppqbYahooSalary,
+    opprbOnwYahooSalary,
+    opprbTwoYahooSalary,
+    oppwrOneYahooSalary,
+    oppwrTwoYahooSalary,
+    oppwrThreeYahooSalary,
+    oppteYahooSalary,
+    oppqbOwnershipProjectionDraftkings,
+    opprbOneOwnershipProjectionDraftkings,
+    opprbTwoOwnershipProjectionDraftkings,
+    oppwrOneOwnershipProjectionDraftkings,
+    oppwrTwoOwnershipProjectionDraftkings,
+    oppwrThreeOwnershipProjectionDraftkings,
+    oppteOwnershipProjectionDraftkings,
+    oppqbOwnershipProjectionFanduel,
+    opprbOneOwnershipProjectionFanduel,
+    opprbTwoOwnershipProjectionFanduel,
+    oppwrOneOwnershipProjectionFanduel,
+    oppwrTwoOwnershipProjectionFanduel,
+    oppwrThreeOwnershipProjectionFanduel,
+    oppteOwnershipProjectionFanduel,
+    oppqbOwnershipProjectionYahoo,
+    opprbOneOwnershipProjectionYahoo,
+    opprbTwoOwnershipProjectionYahoo,
+    oppwrOneOwnershipProjectionYahoo,
+    oppwrTwoOwnershipProjectionYahoo,
+    oppwrThreeOwnershipProjectionYahoo,
+    oppteOwnershipProjectionYahoo
+  ) {
+    this.teamName = teamName;
+    this.vegasTeamTotal = vtt;
+    this.qbName = qbName;
+    this.rbOneName = rbOneName;
+    this.rbTwoName = rbTwoName;
+    this.wrOneName = wrOneName;
+    this.wrTwoName = wrTwoName;
+    this.wrThreeName = wrThreeName;
+    this.teName = teName;
+    this.qbProjPoints = qbProjPoints;
+    this.rbOneHalfProjPoints = rbOneHalfProjPoints;
+    this.rbTwoHalfProjPoints = rbTwoHalfProjPoints;
+    this.wrOneHalfProjPoints = wrOneHalfProjPoints;
+    this.wrTwoHalfProjPoints = wrTwoHalfProjPoints;
+    this.wrThreeHalfProjPoints = wrThreeHalfProjPoints;
+    this.teHalfProjPoints = teHalfProjPoints;
+    this.rbOneFullProjPoints = rbOneFullProjPoints;
+    this.rbTwoFullProjPoints = rbTwoFullProjPoints;
+    this.wrOneFullProjPoints = wrOneFullProjPoints;
+    this.wrTwoFullProjPoints = wrTwoFullProjPoints;
+    this.wrThreeFullProjPoints = wrThreeFullProjPoints;
+    this.teFullProjPoints = teFullProjPoints;
+    this.teTEPProjPoints = teTEPProjPoints;
+    this.teamDefProjPoints = teamDefProjPoints;
+    this.qbDraftkingsSalary = qbDraftkingsSalary;
+    this.rbOneDraftkingsSalary = rbOneDraftkingsSalary;
+    this.rbTwoDraftkingsSalary = rbTwoDraftkingsSalary;
+    this.wrOneDraftkingsSalary = wrOneDraftkingsSalary;
+    this.wrTwoDraftkingsSalary = wrTwoDraftkingsSalary;
+    this.wrThreeDraftkingsSalary = wrThreeDraftkingsSalary;
+    this.teDraftkingsSalary = teDraftkingsSalary;
+    this.qbFanduelSalary = qbFanduelSalary;
+    this.rbOneFanduelSalary = rbOneFanduelSalary;
+    this.rbTwoFanduelSalary = rbTwoFanduelSalary;
+    this.wrOneFanduelSalary = wrOneFanduelSalary;
+    this.wrTwoFanduelSalary = wrTwoFanduelSalary;
+    this.wrThreeFanduelSalary = wrThreeFanduelSalary;
+    this.teFanduelSalary = teFanduelSalary;
+    this.qbYahooSalary = qbYahooSalary;
+    this.rbOnwYahooSalary = rbOnwYahooSalary;
+    this.rbTwoYahooSalary = rbTwoYahooSalary;
+    this.wrOneYahooSalary = wrOneYahooSalary;
+    this.wrTwoYahooSalary = wrTwoYahooSalary;
+    this.wrThreeYahooSalary = wrThreeYahooSalary;
+    this.teYahooSalary = teYahooSalary;
+    this.qbOwnershipProjectionDraftkings = qbOwnershipProjectionDraftkings;
+    this.rbOneOwnershipProjectionDraftkings =
+      rbOneOwnershipProjectionDraftkings;
+    this.rbTwoOwnershipProjectionDraftkings =
+      rbTwoOwnershipProjectionDraftkings;
+    this.wrOneOwnershipProjectionDraftkings =
+      wrOneOwnershipProjectionDraftkings;
+    this.wrTwoOwnershipProjectionDraftkings =
+      wrTwoOwnershipProjectionDraftkings;
+    this.wrThreeOwnershipProjectionDraftkings =
+      wrThreeOwnershipProjectionDraftkings;
+    this.teOwnershipProjectionDraftkings = teOwnershipProjectionDraftkings;
+    this.qbOwnershipProjectionFanduel = qbOwnershipProjectionFanduel;
+    this.rbOneOwnershipProjectionFanduel = rbOneOwnershipProjectionFanduel;
+    this.rbTwoOwnershipProjectionFanduel = rbTwoOwnershipProjectionFanduel;
+    this.wrOneOwnershipProjectionFanduel = wrOneOwnershipProjectionFanduel;
+    this.wrTwoOwnershipProjectionFanduel = wrTwoOwnershipProjectionFanduel;
+    this.wrThreeOwnershipProjectionFanduel = wrThreeOwnershipProjectionFanduel;
+    this.teOwnershipProjectionFanduel = teOwnershipProjectionFanduel;
+    this.qbOwnershipProjectionYahoo = qbOwnershipProjectionYahoo;
+    this.rbOneOwnershipProjectionYahoo = rbOneOwnershipProjectionYahoo;
+    this.rbTwoOwnershipProjectionYahoo = rbTwoOwnershipProjectionYahoo;
+    this.wrOneOwnershipProjectionYahoo = wrOneOwnershipProjectionYahoo;
+    this.wrTwoOwnershipProjectionYahoo = wrTwoOwnershipProjectionYahoo;
+    this.wrThreeOwnershipProjectionYahoo = wrThreeOwnershipProjectionYahoo;
+    this.teOwnershipProjectionYahoo = teOwnershipProjectionYahoo;
+    //opposing team
+    this.oppteamName = oppteamName;
+    this.oppvegasTeamTotal = oppvtt;
+    this.oppqbName = oppqbName;
+    this.opprbOneName = opprbOneName;
+    this.opprbTwoName = opprbTwoName;
+    this.oppwrOneName = oppwrOneName;
+    this.oppwrTwoName = oppwrTwoName;
+    this.oppwrThreeName = oppwrThreeName;
+    this.oppteName = oppteName;
+    this.oppqbProjPoints = oppqbProjPoints;
+    this.opprbOneHalfProjPoints = opprbOneHalfProjPoints;
+    this.opprbTwoHalfProjPoints = opprbTwoHalfProjPoints;
+    this.oppwrOneHalfProjPoints = oppwrOneHalfProjPoints;
+    this.oppwrTwoHalfProjPoints = oppwrTwoHalfProjPoints;
+    this.oppwrThreeHalfProjPoints = oppwrThreeHalfProjPoints;
+    this.oppteHalfProjPoints = oppteHalfProjPoints;
+    this.opprbOneFullProjPoints = opprbOneFullProjPoints;
+    this.opprbTwoFullProjPoints = opprbTwoFullProjPoints;
+    this.oppwrOneFullProjPoints = oppwrOneFullProjPoints;
+    this.oppwrTwoFullProjPoints = oppwrTwoFullProjPoints;
+    this.oppwrThreeFullProjPoints = oppwrThreeFullProjPoints;
+    this.oppteFullProjPoints = oppteFullProjPoints;
+    this.oppteTEPProjPoints = oppteTEPProjPoints;
+    this.oppteamDefProjPoints = oppteamDefProjPoints;
+    this.oppqbDraftkingsSalary = oppqbDraftkingsSalary;
+    this.opprbOneDraftkingsSalary = opprbOneDraftkingsSalary;
+    this.opprbTwoDraftkingsSalary = opprbTwoDraftkingsSalary;
+    this.oppwrOneDraftkingsSalary = oppwrOneDraftkingsSalary;
+    this.oppwrTwoDraftkingsSalary = oppwrTwoDraftkingsSalary;
+    this.oppwrThreeDraftkingsSalary = oppwrThreeDraftkingsSalary;
+    this.oppteDraftkingsSalary = oppteDraftkingsSalary;
+    this.oppqbFanduelSalary = oppqbFanduelSalary;
+    this.opprbOneFanduelSalary = opprbOneFanduelSalary;
+    this.opprbTwoFanduelSalary = opprbTwoFanduelSalary;
+    this.oppwrOneFanduelSalary = oppwrOneFanduelSalary;
+    this.oppwrTwoFanduelSalary = oppwrTwoFanduelSalary;
+    this.oppwrThreeFanduelSalary = oppwrThreeFanduelSalary;
+    this.oppteFanduelSalary = oppteFanduelSalary;
+    this.oppqbYahooSalary = oppqbYahooSalary;
+    this.opprbOnwYahooSalary = opprbOnwYahooSalary;
+    this.opprbTwoYahooSalary = opprbTwoYahooSalary;
+    this.oppwrOneYahooSalary = oppwrOneYahooSalary;
+    this.oppwrTwoYahooSalary = oppwrTwoYahooSalary;
+    this.oppwrThreeYahooSalary = oppwrThreeYahooSalary;
+    this.oppteYahooSalary = oppteYahooSalary;
+    this.oppqbOwnershipProjectionDraftkings =
+      oppqbOwnershipProjectionDraftkings;
+    this.opprbOneOwnershipProjectionDraftkings =
+      opprbOneOwnershipProjectionDraftkings;
+    this.opprbTwoOwnershipProjectionDraftkings =
+      opprbTwoOwnershipProjectionDraftkings;
+    this.oppwrOneOwnershipProjectionDraftkings =
+      oppwrOneOwnershipProjectionDraftkings;
+    this.oppwrTwoOwnershipProjectionDraftkings =
+      oppwrTwoOwnershipProjectionDraftkings;
+    this.oppwrThreeOwnershipProjectionDraftkings =
+      oppwrThreeOwnershipProjectionDraftkings;
+    this.oppteOwnershipProjectionDraftkings =
+      oppteOwnershipProjectionDraftkings;
+    this.oppqbOwnershipProjectionFanduel = oppqbOwnershipProjectionFanduel;
+    this.opprbOneOwnershipProjectionFanduel =
+      opprbOneOwnershipProjectionFanduel;
+    this.opprbTwoOwnershipProjectionFanduel =
+      opprbTwoOwnershipProjectionFanduel;
+    this.oppwrOneOwnershipProjectionFanduel =
+      oppwrOneOwnershipProjectionFanduel;
+    this.oppwrTwoOwnershipProjectionFanduel =
+      oppwrTwoOwnershipProjectionFanduel;
+    this.oppwrThreeOwnershipProjectionFanduel =
+      oppwrThreeOwnershipProjectionFanduel;
+    this.oppteOwnershipProjectionFanduel = oppteOwnershipProjectionFanduel;
+    this.oppqbOwnershipProjectionYahoo = oppqbOwnershipProjectionYahoo;
+    this.opprbOneOwnershipProjectionYahoo = opprbOneOwnershipProjectionYahoo;
+    this.opprbTwoOwnershipProjectionYahoo = opprbTwoOwnershipProjectionYahoo;
+    this.oppwrOneOwnershipProjectionYahoo = oppwrOneOwnershipProjectionYahoo;
+    this.oppwrTwoOwnershipProjectionYahoo = oppwrTwoOwnershipProjectionYahoo;
+    this.oppwrThreeOwnershipProjectionYahoo =
+      oppwrThreeOwnershipProjectionYahoo;
+    this.oppteOwnershipProjectionYahoo = oppteOwnershipProjectionYahoo;
+  }
 
-  const arr = array;
-  const n = 2;
+  //add methods here
+}
+
+allTeams.forEach(function (team, i) {
+  // console.log(team);
+
+  let teamObject = new FullTeamObjectWithAllStacks(team.teamName);
+
+  allTeamObjectsArray.push(teamObject);
+});
+
+console.log(allTeamObjectsArray);
+//
+
+const calcAllStackData = function (halfArray, PPRArray, TEPArray, team, i) {
+  // console.log(team.teamName);
+  // const arr = [3, 5, 6, 7];
+  // const arr = array;
+  // const n = 2;
   const buildCombinations = (arr, num) => {
     const res = [];
 
@@ -39,13 +342,11 @@ const calcAllStackData = function (array, scoring, i) {
       }
 
       if (temp.length === num) {
-        if (scoring === 'half') {
-          res.push(
-            temp.reduce(function (a, b) {
-              return +(a + b).toFixed(4);
-            })
-          );
-        }
+        res.push(
+          temp.reduce(function (a, b) {
+            return +(a + b).toFixed(4);
+          })
+        );
       }
     }
 
@@ -56,11 +357,25 @@ const calcAllStackData = function (array, scoring, i) {
 
     return res;
   };
+
   // buildCombinations(arr, n);
-  console.log(buildCombinations(arr, n));
+  // console.log(buildCombinations(arr, n));
+  const halfSingleStacks = buildCombinations(halfArray, 2);
+  const PPRSingleStacks = buildCombinations(PPRArray, 2);
+  const TEPSingleStacks = buildCombinations(TEPArray, 2);
+  const halfDoubleStacks = buildCombinations(halfArray, 3);
+  const PPRDoubleStacks = buildCombinations(PPRArray, 3);
+  const TEPDoubleStacks = buildCombinations(TEPArray, 3);
+  const halfTripleStacks = buildCombinations(halfArray, 4);
+  const PPRTripleStacks = buildCombinations(PPRArray, 4);
+  const TEPTripleStacks = buildCombinations(TEPArray, 4);
+  // console.log(TEPTripleStacks);
 
+  // halfSingleStacks.map(function (team, i) {
+  //   console.log(team.length);
+  // });
   // console.log(allTeamsHalfSingleStacks);
-
+  //
   //first destructure array passed in as param and define any other variables for any other data that will be needed in here
 
   //after everything has been defined and assigned its variables define and build the constructor function here before the forEach loop
@@ -69,8 +384,7 @@ const calcAllStackData = function (array, scoring, i) {
   //team objects as well as this map of all team objects so I have access to and the option to use either later
   const allTeamDataObjectsWithStacksDataMap = new Map();
 
-  allTeams.forEach(function (team) {
-    //in here loop over the constructor function and pass a team in each interation and construct their entire team object from the plan using the constructor function. refer tp the defValuesCalcs for help and guidance here
+  allTeams.forEach(function (team, i) {
     //also in this loop but outside of the constructor function stuff push to and populate all arrays that contain the data for every team from the plan i.e the array that holds every single projected points value for every single possible single stack with QB from every single team
   });
 };
@@ -79,6 +393,8 @@ allQBData.allQBFinalProjectedPointsValues.map(function (value, i) {
   //////////////
   //first thing you should do is look to your old stackingValuesCalcs and go ahead and define all triple stack variables here so that all you have to do in the calcAllStackData function is destructure!!!!!!!!!!!!!!!!!!, go ahead and build the half, PPR, and TEPremium arrays for triple stacks in here as well like you are already doing for the double stack arrays and pass those into the calcAllStackData function. define everything possible in here. not sure yet how or if I want to do the with names arrays/stuff yet but define everything you possibly can in here
   //////////////
+
+  let team = allTeams[i];
 
   // let qb = `${value}: ${allQBs[i].name}`;
   let qb = value;
@@ -164,7 +480,7 @@ allQBData.allQBFinalProjectedPointsValues.map(function (value, i) {
     // let oppteName = allTEs[i + 1].TE.name;
   }
 
-  let halfDoubleStackArray = [
+  let halfStackArray = [
     qb,
     rbOneHalf,
     rbTwoHalf,
@@ -187,7 +503,7 @@ allQBData.allQBFinalProjectedPointsValues.map(function (value, i) {
     // oppteName,
   ];
 
-  let PPRDoubleStackArray = [
+  let PPRStackArray = [
     qb,
     rbOnePPR,
     rbTwoPPR,
@@ -209,7 +525,7 @@ allQBData.allQBFinalProjectedPointsValues.map(function (value, i) {
     // oppteName,
   ];
 
-  let TEPremiumDoubleStackArray = [
+  let TEPremiumStackArray = [
     qb,
     rbOnePPR,
     rbTwoPPR,
@@ -232,7 +548,7 @@ allQBData.allQBFinalProjectedPointsValues.map(function (value, i) {
   ];
 
   // const allHalfDoubleStackWithQBAndQBsWROne =
-  calcAllStackData(halfDoubleStackArray, 'half');
+  calcAllStackData(halfStackArray, PPRStackArray, TEPremiumStackArray, team);
 
   // const allPPRDoubleStackWithQBAndQBsWROne =
   // calcAllStackData(PPRDoubleStackArray);
