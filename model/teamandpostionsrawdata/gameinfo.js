@@ -8,6 +8,13 @@ const gameInfo = {
     homeOrRoad: 'road',
     vtt: 0,
     def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
+    //below ownership projections here are for team def
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
+    yahooProjectedOwnership: 0,
   },
 
   bears: {
@@ -15,6 +22,13 @@ const gameInfo = {
     homeOrRoad: 'road',
     vtt: 0,
     def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
+
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
+    yahooProjectedOwnership: 0,
   },
 
   bengals: {
@@ -22,6 +36,13 @@ const gameInfo = {
     homeOrRoad: 'home',
     vtt: 25.25,
     def4for4projectedpoints: 9,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
+
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
+    yahooProjectedOwnership: 0,
   },
 
   bills: {
@@ -29,6 +50,13 @@ const gameInfo = {
     homeOrRoad: 'road',
     vtt: 0,
     def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
+
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
+    yahooProjectedOwnership: 0,
   },
 
   broncos: {
@@ -36,6 +64,13 @@ const gameInfo = {
     homeOrRoad: 'road',
     vtt: 0,
     def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
+
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
+    yahooProjectedOwnership: 0,
   },
 
   browns: {
@@ -43,6 +78,13 @@ const gameInfo = {
     homeOrRoad: 'road',
     vtt: 0,
     def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
+
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
+    yahooProjectedOwnership: 0,
   },
 
   buccaneers: {
@@ -50,6 +92,13 @@ const gameInfo = {
     homeOrRoad: 'road',
     vtt: 0,
     def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
+
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
+    yahooProjectedOwnership: 0,
   },
 
   cardinals: {
@@ -57,6 +106,13 @@ const gameInfo = {
     homeOrRoad: 'road',
     vtt: 0,
     def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
+
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
+    yahooProjectedOwnership: 0,
   },
 
   chargers: {
@@ -64,6 +120,13 @@ const gameInfo = {
     homeOrRoad: 'road',
     vtt: 0,
     def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
+
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
+    yahooProjectedOwnership: 0,
   },
 
   chiefs: {
@@ -71,6 +134,13 @@ const gameInfo = {
     homeOrRoad: 'home',
     vtt: 27.5,
     def4for4projectedpoints: 9,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
+
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
+    yahooProjectedOwnership: 0,
   },
 
   colts: {
@@ -78,6 +148,13 @@ const gameInfo = {
     homeOrRoad: 'road',
     vtt: 0,
     def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
+
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
+    yahooProjectedOwnership: 0,
   },
 
   comanders: {
@@ -85,6 +162,13 @@ const gameInfo = {
     homeOrRoad: 'road',
     vtt: 0,
     def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
+
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
+    yahooProjectedOwnership: 0,
   },
 
   cowboys: {
@@ -92,13 +176,26 @@ const gameInfo = {
     homeOrRoad: 'home',
     vtt: 0,
     def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
+
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
+    yahooProjectedOwnership: 0,
   },
 
   dolphins: {
     teamName: 'Dolphins',
     homeOrRoad: 'road',
     vtt: 20.25,
-    def4for4projectedpoints: 9,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
+
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
+    yahooProjectedOwnership: 0,
   },
 
   eagles: {
@@ -106,6 +203,13 @@ const gameInfo = {
     homeOrRoad: 'home',
     vtt: 0,
     def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
+
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
+    yahooProjectedOwnership: 0,
   },
 
   falcons: {
@@ -113,6 +217,13 @@ const gameInfo = {
     homeOrRoad: 'home',
     vtt: 0,
     def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
+
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
+    yahooProjectedOwnership: 0,
   },
 
   giants: {
@@ -120,6 +231,13 @@ const gameInfo = {
     homeOrRoad: 'road',
     vtt: 0,
     def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
+
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
+    yahooProjectedOwnership: 0,
   },
 
   jaguars: {
@@ -127,6 +245,13 @@ const gameInfo = {
     homeOrRoad: 'road',
     vtt: 20.25,
     def4for4projectedpoints: 9,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
+
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
+    yahooProjectedOwnership: 0,
   },
 
   jets: {
@@ -134,6 +259,13 @@ const gameInfo = {
     homeOrRoad: 'home',
     vtt: 22.75,
     def4for4projectedpoints: 9,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
+
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
+    yahooProjectedOwnership: 0,
   },
 
   lions: {
@@ -141,6 +273,13 @@ const gameInfo = {
     homeOrRoad: 'road',
     vtt: 0,
     def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
+
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
+    yahooProjectedOwnership: 0,
   },
 
   packers: {
@@ -148,6 +287,13 @@ const gameInfo = {
     homeOrRoad: 'home',
     vtt: 0,
     def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
+
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
+    yahooProjectedOwnership: 0,
   },
 
   panthers: {
@@ -155,6 +301,13 @@ const gameInfo = {
     homeOrRoad: 'home',
     vtt: 0,
     def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
+
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
+    yahooProjectedOwnership: 0,
   },
 
   raiders: {
@@ -162,6 +315,13 @@ const gameInfo = {
     homeOrRoad: 'home',
     vtt: 0,
     def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
+
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
+    yahooProjectedOwnership: 0,
   },
 
   rams: {
@@ -169,6 +329,13 @@ const gameInfo = {
     homeOrRoad: 'road',
     vtt: 0,
     def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
+
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
+    yahooProjectedOwnership: 0,
   },
 
   ravens: {
@@ -176,6 +343,13 @@ const gameInfo = {
     homeOrRoad: 'road',
     vtt: 18.25,
     def4for4projectedpoints: 9,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
+
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
+    yahooProjectedOwnership: 0,
   },
 
   saints: {
@@ -183,6 +357,13 @@ const gameInfo = {
     homeOrRoad: 'home',
     vtt: 17.25,
     def4for4projectedpoints: 9,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
+
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
+    yahooProjectedOwnership: 0,
   },
 
   seahawks: {
@@ -190,6 +371,13 @@ const gameInfo = {
     homeOrRoad: 'home',
     vtt: 0,
     def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
+
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
+    yahooProjectedOwnership: 0,
   },
 
   steelers: {
@@ -197,6 +385,13 @@ const gameInfo = {
     homeOrRoad: 'road',
     vtt: 17,
     def4for4projectedpoints: 9,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
+
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
+    yahooProjectedOwnership: 0,
   },
 
   texans: {
@@ -204,6 +399,13 @@ const gameInfo = {
     homeOrRoad: 'home',
     vtt: 0,
     def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
+
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
+    yahooProjectedOwnership: 0,
   },
 
   titans: {
@@ -211,6 +413,13 @@ const gameInfo = {
     homeOrRoad: 'home',
     vtt: 0,
     def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
+
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
+    yahooProjectedOwnership: 0,
   },
 
   vikings: {
@@ -218,6 +427,13 @@ const gameInfo = {
     homeOrRoad: 'home',
     vtt: 0,
     def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
+
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
+    yahooProjectedOwnership: 0,
   },
 }; //closing gameInfo object tag
 

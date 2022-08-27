@@ -9,6 +9,8 @@ const allRBs = require('../../teamandpositionvariables/allRBVariables');
 const allWRs = require('../../teamandpositionvariables/allWRVariables');
 const allTEs = require('../../teamandpositionvariables/allTEVariables');
 const allTeams = require('../../teamandpositionvariables/allTeamLevelVariables');
+const allDefData = require('../defValuesCalcs');
+const gameInfo = require('../../teamandpostionsrawdata/gameinfo');
 
 /////the back to front plan for all of this at the bottom of this file!!!!!!!
 
@@ -50,6 +52,7 @@ class FullTeamObjectWithAllStacks {
     wrTwoDraftkingsSalary,
     wrThreeDraftkingsSalary,
     teDraftkingsSalary,
+    teamDefDraftkingsSalary,
     qbFanduelSalary,
     rbOneFanduelSalary,
     rbTwoFanduelSalary,
@@ -57,13 +60,15 @@ class FullTeamObjectWithAllStacks {
     wrTwoFanduelSalary,
     wrThreeFanduelSalary,
     teFanduelSalary,
+    teamDefFanduelSalary,
     qbYahooSalary,
-    rbOnwYahooSalary,
+    rbOneYahooSalary,
     rbTwoYahooSalary,
     wrOneYahooSalary,
     wrTwoYahooSalary,
     wrThreeYahooSalary,
     teYahooSalary,
+    teamDefYahooSalary,
     qbOwnershipProjectionDraftkings,
     rbOneOwnershipProjectionDraftkings,
     rbTwoOwnershipProjectionDraftkings,
@@ -71,6 +76,7 @@ class FullTeamObjectWithAllStacks {
     wrTwoOwnershipProjectionDraftkings,
     wrThreeOwnershipProjectionDraftkings,
     teOwnershipProjectionDraftkings,
+    teamDefOwnershipProjectionDraftkings,
     qbOwnershipProjectionFanduel,
     rbOneOwnershipProjectionFanduel,
     rbTwoOwnershipProjectionFanduel,
@@ -78,6 +84,7 @@ class FullTeamObjectWithAllStacks {
     wrTwoOwnershipProjectionFanduel,
     wrThreeOwnershipProjectionFanduel,
     teOwnershipProjectionFanduel,
+    teamDefOwnershipProjectionFanduel,
     qbOwnershipProjectionYahoo,
     rbOneOwnershipProjectionYahoo,
     rbTwoOwnershipProjectionYahoo,
@@ -85,6 +92,7 @@ class FullTeamObjectWithAllStacks {
     wrTwoOwnershipProjectionYahoo,
     wrThreeOwnershipProjectionYahoo,
     teOwnershipProjectionYahoo,
+    teamDefOwnershipProjectionYahoo,
     //opposing team
     oppteamName,
     oppvtt,
@@ -187,6 +195,7 @@ class FullTeamObjectWithAllStacks {
     this.wrTwoDraftkingsSalary = wrTwoDraftkingsSalary;
     this.wrThreeDraftkingsSalary = wrThreeDraftkingsSalary;
     this.teDraftkingsSalary = teDraftkingsSalary;
+    this.teamDefDraftkingsSalary = teamDefDraftkingsSalary;
     this.qbFanduelSalary = qbFanduelSalary;
     this.rbOneFanduelSalary = rbOneFanduelSalary;
     this.rbTwoFanduelSalary = rbTwoFanduelSalary;
@@ -194,13 +203,15 @@ class FullTeamObjectWithAllStacks {
     this.wrTwoFanduelSalary = wrTwoFanduelSalary;
     this.wrThreeFanduelSalary = wrThreeFanduelSalary;
     this.teFanduelSalary = teFanduelSalary;
+    this.teamDefFanduelSalary = teamDefFanduelSalary;
     this.qbYahooSalary = qbYahooSalary;
-    this.rbOnwYahooSalary = rbOnwYahooSalary;
+    this.rbOneYahooSalary = rbOneYahooSalary;
     this.rbTwoYahooSalary = rbTwoYahooSalary;
     this.wrOneYahooSalary = wrOneYahooSalary;
     this.wrTwoYahooSalary = wrTwoYahooSalary;
     this.wrThreeYahooSalary = wrThreeYahooSalary;
     this.teYahooSalary = teYahooSalary;
+    this.teamDefYahooSalary = teamDefYahooSalary;
     this.qbOwnershipProjectionDraftkings = qbOwnershipProjectionDraftkings;
     this.rbOneOwnershipProjectionDraftkings =
       rbOneOwnershipProjectionDraftkings;
@@ -213,6 +224,8 @@ class FullTeamObjectWithAllStacks {
     this.wrThreeOwnershipProjectionDraftkings =
       wrThreeOwnershipProjectionDraftkings;
     this.teOwnershipProjectionDraftkings = teOwnershipProjectionDraftkings;
+    this.teamDefOwnershipProjectionDraftkings =
+      teamDefOwnershipProjectionDraftkings;
     this.qbOwnershipProjectionFanduel = qbOwnershipProjectionFanduel;
     this.rbOneOwnershipProjectionFanduel = rbOneOwnershipProjectionFanduel;
     this.rbTwoOwnershipProjectionFanduel = rbTwoOwnershipProjectionFanduel;
@@ -220,6 +233,7 @@ class FullTeamObjectWithAllStacks {
     this.wrTwoOwnershipProjectionFanduel = wrTwoOwnershipProjectionFanduel;
     this.wrThreeOwnershipProjectionFanduel = wrThreeOwnershipProjectionFanduel;
     this.teOwnershipProjectionFanduel = teOwnershipProjectionFanduel;
+    this.teamDefOwnershipProjectionFanduel = teamDefOwnershipProjectionFanduel;
     this.qbOwnershipProjectionYahoo = qbOwnershipProjectionYahoo;
     this.rbOneOwnershipProjectionYahoo = rbOneOwnershipProjectionYahoo;
     this.rbTwoOwnershipProjectionYahoo = rbTwoOwnershipProjectionYahoo;
@@ -227,6 +241,7 @@ class FullTeamObjectWithAllStacks {
     this.wrTwoOwnershipProjectionYahoo = wrTwoOwnershipProjectionYahoo;
     this.wrThreeOwnershipProjectionYahoo = wrThreeOwnershipProjectionYahoo;
     this.teOwnershipProjectionYahoo = teOwnershipProjectionYahoo;
+    this.teamDefOwnershipProjectionYahoo = teamDefOwnershipProjectionYahoo;
     //opposing team
     this.oppteamName = oppteamName;
     this.oppvegasTeamTotal = oppvtt;
@@ -335,8 +350,55 @@ allTeams.forEach(function (team, i) {
   let wrThreeHalfProjPoints =
     allWRData.allHalfWRThreeFinalProjectedPointsValues[i];
   let teHalfProjPoints = allTEData.allHalfTEFinalProjectedPointsValues[i];
-  // console.log(qbProjPoints);
-  // console.log(allTEs[i].TE.name);
+  let rbOneFullProjPoints = allRBData.allRBOneFullPPRProjectedPointsValues[i];
+  let rbTwoFullProjPoints = allRBData.allRBTwoFullPPRProjectedPointsValues[i];
+  let wrOneFullProjPoints = allWRData.allFullWROneFinalProjectedPointsValues[i];
+  let wrTwoFullProjPoints = allWRData.allFullWRTwoFinalProjectedPointsValues[i];
+  let wrThreeFullProjPoints =
+    allWRData.allFullWRThreeFinalProjectedPointsValues[i];
+  let teFullProjPoints = allTEData.allFullTEFinalProjectedPointsValues[i];
+  let teTEPProjPoints = allTEData.allTEPremiuimFinalProjectedPointsValues[i];
+  let teamDefProjPoints = allDefData.TeamDefProjPoints[i];
+  let qbDraftkingsSalary = allQBs[i].draftkingsSalary;
+  let rbOneDraftkingsSalary = allRBs[i].RBOne.draftkingsSalary;
+  let rbTwoDraftkingsSalary = allRBs[i].RBTwo.draftkingsSalary;
+  let wrOneDraftkingsSalary = allWRs[i].WROne.draftkingsSalary;
+  let wrTwoDraftkingsSalary = allWRs[i].WRTwo.draftkingsSalary;
+  let wrThreeDraftkingsSalary = allWRs[i].WRThree.draftkingsSalary;
+  let teDraftkingsSalary = allTEs[i].TE.draftkingsSalary;
+  let teamDefDraftkingsSalary = team.teamDefDraftkingsSalary;
+  let qbFanduelSalary = allQBs[i].fanduelSalary;
+  let rbOneFanduelSalary = allRBs[i].RBOne.fanduelSalary;
+  let rbTwoFanduelSalary = allRBs[i].RBTwo.fanduelSalary;
+  let wrOneFanduelSalary = allWRs[i].WROne.fanduelSalary;
+  let wrTwoFanduelSalary = allWRs[i].WRTwo.fanduelSalary;
+  let wrThreeFanduelSalary = allWRs[i].WRThree.fanduelSalary;
+  let teFanduelSalary = allTEs[i].TE.fanduelSalary;
+  let teamDefFanduelSalary = team.teamDefFanduelSalary;
+  let qbYahooSalary = allQBs[i].yahooSalary;
+  let rbOneYahooSalary = allRBs[i].RBOne.yahooSalary;
+  let rbTwoYahooSalary = allRBs[i].RBTwo.yahooSalary;
+  let wrOneYahooSalary = allWRs[i].WROne.yahooSalary;
+  let wrTwoYahooSalary = allWRs[i].WRTwo.yahooSalary;
+  let wrThreeYahooSalary = allWRs[i].WRThree.yahooSalary;
+  let teYahooSalary = allTEs[i].TE.yahooSalary;
+  let teamDefYahooSalary = team.teamDefYahooSalary;
+  let qbOwnershipProjectionDraftkings = allQBs[i].draftkingsProjectedOwnership;
+  let rbOneOwnershipProjectionDraftkings =
+    allRBs[i].RBOne.draftkingsProjectedOwnership;
+  let rbTwoOwnershipProjectionDraftkings =
+    allRBs[i].RBTwo.draftkingsProjectedOwnership;
+  let wrOneOwnershipProjectionDraftkings =
+    allWRs[i].WROne.draftkingsProjectedOwnership;
+  let wrTwoOwnershipProjectionDraftkings =
+    allWRs[i].WRTwo.draftkingsProjectedOwnership;
+  let wrThreeOwnershipProjectionDraftkings =
+    allWRs[i].WRThree.draftkingsProjectedOwnership;
+  let teOwnershipProjectionDraftkings =
+    allTEs[i].TE.draftkingsProjectedOwnership;
+  let teamDefOwnershipProjectionDraftkings = team.draftkingsProjectedOwnership;
+  // console.log(teamDefDraftkingsSalary);
+  // console.log(allRBs[i].RBOne.draftkingsSalary);
 
   let teamObject = new FullTeamObjectWithAllStacks(
     team.teamName,
@@ -354,7 +416,55 @@ allTeams.forEach(function (team, i) {
     wrOneHalfProjPoints,
     wrTwoHalfProjPoints,
     wrThreeHalfProjPoints,
-    teHalfProjPoints
+    teHalfProjPoints,
+    rbOneFullProjPoints,
+    rbTwoFullProjPoints,
+    wrOneFullProjPoints,
+    wrTwoFullProjPoints,
+    wrThreeFullProjPoints,
+    teFullProjPoints,
+    teTEPProjPoints,
+    teamDefProjPoints,
+    qbDraftkingsSalary,
+    rbOneDraftkingsSalary,
+    rbTwoDraftkingsSalary,
+    wrOneDraftkingsSalary,
+    wrTwoDraftkingsSalary,
+    wrThreeDraftkingsSalary,
+    teDraftkingsSalary,
+    teamDefDraftkingsSalary,
+    qbFanduelSalary,
+    rbOneFanduelSalary,
+    rbTwoFanduelSalary,
+    wrOneFanduelSalary,
+    wrTwoFanduelSalary,
+    wrThreeFanduelSalary,
+    teFanduelSalary,
+    teamDefFanduelSalary,
+    qbYahooSalary,
+    rbOneYahooSalary,
+    rbTwoYahooSalary,
+    wrOneYahooSalary,
+    wrTwoYahooSalary,
+    wrThreeYahooSalary,
+    teYahooSalary,
+    teamDefYahooSalary,
+    qbOwnershipProjectionDraftkings,
+    rbOneOwnershipProjectionDraftkings,
+    rbTwoOwnershipProjectionDraftkings,
+    wrOneOwnershipProjectionDraftkings,
+    wrTwoOwnershipProjectionDraftkings,
+    wrThreeOwnershipProjectionDraftkings,
+    teOwnershipProjectionDraftkings,
+    teamDefOwnershipProjectionDraftkings
+    // qbOwnershipProjectionFanduel,
+    // rbOneOwnershipProjectionFanduel,
+    // rbTwoOwnershipProjectionFanduel,
+    // wrOneOwnershipProjectionFanduel,
+    // wrTwoOwnershipProjectionFanduel,
+    // wrThreeOwnershipProjectionFanduel,
+    // teOwnershipProjectionFanduel,
+    // teamDefOwnershipProjectionFanduel,
   );
 
   allTeamObjectsArray.push(teamObject);

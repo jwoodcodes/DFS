@@ -30,6 +30,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
 
     WRTwo: {
@@ -55,6 +59,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
     WRThree: {
       name: 'placeholder',
@@ -79,6 +87,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   bears: {
@@ -109,6 +121,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
 
     WRTwo: {
@@ -134,6 +150,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
     WRThree: {
       name: 'placeholder',
@@ -158,6 +178,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   bengals: {
@@ -188,6 +212,10 @@ const wrrawdata = {
       yahooSalary: 22,
       fanduelSalary: 6500,
       draftkingsSalary: 7000,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
 
     WRTwo: {
@@ -213,6 +241,10 @@ const wrrawdata = {
       yahooSalary: 28,
       fanduelSalary: 7000,
       draftkingsSalary: 7500,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
     WRThree: {
       name: 'Tyler Boyd',
@@ -237,6 +269,10 @@ const wrrawdata = {
       yahooSalary: 15,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   bills: {
@@ -267,6 +303,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
 
     WRTwo: {
@@ -292,6 +332,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
     WRThree: {
       name: 'placeholder',
@@ -316,6 +360,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   broncos: {
@@ -346,6 +394,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
 
     WRTwo: {
@@ -371,6 +423,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
     WRThree: {
       name: 'placeholder',
@@ -395,6 +451,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   browns: {
@@ -425,6 +485,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
 
     WRTwo: {
@@ -450,6 +514,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
     WRThree: {
       name: 'placeholder',
@@ -474,6 +542,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
 
@@ -505,6 +577,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
 
     WRTwo: {
@@ -530,6 +606,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
     WRThree: {
       name: 'placeholder',
@@ -554,6 +634,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   cardinals: {
@@ -584,6 +668,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
 
     WRTwo: {
@@ -609,6 +697,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
     WRThree: {
       name: 'placeholder',
@@ -633,6 +725,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   chargers: {
@@ -663,6 +759,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
 
     WRTwo: {
@@ -688,6 +788,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
     WRThree: {
       name: 'placeholder',
@@ -712,6 +816,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   chiefs: {
@@ -742,6 +850,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
 
     WRTwo: {
@@ -767,6 +879,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
     WRThree: {
       name: 'placeholder',
@@ -791,6 +907,10 @@ const wrrawdata = {
       yahooSalary: 12,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   colts: {
@@ -821,6 +941,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
 
     WRTwo: {
@@ -846,6 +970,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
     WRThree: {
       name: 'placeholder',
@@ -870,6 +998,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   comanders: {
@@ -900,6 +1032,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
 
     WRTwo: {
@@ -925,6 +1061,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
     WRThree: {
       name: 'placeholder',
@@ -949,6 +1089,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   cowboys: {
@@ -979,6 +1123,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
 
     WRTwo: {
@@ -1004,6 +1152,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
     WRThree: {
       name: 'placeholder',
@@ -1028,6 +1180,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   dolphins: {
@@ -1058,6 +1214,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
 
     WRTwo: {
@@ -1083,6 +1243,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
     WRThree: {
       name: 'placeholder',
@@ -1107,6 +1271,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   eagles: {
@@ -1137,6 +1305,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
 
     WRTwo: {
@@ -1162,6 +1334,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
     WRThree: {
       name: 'placeholder',
@@ -1186,6 +1362,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   falcons: {
@@ -1216,6 +1396,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
 
     WRTwo: {
@@ -1241,6 +1425,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
     WRThree: {
       name: 'placeholder',
@@ -1265,6 +1453,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   giants: {
@@ -1295,6 +1487,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
 
     WRTwo: {
@@ -1320,6 +1516,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
     WRThree: {
       name: 'placeholder',
@@ -1344,6 +1544,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   jaguars: {
@@ -1374,6 +1578,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
 
     WRTwo: {
@@ -1399,6 +1607,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
     WRThree: {
       name: 'placeholder',
@@ -1423,6 +1635,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   jets: {
@@ -1453,6 +1669,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
 
     WRTwo: {
@@ -1478,6 +1698,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
     WRThree: {
       name: 'placeholder',
@@ -1502,6 +1726,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   lions: {
@@ -1532,6 +1760,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
 
     WRTwo: {
@@ -1557,6 +1789,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
     WRThree: {
       name: 'placeholder',
@@ -1581,6 +1817,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   packers: {
@@ -1611,6 +1851,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
 
     WRTwo: {
@@ -1636,6 +1880,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
     WRThree: {
       name: 'placeholder',
@@ -1660,6 +1908,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   panthers: {
@@ -1690,6 +1942,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
 
     WRTwo: {
@@ -1715,6 +1971,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
     WRThree: {
       name: 'placeholder',
@@ -1739,6 +1999,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   patriots: {
@@ -1769,6 +2033,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
 
     WRTwo: {
@@ -1794,6 +2062,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
     WRThree: {
       name: 'placeholder',
@@ -1818,6 +2090,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
 
@@ -1849,6 +2125,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
 
     WRTwo: {
@@ -1874,6 +2154,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
     WRThree: {
       name: 'placeholder',
@@ -1898,6 +2182,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   rams: {
@@ -1928,6 +2216,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
 
     WRTwo: {
@@ -1953,6 +2245,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
     WRThree: {
       name: 'placeholder',
@@ -1977,6 +2273,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   ravens: {
@@ -2007,6 +2307,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
 
     WRTwo: {
@@ -2032,6 +2336,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
     WRThree: {
       name: 'placeholder',
@@ -2056,6 +2364,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   saints: {
@@ -2086,6 +2398,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
 
     WRTwo: {
@@ -2111,6 +2427,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
     WRThree: {
       name: 'placeholder',
@@ -2135,6 +2455,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   seahawks: {
@@ -2165,6 +2489,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
 
     WRTwo: {
@@ -2190,6 +2518,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
     WRThree: {
       name: 'placeholder',
@@ -2214,6 +2546,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   steelers: {
@@ -2244,6 +2580,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
 
     WRTwo: {
@@ -2269,6 +2609,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
     WRThree: {
       name: 'placeholder',
@@ -2293,6 +2637,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   texans: {
@@ -2323,6 +2671,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
 
     WRTwo: {
@@ -2348,6 +2700,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
     WRThree: {
       name: 'placeholder',
@@ -2372,6 +2728,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   titans: {
@@ -2402,6 +2762,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
 
     WRTwo: {
@@ -2427,6 +2791,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   vikings: {
@@ -2457,6 +2825,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
 
     WRTwo: {
@@ -2482,6 +2854,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
     WRThree: {
       name: 'placeholder',
@@ -2506,6 +2882,10 @@ const wrrawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
 };

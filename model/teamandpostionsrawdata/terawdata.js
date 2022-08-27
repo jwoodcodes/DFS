@@ -28,6 +28,10 @@ const terawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   bears: {
@@ -59,6 +63,10 @@ const terawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   bengals: {
@@ -90,6 +98,10 @@ const terawdata = {
       yahooSalary: 14,
       fanduelSalary: 4500,
       draftkingsSalary: 5000,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   bills: {
@@ -121,6 +133,10 @@ const terawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   broncos: {
@@ -152,6 +168,10 @@ const terawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   browns: {
@@ -183,6 +203,10 @@ const terawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   buccaneers: {
@@ -214,6 +238,10 @@ const terawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   cardinals: {
@@ -245,6 +273,10 @@ const terawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   chargers: {
@@ -276,6 +308,10 @@ const terawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   chiefs: {
@@ -307,6 +343,10 @@ const terawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   colts: {
@@ -338,6 +378,10 @@ const terawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   comanders: {
@@ -369,6 +413,10 @@ const terawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   cowboys: {
@@ -400,6 +448,10 @@ const terawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   dolphins: {
@@ -431,6 +483,10 @@ const terawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   eagles: {
@@ -462,6 +518,10 @@ const terawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   falcons: {
@@ -493,6 +553,10 @@ const terawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   giants: {
@@ -524,6 +588,10 @@ const terawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   jaguars: {
@@ -555,6 +623,10 @@ const terawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   jets: {
@@ -586,6 +658,10 @@ const terawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   lions: {
@@ -617,6 +693,10 @@ const terawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   packers: {
@@ -648,6 +728,10 @@ const terawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   panthers: {
@@ -679,6 +763,10 @@ const terawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   patriots: {
@@ -710,6 +798,10 @@ const terawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   raiders: {
@@ -741,6 +833,10 @@ const terawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   rams: {
@@ -772,6 +868,10 @@ const terawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   ravens: {
@@ -809,6 +909,10 @@ const terawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   saints: {
@@ -840,6 +944,10 @@ const terawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   seahawks: {
@@ -871,6 +979,10 @@ const terawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   steelers: {
@@ -902,6 +1014,10 @@ const terawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   texans: {
@@ -933,6 +1049,10 @@ const terawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   titans: {
@@ -964,6 +1084,10 @@ const terawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
   vikings: {
@@ -995,6 +1119,10 @@ const terawdata = {
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
     },
   },
 };
