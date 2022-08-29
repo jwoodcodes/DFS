@@ -327,7 +327,9 @@ class FullTeamObjectWithAllStacks {
     this.TEPArray = TEPArray;
   }
 
-  //add methods here
+  //////////////////
+  /////////////////add methods here/////////////////////
+  //////////////////////
 }
 
 //////
@@ -397,6 +399,29 @@ allTeams.forEach(function (team, i) {
   let teOwnershipProjectionDraftkings =
     allTEs[i].TE.draftkingsProjectedOwnership;
   let teamDefOwnershipProjectionDraftkings = team.draftkingsProjectedOwnership;
+  let qbOwnershipProjectionFanduel = allQBs[i].fanduelProjectedOwnership;
+  let rbOneOwnershipProjectionFanduel =
+    allRBs[i].RBOne.fanduelProjectedOwnership;
+  let rbTwoOwnershipProjectionFanduel =
+    allRBs[i].RBTwo.fanduelProjectedOwnership;
+  let wrOneOwnershipProjectionFanduel =
+    allWRs[i].WROne.fanduelProjectedOwnership;
+  let wrTwoOwnershipProjectionFanduel =
+    allWRs[i].WRTwo.fanduelProjectedOwnership;
+  let wrThreeOwnershipProjectionFanduel =
+    allWRs[i].WRThree.fanduelProjectedOwnership;
+  let teOwnershipProjectionFanduel = allTEs[i].TE.fanduelProjectedOwnership;
+  let teamDefOwnershipProjectionFanduel = team.fanduelProjectedOwnership;
+  let qbOwnershipProjectionYahoo = allQBs[i].yahooProjectedOwnership;
+  let rbOneOwnershipProjectionYahoo = allRBs[i].RBOne.yahooProjectedOwnership;
+  let rbTwoOwnershipProjectionYahoo = allRBs[i].RBTwo.yahooProjectedOwnership;
+  let wrOneOwnershipProjectionYahoo = allWRs[i].WROne.yahooProjectedOwnership;
+  let wrTwoOwnershipProjectionYahoo = allWRs[i].WRTwo.yahooProjectedOwnership;
+  let wrThreeOwnershipProjectionYahoo =
+    allWRs[i].WRThree.yahooProjectedOwnership;
+  let teOwnershipProjectionYahoo = allTEs[i].TE.yahooProjectedOwnership;
+  let teamDefOwnershipProjectionYahoo = team.yahooProjectedOwnership;
+
   // console.log(teamDefDraftkingsSalary);
   // console.log(allRBs[i].RBOne.draftkingsSalary);
 
@@ -456,15 +481,23 @@ allTeams.forEach(function (team, i) {
     wrTwoOwnershipProjectionDraftkings,
     wrThreeOwnershipProjectionDraftkings,
     teOwnershipProjectionDraftkings,
-    teamDefOwnershipProjectionDraftkings
-    // qbOwnershipProjectionFanduel,
-    // rbOneOwnershipProjectionFanduel,
-    // rbTwoOwnershipProjectionFanduel,
-    // wrOneOwnershipProjectionFanduel,
-    // wrTwoOwnershipProjectionFanduel,
-    // wrThreeOwnershipProjectionFanduel,
-    // teOwnershipProjectionFanduel,
-    // teamDefOwnershipProjectionFanduel,
+    teamDefOwnershipProjectionDraftkings,
+    qbOwnershipProjectionFanduel,
+    rbOneOwnershipProjectionFanduel,
+    rbTwoOwnershipProjectionFanduel,
+    wrOneOwnershipProjectionFanduel,
+    wrTwoOwnershipProjectionFanduel,
+    wrThreeOwnershipProjectionFanduel,
+    teOwnershipProjectionFanduel,
+    teamDefOwnershipProjectionFanduel,
+    qbOwnershipProjectionYahoo,
+    rbOneOwnershipProjectionYahoo,
+    rbTwoOwnershipProjectionYahoo,
+    wrOneOwnershipProjectionYahoo,
+    wrTwoOwnershipProjectionYahoo,
+    wrThreeOwnershipProjectionYahoo,
+    teOwnershipProjectionYahoo,
+    teamDefOwnershipProjectionYahoo
   );
 
   allTeamObjectsArray.push(teamObject);
