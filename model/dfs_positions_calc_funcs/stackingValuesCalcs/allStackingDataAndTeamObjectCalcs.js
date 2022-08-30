@@ -422,6 +422,283 @@ allTeams.forEach(function (team, i) {
   let teOwnershipProjectionYahoo = allTEs[i].TE.yahooProjectedOwnership;
   let teamDefOwnershipProjectionYahoo = team.yahooProjectedOwnership;
 
+  ////////// for opposing team
+
+  let oppteamName = '';
+  let oppvtt = 0;
+  let oppqbName = '';
+  let opprbOneName = '';
+  let opprbTwoName = '';
+  let oppwrOneName = '';
+  let oppwrTwoName = '';
+  let oppwrThreeName = '';
+  let oppteName = '';
+  let oppqbProjPoints = 0;
+  let opprbOneHalfProjPoints = 0;
+  let opprbTwoHalfProjPoints = 0;
+  let oppwrOneHalfProjPoints = 0;
+  let oppwrTwoHalfProjPoints = 0;
+  let oppwrThreeHalfProjPoints = 0;
+  let oppteHalfProjPoints = 0;
+  let opprbOneFullProjPoints = 0;
+  let opprbTwoFullProjPoints = 0;
+  let oppwrOneFullProjPoints = 0;
+  let oppwrTwoFullProjPoints = 0;
+  let oppwrThreeFullProjPoints = 0;
+  let oppteFullProjPoints = 0;
+  let oppteTEPProjPoints = 0;
+  let oppteamDefProjPoints = 0;
+  let oppqbDraftkingsSalary = 0;
+  let opprbOneDraftkingsSalary = 0;
+  let opprbTwoDraftkingsSalary = 0;
+  let oppwrOneDraftkingsSalary = 0;
+  let oppwrTwoDraftkingsSalary = 0;
+  let oppwrThreeDraftkingsSalary = 0;
+  let oppteDraftkingsSalary = 0;
+
+  let oppqbFanduelSalary = 0;
+  let opprbOneFanduelSalary = 0;
+  let opprbTwoFanduelSalary = 0;
+  let oppwrOneFanduelSalary = 0;
+  let oppwrTwoFanduelSalary = 0;
+  let oppwrThreeFanduelSalary = 0;
+  let oppteFanduelSalary = 0;
+
+  let oppqbYahooSalary = 0;
+  let opprbOneYahooSalary = 0;
+  let opprbTwoYahooSalary = 0;
+  let oppwrOneYahooSalary = 0;
+  let oppwrTwoYahooSalary = 0;
+  let oppwrThreeYahooSalary = 0;
+  let oppteYahooSalary = 0;
+
+  let oppqbOwnershipProjectionDraftkings = 0;
+  let opprbOneOwnershipProjectionDraftkings = 0;
+  let opprbTwoOwnershipProjectionDraftkings = 0;
+  let oppwrOneOwnershipProjectionDraftkings = 0;
+  let oppwrTwoOwnershipProjectionDraftkings = 0;
+  let oppwrThreeOwnershipProjectionDraftkings = 0;
+  let oppteOwnershipProjectionDraftkings = 0;
+  let oppqbOwnershipProjectionFanduel = 0;
+  let opprbOneOwnershipProjectionFanduel = 0;
+  let opprbTwoOwnershipProjectionFanduel = 0;
+  let oppwrOneOwnershipProjectionFanduel = 0;
+  let oppwrTwoOwnershipProjectionFanduel = 0;
+  let oppwrThreeOwnershipProjectionFanduel = 0;
+  let oppteOwnershipProjectionFanduel = 0;
+  let oppqbOwnershipProjectionYahoo = 0;
+  let opprbOneOwnershipProjectionYahoo = 0;
+  let opprbTwoOwnershipProjectionYahoo = 0;
+  let oppwrOneOwnershipProjectionYahoo = 0;
+  let oppwrTwoOwnershipProjectionYahoo = 0;
+  let oppwrThreeOwnershipProjectionYahoo = 0;
+  let oppteOwnershipProjectionYahoo = 0;
+
+  if (i % 2 === 1) {
+    oppteamName = allTeams[i - 1].teamName;
+    oppvtt = allTeams[i - 1].vtt;
+    oppqbName = allQBs[i - 1].name;
+    opprbOneName = allRBs[i - 1].RBOne.name;
+    opprbTwoName = allRBs[i - 1].RBTwo.name;
+    oppwrOneName = allWRs[i - 1].WROne.name;
+    oppwrTwoName = allWRs[i - 1].WRTwo.name;
+    oppwrThreeName = allWRs[i - 1].WRThree.name;
+    oppteName = allTEs[i - 1].TE.name;
+    oppqbProjPoints = allQBData.allQBFinalProjectedPointsValues[i - 1];
+    opprbOneHalfProjPoints =
+      allRBData.allRBOneHalfPPRProjectedPointsValues[i - 1];
+    opprbTwoHalfProjPoints =
+      allRBData.allRBTwoHalfPPRProjectedPointsValues[i - 1];
+    oppwrOneHalfProjPoints =
+      allWRData.allHalfWROneFinalProjectedPointsValues[i - 1];
+    oppwrTwoHalfProjPoints =
+      allWRData.allHalfWRTwoFinalProjectedPointsValues[i - 1];
+    oppwrThreeHalfProjPoints =
+      allWRData.allHalfWRThreeFinalProjectedPointsValues[i - 1];
+    oppteHalfProjPoints = allTEData.allHalfTEFinalProjectedPointsValues[i - 1];
+
+    opprbOneFullProjPoints =
+      allRBData.allRBOneFullPPRProjectedPointsValues[i - 1];
+    opprbTwoFullProjPoints =
+      allRBData.allRBTwoFullPPRProjectedPointsValues[i - 1];
+    oppwrOneFullProjPoints =
+      allWRData.allFullWROneFinalProjectedPointsValues[i - 1];
+    oppwrTwoFullProjPoints =
+      allWRData.allFullWRTwoFinalProjectedPointsValues[i - 1];
+    oppwrThreeFullProjPoints =
+      allWRData.allFullWRThreeFinalProjectedPointsValues[i - 1];
+    oppteFullProjPoints = allTEData.allFullTEFinalProjectedPointsValues[i - 1];
+    oppteTEPProjPoints =
+      allTEData.allTEPremiuimFinalProjectedPointsValues[i - 1];
+    oppteamDefProjPoints = allDefData.TeamDefProjPoints[i - 1];
+
+    oppqbDraftkingsSalary = allQBs[i - 1].draftkingsSalary;
+    opprbOneDraftkingsSalary = allRBs[i - 1].RBOne.draftkingsSalary;
+    opprbTwoDraftkingsSalary = allRBs[i - 1].RBTwo.draftkingsSalary;
+    oppwrOneDraftkingsSalary = allWRs[i - 1].WROne.draftkingsSalary;
+    oppwrTwoDraftkingsSalary = allWRs[i - 1].WRTwo.draftkingsSalary;
+    oppwrThreeDraftkingsSalary = allWRs[i - 1].WRThree.draftkingsSalary;
+    oppteDraftkingsSalary = allTEs[i - 1].TE.draftkingsSalary;
+
+    oppqbFanduelSalary = allQBs[i - 1].fanduelSalary;
+    opprbOneFanduelSalary = allRBs[i - 1].RBOne.fanduelSalary;
+    opprbTwoFanduelSalary = allRBs[i - 1].RBTwo.fanduelSalary;
+    oppwrOneFanduelSalary = allWRs[i - 1].WROne.fanduelSalary;
+    oppwrTwoFanduelSalary = allWRs[i - 1].WRTwo.fanduelSalary;
+    oppwrThreeFanduelSalary = allWRs[i - 1].WRThree.fanduelSalary;
+    oppteFanduelSalary = allTEs[i - 1].TE.fanduelSalary;
+
+    oppqbYahooSalary = allQBs[i - 1].yahooSalary;
+    opprbOneYahooSalary = allRBs[i - 1].RBOne.yahooSalary;
+    opprbTwoYahooSalary = allRBs[i - 1].RBTwo.yahooSalary;
+    oppwrOneYahooSalary = allWRs[i - 1].WROne.yahooSalary;
+    oppwrTwoYahooSalary = allWRs[i - 1].WRTwo.yahooSalary;
+    oppwrThreeYahooSalary = allWRs[i - 1].WRThree.yahooSalary;
+    oppteYahooSalary = allTEs[i - 1].TE.yahooSalary;
+
+    oppqbOwnershipProjectionDraftkings =
+      allQBs[i - 1].draftkingsProjectedOwnership;
+    opprbOneOwnershipProjectionDraftkings =
+      allRBs[i - 1].RBOne.draftkingsProjectedOwnership;
+    opprbTwoOwnershipProjectionDraftkings =
+      allRBs[i - 1].RBTwo.draftkingsProjectedOwnership;
+    oppwrOneOwnershipProjectionDraftkings =
+      allWRs[i - 1].WROne.draftkingsProjectedOwnership;
+    oppwrTwoOwnershipProjectionDraftkings =
+      allWRs[i - 1].WRTwo.draftkingsProjectedOwnership;
+    oppwrThreeOwnershipProjectionDraftkings =
+      allWRs[i - 1].WRThree.draftkingsProjectedOwnership;
+    oppteOwnershipProjectionDraftkings =
+      allTEs[i - 1].TE.draftkingsProjectedOwnership;
+    oppqbOwnershipProjectionFanduel = allQBs[i - 1].fanduelProjectedOwnership;
+    opprbOneOwnershipProjectionFanduel =
+      allRBs[i - 1].RBOne.fanduelProjectedOwnership;
+    opprbTwoOwnershipProjectionFanduel =
+      allRBs[i - 1].RBTwo.fanduelProjectedOwnership;
+    oppwrOneOwnershipProjectionFanduel =
+      allWRs[i - 1].WROne.fanduelProjectedOwnership;
+    oppwrTwoOwnershipProjectionFanduel =
+      allWRs[i - 1].WRTwo.fanduelProjectedOwnership;
+    oppwrThreeOwnershipProjectionFanduel =
+      allWRs[i - 1].WRThree.fanduelProjectedOwnership;
+    oppteOwnershipProjectionFanduel =
+      allTEs[i - 1].TE.fanduelProjectedOwnership;
+    oppqbOwnershipProjectionYahoo = allQBs[i - 1].yahooProjectedOwnership;
+    opprbOneOwnershipProjectionYahoo =
+      allRBs[i - 1].RBOne.yahooProjectedOwnership;
+    opprbTwoOwnershipProjectionYahoo =
+      allRBs[i - 1].RBTwo.yahooProjectedOwnership;
+    oppwrOneOwnershipProjectionYahoo =
+      allWRs[i - 1].WROne.yahooProjectedOwnership;
+    oppwrTwoOwnershipProjectionYahoo =
+      allWRs[i - 1].WRTwo.yahooProjectedOwnership;
+    oppwrThreeOwnershipProjectionYahoo =
+      allWRs[i - 1].WRThree.yahooProjectedOwnership;
+    oppteOwnershipProjectionYahoo = allTEs[i - 1].TE.yahooProjectedOwnership;
+  } else {
+    oppteamName = allTeams[i + 1].teamName;
+    oppvtt = allTeams[i + 1].vtt;
+    oppqbName = allQBs[i + 1].name;
+    opprbOneName = allRBs[i + 1].RBOne.name;
+    opprbTwoName = allRBs[i + 1].RBTwo.name;
+    oppwrOneName = allWRs[i + 1].WROne.name;
+    oppwrTwoName = allWRs[i + 1].WRTwo.name;
+    oppwrThreeName = allWRs[i + 1].WRThree.name;
+    oppteName = allTEs[i + 1].TE.name;
+
+    oppqbProjPoints = allQBData.allQBFinalProjectedPointsValues[i + 1];
+    opprbOneHalfProjPoints =
+      allRBData.allRBOneHalfPPRProjectedPointsValues[i + 1];
+    opprbTwoHalfProjPoints =
+      allRBData.allRBTwoHalfPPRProjectedPointsValues[i + 1];
+    oppwrOneHalfProjPoints =
+      allWRData.allHalfWROneFinalProjectedPointsValues[i + 1];
+    oppwrTwoHalfProjPoints =
+      allWRData.allHalfWRTwoFinalProjectedPointsValues[i + 1];
+    oppwrThreeHalfProjPoints =
+      allWRData.allHalfWRThreeFinalProjectedPointsValues[i + 1];
+    oppteHalfProjPoints = allTEData.allHalfTEFinalProjectedPointsValues[i + 1];
+
+    opprbOneFullProjPoints =
+      allRBData.allRBOneFullPPRProjectedPointsValues[i + 1];
+    opprbTwoFullProjPoints =
+      allRBData.allRBTwoFullPPRProjectedPointsValues[i + 1];
+    oppwrOneFullProjPoints =
+      allWRData.allFullWROneFinalProjectedPointsValues[i + 1];
+    oppwrTwoFullProjPoints =
+      allWRData.allFullWRTwoFinalProjectedPointsValues[i + 1];
+    oppwrThreeFullProjPoints =
+      allWRData.allFullWRThreeFinalProjectedPointsValues[i + 1];
+    oppteFullProjPoints = allTEData.allFullTEFinalProjectedPointsValues[i + 1];
+    oppteTEPProjPoints =
+      allTEData.allTEPremiuimFinalProjectedPointsValues[i + 1];
+    oppteamDefProjPoints = allDefData.TeamDefProjPoints[i + 1];
+
+    oppqbDraftkingsSalary = allQBs[i + 1].draftkingsSalary;
+    opprbOneDraftkingsSalary = allRBs[i + 1].RBOne.draftkingsSalary;
+    opprbTwoDraftkingsSalary = allRBs[i + 1].RBTwo.draftkingsSalary;
+    oppwrOneDraftkingsSalary = allWRs[i + 1].WROne.draftkingsSalary;
+    oppwrTwoDraftkingsSalary = allWRs[i + 1].WRTwo.draftkingsSalary;
+    oppwrThreeDraftkingsSalary = allWRs[i + 1].WRThree.draftkingsSalary;
+    oppteDraftkingsSalary = allTEs[i + 1].TE.draftkingsSalary;
+
+    oppqbFanduelSalary = allQBs[i + 1].fanduelSalary;
+    opprbOneFanduelSalary = allRBs[i + 1].RBOne.fanduelSalary;
+    opprbTwoFanduelSalary = allRBs[i + 1].RBTwo.fanduelSalary;
+    oppwrOneFanduelSalary = allWRs[i + 1].WROne.fanduelSalary;
+    oppwrTwoFanduelSalary = allWRs[i + 1].WRTwo.fanduelSalary;
+    oppwrThreeFanduelSalary = allWRs[i + 1].WRThree.fanduelSalary;
+    oppteFanduelSalary = allTEs[i + 1].TE.fanduelSalary;
+
+    oppqbYahooSalary = allQBs[i + 1].yahooSalary;
+    opprbOneYahooSalary = allRBs[i + 1].RBOne.yahooSalary;
+    opprbTwoYahooSalary = allRBs[i + 1].RBTwo.yahooSalary;
+    oppwrOneYahooSalary = allWRs[i + 1].WROne.yahooSalary;
+    oppwrTwoYahooSalary = allWRs[i + 1].WRTwo.yahooSalary;
+    oppwrThreeYahooSalary = allWRs[i + 1].WRThree.yahooSalary;
+    oppteYahooSalary = allTEs[i + 1].TE.yahooSalary;
+
+    oppqbOwnershipProjectionDraftkings =
+      allQBs[i + 1].draftkingsProjectedOwnership;
+    opprbOneOwnershipProjectionDraftkings =
+      allRBs[i + 1].RBOne.draftkingsProjectedOwnership;
+    opprbTwoOwnershipProjectionDraftkings =
+      allRBs[i + 1].RBTwo.draftkingsProjectedOwnership;
+    oppwrOneOwnershipProjectionDraftkings =
+      allWRs[i + 1].WROne.draftkingsProjectedOwnership;
+    oppwrTwoOwnershipProjectionDraftkings =
+      allWRs[i + 1].WRTwo.draftkingsProjectedOwnership;
+    oppwrThreeOwnershipProjectionDraftkings =
+      allWRs[i + 1].WRThree.draftkingsProjectedOwnership;
+    oppteOwnershipProjectionDraftkings =
+      allTEs[i + 1].TE.draftkingsProjectedOwnership;
+    oppqbOwnershipProjectionFanduel = allQBs[i + 1].fanduelProjectedOwnership;
+    opprbOneOwnershipProjectionFanduel =
+      allRBs[i + 1].RBOne.fanduelProjectedOwnership;
+    opprbTwoOwnershipProjectionFanduel =
+      allRBs[i + 1].RBTwo.fanduelProjectedOwnership;
+    oppwrOneOwnershipProjectionFanduel =
+      allWRs[i + 1].WROne.fanduelProjectedOwnership;
+    oppwrTwoOwnershipProjectionFanduel =
+      allWRs[i + 1].WRTwo.fanduelProjectedOwnership;
+    oppwrThreeOwnershipProjectionFanduel =
+      allWRs[i + 1].WRThree.fanduelProjectedOwnership;
+    oppteOwnershipProjectionFanduel =
+      allTEs[i + 1].TE.fanduelProjectedOwnership;
+    oppqbOwnershipProjectionYahoo = allQBs[i + 1].yahooProjectedOwnership;
+    opprbOneOwnershipProjectionYahoo =
+      allRBs[i + 1].RBOne.yahooProjectedOwnership;
+    opprbTwoOwnershipProjectionYahoo =
+      allRBs[i + 1].RBTwo.yahooProjectedOwnership;
+    oppwrOneOwnershipProjectionYahoo =
+      allWRs[i + 1].WROne.yahooProjectedOwnership;
+    oppwrTwoOwnershipProjectionYahoo =
+      allWRs[i + 1].WRTwo.yahooProjectedOwnership;
+    oppwrThreeOwnershipProjectionYahoo =
+      allWRs[i + 1].WRThree.yahooProjectedOwnership;
+    oppteOwnershipProjectionYahoo = allTEs[i + 1].TE.yahooProjectedOwnership;
+  }
+
   // console.log(teamDefDraftkingsSalary);
   // console.log(allRBs[i].RBOne.draftkingsSalary);
 
@@ -497,7 +774,76 @@ allTeams.forEach(function (team, i) {
     wrTwoOwnershipProjectionYahoo,
     wrThreeOwnershipProjectionYahoo,
     teOwnershipProjectionYahoo,
-    teamDefOwnershipProjectionYahoo
+    teamDefOwnershipProjectionYahoo,
+    oppteamName,
+    oppvtt,
+    oppqbName,
+    opprbOneName,
+    opprbTwoName,
+    oppwrOneName,
+    oppwrTwoName,
+    oppwrThreeName,
+    oppteName,
+    oppqbProjPoints,
+    opprbOneHalfProjPoints,
+    opprbTwoHalfProjPoints,
+    oppwrOneHalfProjPoints,
+    oppwrTwoHalfProjPoints,
+    oppwrThreeHalfProjPoints,
+    oppteHalfProjPoints,
+    opprbOneFullProjPoints,
+    opprbTwoFullProjPoints,
+    oppwrOneFullProjPoints,
+    oppwrTwoFullProjPoints,
+    oppwrThreeFullProjPoints,
+    oppteFullProjPoints,
+    oppteTEPProjPoints,
+    oppteamDefProjPoints,
+    oppqbDraftkingsSalary,
+    opprbOneDraftkingsSalary,
+    opprbTwoDraftkingsSalary,
+    oppwrOneDraftkingsSalary,
+    oppwrTwoDraftkingsSalary,
+    oppwrThreeDraftkingsSalary,
+    oppteDraftkingsSalary,
+    oppqbFanduelSalary,
+    opprbOneFanduelSalary,
+    opprbTwoFanduelSalary,
+    oppwrOneFanduelSalary,
+    oppwrTwoFanduelSalary,
+    oppwrThreeFanduelSalary,
+    oppteFanduelSalary,
+    oppqbYahooSalary,
+    opprbOneYahooSalary,
+    opprbTwoYahooSalary,
+    oppwrOneYahooSalary,
+    oppwrTwoYahooSalary,
+    oppwrThreeYahooSalary,
+    oppteYahooSalary,
+    oppqbOwnershipProjectionDraftkings,
+    opprbOneOwnershipProjectionDraftkings,
+    opprbTwoOwnershipProjectionDraftkings,
+    oppwrOneOwnershipProjectionDraftkings,
+    oppwrTwoOwnershipProjectionDraftkings,
+    oppwrThreeOwnershipProjectionDraftkings,
+    oppteOwnershipProjectionDraftkings,
+    oppqbOwnershipProjectionFanduel,
+    opprbOneOwnershipProjectionFanduel,
+    opprbTwoOwnershipProjectionFanduel,
+    oppwrOneOwnershipProjectionFanduel,
+    oppwrTwoOwnershipProjectionFanduel,
+    oppwrThreeOwnershipProjectionFanduel,
+    oppteOwnershipProjectionFanduel,
+    oppqbOwnershipProjectionYahoo,
+    opprbOneOwnershipProjectionYahoo,
+    opprbTwoOwnershipProjectionYahoo,
+    oppwrOneOwnershipProjectionYahoo,
+    oppwrTwoOwnershipProjectionYahoo,
+    oppwrThreeOwnershipProjectionYahoo,
+    oppteOwnershipProjectionYahoo
+    // halfStackArray,
+    // PPRArray,
+    // TEPArray
   );
 
   allTeamObjectsArray.push(teamObject);
@@ -632,13 +978,6 @@ allQBData.allQBFinalProjectedPointsValues.map(function (value, i) {
     opposingTEPPR = allTEData.allFullTEFinalProjectedPointsValues[i - 1];
     opposingTEPremium =
       allTEData.allTEPremiuimFinalProjectedPointsValues[i - 1];
-
-    // let oppRBOneName = allRBs[i - 1].RBOne.name;
-    // let oppRBTwoName = allRBs[i - 1].RBTwo.name;
-    // let oppWROneName = allWRs[i - 1].WROne.name;
-    // let oppWRTwoName = allWRs[i - 1].WRTwo.name;
-    // let oppWRThreeName = allWRs[i - 1].WRThree.name;
-    // let oppteName = allTEs[i - 1].TE.name;
   } else {
     opposingRBOneHalf = allRBData.allRBOneHalfPPRProjectedPointsValues[i + 1];
     opposingRBTwoHalf = allRBData.allRBTwoHalfPPRProjectedPointsValues[i + 1];
@@ -657,13 +996,6 @@ allQBData.allQBFinalProjectedPointsValues.map(function (value, i) {
     opposingTEPPR = allTEData.allFullTEFinalProjectedPointsValues[i + 1];
     opposingTEPremium =
       allTEData.allTEPremiuimFinalProjectedPointsValues[i + 1];
-
-    // let oppRBOneName = allRBs[i + 1].RBOne.name;
-    // let oppRBTwoName = allRBs[i + 1].RBTwo.name;
-    // let oppWROneName = allWRs[i + 1].WROne.name;
-    // let oppWRTwoName = allWRs[i + 1].WRTwo.name;
-    // let oppWRThreeName = allWRs[i + 1].WRThree.name;
-    // let oppteName = allTEs[i + 1].TE.name;
   }
 
   let halfStackArray = [
@@ -680,13 +1012,6 @@ allQBData.allQBFinalProjectedPointsValues.map(function (value, i) {
     opposingWRTwohalf,
     opposingWRThreehalf,
     opposingTEHalf,
-
-    // oppRBOneName,
-    // oppRBTwoName,
-    // oppWROneName,
-    // oppWRTwoName,
-    // oppWRThreeName,
-    // oppteName,
   ];
 
   let PPRStackArray = [
@@ -703,12 +1028,6 @@ allQBData.allQBFinalProjectedPointsValues.map(function (value, i) {
     opposingWRTwoPPR,
     opposingWRThreePPR,
     opposingTEPPR,
-    // oppRBOneName,
-    // oppRBTwoName,
-    // oppWROneName,
-    // oppWRTwoName,
-    // oppWRThreeName,
-    // oppteName,
   ];
 
   let TEPremiumStackArray = [
@@ -725,12 +1044,6 @@ allQBData.allQBFinalProjectedPointsValues.map(function (value, i) {
     opposingWRTwoPPR,
     opposingWRThreePPR,
     opposingTEPremium,
-    // oppRBOneName,
-    // oppRBTwoName,
-    // oppWROneName,
-    // oppWRTwoName,
-    // oppWRThreeName,
-    // oppteName,
   ];
 
   // const allHalfDoubleStackWithQBAndQBsWROne =
