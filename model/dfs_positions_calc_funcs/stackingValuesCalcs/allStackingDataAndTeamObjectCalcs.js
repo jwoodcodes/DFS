@@ -183,9 +183,18 @@ class FullTeamObjectWithAllStacks {
     teamUnsortedHalfTripleStacksValues,
     teamUnsortedFullTripleStacksValues,
     teamUnsortedTEPTripleStacksValues,
-    teamSingleCombinationNames,
-    teamDoubleCombinationNames,
-    teamTripleCombinationNames
+    teamSingleStacksNames,
+    teamDoubleStacksNames,
+    teamTripleStacksNames,
+    teamSingleStacksTotalDraftkingsSalaries,
+    teamDoubleStacksTotalDraftkingsSalaries,
+    teamTripleStacksTotalDraftkingsSalaries,
+    teamSingleStacksTotalFanduelSalaries,
+    teamDoubleStacksTotalFanduelSalaries,
+    teamTripleStacksTotalFanduelSalaries,
+    teamSingleStacksTotalYahooSalaries,
+    teamDoubleStacksTotalYahooSalaries,
+    teamTripleStacksTotalYahooSalaries
   ) {
     this.teamName = teamName;
     this.vegasTeamTotal = vtt;
@@ -353,9 +362,20 @@ class FullTeamObjectWithAllStacks {
   //////////////////
   /////////////////add methods here/////////////////////
   //////////////////////
-  buildCombinations(arr, num, scoring, namesArray) {
+  buildCombinations(
+    arr,
+    num,
+    scoring,
+    namesArray,
+    dkSalaries,
+    fanduelSalaries,
+    yahooSalaries
+  ) {
     const res = [];
     const names = [];
+    const totalDraftkingsSalaries = [];
+    const totalFanduelSalaries = [];
+    const totalYahooSalaries = [];
 
     let temp,
       i,
@@ -373,13 +393,7 @@ class FullTeamObjectWithAllStacks {
       if (temp.length === num) {
         res.push(
           temp.reduce(function (a, b) {
-            // return +(a + b).toFixed(4);
-            if (typeof a === 'string' || typeof b === 'string') {
-              return a + ', ' + b;
-            }
-            if (typeof a === 'number' && typeof b === 'number') {
-              return +(a + b).toFixed(4);
-            }
+            return +(a + b).toFixed(4);
           })
         );
       }
@@ -407,14 +421,97 @@ class FullTeamObjectWithAllStacks {
       }
     }
 
+    let temptotalDraftkingsSalaries,
+      iSalaries,
+      jSalaries,
+      maxSalaries = 1 << arr.length;
+
+    for (iSalaries = 0; iSalaries < maxSalaries; iSalaries++) {
+      temptotalDraftkingsSalaries = [];
+      for (jSalaries = 0; jSalaries < arr.length; jSalaries++) {
+        if (iSalaries & (1 << jSalaries)) {
+          temptotalDraftkingsSalaries.push(dkSalaries[jSalaries]);
+        }
+      }
+
+      if (temptotalDraftkingsSalaries.length === num) {
+        totalDraftkingsSalaries.push(
+          temptotalDraftkingsSalaries.reduce(function (a, b) {
+            return +(a + b).toFixed(4);
+          })
+        );
+      }
+    }
+
+    let temptotalFanduelSalaries,
+      ifanduelSalaries,
+      jfanduelSalaries,
+      maxfanduelSalaries = 1 << arr.length;
+
+    for (
+      ifanduelSalaries = 0;
+      ifanduelSalaries < maxfanduelSalaries;
+      ifanduelSalaries++
+    ) {
+      temptotalFanduelSalaries = [];
+      for (
+        jfanduelSalaries = 0;
+        jfanduelSalaries < arr.length;
+        jfanduelSalaries++
+      ) {
+        if (ifanduelSalaries & (1 << jfanduelSalaries)) {
+          temptotalFanduelSalaries.push(fanduelSalaries[jfanduelSalaries]);
+        }
+      }
+
+      if (temptotalFanduelSalaries.length === num) {
+        totalFanduelSalaries.push(
+          temptotalFanduelSalaries.reduce(function (a, b) {
+            return +(a + b).toFixed(4);
+          })
+        );
+      }
+    }
+
+    let temptotalYahooSalaries,
+      iyahooSalaries,
+      jyahooSalaries,
+      maxyahooSalaries = 1 << arr.length;
+
+    for (
+      iyahooSalaries = 0;
+      iyahooSalaries < maxyahooSalaries;
+      iyahooSalaries++
+    ) {
+      temptotalYahooSalaries = [];
+      for (jyahooSalaries = 0; jyahooSalaries < arr.length; jyahooSalaries++) {
+        if (iyahooSalaries & (1 << jyahooSalaries)) {
+          temptotalYahooSalaries.push(yahooSalaries[jyahooSalaries]);
+        }
+      }
+
+      if (temptotalYahooSalaries.length === num) {
+        totalYahooSalaries.push(
+          temptotalYahooSalaries.reduce(function (a, b) {
+            return +(a + b).toFixed(4);
+          })
+        );
+      }
+    }
+
+    // teamTripleStacksTotalYahooSalaries
+
     // let sortedRes = res.sort((a, b) => {
     //   if (a > b) return -1;
     //   if (a < b) return 1;
     // });
 
     if (scoring === 'half' && num === 2) {
-      this.teamSingleCombinationNames = names;
-      this.teamUnsortedHalfSingleStacksValuesv = res;
+      this.teamSingleStacksNames = names;
+      this.teamUnsortedHalfSingleStacksValues = res;
+      this.teamSingleStacksTotalDraftkingsSalaries = totalDraftkingsSalaries;
+      this.teamSingleStacksTotalFanduelSalaries = totalFanduelSalaries;
+      this.teamSingleStacksTotalYahooSalaries = totalYahooSalaries;
     }
     if (scoring === 'full' && num === 2) {
       this.teamUnsortedFullSingleStacksValues = res;
@@ -423,8 +520,11 @@ class FullTeamObjectWithAllStacks {
       this.teamUnsortedTEPSingleStacksValues = res;
     }
     if (scoring === 'half' && num === 3) {
-      this.teamDoubleCombinationNames = names;
+      this.teamDoubleStacksNames = names;
       this.teamUnsortedHalfDoubleStacksValues = res;
+      this.teamDoubleStacksTotalDraftkingsSalaries = totalDraftkingsSalaries;
+      this.teamDoubleStacksTotalFanduelSalaries = totalFanduelSalaries;
+      this.teamDoubleStacksTotalYahooSalaries = totalYahooSalaries;
     }
     if (scoring === 'full' && num === 3) {
       this.teamUnsortedFullDoubleStacksValues = res;
@@ -433,8 +533,11 @@ class FullTeamObjectWithAllStacks {
       this.teamUnsortedTEPDoubleStacksValues = res;
     }
     if (scoring === 'half' && num === 4) {
-      this.teamTripleCombinationNames = names;
+      this.teamTripleStacksNames = names;
       this.teamUnsortedHalfTripleStacksValues = res;
+      this.teamTripleStacksTotalDraftkingsSalaries = totalDraftkingsSalaries;
+      this.teamTripleStacksTotalFanduelSalaries = totalFanduelSalaries;
+      this.teamTripleStacksTotalYahooSalaries = totalYahooSalaries;
     }
     if (scoring === 'full' && num === 4) {
       this.teamUnsortedFullTripleStacksValues = res;
@@ -878,6 +981,54 @@ allTeams.forEach(function (team, i) {
     oppteName,
   ];
 
+  let draftkingssalariesArray = [
+    qbDraftkingsSalary,
+    rbOneDraftkingsSalary,
+    rbTwoDraftkingsSalary,
+    wrOneDraftkingsSalary,
+    wrTwoDraftkingsSalary,
+    wrThreeDraftkingsSalary,
+    teDraftkingsSalary,
+    opprbOneDraftkingsSalary,
+    opprbTwoDraftkingsSalary,
+    oppwrOneDraftkingsSalary,
+    oppwrTwoDraftkingsSalary,
+    oppwrThreeDraftkingsSalary,
+    oppteDraftkingsSalary,
+  ];
+
+  let fanduelSalariesArray = [
+    qbFanduelSalary,
+    rbOneFanduelSalary,
+    rbTwoFanduelSalary,
+    wrOneFanduelSalary,
+    wrTwoFanduelSalary,
+    wrThreeFanduelSalary,
+    teFanduelSalary,
+    opprbOneFanduelSalary,
+    opprbTwoFanduelSalary,
+    oppwrOneFanduelSalary,
+    oppwrTwoFanduelSalary,
+    oppwrThreeFanduelSalary,
+    oppteFanduelSalary,
+  ];
+
+  let yahooSalariesArray = [
+    qbYahooSalary,
+    rbOneYahooSalary,
+    rbTwoYahooSalary,
+    wrOneYahooSalary,
+    wrTwoYahooSalary,
+    wrThreeYahooSalary,
+    teYahooSalary,
+    opprbOneYahooSalary,
+    opprbTwoYahooSalary,
+    oppwrOneYahooSalary,
+    oppwrTwoYahooSalary,
+    oppwrThreeYahooSalary,
+    oppteYahooSalary,
+  ];
+
   let teamUnsortedHalfSingleStacksValues = [];
   let teamUnsortedFullSingleStacksValues = [];
   let teamUnsortedTEPSingleStacksValues = [];
@@ -887,9 +1038,18 @@ allTeams.forEach(function (team, i) {
   let teamUnsortedHalfTripleStacksValues = [];
   let teamUnsortedFullTripleStacksValues = [];
   let teamUnsortedTEPTripleStacksValues = [];
-  let teamSingleCombinationNames = [];
-  let teamDoubleCombinationNames = [];
-  let teamTripleCombinationNames = [];
+  let teamSingleStacksNames = [];
+  let teamDoubleStacksNames = [];
+  let teamTripleStacksNames = [];
+  let teamSingleStacksTotalDraftkingsSalaries = [];
+  let teamDoubleStacksTotalDraftkingsSalaries = [];
+  let teamTripleStacksTotalDraftkingsSalaries = [];
+  let teamSingleStacksTotalFanduelSalaries = [];
+  let teamDoubleStacksTotalFanduelSalaries = [];
+  let teamTripleStacksTotalFanduelSalaries = [];
+  let teamSingleStacksTotalYahooSalaries = [];
+  let teamDoubleStacksTotalYahooSalaries = [];
+  let teamTripleStacksTotalYahooSalaries = [];
 
   //////////////////////////////
   //looping over constructor function
@@ -1046,47 +1206,128 @@ allTeams.forEach(function (team, i) {
     teamUnsortedHalfTripleStacksValues,
     teamUnsortedFullTripleStacksValues,
     teamUnsortedTEPTripleStacksValues,
-    teamSingleCombinationNames,
-    teamDoubleCombinationNames,
-    teamTripleCombinationNames
+    teamSingleStacksNames,
+    teamDoubleStacksNames,
+    teamTripleStacksNames,
+    teamSingleStacksTotalDraftkingsSalaries,
+    teamDoubleStacksTotalDraftkingsSalaries,
+    teamTripleStacksTotalDraftkingsSalaries,
+    teamSingleStacksTotalFanduelSalaries,
+    teamDoubleStacksTotalFanduelSalaries,
+    teamTripleStacksTotalFanduelSalaries,
+    teamSingleStacksTotalYahooSalaries,
+    teamDoubleStacksTotalYahooSalaries,
+    teamTripleStacksTotalYahooSalaries
   );
 
   //call methods here
 
   teamHalfSingleStacks.push(
-    teamObject.buildCombinations(halfStackArray, 2, 'half', namesArray)
+    teamObject.buildCombinations(
+      halfStackArray,
+      2,
+      'half',
+      namesArray,
+      draftkingssalariesArray,
+      fanduelSalariesArray,
+      yahooSalariesArray
+    )
   );
 
   teamFullSingleStacks.push(
-    teamObject.buildCombinations(PPRArray, 2, 'full', namesArray)
+    teamObject.buildCombinations(
+      PPRArray,
+      2,
+      'full',
+      namesArray,
+      draftkingssalariesArray,
+      fanduelSalariesArray,
+      yahooSalariesArray
+    )
   );
 
   teamTEPSingleStacks.push(
-    teamObject.buildCombinations(TEPArray, 2, 'TEP', namesArray)
+    teamObject.buildCombinations(
+      TEPArray,
+      2,
+      'TEP',
+      namesArray,
+      draftkingssalariesArray,
+      fanduelSalariesArray,
+      yahooSalariesArray
+    )
   );
 
   teamHalfDoubleStacks.push(
-    teamObject.buildCombinations(halfStackArray, 3, 'half', namesArray)
+    teamObject.buildCombinations(
+      halfStackArray,
+      3,
+      'half',
+      namesArray,
+      draftkingssalariesArray,
+      fanduelSalariesArray,
+      yahooSalariesArray
+    )
   );
 
   teamFullDoubleStacks.push(
-    teamObject.buildCombinations(PPRArray, 3, 'full', namesArray)
+    teamObject.buildCombinations(
+      PPRArray,
+      3,
+      'full',
+      namesArray,
+      draftkingssalariesArray,
+      fanduelSalariesArray,
+      yahooSalariesArray
+    )
   );
 
   teamTEPDoubleStacks.push(
-    teamObject.buildCombinations(TEPArray, 3, 'TEP', namesArray)
+    teamObject.buildCombinations(
+      TEPArray,
+      3,
+      'TEP',
+      namesArray,
+      draftkingssalariesArray,
+      fanduelSalariesArray,
+      yahooSalariesArray
+    )
   );
 
   teamHalfTripleStacks.push(
-    teamObject.buildCombinations(halfStackArray, 4, 'half', namesArray)
+    teamObject.buildCombinations(
+      halfStackArray,
+      4,
+      'half',
+      namesArray,
+      draftkingssalariesArray,
+      fanduelSalariesArray,
+      yahooSalariesArray
+    )
   );
 
   teamFullTripleStacks.push(
-    teamObject.buildCombinations(PPRArray, 4, 'full', namesArray)
+    teamObject.buildCombinations(
+      PPRArray,
+      4,
+      'full',
+      namesArray,
+      draftkingssalariesArray,
+      fanduelSalariesArray,
+      yahooSalariesArray
+    )
   );
 
   teamTEPTripleStacks.push(
-    teamObject.buildCombinations(TEPArray, 4, 'TEP', namesArray)
+    teamObject.buildCombinations(
+      TEPArray,
+      4,
+      'TEP',
+      namesArray,
+      draftkingssalariesArray,
+      fanduelSalariesArray,
+      yahooSalariesArray
+    )
   );
 
   allTeamObjectsArray.push(teamObject);
