@@ -194,7 +194,34 @@ class FullTeamObjectWithAllStacks {
     teamTripleStacksTotalFanduelSalaries,
     teamSingleStacksTotalYahooSalaries,
     teamDoubleStacksTotalYahooSalaries,
-    teamTripleStacksTotalYahooSalaries
+    teamTripleStacksTotalYahooSalaries,
+    teamHalfSingleStacksDraftkingsProjectedPointsPerDollar,
+    teamFullSingleStacksDraftkingsProjectedPointsPerDollar,
+    teamTEPSingleStacksDraftkingsProjectedPointsPerDollar,
+    teamHalfSingleStacksFanduelProjectedPointsPerDollar,
+    teamFullSingleStacksFanduelProjectedPointsPerDollar,
+    teamTEPSingleStacksFanduelProjectedPointsPerDollar,
+    teamHalfSingleStacksYahooProjectedPointsPerDollar,
+    teamFullSingleStacksYahooProjectedPointsPerDollar,
+    teamTEPSingleStacksYahooProjectedPointsPerDollar,
+    teamHalfDoubleStacksDraftkingsProjectedPointsPerDollar,
+    teamFullDoubleStacksDraftkingsProjectedPointsPerDollar,
+    teamTEPDoubleStacksDraftkingsProjectedPointsPerDollar,
+    teamHalfDoubleStacksFanduelProjectedPointsPerDollar,
+    teamFullDoubleStacksFanduelProjectedPointsPerDollar,
+    teamTEPDoubleStacksFanduelProjectedPointsPerDollar,
+    teamHalfDoubleStacksYahooProjectedPointsPerDollar,
+    teamFullDoubleStacksYahooProjectedPointsPerDollar,
+    teamTEPDoubleStacksYahooProjectedPointsPerDollar,
+    teamHalfTripleStacksDraftkingsProjectedPointsPerDollar,
+    teamFullTripleStacksDraftkingsProjectedPointsPerDollar,
+    teamTEPTripleStacksDraftkingsProjectedPointsPerDollar,
+    teamHalfTripleStacksFanduelProjectedPointsPerDollar,
+    teamFullTripleStacksFanduelProjectedPointsPerDollar,
+    teamTEPTripleStacksFanduelProjectedPointsPerDollar,
+    teamHalfTripleStacksYahooProjectedPointsPerDollar,
+    teamFullTripleStacksYahooProjectedPointsPerDollar,
+    teamTEPTripleStacksYahooProjectedPointsPerDollar
   ) {
     this.teamName = teamName;
     this.vegasTeamTotal = vtt;
@@ -357,6 +384,33 @@ class FullTeamObjectWithAllStacks {
     this.halfStackArray = halfStackArray;
     this.PPRArray = PPRArray;
     this.TEPArray = TEPArray;
+    this.teamHalfSingleStacksDraftkingsProjectedPointsPerDollar = [];
+    this.teamFullSingleStacksDraftkingsProjectedPointsPerDollar = [];
+    this.teamTEPSingleStacksDraftkingsProjectedPointsPerDollar = [];
+    this.teamHalfSingleStacksFanduelProjectedPointsPerDollar = [];
+    this.teamFullSingleStacksFanduelProjectedPointsPerDollar = [];
+    this.teamTEPSingleStacksFanduelProjectedPointsPerDollar = [];
+    this.teamHalfSingleStacksYahooProjectedPointsPerDollar = [];
+    this.teamFullSingleStacksYahooProjectedPointsPerDollar = [];
+    this.teamTEPSingleStacksYahooProjectedPointsPerDollar = [];
+    this.teamHalfDoubleStacksDraftkingsProjectedPointsPerDollar = [];
+    this.teamFullDoubleStacksDraftkingsProjectedPointsPerDollar = [];
+    this.teamTEPDoubleStacksDraftkingsProjectedPointsPerDollar = [];
+    this.teamHalfDoubleStacksFanduelProjectedPointsPerDollar = [];
+    this.teamFullDoubleStacksFanduelProjectedPointsPerDollar = [];
+    this.teamTEPDoubleStacksFanduelProjectedPointsPerDollar = [];
+    this.teamHalfDoubleStacksYahooProjectedPointsPerDollar = [];
+    this.teamFullDoubleStacksYahooProjectedPointsPerDollar = [];
+    this.teamTEPDoubleStacksYahooProjectedPointsPerDollar = [];
+    this.teamHalfTripleStacksDraftkingsProjectedPointsPerDollar = [];
+    this.teamFullTripleStacksDraftkingsProjectedPointsPerDollar = [];
+    this.teamTEPTripleStacksDraftkingsProjectedPointsPerDollar = [];
+    this.teamHalfTripleStacksFanduelProjectedPointsPerDollar = [];
+    this.teamFullTripleStacksFanduelProjectedPointsPerDollar = [];
+    this.teamTEPTripleStacksFanduelProjectedPointsPerDollar = [];
+    this.teamHalfTripleStacksYahooProjectedPointsPerDollar = [];
+    this.teamFullTripleStacksYahooProjectedPointsPerDollar = [];
+    this.teamTEPTripleStacksYahooProjectedPointsPerDollar = [];
   }
 
   //////////////////
@@ -499,51 +553,304 @@ class FullTeamObjectWithAllStacks {
       }
     }
 
-    // teamTripleStacksTotalYahooSalaries
-
     // let sortedRes = res.sort((a, b) => {
     //   if (a > b) return -1;
     //   if (a < b) return 1;
     // });
+    let tempteamHalfSingleStacksDraftkingsProjectedPointsPerDollar = [];
+    let tempteamFullSingleStacksDraftkingsProjectedPointsPerDollar = [];
+    let tempteamTEPSingleStacksDraftkingsProjectedPointsPerDollar = [];
+    let tempteamHalfSingleStacksFanduelProjectedPointsPerDollar = [];
+    let tempteamFullSingleStacksFanduelProjectedPointsPerDollar = [];
+    let tempteamTEPSingleStacksFanduelProjectedPointsPerDollar = [];
+    let tempteamHalfSingleStacksYahooProjectedPointsPerDollar = [];
+    let tempteamFullSingleStacksYahooProjectedPointsPerDollar = [];
+    let tempteamTEPSingleStacksYahooProjectedPointsPerDollar = [];
 
+    let tempteamHalfDoubleStacksDraftkingsProjectedPointsPerDollar = [];
+    let tempteamFullDoubleStacksDraftkingsProjectedPointsPerDollar = [];
+    let tempteamTEPDoubleStacksDraftkingsProjectedPointsPerDollar = [];
+    let tempteamHalfDoubleStacksFanduelProjectedPointsPerDollar = [];
+    let tempteamFullDoubleStacksFanduelProjectedPointsPerDollar = [];
+    let tempteamTEPDoubleStacksFanduelProjectedPointsPerDollar = [];
+    let tempteamHalfDoubleStacksYahooProjectedPointsPerDollar = [];
+    let tempteamFullDoubleStacksYahooProjectedPointsPerDollar = [];
+    let tempteamTEPDoubleStacksYahooProjectedPointsPerDollar = [];
+    let tempteamHalfTripleStacksDraftkingsProjectedPointsPerDollar = [];
+    let tempteamFullTripleStacksDraftkingsProjectedPointsPerDollar = [];
+    let tempteamTEPTripleStacksDraftkingsProjectedPointsPerDollar = [];
+    let tempteamHalfTripleStacksFanduelProjectedPointsPerDollar = [];
+    let tempteamFullTripleStacksFanduelProjectedPointsPerDollar = [];
+    let tempteamTEPTripleStacksFanduelProjectedPointsPerDollar = [];
+    let tempteamHalfTripleStacksYahooProjectedPointsPerDollar = [];
+    let tempteamFullTripleStacksYahooProjectedPointsPerDollar = [];
+    let tempteamTEPTripleStacksYahooProjectedPointsPerDollar = [];
+
+    //
+    //single stacks
+    //
     if (scoring === 'half' && num === 2) {
       this.teamSingleStacksNames = names;
       this.teamUnsortedHalfSingleStacksValues = res;
       this.teamSingleStacksTotalDraftkingsSalaries = totalDraftkingsSalaries;
       this.teamSingleStacksTotalFanduelSalaries = totalFanduelSalaries;
       this.teamSingleStacksTotalYahooSalaries = totalYahooSalaries;
+
+      this.teamUnsortedHalfSingleStacksValues.map(function (projPoints, i) {
+        if (projPoints / totalDraftkingsSalaries[i]) {
+          tempteamHalfSingleStacksDraftkingsProjectedPointsPerDollar.push(
+            (projPoints / totalDraftkingsSalaries[i]).toFixed(4)
+          );
+        }
+        if (projPoints / totalFanduelSalaries[i]) {
+          tempteamHalfSingleStacksFanduelProjectedPointsPerDollar.push(
+            (projPoints / totalFanduelSalaries[i]).toFixed(4)
+          );
+        }
+        if (projPoints / totalYahooSalaries[i]) {
+          tempteamHalfSingleStacksYahooProjectedPointsPerDollar.push(
+            (projPoints / totalYahooSalaries[i]).toFixed(4)
+          );
+        }
+      });
+      this.teamHalfSingleStacksDraftkingsProjectedPointsPerDollar =
+        tempteamHalfSingleStacksDraftkingsProjectedPointsPerDollar;
+      this.teamHalfSingleStacksFanduelProjectedPointsPerDollar =
+        tempteamHalfSingleStacksFanduelProjectedPointsPerDollar;
+      this.teamHalfSingleStacksYahooProjectedPointsPerDollar =
+        tempteamHalfSingleStacksYahooProjectedPointsPerDollar;
     }
     if (scoring === 'full' && num === 2) {
       this.teamUnsortedFullSingleStacksValues = res;
+
+      this.teamUnsortedFullSingleStacksValues.map(function (projPoints, i) {
+        if (projPoints / totalDraftkingsSalaries[i]) {
+          tempteamFullSingleStacksDraftkingsProjectedPointsPerDollar.push(
+            (projPoints / totalDraftkingsSalaries[i]).toFixed(4)
+          );
+        }
+        if (projPoints / totalFanduelSalaries[i]) {
+          tempteamFullSingleStacksFanduelProjectedPointsPerDollar.push(
+            (projPoints / totalFanduelSalaries[i]).toFixed(4)
+          );
+        }
+        if (projPoints / totalYahooSalaries[i]) {
+          tempteamFullSingleStacksYahooProjectedPointsPerDollar.push(
+            (projPoints / totalYahooSalaries[i]).toFixed(4)
+          );
+        }
+      });
+      this.teamFullSingleStacksDraftkingsProjectedPointsPerDollar =
+        tempteamFullSingleStacksDraftkingsProjectedPointsPerDollar;
+      this.teamFullSingleStacksFanduelProjectedPointsPerDollar =
+        tempteamFullSingleStacksFanduelProjectedPointsPerDollar;
+      this.teamFullSingleStacksYahooProjectedPointsPerDollar =
+        tempteamFullSingleStacksYahooProjectedPointsPerDollar;
     }
     if (scoring === 'TEP' && num === 2) {
       this.teamUnsortedTEPSingleStacksValues = res;
+
+      this.teamUnsortedTEPSingleStacksValues.map(function (projPoints, i) {
+        if (projPoints / totalDraftkingsSalaries[i]) {
+          tempteamTEPSingleStacksDraftkingsProjectedPointsPerDollar.push(
+            (projPoints / totalDraftkingsSalaries[i]).toFixed(4)
+          );
+        }
+        if (projPoints / totalFanduelSalaries[i]) {
+          tempteamTEPSingleStacksFanduelProjectedPointsPerDollar.push(
+            (projPoints / totalFanduelSalaries[i]).toFixed(4)
+          );
+        }
+        if (projPoints / totalYahooSalaries[i]) {
+          tempteamTEPSingleStacksYahooProjectedPointsPerDollar.push(
+            (projPoints / totalYahooSalaries[i]).toFixed(4)
+          );
+        }
+      });
+      this.teamTEPSingleStacksDraftkingsProjectedPointsPerDollar =
+        tempteamTEPSingleStacksDraftkingsProjectedPointsPerDollar;
+      this.teamTEPSingleStacksFanduelProjectedPointsPerDollar =
+        tempteamTEPSingleStacksFanduelProjectedPointsPerDollar;
+      this.teamTEPSingleStacksYahooProjectedPointsPerDollar =
+        tempteamTEPSingleStacksYahooProjectedPointsPerDollar;
     }
+
+    //
+    //double stacks
+    //
     if (scoring === 'half' && num === 3) {
       this.teamDoubleStacksNames = names;
       this.teamUnsortedHalfDoubleStacksValues = res;
       this.teamDoubleStacksTotalDraftkingsSalaries = totalDraftkingsSalaries;
       this.teamDoubleStacksTotalFanduelSalaries = totalFanduelSalaries;
       this.teamDoubleStacksTotalYahooSalaries = totalYahooSalaries;
+
+      this.teamUnsortedHalfDoubleStacksValues.map(function (projPoints, i) {
+        if (projPoints / totalDraftkingsSalaries[i]) {
+          tempteamHalfDoubleStacksDraftkingsProjectedPointsPerDollar.push(
+            (projPoints / totalDraftkingsSalaries[i]).toFixed(4)
+          );
+        }
+        if (projPoints / totalFanduelSalaries[i]) {
+          tempteamHalfDoubleStacksFanduelProjectedPointsPerDollar.push(
+            (projPoints / totalFanduelSalaries[i]).toFixed(4)
+          );
+        }
+        if (projPoints / totalYahooSalaries[i]) {
+          tempteamHalfDoubleStacksYahooProjectedPointsPerDollar.push(
+            (projPoints / totalYahooSalaries[i]).toFixed(4)
+          );
+        }
+      });
+      this.teamHalfDoubleStacksDraftkingsProjectedPointsPerDollar =
+        tempteamHalfDoubleStacksDraftkingsProjectedPointsPerDollar;
+      this.teamHalfDoubleStacksFanduelProjectedPointsPerDollar =
+        tempteamHalfDoubleStacksFanduelProjectedPointsPerDollar;
+      this.teamHalfDoubleStacksYahooProjectedPointsPerDollar =
+        tempteamHalfDoubleStacksYahooProjectedPointsPerDollar;
     }
     if (scoring === 'full' && num === 3) {
       this.teamUnsortedFullDoubleStacksValues = res;
+
+      this.teamUnsortedFullDoubleStacksValues.map(function (projPoints, i) {
+        if (projPoints / totalDraftkingsSalaries[i]) {
+          tempteamFullDoubleStacksDraftkingsProjectedPointsPerDollar.push(
+            (projPoints / totalDraftkingsSalaries[i]).toFixed(4)
+          );
+        }
+        if (projPoints / totalFanduelSalaries[i]) {
+          tempteamFullDoubleStacksFanduelProjectedPointsPerDollar.push(
+            (projPoints / totalFanduelSalaries[i]).toFixed(4)
+          );
+        }
+        if (projPoints / totalYahooSalaries[i]) {
+          tempteamFullDoubleStacksYahooProjectedPointsPerDollar.push(
+            (projPoints / totalYahooSalaries[i]).toFixed(4)
+          );
+        }
+      });
+      this.teamFullDoubleStacksDraftkingsProjectedPointsPerDollar =
+        tempteamFullDoubleStacksDraftkingsProjectedPointsPerDollar;
+      this.teamFullDoubleStacksFanduelProjectedPointsPerDollar =
+        tempteamFullDoubleStacksFanduelProjectedPointsPerDollar;
+      this.teamFullDoubleStacksYahooProjectedPointsPerDollar =
+        tempteamFullDoubleStacksYahooProjectedPointsPerDollar;
     }
     if (scoring === 'TEP' && num === 3) {
       this.teamUnsortedTEPDoubleStacksValues = res;
+
+      this.teamUnsortedTEPDoubleStacksValues.map(function (projPoints, i) {
+        if (projPoints / totalDraftkingsSalaries[i]) {
+          tempteamTEPDoubleStacksDraftkingsProjectedPointsPerDollar.push(
+            (projPoints / totalDraftkingsSalaries[i]).toFixed(4)
+          );
+        }
+        if (projPoints / totalFanduelSalaries[i]) {
+          tempteamTEPDoubleStacksFanduelProjectedPointsPerDollar.push(
+            (projPoints / totalFanduelSalaries[i]).toFixed(4)
+          );
+        }
+        if (projPoints / totalYahooSalaries[i]) {
+          tempteamTEPDoubleStacksYahooProjectedPointsPerDollar.push(
+            (projPoints / totalYahooSalaries[i]).toFixed(4)
+          );
+        }
+      });
+      this.teamTEPDoubleStacksDraftkingsProjectedPointsPerDollar =
+        tempteamTEPDoubleStacksDraftkingsProjectedPointsPerDollar;
+      this.teamTEPDoubleStacksFanduelProjectedPointsPerDollar =
+        tempteamTEPDoubleStacksFanduelProjectedPointsPerDollar;
+      this.teamTEPDoubleStacksYahooProjectedPointsPerDollar =
+        tempteamTEPDoubleStacksYahooProjectedPointsPerDollar;
     }
+
+    //
+    //triple stacks
+    //
     if (scoring === 'half' && num === 4) {
       this.teamTripleStacksNames = names;
       this.teamUnsortedHalfTripleStacksValues = res;
       this.teamTripleStacksTotalDraftkingsSalaries = totalDraftkingsSalaries;
       this.teamTripleStacksTotalFanduelSalaries = totalFanduelSalaries;
       this.teamTripleStacksTotalYahooSalaries = totalYahooSalaries;
+
+      this.teamUnsortedHalfTripleStacksValues.map(function (projPoints, i) {
+        if (projPoints / totalDraftkingsSalaries[i]) {
+          tempteamHalfTripleStacksDraftkingsProjectedPointsPerDollar.push(
+            (projPoints / totalDraftkingsSalaries[i]).toFixed(4)
+          );
+        }
+        if (projPoints / totalFanduelSalaries[i]) {
+          tempteamHalfTripleStacksFanduelProjectedPointsPerDollar.push(
+            (projPoints / totalFanduelSalaries[i]).toFixed(4)
+          );
+        }
+        if (projPoints / totalYahooSalaries[i]) {
+          tempteamHalfTripleStacksYahooProjectedPointsPerDollar.push(
+            (projPoints / totalYahooSalaries[i]).toFixed(4)
+          );
+        }
+      });
+      this.teamHalfTripleStacksDraftkingsProjectedPointsPerDollar =
+        tempteamHalfTripleStacksDraftkingsProjectedPointsPerDollar;
+      this.teamHalfTripleStacksFanduelProjectedPointsPerDollar =
+        tempteamHalfTripleStacksFanduelProjectedPointsPerDollar;
+      this.teamHalfTripleStacksYahooProjectedPointsPerDollar =
+        tempteamHalfTripleStacksYahooProjectedPointsPerDollar;
     }
     if (scoring === 'full' && num === 4) {
       this.teamUnsortedFullTripleStacksValues = res;
+
+      this.teamUnsortedFullTripleStacksValues.map(function (projPoints, i) {
+        if (projPoints / totalDraftkingsSalaries[i]) {
+          tempteamFullTripleStacksDraftkingsProjectedPointsPerDollar.push(
+            (projPoints / totalDraftkingsSalaries[i]).toFixed(4)
+          );
+        }
+        if (projPoints / totalFanduelSalaries[i]) {
+          tempteamFullTripleStacksFanduelProjectedPointsPerDollar.push(
+            (projPoints / totalFanduelSalaries[i]).toFixed(4)
+          );
+        }
+        if (projPoints / totalYahooSalaries[i]) {
+          tempteamFullTripleStacksYahooProjectedPointsPerDollar.push(
+            (projPoints / totalYahooSalaries[i]).toFixed(4)
+          );
+        }
+      });
+      this.teamFullTripleStacksDraftkingsProjectedPointsPerDollar =
+        tempteamFullTripleStacksDraftkingsProjectedPointsPerDollar;
+      this.teamFullTripleStacksFanduelProjectedPointsPerDollar =
+        tempteamFullTripleStacksFanduelProjectedPointsPerDollar;
+      this.teamFullTripleStacksYahooProjectedPointsPerDollar =
+        tempteamFullTripleStacksYahooProjectedPointsPerDollar;
     }
     if (scoring === 'TEP' && num === 4) {
       this.teamUnsortedTEPTripleStacksValues = res;
+
+      this.teamUnsortedTEPTripleStacksValues.map(function (projPoints, i) {
+        if (projPoints / totalDraftkingsSalaries[i]) {
+          tempteamTEPTripleStacksDraftkingsProjectedPointsPerDollar.push(
+            (projPoints / totalDraftkingsSalaries[i]).toFixed(4)
+          );
+        }
+        if (projPoints / totalFanduelSalaries[i]) {
+          tempteamTEPTripleStacksFanduelProjectedPointsPerDollar.push(
+            (projPoints / totalFanduelSalaries[i]).toFixed(4)
+          );
+        }
+        if (projPoints / totalYahooSalaries[i]) {
+          tempteamTEPTripleStacksYahooProjectedPointsPerDollar.push(
+            (projPoints / totalYahooSalaries[i]).toFixed(4)
+          );
+        }
+      });
+      this.teamTEPTripleStacksDraftkingsProjectedPointsPerDollar =
+        tempteamTEPTripleStacksDraftkingsProjectedPointsPerDollar;
+      this.teamTEPTripleStacksFanduelProjectedPointsPerDollar =
+        tempteamTEPTripleStacksFanduelProjectedPointsPerDollar;
+      this.teamTEPTripleStacksYahooProjectedPointsPerDollar =
+        tempteamTEPTripleStacksYahooProjectedPointsPerDollar;
     }
 
     return res;
@@ -1050,6 +1357,33 @@ allTeams.forEach(function (team, i) {
   let teamSingleStacksTotalYahooSalaries = [];
   let teamDoubleStacksTotalYahooSalaries = [];
   let teamTripleStacksTotalYahooSalaries = [];
+  let teamHalfSingleStacksDraftkingsProjectedPointsPerDollar = [];
+  let teamFullSingleStacksDraftkingsProjectedPointsPerDollar = [];
+  let teamTEPSingleStacksDraftkingsProjectedPointsPerDollar = [];
+  let teamHalfSingleStacksFanduelProjectedPointsPerDollar = [];
+  let teamFullSingleStacksFanduelProjectedPointsPerDollar = [];
+  let teamTEPSingleStacksFanduelProjectedPointsPerDollar = [];
+  let teamHalfSingleStacksYahooProjectedPointsPerDollar = [];
+  let teamFullSingleStacksYahooProjectedPointsPerDollar = [];
+  let teamTEPSingleStacksYahooProjectedPointsPerDollar = [];
+  let teamHalfDoubleStacksDraftkingsProjectedPointsPerDollar = [];
+  let teamFullDoubleStacksDraftkingsProjectedPointsPerDollar = [];
+  let teamTEPDoubleStacksDraftkingsProjectedPointsPerDollar = [];
+  let teamHalfDoubleStacksFanduelProjectedPointsPerDollar = [];
+  let teamFullDoubleStacksFanduelProjectedPointsPerDollar = [];
+  let teamTEPDoubleStacksFanduelProjectedPointsPerDollar = [];
+  let teamHalfDoubleStacksYahooProjectedPointsPerDollar = [];
+  let teamFullDoubleStacksYahooProjectedPointsPerDollar = [];
+  let teamTEPDoubleStacksYahooProjectedPointsPerDollar = [];
+  let teamHalfTripleStacksDraftkingsProjectedPointsPerDollar = [];
+  let teamFullTripleStacksDraftkingsProjectedPointsPerDollar = [];
+  let teamTEPTripleStacksDraftkingsProjectedPointsPerDollar = [];
+  let teamHalfTripleStacksFanduelProjectedPointsPerDollar = [];
+  let teamFullTripleStacksFanduelProjectedPointsPerDollar = [];
+  let teamTEPTripleStacksFanduelProjectedPointsPerDollar = [];
+  let teamHalfTripleStacksYahooProjectedPointsPerDollar = [];
+  let teamFullTripleStacksYahooProjectedPointsPerDollar = [];
+  let teamTEPTripleStacksYahooProjectedPointsPerDollar = [];
 
   //////////////////////////////
   //looping over constructor function
@@ -1217,7 +1551,34 @@ allTeams.forEach(function (team, i) {
     teamTripleStacksTotalFanduelSalaries,
     teamSingleStacksTotalYahooSalaries,
     teamDoubleStacksTotalYahooSalaries,
-    teamTripleStacksTotalYahooSalaries
+    teamTripleStacksTotalYahooSalaries,
+    teamHalfSingleStacksDraftkingsProjectedPointsPerDollar,
+    teamFullSingleStacksDraftkingsProjectedPointsPerDollar,
+    teamTEPSingleStacksDraftkingsProjectedPointsPerDollar,
+    teamHalfSingleStacksFanduelProjectedPointsPerDollar,
+    teamFullSingleStacksFanduelProjectedPointsPerDollar,
+    teamTEPSingleStacksFanduelProjectedPointsPerDollar,
+    teamHalfSingleStacksYahooProjectedPointsPerDollar,
+    teamFullSingleStacksYahooProjectedPointsPerDollar,
+    teamTEPSingleStacksYahooProjectedPointsPerDollar,
+    teamHalfDoubleStacksDraftkingsProjectedPointsPerDollar,
+    teamFullDoubleStacksDraftkingsProjectedPointsPerDollar,
+    teamTEPDoubleStacksDraftkingsProjectedPointsPerDollar,
+    teamHalfDoubleStacksFanduelProjectedPointsPerDollar,
+    teamFullDoubleStacksFanduelProjectedPointsPerDollar,
+    teamTEPDoubleStacksFanduelProjectedPointsPerDollar,
+    teamHalfDoubleStacksYahooProjectedPointsPerDollar,
+    teamFullDoubleStacksYahooProjectedPointsPerDollar,
+    teamTEPDoubleStacksYahooProjectedPointsPerDollar,
+    teamHalfTripleStacksDraftkingsProjectedPointsPerDollar,
+    teamFullTripleStacksDraftkingsProjectedPointsPerDollar,
+    teamTEPTripleStacksDraftkingsProjectedPointsPerDollar,
+    teamHalfTripleStacksFanduelProjectedPointsPerDollar,
+    teamFullTripleStacksFanduelProjectedPointsPerDollar,
+    teamTEPTripleStacksFanduelProjectedPointsPerDollar,
+    teamHalfTripleStacksYahooProjectedPointsPerDollar,
+    teamFullTripleStacksYahooProjectedPointsPerDollar,
+    teamTEPTripleStacksYahooProjectedPointsPerDollar
   );
 
   //call methods here
@@ -1333,7 +1694,7 @@ allTeams.forEach(function (team, i) {
   allTeamObjectsArray.push(teamObject);
 });
 
-console.log(allTeamObjectsArray);
+console.log(allTeamObjectsArray[0]);
 //
 
 module.exports = allTeamObjectsArray;
