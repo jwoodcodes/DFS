@@ -47,10 +47,12 @@ const wrrawdata = require('./teamandpostionsrawdata/wrrawdata');
 const allTEData = require('./dfs_positions_calc_funcs/teValuesCalcs');
 const terawdata = require('./teamandpostionsrawdata/terawdata');
 
-const allStackData = require('./dfs_positions_calc_funcs/stackingValuesCalcs/allStackingDataAndTeamObjectCalcs');
-const allDefData = require('./dfs_positions_calc_funcs/defValuesCalcs');
+const allFlexAndSuperFlexData = require('./dfs_positions_calc_funcs/flexAndSuperflexCalcs');
 
-const calcAllStackData = require('./dfs_positions_calc_funcs/stackingValuesCalcs/allStackingDataAndTeamObjectCalcs');
+// const allStackData = require('./dfs_positions_calc_funcs/stackingValuesCalcs/allStackingDataAndTeamObjectCalcs');
+const allTeamObjectsArray = require('./dfs_positions_calc_funcs/stackingValuesCalcs/allStackingDataAndTeamObjectCalcs');
+
+const allDefData = require('./dfs_positions_calc_funcs/defValuesCalcs');
 
 const { clearCache } = require('ejs');
 const { getSystemErrorName } = require('util');
@@ -410,136 +412,136 @@ TE.insertMany({
   // console.log(data);
 });
 
-const flexSchema = new mongoose.Schema({
-  position: String,
-  allHalfFlexValues: Array,
-  allHalfFlexValuesWithNames: Array,
-  allPPRFlexValues: Array,
-  allPPRFlexValuesWithNames: Array,
-  allTEPFlexValues: Array,
-  allTEPFlexValuesWithNames: Array,
-  allHalfSuperflexValues: Array,
-  allHalfSuperflexValuesWithNames: Array,
-  allPPRSuperflexValues: Array,
-  allPPRSuperflexValuesWithNames: Array,
-  allTEPremiumSuperflexValues: Array,
-  allTEPremiumSuperflexValuesWithNames: Array,
-});
+// const flexSchema = new mongoose.Schema({
+//   position: String,
+//   allHalfFlexValues: Array,
+//   allHalfFlexValuesWithNames: Array,
+//   allPPRFlexValues: Array,
+//   allPPRFlexValuesWithNames: Array,
+//   allTEPFlexValues: Array,
+//   allTEPFlexValuesWithNames: Array,
+//   allHalfSuperflexValues: Array,
+//   allHalfSuperflexValuesWithNames: Array,
+//   allPPRSuperflexValues: Array,
+//   allPPRSuperflexValuesWithNames: Array,
+//   allTEPremiumSuperflexValues: Array,
+//   allTEPremiumSuperflexValuesWithNames: Array,
+// });
 
-const flex = mongoose.model('flex', flexSchema);
+// const flex = mongoose.model('flex', flexSchema);
 
-flex.deleteMany({ position: 'flex' }, function (err) {
-  if (err) {
-    console.log(`${err} error at flex delete`);
-  }
-  console.log('successful flex delete');
-});
+// flex.deleteMany({ position: 'flex' }, function (err) {
+//   if (err) {
+//     console.log(`${err} error at flex delete`);
+//   }
+//   console.log('successful flex delete');
+// });
 
-flex
-  .insertMany({
-    position: 'flex',
-    allHalfFlexValues: allStackData.allHalfFlexValues,
-    allHalfFlexValuesWithNames: allStackData.allHalfFlexValuesWithNames,
-    allPPRFlexValues: allStackData.allPPRFlexValues,
-    allPPRFlexValuesWithNames: allStackData.allPPRFlexValuesWithNames,
-    allTEPFlexValues: allStackData.allTEPFlexValues,
-    allTEPFlexValuesWithNames: allStackData.allTEPFlexValuesWithNames,
-    allHalfSuperflexValues: allStackData.allHalfSuperflexValues,
-    allHalfSuperflexValuesWithNames:
-      allStackData.allHalfSuperflexValuesWithNames,
-    allPPRSuperflexValues: allStackData.allPPRSuperflexValues,
-    allPPRSuperflexValuesWithNames: allStackData.allPPRSuperflexValuesWithNames,
-    allTEPremiumSuperflexValues: allStackData.allTEPremiumSuperflexValues,
-    allTEPremiumSuperflexValuesWithNames:
-      allStackData.allTEPremiumSuperflexValuesWithNames,
-  })
-  .then(data => {
-    console.log('flex Data Iserted Successfully');
-    // console.log(data);
-  });
+// flex
+//   .insertMany({
+//     position: 'flex',
+//     allHalfFlexValues: allStackData.allHalfFlexValues,
+//     allHalfFlexValuesWithNames: allStackData.allHalfFlexValuesWithNames,
+//     allPPRFlexValues: allStackData.allPPRFlexValues,
+//     allPPRFlexValuesWithNames: allStackData.allPPRFlexValuesWithNames,
+//     allTEPFlexValues: allStackData.allTEPFlexValues,
+//     allTEPFlexValuesWithNames: allStackData.allTEPFlexValuesWithNames,
+//     allHalfSuperflexValues: allStackData.allHalfSuperflexValues,
+//     allHalfSuperflexValuesWithNames:
+//       allStackData.allHalfSuperflexValuesWithNames,
+//     allPPRSuperflexValues: allStackData.allPPRSuperflexValues,
+//     allPPRSuperflexValuesWithNames: allStackData.allPPRSuperflexValuesWithNames,
+//     allTEPremiumSuperflexValues: allStackData.allTEPremiumSuperflexValues,
+//     allTEPremiumSuperflexValuesWithNames:
+//       allStackData.allTEPremiumSuperflexValuesWithNames,
+//   })
+//   .then(data => {
+//     console.log('flex Data Iserted Successfully');
+//     // console.log(data);
+//   });
 
-const stackingSchema = new mongoose.Schema({
-  position: String,
-  allHalfQBWROneStacks: Array,
-  allPPRQBWROneStacks: Array,
-  allHalfQBWROneStackWithNames: Array,
-  allPPRQBWROneStacksWithNames: Array,
-  allTeamsBestHalfSingleStackWithQBWithNames: Array,
-  // sortedAllHalfQBWROneStacks: Array,
-  allTeamsBestPPRSingleStackWithQB: Array,
-  allTeamsBestPPRSingleStackWithQBWithNames: Array,
-  allTEPremiumBestSingleStackWithQB: Array,
-  allTEPremiumBestSingleStackWithQBWithNames: Array,
-  allTeamsBestHalfDoubleStackWithQBAndWROne: Array,
-  allTeamsBestHalfDoubleStackWithQBAndWROneWithNames: Array,
-  allTeamsBestPPRDoubleStackWithQBAndWROne: Array,
-  allTeamsBestPPRDoubleStackWithQBAndWROneWithNames: Array,
-  allTEPremiumBestDoubleStackWithQBAndWROne: Array,
-  allTEPremiumBestDoubleStackWithQBAndWROneWithNames: Array,
-  allTeamsBestHalfTripleStackWithQBAndWROne: Array,
-  allTeamsBestPPRTripleStackWithQBAndWROne: Array,
-  allTEPremiumBestTripleStackWithQBAndWROne: Array,
-  allTeamsBestHalfTripleStackWithQBAndWROneWithNames: Array,
-  allTeamsBestPPRTripleStackWithQBAndWROneWithNames: Array,
-  allTEPremiumBestTripleStackWithQBAndWROneWithNames: Array,
-});
+// const stackingSchema = new mongoose.Schema({
+//   position: String,
+//   allHalfQBWROneStacks: Array,
+//   allPPRQBWROneStacks: Array,
+//   allHalfQBWROneStackWithNames: Array,
+//   allPPRQBWROneStacksWithNames: Array,
+//   allTeamsBestHalfSingleStackWithQBWithNames: Array,
+//   // sortedAllHalfQBWROneStacks: Array,
+//   allTeamsBestPPRSingleStackWithQB: Array,
+//   allTeamsBestPPRSingleStackWithQBWithNames: Array,
+//   allTEPremiumBestSingleStackWithQB: Array,
+//   allTEPremiumBestSingleStackWithQBWithNames: Array,
+//   allTeamsBestHalfDoubleStackWithQBAndWROne: Array,
+//   allTeamsBestHalfDoubleStackWithQBAndWROneWithNames: Array,
+//   allTeamsBestPPRDoubleStackWithQBAndWROne: Array,
+//   allTeamsBestPPRDoubleStackWithQBAndWROneWithNames: Array,
+//   allTEPremiumBestDoubleStackWithQBAndWROne: Array,
+//   allTEPremiumBestDoubleStackWithQBAndWROneWithNames: Array,
+//   allTeamsBestHalfTripleStackWithQBAndWROne: Array,
+//   allTeamsBestPPRTripleStackWithQBAndWROne: Array,
+//   allTEPremiumBestTripleStackWithQBAndWROne: Array,
+//   allTeamsBestHalfTripleStackWithQBAndWROneWithNames: Array,
+//   allTeamsBestPPRTripleStackWithQBAndWROneWithNames: Array,
+//   allTEPremiumBestTripleStackWithQBAndWROneWithNames: Array,
+// });
 
-const bestStacks = mongoose.model('bestStacks', stackingSchema);
+// const bestStacks = mongoose.model('bestStacks', stackingSchema);
 
-bestStacks.deleteMany({ position: 'stacks' }, function (err) {
-  if (err) {
-    console.log(`${err} error at stacking delete`);
-  }
-  console.log('successful stacks delete');
-});
+// bestStacks.deleteMany({ position: 'stacks' }, function (err) {
+//   if (err) {
+//     console.log(`${err} error at stacking delete`);
+//   }
+//   console.log('successful stacks delete');
+// });
 
-bestStacks
-  .insertMany({
-    position: 'stacks',
-    allHalfQBWROneStacks: allStackData.allHalfQBWROneStacks,
-    allPPRQBWROneStacks: allStackData.allPPRQBWROneStacks,
-    allHalfQBWROneStackWithNames: allStackData.allHalfQBWROneStackWithNames,
-    allPPRQBWROneStacksWithNames: allStackData.allPPRQBWROneStacksWithNames,
-    allTeamsBestHalfSingleStackWithQBWithNames:
-      allStackData.allTeamsBestHalfSingleStackWithQBWithNames,
-    // sortedAllHalfQBWROneStacks: allStackData.sortedAllHalfQBWROneStacks,
-    allTeamsBestPPRSingleStackWithQB:
-      allStackData.allTeamsBestPPRSingleStackWithQB,
-    allTeamsBestPPRSingleStackWithQBWithNames:
-      allStackData.allTeamsBestPPRSingleStackWithQBWithNames,
-    allTEPremiumBestSingleStackWithQB:
-      allStackData.allTEPremiumBestSingleStackWithQB,
-    allTEPremiumBestSingleStackWithQBWithNames:
-      allStackData.allTEPremiumBestSingleStackWithQBWithNames,
-    allTeamsBestHalfDoubleStackWithQBAndWROne:
-      allStackData.allTeamsBestHalfDoubleStackWithQBAndWROne,
-    allTeamsBestHalfDoubleStackWithQBAndWROneWithNames:
-      allStackData.allTeamsBestHalfDoubleStackWithQBAndWROneWithNames,
-    allTeamsBestPPRDoubleStackWithQBAndWROne:
-      allStackData.allTeamsBestPPRDoubleStackWithQBAndWROne,
-    allTeamsBestPPRDoubleStackWithQBAndWROneWithNames:
-      allStackData.allTeamsBestPPRDoubleStackWithQBAndWROneWithNames,
-    allTEPremiumBestDoubleStackWithQBAndWROne:
-      allStackData.allTEPremiumBestDoubleStackWithQBAndWROne,
-    allTEPremiumBestDoubleStackWithQBAndWROneWithNames:
-      allStackData.allTEPremiumBestDoubleStackWithQBAndWROneWithNames,
-    allTeamsBestHalfTripleStackWithQBAndWROne:
-      allStackData.allTeamsBestHalfTripleStackWithQBAndWROne,
-    allTeamsBestPPRTripleStackWithQBAndWROne:
-      allStackData.allTeamsBestPPRTripleStackWithQBAndWROne,
-    allTEPremiumBestTripleStackWithQBAndWROne:
-      allStackData.allTEPremiumBestTripleStackWithQBAndWROne,
-    allTeamsBestHalfTripleStackWithQBAndWROneWithNames:
-      allStackData.allTeamsBestHalfTripleStackWithQBAndWROneWithNames,
-    allTeamsBestPPRTripleStackWithQBAndWROneWithNames:
-      allStackData.allTeamsBestPPRTripleStackWithQBAndWROneWithNames,
-    allTEPremiumBestTripleStackWithQBAndWROneWithNames:
-      allStackData.allTEPremiumBestTripleStackWithQBAndWROneWithNames,
-  })
-  .then(data => {
-    console.log('Stacks Data Inserted Successfully');
-    // console.log(data);
-  });
+// bestStacks
+//   .insertMany({
+//     position: 'stacks',
+//     allHalfQBWROneStacks: allStackData.allHalfQBWROneStacks,
+//     allPPRQBWROneStacks: allStackData.allPPRQBWROneStacks,
+//     allHalfQBWROneStackWithNames: allStackData.allHalfQBWROneStackWithNames,
+//     allPPRQBWROneStacksWithNames: allStackData.allPPRQBWROneStacksWithNames,
+//     allTeamsBestHalfSingleStackWithQBWithNames:
+//       allStackData.allTeamsBestHalfSingleStackWithQBWithNames,
+//     // sortedAllHalfQBWROneStacks: allStackData.sortedAllHalfQBWROneStacks,
+//     allTeamsBestPPRSingleStackWithQB:
+//       allStackData.allTeamsBestPPRSingleStackWithQB,
+//     allTeamsBestPPRSingleStackWithQBWithNames:
+//       allStackData.allTeamsBestPPRSingleStackWithQBWithNames,
+//     allTEPremiumBestSingleStackWithQB:
+//       allStackData.allTEPremiumBestSingleStackWithQB,
+//     allTEPremiumBestSingleStackWithQBWithNames:
+//       allStackData.allTEPremiumBestSingleStackWithQBWithNames,
+//     allTeamsBestHalfDoubleStackWithQBAndWROne:
+//       allStackData.allTeamsBestHalfDoubleStackWithQBAndWROne,
+//     allTeamsBestHalfDoubleStackWithQBAndWROneWithNames:
+//       allStackData.allTeamsBestHalfDoubleStackWithQBAndWROneWithNames,
+//     allTeamsBestPPRDoubleStackWithQBAndWROne:
+//       allStackData.allTeamsBestPPRDoubleStackWithQBAndWROne,
+//     allTeamsBestPPRDoubleStackWithQBAndWROneWithNames:
+//       allStackData.allTeamsBestPPRDoubleStackWithQBAndWROneWithNames,
+//     allTEPremiumBestDoubleStackWithQBAndWROne:
+//       allStackData.allTEPremiumBestDoubleStackWithQBAndWROne,
+//     allTEPremiumBestDoubleStackWithQBAndWROneWithNames:
+//       allStackData.allTEPremiumBestDoubleStackWithQBAndWROneWithNames,
+//     allTeamsBestHalfTripleStackWithQBAndWROne:
+//       allStackData.allTeamsBestHalfTripleStackWithQBAndWROne,
+//     allTeamsBestPPRTripleStackWithQBAndWROne:
+//       allStackData.allTeamsBestPPRTripleStackWithQBAndWROne,
+//     allTEPremiumBestTripleStackWithQBAndWROne:
+//       allStackData.allTEPremiumBestTripleStackWithQBAndWROne,
+//     allTeamsBestHalfTripleStackWithQBAndWROneWithNames:
+//       allStackData.allTeamsBestHalfTripleStackWithQBAndWROneWithNames,
+//     allTeamsBestPPRTripleStackWithQBAndWROneWithNames:
+//       allStackData.allTeamsBestPPRTripleStackWithQBAndWROneWithNames,
+//     allTEPremiumBestTripleStackWithQBAndWROneWithNames:
+//       allStackData.allTEPremiumBestTripleStackWithQBAndWROneWithNames,
+//   })
+//   .then(data => {
+//     console.log('Stacks Data Inserted Successfully');
+//     // console.log(data);
+//   });
 
 const defSchema = new mongoose.Schema({
   position: String,
@@ -588,7 +590,7 @@ app.get('/pos/:position', (req, res) => {
     allRBData,
     allWRData,
     allTEData,
-    allStackData,
+    // allStackData,
   });
 });
 
