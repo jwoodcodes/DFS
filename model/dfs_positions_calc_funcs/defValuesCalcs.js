@@ -28,8 +28,6 @@ allTeams.map(function (team, i) {
   calcTeamsTotalProjectedPointsForCalculatingProjectedTeamDefPoints(team, i);
 });
 
-//////// testing things and messing around with OOP
-
 const scoreFromProjectedPointsForDef = [];
 const ScoreFromOwnOff = [];
 const ScoreFromOppOff = [];
@@ -41,12 +39,18 @@ class TeamDef {
     teamName,
     defprojpoints,
     teamoffprojpoints,
-    oppteamoffprojectedpoints
+    oppteamoffprojectedpoints,
+    draftkingsSalary,
+    fanduelSalary,
+    yahooSalary
   ) {
     this.teamName = teamName;
     this.defprojpoints = defprojpoints;
     this.teamoffprojpoints = teamoffprojpoints;
     this.oppteamoffprojectedpoints = oppteamoffprojectedpoints;
+    // this.draftkingsSalary = 0;
+    // this.fanduelSalary = 0;
+    // this.yahooSalary = 0;
   }
 
   ////add methods here
@@ -117,6 +121,12 @@ class TeamDef {
 
     TeamDefProjPoints.push(this.teamDefProjPoints);
   }
+
+  calcTeamProjectedPointsPerDollar(dk, fan, yahoo) {
+    this.draftkingsPointsPerDollar = +(this.teamDefProjPoints / dk).toFixed(5);
+    this.fanduelPointsPerDollar = +(this.teamDefProjPoints / fan).toFixed(5);
+    this.yahooPointsPerDolar = +(this.teamDefProjPoints / yahoo).toFixed(4);
+  }
 }
 
 //assingning a value for each team for the opposing teams offensive porjections
@@ -140,11 +150,18 @@ allTeams.forEach(function (team, i) {
 
   let oppTeamTotal = oppTeamOffenseTotalProjPoints[i];
 
+  let draftkingsSalary = team.teamDefDraftkingsSalary;
+  let fanduelSalary = team.teamDefFanduelSalary;
+  let yahooSalary = team.teamDefYahooSalary;
+
   let testteam = new TeamDef(
     team.teamName,
     defprojectedpoints,
     teamTotal,
-    oppTeamTotal
+    oppTeamTotal,
+    draftkingsSalary,
+    fanduelSalary,
+    yahooSalary
   );
 
   testteam.calcScoreFromProjDefPoints();
@@ -152,6 +169,11 @@ allTeams.forEach(function (team, i) {
   testteam.calcScoreFromOppTeamOffTotalProjectedPointsScore();
 
   testteam.calcTeamDefProjPoints();
+  testteam.calcTeamProjectedPointsPerDollar(
+    draftkingsSalary,
+    fanduelSalary,
+    yahooSalary
+  );
 
   allTeamDefensesMap.set(team.teamName, testteam);
 });
@@ -165,8 +187,6 @@ const allDefData = {
   allTeamDefensesMap: allTeamDefensesMap,
 };
 
-// console.log(allDefData);
+console.log(allDefData);
 
 module.exports = allDefData;
-
-console.log('this is for the def values calcs');
