@@ -259,6 +259,6 @@ const allFlexAndSuperFlexData = {
     allSuperFlexYahooProjectedpointsPerdollar,
 };
 
-console.log(allFlexAndSuperFlexData);
+// console.log(allFlexAndSuperFlexData);
 
 module.exports = allFlexAndSuperFlexData;

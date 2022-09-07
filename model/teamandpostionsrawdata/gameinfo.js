@@ -36,9 +36,9 @@ const gameInfo = {
     homeOrRoad: 'home',
     vtt: 25.25,
     def4for4projectedpoints: 9,
-    teamDefDraftkingsSalary: 0,
-    teamDefFanduelSalary: 0,
-    teamDefYahooSalary: 0,
+    teamDefDraftkingsSalary: 4500,
+    teamDefFanduelSalary: 4000,
+    teamDefYahooSalary: 15,
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
