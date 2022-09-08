@@ -7,6 +7,7 @@ const allTEData = require('./teValuesCalcs');
 const { chiefs } = require('../teamandpostionsrawdata/gameinfo');
 
 const allTeamsTotalProjectedPointsScore = [];
+const allTeamDefenseObjectsArray = [];
 
 const calcTeamsTotalProjectedPointsForCalculatingProjectedTeamDefPoints =
   function (team, i) {
@@ -176,6 +177,7 @@ allTeams.forEach(function (team, i) {
   );
 
   allTeamDefensesMap.set(team.teamName, testteam);
+  allTeamDefenseObjectsArray.push(testteam);
 });
 
 const allDefData = {
@@ -184,9 +186,10 @@ const allDefData = {
   ScoreFromOppOff: ScoreFromOppOff,
   TeamDefProjPoints: TeamDefProjPoints,
 
+  allTeamDefenseObjectsArray: allTeamDefenseObjectsArray,
   allTeamDefensesMap: allTeamDefensesMap,
 };
 
-console.log(allDefData);
+// console.log(allDefData);
 
 module.exports = allDefData;

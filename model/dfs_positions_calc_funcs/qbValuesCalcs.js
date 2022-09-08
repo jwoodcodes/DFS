@@ -179,7 +179,7 @@ allQBs.map(function (team, i) {
   numOfMatchingRoleWeeks.push(matchingWeeks);
 });
 
-if (gameInfo.week.currentWeek < 3) {
+if (gameInfo.week.currentWeek < 5) {
   allQBs.map(function (team, i) {
     let QBProjectedPoints = 0;
 
@@ -192,20 +192,37 @@ if (gameInfo.week.currentWeek < 3) {
   });
 }
 
-if (gameInfo.week.currentWeek === 3) {
+if (gameInfo.week.currentWeek === 5 || gameInfo.week.currentWeek === 6) {
   allQBs.map(function (team, i) {
-    let GLSPProjectedPoints = team.fiftyithPercentProjectedPoints;
-    let fourForFour = team.fourForFourHalfPPRProjectedPoints;
-    let total = GLSPProjectedPoints + fourForFour;
-    let QBProjectedPoints = total / 2;
+    let twentyFifthPercentProjection =
+      allQBs[i].twentyFifthPercentProjectedPoints;
+    let fiftyithPercentProjection = allQBs[i].fiftyithPercentProjectedPoints;
+    let seventyFifthPercentProjection =
+      allQBs[i].seventyFifthPercentProjectedPoints;
+
+    let initialQBProjectedPoints = 0;
 
     // console.log(team.roleLastXNumOfWeeksUpToFive[1]);
+    let matchingWeeksPercentage =
+      numOfMatchingRoleWeeks[i] / allQBs[i].roleLastXNumOfWeeksUpToFive.length;
 
     if (
-      team.roleLastXNumOfWeeksUpToFive.length === 2 &&
-      team.roleThisWeek === team.roleLastXNumOfWeeksUpToFive[0] &&
-      team.roleThisWeek === team.roleLastXNumOfWeeksUpToFive[1]
+      allQBs[i].roleLastXNumOfWeeksUpToFive.length > 3 &&
+      matchingWeeksPercentage > 0.74
     ) {
+      let fourForFour = team.fourForFourHalfPPRProjectedPoints;
+
+      if (allQBTotalScores[i] >= 35) {
+        initialQBProjectedPoints = seventyFifthPercentProjection;
+      } else if (allQBTotalScores[i] >= -25) {
+        initialQBProjectedPoints = fiftyithPercentProjection;
+      } else {
+        initialQBProjectedPoints = twentyFifthPercentProjection;
+      }
+
+      let total = initialQBProjectedPoints + fourForFour;
+      let QBProjectedPoints = total / 2;
+
       allQBFinalProjectedPointsValues.push(QBProjectedPoints);
       allQBFinalProjectedPointsValuesPlusNames.push(
         `${allQBs[i].name}: ${QBProjectedPoints}`
@@ -220,7 +237,7 @@ if (gameInfo.week.currentWeek === 3) {
   });
 }
 
-if (gameInfo.week.currentWeek > 3) {
+if (gameInfo.week.currentWeek > 6) {
   allQBTotalScores.map(function (score, i, array) {
     let twentyFifthPercentProjection =
       allQBs[i].twentyFifthPercentProjectedPoints;
