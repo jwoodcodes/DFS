@@ -175,7 +175,7 @@ allTETotalScores.map(function (score, i, array) {
   //   console.log(`${score}: ${allTEs[i].TE.name}`);
 
   if (
-    gameInfo.week.currentWeek > 3 &&
+    gameInfo.week.currentWeek > 6 &&
     tePercentageOfMatchingRoleWeeks[i] > 0.74
   ) {
     if (score >= 40) {
@@ -198,7 +198,7 @@ allTETotalScores.map(function (score, i, array) {
       ).toFixed(2);
     }
   } else if (
-    gameInfo.week.currentWeek > 3 &&
+    gameInfo.week.currentWeek > 6 &&
     tePercentageOfMatchingRoleWeeks[i] < 0.75
   ) {
     TEHalfProjectedPoints = HalfFourForFour;
@@ -209,8 +209,9 @@ allTETotalScores.map(function (score, i, array) {
   }
 
   if (
-    gameInfo.week.currentWeek === 3 &&
-    tePercentageOfMatchingRoleWeeks[i] === 1
+    gameInfo.week.currentWeek === 5 ||
+    (gameInfo.week.currentWeek === 6 &&
+      tePercentageOfMatchingRoleWeeks[i] > 0.74)
   ) {
     if (score >= 40) {
       TEHalfProjectedPoints =
@@ -244,8 +245,9 @@ allTETotalScores.map(function (score, i, array) {
         (TEPremiuimPorjectedPointsTotal + FullFourForFour) / 2;
     }
   } else if (
-    gameInfo.week.currentWeek === 3 &&
-    tePercentageOfMatchingRoleWeeks[i] !== 1
+    gameInfo.week.currentWeek === 5 ||
+    (gameInfo.week.currentWeek === 6 &&
+      tePercentageOfMatchingRoleWeeks[i] < 0.75)
   ) {
     TEHalfProjectedPoints = HalfFourForFour;
     TEFullProjectedPoints = FullFourForFour;
@@ -254,7 +256,7 @@ allTETotalScores.map(function (score, i, array) {
     ).toFixed(2);
   }
 
-  if (gameInfo.week.currentWeek < 3) {
+  if (gameInfo.week.currentWeek < 5) {
     TEHalfProjectedPoints = HalfFourForFour;
     TEFullProjectedPoints = FullFourForFour;
     TEPremiuimPorjectedPoints = +(
@@ -362,6 +364,8 @@ const allTEData = {
   tePremiumProjectedPointsPerDollarYahoo:
     tePremiumProjectedPointsPerDollarYahoo,
 };
+
+// console.log(allTEData);
 
 module.exports = allTECalcFunctions;
 module.exports = allTEData;

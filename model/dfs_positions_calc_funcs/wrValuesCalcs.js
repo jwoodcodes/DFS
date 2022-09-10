@@ -884,7 +884,7 @@ const allWRData = {
 // console.log(allFullWRThreeFinalProjectedPointsValuesPlusNames);
 // console.log(allWRsHalfProjectedPointsValuesPlusNames);
 
-console.log(allWRData);
+// console.log(allWRData);
 
 module.exports = allWRCalcFunctions;
 module.exports = allWRData;
