@@ -166,6 +166,9 @@ allQBs.map(function (team, i) {
 const allQBFinalProjectedPointsValues = [];
 const allQBFinalProjectedPointsValuesPlusNames = [];
 
+const allQBManagedAndCashProjectedPointsValues = [];
+const allQBManagedAndCashProjectedPointsValuesPlusNames = [];
+
 const numOfMatchingRoleWeeks = [];
 
 allQBs.map(function (team, i) {
@@ -187,6 +190,10 @@ if (gameInfo.week.currentWeek < 5) {
 
     allQBFinalProjectedPointsValues.push(QBProjectedPoints);
     allQBFinalProjectedPointsValuesPlusNames.push(
+      `${allQBs[i].name}: ${QBProjectedPoints}`
+    );
+    allQBManagedAndCashProjectedPointsValues.push(QBProjectedPoints);
+    allQBManagedAndCashProjectedPointsValuesPlusNames.push(
       `${allQBs[i].name}: ${QBProjectedPoints}`
     );
   });
@@ -227,13 +234,51 @@ if (gameInfo.week.currentWeek === 5 || gameInfo.week.currentWeek === 6) {
       allQBFinalProjectedPointsValuesPlusNames.push(
         `${allQBs[i].name}: ${QBProjectedPoints}`
       );
+      allQBManagedAndCashProjectedPointsValues.push(QBProjectedPoints);
+      allQBManagedAndCashProjectedPointsValuesPlusNames.push(
+        `${allQBs[i].name}: ${QBProjectedPoints}`
+      );
     } else {
       QBProjectedPoints = team.fourForFourHalfPPRProjectedPoints;
       allQBFinalProjectedPointsValues.push(QBProjectedPoints);
       allQBFinalProjectedPointsValuesPlusNames.push(
         `${allQBs[i].name}: ${QBProjectedPoints}`
       );
+      allQBManagedAndCashProjectedPointsValues.push(QBProjectedPoints);
+      allQBManagedAndCashProjectedPointsValuesPlusNames.push(
+        `${allQBs[i].name}: ${QBProjectedPoints}`
+      );
     }
+  });
+}
+
+if (gameInfo.week.currentWeek > 6) {
+  allQBs.map(function (team, i) {
+    let fourForFour = team.fourForFourHalfPPRProjectedPoints;
+
+    let twentyFifthPercentProjection =
+      allQBs[i].twentyFifthPercentProjectedPoints;
+    let fiftyithPercentProjection = allQBs[i].fiftyithPercentProjectedPoints;
+    let seventyFifthPercentProjection =
+      allQBs[i].seventyFifthPercentProjectedPoints;
+
+    let initialQBProjectedPoints = 0;
+
+    if (allQBTotalScores[i] >= 35) {
+      initialQBProjectedPoints = seventyFifthPercentProjection;
+    } else if (allQBTotalScores[i] >= -25) {
+      initialQBProjectedPoints = fiftyithPercentProjection;
+    } else {
+      initialQBProjectedPoints = twentyFifthPercentProjection;
+    }
+
+    let total = initialQBProjectedPoints + fourForFour;
+    let QBProjectedPoints = total / 2;
+
+    allQBManagedAndCashProjectedPointsValues.push(QBProjectedPoints);
+    allQBManagedAndCashProjectedPointsValuesPlusNames.push(
+      `${allQBs[i].name}: ${QBProjectedPoints}`
+    );
   });
 }
 
@@ -310,12 +355,17 @@ const allQBData = {
   allQBFinalProjectedPointsValuesPlusNames:
     allQBFinalProjectedPointsValuesPlusNames,
 
+  allQBManagedAndCashProjectedPointsValues:
+    allQBManagedAndCashProjectedPointsValues,
+  allQBManagedAndCashProjectedPointsValuesPlusNames:
+    allQBManagedAndCashProjectedPointsValuesPlusNames,
+
   projectedPointsPerDollarDraftkings: projectedPointsPerDollarDraftkings,
   projectedPointsPerDollarFanduel: projectedPointsPerDollarFanduel,
   projectedPointsPerDollarYahoo: projectedPointsPerDollarYahoo,
 };
 
-// console.log(allQBData);
+console.log(allQBData);
 
 module.exports = allQBCalcFunctions;
 module.exports = allQBData;
