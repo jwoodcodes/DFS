@@ -1,37 +1,39 @@
 {
-  "name": "dfs_app",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "autoprefixer": "^10.4.0",
-    "concat": "^1.0.3",
-    "cors": "^2.8.5",
-    "dotenv": "^16.0.1",
-    "ejs": "^3.1.6",
-    "express": "^4.17.2",
-    "live-server": "^1.2.1",
-    "mongodb": "^4.4.1",
-    "mongoose": "^6.2.8",
-    "node": "^17.2.0",
-    "node-sass": "^7.0.0",
-    "npm-run-all": "^4.1.5",
-    "postcss": "^8.4.4",
-    "postcss-cli": "^9.0.2",
-    "requirejs": "^2.3.6",
-    "stream-consumers": "^1.0.2"
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "mongoose": "^6.6.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1",
+    "web-vitals": "^2.1.4"
   },
-  "devDependencies": {},
   "scripts": {
-    "watch:sass": "node-sass sass/main.scss public/app.css -w -r",
-    "devserver": "live-server",
-    "start": "npm-run-all --parallel devserver watch:sass",
-    "compile:sass": "node-sass sass/main.scss public/app.comp.css",
-    "concat:css": "concat -o public/app.concat.css public/menu.css public/app.comp.css",
-    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' public/app.concat.css -o public/app.prefix.css",
-    "compress:css": "node-sass public/app.prefix.css public/app.css --output-style compressed",
-    "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "author": "jwood",
-  "license": "ISC"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
