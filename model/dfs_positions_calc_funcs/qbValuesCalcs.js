@@ -365,7 +365,7 @@ const allQBData = {
   projectedPointsPerDollarYahoo: projectedPointsPerDollarYahoo,
 };
 
-console.log(allQBData);
+// console.log(allQBData);
 
 module.exports = allQBCalcFunctions;
 module.exports = allQBData;
