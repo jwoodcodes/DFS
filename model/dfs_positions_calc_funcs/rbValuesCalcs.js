@@ -86,7 +86,7 @@ const allRBCalcFunctions = {
     let rbPPRProjectedPoints = 0;
 
     if (
-      gameInfo.week.currentWeek > 3 &&
+      gameInfo.week.currentWeek > 6 &&
       rb.roleThisWeek === 1 &&
       rbOnePercentageOfMatchingRoleWeeks[i] > 0.74
     ) {
@@ -104,7 +104,7 @@ const allRBCalcFunctions = {
         rbPPRProjectedPoints = PPRTwentyFifthPercentProjectedPoints;
       }
     } else if (
-      gameInfo.week.currentWeek > 3 &&
+      gameInfo.week.currentWeek > 6 &&
       rb.roleThisWeek === 1 &&
       rbOnePercentageOfMatchingRoleWeeks[i] < 0.75
     ) {
@@ -113,7 +113,7 @@ const allRBCalcFunctions = {
     }
 
     if (
-      gameInfo.week.currentWeek > 3 &&
+      gameInfo.week.currentWeek > 6 &&
       rb.roleThisWeek === 2 &&
       rbTwoPercentageOfMatchingRoleWeeks[i] > 0.74
     ) {
@@ -131,7 +131,7 @@ const allRBCalcFunctions = {
         rbPPRProjectedPoints = PPRTwentyFifthPercentProjectedPoints;
       }
     } else if (
-      gameInfo.week.currentWeek > 3 &&
+      gameInfo.week.currentWeek > 6 &&
       rb.roleThisWeek === 2 &&
       rbTwoPercentageOfMatchingRoleWeeks[i] < 0.75
     ) {
@@ -140,33 +140,80 @@ const allRBCalcFunctions = {
     }
 
     if (
-      gameInfo.week.currentWeek === 3 &&
-      rb.roleLastXNumOfWeeksUpToFive.length === 2 &&
-      rb.roleThisWeek === rb.roleLastXNumOfWeeksUpToFive[0] &&
-      rb.roleThisWeek === rb.roleLastXNumOfWeeksUpToFive[1]
+      gameInfo.week.currentWeek === 5 ||
+      (gameInfo.week.currentWeek === 6 &&
+        rb.roleThisWeek === 1 &&
+        rbOnePercentageOfMatchingRoleWeeks[i] > 0.74)
     ) {
+      if (rbTotalTouches >= totalTeamBackfieldMArket * 0.65) {
+        temprbHalfPorjectedPoints = halfSeventyFifthPercentProjectedPoints;
+        temprbPPRProjectedPoints = PPRSeventyFifthPercentProjectedPoints;
+      } else if (
+        rbTotalTouches > totalTeamBackfieldMArket * 0.35 &&
+        rbTotalTouches < totalTeamBackfieldMArket * 0.65
+      ) {
+        temprbHalfPorjectedPoints = halfFiftyithPercentProjectedPoints;
+        temprbPPRProjectedPoints = PPRFiftyithPercentProjectedPoints;
+      } else {
+        temprbHalfPorjectedPoints = halfTwentyFifthPercentProjectedPoints;
+        temprbPPRProjectedPoints = PPRTwentyFifthPercentProjectedPoints;
+      }
+
       let avgHalf =
-        (halfFiftyithPercentProjectedPoints +
-          rb.fourForFourHalfPPRProjectedPoints) /
-        2;
+        (temprbHalfPorjectedPoints + rb.fourForFourHalfPPRProjectedPoints) / 2;
       let avgFull =
-        (PPRFiftyithPercentProjectedPoints +
-          rb.fourForFourFullPPRProjectedPoints) /
-        2;
+        (temprbPPRProjectedPoints + rb.fourForFourFullPPRProjectedPoints) / 2;
 
       rbHalfPorjectedPoints = avgHalf;
       rbPPRProjectedPoints = avgFull;
     } else if (
-      (gameInfo.week.currentWeek === 3 &&
-        rb.roleLastXNumOfWeeksUpToFive.length !== 2) ||
-      rb.roleThisWeek !== rb.roleLastXNumOfWeeksUpToFive[0] ||
-      rb.roleThisWeek !== rb.roleLastXNumOfWeeksUpToFive[1]
+      gameInfo.week.currentWeek === 5 ||
+      (gameInfo.week.currentWeek === 6 &&
+        rb.roleThisWeek === 1 &&
+        rbOnePercentageOfMatchingRoleWeeks[i] < 0.75)
     ) {
       rbHalfPorjectedPoints = rb.fourForFourHalfPPRProjectedPoints;
       rbPPRProjectedPoints = rb.fourForFourFullPPRProjectedPoints;
     }
 
-    if (gameInfo.week.currentWeek < 3) {
+    if (
+      gameInfo.week.currentWeek === 5 ||
+      (gameInfo.week.currentWeek === 6 &&
+        rb.roleThisWeek === 2 &&
+        rbTwoPercentageOfMatchingRoleWeeks[i] > 0.74)
+    ) {
+      if (rbTotalTouches >= totalTeamBackfieldMArket * 0.65) {
+        temprbHalfPorjectedPoints = halfSeventyFifthPercentProjectedPoints;
+        temprbPPRProjectedPoints = PPRSeventyFifthPercentProjectedPoints;
+      } else if (
+        rbTotalTouches > totalTeamBackfieldMArket * 0.35 &&
+        rbTotalTouches < totalTeamBackfieldMArket * 0.65
+      ) {
+        temprbHalfPorjectedPoints = halfFiftyithPercentProjectedPoints;
+        temprbPPRProjectedPoints = PPRFiftyithPercentProjectedPoints;
+      } else {
+        temprbHalfPorjectedPoints = halfTwentyFifthPercentProjectedPoints;
+        temprbPPRProjectedPoints = PPRTwentyFifthPercentProjectedPoints;
+      }
+
+      let avgHalf =
+        (temprbHalfPorjectedPoints + rb.fourForFourHalfPPRProjectedPoints) / 2;
+      let avgFull =
+        (temprbPPRProjectedPoints + rb.fourForFourFullPPRProjectedPoints) / 2;
+
+      rbHalfPorjectedPoints = avgHalf;
+      rbPPRProjectedPoints = avgFull;
+    } else if (
+      gameInfo.week.currentWeek === 5 ||
+      (gameInfo.week.currentWeek === 6 &&
+        rb.roleThisWeek === 2 &&
+        rbTwoPercentageOfMatchingRoleWeeks[i] < 0.75)
+    ) {
+      rbHalfPorjectedPoints = rb.fourForFourHalfPPRProjectedPoints;
+      rbPPRProjectedPoints = rb.fourForFourFullPPRProjectedPoints;
+    }
+
+    if (gameInfo.week.currentWeek < 5) {
       rbHalfPorjectedPoints = rb.fourForFourHalfPPRProjectedPoints;
       rbPPRProjectedPoints = rb.fourForFourFullPPRProjectedPoints;
     }

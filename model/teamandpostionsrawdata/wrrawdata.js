@@ -263,8 +263,8 @@ const wrrawdata = {
       roleThisWeek: 3,
       roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
 
-      fourForFourHalfPPRProjectedPoints: 8,
-      fourForFourFullPPRProjectedPoints: 10,
+      fourForFourHalfPPRProjectedPoints: 7.65,
+      fourForFourFullPPRProjectedPoints: 9.35,
 
       yahooSalary: 15,
       fanduelSalary: 0,

@@ -1,6 +1,6 @@
 const gameInfo = {
   week: {
-    currentWeek: 16,
+    currentWeek: 8,
   },
 
   SF49ers: {
