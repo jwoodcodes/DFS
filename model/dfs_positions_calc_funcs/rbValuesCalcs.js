@@ -229,22 +229,6 @@ const allRBCalcFunctions = {
       );
     }
 
-    // const allRBOneHalfManagedAndCashProjectedPointsValues = [];
-    // const allRBOneFullManagedAndCashProjectedPointsValues = [];
-
-    // const allRBTwoHalfManagedAndCashProjectedPointsValues = [];
-    // const allRBTwoFullManagedAndCashProjectedPointsValues = [];
-
-    // const allRBOneHalfManagedAndCashProjectedPointsValuesPlusNames = [];
-    // const allRBOneFullManagedAndCashProjectedPointsValuesPlusNames = [];
-    // const allRBTwoHalfManagedAndCashProjectedPointsValuePlusNames = [];
-    // const allRBTwoFullManagedAndCashProjectedPointsValuePlusNames = [];
-
-    // const allRBHalfManagedAndCashProjectedPointsValues = [];
-    // const allRBFullManagedAndCashProjectedPointsValues = [];
-    // const allRBHalfManagedAndCashProjectedPointsValuesPlusNames = [];
-    // const allRBFullManagedAndCashProjectedPointsValuesPlusNames = [];
-
     if (
       gameInfo.week.currentWeek === 5 ||
       (gameInfo.week.currentWeek === 6 &&
