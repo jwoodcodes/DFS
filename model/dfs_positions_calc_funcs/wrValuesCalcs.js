@@ -378,6 +378,17 @@ allWRs.map(function (team, i) {
   wrThreePercentageOfMatchingRoleWeeks.push(wrThreematchingWeeksPercentage);
 });
 
+const allWROneHalfManagedAndCashProjectedPointsValues = [];
+const allWROneFullManagedAndCashProjectedPointsValues = [];
+
+const allWROneHalfManagedAndCashProjectedPointsValuesPlusNames = [];
+const allWROneFullManagedAndCashProjectedPointsValuesPlusNames = [];
+
+const allWRHalfManagedAndCashProjectedPointsValues = [];
+const allWRFullManagedAndCashProjectedPointsValues = [];
+const allWRHalfManagedAndCashProjectedPointsValuesPlusNames = [];
+const allWRFullManagedAndCashProjectedPointsValuesPlusNames = [];
+
 allWROneTotalScores.map(function (score, i, array) {
   let halfTwentyFifthPercentProjection =
     allWRs[i].WROne.halfTwentyFifthPercentProjectedPoints;
@@ -394,6 +405,8 @@ allWROneTotalScores.map(function (score, i, array) {
 
   let WRHalfProjectedPoints = 0;
   let WRFullProjectedPoints = 0;
+  let halfManagedAndCash = 0;
+  let fullManagedAndCash = 0;
 
   //   console.log(`${score}: ${allWRs[i].WROne.name}`);
 
@@ -411,12 +424,23 @@ allWROneTotalScores.map(function (score, i, array) {
       WRHalfProjectedPoints = halfTwentyFifthPercentProjection;
       WRFullProjectedPoints = PPRTwentyFifthPercentProjection;
     }
+
+    halfManagedAndCash =
+      (WRHalfProjectedPoints +
+        allWRs[i].WROne.fourForFourHalfPPRProjectedPoints) /
+      2;
+    fullManagedAndCash =
+      (WRFullProjectedPoints +
+        allWRs[i].WROne.fourForFourFullPPRProjectedPoints) /
+      2;
   } else if (
     gameInfo.week.currentWeek > 6 &&
     wrOnePercentageOfMatchingRoleWeeks[i] < 0.75
   ) {
     WRHalfProjectedPoints = allWRs[i].WROne.fourForFourHalfPPRProjectedPoints;
     WRFullProjectedPoints = allWRs[i].WROne.fourForFourFullPPRProjectedPoints;
+    halfManagedAndCash = allWRs[i].WROne.fourForFourHalfPPRProjectedPoints;
+    fullManagedAndCash = allWRs[i].WROne.fourForFourFullPPRProjectedPoints;
   }
 
   if (
@@ -446,6 +470,8 @@ allWROneTotalScores.map(function (score, i, array) {
 
     WRHalfProjectedPoints = +totalHalfAvg.toFixed(2);
     WRFullProjectedPoints = +totalFullAvg.toFixed(2);
+    halfManagedAndCash = +totalHalfAvg.toFixed(2);
+    fullManagedAndCash = +totalFullAvg.toFixed(2);
   } else if (
     gameInfo.week.currentWeek === 5 ||
     (gameInfo.week.currentWeek === 6 &&
@@ -453,23 +479,49 @@ allWROneTotalScores.map(function (score, i, array) {
   ) {
     WRHalfProjectedPoints = allWRs[i].WROne.fourForFourHalfPPRProjectedPoints;
     WRFullProjectedPoints = allWRs[i].WROne.fourForFourFullPPRProjectedPoints;
+    halfManagedAndCash = allWRs[i].WROne.fourForFourHalfPPRProjectedPoints;
+    fullManagedAndCash = allWRs[i].WROne.fourForFourFullPPRProjectedPoints;
   }
 
   if (gameInfo.week.currentWeek < 5) {
     WRHalfProjectedPoints = allWRs[i].WROne.fourForFourHalfPPRProjectedPoints;
     WRFullProjectedPoints = allWRs[i].WROne.fourForFourFullPPRProjectedPoints;
+    halfManagedAndCash = allWRs[i].WROne.fourForFourHalfPPRProjectedPoints;
+    fullManagedAndCash = allWRs[i].WROne.fourForFourFullPPRProjectedPoints;
   }
 
   allHalfWROneFinalProjectedPointsValues.push(WRHalfProjectedPoints);
+  allWROneHalfManagedAndCashProjectedPointsValues.push(halfManagedAndCash);
   allHalfWROneFinalProjectedPointsValuesPlusNames.push(
     `${allWRs[i].WROne.name}: ${WRHalfProjectedPoints}`
   );
+  allWROneHalfManagedAndCashProjectedPointsValuesPlusNames.push(
+    `${allWRs[i].WROne.name}: ${halfManagedAndCash}`
+  );
+  allWRHalfManagedAndCashProjectedPointsValues.push(halfManagedAndCash);
+  allWRHalfManagedAndCashProjectedPointsValuesPlusNames.push(
+    `${allWRs[i].WROne.name}: ${halfManagedAndCash}`
+  );
 
   allFullWROneFinalProjectedPointsValues.push(WRFullProjectedPoints);
+  allWROneFullManagedAndCashProjectedPointsValues.push(fullManagedAndCash);
   allFullWROneFinalProjectedPointsValuesPlusNames.push(
     `${allWRs[i].WROne.name}: ${WRFullProjectedPoints}`
   );
+  allWROneFullManagedAndCashProjectedPointsValuesPlusNames.push(
+    `${allWRs[i].WROne.name}: ${fullManagedAndCash}`
+  );
+  allWRFullManagedAndCashProjectedPointsValues.push(fullManagedAndCash);
+  allWRFullManagedAndCashProjectedPointsValuesPlusNames.push(
+    `${allWRs[i].WROne.name}: ${fullManagedAndCash}`
+  );
 });
+
+// const allWROneHalfManagedAndCashProjectedPointsValues = [];
+// const allWROneFullManagedAndCashProjectedPointsValues = [];
+
+// const allWROneHalfManagedAndCashProjectedPointsValuesPlusNames = [];
+// const allWROneFullManagedAndCashProjectedPointsValuesPlusNames = [];
 
 ////////////////////WR2's- calculaing and assigning projections for all WR2s
 
@@ -478,6 +530,12 @@ const allHalfWRTwoFinalProjectedPointsValuesPlusNames = [];
 
 const allFullWRTwoFinalProjectedPointsValues = [];
 const allFullWRTwoFinalProjectedPointsValuesPlusNames = [];
+
+const allWRTwoHalfManagedAndCashProjectedPointsValues = [];
+const allWRTwoFullManagedAndCashProjectedPointsValues = [];
+
+const allWRTwoHalfManagedAndCashProjectedPointsValuePlusNames = [];
+const allWRTwoFullManagedAndCashProjectedPointsValuePlusNames = [];
 
 allWRTwoTotalScores.map(function (score, i, array) {
   let halfTwentyFifthPercentProjection =
@@ -495,6 +553,8 @@ allWRTwoTotalScores.map(function (score, i, array) {
 
   let WRHalfProjectedPoints = 0;
   let WRFullProjectedPoints = 0;
+  let halfManagedAndCash = 0;
+  let fullManagedAndCash = 0;
 
   //   console.log(`${score}: ${allWRs[i].WRTwo.name}`);
 
@@ -512,12 +572,23 @@ allWRTwoTotalScores.map(function (score, i, array) {
       WRHalfProjectedPoints = halfTwentyFifthPercentProjection;
       WRFullProjectedPoints = PPRTwentyFifthPercentProjection;
     }
+
+    halfManagedAndCash =
+      (WRHalfProjectedPoints +
+        allWRs[i].WRTwo.fourForFourHalfPPRProjectedPoints) /
+      2;
+    fullManagedAndCash =
+      (WRFullProjectedPoints +
+        allWRs[i].WRTwo.fourForFourFullPPRProjectedPoints) /
+      2;
   } else if (
     gameInfo.week.currentWeek > 6 &&
     wrTwoPercentageOfMatchingRoleWeeks[i] < 0.75
   ) {
     WRHalfProjectedPoints = allWRs[i].WRTwo.fourForFourHalfPPRProjectedPoints;
     WRFullProjectedPoints = allWRs[i].WRTwo.fourForFourFullPPRProjectedPoints;
+    halfManagedAndCash = allWRs[i].WRTwo.fourForFourHalfPPRProjectedPoints;
+    fullManagedAndCash = allWRs[i].WRTwo.fourForFourFullPPRProjectedPoints;
   }
 
   if (
@@ -547,6 +618,8 @@ allWRTwoTotalScores.map(function (score, i, array) {
 
     WRHalfProjectedPoints = +totalHalfAvg.toFixed(2);
     WRFullProjectedPoints = +totalFullAvg.toFixed(2);
+    halfManagedAndCash = +totalHalfAvg.toFixed(2);
+    fullManagedAndCash = +totalFullAvg.toFixed(2);
   } else if (
     gameInfo.week.currentWeek === 5 ||
     (gameInfo.week.currentWeek === 6 &&
@@ -554,21 +627,41 @@ allWRTwoTotalScores.map(function (score, i, array) {
   ) {
     WRHalfProjectedPoints = allWRs[i].WRTwo.fourForFourHalfPPRProjectedPoints;
     WRFullProjectedPoints = allWRs[i].WRTwo.fourForFourFullPPRProjectedPoints;
+    halfManagedAndCash = allWRs[i].WRTwo.fourForFourHalfPPRProjectedPoints;
+    fullManagedAndCash = allWRs[i].WRTwo.fourForFourFullPPRProjectedPoints;
   }
 
   if (gameInfo.week.currentWeek < 5) {
     WRHalfProjectedPoints = allWRs[i].WRTwo.fourForFourHalfPPRProjectedPoints;
     WRFullProjectedPoints = allWRs[i].WRTwo.fourForFourFullPPRProjectedPoints;
+    halfManagedAndCash = allWRs[i].WRTwo.fourForFourHalfPPRProjectedPoints;
+    fullManagedAndCash = allWRs[i].WRTwo.fourForFourFullPPRProjectedPoints;
   }
 
   allHalfWRTwoFinalProjectedPointsValues.push(WRHalfProjectedPoints);
+  allWRTwoHalfManagedAndCashProjectedPointsValues.push(halfManagedAndCash);
   allHalfWRTwoFinalProjectedPointsValuesPlusNames.push(
     `${allWRs[i].WRTwo.name}: ${WRHalfProjectedPoints}`
   );
+  allWRTwoHalfManagedAndCashProjectedPointsValuePlusNames.push(
+    `${allWRs[i].WRTwo.name}: ${halfManagedAndCash}`
+  );
+  allWRHalfManagedAndCashProjectedPointsValues.push(halfManagedAndCash);
+  allWRHalfManagedAndCashProjectedPointsValuesPlusNames.push(
+    `${allWRs[i].WRTwo.name}: ${halfManagedAndCash}`
+  );
 
   allFullWRTwoFinalProjectedPointsValues.push(WRFullProjectedPoints);
+  allWRTwoFullManagedAndCashProjectedPointsValues.push(fullManagedAndCash);
   allFullWRTwoFinalProjectedPointsValuesPlusNames.push(
     `${allWRs[i].WRTwo.name}: ${WRFullProjectedPoints}`
+  );
+  allWRTwoFullManagedAndCashProjectedPointsValuePlusNames.push(
+    `${allWRs[i].WRTwo.name}: ${fullManagedAndCash}`
+  );
+  allWRFullManagedAndCashProjectedPointsValues.push(fullManagedAndCash);
+  allWRFullManagedAndCashProjectedPointsValuesPlusNames.push(
+    `${allWRs[i].WRTwo.name}: ${fullManagedAndCash}`
   );
 });
 
@@ -580,6 +673,12 @@ const allHalfWRThreeFinalProjectedPointsValuesPlusNames = [];
 
 const allFullWRThreeFinalProjectedPointsValues = [];
 const allFullWRThreeFinalProjectedPointsValuesPlusNames = [];
+
+const allWRThreeHalfManagedAndCashProjectedPointsValues = [];
+const allWRThreeFullManagedAndCashProjectedPointsValues = [];
+
+const allWRThreeHalfManagedAndCashProjectedPointsValuePlusNames = [];
+const allWRThreeFullManagedAndCashProjectedPointsValuePlusNames = [];
 
 allWRThreeTotalScores.map(function (score, i, array) {
   let halfTwentyFifthPercentProjection =
@@ -597,6 +696,8 @@ allWRThreeTotalScores.map(function (score, i, array) {
 
   let WRHalfProjectedPoints = 0;
   let WRFullProjectedPoints = 0;
+  let halfManagedAndCash = 0;
+  let fullManagedAndCash = 0;
 
   //   console.log(`${score}: ${allWRs[i].WRTwo.name}`);
 
@@ -614,12 +715,23 @@ allWRThreeTotalScores.map(function (score, i, array) {
       WRHalfProjectedPoints = halfTwentyFifthPercentProjection;
       WRFullProjectedPoints = PPRTwentyFifthPercentProjection;
     }
+
+    halfManagedAndCash =
+      (WRHalfProjectedPoints +
+        allWRs[i].WRThree.fourForFourHalfPPRProjectedPoints) /
+      2;
+    fullManagedAndCash =
+      (WRFullProjectedPoints +
+        allWRs[i].WRThree.fourForFourFullPPRProjectedPoints) /
+      2;
   } else if (
     gameInfo.week.currentWeek > 6 &&
     wrThreePercentageOfMatchingRoleWeeks[i] < 0.75
   ) {
     WRHalfProjectedPoints = allWRs[i].WRThree.fourForFourHalfPPRProjectedPoints;
     WRFullProjectedPoints = allWRs[i].WRThree.fourForFourFullPPRProjectedPoints;
+    halfManagedAndCash = allWRs[i].WRThree.fourForFourHalfPPRProjectedPoints;
+    fullManagedAndCash = allWRs[i].WRThree.fourForFourFullPPRProjectedPoints;
   }
 
   if (
@@ -649,6 +761,8 @@ allWRThreeTotalScores.map(function (score, i, array) {
 
     WRHalfProjectedPoints = +totalHalfAvg.toFixed(2);
     WRFullProjectedPoints = +totalFullAvg.toFixed(2);
+    halfManagedAndCash = +totalHalfAvg.toFixed(2);
+    fullManagedAndCash = +totalFullAvg.toFixed(2);
   } else if (
     gameInfo.week.currentWeek === 5 ||
     (gameInfo.week.currentWeek === 6 &&
@@ -656,21 +770,44 @@ allWRThreeTotalScores.map(function (score, i, array) {
   ) {
     WRHalfProjectedPoints = allWRs[i].WRThree.fourForFourHalfPPRProjectedPoints;
     WRFullProjectedPoints = allWRs[i].WRThree.fourForFourFullPPRProjectedPoints;
+    halfManagedAndCash = allWRs[i].WRThree.fourForFourHalfPPRProjectedPoints;
+    fullManagedAndCash = allWRs[i].WRThree.fourForFourFullPPRProjectedPoints;
   }
 
   if (gameInfo.week.currentWeek < 5) {
     WRHalfProjectedPoints = allWRs[i].WRThree.fourForFourHalfPPRProjectedPoints;
     WRFullProjectedPoints = allWRs[i].WRThree.fourForFourFullPPRProjectedPoints;
+    halfManagedAndCash = allWRs[i].WRThree.fourForFourHalfPPRProjectedPoints;
+    fullManagedAndCash = allWRs[i].WRThree.fourForFourFullPPRProjectedPoints;
   }
 
   allHalfWRThreeFinalProjectedPointsValues.push(WRHalfProjectedPoints);
+  allWRThreeHalfManagedAndCashProjectedPointsValues.push(halfManagedAndCash);
   allHalfWRThreeFinalProjectedPointsValuesPlusNames.push(
     `${allWRs[i].WRThree.name}: ${WRHalfProjectedPoints}`
   );
+  allWRThreeHalfManagedAndCashProjectedPointsValuePlusNames.push(
+    `${allWRs[i].WRThree.name}: ${halfManagedAndCash}`
+  );
+  allWRHalfManagedAndCashProjectedPointsValues.push(halfManagedAndCash);
+  allWRHalfManagedAndCashProjectedPointsValuesPlusNames.push(
+    `${allWRs[i].WRThree.name}: ${halfManagedAndCash}`
+  );
 
   allFullWRThreeFinalProjectedPointsValues.push(WRFullProjectedPoints);
+  allWRThreeFullManagedAndCashProjectedPointsValues.push(fullManagedAndCash);
   allFullWRThreeFinalProjectedPointsValuesPlusNames.push(
     `${allWRs[i].WRThree.name}: ${WRFullProjectedPoints}`
+  );
+  allWRThreeFullManagedAndCashProjectedPointsValuePlusNames.push(
+    `${allWRs[i].WRThree.name}: ${fullManagedAndCash}`
+  );
+  allWRFullManagedAndCashProjectedPointsValues.push(
+    `${allWRs[i].WRThree.name}: ${fullManagedAndCash}`
+  );
+  allWRFullManagedAndCashProjectedPointsValues.push(fullManagedAndCash);
+  allWRFullManagedAndCashProjectedPointsValuesPlusNames.push(
+    `${allWRs[i].WRThree.name}: ${fullManagedAndCash}`
   );
 });
 
@@ -879,6 +1016,42 @@ const allWRData = {
     fullProjectedPointsPerDollarDraftkings,
   fullProjectedPointsPerDollarFanduel: fullProjectedPointsPerDollarFanduel,
   fullProjectedPointsPerDollarYahoo: fullProjectedPointsPerDollarYahoo,
+
+  //managedAndCash
+  allWROneHalfManagedAndCashProjectedPointsValues:
+    allWROneHalfManagedAndCashProjectedPointsValues,
+  allWROneFullManagedAndCashProjectedPointsValues:
+    allWROneFullManagedAndCashProjectedPointsValues,
+  allWRTwoHalfManagedAndCashProjectedPointsValues:
+    allWRTwoHalfManagedAndCashProjectedPointsValues,
+  allWRTwoFullManagedAndCashProjectedPointsValues:
+    allWRTwoFullManagedAndCashProjectedPointsValues,
+  allWRThreeHalfManagedAndCashProjectedPointsValues:
+    allWRThreeHalfManagedAndCashProjectedPointsValues,
+  allWRThreeFullManagedAndCashProjectedPointsValues:
+    allWRThreeFullManagedAndCashProjectedPointsValues,
+
+  allWROneHalfManagedAndCashProjectedPointsValuesPlusNames:
+    allWROneHalfManagedAndCashProjectedPointsValuesPlusNames,
+  allWROneFullManagedAndCashProjectedPointsValuesPlusNames:
+    allWROneFullManagedAndCashProjectedPointsValuesPlusNames,
+  allWRTwoHalfManagedAndCashProjectedPointsValuePlusNames:
+    allWRTwoHalfManagedAndCashProjectedPointsValuePlusNames,
+  allWRTwoFullManagedAndCashProjectedPointsValuePlusNames:
+    allWRTwoFullManagedAndCashProjectedPointsValuePlusNames,
+  allWRThreeHalfManagedAndCashProjectedPointsValuePlusNames:
+    allWRThreeHalfManagedAndCashProjectedPointsValuePlusNames,
+  allWRThreeFullManagedAndCashProjectedPointsValuePlusNames:
+    allWRThreeFullManagedAndCashProjectedPointsValuePlusNames,
+
+  allWRHalfManagedAndCashProjectedPointsValues:
+    allWRHalfManagedAndCashProjectedPointsValues,
+  allWRFullManagedAndCashProjectedPointsValues:
+    allWRFullManagedAndCashProjectedPointsValues,
+  allWRHalfManagedAndCashProjectedPointsValuesPlusNames:
+    allWRHalfManagedAndCashProjectedPointsValuesPlusNames,
+  allWRFullManagedAndCashProjectedPointsValuesPlusNames:
+    allWRFullManagedAndCashProjectedPointsValuesPlusNames,
 };
 
 // console.log(allFullWRThreeFinalProjectedPointsValuesPlusNames);
