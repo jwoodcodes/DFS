@@ -860,22 +860,19 @@ allFullWROneFinalProjectedPointsValuesPlusNames.map(function (proj, i) {
 
 /////////////////////////projected points per dollar
 
-const halfProjectedPointsPerDollarDraftkings = [];
 const halfProjectedPointsPerDollarFanduel = [];
 const halfProjectedPointsPerDollarYahoo = [];
-
 const fullProjectedPointsPerDollarDraftkings = [];
-const fullProjectedPointsPerDollarFanduel = [];
-const fullProjectedPointsPerDollarYahoo = [];
+
+const cashprojectedPointsPerDollarDraftkings = [];
+const cashprojectedPointsPerDollarFanduel = [];
+const cashprojectedPointsPerDollarYahoo = [];
 
 allWRs.forEach(function (team, i) {
   let WROnes = team.WROne;
   let WRTwos = team.WRTwo;
   let WRThrees = team.WRThree;
 
-  let wrOnehalfdraftkings = +(
-    allHalfWROneFinalProjectedPointsValues[i] / WROnes.draftkingsSalary
-  ).toFixed(4);
   let wrOnehalfFanduel = +(
     allHalfWROneFinalProjectedPointsValues[i] / WROnes.fanduelSalary
   ).toFixed(4);
@@ -883,9 +880,6 @@ allWRs.forEach(function (team, i) {
     allHalfWROneFinalProjectedPointsValues[i] / WROnes.yahooSalary
   ).toFixed(4);
 
-  let wrTwohalfdraftkings = +(
-    allHalfWRTwoFinalProjectedPointsValues[i] / WRTwos.draftkingsSalary
-  ).toFixed(4);
   let wrTwohalfFanduel = +(
     allHalfWRTwoFinalProjectedPointsValues[i] / WRTwos.fanduelSalary
   ).toFixed(4);
@@ -893,9 +887,6 @@ allWRs.forEach(function (team, i) {
     allHalfWRTwoFinalProjectedPointsValues[i] / WRTwos.yahooSalary
   ).toFixed(4);
 
-  let wrThreehalfdraftkings = +(
-    allHalfWRThreeFinalProjectedPointsValues[i] / WRThrees.draftkingsSalary
-  ).toFixed(4);
   let wrThreehalfFanduel = +(
     allHalfWRThreeFinalProjectedPointsValues[i] / WRThrees.fanduelSalary
   ).toFixed(4);
@@ -903,55 +894,29 @@ allWRs.forEach(function (team, i) {
     allHalfWRThreeFinalProjectedPointsValues[i] / WRThrees.yahooSalary
   ).toFixed(4);
 
-  halfProjectedPointsPerDollarDraftkings.push(wrOnehalfdraftkings);
   halfProjectedPointsPerDollarFanduel.push(wrOnehalfFanduel);
   halfProjectedPointsPerDollarYahoo.push(wrOnehalfYahoo);
-  halfProjectedPointsPerDollarDraftkings.push(wrTwohalfdraftkings);
   halfProjectedPointsPerDollarFanduel.push(wrTwohalfFanduel);
   halfProjectedPointsPerDollarYahoo.push(wrTwohalfYahoo);
-  halfProjectedPointsPerDollarDraftkings.push(wrThreehalfdraftkings);
+
   halfProjectedPointsPerDollarFanduel.push(wrThreehalfFanduel);
   halfProjectedPointsPerDollarYahoo.push(wrThreehalfYahoo);
 
   let wrOneFulldraftkings = +(
     allFullWROneFinalProjectedPointsValues[i] / WROnes.draftkingsSalary
   ).toFixed(4);
-  let wrOneFullFanduel = +(
-    allFullWROneFinalProjectedPointsValues[i] / WROnes.fanduelSalary
-  ).toFixed(4);
-  let wrOneFullYahoo = +(
-    allFullWROneFinalProjectedPointsValues[i] / WROnes.yahooSalary
-  ).toFixed(4);
 
   let wrTwoFulldraftkings = +(
     allFullWRTwoFinalProjectedPointsValues[i] / WRTwos.draftkingsSalary
-  ).toFixed(4);
-  let wrTwoFullFanduel = +(
-    allFullWRTwoFinalProjectedPointsValues[i] / WRTwos.fanduelSalary
-  ).toFixed(4);
-  let wrTwoFullYahoo = +(
-    allFullWRTwoFinalProjectedPointsValues[i] / WRTwos.yahooSalary
   ).toFixed(4);
 
   let wrThreeFulldraftkings = +(
     allFullWRThreeFinalProjectedPointsValues[i] / WRThrees.draftkingsSalary
   ).toFixed(4);
-  let wrThreeFullFanduel = +(
-    allFullWRThreeFinalProjectedPointsValues[i] / WRThrees.fanduelSalary
-  ).toFixed(4);
-  let wrThreeFullYahoo = +(
-    allFullWRThreeFinalProjectedPointsValues[i] / WRThrees.yahooSalary
-  ).toFixed(4);
 
   fullProjectedPointsPerDollarDraftkings.push(wrOneFulldraftkings);
-  fullProjectedPointsPerDollarFanduel.push(wrOneFullFanduel);
-  fullProjectedPointsPerDollarYahoo.push(wrOneFullYahoo);
   fullProjectedPointsPerDollarDraftkings.push(wrTwoFulldraftkings);
-  fullProjectedPointsPerDollarFanduel.push(wrTwoFullFanduel);
-  fullProjectedPointsPerDollarYahoo.push(wrTwoFullYahoo);
   fullProjectedPointsPerDollarDraftkings.push(wrThreeFulldraftkings);
-  fullProjectedPointsPerDollarFanduel.push(wrThreeFullFanduel);
-  fullProjectedPointsPerDollarYahoo.push(wrThreeFullYahoo);
 });
 
 const allWRData = {
@@ -1007,15 +972,11 @@ const allWRData = {
   allWRsFullProjectedPointsValuesPlusNames:
     allWRsFullProjectedPointsValuesPlusNames,
 
-  halfProjectedPointsPerDollarDraftkings:
-    halfProjectedPointsPerDollarDraftkings,
   halfProjectedPointsPerDollarFanduel: halfProjectedPointsPerDollarFanduel,
   halfProjectedPointsPerDollarYahoo: halfProjectedPointsPerDollarYahoo,
 
   fullProjectedPointsPerDollarDraftkings:
     fullProjectedPointsPerDollarDraftkings,
-  fullProjectedPointsPerDollarFanduel: fullProjectedPointsPerDollarFanduel,
-  fullProjectedPointsPerDollarYahoo: fullProjectedPointsPerDollarYahoo,
 
   //managedAndCash
   allWROneHalfManagedAndCashProjectedPointsValues:

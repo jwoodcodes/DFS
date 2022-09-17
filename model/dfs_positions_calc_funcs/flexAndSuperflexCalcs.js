@@ -62,22 +62,22 @@ allRBData.allRBHalfPPRProjectedPointsValues.forEach(function (player, i) {
   allHalfFlexValues.push(player);
   allHalfSuperflexValues.push(player);
   allFlexDraftkingsProjectedpointsPerdollar.push(
-    allRBData.fullProjectedPointsPerDollarDraftkings[i]
+    allRBData.ProjectedPointsPerDollarDraftkings[i]
   );
   allSuperFlexDraftkingsProjectedpointsPerdollar.push(
-    allRBData.fullProjectedPointsPerDollarDraftkings[i]
+    allRBData.ProjectedPointsPerDollarDraftkings[i]
   );
   allFlexFandeulProjectedpointsPerdollar.push(
-    allRBData.halfProjectedPointsPerDollarFanduel[i]
+    allRBData.ProjectedPointsPerDollarFanduel[i]
   );
   allSuperFlexFandeulProjectedpointsPerdollar.push(
-    allRBData.halfProjectedPointsPerDollarFanduel[i]
+    allRBData.ProjectedPointsPerDollarFanduel[i]
   );
   allFlexYahooProjectedpointsPerdollar.push(
-    allRBData.halfProjectedPointsPerDollarYahoo[i]
+    allRBData.ProjectedPointsPerDollarYahoo[i]
   );
   allSuperFlexYahooProjectedpointsPerdollar.push(
-    allRBData.halfProjectedPointsPerDollarYahoo[i]
+    allRBData.ProjectedPointsPerDollarYahoo[i]
   );
   if (i < allWRData.allWRsHalfProjectedPointsValues.length) {
     allHalfFlexValues.push(allWRData.allWRsHalfProjectedPointsValues[i]);
