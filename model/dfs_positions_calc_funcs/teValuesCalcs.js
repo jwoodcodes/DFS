@@ -150,6 +150,14 @@ const allFullTEFinalProjectedPointsValuesPlusNames = [];
 const allTEPremiuimFinalProjectedPointsValues = [];
 const allTEPremiuimFinalProjectedPointsValuesPlusNames = [];
 
+const allTEHalfManagedAndCashProjectedPointsValues = [];
+const allTEFullManagedAndCashProjectedPointsValues = [];
+const allTETEPManagedAndCashProjectedPointsValues = [];
+
+const allTEHalfManagedAndCashProjectedPointsValuesPlusNames = [];
+const allTEFullManagedAndCashProjectedPointsValuesPlusNames = [];
+const allTETEPManagedAndCashProjectedPointsValuesPlusNames = [];
+
 allTETotalScores.map(function (score, i, array) {
   let halfTwentyFifthPercentProjection =
     allTEs[i].TE.halfTwentyFifthPercentProjectedPoints;
@@ -171,6 +179,10 @@ allTETotalScores.map(function (score, i, array) {
   let TEHalfProjectedPoints = 0;
   let TEFullProjectedPoints = 0;
   let TEPremiuimPorjectedPoints = 0;
+
+  let halfManagedAndCash = 0;
+  let fullManagedAndCash = 0;
+  let TEPManagedAndCash = 0;
 
   //   console.log(`${score}: ${allTEs[i].TE.name}`);
 
@@ -197,6 +209,15 @@ allTETotalScores.map(function (score, i, array) {
         PPRTwentyFifthPercentProjection + TEPremiuimAddedProjectedPoints
       ).toFixed(2);
     }
+
+    halfManagedAndCash = (TEHalfProjectedPoints + HalfFourForFour) / 2;
+    fullManagedAndCash = (TEFullProjectedPoints + FullFourForFour) / 2;
+    tempTEPremiuimPorjectedPoints = +(
+      FullFourForFour + TEPremiuimAddedProjectedPoints
+    ).toFixed(2);
+    tempTEPManagedAndCash =
+      (TEPremiuimPorjectedPoints + tempTEPremiuimPorjectedPoints) / 2;
+    TEPManagedAndCash = +tempTEPManagedAndCash.toFixed(2);
   } else if (
     gameInfo.week.currentWeek > 6 &&
     tePercentageOfMatchingRoleWeeks[i] < 0.75
@@ -204,6 +225,11 @@ allTETotalScores.map(function (score, i, array) {
     TEHalfProjectedPoints = HalfFourForFour;
     TEFullProjectedPoints = FullFourForFour;
     TEPremiuimPorjectedPoints = +(
+      FullFourForFour + TEPremiuimAddedProjectedPoints
+    ).toFixed(2);
+    halfManagedAndCash = HalfFourForFour;
+    fullManagedAndCash = FullFourForFour;
+    TEPManagedAndCash = +(
       FullFourForFour + TEPremiuimAddedProjectedPoints
     ).toFixed(2);
   }
@@ -244,6 +270,10 @@ allTETotalScores.map(function (score, i, array) {
       TEPremiuimPorjectedPoints =
         (TEPremiuimPorjectedPointsTotal + FullFourForFour) / 2;
     }
+
+    halfManagedAndCash = TEHalfProjectedPoints;
+    fullManagedAndCash = TEFullProjectedPoints;
+    TEPManagedAndCash = TEPremiuimPorjectedPointsTotal;
   } else if (
     gameInfo.week.currentWeek === 5 ||
     (gameInfo.week.currentWeek === 6 &&
@@ -254,6 +284,11 @@ allTETotalScores.map(function (score, i, array) {
     TEPremiuimPorjectedPoints = +(
       FullFourForFour + TEPremiuimAddedProjectedPoints
     ).toFixed(2);
+    halfManagedAndCash = HalfFourForFour;
+    fullManagedAndCash = FullFourForFour;
+    TEPManagedAndCash = +(
+      FullFourForFour + TEPremiuimAddedProjectedPoints
+    ).toFixed(2);
   }
 
   if (gameInfo.week.currentWeek < 5) {
@@ -262,21 +297,38 @@ allTETotalScores.map(function (score, i, array) {
     TEPremiuimPorjectedPoints = +(
       FullFourForFour + TEPremiuimAddedProjectedPoints
     ).toFixed(2);
+    halfManagedAndCash = HalfFourForFour;
+    fullManagedAndCash = FullFourForFour;
+    TEPManagedAndCash = +(
+      FullFourForFour + TEPremiuimAddedProjectedPoints
+    ).toFixed(2);
   }
 
   allHalfTEFinalProjectedPointsValues.push(TEHalfProjectedPoints);
+  allTEHalfManagedAndCashProjectedPointsValues.push(halfManagedAndCash);
   allHalfTEFinalProjectedPointsValuesPlusNames.push(
     `${allTEs[i].TE.name}: ${TEHalfProjectedPoints}`
   );
+  allTEHalfManagedAndCashProjectedPointsValuesPlusNames.push(
+    `${allTEs[i].TE.name}: ${halfManagedAndCash}`
+  );
 
   allFullTEFinalProjectedPointsValues.push(TEFullProjectedPoints);
+  allTEFullManagedAndCashProjectedPointsValues.push(fullManagedAndCash);
   allFullTEFinalProjectedPointsValuesPlusNames.push(
     `${allTEs[i].TE.name}: ${TEFullProjectedPoints}`
   );
+  allTEFullManagedAndCashProjectedPointsValuesPlusNames.push(
+    `${allTEs[i].TE.name}: ${fullManagedAndCash}`
+  );
 
   allTEPremiuimFinalProjectedPointsValues.push(TEPremiuimPorjectedPoints);
+  allTETEPManagedAndCashProjectedPointsValues.push(TEPManagedAndCash);
   allTEPremiuimFinalProjectedPointsValuesPlusNames.push(
-    `${allTEs[i].TE.name}: ${TEPremiuimPorjectedPoints}`
+    `${allTEs[i].TE.name}: ${TEPManagedAndCash}`
+  );
+  allTETEPManagedAndCashProjectedPointsValuesPlusNames.push(
+    `${allTEs[i].TE.name}: ${TEPManagedAndCash}`
   );
 });
 
@@ -363,6 +415,37 @@ const allTEData = {
     tePremiumProjectedPointsPerDollarFanduel,
   tePremiumProjectedPointsPerDollarYahoo:
     tePremiumProjectedPointsPerDollarYahoo,
+
+  //managed and cash
+  allTEHalfManagedAndCashProjectedPointsValues:
+    allTEHalfManagedAndCashProjectedPointsValues,
+  allTEFullManagedAndCashProjectedPointsValues:
+    allTEFullManagedAndCashProjectedPointsValues,
+  allTETEPManagedAndCashProjectedPointsValues:
+    allTETEPManagedAndCashProjectedPointsValues,
+
+  allTEHalfManagedAndCashProjectedPointsValuesPlusNames:
+    allTEHalfManagedAndCashProjectedPointsValuesPlusNames,
+  allTEFullManagedAndCashProjectedPointsValuesPlusNames:
+    allTEFullManagedAndCashProjectedPointsValuesPlusNames,
+  allTETEPManagedAndCashProjectedPointsValuesPlusNames:
+    allTETEPManagedAndCashProjectedPointsValuesPlusNames,
+
+  //managed and cash
+
+  allTEHalfManagedAndCashProjectedPointsValues:
+    allTEHalfManagedAndCashProjectedPointsValues,
+  allTEFullManagedAndCashProjectedPointsValues:
+    allTEFullManagedAndCashProjectedPointsValues,
+  allTETEPManagedAndCashProjectedPointsValues:
+    allTETEPManagedAndCashProjectedPointsValues,
+
+  allTEHalfManagedAndCashProjectedPointsValuesPlusNames:
+    allTEHalfManagedAndCashProjectedPointsValuesPlusNames,
+  allTEFullManagedAndCashProjectedPointsValuesPlusNames:
+    allTEFullManagedAndCashProjectedPointsValuesPlusNames,
+  allTETEPManagedAndCashProjectedPointsValuesPlusNames:
+    allTETEPManagedAndCashProjectedPointsValuesPlusNames,
 };
 
 // console.log(allTEData);

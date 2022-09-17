@@ -724,8 +724,6 @@ allWRThreeTotalScores.map(function (score, i, array) {
       (WRFullProjectedPoints +
         allWRs[i].WRThree.fourForFourFullPPRProjectedPoints) /
       2;
-
-    console.log(halfManagedAndCash);
   } else if (
     gameInfo.week.currentWeek > 6 &&
     wrThreePercentageOfMatchingRoleWeeks[i] < 0.75
@@ -1059,7 +1057,7 @@ const allWRData = {
 // console.log(allFullWRThreeFinalProjectedPointsValuesPlusNames);
 // console.log(allWRsHalfProjectedPointsValuesPlusNames);
 
-console.log(allWRData);
+// console.log(allWRData);
 
 module.exports = allWRCalcFunctions;
 module.exports = allWRData;

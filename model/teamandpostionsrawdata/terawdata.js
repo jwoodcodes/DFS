@@ -900,11 +900,8 @@ const terawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
-
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      fourForFourHalfPPRProjectedPoints: 21,
+      fourForFourFullPPRProjectedPoints: 25,
 
       yahooSalary: 0,
       fanduelSalary: 0,
