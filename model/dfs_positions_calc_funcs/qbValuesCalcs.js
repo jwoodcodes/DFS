@@ -326,6 +326,10 @@ const projectedPointsPerDollarDraftkings = [];
 const projectedPointsPerDollarFanduel = [];
 const projectedPointsPerDollarYahoo = [];
 
+const managedAndCashprojectedPointsPerDollarDraftkings = [];
+const managedAndCashprojectedPointsPerDollarFanduel = [];
+const managedAndCashprojectedPointsPerDollarYahoo = [];
+
 allQBs.forEach(function (team, i) {
   // console.log(team.draftkingsSalary);
   // console.log(allQBFinalProjectedPointsValues[i]);
@@ -334,9 +338,29 @@ allQBs.forEach(function (team, i) {
   let pppdfanduel = allQBFinalProjectedPointsValues[i] / team.fanduelSalary;
   let pppdyahoo = allQBFinalProjectedPointsValues[i] / team.yahooSalary;
 
+  let draftkingsCashPorjectedPointsPerDollar = (
+    +allQBManagedAndCashProjectedPointsValues[i] / team.draftkingsSalary
+  ).toFixed(4);
+  let fanduelCashPorjectedPointsPerDollar = (
+    +allQBManagedAndCashProjectedPointsValues[i] / team.fanduelSalary
+  ).toFixed(4);
+  let yahooCashPorjectedPointsPerDollar = (
+    +allQBManagedAndCashProjectedPointsValues[i] / team.yahooSalary
+  ).toFixed(3);
+
   projectedPointsPerDollarDraftkings.push(pppddraftkings);
   projectedPointsPerDollarFanduel.push(pppdfanduel);
   projectedPointsPerDollarYahoo.push(pppdyahoo);
+
+  managedAndCashprojectedPointsPerDollarDraftkings.push(
+    draftkingsCashPorjectedPointsPerDollar
+  );
+  managedAndCashprojectedPointsPerDollarFanduel.push(
+    fanduelCashPorjectedPointsPerDollar
+  );
+  managedAndCashprojectedPointsPerDollarYahoo.push(
+    yahooCashPorjectedPointsPerDollar
+  );
 });
 
 /////////all QB data////////////
@@ -363,6 +387,13 @@ const allQBData = {
   projectedPointsPerDollarDraftkings: projectedPointsPerDollarDraftkings,
   projectedPointsPerDollarFanduel: projectedPointsPerDollarFanduel,
   projectedPointsPerDollarYahoo: projectedPointsPerDollarYahoo,
+
+  managedAndCashprojectedPointsPerDollarDraftkings:
+    managedAndCashprojectedPointsPerDollarDraftkings,
+  managedAndCashprojectedPointsPerDollarFanduel:
+    managedAndCashprojectedPointsPerDollarFanduel,
+  managedAndCashprojectedPointsPerDollarYahoo:
+    managedAndCashprojectedPointsPerDollarYahoo,
 };
 
 // console.log(allQBData);
