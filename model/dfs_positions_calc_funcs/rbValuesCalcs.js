@@ -26,10 +26,12 @@ const allRBHalfPPRProjectedPointsValues = [];
 const allRBFullPPRProjectedPointsValues = [];
 const allRBHalfManagedAndCashProjectedPointsValues = [];
 const allRBFullManagedAndCashProjectedPointsValues = [];
+
 const allRBHalfPPRProjectedPointsValuesPlusNames = [];
 const allRBFullPPRProjectedPointsValuesPlusNames = [];
 const allRBHalfManagedAndCashProjectedPointsValuesPlusNames = [];
 const allRBFullManagedAndCashProjectedPointsValuesPlusNames = [];
+
 const rbOnenumOfMatchingRoleWeeks = [];
 const rbTwonumOfMatchingRoleWeeks = [];
 
@@ -351,6 +353,10 @@ const cashprojectedPointsPerDollarDraftkings = [];
 const cashprojectedPointsPerDollarFanduel = [];
 const cashprojectedPointsPerDollarYahoo = [];
 
+const cashprojectedPointsPerDollarDraftkingsPlusNames = [];
+const cashprojectedPointsPerDollarFanduelPlusNames = [];
+const cashprojectedPointsPerDollarYahooPlusNames = [];
+
 allRBs.forEach(function (team, i) {
   let RBOnes = team.RBOne;
   let RBTwos = team.RBTwo;
@@ -391,6 +397,18 @@ allRBs.forEach(function (team, i) {
   cashprojectedPointsPerDollarYahoo.push(rbOneCashYahoo);
   cashprojectedPointsPerDollarFanduel.push(rbTwoCashFanduel);
   cashprojectedPointsPerDollarYahoo.push(rbTwoCashYahoo);
+  cashprojectedPointsPerDollarFanduelPlusNames.push(
+    `${rbOneCashFanduel}: ${RBOnes.name}`
+  );
+  cashprojectedPointsPerDollarFanduelPlusNames.push(
+    `${rbTwoCashFanduel}: ${RBTwos.name}`
+  );
+  cashprojectedPointsPerDollarYahooPlusNames.push(
+    `${rbOneCashYahoo}: ${RBOnes.name}`
+  );
+  cashprojectedPointsPerDollarYahooPlusNames.push(
+    `${rbTwoCashYahoo}: ${RBTwos.name}`
+  );
 
   let rbOnedraftkings = +(
     allRBOneFullPPRProjectedPointsValues[i] / RBOnes.draftkingsSalary
@@ -411,6 +429,12 @@ allRBs.forEach(function (team, i) {
   ProjectedPointsPerDollarDraftkings.push(rbTwodraftkings);
   cashprojectedPointsPerDollarDraftkings.push(rbOneCashDraftkings);
   cashprojectedPointsPerDollarDraftkings.push(rbTwoCashDraftkings);
+  cashprojectedPointsPerDollarDraftkingsPlusNames.push(
+    `${rbOneCashDraftkings}: ${RBOnes.name}`
+  );
+  cashprojectedPointsPerDollarDraftkingsPlusNames.push(
+    `${rbTwoCashDraftkings}: ${RBTwos.name}`
+  );
 });
 
 //////////////calculating projected points per dollar
@@ -478,6 +502,13 @@ const allRBData = {
     cashprojectedPointsPerDollarDraftkings,
   cashprojectedPointsPerDollarFanduel: cashprojectedPointsPerDollarFanduel,
   cashprojectedPointsPerDollarYahoo: cashprojectedPointsPerDollarYahoo,
+
+  cashprojectedPointsPerDollarDraftkingsPlusNames:
+    cashprojectedPointsPerDollarDraftkingsPlusNames,
+  cashprojectedPointsPerDollarFanduelPlusNames:
+    cashprojectedPointsPerDollarFanduelPlusNames,
+  cashprojectedPointsPerDollarYahooPlusNames:
+    cashprojectedPointsPerDollarYahooPlusNames,
 };
 
 // console.log(allRBData);

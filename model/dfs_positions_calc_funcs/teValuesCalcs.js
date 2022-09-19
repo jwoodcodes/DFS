@@ -307,28 +307,28 @@ allTETotalScores.map(function (score, i, array) {
   allHalfTEFinalProjectedPointsValues.push(TEHalfProjectedPoints);
   allTEHalfManagedAndCashProjectedPointsValues.push(halfManagedAndCash);
   allHalfTEFinalProjectedPointsValuesPlusNames.push(
-    `${allTEs[i].TE.name}: ${TEHalfProjectedPoints}`
+    `${TEHalfProjectedPoints}: ${allTEs[i].TE.name}`
   );
   allTEHalfManagedAndCashProjectedPointsValuesPlusNames.push(
-    `${allTEs[i].TE.name}: ${halfManagedAndCash}`
+    `${halfManagedAndCash}: ${allTEs[i].TE.name}`
   );
 
   allFullTEFinalProjectedPointsValues.push(TEFullProjectedPoints);
   allTEFullManagedAndCashProjectedPointsValues.push(fullManagedAndCash);
   allFullTEFinalProjectedPointsValuesPlusNames.push(
-    `${allTEs[i].TE.name}: ${TEFullProjectedPoints}`
+    `${TEFullProjectedPoints}: ${allTEs[i].TE.name}`
   );
   allTEFullManagedAndCashProjectedPointsValuesPlusNames.push(
-    `${allTEs[i].TE.name}: ${fullManagedAndCash}`
+    `${fullManagedAndCash}: ${allTEs[i].TE.name}`
   );
 
   allTEPremiuimFinalProjectedPointsValues.push(TEPremiuimPorjectedPoints);
   allTETEPManagedAndCashProjectedPointsValues.push(TEPManagedAndCash);
   allTEPremiuimFinalProjectedPointsValuesPlusNames.push(
-    `${allTEs[i].TE.name}: ${TEPManagedAndCash}`
+    `${TEPManagedAndCash}: ${allTEs[i].TE.name}`
   );
   allTETEPManagedAndCashProjectedPointsValuesPlusNames.push(
-    `${allTEs[i].TE.name}: ${TEPManagedAndCash}`
+    `${TEPManagedAndCash}: ${allTEs[i].TE.name}`
   );
 });
 
@@ -341,6 +341,10 @@ const fullProjectedPointsPerDollarDraftkings = [];
 const cashprojectedPointsPerDollarDraftkings = [];
 const cashprojectedPointsPerDollarFanduel = [];
 const cashprojectedPointsPerDollarYahoo = [];
+
+const cashprojectedPointsPerDollarDraftkingsPlusNames = [];
+const cashprojectedPointsPerDollarFanduelPlusNames = [];
+const cashprojectedPointsPerDollarYahooPlusNames = [];
 
 allTEs.forEach(function (team, i) {
   let halfpppdfanduel =
@@ -365,6 +369,16 @@ allTEs.forEach(function (team, i) {
   cashprojectedPointsPerDollarDraftkings.push(+cashDraftkings.toFixed(5));
   cashprojectedPointsPerDollarFanduel.push(+cashFanduel.toFixed(4));
   cashprojectedPointsPerDollarYahoo.push(+cashYahoo.toFixed(5));
+
+  cashprojectedPointsPerDollarDraftkingsPlusNames.push(
+    `${+cashDraftkings.toFixed(5)}: ${team.TE.name}`
+  );
+  cashprojectedPointsPerDollarFanduelPlusNames.push(
+    `${+cashFanduel.toFixed(5)}: ${team.TE.name}`
+  );
+  cashprojectedPointsPerDollarYahooPlusNames.push(
+    `${+cashYahoo.toFixed(5)}: ${team.TE.name}`
+  );
 });
 
 const allTEData = {
@@ -411,6 +425,13 @@ const allTEData = {
     cashprojectedPointsPerDollarDraftkings,
   cashprojectedPointsPerDollarFanduel: cashprojectedPointsPerDollarFanduel,
   cashprojectedPointsPerDollarYahoo: cashprojectedPointsPerDollarYahoo,
+
+  cashprojectedPointsPerDollarDraftkingsPlusNames:
+    cashprojectedPointsPerDollarDraftkingsPlusNames,
+  cashprojectedPointsPerDollarFanduelPlusNames:
+    cashprojectedPointsPerDollarFanduelPlusNames,
+  cashprojectedPointsPerDollarYahooPlusNames:
+    cashprojectedPointsPerDollarYahooPlusNames,
 };
 
 // console.log(allTEData);

@@ -190,11 +190,11 @@ if (gameInfo.week.currentWeek < 5) {
 
     allQBFinalProjectedPointsValues.push(QBProjectedPoints);
     allQBFinalProjectedPointsValuesPlusNames.push(
-      `${allQBs[i].name}: ${QBProjectedPoints}`
+      `${QBProjectedPoints}: ${allQBs[i].name}`
     );
     allQBManagedAndCashProjectedPointsValues.push(QBProjectedPoints);
     allQBManagedAndCashProjectedPointsValuesPlusNames.push(
-      `${allQBs[i].name}: ${QBProjectedPoints}`
+      `${QBProjectedPoints}: ${allQBs[i].name}`
     );
   });
 }
@@ -232,21 +232,21 @@ if (gameInfo.week.currentWeek === 5 || gameInfo.week.currentWeek === 6) {
 
       allQBFinalProjectedPointsValues.push(QBProjectedPoints);
       allQBFinalProjectedPointsValuesPlusNames.push(
-        `${allQBs[i].name}: ${QBProjectedPoints}`
+        `${QBProjectedPoints}: ${allQBs[i].name}`
       );
       allQBManagedAndCashProjectedPointsValues.push(QBProjectedPoints);
       allQBManagedAndCashProjectedPointsValuesPlusNames.push(
-        `${allQBs[i].name}: ${QBProjectedPoints}`
+        `${QBProjectedPoints}: ${allQBs[i].name}`
       );
     } else {
       QBProjectedPoints = team.fourForFourHalfPPRProjectedPoints;
       allQBFinalProjectedPointsValues.push(QBProjectedPoints);
       allQBFinalProjectedPointsValuesPlusNames.push(
-        `${allQBs[i].name}: ${QBProjectedPoints}`
+        `${QBProjectedPoints}: ${allQBs[i].name}`
       );
       allQBManagedAndCashProjectedPointsValues.push(QBProjectedPoints);
       allQBManagedAndCashProjectedPointsValuesPlusNames.push(
-        `${allQBs[i].name}: ${QBProjectedPoints}`
+        `${QBProjectedPoints}: ${allQBs[i].name}`
       );
     }
   });
@@ -277,7 +277,7 @@ if (gameInfo.week.currentWeek > 6) {
 
     allQBManagedAndCashProjectedPointsValues.push(QBProjectedPoints);
     allQBManagedAndCashProjectedPointsValuesPlusNames.push(
-      `${allQBs[i].name}: ${QBProjectedPoints}`
+      `${QBProjectedPoints}: ${allQBs[i].name}`
     );
   });
 }
@@ -308,13 +308,13 @@ if (gameInfo.week.currentWeek > 6) {
 
       allQBFinalProjectedPointsValues.push(QBProjectedPoints);
       allQBFinalProjectedPointsValuesPlusNames.push(
-        `${allQBs[i].name}: ${QBProjectedPoints}`
+        ` ${QBProjectedPoints}: ${allQBs[i].name}`
       );
     } else {
       QBProjectedPoints = allQBs[i].fourForFourHalfPPRProjectedPoints;
       allQBFinalProjectedPointsValues.push(QBProjectedPoints);
       allQBFinalProjectedPointsValuesPlusNames.push(
-        `${allQBs[i].name}: ${QBProjectedPoints}`
+        `${QBProjectedPoints}: ${allQBs[i].name}`
       );
     }
   });
