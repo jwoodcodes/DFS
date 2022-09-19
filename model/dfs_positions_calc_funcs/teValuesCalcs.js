@@ -307,48 +307,46 @@ allTETotalScores.map(function (score, i, array) {
   allHalfTEFinalProjectedPointsValues.push(TEHalfProjectedPoints);
   allTEHalfManagedAndCashProjectedPointsValues.push(halfManagedAndCash);
   allHalfTEFinalProjectedPointsValuesPlusNames.push(
-    `${allTEs[i].TE.name}: ${TEHalfProjectedPoints}`
+    `${TEHalfProjectedPoints}: ${allTEs[i].TE.name}`
   );
   allTEHalfManagedAndCashProjectedPointsValuesPlusNames.push(
-    `${allTEs[i].TE.name}: ${halfManagedAndCash}`
+    `${halfManagedAndCash}: ${allTEs[i].TE.name}`
   );
 
   allFullTEFinalProjectedPointsValues.push(TEFullProjectedPoints);
   allTEFullManagedAndCashProjectedPointsValues.push(fullManagedAndCash);
   allFullTEFinalProjectedPointsValuesPlusNames.push(
-    `${allTEs[i].TE.name}: ${TEFullProjectedPoints}`
+    `${TEFullProjectedPoints}: ${allTEs[i].TE.name}`
   );
   allTEFullManagedAndCashProjectedPointsValuesPlusNames.push(
-    `${allTEs[i].TE.name}: ${fullManagedAndCash}`
+    `${fullManagedAndCash}: ${allTEs[i].TE.name}`
   );
 
   allTEPremiuimFinalProjectedPointsValues.push(TEPremiuimPorjectedPoints);
   allTETEPManagedAndCashProjectedPointsValues.push(TEPManagedAndCash);
   allTEPremiuimFinalProjectedPointsValuesPlusNames.push(
-    `${allTEs[i].TE.name}: ${TEPManagedAndCash}`
+    `${TEPManagedAndCash}: ${allTEs[i].TE.name}`
   );
   allTETEPManagedAndCashProjectedPointsValuesPlusNames.push(
-    `${allTEs[i].TE.name}: ${TEPManagedAndCash}`
+    `${TEPManagedAndCash}: ${allTEs[i].TE.name}`
   );
 });
 
 ////////////Calculating projected points per dollar, PP/d
 
-const halfProjectedPointsPerDollarDraftkings = [];
 const halfProjectedPointsPerDollarFanduel = [];
 const halfProjectedPointsPerDollarYahoo = [];
-
 const fullProjectedPointsPerDollarDraftkings = [];
-const fullProjectedPointsPerDollarFanduel = [];
-const fullProjectedPointsPerDollarYahoo = [];
 
-const tePremiumProjectedPointsPerDollarDraftkings = [];
-const tePremiumProjectedPointsPerDollarFanduel = [];
-const tePremiumProjectedPointsPerDollarYahoo = [];
+const cashprojectedPointsPerDollarDraftkings = [];
+const cashprojectedPointsPerDollarFanduel = [];
+const cashprojectedPointsPerDollarYahoo = [];
+
+const cashprojectedPointsPerDollarDraftkingsPlusNames = [];
+const cashprojectedPointsPerDollarFanduelPlusNames = [];
+const cashprojectedPointsPerDollarYahooPlusNames = [];
 
 allTEs.forEach(function (team, i) {
-  let halfpppddraftkings =
-    allHalfTEFinalProjectedPointsValues[i] / team.TE.draftkingsSalary;
   let halfpppdfanduel =
     allHalfTEFinalProjectedPointsValues[i] / team.TE.fanduelSalary;
   let halfpppdyahoo =
@@ -356,31 +354,31 @@ allTEs.forEach(function (team, i) {
 
   let fullpppddraftkings =
     allFullTEFinalProjectedPointsValues[i] / team.TE.draftkingsSalary;
-  let fullpppdfanduel =
-    allFullTEFinalProjectedPointsValues[i] / team.TE.fanduelSalary;
-  let fullpppdyahoo =
-    allFullTEFinalProjectedPointsValues[i] / team.TE.yahooSalary;
 
-  let teppppddraftkings =
-    allTEPremiuimFinalProjectedPointsValues[i] / team.TE.draftkingsSalary;
-  let teppppdfanduel =
-    allTEPremiuimFinalProjectedPointsValues[i] / team.TE.fanduelSalary;
-  let teppppdyahoo =
-    allTEPremiuimFinalProjectedPointsValues[i] / team.TE.yahooSalary;
+  let cashFanduel =
+    allTEHalfManagedAndCashProjectedPointsValues[i] / team.TE.fanduelSalary;
+  let cashYahoo =
+    allTEHalfManagedAndCashProjectedPointsValues[i] / team.TE.yahooSalary;
+  let cashDraftkings =
+    allTEHalfManagedAndCashProjectedPointsValues[i] / team.TE.draftkingsSalary;
 
-  halfProjectedPointsPerDollarDraftkings.push(+halfpppddraftkings.toFixed(5));
   halfProjectedPointsPerDollarFanduel.push(+halfpppdfanduel.toFixed(5));
   halfProjectedPointsPerDollarYahoo.push(+halfpppdyahoo.toFixed(4));
-
   fullProjectedPointsPerDollarDraftkings.push(+fullpppddraftkings.toFixed(5));
-  fullProjectedPointsPerDollarFanduel.push(+fullpppdfanduel.toFixed(5));
-  fullProjectedPointsPerDollarYahoo.push(+fullpppdyahoo.toFixed(4));
 
-  tePremiumProjectedPointsPerDollarDraftkings.push(
-    +teppppddraftkings.toFixed(5)
+  cashprojectedPointsPerDollarDraftkings.push(+cashDraftkings.toFixed(5));
+  cashprojectedPointsPerDollarFanduel.push(+cashFanduel.toFixed(4));
+  cashprojectedPointsPerDollarYahoo.push(+cashYahoo.toFixed(5));
+
+  cashprojectedPointsPerDollarDraftkingsPlusNames.push(
+    `${+cashDraftkings.toFixed(5)}: ${team.TE.name}`
   );
-  tePremiumProjectedPointsPerDollarFanduel.push(+teppppdfanduel.toFixed(5));
-  tePremiumProjectedPointsPerDollarYahoo.push(+teppppdyahoo.toFixed(4));
+  cashprojectedPointsPerDollarFanduelPlusNames.push(
+    `${+cashFanduel.toFixed(5)}: ${team.TE.name}`
+  );
+  cashprojectedPointsPerDollarYahooPlusNames.push(
+    `${+cashYahoo.toFixed(5)}: ${team.TE.name}`
+  );
 });
 
 const allTEData = {
@@ -401,20 +399,10 @@ const allTEData = {
   allTEPremiuimFinalProjectedPointsValuesPlusNames:
     allTEPremiuimFinalProjectedPointsValuesPlusNames,
 
-  halfProjectedPointsPerDollarDraftkings:
-    halfProjectedPointsPerDollarDraftkings,
   halfProjectedPointsPerDollarFanduel: halfProjectedPointsPerDollarFanduel,
   halfProjectedPointsPerDollarYahoo: halfProjectedPointsPerDollarYahoo,
   fullProjectedPointsPerDollarDraftkings:
     fullProjectedPointsPerDollarDraftkings,
-  fullProjectedPointsPerDollarFanduel: fullProjectedPointsPerDollarFanduel,
-  fullProjectedPointsPerDollarYahoo: fullProjectedPointsPerDollarYahoo,
-  tePremiumProjectedPointsPerDollarDraftkings:
-    tePremiumProjectedPointsPerDollarDraftkings,
-  tePremiumProjectedPointsPerDollarFanduel:
-    tePremiumProjectedPointsPerDollarFanduel,
-  tePremiumProjectedPointsPerDollarYahoo:
-    tePremiumProjectedPointsPerDollarYahoo,
 
   //managed and cash
   allTEHalfManagedAndCashProjectedPointsValues:
@@ -431,21 +419,19 @@ const allTEData = {
   allTETEPManagedAndCashProjectedPointsValuesPlusNames:
     allTETEPManagedAndCashProjectedPointsValuesPlusNames,
 
-  //managed and cash
+  //managed and cash per dollar
 
-  allTEHalfManagedAndCashProjectedPointsValues:
-    allTEHalfManagedAndCashProjectedPointsValues,
-  allTEFullManagedAndCashProjectedPointsValues:
-    allTEFullManagedAndCashProjectedPointsValues,
-  allTETEPManagedAndCashProjectedPointsValues:
-    allTETEPManagedAndCashProjectedPointsValues,
+  cashprojectedPointsPerDollarDraftkings:
+    cashprojectedPointsPerDollarDraftkings,
+  cashprojectedPointsPerDollarFanduel: cashprojectedPointsPerDollarFanduel,
+  cashprojectedPointsPerDollarYahoo: cashprojectedPointsPerDollarYahoo,
 
-  allTEHalfManagedAndCashProjectedPointsValuesPlusNames:
-    allTEHalfManagedAndCashProjectedPointsValuesPlusNames,
-  allTEFullManagedAndCashProjectedPointsValuesPlusNames:
-    allTEFullManagedAndCashProjectedPointsValuesPlusNames,
-  allTETEPManagedAndCashProjectedPointsValuesPlusNames:
-    allTETEPManagedAndCashProjectedPointsValuesPlusNames,
+  cashprojectedPointsPerDollarDraftkingsPlusNames:
+    cashprojectedPointsPerDollarDraftkingsPlusNames,
+  cashprojectedPointsPerDollarFanduelPlusNames:
+    cashprojectedPointsPerDollarFanduelPlusNames,
+  cashprojectedPointsPerDollarYahooPlusNames:
+    cashprojectedPointsPerDollarYahooPlusNames,
 };
 
 // console.log(allTEData);

@@ -26,10 +26,12 @@ const allRBHalfPPRProjectedPointsValues = [];
 const allRBFullPPRProjectedPointsValues = [];
 const allRBHalfManagedAndCashProjectedPointsValues = [];
 const allRBFullManagedAndCashProjectedPointsValues = [];
+
 const allRBHalfPPRProjectedPointsValuesPlusNames = [];
 const allRBFullPPRProjectedPointsValuesPlusNames = [];
 const allRBHalfManagedAndCashProjectedPointsValuesPlusNames = [];
 const allRBFullManagedAndCashProjectedPointsValuesPlusNames = [];
+
 const rbOnenumOfMatchingRoleWeeks = [];
 const rbTwonumOfMatchingRoleWeeks = [];
 
@@ -124,9 +126,6 @@ const allRBCalcFunctions = {
 
       fullManagedAndCash =
         (rbPPRProjectedPoints + rb.fourForFourFullPPRProjectedPoints) / 2;
-
-      allRBOneHalfManagedAndCashProjectedPointsValues.push(halfManagedAndCash);
-      allRBOneFullManagedAndCashProjectedPointsValues.push(fullManagedAndCash);
     } else if (
       gameInfo.week.currentWeek > 6 &&
       rb.roleThisWeek === 1 &&
@@ -166,9 +165,6 @@ const allRBCalcFunctions = {
 
       fullManagedAndCash =
         (rbPPRProjectedPoints + rb.fourForFourFullPPRProjectedPoints) / 2;
-
-      allRBTwoHalfManagedAndCashProjectedPointsValues.push(halfManagedAndCash);
-      allRBTwoFullManagedAndCashProjectedPointsValues.push(fullManagedAndCash);
     } else if (
       gameInfo.week.currentWeek > 6 &&
       rb.roleThisWeek === 2 &&
@@ -221,12 +217,9 @@ const allRBCalcFunctions = {
     ) {
       rbHalfPorjectedPoints = rb.fourForFourHalfPPRProjectedPoints;
       rbPPRProjectedPoints = rb.fourForFourFullPPRProjectedPoints;
-      allRBOneHalfManagedAndCashProjectedPointsValues.push(
-        rb.fourForFourHalfPPRProjectedPoints
-      );
-      allRBOneFullManagedAndCashProjectedPointsValues.push(
-        rb.fourForFourFullPPRProjectedPoints
-      );
+
+      halfManagedAndCash = rb.fourForFourHalfPPRProjectedPoints;
+      fullManagedAndCash = rb.fourForFourFullPPRProjectedPoints;
     }
 
     if (
@@ -266,12 +259,9 @@ const allRBCalcFunctions = {
     ) {
       rbHalfPorjectedPoints = rb.fourForFourHalfPPRProjectedPoints;
       rbPPRProjectedPoints = rb.fourForFourFullPPRProjectedPoints;
-      allRBOneHalfManagedAndCashProjectedPointsValues.push(
-        rb.fourForFourHalfPPRProjectedPoints
-      );
-      allRBOneFullManagedAndCashProjectedPointsValues.push(
-        rb.fourForFourFullPPRProjectedPoints
-      );
+
+      halfManagedAndCash = rb.fourForFourHalfPPRProjectedPoints;
+      fullManagedAndCash = rb.fourForFourFullPPRProjectedPoints;
     }
 
     if (gameInfo.week.currentWeek < 5) {
@@ -355,71 +345,96 @@ allRBs.map(function (rb, i) {
 
 ////////////Calculating projected points per dollar, PP/d
 
-const halfProjectedPointsPerDollarDraftkings = [];
-const halfProjectedPointsPerDollarFanduel = [];
-const halfProjectedPointsPerDollarYahoo = [];
+const ProjectedPointsPerDollarFanduel = [];
+const ProjectedPointsPerDollarYahoo = [];
+const ProjectedPointsPerDollarDraftkings = [];
 
-const fullProjectedPointsPerDollarDraftkings = [];
-const fullProjectedPointsPerDollarFanduel = [];
-const fullProjectedPointsPerDollarYahoo = [];
+const cashprojectedPointsPerDollarDraftkings = [];
+const cashprojectedPointsPerDollarFanduel = [];
+const cashprojectedPointsPerDollarYahoo = [];
+
+const cashprojectedPointsPerDollarDraftkingsPlusNames = [];
+const cashprojectedPointsPerDollarFanduelPlusNames = [];
+const cashprojectedPointsPerDollarYahooPlusNames = [];
 
 allRBs.forEach(function (team, i) {
   let RBOnes = team.RBOne;
   let RBTwos = team.RBTwo;
 
-  let rbOnehalfdraftkings = +(
-    allRBOneHalfPPRProjectedPointsValues[i] / RBOnes.draftkingsSalary
-  ).toFixed(4);
-  let rbOnehalfFanduel = +(
+  let rbOneFanduel = +(
     allRBOneHalfPPRProjectedPointsValues[i] / RBOnes.fanduelSalary
   ).toFixed(4);
-  let rbOnehalfYahoo = +(
+  let rbOneYahoo = +(
     allRBOneHalfPPRProjectedPointsValues[i] / RBOnes.yahooSalary
-  ).toFixed(4);
+  ).toFixed(3);
 
-  let rbTwohalfdraftkings = +(
-    allRBTwoHalfPPRProjectedPointsValues[i] / RBTwos.draftkingsSalary
+  let rbOneCashFanduel = +(
+    allRBOneHalfManagedAndCashProjectedPointsValues[i] / RBOnes.fanduelSalary
   ).toFixed(4);
-  let rbTwohalfFanduel = +(
+  let rbOneCashYahoo = +(
+    allRBOneHalfManagedAndCashProjectedPointsValues[i] / RBOnes.yahooSalary
+  ).toFixed(3);
+
+  let rbTwoFanduel = +(
     allRBTwoHalfPPRProjectedPointsValues[i] / RBTwos.fanduelSalary
   ).toFixed(4);
-  let rbTwohalfYahoo = +(
+  let rbTwoYahoo = +(
     allRBTwoHalfPPRProjectedPointsValues[i] / RBTwos.yahooSalary
+  ).toFixed(3);
+
+  let rbTwoCashFanduel = +(
+    allRBTwoHalfManagedAndCashProjectedPointsValues[i] / RBTwos.fanduelSalary
   ).toFixed(4);
+  let rbTwoCashYahoo = +(
+    allRBTwoHalfManagedAndCashProjectedPointsValues[i] / RBTwos.yahooSalary
+  ).toFixed(3);
 
-  halfProjectedPointsPerDollarDraftkings.push(rbOnehalfdraftkings);
-  halfProjectedPointsPerDollarFanduel.push(rbOnehalfFanduel);
-  halfProjectedPointsPerDollarYahoo.push(rbOnehalfYahoo);
-  halfProjectedPointsPerDollarDraftkings.push(rbTwohalfdraftkings);
-  halfProjectedPointsPerDollarFanduel.push(rbTwohalfFanduel);
-  halfProjectedPointsPerDollarYahoo.push(rbTwohalfYahoo);
+  ProjectedPointsPerDollarFanduel.push(rbOneFanduel);
+  ProjectedPointsPerDollarYahoo.push(rbOneYahoo);
+  ProjectedPointsPerDollarFanduel.push(rbTwoFanduel);
+  ProjectedPointsPerDollarYahoo.push(rbTwoYahoo);
+  cashprojectedPointsPerDollarFanduel.push(rbOneCashFanduel);
+  cashprojectedPointsPerDollarYahoo.push(rbOneCashYahoo);
+  cashprojectedPointsPerDollarFanduel.push(rbTwoCashFanduel);
+  cashprojectedPointsPerDollarYahoo.push(rbTwoCashYahoo);
+  cashprojectedPointsPerDollarFanduelPlusNames.push(
+    `${rbOneCashFanduel}: ${RBOnes.name}`
+  );
+  cashprojectedPointsPerDollarFanduelPlusNames.push(
+    `${rbTwoCashFanduel}: ${RBTwos.name}`
+  );
+  cashprojectedPointsPerDollarYahooPlusNames.push(
+    `${rbOneCashYahoo}: ${RBOnes.name}`
+  );
+  cashprojectedPointsPerDollarYahooPlusNames.push(
+    `${rbTwoCashYahoo}: ${RBTwos.name}`
+  );
 
-  let rbOneFulldraftkings = +(
+  let rbOnedraftkings = +(
     allRBOneFullPPRProjectedPointsValues[i] / RBOnes.draftkingsSalary
   ).toFixed(4);
-  let rbOneFullFanduel = +(
-    allRBOneFullPPRProjectedPointsValues[i] / RBOnes.fanduelSalary
-  ).toFixed(4);
-  let rbOneFullYahoo = +(
-    allRBOneFullPPRProjectedPointsValues[i] / RBOnes.yahooSalary
-  ).toFixed(4);
 
-  let rbTwoFulldraftkings = +(
+  let rbTwodraftkings = +(
     allRBTwoFullPPRProjectedPointsValues[i] / RBTwos.draftkingsSalary
   ).toFixed(4);
-  let rbTwoFullFanduel = +(
-    allRBTwoFullPPRProjectedPointsValues[i] / RBTwos.fanduelSalary
+
+  let rbOneCashDraftkings = +(
+    allRBOneFullManagedAndCashProjectedPointsValues[i] / RBOnes.draftkingsSalary
   ).toFixed(4);
-  let rbTwoFullYahoo = +(
-    allRBTwoFullPPRProjectedPointsValues[i] / RBTwos.yahooSalary
+  let rbTwoCashDraftkings = +(
+    allRBTwoFullManagedAndCashProjectedPointsValues[i] / RBTwos.draftkingsSalary
   ).toFixed(4);
 
-  fullProjectedPointsPerDollarDraftkings.push(rbOneFulldraftkings);
-  fullProjectedPointsPerDollarFanduel.push(rbOneFullFanduel);
-  fullProjectedPointsPerDollarYahoo.push(rbOneFullYahoo);
-  fullProjectedPointsPerDollarDraftkings.push(rbTwoFulldraftkings);
-  fullProjectedPointsPerDollarFanduel.push(rbTwoFullFanduel);
-  fullProjectedPointsPerDollarYahoo.push(rbTwoFullYahoo);
+  ProjectedPointsPerDollarDraftkings.push(rbOnedraftkings);
+  ProjectedPointsPerDollarDraftkings.push(rbTwodraftkings);
+  cashprojectedPointsPerDollarDraftkings.push(rbOneCashDraftkings);
+  cashprojectedPointsPerDollarDraftkings.push(rbTwoCashDraftkings);
+  cashprojectedPointsPerDollarDraftkingsPlusNames.push(
+    `${rbOneCashDraftkings}: ${RBOnes.name}`
+  );
+  cashprojectedPointsPerDollarDraftkingsPlusNames.push(
+    `${rbTwoCashDraftkings}: ${RBTwos.name}`
+  );
 });
 
 //////////////calculating projected points per dollar
@@ -478,15 +493,22 @@ const allRBData = {
     allRBFullManagedAndCashProjectedPointsValuesPlusNames,
 
   //////projected points per dollar arrays
-  halfProjectedPointsPerDollarDraftkings:
-    halfProjectedPointsPerDollarDraftkings,
-  halfProjectedPointsPerDollarFanduel: halfProjectedPointsPerDollarFanduel,
-  halfProjectedPointsPerDollarYahoo: halfProjectedPointsPerDollarYahoo,
 
-  fullProjectedPointsPerDollarDraftkings:
-    fullProjectedPointsPerDollarDraftkings,
-  fullProjectedPointsPerDollarFanduel: fullProjectedPointsPerDollarFanduel,
-  fullProjectedPointsPerDollarYahoo: fullProjectedPointsPerDollarYahoo,
+  ProjectedPointsPerDollarFanduel: ProjectedPointsPerDollarFanduel,
+  ProjectedPointsPerDollarYahoo: ProjectedPointsPerDollarYahoo,
+  ProjectedPointsPerDollarDraftkings: ProjectedPointsPerDollarDraftkings,
+
+  cashprojectedPointsPerDollarDraftkings:
+    cashprojectedPointsPerDollarDraftkings,
+  cashprojectedPointsPerDollarFanduel: cashprojectedPointsPerDollarFanduel,
+  cashprojectedPointsPerDollarYahoo: cashprojectedPointsPerDollarYahoo,
+
+  cashprojectedPointsPerDollarDraftkingsPlusNames:
+    cashprojectedPointsPerDollarDraftkingsPlusNames,
+  cashprojectedPointsPerDollarFanduelPlusNames:
+    cashprojectedPointsPerDollarFanduelPlusNames,
+  cashprojectedPointsPerDollarYahooPlusNames:
+    cashprojectedPointsPerDollarYahooPlusNames,
 };
 
 // console.log(allRBData);
