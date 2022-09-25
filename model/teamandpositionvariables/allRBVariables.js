@@ -15,7 +15,7 @@ const cardinalsRB = rbrawdata.cardinals;
 const chargersRB = rbrawdata.chargers;
 const chiefsRB = rbrawdata.chiefs;
 const coltsRB = rbrawdata.colts;
-const commandersRB = rbrawdata.Commanders;
+const commandersRB = rbrawdata.commanders;
 const cowboysRB = rbrawdata.cowboys;
 const dolphinsRB = rbrawdata.dolphins;
 const eaglesRB = rbrawdata.eagles;
@@ -38,16 +38,32 @@ const titansRB = rbrawdata.titans;
 const vikingsRB = rbrawdata.vikings;
 
 const allRBs = [
-  bengalsRB,
+  panthersRB,
+  saintsRB,
+  bearsRB,
+  texansRB,
+  coltsRB,
+  chiefsRB,
+  dolphinsRB,
+  billsRB,
+  vikingsRB,
+  lionsRB,
+  patriotsRB,
   ravensRB,
   jetsRB,
+  bengalsRB,
+  titansRB,
+  raidersRB,
+  commandersRB,
+  eaglesRB,
+  chargersRB,
   jaguarsRB,
-
-  chiefsRB,
-  steelersRB,
-
-  saintsRB,
-  dolphinsRB,
+  cardinalsRB,
+  ramsRB,
+  seahawksRB,
+  falconsRB,
+  buccaneersRB,
+  packersRB,
 ];
 
 module.exports = allRBs;

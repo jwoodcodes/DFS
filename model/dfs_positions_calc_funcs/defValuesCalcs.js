@@ -191,5 +191,6 @@ const allDefData = {
 };
 
 // console.log(allDefData);
+// console.log(allDefData.allTeamDefenseObjectsArray);
 
 module.exports = allDefData;

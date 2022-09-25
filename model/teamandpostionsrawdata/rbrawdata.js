@@ -627,7 +627,7 @@ const rbrawdata = {
       yahooProjectedOwnership: 0,
     },
   },
-  comanders: {
+  commanders: {
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {

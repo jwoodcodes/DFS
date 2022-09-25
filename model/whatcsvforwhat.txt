@@ -1,0 +1,24 @@
+
+*process for getting, converting, naming, changing, exporting, and importing 4for4 CSV's:
+
+    1) download all CSV's which are:
+        a) Downloadable Spreadsheet with Projections & DFS Site Salaries for draftkings
+        b) Downloadable Spreadsheet with Projections & DFS Site Salaries for fanduel
+        c) Downloadable Spreadsheet with Projections & DFS Site Salaries for Yahoo
+        d) player pricing page for draftkings
+        e) player pricing page for fanduel
+        f) player pricing page for Yahoo
+        g) draftkings/fanduel ownership projections or the leverage scores for both draftkings
+            and fanduel. not sure which is going to be better yet.
+        H) ?
+
+    2) convert each CSV to JSON and rename to the following (letters match the above): 
+        a) 
+
+*which propeties I am using from which CSV's, and what raw files to import which into for use:
+
+    1) use CSV's from 4for4 Downloadable Spreadsheet with Projections & DFS Site Salaries page to get:
+            a)
+
+    2) use CSV from 4for4 player pricing page for each site to get:
+   a) all players % of cap number on each site 

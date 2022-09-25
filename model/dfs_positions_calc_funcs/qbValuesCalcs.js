@@ -93,7 +93,9 @@ const allQBCalcFunctions = {
       QBHOAFOU = 5;
     } else if (
       (i % 2 && team.teamVTT > allQBs[i - 1].teamVTT) ||
-      (team.teamVTT < allQBs[i - 1].teamVTT && allQBs[i - 1].teamVTT > 24.9)
+      (i % 2 &&
+        team.teamVTT < allQBs[i - 1].teamVTT &&
+        allQBs[i - 1].teamVTT > 24.9)
     ) {
       QBHOAFOU = -5;
     } else if (

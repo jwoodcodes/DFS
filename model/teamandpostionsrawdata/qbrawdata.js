@@ -1,14 +1,16 @@
+const qbyahooprojwithoverunder = require('../datafilesmadefrom4for4CSVs/qbyahooproj&overunderweek3');
+
+const weekThreeQBFourForFourProj = require('../datafilesmadefrom4for4CSVs/week3QB');
+
 //QB TDrate is TD's/pass attempts
-//QB YPA for a given stretch can be found on the rotoviz monday review tab
-//QB prjpassattempts is from rotoviz GLSP projections average stat line for that QB for that week
 
 const qbrawdata = {
   SF49ers: {
-    teamVTT: 0,
+    teamVTT: 23.25,
     name: 'Jimmy Garoppolo',
     roleThisWeek: 1,
     ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS WEEK!!!!!!!!!!!!!!
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+    roleLastXNumOfWeeksUpToFive: [2, 2],
 
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
@@ -27,7 +29,8 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    yahooProjectedOwnership: 0,
+    SalaryRankFanduel: 0,
+    SalaryRankYahoo: 0,
   },
   bears: {
     teamVTT: 17,
@@ -53,7 +56,8 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    yahooProjectedOwnership: 0,
+    SalaryRankFanduel: 0,
+    SalaryRankYahoo: 0,
   },
   bengals: {
     teamVTT: 25,
@@ -79,11 +83,12 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    yahooProjectedOwnership: 0,
+    SalaryRankFanduel: 0,
+    SalaryRankYahoo: 0,
   },
   bills: {
     teamVTT: 0,
-    name: 'Josh Allen',
+    name: '',
     roleThisWeek: 1,
     ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
     roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
@@ -105,7 +110,8 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    yahooProjectedOwnership: 0,
+    SalaryRankFanduel: 0,
+    SalaryRankYahoo: 0,
   },
   broncos: {
     teamVTT: 0,
@@ -131,7 +137,8 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    yahooProjectedOwnership: 0,
+    SalaryRankFanduel: 0,
+    SalaryRankYahoo: 0,
   },
   browns: {
     teamVTT: 0,
@@ -157,7 +164,8 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    yahooProjectedOwnership: 0,
+    SalaryRankFanduel: 0,
+    SalaryRankYahoo: 0,
   },
   buccaneers: {
     teamVTT: 27.25,
@@ -183,7 +191,35 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    yahooProjectedOwnership: 0,
+    SalaryRankFanduel: 0,
+    SalaryRankYahoo: 0,
+  },
+  commanders: {
+    teamVTT: 25.5,
+    name: 'Carson Wentz',
+    roleThisWeek: 1,
+    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
+    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+    twentyFifthPercentProjectedPoints: 0,
+    fiftyithPercentProjectedPoints: 0,
+    seventyFifthPercentProjectedPoints: 0,
+    prjpassattempts: 0,
+    ypaLastFiveGames: 0,
+    TDrateLastFiveGames: 0,
+    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    fourForFourHalfPPRProjectedPoints: 0,
+    fourForFourFullPPRProjectedPoints: 0,
+
+    yahooSalary: 35,
+    fanduelSalary: 8200,
+    draftkingsSalary: 7300,
+
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
+    SalaryRankFanduel: 0,
+    SalaryRankYahoo: 0,
   },
   cardinals: {
     teamVTT: 25.5,
@@ -209,7 +245,8 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    yahooProjectedOwnership: 0,
+    SalaryRankFanduel: 0,
+    SalaryRankYahoo: 0,
   },
   chargers: {
     teamVTT: 29,
@@ -235,7 +272,8 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    yahooProjectedOwnership: 0,
+    SalaryRankFanduel: 0,
+    SalaryRankYahoo: 0,
   },
   chiefs: {
     teamVTT: 27.5,
@@ -261,7 +299,8 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    yahooProjectedOwnership: 0,
+    SalaryRankFanduel: 0,
+    SalaryRankYahoo: 0,
   },
   colts: {
     teamVTT: 0,
@@ -287,7 +326,8 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    yahooProjectedOwnership: 0,
+    SalaryRankFanduel: 0,
+    SalaryRankYahoo: 0,
   },
   comanders: {
     teamVTT: 0,
@@ -313,7 +353,8 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    yahooProjectedOwnership: 0,
+    SalaryRankFanduel: 0,
+    SalaryRankYahoo: 0,
   },
   cowboys: {
     teamVTT: 0,
@@ -339,7 +380,8 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    yahooProjectedOwnership: 0,
+    SalaryRankFanduel: 0,
+    SalaryRankYahoo: 0,
   },
   dolphins: {
     teamVTT: 20.25,
@@ -365,11 +407,12 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    yahooProjectedOwnership: 0,
+    SalaryRankFanduel: 0,
+    SalaryRankYahoo: 0,
   },
   eagles: {
     teamVTT: 0,
-    name: 'Placeholder',
+    name: 'Jalen Hurts',
     roleThisWeek: 1,
     ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
     roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
@@ -391,7 +434,8 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    yahooProjectedOwnership: 0,
+    SalaryRankFanduel: 0,
+    SalaryRankYahoo: 0,
   },
   falcons: {
     teamVTT: 0,
@@ -417,7 +461,8 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    yahooProjectedOwnership: 0,
+    SalaryRankFanduel: 0,
+    SalaryRankYahoo: 0,
   },
   giants: {
     teamVTT: 0,
@@ -443,7 +488,8 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    yahooProjectedOwnership: 0,
+    SalaryRankFanduel: 0,
+    SalaryRankYahoo: 0,
   },
   jaguars: {
     teamVTT: 20.25,
@@ -469,7 +515,8 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    yahooProjectedOwnership: 0,
+    SalaryRankFanduel: 0,
+    SalaryRankYahoo: 0,
   },
   jets: {
     teamVTT: 15,
@@ -495,7 +542,8 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    yahooProjectedOwnership: 0,
+    SalaryRankFanduel: 0,
+    SalaryRankYahoo: 0,
   },
   lions: {
     teamVTT: 0,
@@ -521,7 +569,8 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    yahooProjectedOwnership: 0,
+    SalaryRankFanduel: 0,
+    SalaryRankYahoo: 0,
   },
   packers: {
     teamVTT: 0,
@@ -547,7 +596,8 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    yahooProjectedOwnership: 0,
+    SalaryRankFanduel: 0,
+    SalaryRankYahoo: 0,
   },
   panthers: {
     teamVTT: 0,
@@ -573,7 +623,8 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    yahooProjectedOwnership: 0,
+    SalaryRankFanduel: 0,
+    SalaryRankYahoo: 0,
   },
   patriots: {
     teamVTT: 0,
@@ -599,7 +650,8 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    yahooProjectedOwnership: 0,
+    SalaryRankFanduel: 0,
+    SalaryRankYahoo: 0,
   },
   raiders: {
     teamVTT: 0,
@@ -625,7 +677,8 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    yahooProjectedOwnership: 0,
+    SalaryRankFanduel: 0,
+    SalaryRankYahoo: 0,
   },
   rams: {
     teamVTT: 0,
@@ -651,7 +704,8 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    yahooProjectedOwnership: 0,
+    SalaryRankFanduel: 0,
+    SalaryRankYahoo: 0,
   },
   ravens: {
     teamVTT: 18.25,
@@ -677,7 +731,8 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    yahooProjectedOwnership: 0,
+    SalaryRankFanduel: 0,
+    SalaryRankYahoo: 0,
   },
   saints: {
     teamVTT: 17.25,
@@ -703,7 +758,8 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    yahooProjectedOwnership: 0,
+    SalaryRankFanduel: 0,
+    SalaryRankYahoo: 0,
   },
   seahawks: {
     teamVTT: 0,
@@ -729,11 +785,12 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    yahooProjectedOwnership: 0,
+    SalaryRankFanduel: 0,
+    SalaryRankYahoo: 0,
   },
   steelers: {
     teamVTT: 17,
-    name: 'Roethlisberger',
+    name: '',
     roleThisWeek: 1,
     ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
     roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
@@ -755,7 +812,8 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    yahooProjectedOwnership: 0,
+    SalaryRankFanduel: 0,
+    SalaryRankYahoo: 0,
   },
   texans: {
     teamVTT: 0,
@@ -781,7 +839,8 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    yahooProjectedOwnership: 0,
+    SalaryRankFanduel: 0,
+    SalaryRankYahoo: 0,
   },
   titans: {
     teamVTT: 0,
@@ -807,7 +866,8 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    yahooProjectedOwnership: 0,
+    SalaryRankFanduel: 0,
+    SalaryRankYahoo: 0,
   },
   vikings: {
     teamVTT: 0,
@@ -833,8 +893,32 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    yahooProjectedOwnership: 0,
+    SalaryRankFanduel: 0,
+    SalaryRankYahoo: 0,
   },
 };
+
+qbyahooprojwithoverunder.forEach(function (playerobj, i) {
+  // console.log(playerobj);
+
+  let teamName = playerobj.Team;
+  let teamvtt = playerobj['Team O/U'];
+  let playerName = playerobj.Player;
+  let projpts = playerobj.FFPts;
+  let playerObject = playerobj;
+
+  // console.log(teamName);
+
+  if (teamName === 'BUF') {
+    // console.log('match');
+    // console.log(playerName);
+    qbrawdata.bills.teamVTT = teamvtt;
+    qbrawdata.bills.name = playerName;
+    qbrawdata.bills.fourForFourHalfPPRProjectedPoints = projpts;
+    qbrawdata.bills.fourForFourFullPPRProjectedPoints = projpts;
+  }
+});
+
+console.log(qbrawdata.bills);
 
 module.exports = qbrawdata;

@@ -395,7 +395,8 @@ class FullTeamObjectWithAllStacks {
       if (temp.length === num) {
         res.push(
           temp.reduce(function (a, b) {
-            return +(a + b).toFixed(4);
+            // return +(a + b).toFixed(4);
+            return a + b;
           })
         );
       }

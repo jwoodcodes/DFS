@@ -50,7 +50,7 @@ const allWRCalcFunctions = {
       WRThreeHOAFOU = 5;
     } else if (
       (i % 2 && team.teamVTT > allWRs[i - 1].teamVTT) ||
-      (team.teamVTT < allWRs[i - 1].teamVTT && team.teamVTT > 24.9)
+      (i % 2 && team.teamVTT < allWRs[i - 1].teamVTT && team.teamVTT > 24.9)
     ) {
       WROneHOAFOU = -5;
       WRTwoHOAFOU = -5;
