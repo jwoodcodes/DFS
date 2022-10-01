@@ -190,7 +190,7 @@ const allDefData = {
   allTeamDefensesMap: allTeamDefensesMap,
 };
 
-// console.log(allDefData);
+// console.log(allTeamDefensesMap);
 // console.log(allDefData.allTeamDefenseObjectsArray);
 
 module.exports = allDefData;

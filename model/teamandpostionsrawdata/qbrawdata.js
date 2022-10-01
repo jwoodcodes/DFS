@@ -1,6 +1,4 @@
-const qbyahooprojwithoverunder = require('../datafilesmadefrom4for4CSVs/qbyahooproj&overunderweek3');
-
-const weekThreeQBFourForFourProj = require('../datafilesmadefrom4for4CSVs/week3QB');
+const qbDownloadableSpreadSheetYahoo = require('../datafilesmadefrom4for4CSVs/Yahoo/qbDownloadableSpreadSheetYahoo');
 
 //QB TDrate is TD's/pass attempts
 
@@ -29,8 +27,9 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    SalaryRankFanduel: 0,
-    SalaryRankYahoo: 0,
+    percentOfSalaryCapDraftkings: 0,
+    percentOfSalaryCapFanduel: 0,
+    percentOfSalaryCapYahoo: 0,
   },
   bears: {
     teamVTT: 17,
@@ -56,8 +55,9 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    SalaryRankFanduel: 0,
-    SalaryRankYahoo: 0,
+    percentOfSalaryCapDraftkings: 0,
+    percentOfSalaryCapFanduel: 0,
+    percentOfSalaryCapYahoo: 0,
   },
   bengals: {
     teamVTT: 25,
@@ -83,8 +83,9 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    SalaryRankFanduel: 0,
-    SalaryRankYahoo: 0,
+    percentOfSalaryCapDraftkings: 0,
+    percentOfSalaryCapFanduel: 0,
+    percentOfSalaryCapYahoo: 0,
   },
   bills: {
     teamVTT: 0,
@@ -110,8 +111,9 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    SalaryRankFanduel: 0,
-    SalaryRankYahoo: 0,
+    percentOfSalaryCapDraftkings: 0,
+    percentOfSalaryCapFanduel: 0,
+    percentOfSalaryCapYahoo: 0,
   },
   broncos: {
     teamVTT: 0,
@@ -137,8 +139,9 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    SalaryRankFanduel: 0,
-    SalaryRankYahoo: 0,
+    percentOfSalaryCapDraftkings: 0,
+    percentOfSalaryCapFanduel: 0,
+    percentOfSalaryCapYahoo: 0,
   },
   browns: {
     teamVTT: 0,
@@ -164,8 +167,9 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    SalaryRankFanduel: 0,
-    SalaryRankYahoo: 0,
+    percentOfSalaryCapDraftkings: 0,
+    percentOfSalaryCapFanduel: 0,
+    percentOfSalaryCapYahoo: 0,
   },
   buccaneers: {
     teamVTT: 27.25,
@@ -191,8 +195,9 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    SalaryRankFanduel: 0,
-    SalaryRankYahoo: 0,
+    percentOfSalaryCapDraftkings: 0,
+    percentOfSalaryCapFanduel: 0,
+    percentOfSalaryCapYahoo: 0,
   },
   commanders: {
     teamVTT: 25.5,
@@ -218,8 +223,9 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    SalaryRankFanduel: 0,
-    SalaryRankYahoo: 0,
+    percentOfSalaryCapDraftkings: 0,
+    percentOfSalaryCapFanduel: 0,
+    percentOfSalaryCapYahoo: 0,
   },
   cardinals: {
     teamVTT: 25.5,
@@ -245,8 +251,9 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    SalaryRankFanduel: 0,
-    SalaryRankYahoo: 0,
+    percentOfSalaryCapDraftkings: 0,
+    percentOfSalaryCapFanduel: 0,
+    percentOfSalaryCapYahoo: 0,
   },
   chargers: {
     teamVTT: 29,
@@ -272,8 +279,9 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    SalaryRankFanduel: 0,
-    SalaryRankYahoo: 0,
+    percentOfSalaryCapDraftkings: 0,
+    percentOfSalaryCapFanduel: 0,
+    percentOfSalaryCapYahoo: 0,
   },
   chiefs: {
     teamVTT: 27.5,
@@ -299,8 +307,9 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    SalaryRankFanduel: 0,
-    SalaryRankYahoo: 0,
+    percentOfSalaryCapDraftkings: 0,
+    percentOfSalaryCapFanduel: 0,
+    percentOfSalaryCapYahoo: 0,
   },
   colts: {
     teamVTT: 0,
@@ -326,8 +335,9 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    SalaryRankFanduel: 0,
-    SalaryRankYahoo: 0,
+    percentOfSalaryCapDraftkings: 0,
+    percentOfSalaryCapFanduel: 0,
+    percentOfSalaryCapYahoo: 0,
   },
   comanders: {
     teamVTT: 0,
@@ -353,8 +363,9 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    SalaryRankFanduel: 0,
-    SalaryRankYahoo: 0,
+    percentOfSalaryCapDraftkings: 0,
+    percentOfSalaryCapFanduel: 0,
+    percentOfSalaryCapYahoo: 0,
   },
   cowboys: {
     teamVTT: 0,
@@ -380,8 +391,9 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    SalaryRankFanduel: 0,
-    SalaryRankYahoo: 0,
+    percentOfSalaryCapDraftkings: 0,
+    percentOfSalaryCapFanduel: 0,
+    percentOfSalaryCapYahoo: 0,
   },
   dolphins: {
     teamVTT: 20.25,
@@ -407,8 +419,9 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    SalaryRankFanduel: 0,
-    SalaryRankYahoo: 0,
+    percentOfSalaryCapDraftkings: 0,
+    percentOfSalaryCapFanduel: 0,
+    percentOfSalaryCapYahoo: 0,
   },
   eagles: {
     teamVTT: 0,
@@ -434,8 +447,9 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    SalaryRankFanduel: 0,
-    SalaryRankYahoo: 0,
+    percentOfSalaryCapDraftkings: 0,
+    percentOfSalaryCapFanduel: 0,
+    percentOfSalaryCapYahoo: 0,
   },
   falcons: {
     teamVTT: 0,
@@ -461,8 +475,9 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    SalaryRankFanduel: 0,
-    SalaryRankYahoo: 0,
+    percentOfSalaryCapDraftkings: 0,
+    percentOfSalaryCapFanduel: 0,
+    percentOfSalaryCapYahoo: 0,
   },
   giants: {
     teamVTT: 0,
@@ -488,8 +503,9 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    SalaryRankFanduel: 0,
-    SalaryRankYahoo: 0,
+    percentOfSalaryCapDraftkings: 0,
+    percentOfSalaryCapFanduel: 0,
+    percentOfSalaryCapYahoo: 0,
   },
   jaguars: {
     teamVTT: 20.25,
@@ -515,8 +531,9 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    SalaryRankFanduel: 0,
-    SalaryRankYahoo: 0,
+    percentOfSalaryCapDraftkings: 0,
+    percentOfSalaryCapFanduel: 0,
+    percentOfSalaryCapYahoo: 0,
   },
   jets: {
     teamVTT: 15,
@@ -542,8 +559,9 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    SalaryRankFanduel: 0,
-    SalaryRankYahoo: 0,
+    percentOfSalaryCapDraftkings: 0,
+    percentOfSalaryCapFanduel: 0,
+    percentOfSalaryCapYahoo: 0,
   },
   lions: {
     teamVTT: 0,
@@ -569,8 +587,9 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    SalaryRankFanduel: 0,
-    SalaryRankYahoo: 0,
+    percentOfSalaryCapDraftkings: 0,
+    percentOfSalaryCapFanduel: 0,
+    percentOfSalaryCapYahoo: 0,
   },
   packers: {
     teamVTT: 0,
@@ -596,8 +615,9 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    SalaryRankFanduel: 0,
-    SalaryRankYahoo: 0,
+    percentOfSalaryCapDraftkings: 0,
+    percentOfSalaryCapFanduel: 0,
+    percentOfSalaryCapYahoo: 0,
   },
   panthers: {
     teamVTT: 0,
@@ -623,8 +643,9 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    SalaryRankFanduel: 0,
-    SalaryRankYahoo: 0,
+    percentOfSalaryCapDraftkings: 0,
+    percentOfSalaryCapFanduel: 0,
+    percentOfSalaryCapYahoo: 0,
   },
   patriots: {
     teamVTT: 0,
@@ -650,8 +671,9 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    SalaryRankFanduel: 0,
-    SalaryRankYahoo: 0,
+    percentOfSalaryCapDraftkings: 0,
+    percentOfSalaryCapFanduel: 0,
+    percentOfSalaryCapYahoo: 0,
   },
   raiders: {
     teamVTT: 0,
@@ -677,8 +699,9 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    SalaryRankFanduel: 0,
-    SalaryRankYahoo: 0,
+    percentOfSalaryCapDraftkings: 0,
+    percentOfSalaryCapFanduel: 0,
+    percentOfSalaryCapYahoo: 0,
   },
   rams: {
     teamVTT: 0,
@@ -704,8 +727,9 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    SalaryRankFanduel: 0,
-    SalaryRankYahoo: 0,
+    percentOfSalaryCapDraftkings: 0,
+    percentOfSalaryCapFanduel: 0,
+    percentOfSalaryCapYahoo: 0,
   },
   ravens: {
     teamVTT: 18.25,
@@ -731,8 +755,9 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    SalaryRankFanduel: 0,
-    SalaryRankYahoo: 0,
+    percentOfSalaryCapDraftkings: 0,
+    percentOfSalaryCapFanduel: 0,
+    percentOfSalaryCapYahoo: 0,
   },
   saints: {
     teamVTT: 17.25,
@@ -758,8 +783,9 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    SalaryRankFanduel: 0,
-    SalaryRankYahoo: 0,
+    percentOfSalaryCapDraftkings: 0,
+    percentOfSalaryCapFanduel: 0,
+    percentOfSalaryCapYahoo: 0,
   },
   seahawks: {
     teamVTT: 0,
@@ -785,8 +811,9 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    SalaryRankFanduel: 0,
-    SalaryRankYahoo: 0,
+    percentOfSalaryCapDraftkings: 0,
+    percentOfSalaryCapFanduel: 0,
+    percentOfSalaryCapYahoo: 0,
   },
   steelers: {
     teamVTT: 17,
@@ -812,8 +839,9 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    SalaryRankFanduel: 0,
-    SalaryRankYahoo: 0,
+    percentOfSalaryCapDraftkings: 0,
+    percentOfSalaryCapFanduel: 0,
+    percentOfSalaryCapYahoo: 0,
   },
   texans: {
     teamVTT: 0,
@@ -839,8 +867,9 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    SalaryRankFanduel: 0,
-    SalaryRankYahoo: 0,
+    percentOfSalaryCapDraftkings: 0,
+    percentOfSalaryCapFanduel: 0,
+    percentOfSalaryCapYahoo: 0,
   },
   titans: {
     teamVTT: 0,
@@ -866,8 +895,9 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    SalaryRankFanduel: 0,
-    SalaryRankYahoo: 0,
+    percentOfSalaryCapDraftkings: 0,
+    percentOfSalaryCapFanduel: 0,
+    percentOfSalaryCapYahoo: 0,
   },
   vikings: {
     teamVTT: 0,
@@ -893,12 +923,13 @@ const qbrawdata = {
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
-    SalaryRankFanduel: 0,
-    SalaryRankYahoo: 0,
+    percentOfSalaryCapDraftkings: 0,
+    percentOfSalaryCapFanduel: 0,
+    percentOfSalaryCapYahoo: 0,
   },
 };
 
-qbyahooprojwithoverunder.forEach(function (playerobj, i) {
+qbDownloadableSpreadSheetYahoo.forEach(function (playerobj, i) {
   // console.log(playerobj);
 
   let teamName = playerobj.Team;
@@ -919,6 +950,6 @@ qbyahooprojwithoverunder.forEach(function (playerobj, i) {
   }
 });
 
-console.log(qbrawdata.bills);
+// console.log(qbrawdata.bills);
 
 module.exports = qbrawdata;

@@ -1,15 +1,74 @@
 
 *process for getting, converting, naming, changing, exporting, and importing 4for4 CSV's:
 
+*what stats do I need for each position and where do I get them from:
+  team(gameInfo):
+    vtt- get from qbDownloadableSpreadSheetYahoo file  made from Downloadable SpreadSheet Yahoo CSV.
+
+    def4for4projectedpoints- get from wholeDownloadableSpreadSheetYahoo made fron downloadable spreadsheet yahoo CSV
+
+    teamDefDraftkingsSalary- get from wholePlayerPricingWithPercntOfCapDraftkings file made from draftkings player pricing CSV
+
+    teamDefFanduelSalary- get from wholePlayerPricingWithPercntOfCapFanduel file made from draftkings player pricing CSV
+
+    teamDefYahooSalary- get from wholePlayerPricingWithPercntOfCapYahoo file made from yahoo player pricing CSV
+
+    draftkingsProjectedOwnership- get from gppLeverageScoresAndProjOwnershipDraftkings file mde from draftkings gpp leverage scores CSV
+
+    fanduelProjectedOwnership- get from gppLeverageScoresAndProjOwnershipFandeul file mde from fanduel gpp leverage scores CSV
+
+    percentOfSalaryCapDraftkings- get from wholePlayerPricingWithPercentOfCapDraftkings file made from draftkings player pricing CSV
+
+    percentOfSalaryCapFanduel- get from wholePlayerPricingWithPercentOfCapFanduel file made from Fanduel player pricing CSV
+
+    percentOfSalaryCapYahoo- get from wholePlayerPricingWithPercentOfCapYahoo file made from Yahoo player pricing CSV
+
+    assinging the teamName variable - use qbDownloadableSpreadSheetYahoo to make sure you only have the right number of team.
+
+  QB:
+    vtt- get from qbDownloadableSpreadSheetDraftkings file  made from Downloadable SpreadSheet Draftkings CSV
+
+    name- get from qbDownloadableSpreadSheetDraftkings file  made from Downloadable SpreadSheet Draftkings CSV
+
+
+
+
     1) download all CSV's which are:
+
+        *****MAKE SURE TO SORT THE TABLE BY POSTION BEFORE YOU DOWNLOAD A CSV!!!!!!!!********
+
         a) Downloadable Spreadsheet with Projections & DFS Site Salaries for draftkings
+            turn into:
+            -wholeDownloadableSpreadSheetDraftkings,
+            -
+            
         b) Downloadable Spreadsheet with Projections & DFS Site Salaries for fanduel
+            turn into:
+            - wholeDownloadableSpreadSheetFanduel
+
         c) Downloadable Spreadsheet with Projections & DFS Site Salaries for Yahoo
+            turn into: 
+            -wholeDownloadableSpreadSheetYahoo 
+            -qbDownloadableSpreadSheetYahoo 
+            -
+
         d) player pricing page for draftkings
+            turn into:
+            -wholePlayerPricingWithPercntOfCapDraftkings
+            -
+
         e) player pricing page for fanduel
+            turn into:
+            -wholePlayerPricingWithPercntOfCapFanduel
+
         f) player pricing page for Yahoo
+            turn into:
+            -wholePlayerPricingWithPercentOfCapYahoo 
+            -may need to do the above one at individual positions as well but don't know yet
+
         g) draftkings/fanduel ownership projections or the leverage scores for both draftkings
             and fanduel. not sure which is going to be better yet.
+            
         H) ?
 
     2) convert each CSV to JSON and rename to the following (letters match the above): 
