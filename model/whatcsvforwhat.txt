@@ -3,9 +3,9 @@
 
 *what stats do I need for each position and where do I get them from:
   team(gameInfo):
-    vtt- get from qbDownloadableSpreadSheetYahoo file  made from Downloadable SpreadSheet Yahoo CSV.
+    vtt- get from qbDownloadableSpreadSheetYahoo file  made from Downloadable SpreadSheet Yahoo FOR ALL GAMES OF THE WEEK NOT JUST MAIN SLATE CSV.
 
-    def4for4projectedpoints- get from wholeDownloadableSpreadSheetYahoo made fron downloadable spreadsheet yahoo CSV
+    def4for4projectedpoints- get from wholeDownloadableSpreadSheetYahoo made fron downloadable spreadsheet yahoo FOR ALL GAMES OF THE WEEK NOT JUST MAIN SLATE CSV
 
     teamDefDraftkingsSalary- get from wholePlayerPricingWithPercntOfCapDraftkings file made from draftkings player pricing CSV
 
@@ -26,9 +26,9 @@
     assinging the teamName variable - use qbDownloadableSpreadSheetYahoo to make sure you only have the right number of team.
 
   QB:
-    vtt- get from qbDownloadableSpreadSheetDraftkings file  made from Downloadable SpreadSheet Draftkings CSV
+    vtt- get from qbDownloadableSpreadSheetDraftkings file  made from Downloadable SpreadSheet Draftkings FOR ALL GAMES OF THE WEEK NOT JUST MAIN SLATE CSV
 
-    name- get from qbDownloadableSpreadSheetDraftkings file  made from Downloadable SpreadSheet Draftkings CSV
+    name- get from qbDownloadableSpreadSheetDraftkings file  made from Downloadable SpreadSheet Draftkings FOR ALL GAMES OF THE WEEK NOT JUST MAIN SLATE CSV
 
 
 
@@ -37,16 +37,16 @@
 
         *****MAKE SURE TO SORT THE TABLE BY POSTION BEFORE YOU DOWNLOAD A CSV!!!!!!!!********
 
-        a) Downloadable Spreadsheet with Projections & DFS Site Salaries for draftkings
+        a) Downloadable Spreadsheet with Projections & DFS Site Salaries for draftkings FOR ALL GAMES OF THE WEEK NOT JUST MAIN SLATE
             turn into:
             -wholeDownloadableSpreadSheetDraftkings,
             -
             
-        b) Downloadable Spreadsheet with Projections & DFS Site Salaries for fanduel
+        b) Downloadable Spreadsheet with Projections & DFS Site Salaries for fanduel FOR ALL GAMES OF THE WEEK NOT JUST MAIN SLATE
             turn into:
             - wholeDownloadableSpreadSheetFanduel
 
-        c) Downloadable Spreadsheet with Projections & DFS Site Salaries for Yahoo
+        c) Downloadable Spreadsheet with Projections & DFS Site Salaries for Yahoo FOR ALL GAMES OF THE WEEK NOT JUST MAIN SLATE
             turn into: 
             -wholeDownloadableSpreadSheetYahoo 
             -qbDownloadableSpreadSheetYahoo 
@@ -68,7 +68,7 @@
 
         g) draftkings/fanduel ownership projections or the leverage scores for both draftkings
             and fanduel. not sure which is going to be better yet.
-            
+
         H) ?
 
     2) convert each CSV to JSON and rename to the following (letters match the above): 

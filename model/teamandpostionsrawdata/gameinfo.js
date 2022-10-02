@@ -13,6 +13,7 @@ const gameInfo = {
 
   SF49ers: {
     teamName: '49ers',
+    teamABV: 'SF',
     slate: 'night',
     vtt: 0,
     def4for4projectedpoints: 6.5,
@@ -29,7 +30,7 @@ const gameInfo = {
 
   bears: {
     teamName: 'Bears',
-
+    teamABV: 'CHI',
     slate: 'night',
     vtt: 21.25,
     def4for4projectedpoints: 6.2,
@@ -46,7 +47,7 @@ const gameInfo = {
 
   bengals: {
     teamName: 'Bengals',
-
+    teamABV: 'CIN',
     vtt: 25.25,
     def4for4projectedpoints: 7.1,
     teamDefDraftkingsSalary: 3600,
@@ -62,7 +63,7 @@ const gameInfo = {
 
   bills: {
     teamName: 'Bills',
-
+    teamABV: 'BUF',
     vtt: 29,
     def4for4projectedpoints: 6.8,
     teamDefDraftkingsSalary: 3500,
@@ -78,7 +79,7 @@ const gameInfo = {
 
   broncos: {
     teamName: 'Broncos',
-
+    teamABV: 'DEN',
     vtt: 0,
     def4for4projectedpoints: 0,
     teamDefDraftkingsSalary: 0,
@@ -94,7 +95,7 @@ const gameInfo = {
 
   browns: {
     teamName: 'Browns',
-
+    teamABV: 'CLE',
     vtt: 0,
     def4for4projectedpoints: 0,
     teamDefDraftkingsSalary: 0,
@@ -110,7 +111,7 @@ const gameInfo = {
 
   buccaneers: {
     teamName: 'Buccaneers',
-
+    teamABV: 'TB',
     vtt: 21.5,
     def4for4projectedpoints: 6.4,
     teamDefDraftkingsSalary: 3100,
@@ -126,7 +127,7 @@ const gameInfo = {
 
   cardinals: {
     teamName: 'Cardinals',
-
+    teamABV: 'ARI',
     vtt: 22.5,
     def4for4projectedpoints: 5.5,
     teamDefDraftkingsSalary: 2400,
@@ -142,7 +143,7 @@ const gameInfo = {
 
   chargers: {
     teamName: 'Chargers',
-
+    teamABV: 'LAC',
     vtt: 27,
     def4for4projectedpoints: 6.5,
     teamDefDraftkingsSalary: 3900,
@@ -158,7 +159,7 @@ const gameInfo = {
 
   chiefs: {
     teamName: 'Chiefs',
-
+    teamABV: 'KC',
     vtt: 28,
     def4for4projectedpoints: 6.8,
     teamDefDraftkingsSalary: 3700,
@@ -174,7 +175,7 @@ const gameInfo = {
 
   colts: {
     teamName: 'Colts',
-
+    teamABV: 'IND',
     vtt: 22.5,
     def4for4projectedpoints: 4.7,
     teamDefDraftkingsSalary: 2200,
@@ -190,7 +191,7 @@ const gameInfo = {
 
   commanders: {
     teamName: 'Commanders',
-
+    teamABV: 'WAS',
     vtt: 20.25,
     def4for4projectedpoints: 5.1,
     teamDefDraftkingsSalary: 2300,
@@ -206,7 +207,7 @@ const gameInfo = {
 
   cowboys: {
     teamName: 'Cowboys',
-
+    teamABV: 'DAL',
     vtt: 0,
     def4for4projectedpoints: 0,
     teamDefDraftkingsSalary: 0,
@@ -222,6 +223,7 @@ const gameInfo = {
 
   dolphins: {
     teamName: 'Dolphins',
+    teamABV: 'MIA',
 
     vtt: 0,
     def4for4projectedpoints: 5.2,
@@ -238,7 +240,7 @@ const gameInfo = {
 
   eagles: {
     teamName: 'Eagles',
-
+    teamABV: 'PHI',
     vtt: 26.75,
     def4for4projectedpoints: 7.1,
     teamDefDraftkingsSalary: 2900,
@@ -254,7 +256,7 @@ const gameInfo = {
 
   falcons: {
     teamName: 'Falcons',
-
+    teamABV: 'ATL',
     vtt: 21,
     def4for4projectedpoints: 5.8,
     teamDefDraftkingsSalary: 2700,
@@ -270,7 +272,7 @@ const gameInfo = {
 
   giants: {
     teamName: 'Giants',
-
+    teamABV: 'NYG',
     vtt: 0,
     def4for4projectedpoints: 0,
     teamDefDraftkingsSalary: 0,
@@ -286,7 +288,7 @@ const gameInfo = {
 
   jaguars: {
     teamName: 'Jaguars',
-
+    teamABV: 'JAX',
     vtt: 20,
     def4for4projectedpoints: 6.5,
     teamDefDraftkingsSalary: 2300,
@@ -302,7 +304,7 @@ const gameInfo = {
 
   jets: {
     teamName: 'Jets',
-
+    teamABV: 'NYJ',
     vtt: 19.5,
     def4for4projectedpoints: 5.7,
     teamDefDraftkingsSalary: 2400,
@@ -318,7 +320,7 @@ const gameInfo = {
 
   lions: {
     teamName: 'Lions',
-
+    teamABV: 'DET',
     vtt: 23.25,
     def4for4projectedpoints: 5.0,
     teamDefDraftkingsSalary: 2200,
@@ -334,7 +336,7 @@ const gameInfo = {
 
   packers: {
     teamName: 'Packers',
-
+    teamABV: 'GB',
     vtt: 20.5,
     def4for4projectedpoints: 6.1,
     teamDefDraftkingsSalary: 2800,
@@ -350,7 +352,7 @@ const gameInfo = {
 
   panthers: {
     teamName: 'Panthers',
-
+    teamABV: 'CAR',
     vtt: 19.25,
     def4for4projectedpoints: 6.3,
     teamDefDraftkingsSalary: 2600,
@@ -366,7 +368,7 @@ const gameInfo = {
 
   patriots: {
     teamName: 'Patriots',
-
+    teamABV: 'NE',
     vtt: 20.5,
     def4for4projectedpoints: 6.1,
     teamDefDraftkingsSalary: 2500,
@@ -382,7 +384,7 @@ const gameInfo = {
 
   raiders: {
     teamName: 'Raiders',
-
+    teamABV: 'LV',
     vtt: 23.75,
     def4for4projectedpoints: 6.0,
     teamDefDraftkingsSalary: 2500,
@@ -398,7 +400,7 @@ const gameInfo = {
 
   rams: {
     teamName: 'Rams',
-
+    teamABV: 'LAR',
     vtt: 26,
     def4for4projectedpoints: 6.6,
     teamDefDraftkingsSalary: 3400,
@@ -414,7 +416,7 @@ const gameInfo = {
 
   ravens: {
     teamName: 'Ravens',
-
+    teamABV: 'BAL',
     vtt: 23.5,
     def4for4projectedpoints: 6.4,
     teamDefDraftkingsSalary: 3000,
@@ -430,7 +432,7 @@ const gameInfo = {
 
   saints: {
     teamName: 'Saints',
-
+    teamABV: 'NO',
     vtt: 21.75,
     def4for4projectedpoints: 6.9,
     teamDefDraftkingsSalary: 3500,
@@ -446,15 +448,15 @@ const gameInfo = {
 
   seahawks: {
     teamName: 'Seahawks',
+    teamABV: 'SEA',
+    vtt: 0,
+    def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
 
-    vtt: 21,
-    def4for4projectedpoints: 5.9,
-    teamDefDraftkingsSalary: 2700,
-    teamDefFanduelSalary: 3400,
-    teamDefYahooSalary: 16,
-
-    draftkingsProjectedOwnership: 12.5,
-    fanduelProjectedOwnership: 7.5,
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
     percentOfSalaryCapDraftkings: 0,
     percentOfSalaryCapFanduel: 0,
     percentOfSalaryCapYahoo: 0,
@@ -462,9 +464,9 @@ const gameInfo = {
 
   steelers: {
     teamName: 'Steelers',
-
-    vtt: 17,
-    def4for4projectedpoints: 9,
+    teamABV: 'PIT',
+    vtt: 0,
+    def4for4projectedpoints: 0,
     teamDefDraftkingsSalary: 0,
     teamDefFanduelSalary: 0,
     teamDefYahooSalary: 0,
@@ -478,15 +480,15 @@ const gameInfo = {
 
   texans: {
     teamName: 'Texans',
+    teamABV: 'HOU',
+    vtt: 0,
+    def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
 
-    vtt: 18.75,
-    def4for4projectedpoints: 6.0,
-    teamDefDraftkingsSalary: 2600,
-    teamDefFanduelSalary: 3800,
-    teamDefYahooSalary: 16,
-
-    draftkingsProjectedOwnership: 7.5,
-    fanduelProjectedOwnership: 2.5,
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
     percentOfSalaryCapDraftkings: 0,
     percentOfSalaryCapFanduel: 0,
     percentOfSalaryCapYahoo: 0,
@@ -494,7 +496,7 @@ const gameInfo = {
 
   titans: {
     teamName: 'Titans',
-
+    teamABV: 'TEN',
     vtt: 0,
     def4for4projectedpoints: 0,
     teamDefDraftkingsSalary: 0,
@@ -510,6 +512,7 @@ const gameInfo = {
 
   vikings: {
     teamName: 'Vikings',
+    teamABV: 'MIN',
     vtt: 0,
     def4for4projectedpoints: 0,
     teamDefDraftkingsSalary: 3200,
@@ -524,119 +527,119 @@ const gameInfo = {
   },
 }; //closing gameInfo object tag
 
-wholeDownloadableSpreadSheetYahoo.forEach(function (playerobj, i) {
-  // console.log(playerobj);
-  let teamName = '';
-  // console.log(playerobj.PID);
+const populateTeamObjects = function (passedInTeam) {
+  let settingTeamName = '';
+  // console.log(passedInteam);
+  wholeDownloadableSpreadSheetYahoo.forEach(function (object, i) {
+    if (i < qbDownloadableSpreadSheetYahoo.length) {
+      settingTeamName = qbDownloadableSpreadSheetYahoo[i].Team;
+      // console.log(settingTeamName);
+      if (passedInTeam.teamABV === settingTeamName) {
+        passedInTeam.vtt = qbDownloadableSpreadSheetYahoo[i]['Team O/U'];
+      }
+    }
+    if (object.PID === passedInTeam.teamABV) {
+      let projpoints = +object['Y! (Proj)'];
+      passedInTeam.def4for4projectedpoints = projpoints;
+    }
+  });
 
-  if (i < qbDownloadableSpreadSheetYahoo.length) {
-    teamName = qbDownloadableSpreadSheetYahoo[i].Team;
-    // console.log(teamName);
-  }
+  wholePlayerPricingWithPercentOfCapDraftkings.forEach(function (teamObj) {
+    let tempTeamName = '';
 
-  if (teamName === 'TEN' || playerobj.PID === 'TEN') {
-    if (qbDownloadableSpreadSheetYahoo[i]) {
-      let teamVTT = +qbDownloadableSpreadSheetYahoo[i]['Team O/U'];
-      gameInfo.titans.vtt = teamVTT;
+    if (teamObj['"Team"'].length === 5) {
+      tempTeamName = teamObj['"Team"'].slice(1, 4);
+    } else {
+      tempTeamName = teamObj['"Team"'].slice(1, 3);
     }
 
-    if (playerobj.PID === 'TEN') {
-      // console.log(playerobj['Y! (Proj)']);
-      let projpoints = +playerobj['Y! (Proj)'];
-      gameInfo.titans.def4for4projectedpoints = projpoints;
-      // console.log(playerobj);
+    if (
+      passedInTeam.teamABV === tempTeamName &&
+      teamObj['"Position"'] === '"DEF"'
+    ) {
+      draftkingssalary = +teamObj['"Current $"'].slice(1, 5);
+      passedInTeam.teamDefDraftkingsSalary = draftkingssalary;
+      let dkPercentOfCap = +teamObj['"% of Cap"'].slice(1, 5);
+      passedInTeam.percentOfSalaryCapDraftkings = dkPercentOfCap;
+    }
+  });
+
+  wholePlayerPricingWithPercentOfCapFanduel.forEach(function (teamObj) {
+    let tempTeamName = '';
+
+    if (teamObj['"Team"'].length === 5) {
+      tempTeamName = teamObj['"Team"'].slice(1, 4);
+    } else {
+      tempTeamName = teamObj['"Team"'].slice(1, 3);
     }
 
-    wholePlayerPricingWithPercentOfCapDraftkings.forEach(function (teamObj) {
-      let tempTeamName = '';
-      // console.log(teamObj['"Tm"'].length);
-      if (teamObj['"Team"'].length === 5) {
-        tempTeamName = teamObj['"Team"'].slice(1, 4);
-      } else {
-        tempTeamName = teamObj['"Team"'].slice(1, 3);
-      }
+    if (
+      passedInTeam.teamABV === tempTeamName &&
+      teamObj['"Position"'] === '"DEF"'
+    ) {
+      fanduelsalary = +teamObj['"Current $"'].slice(1, 5);
+      passedInTeam.teamDefFanduelSalary = fanduelsalary;
+      let fdPercentOfCap = +teamObj['"% of Cap"'].slice(1, 5);
+      passedInTeam.percentOfSalaryCapFanduel = fdPercentOfCap;
+    }
+  });
 
-      if (tempTeamName === 'TEN') {
-        if (teamObj['"Position"'] === '"DEF"') {
-          draftkingssalary = +teamObj['"Current $"'].slice(1, 5);
-          gameInfo.titans.teamDefDraftkingsSalary = draftkingssalary;
-          let dkPercentOfCap = +teamObj['"% of Cap"'].slice(1, 5);
-          gameInfo.titans.percentOfSalaryCapDraftkings = dkPercentOfCap;
-        }
-      }
-    });
+  wholePlayerPricingWithPercntOfCapYahoo.forEach(function (teamObj) {
+    let tempTeamName = '';
 
-    wholePlayerPricingWithPercentOfCapFanduel.forEach(function (teamObj) {
-      let tempTeamName = '';
-      // console.log(teamObj['"Tm"'].length);
-      if (teamObj['"Team"'].length === 5) {
-        tempTeamName = teamObj['"Team"'].slice(1, 4);
-      } else {
-        tempTeamName = teamObj['"Team"'].slice(1, 3);
-      }
+    if (teamObj['"Team"'].length === 5) {
+      tempTeamName = teamObj['"Team"'].slice(1, 4);
+    } else {
+      tempTeamName = teamObj['"Team"'].slice(1, 3);
+    }
 
-      if (tempTeamName === 'TEN') {
-        if (teamObj['"Position"'] === '"DEF"');
+    if (
+      passedInTeam.teamABV === tempTeamName &&
+      teamObj['"Position"'] === '"DEF"'
+    ) {
+      Yahoosalary = +teamObj['"Current $"'].slice(1, 3);
+      passedInTeam.teamDefYahooSalary = Yahoosalary;
+      let yahooPercentOfCap = +teamObj['"% of Cap"'].slice(1, 5);
+      passedInTeam.percentOfSalaryCapYahoo = yahooPercentOfCap;
+    }
+  });
 
-        Fanduelsalary = +teamObj['"Current $"'].slice(1, 5);
-        gameInfo.titans.teamDefFanduelSalary = Fanduelsalary;
-        let fdPercentOfCap = +teamObj['"% of Cap"'].slice(1, 5);
-        gameInfo.titans.percentOfSalaryCapFanduel = fdPercentOfCap;
-      }
-    });
+  gppLeverageScoresAndProjOwnershipDraftkings.forEach(function (teamObj) {
+    let tempTeamName = '';
+    // console.log(teamObj['"Tm"'].length);
+    if (teamObj['"Tm"'].length === 5) {
+      tempTeamName = teamObj['"Tm"'].slice(1, 4);
+    } else {
+      tempTeamName = teamObj['"Tm"'].slice(1, 3);
+    }
 
-    wholePlayerPricingWithPercntOfCapYahoo.forEach(function (teamObj) {
-      let tempTeamName = '';
-      // console.log(teamObj['"Tm"'].length);
-      if (teamObj['"Team"'].length === 5) {
-        tempTeamName = teamObj['"Team"'].slice(1, 4);
-      } else {
-        tempTeamName = teamObj['"Team"'].slice(1, 3);
-      }
+    if (tempTeamName === passedInTeam.teamABV && teamObj['"Pos"'] === '"DEF"') {
+      dkOwnership = +teamObj['"Projected Own%"'].slice(1, 4);
+      passedInTeam.draftkingsProjectedOwnership = dkOwnership;
+    }
+  });
 
-      if (tempTeamName === 'TEN') {
-        if (teamObj['"Position"'] === '"DEF"');
+  gppLeverageScoresAndProjOwnershipFanduel.forEach(function (teamObj) {
+    let tempTeamName = '';
+    // console.log(teamObj['"Tm"'].length);
+    if (teamObj['"Tm"'].length === 5) {
+      tempTeamName = teamObj['"Tm"'].slice(1, 4);
+    } else {
+      tempTeamName = teamObj['"Tm"'].slice(1, 3);
+    }
 
-        yahoosalary = +teamObj['"Current $"'].slice(1, 3);
-        gameInfo.titans.teamDefYahooSalary = yahoosalary;
-        let yahooPercentOfCap = +teamObj['"% of Cap"'].slice(1, 5);
-        gameInfo.titans.percentOfSalaryCapYahoo = yahooPercentOfCap;
-      }
-    });
+    if (tempTeamName === passedInTeam.teamABV && teamObj['"Pos"'] === '"DEF"') {
+      fdOwnership = +teamObj['"Projected Own%"'].slice(1, 4);
+      passedInTeam.fanduelProjectedOwnership = fdOwnership;
+    }
+  });
+};
 
-    gppLeverageScoresAndProjOwnershipDraftkings.forEach(function (teamObj) {
-      let tempTeamName = '';
-      // console.log(teamObj['"Tm"'].length);
-      if (teamObj['"Tm"'].length === 5) {
-        tempTeamName = teamObj['"Tm"'].slice(1, 4);
-      } else {
-        tempTeamName = teamObj['"Tm"'].slice(1, 3);
-      }
-
-      if (tempTeamName === 'TEN' && teamObj['"Pos"'] === '"DEF"') {
-        dkOwnership = +teamObj['"Projected Own%"'].slice(1, 4);
-        gameInfo.titans.draftkingsProjectedOwnership = dkOwnership;
-      }
-    });
-
-    gppLeverageScoresAndProjOwnershipFanduel.forEach(function (teamObj) {
-      let tempTeamName = '';
-      // console.log(teamObj['"Tm"'].length);
-      if (teamObj['"Tm"'].length === 5) {
-        tempTeamName = teamObj['"Tm"'].slice(1, 4);
-      } else {
-        tempTeamName = teamObj['"Tm"'].slice(1, 3);
-      }
-
-      if (tempTeamName === 'TEN' && teamObj['"Pos"'] === '"DEF"') {
-        fdOwnership = +teamObj['"Projected Own%"'].slice(1, 4);
-        gameInfo.titans.fanduelProjectedOwnership = fdOwnership;
-      }
-    });
-  }
-});
-
-console.log(gameInfo.titans);
-// console.log(gameInfo.SF49ers);
+populateTeamObjects(gameInfo.SF49ers);
+populateTeamObjects(gameInfo.texans);
+populateTeamObjects(gameInfo.seahawks);
+console.log(gameInfo.SF49ers);
+console.log(gameInfo.texans);
+console.log(gameInfo.seahawks);
 
 module.exports = gameInfo;
