@@ -2,6 +2,7 @@
 *process for getting, converting, naming, changing, exporting, and importing 4for4 CSV's:
 
 *what stats do I need for each position and where do I get them from:
+
   team(gameInfo):
     vtt- get from qbDownloadableSpreadSheetYahoo file  made from Downloadable SpreadSheet Yahoo FOR ALL GAMES OF THE WEEK NOT JUST MAIN SLATE CSV.
 
@@ -29,6 +30,10 @@
     vtt- get from qbDownloadableSpreadSheetDraftkings file  made from Downloadable SpreadSheet Draftkings FOR ALL GAMES OF THE WEEK NOT JUST MAIN SLATE CSV
 
     name- get from qbDownloadableSpreadSheetDraftkings file  made from Downloadable SpreadSheet Draftkings FOR ALL GAMES OF THE WEEK NOT JUST MAIN SLATE CSV
+
+    fourForFourHalfPPRProjectedPoints- get from allHalfPPRProjectedPointsWithoutTeamDef file made from HALF PPR weekly rankings CSV
+
+    fourForFourFullPPRProjectedPoints- get from allFullPPRProjectedPointsWithoutTeamDef file made from FULL PPR weekly rankings CSV
 
 
 
@@ -66,18 +71,29 @@
             -wholePlayerPricingWithPercentOfCapYahoo 
             -may need to do the above one at individual positions as well but don't know yet
 
-        g) draftkings/fanduel ownership projections or the leverage scores for both draftkings
-            and fanduel. not sure which is going to be better yet.
+        g) gppLeverageScoresAndProjOwnershipDraftkings
 
-        H) ?
+        H) gppLeverageScoresAndProjOwnershipFandeul
 
-    2) convert each CSV to JSON and rename to the following (letters match the above): 
-        a) 
+        I) gppLeverageScoresAndProjOwnershipYahoo
 
-*which propeties I am using from which CSV's, and what raw files to import which into for use:
+        J) allHalfPPRProjectedPointsWithoutTeamDef
 
-    1) use CSV's from 4for4 Downloadable Spreadsheet with Projections & DFS Site Salaries page to get:
-            a)
+        K) allFullPPRProjectedPointsWithoutTeamDef
 
-    2) use CSV from 4for4 player pricing page for each site to get:
-   a) all players % of cap number on each site 
+    
+  properties in raw data files I currently need to hardcode myself:
+
+  gameInfo:
+    -def4for4projectedpoints for teams not on main slate. console.log(gameInfo) after downloading and copt pasting all CSV's for the week and hard code the teams that have a zero for def4for4projectedpoints
+
+ qbrawdata:
+    -slate: for each team which slate they play on that week
+
+ rbrawdata:
+
+ wrrawdata: 
+
+ terawdata:
+
+

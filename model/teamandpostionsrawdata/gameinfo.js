@@ -14,9 +14,8 @@ const gameInfo = {
   SF49ers: {
     teamName: '49ers',
     teamABV: 'SF',
-    slate: 'night',
     vtt: 0,
-    def4for4projectedpoints: 6.5,
+    def4for4projectedpoints: 0,
     teamDefDraftkingsSalary: 0,
     teamDefFanduelSalary: 0,
     teamDefYahooSalary: 0,
@@ -31,15 +30,14 @@ const gameInfo = {
   bears: {
     teamName: 'Bears',
     teamABV: 'CHI',
-    slate: 'night',
-    vtt: 21.25,
-    def4for4projectedpoints: 6.2,
-    teamDefDraftkingsSalary: 3800,
-    teamDefFanduelSalary: 4900,
-    teamDefYahooSalary: 17,
+    vtt: 0,
+    def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
 
-    draftkingsProjectedOwnership: 1,
-    fanduelProjectedOwnership: 2.5,
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
     percentOfSalaryCapDraftkings: 0,
     percentOfSalaryCapFanduel: 0,
     percentOfSalaryCapYahoo: 0,
@@ -48,14 +46,14 @@ const gameInfo = {
   bengals: {
     teamName: 'Bengals',
     teamABV: 'CIN',
-    vtt: 25.25,
-    def4for4projectedpoints: 7.1,
-    teamDefDraftkingsSalary: 3600,
-    teamDefFanduelSalary: 3600,
-    teamDefYahooSalary: 12,
+    vtt: 0,
+    def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
 
-    draftkingsProjectedOwnership: 2.5,
-    fanduelProjectedOwnership: 12.5,
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
     percentOfSalaryCapDraftkings: 0,
     percentOfSalaryCapFanduel: 0,
     percentOfSalaryCapYahoo: 0,
@@ -64,14 +62,14 @@ const gameInfo = {
   bills: {
     teamName: 'Bills',
     teamABV: 'BUF',
-    vtt: 29,
-    def4for4projectedpoints: 6.8,
-    teamDefDraftkingsSalary: 3500,
-    teamDefFanduelSalary: 4600,
-    teamDefYahooSalary: 18,
+    vtt: 0,
+    def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
 
-    draftkingsProjectedOwnership: 2.5,
-    fanduelProjectedOwnership: 2.5,
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
     percentOfSalaryCapDraftkings: 0,
     percentOfSalaryCapFanduel: 0,
     percentOfSalaryCapYahoo: 0,
@@ -112,14 +110,14 @@ const gameInfo = {
   buccaneers: {
     teamName: 'Buccaneers',
     teamABV: 'TB',
-    vtt: 21.5,
-    def4for4projectedpoints: 6.4,
-    teamDefDraftkingsSalary: 3100,
-    teamDefFanduelSalary: 4700,
-    teamDefYahooSalary: 17,
+    vtt: 0,
+    def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
 
-    draftkingsProjectedOwnership: 2.5,
-    fanduelProjectedOwnership: 2.5,
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
     percentOfSalaryCapDraftkings: 0,
     percentOfSalaryCapFanduel: 0,
     percentOfSalaryCapYahoo: 0,
@@ -128,14 +126,14 @@ const gameInfo = {
   cardinals: {
     teamName: 'Cardinals',
     teamABV: 'ARI',
-    vtt: 22.5,
-    def4for4projectedpoints: 5.5,
-    teamDefDraftkingsSalary: 2400,
-    teamDefFanduelSalary: 3000,
-    teamDefYahooSalary: 12,
+    vtt: 0,
+    def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
 
-    draftkingsProjectedOwnership: 1,
-    fanduelProjectedOwnership: 17.5,
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
     percentOfSalaryCapDraftkings: 0,
     percentOfSalaryCapFanduel: 0,
     percentOfSalaryCapYahoo: 0,
@@ -144,14 +142,14 @@ const gameInfo = {
   chargers: {
     teamName: 'Chargers',
     teamABV: 'LAC',
-    vtt: 27,
-    def4for4projectedpoints: 6.5,
-    teamDefDraftkingsSalary: 3900,
-    teamDefFanduelSalary: 4500,
-    teamDefYahooSalary: 18,
+    vtt: 0,
+    def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
 
-    draftkingsProjectedOwnership: 2.5,
-    fanduelProjectedOwnership: 2.5,
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
     percentOfSalaryCapDraftkings: 0,
     percentOfSalaryCapFanduel: 0,
     percentOfSalaryCapYahoo: 0,
@@ -160,11 +158,11 @@ const gameInfo = {
   chiefs: {
     teamName: 'Chiefs',
     teamABV: 'KC',
-    vtt: 28,
-    def4for4projectedpoints: 6.8,
-    teamDefDraftkingsSalary: 3700,
-    teamDefFanduelSalary: 4100,
-    teamDefYahooSalary: 14,
+    vtt: 0,
+    def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
@@ -176,11 +174,11 @@ const gameInfo = {
   colts: {
     teamName: 'Colts',
     teamABV: 'IND',
-    vtt: 22.5,
-    def4for4projectedpoints: 4.7,
-    teamDefDraftkingsSalary: 2200,
-    teamDefFanduelSalary: 3600,
-    teamDefYahooSalary: 12,
+    vtt: 0,
+    def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
@@ -192,14 +190,14 @@ const gameInfo = {
   commanders: {
     teamName: 'Commanders',
     teamABV: 'WAS',
-    vtt: 20.25,
-    def4for4projectedpoints: 5.1,
-    teamDefDraftkingsSalary: 2300,
-    teamDefFanduelSalary: 3500,
-    teamDefYahooSalary: 10,
+    vtt: 0,
+    def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
 
-    draftkingsProjectedOwnership: 1,
-    fanduelProjectedOwnership: 2.5,
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
     percentOfSalaryCapDraftkings: 0,
     percentOfSalaryCapFanduel: 0,
     percentOfSalaryCapYahoo: 0,
@@ -226,13 +224,13 @@ const gameInfo = {
     teamABV: 'MIA',
 
     vtt: 0,
-    def4for4projectedpoints: 5.2,
-    teamDefDraftkingsSalary: 2200,
-    teamDefFanduelSalary: 3500,
-    teamDefYahooSalary: 10,
+    def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
 
-    draftkingsProjectedOwnership: 1,
-    fanduelProjectedOwnership: 1,
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
     percentOfSalaryCapDraftkings: 0,
     percentOfSalaryCapFanduel: 0,
     percentOfSalaryCapYahoo: 0,
@@ -241,14 +239,14 @@ const gameInfo = {
   eagles: {
     teamName: 'Eagles',
     teamABV: 'PHI',
-    vtt: 26.75,
-    def4for4projectedpoints: 7.1,
-    teamDefDraftkingsSalary: 2900,
-    teamDefFanduelSalary: 4000,
-    teamDefYahooSalary: 13,
+    vtt: 0,
+    def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
 
-    draftkingsProjectedOwnership: 7.5,
-    fanduelProjectedOwnership: 7.5,
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
     percentOfSalaryCapDraftkings: 0,
     percentOfSalaryCapFanduel: 0,
     percentOfSalaryCapYahoo: 0,
@@ -257,14 +255,14 @@ const gameInfo = {
   falcons: {
     teamName: 'Falcons',
     teamABV: 'ATL',
-    vtt: 21,
-    def4for4projectedpoints: 5.8,
-    teamDefDraftkingsSalary: 2700,
-    teamDefFanduelSalary: 3700,
-    teamDefYahooSalary: 14,
+    vtt: 0,
+    def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
 
-    draftkingsProjectedOwnership: 2.5,
-    fanduelProjectedOwnership: 2.5,
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
     percentOfSalaryCapDraftkings: 0,
     percentOfSalaryCapFanduel: 0,
     percentOfSalaryCapYahoo: 0,
@@ -289,14 +287,14 @@ const gameInfo = {
   jaguars: {
     teamName: 'Jaguars',
     teamABV: 'JAX',
-    vtt: 20,
-    def4for4projectedpoints: 6.5,
-    teamDefDraftkingsSalary: 2300,
-    teamDefFanduelSalary: 3200,
-    teamDefYahooSalary: 11,
+    vtt: 0,
+    def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
 
-    draftkingsProjectedOwnership: 1,
-    fanduelProjectedOwnership: 1,
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
     percentOfSalaryCapDraftkings: 0,
     percentOfSalaryCapFanduel: 0,
     percentOfSalaryCapYahoo: 0,
@@ -305,14 +303,14 @@ const gameInfo = {
   jets: {
     teamName: 'Jets',
     teamABV: 'NYJ',
-    vtt: 19.5,
-    def4for4projectedpoints: 5.7,
-    teamDefDraftkingsSalary: 2400,
-    teamDefFanduelSalary: 3700,
-    teamDefYahooSalary: 14,
+    vtt: 0,
+    def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
 
-    draftkingsProjectedOwnership: 7.5,
-    fanduelProjectedOwnership: 2.5,
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
     percentOfSalaryCapDraftkings: 0,
     percentOfSalaryCapFanduel: 0,
     percentOfSalaryCapYahoo: 0,
@@ -321,14 +319,14 @@ const gameInfo = {
   lions: {
     teamName: 'Lions',
     teamABV: 'DET',
-    vtt: 23.25,
-    def4for4projectedpoints: 5.0,
-    teamDefDraftkingsSalary: 2200,
-    teamDefFanduelSalary: 3100,
-    teamDefYahooSalary: 10,
+    vtt: 0,
+    def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
 
-    draftkingsProjectedOwnership: 2.5,
-    fanduelProjectedOwnership: 2.5,
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
     percentOfSalaryCapDraftkings: 0,
     percentOfSalaryCapFanduel: 0,
     percentOfSalaryCapYahoo: 0,
@@ -337,14 +335,14 @@ const gameInfo = {
   packers: {
     teamName: 'Packers',
     teamABV: 'GB',
-    vtt: 20.5,
-    def4for4projectedpoints: 6.1,
-    teamDefDraftkingsSalary: 2800,
-    teamDefFanduelSalary: 4000,
-    teamDefYahooSalary: 10,
+    vtt: 0,
+    def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
 
-    draftkingsProjectedOwnership: 7.5,
-    fanduelProjectedOwnership: 1,
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
     percentOfSalaryCapDraftkings: 0,
     percentOfSalaryCapFanduel: 0,
     percentOfSalaryCapYahoo: 0,
@@ -353,14 +351,14 @@ const gameInfo = {
   panthers: {
     teamName: 'Panthers',
     teamABV: 'CAR',
-    vtt: 19.25,
-    def4for4projectedpoints: 6.3,
-    teamDefDraftkingsSalary: 2600,
-    teamDefFanduelSalary: 3900,
-    teamDefYahooSalary: 10,
+    vtt: 0,
+    def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
 
-    draftkingsProjectedOwnership: 7.5,
-    fanduelProjectedOwnership: 7.5,
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
     percentOfSalaryCapDraftkings: 0,
     percentOfSalaryCapFanduel: 0,
     percentOfSalaryCapYahoo: 0,
@@ -369,14 +367,14 @@ const gameInfo = {
   patriots: {
     teamName: 'Patriots',
     teamABV: 'NE',
-    vtt: 20.5,
-    def4for4projectedpoints: 6.1,
-    teamDefDraftkingsSalary: 2500,
-    teamDefFanduelSalary: 3300,
-    teamDefYahooSalary: 12,
+    vtt: 0,
+    def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
 
-    draftkingsProjectedOwnership: 7.5,
-    fanduelProjectedOwnership: 7.5,
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
     percentOfSalaryCapDraftkings: 0,
     percentOfSalaryCapFanduel: 0,
     percentOfSalaryCapYahoo: 0,
@@ -385,14 +383,14 @@ const gameInfo = {
   raiders: {
     teamName: 'Raiders',
     teamABV: 'LV',
-    vtt: 23.75,
-    def4for4projectedpoints: 6.0,
-    teamDefDraftkingsSalary: 2500,
-    teamDefFanduelSalary: 3400,
-    teamDefYahooSalary: 10,
+    vtt: 0,
+    def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
 
-    draftkingsProjectedOwnership: 17.5,
-    fanduelProjectedOwnership: 12.5,
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
     percentOfSalaryCapDraftkings: 0,
     percentOfSalaryCapFanduel: 0,
     percentOfSalaryCapYahoo: 0,
@@ -401,14 +399,14 @@ const gameInfo = {
   rams: {
     teamName: 'Rams',
     teamABV: 'LAR',
-    vtt: 26,
-    def4for4projectedpoints: 6.6,
-    teamDefDraftkingsSalary: 3400,
-    teamDefFanduelSalary: 4200,
-    teamDefYahooSalary: 16,
+    vtt: 0,
+    def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
 
-    draftkingsProjectedOwnership: 1,
-    fanduelProjectedOwnership: 2.5,
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
     percentOfSalaryCapDraftkings: 0,
     percentOfSalaryCapFanduel: 0,
     percentOfSalaryCapYahoo: 0,
@@ -417,14 +415,14 @@ const gameInfo = {
   ravens: {
     teamName: 'Ravens',
     teamABV: 'BAL',
-    vtt: 23.5,
-    def4for4projectedpoints: 6.4,
-    teamDefDraftkingsSalary: 3000,
-    teamDefFanduelSalary: 5000,
-    teamDefYahooSalary: 20,
+    vtt: 0,
+    def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
 
-    draftkingsProjectedOwnership: 2.5,
-    fanduelProjectedOwnership: 1,
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
     percentOfSalaryCapDraftkings: 0,
     percentOfSalaryCapFanduel: 0,
     percentOfSalaryCapYahoo: 0,
@@ -433,14 +431,14 @@ const gameInfo = {
   saints: {
     teamName: 'Saints',
     teamABV: 'NO',
-    vtt: 21.75,
-    def4for4projectedpoints: 6.9,
-    teamDefDraftkingsSalary: 3500,
-    teamDefFanduelSalary: 4300,
-    teamDefYahooSalary: 15,
+    vtt: 0,
+    def4for4projectedpoints: 0,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
 
-    draftkingsProjectedOwnership: 2.5,
-    fanduelProjectedOwnership: 2.5,
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
     percentOfSalaryCapDraftkings: 0,
     percentOfSalaryCapFanduel: 0,
     percentOfSalaryCapYahoo: 0,
@@ -515,12 +513,12 @@ const gameInfo = {
     teamABV: 'MIN',
     vtt: 0,
     def4for4projectedpoints: 0,
-    teamDefDraftkingsSalary: 3200,
-    teamDefFanduelSalary: 4800,
-    teamDefYahooSalary: 18,
+    teamDefDraftkingsSalary: 0,
+    teamDefFanduelSalary: 0,
+    teamDefYahooSalary: 0,
 
-    draftkingsProjectedOwnership: 2.5,
-    fanduelProjectedOwnership: 1,
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
     percentOfSalaryCapDraftkings: 0,
     percentOfSalaryCapFanduel: 0,
     percentOfSalaryCapYahoo: 0,
@@ -535,11 +533,15 @@ const populateTeamObjects = function (passedInTeam) {
       settingTeamName = qbDownloadableSpreadSheetYahoo[i].Team;
       // console.log(settingTeamName);
       if (passedInTeam.teamABV === settingTeamName) {
+        // console.log(
+        //   `${passedInTeam.teamABV}: ${qbDownloadableSpreadSheetYahoo[i]['Team O/U']}`
+        // );
         passedInTeam.vtt = qbDownloadableSpreadSheetYahoo[i]['Team O/U'];
       }
     }
     if (object.PID === passedInTeam.teamABV) {
       let projpoints = +object['Y! (Proj)'];
+      // console.log(`${passedInTeam.teamABV}: ${projpoints}`);
       passedInTeam.def4for4projectedpoints = projpoints;
     }
   });
@@ -636,10 +638,38 @@ const populateTeamObjects = function (passedInTeam) {
 };
 
 populateTeamObjects(gameInfo.SF49ers);
-populateTeamObjects(gameInfo.texans);
+populateTeamObjects(gameInfo.bears);
+populateTeamObjects(gameInfo.bengals);
+populateTeamObjects(gameInfo.bills);
+populateTeamObjects(gameInfo.broncos);
+populateTeamObjects(gameInfo.browns);
+populateTeamObjects(gameInfo.buccaneers);
+populateTeamObjects(gameInfo.cardinals);
+populateTeamObjects(gameInfo.chargers);
+populateTeamObjects(gameInfo.chiefs);
+populateTeamObjects(gameInfo.colts);
+populateTeamObjects(gameInfo.commanders);
+populateTeamObjects(gameInfo.cowboys);
+populateTeamObjects(gameInfo.dolphins);
+populateTeamObjects(gameInfo.eagles);
+populateTeamObjects(gameInfo.falcons);
+populateTeamObjects(gameInfo.giants);
+populateTeamObjects(gameInfo.jaguars);
+populateTeamObjects(gameInfo.jets);
+populateTeamObjects(gameInfo.lions);
+populateTeamObjects(gameInfo.packers);
+populateTeamObjects(gameInfo.panthers);
+populateTeamObjects(gameInfo.patriots);
+populateTeamObjects(gameInfo.raiders);
+populateTeamObjects(gameInfo.rams);
+populateTeamObjects(gameInfo.ravens);
+populateTeamObjects(gameInfo.saints);
 populateTeamObjects(gameInfo.seahawks);
-console.log(gameInfo.SF49ers);
-console.log(gameInfo.texans);
-console.log(gameInfo.seahawks);
+populateTeamObjects(gameInfo.steelers);
+populateTeamObjects(gameInfo.texans);
+populateTeamObjects(gameInfo.titans);
+populateTeamObjects(gameInfo.vikings);
+
+// console.log(gameInfo);
 
 module.exports = gameInfo;

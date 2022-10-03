@@ -1,4 +1,12 @@
+const wholeDownloadableSpreadSheetYahoo = require('../datafilesmadefrom4for4CSVs/Yahoo/wholeDownloadableSpreadSheetYahoo');
 const qbDownloadableSpreadSheetYahoo = require('../datafilesmadefrom4for4CSVs/Yahoo/qbDownloadableSpreadSheetYahoo');
+const wholePlayerPricingWithPercentOfCapDraftkings = require('../datafilesmadefrom4for4CSVs/draftkings/wholePlayerPricingWithPercentOfCapDraftkings');
+const wholePlayerPricingWithPercentOfCapFanduel = require('../datafilesmadefrom4for4CSVs/Fanduel/wholePlayerPricingWithPercentOfCapFanduel');
+const wholePlayerPricingWithPercntOfCapYahoo = require('../datafilesmadefrom4for4CSVs/Yahoo/wholePlayerPricingWithPercentOfCapYahoo');
+const gppLeverageScoresAndProjOwnershipDraftkings = require('../datafilesmadefrom4for4CSVs/draftkings/gppLeverageScoresAndProjOwnershipDraftkings');
+const gppLeverageScoresAndProjOwnershipFanduel = require('../datafilesmadefrom4for4CSVs/Fanduel/gppLeverageScoresAndProjOwnershipFanduel');
+const allHalfPPRProjectedPointsWithoutTeamDef = require('../datafilesmadefrom4for4CSVs/allHalfPPRProjectedPointsWithoutTeamDef');
+const allFullPPRProjectedPointsWithoutTeamDef = require('../datafilesmadefrom4for4CSVs/allFullPPRProjectedPointsWithoutTeamDef');
 
 //QB TDrate is TD's/pass attempts
 
@@ -144,6 +152,7 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   browns: {
+    slate: 'main',
     teamVTT: 0,
     name: 'Baker Mayfield',
     roleThisWeek: 1,
@@ -172,6 +181,7 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   buccaneers: {
+    slate: 'main',
     teamVTT: 27.25,
     name: 'Tom Brady',
     roleThisWeek: 1,
@@ -200,6 +210,7 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   commanders: {
+    slate: 'main',
     teamVTT: 25.5,
     name: 'Carson Wentz',
     roleThisWeek: 1,
@@ -228,6 +239,7 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   cardinals: {
+    slate: 'main',
     teamVTT: 25.5,
     name: 'Kyler Murray',
     roleThisWeek: 1,
@@ -256,6 +268,7 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   chargers: {
+    slate: 'main',
     teamVTT: 29,
     name: 'Justin Herbert',
     roleThisWeek: 1,
@@ -284,6 +297,7 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   chiefs: {
+    slate: 'main',
     teamVTT: 27.5,
     name: 'Mahomes',
     roleThisWeek: 1,
@@ -312,6 +326,7 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   colts: {
+    slate: 'main',
     teamVTT: 0,
     name: 'Placeholder',
     roleThisWeek: 1,
@@ -340,6 +355,7 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   comanders: {
+    slate: 'main',
     teamVTT: 0,
     name: 'Placeholder',
     roleThisWeek: 1,
@@ -368,6 +384,7 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   cowboys: {
+    slate: 'main',
     teamVTT: 0,
     name: 'Placeholder',
     roleThisWeek: 1,
@@ -396,6 +413,7 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   dolphins: {
+    slate: 'main',
     teamVTT: 20.25,
     name: 'Tagovailoa',
     roleThisWeek: 1,
@@ -424,6 +442,7 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   eagles: {
+    slate: 'main',
     teamVTT: 0,
     name: 'Jalen Hurts',
     roleThisWeek: 1,
@@ -452,6 +471,7 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   falcons: {
+    slate: 'main',
     teamVTT: 0,
     name: 'Placeholder',
     roleThisWeek: 1,
@@ -480,6 +500,7 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   giants: {
+    slate: 'main',
     teamVTT: 0,
     name: 'Placeholder',
     roleThisWeek: 1,
@@ -508,6 +529,7 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   jaguars: {
+    slate: 'main',
     teamVTT: 20.25,
     name: 'Lawrence',
     roleThisWeek: 1,
@@ -536,6 +558,7 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   jets: {
+    slate: 'main',
     teamVTT: 15,
     name: 'Wilson',
     roleThisWeek: 1,
@@ -564,6 +587,7 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   lions: {
+    slate: 'main',
     teamVTT: 0,
     name: 'Placeholder',
     roleThisWeek: 1,
@@ -592,6 +616,7 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   packers: {
+    slate: 'main',
     teamVTT: 0,
     name: 'Placeholder',
     roleThisWeek: 1,
@@ -620,6 +645,7 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   panthers: {
+    slate: 'main',
     teamVTT: 0,
     name: 'Placeholder',
     roleThisWeek: 1,
@@ -648,6 +674,7 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   patriots: {
+    slate: 'main',
     teamVTT: 0,
     name: 'Placeholder',
     roleThisWeek: 1,
@@ -676,6 +703,7 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   raiders: {
+    slate: 'main',
     teamVTT: 0,
     name: 'Placeholder',
     roleThisWeek: 1,
@@ -704,6 +732,7 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   rams: {
+    slate: 'main',
     teamVTT: 0,
     name: 'Placeholder',
     roleThisWeek: 1,
@@ -732,6 +761,7 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   ravens: {
+    slate: 'main',
     teamVTT: 18.25,
     name: 'Huntley',
     roleThisWeek: 1,
@@ -760,6 +790,7 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   saints: {
+    slate: 'main',
     teamVTT: 17.25,
     name: 'Hill',
     roleThisWeek: 1,
@@ -788,6 +819,7 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   seahawks: {
+    slate: 'main',
     teamVTT: 0,
     name: 'Placeholder',
     roleThisWeek: 1,
@@ -816,6 +848,7 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   steelers: {
+    slate: 'main',
     teamVTT: 17,
     name: '',
     roleThisWeek: 1,
@@ -844,6 +877,7 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   texans: {
+    slate: 'main',
     teamVTT: 0,
     name: 'Placeholder',
     roleThisWeek: 1,
@@ -872,6 +906,7 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   titans: {
+    slate: 'main',
     teamVTT: 0,
     name: 'Placeholder',
     roleThisWeek: 1,
@@ -900,6 +935,7 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   vikings: {
+    slate: 'main',
     teamVTT: 0,
     name: 'Placeholder',
     roleThisWeek: 1,
