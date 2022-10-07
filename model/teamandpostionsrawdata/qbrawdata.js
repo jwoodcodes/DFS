@@ -935,7 +935,6 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   vikings: {
-    slate: 'main',
     teamVTT: 0,
     name: 'Placeholder',
     roleThisWeek: 1,

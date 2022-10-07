@@ -1,13 +1,14 @@
 .sitename__container {
   font-size: 3.5rem;
   margin-bottom: 6rem;
+  margin-top: 3rem;
 }
 
 .siteName {
   /* display: flex;
   justify-content: space-around; */
   width: 80%;
-  margin-left: auto;
+  margin-left: 12vw;
   margin-right: auto;
 
   /* display: grid;
@@ -26,9 +27,10 @@
 
 .homepage__spacer {
   background-image: linear-gradient(to right bottom, #3e1f47, #065a60);
-  width: 5vw;
+  width: 8vw;
   height: 2vh;
   align-self: flex-end;
+
   border-radius: 3rem;
 }
 
@@ -57,11 +59,6 @@
   height: 60vh;
 }
 
-.card_container--homepage:hover {
-  transition: all 0.5s;
-  height: 65vh;
-}
-
 .card__item {
   margin-bottom: 5rem;
   color: #f4f1de;
@@ -81,21 +78,27 @@
   background-image: linear-gradient(to right bottom, #212f45, #3e1f47);
 }
 
+.card__item--dfshomepage:hover,
+.card__item--dynastyhomepage:hover {
+  transform: scale(1.025);
+  box-shadow: 3.5px 5.5px 5.5px rgba(#000, 0.9);
+}
+
 .card__item--dynastyhomepage {
   background-image: linear-gradient(to right bottom, #065a60, #212f45);
 }
 
-.nav__container {
-  display: flex;
-  justify-content: space-evenly;
-  align-content: stretch;
+.navitem__home {
+  color: #fff;
+  font-size: 2.7rem;
+  padding: 0.5rem;
+  cursor: default;
 }
 
-.nav__item {
-  list-style-type: none;
-  font-size: 2rem;
-  padding: 1.5rem;
-  margin-bottom: 2rem;
+.navitem__home:hover {
+  transform: scale(1.125);
+  box-shadow: 3.5px 5.5px 5.5px rgba(#000, 0.6);
+  font-weight: 500;
 }
 
 .footer {

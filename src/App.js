@@ -1,11 +1,10 @@
 import './App.css';
-import Nav from './components/nav';
 import Card from './components/card';
+import NavItem from './components/navItem';
 
 function App() {
   return (
     <div className="App">
-      <Nav />
       <div className="sitename__container">
         <h1 className="siteName">
           <div className="homepage__daily">Daily</div>
@@ -21,16 +20,36 @@ function App() {
         <Card
           class="card__item card__item--homepage card__item--dfshomepage"
           message="DFS Tools & Projections"
+          item1={
+            <NavItem class="navitem__home" text="Projections By Position" />
+          }
+          item2={<NavItem class="navitem__home" text="Stacking Projections" />}
+          item3={
+            <NavItem class="navitem__home" text="Game By Game Breakdowns" />
+          }
+          item4={<NavItem class="navitem__home" text="Ownership Projections" />}
+          item5={<NavItem class="navitem__home" text="Lineup Builder" />}
         />
+
         <Card
           class="card__item card__item--homepage card__item--dynastyhomepage"
           message="Dynasty Tools & Projections"
+          item1={
+            <NavItem class="navitem__home" text="Managed Lineup Projections" />
+          }
+          item2={
+            <NavItem class="navitem__home" text="Sleeper Command Center" />
+          }
+          item3={
+            <NavItem
+              class="navitem__home"
+              text="PCW Dynasty Trade Calculator"
+            />
+          }
+          item4={<NavItem class="navitem__home" text="Player Exposure Tool" />}
+          item5={<NavItem class="navitem__home" text="QB Prospect Model" />}
         />
       </div>
-
-      {/* <div className="footer">
-        <footer message="theFFcoder" class="footer footer__homepage" />
-      </div> */}
     </div>
   );
 }

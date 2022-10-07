@@ -6,6 +6,16 @@
   team(gameInfo):
     vtt- get from qbDownloadableSpreadSheetYahoo file  made from Downloadable SpreadSheet Yahoo FOR ALL GAMES OF THE WEEK NOT JUST MAIN SLATE CSV.
 
+    opponentABV- get from allNFLTeamPace made from rotoviz NFL pace tool CSV
+
+    homeOrAway- get from allNFLTeamPace made from rotoviz NFL pace tool CSV
+
+    slate- get from allNFLTeamPace made from rotoviz NFL pace tool CSV
+
+    teamPlaysPerSixtyMinNeutralSituations- get from allNFLTeamPace made from rotoviz NFL pace tool CSV
+
+    teamPlaysPerSixtyMinAllSituations- get from allNFLTeamPace made from rotoviz NFL pace tool CSV
+
     def4for4projectedpoints- get from wholeDownloadableSpreadSheetYahoo made fron downloadable spreadsheet yahoo FOR ALL GAMES OF THE WEEK NOT JUST MAIN SLATE CSV
 
     teamDefDraftkingsSalary- get from wholePlayerPricingWithPercntOfCapDraftkings file made from draftkings player pricing CSV
@@ -81,6 +91,8 @@
 
         K) allFullPPRProjectedPointsWithoutTeamDef
 
+        L) allNFLTeamPace from rotoviz NFL pace tool
+
     
   properties in raw data files I currently need to hardcode myself:
 
@@ -88,7 +100,7 @@
     -def4for4projectedpoints for teams not on main slate. console.log(gameInfo) after downloading and copt pasting all CSV's for the week and hard code the teams that have a zero for def4for4projectedpoints
 
  qbrawdata:
-    -slate: for each team which slate they play on that week
+    
 
  rbrawdata:
 
