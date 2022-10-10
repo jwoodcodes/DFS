@@ -25,7 +25,10 @@ function App() {
           }
           item2={<NavItem class="navitem__home" text="Stacking Projections" />}
           item3={
-            <NavItem class="navitem__home" text="Game By Game Breakdowns" />
+            <NavItem
+              class="navitem__home"
+              text="Team & Game Environment Breakdowns"
+            />
           }
           item4={<NavItem class="navitem__home" text="Ownership Projections" />}
           item5={<NavItem class="navitem__home" text="Lineup Builder" />}

@@ -171,18 +171,18 @@ const allQBFinalProjectedPointsValuesPlusNames = [];
 const allQBManagedAndCashProjectedPointsValues = [];
 const allQBManagedAndCashProjectedPointsValuesPlusNames = [];
 
-const numOfMatchingRoleWeeks = [];
+// const numOfMatchingRoleWeeks = [];
 
-allQBs.map(function (team, i) {
-  let matchingWeeks = 0;
+// allQBs.map(function (team, i) {
+//   let matchingWeeks = 0;
 
-  team.roleLastXNumOfWeeksUpToFive.forEach(function (week) {
-    if (week === allQBs[i].roleThisWeek) {
-      matchingWeeks = matchingWeeks + 1;
-    }
-  });
-  numOfMatchingRoleWeeks.push(matchingWeeks);
-});
+//   team.roleLastXNumOfWeeksUpToFive.forEach(function (week) {
+//     if (week === allQBs[i].roleThisWeek) {
+//       matchingWeeks = matchingWeeks + 1;
+//     }
+//   });
+//   numOfMatchingRoleWeeks.push(matchingWeeks);
+// });
 
 if (gameInfo.week.currentWeek < 5) {
   allQBs.map(function (team, i) {
@@ -212,13 +212,10 @@ if (gameInfo.week.currentWeek === 5 || gameInfo.week.currentWeek === 6) {
     let initialQBProjectedPoints = 0;
 
     // console.log(team.roleLastXNumOfWeeksUpToFive[1]);
-    let matchingWeeksPercentage =
-      numOfMatchingRoleWeeks[i] / allQBs[i].roleLastXNumOfWeeksUpToFive.length;
+    // let matchingWeeksPercentage =
+    //   numOfMatchingRoleWeeks[i] / allQBs[i].roleLastXNumOfWeeksUpToFive.length;
 
-    if (
-      allQBs[i].roleLastXNumOfWeeksUpToFive.length > 3 &&
-      matchingWeeksPercentage > 0.74
-    ) {
+    if (team.percentOfGamesPlayedLastFiveWeeks > 0.74) {
       let fourForFour = team.fourForFourHalfPPRProjectedPoints;
 
       if (allQBTotalScores[i] >= 35) {
@@ -292,14 +289,11 @@ if (gameInfo.week.currentWeek > 6) {
     let seventyFifthPercentProjection =
       allQBs[i].seventyFifthPercentProjectedPoints;
 
-    let QBProjectedPoints = 0;
-    let matchingWeeksPercentage =
-      numOfMatchingRoleWeeks[i] / allQBs[i].roleLastXNumOfWeeksUpToFive.length;
+    // let QBProjectedPoints = 0;
+    // let matchingWeeksPercentage =
+    //   numOfMatchingRoleWeeks[i] / allQBs[i].roleLastXNumOfWeeksUpToFive.length;
 
-    if (
-      allQBs[i].roleLastXNumOfWeeksUpToFive.length > 3 &&
-      matchingWeeksPercentage > 0.74
-    ) {
+    if (allQBs[i].percentOfGamesPlayedLastFiveWeeks > 0.74) {
       if (score >= 35) {
         QBProjectedPoints = seventyFifthPercentProjection;
       } else if (score >= -25) {

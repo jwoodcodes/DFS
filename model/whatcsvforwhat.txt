@@ -41,9 +41,31 @@
 
     name- get from qbDownloadableSpreadSheetDraftkings file  made from Downloadable SpreadSheet Draftkings FOR ALL GAMES OF THE WEEK NOT JUST MAIN SLATE CSV
 
-    fourForFourHalfPPRProjectedPoints- get from allHalfPPRProjectedPointsWithoutTeamDef file made from HALF PPR weekly rankings CSV
+    numberOfGamesPlayedLastFiveWeeks- get from QBWeeklyStatExplorerLastFiveWeeksCategoryPassing file made from rotoviz weekly stat explorer with position set to QB, category set to passing, and set for the last 5 weeks!
 
-    fourForFourFullPPRProjectedPoints- get from allFullPPRProjectedPointsWithoutTeamDef file made from FULL PPR weekly rankings CSV
+    fourForFourHalfPPRProjectedPoints- get from qbDownloadableSpreadSheetYahoo made from Downloadable SpreadSheet Draftkings FOR ALL GAMES OF THE WEEK NOT JUST MAIN SLATE CSV
+
+    fourForFourFullPPRProjectedPoints- get from qbDownloadableSpreadSheetYahoo made from Downloadable SpreadSheet Draftkings FOR ALL GAMES OF THE WEEK NOT JUST MAIN SLATE CSV
+
+    twentyFifthPercentProjectedPoints- get from allQBGLSP
+
+    fiftyithPercentProjectedPoints- get from allQBGLSP
+
+    seventyFifthPercentProjectedPoints- get from allQBGLSP
+
+    prjpassattempts- get from qbDownloadableSpreadSheetYahoo made from Downloadable SpreadSheet Draftkings FOR ALL GAMES OF THE WEEK NOT JUST MAIN SLATE CSV
+
+    ypaLastFiveGames- get from QBWeeklyStatExplorerLastFiveWeeksCategoryPassing file made from rotoviz weekly stat explorer with position set to QB, category set to passing, and set for the last 5 weeks!
+
+    TDrateLastFiveGames- get from QBWeeklyStatExplorerLastFiveWeeksCategoryPassing file made from rotoviz weekly stat explorer with position set to QB, category set to passing, and set for the last 5 weeks!
+
+    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints- get from allHalfPPRProjectedPointsWithoutTeamDef file made from the weekly rankings on 4for4 for superflex CSV
+
+     yahooSalary-
+
+    fanduelSalary-
+
+    draftkingsSalary-
 
 
 
@@ -87,17 +109,37 @@
 
         I) gppLeverageScoresAndProjOwnershipYahoo
 
-        J) allHalfPPRProjectedPointsWithoutTeamDef
-
-        K) allFullPPRProjectedPointsWithoutTeamDef
+        J) 4for4 weekly rankings on superflex for Half PPR 
+             turn into:  allHalfPPRProjectedPointsWithoutTeamDef
+       
+        K)  4for4 weekly rankings on superflex for Full PPR 
+              turn into: allFullPPRProjectedPointsWithoutTeamDef
 
         L) allNFLTeamPace from rotoviz NFL pace tool
+
+        M) QB GLSP
+
+        N) flex GLSP
+
+        O) Rotoviz NFL weekly stat explorer for QB with passing as the category for last 5 weeks (or how many have been played so far!!!!!!!!!!!!)
 
     
   properties in raw data files I currently need to hardcode myself:
 
   gameInfo:
-    -def4for4projectedpoints for teams not on main slate. console.log(gameInfo) after downloading and copt pasting all CSV's for the week and hard code the teams that have a zero for def4for4projectedpoints
+
+    - ABSULUTLY CRITICAL TO SET THE CURRENT WEEK VALUE IN GAMEINFO AT THE START OF EVER WEEK!!!
+        ABSULUTLY CRITICAL TO SET THE CURRENT WEEK VALUE IN GAMEINFO AT THE START OF EVER WEEK!!!
+        ABSULUTLY CRITICAL TO SET THE CURRENT WEEK VALUE IN GAMEINFO AT THE START OF EVER WEEK!!!
+        ABSULUTLY CRITICAL TO SET THE CURRENT WEEK VALUE IN GAMEINFO AT THE START OF EVER WEEK!!!
+        ABSULUTLY CRITICAL TO SET THE CURRENT WEEK VALUE IN GAMEINFO AT THE START OF EVER WEEK!!!
+        ABSULUTLY CRITICAL TO SET THE CURRENT WEEK VALUE IN GAMEINFO AT THE START OF EVER WEEK!!!
+        ABSULUTLY CRITICAL TO SET THE CURRENT WEEK VALUE IN GAMEINFO AT THE START OF EVER WEEK!!!
+        ABSULUTLY CRITICAL TO SET THE CURRENT WEEK VALUE IN GAMEINFO AT THE START OF EVER WEEK!!!
+        ABSULUTLY CRITICAL TO SET THE CURRENT WEEK VALUE IN GAMEINFO AT THE START OF EVER WEEK!!!
+
+
+    -def4for4projectedpoints for teams not on main slate. console.log(gameInfo) after downloading and copy pasting all CSV's for the week and hard code the teams that have a zero for def4for4projectedpoints
 
  qbrawdata:
     

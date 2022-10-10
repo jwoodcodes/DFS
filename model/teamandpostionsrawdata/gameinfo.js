@@ -9,7 +9,7 @@ const allNFLTeamPace = require('../datafilesmadefrom4for4CSVs/allNFLTeamPace');
 
 const gameInfo = {
   week: {
-    currentWeek: 3,
+    currentWeek: 5,
   },
 
   SF49ers: {
@@ -984,6 +984,6 @@ populateTeamObjects(gameInfo.texans);
 populateTeamObjects(gameInfo.titans);
 populateTeamObjects(gameInfo.vikings);
 
-console.log(gameInfo);
+// console.log(gameInfo);
 
 module.exports = gameInfo;

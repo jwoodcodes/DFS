@@ -7,16 +7,25 @@ const gppLeverageScoresAndProjOwnershipDraftkings = require('../datafilesmadefro
 const gppLeverageScoresAndProjOwnershipFanduel = require('../datafilesmadefrom4for4CSVs/Fanduel/gppLeverageScoresAndProjOwnershipFanduel');
 const allHalfPPRProjectedPointsWithoutTeamDef = require('../datafilesmadefrom4for4CSVs/allHalfPPRProjectedPointsWithoutTeamDef');
 const allFullPPRProjectedPointsWithoutTeamDef = require('../datafilesmadefrom4for4CSVs/allFullPPRProjectedPointsWithoutTeamDef');
+const allNFLTeamPace = require('../datafilesmadefrom4for4CSVs/allNFLTeamPace');
+const allQBGLSP = require('../datafilesmadefrom4for4CSVs/allQBGLSP');
+
+const allFlexGLSP = require('../datafilesmadefrom4for4CSVs/allFlexGLSP');
+const QBWeeklyStatExplorerLastFiveWeeksCategoryPassing = require('../datafilesmadefrom4for4CSVs/QBWeeklyStatExplorerLastFiveWeeksCategoryPassing');
+const gameInfo = require('./gameinfo');
 
 //QB TDrate is TD's/pass attempts
 
 const qbrawdata = {
   SF49ers: {
-    teamVTT: 23.25,
+    teamVTT: 0,
+    teamABV: 'SF',
     name: 'Jimmy Garoppolo',
-    roleThisWeek: 1,
+    // roleThisWeek: 1,
     ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS WEEK!!!!!!!!!!!!!!
-    roleLastXNumOfWeeksUpToFive: [2, 2],
+    // roleLastXNumOfWeeksUpToFive: [2, 1, 1, 1],
+    numberOfGamesPlayedLastFiveWeeks: 0,
+    percentOfGamesPlayedLastFiveWeeks: 0,
 
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
@@ -29,9 +38,9 @@ const qbrawdata = {
     fourForFourHalfPPRProjectedPoints: 0,
     fourForFourFullPPRProjectedPoints: 0,
 
-    yahooSalary: 24,
-    fanduelSalary: 7100,
-    draftkingsSalary: 5700,
+    yahooSalary: 0,
+    fanduelSalary: 0,
+    draftkingsSalary: 0,
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
@@ -40,11 +49,14 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   bears: {
-    teamVTT: 17,
+    teamVTT: 0,
+    teamABV: 'CHI',
     name: 'Justin Fields',
-    roleThisWeek: 1,
-    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS WEEK!!!!!!!!!!!!!!
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+    // roleThisWeek: 1,
+    // ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS WEEK!!!!!!!!!!!!!!
+    // roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1],
+    numberOfGamesPlayedLastFiveWeeks: 0,
+    percentOfGamesPlayedLastFiveWeeks: 0,
 
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
@@ -57,9 +69,9 @@ const qbrawdata = {
     fourForFourHalfPPRProjectedPoints: 0,
     fourForFourFullPPRProjectedPoints: 0,
 
-    yahooSalary: 23,
-    fanduelSalary: 6300,
-    draftkingsSalary: 4800,
+    yahooSalary: 0,
+    fanduelSalary: 0,
+    draftkingsSalary: 0,
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
@@ -68,26 +80,29 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   bengals: {
-    teamVTT: 25,
+    teamVTT: 0,
+    teamABV: 'CIN',
     name: 'Joe Burrow',
-    roleThisWeek: 1,
-    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+    // roleThisWeek: 1,
+    // ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
+    // roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1],
+    numberOfGamesPlayedLastFiveWeeks: 0,
+    percentOfGamesPlayedLastFiveWeeks: 0,
 
-    twentyFifthPercentProjectedPoints: 12,
-    fiftyithPercentProjectedPoints: 16,
-    seventyFifthPercentProjectedPoints: 23,
-    prjpassattempts: 29.8,
-    ypaLastFiveGames: 7.7,
-    TDrateLastFiveGames: 4.0,
-    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 15,
+    twentyFifthPercentProjectedPoints: 0,
+    fiftyithPercentProjectedPoints: 0,
+    seventyFifthPercentProjectedPoints: 0,
+    prjpassattempts: 0,
+    ypaLastFiveGames: 0,
+    TDrateLastFiveGames: 0,
+    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
 
-    fourForFourHalfPPRProjectedPoints: 16,
-    fourForFourFullPPRProjectedPoints: 16,
+    fourForFourHalfPPRProjectedPoints: 0,
+    fourForFourFullPPRProjectedPoints: 0,
 
-    yahooSalary: 30,
-    fanduelSalary: 7700,
-    draftkingsSalary: 6900,
+    yahooSalary: 0,
+    fanduelSalary: 0,
+    draftkingsSalary: 0,
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
@@ -97,10 +112,13 @@ const qbrawdata = {
   },
   bills: {
     teamVTT: 0,
-    name: '',
-    roleThisWeek: 1,
-    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+    teamABV: 'BUF',
+    name: 'Josh Allen',
+    // roleThisWeek: 1,
+    // ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
+    // roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1],
+    numberOfGamesPlayedLastFiveWeeks: 0,
+    percentOfGamesPlayedLastFiveWeeks: 0,
 
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
@@ -113,9 +131,9 @@ const qbrawdata = {
     fourForFourHalfPPRProjectedPoints: 0,
     fourForFourFullPPRProjectedPoints: 0,
 
-    yahooSalary: 37,
-    fanduelSalary: 8800,
-    draftkingsSalary: 8000,
+    yahooSalary: 0,
+    fanduelSalary: 0,
+    draftkingsSalary: 0,
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
@@ -125,10 +143,13 @@ const qbrawdata = {
   },
   broncos: {
     teamVTT: 0,
-    name: 'Teddy Bridgewater',
-    roleThisWeek: 1,
-    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+    teamABV: 'DEN',
+    name: 'Russell Wilson',
+    // roleThisWeek: 1,
+    // ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
+    // roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1],
+    numberOfGamesPlayedLastFiveWeeks: 0,
+    percentOfGamesPlayedLastFiveWeeks: 0,
 
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
@@ -141,9 +162,9 @@ const qbrawdata = {
     fourForFourHalfPPRProjectedPoints: 0,
     fourForFourFullPPRProjectedPoints: 0,
 
-    yahooSalary: 23,
-    fanduelSalary: 6500,
-    draftkingsSalary: 5100,
+    yahooSalary: 0,
+    fanduelSalary: 0,
+    draftkingsSalary: 0,
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
@@ -152,12 +173,14 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   browns: {
-    slate: 'main',
     teamVTT: 0,
-    name: 'Baker Mayfield',
-    roleThisWeek: 1,
-    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+    teamABV: 'CLE',
+    name: 'Jacoby Brissett',
+    // roleThisWeek: 1,
+    // ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
+    // roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1],
+    numberOfGamesPlayedLastFiveWeeks: 0,
+    percentOfGamesPlayedLastFiveWeeks: 0,
 
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
@@ -170,9 +193,9 @@ const qbrawdata = {
     fourForFourHalfPPRProjectedPoints: 0,
     fourForFourFullPPRProjectedPoints: 0,
 
-    yahooSalary: 20,
-    fanduelSalary: 6700,
-    draftkingsSalary: 5300,
+    yahooSalary: 0,
+    fanduelSalary: 0,
+    draftkingsSalary: 0,
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
@@ -181,12 +204,14 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   buccaneers: {
-    slate: 'main',
-    teamVTT: 27.25,
+    teamVTT: 0,
+    teamABV: 'TB',
     name: 'Tom Brady',
-    roleThisWeek: 1,
-    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+    // roleThisWeek: 1,
+    // ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
+    // roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1],
+    numberOfGamesPlayedLastFiveWeeks: 0,
+    percentOfGamesPlayedLastFiveWeeks: 0,
 
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
@@ -199,9 +224,9 @@ const qbrawdata = {
     fourForFourHalfPPRProjectedPoints: 0,
     fourForFourFullPPRProjectedPoints: 0,
 
-    yahooSalary: 34,
-    fanduelSalary: 8300,
-    draftkingsSalary: 7600,
+    yahooSalary: 0,
+    fanduelSalary: 0,
+    draftkingsSalary: 0,
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
@@ -209,42 +234,16 @@ const qbrawdata = {
     percentOfSalaryCapFanduel: 0,
     percentOfSalaryCapYahoo: 0,
   },
-  commanders: {
-    slate: 'main',
-    teamVTT: 25.5,
-    name: 'Carson Wentz',
-    roleThisWeek: 1,
-    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
 
-    twentyFifthPercentProjectedPoints: 0,
-    fiftyithPercentProjectedPoints: 0,
-    seventyFifthPercentProjectedPoints: 0,
-    prjpassattempts: 0,
-    ypaLastFiveGames: 0,
-    TDrateLastFiveGames: 0,
-    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
-
-    fourForFourHalfPPRProjectedPoints: 0,
-    fourForFourFullPPRProjectedPoints: 0,
-
-    yahooSalary: 35,
-    fanduelSalary: 8200,
-    draftkingsSalary: 7300,
-
-    draftkingsProjectedOwnership: 0,
-    fanduelProjectedOwnership: 0,
-    percentOfSalaryCapDraftkings: 0,
-    percentOfSalaryCapFanduel: 0,
-    percentOfSalaryCapYahoo: 0,
-  },
   cardinals: {
-    slate: 'main',
-    teamVTT: 25.5,
+    teamVTT: 0,
+    teamABV: 'ARI',
     name: 'Kyler Murray',
-    roleThisWeek: 1,
-    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+    // roleThisWeek: 1,
+    // ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
+    // roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1],
+    numberOfGamesPlayedLastFiveWeeks: 0,
+    percentOfGamesPlayedLastFiveWeeks: 0,
 
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
@@ -257,9 +256,9 @@ const qbrawdata = {
     fourForFourHalfPPRProjectedPoints: 0,
     fourForFourFullPPRProjectedPoints: 0,
 
-    yahooSalary: 35,
-    fanduelSalary: 8200,
-    draftkingsSalary: 7300,
+    yahooSalary: 0,
+    fanduelSalary: 0,
+    draftkingsSalary: 0,
 
     draftkingsProjectedOwnership: 0,
     fanduelProjectedOwnership: 0,
@@ -268,12 +267,14 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   chargers: {
-    slate: 'main',
-    teamVTT: 29,
+    teamVTT: 0,
+    teamABV: 'LAC',
     name: 'Justin Herbert',
-    roleThisWeek: 1,
-    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+    // roleThisWeek: 1,
+    // ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
+    // roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1],
+    numberOfGamesPlayedLastFiveWeeks: 0,
+    percentOfGamesPlayedLastFiveWeeks: 0,
 
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
@@ -297,41 +298,14 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   chiefs: {
-    slate: 'main',
-    teamVTT: 27.5,
-    name: 'Mahomes',
-    roleThisWeek: 1,
-    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
-
-    twentyFifthPercentProjectedPoints: 13,
-    fiftyithPercentProjectedPoints: 17,
-    seventyFifthPercentProjectedPoints: 24,
-    prjpassattempts: 37.4,
-    ypaLastFiveGames: 8.1,
-    TDrateLastFiveGames: 5.3,
-    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 13,
-
-    fourForFourHalfPPRProjectedPoints: 18,
-    fourForFourFullPPRProjectedPoints: 18,
-
-    yahooSalary: 37,
-    fanduelSalary: 0,
-    draftkingsSalary: 0,
-
-    draftkingsProjectedOwnership: 0,
-    fanduelProjectedOwnership: 0,
-    percentOfSalaryCapDraftkings: 0,
-    percentOfSalaryCapFanduel: 0,
-    percentOfSalaryCapYahoo: 0,
-  },
-  colts: {
-    slate: 'main',
     teamVTT: 0,
-    name: 'Placeholder',
-    roleThisWeek: 1,
-    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+    teamABV: 'KC',
+    name: 'Patrick Mahomes',
+    // roleThisWeek: 1,
+    // ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
+    // roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1],
+    numberOfGamesPlayedLastFiveWeeks: 0,
+    percentOfGamesPlayedLastFiveWeeks: 0,
 
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
@@ -354,13 +328,46 @@ const qbrawdata = {
     percentOfSalaryCapFanduel: 0,
     percentOfSalaryCapYahoo: 0,
   },
-  comanders: {
-    slate: 'main',
+  colts: {
     teamVTT: 0,
-    name: 'Placeholder',
-    roleThisWeek: 1,
-    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+    teamABV: 'IND',
+    name: 'Matt Ryan',
+    // roleThisWeek: 1,
+    // ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
+    // roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1],
+    numberOfGamesPlayedLastFiveWeeks: 0,
+    percentOfGamesPlayedLastFiveWeeks: 0,
+
+    twentyFifthPercentProjectedPoints: 0,
+    fiftyithPercentProjectedPoints: 0,
+    seventyFifthPercentProjectedPoints: 0,
+    prjpassattempts: 0,
+    ypaLastFiveGames: 0,
+    TDrateLastFiveGames: 0,
+    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+
+    fourForFourHalfPPRProjectedPoints: 0,
+    fourForFourFullPPRProjectedPoints: 0,
+
+    yahooSalary: 0,
+    fanduelSalary: 0,
+    draftkingsSalary: 0,
+
+    draftkingsProjectedOwnership: 0,
+    fanduelProjectedOwnership: 0,
+    percentOfSalaryCapDraftkings: 0,
+    percentOfSalaryCapFanduel: 0,
+    percentOfSalaryCapYahoo: 0,
+  },
+  commanders: {
+    teamVTT: 0,
+    teamABV: 'WAS',
+    name: 'Carson Wentz',
+    // roleThisWeek: 1,
+    // ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
+    // roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1],
+    numberOfGamesPlayedLastFiveWeeks: 0,
+    percentOfGamesPlayedLastFiveWeeks: 0,
 
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
@@ -384,12 +391,14 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   cowboys: {
-    slate: 'main',
     teamVTT: 0,
-    name: 'Placeholder',
-    roleThisWeek: 1,
-    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+    teamABV: 'DAL',
+    name: 'Cooper Rush',
+    // roleThisWeek: 1,
+    // ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
+    // roleLastXNumOfWeeksUpToFive: [2, 1, 1, 1],
+    numberOfGamesPlayedLastFiveWeeks: 0,
+    percentOfGamesPlayedLastFiveWeeks: 0,
 
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
@@ -413,25 +422,27 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   dolphins: {
-    slate: 'main',
-    teamVTT: 20.25,
-    name: 'Tagovailoa',
-    roleThisWeek: 1,
-    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS WEEK!!!!!!!!!!!!!!
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+    teamVTT: 0,
+    teamABV: 'MIA',
+    name: 'Teddy Bridgewater',
+    // roleThisWeek: 1,
+    // ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS WEEK!!!!!!!!!!!!!!
+    // roleLastXNumOfWeeksUpToFive: [2, 2, 2, 1],
+    numberOfGamesPlayedLastFiveWeeks: 0,
+    percentOfGamesPlayedLastFiveWeeks: 0,
 
-    twentyFifthPercentProjectedPoints: 11,
-    fiftyithPercentProjectedPoints: 15,
-    seventyFifthPercentProjectedPoints: 17.5,
-    prjpassattempts: 33,
-    ypaLastFiveGames: 7.1,
-    TDrateLastFiveGames: 5.3,
-    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 8,
+    twentyFifthPercentProjectedPoints: 0,
+    fiftyithPercentProjectedPoints: 0,
+    seventyFifthPercentProjectedPoints: 0,
+    prjpassattempts: 0,
+    ypaLastFiveGames: 0,
+    TDrateLastFiveGames: 0,
+    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
 
     fourForFourHalfPPRProjectedPoints: 0,
     fourForFourFullPPRProjectedPoints: 0,
 
-    yahooSalary: 28,
+    yahooSalary: 0,
     fanduelSalary: 0,
     draftkingsSalary: 0,
 
@@ -442,12 +453,14 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   eagles: {
-    slate: 'main',
     teamVTT: 0,
+    teamABV: 'PHI',
     name: 'Jalen Hurts',
-    roleThisWeek: 1,
-    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+    // roleThisWeek: 1,
+    // ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
+    // roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1],
+    numberOfGamesPlayedLastFiveWeeks: 0,
+    percentOfGamesPlayedLastFiveWeeks: 0,
 
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
@@ -471,12 +484,14 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   falcons: {
-    slate: 'main',
     teamVTT: 0,
-    name: 'Placeholder',
-    roleThisWeek: 1,
-    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+    teamABV: 'ATL',
+    name: 'Marcus Mariota',
+    // roleThisWeek: 1,
+    // ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
+    // roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1],
+    numberOfGamesPlayedLastFiveWeeks: 0,
+    percentOfGamesPlayedLastFiveWeeks: 0,
 
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
@@ -500,12 +515,14 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   giants: {
-    slate: 'main',
     teamVTT: 0,
-    name: 'Placeholder',
-    roleThisWeek: 1,
-    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+    teamABV: 'NYG',
+    name: 'Daniel Jones',
+    // roleThisWeek: 1,
+    // ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
+    // roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1],
+    numberOfGamesPlayedLastFiveWeeks: 0,
+    percentOfGamesPlayedLastFiveWeeks: 0,
 
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
@@ -529,25 +546,28 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   jaguars: {
-    slate: 'main',
-    teamVTT: 20.25,
-    name: 'Lawrence',
-    roleThisWeek: 1,
-    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+    teamVTT: 0,
+    teamABV: 'JAC',
+    altTeamABV: 'JAX',
+    name: 'Trevor Lawrence',
+    // roleThisWeek: 1,
+    // ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
+    // roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1],
+    numberOfGamesPlayedLastFiveWeeks: 0,
+    percentOfGamesPlayedLastFiveWeeks: 0,
 
-    twentyFifthPercentProjectedPoints: 10,
-    fiftyithPercentProjectedPoints: 14,
-    seventyFifthPercentProjectedPoints: 18,
-    prjpassattempts: 34.6,
-    ypaLastFiveGames: 5.6,
-    TDrateLastFiveGames: 1,
-    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 7,
+    twentyFifthPercentProjectedPoints: 0,
+    fiftyithPercentProjectedPoints: 0,
+    seventyFifthPercentProjectedPoints: 0,
+    prjpassattempts: 0,
+    ypaLastFiveGames: 0,
+    TDrateLastFiveGames: 0,
+    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
 
     fourForFourHalfPPRProjectedPoints: 0,
     fourForFourFullPPRProjectedPoints: 0,
 
-    yahooSalary: 23,
+    yahooSalary: 0,
     fanduelSalary: 0,
     draftkingsSalary: 0,
 
@@ -558,25 +578,27 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   jets: {
-    slate: 'main',
-    teamVTT: 15,
-    name: 'Wilson',
-    roleThisWeek: 1,
-    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+    teamVTT: 0,
+    teamABV: 'NYJ',
+    name: 'Zach Wilson',
+    // roleThisWeek: 1,
+    // ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
+    // roleLastXNumOfWeeksUpToFive: [2, 2, 2, 1],
+    numberOfGamesPlayedLastFiveWeeks: 0,
+    percentOfGamesPlayedLastFiveWeeks: 0,
 
     twentyFifthPercentProjectedPoints: 9,
-    fiftyithPercentProjectedPoints: 14,
-    seventyFifthPercentProjectedPoints: 19,
-    prjpassattempts: 27.4,
-    ypaLastFiveGames: 5.8,
-    TDrateLastFiveGames: 1.5,
+    fiftyithPercentProjectedPoints: 0,
+    seventyFifthPercentProjectedPoints: 0,
+    prjpassattempts: 0,
+    ypaLastFiveGames: 0,
+    TDrateLastFiveGames: 0,
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 9,
 
     fourForFourHalfPPRProjectedPoints: 0,
     fourForFourFullPPRProjectedPoints: 0,
 
-    yahooSalary: 20,
+    yahooSalary: 0,
     fanduelSalary: 0,
     draftkingsSalary: 0,
 
@@ -587,12 +609,14 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   lions: {
-    slate: 'main',
     teamVTT: 0,
-    name: 'Placeholder',
-    roleThisWeek: 1,
-    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+    teamABV: 'DET',
+    name: 'Jared Goff',
+    // roleThisWeek: 1,
+    // ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
+    // roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1],
+    numberOfGamesPlayedLastFiveWeeks: 0,
+    percentOfGamesPlayedLastFiveWeeks: 0,
 
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
@@ -616,12 +640,14 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   packers: {
-    slate: 'main',
     teamVTT: 0,
-    name: 'Placeholder',
-    roleThisWeek: 1,
-    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+    teamABV: 'GB',
+    name: 'Aaron Rodgers',
+    // roleThisWeek: 1,
+    // ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
+    // roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1],
+    numberOfGamesPlayedLastFiveWeeks: 0,
+    percentOfGamesPlayedLastFiveWeeks: 0,
 
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
@@ -645,12 +671,14 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   panthers: {
-    slate: 'main',
     teamVTT: 0,
-    name: 'Placeholder',
-    roleThisWeek: 1,
-    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+    teamABV: 'CAR',
+    name: 'Baker Mayfield',
+    // roleThisWeek: 1,
+    // ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
+    // roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1],
+    numberOfGamesPlayedLastFiveWeeks: 0,
+    percentOfGamesPlayedLastFiveWeeks: 0,
 
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
@@ -674,12 +702,14 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   patriots: {
-    slate: 'main',
     teamVTT: 0,
-    name: 'Placeholder',
-    roleThisWeek: 1,
-    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+    teamABV: 'NE',
+    name: 'Baily Zappe',
+    // roleThisWeek: 1,
+    // ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
+    // roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2],
+    numberOfGamesPlayedLastFiveWeeks: 0,
+    percentOfGamesPlayedLastFiveWeeks: 0,
 
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
@@ -703,12 +733,14 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   raiders: {
-    slate: 'main',
     teamVTT: 0,
-    name: 'Placeholder',
-    roleThisWeek: 1,
-    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+    teamABV: 'LV',
+    name: 'Derick Carr',
+    // roleThisWeek: 1,
+    // ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
+    // roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1],
+    numberOfGamesPlayedLastFiveWeeks: 0,
+    percentOfGamesPlayedLastFiveWeeks: 0,
 
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
@@ -732,12 +764,14 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   rams: {
-    slate: 'main',
     teamVTT: 0,
-    name: 'Placeholder',
-    roleThisWeek: 1,
-    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+    teamABV: 'LAR',
+    name: 'Matthew Stafford',
+    // roleThisWeek: 1,
+    // ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
+    // roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1],
+    numberOfGamesPlayedLastFiveWeeks: 0,
+    percentOfGamesPlayedLastFiveWeeks: 0,
 
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
@@ -761,25 +795,27 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   ravens: {
-    slate: 'main',
-    teamVTT: 18.25,
-    name: 'Huntley',
-    roleThisWeek: 1,
-    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+    teamVTT: 0,
+    teamABV: 'BAL',
+    name: 'Lamar Jackson',
+    // roleThisWeek: 1,
+    // ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
+    // roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1],
+    numberOfGamesPlayedLastFiveWeeks: 0,
+    percentOfGamesPlayedLastFiveWeeks: 0,
 
-    twentyFifthPercentProjectedPoints: 10,
-    fiftyithPercentProjectedPoints: 13,
-    seventyFifthPercentProjectedPoints: 16,
-    prjpassattempts: 38,
-    ypaLastFiveGames: 6.2,
-    TDrateLastFiveGames: 2.6,
-    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 7,
+    twentyFifthPercentProjectedPoints: 0,
+    fiftyithPercentProjectedPoints: 0,
+    seventyFifthPercentProjectedPoints: 0,
+    prjpassattempts: 0,
+    ypaLastFiveGames: 0,
+    TDrateLastFiveGames: 0,
+    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
 
     fourForFourHalfPPRProjectedPoints: 0,
     fourForFourFullPPRProjectedPoints: 0,
 
-    yahooSalary: 20,
+    yahooSalary: 0,
     fanduelSalary: 0,
     draftkingsSalary: 0,
 
@@ -790,25 +826,27 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   saints: {
-    slate: 'main',
-    teamVTT: 17.25,
-    name: 'Hill',
-    roleThisWeek: 1,
-    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+    teamVTT: 0,
+    teamABV: 'NO',
+    name: 'Andy Dalton',
+    // roleThisWeek: 1,
+    // ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
+    // roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2],
+    numberOfGamesPlayedLastFiveWeeks: 0,
+    percentOfGamesPlayedLastFiveWeeks: 0,
 
-    twentyFifthPercentProjectedPoints: 10,
-    fiftyithPercentProjectedPoints: 14,
-    seventyFifthPercentProjectedPoints: 18,
-    prjpassattempts: 22.75,
-    ypaLastFiveGames: 6.6,
-    TDrateLastFiveGames: 2.2,
-    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 7,
+    twentyFifthPercentProjectedPoints: 0,
+    fiftyithPercentProjectedPoints: 0,
+    seventyFifthPercentProjectedPoints: 0,
+    prjpassattempts: 0,
+    ypaLastFiveGames: 0,
+    TDrateLastFiveGames: 0,
+    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
 
     fourForFourHalfPPRProjectedPoints: 0,
     fourForFourFullPPRProjectedPoints: 0,
 
-    yahooSalary: 25,
+    yahooSalary: 0,
     fanduelSalary: 0,
     draftkingsSalary: 0,
 
@@ -819,12 +857,14 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   seahawks: {
-    slate: 'main',
     teamVTT: 0,
-    name: 'Placeholder',
-    roleThisWeek: 1,
+    teamABV: 'SEA',
+    name: 'Geno Smith',
+    // roleThisWeek: 1,
     ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+    // roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1],
+    numberOfGamesPlayedLastFiveWeeks: 0,
+    percentOfGamesPlayedLastFiveWeeks: 0,
 
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
@@ -848,25 +888,27 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   steelers: {
-    slate: 'main',
-    teamVTT: 17,
-    name: '',
-    roleThisWeek: 1,
-    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+    teamVTT: 0,
+    teamABV: 'PIT',
+    name: 'Kenny Pickett',
+    // roleThisWeek: 1,
+    // ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
+    // roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2],
+    numberOfGamesPlayedLastFiveWeeks: 0,
+    percentOfGamesPlayedLastFiveWeeks: 0,
 
-    twentyFifthPercentProjectedPoints: 9,
-    fiftyithPercentProjectedPoints: 12,
-    seventyFifthPercentProjectedPoints: 15,
-    prjpassattempts: 36.2,
-    ypaLastFiveGames: 6.8,
-    TDrateLastFiveGames: 5,
-    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 9,
+    twentyFifthPercentProjectedPoints: 0,
+    fiftyithPercentProjectedPoints: 0,
+    seventyFifthPercentProjectedPoints: 0,
+    prjpassattempts: 0,
+    ypaLastFiveGames: 0,
+    TDrateLastFiveGames: 0,
+    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
 
     fourForFourHalfPPRProjectedPoints: 0,
     fourForFourFullPPRProjectedPoints: 0,
 
-    yahooSalary: 26,
+    yahooSalary: 0,
     fanduelSalary: 0,
     draftkingsSalary: 0,
 
@@ -877,12 +919,14 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   texans: {
-    slate: 'main',
     teamVTT: 0,
-    name: 'Placeholder',
-    roleThisWeek: 1,
-    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+    teamABV: 'HOU',
+    name: 'Davis Mills',
+    // oleThisWeek: 1,
+    // ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
+    // roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1],r
+    numberOfGamesPlayedLastFiveWeeks: 0,
+    percentOfGamesPlayedLastFiveWeeks: 0,
 
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
@@ -906,12 +950,14 @@ const qbrawdata = {
     percentOfSalaryCapYahoo: 0,
   },
   titans: {
-    slate: 'main',
     teamVTT: 0,
-    name: 'Placeholder',
-    roleThisWeek: 1,
-    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+    teamABV: 'TEN',
+    name: 'Ryan Tannehill',
+    // roleThisWeek: 1,
+    // ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
+    // roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1],
+    numberOfGamesPlayedLastFiveWeeks: 0,
+    percentOfGamesPlayedLastFiveWeeks: 0,
 
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
@@ -936,10 +982,13 @@ const qbrawdata = {
   },
   vikings: {
     teamVTT: 0,
-    name: 'Placeholder',
-    roleThisWeek: 1,
-    ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
-    roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+    teamABV: 'MIN',
+    name: '',
+    // roleThisWeek: 1,
+    // ///roleLastXNumOfWeeksUpToFive below DOES NOT CONTAIN THIS COMING WEEK!!!!!!!!!!!!!!
+    // roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1],
+    numberOfGamesPlayedLastFiveWeeks: 0,
+    percentOfGamesPlayedLastFiveWeeks: 0,
 
     twentyFifthPercentProjectedPoints: 0,
     fiftyithPercentProjectedPoints: 0,
@@ -964,27 +1013,138 @@ const qbrawdata = {
   },
 };
 
-qbDownloadableSpreadSheetYahoo.forEach(function (playerobj, i) {
-  // console.log(playerobj);
+const populateTeamObjects = function (passedInTeam) {
+  qbDownloadableSpreadSheetYahoo.forEach(function (playerobj, i) {
+    // console.log(playerobj);
 
-  let teamName = playerobj.Team;
-  let teamvtt = playerobj['Team O/U'];
-  let playerName = playerobj.Player;
-  let projpts = playerobj.FFPts;
-  let playerObject = playerobj;
+    let teamName = playerobj.Team;
+    let teamvtt = playerobj['Team O/U'];
+    let playerName = playerobj.Player;
+    let projpts = playerobj.FFPts;
 
-  // console.log(teamName);
+    let playerObject = playerobj;
 
-  if (teamName === 'BUF') {
-    // console.log('match');
-    // console.log(playerName);
-    qbrawdata.bills.teamVTT = teamvtt;
-    qbrawdata.bills.name = playerName;
-    qbrawdata.bills.fourForFourHalfPPRProjectedPoints = projpts;
-    qbrawdata.bills.fourForFourFullPPRProjectedPoints = projpts;
-  }
-});
+    if (
+      teamName === passedInTeam.teamABV ||
+      teamName === passedInTeam.altTeamABV
+    ) {
+      // console.log(playerObject);
 
-// console.log(qbrawdata.bills);
+      // console.log(playerObject);
+      passedInTeam.teamVTT = playerObject['Team O/U'];
+      passedInTeam.name = playerObject.Player;
+      passedInTeam.fourForFourFullPPRProjectedPoints = projpts;
+      passedInTeam.fourForFourHalfPPRProjectedPoints = projpts;
+      passedInTeam.prjpassattempts = playerObject['Pass Att'];
+      // console.log(projpts);
+    }
+
+    // console.log(teamName);
+  });
+
+  let percentageOfRecentWeeksPlayed = 0;
+
+  QBWeeklyStatExplorerLastFiveWeeksCategoryPassing.forEach(function (qb, i) {
+    let qbName = qb['"Player"'].slice(1, -1);
+
+    if (qbName === passedInTeam.name) {
+      // console.log(qb['"GMs"']);
+      passedInTeam.numberOfGamesPlayedLastFiveWeeks = qb['"GMs"'];
+      if (gameInfo.week.currentWeek > 5) {
+        percentageOfRecentWeeksPlayed = qb['"GMs"'] / 5;
+        passedInTeam.percentOfGamesPlayedLastFiveWeeks =
+          percentageOfRecentWeeksPlayed;
+      }
+      if (gameInfo.week.currentWeek === 5) {
+        percentageOfRecentWeeksPlayed = qb['"GMs"'] / 4;
+        passedInTeam.percentOfGamesPlayedLastFiveWeeks =
+          percentageOfRecentWeeksPlayed;
+      }
+      if (gameInfo.week.currentWeek === 4) {
+        percentageOfRecentWeeksPlayed = qb['"GMs"'] / 3;
+        passedInTeam.percentOfGamesPlayedLastFiveWeeks =
+          percentageOfRecentWeeksPlayed;
+      }
+      passedInTeam.ypaLastFiveGames = qb['"Yd/Att"'];
+
+      //QB TDrate is TD's/pass attempts
+      // console.log(`${qbName}: ${qb['"TD"']}: ${qb['"Att"']}`);
+      let tempTDrate = +(qb['"TD"'] / qb['"Att"']);
+      let ttdrate = tempTDrate.toFixed(3);
+      let touchdownRate = (ttdrate * 100).toFixed(1);
+      passedInTeam.TDrateLastFiveGames = touchdownRate;
+    }
+  });
+
+  allQBGLSP.forEach(function (qb, i) {
+    let qbName = qb['"Player"'].slice(1, -1);
+    if (qbName === passedInTeam.name) {
+      // console.log(`${passedInTeam.name}: ${qb['"25th"']}`);
+      passedInTeam.twentyFifthPercentProjectedPoints = qb['"25th"'];
+      passedInTeam.fiftyithPercentProjectedPoints = qb['"50th"'];
+      passedInTeam.seventyFifthPercentProjectedPoints = qb['"75th"'];
+    }
+  });
+  let tempPassCatchersProjPoints = [];
+  allHalfPPRProjectedPointsWithoutTeamDef.forEach(function (player, i) {
+    if (
+      player.Team === passedInTeam.teamABV ||
+      player.Team === passedInTeam.altTeamABV
+    ) {
+      if (player.Pos === 'WR' || player.Pos === 'TE') {
+        tempPassCatchersProjPoints.push(+player.FFPts);
+      }
+    }
+  });
+
+  // wholePlayerPricingWithPercntOfCapDraftkings
+
+  let sortedtempPassCatchersProjPoints = tempPassCatchersProjPoints.sort(
+    (a, b) => {
+      if (a > b) return -1;
+      if (a < b) return 1;
+    }
+  );
+
+  // console.log(sortedtempPassCatchersProjPoints);
+  // console.log(`${passedInTeam.teamABV}: ${sortedtempPassCatchersProjPoints}`);
+  passedInTeam.secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints =
+    sortedtempPassCatchersProjPoints[1];
+};
+
+populateTeamObjects(qbrawdata.SF49ers);
+populateTeamObjects(qbrawdata.bears);
+populateTeamObjects(qbrawdata.bengals);
+populateTeamObjects(qbrawdata.bills);
+populateTeamObjects(qbrawdata.broncos);
+populateTeamObjects(qbrawdata.browns);
+populateTeamObjects(qbrawdata.buccaneers);
+populateTeamObjects(qbrawdata.cardinals);
+populateTeamObjects(qbrawdata.chargers);
+populateTeamObjects(qbrawdata.chiefs);
+populateTeamObjects(qbrawdata.colts);
+populateTeamObjects(qbrawdata.commanders);
+populateTeamObjects(qbrawdata.cowboys);
+populateTeamObjects(qbrawdata.dolphins);
+populateTeamObjects(qbrawdata.eagles);
+populateTeamObjects(qbrawdata.falcons);
+populateTeamObjects(qbrawdata.giants);
+populateTeamObjects(qbrawdata.jaguars);
+populateTeamObjects(qbrawdata.jets);
+populateTeamObjects(qbrawdata.lions);
+populateTeamObjects(qbrawdata.packers);
+populateTeamObjects(qbrawdata.panthers);
+populateTeamObjects(qbrawdata.patriots);
+populateTeamObjects(qbrawdata.raiders);
+populateTeamObjects(qbrawdata.rams);
+populateTeamObjects(qbrawdata.ravens);
+populateTeamObjects(qbrawdata.saints);
+populateTeamObjects(qbrawdata.seahawks);
+populateTeamObjects(qbrawdata.steelers);
+populateTeamObjects(qbrawdata.texans);
+populateTeamObjects(qbrawdata.titans);
+populateTeamObjects(qbrawdata.vikings);
+
+console.log(qbrawdata);
 
 module.exports = qbrawdata;
