@@ -13,7 +13,7 @@ const cardinals = gameInfo.cardinals;
 const chargers = gameInfo.chargers;
 const chiefs = gameInfo.chiefs;
 const colts = gameInfo.colts;
-const commanders = gameInfo.Commanders;
+const commanders = gameInfo.commanders;
 const cowboys = gameInfo.cowboys;
 const dolphins = gameInfo.dolphins;
 const eagles = gameInfo.eagles;
@@ -38,42 +38,32 @@ const vikings = gameInfo.vikings;
 //////////all team level allTeams array///////
 
 const allTeams = [
-  // sf49ers,
-  // titans,
-  // browns,
-  // packers,
-  // colts,
-  // cardinals,
-  bengals,
-  ravens,
-
-  // giants,
-  // eagles,
-  // rams,
-  // vikings,
-  // buccaneers,
-  // panthers,
-  // bills,
-  // patriots,
-
-  jets,
-  jaguars,
-
-  // lions,
-  // falcons,
-  // chargers,
-  // texans,
-  // bears,
-  // seahawks,
-
-  chiefs,
-  steelers,
-  // broncos,
-  // raiders,
-  // commanders,
-  // cowboys,
+  panthers,
   saints,
+  bears,
+  texans,
+  colts,
+  chiefs,
   dolphins,
+  bills,
+  vikings,
+  lions,
+  patriots,
+  ravens,
+  jets,
+  bengals,
+  titans,
+  raiders,
+  commanders,
+  eagles,
+  chargers,
+  jaguars,
+  cardinals,
+  rams,
+  seahawks,
+  falcons,
+  buccaneers,
+  packers,
 ];
 
 module.exports = allTeams;

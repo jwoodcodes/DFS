@@ -1,38 +1,108 @@
-.App {
-  text-align: center;
+.sitename__container {
+  font-size: 3.5rem;
+  margin-bottom: 6rem;
+  margin-top: 3rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.siteName {
+  /* display: flex;
+  justify-content: space-around; */
+  width: 80%;
+  margin-left: 12vw;
+  margin-right: auto;
+
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  grid-gap: 2rem; */
+
+  display: flex;
+  justify-content: center;
+
+  letter-spacing: 0.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.homepage__daily {
+  margin-left: 8rem;
+}
+
+.homepage__spacer {
+  background-image: linear-gradient(to right bottom, #3e1f47, #065a60);
+  width: 8vw;
+  height: 2vh;
+  align-self: flex-end;
+
+  border-radius: 3rem;
+}
+
+.homepage__dynasties {
+}
+
+.card_container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  grid-gap: 5rem;
+
+  /* @media (max-width: 500px) {
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   }
+
+  @media (max-width: 350px) {
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  } */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card_container--homepage {
+  height: 60vh;
+}
+
+.card__item {
+  margin-bottom: 5rem;
+  color: #f4f1de;
+  font-size: 5rem;
+  text-align: center;
+
+  box-shadow: 0 1.5rem 4rem rgba(#000, 0.35);
+  border-radius: 4px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-evenly;
 }
 
-.App-link {
-  color: #61dafb;
+.card__item--dfshomepage {
+  background-image: linear-gradient(to right bottom, #212f45, #3e1f47);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card__item--dfshomepage:hover,
+.card__item--dynastyhomepage:hover {
+  transform: scale(1.025);
+  box-shadow: 3.5px 5.5px 5.5px rgba(#000, 0.9);
+}
+
+.card__item--dynastyhomepage {
+  background-image: linear-gradient(to right bottom, #065a60, #212f45);
+}
+
+.navitem__home {
+  color: #fff;
+  font-size: 2.7rem;
+  padding: 0.5rem;
+  cursor: default;
+}
+
+.navitem__home:hover {
+  transform: scale(1.125);
+  box-shadow: 3.5px 5.5px 5.5px rgba(#000, 0.6);
+  font-weight: 500;
+}
+
+.footer {
+  height: 5vh;
+  background-color: #000;
+  fill: #fff;
 }

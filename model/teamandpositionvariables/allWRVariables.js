@@ -13,7 +13,7 @@ const cardinalsWR = wrrawdata.cardinals;
 const chargersWR = wrrawdata.chargers;
 const chiefsWR = wrrawdata.chiefs;
 const coltsWR = wrrawdata.colts;
-const commandersWR = wrrawdata.Commanders;
+const commandersWR = wrrawdata.commanders;
 const cowboysWR = wrrawdata.cowboys;
 const dolphinsWR = wrrawdata.dolphins;
 const eaglesWR = wrrawdata.eagles;
@@ -36,15 +36,32 @@ const titansWR = wrrawdata.titans;
 const vikingsWR = wrrawdata.vikings;
 
 const allWRs = [
-  bengalsWR,
+  panthersWR,
+  saintsWR,
+  bearsWR,
+  texansWR,
+  coltsWR,
+  chiefsWR,
+  dolphinsWR,
+  billsWR,
+  vikingsWR,
+  lionsWR,
+  patriotsWR,
   ravensWR,
   jetsWR,
+  bengalsWR,
+  titansWR,
+  raidersWR,
+  commandersWR,
+  eaglesWR,
+  chargersWR,
   jaguarsWR,
-  chiefsWR,
-  steelersWR,
-
-  saintsWR,
-  dolphinsWR,
+  cardinalsWR,
+  ramsWR,
+  seahawksWR,
+  falconsWR,
+  buccaneersWR,
+  packersWR,
 ];
 
 module.exports = allWRs;

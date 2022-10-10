@@ -11,7 +11,7 @@ const cardinalsTE = terawdata.cardinals;
 const chargersTE = terawdata.chargers;
 const chiefsTE = terawdata.chiefs;
 const coltsTE = terawdata.colts;
-const commandersTE = terawdata.Commanders;
+const commandersTE = terawdata.commanders;
 const cowboysTE = terawdata.cowboys;
 const dolphinsTE = terawdata.dolphins;
 const eaglesTE = terawdata.eagles;
@@ -34,15 +34,32 @@ const titansTE = terawdata.titans;
 const vikingsTE = terawdata.vikings;
 
 const allTEs = [
-  bengalsTE,
-  ravensTE,
-  chiefsTE,
-  steelersTE,
-  jetsTE,
-  jaguarsTE,
-
+  panthersTE,
   saintsTE,
+  bearsTE,
+  texansTE,
+  coltsTE,
+  chiefsTE,
   dolphinsTE,
+  billsTE,
+  vikingsTE,
+  lionsTE,
+  patriotsTE,
+  ravensTE,
+  jetsTE,
+  bengalsTE,
+  titansTE,
+  raidersTE,
+  commandersTE,
+  eaglesTE,
+  chargersTE,
+  jaguarsTE,
+  cardinalsTE,
+  ramsTE,
+  seahawksTE,
+  falconsTE,
+  buccaneersTE,
+  packersTE,
 ];
 
 module.exports = allTEs;

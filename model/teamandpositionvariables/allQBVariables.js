@@ -36,15 +36,32 @@ const titansQB = qbrawdata.titans;
 const vikingsQB = qbrawdata.vikings;
 
 const allQBs = [
-  bengalsQB,
-  ravensQB,
-
-  jetsQB,
-  jaguarsQB,
-  chiefsQB,
-  steelersQB,
+  panthersQB,
   saintsQB,
+  bearsQB,
+  texansQB,
+  coltsQB,
+  chiefsQB,
   dolphinsQB,
+  billsQB,
+  vikingsQB,
+  lionsQB,
+  patriotsQB,
+  ravensQB,
+  jetsQB,
+  bengalsQB,
+  titansQB,
+  raidersQB,
+  commandersQB,
+  eaglesQB,
+  chargersQB,
+  jaguarsQB,
+  cardinalsQB,
+  ramsQB,
+  seahawksQB,
+  falconsQB,
+  buccaneersQB,
+  packersQB,
 ];
 
 module.exports = allQBs;

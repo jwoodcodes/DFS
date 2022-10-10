@@ -384,7 +384,7 @@ const terawdata = {
       yahooProjectedOwnership: 0,
     },
   },
-  comanders: {
+  commanders: {
     teamName: 'Commanders',
     teamVTT: 0,
     QBGLSPProjectedPassAttempts: 0,

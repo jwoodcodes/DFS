@@ -1004,7 +1004,7 @@ const wrrawdata = {
       yahooProjectedOwnership: 0,
     },
   },
-  comanders: {
+  commanders: {
     teamName: 'commanders',
     teamVTT: 0,
     QBProjectedPoints: 0,
@@ -1920,7 +1920,7 @@ const wrrawdata = {
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
     WROne: {
-      name: 'placeholder',
+      name: 'DJ Moore',
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -2784,6 +2784,34 @@ const wrrawdata = {
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
+
+      yahooSalary: 0,
+      fanduelSalary: 0,
+      draftkingsSalary: 0,
+
+      draftkingsProjectedOwnership: 0,
+      fanduelProjectedOwnership: 0,
+      yahooProjectedOwnership: 0,
+    },
+    WRThree: {
+      name: 'placeholder',
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+
+      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
+
+      targetShareLastThreeGamesPlayed: 0,
+      projectedTargets4For4: 0,
+
+      roleThisWeek: 3,
+      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
 
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
