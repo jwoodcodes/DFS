@@ -2,7 +2,7 @@ const wholeDownloadableSpreadSheetYahoo = require('../datafilesmadefrom4for4CSVs
 const qbDownloadableSpreadSheetYahoo = require('../datafilesmadefrom4for4CSVs/Yahoo/qbDownloadableSpreadSheetYahoo');
 const wholePlayerPricingWithPercentOfCapDraftkings = require('../datafilesmadefrom4for4CSVs/draftkings/wholePlayerPricingWithPercentOfCapDraftkings');
 const wholePlayerPricingWithPercentOfCapFanduel = require('../datafilesmadefrom4for4CSVs/Fanduel/wholePlayerPricingWithPercentOfCapFanduel');
-const wholePlayerPricingWithPercntOfCapYahoo = require('../datafilesmadefrom4for4CSVs/Yahoo/wholePlayerPricingWithPercentOfCapYahoo');
+const wholePlayerPricingWithPercentOfCapYahoo = require('../datafilesmadefrom4for4CSVs/Yahoo/wholePlayerPricingWithPercentOfCapYahoo');
 const gppLeverageScoresAndProjOwnershipDraftkings = require('../datafilesmadefrom4for4CSVs/draftkings/gppLeverageScoresAndProjOwnershipDraftkings');
 const gppLeverageScoresAndProjOwnershipFanduel = require('../datafilesmadefrom4for4CSVs/Fanduel/gppLeverageScoresAndProjOwnershipFanduel');
 const allHalfPPRProjectedPointsWithoutTeamDef = require('../datafilesmadefrom4for4CSVs/allHalfPPRProjectedPointsWithoutTeamDef');
@@ -13,6 +13,7 @@ const allQBGLSP = require('../datafilesmadefrom4for4CSVs/allQBGLSP');
 const allFlexGLSP = require('../datafilesmadefrom4for4CSVs/allFlexGLSP');
 const QBWeeklyStatExplorerLastFiveWeeksCategoryPassing = require('../datafilesmadefrom4for4CSVs/QBWeeklyStatExplorerLastFiveWeeksCategoryPassing');
 const gameInfo = require('./gameinfo');
+const allTeams = require('../teamandpositionvariables/allTeamLevelVariables');
 
 //QB TDrate is TD's/pass attempts
 
@@ -1029,8 +1030,10 @@ const populateTeamObjects = function (passedInTeam) {
       teamName === passedInTeam.altTeamABV
     ) {
       // console.log(playerObject);
-
+      // console.log(passedInTeam.name);
       // console.log(playerObject);
+      // passedInTeam.teamName = teamName;
+
       passedInTeam.teamVTT = playerObject['Team O/U'];
       passedInTeam.name = playerObject.Player;
       passedInTeam.fourForFourFullPPRProjectedPoints = projpts;
@@ -1040,6 +1043,66 @@ const populateTeamObjects = function (passedInTeam) {
     }
 
     // console.log(teamName);
+  });
+
+  passedInTeam.slate = '';
+  allNFLTeamPace.forEach(function (teamObj) {
+    let tempHomeTeamName = '';
+    let tempAwayTeamName = '';
+    if (teamObj['"Home"'].length === 5) {
+      tempHomeTeamName = teamObj['"Home"'].slice(1, 4);
+    } else {
+      tempHomeTeamName = teamObj['"Home"'].slice(1, 3);
+    }
+
+    if (teamObj['"Away"'].length === 5) {
+      tempAwayTeamName = teamObj['"Away"'].slice(1, 4);
+    } else {
+      tempAwayTeamName = teamObj['"Away"'].slice(1, 3);
+    }
+    if (
+      tempHomeTeamName === passedInTeam.teamABV ||
+      tempHomeTeamName === passedInTeam.altTeamABV
+    ) {
+      passedInTeam.opponentABV = tempAwayTeamName;
+      let gameTime = teamObj['"Time"'].slice(5, 9);
+      let gameDay = teamObj['"Time"'].slice(1, 4);
+      let gameTimeABV = +gameTime.slice(0, 1);
+      // console.log(`${passedInTeam.teamName}: ${teamObj['"Time"']}`);
+      // console.log(`${gameTimeABV}: ${passedInTeam.teamName}`);
+      // console.log(teamObj);
+      if (gameTimeABV > 5) {
+        // console.log('match');
+        // console.log(passedInTeam.teamName);
+        passedInTeam.slate = 'night';
+      }
+      if (gameTimeABV < 5) {
+        passedInTeam.slate = 'main';
+      }
+    }
+
+    if (
+      tempAwayTeamName === passedInTeam.teamABV ||
+      tempAwayTeamName === passedInTeam.altTeamABV
+    ) {
+      passedInTeam.opponentABV = tempHomeTeamName;
+      // passedInTeam.homeOrAway = 'Away';
+
+      let gameTime = teamObj['"Time"'].slice(5, 9);
+      let gameDay = teamObj['"Time"'].slice(1, 4);
+      let gameTimeABV = +gameTime.slice(0, 1);
+      // console.log(`${passedInTeam.teamName}: ${teamObj['"Time"']}`);
+      // console.log(`${gameTimeABV}: ${passedInTeam.teamName}`);
+
+      if (gameTimeABV > 5) {
+        // console.log('match');
+        // console.log(passedInTeam.teamName);
+        passedInTeam.slate = 'night';
+      }
+      if (gameTimeABV < 5) {
+        passedInTeam.slate = 'main';
+      }
+    }
   });
 
   let percentageOfRecentWeeksPlayed = 0;
@@ -1097,7 +1160,147 @@ const populateTeamObjects = function (passedInTeam) {
     }
   });
 
-  // wholePlayerPricingWithPercntOfCapDraftkings
+  wholePlayerPricingWithPercentOfCapDraftkings.forEach(function (teamObj) {
+    let tempTeamName = '';
+
+    if (teamObj['"Team"'].length === 5) {
+      tempTeamName = teamObj['"Team"'].slice(1, 4);
+    } else {
+      tempTeamName = teamObj['"Team"'].slice(1, 3);
+    }
+    // console.log(tempTeamName);
+    let tempPlayerName = teamObj['"Player"'].slice(1, -1);
+    // console.log(tempPlayerName);
+    // console.log();
+    if (
+      passedInTeam.teamABV === tempTeamName ||
+      (passedInTeam.altTeamABV === tempTeamName &&
+        teamObj['"Position"'] === '"QB"' &&
+        passedInTeam.name === tempPlayerName)
+    ) {
+      draftkingssalary = +teamObj['"Current $"'].slice(1, 5);
+      passedInTeam.draftkingsSalary = draftkingssalary;
+
+      let dkPercentOfCap = +teamObj['"% of Cap"'].slice(1, 5);
+      passedInTeam.percentOfSalaryCapDraftkings = dkPercentOfCap;
+    }
+  });
+
+  wholePlayerPricingWithPercentOfCapFanduel.forEach(function (teamObj) {
+    let tempTeamName = '';
+
+    if (teamObj['"Team"'].length === 5) {
+      tempTeamName = teamObj['"Team"'].slice(1, 4);
+    } else {
+      tempTeamName = teamObj['"Team"'].slice(1, 3);
+    }
+    // console.log(tempTeamName);
+    let tempPlayerName = teamObj['"Player"'].slice(1, -1);
+    // console.log(tempPlayerName);
+    // console.log();
+    if (
+      passedInTeam.teamABV === tempTeamName ||
+      (passedInTeam.altTeamABV === tempTeamName &&
+        teamObj['"Position"'] === '"QB"' &&
+        passedInTeam.name === tempPlayerName)
+    ) {
+      Fanduelsalary = +teamObj['"Current $"'].slice(1, 5);
+      passedInTeam.fanduelSalary = Fanduelsalary;
+
+      let fdPercentOfCap = +teamObj['"% of Cap"'].slice(1, 5);
+      passedInTeam.percentOfSalaryCapFanduel = fdPercentOfCap;
+    }
+  });
+
+  wholePlayerPricingWithPercentOfCapYahoo.forEach(function (teamObj) {
+    let tempTeamName = '';
+
+    if (teamObj['"Team"'].length === 5) {
+      tempTeamName = teamObj['"Team"'].slice(1, 4);
+    } else {
+      tempTeamName = teamObj['"Team"'].slice(1, 3);
+    }
+    // console.log(tempTeamName);
+    let tempPlayerName = teamObj['"Player"'].slice(1, -1);
+    // console.log(tempPlayerName);
+    // console.log();
+    if (
+      passedInTeam.teamABV === tempTeamName ||
+      (passedInTeam.altTeamABV === tempTeamName &&
+        teamObj['"Position"'] === '"QB"' &&
+        passedInTeam.name === tempPlayerName)
+    ) {
+      Yahoosalary = +teamObj['"Current $"'].slice(1, 3);
+      passedInTeam.yahooSalary = Yahoosalary;
+
+      let yahooPercentOfCap = +teamObj['"% of Cap"'].slice(1, 5);
+      passedInTeam.percentOfSalaryCapYahoo = yahooPercentOfCap;
+    }
+  });
+
+  allTeams.forEach(function (team) {
+    if (
+      passedInTeam.teamABV === team.teamABV ||
+      passedInTeam.altTeamABV === team.teamABV
+    ) {
+      passedInTeam.opponentABV = team.opponentABV;
+      passedInTeam.homeOrAway = team.homeOrAway;
+    }
+  });
+
+  gppLeverageScoresAndProjOwnershipDraftkings.forEach(function (teamObj) {
+    let tempTeamName = '';
+    // console.log(teamObj['"Tm"'].length);
+    if (teamObj['"Tm"'].length === 5) {
+      tempTeamName = teamObj['"Tm"'].slice(1, 4);
+    } else {
+      tempTeamName = teamObj['"Tm"'].slice(1, 3);
+    }
+    let tempPlayerName = teamObj['"Player"'].slice(1, -1);
+    let temppos = teamObj['"Pos"'].slice(1, -1);
+
+    if (
+      (passedInTeam.teamABV === tempTeamName &&
+        temppos === 'QB' &&
+        passedInTeam.name === tempPlayerName) ||
+      (passedInTeam.altTeamABV === tempTeamName &&
+        temppos === 'QB' &&
+        passedInTeam.name === tempPlayerName)
+    ) {
+      // console.log(teamObj);
+      // console.log(teamObj['"Pos"']);
+      dkOwnership = +teamObj['"Projected Own%"'].slice(1, 4);
+      passedInTeam.draftkingsProjectedOwnership = dkOwnership;
+    }
+  });
+
+  gppLeverageScoresAndProjOwnershipFanduel.forEach(function (teamObj) {
+    let tempTeamName = '';
+    // console.log(teamObj['"Tm"'].length);
+    if (teamObj['"Tm"'].length === 5) {
+      tempTeamName = teamObj['"Tm"'].slice(1, 4);
+    } else {
+      tempTeamName = teamObj['"Tm"'].slice(1, 3);
+    }
+    let tempPlayerName = teamObj['"Player"'].slice(1, -1);
+    let temppos = teamObj['"Pos"'].slice(1, -1);
+
+    if (
+      (passedInTeam.teamABV === tempTeamName &&
+        temppos === 'QB' &&
+        passedInTeam.name === tempPlayerName) ||
+      (passedInTeam.altTeamABV === tempTeamName &&
+        temppos === 'QB' &&
+        passedInTeam.name === tempPlayerName)
+    ) {
+      // console.log(teamObj);
+      // console.log(teamObj['"Pos"']);
+      fdOwnership = +teamObj['"Projected Own%"'].slice(1, 4);
+      passedInTeam.fanduelProjectedOwnership = fdOwnership;
+    }
+  });
+  // draftkingsProjectedOwnership: 0,
+  //   fanduelProjectedOwnership: 0,
 
   let sortedtempPassCatchersProjPoints = tempPassCatchersProjPoints.sort(
     (a, b) => {
@@ -1145,6 +1348,6 @@ populateTeamObjects(qbrawdata.texans);
 populateTeamObjects(qbrawdata.titans);
 populateTeamObjects(qbrawdata.vikings);
 
-console.log(qbrawdata);
+// console.log(qbrawdata);
 
 module.exports = qbrawdata;

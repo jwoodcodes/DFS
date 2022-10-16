@@ -1,67 +1,153 @@
 const qbrawdata = require('../teamandpostionsrawdata/qbrawdata');
+const gameInfo = require('../teamandpostionsrawdata/gameinfo');
 
 /////////////QB variables and allQBs array////////////////
 
-const sf49ersQB = qbrawdata.SF49ers;
-const bearsQB = qbrawdata.bears;
-const bengalsQB = qbrawdata.bengals;
-const billsQB = qbrawdata.bills;
-const broncosQB = qbrawdata.broncos;
-const brownsQB = qbrawdata.browns;
-const buccaneersQB = qbrawdata.buccaneers;
-const cardinalsQB = qbrawdata.cardinals;
-const chargersQB = qbrawdata.chargers;
-const chiefsQB = qbrawdata.chiefs;
-const coltsQB = qbrawdata.colts;
-const commandersQB = qbrawdata.commanders;
-const cowboysQB = qbrawdata.cowboys;
-const dolphinsQB = qbrawdata.dolphins;
-const eaglesQB = qbrawdata.eagles;
-const falconsQB = qbrawdata.falcons;
-const giantsQB = qbrawdata.giants;
-const jaguarsQB = qbrawdata.jaguars;
-const jetsQB = qbrawdata.jets;
-const lionsQB = qbrawdata.lions;
-const packersQB = qbrawdata.packers;
-const panthersQB = qbrawdata.panthers;
-const patriotsQB = qbrawdata.patriots;
-const raidersQB = qbrawdata.raiders;
-const ramsQB = qbrawdata.rams;
-const ravensQB = qbrawdata.ravens;
-const saintsQB = qbrawdata.saints;
-const seahawksQB = qbrawdata.seahawks;
-const steelersQB = qbrawdata.steelers;
-const texansQB = qbrawdata.texans;
-const titansQB = qbrawdata.titans;
-const vikingsQB = qbrawdata.vikings;
+//All team level variables
 
-const allQBs = [
-  panthersQB,
-  saintsQB,
-  bearsQB,
-  texansQB,
-  coltsQB,
-  chiefsQB,
-  dolphinsQB,
-  billsQB,
-  vikingsQB,
-  lionsQB,
-  patriotsQB,
-  ravensQB,
-  jetsQB,
-  bengalsQB,
-  titansQB,
-  raidersQB,
-  commandersQB,
-  eaglesQB,
-  chargersQB,
-  jaguarsQB,
-  cardinalsQB,
-  ramsQB,
-  seahawksQB,
-  falconsQB,
-  buccaneersQB,
-  packersQB,
+const SF = qbrawdata.SF49ers;
+const CHI = qbrawdata.bears;
+const CIN = qbrawdata.bengals;
+const BUF = qbrawdata.bills;
+const DEN = qbrawdata.broncos;
+const CLE = qbrawdata.browns;
+const TB = qbrawdata.buccaneers;
+const ARI = qbrawdata.cardinals;
+const LAC = qbrawdata.chargers;
+const KC = qbrawdata.chiefs;
+const IND = qbrawdata.colts;
+const WAS = qbrawdata.commanders;
+const DAL = qbrawdata.cowboys;
+const MIA = qbrawdata.dolphins;
+const PHI = qbrawdata.eagles;
+const ATL = qbrawdata.falcons;
+const NYG = qbrawdata.giants;
+const JAC = qbrawdata.jaguars;
+const NYJ = qbrawdata.jets;
+const DET = qbrawdata.lions;
+const GB = qbrawdata.packers;
+const CAR = qbrawdata.panthers;
+const NE = qbrawdata.patriots;
+const LV = qbrawdata.raiders;
+const LAR = qbrawdata.rams;
+const BAL = qbrawdata.ravens;
+const NO = qbrawdata.saints;
+const SEA = qbrawdata.seahawks;
+const PIT = qbrawdata.steelers;
+const HOU = qbrawdata.texans;
+const TEN = qbrawdata.titans;
+const MIN = qbrawdata.vikings;
+
+//////////all team level allTeams array///////
+
+const allEveryTeamEvenOnesOnByeThisWeek = [
+  CAR,
+  NO,
+  CHI,
+  HOU,
+  IND,
+  KC,
+  MIA,
+  BUF,
+  MIN,
+  DET,
+  NE,
+  BAL,
+  NYG,
+  CIN,
+  TEN,
+  LV,
+  WAS,
+  PHI,
+  LAC,
+  JAC,
+  ARI,
+  LAR,
+  SEA,
+  ATL,
+  TB,
+  GB,
+  PIT,
+  NYJ,
+  DAL,
+  CLE,
+  DEN,
+  SF,
 ];
+
+const allTeamABV = [
+  CAR,
+  NO,
+  CHI,
+  HOU,
+  IND,
+  KC,
+  MIA,
+  BUF,
+  MIN,
+  DET,
+  NE,
+  BAL,
+  NYG,
+  CIN,
+  TEN,
+  LV,
+  WAS,
+  PHI,
+  LAC,
+  JAC,
+  ARI,
+  LAR,
+  SEA,
+  ATL,
+  TB,
+  GB,
+  PIT,
+  NYJ,
+  DAL,
+  CLE,
+  DEN,
+  SF,
+];
+
+const testAllTeams = [];
+
+allEveryTeamEvenOnesOnByeThisWeek.forEach(function (team, i) {
+  if (team.slate !== '') {
+    // console.log(team.opponentABV);
+    allTeamABV.forEach(function (ABV) {
+      // console.log(team.opponentABV);
+      // console.log(team.opponentABV);
+      // console.log(`${team.name}: ${team.opponentABV}: ${ABV}`);
+      if (team.opponentABV === ABV.teamABV) {
+        if (team.homeOrAway === 'Home') {
+          // console.log(team);
+          testAllTeams.push(team);
+        }
+        if (ABV.homeOrAway === 'Home') {
+          testAllTeams.push(ABV);
+        }
+        if (team.homeOrAway === 'Away') {
+          testAllTeams.push(team);
+        }
+        if (ABV.homeOrAway === 'Away') {
+          testAllTeams.push(ABV);
+        }
+      }
+    });
+  }
+});
+
+// console.log(testAllTeams);
+
+function onlyUnqiues(value, index, self) {
+  return self.indexOf(value) === index;
+}
+
+let allUniqueTeams = testAllTeams.filter(onlyUnqiues);
+
+// console.log(allUniqueTeams);
+
+const allQBs = allUniqueTeams;
 
 module.exports = allQBs;

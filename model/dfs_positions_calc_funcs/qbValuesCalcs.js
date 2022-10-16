@@ -202,7 +202,7 @@ if (gameInfo.week.currentWeek < 5) {
 }
 
 if (gameInfo.week.currentWeek === 5 || gameInfo.week.currentWeek === 6) {
-  allQBs.map(function (team, i) {
+  allQBs.forEach(function (team, i) {
     let twentyFifthPercentProjection =
       allQBs[i].twentyFifthPercentProjectedPoints;
     let fiftyithPercentProjection = allQBs[i].fiftyithPercentProjectedPoints;
@@ -226,8 +226,10 @@ if (gameInfo.week.currentWeek === 5 || gameInfo.week.currentWeek === 6) {
         initialQBProjectedPoints = twentyFifthPercentProjection;
       }
 
-      let total = initialQBProjectedPoints + fourForFour;
+      let total = +initialQBProjectedPoints + +fourForFour;
+
       let QBProjectedPoints = total / 2;
+      // console.log(`${team.name}: ${QBProjectedPoints}`);
 
       allQBFinalProjectedPointsValues.push(QBProjectedPoints);
       allQBFinalProjectedPointsValuesPlusNames.push(
@@ -271,7 +273,7 @@ if (gameInfo.week.currentWeek > 6) {
       initialQBProjectedPoints = twentyFifthPercentProjection;
     }
 
-    let total = initialQBProjectedPoints + fourForFour;
+    let total = +initialQBProjectedPoints + +fourForFour;
     let QBProjectedPoints = total / 2;
 
     allQBManagedAndCashProjectedPointsValues.push(QBProjectedPoints);

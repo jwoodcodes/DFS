@@ -1,5 +1,23 @@
+const wholeDownloadableSpreadSheetYahoo = require('../datafilesmadefrom4for4CSVs/Yahoo/wholeDownloadableSpreadSheetYahoo');
+const qbDownloadableSpreadSheetYahoo = require('../datafilesmadefrom4for4CSVs/Yahoo/qbDownloadableSpreadSheetYahoo');
+const wholePlayerPricingWithPercentOfCapDraftkings = require('../datafilesmadefrom4for4CSVs/draftkings/wholePlayerPricingWithPercentOfCapDraftkings');
+const wholePlayerPricingWithPercentOfCapFanduel = require('../datafilesmadefrom4for4CSVs/Fanduel/wholePlayerPricingWithPercentOfCapFanduel');
+const wholePlayerPricingWithPercentOfCapYahoo = require('../datafilesmadefrom4for4CSVs/Yahoo/wholePlayerPricingWithPercentOfCapYahoo');
+const gppLeverageScoresAndProjOwnershipDraftkings = require('../datafilesmadefrom4for4CSVs/draftkings/gppLeverageScoresAndProjOwnershipDraftkings');
+const gppLeverageScoresAndProjOwnershipFanduel = require('../datafilesmadefrom4for4CSVs/Fanduel/gppLeverageScoresAndProjOwnershipFanduel');
+const allHalfPPRProjectedPointsWithoutTeamDef = require('../datafilesmadefrom4for4CSVs/allHalfPPRProjectedPointsWithoutTeamDef');
+const allFullPPRProjectedPointsWithoutTeamDef = require('../datafilesmadefrom4for4CSVs/allFullPPRProjectedPointsWithoutTeamDef');
+const allNFLTeamPace = require('../datafilesmadefrom4for4CSVs/allNFLTeamPace');
+const allQBGLSP = require('../datafilesmadefrom4for4CSVs/allQBGLSP');
+
+const allFlexGLSP = require('../datafilesmadefrom4for4CSVs/allFlexGLSP');
+const QBWeeklyStatExplorerLastFiveWeeksCategoryPassing = require('../datafilesmadefrom4for4CSVs/QBWeeklyStatExplorerLastFiveWeeksCategoryPassing');
+const gameInfo = require('./gameinfo');
+const allTeams = require('../teamandpositionvariables/allTeamLevelVariables');
+
 const rbrawdata = {
   SF49ers: {
+    teamABV: 'SF',
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
@@ -57,6 +75,7 @@ const rbrawdata = {
     },
   },
   bears: {
+    teamABV: 'CHI',
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
@@ -114,6 +133,7 @@ const rbrawdata = {
     },
   },
   bengals: {
+    teamABV: 'CIN',
     totalTeamPRojectedRBCarries: 27,
     totalTeamProjectedRBTargets: 4.6,
 
@@ -172,6 +192,7 @@ const rbrawdata = {
     },
   },
   bills: {
+    teamABV: 'BUF',
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
@@ -229,6 +250,7 @@ const rbrawdata = {
     },
   },
   broncos: {
+    teamABV: 'DEN',
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
@@ -286,6 +308,7 @@ const rbrawdata = {
     },
   },
   browns: {
+    teamABV: 'CLE',
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
@@ -343,6 +366,7 @@ const rbrawdata = {
     },
   },
   buccaneers: {
+    teamABV: 'TB',
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
@@ -400,6 +424,7 @@ const rbrawdata = {
     },
   },
   cardinals: {
+    teamABV: 'ARI',
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
@@ -457,6 +482,7 @@ const rbrawdata = {
     },
   },
   chargers: {
+    teamABV: 'LAC',
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
@@ -514,6 +540,7 @@ const rbrawdata = {
     },
   },
   chiefs: {
+    teamABV: 'KC',
     totalTeamPRojectedRBCarries: 18.2,
     totalTeamProjectedRBTargets: 7.2,
     RBOne: {
@@ -571,6 +598,7 @@ const rbrawdata = {
     },
   },
   colts: {
+    teamABV: 'IND',
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
@@ -628,6 +656,7 @@ const rbrawdata = {
     },
   },
   commanders: {
+    teamABV: 'WAS',
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
@@ -685,6 +714,7 @@ const rbrawdata = {
     },
   },
   cowboys: {
+    teamABV: 'DAL',
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
@@ -742,6 +772,7 @@ const rbrawdata = {
     },
   },
   dolphins: {
+    teamABV: 'MIA',
     totalTeamPRojectedRBCarries: 26.4,
     totalTeamProjectedRBTargets: 3,
     RBOne: {
@@ -799,6 +830,7 @@ const rbrawdata = {
     },
   },
   eagles: {
+    teamABV: 'PHI',
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
@@ -856,6 +888,7 @@ const rbrawdata = {
     },
   },
   falcons: {
+    teamABV: 'ATL',
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
@@ -913,6 +946,7 @@ const rbrawdata = {
     },
   },
   giants: {
+    teamABV: 'NYG',
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
@@ -970,6 +1004,8 @@ const rbrawdata = {
     },
   },
   jaguars: {
+    teamABV: 'JAC',
+    altTeamABV: 'JAX',
     totalTeamPRojectedRBCarries: 15.6,
     totalTeamProjectedRBTargets: 5.6,
     RBOne: {
@@ -1027,6 +1063,7 @@ const rbrawdata = {
     },
   },
   jets: {
+    teamABV: 'NYJ',
     totalTeamPRojectedRBCarries: 19,
     totalTeamProjectedRBTargets: 5.4,
     RBOne: {
@@ -1084,6 +1121,7 @@ const rbrawdata = {
     },
   },
   lions: {
+    teamABV: 'DET',
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
@@ -1141,6 +1179,7 @@ const rbrawdata = {
     },
   },
   packers: {
+    teamABV: 'GB',
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
@@ -1198,6 +1237,7 @@ const rbrawdata = {
     },
   },
   panthers: {
+    teamABV: 'CAR',
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
@@ -1255,6 +1295,7 @@ const rbrawdata = {
     },
   },
   patriots: {
+    teamABV: 'NE',
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
@@ -1312,6 +1353,7 @@ const rbrawdata = {
     },
   },
   raiders: {
+    teamABV: 'LV',
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
@@ -1369,6 +1411,7 @@ const rbrawdata = {
     },
   },
   rams: {
+    teamABV: 'LAR',
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
@@ -1426,6 +1469,7 @@ const rbrawdata = {
     },
   },
   ravens: {
+    teamABV: 'BAL',
     totalTeamPRojectedRBCarries: 19,
     totalTeamProjectedRBTargets: 5.8,
     RBOne: {
@@ -1483,6 +1527,7 @@ const rbrawdata = {
     },
   },
   saints: {
+    teamABV: 'NO',
     totalTeamPRojectedRBCarries: 19.6,
     totalTeamProjectedRBTargets: 5,
     RBOne: {
@@ -1540,6 +1585,7 @@ const rbrawdata = {
     },
   },
   seahawks: {
+    teamABV: 'SEA',
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
@@ -1597,6 +1643,7 @@ const rbrawdata = {
     },
   },
   steelers: {
+    teamABV: 'PIT',
     totalTeamPRojectedRBCarries: 17.2,
     totalTeamProjectedRBTargets: 5.4,
     RBOne: {
@@ -1654,6 +1701,7 @@ const rbrawdata = {
     },
   },
   texans: {
+    teamABV: 'HOU',
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
@@ -1711,6 +1759,7 @@ const rbrawdata = {
     },
   },
   titans: {
+    teamABV: 'TEN',
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
@@ -1769,6 +1818,7 @@ const rbrawdata = {
   },
 
   vikings: {
+    teamABV: 'MIN',
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
@@ -1826,5 +1876,107 @@ const rbrawdata = {
     },
   },
 };
+
+const populateTeamObjects = function (passedInTeam) {
+  qbDownloadableSpreadSheetYahoo.forEach(function (playerobj, i) {
+    passedInTeam.slate = '';
+    allNFLTeamPace.forEach(function (teamObj) {
+      let tempHomeTeamName = '';
+      let tempAwayTeamName = '';
+      if (teamObj['"Home"'].length === 5) {
+        tempHomeTeamName = teamObj['"Home"'].slice(1, 4);
+      } else {
+        tempHomeTeamName = teamObj['"Home"'].slice(1, 3);
+      }
+
+      if (teamObj['"Away"'].length === 5) {
+        tempAwayTeamName = teamObj['"Away"'].slice(1, 4);
+      } else {
+        tempAwayTeamName = teamObj['"Away"'].slice(1, 3);
+      }
+
+      if (
+        tempHomeTeamName === passedInTeam.teamABV ||
+        tempHomeTeamName === passedInTeam.altTeamABV
+      ) {
+        // console.log(tempHomeTeamName);
+        passedInTeam.opponentABV = tempAwayTeamName;
+        passedInTeam.homeOrAway = 'Home';
+        let gameTime = teamObj['"Time"'].slice(5, 9);
+        let gameDay = teamObj['"Time"'].slice(1, 4);
+        let gameTimeABV = +gameTime.slice(0, 1);
+        // console.log(`${passedInTeam.teamName}: ${teamObj['"Time"']}`);
+        // console.log(`${gameTimeABV}: ${passedInTeam.teamName}`);
+        // console.log(teamObj);
+        if (gameTimeABV > 5) {
+          // console.log('match');
+          // console.log(passedInTeam.teamName);
+          passedInTeam.slate = 'night';
+        }
+        if (gameTimeABV < 5) {
+          passedInTeam.slate = 'main';
+        }
+      }
+
+      if (
+        tempAwayTeamName === passedInTeam.teamABV ||
+        tempAwayTeamName === passedInTeam.altTeamABV
+      ) {
+        passedInTeam.opponentABV = tempHomeTeamName;
+        passedInTeam.homeOrAway = 'Away';
+
+        let gameTime = teamObj['"Time"'].slice(5, 9);
+        let gameDay = teamObj['"Time"'].slice(1, 4);
+        let gameTimeABV = +gameTime.slice(0, 1);
+        // console.log(`${passedInTeam.teamName}: ${teamObj['"Time"']}`);
+        // console.log(`${gameTimeABV}: ${passedInTeam.teamName}`);
+
+        if (gameTimeABV > 5) {
+          // console.log('match');
+          // console.log(passedInTeam.teamName);
+          passedInTeam.slate = 'night';
+        }
+        if (gameTimeABV < 5) {
+          passedInTeam.slate = 'main';
+        }
+      }
+    });
+  });
+};
+
+populateTeamObjects(rbrawdata.SF49ers);
+populateTeamObjects(rbrawdata.bears);
+populateTeamObjects(rbrawdata.bengals);
+populateTeamObjects(rbrawdata.bills);
+populateTeamObjects(rbrawdata.broncos);
+populateTeamObjects(rbrawdata.browns);
+populateTeamObjects(rbrawdata.buccaneers);
+populateTeamObjects(rbrawdata.cardinals);
+populateTeamObjects(rbrawdata.chargers);
+populateTeamObjects(rbrawdata.chiefs);
+populateTeamObjects(rbrawdata.colts);
+populateTeamObjects(rbrawdata.commanders);
+populateTeamObjects(rbrawdata.cowboys);
+populateTeamObjects(rbrawdata.dolphins);
+populateTeamObjects(rbrawdata.eagles);
+populateTeamObjects(rbrawdata.falcons);
+populateTeamObjects(rbrawdata.giants);
+populateTeamObjects(rbrawdata.jaguars);
+populateTeamObjects(rbrawdata.jets);
+populateTeamObjects(rbrawdata.lions);
+populateTeamObjects(rbrawdata.packers);
+populateTeamObjects(rbrawdata.panthers);
+populateTeamObjects(rbrawdata.patriots);
+populateTeamObjects(rbrawdata.raiders);
+populateTeamObjects(rbrawdata.rams);
+populateTeamObjects(rbrawdata.ravens);
+populateTeamObjects(rbrawdata.saints);
+populateTeamObjects(rbrawdata.seahawks);
+populateTeamObjects(rbrawdata.steelers);
+populateTeamObjects(rbrawdata.texans);
+populateTeamObjects(rbrawdata.titans);
+populateTeamObjects(rbrawdata.vikings);
+
+// console.log(rbrawdata);
 
 module.exports = rbrawdata;

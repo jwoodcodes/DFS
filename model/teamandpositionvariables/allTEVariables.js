@@ -1,65 +1,156 @@
 const terawdata = require('../teamandpostionsrawdata/terawdata');
 
-const sf49ersTE = terawdata.SF49ers;
-const bearsTE = terawdata.bears;
-const bengalsTE = terawdata.bengals;
-const billsTE = terawdata.bills;
-const broncosTE = terawdata.broncos;
-const brownsTE = terawdata.browns;
-const buccaneersTE = terawdata.buccaneers;
-const cardinalsTE = terawdata.cardinals;
-const chargersTE = terawdata.chargers;
-const chiefsTE = terawdata.chiefs;
-const coltsTE = terawdata.colts;
-const commandersTE = terawdata.commanders;
-const cowboysTE = terawdata.cowboys;
-const dolphinsTE = terawdata.dolphins;
-const eaglesTE = terawdata.eagles;
-const falconsTE = terawdata.falcons;
-const giantsTE = terawdata.giants;
-const jaguarsTE = terawdata.jaguars;
-const jetsTE = terawdata.jets;
-const lionsTE = terawdata.lions;
-const packersTE = terawdata.packers;
-const panthersTE = terawdata.panthers;
-const patriotsTE = terawdata.patriots;
-const raidersTE = terawdata.raiders;
-const ramsTE = terawdata.rams;
-const ravensTE = terawdata.ravens;
-const saintsTE = terawdata.saints;
-const seahawksTE = terawdata.seahawks;
-const steelersTE = terawdata.steelers;
-const texansTE = terawdata.texans;
-const titansTE = terawdata.titans;
-const vikingsTE = terawdata.vikings;
+const gameInfo = require('../teamandpostionsrawdata/gameinfo');
+const allTeams = require('./allTeamLevelVariables');
 
-const allTEs = [
-  panthersTE,
-  saintsTE,
-  bearsTE,
-  texansTE,
-  coltsTE,
-  chiefsTE,
-  dolphinsTE,
-  billsTE,
-  vikingsTE,
-  lionsTE,
-  patriotsTE,
-  ravensTE,
-  jetsTE,
-  bengalsTE,
-  titansTE,
-  raidersTE,
-  commandersTE,
-  eaglesTE,
-  chargersTE,
-  jaguarsTE,
-  cardinalsTE,
-  ramsTE,
-  seahawksTE,
-  falconsTE,
-  buccaneersTE,
-  packersTE,
+/////////////RB Variables and allRBs array//////////////////
+
+//All team level variables
+
+const SF = terawdata.SF49ers;
+const CHI = terawdata.bears;
+const CIN = terawdata.bengals;
+const BUF = terawdata.bills;
+const DEN = terawdata.broncos;
+const CLE = terawdata.browns;
+const TB = terawdata.buccaneers;
+const ARI = terawdata.cardinals;
+const LAC = terawdata.chargers;
+const KC = terawdata.chiefs;
+const IND = terawdata.colts;
+const WAS = terawdata.commanders;
+const DAL = terawdata.cowboys;
+const MIA = terawdata.dolphins;
+const PHI = terawdata.eagles;
+const ATL = terawdata.falcons;
+const NYG = terawdata.giants;
+const JAC = terawdata.jaguars;
+const NYJ = terawdata.jets;
+const DET = terawdata.lions;
+const GB = terawdata.packers;
+const CAR = terawdata.panthers;
+const NE = terawdata.patriots;
+const LV = terawdata.raiders;
+const LAR = terawdata.rams;
+const BAL = terawdata.ravens;
+const NO = terawdata.saints;
+const SEA = terawdata.seahawks;
+const PIT = terawdata.steelers;
+const HOU = terawdata.texans;
+const TEN = terawdata.titans;
+const MIN = terawdata.vikings;
+
+//////////all team level allTeams array///////
+
+const allEveryTeamEvenOnesOnByeThisWeek = [
+  CAR,
+  NO,
+  CHI,
+  HOU,
+  IND,
+  KC,
+  MIA,
+  BUF,
+  MIN,
+  DET,
+  NE,
+  BAL,
+  NYG,
+  CIN,
+  TEN,
+  LV,
+  WAS,
+  PHI,
+  LAC,
+  JAC,
+  ARI,
+  LAR,
+  SEA,
+  ATL,
+  TB,
+  GB,
+  PIT,
+  NYJ,
+  DAL,
+  CLE,
+  DEN,
+  SF,
 ];
+
+const allTeamABV = [
+  CAR,
+  NO,
+  CHI,
+  HOU,
+  IND,
+  KC,
+  MIA,
+  BUF,
+  MIN,
+  DET,
+  NE,
+  BAL,
+  NYG,
+  CIN,
+  TEN,
+  LV,
+  WAS,
+  PHI,
+  LAC,
+  JAC,
+  ARI,
+  LAR,
+  SEA,
+  ATL,
+  TB,
+  GB,
+  PIT,
+  NYJ,
+  DAL,
+  CLE,
+  DEN,
+  SF,
+];
+
+const testAllTeams = [];
+
+allEveryTeamEvenOnesOnByeThisWeek.forEach(function (team, i) {
+  if (team.slate !== '') {
+    // console.log(team.opponentABV);
+    allTeamABV.forEach(function (ABV) {
+      // console.log(team.opponentABV);
+      // console.log(team.opponentABV);
+      // console.log(`${team.name}: ${team.opponentABV}: ${ABV}`);
+      if (team.opponentABV === ABV.teamABV) {
+        if (team.homeOrAway === 'Home') {
+          // console.log(team);
+          testAllTeams.push(team);
+        }
+        if (ABV.homeOrAway === 'Home') {
+          testAllTeams.push(ABV);
+        }
+        if (team.homeOrAway === 'Away') {
+          testAllTeams.push(team);
+        }
+        if (ABV.homeOrAway === 'Away') {
+          testAllTeams.push(ABV);
+        }
+      }
+    });
+  }
+});
+
+// console.log(testAllTeams);
+
+function onlyUnqiues(value, index, self) {
+  return self.indexOf(value) === index;
+}
+
+let allUniqueTeams = testAllTeams.filter(onlyUnqiues);
+
+// console.log(allUniqueTeams);
+
+const allTEs = allUniqueTeams;
+// console.log(allTEs);
 
 module.exports = allTEs;

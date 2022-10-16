@@ -61,11 +61,22 @@
 
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints- get from allHalfPPRProjectedPointsWithoutTeamDef file made from the weekly rankings on 4for4 for superflex CSV
 
-     yahooSalary-
+     yahooSalary- get from wholePlayerPricingWithPercentOfCapYahoo file made from Yahoo player pricing CSV
 
-    fanduelSalary-
+    fanduelSalary- get from wholePlayerPricingWithPercentOfCapFanduel file made from Fanduel player pricing CSV
 
-    draftkingsSalary-
+    draftkingsSalary- get from wholePlayerPricingWithPercentOfCapDraftkings file made from draftkings player pricing CSV
+
+    draftkingsProjectedOwnership- get from gppLeverageScoresAndProjOwnershipDraftkings file mde from draftkings gpp leverage scores CSV
+  
+    fanduelProjectedOwnership- get from gppLeverageScoresAndProjOwnershipFandeul file mde from fanduel gpp leverage scores CSV
+
+    percentOfSalaryCapDraftkings-  get from wholePlayerPricingWithPercentOfCapDraftkings file made from draftkings player pricing CSV
+
+
+    percentOfSalaryCapFanduel- get from wholePlayerPricingWithPercentOfCapFanduel file made from Fanduel player pricing CSV
+
+    percentOfSalaryCapYahoo- get from wholePlayerPricingWithPercentOfCapYahoo file made from Yahoo player pricing CSV
 
 
 
@@ -127,16 +138,6 @@
   properties in raw data files I currently need to hardcode myself:
 
   gameInfo:
-
-    - ABSULUTLY CRITICAL TO SET THE CURRENT WEEK VALUE IN GAMEINFO AT THE START OF EVER WEEK!!!
-        ABSULUTLY CRITICAL TO SET THE CURRENT WEEK VALUE IN GAMEINFO AT THE START OF EVER WEEK!!!
-        ABSULUTLY CRITICAL TO SET THE CURRENT WEEK VALUE IN GAMEINFO AT THE START OF EVER WEEK!!!
-        ABSULUTLY CRITICAL TO SET THE CURRENT WEEK VALUE IN GAMEINFO AT THE START OF EVER WEEK!!!
-        ABSULUTLY CRITICAL TO SET THE CURRENT WEEK VALUE IN GAMEINFO AT THE START OF EVER WEEK!!!
-        ABSULUTLY CRITICAL TO SET THE CURRENT WEEK VALUE IN GAMEINFO AT THE START OF EVER WEEK!!!
-        ABSULUTLY CRITICAL TO SET THE CURRENT WEEK VALUE IN GAMEINFO AT THE START OF EVER WEEK!!!
-        ABSULUTLY CRITICAL TO SET THE CURRENT WEEK VALUE IN GAMEINFO AT THE START OF EVER WEEK!!!
-        ABSULUTLY CRITICAL TO SET THE CURRENT WEEK VALUE IN GAMEINFO AT THE START OF EVER WEEK!!!
 
 
     -def4for4projectedpoints for teams not on main slate. console.log(gameInfo) after downloading and copy pasting all CSV's for the week and hard code the teams that have a zero for def4for4projectedpoints

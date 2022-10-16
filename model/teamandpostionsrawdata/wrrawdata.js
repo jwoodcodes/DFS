@@ -1,9 +1,27 @@
+const wholeDownloadableSpreadSheetYahoo = require('../datafilesmadefrom4for4CSVs/Yahoo/wholeDownloadableSpreadSheetYahoo');
+const qbDownloadableSpreadSheetYahoo = require('../datafilesmadefrom4for4CSVs/Yahoo/qbDownloadableSpreadSheetYahoo');
+const wholePlayerPricingWithPercentOfCapDraftkings = require('../datafilesmadefrom4for4CSVs/draftkings/wholePlayerPricingWithPercentOfCapDraftkings');
+const wholePlayerPricingWithPercentOfCapFanduel = require('../datafilesmadefrom4for4CSVs/Fanduel/wholePlayerPricingWithPercentOfCapFanduel');
+const wholePlayerPricingWithPercentOfCapYahoo = require('../datafilesmadefrom4for4CSVs/Yahoo/wholePlayerPricingWithPercentOfCapYahoo');
+const gppLeverageScoresAndProjOwnershipDraftkings = require('../datafilesmadefrom4for4CSVs/draftkings/gppLeverageScoresAndProjOwnershipDraftkings');
+const gppLeverageScoresAndProjOwnershipFanduel = require('../datafilesmadefrom4for4CSVs/Fanduel/gppLeverageScoresAndProjOwnershipFanduel');
+const allHalfPPRProjectedPointsWithoutTeamDef = require('../datafilesmadefrom4for4CSVs/allHalfPPRProjectedPointsWithoutTeamDef');
+const allFullPPRProjectedPointsWithoutTeamDef = require('../datafilesmadefrom4for4CSVs/allFullPPRProjectedPointsWithoutTeamDef');
+const allNFLTeamPace = require('../datafilesmadefrom4for4CSVs/allNFLTeamPace');
+const allQBGLSP = require('../datafilesmadefrom4for4CSVs/allQBGLSP');
+
+const allFlexGLSP = require('../datafilesmadefrom4for4CSVs/allFlexGLSP');
+const QBWeeklyStatExplorerLastFiveWeeksCategoryPassing = require('../datafilesmadefrom4for4CSVs/QBWeeklyStatExplorerLastFiveWeeksCategoryPassing');
+const gameInfo = require('./gameinfo');
+const allTeams = require('../teamandpositionvariables/allTeamLevelVariables');
+
 //WR target share the last x number of games can be found on the rotoviz monday review and the last 6 weeks should be used for a WR's target share number
 //WR projected targets should be QB prjpassattempts * target share(in decimal form!)
 
 const wrrawdata = {
   SF49ers: {
     teamName: 'SF49ers',
+    teamABV: 'SF',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
@@ -95,6 +113,7 @@ const wrrawdata = {
   },
   bears: {
     teamName: 'bears',
+    teamABV: 'CHI',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
@@ -186,6 +205,7 @@ const wrrawdata = {
   },
   bengals: {
     teamName: 'bengals',
+    teamABV: 'CIN',
     teamVTT: 25.25,
     QBProjectedPoints: 23,
     QBGLSPProjectedPassAttempts: 29.8,
@@ -277,6 +297,7 @@ const wrrawdata = {
   },
   bills: {
     teamName: 'bills',
+    teamABV: 'BUF',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
@@ -368,6 +389,7 @@ const wrrawdata = {
   },
   broncos: {
     teamName: 'broncos',
+    teamABV: 'DEN',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
@@ -459,6 +481,7 @@ const wrrawdata = {
   },
   browns: {
     teamName: 'browns',
+    teamABV: 'CLE',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
@@ -551,6 +574,7 @@ const wrrawdata = {
 
   buccaneers: {
     teamName: 'buccaneers',
+    teamABV: 'TB',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
@@ -642,6 +666,7 @@ const wrrawdata = {
   },
   cardinals: {
     teamName: 'cardinals',
+    teamABV: 'ARI',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
@@ -733,6 +758,7 @@ const wrrawdata = {
   },
   chargers: {
     teamName: 'chargers',
+    teamABV: 'LAC',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
@@ -824,6 +850,7 @@ const wrrawdata = {
   },
   chiefs: {
     teamName: 'chiefs',
+    teamABV: 'KC',
     teamVTT: 27.5,
     QBProjectedPoints: 24,
     QBGLSPProjectedPassAttempts: 37.4,
@@ -915,6 +942,7 @@ const wrrawdata = {
   },
   colts: {
     teamName: 'colts',
+    teamABV: 'IND',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
@@ -1006,6 +1034,7 @@ const wrrawdata = {
   },
   commanders: {
     teamName: 'commanders',
+    teamABV: 'WAS',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
@@ -1097,6 +1126,7 @@ const wrrawdata = {
   },
   cowboys: {
     teamName: 'cowboys',
+    teamABV: 'DAL',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
@@ -1188,6 +1218,7 @@ const wrrawdata = {
   },
   dolphins: {
     teamName: 'dolphins',
+    teamABV: 'MIA',
     teamVTT: 20.25,
     QBProjectedPoints: 15,
     QBGLSPProjectedPassAttempts: 33,
@@ -1279,6 +1310,7 @@ const wrrawdata = {
   },
   eagles: {
     teamName: 'eagles',
+    teamABV: 'PHI',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
@@ -1370,6 +1402,7 @@ const wrrawdata = {
   },
   falcons: {
     teamName: 'falcons',
+    teamABV: 'ATL',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
@@ -1461,6 +1494,7 @@ const wrrawdata = {
   },
   giants: {
     teamName: 'giants',
+    teamABV: 'NYG',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
@@ -1552,6 +1586,8 @@ const wrrawdata = {
   },
   jaguars: {
     teamName: 'jaguars',
+    teamABV: 'JAC',
+    altTeamABV: 'JAX',
     teamVTT: 20.25,
     QBProjectedPoints: 10,
     QBGLSPProjectedPassAttempts: 34.6,
@@ -1643,6 +1679,7 @@ const wrrawdata = {
   },
   jets: {
     teamName: 'jets',
+    teamABV: 'NYJ',
     teamVTT: 15,
     QBProjectedPoints: 9,
     QBGLSPProjectedPassAttempts: 27.4,
@@ -1734,6 +1771,7 @@ const wrrawdata = {
   },
   lions: {
     teamName: 'lions',
+    teamABV: 'DET',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
@@ -1825,6 +1863,7 @@ const wrrawdata = {
   },
   packers: {
     teamName: 'packers',
+    teamABV: 'GB',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
@@ -1916,6 +1955,7 @@ const wrrawdata = {
   },
   panthers: {
     teamName: 'panthers',
+    teamABV: 'CAR',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
@@ -2007,6 +2047,7 @@ const wrrawdata = {
   },
   patriots: {
     teamName: 'patriots',
+    teamABV: 'NE',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
@@ -2099,6 +2140,7 @@ const wrrawdata = {
 
   raiders: {
     teamName: 'raiders',
+    teamABV: 'LV',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
@@ -2190,6 +2232,7 @@ const wrrawdata = {
   },
   rams: {
     teamName: 'rams',
+    teamABV: 'LAR',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
@@ -2281,6 +2324,7 @@ const wrrawdata = {
   },
   ravens: {
     teamName: 'ravens',
+    teamABV: 'BAL',
     teamVTT: 18.25,
     QBProjectedPoints: 13,
     QBGLSPProjectedPassAttempts: 38,
@@ -2372,6 +2416,7 @@ const wrrawdata = {
   },
   saints: {
     teamName: 'saints',
+    teamABV: 'NO',
     teamVTT: 17.25,
     QBProjectedPoints: 10,
     QBGLSPProjectedPassAttempts: 22.75,
@@ -2463,6 +2508,7 @@ const wrrawdata = {
   },
   seahawks: {
     teamName: 'seahawks',
+    teamABV: 'SEA',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
@@ -2554,6 +2600,7 @@ const wrrawdata = {
   },
   steelers: {
     teamName: 'steelers',
+    teamABV: 'PIT',
     teamVTT: 17,
     QBProjectedPoints: 12,
     QBGLSPProjectedPassAttempts: 36.2,
@@ -2645,6 +2692,7 @@ const wrrawdata = {
   },
   texans: {
     teamName: 'texans',
+    teamABV: 'HOU',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
@@ -2736,6 +2784,7 @@ const wrrawdata = {
   },
   titans: {
     teamName: 'titans',
+    teamABV: 'TEN',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
@@ -2827,6 +2876,7 @@ const wrrawdata = {
   },
   vikings: {
     teamName: 'vikings',
+    teamABV: 'MIN',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
@@ -2917,5 +2967,107 @@ const wrrawdata = {
     },
   },
 };
+
+const populateTeamObjects = function (passedInTeam) {
+  qbDownloadableSpreadSheetYahoo.forEach(function (playerobj, i) {
+    passedInTeam.slate = '';
+    allNFLTeamPace.forEach(function (teamObj) {
+      let tempHomeTeamName = '';
+      let tempAwayTeamName = '';
+      if (teamObj['"Home"'].length === 5) {
+        tempHomeTeamName = teamObj['"Home"'].slice(1, 4);
+      } else {
+        tempHomeTeamName = teamObj['"Home"'].slice(1, 3);
+      }
+
+      if (teamObj['"Away"'].length === 5) {
+        tempAwayTeamName = teamObj['"Away"'].slice(1, 4);
+      } else {
+        tempAwayTeamName = teamObj['"Away"'].slice(1, 3);
+      }
+
+      if (
+        tempHomeTeamName === passedInTeam.teamABV ||
+        tempHomeTeamName === passedInTeam.altTeamABV
+      ) {
+        // console.log(tempHomeTeamName);
+        passedInTeam.opponentABV = tempAwayTeamName;
+        passedInTeam.homeOrAway = 'Home';
+        let gameTime = teamObj['"Time"'].slice(5, 9);
+        let gameDay = teamObj['"Time"'].slice(1, 4);
+        let gameTimeABV = +gameTime.slice(0, 1);
+        // console.log(`${passedInTeam.teamName}: ${teamObj['"Time"']}`);
+        // console.log(`${gameTimeABV}: ${passedInTeam.teamName}`);
+        // console.log(teamObj);
+        if (gameTimeABV > 5) {
+          // console.log('match');
+          // console.log(passedInTeam.teamName);
+          passedInTeam.slate = 'night';
+        }
+        if (gameTimeABV < 5) {
+          passedInTeam.slate = 'main';
+        }
+      }
+
+      if (
+        tempAwayTeamName === passedInTeam.teamABV ||
+        tempAwayTeamName === passedInTeam.altTeamABV
+      ) {
+        passedInTeam.opponentABV = tempHomeTeamName;
+        passedInTeam.homeOrAway = 'Away';
+
+        let gameTime = teamObj['"Time"'].slice(5, 9);
+        let gameDay = teamObj['"Time"'].slice(1, 4);
+        let gameTimeABV = +gameTime.slice(0, 1);
+        // console.log(`${passedInTeam.teamName}: ${teamObj['"Time"']}`);
+        // console.log(`${gameTimeABV}: ${passedInTeam.teamName}`);
+
+        if (gameTimeABV > 5) {
+          // console.log('match');
+          // console.log(passedInTeam.teamName);
+          passedInTeam.slate = 'night';
+        }
+        if (gameTimeABV < 5) {
+          passedInTeam.slate = 'main';
+        }
+      }
+    });
+  });
+};
+
+populateTeamObjects(wrrawdata.SF49ers);
+populateTeamObjects(wrrawdata.bears);
+populateTeamObjects(wrrawdata.bengals);
+populateTeamObjects(wrrawdata.bills);
+populateTeamObjects(wrrawdata.broncos);
+populateTeamObjects(wrrawdata.browns);
+populateTeamObjects(wrrawdata.buccaneers);
+populateTeamObjects(wrrawdata.cardinals);
+populateTeamObjects(wrrawdata.chargers);
+populateTeamObjects(wrrawdata.chiefs);
+populateTeamObjects(wrrawdata.colts);
+populateTeamObjects(wrrawdata.commanders);
+populateTeamObjects(wrrawdata.cowboys);
+populateTeamObjects(wrrawdata.dolphins);
+populateTeamObjects(wrrawdata.eagles);
+populateTeamObjects(wrrawdata.falcons);
+populateTeamObjects(wrrawdata.giants);
+populateTeamObjects(wrrawdata.jaguars);
+populateTeamObjects(wrrawdata.jets);
+populateTeamObjects(wrrawdata.lions);
+populateTeamObjects(wrrawdata.packers);
+populateTeamObjects(wrrawdata.panthers);
+populateTeamObjects(wrrawdata.patriots);
+populateTeamObjects(wrrawdata.raiders);
+populateTeamObjects(wrrawdata.rams);
+populateTeamObjects(wrrawdata.ravens);
+populateTeamObjects(wrrawdata.saints);
+populateTeamObjects(wrrawdata.seahawks);
+populateTeamObjects(wrrawdata.steelers);
+populateTeamObjects(wrrawdata.texans);
+populateTeamObjects(wrrawdata.titans);
+populateTeamObjects(wrrawdata.vikings);
+
+// console.log(wrrawdata);
 
 module.exports = wrrawdata;

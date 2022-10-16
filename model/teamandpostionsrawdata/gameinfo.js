@@ -6,10 +6,11 @@ const wholePlayerPricingWithPercntOfCapYahoo = require('../datafilesmadefrom4for
 const gppLeverageScoresAndProjOwnershipDraftkings = require('../datafilesmadefrom4for4CSVs/draftkings/gppLeverageScoresAndProjOwnershipDraftkings');
 const gppLeverageScoresAndProjOwnershipFanduel = require('../datafilesmadefrom4for4CSVs/Fanduel/gppLeverageScoresAndProjOwnershipFanduel');
 const allNFLTeamPace = require('../datafilesmadefrom4for4CSVs/allNFLTeamPace');
+const allFullPPRProjectedPointsWithoutTeamDef = require('../datafilesmadefrom4for4CSVs/allFullPPRProjectedPointsWithoutTeamDef');
 
 const gameInfo = {
   week: {
-    currentWeek: 5,
+    currentWeek: 0,
   },
 
   SF49ers: {
@@ -749,6 +750,12 @@ const gameInfo = {
     percentOfSalaryCapYahoo: 0,
   },
 }; //closing gameInfo object tag
+
+allFullPPRProjectedPointsWithoutTeamDef.forEach(function (team, i) {
+  if (i < 2) {
+    gameInfo.week.currentWeek = team.Week;
+  }
+});
 
 const populateTeamObjects = function (passedInTeam) {
   let settingTeamName = '';
