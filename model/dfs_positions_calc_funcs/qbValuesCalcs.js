@@ -129,6 +129,259 @@ const allQBCalcFunctions = {
     }
     return QBSHPPC;
   },
+
+  calcQBScoreFromGlSPPercentageMatchesAndBuckets(team) {
+    let ScoreFromGLSP = 0;
+    let bucketTwentyFifthPercentileGLSPIsIn = 0;
+    let bucketFiftyithPercentileGLSPIsIn = 0;
+    let bucketSeventyFifthPercentileGLSPIsIn = 0;
+    let percentOfCompsInTwentyFifthPercentileGLSPBucketAndBelow = 0;
+    let percentOfCompsInSeventyFifthPercentileGLSPBucketAndAbove = 0;
+    let allThreePercentilesInSameBucket = false;
+    let bucketOfTwentyFifthAndFiftyithIsSame = false;
+    let bucketOfSeventyFifthAndFiftyithIsSame = false;
+
+    if (
+      team.twentyFifthPercentProjectedPoints > 0 &&
+      team.twentyFifthPercentProjectedPoints <= 5
+    ) {
+      bucketTwentyFifthPercentileGLSPIsIn = 2.5;
+    }
+    if (
+      team.twentyFifthPercentProjectedPoints > 5 &&
+      team.twentyFifthPercentProjectedPoints <= 10
+    ) {
+      bucketTwentyFifthPercentileGLSPIsIn = 7.5;
+    }
+    if (
+      team.twentyFifthPercentProjectedPoints > 10 &&
+      team.twentyFifthPercentProjectedPoints <= 15
+    ) {
+      bucketTwentyFifthPercentileGLSPIsIn = 12.5;
+    }
+    if (
+      team.twentyFifthPercentProjectedPoints > 15 &&
+      team.twentyFifthPercentProjectedPoints <= 20
+    ) {
+      bucketTwentyFifthPercentileGLSPIsIn = 17.5;
+    }
+    if (
+      team.twentyFifthPercentProjectedPoints > 20 &&
+      team.twentyFifthPercentProjectedPoints <= 25
+    ) {
+      bucketTwentyFifthPercentileGLSPIsIn = 22.5;
+    }
+    if (team.twentyFifthPercentProjectedPoints > 25) {
+      bucketTwentyFifthPercentileGLSPIsIn = 27.5;
+    }
+
+    ///////////
+    if (
+      team.fiftyithPercentProjectedPoints > 0 &&
+      team.fiftyithPercentProjectedPoints <= 5
+    ) {
+      bucketFiftyithPercentileGLSPIsIn = 2.5;
+    }
+    if (
+      team.fiftyithPercentProjectedPoints > 5 &&
+      team.fiftyithPercentProjectedPoints <= 10
+    ) {
+      bucketFiftyithPercentileGLSPIsIn = 7.5;
+    }
+    if (
+      team.fiftyithPercentProjectedPoints > 10 &&
+      team.fiftyithPercentProjectedPoints <= 15
+    ) {
+      bucketFiftyithPercentileGLSPIsIn = 12.5;
+    }
+    if (
+      team.fiftyithPercentProjectedPoints > 15 &&
+      team.fiftyithPercentProjectedPoints <= 20
+    ) {
+      bucketFiftyithPercentileGLSPIsIn = 17.5;
+    }
+    if (
+      team.fiftyithPercentProjectedPoints > 20 &&
+      team.fiftyithPercentProjectedPoints <= 25
+    ) {
+      bucketFiftyithPercentileGLSPIsIn = 22.5;
+    }
+    if (team.fiftyithPercentProjectedPoints > 25) {
+      bucketFiftyithPercentileGLSPIsIn = 27.5;
+    }
+
+    ////////////
+
+    if (
+      team.seventyFifthPercentProjectedPoints > 0 &&
+      team.seventyFifthPercentProjectedPoints <= 5
+    ) {
+      bucketSeventyFifthPercentileGLSPIsIn = 2.5;
+    }
+    if (
+      team.seventyFifthPercentProjectedPoints > 5 &&
+      team.seventyFifthPercentProjectedPoints <= 10
+    ) {
+      bucketSeventyFifthPercentileGLSPIsIn = 7.5;
+    }
+    if (
+      team.seventyFifthPercentProjectedPoints > 10 &&
+      team.seventyFifthPercentProjectedPoints <= 15
+    ) {
+      bucketSeventyFifthPercentileGLSPIsIn = 12.5;
+    }
+    if (
+      team.seventyFifthPercentProjectedPoints > 15 &&
+      team.seventyFifthPercentProjectedPoints <= 20
+    ) {
+      bucketSeventyFifthPercentileGLSPIsIn = 17.5;
+    }
+    if (
+      team.seventyFifthPercentProjectedPoints > 20 &&
+      team.seventyFifthPercentProjectedPoints <= 25
+    ) {
+      bucketSeventyFifthPercentileGLSPIsIn = 22.5;
+    }
+    if (team.seventyFifthPercentProjectedPoints > 25) {
+      bucketSeventyFifthPercentileGLSPIsIn = 27.5;
+    }
+    // console.log(
+    //   bucketTwentyFifthPercentileGLSPIsIn,
+    //   bucketFiftyithPercentileGLSPIsIn,
+    //   bucketSeventyFifthPercentileGLSPIsIn
+    // );
+
+    if (
+      bucketTwentyFifthPercentileGLSPIsIn === bucketFiftyithPercentileGLSPIsIn
+    ) {
+      bucketOfTwentyFifthAndFiftyithIsSame = true;
+    }
+    if (
+      bucketSeventyFifthPercentileGLSPIsIn === bucketFiftyithPercentileGLSPIsIn
+    ) {
+      bucketOfSeventyFifthAndFiftyithIsSame = true;
+    }
+    if (
+      bucketTwentyFifthPercentileGLSPIsIn ===
+        bucketFiftyithPercentileGLSPIsIn &&
+      bucketSeventyFifthPercentileGLSPIsIn === bucketFiftyithPercentileGLSPIsIn
+    ) {
+      allThreePercentilesInSameBucket = true;
+    }
+
+    // console.log(
+    //   bucketOfTwentyFifthAndFiftyithIsSame,
+    //   bucketOfSeventyFifthAndFiftyithIsSame,
+    //   allThreePercentilesInSameBucket
+    // );
+
+    // let percentOfCompsInTwentyFifthPercentileGLSPBucketAndBelow = 0;
+    // let percentOfCompsInSeventyFifthPercentileGLSPBucketAndAbove = 0;
+    // console.log(bucketTwentyFifthPercentileGLSPIsIn);
+    if (bucketTwentyFifthPercentileGLSPIsIn === 2.5) {
+      percentOfCompsInTwentyFifthPercentileGLSPBucketAndBelow =
+        team.glspLessThanFive;
+    }
+    if (bucketTwentyFifthPercentileGLSPIsIn === 7.5) {
+      percentOfCompsInTwentyFifthPercentileGLSPBucketAndBelow =
+        team.glspLessThanFive + team.glspFiveToTen;
+    }
+    if (bucketTwentyFifthPercentileGLSPIsIn === 12.5) {
+      percentOfCompsInTwentyFifthPercentileGLSPBucketAndBelow =
+        team.glspLessThanFive + team.glspFiveToTen + team.glspTenToFifteen;
+    }
+    if (bucketTwentyFifthPercentileGLSPIsIn === 17.5) {
+      percentOfCompsInTwentyFifthPercentileGLSPBucketAndBelow =
+        team.glspLessThanFive +
+        team.glspFiveToTen +
+        team.glspTenToFifteen +
+        team.glspFifteenToTwenty;
+    }
+    if (bucketTwentyFifthPercentileGLSPIsIn === 22.5) {
+      percentOfCompsInTwentyFifthPercentileGLSPBucketAndBelow =
+        team.glspLessThanFive +
+        team.glspFiveToTen +
+        team.glspTenToFifteen +
+        team.glspFifteenToTwenty +
+        team.glspTwentyToTwentyFive;
+    }
+
+    //////
+    // console.log(bucketSeventyFifthPercentileGLSPIsIn);
+    if (bucketSeventyFifthPercentileGLSPIsIn === 2.5) {
+      percentOfCompsInSeventyFifthPercentileGLSPBucketAndAbove =
+        team.glspLessThanFive +
+        team.glspFiveToTen +
+        team.glspTenToFifteen +
+        team.glspFifteenToTwenty +
+        team.glspTwentyToTwentyFive +
+        team.glspGreaterThanTwentyFive;
+    }
+    if (bucketSeventyFifthPercentileGLSPIsIn === 7.5) {
+      percentOfCompsInSeventyFifthPercentileGLSPBucketAndAbove =
+        team.glspFiveToTen +
+        team.glspTenToFifteen +
+        team.glspFifteenToTwenty +
+        team.glspTwentyToTwentyFive +
+        team.glspGreaterThanTwentyFive;
+    }
+    if (bucketSeventyFifthPercentileGLSPIsIn === 12.5) {
+      percentOfCompsInSeventyFifthPercentileGLSPBucketAndAbove =
+        team.glspTenToFifteen +
+        team.glspFifteenToTwenty +
+        team.glspTwentyToTwentyFive +
+        team.glspGreaterThanTwentyFive;
+    }
+    if (bucketSeventyFifthPercentileGLSPIsIn === 17.5) {
+      percentOfCompsInSeventyFifthPercentileGLSPBucketAndAbove =
+        team.glspFifteenToTwenty +
+        team.glspTwentyToTwentyFive +
+        team.glspGreaterThanTwentyFive;
+    }
+    if (bucketSeventyFifthPercentileGLSPIsIn === 22.5) {
+      percentOfCompsInSeventyFifthPercentileGLSPBucketAndAbove =
+        team.glspTwentyToTwentyFive + team.glspGreaterThanTwentyFive;
+    }
+    if (bucketSeventyFifthPercentileGLSPIsIn === 27.5) {
+      percentOfCompsInSeventyFifthPercentileGLSPBucketAndAbove =
+        team.glspGreaterThanTwentyFive;
+    }
+    // console.log(percentOfCompsInSeventyFifthPercentileGLSPBucketAndAbove);
+    //   console.log(
+    //     percentOfCompsInTwentyFifthPercentileGLSPBucketAndBelow,
+    //     percentOfCompsInSeventyFifthPercentileGLSPBucketAndAbove
+    //   );
+    let glspSuggestedPercentileProjection = 0;
+
+    if (
+      percentOfCompsInTwentyFifthPercentileGLSPBucketAndBelow >= 40 &&
+      percentOfCompsInSeventyFifthPercentileGLSPBucketAndAbove < 40
+    ) {
+      if (bucketOfTwentyFifthAndFiftyithIsSame === true) {
+        glspSuggestedPercentileProjection = 50;
+      } else glspSuggestedPercentileProjection = 25;
+    }
+    if (
+      percentOfCompsInSeventyFifthPercentileGLSPBucketAndAbove >= 40 &&
+      percentOfCompsInTwentyFifthPercentileGLSPBucketAndBelow < 40
+    ) {
+      if (bucketOfSeventyFifthAndFiftyithIsSame === true) {
+        glspSuggestedPercentileProjection = 50;
+      } else glspSuggestedPercentileProjection = 75;
+    }
+    if (
+      (percentOfCompsInTwentyFifthPercentileGLSPBucketAndBelow >= 40 &&
+        percentOfCompsInSeventyFifthPercentileGLSPBucketAndAbove >= 40) ||
+      (percentOfCompsInTwentyFifthPercentileGLSPBucketAndBelow <= 40 &&
+        percentOfCompsInSeventyFifthPercentileGLSPBucketAndAbove <= 40)
+    ) {
+      glspSuggestedPercentileProjection = 50;
+    }
+    if (allThreePercentilesInSameBucket === true) {
+      glspSuggestedPercentileProjection = 50;
+    }
+    return glspSuggestedPercentileProjection;
+  },
 };
 
 //&& allQBs[i].teamVTT > allQBs[i + 1].teamVTT
@@ -160,7 +413,25 @@ allQBs.map(function (team, i) {
   allQBSecondHighlyProjectedPassCatchers.push(QBSHPPCS);
   totalScore += QBSHPPCS;
 
-  allQBTotalScores.push(totalScore);
+  let ScoreFromGLSP =
+    allQBCalcFunctions.calcQBScoreFromGlSPPercentageMatchesAndBuckets(team);
+  // totalScore += ScoreFromGLSP;
+
+  if (totalScore >= 35) {
+    suggestionProjectionFromTotalScore = 75;
+  } else if (totalScore >= -25) {
+    suggestionProjectionFromTotalScore = 50;
+  } else {
+    suggestionProjectionFromTotalScore = 25;
+  }
+  // console.log(ScoreFromGLSP);
+  // console.log(totalScore, ScoreFromGLSP);
+  // console.log(suggestionProjectionFromTotalScore);
+
+  let FinalTotalScore =
+    (ScoreFromGLSP + suggestionProjectionFromTotalScore) / 2;
+  // console.log(FinalTotalScore);
+  allQBTotalScores.push(FinalTotalScore);
 });
 
 /////////assigning QB's their projected points for the week using totalScore from above///////////
@@ -188,7 +459,7 @@ if (gameInfo.week.currentWeek < 5) {
   allQBs.map(function (team, i) {
     let QBProjectedPoints = 0;
 
-    QBProjectedPoints = team.fourForFourHalfPPRProjectedPoints;
+    QBProjectedPoints = team.fourForFourHalfPPRProjectedPoints.toFixed(2);
 
     allQBFinalProjectedPointsValues.push(QBProjectedPoints);
     allQBFinalProjectedPointsValuesPlusNames.push(
@@ -203,6 +474,7 @@ if (gameInfo.week.currentWeek < 5) {
 
 if (gameInfo.week.currentWeek === 5 || gameInfo.week.currentWeek === 6) {
   allQBs.forEach(function (team, i) {
+    // console.log(team);
     let twentyFifthPercentProjection =
       allQBs[i].twentyFifthPercentProjectedPoints;
     let fiftyithPercentProjection = allQBs[i].fiftyithPercentProjectedPoints;
@@ -218,17 +490,23 @@ if (gameInfo.week.currentWeek === 5 || gameInfo.week.currentWeek === 6) {
     if (team.percentOfGamesPlayedLastFiveWeeks > 0.74) {
       let fourForFour = team.fourForFourHalfPPRProjectedPoints;
 
-      if (allQBTotalScores[i] >= 35) {
+      if ((allQBTotalScores[i] = 75)) {
         initialQBProjectedPoints = seventyFifthPercentProjection;
-      } else if (allQBTotalScores[i] >= -25) {
+      } else if ((allQBTotalScores[i] = 62.5)) {
+        initialQBProjectedPoints =
+          (fiftyithPercentProjection + seventyFifthPercentProjection) / 2;
+      } else if ((allQBTotalScores[i] = 50)) {
         initialQBProjectedPoints = fiftyithPercentProjection;
+      } else if ((allQBTotalScores[i] = 37.5)) {
+        initialQBProjectedPoints =
+          (fiftyithPercentProjection + twentyFifthPercentProjection) / 2;
       } else {
         initialQBProjectedPoints = twentyFifthPercentProjection;
       }
 
       let total = +initialQBProjectedPoints + +fourForFour;
 
-      let QBProjectedPoints = total / 2;
+      let QBProjectedPoints = (total / 2).toFixed(2);
       // console.log(`${team.name}: ${QBProjectedPoints}`);
 
       allQBFinalProjectedPointsValues.push(QBProjectedPoints);
@@ -265,16 +543,22 @@ if (gameInfo.week.currentWeek > 6) {
 
     let initialQBProjectedPoints = 0;
 
-    if (allQBTotalScores[i] >= 35) {
+    if ((allQBTotalScores[i] = 75)) {
       initialQBProjectedPoints = seventyFifthPercentProjection;
-    } else if (allQBTotalScores[i] >= -25) {
+    } else if ((allQBTotalScores[i] = 62.5)) {
+      initialQBProjectedPoints =
+        (fiftyithPercentProjection + seventyFifthPercentProjection) / 2;
+    } else if ((allQBTotalScores[i] = 50)) {
       initialQBProjectedPoints = fiftyithPercentProjection;
+    } else if ((allQBTotalScores[i] = 37.5)) {
+      initialQBProjectedPoints =
+        (fiftyithPercentProjection + twentyFifthPercentProjection) / 2;
     } else {
       initialQBProjectedPoints = twentyFifthPercentProjection;
     }
 
     let total = +initialQBProjectedPoints + +fourForFour;
-    let QBProjectedPoints = total / 2;
+    let QBProjectedPoints = (total / 2).toFixed(2);
 
     allQBManagedAndCashProjectedPointsValues.push(QBProjectedPoints);
     allQBManagedAndCashProjectedPointsValuesPlusNames.push(
@@ -296,23 +580,29 @@ if (gameInfo.week.currentWeek > 6) {
     //   numOfMatchingRoleWeeks[i] / allQBs[i].roleLastXNumOfWeeksUpToFive.length;
 
     if (allQBs[i].percentOfGamesPlayedLastFiveWeeks > 0.74) {
-      if (score >= 35) {
-        QBProjectedPoints = seventyFifthPercentProjection;
-      } else if (score >= -25) {
-        QBProjectedPoints = fiftyithPercentProjection;
+      if ((allQBTotalScores[i] = 75)) {
+        initialQBProjectedPoints = seventyFifthPercentProjection;
+      } else if ((allQBTotalScores[i] = 62.5)) {
+        initialQBProjectedPoints =
+          (fiftyithPercentProjection + seventyFifthPercentProjection) / 2;
+      } else if ((allQBTotalScores[i] = 50)) {
+        initialQBProjectedPoints = fiftyithPercentProjection;
+      } else if ((allQBTotalScores[i] = 37.5)) {
+        initialQBProjectedPoints =
+          (fiftyithPercentProjection + twentyFifthPercentProjection) / 2;
       } else {
-        QBProjectedPoints = twentyFifthPercentProjection;
+        initialQBProjectedPoints = twentyFifthPercentProjection;
       }
 
-      allQBFinalProjectedPointsValues.push(QBProjectedPoints);
+      allQBFinalProjectedPointsValues.push(initialQBProjectedPoints.toFixed(2));
       allQBFinalProjectedPointsValuesPlusNames.push(
-        ` ${QBProjectedPoints}: ${allQBs[i].name}`
+        ` ${initialQBProjectedPoints.toFixed(2)}: ${allQBs[i].name}`
       );
     } else {
-      QBProjectedPoints = allQBs[i].fourForFourHalfPPRProjectedPoints;
-      allQBFinalProjectedPointsValues.push(QBProjectedPoints);
+      initialQBProjectedPoints = allQBs[i].fourForFourHalfPPRProjectedPoints;
+      allQBFinalProjectedPointsValues.push(initialQBProjectedPoints.toFixed(2));
       allQBFinalProjectedPointsValuesPlusNames.push(
-        `${QBProjectedPoints}: ${allQBs[i].name}`
+        `${initialQBProjectedPoints.toFixed(2)}: ${allQBs[i].name}`
       );
     }
   });

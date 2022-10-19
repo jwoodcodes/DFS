@@ -1,6 +1,4 @@
-import React from 'react';
-
-const Card = props => {
+export default function Card(props) {
   return (
     <div className={props.class}>
       <div className={props.link}>{props.message}</div>
@@ -14,6 +12,4 @@ const Card = props => {
       </ul>
     </div>
   );
-};
-
-export default Card;
+}

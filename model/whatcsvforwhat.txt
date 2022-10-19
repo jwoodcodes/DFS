@@ -18,21 +18,21 @@
 
     def4for4projectedpoints- get from wholeDownloadableSpreadSheetYahoo made fron downloadable spreadsheet yahoo FOR ALL GAMES OF THE WEEK NOT JUST MAIN SLATE CSV
 
-    teamDefDraftkingsSalary- get from wholePlayerPricingWithPercntOfCapDraftkings file made from draftkings player pricing CSV
+    teamDefDraftkingsSalary- get from gppLeverageScoresAndProjOwnershipDraftkings file mde from draftkings gpp leverage scores CSV
 
-    teamDefFanduelSalary- get from wholePlayerPricingWithPercntOfCapFanduel file made from draftkings player pricing CSV
+    teamDefFanduelSalary- get from gppLeverageScoresAndProjOwnershipFandeul file mde from fanduel gpp leverage scores CSV
 
-    teamDefYahooSalary- get from wholePlayerPricingWithPercntOfCapYahoo file made from yahoo player pricing CSV
+    teamDefYahooSalary- get from wholeDownloadableSpreadSheetYahoo made fron downloadable spreadsheet yahoo FOR ALL GAMES OF THE WEEK NOT JUST MAIN SLATE CSV
 
     draftkingsProjectedOwnership- get from gppLeverageScoresAndProjOwnershipDraftkings file mde from draftkings gpp leverage scores CSV
 
     fanduelProjectedOwnership- get from gppLeverageScoresAndProjOwnershipFandeul file mde from fanduel gpp leverage scores CSV
 
-    percentOfSalaryCapDraftkings- get from wholePlayerPricingWithPercentOfCapDraftkings file made from draftkings player pricing CSV
+    percentOfSalaryCapDraftkings- get from gppLeverageScoresAndProjOwnershipDraftkings file mde from draftkings gpp leverage scores CSV
 
-    percentOfSalaryCapFanduel- get from wholePlayerPricingWithPercentOfCapFanduel file made from Fanduel player pricing CSV
+    percentOfSalaryCapFanduel- get from gppLeverageScoresAndProjOwnershipFandeul file mde from fanduel gpp leverage scores CSV
 
-    percentOfSalaryCapYahoo- get from wholePlayerPricingWithPercentOfCapYahoo file made from Yahoo player pricing CSV
+    percentOfSalaryCapYahoo- get from wholeDownloadableSpreadSheetYahoo made fron downloadable spreadsheet yahoo FOR ALL GAMES OF THE WEEK NOT JUST MAIN SLATE CSV
 
     assinging the teamName variable - use qbDownloadableSpreadSheetYahoo to make sure you only have the right number of team.
 
@@ -61,22 +61,22 @@
 
     secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints- get from allHalfPPRProjectedPointsWithoutTeamDef file made from the weekly rankings on 4for4 for superflex CSV
 
-     yahooSalary- get from wholePlayerPricingWithPercentOfCapYahoo file made from Yahoo player pricing CSV
+     yahooSalary- get from qbDownloadableSpreadSheetYahoo made from Downloadable SpreadSheet Draftkings FOR ALL GAMES OF THE WEEK NOT JUST MAIN SLATE CSV
 
-    fanduelSalary- get from wholePlayerPricingWithPercentOfCapFanduel file made from Fanduel player pricing CSV
+    fanduelSalary- get from gppLeverageScoresAndProjOwnershipFandeul file mde from fanduel gpp leverage scores CSV
 
-    draftkingsSalary- get from wholePlayerPricingWithPercentOfCapDraftkings file made from draftkings player pricing CSV
+    draftkingsSalary- get from gppLeverageScoresAndProjOwnershipDraftkings file mde from fanduel gpp leverage scores CSV
 
     draftkingsProjectedOwnership- get from gppLeverageScoresAndProjOwnershipDraftkings file mde from draftkings gpp leverage scores CSV
   
     fanduelProjectedOwnership- get from gppLeverageScoresAndProjOwnershipFandeul file mde from fanduel gpp leverage scores CSV
 
-    percentOfSalaryCapDraftkings-  get from wholePlayerPricingWithPercentOfCapDraftkings file made from draftkings player pricing CSV
+    percentOfSalaryCapDraftkings-  get from gppLeverageScoresAndProjOwnershipDraftkings file mde from fanduel gpp leverage scores CSV
 
 
-    percentOfSalaryCapFanduel- get from wholePlayerPricingWithPercentOfCapFanduel file made from Fanduel player pricing CSV
+    percentOfSalaryCapFanduel- get from gppLeverageScoresAndProjOwnershipFandeul file mde from fanduel gpp leverage scores CSV
 
-    percentOfSalaryCapYahoo- get from wholePlayerPricingWithPercentOfCapYahoo file made from Yahoo player pricing CSV
+    percentOfSalaryCapYahoo- get from qbDownloadableSpreadSheetYahoo made from Downloadable SpreadSheet Draftkings FOR ALL GAMES OF THE WEEK NOT JUST MAIN SLATE CSV
 
 
 

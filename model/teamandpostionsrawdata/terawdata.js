@@ -1,8 +1,6 @@
 const wholeDownloadableSpreadSheetYahoo = require('../datafilesmadefrom4for4CSVs/Yahoo/wholeDownloadableSpreadSheetYahoo');
 const qbDownloadableSpreadSheetYahoo = require('../datafilesmadefrom4for4CSVs/Yahoo/qbDownloadableSpreadSheetYahoo');
-const wholePlayerPricingWithPercentOfCapDraftkings = require('../datafilesmadefrom4for4CSVs/draftkings/wholePlayerPricingWithPercentOfCapDraftkings');
-const wholePlayerPricingWithPercentOfCapFanduel = require('../datafilesmadefrom4for4CSVs/Fanduel/wholePlayerPricingWithPercentOfCapFanduel');
-const wholePlayerPricingWithPercentOfCapYahoo = require('../datafilesmadefrom4for4CSVs/Yahoo/wholePlayerPricingWithPercentOfCapYahoo');
+
 const gppLeverageScoresAndProjOwnershipDraftkings = require('../datafilesmadefrom4for4CSVs/draftkings/gppLeverageScoresAndProjOwnershipDraftkings');
 const gppLeverageScoresAndProjOwnershipFanduel = require('../datafilesmadefrom4for4CSVs/Fanduel/gppLeverageScoresAndProjOwnershipFanduel');
 const allHalfPPRProjectedPointsWithoutTeamDef = require('../datafilesmadefrom4for4CSVs/allHalfPPRProjectedPointsWithoutTeamDef');

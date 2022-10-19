@@ -1,15 +1,11 @@
 const wholeDownloadableSpreadSheetYahoo = require('../datafilesmadefrom4for4CSVs/Yahoo/wholeDownloadableSpreadSheetYahoo');
 const qbDownloadableSpreadSheetYahoo = require('../datafilesmadefrom4for4CSVs/Yahoo/qbDownloadableSpreadSheetYahoo');
-const wholePlayerPricingWithPercentOfCapDraftkings = require('../datafilesmadefrom4for4CSVs/draftkings/wholePlayerPricingWithPercentOfCapDraftkings');
-const wholePlayerPricingWithPercentOfCapFanduel = require('../datafilesmadefrom4for4CSVs/Fanduel/wholePlayerPricingWithPercentOfCapFanduel');
-const wholePlayerPricingWithPercentOfCapYahoo = require('../datafilesmadefrom4for4CSVs/Yahoo/wholePlayerPricingWithPercentOfCapYahoo');
 const gppLeverageScoresAndProjOwnershipDraftkings = require('../datafilesmadefrom4for4CSVs/draftkings/gppLeverageScoresAndProjOwnershipDraftkings');
 const gppLeverageScoresAndProjOwnershipFanduel = require('../datafilesmadefrom4for4CSVs/Fanduel/gppLeverageScoresAndProjOwnershipFanduel');
 const allHalfPPRProjectedPointsWithoutTeamDef = require('../datafilesmadefrom4for4CSVs/allHalfPPRProjectedPointsWithoutTeamDef');
 const allFullPPRProjectedPointsWithoutTeamDef = require('../datafilesmadefrom4for4CSVs/allFullPPRProjectedPointsWithoutTeamDef');
 const allNFLTeamPace = require('../datafilesmadefrom4for4CSVs/allNFLTeamPace');
 const allQBGLSP = require('../datafilesmadefrom4for4CSVs/allQBGLSP');
-
 const allFlexGLSP = require('../datafilesmadefrom4for4CSVs/allFlexGLSP');
 const QBWeeklyStatExplorerLastFiveWeeksCategoryPassing = require('../datafilesmadefrom4for4CSVs/QBWeeklyStatExplorerLastFiveWeeksCategoryPassing');
 const gameInfo = require('./gameinfo');
@@ -18,13 +14,18 @@ const allTeams = require('../teamandpositionvariables/allTeamLevelVariables');
 const rbrawdata = {
   SF49ers: {
     teamABV: 'SF',
+    opponentABV: 0,
+    teamVTT: 0,
+    opponentVTT: 0,
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
-      name: 'Placeholder',
+      name: '',
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -32,12 +33,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentage: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -46,6 +57,10 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
     RBTwo: {
       name: 'Placeholder',

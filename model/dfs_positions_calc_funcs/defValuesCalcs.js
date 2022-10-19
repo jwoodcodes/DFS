@@ -12,14 +12,15 @@ const allTeamDefenseObjectsArray = [];
 const calcTeamsTotalProjectedPointsForCalculatingProjectedTeamDefPoints =
   function (team, i) {
     let total = 0;
-    let qbMultipliedByTwo = allQBData.allQBFinalProjectedPointsValues[i] * 2;
+    let qbMultipliedByThree = allQBData.allQBFinalProjectedPointsValues[i] * 3;
 
-    total += qbMultipliedByTwo;
+    total += qbMultipliedByThree;
 
     total += allRBData.allRBOneHalfPPRProjectedPointsValues[i];
     total += allRBData.allRBTwoHalfPPRProjectedPointsValues[i];
     total += allWRData.allHalfWROneFinalProjectedPointsValues[i];
     total += allWRData.allHalfWRTwoFinalProjectedPointsValues[i];
+    total += allWRData.allHalfWRThreeFinalProjectedPointsValues[i];
     total += allTEData.allHalfTEFinalProjectedPointsValues[i];
 
     allTeamsTotalProjectedPointsScore.push(+total.toFixed(2));
@@ -76,11 +77,11 @@ class TeamDef {
   }
 
   calcScoreFromOwnTeamsOffTotalProjectedPointsScore() {
-    if (this.teamoffprojpoints >= 95) {
+    if (this.teamoffprojpoints >= 115) {
       this.ownTeamOffScore = 30;
-    } else if (this.teamoffprojpoints >= 85 && this.teamoffprojpoints < 95) {
+    } else if (this.teamoffprojpoints >= 95 && this.teamoffprojpoints < 115) {
       this.ownTeamOffScore = 20;
-    } else if (this.teamoffprojpoints >= 75 && this.teamoffprojpoints < 85) {
+    } else if (this.teamoffprojpoints >= 75 && this.teamoffprojpoints < 95) {
       this.ownTeamOffScore = 10;
     } else {
       this.ownTeamOffScore = 0;
@@ -90,21 +91,21 @@ class TeamDef {
   }
 
   calcScoreFromOppTeamOffTotalProjectedPointsScore() {
-    if (this.oppteamoffprojectedpoints <= 55) {
+    if (this.oppteamoffprojectedpoints <= 75) {
       this.oppTeamOffScore = 40;
     } else if (
-      this.oppteamoffprojectedpoints <= 65 &&
-      this.oppteamoffprojectedpoints > 55
+      this.oppteamoffprojectedpoints <= 85 &&
+      this.oppteamoffprojectedpoints > 75
     ) {
       this.oppTeamOffScore = 30;
     } else if (
-      this.oppteamoffprojectedpoints <= 75 &&
-      this.oppteamoffprojectedpoints > 65
+      this.oppteamoffprojectedpoints <= 95 &&
+      this.oppteamoffprojectedpoints > 85
     ) {
       this.oppTeamOffScore = 20;
     } else if (
-      this.oppteamoffprojectedpoints <= 94.9 &&
-      this.oppteamoffprojectedpoints > 75
+      this.oppteamoffprojectedpoints <= 114.9 &&
+      this.oppteamoffprojectedpoints > 95
     ) {
       this.oppTeamOffScore = 10;
     } else {

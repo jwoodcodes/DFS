@@ -1,8 +1,6 @@
 const wholeDownloadableSpreadSheetYahoo = require('../datafilesmadefrom4for4CSVs/Yahoo/wholeDownloadableSpreadSheetYahoo');
 const qbDownloadableSpreadSheetYahoo = require('../datafilesmadefrom4for4CSVs/Yahoo/qbDownloadableSpreadSheetYahoo');
-const wholePlayerPricingWithPercentOfCapDraftkings = require('../datafilesmadefrom4for4CSVs/draftkings/wholePlayerPricingWithPercentOfCapDraftkings');
-const wholePlayerPricingWithPercentOfCapFanduel = require('../datafilesmadefrom4for4CSVs/Fanduel/wholePlayerPricingWithPercentOfCapFanduel');
-const wholePlayerPricingWithPercntOfCapYahoo = require('../datafilesmadefrom4for4CSVs/Yahoo/wholePlayerPricingWithPercentOfCapYahoo');
+
 const gppLeverageScoresAndProjOwnershipDraftkings = require('../datafilesmadefrom4for4CSVs/draftkings/gppLeverageScoresAndProjOwnershipDraftkings');
 const gppLeverageScoresAndProjOwnershipFanduel = require('../datafilesmadefrom4for4CSVs/Fanduel/gppLeverageScoresAndProjOwnershipFanduel');
 const allNFLTeamPace = require('../datafilesmadefrom4for4CSVs/allNFLTeamPace');
@@ -753,7 +751,7 @@ const gameInfo = {
 
 allFullPPRProjectedPointsWithoutTeamDef.forEach(function (team, i) {
   if (i < 2) {
-    gameInfo.week.currentWeek = team.Week;
+    gameInfo.week.currentWeek = +team.Week;
   }
 });
 
@@ -772,69 +770,16 @@ const populateTeamObjects = function (passedInTeam) {
       }
     }
     if (object.PID === passedInTeam.teamABV) {
+      // console.log(+object['Y! ($)']);
+      let yahooSalary = +object['Y! ($)'];
+      passedInTeam.teamDefYahooSalary = yahooSalary;
+      let rawPercentOfCap = yahooSalary / 200;
+      let percentOfCap = (rawPercentOfCap * 100).toFixed(1);
+      passedInTeam.percentOfSalaryCapYahoo = percentOfCap;
       let projpoints = +object['Y! (Proj)'];
+
       // console.log(`${passedInTeam.teamABV}: ${projpoints}`);
       passedInTeam.def4for4projectedpoints = projpoints;
-    }
-  });
-
-  wholePlayerPricingWithPercentOfCapDraftkings.forEach(function (teamObj) {
-    let tempTeamName = '';
-
-    if (teamObj['"Team"'].length === 5) {
-      tempTeamName = teamObj['"Team"'].slice(1, 4);
-    } else {
-      tempTeamName = teamObj['"Team"'].slice(1, 3);
-    }
-
-    if (
-      passedInTeam.teamABV === tempTeamName &&
-      teamObj['"Position"'] === '"DEF"'
-    ) {
-      draftkingssalary = +teamObj['"Current $"'].slice(1, 5);
-      passedInTeam.teamDefDraftkingsSalary = draftkingssalary;
-      let dkPercentOfCap = +teamObj['"% of Cap"'].slice(1, 5);
-      passedInTeam.percentOfSalaryCapDraftkings = dkPercentOfCap;
-    }
-  });
-
-  wholePlayerPricingWithPercentOfCapFanduel.forEach(function (teamObj) {
-    let tempTeamName = '';
-
-    if (teamObj['"Team"'].length === 5) {
-      tempTeamName = teamObj['"Team"'].slice(1, 4);
-    } else {
-      tempTeamName = teamObj['"Team"'].slice(1, 3);
-    }
-
-    if (
-      passedInTeam.teamABV === tempTeamName &&
-      teamObj['"Position"'] === '"DEF"'
-    ) {
-      fanduelsalary = +teamObj['"Current $"'].slice(1, 5);
-      passedInTeam.teamDefFanduelSalary = fanduelsalary;
-      let fdPercentOfCap = +teamObj['"% of Cap"'].slice(1, 5);
-      passedInTeam.percentOfSalaryCapFanduel = fdPercentOfCap;
-    }
-  });
-
-  wholePlayerPricingWithPercntOfCapYahoo.forEach(function (teamObj) {
-    let tempTeamName = '';
-
-    if (teamObj['"Team"'].length === 5) {
-      tempTeamName = teamObj['"Team"'].slice(1, 4);
-    } else {
-      tempTeamName = teamObj['"Team"'].slice(1, 3);
-    }
-
-    if (
-      passedInTeam.teamABV === tempTeamName &&
-      teamObj['"Position"'] === '"DEF"'
-    ) {
-      Yahoosalary = +teamObj['"Current $"'].slice(1, 3);
-      passedInTeam.teamDefYahooSalary = Yahoosalary;
-      let yahooPercentOfCap = +teamObj['"% of Cap"'].slice(1, 5);
-      passedInTeam.percentOfSalaryCapYahoo = yahooPercentOfCap;
     }
   });
 
@@ -848,6 +793,13 @@ const populateTeamObjects = function (passedInTeam) {
     }
 
     if (tempTeamName === passedInTeam.teamABV && teamObj['"Pos"'] === '"DEF"') {
+      draftkingssalary = +teamObj['"DK Sal $"'].slice(1, 5);
+
+      passedInTeam.teamDefDraftkingsSalary = draftkingssalary;
+
+      let rawdkPercentOfCap = draftkingssalary / 50000;
+      let dkPercentOfCap = (rawdkPercentOfCap * 100).toFixed(1);
+      passedInTeam.percentOfSalaryCapDraftkings = dkPercentOfCap;
       dkOwnership = +teamObj['"Projected Own%"'].slice(1, 4);
       passedInTeam.draftkingsProjectedOwnership = dkOwnership;
     }
@@ -863,6 +815,15 @@ const populateTeamObjects = function (passedInTeam) {
     }
 
     if (tempTeamName === passedInTeam.teamABV && teamObj['"Pos"'] === '"DEF"') {
+      fanduelsalary = +teamObj['"FD Sal $"'].slice(1, 5);
+
+      passedInTeam.teamDefFanduelSalary = fanduelsalary;
+
+      let rawfdPercentOfCap = fanduelsalary / 60000;
+      let fdPercentOfCap = (rawfdPercentOfCap * 100).toFixed(1);
+
+      passedInTeam.percentOfSalaryCapFanduel = fdPercentOfCap;
+
       fdOwnership = +teamObj['"Projected Own%"'].slice(1, 4);
       passedInTeam.fanduelProjectedOwnership = fdOwnership;
     }

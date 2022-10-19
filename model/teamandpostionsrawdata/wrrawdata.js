@@ -1,8 +1,6 @@
 const wholeDownloadableSpreadSheetYahoo = require('../datafilesmadefrom4for4CSVs/Yahoo/wholeDownloadableSpreadSheetYahoo');
 const qbDownloadableSpreadSheetYahoo = require('../datafilesmadefrom4for4CSVs/Yahoo/qbDownloadableSpreadSheetYahoo');
-const wholePlayerPricingWithPercentOfCapDraftkings = require('../datafilesmadefrom4for4CSVs/draftkings/wholePlayerPricingWithPercentOfCapDraftkings');
-const wholePlayerPricingWithPercentOfCapFanduel = require('../datafilesmadefrom4for4CSVs/Fanduel/wholePlayerPricingWithPercentOfCapFanduel');
-const wholePlayerPricingWithPercentOfCapYahoo = require('../datafilesmadefrom4for4CSVs/Yahoo/wholePlayerPricingWithPercentOfCapYahoo');
+
 const gppLeverageScoresAndProjOwnershipDraftkings = require('../datafilesmadefrom4for4CSVs/draftkings/gppLeverageScoresAndProjOwnershipDraftkings');
 const gppLeverageScoresAndProjOwnershipFanduel = require('../datafilesmadefrom4for4CSVs/Fanduel/gppLeverageScoresAndProjOwnershipFanduel');
 const allHalfPPRProjectedPointsWithoutTeamDef = require('../datafilesmadefrom4for4CSVs/allHalfPPRProjectedPointsWithoutTeamDef');
@@ -22,11 +20,12 @@ const wrrawdata = {
   SF49ers: {
     teamName: 'SF49ers',
     teamABV: 'SF',
+    homeOrAway: '',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
     WROne: {
-      name: 'placeholder',
+      name: '',
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -34,13 +33,17 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
+      top12NFLTargetShareLastThreeWeeks: 0,
 
       targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
 
+      //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: +0,
 
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
@@ -52,6 +55,10 @@ const wrrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
 
     WRTwo: {
@@ -114,6 +121,7 @@ const wrrawdata = {
   bears: {
     teamName: 'bears',
     teamABV: 'CHI',
+    homeOrAway: '',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
@@ -206,9 +214,10 @@ const wrrawdata = {
   bengals: {
     teamName: 'bengals',
     teamABV: 'CIN',
-    teamVTT: 25.25,
-    QBProjectedPoints: 23,
-    QBGLSPProjectedPassAttempts: 29.8,
+    homeOrAway: '',
+    teamVTT: 0,
+    QBProjectedPoints: 0,
+    QBGLSPProjectedPassAttempts: 0,
     WROne: {
       name: 'Tee Higgins',
       halfTwentyFifthPercentProjectedPoints: 12.5,
@@ -298,6 +307,7 @@ const wrrawdata = {
   bills: {
     teamName: 'bills',
     teamABV: 'BUF',
+    homeOrAway: '',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
@@ -390,6 +400,7 @@ const wrrawdata = {
   broncos: {
     teamName: 'broncos',
     teamABV: 'DEN',
+    homeOrAway: '',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
@@ -482,6 +493,7 @@ const wrrawdata = {
   browns: {
     teamName: 'browns',
     teamABV: 'CLE',
+    homeOrAway: '',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
@@ -575,6 +587,7 @@ const wrrawdata = {
   buccaneers: {
     teamName: 'buccaneers',
     teamABV: 'TB',
+    homeOrAway: '',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
@@ -667,6 +680,7 @@ const wrrawdata = {
   cardinals: {
     teamName: 'cardinals',
     teamABV: 'ARI',
+    homeOrAway: '',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
@@ -759,6 +773,7 @@ const wrrawdata = {
   chargers: {
     teamName: 'chargers',
     teamABV: 'LAC',
+    homeOrAway: '',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
@@ -851,6 +866,7 @@ const wrrawdata = {
   chiefs: {
     teamName: 'chiefs',
     teamABV: 'KC',
+    homeOrAway: '',
     teamVTT: 27.5,
     QBProjectedPoints: 24,
     QBGLSPProjectedPassAttempts: 37.4,
@@ -943,6 +959,7 @@ const wrrawdata = {
   colts: {
     teamName: 'colts',
     teamABV: 'IND',
+    homeOrAway: '',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
@@ -1035,6 +1052,7 @@ const wrrawdata = {
   commanders: {
     teamName: 'commanders',
     teamABV: 'WAS',
+    homeOrAway: '',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
@@ -1127,6 +1145,7 @@ const wrrawdata = {
   cowboys: {
     teamName: 'cowboys',
     teamABV: 'DAL',
+    homeOrAway: '',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
@@ -1219,6 +1238,7 @@ const wrrawdata = {
   dolphins: {
     teamName: 'dolphins',
     teamABV: 'MIA',
+    homeOrAway: '',
     teamVTT: 20.25,
     QBProjectedPoints: 15,
     QBGLSPProjectedPassAttempts: 33,
@@ -1311,6 +1331,7 @@ const wrrawdata = {
   eagles: {
     teamName: 'eagles',
     teamABV: 'PHI',
+    homeOrAway: '',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
@@ -1403,6 +1424,7 @@ const wrrawdata = {
   falcons: {
     teamName: 'falcons',
     teamABV: 'ATL',
+    homeOrAway: '',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
@@ -1495,6 +1517,7 @@ const wrrawdata = {
   giants: {
     teamName: 'giants',
     teamABV: 'NYG',
+    homeOrAway: '',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
@@ -1588,9 +1611,10 @@ const wrrawdata = {
     teamName: 'jaguars',
     teamABV: 'JAC',
     altTeamABV: 'JAX',
-    teamVTT: 20.25,
-    QBProjectedPoints: 10,
-    QBGLSPProjectedPassAttempts: 34.6,
+    homeOrAway: '',
+    teamVTT: 0,
+    QBProjectedPoints: 0,
+    QBGLSPProjectedPassAttempts: 0,
     WROne: {
       name: 'Laquan Treadwell',
       halfTwentyFifthPercentProjectedPoints: 4.9,
@@ -1680,9 +1704,10 @@ const wrrawdata = {
   jets: {
     teamName: 'jets',
     teamABV: 'NYJ',
-    teamVTT: 15,
-    QBProjectedPoints: 9,
-    QBGLSPProjectedPassAttempts: 27.4,
+    homeOrAway: '',
+    teamVTT: 0,
+    QBProjectedPoints: 0,
+    QBGLSPProjectedPassAttempts: 0,
     WROne: {
       name: 'Elijah Moore',
       halfTwentyFifthPercentProjectedPoints: 14.8,
@@ -1772,6 +1797,7 @@ const wrrawdata = {
   lions: {
     teamName: 'lions',
     teamABV: 'DET',
+    homeOrAway: '',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
@@ -1864,6 +1890,7 @@ const wrrawdata = {
   packers: {
     teamName: 'packers',
     teamABV: 'GB',
+    homeOrAway: '',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
@@ -1956,6 +1983,7 @@ const wrrawdata = {
   panthers: {
     teamName: 'panthers',
     teamABV: 'CAR',
+    homeOrAway: '',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
@@ -2048,6 +2076,7 @@ const wrrawdata = {
   patriots: {
     teamName: 'patriots',
     teamABV: 'NE',
+    homeOrAway: '',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
@@ -2141,6 +2170,7 @@ const wrrawdata = {
   raiders: {
     teamName: 'raiders',
     teamABV: 'LV',
+    homeOrAway: '',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
@@ -2233,6 +2263,7 @@ const wrrawdata = {
   rams: {
     teamName: 'rams',
     teamABV: 'LAR',
+    homeOrAway: '',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
@@ -2325,9 +2356,10 @@ const wrrawdata = {
   ravens: {
     teamName: 'ravens',
     teamABV: 'BAL',
-    teamVTT: 18.25,
-    QBProjectedPoints: 13,
-    QBGLSPProjectedPassAttempts: 38,
+    homeOrAway: '',
+    teamVTT: 0,
+    QBProjectedPoints: 0,
+    QBGLSPProjectedPassAttempts: 0,
     WROne: {
       name: 'Marquise Brown',
       halfTwentyFifthPercentProjectedPoints: 6.25,
@@ -2417,9 +2449,10 @@ const wrrawdata = {
   saints: {
     teamName: 'saints',
     teamABV: 'NO',
-    teamVTT: 17.25,
-    QBProjectedPoints: 10,
-    QBGLSPProjectedPassAttempts: 22.75,
+    homeOrAway: '',
+    teamVTT: 0,
+    QBProjectedPoints: 0,
+    QBGLSPProjectedPassAttempts: 0,
     WROne: {
       name: 'Marquez Colston',
       halfTwentyFifthPercentProjectedPoints: 4.5,
@@ -2509,6 +2542,7 @@ const wrrawdata = {
   seahawks: {
     teamName: 'seahawks',
     teamABV: 'SEA',
+    homeOrAway: '',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
@@ -2601,9 +2635,10 @@ const wrrawdata = {
   steelers: {
     teamName: 'steelers',
     teamABV: 'PIT',
-    teamVTT: 17,
-    QBProjectedPoints: 12,
-    QBGLSPProjectedPassAttempts: 36.2,
+    homeOrAway: '',
+    teamVTT: 0,
+    QBProjectedPoints: 0,
+    QBGLSPProjectedPassAttempts: 0,
     WROne: {
       name: 'Dionte Johnson',
       halfTwentyFifthPercentProjectedPoints: 14,
@@ -2693,6 +2728,7 @@ const wrrawdata = {
   texans: {
     teamName: 'texans',
     teamABV: 'HOU',
+    homeOrAway: '',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
@@ -2785,6 +2821,7 @@ const wrrawdata = {
   titans: {
     teamName: 'titans',
     teamABV: 'TEN',
+    homeOrAway: '',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
@@ -2877,6 +2914,7 @@ const wrrawdata = {
   vikings: {
     teamName: 'vikings',
     teamABV: 'MIN',
+    homeOrAway: '',
     teamVTT: 0,
     QBProjectedPoints: 0,
     QBGLSPProjectedPassAttempts: 0,
