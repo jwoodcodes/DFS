@@ -149,5 +149,5 @@ let allUniqueTeams = testAllTeams.filter(onlyUnqiues);
 // console.log(allUniqueTeams);
 
 const allQBs = allUniqueTeams;
-
+// console.log(allQBs)
 module.exports = allQBs;

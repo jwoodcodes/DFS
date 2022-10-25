@@ -12,6 +12,7 @@ const allFlexGLSP = require('../datafilesmadefrom4for4CSVs/allFlexGLSP');
 const QBWeeklyStatExplorerLastFiveWeeksCategoryPassing = require('../datafilesmadefrom4for4CSVs/QBWeeklyStatExplorerLastFiveWeeksCategoryPassing');
 const gameInfo = require('./gameinfo');
 const allTeams = require('../teamandpositionvariables/allTeamLevelVariables');
+const allQBData = require('../dfs_positions_calc_funcs/qbValuesCalcs');
 
 //QB TDrate is TD's/pass attempts
 
@@ -1268,7 +1269,7 @@ const qbrawdata = {
   },
 };
 
-const populateTeamObjects = function (passedInTeam) {
+const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
   qbDownloadableSpreadSheetYahoo.forEach(function (playerobj, i) {
     // console.log(playerobj);
 
@@ -1371,21 +1372,44 @@ const populateTeamObjects = function (passedInTeam) {
 
     if (qbName === passedInTeam.name) {
       // console.log(qb['"GMs"']);
+
+      // console.log(allTeams[i].byeWeek2022);
       passedInTeam.numberOfGamesPlayedLastFiveWeeks = qb['"GMs"'];
-      if (gameInfo.week.currentWeek > 5) {
-        percentageOfRecentWeeksPlayed = qb['"GMs"'] / 5;
-        passedInTeam.percentOfGamesPlayedLastFiveWeeks =
-          percentageOfRecentWeeksPlayed;
+
+      if (gameInfoPassedInTeam.hadByeInTheLastFiveweeks === false) {
+        if (gameInfo.week.currentWeek > 5) {
+          percentageOfRecentWeeksPlayed = qb['"GMs"'] / 5;
+          passedInTeam.percentOfGamesPlayedLastFiveWeeks =
+            percentageOfRecentWeeksPlayed;
+        }
+        if (gameInfo.week.currentWeek === 5) {
+          percentageOfRecentWeeksPlayed = qb['"GMs"'] / 4;
+          passedInTeam.percentOfGamesPlayedLastFiveWeeks =
+            percentageOfRecentWeeksPlayed;
+        }
+        if (gameInfo.week.currentWeek === 4) {
+          percentageOfRecentWeeksPlayed = qb['"GMs"'] / 3;
+          passedInTeam.percentOfGamesPlayedLastFiveWeeks =
+            percentageOfRecentWeeksPlayed;
+        }
       }
-      if (gameInfo.week.currentWeek === 5) {
-        percentageOfRecentWeeksPlayed = qb['"GMs"'] / 4;
-        passedInTeam.percentOfGamesPlayedLastFiveWeeks =
-          percentageOfRecentWeeksPlayed;
-      }
-      if (gameInfo.week.currentWeek === 4) {
-        percentageOfRecentWeeksPlayed = qb['"GMs"'] / 3;
-        passedInTeam.percentOfGamesPlayedLastFiveWeeks =
-          percentageOfRecentWeeksPlayed;
+
+      if (gameInfoPassedInTeam.hadByeInTheLastFiveweeks === true) {
+        if (gameInfo.week.currentWeek > 5) {
+          percentageOfRecentWeeksPlayed = qb['"GMs"'] / 4;
+          passedInTeam.percentOfGamesPlayedLastFiveWeeks =
+            percentageOfRecentWeeksPlayed;
+        }
+        if (gameInfo.week.currentWeek === 5) {
+          percentageOfRecentWeeksPlayed = qb['"GMs"'] / 3;
+          passedInTeam.percentOfGamesPlayedLastFiveWeeks =
+            percentageOfRecentWeeksPlayed;
+        }
+        if (gameInfo.week.currentWeek === 4) {
+          percentageOfRecentWeeksPlayed = qb['"GMs"'] / 2;
+          passedInTeam.percentOfGamesPlayedLastFiveWeeks =
+            percentageOfRecentWeeksPlayed;
+        }
       }
       passedInTeam.ypaLastFiveGames = qb['"Yd/Att"'];
 
@@ -1510,7 +1534,6 @@ const populateTeamObjects = function (passedInTeam) {
         0
       );
       passedInTeam.glspGreaterThanTwentyFive = +(qb['">25"'] * 100).toFixed(0);
-      // console.log();
     }
   });
 
@@ -1527,38 +1550,38 @@ const populateTeamObjects = function (passedInTeam) {
     sortedtempPassCatchersProjPoints[1];
 };
 
-populateTeamObjects(qbrawdata.SF49ers);
-populateTeamObjects(qbrawdata.bears);
-populateTeamObjects(qbrawdata.bengals);
-populateTeamObjects(qbrawdata.bills);
-populateTeamObjects(qbrawdata.broncos);
-populateTeamObjects(qbrawdata.browns);
-populateTeamObjects(qbrawdata.buccaneers);
-populateTeamObjects(qbrawdata.cardinals);
-populateTeamObjects(qbrawdata.chargers);
-populateTeamObjects(qbrawdata.chiefs);
-populateTeamObjects(qbrawdata.colts);
-populateTeamObjects(qbrawdata.commanders);
-populateTeamObjects(qbrawdata.cowboys);
-populateTeamObjects(qbrawdata.dolphins);
-populateTeamObjects(qbrawdata.eagles);
-populateTeamObjects(qbrawdata.falcons);
-populateTeamObjects(qbrawdata.giants);
-populateTeamObjects(qbrawdata.jaguars);
-populateTeamObjects(qbrawdata.jets);
-populateTeamObjects(qbrawdata.lions);
-populateTeamObjects(qbrawdata.packers);
-populateTeamObjects(qbrawdata.panthers);
-populateTeamObjects(qbrawdata.patriots);
-populateTeamObjects(qbrawdata.raiders);
-populateTeamObjects(qbrawdata.rams);
-populateTeamObjects(qbrawdata.ravens);
-populateTeamObjects(qbrawdata.saints);
-populateTeamObjects(qbrawdata.seahawks);
-populateTeamObjects(qbrawdata.steelers);
-populateTeamObjects(qbrawdata.texans);
-populateTeamObjects(qbrawdata.titans);
-populateTeamObjects(qbrawdata.vikings);
+populateTeamObjects(qbrawdata.SF49ers, gameInfo.SF49ers);
+populateTeamObjects(qbrawdata.bears, gameInfo.bears);
+populateTeamObjects(qbrawdata.bengals, gameInfo.bengals);
+populateTeamObjects(qbrawdata.bills, gameInfo.bills);
+populateTeamObjects(qbrawdata.broncos, gameInfo.broncos);
+populateTeamObjects(qbrawdata.browns, gameInfo.browns);
+populateTeamObjects(qbrawdata.buccaneers, gameInfo.buccaneers);
+populateTeamObjects(qbrawdata.cardinals, gameInfo.cardinals);
+populateTeamObjects(qbrawdata.chargers, gameInfo.chargers);
+populateTeamObjects(qbrawdata.chiefs, gameInfo.chiefs);
+populateTeamObjects(qbrawdata.colts, gameInfo.colts);
+populateTeamObjects(qbrawdata.commanders, gameInfo.commanders);
+populateTeamObjects(qbrawdata.cowboys, gameInfo.cowboys);
+populateTeamObjects(qbrawdata.dolphins, gameInfo.dolphins);
+populateTeamObjects(qbrawdata.eagles, gameInfo.eagles);
+populateTeamObjects(qbrawdata.falcons, gameInfo.falcons);
+populateTeamObjects(qbrawdata.giants, gameInfo.giants);
+populateTeamObjects(qbrawdata.jaguars, gameInfo.jaguars);
+populateTeamObjects(qbrawdata.jets, gameInfo.jets);
+populateTeamObjects(qbrawdata.lions, gameInfo.lions);
+populateTeamObjects(qbrawdata.packers, gameInfo.packers);
+populateTeamObjects(qbrawdata.panthers, gameInfo.panthers);
+populateTeamObjects(qbrawdata.patriots, gameInfo.patriots);
+populateTeamObjects(qbrawdata.raiders, gameInfo.raiders);
+populateTeamObjects(qbrawdata.rams, gameInfo.rams);
+populateTeamObjects(qbrawdata.ravens, gameInfo.ravens);
+populateTeamObjects(qbrawdata.saints, gameInfo.saints);
+populateTeamObjects(qbrawdata.seahawks, gameInfo.seahawks);
+populateTeamObjects(qbrawdata.steelers, gameInfo.steelers);
+populateTeamObjects(qbrawdata.texans, gameInfo.texans);
+populateTeamObjects(qbrawdata.titans, gameInfo.titans);
+populateTeamObjects(qbrawdata.vikings, gameInfo.vikings);
 
 // console.log(qbrawdata);
 

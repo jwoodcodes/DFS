@@ -144,6 +144,5 @@ let allUniqueTeams = testAllTeams.filter(onlyUnqiues);
 // console.log(allUniqueTeams);
 
 const allTeams = allUniqueTeams;
-// console.log(allTeams);
 
 module.exports = allTeams;
