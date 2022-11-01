@@ -1,0 +1,60 @@
+.position__label {
+  color: #219ebc;
+  font-size: 4.5rem;
+  margin: 3rem;
+  text-align: center;
+}
+
+.position__qb {
+  font-size: 3rem;
+  margin-left: 3rem;
+  list-style-type: none;
+}
+
+.stack {
+  font-size: 2rem;
+}
+
+.stacktype__label {
+  font-size: 3rem;
+  color: #006466;
+  text-align: center;
+  margin: 5rem;
+}
+
+.scoringtype__label {
+  font-size: 2rem;
+  color: #e07a5f;
+  margin-bottom: 1rem;
+}
+
+.nav {
+  padding: 2rem;
+  background-color: #3d405b;
+  display: flex;
+  justify-content: space-evenly;
+
+  &__link {
+    color: #fff;
+    font-size: 2.5rem;
+  }
+}
+
+.list {
+  &__container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 4rem;
+  }
+
+  &__item {
+    font-size: 2rem;
+    list-style-type: none;
+    padding: 0.4rem;
+    padding-bottom: 1rem;
+
+    &--qb {
+      margin-left: 3rem;
+    }
+  }
+}
