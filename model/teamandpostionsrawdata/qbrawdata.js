@@ -13,6 +13,8 @@ const QBWeeklyStatExplorerLastFiveWeeksCategoryPassing = require('../datafilesma
 const gameInfo = require('./gameinfo');
 const allTeams = require('../teamandpositionvariables/allTeamLevelVariables');
 const allQBData = require('../dfs_positions_calc_funcs/qbValuesCalcs');
+const qbRushingLastFiveGamesFromWeeklyStatExplorer = require('../datafilesmadefrom4for4CSVs/qbRushingLastFiveGamesFromWeeklyStatExplorer');
+const fantasyPointsBrowser4for4ForQBLastFiveWeeks = require('../datafilesmadefrom4for4CSVs/fantasyPointsBrowser4for4ForQbLastFiveWeeks');
 
 //QB TDrate is TD's/pass attempts
 
@@ -30,7 +32,7 @@ const qbrawdata = {
     prjpassattempts: 0,
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
-    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+    secondHighestProjectedPassCatcher4for4ProjectedPoints: 0,
 
     glspavg: 0,
     twentyFifthPercentProjectedPoints: 0,
@@ -69,7 +71,7 @@ const qbrawdata = {
     prjpassattempts: 0,
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
-    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+    secondHighestProjectedPassCatcher4for4ProjectedPoints: 0,
 
     glspavg: 0,
     twentyFifthPercentProjectedPoints: 0,
@@ -108,7 +110,7 @@ const qbrawdata = {
     prjpassattempts: 0,
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
-    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+    secondHighestProjectedPassCatcher4for4ProjectedPoints: 0,
 
     glspavg: 0,
     twentyFifthPercentProjectedPoints: 0,
@@ -147,7 +149,7 @@ const qbrawdata = {
     prjpassattempts: 0,
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
-    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+    secondHighestProjectedPassCatcher4for4ProjectedPoints: 0,
 
     glspavg: 0,
     twentyFifthPercentProjectedPoints: 0,
@@ -186,7 +188,7 @@ const qbrawdata = {
     prjpassattempts: 0,
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
-    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+    secondHighestProjectedPassCatcher4for4ProjectedPoints: 0,
 
     glspavg: 0,
     twentyFifthPercentProjectedPoints: 0,
@@ -225,7 +227,7 @@ const qbrawdata = {
     prjpassattempts: 0,
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
-    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+    secondHighestProjectedPassCatcher4for4ProjectedPoints: 0,
 
     glspavg: 0,
     twentyFifthPercentProjectedPoints: 0,
@@ -264,7 +266,7 @@ const qbrawdata = {
     prjpassattempts: 0,
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
-    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+    secondHighestProjectedPassCatcher4for4ProjectedPoints: 0,
 
     glspavg: 0,
     twentyFifthPercentProjectedPoints: 0,
@@ -304,7 +306,7 @@ const qbrawdata = {
     prjpassattempts: 0,
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
-    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+    secondHighestProjectedPassCatcher4for4ProjectedPoints: 0,
 
     glspavg: 0,
     twentyFifthPercentProjectedPoints: 0,
@@ -343,7 +345,7 @@ const qbrawdata = {
     prjpassattempts: 0,
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
-    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+    secondHighestProjectedPassCatcher4for4ProjectedPoints: 0,
 
     glspavg: 0,
     twentyFifthPercentProjectedPoints: 0,
@@ -382,7 +384,7 @@ const qbrawdata = {
     prjpassattempts: 0,
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
-    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+    secondHighestProjectedPassCatcher4for4ProjectedPoints: 0,
 
     glspavg: 0,
     twentyFifthPercentProjectedPoints: 0,
@@ -421,7 +423,7 @@ const qbrawdata = {
     prjpassattempts: 0,
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
-    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+    secondHighestProjectedPassCatcher4for4ProjectedPoints: 0,
 
     glspavg: 0,
     twentyFifthPercentProjectedPoints: 0,
@@ -460,7 +462,7 @@ const qbrawdata = {
     prjpassattempts: 0,
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
-    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+    secondHighestProjectedPassCatcher4for4ProjectedPoints: 0,
 
     glspavg: 0,
     twentyFifthPercentProjectedPoints: 0,
@@ -499,7 +501,7 @@ const qbrawdata = {
     prjpassattempts: 0,
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
-    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+    secondHighestProjectedPassCatcher4for4ProjectedPoints: 0,
 
     glspavg: 0,
     twentyFifthPercentProjectedPoints: 0,
@@ -538,7 +540,7 @@ const qbrawdata = {
     prjpassattempts: 0,
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
-    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+    secondHighestProjectedPassCatcher4for4ProjectedPoints: 0,
 
     glspavg: 0,
     twentyFifthPercentProjectedPoints: 0,
@@ -577,7 +579,7 @@ const qbrawdata = {
     prjpassattempts: 0,
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
-    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+    secondHighestProjectedPassCatcher4for4ProjectedPoints: 0,
 
     glspavg: 0,
     twentyFifthPercentProjectedPoints: 0,
@@ -616,7 +618,7 @@ const qbrawdata = {
     prjpassattempts: 0,
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
-    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+    secondHighestProjectedPassCatcher4for4ProjectedPoints: 0,
 
     glspavg: 0,
     twentyFifthPercentProjectedPoints: 0,
@@ -655,7 +657,7 @@ const qbrawdata = {
     prjpassattempts: 0,
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
-    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+    secondHighestProjectedPassCatcher4for4ProjectedPoints: 0,
 
     glspavg: 0,
     twentyFifthPercentProjectedPoints: 0,
@@ -695,7 +697,7 @@ const qbrawdata = {
     prjpassattempts: 0,
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
-    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+    secondHighestProjectedPassCatcher4for4ProjectedPoints: 0,
 
     glspavg: 0,
     twentyFifthPercentProjectedPoints: 0,
@@ -734,7 +736,7 @@ const qbrawdata = {
     prjpassattempts: 0,
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
-    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+    secondHighestProjectedPassCatcher4for4ProjectedPoints: 0,
 
     glspavg: 0,
     twentyFifthPercentProjectedPoints: 0,
@@ -773,7 +775,7 @@ const qbrawdata = {
     prjpassattempts: 0,
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
-    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+    secondHighestProjectedPassCatcher4for4ProjectedPoints: 0,
 
     glspavg: 0,
     twentyFifthPercentProjectedPoints: 0,
@@ -812,7 +814,7 @@ const qbrawdata = {
     prjpassattempts: 0,
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
-    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+    secondHighestProjectedPassCatcher4for4ProjectedPoints: 0,
 
     glspavg: 0,
     twentyFifthPercentProjectedPoints: 0,
@@ -851,7 +853,7 @@ const qbrawdata = {
     prjpassattempts: 0,
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
-    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+    secondHighestProjectedPassCatcher4for4ProjectedPoints: 0,
 
     glspavg: 0,
     twentyFifthPercentProjectedPoints: 0,
@@ -890,7 +892,7 @@ const qbrawdata = {
     prjpassattempts: 0,
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
-    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+    secondHighestProjectedPassCatcher4for4ProjectedPoints: 0,
 
     glspavg: 0,
     twentyFifthPercentProjectedPoints: 0,
@@ -929,7 +931,7 @@ const qbrawdata = {
     prjpassattempts: 0,
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
-    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+    secondHighestProjectedPassCatcher4for4ProjectedPoints: 0,
 
     glspavg: 0,
     twentyFifthPercentProjectedPoints: 0,
@@ -968,7 +970,7 @@ const qbrawdata = {
     prjpassattempts: 0,
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
-    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+    secondHighestProjectedPassCatcher4for4ProjectedPoints: 0,
 
     glspavg: 0,
     twentyFifthPercentProjectedPoints: 0,
@@ -1007,7 +1009,7 @@ const qbrawdata = {
     prjpassattempts: 0,
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
-    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+    secondHighestProjectedPassCatcher4for4ProjectedPoints: 0,
 
     glspavg: 0,
     twentyFifthPercentProjectedPoints: 0,
@@ -1046,7 +1048,7 @@ const qbrawdata = {
     prjpassattempts: 0,
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
-    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+    secondHighestProjectedPassCatcher4for4ProjectedPoints: 0,
 
     glspavg: 0,
     twentyFifthPercentProjectedPoints: 0,
@@ -1085,7 +1087,7 @@ const qbrawdata = {
     prjpassattempts: 0,
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
-    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+    secondHighestProjectedPassCatcher4for4ProjectedPoints: 0,
 
     glspavg: 0,
     twentyFifthPercentProjectedPoints: 0,
@@ -1124,7 +1126,7 @@ const qbrawdata = {
     prjpassattempts: 0,
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
-    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+    secondHighestProjectedPassCatcher4for4ProjectedPoints: 0,
 
     glspavg: 0,
     twentyFifthPercentProjectedPoints: 0,
@@ -1163,7 +1165,7 @@ const qbrawdata = {
     prjpassattempts: 0,
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
-    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+    secondHighestProjectedPassCatcher4for4ProjectedPoints: 0,
 
     glspavg: 0,
     twentyFifthPercentProjectedPoints: 0,
@@ -1202,7 +1204,7 @@ const qbrawdata = {
     prjpassattempts: 0,
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
-    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+    secondHighestProjectedPassCatcher4for4ProjectedPoints: 0,
 
     glspavg: 0,
     twentyFifthPercentProjectedPoints: 0,
@@ -1241,7 +1243,7 @@ const qbrawdata = {
     prjpassattempts: 0,
     ypaLastFiveGames: 0,
     TDrateLastFiveGames: 0,
-    secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints: 0,
+    secondHighestProjectedPassCatcher4for4ProjectedPoints: 0,
 
     glspavg: 0,
     twentyFifthPercentProjectedPoints: 0,
@@ -1372,7 +1374,7 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
 
     if (qbName === passedInTeam.name) {
       // console.log(qb['"GMs"']);
-
+      // console.log(qb);
       // console.log(allTeams[i].byeWeek2022);
       passedInTeam.numberOfGamesPlayedLastFiveWeeks = qb['"GMs"'];
 
@@ -1419,6 +1421,61 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
       let ttdrate = tempTDrate.toFixed(3);
       let touchdownRate = (ttdrate * 100).toFixed(1);
       passedInTeam.TDrateLastFiveGames = touchdownRate;
+
+      fantasyPointsBrowser4for4ForQBLastFiveWeeks.forEach(function (qbfp) {
+        // console.log(qbfp.Player.slice(1, -1));
+        if (qbfp.Player.slice(1, -1) === passedInTeam.name) {
+          if (qbfp.G > 1) {
+            // console.log(qbfp);
+            passedInTeam.totalFantasyPointsScoredLastFiveWeeks =
+              qbfp['"FF Pts"'];
+          }
+        }
+      });
+
+      passedInTeam.totalFantasyPointsPerGameLastFiveWeeks = +(
+        passedInTeam.totalFantasyPointsScoredLastFiveWeeks /
+        passedInTeam.numberOfGamesPlayedLastFiveWeeks
+      ).toFixed(2);
+
+      qbRushingLastFiveGamesFromWeeklyStatExplorer.forEach(function (
+        qbrushing
+      ) {
+        if (qbrushing['"Player"'].slice(1, -1) === passedInTeam.name) {
+          pointsFromRuYards = qbrushing['"Yards"'] / 10;
+          pointsFromRuTDs = qbrushing['"TD"'] * 6;
+          totalPointsFromRushing = pointsFromRuYards + pointsFromRuTDs;
+
+          passedInTeam.totalPointsFromRushingLastFiveWeeks =
+            totalPointsFromRushing;
+        }
+      });
+
+      passedInTeam.fantasyPointsFromRushingPerGameLastFiveWeeks = +(
+        passedInTeam.totalPointsFromRushingLastFiveWeeks /
+        passedInTeam.numberOfGamesPlayedLastFiveWeeks
+      ).toFixed(2);
+
+      passedInTeam.totalFantasyPointsFromPassingLastFiveWeeks = +(
+        passedInTeam.totalFantasyPointsScoredLastFiveWeeks -
+        passedInTeam.totalPointsFromRushingLastFiveWeeks
+      ).toFixed(2);
+
+      passedInTeam.fantasyPointsFromPassingPerGameLastFiveWeeks = +(
+        passedInTeam.totalFantasyPointsFromPassingLastFiveWeeks /
+        passedInTeam.numberOfGamesPlayedLastFiveWeeks
+      ).toFixed(2);
+
+      passedInTeam.totalPassAttemptsLastFiveWeeks = qb['"Att"'];
+
+      passedInTeam.passAttemptsPerGameLastFiveWeeks = +(
+        passedInTeam.totalPassAttemptsLastFiveWeeks /
+        passedInTeam.numberOfGamesPlayedLastFiveWeeks
+      ).toFixed(2);
+
+      passedInTeam.fantasyPointsPerPassAttemptLastFiveWeeks = +(
+        passedInTeam.totalFantasyPointsFromPassingLastFiveWeeks / qb['"Att"']
+      ).toFixed(4);
     }
   });
 
@@ -1431,17 +1488,17 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
       passedInTeam.seventyFifthPercentProjectedPoints = qb['"75th"'];
     }
   });
-  let tempPassCatchersProjPoints = [];
-  allHalfPPRProjectedPointsWithoutTeamDef.forEach(function (player, i) {
-    if (
-      player.Team === passedInTeam.teamABV ||
-      player.Team === passedInTeam.altTeamABV
-    ) {
-      if (player.Pos === 'WR' || player.Pos === 'TE') {
-        tempPassCatchersProjPoints.push(+player.FFPts);
-      }
-    }
-  });
+  // let tempPassCatchersProjPoints = [];
+  // allHalfPPRProjectedPointsWithoutTeamDef.forEach(function (player, i) {
+  //   if (
+  //     player.Team === passedInTeam.teamABV ||
+  //     player.Team === passedInTeam.altTeamABV
+  //   ) {
+  //     if (player.Pos === 'WR' || player.Pos === 'TE') {
+  //       tempPassCatchersProjPoints.push(+player.FFPts);
+  //     }
+  //   }
+  // });
 
   allTeams.forEach(function (team) {
     if (
@@ -1537,17 +1594,23 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
     }
   });
 
-  let sortedtempPassCatchersProjPoints = tempPassCatchersProjPoints.sort(
-    (a, b) => {
-      if (a > b) return -1;
-      if (a < b) return 1;
-    }
-  );
+  // let sortedtempPassCatchersProjPoints = tempPassCatchersProjPoints.sort(
+  //   (a, b) => {
+  //     if (a > b) return -1;
+  //     if (a < b) return 1;
+  //   }
+  // );
+
+  // console.log(gameInfoPassedInTeam.WRTwoThisWeek4for4HalfProjPoints);
+  if (gameInfoPassedInTeam.WRTwoThisWeek4for4HalfProjPoints) {
+    passedInTeam.secondHighestProjectedPassCatcher4for4ProjectedPoints =
+      gameInfoPassedInTeam.WRTwoThisWeek4for4HalfProjPoints;
+  }
 
   // console.log(sortedtempPassCatchersProjPoints);
   // console.log(`${passedInTeam.teamABV}: ${sortedtempPassCatchersProjPoints}`);
-  passedInTeam.secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints =
-    sortedtempPassCatchersProjPoints[1];
+  //   passedInTeam.secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints =
+  //     sortedtempPassCatchersProjPoints[1];
 };
 
 populateTeamObjects(qbrawdata.SF49ers, gameInfo.SF49ers);

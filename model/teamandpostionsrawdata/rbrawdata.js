@@ -10,6 +10,7 @@ const allFlexGLSP = require('../datafilesmadefrom4for4CSVs/allFlexGLSP');
 const QBWeeklyStatExplorerLastFiveWeeksCategoryPassing = require('../datafilesmadefrom4for4CSVs/QBWeeklyStatExplorerLastFiveWeeksCategoryPassing');
 const gameInfo = require('./gameinfo');
 const allTeams = require('../teamandpositionvariables/allTeamLevelVariables');
+const qbrawdata = require('../teamandpostionsrawdata/qbrawdata');
 
 const rbrawdata = {
   SF49ers: {
@@ -23,7 +24,7 @@ const rbrawdata = {
       name: '',
       RBOneOrTwo: 1,
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
       numberOfGamesPlayedLastFiveWeeks: 0,
       percentOfGamesPlayedLastFiveWeeks: 0,
 
@@ -48,7 +49,7 @@ const rbrawdata = {
       prjTargets: 0,
 
       percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentage: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -63,9 +64,12 @@ const rbrawdata = {
       percentOfSalaryCapYahoo: 0,
     },
     RBTwo: {
-      name: 'Placeholder',
+      name: '',
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
+
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -73,12 +77,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -87,17 +101,26 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
   },
   bears: {
     teamABV: 'CHI',
+    opponentABV: 0,
+    teamVTT: 0,
+    opponentVTT: 0,
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
-      name: 'Placeholder',
+      name: '',
       RBOneOrTwo: 1,
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -105,12 +128,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -119,11 +152,18 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
     RBTwo: {
-      name: 'Placeholder',
+      name: '',
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
+
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -131,12 +171,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -145,76 +195,120 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
   },
   bengals: {
     teamABV: 'CIN',
-    totalTeamPRojectedRBCarries: 27,
-    totalTeamProjectedRBTargets: 4.6,
-
+    opponentABV: 0,
+    teamVTT: 0,
+    opponentVTT: 0,
+    totalTeamPRojectedRBCarries: 0,
+    totalTeamProjectedRBTargets: 0,
     RBOne: {
-      name: 'Mixon',
+      name: '',
       RBOneOrTwo: 1,
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
-      halfTwentyFifthPercentProjectedPoints: 9.3,
-      halfFiftyithPercentProjectedPoints: 12.8,
-      halfSeventyFifthPercentProjectedPoints: 17.3,
-      PPRTwentyFifthPercentProjectedPoints: 10.1,
-      PPRFiftyithPercentProjectedPoints: 13.8,
-      PPRSeventyFifthPercentProjectedPoints: 19,
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
 
-      prjCarries: 22.4,
-      prjTargets: 1.6,
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
-      fourForFourHalfPPRProjectedPoints: 15,
-      fourForFourFullPPRProjectedPoints: 18,
+      prjCarries: 0,
+      prjTargets: 0,
 
-      yahooSalary: 28,
-      fanduelSalary: 6200,
-      draftkingsSalary: 7000,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
+
+      yahooSalary: 0,
+      fanduelSalary: 0,
+      draftkingsSalary: 0,
 
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
     RBTwo: {
-      name: 'Evans',
+      name: '',
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
 
-      halfTwentyFifthPercentProjectedPoints: 0.7,
-      halfFiftyithPercentProjectedPoints: 2.3,
-      halfSeventyFifthPercentProjectedPoints: 5,
-      PPRTwentyFifthPercentProjectedPoints: 1.2,
-      PPRFiftyithPercentProjectedPoints: 3.1,
-      PPRSeventyFifthPercentProjectedPoints: 6.3,
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
-      prjCarries: 1,
-      prjTargets: 0.4,
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
 
-      fourForFourHalfPPRProjectedPoints: 4,
-      fourForFourFullPPRProjectedPoints: 2,
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
-      yahooSalary: 10,
-      fanduelSalary: 3000,
-      draftkingsSalary: 4000,
+      prjCarries: 0,
+      prjTargets: 0,
+
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
+
+      yahooSalary: 0,
+      fanduelSalary: 0,
+      draftkingsSalary: 0,
 
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
   },
   bills: {
     teamABV: 'BUF',
+    opponentABV: 0,
+    teamVTT: 0,
+    opponentVTT: 0,
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
-      name: 'Placeholder',
+      name: '',
       RBOneOrTwo: 1,
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -222,12 +316,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -236,11 +340,18 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
     RBTwo: {
-      name: 'Placeholder',
+      name: '',
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
+
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -248,12 +359,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -262,17 +383,26 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
   },
   broncos: {
     teamABV: 'DEN',
+    opponentABV: 0,
+    teamVTT: 0,
+    opponentVTT: 0,
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
-      name: 'Placeholder',
+      name: '',
       RBOneOrTwo: 1,
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -280,12 +410,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -294,11 +434,18 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
     RBTwo: {
-      name: 'Placeholder',
+      name: '',
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
+
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -306,12 +453,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -320,17 +477,26 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
   },
   browns: {
     teamABV: 'CLE',
+    opponentABV: 0,
+    teamVTT: 0,
+    opponentVTT: 0,
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
-      name: 'Placeholder',
+      name: '',
       RBOneOrTwo: 1,
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -338,12 +504,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -352,11 +528,18 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
     RBTwo: {
-      name: 'Placeholder',
+      name: '',
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
+
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -364,12 +547,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -378,17 +571,26 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
   },
   buccaneers: {
     teamABV: 'TB',
+    opponentABV: 0,
+    teamVTT: 0,
+    opponentVTT: 0,
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
-      name: 'Placeholder',
+      name: '',
       RBOneOrTwo: 1,
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -396,12 +598,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -410,11 +622,18 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
     RBTwo: {
-      name: 'Placeholder',
+      name: '',
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
+
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -422,12 +641,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -436,17 +665,26 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
   },
   cardinals: {
     teamABV: 'ARI',
+    opponentABV: 0,
+    teamVTT: 0,
+    opponentVTT: 0,
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
-      name: 'Placeholder',
+      name: '',
       RBOneOrTwo: 1,
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -454,12 +692,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -468,11 +716,18 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
     RBTwo: {
-      name: 'Placeholder',
+      name: '',
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
+
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -480,12 +735,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -494,17 +759,26 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
   },
   chargers: {
     teamABV: 'LAC',
+    opponentABV: 0,
+    teamVTT: 0,
+    opponentVTT: 0,
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
-      name: 'Placeholder',
+      name: '',
       RBOneOrTwo: 1,
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -512,12 +786,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -526,11 +810,18 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
     RBTwo: {
-      name: 'Placeholder',
+      name: '',
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
+
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -538,12 +829,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -552,30 +853,49 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
   },
   chiefs: {
     teamABV: 'KC',
-    totalTeamPRojectedRBCarries: 18.2,
-    totalTeamProjectedRBTargets: 7.2,
+    opponentABV: 0,
+    teamVTT: 0,
+    opponentVTT: 0,
+    totalTeamPRojectedRBCarries: 0,
+    totalTeamProjectedRBTargets: 0,
     RBOne: {
-      name: 'Edwards-Helaire',
+      name: '',
       RBOneOrTwo: 1,
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
-      halfTwentyFifthPercentProjectedPoints: 6.3,
-      halfFiftyithPercentProjectedPoints: 9.8,
-      halfSeventyFifthPercentProjectedPoints: 13.3,
-      PPRTwentyFifthPercentProjectedPoints: 9.1,
-      PPRFiftyithPercentProjectedPoints: 13.5,
-      PPRSeventyFifthPercentProjectedPoints: 16,
-
-      prjCarries: 11.25,
-      prjTargets: 3,
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
+
+      prjCarries: 0,
+      prjTargets: 0,
+
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -584,24 +904,41 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
     RBTwo: {
-      name: 'Darrell Williams',
+      name: '',
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
 
-      halfTwentyFifthPercentProjectedPoints: 5,
-      halfFiftyithPercentProjectedPoints: 7,
-      halfSeventyFifthPercentProjectedPoints: 9,
-      PPRTwentyFifthPercentProjectedPoints: 9,
-      PPRFiftyithPercentProjectedPoints: 11.5,
-      PPRSeventyFifthPercentProjectedPoints: 13,
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
-      prjCarries: 5.6,
-      prjTargets: 3.8,
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
+
+      prjCarries: 0,
+      prjTargets: 0,
+
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -610,17 +947,26 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
   },
   colts: {
     teamABV: 'IND',
+    opponentABV: 0,
+    teamVTT: 0,
+    opponentVTT: 0,
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
-      name: 'Placeholder',
+      name: '',
       RBOneOrTwo: 1,
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -628,12 +974,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -642,11 +998,18 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
     RBTwo: {
-      name: 'Placeholder',
+      name: '',
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
+
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -654,12 +1017,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -668,17 +1041,26 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
   },
   commanders: {
     teamABV: 'WAS',
+    opponentABV: 0,
+    teamVTT: 0,
+    opponentVTT: 0,
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
-      name: 'Placeholder',
+      name: '',
       RBOneOrTwo: 1,
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -686,12 +1068,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -700,11 +1092,18 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
     RBTwo: {
-      name: 'Placeholder',
+      name: '',
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
+
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -712,12 +1111,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -726,17 +1135,26 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
   },
   cowboys: {
     teamABV: 'DAL',
+    opponentABV: 0,
+    teamVTT: 0,
+    opponentVTT: 0,
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
-      name: 'Placeholder',
+      name: '',
       RBOneOrTwo: 1,
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -744,12 +1162,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -758,11 +1186,18 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
     RBTwo: {
-      name: 'Placeholder',
+      name: '',
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
+
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -770,12 +1205,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -784,30 +1229,49 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
   },
   dolphins: {
     teamABV: 'MIA',
-    totalTeamPRojectedRBCarries: 26.4,
-    totalTeamProjectedRBTargets: 3,
+    opponentABV: 0,
+    teamVTT: 0,
+    opponentVTT: 0,
+    totalTeamPRojectedRBCarries: 0,
+    totalTeamProjectedRBTargets: 0,
     RBOne: {
-      name: 'Myles Gaskin',
+      name: '',
       RBOneOrTwo: 1,
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
-      halfTwentyFifthPercentProjectedPoints: 8.3,
-      halfFiftyithPercentProjectedPoints: 10.32,
-      halfSeventyFifthPercentProjectedPoints: 12.5,
-      PPRTwentyFifthPercentProjectedPoints: 10.1,
-      PPRFiftyithPercentProjectedPoints: 11.2,
-      PPRSeventyFifthPercentProjectedPoints: 13,
-
-      prjCarries: 15.6,
-      prjTargets: 2,
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
+
+      prjCarries: 0,
+      prjTargets: 0,
+
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -816,24 +1280,41 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
     RBTwo: {
-      name: 'Duke Johnson',
+      name: '',
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
 
-      halfTwentyFifthPercentProjectedPoints: 6,
-      halfFiftyithPercentProjectedPoints: 8.3,
-      halfSeventyFifthPercentProjectedPoints: 10,
-      PPRTwentyFifthPercentProjectedPoints: 10,
-      PPRFiftyithPercentProjectedPoints: 12,
-      PPRSeventyFifthPercentProjectedPoints: 14,
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
-      prjCarries: 13,
-      prjTargets: 0.5,
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
+
+      prjCarries: 0,
+      prjTargets: 0,
+
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -842,17 +1323,26 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
   },
   eagles: {
     teamABV: 'PHI',
+    opponentABV: 0,
+    teamVTT: 0,
+    opponentVTT: 0,
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
-      name: 'Placeholder',
+      name: '',
       RBOneOrTwo: 1,
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -860,12 +1350,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -874,11 +1374,18 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
     RBTwo: {
-      name: 'Placeholder',
+      name: '',
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
+
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -886,12 +1393,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -900,17 +1417,26 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
   },
   falcons: {
     teamABV: 'ATL',
+    opponentABV: 0,
+    teamVTT: 0,
+    opponentVTT: 0,
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
-      name: 'Placeholder',
+      name: '',
       RBOneOrTwo: 1,
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -918,12 +1444,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -932,11 +1468,18 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
     RBTwo: {
-      name: 'Placeholder',
+      name: '',
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
+
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -944,12 +1487,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -958,17 +1511,26 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
   },
   giants: {
     teamABV: 'NYG',
+    opponentABV: 0,
+    teamVTT: 0,
+    opponentVTT: 0,
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
-      name: 'Placeholder',
+      name: '',
       RBOneOrTwo: 1,
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -976,12 +1538,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -990,11 +1562,18 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
     RBTwo: {
-      name: 'Placeholder',
+      name: '',
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
+
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -1002,12 +1581,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1016,31 +1605,50 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
   },
   jaguars: {
     teamABV: 'JAC',
     altTeamABV: 'JAX',
-    totalTeamPRojectedRBCarries: 15.6,
-    totalTeamProjectedRBTargets: 5.6,
+    opponentABV: 0,
+    teamVTT: 0,
+    opponentVTT: 0,
+    totalTeamPRojectedRBCarries: 0,
+    totalTeamProjectedRBTargets: 0,
     RBOne: {
-      name: 'James Robinson',
+      name: '',
       RBOneOrTwo: 1,
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
-      halfTwentyFifthPercentProjectedPoints: 8.3,
-      halfFiftyithPercentProjectedPoints: 10.15,
-      halfSeventyFifthPercentProjectedPoints: 12.5,
-      PPRTwentyFifthPercentProjectedPoints: 10.1,
-      PPRFiftyithPercentProjectedPoints: 11.2,
-      PPRSeventyFifthPercentProjectedPoints: 13,
-
-      prjCarries: 12.2,
-      prjTargets: 3.4,
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
+
+      prjCarries: 0,
+      prjTargets: 0,
+
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1049,24 +1657,41 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
     RBTwo: {
-      name: 'Carlos Hyde',
+      name: '',
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
 
-      halfTwentyFifthPercentProjectedPoints: 1,
-      halfFiftyithPercentProjectedPoints: 2.52,
-      halfSeventyFifthPercentProjectedPoints: 4,
-      PPRTwentyFifthPercentProjectedPoints: 1.5,
-      PPRFiftyithPercentProjectedPoints: 2.8,
-      PPRSeventyFifthPercentProjectedPoints: 5,
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
-      prjCarries: 4,
-      prjTargets: 1.25,
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
+
+      prjCarries: 0,
+      prjTargets: 0,
+
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1075,30 +1700,49 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
   },
   jets: {
     teamABV: 'NYJ',
-    totalTeamPRojectedRBCarries: 19,
-    totalTeamProjectedRBTargets: 5.4,
+    opponentABV: 0,
+    teamVTT: 0,
+    opponentVTT: 0,
+    totalTeamPRojectedRBCarries: 0,
+    totalTeamProjectedRBTargets: 0,
     RBOne: {
-      name: 'Michael Carter',
+      name: '',
       RBOneOrTwo: 1,
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
-      halfTwentyFifthPercentProjectedPoints: 6,
-      halfFiftyithPercentProjectedPoints: 9.78,
-      halfSeventyFifthPercentProjectedPoints: 12,
-      PPRTwentyFifthPercentProjectedPoints: 7,
-      PPRFiftyithPercentProjectedPoints: 10.78,
-      PPRSeventyFifthPercentProjectedPoints: 13,
-
-      prjCarries: 11,
-      prjTargets: 3,
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
+
+      prjCarries: 0,
+      prjTargets: 0,
+
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1107,24 +1751,41 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
     RBTwo: {
-      name: 'Tevin Coleman',
+      name: '',
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
 
-      halfTwentyFifthPercentProjectedPoints: 3.5,
-      halfFiftyithPercentProjectedPoints: 5.9,
-      halfSeventyFifthPercentProjectedPoints: 8,
-      PPRTwentyFifthPercentProjectedPoints: 4,
-      PPRFiftyithPercentProjectedPoints: 6.65,
-      PPRSeventyFifthPercentProjectedPoints: 9,
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
-      prjCarries: 8.8,
-      prjTargets: 2.2,
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
+
+      prjCarries: 0,
+      prjTargets: 0,
+
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1133,17 +1794,26 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
   },
   lions: {
     teamABV: 'DET',
+    opponentABV: 0,
+    teamVTT: 0,
+    opponentVTT: 0,
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
-      name: 'Placeholder',
+      name: '',
       RBOneOrTwo: 1,
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -1151,12 +1821,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1165,11 +1845,18 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
     RBTwo: {
-      name: 'Placeholder',
+      name: '',
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
+
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -1177,12 +1864,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1191,17 +1888,26 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
   },
   packers: {
     teamABV: 'GB',
+    opponentABV: 0,
+    teamVTT: 0,
+    opponentVTT: 0,
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
-      name: 'Placeholder',
+      name: '',
       RBOneOrTwo: 1,
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -1209,12 +1915,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1223,11 +1939,18 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
     RBTwo: {
-      name: 'Placeholder',
+      name: '',
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
+
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -1235,12 +1958,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1249,17 +1982,26 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
   },
   panthers: {
     teamABV: 'CAR',
+    opponentABV: 0,
+    teamVTT: 0,
+    opponentVTT: 0,
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
-      name: 'Placeholder',
+      name: '',
       RBOneOrTwo: 1,
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -1267,12 +2009,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1281,11 +2033,18 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
     RBTwo: {
-      name: 'Placeholder',
+      name: '',
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
+
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -1293,12 +2052,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1307,17 +2076,26 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
   },
   patriots: {
     teamABV: 'NE',
+    opponentABV: 0,
+    teamVTT: 0,
+    opponentVTT: 0,
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
-      name: 'Placeholder',
+      name: '',
       RBOneOrTwo: 1,
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -1325,12 +2103,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1339,11 +2127,18 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
     RBTwo: {
-      name: 'Placeholder',
+      name: '',
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
+
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -1351,12 +2146,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1365,17 +2170,26 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
   },
   raiders: {
     teamABV: 'LV',
+    opponentABV: 0,
+    teamVTT: 0,
+    opponentVTT: 0,
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
-      name: 'Placeholder',
+      name: '',
       RBOneOrTwo: 1,
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -1383,12 +2197,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1397,11 +2221,18 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
     RBTwo: {
-      name: 'Placeholder',
+      name: '',
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
+
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -1409,12 +2240,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1423,17 +2264,26 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
   },
   rams: {
     teamABV: 'LAR',
+    opponentABV: 0,
+    teamVTT: 0,
+    opponentVTT: 0,
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
-      name: 'Placeholder',
+      name: '',
       RBOneOrTwo: 1,
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -1441,12 +2291,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1455,11 +2315,18 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
     RBTwo: {
-      name: 'Placeholder',
+      name: '',
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
+
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -1467,12 +2334,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1481,30 +2358,49 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
   },
   ravens: {
     teamABV: 'BAL',
-    totalTeamPRojectedRBCarries: 19,
-    totalTeamProjectedRBTargets: 5.8,
+    opponentABV: 0,
+    teamVTT: 0,
+    opponentVTT: 0,
+    totalTeamPRojectedRBCarries: 0,
+    totalTeamProjectedRBTargets: 0,
     RBOne: {
-      name: 'Devonta Freeman',
+      name: '',
       RBOneOrTwo: 1,
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
-      halfTwentyFifthPercentProjectedPoints: 7,
-      halfFiftyithPercentProjectedPoints: 10,
-      halfSeventyFifthPercentProjectedPoints: 13,
-      PPRTwentyFifthPercentProjectedPoints: 8,
-      PPRFiftyithPercentProjectedPoints: 11.7,
-      PPRSeventyFifthPercentProjectedPoints: 14.7,
-
-      prjCarries: 12.5,
-      prjTargets: 4.16,
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
+
+      prjCarries: 0,
+      prjTargets: 0,
+
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1513,24 +2409,41 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
     RBTwo: {
-      name: 'Latavius Murray',
+      name: '',
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
 
-      halfTwentyFifthPercentProjectedPoints: 2,
-      halfFiftyithPercentProjectedPoints: 4,
-      halfSeventyFifthPercentProjectedPoints: 6,
-      PPRTwentyFifthPercentProjectedPoints: 2.5,
-      PPRFiftyithPercentProjectedPoints: 4.6,
-      PPRSeventyFifthPercentProjectedPoints: 6.5,
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
-      prjCarries: 5.6,
-      prjTargets: 1.4,
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
+
+      prjCarries: 0,
+      prjTargets: 0,
+
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1539,30 +2452,49 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
   },
   saints: {
     teamABV: 'NO',
-    totalTeamPRojectedRBCarries: 19.6,
-    totalTeamProjectedRBTargets: 5,
+    opponentABV: 0,
+    teamVTT: 0,
+    opponentVTT: 0,
+    totalTeamPRojectedRBCarries: 0,
+    totalTeamProjectedRBTargets: 0,
     RBOne: {
-      name: 'Alvin Kamara',
+      name: '',
       RBOneOrTwo: 1,
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
-      halfTwentyFifthPercentProjectedPoints: 11,
-      halfFiftyithPercentProjectedPoints: 13.4,
-      halfSeventyFifthPercentProjectedPoints: 15,
-      PPRTwentyFifthPercentProjectedPoints: 13,
-      PPRFiftyithPercentProjectedPoints: 15,
-      PPRSeventyFifthPercentProjectedPoints: 18,
-
-      prjCarries: 17.5,
-      prjTargets: 5.5,
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
+
+      prjCarries: 0,
+      prjTargets: 0,
+
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1571,24 +2503,41 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
     RBTwo: {
-      name: 'Mark Ingram',
+      name: '',
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
 
-      halfTwentyFifthPercentProjectedPoints: 6,
-      halfFiftyithPercentProjectedPoints: 8,
-      halfSeventyFifthPercentProjectedPoints: 10,
-      PPRTwentyFifthPercentProjectedPoints: 7.5,
-      PPRFiftyithPercentProjectedPoints: 9.5,
-      PPRSeventyFifthPercentProjectedPoints: 10.5,
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
-      prjCarries: 10.6,
-      prjTargets: 4.3,
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
+
+      prjCarries: 0,
+      prjTargets: 0,
+
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1597,17 +2546,26 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
   },
   seahawks: {
     teamABV: 'SEA',
+    opponentABV: 0,
+    teamVTT: 0,
+    opponentVTT: 0,
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
-      name: 'Placeholder',
+      name: '',
       RBOneOrTwo: 1,
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -1615,12 +2573,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1629,11 +2597,18 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
     RBTwo: {
-      name: 'Placeholder',
+      name: '',
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
+
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -1641,12 +2616,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1655,30 +2640,49 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
   },
   steelers: {
     teamABV: 'PIT',
-    totalTeamPRojectedRBCarries: 17.2,
-    totalTeamProjectedRBTargets: 5.4,
+    opponentABV: 0,
+    teamVTT: 0,
+    opponentVTT: 0,
+    totalTeamPRojectedRBCarries: 0,
+    totalTeamProjectedRBTargets: 0,
     RBOne: {
-      name: 'Najee Harris',
+      name: '',
       RBOneOrTwo: 1,
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
-      halfTwentyFifthPercentProjectedPoints: 10,
-      halfFiftyithPercentProjectedPoints: 12.73,
-      halfSeventyFifthPercentProjectedPoints: 15,
-      PPRTwentyFifthPercentProjectedPoints: 12.5,
-      PPRFiftyithPercentProjectedPoints: 14.66,
-      PPRSeventyFifthPercentProjectedPoints: 18,
-
-      prjCarries: 16.5,
-      prjTargets: 4.6,
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
+
+      prjCarries: 0,
+      prjTargets: 0,
+
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1687,24 +2691,41 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
     RBTwo: {
-      name: 'Benny Snell',
+      name: '',
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
 
-      halfTwentyFifthPercentProjectedPoints: 0.5,
-      halfFiftyithPercentProjectedPoints: 1,
-      halfSeventyFifthPercentProjectedPoints: 2,
-      PPRTwentyFifthPercentProjectedPoints: 0.5,
-      PPRFiftyithPercentProjectedPoints: 1,
-      PPRSeventyFifthPercentProjectedPoints: 2,
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
-      prjCarries: 1,
-      prjTargets: 1,
+      halfTwentyFifthPercentProjectedPoints: 0,
+      halfFiftyithPercentProjectedPoints: 0,
+      halfSeventyFifthPercentProjectedPoints: 0,
+      PPRTwentyFifthPercentProjectedPoints: 0,
+      PPRFiftyithPercentProjectedPoints: 0,
+      PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
+
+      prjCarries: 0,
+      prjTargets: 0,
+
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1713,17 +2734,26 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
   },
   texans: {
     teamABV: 'HOU',
+    opponentABV: 0,
+    teamVTT: 0,
+    opponentVTT: 0,
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
-      name: 'Placeholder',
+      name: '',
       RBOneOrTwo: 1,
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -1731,12 +2761,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1745,11 +2785,18 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
     RBTwo: {
-      name: 'Placeholder',
+      name: '',
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
+
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -1757,12 +2804,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1771,17 +2828,26 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
   },
   titans: {
     teamABV: 'TEN',
+    opponentABV: 0,
+    teamVTT: 0,
+    opponentVTT: 0,
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
-      name: 'Placeholder',
+      name: '',
       RBOneOrTwo: 1,
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -1789,12 +2855,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1803,11 +2879,18 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
     RBTwo: {
-      name: 'Placeholder',
+      name: '',
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
+
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -1815,12 +2898,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1829,18 +2922,27 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
   },
 
   vikings: {
     teamABV: 'MIN',
+    opponentABV: 0,
+    teamVTT: 0,
+    opponentVTT: 0,
     totalTeamPRojectedRBCarries: 0,
     totalTeamProjectedRBTargets: 0,
     RBOne: {
-      name: 'Placeholder',
+      name: '',
       RBOneOrTwo: 1,
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -1848,12 +2950,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1862,11 +2974,18 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
     RBTwo: {
-      name: 'Placeholder',
+      name: '',
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
+
+      numberOfGamesPlayedLastFiveWeeks: 0,
+      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -1874,12 +2993,22 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
+      glspavg: 0,
+      glspLessThanFive: 0,
+      glspFiveToTen: 0,
+      glspTenToFifteen: 0,
+      glspFifteenToTwenty: 0,
+      glspTwentyToTwentyFive: 0,
+      glspGreaterThanTwentyFive: 0,
+
+      fourForFourHalfPPRProjectedPoints: 0,
+      fourForFourFullPPRProjectedPoints: 0,
 
       prjCarries: 0,
       prjTargets: 0,
 
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
+      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
+      TargetSharePercentageLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
@@ -1888,12 +3017,17 @@ const rbrawdata = {
       draftkingsProjectedOwnership: 0,
       fanduelProjectedOwnership: 0,
       yahooProjectedOwnership: 0,
+
+      percentOfSalaryCapDraftkings: 0,
+      percentOfSalaryCapFanduel: 0,
+      percentOfSalaryCapYahoo: 0,
     },
   },
 };
 
-const populateTeamObjects = function (passedInTeam) {
+const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
   qbDownloadableSpreadSheetYahoo.forEach(function (playerobj, i) {
+    // console.log(gameInfoPassedInTeam);
     passedInTeam.slate = '';
     allNFLTeamPace.forEach(function (teamObj) {
       let tempHomeTeamName = '';
@@ -1959,39 +3093,41 @@ const populateTeamObjects = function (passedInTeam) {
   });
 };
 
-populateTeamObjects(rbrawdata.SF49ers);
-populateTeamObjects(rbrawdata.bears);
-populateTeamObjects(rbrawdata.bengals);
-populateTeamObjects(rbrawdata.bills);
-populateTeamObjects(rbrawdata.broncos);
-populateTeamObjects(rbrawdata.browns);
-populateTeamObjects(rbrawdata.buccaneers);
-populateTeamObjects(rbrawdata.cardinals);
-populateTeamObjects(rbrawdata.chargers);
-populateTeamObjects(rbrawdata.chiefs);
-populateTeamObjects(rbrawdata.colts);
-populateTeamObjects(rbrawdata.commanders);
-populateTeamObjects(rbrawdata.cowboys);
-populateTeamObjects(rbrawdata.dolphins);
-populateTeamObjects(rbrawdata.eagles);
-populateTeamObjects(rbrawdata.falcons);
-populateTeamObjects(rbrawdata.giants);
-populateTeamObjects(rbrawdata.jaguars);
-populateTeamObjects(rbrawdata.jets);
-populateTeamObjects(rbrawdata.lions);
-populateTeamObjects(rbrawdata.packers);
-populateTeamObjects(rbrawdata.panthers);
-populateTeamObjects(rbrawdata.patriots);
-populateTeamObjects(rbrawdata.raiders);
-populateTeamObjects(rbrawdata.rams);
-populateTeamObjects(rbrawdata.ravens);
-populateTeamObjects(rbrawdata.saints);
-populateTeamObjects(rbrawdata.seahawks);
-populateTeamObjects(rbrawdata.steelers);
-populateTeamObjects(rbrawdata.texans);
-populateTeamObjects(rbrawdata.titans);
-populateTeamObjects(rbrawdata.vikings);
+//passs in each teams gameInfo as second arg
 
-// console.log(rbrawdata);
+populateTeamObjects(rbrawdata.SF49ers, gameInfo.SF49ers);
+populateTeamObjects(rbrawdata.bears, gameInfo.bears);
+populateTeamObjects(rbrawdata.bengals, gameInfo.bengals);
+populateTeamObjects(rbrawdata.bills, gameInfo.bills);
+populateTeamObjects(rbrawdata.broncos, gameInfo.broncos);
+populateTeamObjects(rbrawdata.browns, gameInfo.browns);
+populateTeamObjects(rbrawdata.buccaneers, gameInfo.buccaneers);
+populateTeamObjects(rbrawdata.cardinals, gameInfo.cardinals);
+populateTeamObjects(rbrawdata.chargers, gameInfo.chargers);
+populateTeamObjects(rbrawdata.chiefs, gameInfo.chiefs);
+populateTeamObjects(rbrawdata.colts, gameInfo.colts);
+populateTeamObjects(rbrawdata.commanders, gameInfo.commanders);
+populateTeamObjects(rbrawdata.cowboys, gameInfo.cowboys);
+populateTeamObjects(rbrawdata.dolphins, gameInfo.dolphins);
+populateTeamObjects(rbrawdata.eagles, gameInfo.eagles);
+populateTeamObjects(rbrawdata.falcons, gameInfo.falcons);
+populateTeamObjects(rbrawdata.giants, gameInfo.giants);
+populateTeamObjects(rbrawdata.jaguars, gameInfo.jaguars);
+populateTeamObjects(rbrawdata.jets, gameInfo.jets);
+populateTeamObjects(rbrawdata.lions, gameInfo.lions);
+populateTeamObjects(rbrawdata.packers, gameInfo.packers);
+populateTeamObjects(rbrawdata.panthers, gameInfo.panthers);
+populateTeamObjects(rbrawdata.patriots, gameInfo.patriots);
+populateTeamObjects(rbrawdata.raiders, gameInfo.raiders);
+populateTeamObjects(rbrawdata.rams, gameInfo.rams);
+populateTeamObjects(rbrawdata.ravens, gameInfo.ravens);
+populateTeamObjects(rbrawdata.saints, gameInfo.saints);
+populateTeamObjects(rbrawdata.seahawks, gameInfo.seahawks);
+populateTeamObjects(rbrawdata.steelers, gameInfo.steelers);
+populateTeamObjects(rbrawdata.texans, gameInfo.texans);
+populateTeamObjects(rbrawdata.titans, gameInfo.titans);
+populateTeamObjects(rbrawdata.vikings, gameInfo.vikings);
+
+console.log(rbrawdata);
 
 module.exports = rbrawdata;

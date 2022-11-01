@@ -113,8 +113,7 @@ const allQBCalcFunctions = {
   },
 
   calcQBSecondHighlyProjectedPassCatchers(team) {
-    let QBSHPPC =
-      team.secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints;
+    let QBSHPPC = team.secondHighestProjectedPassCatcher4for4ProjectedPoints;
 
     if (QBSHPPC > 14.9) {
       QBSHPPC = 15;
@@ -673,6 +672,8 @@ const allQBData = {
     managedAndCashprojectedPointsPerDollarYahoo,
 };
 
+// console.log(allQBData.projectedPointsPerDollarYahoo);
+// console.log(allQBData.allQBFinalProjectedPointsValuesPlusNames);
 // console.log(allQBData);
 
 module.exports = allQBCalcFunctions;

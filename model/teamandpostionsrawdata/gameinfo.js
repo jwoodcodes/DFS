@@ -9,6 +9,9 @@ const allQBGLSP = require('../datafilesmadefrom4for4CSVs/allQBGLSP');
 
 const allFlexGLSP = require('../datafilesmadefrom4for4CSVs/allFlexGLSP');
 const allTeams = require('../teamandpositionvariables/allTeamLevelVariables');
+const rotovizNeutralScriptOffensivePaceAndRunPassReportLastFiveWeeks = require('../datafilesmadefrom4for4CSVs/RotovizNeutralOffensivePaceAndRunPassReport');
+const rotovizNegativeScriptOffensivePaceAndRunPassReportLastFiveWeeks = require('../datafilesmadefrom4for4CSVs/rotovizNegetiveOffensivePaceAndRunPassReport');
+const rotovizPositiveScriptOffensivePaceAndRunPassReportLastFiveWeeks = require('../datafilesmadefrom4for4CSVs/rotovizPositiveOffensivePaceAndRunPassReport');
 
 const gameInfo = {
   week: {
@@ -21,6 +24,8 @@ const gameInfo = {
     teamABV: 'SF',
     byeWeek2022: 9,
     vtt: 0,
+    opponentvtt: 0,
+    gameTotalVegasTotal: 0,
     homeOrAway: '',
     slate: '',
 
@@ -45,6 +50,8 @@ const gameInfo = {
     teamABV: 'CHI',
     byeWeek2022: 14,
     vtt: 0,
+    opponentvtt: 0,
+    gameTotalVegasTotal: 0,
     homeOrAway: '',
     slate: '',
 
@@ -69,6 +76,8 @@ const gameInfo = {
     teamABV: 'CIN',
     byeWeek2022: 10,
     vtt: 0,
+    opponentvtt: 0,
+    gameTotalVegasTotal: 0,
     homeOrAway: '',
     slate: '',
 
@@ -93,6 +102,8 @@ const gameInfo = {
     teamABV: 'BUF',
     byeWeek2022: 7,
     vtt: 0,
+    opponentvtt: 0,
+    gameTotalVegasTotal: 0,
     homeOrAway: '',
     slate: '',
 
@@ -117,6 +128,8 @@ const gameInfo = {
     teamABV: 'DEN',
     byeWeek2022: 9,
     vtt: 0,
+    opponentvtt: 0,
+    gameTotalVegasTotal: 0,
     homeOrAway: '',
     slate: '',
 
@@ -141,6 +154,8 @@ const gameInfo = {
     teamABV: 'CLE',
     byeWeek2022: 9,
     vtt: 0,
+    opponentvtt: 0,
+    gameTotalVegasTotal: 0,
     homeOrAway: '',
     slate: '',
 
@@ -165,6 +180,8 @@ const gameInfo = {
     teamABV: 'TB',
     byeWeek2022: 11,
     vtt: 0,
+    opponentvtt: 0,
+    gameTotalVegasTotal: 0,
     homeOrAway: '',
     slate: '',
 
@@ -189,6 +206,8 @@ const gameInfo = {
     teamABV: 'ARI',
     byeWeek2022: 13,
     vtt: 0,
+    opponentvtt: 0,
+    gameTotalVegasTotal: 0,
     homeOrAway: '',
     slate: '',
 
@@ -213,6 +232,8 @@ const gameInfo = {
     teamABV: 'LAC',
     byeWeek2022: 8,
     vtt: 0,
+    opponentvtt: 0,
+    gameTotalVegasTotal: 0,
     homeOrAway: '',
     slate: '',
 
@@ -237,6 +258,8 @@ const gameInfo = {
     teamABV: 'KC',
     byeWeek2022: 8,
     vtt: 0,
+    opponentvtt: 0,
+    gameTotalVegasTotal: 0,
     homeOrAway: '',
     slate: '',
 
@@ -261,6 +284,8 @@ const gameInfo = {
     teamABV: 'IND',
     byeWeek2022: 14,
     vtt: 0,
+    opponentvtt: 0,
+    gameTotalVegasTotal: 0,
     homeOrAway: '',
     slate: '',
 
@@ -285,6 +310,8 @@ const gameInfo = {
     teamABV: 'WAS',
     byeWeek2022: 14,
     vtt: 0,
+    opponentvtt: 0,
+    gameTotalVegasTotal: 0,
     homeOrAway: '',
     slate: '',
 
@@ -309,6 +336,8 @@ const gameInfo = {
     teamABV: 'DAL',
     byeWeek2022: 9,
     vtt: 0,
+    opponentvtt: 0,
+    gameTotalVegasTotal: 0,
     homeOrAway: '',
     slate: '',
 
@@ -333,6 +362,8 @@ const gameInfo = {
     teamABV: 'MIA',
     byeWeek2022: 11,
     vtt: 0,
+    opponentvtt: 0,
+    gameTotalVegasTotal: 0,
     homeOrAway: '',
     slate: '',
 
@@ -357,6 +388,8 @@ const gameInfo = {
     teamABV: 'PHI',
     byeWeek2022: 7,
     vtt: 0,
+    opponentvtt: 0,
+    gameTotalVegasTotal: 0,
     homeOrAway: '',
     slate: '',
 
@@ -381,6 +414,8 @@ const gameInfo = {
     teamABV: 'ATL',
     byeWeek2022: 14,
     vtt: 0,
+    opponentvtt: 0,
+    gameTotalVegasTotal: 0,
     homeOrAway: '',
     slate: '',
 
@@ -405,6 +440,8 @@ const gameInfo = {
     teamABV: 'NYG',
     byeWeek2022: 9,
     vtt: 0,
+    opponentvtt: 0,
+    gameTotalVegasTotal: 0,
     homeOrAway: '',
     slate: '',
 
@@ -430,6 +467,8 @@ const gameInfo = {
     altTeamABV: 'JAC',
     byeWeek2022: 11,
     vtt: 0,
+    opponentvtt: 0,
+    gameTotalVegasTotal: 0,
     homeOrAway: '',
     slate: '',
 
@@ -454,6 +493,8 @@ const gameInfo = {
     teamABV: 'NYJ',
     byeWeek2022: 10,
     vtt: 0,
+    opponentvtt: 0,
+    gameTotalVegasTotal: 0,
     homeOrAway: '',
     slate: '',
 
@@ -478,6 +519,8 @@ const gameInfo = {
     teamABV: 'DET',
     byeWeek2022: 6,
     vtt: 0,
+    opponentvtt: 0,
+    gameTotalVegasTotal: 0,
     homeOrAway: '',
     slate: '',
 
@@ -502,6 +545,8 @@ const gameInfo = {
     teamABV: 'GB',
     byeWeek2022: 14,
     vtt: 0,
+    opponentvtt: 0,
+    gameTotalVegasTotal: 0,
     homeOrAway: '',
     slate: '',
 
@@ -526,6 +571,8 @@ const gameInfo = {
     teamABV: 'CAR',
     byeWeek2022: 13,
     vtt: 0,
+    opponentvtt: 0,
+    gameTotalVegasTotal: 0,
     homeOrAway: '',
     slate: '',
 
@@ -550,6 +597,8 @@ const gameInfo = {
     teamABV: 'NE',
     byeWeek2022: 10,
     vtt: 0,
+    opponentvtt: 0,
+    gameTotalVegasTotal: 0,
     homeOrAway: '',
     slate: '',
 
@@ -574,6 +623,8 @@ const gameInfo = {
     teamABV: 'LV',
     byeWeek2022: 6,
     vtt: 0,
+    opponentvtt: 0,
+    gameTotalVegasTotal: 0,
     homeOrAway: '',
     slate: '',
 
@@ -598,6 +649,8 @@ const gameInfo = {
     teamABV: 'LAR',
     byeWeek2022: 7,
     vtt: 0,
+    opponentvtt: 0,
+    gameTotalVegasTotal: 0,
     homeOrAway: '',
     slate: '',
 
@@ -622,6 +675,8 @@ const gameInfo = {
     teamABV: 'BAL',
     byeWeek2022: 10,
     vtt: 0,
+    opponentvtt: 0,
+    gameTotalVegasTotal: 0,
     homeOrAway: '',
     slate: '',
 
@@ -646,6 +701,8 @@ const gameInfo = {
     teamABV: 'NO',
     byeWeek2022: 14,
     vtt: 0,
+    opponentvtt: 0,
+    gameTotalVegasTotal: 0,
     homeOrAway: '',
     slate: '',
 
@@ -670,6 +727,8 @@ const gameInfo = {
     teamABV: 'SEA',
     byeWeek2022: 11,
     vtt: 0,
+    opponentvtt: 0,
+    gameTotalVegasTotal: 0,
     homeOrAway: '',
     slate: '',
 
@@ -694,6 +753,8 @@ const gameInfo = {
     teamABV: 'PIT',
     byeWeek2022: 9,
     vtt: 0,
+    opponentvtt: 0,
+    gameTotalVegasTotal: 0,
     homeOrAway: '',
     slate: '',
 
@@ -718,6 +779,8 @@ const gameInfo = {
     teamABV: 'HOU',
     byeWeek2022: 6,
     vtt: 0,
+    opponentvtt: 0,
+    gameTotalVegasTotal: 0,
     homeOrAway: '',
     slate: '',
 
@@ -742,6 +805,8 @@ const gameInfo = {
     teamABV: 'TEN',
     byeWeek2022: 6,
     vtt: 0,
+    opponentvtt: 0,
+    gameTotalVegasTotal: 0,
     homeOrAway: '',
     slate: '',
 
@@ -768,6 +833,8 @@ const gameInfo = {
     teamABV: 'MIN',
     byeWeek2022: 7,
     vtt: 0,
+    opponentvtt: 0,
+    gameTotalVegasTotal: 0,
     homeOrAway: '',
     slate: '',
 
@@ -1044,6 +1111,9 @@ const populateTeamObjects = function (passedInTeam) {
           ) {
             passedInTeam.RBTwoThisWeekName = team.Player;
             passedInTeam.RBTwoThisWeek4for4HalfProjPoints = +team['Y! (Proj)'];
+          } else {
+            passedInTeam.RBTwoThisWeekName = 'no second RB';
+            passedInTeam.RBTwoThisWeek4for4HalfProjPoints = 0;
           }
         }
       }
@@ -1095,6 +1165,7 @@ const populateTeamObjects = function (passedInTeam) {
         }
       }
     });
+
     const calcInitialTeamLikelihoodOfOffensiveSuccess = function (PITeam) {
       if (passedInTeam.QBOneThisWeek4for4HalfProjPoints) {
         qb = +(passedInTeam.QBOneThisWeek4for4HalfProjPoints * 2).toFixed(2);
@@ -1123,6 +1194,102 @@ const populateTeamObjects = function (passedInTeam) {
     calcInitialTeamLikelihoodOfOffensiveSuccess(passedInTeam);
   };
   setPlayerNamesAtPositionsToTheirTeams(passedInTeam);
+
+  const setTeamPassRunRatioForAllGameScripts = function (PITeam) {
+    rotovizNeutralScriptOffensivePaceAndRunPassReportLastFiveWeeks.forEach(
+      function (team) {
+        if (team['"Team"'].length === 5) {
+          tempTeamName = team['"Team"'].slice(1, 4);
+        } else {
+          tempTeamName = team['"Team"'].slice(1, 3);
+        }
+        if (tempTeamName === passedInTeam.teamABV) {
+          passedInTeam.neutralGameScriptSecondsPerSnap = team['"Sec/Snap"'];
+          passedInTeam.neutralScriptPassPercentage = +team['"Pass%"'].slice(
+            1,
+            -2
+          );
+          passedInTeam.neutralScriptRunPercentage = +team['"Rush%"'].slice(
+            1,
+            -2
+          );
+          // console.log(team['"Pass%"']);
+        }
+      }
+    );
+
+    rotovizNegativeScriptOffensivePaceAndRunPassReportLastFiveWeeks.forEach(
+      function (team) {
+        if (team['"Team"'].length === 5) {
+          tempTeamName = team['"Team"'].slice(1, 4);
+        } else {
+          tempTeamName = team['"Team"'].slice(1, 3);
+        }
+
+        if (tempTeamName === passedInTeam.teamABV) {
+          // console.log(team['"Plays"']);
+          // console
+          //   .log
+          // `${team['"Team"']}: ${team['"Rush%"']} ${team['"Pass%"']}`
+          // ();
+
+          if (team['"Plays"'] > 10) {
+            passedInTeam.negativeGameScriptSecondsPerSnap = team['"Sec/Snap"'];
+            passedInTeam.negativeScriptPassPercentage = +team['"Pass%"'].slice(
+              1,
+              -2
+            );
+            passedInTeam.negativeScriptRunPercentage = +team['"Rush%"'].slice(
+              1,
+              -2
+            );
+            passedInTeam.negativeScriptPlaysRanLastFiveWeeks = +team['"Plays"'];
+          } else {
+            passedInTeam.negativeScriptPassPercentage = 0;
+            passedInTeam.negativeScriptRunPercentage = 0;
+            passedInTeam.negativeScriptPlaysRanLastFiveWeeks = +team['"Plays"'];
+          }
+        }
+      }
+    );
+
+    rotovizPositiveScriptOffensivePaceAndRunPassReportLastFiveWeeks.forEach(
+      function (team) {
+        if (team['"Team"'].length === 5) {
+          tempTeamName = team['"Team"'].slice(1, 4);
+        } else {
+          tempTeamName = team['"Team"'].slice(1, 3);
+        }
+
+        if (tempTeamName === passedInTeam.teamABV) {
+          // console.log(team['"Plays"']);
+          // console
+          //   .log
+          // `${team['"Team"']}: ${team['"Rush%"']} ${team['"Pass%"']}`
+          // ();
+
+          if (team['"Plays"'] > 10) {
+            // console.log(team['"Sec/Snap"']);
+            passedInTeam.positiveGameScriptSecondsPerSnap = team['"Sec/Snap"'];
+            passedInTeam.positiveScriptPassPercentage = +team['"Pass%"'].slice(
+              1,
+              -2
+            );
+            passedInTeam.positiveScriptRunPercentage = +team['"Rush%"'].slice(
+              1,
+              -2
+            );
+            passedInTeam.positiveScriptPlaysRanLastFiveWeeks = +team['"Plays"'];
+          } else {
+            passedInTeam.positiveScriptPassPercentage = 0;
+            passedInTeam.positiveScriptRunPercentage = 0;
+            passedInTeam.positiveScriptPlaysRanLastFiveWeeks = +team['"Plays"'];
+          }
+        }
+      }
+    );
+  };
+  setTeamPassRunRatioForAllGameScripts(passedInTeam);
 };
 
 populateTeamObjects(gameInfo.SF49ers);
@@ -1165,6 +1332,9 @@ const assignOpponentObjectToPassedInTeam = function (team) {
     team.opponentThisWeek.teamName = gameInfo.cardinals.teamName;
     team.opponentThisWeek.teamABV = gameInfo.cardinals.teamABV;
     team.opponentThisWeek.vtt = gameInfo.cardinals.vtt;
+    team.opponentvtt = gameInfo.cardinals.vtt;
+    team.gameTotalVegasTotal = +team.vtt + +team.opponentvtt;
+
     team.opponentThisWeek.teamPlaysPerSixtyMinNeutralSituations =
       gameInfo.cardinals.teamPlaysPerSixtyMinNeutralSituations;
     team.opponentThisWeek.teamPlaysPerSixtyMinAllSituations =
@@ -1177,6 +1347,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
     team.opponentThisWeek.teamName = gameInfo.falcons.teamName;
     team.opponentThisWeek.teamABV = gameInfo.falcons.teamABV;
     team.opponentThisWeek.vtt = gameInfo.falcons.vtt;
+    team.opponentvtt = gameInfo.falcons.vtt;
+    team.gameTotalVegasTotal = +team.vtt + +team.opponentvtt;
     team.opponentThisWeek.teamPlaysPerSixtyMinNeutralSituations =
       gameInfo.falcons.teamPlaysPerSixtyMinNeutralSituations;
     team.opponentThisWeek.teamPlaysPerSixtyMinAllSituations =
@@ -1189,6 +1361,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
     team.opponentThisWeek.teamName = gameInfo.ravens.teamName;
     team.opponentThisWeek.teamABV = gameInfo.ravens.teamABV;
     team.opponentThisWeek.vtt = gameInfo.ravens.vtt;
+    team.opponentvtt = gameInfo.ravens.vtt;
+    team.gameTotalVegasTotal = +team.vtt + +team.opponentvtt;
     team.opponentThisWeek.teamPlaysPerSixtyMinNeutralSituations =
       gameInfo.ravens.teamPlaysPerSixtyMinNeutralSituations;
     team.opponentThisWeek.teamPlaysPerSixtyMinAllSituations =
@@ -1201,6 +1375,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
     team.opponentThisWeek.teamName = gameInfo.bills.teamName;
     team.opponentThisWeek.teamABV = gameInfo.bills.teamABV;
     team.opponentThisWeek.vtt = gameInfo.bills.vtt;
+    team.opponentvtt = gameInfo.bills.vtt;
+    team.gameTotalVegasTotal = +team.vtt + +team.opponentvtt;
     team.opponentThisWeek.teamPlaysPerSixtyMinNeutralSituations =
       gameInfo.bills.teamPlaysPerSixtyMinNeutralSituations;
     team.opponentThisWeek.teamPlaysPerSixtyMinAllSituations =
@@ -1213,6 +1389,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
     team.opponentThisWeek.teamName = gameInfo.panthers.teamName;
     team.opponentThisWeek.teamABV = gameInfo.panthers.teamABV;
     team.opponentThisWeek.vtt = gameInfo.panthers.vtt;
+    team.opponentvtt = gameInfo.panthers.vtt;
+    team.gameTotalVegasTotal = +team.vtt + +team.opponentvtt;
     team.opponentThisWeek.teamPlaysPerSixtyMinNeutralSituations =
       gameInfo.panthers.teamPlaysPerSixtyMinNeutralSituations;
     team.opponentThisWeek.teamPlaysPerSixtyMinAllSituations =
@@ -1225,6 +1403,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
     team.opponentThisWeek.teamName = gameInfo.bears.teamName;
     team.opponentThisWeek.teamABV = gameInfo.bears.teamABV;
     team.opponentThisWeek.vtt = gameInfo.bears.vtt;
+    team.opponentvtt = gameInfo.bears.vtt;
+    team.gameTotalVegasTotal = +team.vtt + +team.opponentvtt;
     team.opponentThisWeek.teamPlaysPerSixtyMinNeutralSituations =
       gameInfo.bears.teamPlaysPerSixtyMinNeutralSituations;
     team.opponentThisWeek.teamPlaysPerSixtyMinAllSituations =
@@ -1237,6 +1417,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
     team.opponentThisWeek.teamName = gameInfo.bengals.teamName;
     team.opponentThisWeek.teamABV = gameInfo.bengals.teamABV;
     team.opponentThisWeek.vtt = gameInfo.bengals.vtt;
+    team.opponentvtt = gameInfo.bengals.vtt;
+    team.gameTotalVegasTotal = +team.vtt + +team.opponentvtt;
     team.opponentThisWeek.teamPlaysPerSixtyMinNeutralSituations =
       gameInfo.bengals.teamPlaysPerSixtyMinNeutralSituations;
     team.opponentThisWeek.teamPlaysPerSixtyMinAllSituations =
@@ -1249,6 +1431,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
     team.opponentThisWeek.teamName = gameInfo.browns.teamName;
     team.opponentThisWeek.teamABV = gameInfo.browns.teamABV;
     team.opponentThisWeek.vtt = gameInfo.browns.vtt;
+    team.opponentvtt = gameInfo.browns.vtt;
+    team.gameTotalVegasTotal = +team.vtt + +team.opponentvtt;
     team.opponentThisWeek.teamPlaysPerSixtyMinNeutralSituations =
       gameInfo.browns.teamPlaysPerSixtyMinNeutralSituations;
     team.opponentThisWeek.teamPlaysPerSixtyMinAllSituations =
@@ -1261,6 +1445,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
     team.opponentThisWeek.teamName = gameInfo.cowboys.teamName;
     team.opponentThisWeek.teamABV = gameInfo.cowboys.teamABV;
     team.opponentThisWeek.vtt = gameInfo.cowboys.vtt;
+    team.opponentvtt = gameInfo.cowboys.vtt;
+    team.gameTotalVegasTotal = +team.vtt + +team.opponentvtt;
     team.opponentThisWeek.teamPlaysPerSixtyMinNeutralSituations =
       gameInfo.cowboys.teamPlaysPerSixtyMinNeutralSituations;
     team.opponentThisWeek.teamPlaysPerSixtyMinAllSituations =
@@ -1274,6 +1460,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
     team.opponentThisWeek.teamName = gameInfo.broncos.teamName;
     team.opponentThisWeek.teamABV = gameInfo.broncos.teamABV;
     team.opponentThisWeek.vtt = gameInfo.broncos.vtt;
+    team.opponentvtt = gameInfo.broncos.vtt;
+    team.gameTotalVegasTotal = +team.vtt + +team.opponentvtt;
     team.opponentThisWeek.teamPlaysPerSixtyMinNeutralSituations =
       gameInfo.broncos.teamPlaysPerSixtyMinNeutralSituations;
     team.opponentThisWeek.teamPlaysPerSixtyMinAllSituations =
@@ -1286,6 +1474,10 @@ const assignOpponentObjectToPassedInTeam = function (team) {
     team.opponentThisWeek.teamName = gameInfo.lions.teamName;
     team.opponentThisWeek.teamABV = gameInfo.lions.teamABV;
     team.opponentThisWeek.vtt = gameInfo.lions.vtt;
+
+    team.opponentvtt = gameInfo.lions.vtt;
+    team.gameTotalVegasTotal = +team.vtt + +team.opponentvtt;
+
     team.opponentThisWeek.teamPlaysPerSixtyMinNeutralSituations =
       gameInfo.lions.teamPlaysPerSixtyMinNeutralSituations;
     team.opponentThisWeek.teamPlaysPerSixtyMinAllSituations =
@@ -1299,6 +1491,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
     team.opponentThisWeek.teamName = gameInfo.packers.teamName;
     team.opponentThisWeek.teamABV = gameInfo.packers.teamABV;
     team.opponentThisWeek.vtt = gameInfo.packers.vtt;
+    team.opponentvtt = gameInfo.packers.vtt;
+    team.gameTotalVegasTotal = +team.vtt + +team.opponentvtt;
     team.opponentThisWeek.teamPlaysPerSixtyMinNeutralSituations =
       gameInfo.packers.teamPlaysPerSixtyMinNeutralSituations;
     team.opponentThisWeek.teamPlaysPerSixtyMinAllSituations =
@@ -1311,6 +1505,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
     team.opponentThisWeek.teamName = gameInfo.texans.teamName;
     team.opponentThisWeek.teamABV = gameInfo.texans.teamABV;
     team.opponentThisWeek.vtt = gameInfo.texans.vtt;
+    team.opponentvtt = gameInfo.texans.vtt;
+    team.gameTotalVegasTotal = +team.vtt + +team.opponentvtt;
     team.opponentThisWeek.teamPlaysPerSixtyMinNeutralSituations =
       gameInfo.texans.teamPlaysPerSixtyMinNeutralSituations;
     team.opponentThisWeek.teamPlaysPerSixtyMinAllSituations =
@@ -1323,6 +1519,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
     team.opponentThisWeek.teamName = gameInfo.colts.teamName;
     team.opponentThisWeek.teamABV = gameInfo.colts.teamABV;
     team.opponentThisWeek.vtt = gameInfo.colts.vtt;
+    team.opponentvtt = gameInfo.colts.vtt;
+    team.gameTotalVegasTotal = +team.vtt + +team.opponentvtt;
     team.opponentThisWeek.teamPlaysPerSixtyMinNeutralSituations =
       gameInfo.colts.teamPlaysPerSixtyMinNeutralSituations;
     team.opponentThisWeek.teamPlaysPerSixtyMinAllSituations =
@@ -1335,6 +1533,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
     team.opponentThisWeek.teamName = gameInfo.jaguars.teamName;
     team.opponentThisWeek.teamABV = gameInfo.jaguars.teamABV;
     team.opponentThisWeek.vtt = gameInfo.jaguars.vtt;
+    team.opponentvtt = gameInfo.jaguars.vtt;
+    team.gameTotalVegasTotal = +team.vtt + +team.opponentvtt;
     team.opponentThisWeek.teamPlaysPerSixtyMinNeutralSituations =
       gameInfo.jaguars.teamPlaysPerSixtyMinNeutralSituations;
     team.opponentThisWeek.teamPlaysPerSixtyMinAllSituations =
@@ -1347,6 +1547,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
     team.opponentThisWeek.teamName = gameInfo.chiefs.teamName;
     team.opponentThisWeek.teamABV = gameInfo.chiefs.teamABV;
     team.opponentThisWeek.vtt = gameInfo.chiefs.vtt;
+    team.opponentvtt = gameInfo.chiefs.vtt;
+    team.gameTotalVegasTotal = +team.vtt + +team.opponentvtt;
     team.opponentThisWeek.teamPlaysPerSixtyMinNeutralSituations =
       gameInfo.chiefs.teamPlaysPerSixtyMinNeutralSituations;
     team.opponentThisWeek.teamPlaysPerSixtyMinAllSituations =
@@ -1359,6 +1561,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
     team.opponentThisWeek.teamName = gameInfo.raiders.teamName;
     team.opponentThisWeek.teamABV = gameInfo.raiders.teamABV;
     team.opponentThisWeek.vtt = gameInfo.raiders.vtt;
+    team.opponentvtt = gameInfo.raiders.vtt;
+    team.gameTotalVegasTotal = +team.vtt + +team.opponentvtt;
     team.opponentThisWeek.teamPlaysPerSixtyMinNeutralSituations =
       gameInfo.raiders.teamPlaysPerSixtyMinNeutralSituations;
     team.opponentThisWeek.teamPlaysPerSixtyMinAllSituations =
@@ -1371,6 +1575,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
     team.opponentThisWeek.teamName = gameInfo.chargers.teamName;
     team.opponentThisWeek.teamABV = gameInfo.chargers.teamABV;
     team.opponentThisWeek.vtt = gameInfo.chargers.vtt;
+    team.opponentvtt = gameInfo.chargers.vtt;
+    team.gameTotalVegasTotal = +team.vtt + +team.opponentvtt;
     team.opponentThisWeek.teamPlaysPerSixtyMinNeutralSituations =
       gameInfo.chargers.teamPlaysPerSixtyMinNeutralSituations;
     team.opponentThisWeek.teamPlaysPerSixtyMinAllSituations =
@@ -1383,6 +1589,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
     team.opponentThisWeek.teamName = gameInfo.rams.teamName;
     team.opponentThisWeek.teamABV = gameInfo.rams.teamABV;
     team.opponentThisWeek.vtt = gameInfo.rams.vtt;
+    team.opponentvtt = gameInfo.rams.vtt;
+    team.gameTotalVegasTotal = +team.vtt + +team.opponentvtt;
     team.opponentThisWeek.teamPlaysPerSixtyMinNeutralSituations =
       gameInfo.rams.teamPlaysPerSixtyMinNeutralSituations;
     team.opponentThisWeek.teamPlaysPerSixtyMinAllSituations =
@@ -1395,6 +1603,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
     team.opponentThisWeek.teamName = gameInfo.dolphins.teamName;
     team.opponentThisWeek.teamABV = gameInfo.dolphins.teamABV;
     team.opponentThisWeek.vtt = gameInfo.dolphins.vtt;
+    team.opponentvtt = gameInfo.dolphins.vtt;
+    team.gameTotalVegasTotal = +team.vtt + +team.opponentvtt;
     team.opponentThisWeek.teamPlaysPerSixtyMinNeutralSituations =
       gameInfo.dolphins.teamPlaysPerSixtyMinNeutralSituations;
     team.opponentThisWeek.teamPlaysPerSixtyMinAllSituations =
@@ -1407,6 +1617,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
     team.opponentThisWeek.teamName = gameInfo.vikings.teamName;
     team.opponentThisWeek.teamABV = gameInfo.vikings.teamABV;
     team.opponentThisWeek.vtt = gameInfo.vikings.vtt;
+    team.opponentvtt = gameInfo.vikings.vtt;
+    team.gameTotalVegasTotal = +team.vtt + +team.opponentvtt;
     team.opponentThisWeek.teamPlaysPerSixtyMinNeutralSituations =
       gameInfo.vikings.teamPlaysPerSixtyMinNeutralSituations;
     team.opponentThisWeek.teamPlaysPerSixtyMinAllSituations =
@@ -1419,6 +1631,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
     team.opponentThisWeek.teamName = gameInfo.patriots.teamName;
     team.opponentThisWeek.teamABV = gameInfo.patriots.teamABV;
     team.opponentThisWeek.vtt = gameInfo.patriots.vtt;
+    team.opponentvtt = gameInfo.patriots.vtt;
+    team.gameTotalVegasTotal = +team.vtt + +team.opponentvtt;
     team.opponentThisWeek.teamPlaysPerSixtyMinNeutralSituations =
       gameInfo.patriots.teamPlaysPerSixtyMinNeutralSituations;
     team.opponentThisWeek.teamPlaysPerSixtyMinAllSituations =
@@ -1431,6 +1645,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
     team.opponentThisWeek.teamName = gameInfo.saints.teamName;
     team.opponentThisWeek.teamABV = gameInfo.saints.teamABV;
     team.opponentThisWeek.vtt = gameInfo.saints.vtt;
+    team.opponentvtt = gameInfo.saints.vtt;
+    team.gameTotalVegasTotal = +team.vtt + +team.opponentvtt;
     team.opponentThisWeek.teamPlaysPerSixtyMinNeutralSituations =
       gameInfo.saints.teamPlaysPerSixtyMinNeutralSituations;
     team.opponentThisWeek.teamPlaysPerSixtyMinAllSituations =
@@ -1443,6 +1659,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
     team.opponentThisWeek.teamName = gameInfo.giants.teamName;
     team.opponentThisWeek.teamABV = gameInfo.giants.teamABV;
     team.opponentThisWeek.vtt = gameInfo.giants.vtt;
+    team.opponentvtt = gameInfo.giants.vtt;
+    team.gameTotalVegasTotal = +team.vtt + +team.opponentvtt;
     team.opponentThisWeek.teamPlaysPerSixtyMinNeutralSituations =
       gameInfo.giants.teamPlaysPerSixtyMinNeutralSituations;
     team.opponentThisWeek.teamPlaysPerSixtyMinAllSituations =
@@ -1455,6 +1673,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
     team.opponentThisWeek.teamName = gameInfo.jets.teamName;
     team.opponentThisWeek.teamABV = gameInfo.jets.teamABV;
     team.opponentThisWeek.vtt = gameInfo.jets.vtt;
+    team.opponentvtt = gameInfo.jets.vtt;
+    team.gameTotalVegasTotal = +team.vtt + +team.opponentvtt;
     team.opponentThisWeek.teamPlaysPerSixtyMinNeutralSituations =
       gameInfo.jets.teamPlaysPerSixtyMinNeutralSituations;
     team.opponentThisWeek.teamPlaysPerSixtyMinAllSituations =
@@ -1467,6 +1687,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
     team.opponentThisWeek.teamName = gameInfo.eagles.teamName;
     team.opponentThisWeek.teamABV = gameInfo.eagles.teamABV;
     team.opponentThisWeek.vtt = gameInfo.eagles.vtt;
+    team.opponentvtt = gameInfo.eagles.vtt;
+    team.gameTotalVegasTotal = +team.vtt + +team.opponentvtt;
     team.opponentThisWeek.teamPlaysPerSixtyMinNeutralSituations =
       gameInfo.eagles.teamPlaysPerSixtyMinNeutralSituations;
     team.opponentThisWeek.teamPlaysPerSixtyMinAllSituations =
@@ -1479,6 +1701,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
     team.opponentThisWeek.teamName = gameInfo.steelers.teamName;
     team.opponentThisWeek.teamABV = gameInfo.steelers.teamABV;
     team.opponentThisWeek.vtt = gameInfo.steelers.vtt;
+    team.opponentvtt = gameInfo.steelers.vtt;
+    team.gameTotalVegasTotal = +team.vtt + +team.opponentvtt;
     team.opponentThisWeek.teamPlaysPerSixtyMinNeutralSituations =
       gameInfo.steelers.teamPlaysPerSixtyMinNeutralSituations;
     team.opponentThisWeek.teamPlaysPerSixtyMinAllSituations =
@@ -1491,6 +1715,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
     team.opponentThisWeek.teamName = gameInfo.SF49ers.teamName;
     team.opponentThisWeek.teamABV = gameInfo.SF49ers.teamABV;
     team.opponentThisWeek.vtt = gameInfo.SF49ers.vtt;
+    team.opponentvtt = gameInfo.SF49ers.vtt;
+    team.gameTotalVegasTotal = +team.vtt + +team.opponentvtt;
     team.opponentThisWeek.teamPlaysPerSixtyMinNeutralSituations =
       gameInfo.SF49ers.teamPlaysPerSixtyMinNeutralSituations;
     team.opponentThisWeek.teamPlaysPerSixtyMinAllSituations =
@@ -1503,6 +1729,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
     team.opponentThisWeek.teamName = gameInfo.seahawks.teamName;
     team.opponentThisWeek.teamABV = gameInfo.seahawks.teamABV;
     team.opponentThisWeek.vtt = gameInfo.seahawks.vtt;
+    team.opponentvtt = gameInfo.seahawks.vtt;
+    team.gameTotalVegasTotal = +team.vtt + +team.opponentvtt;
     team.opponentThisWeek.teamPlaysPerSixtyMinNeutralSituations =
       gameInfo.seahawks.teamPlaysPerSixtyMinNeutralSituations;
     team.opponentThisWeek.teamPlaysPerSixtyMinAllSituations =
@@ -1515,6 +1743,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
     team.opponentThisWeek.teamName = gameInfo.buccaneers.teamName;
     team.opponentThisWeek.teamABV = gameInfo.buccaneers.teamABV;
     team.opponentThisWeek.vtt = gameInfo.buccaneers.vtt;
+    team.opponentvtt = gameInfo.buccaneers.vtt;
+    team.gameTotalVegasTotal = +team.vtt + +team.opponentvtt;
     team.opponentThisWeek.teamPlaysPerSixtyMinNeutralSituations =
       gameInfo.buccaneers.teamPlaysPerSixtyMinNeutralSituations;
     team.opponentThisWeek.teamPlaysPerSixtyMinAllSituations =
@@ -1527,6 +1757,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
     team.opponentThisWeek.teamName = gameInfo.titans.teamName;
     team.opponentThisWeek.teamABV = gameInfo.titans.teamABV;
     team.opponentThisWeek.vtt = gameInfo.titans.vtt;
+    team.opponentvtt = gameInfo.titans.vtt;
+    team.gameTotalVegasTotal = +team.vtt + +team.opponentvtt;
     team.opponentThisWeek.teamPlaysPerSixtyMinNeutralSituations =
       gameInfo.titans.teamPlaysPerSixtyMinNeutralSituations;
     team.opponentThisWeek.teamPlaysPerSixtyMinAllSituations =
@@ -1539,6 +1771,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
     team.opponentThisWeek.teamName = gameInfo.commanders.teamName;
     team.opponentThisWeek.teamABV = gameInfo.commanders.teamABV;
     team.opponentThisWeek.vtt = gameInfo.commanders.vtt;
+    team.opponentvtt = gameInfo.commanders.vtt;
+    team.gameTotalVegasTotal = +team.vtt + +team.opponentvtt;
     team.opponentThisWeek.teamPlaysPerSixtyMinNeutralSituations =
       gameInfo.commanders.teamPlaysPerSixtyMinNeutralSituations;
     team.opponentThisWeek.teamPlaysPerSixtyMinAllSituations =
@@ -1555,27 +1789,27 @@ const assignOpponentObjectToPassedInTeam = function (team) {
       team.InitialTeamLikelihoodOfOffensiveSuccess -
       team.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess
     ).toFixed(2);
-    if (team.initialGameLikelihoodOfOffensiveSuccessDifference > 20) {
+    if (team.initialGameLikelihoodOfOffensiveSuccessDifference > 17.5) {
       team.opponentThisWeek.initialLikeliestGameFlow = 'negative';
       team.initialLikeliestGameFlow = 'positive';
     }
-    if (team.initialGameLikelihoodOfOffensiveSuccessDifference < -20) {
+    if (team.initialGameLikelihoodOfOffensiveSuccessDifference < -17.5) {
       team.opponentThisWeek.initialLikeliestGameFlow = 'positive';
       team.initialLikeliestGameFlow = 'negetive';
     }
     if (
-      team.initialGameLikelihoodOfOffensiveSuccessDifference < 20 &&
-      team.initialGameLikelihoodOfOffensiveSuccessDifference > -20
+      team.initialGameLikelihoodOfOffensiveSuccessDifference < 17.5 &&
+      team.initialGameLikelihoodOfOffensiveSuccessDifference > -17.5
     ) {
       team.opponentThisWeek.initialLikeliestGameFlow = 'neutral';
       team.initialLikeliestGameFlow = 'neutral';
     }
-    if (team.initialGameTotalLikelihoodOfOffensiveSuccess < 160) {
+    if (team.initialGameTotalLikelihoodOfOffensiveSuccess < 155) {
       team.initialLikelyScoringEnvironment =
-        'Low Scoring Total,Close Game, Mostly Neutral Game Script';
+        'Low Scoring Total, Close Game, Mostly Neutral Game Script';
     }
     if (
-      (team.initialGameTotalLikelihoodOfOffensiveSuccess < 160 &&
+      (team.initialGameTotalLikelihoodOfOffensiveSuccess < 155 &&
         team.initialLikeliestGameFlow === 'positive') ||
       team.initialLikeliestGameFlow === 'negetive'
     ) {
@@ -1583,37 +1817,53 @@ const assignOpponentObjectToPassedInTeam = function (team) {
         'Low Scoring Total, one sided Game, Mostly Non Neutral Game Script';
     }
     if (
-      team.initialGameTotalLikelihoodOfOffensiveSuccess > 160 &&
-      team.initialGameTotalLikelihoodOfOffensiveSuccess < 170 &&
+      team.initialGameTotalLikelihoodOfOffensiveSuccess > 155 &&
+      team.initialGameTotalLikelihoodOfOffensiveSuccess < 167.5 &&
       team.initialLikeliestGameFlow === 'neutral'
     ) {
       team.initialLikelyScoringEnvironment =
         'Average Scoring Total, Close Game, Mostly Neutral Game Script';
     }
     if (
-      (team.initialGameTotalLikelihoodOfOffensiveSuccess > 160 &&
-        team.initialGameTotalLikelihoodOfOffensiveSuccess < 170 &&
-        team.initialLikeliestGameFlow === 'positive') ||
-      team.initialLikeliestGameFlow === 'negetive'
+      team.initialGameTotalLikelihoodOfOffensiveSuccess > 155 &&
+      team.initialGameTotalLikelihoodOfOffensiveSuccess < 167.5 &&
+      team.initialLikeliestGameFlow === 'positive'
     ) {
-      team.initialLikelyScoringEnvironment =
-        'Average Scoring Total, one sided Game, Mostly Non Neutral Game Script';
+      team.initialLikelyScoringEnvironment = `Average Scoring Total, one sided Game, Mostly Non Neutral Game Script with ${team.teamName} likely to be a positive game script in the second half. ${team.opponentThisWeek.teamName} likely to have negetive game scripts in the second half`;
     }
     if (
-      team.initialGameTotalLikelihoodOfOffensiveSuccess > 170 &&
+      team.initialGameTotalLikelihoodOfOffensiveSuccess > 155 &&
+      team.initialGameTotalLikelihoodOfOffensiveSuccess < 167.5 &&
+      team.initialLikeliestGameFlow === 'negetive'
+    ) {
+      team.initialLikelyScoringEnvironment = `Average Scoring Total, one sided Game, Mostly Non Neutral Game Script with ${team.opponentThisWeek.teamName} likely to be a positive game script in the second half. ${team.teamName} likely to have negetive game scripts in the second half`;
+    }
+    if (
+      team.initialGameTotalLikelihoodOfOffensiveSuccess > 167.5 &&
       team.initialLikeliestGameFlow === 'neutral'
     ) {
       team.initialLikelyScoringEnvironment =
         'High Scoring Total, Back And Forth, Possible Shootout, Mostly Neutral Game Script';
     }
     if (
-      (team.initialGameTotalLikelihoodOfOffensiveSuccess > 170 &&
-        team.initialLikeliestGameFlow === 'positive') ||
-      team.initialLikeliestGameFlow === 'negetive'
+      team.initialGameTotalLikelihoodOfOffensiveSuccess > 167.5 &&
+      team.initialLikeliestGameFlow === 'positive'
     ) {
-      team.initialLikelyScoringEnvironment =
-        'High Scoring Total, one sided Game, Mostly Non Neutral Game Script';
+      team.initialLikelyScoringEnvironment = `High Scoring Total, one sided Game, Mostly Non Neutral Game Script with ${team.teamName} controlling the game and possibly quite early. ${team.opponentThisWeek.teamName} likely playing in negetive game script for a good amount of the game`;
     }
+  }
+  if (
+    team.initialGameTotalLikelihoodOfOffensiveSuccess > 167.5 &&
+    team.initialLikeliestGameFlow === 'negetive'
+  ) {
+    team.initialLikelyScoringEnvironment = `High Scoring Total, one sided Game, Mostly Non Neutral Game Script with ${team.opponentThisWeek.teamName} controlling the game and possibly quite early. ${team.teamName} likely playing in negetive game script for a good amount of the game`;
+  }
+  if (
+    team.initialGameTotalLikelihoodOfOffensiveSuccess > 167.5 &&
+    team.InitialTeamLikelihoodOfOffensiveSuccess < 80 &&
+    team.initialLikeliestGameFlow === 'negetive'
+  ) {
+    team.initialLikelyScoringEnvironment = `High Scoring Total, one sided Game, Mostly Non Neutral Game Script with ${team.opponentThisWeek.teamName} controlling the game and possibly quite early. ${team.teamName} likely playing in negetive game script for a good amount of the game`;
   }
 };
 
@@ -1650,6 +1900,6 @@ assignOpponentObjectToPassedInTeam(gameInfo.texans);
 assignOpponentObjectToPassedInTeam(gameInfo.titans);
 assignOpponentObjectToPassedInTeam(gameInfo.vikings);
 
-console.log(gameInfo);
+// console.log(gameInfo);
 
 module.exports = gameInfo;
