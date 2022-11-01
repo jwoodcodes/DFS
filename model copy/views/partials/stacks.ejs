@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=h, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <%if(group === 'stacks') {%>
+
+    <h2 class="stacktype__label">Best Single Stacks With QB and WR1</h2>
+    <div class="list__container">
+      <ul class="list">
+        <h3 class="scoringtype__label">Half PPR</h3>
+        <%allStackData.allHalfQBWROneStackWithNames.forEach(function(stack) {%>
+        <li class="list__item"><%=stack%></li>
+        <%})%>
+      </ul>
+
+      <ul class="list">
+        <h3 class="scoringtype__label">Full PPR</h3>
+        <%allStackData.allPPRQBWROneStacksWithNames.forEach(function(stack) {%>
+        <li class="list__item"><%=stack%></li>
+        <%})%>
+      </ul>
+    </div>
+
+    <hr />
+
+    <h2 class="stacktype__label">Best Single Stacks With QB</h2>
+    <div class="list__container">
+      <ul class="list">
+        <h3 class="scoringtype__label">Half PPR</h3>
+        <%allStackData.allTeamsBestHalfSingleStackWithQBWithNames.forEach(function(stack)
+        {%>
+        <li class="list__item"><%=stack%></li>
+        <%})%>
+      </ul>
+
+      <ul class="list">
+        <h3 class="scoringtype__label">Full PPR</h3>
+        <%allStackData.allTeamsBestPPRSingleStackWithQBWithNames.forEach(function(stack)
+        {%>
+        <li class="list__item"><%=stack%></li>
+        <%})%>
+      </ul>
+
+      <ul class="list">
+        <h3 class="scoringtype__label">TE Premium</h3>
+        <%allStackData.allTEPremiumBestSingleStackWithQBWithNames.forEach(function(stack)
+        {%>
+        <li class="list__item"><%=stack%></li>
+        <%})%>
+      </ul>
+    </div>
+
+    <hr />
+
+    <h2 class="stacktype__label">Best Double Stacks With QB and WR1</h2>
+    <div class="list__container">
+      <ul class="list">
+        <h3 class="scoringtype__label">Half PPR</h3>
+        <%allStackData.allTeamsBestHalfDoubleStackWithQBAndWROneWithNames.forEach(function(stack)
+        {%>
+        <li class="list__item"><%=stack%></li>
+        <%})%>
+      </ul>
+
+      <ul class="list">
+        <h3 class="scoringtype__label">Full PPR</h3>
+        <%allStackData.allTeamsBestPPRDoubleStackWithQBAndWROneWithNames.forEach(function(stack)
+        {%>
+        <li class="list__item"><%=stack%></li>
+        <%})%>
+      </ul>
+
+      <ul class="list">
+        <h3 class="scoringtype__label">TE Premium</h3>
+        <%allStackData.allTEPremiumBestDoubleStackWithQBAndWROneWithNames.forEach(function(stack)
+        {%>
+        <li class="list__item"><%=stack%></li>
+        <%})%>
+      </ul>
+    </div>
+
+    <hr />
+
+    <h2 class="stacktype__label">Best Triple Stacks With QB and WR1</h2>
+    <div class="list__container">
+      <ul class="list">
+        <h3 class="scoringtype__label">Half PPR</h3>
+        <%allStackData.allTeamsBestHalfTripleStackWithQBAndWROneWithNames.forEach(function(stack)
+        {%>
+        <li class="list__item"><%=stack%></li>
+        <%})%>
+      </ul>
+
+      <ul class="list">
+        <h3 class="scoringtype__label">Full PPR</h3>
+        <%allStackData.allTeamsBestPPRTripleStackWithQBAndWROneWithNames.forEach(function(stack)
+        {%>
+        <li class="list__item"><%=stack%></li>
+        <%})%>
+      </ul>
+
+      <ul class="list">
+        <h3 class="scoringtype__label">TE Premium</h3>
+        <%allStackData.allTEPremiumBestTripleStackWithQBAndWROneWithNames.forEach(function(stack)
+        {%>
+        <li class="list__item"><%=stack%></li>
+        <%})%>
+      </ul>
+    </div>
+    <%}%>
+  </body>
+</html>
