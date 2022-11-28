@@ -20,9 +20,12 @@ const allQBSecondHighlyProjectedPassCatchers = [];
 
 const allQBCalcFunctions = {
   calcQBvtt(team) {
-    let qbvtt = team.teamVTT;
+    let qbvtt = team.teamProjectedPointsThisWeek;
+    // console.log(team.teamProjectedPointsThisWeek);
 
-    if (qbvtt > 27.4) {
+    if (qbvtt > 29.9) {
+      qbvtt = 30;
+    } else if (qbvtt > 27.4 && qbvtt < 30) {
       qbvtt = 20;
     } else if (qbvtt > 24.9 && qbvtt < 27.5) {
       qbvtt = 15;

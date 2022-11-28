@@ -1277,6 +1277,7 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
 
     let teamName = playerobj.Team;
     let teamvtt = playerobj['Team O/U'];
+
     let playerName = playerobj.Player;
     let projpts = playerobj.FFPts;
 
@@ -1293,6 +1294,26 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
 
       passedInTeam.teamVTT = playerObject['Team O/U'];
       passedInTeam.name = playerObject.Player;
+      passedInTeam.teamProjectedPointsThisWeek =
+        gameInfoPassedInTeam.teamProjectedPointsThisWeek;
+      if (gameInfoPassedInTeam.quarterOfNegetiveGameScriptPossible) {
+        passedInTeam.quarterOfNegetiveGameScriptPossible = true;
+      }
+      if (gameInfoPassedInTeam.quarterOfPositiveGameScriptPossible) {
+        passedInTeam.quarterOfPositiveGameScriptPossible = true;
+      }
+      if (gameInfoPassedInTeam.halfOfNegetiveGameScriptPossible) {
+        passedInTeam.halfOfNegetiveGameScriptPossible = true;
+      }
+      if (gameInfoPassedInTeam.halfOfPositiveGameScriptPossible) {
+        passedInTeam.halfOfPositiveGameScriptPossible = true;
+      }
+      if (gameInfoPassedInTeam.threeQuartersOfNegetiveGameScriptPossible) {
+        passedInTeam.threeQuartersOfNegetiveGameScriptPossible = true;
+      }
+      if (gameInfoPassedInTeam.threeQuartersOfPositiveGameScriptPossible) {
+        passedInTeam.threeQuartersOfPositiveGameScriptPossible = true;
+      }
       passedInTeam.fourForFourFullPPRProjectedPoints = projpts;
       passedInTeam.fourForFourHalfPPRProjectedPoints = projpts;
       passedInTeam.prjpassattempts = playerObject['Pass Att'];
@@ -1646,6 +1667,6 @@ populateTeamObjects(qbrawdata.texans, gameInfo.texans);
 populateTeamObjects(qbrawdata.titans, gameInfo.titans);
 populateTeamObjects(qbrawdata.vikings, gameInfo.vikings);
 
-// console.log(qbrawdata);
+console.log(qbrawdata);
 
 module.exports = qbrawdata;
