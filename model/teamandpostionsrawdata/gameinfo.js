@@ -1216,7 +1216,10 @@ const populateTeamObjects = function (passedInTeam) {
         } else {
           tempTeamName = team['"Team"'].slice(1, 3);
         }
-        if (tempTeamName === passedInTeam.teamABV) {
+        if (
+          tempTeamName === passedInTeam.teamABV ||
+          tempTeamName === passedInTeam.altTeamABV
+        ) {
           passedInTeam.neutralGameScriptSecondsPerSnap = team['"Sec/Snap"'];
           passedInTeam.neutralScriptPassPercentage = +team['"Pass%"'].slice(
             1,
@@ -1239,14 +1242,17 @@ const populateTeamObjects = function (passedInTeam) {
           tempTeamName = team['"Team"'].slice(1, 3);
         }
 
-        if (tempTeamName === passedInTeam.teamABV) {
+        if (
+          tempTeamName === passedInTeam.teamABV ||
+          tempTeamName === passedInTeam.altTeamABV
+        ) {
           // console.log(team['"Plays"']);
           // console
           //   .log
           // `${team['"Team"']}: ${team['"Rush%"']} ${team['"Pass%"']}`
           // ();
 
-          if (team['"Plays"'] > 10) {
+          if (team['"Plays"'] > 20) {
             passedInTeam.negativeGameScriptSecondsPerSnap = team['"Sec/Snap"'];
             passedInTeam.negativeScriptPassPercentage = +team['"Pass%"'].slice(
               1,
@@ -1258,13 +1264,22 @@ const populateTeamObjects = function (passedInTeam) {
             );
             passedInTeam.negativeScriptPlaysRanLastFiveWeeks = +team['"Plays"'];
           } else {
-            passedInTeam.negativeScriptPassPercentage = 0;
-            passedInTeam.negativeScriptRunPercentage = 0;
+            passedInTeam.negativeScriptPassPercentage =
+              passedInTeam.neutralScriptPassPercentage;
+            passedInTeam.negativeScriptRunPercentage =
+              passedInTeam.neutralScriptRunPercentage;
             passedInTeam.negativeScriptPlaysRanLastFiveWeeks = +team['"Plays"'];
           }
         }
       }
     );
+
+    if (!passedInTeam.negativeScriptPassPercentage) {
+      passedInTeam.negativeScriptPassPercentage =
+        passedInTeam.neutralScriptPassPercentage;
+      passedInTeam.negativeScriptRunPercentage =
+        passedInTeam.neutralScriptRunPercentage;
+    }
 
     rotovizPositiveScriptOffensivePaceAndRunPassReportLastFiveWeeks.forEach(
       function (team) {
@@ -1281,7 +1296,7 @@ const populateTeamObjects = function (passedInTeam) {
           // `${team['"Team"']}: ${team['"Rush%"']} ${team['"Pass%"']}`
           // ();
 
-          if (team['"Plays"'] > 10) {
+          if (team['"Plays"'] > 20) {
             // console.log(team['"Sec/Snap"']);
             passedInTeam.positiveGameScriptSecondsPerSnap = team['"Sec/Snap"'];
             passedInTeam.positiveScriptPassPercentage = +team['"Pass%"'].slice(
@@ -1294,8 +1309,10 @@ const populateTeamObjects = function (passedInTeam) {
             );
             passedInTeam.positiveScriptPlaysRanLastFiveWeeks = +team['"Plays"'];
           } else {
-            passedInTeam.positiveScriptPassPercentage = 0;
-            passedInTeam.positiveScriptRunPercentage = 0;
+            passedInTeam.positiveScriptPassPercentage =
+              passedInTeam.neutralScriptPassPercentage;
+            passedInTeam.positiveScriptRunPercentage =
+              passedInTeam.neutralScriptRunPercentage;
             passedInTeam.positiveScriptPlaysRanLastFiveWeeks = +team['"Plays"'];
           }
         }
@@ -4974,9 +4991,16 @@ const allGameInfo = [
   MIN,
 ];
 
-// allGameInfo.forEach(function(team) {
-//   console.log(team)
-// })
+allGameInfo.forEach(function (team) {
+  // if (team.teamProjectedPointsThisWeek) {
+  //   console.log(
+  //     team.teamName,
+  //     team.teamProjectedPointsThisWeek,
+  //     team.opponentABV,
+  //     team.opponentThisWeek.teamProjectedPointsThisWeek
+  //   );
+  // }
+});
 
 // console.log(
 //   gameInfo.browns.teamProjectedPointsThisWeek,

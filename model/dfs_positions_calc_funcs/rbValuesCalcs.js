@@ -105,7 +105,7 @@ const allRBCalcFunctions = {
     if (
       gameInfo.week.currentWeek > 6 &&
       rb.roleThisWeek === 1 &&
-      rbOnePercentageOfMatchingRoleWeeks[i] > 0.74
+      rbOnePercentageOfMatchingRoleWeeks[i] > 0.59
     ) {
       if (rbTotalTouches >= totalTeamBackfieldMArket * 0.65) {
         rbHalfPorjectedPoints = halfSeventyFifthPercentProjectedPoints;
@@ -129,7 +129,7 @@ const allRBCalcFunctions = {
     } else if (
       gameInfo.week.currentWeek > 6 &&
       rb.roleThisWeek === 1 &&
-      rbOnePercentageOfMatchingRoleWeeks[i] < 0.75
+      rbOnePercentageOfMatchingRoleWeeks[i] < 0.6
     ) {
       rbHalfPorjectedPoints = rb.fourForFourHalfPPRProjectedPoints;
       rbPPRProjectedPoints = rb.fourForFourFullPPRProjectedPoints;
@@ -144,7 +144,7 @@ const allRBCalcFunctions = {
     if (
       gameInfo.week.currentWeek > 6 &&
       rb.roleThisWeek === 2 &&
-      rbTwoPercentageOfMatchingRoleWeeks[i] > 0.74
+      rbTwoPercentageOfMatchingRoleWeeks[i] > 0.59
     ) {
       if (rbTotalTouches >= totalTeamBackfieldMArket * 0.65) {
         rbHalfPorjectedPoints = halfSeventyFifthPercentProjectedPoints;
@@ -168,7 +168,7 @@ const allRBCalcFunctions = {
     } else if (
       gameInfo.week.currentWeek > 6 &&
       rb.roleThisWeek === 2 &&
-      rbTwoPercentageOfMatchingRoleWeeks[i] < 0.75
+      rbTwoPercentageOfMatchingRoleWeeks[i] < 0.6
     ) {
       rbHalfPorjectedPoints = rb.fourForFourHalfPPRProjectedPoints;
       rbPPRProjectedPoints = rb.fourForFourFullPPRProjectedPoints;
@@ -184,7 +184,7 @@ const allRBCalcFunctions = {
       gameInfo.week.currentWeek === 5 ||
       (gameInfo.week.currentWeek === 6 &&
         rb.roleThisWeek === 1 &&
-        rbOnePercentageOfMatchingRoleWeeks[i] > 0.74)
+        rbOnePercentageOfMatchingRoleWeeks[i] > 0.59)
     ) {
       if (rbTotalTouches >= totalTeamBackfieldMArket * 0.65) {
         temprbHalfPorjectedPoints = halfSeventyFifthPercentProjectedPoints;
@@ -213,7 +213,7 @@ const allRBCalcFunctions = {
       gameInfo.week.currentWeek === 5 ||
       (gameInfo.week.currentWeek === 6 &&
         rb.roleThisWeek === 1 &&
-        rbOnePercentageOfMatchingRoleWeeks[i] < 0.75)
+        rbOnePercentageOfMatchingRoleWeeks[i] < 0.6)
     ) {
       rbHalfPorjectedPoints = rb.fourForFourHalfPPRProjectedPoints;
       rbPPRProjectedPoints = rb.fourForFourFullPPRProjectedPoints;
@@ -226,7 +226,7 @@ const allRBCalcFunctions = {
       gameInfo.week.currentWeek === 5 ||
       (gameInfo.week.currentWeek === 6 &&
         rb.roleThisWeek === 2 &&
-        rbTwoPercentageOfMatchingRoleWeeks[i] > 0.74)
+        rbTwoPercentageOfMatchingRoleWeeks[i] > 0.59)
     ) {
       if (rbTotalTouches >= totalTeamBackfieldMArket * 0.65) {
         temprbHalfPorjectedPoints = halfSeventyFifthPercentProjectedPoints;
@@ -255,7 +255,7 @@ const allRBCalcFunctions = {
       gameInfo.week.currentWeek === 5 ||
       (gameInfo.week.currentWeek === 6 &&
         rb.roleThisWeek === 2 &&
-        rbTwoPercentageOfMatchingRoleWeeks[i] < 0.75)
+        rbTwoPercentageOfMatchingRoleWeeks[i] < 0.6)
     ) {
       rbHalfPorjectedPoints = rb.fourForFourHalfPPRProjectedPoints;
       rbPPRProjectedPoints = rb.fourForFourFullPPRProjectedPoints;
@@ -436,6 +436,13 @@ allRBs.forEach(function (team, i) {
     `${rbTwoCashDraftkings}: ${RBTwos.name}`
   );
 });
+
+// allRBs.forEach(function (rb) {
+//   console.log(
+//     rb.RBTwo.name,
+//     rb.RBTwo.totalPercentOfTeamHighValueTouchesLastFiveweeks
+//   );
+// });
 
 //////////////calculating projected points per dollar
 

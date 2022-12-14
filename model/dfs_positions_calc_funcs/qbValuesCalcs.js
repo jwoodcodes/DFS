@@ -24,21 +24,21 @@ const allQBCalcFunctions = {
     // console.log(team.teamProjectedPointsThisWeek);
 
     if (qbvtt > 29.9) {
-      qbvtt = 30;
+      qbvtt = 50;
     } else if (qbvtt > 27.4 && qbvtt < 30) {
-      qbvtt = 20;
+      qbvtt = 40;
     } else if (qbvtt > 24.9 && qbvtt < 27.5) {
-      qbvtt = 15;
+      qbvtt = 20;
     } else if (qbvtt > 22.4 && qbvtt < 25) {
       qbvtt = 7.5;
     } else if (qbvtt > 19.9 && qbvtt < 22.5) {
       qbvtt = 0;
     } else if (qbvtt > 17.4 && qbvtt < 20) {
-      qbvtt = -5;
-    } else if (qbvtt > 14.9 && qbvtt < 17.5) {
       qbvtt = -10;
+    } else if (qbvtt > 14.9 && qbvtt < 17.5) {
+      qbvtt = -30;
     } else {
-      qbvtt = -15;
+      qbvtt = -40;
     }
 
     return qbvtt;
@@ -130,6 +130,97 @@ const allQBCalcFunctions = {
       QBSHPPC = 0;
     }
     return QBSHPPC;
+  },
+
+  calcQBPossibleGameScriptBonusIfEffiecient(team) {
+    if (team.fantasyPointsPerPassAttemptLastFiveWeeks) {
+      // console.log(team.fantasyPointsPerPassAttemptLastFiveWeeks);
+      let efficiency = team.fantasyPointsPerPassAttemptLastFiveWeeks;
+      let increaseOfPlaysInNonNeutralSituations =
+        +team.teamPlaysPerSixtyMinAllSituations -
+        +team.teamPlaysPerSixtyMinNeutralSituations;
+
+      // console.log(team.name, team.negativeScriptPassPercentage);
+      let tempneutralSituationPassAttemptsPerQuarter =
+        (+team.passAttemptsPerGameLastFiveWeeks + +team.prjpassattempts) / 2;
+      let neutralSituationPassAttemptsPerQuarter = (
+        +tempneutralSituationPassAttemptsPerQuarter / 4
+      ).toFixed(1);
+
+      // console.log(team.name, neutralSituationPassAttemptsPerQuarter);
+
+      let decnegativeScriptPassPercentage =
+        +team.negativeScriptPassPercentage / 100;
+      // console.log(team.name, decnegativeScriptPassPercentage);
+      let negetiveSituationPassAttemptsPerQuarter = (
+        (+team.teamPlaysPerSixtyMinAllSituations *
+          +decnegativeScriptPassPercentage) /
+        4
+      ).toFixed(1);
+      team.neutralSituationPassAttemptsPerQuarter =
+        neutralSituationPassAttemptsPerQuarter;
+      team.negetiveSituationPassAttemptsPerQuarter =
+        negetiveSituationPassAttemptsPerQuarter;
+
+      // console.log(team.name, negetiveSituationPassAttemptsPerQuarter);
+
+      let numberOfIncresedPassAttemptsPerQuarterOfNegetiveGameScript = (
+        negetiveSituationPassAttemptsPerQuarter -
+        neutralSituationPassAttemptsPerQuarter
+      ).toFixed(2);
+
+      // console.log(
+      //   team.name,
+      //   neutralSituationPassAttemptsPerQuarter,
+      //   negetiveSituationPassAttemptsPerQuarter,
+      //   numberOfIncresedPassAttemptsPerQuarterOfNegetiveGameScript
+      // );
+
+      let increasedPassAttemptsByFantasyPointsPerPassAttemptsLastFiveWeeks = +(
+        numberOfIncresedPassAttemptsPerQuarterOfNegetiveGameScript *
+        team.fantasyPointsPerPassAttemptLastFiveWeeks
+      ).toFixed(2);
+
+      // console.log(
+      //   team.name,
+      //   increasedPassAttemptsByFantasyPointsPerPassAttemptsLastFiveWeeks
+      // );
+
+      let gameScriptBonusIfTeamThrowsMoreInNegetiveGameScriptsAndQBIsEfficient = 0;
+
+      if (
+        team.quarterOfNegetiveGameScriptPossible &&
+        !team.halfOfNegetiveGameScriptPossible
+      ) {
+        // console.log(team);
+        if (
+          increasedPassAttemptsByFantasyPointsPerPassAttemptsLastFiveWeeks > 1.5
+        ) {
+          gameScriptBonusIfTeamThrowsMoreInNegetiveGameScriptsAndQBIsEfficient = 5;
+        }
+      }
+      if (
+        team.halfOfNegetiveGameScriptPossible &&
+        !team.threeQuartersOfNegetiveGameScriptPossible
+      ) {
+        // console.log(team);
+        if (
+          increasedPassAttemptsByFantasyPointsPerPassAttemptsLastFiveWeeks > 1.5
+        ) {
+          gameScriptBonusIfTeamThrowsMoreInNegetiveGameScriptsAndQBIsEfficient = 10;
+        }
+      }
+      if (team.threeQuartersOfNegetiveGameScriptPossible) {
+        // console.log(team);
+        if (
+          increasedPassAttemptsByFantasyPointsPerPassAttemptsLastFiveWeeks > 1.5
+        ) {
+          gameScriptBonusIfTeamThrowsMoreInNegetiveGameScriptsAndQBIsEfficient = 15;
+        }
+      }
+
+      return gameScriptBonusIfTeamThrowsMoreInNegetiveGameScriptsAndQBIsEfficient;
+    }
   },
 
   calcQBScoreFromGlSPPercentageMatchesAndBuckets(team) {
@@ -415,6 +506,10 @@ allQBs.map(function (team, i) {
   allQBSecondHighlyProjectedPassCatchers.push(QBSHPPCS);
   totalScore += QBSHPPCS;
 
+  let gameScriptBonus =
+    allQBCalcFunctions.calcQBPossibleGameScriptBonusIfEffiecient(team);
+  totalScore += gameScriptBonus;
+
   let ScoreFromGLSP =
     allQBCalcFunctions.calcQBScoreFromGlSPPercentageMatchesAndBuckets(team);
   // totalScore += ScoreFromGLSP;
@@ -429,11 +524,53 @@ allQBs.map(function (team, i) {
   // console.log(ScoreFromGLSP);
   // console.log(`${team.name} ${totalScore} ${ScoreFromGLSP}`);
   // console.log(suggestionProjectionFromTotalScore);
+  let FinalTotalScore = 0;
 
-  let FinalTotalScore =
-    (ScoreFromGLSP + suggestionProjectionFromTotalScore) / 2;
-  // console.log(`${team.name} ${FinalTotalScore}`);
+  if (team.fantasyPointsFromRushingPerGameLastFiveWeeks > 8) {
+    if (suggestionProjectionFromTotalScore === 75) {
+      if (ScoreFromGLSP === 75) {
+        FinalTotalScore = 75;
+      }
+      if (ScoreFromGLSP < 75) {
+        FinalTotalScore = 62.5;
+      }
+    }
+    if (suggestionProjectionFromTotalScore === 50) {
+      if (ScoreFromGLSP === 75) {
+        FinalTotalScore = 62.5;
+      }
+      if (ScoreFromGLSP === 50) {
+        FinalTotalScore = 50;
+      }
+      if (ScoreFromGLSP === 25) {
+        FinalTotalScore = 32.5;
+      }
+    }
+    if (suggestionProjectionFromTotalScore === 25) {
+      if (ScoreFromGLSP === 75) {
+        FinalTotalScore = 50;
+      }
+      if (ScoreFromGLSP === 50) {
+        FinalTotalScore = 32.5;
+      }
+
+      if (ScoreFromGLSP === 25) {
+        FinalTotalScore = 25;
+      }
+    }
+  }
+
+  if (team.fantasyPointsFromRushingPerGameLastFiveWeeks <= 8) {
+    FinalTotalScore = (ScoreFromGLSP + suggestionProjectionFromTotalScore) / 2;
+    // console.log(`${team.name} ${FinalTotalScore}`);
+  }
   allQBTotalScores.push(FinalTotalScore);
+  // console.log(
+  //   team.name,
+  //   ScoreFromGLSP,
+  //   suggestionProjectionFromTotalScore,
+  //   FinalTotalScore
+  // );
 });
 
 /////////assigning QB's their projected points for the week using totalScore from above///////////
@@ -489,7 +626,7 @@ if (gameInfo.week.currentWeek === 5 || gameInfo.week.currentWeek === 6) {
     // let matchingWeeksPercentage =
     //   numOfMatchingRoleWeeks[i] / allQBs[i].roleLastXNumOfWeeksUpToFive.length;
 
-    if (team.percentOfGamesPlayedLastFiveWeeks > 0.74) {
+    if (team.percentOfGamesPlayedLastFiveWeeks > 0.59) {
       let fourForFour = team.fourForFourHalfPPRProjectedPoints;
 
       if (allQBTotalScores[i] === 75) {
@@ -545,7 +682,7 @@ if (gameInfo.week.currentWeek > 6) {
 
     let initialQBProjectedPoints = 0;
 
-    if (allQBs[i].percentOfGamesPlayedLastFiveWeeks > 0.74) {
+    if (allQBs[i].percentOfGamesPlayedLastFiveWeeks > 0.59) {
       // console.log(`${team.name} ${allQBTotalScores[i]}`);
       if (allQBTotalScores[i] === 75) {
         initialQBProjectedPoints = seventyFifthPercentProjection;
