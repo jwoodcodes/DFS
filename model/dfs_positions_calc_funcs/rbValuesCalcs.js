@@ -78,6 +78,8 @@ allRBs.map(function (team, i) {
   rbTwoPercentageOfMatchingRoleWeeks.push(rbTwomatchingWeeksPercentage);
 });
 
+/// have checked down to here for re-write. the rbOnematchingWeeksPercentage and rbTwomatchingWeeksPercentage above are working still. procedd down from here with the re-write
+
 const allRBCalcFunctions = {
   calcRBProjectionToUseOffBackfieldShare(rb, i) {
     let halfTwentyFifthPercentProjectedPoints =
@@ -437,12 +439,16 @@ allRBs.forEach(function (team, i) {
   );
 });
 
-// allRBs.forEach(function (rb) {
-//   console.log(
-//     rb.RBTwo.name,
-//     rb.RBTwo.totalPercentOfTeamHighValueTouchesLastFiveweeks
-//   );
-// });
+allRBs.forEach(function (rb) {
+  // console.log(
+  //   rb.RBOne.name,
+  //   rb.RBOne.totalPercentOfTeamHighValueTouchesLastFiveweeks,
+  //   rb.RBTwo.name,
+  //   rb.RBTwo.totalPercentOfTeamHighValueTouchesLastFiveweeks
+  // );
+  // console.log(rb.RBOne.name, rb.RBOne.HVTsFiveweeksAgo);
+  // console.log(rb.RBOne.name, rb.RBOne.FPOEPerGameLastFiveWeeks);
+});
 
 //////////////calculating projected points per dollar
 
