@@ -1561,6 +1561,12 @@ const assignOpponentObjectToPassedInTeam = function (team) {
       // console.log(
       //   `${team.teamABV}: ${team.InitialTeamLikelihoodOfOffensiveSuccess}, ${team.offExplosivePassRateRank} - ${teamAgainsTeamThisWeek.teamABV}: ${teamAgainsTeamThisWeek.InitialTeamLikelihoodOfOffensiveSuccess}, ${teamAgainsTeamThisWeek.offExplosivePassRateRank}`
       // );
+
+      team.bonusForHighExplosivePassVsBadExplosivePassDef = 0;
+      teamAgainsTeamThisWeek.opponentThisWeek.bonusForHighExplosivePassVsBadExplosivePassDef = 0;
+      teamAgainsTeamThisWeek.bonusForHighExplosivePassVsBadExplosivePassDef = 0;
+      team.opponentThisWeek.bonusForHighExplosivePassVsBadExplosivePassDef = 0;
+
       if (
         team.offExplosivePassRateRank < 11 &&
         team.offExplosivePassRateRank > 5 &&
@@ -2173,6 +2179,9 @@ const assignOpponentObjectToPassedInTeam = function (team) {
 
       team.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         gameInfo.cardinals.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      // gameInfo.cardinals.opponentThisWeek.qbName = team.QBOneThisWeekName;
+      team.opponentThisWeek.qbName = gameInfo.cardinals.QBOneThisWeekName;
     }
 
     if (!gameInfo.cardinals.opponentThisWeek) {
@@ -2212,6 +2221,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
         +team.teamDefScoreToUseForOpposingTeamDef;
       gameInfo.cardinals.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         team.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      gameInfo.cardinals.opponentThisWeek.qbName = team.QBOneThisWeekName;
     }
 
     if (!team.teamProjectedPointsThisWeek) {
@@ -2260,6 +2271,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
 
       team.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         gameInfo.falcons.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      team.opponentThisWeek.qbName = gameInfo.falcons.QBOneThisWeekName;
     }
 
     if (!gameInfo.falcons.opponentThisWeek) {
@@ -2298,6 +2311,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
         +team.teamDefScoreToUseForOpposingTeamDef;
       gameInfo.falcons.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         team.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      gameInfo.falcons.opponentThisWeek.qbName = team.QBOneThisWeekName;
     }
 
     if (!team.teamProjectedPointsThisWeek) {
@@ -2346,6 +2361,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
 
       team.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         gameInfo.ravens.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      team.opponentThisWeek.qbName = gameInfo.ravens.QBOneThisWeekName;
     }
 
     if (!gameInfo.ravens.opponentThisWeek) {
@@ -2384,6 +2401,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
         +team.teamDefScoreToUseForOpposingTeamDef;
       gameInfo.ravens.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         team.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      gameInfo.ravens.opponentThisWeek.qbName = team.QBOneThisWeekName;
     }
 
     if (!team.teamProjectedPointsThisWeek) {
@@ -2429,6 +2448,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
 
       team.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         gameInfo.bills.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      team.opponentThisWeek.qbName = gameInfo.bills.QBOneThisWeekName;
     }
 
     if (!gameInfo.bills.opponentThisWeek) {
@@ -2467,6 +2488,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
         +team.teamDefScoreToUseForOpposingTeamDef;
       gameInfo.bills.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         team.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      gameInfo.bills.opponentThisWeek.qbName = team.QBOneThisWeekName;
     }
 
     if (!team.teamProjectedPointsThisWeek) {
@@ -2512,6 +2535,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
 
       team.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         gameInfo.panthers.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      team.opponentThisWeek.qbName = gameInfo.panthers.QBOneThisWeekName;
     }
 
     if (!gameInfo.panthers.opponentThisWeek) {
@@ -2551,6 +2576,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
         +team.teamDefScoreToUseForOpposingTeamDef;
       gameInfo.panthers.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         team.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      gameInfo.panthers.opponentThisWeek.qbName = team.QBOneThisWeekName;
     }
 
     if (!team.teamProjectedPointsThisWeek) {
@@ -2594,6 +2621,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
       team.opposingTeamDef = +team.teamDefScoreToUseForOpposingTeamDef;
       team.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         gameInfo.bears.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      team.opponentThisWeek.qbName = gameInfo.bears.QBOneThisWeekName;
     }
 
     if (!gameInfo.bears.opponentThisWeek) {
@@ -2630,6 +2659,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
         +team.teamDefScoreToUseForOpposingTeamDef;
       gameInfo.bears.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         team.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      gameInfo.bears.opponentThisWeek.qbName = team.QBOneThisWeekName;
     }
 
     if (!team.teamProjectedPointsThisWeek) {
@@ -2675,6 +2706,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
 
       team.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         gameInfo.bengals.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      team.opponentThisWeek.qbName = gameInfo.bengals.QBOneThisWeekName;
     }
 
     if (!gameInfo.bengals.opponentThisWeek) {
@@ -2713,6 +2746,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
         +team.teamDefScoreToUseForOpposingTeamDef;
       gameInfo.bengals.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         team.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      gameInfo.bengals.opponentThisWeek.qbName = team.QBOneThisWeekName;
     }
 
     if (!team.teamProjectedPointsThisWeek) {
@@ -2756,6 +2791,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
       team.opposingTeamDef = +team.teamDefScoreToUseForOpposingTeamDef;
       team.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         gameInfo.browns.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      team.opponentThisWeek.qbName = gameInfo.browns.QBOneThisWeekName;
     }
 
     if (!gameInfo.browns.opponentThisWeek) {
@@ -2794,6 +2831,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
         +team.teamDefScoreToUseForOpposingTeamDef;
       gameInfo.browns.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         team.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      gameInfo.browns.opponentThisWeek.qbName = team.QBOneThisWeekName;
     }
 
     if (!team.teamProjectedPointsThisWeek) {
@@ -2839,6 +2878,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
 
       team.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         gameInfo.cowboys.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      team.opponentThisWeek.qbName = gameInfo.cowboys.QBOneThisWeekName;
     }
 
     if (!gameInfo.cowboys.opponentThisWeek) {
@@ -2877,6 +2918,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
         +team.teamDefScoreToUseForOpposingTeamDef;
       gameInfo.cowboys.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         team.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      gameInfo.cowboys.opponentThisWeek.qbName = team.QBOneThisWeekName;
     }
 
     if (!team.teamProjectedPointsThisWeek) {
@@ -2923,6 +2966,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
 
       team.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         gameInfo.broncos.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      team.opponentThisWeek.qbName = gameInfo.broncos.QBOneThisWeekName;
     }
 
     if (!gameInfo.broncos.opponentThisWeek) {
@@ -2961,6 +3006,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
         +team.teamDefScoreToUseForOpposingTeamDef;
       gameInfo.broncos.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         team.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      gameInfo.broncos.opponentThisWeek.qbName = team.QBOneThisWeekName;
     }
 
     if (!team.teamProjectedPointsThisWeek) {
@@ -3006,6 +3053,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
 
       team.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         gameInfo.lions.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      team.opponentThisWeek.qbName = gameInfo.lions.QBOneThisWeekName;
     }
 
     if (!gameInfo.lions.opponentThisWeek) {
@@ -3044,6 +3093,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
         +team.teamDefScoreToUseForOpposingTeamDef;
       gameInfo.lions.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         team.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      gameInfo.lions.opponentThisWeek.qbName = team.QBOneThisWeekName;
     }
 
     if (!team.teamProjectedPointsThisWeek) {
@@ -3088,6 +3139,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
       team.opposingTeamDef = +team.teamDefScoreToUseForOpposingTeamDef;
       team.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         gameInfo.packers.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      team.opponentThisWeek.qbName = gameInfo.packers.QBOneThisWeekName;
     }
 
     if (!gameInfo.packers.opponentThisWeek) {
@@ -3126,6 +3179,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
         +team.teamDefScoreToUseForOpposingTeamDef;
       gameInfo.packers.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         team.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      gameInfo.packers.opponentThisWeek.qbName = team.QBOneThisWeekName;
     }
 
     if (!team.teamProjectedPointsThisWeek) {
@@ -3171,6 +3226,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
 
       team.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         gameInfo.texans.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      team.opponentThisWeek.qbName = gameInfo.texans.QBOneThisWeekName;
     }
 
     if (!gameInfo.texans.opponentThisWeek) {
@@ -3209,6 +3266,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
         +team.teamDefScoreToUseForOpposingTeamDef;
       gameInfo.texans.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         team.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      gameInfo.texans.opponentThisWeek.qbName = team.QBOneThisWeekName;
     }
 
     if (!team.teamProjectedPointsThisWeek) {
@@ -3252,6 +3311,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
       team.opposingTeamDef = +team.teamDefScoreToUseForOpposingTeamDef;
       team.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         gameInfo.colts.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      team.opponentThisWeek.qbName = gameInfo.colts.QBOneThisWeekName;
     }
 
     if (!gameInfo.colts.opponentThisWeek) {
@@ -3290,6 +3351,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
         +team.teamDefScoreToUseForOpposingTeamDef;
       gameInfo.colts.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         team.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      gameInfo.colts.opponentThisWeek.qbName = team.QBOneThisWeekName;
     }
 
     if (!team.teamProjectedPointsThisWeek) {
@@ -3335,6 +3398,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
 
       team.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         gameInfo.jaguars.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      team.opponentThisWeek.qbName = gameInfo.jaguars.QBOneThisWeekName;
     }
 
     if (!gameInfo.jaguars.opponentThisWeek) {
@@ -3373,6 +3438,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
         +team.teamDefScoreToUseForOpposingTeamDef;
       gameInfo.jaguars.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         team.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      gameInfo.jaguars.opponentThisWeek.qbName = team.QBOneThisWeekName;
     }
 
     if (!team.teamProjectedPointsThisWeek) {
@@ -3418,6 +3485,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
 
       team.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         gameInfo.chiefs.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      team.opponentThisWeek.qbName = gameInfo.chiefs.QBOneThisWeekName;
     }
 
     if (!gameInfo.chiefs.opponentThisWeek) {
@@ -3456,6 +3525,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
         +team.teamDefScoreToUseForOpposingTeamDef;
       gameInfo.chiefs.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         team.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      gameInfo.chiefs.opponentThisWeek.qbName = team.QBOneThisWeekName;
     }
 
     if (!team.teamProjectedPointsThisWeek) {
@@ -3501,6 +3572,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
 
       team.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         gameInfo.raiders.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      team.opponentThisWeek.qbName = gameInfo.raiders.QBOneThisWeekName;
     }
 
     if (!gameInfo.raiders.opponentThisWeek) {
@@ -3539,6 +3612,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
         +team.teamDefScoreToUseForOpposingTeamDef;
       gameInfo.raiders.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         team.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      gameInfo.raiders.opponentThisWeek.qbName = team.QBOneThisWeekName;
     }
 
     if (!team.teamProjectedPointsThisWeek) {
@@ -3584,6 +3659,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
 
       team.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         gameInfo.chargers.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      team.opponentThisWeek.qbName = gameInfo.chargers.QBOneThisWeekName;
     }
 
     if (!gameInfo.chargers.opponentThisWeek) {
@@ -3623,6 +3700,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
         +team.teamDefScoreToUseForOpposingTeamDef;
       gameInfo.chargers.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         team.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      gameInfo.chargers.opponentThisWeek.qbName = team.QBOneThisWeekName;
     }
 
     if (!team.teamProjectedPointsThisWeek) {
@@ -3668,6 +3747,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
 
       team.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         gameInfo.rams.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      team.opponentThisWeek.qbName = gameInfo.rams.QBOneThisWeekName;
     }
 
     if (!gameInfo.rams.opponentThisWeek) {
@@ -3706,6 +3787,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
         +team.teamDefScoreToUseForOpposingTeamDef;
       gameInfo.rams.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         team.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      gameInfo.rams.opponentThisWeek.qbName = team.QBOneThisWeekName;
     }
 
     if (!team.teamProjectedPointsThisWeek) {
@@ -3751,6 +3834,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
 
       team.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         gameInfo.dolphins.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      team.opponentThisWeek.qbName = gameInfo.dolphins.QBOneThisWeekName;
     }
 
     if (!gameInfo.dolphins.opponentThisWeek) {
@@ -3790,6 +3875,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
         +team.teamDefScoreToUseForOpposingTeamDef;
       gameInfo.dolphins.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         team.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      gameInfo.dolphins.opponentThisWeek.qbName = team.QBOneThisWeekName;
     }
 
     if (!team.teamProjectedPointsThisWeek) {
@@ -3835,6 +3922,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
 
       team.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         gameInfo.vikings.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      team.opponentThisWeek.qbName = gameInfo.vikings.QBOneThisWeekName;
     }
 
     if (!gameInfo.vikings.opponentThisWeek) {
@@ -3873,6 +3962,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
         +team.teamDefScoreToUseForOpposingTeamDef;
       gameInfo.vikings.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         team.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      gameInfo.vikings.opponentThisWeek.qbName = team.QBOneThisWeekName;
     }
 
     if (!team.teamProjectedPointsThisWeek) {
@@ -3918,6 +4009,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
 
       team.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         gameInfo.patriots.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      team.opponentThisWeek.qbName = gameInfo.patriots.QBOneThisWeekName;
     }
 
     if (!gameInfo.patriots.opponentThisWeek) {
@@ -3957,6 +4050,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
         +team.teamDefScoreToUseForOpposingTeamDef;
       gameInfo.patriots.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         team.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      gameInfo.patriots.opponentThisWeek.qbName = team.QBOneThisWeekName;
     }
 
     if (!team.teamProjectedPointsThisWeek) {
@@ -4002,6 +4097,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
 
       team.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         gameInfo.saints.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      team.opponentThisWeek.qbName = gameInfo.saints.QBOneThisWeekName;
     }
 
     if (!gameInfo.saints.opponentThisWeek) {
@@ -4040,6 +4137,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
         +team.teamDefScoreToUseForOpposingTeamDef;
       gameInfo.saints.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         team.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      gameInfo.saints.opponentThisWeek.qbName = team.QBOneThisWeekName;
     }
 
     if (!team.teamProjectedPointsThisWeek) {
@@ -4085,6 +4184,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
 
       team.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         gameInfo.giants.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      team.opponentThisWeek.qbName = gameInfo.giants.QBOneThisWeekName;
     }
 
     if (!gameInfo.giants.opponentThisWeek) {
@@ -4123,6 +4224,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
         +team.teamDefScoreToUseForOpposingTeamDef;
       gameInfo.giants.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         team.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      gameInfo.giants.opponentThisWeek.qbName = team.QBOneThisWeekName;
     }
 
     if (!team.teamProjectedPointsThisWeek) {
@@ -4168,6 +4271,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
 
       team.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         gameInfo.jets.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      team.opponentThisWeek.qbName = gameInfo.jets.QBOneThisWeekName;
     }
 
     if (!gameInfo.jets.opponentThisWeek) {
@@ -4206,6 +4311,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
         +team.teamDefScoreToUseForOpposingTeamDef;
       gameInfo.jets.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         team.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      gameInfo.jets.opponentThisWeek.qbName = team.QBOneThisWeekName;
     }
 
     if (!team.teamProjectedPointsThisWeek) {
@@ -4250,6 +4357,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
 
       team.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         gameInfo.eagles.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      team.opponentThisWeek.qbName = gameInfo.eagles.QBOneThisWeekName;
     }
 
     if (!gameInfo.eagles.opponentThisWeek) {
@@ -4289,6 +4398,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
 
       gameInfo.eagles.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         team.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      gameInfo.eagles.opponentThisWeek.qbName = team.QBOneThisWeekName;
     }
 
     if (!team.teamProjectedPointsThisWeek) {
@@ -4334,6 +4445,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
 
       team.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         gameInfo.steelers.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      team.opponentThisWeek.qbName = gameInfo.steelers.QBOneThisWeekName;
     }
 
     if (!gameInfo.steelers.opponentThisWeek) {
@@ -4373,6 +4486,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
         +team.teamDefScoreToUseForOpposingTeamDef;
       gameInfo.steelers.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         team.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      gameInfo.steelers.opponentThisWeek.qbName = team.QBOneThisWeekName;
     }
 
     if (!team.teamProjectedPointsThisWeek) {
@@ -4418,6 +4533,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
 
       team.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         gameInfo.SF49ers.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      team.opponentThisWeek.qbName = gameInfo.SF49ers.QBOneThisWeekName;
     }
 
     if (!gameInfo.SF49ers.opponentThisWeek) {
@@ -4456,6 +4573,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
         +team.teamDefScoreToUseForOpposingTeamDef;
       gameInfo.SF49ers.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         team.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      gameInfo.SF49ers.opponentThisWeek.qbName = team.QBOneThisWeekName;
     }
 
     if (!team.teamProjectedPointsThisWeek) {
@@ -4501,6 +4620,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
 
       team.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         gameInfo.seahawks.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      team.opponentThisWeek.qbName = gameInfo.seahawks.QBOneThisWeekName;
     }
 
     if (!gameInfo.seahawks.opponentThisWeek) {
@@ -4540,6 +4661,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
         +team.teamDefScoreToUseForOpposingTeamDef;
       gameInfo.seahawks.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         team.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      gameInfo.seahawks.opponentThisWeek.qbName = team.QBOneThisWeekName;
     }
 
     if (!team.teamProjectedPointsThisWeek) {
@@ -4585,6 +4708,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
 
       team.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         gameInfo.buccaneers.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      team.opponentThisWeek.qbName = gameInfo.buccaneers.QBOneThisWeekName;
     }
 
     if (!gameInfo.buccaneers.opponentThisWeek) {
@@ -4624,6 +4749,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
         +team.teamDefScoreToUseForOpposingTeamDef;
       gameInfo.buccaneers.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         team.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      gameInfo.buccaneers.opponentThisWeek.qbName = team.QBOneThisWeekName;
     }
 
     if (!team.teamProjectedPointsThisWeek) {
@@ -4671,6 +4798,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
 
       team.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         gameInfo.titans.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      team.opponentThisWeek.qbName = gameInfo.titans.QBOneThisWeekName;
     }
 
     if (!gameInfo.titans.opponentThisWeek) {
@@ -4709,6 +4838,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
         +team.teamDefScoreToUseForOpposingTeamDef;
       gameInfo.titans.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         team.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      gameInfo.titans.opponentThisWeek.qbName = team.QBOneThisWeekName;
     }
 
     if (!team.teamProjectedPointsThisWeek) {
@@ -4754,6 +4885,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
 
       team.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         gameInfo.commanders.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      team.opponentThisWeek.qbName = gameInfo.commanders.QBOneThisWeekName;
     }
 
     if (!gameInfo.commanders.opponentThisWeek) {
@@ -4793,6 +4926,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
         +team.teamDefScoreToUseForOpposingTeamDef;
       gameInfo.commanders.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess =
         team.InitialTeamLikelihoodOfOffensiveSuccess;
+
+      gameInfo.commanders.opponentThisWeek.qbName = team.QBOneThisWeekName;
     }
 
     if (!team.teamProjectedPointsThisWeek) {
@@ -5011,6 +5146,8 @@ allGameInfo.forEach(function (team) {
 
 // console.log(gameInfo.saints);
 // console.log(gameInfo.steelers);
+// console.log(gameInfo.vikings);
+// console.log(gameInfo.SF49ers);
 // console.log(gameInfo.bengals, gameInfo.titans);
 
 // console.log(gameInfo);

@@ -1641,6 +1641,12 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
       gameInfoPassedInTeam.WRTwoThisWeek4for4HalfProjPoints;
   }
 
+  passedInTeam.teamProjectedPoints =
+    gameInfoPassedInTeam.teamProjectedPointsThisWeek;
+  passedInTeam.oppTeamProjectedPoints =
+    gameInfoPassedInTeam.opponentThisWeek.teamProjectedPointsThisWeek;
+  passedInTeam.oppQBName = gameInfoPassedInTeam.opponentThisWeek.qbName;
+
   // console.log(sortedtempPassCatchersProjPoints);
   // console.log(`${passedInTeam.teamABV}: ${sortedtempPassCatchersProjPoints}`);
   //   passedInTeam.secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints =
@@ -1681,6 +1687,8 @@ populateTeamObjects(qbrawdata.titans, gameInfo.titans);
 populateTeamObjects(qbrawdata.vikings, gameInfo.vikings);
 
 // console.log(qbrawdata.chargers);
+// console.log(qbrawdata.vikings);
+// console.log(qbrawdata.chiefs);
 // console.log(qbrawdata);
 
 module.exports = qbrawdata;

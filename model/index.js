@@ -38,6 +38,7 @@ mongoose
 const allQBData = require('./dfs_positions_calc_funcs/qbValuesCalcs');
 const qbrawdata = require('./teamandpostionsrawdata/qbrawdata');
 // import allQBData from './dfs_positions_calc_funcs/qbValuesCalcs';
+
 const allRBData = require('./dfs_positions_calc_funcs/rbValuesCalcs');
 const rbrawdata = require('./teamandpostionsrawdata/rbrawdata');
 
@@ -67,350 +68,325 @@ const { data } = require('autoprefixer');
 // console.log(allStackData);
 // console.log(allDefData);
 
-const qbSchema = new mongoose.Schema({
-  position: String,
-  allQBVttArrays: Array,
-  allQBYPALastFiveGamesPlayedArrays: Array,
-  allQBTDRateLastFiveGamesPlayedArrays: Array,
-  allQBHomeOrAwayFavoriteOrUnderdogArrays: Array,
-  allQBSecondHighlyProjectedPassCatcherArrays: Array,
-  allQBTotalScoreArrays: Array,
-  allQBFinalProjectedPointsValueArrays: Array,
-  allQBFinalProjectedPointsValuesPlusNamesArray: Array,
-  projectedPointsPerDollarDraftkings: Array,
-  projectedPointsPerDollarFanduel: Array,
-  projectedPointsPerDollarYahoo: Array,
-  qbrawdata: Object,
-});
+// const qbSchema = new mongoose.Schema({
+//   position: String,
 
-const QB = mongoose.model('QB', qbSchema);
+//   qbrawdata: Object,
+//   allQBsMap: Map,
+//   qbObectsObject: Object,
+//   allQBObjectsArray: Array,
+// });
 
-QB.deleteMany({ position: 'QB' }, function (err) {
-  if (err) {
-    console.log(`${err} error at QB delete`);
-  }
-  console.log('successful QB delete');
-});
+// const QB = mongoose.model('QB', qbSchema);
 
-QB.insertMany({
-  position: 'QB',
+// QB.deleteMany({ position: 'QB' }, function (err) {
+//   if (err) {
+//     console.log(`${err} error at QB delete`);
+//   }
+//   console.log('successful QB delete');
+// });
 
-  allQBVttArrays: allQBData.allQBVtts,
-  allQBYPALastFiveGamesPlayedArrays: allQBData.allQBYPALastFiveGamesPlayeds,
-  allQBTDRateLastFiveGamesPlayedArrays:
-    allQBData.allQBTDRateLastFiveGamesPlayeds,
+// QB.insertMany({
+//   position: 'QB',
 
-  allQBHomeOrAwayFavoriteOrUnderdogArrays:
-    allQBData.allQBHomeOrAwayFavoriteOrUnderdogs,
+//   qbrawdata: allQBData.qbrawdata,
+//   allQBsMap: allQBData.allQBsMap,
+//   qbObectsObject: allQBData.qbObectsObject,
+//   allQBObjectsArray: allQBData.allQBObjectsArray,
+// }).then(data => {
+//   console.log('QB Data Inserted Successfully');
+//   // console.log(data);
+// });
 
-  allQBSecondHighlyProjectedPassCatcherArrays:
-    allQBData.allQBSecondHighlyProjectedPassCatchers,
+// const rbSchema = new mongoose.Schema({
+//   position: String,
+//   allRBOneHalfPPRProjectedPointsValues: Array,
+//   allRBOneFullPPRProjectedPointsValues: Array,
+//   allRBTwoHalfPPRProjectedPointsValues: Array,
+//   allRBTwoFullPPRProjectedPointsValues: Array,
+//   allRBOneHalfPPRProjectedPointsValuesPlusNames: Array,
+//   allRBTwoHalfPPRProjectedPointsValuesPlusNames: Array,
+//   allRBOneFullPPRProjectedPointsValuesPlusNames: Array,
+//   allRBTwoFullPPRProjectedPointsValuesPlusNames: Array,
+//   allRBHalfPPRProjectedPointsValues: Array,
+//   allRBFullPPRProjectedPointsValues: Array,
+//   allRBHalfPPRProjectedPointsValuesPlusNames: Array,
+//   allRBFullPPRProjectedPointsValuesPlusNames: Array,
+//   halfProjectedPointsPerDollarDraftkings: Array,
+//   halfProjectedPointsPerDollarFanduel: Array,
+//   halfProjectedPointsPerDollarYahoo: Array,
 
-  allQBTotalScoreArrays: allQBData.allQBTotalScores,
-  allQBFinalProjectedPointsValueArrays:
-    allQBData.allQBFinalProjectedPointsValues,
+//   fullProjectedPointsPerDollarDraftkings: Array,
+//   fullProjectedPointsPerDollarFanduel: Array,
+//   fullProjectedPointsPerDollarYahoo: Array,
+//   rbrawdata: Object,
+// });
 
-  allQBFinalProjectedPointsValuesPlusNamesArray:
-    allQBData.allQBFinalProjectedPointsValuesPlusNames,
-  projectedPointsPerDollarDraftkings:
-    allQBData.projectedPointsPerDollarDraftkings,
-  projectedPointsPerDollarFanduel: allQBData.projectedPointsPerDollarFanduel,
-  projectedPointsPerDollarYahoo: allQBData.projectedPointsPerDollarYahoo,
-  qbrawdata: qbrawdata,
-}).then(data => {
-  console.log('QB Data Inserted Successfully');
-  // console.log(data);
-});
+// const RB = mongoose.model('RB', rbSchema);
 
-const rbSchema = new mongoose.Schema({
-  position: String,
-  allRBOneHalfPPRProjectedPointsValues: Array,
-  allRBOneFullPPRProjectedPointsValues: Array,
-  allRBTwoHalfPPRProjectedPointsValues: Array,
-  allRBTwoFullPPRProjectedPointsValues: Array,
-  allRBOneHalfPPRProjectedPointsValuesPlusNames: Array,
-  allRBTwoHalfPPRProjectedPointsValuesPlusNames: Array,
-  allRBOneFullPPRProjectedPointsValuesPlusNames: Array,
-  allRBTwoFullPPRProjectedPointsValuesPlusNames: Array,
-  allRBHalfPPRProjectedPointsValues: Array,
-  allRBFullPPRProjectedPointsValues: Array,
-  allRBHalfPPRProjectedPointsValuesPlusNames: Array,
-  allRBFullPPRProjectedPointsValuesPlusNames: Array,
-  halfProjectedPointsPerDollarDraftkings: Array,
-  halfProjectedPointsPerDollarFanduel: Array,
-  halfProjectedPointsPerDollarYahoo: Array,
+// RB.deleteMany({ position: 'RB' }, function (err) {
+//   if (err) {
+//     console.log(`${err} error at RB delete`);
+//   }
+//   console.log('successful RB delete');
+// });
 
-  fullProjectedPointsPerDollarDraftkings: Array,
-  fullProjectedPointsPerDollarFanduel: Array,
-  fullProjectedPointsPerDollarYahoo: Array,
-  rbrawdata: Object,
-});
+// RB.insertMany({
+//   position: 'RB',
+//   allRBOneHalfPPRProjectedPointsValues:
+//     allRBData.allRBOneHalfPPRProjectedPointsValues,
 
-const RB = mongoose.model('RB', rbSchema);
+//   allRBOneFullPPRProjectedPointsValues:
+//     allRBData.allRBOneFullPPRProjectedPointsValues,
 
-RB.deleteMany({ position: 'RB' }, function (err) {
-  if (err) {
-    console.log(`${err} error at RB delete`);
-  }
-  console.log('successful RB delete');
-});
+//   allRBTwoHalfPPRProjectedPointsValues:
+//     allRBData.allRBTwoHalfPPRProjectedPointsValues,
 
-RB.insertMany({
-  position: 'RB',
-  allRBOneHalfPPRProjectedPointsValues:
-    allRBData.allRBOneHalfPPRProjectedPointsValues,
+//   allRBTwoFullPPRProjectedPointsValues:
+//     allRBData.allRBTwoFullPPRProjectedPointsValues,
 
-  allRBOneFullPPRProjectedPointsValues:
-    allRBData.allRBOneFullPPRProjectedPointsValues,
+//   allRBOneHalfPPRProjectedPointsValuesPlusNames:
+//     allRBData.allRBOneHalfPPRProjectedPointsValuesPlusNames,
 
-  allRBTwoHalfPPRProjectedPointsValues:
-    allRBData.allRBTwoHalfPPRProjectedPointsValues,
+//   allRBTwoHalfPPRProjectedPointsValuesPlusNames:
+//     allRBData.allRBTwoHalfPPRProjectedPointsValuesPlusNames,
 
-  allRBTwoFullPPRProjectedPointsValues:
-    allRBData.allRBTwoFullPPRProjectedPointsValues,
+//   allRBOneFullPPRProjectedPointsValuesPlusNames:
+//     allRBData.allRBOneFullPPRProjectedPointsValuesPlusNames,
 
-  allRBOneHalfPPRProjectedPointsValuesPlusNames:
-    allRBData.allRBOneHalfPPRProjectedPointsValuesPlusNames,
+//   allRBTwoFullPPRProjectedPointsValuesPlusNames:
+//     allRBData.allRBTwoFullPPRProjectedPointsValuesPlusNames,
 
-  allRBTwoHalfPPRProjectedPointsValuesPlusNames:
-    allRBData.allRBTwoHalfPPRProjectedPointsValuesPlusNames,
+//   allRBHalfPPRProjectedPointsValues:
+//     allRBData.allRBHalfPPRProjectedPointsValues,
 
-  allRBOneFullPPRProjectedPointsValuesPlusNames:
-    allRBData.allRBOneFullPPRProjectedPointsValuesPlusNames,
+//   allRBFullPPRProjectedPointsValues:
+//     allRBData.allRBFullPPRProjectedPointsValues,
 
-  allRBTwoFullPPRProjectedPointsValuesPlusNames:
-    allRBData.allRBTwoFullPPRProjectedPointsValuesPlusNames,
+//   allRBHalfPPRProjectedPointsValuesPlusNames:
+//     allRBData.allRBHalfPPRProjectedPointsValuesPlusNames,
 
-  allRBHalfPPRProjectedPointsValues:
-    allRBData.allRBHalfPPRProjectedPointsValues,
+//   allRBFullPPRProjectedPointsValuesPlusNames:
+//     allRBData.allRBFullPPRProjectedPointsValuesPlusNames,
+//   halfProjectedPointsPerDollarDraftkings:
+//     allRBData.halfProjectedPointsPerDollarDraftkings,
+//   halfProjectedPointsPerDollarFanduel:
+//     allRBData.halfProjectedPointsPerDollarFanduel,
+//   halfProjectedPointsPerDollarYahoo:
+//     allRBData.halfProjectedPointsPerDollarYahoo,
 
-  allRBFullPPRProjectedPointsValues:
-    allRBData.allRBFullPPRProjectedPointsValues,
+//   fullProjectedPointsPerDollarDraftkings:
+//     allRBData.fullProjectedPointsPerDollarDraftkings,
+//   fullProjectedPointsPerDollarFanduel:
+//     allRBData.fullProjectedPointsPerDollarFanduel,
+//   fullProjectedPointsPerDollarYahoo:
+//     allRBData.fullProjectedPointsPerDollarYahoo,
+//   rbrawdata: rbrawdata,
+// }).then(data => {
+//   console.log('RB Data Inserted Successfully');
+//   // console.log(data);
+// });
 
-  allRBHalfPPRProjectedPointsValuesPlusNames:
-    allRBData.allRBHalfPPRProjectedPointsValuesPlusNames,
+// const wrSchema = new mongoose.Schema({
+//   position: String,
+//   allWROneHomeOrAwayFavoriteOrUnderdogs: Array,
+//   allWRTwoHomeOrAwayFavoriteOrUnderdogs: Array,
+//   allWROneVTTs: Array,
+//   allWRTwoVTTs: Array,
+//   allWROneEliteProjectedTargetsBonuss: Array,
+//   allWRTwoEliteProjectedTargetsBonuss: Array,
+//   allWROneGameEnvironmentInducedHighTargetVolume: Array,
+//   allWRTwoGameEnvironmentInducedHighTargetVolume: Array,
+//   allWROneIfTopTwelveTargetShareLasThreeWeeks: Array,
+//   allWRTwoIfTopTwelveTargetShareLasThreeWeeks: Array,
+//   allWROneTotalScores: Array,
+//   allWRTwoTotalScores: Array,
+//   allHalfWROneFinalProjectedPointsValues: Array,
+//   allHalfWROneFinalProjectedPointsValuesPlusNames: Array,
+//   allFullWROneFinalProjectedPointsValues: Array,
+//   allFullWROneFinalProjectedPointsValuesPlusNames: Array,
+//   allHalfWRTwoFinalProjectedPointsValues: Array,
+//   allHalfWRTwoFinalProjectedPointsValuesPlusNames: Array,
+//   allFullWRTwoFinalProjectedPointsValues: Array,
+//   allFullWRTwoFinalProjectedPointsValuesPlusNames: Array,
+//   allHalfWRThreeFinalProjectedPointsValues: Array,
 
-  allRBFullPPRProjectedPointsValuesPlusNames:
-    allRBData.allRBFullPPRProjectedPointsValuesPlusNames,
-  halfProjectedPointsPerDollarDraftkings:
-    allRBData.halfProjectedPointsPerDollarDraftkings,
-  halfProjectedPointsPerDollarFanduel:
-    allRBData.halfProjectedPointsPerDollarFanduel,
-  halfProjectedPointsPerDollarYahoo:
-    allRBData.halfProjectedPointsPerDollarYahoo,
+//   allHalfWRThreeFinalProjectedPointsValuesPlusNames: Array,
 
-  fullProjectedPointsPerDollarDraftkings:
-    allRBData.fullProjectedPointsPerDollarDraftkings,
-  fullProjectedPointsPerDollarFanduel:
-    allRBData.fullProjectedPointsPerDollarFanduel,
-  fullProjectedPointsPerDollarYahoo:
-    allRBData.fullProjectedPointsPerDollarYahoo,
-  rbrawdata: rbrawdata,
-}).then(data => {
-  console.log('RB Data Inserted Successfully');
-  // console.log(data);
-});
+//   allFullWRThreeFinalProjectedPointsValues: Array,
+//   allFullWRThreeFinalProjectedPointsValuesPlusNames: Array,
+//   allWRsHalfProjectedPointsValues: Array,
+//   allWRsFullProjectedPointsValues: Array,
+//   allWRsHalfProjectedPointsValuesPlusNames: Array,
+//   allWRsFullProjectedPointsValuesPlusNames: Array,
+//   halfProjectedPointsPerDollarDraftkings: Array,
+//   halfProjectedPointsPerDollarFanduel: Array,
+//   halfProjectedPointsPerDollarYahoo: Array,
 
-const wrSchema = new mongoose.Schema({
-  position: String,
-  allWROneHomeOrAwayFavoriteOrUnderdogs: Array,
-  allWRTwoHomeOrAwayFavoriteOrUnderdogs: Array,
-  allWROneVTTs: Array,
-  allWRTwoVTTs: Array,
-  allWROneEliteProjectedTargetsBonuss: Array,
-  allWRTwoEliteProjectedTargetsBonuss: Array,
-  allWROneGameEnvironmentInducedHighTargetVolume: Array,
-  allWRTwoGameEnvironmentInducedHighTargetVolume: Array,
-  allWROneIfTopTwelveTargetShareLasThreeWeeks: Array,
-  allWRTwoIfTopTwelveTargetShareLasThreeWeeks: Array,
-  allWROneTotalScores: Array,
-  allWRTwoTotalScores: Array,
-  allHalfWROneFinalProjectedPointsValues: Array,
-  allHalfWROneFinalProjectedPointsValuesPlusNames: Array,
-  allFullWROneFinalProjectedPointsValues: Array,
-  allFullWROneFinalProjectedPointsValuesPlusNames: Array,
-  allHalfWRTwoFinalProjectedPointsValues: Array,
-  allHalfWRTwoFinalProjectedPointsValuesPlusNames: Array,
-  allFullWRTwoFinalProjectedPointsValues: Array,
-  allFullWRTwoFinalProjectedPointsValuesPlusNames: Array,
-  allHalfWRThreeFinalProjectedPointsValues: Array,
+//   fullProjectedPointsPerDollarDraftkings: Array,
+//   fullProjectedPointsPerDollarFanduel: Array,
+//   fullProjectedPointsPerDollarYahoo: Array,
+//   wrrawdata: Object,
+// });
 
-  allHalfWRThreeFinalProjectedPointsValuesPlusNames: Array,
+// const WR = mongoose.model('WR', wrSchema);
 
-  allFullWRThreeFinalProjectedPointsValues: Array,
-  allFullWRThreeFinalProjectedPointsValuesPlusNames: Array,
-  allWRsHalfProjectedPointsValues: Array,
-  allWRsFullProjectedPointsValues: Array,
-  allWRsHalfProjectedPointsValuesPlusNames: Array,
-  allWRsFullProjectedPointsValuesPlusNames: Array,
-  halfProjectedPointsPerDollarDraftkings: Array,
-  halfProjectedPointsPerDollarFanduel: Array,
-  halfProjectedPointsPerDollarYahoo: Array,
+// WR.deleteMany({ position: 'WR' }, function (err) {
+//   if (err) {
+//     console.log(`${err} error at WR delete`);
+//   }
+//   console.log('successful WR delete');
+// });
 
-  fullProjectedPointsPerDollarDraftkings: Array,
-  fullProjectedPointsPerDollarFanduel: Array,
-  fullProjectedPointsPerDollarYahoo: Array,
-  wrrawdata: Object,
-});
+// WR.insertMany({
+//   position: 'WR',
+//   allWROneHomeOrAwayFavoriteOrUnderdogs:
+//     allWRData.allWROneHomeOrAwayFavoriteOrUnderdogs,
+//   allWRTwoHomeOrAwayFavoriteOrUnderdogs:
+//     allWRData.allWRTwoHomeOrAwayFavoriteOrUnderdogs,
+//   allWROneVTTs: allWRData.allWROneVTTs,
+//   allWRTwoVTTs: allWRData.allWRTwoVTTs,
+//   allWROneEliteProjectedTargetsBonuss:
+//     allWRData.allWROneEliteProjectedTargetsBonuss,
+//   allWRTwoEliteProjectedTargetsBonuss:
+//     allWRData.allWRTwoEliteProjectedTargetsBonuss,
+//   allWROneGameEnvironmentInducedHighTargetVolume:
+//     allWRData.allWROneGameEnvironmentInducedHighTargetVolume,
+//   allWRTwoGameEnvironmentInducedHighTargetVolume:
+//     allWRData.allWRTwoGameEnvironmentInducedHighTargetVolume,
+//   allWROneIfTopTwelveTargetShareLasThreeWeeks:
+//     allWRData.allWROneIfTopTwelveTargetShareLasThreeWeeks,
+//   allWRTwoIfTopTwelveTargetShareLasThreeWeeks:
+//     allWRData.allWRTwoIfTopTwelveTargetShareLasThreeWeeks,
+//   allWROneTotalScores: allWRData.allWROneTotalScores,
+//   allWRTwoTotalScores: allWRData.allWRTwoTotalScores,
+//   allHalfWROneFinalProjectedPointsValues:
+//     allWRData.allHalfWROneFinalProjectedPointsValues,
+//   allHalfWROneFinalProjectedPointsValuesPlusNames:
+//     allWRData.allHalfWROneFinalProjectedPointsValuesPlusNames,
+//   allFullWROneFinalProjectedPointsValues:
+//     allWRData.allFullWROneFinalProjectedPointsValues,
+//   allFullWROneFinalProjectedPointsValuesPlusNames:
+//     allWRData.allFullWROneFinalProjectedPointsValuesPlusNames,
+//   allHalfWRTwoFinalProjectedPointsValues:
+//     allWRData.allHalfWRTwoFinalProjectedPointsValues,
+//   allHalfWRTwoFinalProjectedPointsValuesPlusNames:
+//     allWRData.allHalfWRTwoFinalProjectedPointsValuesPlusNames,
+//   allFullWRTwoFinalProjectedPointsValues:
+//     allWRData.allFullWRTwoFinalProjectedPointsValues,
+//   allFullWRTwoFinalProjectedPointsValuesPlusNames:
+//     allWRData.allFullWRTwoFinalProjectedPointsValuesPlusNames,
+//   allHalfWRThreeFinalProjectedPointsValues:
+//     allWRData.allHalfWRThreeFinalProjectedPointsValues,
+//   allHalfWRThreeFinalProjectedPointsValuesPlusNames:
+//     allWRData.allHalfWRThreeFinalProjectedPointsValuesPlusNames,
 
-const WR = mongoose.model('WR', wrSchema);
+//   allFullWRThreeFinalProjectedPointsValues:
+//     allWRData.allFullWRThreeFinalProjectedPointsValues,
+//   allFullWRThreeFinalProjectedPointsValuesPlusNames:
+//     allWRData.allFullWRThreeFinalProjectedPointsValuesPlusNames,
+//   allWRsHalfProjectedPointsValues: allWRData.allWRsHalfProjectedPointsValues,
+//   allWRsFullProjectedPointsValues: allWRData.allWRsFullProjectedPointsValues,
+//   allWRsHalfProjectedPointsValuesPlusNames:
+//     allWRData.allWRsHalfProjectedPointsValuesPlusNames,
+//   allWRsFullProjectedPointsValuesPlusNames:
+//     allWRData.allWRsFullProjectedPointsValuesPlusNames,
+//   halfProjectedPointsPerDollarDraftkings:
+//     allWRData.halfProjectedPointsPerDollarDraftkings,
+//   halfProjectedPointsPerDollarFanduel:
+//     allWRData.halfProjectedPointsPerDollarFanduel,
+//   halfProjectedPointsPerDollarYahoo:
+//     allWRData.halfProjectedPointsPerDollarYahoo,
 
-WR.deleteMany({ position: 'WR' }, function (err) {
-  if (err) {
-    console.log(`${err} error at WR delete`);
-  }
-  console.log('successful WR delete');
-});
+//   fullProjectedPointsPerDollarDraftkings:
+//     allWRData.fullProjectedPointsPerDollarDraftkings,
+//   fullProjectedPointsPerDollarFanduel:
+//     allWRData.fullProjectedPointsPerDollarFanduel,
+//   fullProjectedPointsPerDollarYahoo:
+//     allWRData.fullProjectedPointsPerDollarYahoo,
+//   wrrawdata: wrrawdata,
+// }).then(data => {
+//   console.log('WR Data Inserted Successfully');
+//   // console.log(data);
+// });
 
-WR.insertMany({
-  position: 'WR',
-  allWROneHomeOrAwayFavoriteOrUnderdogs:
-    allWRData.allWROneHomeOrAwayFavoriteOrUnderdogs,
-  allWRTwoHomeOrAwayFavoriteOrUnderdogs:
-    allWRData.allWRTwoHomeOrAwayFavoriteOrUnderdogs,
-  allWROneVTTs: allWRData.allWROneVTTs,
-  allWRTwoVTTs: allWRData.allWRTwoVTTs,
-  allWROneEliteProjectedTargetsBonuss:
-    allWRData.allWROneEliteProjectedTargetsBonuss,
-  allWRTwoEliteProjectedTargetsBonuss:
-    allWRData.allWRTwoEliteProjectedTargetsBonuss,
-  allWROneGameEnvironmentInducedHighTargetVolume:
-    allWRData.allWROneGameEnvironmentInducedHighTargetVolume,
-  allWRTwoGameEnvironmentInducedHighTargetVolume:
-    allWRData.allWRTwoGameEnvironmentInducedHighTargetVolume,
-  allWROneIfTopTwelveTargetShareLasThreeWeeks:
-    allWRData.allWROneIfTopTwelveTargetShareLasThreeWeeks,
-  allWRTwoIfTopTwelveTargetShareLasThreeWeeks:
-    allWRData.allWRTwoIfTopTwelveTargetShareLasThreeWeeks,
-  allWROneTotalScores: allWRData.allWROneTotalScores,
-  allWRTwoTotalScores: allWRData.allWRTwoTotalScores,
-  allHalfWROneFinalProjectedPointsValues:
-    allWRData.allHalfWROneFinalProjectedPointsValues,
-  allHalfWROneFinalProjectedPointsValuesPlusNames:
-    allWRData.allHalfWROneFinalProjectedPointsValuesPlusNames,
-  allFullWROneFinalProjectedPointsValues:
-    allWRData.allFullWROneFinalProjectedPointsValues,
-  allFullWROneFinalProjectedPointsValuesPlusNames:
-    allWRData.allFullWROneFinalProjectedPointsValuesPlusNames,
-  allHalfWRTwoFinalProjectedPointsValues:
-    allWRData.allHalfWRTwoFinalProjectedPointsValues,
-  allHalfWRTwoFinalProjectedPointsValuesPlusNames:
-    allWRData.allHalfWRTwoFinalProjectedPointsValuesPlusNames,
-  allFullWRTwoFinalProjectedPointsValues:
-    allWRData.allFullWRTwoFinalProjectedPointsValues,
-  allFullWRTwoFinalProjectedPointsValuesPlusNames:
-    allWRData.allFullWRTwoFinalProjectedPointsValuesPlusNames,
-  allHalfWRThreeFinalProjectedPointsValues:
-    allWRData.allHalfWRThreeFinalProjectedPointsValues,
-  allHalfWRThreeFinalProjectedPointsValuesPlusNames:
-    allWRData.allHalfWRThreeFinalProjectedPointsValuesPlusNames,
+// const teSchema = new mongoose.Schema({
+//   position: String,
+//   allTEVTTs: Array,
+//   allTEHighProjectedTargetsBonus: Array,
+//   allTEPPRPointsPerGameLastThreeGamesPlayed: Array,
+//   allTEProjectedReceptions: Array,
+//   allTETotalScores: Array,
+//   allHalfTEFinalProjectedPointsValues: Array,
+//   allHalfTEFinalProjectedPointsValuesPlusNames: Array,
+//   allFullTEFinalProjectedPointsValues: Array,
+//   allFullTEFinalProjectedPointsValuesPlusNames: Array,
+//   allTEPremiuimFinalProjectedPointsValues: Array,
+//   allTEPremiuimFinalProjectedPointsValuesPlusNames: Array,
+//   halfProjectedPointsPerDollarDraftkings: Array,
+//   halfProjectedPointsPerDollarFanduel: Array,
+//   halfProjectedPointsPerDollarYahoo: Array,
+//   fullProjectedPointsPerDollarDraftkings: Array,
+//   fullProjectedPointsPerDollarFanduel: Array,
+//   fullProjectedPointsPerDollarYahoo: Array,
+//   tePremiumProjectedPointsPerDollarDraftkings: Array,
+//   tePremiumProjectedPointsPerDollarFanduel: Array,
+//   tePremiumProjectedPointsPerDollarYahoo: Array,
+//   terawdata: Object,
+// });
 
-  allFullWRThreeFinalProjectedPointsValues:
-    allWRData.allFullWRThreeFinalProjectedPointsValues,
-  allFullWRThreeFinalProjectedPointsValuesPlusNames:
-    allWRData.allFullWRThreeFinalProjectedPointsValuesPlusNames,
-  allWRsHalfProjectedPointsValues: allWRData.allWRsHalfProjectedPointsValues,
-  allWRsFullProjectedPointsValues: allWRData.allWRsFullProjectedPointsValues,
-  allWRsHalfProjectedPointsValuesPlusNames:
-    allWRData.allWRsHalfProjectedPointsValuesPlusNames,
-  allWRsFullProjectedPointsValuesPlusNames:
-    allWRData.allWRsFullProjectedPointsValuesPlusNames,
-  halfProjectedPointsPerDollarDraftkings:
-    allWRData.halfProjectedPointsPerDollarDraftkings,
-  halfProjectedPointsPerDollarFanduel:
-    allWRData.halfProjectedPointsPerDollarFanduel,
-  halfProjectedPointsPerDollarYahoo:
-    allWRData.halfProjectedPointsPerDollarYahoo,
+// const TE = mongoose.model('TE', teSchema);
 
-  fullProjectedPointsPerDollarDraftkings:
-    allWRData.fullProjectedPointsPerDollarDraftkings,
-  fullProjectedPointsPerDollarFanduel:
-    allWRData.fullProjectedPointsPerDollarFanduel,
-  fullProjectedPointsPerDollarYahoo:
-    allWRData.fullProjectedPointsPerDollarYahoo,
-  wrrawdata: wrrawdata,
-}).then(data => {
-  console.log('WR Data Inserted Successfully');
-  // console.log(data);
-});
+// TE.deleteMany({ position: 'TE' }, function (err) {
+//   if (err) {
+//     console.log(`${err} error at TE delete`);
+//   }
+//   console.log('successful TE delete');
+// });
 
-const teSchema = new mongoose.Schema({
-  position: String,
-  allTEVTTs: Array,
-  allTEHighProjectedTargetsBonus: Array,
-  allTEPPRPointsPerGameLastThreeGamesPlayed: Array,
-  allTEProjectedReceptions: Array,
-  allTETotalScores: Array,
-  allHalfTEFinalProjectedPointsValues: Array,
-  allHalfTEFinalProjectedPointsValuesPlusNames: Array,
-  allFullTEFinalProjectedPointsValues: Array,
-  allFullTEFinalProjectedPointsValuesPlusNames: Array,
-  allTEPremiuimFinalProjectedPointsValues: Array,
-  allTEPremiuimFinalProjectedPointsValuesPlusNames: Array,
-  halfProjectedPointsPerDollarDraftkings: Array,
-  halfProjectedPointsPerDollarFanduel: Array,
-  halfProjectedPointsPerDollarYahoo: Array,
-  fullProjectedPointsPerDollarDraftkings: Array,
-  fullProjectedPointsPerDollarFanduel: Array,
-  fullProjectedPointsPerDollarYahoo: Array,
-  tePremiumProjectedPointsPerDollarDraftkings: Array,
-  tePremiumProjectedPointsPerDollarFanduel: Array,
-  tePremiumProjectedPointsPerDollarYahoo: Array,
-  terawdata: Object,
-});
-
-const TE = mongoose.model('TE', teSchema);
-
-TE.deleteMany({ position: 'TE' }, function (err) {
-  if (err) {
-    console.log(`${err} error at TE delete`);
-  }
-  console.log('successful TE delete');
-});
-
-TE.insertMany({
-  position: 'TE',
-  allTEVTTs: allTEData.allTEVTTs,
-  allTEHighProjectedTargetsBonus: allTEData.allTEHighProjectedTargetsBonus,
-  allTEPPRPointsPerGameLastThreeGamesPlayed:
-    allTEData.allTEPPRPointsPerGameLastThreeGamesPlayed,
-  allTEProjectedReceptions: allTEData.allTEProjectedReceptions,
-  allTETotalScores: allTEData.allTETotalScores,
-  allHalfTEFinalProjectedPointsValues:
-    allTEData.allHalfTEFinalProjectedPointsValues,
-  allHalfTEFinalProjectedPointsValuesPlusNames:
-    allTEData.allHalfTEFinalProjectedPointsValuesPlusNames,
-  allFullTEFinalProjectedPointsValues:
-    allTEData.allFullTEFinalProjectedPointsValues,
-  allFullTEFinalProjectedPointsValuesPlusNames:
-    allTEData.allFullTEFinalProjectedPointsValuesPlusNames,
-  allTEPremiuimFinalProjectedPointsValues:
-    allTEData.allTEPremiuimFinalProjectedPointsValues,
-  allTEPremiuimFinalProjectedPointsValuesPlusNames:
-    allTEData.allTEPremiuimFinalProjectedPointsValuesPlusNames,
-  halfProjectedPointsPerDollarDraftkings:
-    allTEData.halfProjectedPointsPerDollarDraftkings,
-  halfProjectedPointsPerDollarFanduel:
-    allTEData.halfProjectedPointsPerDollarFanduel,
-  halfProjectedPointsPerDollarYahoo:
-    allTEData.halfProjectedPointsPerDollarYahoo,
-  fullProjectedPointsPerDollarDraftkings:
-    allTEData.fullProjectedPointsPerDollarDraftkings,
-  fullProjectedPointsPerDollarFanduel:
-    allTEData.fullProjectedPointsPerDollarFanduel,
-  fullProjectedPointsPerDollarYahoo:
-    allTEData.fullProjectedPointsPerDollarYahoo,
-  tePremiumProjectedPointsPerDollarDraftkings:
-    allTEData.tePremiumProjectedPointsPerDollarDraftkings,
-  tePremiumProjectedPointsPerDollarFanduel:
-    allTEData.tePremiumProjectedPointsPerDollarFanduel,
-  tePremiumProjectedPointsPerDollarYahoo:
-    allTEData.tePremiumProjectedPointsPerDollarYahoo,
-  terawdata: terawdata,
-}).then(data => {
-  console.log('TE Data Inserted Successfully');
-  // console.log(data);
-});
+// TE.insertMany({
+//   position: 'TE',
+//   allTEVTTs: allTEData.allTEVTTs,
+//   allTEHighProjectedTargetsBonus: allTEData.allTEHighProjectedTargetsBonus,
+//   allTEPPRPointsPerGameLastThreeGamesPlayed:
+//     allTEData.allTEPPRPointsPerGameLastThreeGamesPlayed,
+//   allTEProjectedReceptions: allTEData.allTEProjectedReceptions,
+//   allTETotalScores: allTEData.allTETotalScores,
+//   allHalfTEFinalProjectedPointsValues:
+//     allTEData.allHalfTEFinalProjectedPointsValues,
+//   allHalfTEFinalProjectedPointsValuesPlusNames:
+//     allTEData.allHalfTEFinalProjectedPointsValuesPlusNames,
+//   allFullTEFinalProjectedPointsValues:
+//     allTEData.allFullTEFinalProjectedPointsValues,
+//   allFullTEFinalProjectedPointsValuesPlusNames:
+//     allTEData.allFullTEFinalProjectedPointsValuesPlusNames,
+//   allTEPremiuimFinalProjectedPointsValues:
+//     allTEData.allTEPremiuimFinalProjectedPointsValues,
+//   allTEPremiuimFinalProjectedPointsValuesPlusNames:
+//     allTEData.allTEPremiuimFinalProjectedPointsValuesPlusNames,
+//   halfProjectedPointsPerDollarDraftkings:
+//     allTEData.halfProjectedPointsPerDollarDraftkings,
+//   halfProjectedPointsPerDollarFanduel:
+//     allTEData.halfProjectedPointsPerDollarFanduel,
+//   halfProjectedPointsPerDollarYahoo:
+//     allTEData.halfProjectedPointsPerDollarYahoo,
+//   fullProjectedPointsPerDollarDraftkings:
+//     allTEData.fullProjectedPointsPerDollarDraftkings,
+//   fullProjectedPointsPerDollarFanduel:
+//     allTEData.fullProjectedPointsPerDollarFanduel,
+//   fullProjectedPointsPerDollarYahoo:
+//     allTEData.fullProjectedPointsPerDollarYahoo,
+//   tePremiumProjectedPointsPerDollarDraftkings:
+//     allTEData.tePremiumProjectedPointsPerDollarDraftkings,
+//   tePremiumProjectedPointsPerDollarFanduel:
+//     allTEData.tePremiumProjectedPointsPerDollarFanduel,
+//   tePremiumProjectedPointsPerDollarYahoo:
+//     allTEData.tePremiumProjectedPointsPerDollarYahoo,
+//   terawdata: terawdata,
+// }).then(data => {
+//   console.log('TE Data Inserted Successfully');
+// console.log(data);
+// });
 
 // const flexSchema = new mongoose.Schema({
 //   position: String,
@@ -543,37 +519,37 @@ TE.insertMany({
 //     // console.log(data);
 //   });
 
-const defSchema = new mongoose.Schema({
-  position: String,
-  scoreFromProjectedPointsForDef: Array,
-  ScoreFromOwnOff: Array,
-  ScoreFromOppOff: Array,
-  TeamDefProjPoints: Array,
-  allTeamDefensesMap: Map,
-});
+// const defSchema = new mongoose.Schema({
+//   position: String,
+//   scoreFromProjectedPointsForDef: Array,
+//   ScoreFromOwnOff: Array,
+//   ScoreFromOppOff: Array,
+//   TeamDefProjPoints: Array,
+//   allTeamDefensesMap: Map,
+// });
 
-const teamDef = mongoose.model('teamDef', defSchema);
+// const teamDef = mongoose.model('teamDef', defSchema);
 
-teamDef.deleteMany({ position: 'def' }, function (err) {
-  if (err) {
-    console.log(`${err} error at defense delete`);
-  }
-  console.log('successful defense delete');
-});
+// teamDef.deleteMany({ position: 'def' }, function (err) {
+//   if (err) {
+//     console.log(`${err} error at defense delete`);
+//   }
+//   console.log('successful defense delete');
+// });
 
-teamDef
-  .insertMany({
-    position: 'def',
-    scoreFromProjectedPointsForDef: allDefData.scoreFromProjectedPointsForDef,
-    ScoreFromOwnOff: allDefData.ScoreFromOwnOff,
-    ScoreFromOppOff: allDefData.ScoreFromOppOff,
-    TeamDefProjPoints: allDefData.TeamDefProjPoints,
-    allTeamDefensesMap: allDefData.allTeamDefensesMap,
-  })
-  .then(data => {
-    console.log('def Data Inserted Successfully');
-    // console.log(data);
-  });
+// teamDef
+//   .insertMany({
+//     position: 'def',
+//     scoreFromProjectedPointsForDef: allDefData.scoreFromProjectedPointsForDef,
+//     ScoreFromOwnOff: allDefData.ScoreFromOwnOff,
+//     ScoreFromOppOff: allDefData.ScoreFromOppOff,
+//     TeamDefProjPoints: allDefData.TeamDefProjPoints,
+//     allTeamDefensesMap: allDefData.allTeamDefensesMap,
+//   })
+//   .then(data => {
+//     console.log('def Data Inserted Successfully');
+//     // console.log(data);
+//   });
 
 app.get('/', (req, res) => {
   const group = 'home';
