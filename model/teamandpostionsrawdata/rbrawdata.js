@@ -16,18 +16,20 @@ const rb4for4PlayerStatExplorerPercentOfTeamSnapsLastFiveWeeks = require('../dat
 const rbOpportunitesPerWeekLastFiveWeeks4for4PlayerStatExplorer = require('../datafilesmadefrom4for4CSVs/rbOpportunitiesPerWeekLastFiveWeeks4for4PlayerStatExplorer');
 const teamDefStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer = require('../datafilesmadefrom4for4CSVs/teamDefStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer');
 const teamOffStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer = require('../datafilesmadefrom4for4CSVs/teamOffStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer');
+const rb4for4StatExplorerForRushingLastFiveWeeks = require('../datafilesmadefrom4for4CSVs/rb4for4StatExplorerForRushingLastFiveWeeks');
+const rb4for4WeeklyStatExplorerHVTsLastFiveWeeks = require('../datafilesmadefrom4for4CSVs/rb4for4WeeklyStatExplorerHVTsLastFiveWeeks');
+const rb4for4PlayerStatExplorerSnapsAndFantasyTabThisHasFPOELastFiveWeeks = require('../datafilesmadefrom4for4CSVs/rb4for4PlayerStatExplorerSnapsAndFantasyTabThisHasFPOELastFiveWeeks');
+const rb4for4PlayerStatExplorerForReceivingLastFiveWeeks = require('../datafilesmadefrom4for4CSVs/rb4for4PlayerStatExplorerForReceivingLastFiveWeeks');
 
 const rbrawdata = {
   SF49ers: {
     teamABV: 'SF',
-    opponentABV: 0,
+    opponentABV: '',
     teamVTT: 0,
     opponentVTT: 0,
-    totalTeamPRojectedRBCarries: 0,
-    totalTeamProjectedRBTargets: 0,
 
     teamTotalGreenZoneTouchesLastFiveWeeks: 0,
-    teamTotalReceptionsByRBsPerGameLastFiveWeeks: 0,
+
     teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
@@ -41,8 +43,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -50,7 +50,8 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -61,26 +62,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-      lowValueTouchesLastFiveWeeks: 0,
-      PercentageOfTouchesThatWereTRAPCarriesLastFiveWeeks: 0,
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -88,11 +74,9 @@ const rbrawdata = {
     },
     RBTwo: {
       name: '',
+      RBOneOrTwo: 2,
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
-
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -100,7 +84,8 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -111,19 +96,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -132,11 +109,13 @@ const rbrawdata = {
   },
   bears: {
     teamABV: 'CHI',
-    opponentABV: 0,
+    opponentABV: '',
     teamVTT: 0,
     opponentVTT: 0,
-    totalTeamPRojectedRBCarries: 0,
-    totalTeamProjectedRBTargets: 0,
+
+    teamTotalGreenZoneTouchesLastFiveWeeks: 0,
+
+    teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
     weekFourWeeksAgo: [],
@@ -149,8 +128,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -158,7 +135,8 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -169,19 +147,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -192,16 +162,14 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -212,19 +180,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -233,11 +193,13 @@ const rbrawdata = {
   },
   bengals: {
     teamABV: 'CIN',
-    opponentABV: 0,
+    opponentABV: '',
     teamVTT: 0,
     opponentVTT: 0,
-    totalTeamPRojectedRBCarries: 0,
-    totalTeamProjectedRBTargets: 0,
+
+    teamTotalGreenZoneTouchesLastFiveWeeks: 0,
+
+    teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
     weekFourWeeksAgo: [],
@@ -250,8 +212,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -259,7 +219,8 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -270,19 +231,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -293,8 +246,7 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
+      roleLastXNumOfWeeksUpToFive: [],
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -302,7 +254,8 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -313,19 +266,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -334,11 +279,13 @@ const rbrawdata = {
   },
   bills: {
     teamABV: 'BUF',
-    opponentABV: 0,
+    opponentABV: '',
     teamVTT: 0,
     opponentVTT: 0,
-    totalTeamPRojectedRBCarries: 0,
-    totalTeamProjectedRBTargets: 0,
+
+    teamTotalGreenZoneTouchesLastFiveWeeks: 0,
+
+    teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
     weekFourWeeksAgo: [],
@@ -351,8 +298,8 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
+
+      roleLastXNumOfWeeksUpToFive: [],
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -360,7 +307,8 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -371,19 +319,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -394,8 +334,7 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
+      roleLastXNumOfWeeksUpToFive: [],
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -403,7 +342,8 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -414,19 +354,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -435,11 +367,13 @@ const rbrawdata = {
   },
   broncos: {
     teamABV: 'DEN',
-    opponentABV: 0,
+    opponentABV: '',
     teamVTT: 0,
     opponentVTT: 0,
-    totalTeamPRojectedRBCarries: 0,
-    totalTeamProjectedRBTargets: 0,
+
+    teamTotalGreenZoneTouchesLastFiveWeeks: 0,
+
+    teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
     weekFourWeeksAgo: [],
@@ -452,8 +386,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -461,7 +393,8 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -472,19 +405,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -495,16 +420,14 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -515,19 +438,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -536,11 +451,13 @@ const rbrawdata = {
   },
   browns: {
     teamABV: 'CLE',
-    opponentABV: 0,
+    opponentABV: '',
     teamVTT: 0,
     opponentVTT: 0,
-    totalTeamPRojectedRBCarries: 0,
-    totalTeamProjectedRBTargets: 0,
+
+    teamTotalGreenZoneTouchesLastFiveWeeks: 0,
+
+    teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
     weekFourWeeksAgo: [],
@@ -553,8 +470,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -562,7 +477,8 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -573,19 +489,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -596,16 +504,14 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -616,19 +522,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -637,11 +535,13 @@ const rbrawdata = {
   },
   buccaneers: {
     teamABV: 'TB',
-    opponentABV: 0,
+    opponentABV: '',
     teamVTT: 0,
     opponentVTT: 0,
-    totalTeamPRojectedRBCarries: 0,
-    totalTeamProjectedRBTargets: 0,
+
+    teamTotalGreenZoneTouchesLastFiveWeeks: 0,
+
+    teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
     weekFourWeeksAgo: [],
@@ -654,8 +554,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -663,7 +561,8 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -674,19 +573,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -697,16 +588,14 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -717,19 +606,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -738,11 +619,13 @@ const rbrawdata = {
   },
   cardinals: {
     teamABV: 'ARI',
-    opponentABV: 0,
+    opponentABV: '',
     teamVTT: 0,
     opponentVTT: 0,
-    totalTeamPRojectedRBCarries: 0,
-    totalTeamProjectedRBTargets: 0,
+
+    teamTotalGreenZoneTouchesLastFiveWeeks: 0,
+
+    teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
     weekFourWeeksAgo: [],
@@ -755,8 +638,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -764,7 +645,8 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -775,19 +657,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -798,16 +672,14 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -818,19 +690,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -839,11 +703,13 @@ const rbrawdata = {
   },
   chargers: {
     teamABV: 'LAC',
-    opponentABV: 0,
+    opponentABV: '',
     teamVTT: 0,
     opponentVTT: 0,
-    totalTeamPRojectedRBCarries: 0,
-    totalTeamProjectedRBTargets: 0,
+
+    teamTotalGreenZoneTouchesLastFiveWeeks: 0,
+
+    teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
     weekFourWeeksAgo: [],
@@ -856,8 +722,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -865,7 +729,8 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -876,19 +741,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -899,16 +756,14 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -919,19 +774,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -940,11 +787,13 @@ const rbrawdata = {
   },
   chiefs: {
     teamABV: 'KC',
-    opponentABV: 0,
+    opponentABV: '',
     teamVTT: 0,
     opponentVTT: 0,
-    totalTeamPRojectedRBCarries: 0,
-    totalTeamProjectedRBTargets: 0,
+
+    teamTotalGreenZoneTouchesLastFiveWeeks: 0,
+
+    teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
     weekFourWeeksAgo: [],
@@ -957,8 +806,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -966,7 +813,8 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -977,19 +825,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -1000,16 +840,14 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -1020,19 +858,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -1041,11 +871,13 @@ const rbrawdata = {
   },
   colts: {
     teamABV: 'IND',
-    opponentABV: 0,
+    opponentABV: '',
     teamVTT: 0,
     opponentVTT: 0,
-    totalTeamPRojectedRBCarries: 0,
-    totalTeamProjectedRBTargets: 0,
+
+    teamTotalGreenZoneTouchesLastFiveWeeks: 0,
+
+    teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
     weekFourWeeksAgo: [],
@@ -1058,8 +890,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -1067,7 +897,8 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -1078,19 +909,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -1101,16 +924,14 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -1121,19 +942,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -1142,11 +955,13 @@ const rbrawdata = {
   },
   commanders: {
     teamABV: 'WAS',
-    opponentABV: 0,
+    opponentABV: '',
     teamVTT: 0,
     opponentVTT: 0,
-    totalTeamPRojectedRBCarries: 0,
-    totalTeamProjectedRBTargets: 0,
+
+    teamTotalGreenZoneTouchesLastFiveWeeks: 0,
+
+    teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
     weekFourWeeksAgo: [],
@@ -1159,8 +974,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -1168,7 +981,8 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -1179,19 +993,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -1202,16 +1008,14 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -1222,19 +1026,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -1243,11 +1039,13 @@ const rbrawdata = {
   },
   cowboys: {
     teamABV: 'DAL',
-    opponentABV: 0,
+    opponentABV: '',
     teamVTT: 0,
     opponentVTT: 0,
-    totalTeamPRojectedRBCarries: 0,
-    totalTeamProjectedRBTargets: 0,
+
+    teamTotalGreenZoneTouchesLastFiveWeeks: 0,
+
+    teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
     weekFourWeeksAgo: [],
@@ -1260,8 +1058,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -1269,7 +1065,8 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -1280,19 +1077,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -1303,16 +1092,14 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -1323,19 +1110,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -1344,11 +1123,13 @@ const rbrawdata = {
   },
   dolphins: {
     teamABV: 'MIA',
-    opponentABV: 0,
+    opponentABV: '',
     teamVTT: 0,
     opponentVTT: 0,
-    totalTeamPRojectedRBCarries: 0,
-    totalTeamProjectedRBTargets: 0,
+
+    teamTotalGreenZoneTouchesLastFiveWeeks: 0,
+
+    teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
     weekFourWeeksAgo: [],
@@ -1361,8 +1142,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -1370,7 +1149,8 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -1381,19 +1161,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -1404,16 +1176,14 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -1424,19 +1194,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -1445,11 +1207,13 @@ const rbrawdata = {
   },
   eagles: {
     teamABV: 'PHI',
-    opponentABV: 0,
+    opponentABV: '',
     teamVTT: 0,
     opponentVTT: 0,
-    totalTeamPRojectedRBCarries: 0,
-    totalTeamProjectedRBTargets: 0,
+
+    teamTotalGreenZoneTouchesLastFiveWeeks: 0,
+
+    teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
     weekFourWeeksAgo: [],
@@ -1462,8 +1226,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -1471,7 +1233,8 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -1482,19 +1245,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -1505,16 +1260,14 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -1525,19 +1278,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -1546,11 +1291,13 @@ const rbrawdata = {
   },
   falcons: {
     teamABV: 'ATL',
-    opponentABV: 0,
+    opponentABV: '',
     teamVTT: 0,
     opponentVTT: 0,
-    totalTeamPRojectedRBCarries: 0,
-    totalTeamProjectedRBTargets: 0,
+
+    teamTotalGreenZoneTouchesLastFiveWeeks: 0,
+
+    teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
     weekFourWeeksAgo: [],
@@ -1563,8 +1310,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -1572,7 +1317,8 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -1583,19 +1329,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -1606,16 +1344,14 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -1626,19 +1362,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -1647,11 +1375,13 @@ const rbrawdata = {
   },
   giants: {
     teamABV: 'NYG',
-    opponentABV: 0,
+    opponentABV: '',
     teamVTT: 0,
     opponentVTT: 0,
-    totalTeamPRojectedRBCarries: 0,
-    totalTeamProjectedRBTargets: 0,
+
+    teamTotalGreenZoneTouchesLastFiveWeeks: 0,
+
+    teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
     weekFourWeeksAgo: [],
@@ -1664,8 +1394,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -1673,7 +1401,8 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -1684,19 +1413,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -1707,16 +1428,14 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -1727,19 +1446,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -1749,11 +1460,13 @@ const rbrawdata = {
   jaguars: {
     teamABV: 'JAC',
     altTeamABV: 'JAX',
-    opponentABV: 0,
+    opponentABV: '',
     teamVTT: 0,
     opponentVTT: 0,
-    totalTeamPRojectedRBCarries: 0,
-    totalTeamProjectedRBTargets: 0,
+
+    teamTotalGreenZoneTouchesLastFiveWeeks: 0,
+
+    teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
     weekFourWeeksAgo: [],
@@ -1766,8 +1479,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -1775,7 +1486,8 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -1786,19 +1498,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -1809,16 +1513,14 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -1829,19 +1531,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -1850,11 +1544,13 @@ const rbrawdata = {
   },
   jets: {
     teamABV: 'NYJ',
-    opponentABV: 0,
+    opponentABV: '',
     teamVTT: 0,
     opponentVTT: 0,
-    totalTeamPRojectedRBCarries: 0,
-    totalTeamProjectedRBTargets: 0,
+
+    teamTotalGreenZoneTouchesLastFiveWeeks: 0,
+
+    teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
     weekFourWeeksAgo: [],
@@ -1867,8 +1563,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -1876,7 +1570,8 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -1887,19 +1582,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -1910,16 +1597,14 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -1930,19 +1615,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -1951,11 +1628,13 @@ const rbrawdata = {
   },
   lions: {
     teamABV: 'DET',
-    opponentABV: 0,
+    opponentABV: '',
     teamVTT: 0,
     opponentVTT: 0,
-    totalTeamPRojectedRBCarries: 0,
-    totalTeamProjectedRBTargets: 0,
+
+    teamTotalGreenZoneTouchesLastFiveWeeks: 0,
+
+    teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
     weekFourWeeksAgo: [],
@@ -1968,8 +1647,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -1977,7 +1654,8 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -1988,19 +1666,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -2011,16 +1681,14 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -2031,19 +1699,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -2052,11 +1712,13 @@ const rbrawdata = {
   },
   packers: {
     teamABV: 'GB',
-    opponentABV: 0,
+    opponentABV: '',
     teamVTT: 0,
     opponentVTT: 0,
-    totalTeamPRojectedRBCarries: 0,
-    totalTeamProjectedRBTargets: 0,
+
+    teamTotalGreenZoneTouchesLastFiveWeeks: 0,
+
+    teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
     weekFourWeeksAgo: [],
@@ -2069,8 +1731,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -2078,7 +1738,8 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -2089,19 +1750,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -2112,16 +1765,14 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -2132,19 +1783,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -2153,11 +1796,13 @@ const rbrawdata = {
   },
   panthers: {
     teamABV: 'CAR',
-    opponentABV: 0,
+    opponentABV: '',
     teamVTT: 0,
     opponentVTT: 0,
-    totalTeamPRojectedRBCarries: 0,
-    totalTeamProjectedRBTargets: 0,
+
+    teamTotalGreenZoneTouchesLastFiveWeeks: 0,
+
+    teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
     weekFourWeeksAgo: [],
@@ -2170,8 +1815,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -2179,7 +1822,8 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -2190,19 +1834,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -2213,16 +1849,14 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -2233,19 +1867,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -2254,11 +1880,13 @@ const rbrawdata = {
   },
   patriots: {
     teamABV: 'NE',
-    opponentABV: 0,
+    opponentABV: '',
     teamVTT: 0,
     opponentVTT: 0,
-    totalTeamPRojectedRBCarries: 0,
-    totalTeamProjectedRBTargets: 0,
+
+    teamTotalGreenZoneTouchesLastFiveWeeks: 0,
+
+    teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
     weekFourWeeksAgo: [],
@@ -2271,8 +1899,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -2280,7 +1906,8 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -2291,19 +1918,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -2314,16 +1933,14 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -2334,19 +1951,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -2355,11 +1964,13 @@ const rbrawdata = {
   },
   raiders: {
     teamABV: 'LV',
-    opponentABV: 0,
+    opponentABV: '',
     teamVTT: 0,
     opponentVTT: 0,
-    totalTeamPRojectedRBCarries: 0,
-    totalTeamProjectedRBTargets: 0,
+
+    teamTotalGreenZoneTouchesLastFiveWeeks: 0,
+
+    teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
     weekFourWeeksAgo: [],
@@ -2372,8 +1983,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -2381,7 +1990,8 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -2392,19 +2002,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -2415,16 +2017,14 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -2435,19 +2035,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -2457,11 +2049,13 @@ const rbrawdata = {
   rams: {
     teamABV: 'LAR',
     altTeamABV: 'LA',
-    opponentABV: 0,
+    opponentABV: '',
     teamVTT: 0,
     opponentVTT: 0,
-    totalTeamPRojectedRBCarries: 0,
-    totalTeamProjectedRBTargets: 0,
+
+    teamTotalGreenZoneTouchesLastFiveWeeks: 0,
+
+    teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
     weekFourWeeksAgo: [],
@@ -2474,8 +2068,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -2483,7 +2075,8 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -2494,19 +2087,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -2517,16 +2102,14 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -2537,19 +2120,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -2558,11 +2133,13 @@ const rbrawdata = {
   },
   ravens: {
     teamABV: 'BAL',
-    opponentABV: 0,
+    opponentABV: '',
     teamVTT: 0,
     opponentVTT: 0,
-    totalTeamPRojectedRBCarries: 0,
-    totalTeamProjectedRBTargets: 0,
+
+    teamTotalGreenZoneTouchesLastFiveWeeks: 0,
+
+    teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
     weekFourWeeksAgo: [],
@@ -2575,8 +2152,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -2584,7 +2159,8 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -2595,19 +2171,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -2618,16 +2186,14 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -2638,19 +2204,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -2659,11 +2217,13 @@ const rbrawdata = {
   },
   saints: {
     teamABV: 'NO',
-    opponentABV: 0,
+    opponentABV: '',
     teamVTT: 0,
     opponentVTT: 0,
-    totalTeamPRojectedRBCarries: 0,
-    totalTeamProjectedRBTargets: 0,
+
+    teamTotalGreenZoneTouchesLastFiveWeeks: 0,
+
+    teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
     weekFourWeeksAgo: [],
@@ -2671,16 +2231,11 @@ const rbrawdata = {
     weekTwoWeeksAgo: [],
     weekLastWeek: [],
 
-    teamRBTotalsFiveWeeksAgo: [],
-    teamRBTotalsFourWeeksAgo: [],
-
     RBOne: {
       name: '',
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -2688,7 +2243,8 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -2699,19 +2255,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -2722,16 +2270,14 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -2742,19 +2288,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -2763,11 +2301,13 @@ const rbrawdata = {
   },
   seahawks: {
     teamABV: 'SEA',
-    opponentABV: 0,
+    opponentABV: '',
     teamVTT: 0,
     opponentVTT: 0,
-    totalTeamPRojectedRBCarries: 0,
-    totalTeamProjectedRBTargets: 0,
+
+    teamTotalGreenZoneTouchesLastFiveWeeks: 0,
+
+    teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
     weekFourWeeksAgo: [],
@@ -2780,8 +2320,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -2789,7 +2327,8 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -2800,19 +2339,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -2823,16 +2354,14 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -2843,19 +2372,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -2864,11 +2385,13 @@ const rbrawdata = {
   },
   steelers: {
     teamABV: 'PIT',
-    opponentABV: 0,
+    opponentABV: '',
     teamVTT: 0,
     opponentVTT: 0,
-    totalTeamPRojectedRBCarries: 0,
-    totalTeamProjectedRBTargets: 0,
+
+    teamTotalGreenZoneTouchesLastFiveWeeks: 0,
+
+    teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
     weekFourWeeksAgo: [],
@@ -2881,8 +2404,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -2890,7 +2411,8 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -2901,19 +2423,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -2924,16 +2438,14 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -2944,19 +2456,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -2965,11 +2469,13 @@ const rbrawdata = {
   },
   texans: {
     teamABV: 'HOU',
-    opponentABV: 0,
+    opponentABV: '',
     teamVTT: 0,
     opponentVTT: 0,
-    totalTeamPRojectedRBCarries: 0,
-    totalTeamProjectedRBTargets: 0,
+
+    teamTotalGreenZoneTouchesLastFiveWeeks: 0,
+
+    teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
     weekFourWeeksAgo: [],
@@ -2982,8 +2488,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -2991,7 +2495,8 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -3002,19 +2507,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -3025,16 +2522,14 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -3045,19 +2540,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -3066,11 +2553,13 @@ const rbrawdata = {
   },
   titans: {
     teamABV: 'TEN',
-    opponentABV: 0,
+    opponentABV: '',
     teamVTT: 0,
     opponentVTT: 0,
-    totalTeamPRojectedRBCarries: 0,
-    totalTeamProjectedRBTargets: 0,
+
+    teamTotalGreenZoneTouchesLastFiveWeeks: 0,
+
+    teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
     weekFourWeeksAgo: [],
@@ -3083,8 +2572,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -3092,7 +2579,8 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -3103,19 +2591,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -3126,16 +2606,14 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -3146,19 +2624,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -3168,11 +2638,13 @@ const rbrawdata = {
 
   vikings: {
     teamABV: 'MIN',
-    opponentABV: 0,
+    opponentABV: '',
     teamVTT: 0,
     opponentVTT: 0,
-    totalTeamPRojectedRBCarries: 0,
-    totalTeamProjectedRBTargets: 0,
+
+    teamTotalGreenZoneTouchesLastFiveWeeks: 0,
+
+    teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
     weekFourWeeksAgo: [],
@@ -3185,8 +2657,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -3194,7 +2664,8 @@ const rbrawdata = {
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -3205,19 +2676,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -3228,16 +2691,14 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
       PPRTwentyFifthPercentProjectedPoints: 0,
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
+      glspHalfavg: 0,
+      glspPPRavg: 0,
       glspLessThanFive: 0,
       glspFiveToTen: 0,
       glspTenToFifteen: 0,
@@ -3248,19 +2709,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
+      FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -3279,6 +2732,7 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
   passedInTeam.RBOne.name = gameInfoPassedInTeam.RBOneThisWeekName;
   passedInTeam.RBTwo.name = gameInfoPassedInTeam.RBTwoThisWeekName;
 
+  // console.log(passedInTeam.RBOne.name);
   ////////////////////////////
   ///rb fantasy points scored per week last five weeks to help to determine what rb's roles were each week last five weeks
   /////////////////////
@@ -3427,19 +2881,25 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
       // console.log(rb);
 
       let temprbName = rb.Player.slice(1, -1).replace('.', '');
+      // console.log(temprbName, passedInTeam.RBOne.name);
+      // let alsotemprbName = temprbName.replace("'", '');
       let rbName = temprbName.replace('.', '');
 
       if (rbName.slice(4) === 'Walker') {
         rbName = 'Kenneth Walker';
       }
+      // console.log(rbName, passedInTeam.RBOne.name);
 
       if (!passedInTeam.firstPassedInRBName) {
         passedInTeam.firstPassedInRBName = rbName;
+        // console.log(rbName, passedInTeam.firstPassedInRBName);
         passedInTeam.firstPassedInRBFiveWeeksAgoInFantasyPointsScoredPointsScored =
           +weekFiveWeeksAgo;
+
         if (weekFiveWeeksAgo === '-') {
           passedInTeam.firstPassedInRBFiveWeeksAgoInFantasyPointsScoredPointsScored = 0;
         }
+
         //
         passedInTeam.firstPassedInRBFourWeeksAgoInFantasyPointsScoredPointsScored =
           +weekFourWeeksAgo;
@@ -3584,6 +3044,14 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
         }
       }
 
+      if (passedInTeam.RBOne.name === 'Kenneth Walker') {
+        passedInTeam.RBOne.altName = 'Ken Walker';
+      }
+
+      if (passedInTeam.RBTwo.name === 'Kenneth Walker') {
+        passedInTeam.RBTwo.altName = 'Ken Walker';
+      }
+
       if (passedInTeam.RBOne.name === rb.Player.slice(1, -1)) {
         passedInTeam.RBOne.numberOfGamesPlayedLastFiveWeeks = rb.G;
 
@@ -3623,6 +3091,7 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
           }
         }
       }
+
       if (passedInTeam.RBTwo.name === rb.Player.slice(1, -1)) {
         passedInTeam.RBTwo.numberOfGamesPlayedLastFiveWeeks = rb.G;
 
@@ -3807,15 +3276,46 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
       }
 
       let temprbName = rb['"full_name"'].slice(1, -1).replace('.', '');
+      // let alsotemprbName = temprbName.replace("'", '');
       let rbName = temprbName.replace('.', '');
+      // console.log(rbName, passedInTeam.firstPassedInRBName);
+      if (passedInTeam.firstPassedInRBName.includes("'")) {
+        passedInTeam.firstPassedInRBAltName =
+          passedInTeam.firstPassedInRBName.replace("'", '');
+        // console.log(altrbName);
+      }
+      if (passedInTeam.secondPassedInRBName.includes("'")) {
+        passedInTeam.secondPassedInRBAltName =
+          passedInTeam.secondPassedInRBName.replace("'", '');
+        // console.log(altrbName);
+      }
+      if (
+        passedInTeam.thirdPassedInRBName &&
+        passedInTeam.thirdPassedInRBName.includes("'")
+      ) {
+        passedInTeam.thirdPassedInRBAltName =
+          passedInTeam.thirdPassedInRBName.replace("'", '');
+        // console.log(altrbName);
+      }
+      if (
+        passedInTeam.fourthPassedInRBName &&
+        passedInTeam.fourthPassedInRBName.includes("'")
+      ) {
+        passedInTeam.fourthPassedInRBAltName =
+          passedInTeam.fourthPassedInRBName.replace("'", '');
+        // console.log(altrbName);
+      }
 
-      if (rbName === passedInTeam.firstPassedInRBName) {
+      if (
+        rbName === passedInTeam.firstPassedInRBName ||
+        passedInTeam.firstPassedInRBAltName === rbName
+      ) {
         tempweekFiveWeeksAgo = (+weekFiveWeeksAgo * 100).toFixed(2);
         tempweekFourWeeksAgo = (+weekFourWeeksAgo * 100).toFixed(2);
         tempweekThreeWeeksAgo = (+weekThreeWeeksAgo * 100).toFixed(2);
         tempweekTwoWeeksAgo = (+weekTwoWeeksAgo * 100).toFixed(2);
         tempweekLastWeek = (+weekLastWeek * 100).toFixed(2);
-        // console.log(tempweekFiveWeeksAgo);
+        // console.log(passedInTeam.firstPassedInRBName, tempweekFiveWeeksAgo);
         passedInTeam.firstPassedInRBFiveWeeksagoFantasyPointsScoredPlusSnapPercentage =
           (
             +passedInTeam.firstPassedInRBFiveWeeksAgoInFantasyPointsScoredPointsScored +
@@ -3847,7 +3347,10 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
           ).toFixed(2);
       }
 
-      if (rbName === passedInTeam.secondPassedInRBName) {
+      if (
+        rbName === passedInTeam.secondPassedInRBName ||
+        passedInTeam.secondPassedInRBAltName === rbName
+      ) {
         // console.log(passedInTeam.secondPassedInRBFiveWeeksAgoName);
         tempweekFiveWeeksAgo = (+weekFiveWeeksAgo * 100).toFixed(2);
         tempweekFourWeeksAgo = (+weekFourWeeksAgo * 100).toFixed(2);
@@ -3886,7 +3389,10 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
           ).toFixed(2);
       }
 
-      if (rbName === passedInTeam.thirdPassedInRBName) {
+      if (
+        rbName === passedInTeam.thirdPassedInRBName ||
+        passedInTeam.thirdPassedInRBAltName === rbName
+      ) {
         // console.log(rb['"full_name"']);
         tempweekFiveWeeksAgo = (+weekFiveWeeksAgo * 100).toFixed(2);
         tempweekFourWeeksAgo = (+weekFourWeeksAgo * 100).toFixed(2);
@@ -3925,7 +3431,10 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
           ).toFixed(2);
       }
 
-      if (rbName === passedInTeam.fourthPassedInRBName) {
+      if (
+        rbName === passedInTeam.fourthPassedInRBName ||
+        passedInTeam.fourthPassedInRBAltName === rbName
+      ) {
         // console.log(rb['"full_name"']);
         tempweekFiveWeeksAgo = (+weekFiveWeeksAgo * 100).toFixed(2);
         tempweekFourWeeksAgo = (+weekFourWeeksAgo * 100).toFixed(2);
@@ -4121,9 +3630,42 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
 
       // console.log(weekFiveWeeksAgo);
       let temprbName = rb['"full_name"'].slice(1, -1).replace('.', '');
+      // let alsotemprbName = temprbName.replace("'", '');
       let rbName = temprbName.replace('.', '');
 
-      if (rbName === passedInTeam.firstPassedInRBName) {
+      if (passedInTeam.firstPassedInRBName.includes("'")) {
+        passedInTeam.firstPassedInRBAltName =
+          passedInTeam.firstPassedInRBName.replace("'", '');
+        // console.log(altrbName);
+      }
+      if (passedInTeam.secondPassedInRBName.includes("'")) {
+        passedInTeam.secondPassedInRBAltName =
+          passedInTeam.secondPassedInRBName.replace("'", '');
+        // console.log(altrbName);
+      }
+      if (
+        passedInTeam.thirdPassedInRBName &&
+        passedInTeam.thirdPassedInRBName.includes("'")
+      ) {
+        passedInTeam.thirdPassedInRBAltName =
+          passedInTeam.thirdPassedInRBName.replace("'", '');
+        // console.log(altrbName);
+      }
+      if (
+        passedInTeam.fourthPassedInRBName &&
+        passedInTeam.fourthPassedInRBName.includes("'")
+      ) {
+        passedInTeam.fourthPassedInRBAltName =
+          passedInTeam.fourthPassedInRBName.replace("'", '');
+        // console.log(altrbName);
+      }
+      // console.log(rbName, passedInTeam.firstPassedInRBName);
+      // console.log(rbName, passedInTeam.firstPassedInRBAltName);
+
+      if (
+        rbName === passedInTeam.firstPassedInRBName ||
+        rbName === passedInTeam.firstPassedInRBAltName
+      ) {
         tempweekFiveWeeksAgo = (+weekFiveWeeksAgo).toFixed(2);
         tempweekFourWeeksAgo = (+weekFourWeeksAgo).toFixed(2);
         tempweekThreeWeeksAgo = (+weekThreeWeeksAgo).toFixed(2);
@@ -4138,6 +3680,10 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
         passedInTeam.weekFiveWeeksAgo.push(
           +passedInTeam.firstPassedInRBFiveWeeksagoTotal
         );
+        // console.log(
+        //   passedInTeam.firstPassedInRBName,
+        //   passedInTeam.firstPassedInRBFiveWeeksagoTotal
+        // );
         //
         passedInTeam.firstPassedInRBFourWeeksagoTotal = (
           +passedInTeam.firstPassedInRBFourWeeksagoFantasyPointsScoredPlusSnapPercentage +
@@ -4176,7 +3722,10 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
         );
       }
 
-      if (rbName === passedInTeam.secondPassedInRBName) {
+      if (
+        rbName === passedInTeam.secondPassedInRBName ||
+        rbName === passedInTeam.secondPassedInRBAltName
+      ) {
         tempweekFiveWeeksAgo = (+weekFiveWeeksAgo).toFixed(2);
         tempweekFourWeeksAgo = (+weekFourWeeksAgo).toFixed(2);
         tempweekThreeWeeksAgo = (+weekThreeWeeksAgo).toFixed(2);
@@ -4229,7 +3778,10 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
         );
       }
 
-      if (rbName === passedInTeam.thirdPassedInRBName) {
+      if (
+        rbName === passedInTeam.thirdPassedInRBName ||
+        rbName === passedInTeam.thirdPassedInRBAltName
+      ) {
         tempweekFiveWeeksAgo = (+weekFiveWeeksAgo).toFixed(2);
         tempweekFourWeeksAgo = (+weekFourWeeksAgo).toFixed(2);
         tempweekThreeWeeksAgo = (+weekThreeWeeksAgo).toFixed(2);
@@ -4282,7 +3834,10 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
         );
       }
 
-      if (rbName === passedInTeam.fourthPassedInRBName) {
+      if (
+        rbName === passedInTeam.fourthPassedInRBName ||
+        rbName === passedInTeam.fourthPassedInRBAltName
+      ) {
         tempweekFiveWeeksAgo = (+weekFiveWeeksAgo).toFixed(2);
         tempweekFourWeeksAgo = (+weekFourWeeksAgo).toFixed(2);
         tempweekThreeWeeksAgo = (+weekThreeWeeksAgo).toFixed(2);
@@ -4375,7 +3930,7 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
       passedInTeam.teamRBTotalsTwoWeeksAgo = teamRBTotalsTwoWeeksAgo;
       passedInTeam.teamRBTotalsLastWeek = teamRBTotalsLastWeek;
 
-      // console.log(passedInTeam.firstPassedInRBThreeWeeksagoTotal);
+      // console.log(passedInTeam.teamABV, passedInTeam.teamRBTotalsFiveWeeksAgo);
     }
   });
 
@@ -4391,22 +3946,53 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
       passedInTeam.altTeamABV === rb['"posteam"'].slice(1, -1)
     ) {
       let temprbName = rb['"full_name"'].slice(1, -1).replace('.', '');
+      // let alsotemprbName = temprbName.replace("'", '');
       let rbName = temprbName.replace('.', '');
 
-      if (rbName === passedInTeam.firstPassedInRBName) {
+      if (passedInTeam.RBOne.name) {
+        if (passedInTeam.RBOne.name.includes("'")) {
+          passedInTeam.RBOne.altname = passedInTeam.RBOne.name.replace("'", '');
+        }
+      }
+
+      if (passedInTeam.RBTwo.name) {
+        if (passedInTeam.RBTwo.name.includes("'")) {
+          passedInTeam.RBTwo.altname = passedInTeam.RBTwo.name.replace("'", '');
+        }
+      }
+
+      // console.log(passedInTeam.firstPassedInRBAltName);
+      if (
+        rbName === passedInTeam.firstPassedInRBName ||
+        rbName === passedInTeam.firstPassedInRBAltName
+      ) {
         //first passed in RB
         //
         //five weeks ago
+
         if (+passedInTeam.teamRBTotalsFiveWeeksAgo[0] > 0) {
+          // console.log(
+          //   rbName,
+          //   passedInTeam.firstPassedInRBName,
+          //   +passedInTeam.firstPassedInRBFiveWeeksagoTotal,
+          //   +passedInTeam.teamRBTotalsFiveWeeksAgo[0]
+          // );
           if (
             +passedInTeam.firstPassedInRBFiveWeeksagoTotal ===
             +passedInTeam.teamRBTotalsFiveWeeksAgo[0]
           ) {
             passedInTeam.teamRBOneFiveWeeksAgo = rbName;
-            if (passedInTeam.RBOne.name === rbName) {
+            // console.log(rbName, passedInTeam.RBOne.name);
+            if (
+              passedInTeam.RBOne.name === rbName ||
+              rbName === passedInTeam.RBOne.altname
+            ) {
               passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(1);
             }
-            if (passedInTeam.RBTwo.name === rbName) {
+            if (
+              passedInTeam.RBTwo.name === rbName ||
+              rbName === passedInTeam.RBTwo.altname
+            ) {
               passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(1);
             }
           }
@@ -4415,10 +4001,16 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
             +passedInTeam.teamRBTotalsFiveWeeksAgo[1]
           ) {
             passedInTeam.teamRBTwoFiveWeeksAgo = rbName;
-            if (passedInTeam.RBOne.name === rbName) {
+            if (
+              passedInTeam.RBOne.name === rbName ||
+              rbName === passedInTeam.RBOne.altname
+            ) {
               passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(2);
             }
-            if (passedInTeam.RBTwo.name === rbName) {
+            if (
+              passedInTeam.RBTwo.name === rbName ||
+              rbName === passedInTeam.RBTwo.altname
+            ) {
               passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(2);
             }
           }
@@ -4429,15 +4021,24 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
             +passedInTeam.firstPassedInRBFiveWeeksagoTotal !==
               +passedInTeam.teamRBTotalsFiveWeeksAgo[1]
           ) {
-            if (passedInTeam.RBOne.name === rbName) {
+            if (
+              passedInTeam.RBOne.name === rbName ||
+              rbName === passedInTeam.RBOne.altname
+            ) {
               passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(3);
             }
-            if (passedInTeam.RBTwo.name === rbName) {
+            if (
+              passedInTeam.RBTwo.name === rbName ||
+              rbName === passedInTeam.RBTwo.altname
+            ) {
               passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(3);
             }
           }
         }
-
+        // console.log(
+        //   passedInTeam.RBOne.name,
+        //   passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive
+        // );
         //four weeks ago
         if (+passedInTeam.teamRBTotalsFourWeeksAgo[0] > 0) {
           if (
@@ -4445,10 +4046,16 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
             +passedInTeam.teamRBTotalsFourWeeksAgo[0]
           ) {
             passedInTeam.teamRBOneFourWeeksAgo = rbName;
-            if (passedInTeam.RBOne.name === rbName) {
+            if (
+              passedInTeam.RBOne.name === rbName ||
+              rbName === passedInTeam.RBOne.altname
+            ) {
               passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(1);
             }
-            if (passedInTeam.RBTwo.name === rbName) {
+            if (
+              passedInTeam.RBTwo.name === rbName ||
+              rbName === passedInTeam.RBTwo.altname
+            ) {
               passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(1);
             }
           }
@@ -4457,10 +4064,16 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
             +passedInTeam.teamRBTotalsFourWeeksAgo[1]
           ) {
             passedInTeam.teamRBTwoFourWeeksAgo = rbName;
-            if (passedInTeam.RBOne.name === rbName) {
+            if (
+              passedInTeam.RBOne.name === rbName ||
+              rbName === passedInTeam.RBOne.altname
+            ) {
               passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(2);
             }
-            if (passedInTeam.RBTwo.name === rbName) {
+            if (
+              passedInTeam.RBTwo.name === rbName ||
+              rbName === passedInTeam.RBTwo.altname
+            ) {
               passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(2);
             }
           }
@@ -4471,10 +4084,16 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
             +passedInTeam.firstPassedInRBFourWeeksagoTotal !==
               +passedInTeam.teamRBTotalsFourWeeksAgo[1]
           ) {
-            if (passedInTeam.RBOne.name === rbName) {
+            if (
+              passedInTeam.RBOne.name === rbName ||
+              rbName === passedInTeam.RBOne.altname
+            ) {
               passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(3);
             }
-            if (passedInTeam.RBTwo.name === rbName) {
+            if (
+              passedInTeam.RBTwo.name === rbName ||
+              rbName === passedInTeam.RBTwo.altname
+            ) {
               passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(3);
             }
           }
@@ -4488,10 +4107,16 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
             +passedInTeam.teamRBTotalsThreeWeeksAgo[0]
           ) {
             passedInTeam.teamRBOneThreeWeeksAgo = rbName;
-            if (passedInTeam.RBOne.name === rbName) {
+            if (
+              passedInTeam.RBOne.name === rbName ||
+              rbName === passedInTeam.RBOne.altname
+            ) {
               passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(1);
             }
-            if (passedInTeam.RBTwo.name === rbName) {
+            if (
+              passedInTeam.RBTwo.name === rbName ||
+              rbName === passedInTeam.RBTwo.altname
+            ) {
               passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(1);
             }
           }
@@ -4500,10 +4125,16 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
             +passedInTeam.teamRBTotalsThreeWeeksAgo[1]
           ) {
             passedInTeam.teamRBTwoThreeWeeksAgo = rbName;
-            if (passedInTeam.RBOne.name === rbName) {
+            if (
+              passedInTeam.RBOne.name === rbName ||
+              rbName === passedInTeam.RBOne.altname
+            ) {
               passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(2);
             }
-            if (passedInTeam.RBTwo.name === rbName) {
+            if (
+              passedInTeam.RBTwo.name === rbName ||
+              rbName === passedInTeam.RBTwo.altname
+            ) {
               passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(2);
             }
           }
@@ -4514,10 +4145,16 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
             +passedInTeam.firstPassedInRBThreeWeeksagoTotal !==
               +passedInTeam.teamRBTotalsThreeWeeksAgo[1]
           ) {
-            if (passedInTeam.RBOne.name === rbName) {
+            if (
+              passedInTeam.RBOne.name === rbName ||
+              rbName === passedInTeam.RBOne.altname
+            ) {
               passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(3);
             }
-            if (passedInTeam.RBTwo.name === rbName) {
+            if (
+              passedInTeam.RBTwo.name === rbName ||
+              rbName === passedInTeam.RBTwo.altname
+            ) {
               passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(3);
             }
           }
@@ -4530,10 +4167,16 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
             +passedInTeam.teamRBTotalsTwoWeeksAgo[0]
           ) {
             passedInTeam.teamRBOneTwoWeeksAgo = rbName;
-            if (passedInTeam.RBOne.name === rbName) {
+            if (
+              passedInTeam.RBOne.name === rbName ||
+              rbName === passedInTeam.RBOne.altname
+            ) {
               passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(1);
             }
-            if (passedInTeam.RBTwo.name === rbName) {
+            if (
+              passedInTeam.RBTwo.name === rbName ||
+              rbName === passedInTeam.RBTwo.altname
+            ) {
               passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(1);
             }
           }
@@ -4542,10 +4185,16 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
             +passedInTeam.teamRBTotalsTwoWeeksAgo[1]
           ) {
             passedInTeam.teamRBTwoTwoWeeksAgo = rbName;
-            if (passedInTeam.RBOne.name === rbName) {
+            if (
+              passedInTeam.RBOne.name === rbName ||
+              rbName === passedInTeam.RBOne.altname
+            ) {
               passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(2);
             }
-            if (passedInTeam.RBTwo.name === rbName) {
+            if (
+              passedInTeam.RBTwo.name === rbName ||
+              rbName === passedInTeam.RBTwo.altname
+            ) {
               passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(2);
             }
           }
@@ -4556,10 +4205,16 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
             +passedInTeam.firstPassedInRBTwoWeeksagoTotal !==
               +passedInTeam.teamRBTotalsTwoWeeksAgo[1]
           ) {
-            if (passedInTeam.RBOne.name === rbName) {
+            if (
+              passedInTeam.RBOne.name === rbName ||
+              rbName === passedInTeam.RBOne.altname
+            ) {
               passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(3);
             }
-            if (passedInTeam.RBTwo.name === rbName) {
+            if (
+              passedInTeam.RBTwo.name === rbName ||
+              rbName === passedInTeam.RBTwo.altname
+            ) {
               passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(3);
             }
           }
@@ -4573,10 +4228,16 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
             +passedInTeam.teamRBTotalsLastWeek[0]
           ) {
             passedInTeam.teamRBOneLastWeek = rbName;
-            if (passedInTeam.RBOne.name === rbName) {
+            if (
+              passedInTeam.RBOne.name === rbName ||
+              rbName === passedInTeam.RBOne.altname
+            ) {
               passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(1);
             }
-            if (passedInTeam.RBTwo.name === rbName) {
+            if (
+              passedInTeam.RBTwo.name === rbName ||
+              rbName === passedInTeam.RBTwo.altname
+            ) {
               passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(1);
             }
           }
@@ -4585,10 +4246,16 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
             +passedInTeam.teamRBTotalsLastWeek[1]
           ) {
             passedInTeam.teamRBTwoLastWeek = rbName;
-            if (passedInTeam.RBOne.name === rbName) {
+            if (
+              passedInTeam.RBOne.name === rbName ||
+              rbName === passedInTeam.RBOne.altname
+            ) {
               passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(2);
             }
-            if (passedInTeam.RBTwo.name === rbName) {
+            if (
+              passedInTeam.RBTwo.name === rbName ||
+              rbName === passedInTeam.RBTwo.altname
+            ) {
               passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(2);
             }
           }
@@ -4599,10 +4266,16 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
             +passedInTeam.firstPassedInRBLastWeekTotal !==
               +passedInTeam.teamRBTotalsLastWeek[1]
           ) {
-            if (passedInTeam.RBOne.name === rbName) {
+            if (
+              passedInTeam.RBOne.name === rbName ||
+              rbName === passedInTeam.RBOne.altname
+            ) {
               passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(3);
             }
-            if (passedInTeam.RBTwo.name === rbName) {
+            if (
+              passedInTeam.RBTwo.name === rbName ||
+              rbName === passedInTeam.RBTwo.altname
+            ) {
               passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(3);
             }
           }
@@ -4611,7 +4284,10 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
 
       //second passed in RB
 
-      if (rbName === passedInTeam.secondPassedInRBName) {
+      if (
+        rbName === passedInTeam.secondPassedInRBName ||
+        rbName === passedInTeam.secondPassedInRBAltName
+      ) {
         // console.log(
         //   `${passedInTeam.teamABV} ${+passedInTeam.teamRBTotalsFourWeeksAgo[0]}`
         // );
@@ -4621,10 +4297,16 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
             +passedInTeam.teamRBTotalsFiveWeeksAgo[0]
           ) {
             passedInTeam.teamRBOneFiveWeeksAgo = rbName;
-            if (passedInTeam.RBOne.name === rbName) {
+            if (
+              passedInTeam.RBOne.name === rbName ||
+              rbName === passedInTeam.RBOne.altname
+            ) {
               passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(1);
             }
-            if (passedInTeam.RBTwo.name === rbName) {
+            if (
+              passedInTeam.RBTwo.name === rbName ||
+              rbName === passedInTeam.RBTwo.altname
+            ) {
               passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(1);
             }
           }
@@ -4633,10 +4315,16 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
             +passedInTeam.teamRBTotalsFiveWeeksAgo[1]
           ) {
             passedInTeam.teamRBTwoFiveWeeksAgo = rbName;
-            if (passedInTeam.RBOne.name === rbName) {
+            if (
+              passedInTeam.RBOne.name === rbName ||
+              rbName === passedInTeam.RBOne.altname
+            ) {
               passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(2);
             }
-            if (passedInTeam.RBTwo.name === rbName) {
+            if (
+              passedInTeam.RBTwo.name === rbName ||
+              rbName === passedInTeam.RBTwo.altname
+            ) {
               passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(2);
             }
           }
@@ -4646,10 +4334,16 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
             +passedInTeam.secondPassedInRBFiveWeeksagoTotal !==
               +passedInTeam.teamRBTotalsFiveWeeksAgo[1]
           ) {
-            if (passedInTeam.RBOne.name === rbName) {
+            if (
+              passedInTeam.RBOne.name === rbName ||
+              rbName === passedInTeam.RBOne.altname
+            ) {
               passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(3);
             }
-            if (passedInTeam.RBTwo.name === rbName) {
+            if (
+              passedInTeam.RBTwo.name === rbName ||
+              rbName === passedInTeam.RBTwo.altname
+            ) {
               passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(3);
             }
           }
@@ -4658,16 +4352,25 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
 
       //four weeks ago
       if (+passedInTeam.teamRBTotalsFourWeeksAgo[0] > 0) {
-        if (rbName === passedInTeam.secondPassedInRBName) {
+        if (
+          rbName === passedInTeam.secondPassedInRBName ||
+          rbName === passedInTeam.secondPassedInRBAltName
+        ) {
           if (
             +passedInTeam.secondPassedInRBFourWeeksagoTotal ===
             +passedInTeam.teamRBTotalsFourWeeksAgo[0]
           ) {
             passedInTeam.teamRBOneFourWeeksAgo = rbName;
-            if (passedInTeam.RBOne.name === rbName) {
+            if (
+              passedInTeam.RBOne.name === rbName ||
+              rbName === passedInTeam.RBOne.altname
+            ) {
               passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(1);
             }
-            if (passedInTeam.RBTwo.name === rbName) {
+            if (
+              passedInTeam.RBTwo.name === rbName ||
+              rbName === passedInTeam.RBTwo.altname
+            ) {
               passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(1);
             }
           }
@@ -4676,10 +4379,16 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
             +passedInTeam.teamRBTotalsFourWeeksAgo[1]
           ) {
             passedInTeam.teamRBTwoFourWeeksAgo = rbName;
-            if (passedInTeam.RBOne.name === rbName) {
+            if (
+              passedInTeam.RBOne.name === rbName ||
+              rbName === passedInTeam.RBOne.altname
+            ) {
               passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(2);
             }
-            if (passedInTeam.RBTwo.name === rbName) {
+            if (
+              passedInTeam.RBTwo.name === rbName ||
+              rbName === passedInTeam.RBTwo.altname
+            ) {
               passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(2);
             }
           }
@@ -4689,10 +4398,16 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
             +passedInTeam.secondPassedInRBFourWeeksagoTotal !==
               +passedInTeam.teamRBTotalsFourWeeksAgo[1]
           ) {
-            if (passedInTeam.RBOne.name === rbName) {
+            if (
+              passedInTeam.RBOne.name === rbName ||
+              rbName === passedInTeam.RBOne.altname
+            ) {
               passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(3);
             }
-            if (passedInTeam.RBTwo.name === rbName) {
+            if (
+              passedInTeam.RBTwo.name === rbName ||
+              rbName === passedInTeam.RBTwo.altname
+            ) {
               passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(3);
             }
           }
@@ -4701,7 +4416,10 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
         // three weeks ago
 
         if (+passedInTeam.teamRBTotalsThreeWeeksAgo[0] > 0) {
-          if (rbName === passedInTeam.secondPassedInRBName) {
+          if (
+            rbName === passedInTeam.secondPassedInRBName ||
+            rbName === passedInTeam.secondPassedInRBAltName
+          ) {
             if (
               +passedInTeam.secondPassedInRBThreeWeeksagoTotal ===
               +passedInTeam.teamRBTotalsThreeWeeksAgo[0]
@@ -4710,10 +4428,16 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
               // console.log(
               //   `${passedInTeam.teamABV} ${passedInTeam.teamRBOneThreeWeeksAgo}`
               // );
-              if (passedInTeam.RBOne.name === rbName) {
+              if (
+                passedInTeam.RBOne.name === rbName ||
+                rbName === passedInTeam.RBOne.altname
+              ) {
                 passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(1);
               }
-              if (passedInTeam.RBTwo.name === rbName) {
+              if (
+                passedInTeam.RBTwo.name === rbName ||
+                rbName === passedInTeam.RBTwo.altname
+              ) {
                 passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(1);
               }
             }
@@ -4722,10 +4446,16 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
               +passedInTeam.teamRBTotalsThreeWeeksAgo[1]
             ) {
               passedInTeam.teamRBTwoThreeWeeksAgo = rbName;
-              if (passedInTeam.RBOne.name === rbName) {
+              if (
+                passedInTeam.RBOne.name === rbName ||
+                rbName === passedInTeam.RBOne.altname
+              ) {
                 passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(2);
               }
-              if (passedInTeam.RBTwo.name === rbName) {
+              if (
+                passedInTeam.RBTwo.name === rbName ||
+                rbName === passedInTeam.RBTwo.altname
+              ) {
                 passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(2);
               }
             }
@@ -4735,10 +4465,16 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
               +passedInTeam.secondPassedInRBThreeWeeksagoTotal !==
                 +passedInTeam.teamRBTotalsThreeWeeksAgo[1]
             ) {
-              if (passedInTeam.RBOne.name === rbName) {
+              if (
+                passedInTeam.RBOne.name === rbName ||
+                rbName === passedInTeam.RBOne.altname
+              ) {
                 passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(3);
               }
-              if (passedInTeam.RBTwo.name === rbName) {
+              if (
+                passedInTeam.RBTwo.name === rbName ||
+                rbName === passedInTeam.RBTwo.altname
+              ) {
                 passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(3);
               }
             }
@@ -4749,16 +4485,25 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
         // //two weeks ago
 
         if (+passedInTeam.teamRBTotalsTwoWeeksAgo[0] > 0) {
-          if (rbName === passedInTeam.secondPassedInRBName) {
+          if (
+            rbName === passedInTeam.secondPassedInRBName ||
+            rbName === passedInTeam.secondPassedInRBAltName
+          ) {
             if (
               +passedInTeam.secondPassedInRBTwoWeeksagoTotal ===
               +passedInTeam.teamRBTotalsTwoWeeksAgo[0]
             ) {
               passedInTeam.teamRBOneTwoWeeksAgo = rbName;
-              if (passedInTeam.RBOne.name === rbName) {
+              if (
+                passedInTeam.RBOne.name === rbName ||
+                rbName === passedInTeam.RBOne.altname
+              ) {
                 passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(1);
               }
-              if (passedInTeam.RBTwo.name === rbName) {
+              if (
+                passedInTeam.RBTwo.name === rbName ||
+                rbName === passedInTeam.RBTwo.altname
+              ) {
                 passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(1);
               }
             }
@@ -4767,10 +4512,16 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
               +passedInTeam.teamRBTotalsTwoWeeksAgo[1]
             ) {
               passedInTeam.teamRBTwoTwoWeeksAgo = rbName;
-              if (passedInTeam.RBOne.name === rbName) {
+              if (
+                passedInTeam.RBOne.name === rbName ||
+                rbName === passedInTeam.RBOne.altname
+              ) {
                 passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(2);
               }
-              if (passedInTeam.RBTwo.name === rbName) {
+              if (
+                passedInTeam.RBTwo.name === rbName ||
+                rbName === passedInTeam.RBTwo.altname
+              ) {
                 passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(2);
               }
             }
@@ -4780,10 +4531,16 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
               +passedInTeam.secondPassedInRBTwoWeeksagoTotal !==
                 +passedInTeam.teamRBTotalsTwoWeeksAgo[1]
             ) {
-              if (passedInTeam.RBOne.name === rbName) {
+              if (
+                passedInTeam.RBOne.name === rbName ||
+                rbName === passedInTeam.RBOne.altname
+              ) {
                 passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(3);
               }
-              if (passedInTeam.RBTwo.name === rbName) {
+              if (
+                passedInTeam.RBTwo.name === rbName ||
+                rbName === passedInTeam.RBTwo.altname
+              ) {
                 passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(3);
               }
             }
@@ -4793,16 +4550,25 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
         // //last week
 
         if (+passedInTeam.teamRBTotalsLastWeek[0] > 0) {
-          if (rbName === passedInTeam.secondPassedInRBName) {
+          if (
+            rbName === passedInTeam.secondPassedInRBName ||
+            rbName === passedInTeam.secondPassedInRBAltName
+          ) {
             if (
               +passedInTeam.secondPassedInRBLastWeekTotal ===
               +passedInTeam.teamRBTotalsLastWeek[0]
             ) {
               passedInTeam.teamRBOneLastWeek = rbName;
-              if (passedInTeam.RBOne.name === rbName) {
+              if (
+                passedInTeam.RBOne.name === rbName ||
+                rbName === passedInTeam.RBOne.altname
+              ) {
                 passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(1);
               }
-              if (passedInTeam.RBTwo.name === rbName) {
+              if (
+                passedInTeam.RBTwo.name === rbName ||
+                rbName === passedInTeam.RBTwo.altname
+              ) {
                 passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(1);
               }
             }
@@ -4811,10 +4577,16 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
               +passedInTeam.teamRBTotalsLastWeek[1]
             ) {
               passedInTeam.teamRBTwoLastWeek = rbName;
-              if (passedInTeam.RBOne.name === rbName) {
+              if (
+                passedInTeam.RBOne.name === rbName ||
+                rbName === passedInTeam.RBOne.altname
+              ) {
                 passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(2);
               }
-              if (passedInTeam.RBTwo.name === rbName) {
+              if (
+                passedInTeam.RBTwo.name === rbName ||
+                rbName === passedInTeam.RBTwo.altname
+              ) {
                 passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(2);
               }
             }
@@ -4824,10 +4596,16 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
               +passedInTeam.secondPassedInRBLastWeekTotal !==
                 +passedInTeam.teamRBTotalsLastWeek[1]
             ) {
-              if (passedInTeam.RBOne.name === rbName) {
+              if (
+                passedInTeam.RBOne.name === rbName ||
+                rbName === passedInTeam.RBOne.altname
+              ) {
                 passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(3);
               }
-              if (passedInTeam.RBTwo.name === rbName) {
+              if (
+                passedInTeam.RBTwo.name === rbName ||
+                rbName === passedInTeam.RBTwo.altname
+              ) {
                 passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(3);
               }
             }
@@ -4840,16 +4618,25 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
       //five weeks ago
 
       if (+passedInTeam.teamRBTotalsFiveWeeksAgo[0] > 0) {
-        if (rbName === passedInTeam.thirdPassedInRBName) {
+        if (
+          rbName === passedInTeam.thirdPassedInRBName ||
+          rbName === passedInTeam.thirdPassedInRBAltName
+        ) {
           if (
             +passedInTeam.thirdPassedInRBFiveWeeksagoTotal ===
             +passedInTeam.teamRBTotalsFiveWeeksAgo[0]
           ) {
             passedInTeam.teamRBOneFiveWeeksAgo = rbName;
-            if (passedInTeam.RBOne.name === rbName) {
+            if (
+              passedInTeam.RBOne.name === rbName ||
+              rbName === passedInTeam.RBOne.altname
+            ) {
               passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(1);
             }
-            if (passedInTeam.RBTwo.name === rbName) {
+            if (
+              passedInTeam.RBTwo.name === rbName ||
+              rbName === passedInTeam.RBTwo.altname
+            ) {
               passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(1);
             }
           }
@@ -4858,10 +4645,16 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
             +passedInTeam.teamRBTotalsFiveWeeksAgo[1]
           ) {
             passedInTeam.teamRBTwoFiveWeeksAgo = rbName;
-            if (passedInTeam.RBOne.name === rbName) {
+            if (
+              passedInTeam.RBOne.name === rbName ||
+              rbName === passedInTeam.RBOne.altname
+            ) {
               passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(2);
             }
-            if (passedInTeam.RBTwo.name === rbName) {
+            if (
+              passedInTeam.RBTwo.name === rbName ||
+              rbName === passedInTeam.RBTwo.altname
+            ) {
               passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(2);
             }
           }
@@ -4871,10 +4664,16 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
             +passedInTeam.thirdPassedInRBFiveWeeksagoTotal !==
               +passedInTeam.teamRBTotalsFiveWeeksAgo[1]
           ) {
-            if (passedInTeam.RBOne.name === rbName) {
+            if (
+              passedInTeam.RBOne.name === rbName ||
+              rbName === passedInTeam.RBOne.altname
+            ) {
               passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(3);
             }
-            if (passedInTeam.RBTwo.name === rbName) {
+            if (
+              passedInTeam.RBTwo.name === rbName ||
+              rbName === passedInTeam.RBTwo.altname
+            ) {
               passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(3);
             }
           }
@@ -4884,16 +4683,25 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
       //four weeks ago
 
       if (+passedInTeam.teamRBTotalsFourWeeksAgo[0] > 0) {
-        if (rbName === passedInTeam.thirdPassedInRBName) {
+        if (
+          rbName === passedInTeam.thirdPassedInRBName ||
+          rbName === passedInTeam.thirdPassedInRBAltName
+        ) {
           if (
             +passedInTeam.thirdPassedInRBFourWeeksagoTotal ===
             +passedInTeam.teamRBTotalsFourWeeksAgo[0]
           ) {
             passedInTeam.teamRBOneFourWeeksAgo = rbName;
-            if (passedInTeam.RBOne.name === rbName) {
+            if (
+              passedInTeam.RBOne.name === rbName ||
+              rbName === passedInTeam.RBOne.altname
+            ) {
               passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(1);
             }
-            if (passedInTeam.RBTwo.name === rbName) {
+            if (
+              passedInTeam.RBTwo.name === rbName ||
+              rbName === passedInTeam.RBTwo.altname
+            ) {
               passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(1);
             }
           }
@@ -4902,10 +4710,16 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
             +passedInTeam.teamRBTotalsFourWeeksAgo[1]
           ) {
             passedInTeam.teamRBTwoFourWeeksAgo = rbName;
-            if (passedInTeam.RBOne.name === rbName) {
+            if (
+              passedInTeam.RBOne.name === rbName ||
+              rbName === passedInTeam.RBOne.altname
+            ) {
               passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(2);
             }
-            if (passedInTeam.RBTwo.name === rbName) {
+            if (
+              passedInTeam.RBTwo.name === rbName ||
+              rbName === passedInTeam.RBTwo.altname
+            ) {
               passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(2);
             }
           }
@@ -4915,10 +4729,16 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
             +passedInTeam.thirdPassedInRBFourWeeksagoTotal !==
               +passedInTeam.teamRBTotalsFourWeeksAgo[1]
           ) {
-            if (passedInTeam.RBOne.name === rbName) {
+            if (
+              passedInTeam.RBOne.name === rbName ||
+              rbName === passedInTeam.RBOne.altname
+            ) {
               passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(3);
             }
-            if (passedInTeam.RBTwo.name === rbName) {
+            if (
+              passedInTeam.RBTwo.name === rbName ||
+              rbName === passedInTeam.RBTwo.altname
+            ) {
               passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(3);
             }
           }
@@ -4927,16 +4747,25 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
         //three weeks ago
 
         if (+passedInTeam.teamRBTotalsThreeWeeksAgo[0] > 0) {
-          if (rbName === passedInTeam.thirdPassedInRBName) {
+          if (
+            rbName === passedInTeam.thirdPassedInRBName ||
+            rbName === passedInTeam.thirdPassedInRBAltName
+          ) {
             if (
               +passedInTeam.thirdPassedInRBThreeWeeksagoTotal ===
               +passedInTeam.teamRBTotalsThreeWeeksAgo[0]
             ) {
               passedInTeam.teamRBOneThreeWeeksAgo = rbName;
-              if (passedInTeam.RBOne.name === rbName) {
+              if (
+                passedInTeam.RBOne.name === rbName ||
+                rbName === passedInTeam.RBOne.altname
+              ) {
                 passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(1);
               }
-              if (passedInTeam.RBTwo.name === rbName) {
+              if (
+                passedInTeam.RBTwo.name === rbName ||
+                rbName === passedInTeam.RBTwo.altname
+              ) {
                 passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(1);
               }
             }
@@ -4945,10 +4774,16 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
               +passedInTeam.teamRBTotalsThreeWeeksAgo[1]
             ) {
               passedInTeam.teamRBTwoThreeWeeksAgo = rbName;
-              if (passedInTeam.RBOne.name === rbName) {
+              if (
+                passedInTeam.RBOne.name === rbName ||
+                rbName === passedInTeam.RBOne.altname
+              ) {
                 passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(2);
               }
-              if (passedInTeam.RBTwo.name === rbName) {
+              if (
+                passedInTeam.RBTwo.name === rbName ||
+                rbName === passedInTeam.RBTwo.altname
+              ) {
                 passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(2);
               }
             }
@@ -4958,10 +4793,16 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
               +passedInTeam.thirdPassedInRBThreeWeeksagoTotal !==
                 +passedInTeam.teamRBTotalsThreeWeeksAgo[1]
             ) {
-              if (passedInTeam.RBOne.name === rbName) {
+              if (
+                passedInTeam.RBOne.name === rbName ||
+                rbName === passedInTeam.RBOne.altname
+              ) {
                 passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(3);
               }
-              if (passedInTeam.RBTwo.name === rbName) {
+              if (
+                passedInTeam.RBTwo.name === rbName ||
+                rbName === passedInTeam.RBTwo.altname
+              ) {
                 passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(3);
               }
             }
@@ -4971,16 +4812,25 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
         // //two weeks ago
 
         if (+passedInTeam.teamRBTotalsTwoWeeksAgo[0] > 0) {
-          if (rbName === passedInTeam.thirdPassedInRBName) {
+          if (
+            rbName === passedInTeam.thirdPassedInRBName ||
+            rbName === passedInTeam.thirdPassedInRBAltName
+          ) {
             if (
               +passedInTeam.thirdPassedInRBTwoWeeksagoTotal ===
               +passedInTeam.teamRBTotalsTwoWeeksAgo[0]
             ) {
               passedInTeam.teamRBOneTwoWeeksAgo = rbName;
-              if (passedInTeam.RBOne.name === rbName) {
+              if (
+                passedInTeam.RBOne.name === rbName ||
+                rbName === passedInTeam.RBOne.altname
+              ) {
                 passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(1);
               }
-              if (passedInTeam.RBTwo.name === rbName) {
+              if (
+                passedInTeam.RBTwo.name === rbName ||
+                rbName === passedInTeam.RBTwo.altname
+              ) {
                 passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(1);
               }
             }
@@ -4989,10 +4839,16 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
               +passedInTeam.teamRBTotalsTwoWeeksAgo[1]
             ) {
               passedInTeam.teamRBTwoTwoWeeksAgo = rbName;
-              if (passedInTeam.RBOne.name === rbName) {
+              if (
+                passedInTeam.RBOne.name === rbName ||
+                rbName === passedInTeam.RBOne.altname
+              ) {
                 passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(2);
               }
-              if (passedInTeam.RBTwo.name === rbName) {
+              if (
+                passedInTeam.RBTwo.name === rbName ||
+                rbName === passedInTeam.RBTwo.altname
+              ) {
                 passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(2);
               }
             }
@@ -5002,10 +4858,16 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
               +passedInTeam.thirdPassedInRBTwoWeeksagoTotal !==
                 +passedInTeam.teamRBTotalsTwoWeeksAgo[1]
             ) {
-              if (passedInTeam.RBOne.name === rbName) {
+              if (
+                passedInTeam.RBOne.name === rbName ||
+                rbName === passedInTeam.RBOne.altname
+              ) {
                 passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(3);
               }
-              if (passedInTeam.RBTwo.name === rbName) {
+              if (
+                passedInTeam.RBTwo.name === rbName ||
+                rbName === passedInTeam.RBTwo.altname
+              ) {
                 passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(3);
               }
             }
@@ -5015,16 +4877,25 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
         // //last week
 
         if (+passedInTeam.teamRBTotalsLastWeek[0] > 0) {
-          if (rbName === passedInTeam.thirdPassedInRBName) {
+          if (
+            rbName === passedInTeam.thirdPassedInRBName ||
+            rbName === passedInTeam.thirdPassedInRBAltName
+          ) {
             if (
               +passedInTeam.thirdPassedInRBLastWeekTotal ===
               +passedInTeam.teamRBTotalsLastWeek[0]
             ) {
               passedInTeam.teamRBOneLastWeek = rbName;
-              if (passedInTeam.RBOne.name === rbName) {
+              if (
+                passedInTeam.RBOne.name === rbName ||
+                rbName === passedInTeam.RBOne.altname
+              ) {
                 passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(1);
               }
-              if (passedInTeam.RBTwo.name === rbName) {
+              if (
+                passedInTeam.RBTwo.name === rbName ||
+                rbName === passedInTeam.RBTwo.altname
+              ) {
                 passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(1);
               }
             }
@@ -5033,10 +4904,16 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
               +passedInTeam.teamRBTotalsLastWeek[1]
             ) {
               passedInTeam.teamRBTwoLastWeek = rbName;
-              if (passedInTeam.RBOne.name === rbName) {
+              if (
+                passedInTeam.RBOne.name === rbName ||
+                rbName === passedInTeam.RBOne.altname
+              ) {
                 passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(2);
               }
-              if (passedInTeam.RBTwo.name === rbName) {
+              if (
+                passedInTeam.RBTwo.name === rbName ||
+                rbName === passedInTeam.RBTwo.altname
+              ) {
                 passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(2);
               }
             }
@@ -5046,10 +4923,16 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
               +passedInTeam.thirdPassedInRBLastWeekTotal !==
                 +passedInTeam.teamRBTotalsLastWeek[1]
             ) {
-              if (passedInTeam.RBOne.name === rbName) {
+              if (
+                passedInTeam.RBOne.name === rbName ||
+                rbName === passedInTeam.RBOne.altname
+              ) {
                 passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(3);
               }
-              if (passedInTeam.RBTwo.name === rbName) {
+              if (
+                passedInTeam.RBTwo.name === rbName ||
+                rbName === passedInTeam.RBTwo.altname
+              ) {
                 passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(3);
               }
             }
@@ -5062,16 +4945,25 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
       //five weeks ago
 
       if (+passedInTeam.teamRBTotalsFiveWeeksAgo[0] > 0) {
-        if (rbName === passedInTeam.fourthPassedInRBName) {
+        if (
+          rbName === passedInTeam.fourthPassedInRBName ||
+          rbName === passedInTeam.fourthPassedInRBAltName
+        ) {
           if (
             +passedInTeam.fourthPassedInRBFiveWeeksagoTotal ===
             +passedInTeam.teamRBTotalsFiveWeeksAgo[0]
           ) {
             passedInTeam.teamRBOneFiveWeeksAgo = rbName;
-            if (passedInTeam.RBOne.name === rbName) {
+            if (
+              passedInTeam.RBOne.name === rbName ||
+              rbName === passedInTeam.RBOne.altname
+            ) {
               passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(1);
             }
-            if (passedInTeam.RBTwo.name === rbName) {
+            if (
+              passedInTeam.RBTwo.name === rbName ||
+              rbName === passedInTeam.RBTwo.altname
+            ) {
               passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(1);
             }
           }
@@ -5080,10 +4972,16 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
             +passedInTeam.teamRBTotalsFiveWeeksAgo[1]
           ) {
             passedInTeam.teamRBTwoFiveWeeksAgo = rbName;
-            if (passedInTeam.RBOne.name === rbName) {
+            if (
+              passedInTeam.RBOne.name === rbName ||
+              rbName === passedInTeam.RBOne.altname
+            ) {
               passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(2);
             }
-            if (passedInTeam.RBTwo.name === rbName) {
+            if (
+              passedInTeam.RBTwo.name === rbName ||
+              rbName === passedInTeam.RBTwo.altname
+            ) {
               passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(2);
             }
           }
@@ -5093,10 +4991,16 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
             +passedInTeam.fourthPassedInRBFiveWeeksagoTotal !==
               +passedInTeam.teamRBTotalsFiveWeeksAgo[1]
           ) {
-            if (passedInTeam.RBOne.name === rbName) {
+            if (
+              passedInTeam.RBOne.name === rbName ||
+              rbName === passedInTeam.RBOne.altname
+            ) {
               passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(3);
             }
-            if (passedInTeam.RBTwo.name === rbName) {
+            if (
+              passedInTeam.RBTwo.name === rbName ||
+              rbName === passedInTeam.RBTwo.altname
+            ) {
               passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(3);
             }
           }
@@ -5106,16 +5010,25 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
       //four weeks ago
 
       if (+passedInTeam.teamRBTotalsFourWeeksAgo[0] > 0) {
-        if (rbName === passedInTeam.fourthPassedInRBName) {
+        if (
+          rbName === passedInTeam.fourthPassedInRBName ||
+          rbName === passedInTeam.fourthPassedInRBAltName
+        ) {
           if (
             +passedInTeam.fourthPassedInRBFourWeeksagoTotal ===
             +passedInTeam.teamRBTotalsFourWeeksAgo[0]
           ) {
             passedInTeam.teamRBOneFourWeeksAgo = rbName;
-            if (passedInTeam.RBOne.name === rbName) {
+            if (
+              passedInTeam.RBOne.name === rbName ||
+              rbName === passedInTeam.RBOne.altname
+            ) {
               passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(1);
             }
-            if (passedInTeam.RBTwo.name === rbName) {
+            if (
+              passedInTeam.RBTwo.name === rbName ||
+              rbName === passedInTeam.RBTwo.altname
+            ) {
               passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(1);
             }
           }
@@ -5125,10 +5038,16 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
             +passedInTeam.teamRBTotalsFourWeeksAgo[1]
           ) {
             passedInTeam.teamRBTwoFourWeeksAgo = rbName;
-            if (passedInTeam.RBOne.name === rbName) {
+            if (
+              passedInTeam.RBOne.name === rbName ||
+              rbName === passedInTeam.RBOne.altname
+            ) {
               passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(2);
             }
-            if (passedInTeam.RBTwo.name === rbName) {
+            if (
+              passedInTeam.RBTwo.name === rbName ||
+              rbName === passedInTeam.RBTwo.altname
+            ) {
               passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(2);
             }
           }
@@ -5138,10 +5057,16 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
             +passedInTeam.fourthPassedInRBFourWeeksagoTotal !==
               +passedInTeam.teamRBTotalsFourWeeksAgo[1]
           ) {
-            if (passedInTeam.RBOne.name === rbName) {
+            if (
+              passedInTeam.RBOne.name === rbName ||
+              rbName === passedInTeam.RBOne.altname
+            ) {
               passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(3);
             }
-            if (passedInTeam.RBTwo.name === rbName) {
+            if (
+              passedInTeam.RBTwo.name === rbName ||
+              rbName === passedInTeam.RBTwo.altname
+            ) {
               passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(3);
             }
           }
@@ -5150,16 +5075,25 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
         //three weeks ago
 
         if (+passedInTeam.teamRBTotalsThreeWeeksAgo[0] > 0) {
-          if (rbName === passedInTeam.fourthPassedInRBName) {
+          if (
+            rbName === passedInTeam.fourthPassedInRBName ||
+            rbName === passedInTeam.fourthPassedInRBAltName
+          ) {
             if (
               +passedInTeam.fourthPassedInRBThreeWeeksagoTotal ===
               +passedInTeam.teamRBTotalsThreeWeeksAgo[0]
             ) {
               passedInTeam.teamRBOneThreeWeeksAgo = rbName;
-              if (passedInTeam.RBOne.name === rbName) {
+              if (
+                passedInTeam.RBOne.name === rbName ||
+                rbName === passedInTeam.RBOne.altname
+              ) {
                 passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(1);
               }
-              if (passedInTeam.RBTwo.name === rbName) {
+              if (
+                passedInTeam.RBTwo.name === rbName ||
+                rbName === passedInTeam.RBTwo.altname
+              ) {
                 passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(1);
               }
             }
@@ -5169,10 +5103,16 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
               +passedInTeam.teamRBTotalsThreeWeeksAgo[1]
             ) {
               passedInTeam.teamRBTwoThreeWeeksAgo = rbName;
-              if (passedInTeam.RBOne.name === rbName) {
+              if (
+                passedInTeam.RBOne.name === rbName ||
+                rbName === passedInTeam.RBOne.altname
+              ) {
                 passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(2);
               }
-              if (passedInTeam.RBTwo.name === rbName) {
+              if (
+                passedInTeam.RBTwo.name === rbName ||
+                rbName === passedInTeam.RBTwo.altname
+              ) {
                 passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(2);
               }
             }
@@ -5182,10 +5122,16 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
               +passedInTeam.fourthPassedInRBThreeWeeksagoTotal !==
                 +passedInTeam.teamRBTotalsThreeWeeksAgo[1]
             ) {
-              if (passedInTeam.RBOne.name === rbName) {
+              if (
+                passedInTeam.RBOne.name === rbName ||
+                rbName === passedInTeam.RBOne.altname
+              ) {
                 passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(3);
               }
-              if (passedInTeam.RBTwo.name === rbName) {
+              if (
+                passedInTeam.RBTwo.name === rbName ||
+                rbName === passedInTeam.RBTwo.altname
+              ) {
                 passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(3);
               }
             }
@@ -5195,16 +5141,25 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
         // //two weeks ago
 
         if (+passedInTeam.teamRBTotalsTwoWeeksAgo[0] > 0) {
-          if (rbName === passedInTeam.fourthPassedInRBName) {
+          if (
+            rbName === passedInTeam.fourthPassedInRBName ||
+            rbName === passedInTeam.fourthPassedInRBAltName
+          ) {
             if (
               +passedInTeam.fourthPassedInRBTwoWeeksagoTotal ===
               +passedInTeam.teamRBTotalsTwoWeeksAgo[0]
             ) {
               passedInTeam.teamRBOneTwoWeeksAgo = rbName;
-              if (passedInTeam.RBOne.name === rbName) {
+              if (
+                passedInTeam.RBOne.name === rbName ||
+                rbName === passedInTeam.RBOne.altname
+              ) {
                 passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(1);
               }
-              if (passedInTeam.RBTwo.name === rbName) {
+              if (
+                passedInTeam.RBTwo.name === rbName ||
+                rbName === passedInTeam.RBTwo.altname
+              ) {
                 passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(1);
               }
             }
@@ -5214,10 +5169,16 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
               +passedInTeam.teamRBTotalsTwoWeeksAgo[1]
             ) {
               passedInTeam.teamRBTwoTwoWeeksAgo = rbName;
-              if (passedInTeam.RBOne.name === rbName) {
+              if (
+                passedInTeam.RBOne.name === rbName ||
+                rbName === passedInTeam.RBOne.altname
+              ) {
                 passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(2);
               }
-              if (passedInTeam.RBTwo.name === rbName) {
+              if (
+                passedInTeam.RBTwo.name === rbName ||
+                rbName === passedInTeam.RBTwo.altname
+              ) {
                 passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(2);
               }
             }
@@ -5227,10 +5188,16 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
               +passedInTeam.fourthPassedInRBTwoWeeksagoTotal !==
                 +passedInTeam.teamRBTotalsTwoWeeksAgo[1]
             ) {
-              if (passedInTeam.RBOne.name === rbName) {
+              if (
+                passedInTeam.RBOne.name === rbName ||
+                rbName === passedInTeam.RBOne.altname
+              ) {
                 passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(3);
               }
-              if (passedInTeam.RBTwo.name === rbName) {
+              if (
+                passedInTeam.RBTwo.name === rbName ||
+                rbName === passedInTeam.RBTwo.altname
+              ) {
                 passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(3);
               }
             }
@@ -5240,16 +5207,25 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
         // //last week
 
         if (+passedInTeam.teamRBTotalsLastWeek[0] > 0) {
-          if (rbName === passedInTeam.fourthPassedInRBName) {
+          if (
+            rbName === passedInTeam.fourthPassedInRBName ||
+            rbName === passedInTeam.fourthPassedInRBAltName
+          ) {
             if (
               +passedInTeam.fourthPassedInRBLastWeekTotal ===
               +passedInTeam.teamRBTotalsLastWeek[0]
             ) {
               passedInTeam.teamRBOneLastWeek = rbName;
-              if (passedInTeam.RBOne.name === rbName) {
+              if (
+                passedInTeam.RBOne.name === rbName ||
+                rbName === passedInTeam.RBOne.altname
+              ) {
                 passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(1);
               }
-              if (passedInTeam.RBTwo.name === rbName) {
+              if (
+                passedInTeam.RBTwo.name === rbName ||
+                rbName === passedInTeam.RBTwo.altname
+              ) {
                 passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(1);
               }
             }
@@ -5259,10 +5235,16 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
               +passedInTeam.teamRBTotalsLastWeek[1]
             ) {
               passedInTeam.teamRBTwoLastWeek = rbName;
-              if (passedInTeam.RBOne.name === rbName) {
+              if (
+                passedInTeam.RBOne.name === rbName ||
+                rbName === passedInTeam.RBOne.altname
+              ) {
                 passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(2);
               }
-              if (passedInTeam.RBTwo.name === rbName) {
+              if (
+                passedInTeam.RBTwo.name === rbName ||
+                rbName === passedInTeam.RBTwo.altname
+              ) {
                 passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(2);
               }
             }
@@ -5272,10 +5254,16 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
               +passedInTeam.fourthPassedInRBLastWeekTotal !==
                 +passedInTeam.teamRBTotalsLastWeek[1]
             ) {
-              if (passedInTeam.RBOne.name === rbName) {
+              if (
+                passedInTeam.RBOne.name === rbName ||
+                rbName === passedInTeam.RBOne.altname
+              ) {
                 passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive.push(3);
               }
-              if (passedInTeam.RBTwo.name === rbName) {
+              if (
+                passedInTeam.RBTwo.name === rbName ||
+                rbName === passedInTeam.RBTwo.altname
+              ) {
                 passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive.push(3);
               }
             }
@@ -5287,8 +5275,489 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
 
   //end of settting RB Roles Last five week
 
+  let teamHVTweekFiveWeeksAgo = 0;
+  let teamHVTweekFourWeeksAgo = 0;
+  let teamHVTweekThreeWeeksAgo = 0;
+  let teamHVTweekTwoWeeksAgo = 0;
+  let teamHVTweekLastWeek = 0;
+  passedInTeam.RBOne.percentOfTeamHVTsLastFiveWeeksByWeek = [];
+  passedInTeam.RBTwo.percentOfTeamHVTsLastFiveWeeksByWeek = [];
+
+  rb4for4WeeklyStatExplorerHVTsLastFiveWeeks.forEach(function (rb) {
+    if (
+      passedInTeam.teamABV === rb['"posteam"'].slice(1, -1) ||
+      passedInTeam.altTeamABV === rb['"posteam"'].slice(1, -1)
+    ) {
+      let weekFiveWeeksAgo = 0;
+      let weekFourWeeksAgo = 0;
+      let weekThreeWeeksAgo = 0;
+      let weekTwoWeeksAgo = 0;
+      let weekLastWeek = 0;
+
+      if (gameInfo.week.currentWeek === 3) {
+        weekTwoWeeksAgo = rb['"Wk 1"'];
+        weekLastWeek = rb['"Wk 2"'];
+      }
+
+      if (gameInfo.week.currentWeek === 4) {
+        weekThreeWeeksAgo = rb['"Wk 1"'];
+        weekTwoWeeksAgo = rb['"Wk 2"'];
+        weekLastWeek = rb['"Wk 3"'];
+      }
+
+      if (gameInfo.week.currentWeek === 5) {
+        weekFourWeeksAgo = rb['"Wk 1"'];
+        weekThreeWeeksAgo = rb['"Wk 2"'];
+        weekTwoWeeksAgo = rb['"Wk 3"'];
+        weekLastWeek = rb['"Wk 4"'];
+      }
+
+      if (gameInfo.week.currentWeek === 6) {
+        weekFiveWeeksAgo = rb['"Wk 1"'];
+        weekFourWeeksAgo = rb['"Wk 2"'];
+        weekThreeWeeksAgo = rb['"Wk 3"'];
+        weekTwoWeeksAgo = rb['"Wk 4"'];
+        weekLastWeek = rb['"Wk 5"'];
+      }
+
+      if (gameInfo.week.currentWeek === 7) {
+        weekFiveWeeksAgo = rb['"Wk 2"'];
+        weekFourWeeksAgo = rb['"Wk 3"'];
+        weekThreeWeeksAgo = rb['"Wk 4"'];
+        weekTwoWeeksAgo = rb['"Wk 5"'];
+        weekLastWeek = rb['"Wk 6"'];
+      }
+
+      if (gameInfo.week.currentWeek === 8) {
+        weekFiveWeeksAgo = rb['"Wk 3"'];
+        weekFourWeeksAgo = rb['"Wk 4"'];
+        weekThreeWeeksAgo = rb['"Wk 5"'];
+        weekTwoWeeksAgo = rb['"Wk 6"'];
+        weekLastWeek = rb['"Wk 7"'];
+      }
+
+      if (gameInfo.week.currentWeek === 9) {
+        weekFiveWeeksAgo = rb['"Wk 4"'];
+        weekFourWeeksAgo = rb['"Wk 5"'];
+        weekThreeWeeksAgo = rb['"Wk 6"'];
+        weekTwoWeeksAgo = rb['"Wk 7"'];
+        weekLastWeek = rb['"Wk 8"'];
+      }
+
+      if (gameInfo.week.currentWeek === 10) {
+        weekFiveWeeksAgo = rb['"Wk 5"'];
+        weekFourWeeksAgo = rb['"Wk 6"'];
+        weekThreeWeeksAgo = rb['"Wk 7"'];
+        weekTwoWeeksAgo = rb['"Wk 8"'];
+        weekLastWeek = rb['"Wk 9"'];
+      }
+
+      if (gameInfo.week.currentWeek === 11) {
+        weekFiveWeeksAgo = rb['"Wk 6"'];
+        weekFourWeeksAgo = rb['"Wk 7"'];
+        weekThreeWeeksAgo = rb['"Wk 8"'];
+        weekTwoWeeksAgo = rb['"Wk 9"'];
+        weekLastWeek = rb['"Wk 10"'];
+      }
+
+      if (gameInfo.week.currentWeek === 12) {
+        weekFiveWeeksAgo = rb['"Wk 7"'];
+        weekFourWeeksAgo = rb['"Wk 8"'];
+        weekThreeWeeksAgo = rb['"Wk 9"'];
+        weekTwoWeeksAgo = rb['"Wk 10"'];
+        weekLastWeek = rb['"Wk 11"'];
+      }
+
+      if (gameInfo.week.currentWeek === 13) {
+        weekFiveWeeksAgo = rb['"Wk 8"'];
+        weekFourWeeksAgo = rb['"Wk 9"'];
+        weekThreeWeeksAgo = rb['"Wk 10"'];
+        weekTwoWeeksAgo = rb['"Wk 11"'];
+        weekLastWeek = rb['"Wk 12"'];
+      }
+
+      if (gameInfo.week.currentWeek === 14) {
+        weekFiveWeeksAgo = rb['"Wk 9"'];
+        weekFourWeeksAgo = rb['"Wk 10"'];
+        weekThreeWeeksAgo = rb['"Wk 11"'];
+        weekTwoWeeksAgo = rb['"Wk 12"'];
+        weekLastWeek = rb['"Wk 13"'];
+      }
+
+      if (gameInfo.week.currentWeek === 15) {
+        weekFiveWeeksAgo = rb['"Wk 10"'];
+        weekFourWeeksAgo = rb['"Wk 11"'];
+        weekThreeWeeksAgo = rb['"Wk 12"'];
+        weekTwoWeeksAgo = rb['"Wk 13"'];
+        weekLastWeek = rb['"Wk 14"'];
+      }
+
+      if (gameInfo.week.currentWeek === 16) {
+        weekFiveWeeksAgo = rb['"Wk 11"'];
+        weekFourWeeksAgo = rb['"Wk 12"'];
+        weekThreeWeeksAgo = rb['"Wk 13"'];
+        weekTwoWeeksAgo = rb['"Wk 14"'];
+        weekLastWeek = rb['"Wk 15"'];
+      }
+
+      if (gameInfo.week.currentWeek === 17) {
+        weekFiveWeeksAgo = rb['"Wk 12"'];
+        weekFourWeeksAgo = rb['"Wk 13"'];
+        weekThreeWeeksAgo = rb['"Wk 14"'];
+        weekTwoWeeksAgo = rb['"Wk 15"'];
+        weekLastWeek = rb['"Wk 16"'];
+      }
+
+      if (gameInfo.week.currentWeek === 18) {
+        weekFiveWeeksAgo = rb['"Wk 13"'];
+        weekFourWeeksAgo = rb['"Wk 14"'];
+        weekThreeWeeksAgo = rb['"Wk 15"'];
+        weekTwoWeeksAgo = rb['"Wk 16"'];
+        weekLastWeek = rb['"Wk 17"'];
+      }
+
+      let temprbName = rb['"full_name"'].slice(1, -1).replace('.', '');
+      // let alsotemprbName = temprbName.replace("'", '');
+      let rbName = temprbName.replace('.', '');
+
+      // console.log(altrbName);
+      teamHVTweekFiveWeeksAgo += +weekFiveWeeksAgo;
+      teamHVTweekFourWeeksAgo += +weekFourWeeksAgo;
+      teamHVTweekThreeWeeksAgo += +weekThreeWeeksAgo;
+      teamHVTweekTwoWeeksAgo += +weekTwoWeeksAgo;
+      teamHVTweekLastWeek += +weekLastWeek;
+
+      passedInTeam.teamHVTweekFiveWeeksAgo = +teamHVTweekFiveWeeksAgo;
+      passedInTeam.teamHVTweekFourWeeksAgo = +teamHVTweekFourWeeksAgo;
+      passedInTeam.teamHVTweekThreeWeeksAgo = +teamHVTweekThreeWeeksAgo;
+      passedInTeam.teamHVTweekTwoWeeksAgo = +teamHVTweekTwoWeeksAgo;
+      passedInTeam.teamHVTweekLastWeek = +teamHVTweekLastWeek;
+
+      let totalTeamHVTsLastFiveWeeks = 0;
+      totalTeamHVTsLastFiveWeeks += +teamHVTweekFiveWeeksAgo;
+      totalTeamHVTsLastFiveWeeks += +teamHVTweekFourWeeksAgo;
+      totalTeamHVTsLastFiveWeeks += +teamHVTweekThreeWeeksAgo;
+      totalTeamHVTsLastFiveWeeks += +teamHVTweekTwoWeeksAgo;
+      totalTeamHVTsLastFiveWeeks += +teamHVTweekLastWeek;
+
+      passedInTeam.totalTeamHVTsLastFiveWeeks = totalTeamHVTsLastFiveWeeks;
+      passedInTeam.teamTotalHVTsLastFiveWeeks = totalTeamHVTsLastFiveWeeks;
+      // totalTeamHVTsLastFiveWeeks += teamHVTweekFourWeeksAgo;
+      // totalTeamHVTsLastFiveWeeks += teamHVTweekThreeWeeksAgo;
+      // totalTeamHVTsLastFiveWeeks += teamHVTweekTwoWeeksAgo;
+      // totalTeamHVTsLastFiveWeeks += teamHVTweekLastWeek;
+      // console.log(
+      //   passedInTeam.RBOne.name,
+      //   rbName,
+      //   altrbName,
+      //   rb['"full_name"'].slice(1, -1)
+      // );
+      if (rbName === rb['"full_name"'].slice(1, -1)) {
+        // console.log(passedInTeam.RBOne.name, rbName);
+        if (
+          passedInTeam.RBOne.name === rbName ||
+          rbName === passedInTeam.RBOne.altname
+        ) {
+          // console.log(passedInTeam.RBOne.name, altrbName);
+          // console.log(rbName, passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive);
+          totalHVTCounter = 0;
+          totalHVTCounter += +weekFiveWeeksAgo;
+          totalHVTCounter += +weekFourWeeksAgo;
+          totalHVTCounter += +weekThreeWeeksAgo;
+          totalHVTCounter += +weekTwoWeeksAgo;
+          totalHVTCounter += +weekLastWeek;
+          passedInTeam.RBOne.totalHVTsLastFiveWeeks = +totalHVTCounter;
+
+          passedInTeam.RBOne.HVTsFiveweeksAgo = +weekFiveWeeksAgo;
+          passedInTeam.RBOne.HVTsFourweeksAgo = +weekFourWeeksAgo;
+          passedInTeam.RBOne.HVTsThreeweeksAgo = +weekThreeWeeksAgo;
+          passedInTeam.RBOne.HVTsTwoweeksAgo = +weekTwoWeeksAgo;
+          passedInTeam.RBOne.HVTsLastWeek = +weekLastWeek;
+        }
+        // console.log(
+        //   passedInTeam.RBOne.name,
+        //   passedInTeam.RBOne.HVTsFiveweeksAgo
+        // );
+        if (
+          rbName === passedInTeam.RBTwo.name ||
+          rbName === passedInTeam.RBTwo.altname
+        ) {
+          totalHVTCounter = 0;
+          totalHVTCounter += +weekFiveWeeksAgo;
+          totalHVTCounter += +weekFourWeeksAgo;
+          totalHVTCounter += +weekThreeWeeksAgo;
+          totalHVTCounter += +weekTwoWeeksAgo;
+          totalHVTCounter += +weekLastWeek;
+          passedInTeam.RBTwo.totalHVTsLastFiveWeeks = +totalHVTCounter;
+
+          passedInTeam.RBTwo.HVTsFiveweeksAgo = +weekFiveWeeksAgo;
+          passedInTeam.RBTwo.HVTsFourweeksAgo = +weekFourWeeksAgo;
+          passedInTeam.RBTwo.HVTsThreeweeksAgo = +weekThreeWeeksAgo;
+          passedInTeam.RBTwo.HVTsTwoweeksAgo = +weekTwoWeeksAgo;
+          passedInTeam.RBTwo.HVTsLastWeek = +weekLastWeek;
+        }
+      }
+
+      // console.log(passedInTeam.teamABV, weekLastWeek, teamHVTweekLastWeek);
+    }
+  });
+
+  rb4for4WeeklyStatExplorerHVTsLastFiveWeeks.forEach(function (rb) {
+    // console.log(
+    //   passedInTeam.RBOne.name,
+    //   passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive[0]
+    // );
+    if (passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive[0] < 3) {
+      if (passedInTeam.teamHVTweekFiveWeeksAgo > 0) {
+        // console.log(
+        //   passedInTeam.RBOne.name,
+        //   passedInTeam.RBOne.HVTsFiveweeksAgo,
+        //   passedInTeam.teamHVTweekFiveWeeksAgo
+        // );
+        percentHVTsFiveWeeksAgo = +(
+          passedInTeam.RBOne.HVTsFiveweeksAgo /
+          passedInTeam.teamHVTweekFiveWeeksAgo
+        ).toFixed(2);
+
+        if (
+          !passedInTeam.RBOne.percentOfTeamHVTsLastFiveWeeksByWeek[0] &&
+          passedInTeam.RBOne.percentOfTeamHVTsLastFiveWeeksByWeek[0] !== 0
+        ) {
+          // console.log(passedInTeam.RBOne.name, percentHVTsFiveWeeksAgo);
+          passedInTeam.RBOne.percentOfTeamHVTsLastFiveWeeksByWeek.push(
+            +percentHVTsFiveWeeksAgo
+          );
+        }
+      }
+    }
+
+    if (passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive[1] < 3) {
+      // console.log(rbName, 'played 5 weeks ago');
+      if (passedInTeam.teamHVTweekFourWeeksAgo > 0) {
+        percentHVTsFourWeeksAgo = +(
+          passedInTeam.RBOne.HVTsFourweeksAgo /
+          passedInTeam.teamHVTweekFourWeeksAgo
+        ).toFixed(2);
+        // console.log(rbName, percentHVTsFiveWeeksAgo);
+        if (
+          !passedInTeam.RBOne.percentOfTeamHVTsLastFiveWeeksByWeek[1] &&
+          passedInTeam.RBOne.percentOfTeamHVTsLastFiveWeeksByWeek[1] !== 0
+        ) {
+          passedInTeam.RBOne.percentOfTeamHVTsLastFiveWeeksByWeek.push(
+            +percentHVTsFourWeeksAgo
+          );
+        }
+      }
+    }
+
+    if (passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive[2] < 3) {
+      // console.log(rbName, 'played 5 weeks ago');
+      if (passedInTeam.teamHVTweekThreeWeeksAgo > 0) {
+        percentHVTsThreeWeeksAgo = +(
+          passedInTeam.RBOne.HVTsThreeweeksAgo /
+          passedInTeam.teamHVTweekThreeWeeksAgo
+        ).toFixed(2);
+        // console.log(rbName, percentHVTsFiveWeeksAgo);
+        if (
+          !passedInTeam.RBOne.percentOfTeamHVTsLastFiveWeeksByWeek[2] &&
+          passedInTeam.RBOne.percentOfTeamHVTsLastFiveWeeksByWeek[2] !== 0
+        ) {
+          passedInTeam.RBOne.percentOfTeamHVTsLastFiveWeeksByWeek.push(
+            +percentHVTsThreeWeeksAgo
+          );
+        }
+      }
+    }
+
+    if (passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive[3] < 3) {
+      // console.log(rbName, 'played 5 weeks ago');
+      if (passedInTeam.teamHVTweekTwoWeeksAgo > 0) {
+        percentHVTsTwoWeeksAgo = +(
+          passedInTeam.RBOne.HVTsTwoweeksAgo /
+          passedInTeam.teamHVTweekTwoWeeksAgo
+        ).toFixed(2);
+        // console.log(rbName, percentHVTsFiveWeeksAgo);
+        if (
+          !passedInTeam.RBOne.percentOfTeamHVTsLastFiveWeeksByWeek[3] &&
+          passedInTeam.RBOne.percentOfTeamHVTsLastFiveWeeksByWeek[3] !== 0
+        ) {
+          passedInTeam.RBOne.percentOfTeamHVTsLastFiveWeeksByWeek.push(
+            +percentHVTsTwoWeeksAgo
+          );
+        }
+      }
+    }
+
+    if (passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive[4] < 3) {
+      // console.log(rbName, 'played 5 weeks ago');
+      if (passedInTeam.teamHVTweekLastWeek > 0) {
+        // console.log(passedInTeam.RBOne.name, passedInTeam.RBOne.HVTsLastWeek);
+        percentHVTsweekLastWeek = +(
+          passedInTeam.RBOne.HVTsLastWeek / passedInTeam.teamHVTweekLastWeek
+        ).toFixed(2);
+        // console.log(rbName, percentHVTsFiveWeeksAgo);
+        if (
+          !passedInTeam.RBOne.percentOfTeamHVTsLastFiveWeeksByWeek[4] &&
+          passedInTeam.RBOne.percentOfTeamHVTsLastFiveWeeksByWeek[4] !== 0
+        ) {
+          passedInTeam.RBOne.percentOfTeamHVTsLastFiveWeeksByWeek.push(
+            +percentHVTsweekLastWeek
+          );
+        }
+      }
+    }
+  });
+
+  let temprbOneHVTs = 0;
+
+  passedInTeam.RBOne.percentOfTeamHVTsLastFiveWeeksByWeek.forEach(function (
+    hvtWeek
+  ) {
+    temprbOneHVTs += +hvtWeek;
+  });
+
+  passedInTeam.RBOne.totalPercentOfTeamHighValueTouchesLastFiveweeks = (
+    +temprbOneHVTs /
+    +passedInTeam.RBOne.percentOfTeamHVTsLastFiveWeeksByWeek.length
+  ).toFixed(2);
+
+  // console.log(
+  //   passedInTeam.RBOne.name,
+  //   +temprbOneHVTs,
+  //   +passedInTeam.RBOne.percentOfTeamHVTsLastFiveWeeksByWeek.length,
+  //   passedInTeam.RBOne.totalPercentOfTeamHighValueTouchesLastFiveweeks
+  // );
+  // console.log(
+  //   passedInTeam.RBOne.name,
+  //   passedInTeam.RBOne.totalPercentOfTeamHighValueTouchesLastFiveweeks
+  // );
+
+  // console.log(
+  //   passedInTeam.RBOne.name,
+  //   passedInTeam.RBOne.percentOfTeamHVTsLastFiveWeeksByWeek
+  // );
+
+  rb4for4WeeklyStatExplorerHVTsLastFiveWeeks.forEach(function (rb) {
+    // console.log(
+    //   passedInTeam.RBTwo.name,
+    //   passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive[0]
+    // );
+    if (passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive[0] < 3) {
+      if (passedInTeam.teamHVTweekFiveWeeksAgo > 0) {
+        // console.log(
+        //   passedInTeam.RBTwo.name,
+        //   passedInTeam.RBTwo.HVTsFiveweeksAgo,
+        //   passedInTeam.teamHVTweekFiveWeeksAgo
+        // );
+        percentHVTsFiveWeeksAgo = +(
+          passedInTeam.RBTwo.HVTsFiveweeksAgo /
+          passedInTeam.teamHVTweekFiveWeeksAgo
+        ).toFixed(2);
+
+        if (
+          !passedInTeam.RBTwo.percentOfTeamHVTsLastFiveWeeksByWeek[0] &&
+          passedInTeam.RBTwo.percentOfTeamHVTsLastFiveWeeksByWeek[0] !== 0
+        ) {
+          // console.log(passedInTeam.RBTwo.name, percentHVTsFiveWeeksAgo);
+          passedInTeam.RBTwo.percentOfTeamHVTsLastFiveWeeksByWeek.push(
+            +percentHVTsFiveWeeksAgo
+          );
+        }
+      }
+
+      if (passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive[1] < 3) {
+        // console.log(rbName, 'played 5 weeks ago');
+        if (passedInTeam.teamHVTweekFourWeeksAgo > 0) {
+          percentHVTsFourWeeksAgo = +(
+            passedInTeam.RBTwo.HVTsFourweeksAgo /
+            passedInTeam.teamHVTweekFourWeeksAgo
+          ).toFixed(2);
+          // console.log(rbName, percentHVTsFiveWeeksAgo);
+          if (
+            !passedInTeam.RBTwo.percentOfTeamHVTsLastFiveWeeksByWeek[1] &&
+            passedInTeam.RBTwo.percentOfTeamHVTsLastFiveWeeksByWeek[1] !== 0
+          ) {
+            passedInTeam.RBTwo.percentOfTeamHVTsLastFiveWeeksByWeek.push(
+              +percentHVTsFourWeeksAgo
+            );
+          }
+        }
+      }
+
+      if (passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive[2] < 3) {
+        // console.log(rbName, 'played 5 weeks ago');
+        if (passedInTeam.teamHVTweekThreeWeeksAgo > 0) {
+          percentHVTsThreeWeeksAgo = +(
+            passedInTeam.RBTwo.HVTsThreeweeksAgo /
+            passedInTeam.teamHVTweekThreeWeeksAgo
+          ).toFixed(2);
+          // console.log(rbName, percentHVTsFiveWeeksAgo);
+          if (
+            !passedInTeam.RBTwo.percentOfTeamHVTsLastFiveWeeksByWeek[2] &&
+            passedInTeam.RBTwo.percentOfTeamHVTsLastFiveWeeksByWeek[2] !== 0
+          ) {
+            passedInTeam.RBTwo.percentOfTeamHVTsLastFiveWeeksByWeek.push(
+              +percentHVTsThreeWeeksAgo
+            );
+          }
+        }
+      }
+
+      if (passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive[3] < 3) {
+        // console.log(rbName, 'played 5 weeks ago');
+        if (passedInTeam.teamHVTweekTwoWeeksAgo > 0) {
+          percentHVTsTwoWeeksAgo = +(
+            passedInTeam.RBTwo.HVTsTwoweeksAgo /
+            passedInTeam.teamHVTweekTwoWeeksAgo
+          ).toFixed(2);
+          // console.log(rbName, percentHVTsFiveWeeksAgo);
+          if (
+            !passedInTeam.RBTwo.percentOfTeamHVTsLastFiveWeeksByWeek[3] &&
+            passedInTeam.RBTwo.percentOfTeamHVTsLastFiveWeeksByWeek[3] !== 0
+          ) {
+            passedInTeam.RBTwo.percentOfTeamHVTsLastFiveWeeksByWeek.push(
+              +percentHVTsTwoWeeksAgo
+            );
+          }
+        }
+      }
+
+      if (passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive[4] < 3) {
+        // console.log(rbName, 'played 5 weeks ago');
+        if (passedInTeam.teamHVTweekLastWeek > 0) {
+          percentHVTsweekLastWeek = +(
+            passedInTeam.RBTwo.HVTsLastWeek / passedInTeam.teamHVTweekLastWeek
+          ).toFixed(2);
+          // console.log(rbName, percentHVTsFiveWeeksAgo);
+          if (
+            !passedInTeam.RBTwo.percentOfTeamHVTsLastFiveWeeksByWeek[4] &&
+            passedInTeam.RBTwo.percentOfTeamHVTsLastFiveWeeksByWeek[4] !== 0
+          ) {
+            passedInTeam.RBTwo.percentOfTeamHVTsLastFiveWeeksByWeek.push(
+              +percentHVTsweekLastWeek
+            );
+          }
+        }
+      }
+    }
+  });
+
+  let temprbTwoHVTs = 0;
+
+  passedInTeam.RBTwo.percentOfTeamHVTsLastFiveWeeksByWeek.forEach(function (
+    hvtWeek
+  ) {
+    temprbTwoHVTs += +hvtWeek;
+  });
+
+  passedInTeam.RBTwo.totalPercentOfTeamHighValueTouchesLastFiveweeks = (
+    +temprbTwoHVTs /
+    +passedInTeam.RBTwo.percentOfTeamHVTsLastFiveWeeksByWeek.length
+  ).toFixed(2);
+
   passedInTeam.teamVTT = gameInfoPassedInTeam.vtt;
   passedInTeam.opponentVTT = gameInfoPassedInTeam.opponentvtt;
+  passedInTeam.byeWeek = gameInfoPassedInTeam.byeWeek2022;
 
   qbDownloadableSpreadSheetYahoo.forEach(function (playerobj, i) {
     // console.log(gameInfoPassedInTeam);
@@ -5354,6 +5823,306 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
         }
       }
     });
+
+    allFlexGLSP.forEach(function (team) {
+      if (team['"POS"'].slice(1, -1) === 'RB') {
+        // console.log(team['"Player"']);
+        if (
+          team['"Player"'].slice(1, -1) === 'Brian Robinson Jr' &&
+          passedInTeam.teamABV === 'WAS'
+        ) {
+          passedInTeam.brob = team['"Player"'].slice(1, -4);
+        }
+        if (
+          team['"Player"'].slice(1, -1) === 'Kenneth Walker III' &&
+          passedInTeam.teamABV === 'SEA'
+        ) {
+          passedInTeam.walker = team['"Player"'].slice(1, -5);
+        }
+        if (
+          passedInTeam.RBOne.name === team['"Player"'].slice(1, -1) ||
+          passedInTeam.RBOne.altName === team['"Player"'].slice(1, -1) ||
+          passedInTeam.walker === team['"Player"'].slice(1, -5) ||
+          passedInTeam.brob === team['"Player"'].slice(1, -4)
+        ) {
+          // console.log(team['"Player"'].slice(1, -1));
+          // console.log(team['"Player"']);
+          passedInTeam.RBOne.glspHalfavg = +team['"Half - AVG"'];
+          passedInTeam.RBOne.glspPPRavg = +team['"PPR - AVG"'];
+
+          passedInTeam.RBOne.halfTwentyFifthPercentProjectedPoints =
+            +team['"Half - 25th"'];
+          passedInTeam.RBOne.halfFiftyithPercentProjectedPoints =
+            +team['"Half - 50th"'];
+          passedInTeam.RBOne.halfSeventyFifthPercentProjectedPoints =
+            +team['"Half - 75th"'];
+          passedInTeam.RBOne.PPRTwentyFifthPercentProjectedPoints =
+            +team['"PPR - 25th"'];
+          passedInTeam.RBOne.PPRFiftyithPercentProjectedPoints =
+            +team['"PPR - 50th"'];
+          passedInTeam.RBOne.PPRSeventyFifthPercentProjectedPoints =
+            +team['"PPR - 75th"'];
+          passedInTeam.RBOne.glspLessThanFive = +team['"<5"'];
+          passedInTeam.RBOne.glspFiveToTen = +team['"5 to 10"'];
+          passedInTeam.RBOne.glspTenToFifteen = +team['"10 to 15"'];
+          passedInTeam.RBOne.glspFifteenToTwenty = +team['"15 to 20"'];
+          passedInTeam.RBOne.glspTwentyToTwentyFive = +team['"20 to 25"'];
+          passedInTeam.RBOne.glspGreaterThanTwentyFive = +team['">25"'];
+        }
+        if (
+          passedInTeam.RBTwo.name ===
+          team['"Player"'].slice(
+            1,
+            -1 ||
+              passedInTeam.RBTwo.altName === team['"Player"'].slice(1, -1) ||
+              passedInTeam.walker === team['"Player"'].slice(1, -5)
+          )
+        ) {
+          // console.log(team['"Player"'].slice(1, -1));
+          passedInTeam.RBTwo.glspHalfavg = +team['"Half - AVG"'];
+          passedInTeam.RBTwo.glspPPRavg = +team['"PPR - AVG"'];
+          passedInTeam.RBTwo.halfTwentyFifthPercentProjectedPoints =
+            +team['"Half - 25th"'];
+          passedInTeam.RBTwo.halfFiftyithPercentProjectedPoints =
+            +team['"Half - 50th"'];
+          passedInTeam.RBTwo.halfSeventyFifthPercentProjectedPoints =
+            +team['"Half - 75th"'];
+          passedInTeam.RBTwo.PPRTwentyFifthPercentProjectedPoints =
+            +team['"PPR - 25th"'];
+          passedInTeam.RBTwo.PPRFiftyithPercentProjectedPoints =
+            +team['"PPR - 50th"'];
+          passedInTeam.RBTwo.PPRSeventyFifthPercentProjectedPoints =
+            +team['"PPR - 75th"'];
+          passedInTeam.RBTwo.glspLessThanFive = +team['"<5"'];
+          passedInTeam.RBTwo.glspFiveToTen = +team['"5 to 10"'];
+          passedInTeam.RBTwo.glspTenToFifteen = +team['"10 to 15"'];
+          passedInTeam.RBTwo.glspFifteenToTwenty = +team['"15 to 20"'];
+          passedInTeam.RBTwo.glspTwentyToTwentyFive = +team['"20 to 25"'];
+          passedInTeam.RBTwo.glspGreaterThanTwentyFive = +team['">25"'];
+        }
+      }
+    });
+
+    rb4for4StatExplorerForRushingLastFiveWeeks.forEach(function (team) {
+      // if (passedInTeam.RBOne.name === team['"full_name"'].slice(1, -1)) {
+
+      if (
+        passedInTeam.teamABV === team['"posteam"'].slice(1, -1) ||
+        passedInTeam.altTeamABV === team['"posteam"'].slice(1, -1)
+      ) {
+        if (!passedInTeam.teamTotalGreenZoneTouchesLastFiveWeeks) {
+          passedInTeam.teamTotalGreenZoneTouchesLastFiveWeeks = +(
+            +team['"i10_carries"'] / +team['"pct_team_i10_carries"']
+          ).toFixed(2);
+        }
+      }
+      // }
+    });
+    // console.log(
+    //   (passedInTeam.teamABV, passedInTeam.teamI10CarriesLastFiveWeeks)
+    // );
+    // let rbOneFPOEPerGameLastFiveWeeks = 0;
+
+    rb4for4PlayerStatExplorerSnapsAndFantasyTabThisHasFPOELastFiveWeeks.forEach(
+      function (rb) {
+        if (
+          passedInTeam.RBOne.name === rb['"full_name"'].slice(1, -1) ||
+          passedInTeam.RBOne.altname === rb['"full_name"'].slice(1, -1)
+        )
+          passedInTeam.RBOne.FPOEPerGameLastFiveWeeks = +rb['"fpoe_pg"'];
+        // console.log(
+        //   passedInTeam.RBOne.name,
+        //   passedInTeam.RBOne.FPOEPerGameLastFiveWeeks
+        // );
+
+        if (
+          passedInTeam.RBTwo.name === rb['"full_name"'].slice(1, -1) ||
+          passedInTeam.RBTwo.altname === rb['"full_name"'].slice(1, -1)
+        ) {
+          passedInTeam.RBTwo.FPOEPerGameLastFiveWeeks = +rb['"fpoe_pg"'];
+          // console.log(
+          //   passedInTeam.RBOne.name,
+          //   passedInTeam.RBOne.FPOEPerGameLastFiveWeeks
+          // );
+        }
+      }
+    );
+
+    allHalfPPRProjectedPointsWithoutTeamDef.forEach(function (team) {
+      if (team.Pos === 'RB') {
+        // if (passedInTeam.teamABV === 'SEA' && team.Player === 'Ken Walker') {
+        //   console.log(team.Player, passedInTeam.RBOne.altName);
+        // }
+        if (
+          passedInTeam.RBOne.name === team.Player ||
+          passedInTeam.RBOne.name ===
+            team.Player.replace('.', '').replace('.', '') ||
+          passedInTeam.RBOne.altName === team.Player
+        ) {
+          // console.log(team);
+          // console.log(team.Player);
+          passedInTeam.RBOne.fourForFourHalfPPRProjectedPoints = +team.FFPts;
+        }
+        if (
+          passedInTeam.RBTwo.name === team.Player ||
+          passedInTeam.RBTwo.name ===
+            team.Player.replace('.', '').replace('.', '') ||
+          passedInTeam.RBTwo.altName === team.Player
+        ) {
+          // console.log(team);
+          passedInTeam.RBTwo.fourForFourHalfPPRProjectedPoints = +team.FFPts;
+        }
+      }
+    });
+
+    allFullPPRProjectedPointsWithoutTeamDef.forEach(function (team) {
+      if (team.Pos === 'RB') {
+        if (
+          passedInTeam.RBOne.name === team.Player ||
+          passedInTeam.RBOne.name ===
+            team.Player.replace('.', '').replace('.', '') ||
+          passedInTeam.RBOne.altName === team.Player
+        ) {
+          // console.log(team);
+          passedInTeam.RBOne.fourForFourFullPPRProjectedPoints = +team.FFPts;
+        }
+        // if (passedInTeam.RBTwo.name === 'AJ Dillon') {
+        //   console.log(
+        //     passedInTeam.RBTwo.name,
+        //     team.Player.replace('.', '').replace('.', '')
+        //   );
+        // }
+        if (
+          passedInTeam.RBTwo.name === team.Player ||
+          passedInTeam.RBTwo.name ===
+            team.Player.replace('.', '').replace('.', '') ||
+          passedInTeam.RBTwo.altName === team.Player
+        ) {
+          // console.log(team);
+          passedInTeam.RBTwo.fourForFourFullPPRProjectedPoints = +team.FFPts;
+        }
+      }
+    });
+
+    rb4for4PlayerStatExplorerForReceivingLastFiveWeeks.forEach(function (team) {
+      if (
+        passedInTeam.RBOne.name === team['"full_name"'].slice(1, -1) ||
+        passedInTeam.RBOne.name ===
+          team['"full_name"'].slice(1, -1).replace('.', '').replace('.', '') ||
+        passedInTeam.RBOne.altName === team['"full_name"'].slice(1, -1)
+      ) {
+        // console.log((team['"target_share"'] * 100).toFixed(2));
+        passedInTeam.RBOne.targetSharePercentageLastFiveWeeks = +(
+          team['"target_share"'] * 100
+        ).toFixed(2);
+      }
+
+      if (
+        passedInTeam.RBTwo.name === team['"full_name"'].slice(1, -1) ||
+        passedInTeam.RBTwo.name ===
+          team['"full_name"'].slice(1, -1).replace('.', '').replace('.', '')
+      ) {
+        // console.log((team['"target_share"'] * 100).toFixed(2));
+        passedInTeam.RBTwo.targetSharePercentageLastFiveWeeks = +(
+          team['"target_share"'] * 100
+        ).toFixed(2);
+      }
+    });
+
+    wholeDownloadableSpreadSheetYahoo.forEach(function (team) {
+      if (team.Pos === 'RB') {
+        if (
+          passedInTeam.RBOne.name === team.Player ||
+          passedInTeam.RBOne.name ===
+            team.Player.replace('.', '').replace('.', '') ||
+          passedInTeam.RBOne.altName === team.Player
+        ) {
+          passedInTeam.RBOne.yahooSalary = +team['Y! ($)'];
+          let tempRBOnePercentOfSalaryCap = +(team['Y! ($)'] / 200);
+          passedInTeam.RBOne.percentOfSalaryCapYahoo =
+            tempRBOnePercentOfSalaryCap * 100;
+        }
+
+        if (
+          passedInTeam.RBTwo.name === team.Player ||
+          passedInTeam.RBTwo.name ===
+            team.Player.replace('.', '').replace('.', '') ||
+          passedInTeam.RBTwo.altName === team.Player
+        ) {
+          passedInTeam.RBTwo.yahooSalary = +team['Y! ($)'];
+          let tempRBTwoPercentOfSalaryCap = +(team['Y! ($)'] / 200);
+          passedInTeam.RBTwo.percentOfSalaryCapYahoo =
+            tempRBTwoPercentOfSalaryCap * 100;
+        }
+      }
+    });
+
+    gppLeverageScoresAndProjOwnershipFanduel.forEach(function (team) {
+      if (team['"Pos"'] === '"RB"') {
+        if (
+          passedInTeam.RBOne.name === team['"Player"'].slice(1, -1) ||
+          passedInTeam.RBOne.name ===
+            team['"Player"'].slice(1, -1).replace('.', '').replace('.', '') ||
+          passedInTeam.RBOne.altName === team['"Player"'].slice(1, -1)
+        ) {
+          passedInTeam.RBOne.fanduelSalary = +team['"FD Sal $"'].slice(1, -1);
+          tempPercentOfCap = +team['"FD Sal $"'].slice(1, -1) / 60000;
+          passedInTeam.RBOne.percentOfSalaryCapFanduel = +(
+            tempPercentOfCap * 100
+          ).toFixed();
+        }
+
+        if (
+          passedInTeam.RBTwo.name === team['"Player"'].slice(1, -1) ||
+          passedInTeam.RBTwo.name ===
+            team['"Player"'].slice(1, -1).replace('.', '').replace('.', '') ||
+          passedInTeam.RBTwo.altName === team['"Player"'].slice(1, -1)
+        ) {
+          passedInTeam.RBTwo.fanduelSalary = +team['"FD Sal $"'].slice(1, -1);
+          tempPercentOfCap = +team['"FD Sal $"'].slice(1, -1) / 60000;
+          passedInTeam.RBTwo.percentOfSalaryCapFanduel = +(
+            tempPercentOfCap * 100
+          ).toFixed();
+        }
+      }
+    });
+
+    gppLeverageScoresAndProjOwnershipDraftkings.forEach(function (team) {
+      if (team['"Pos"'] === '"RB"') {
+        // console.log(team['"Player"']);
+        if (
+          passedInTeam.RBOne.name === team['"Player"'].slice(1, -1) ||
+          passedInTeam.RBOne.name ===
+            team['"Player"'].slice(1, -1).replace('.', '').replace('.', '') ||
+          passedInTeam.RBOne.altName === team['"Player"'].slice(1, -1)
+        ) {
+          passedInTeam.RBOne.draftkingsSalary = +team['"DK Sal $"'].slice(
+            1,
+            -1
+          );
+          tempPercentOfCap = +team['"DK Sal $"'].slice(1, -1) / 50000;
+          passedInTeam.RBOne.percentOfSalaryCapDraftkings = +(
+            tempPercentOfCap * 100
+          ).toFixed();
+        }
+
+        if (
+          passedInTeam.RBTwo.name === team['"Player"'].slice(1, -1) ||
+          passedInTeam.RBTwo.name ===
+            team['"Player"'].slice(1, -1).replace('.', '').replace('.', '') ||
+          passedInTeam.RBOne.altName === team['"Player"'].slice(1, -1)
+        ) {
+          passedInTeam.RBTwo.draftkingsSalary = +team['"DK Sal $"'].slice(
+            1,
+            -1
+          );
+          tempPercentOfCap = +team['"DK Sal $"'].slice(1, -1) / 50000;
+          passedInTeam.RBTwo.percentOfSalaryCapDraftkings = +(
+            tempPercentOfCap * 100
+          ).toFixed();
+        }
+      }
+    });
   });
 };
 
@@ -5394,6 +6163,12 @@ populateTeamObjects(rbrawdata.vikings, gameInfo.vikings);
 // console.log(rbrawdata.bills);
 // console.log(rbrawdata.buccaneers);
 // console.log(rbrawdata.chiefs);
+// console.log(rbrawdata.lions);
+// console.log(rbrawdata.panthers);
+// console.log(rbrawdata.SF49ers);
+// console.log(rbrawdata.saints);
+// console.log(rbrawdata.seahawks);
+// console.log(rbrawdata.commanders);
 
 // console.log(rbrawdata.packers);
 // console.log(rbrawdata.ravens);

@@ -1328,6 +1328,19 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
     // console.log(teamName);
   });
 
+  passedInTeam.teamPlaysPerSixtyMinAllSituations =
+    gameInfoPassedInTeam.teamPlaysPerSixtyMinAllSituations;
+  passedInTeam.teamPlaysPerSixtyMinNeutralSituations =
+    gameInfoPassedInTeam.teamPlaysPerSixtyMinNeutralSituations;
+  passedInTeam.neutralScriptPassPercentage =
+    gameInfoPassedInTeam.neutralScriptPassPercentage;
+  passedInTeam.neutralScriptRunPercentage =
+    gameInfoPassedInTeam.neutralScriptRunPercentage;
+  passedInTeam.negativeScriptPassPercentage =
+    gameInfoPassedInTeam.negativeScriptPassPercentage;
+  passedInTeam.negativeScriptRunPercentage =
+    gameInfoPassedInTeam.negativeScriptRunPercentage;
+
   passedInTeam.slate = '';
   allNFLTeamPace.forEach(function (teamObj) {
     let tempHomeTeamName = '';
@@ -1447,18 +1460,18 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
         // console.log(qbfp.Player.slice(1, -1));
         if (qbfp.Player.slice(1, -1) === passedInTeam.name) {
           if (qbfp.G > 1) {
-            // console.log(qbfp);
+            // console.log(qbfp['"0.5 PPR Pts"']);
             passedInTeam.totalFantasyPointsScoredLastFiveWeeks =
-              qbfp['"FF Pts"'];
+              qbfp['"0.5 PPR Pts"'];
           }
         }
       });
 
       passedInTeam.totalFantasyPointsPerGameLastFiveWeeks = +(
-        passedInTeam.totalFantasyPointsScoredLastFiveWeeks /
-        passedInTeam.numberOfGamesPlayedLastFiveWeeks
+        +passedInTeam.totalFantasyPointsScoredLastFiveWeeks /
+        +passedInTeam.numberOfGamesPlayedLastFiveWeeks
       ).toFixed(2);
-
+      // console.log(passedInTeam.totalFantasyPointsPerGameLastFiveWeeks);
       qbRushingLastFiveGamesFromWeeklyStatExplorer.forEach(function (
         qbrushing
       ) {
@@ -1586,7 +1599,7 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
       // console.log(teamObj);
       // console.log(teamObj['"Pos"']);
       fanduelsalary = +teamObj['"FD Sal $"'].slice(1, 5);
-
+      // console.log(`${passedInTeam.name} ${fanduelsalary}`);
       passedInTeam.fanduelSalary = fanduelsalary;
 
       let rawfdPercentOfCap = fanduelsalary / 60000;
@@ -1628,6 +1641,12 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
       gameInfoPassedInTeam.WRTwoThisWeek4for4HalfProjPoints;
   }
 
+  passedInTeam.teamProjectedPoints =
+    gameInfoPassedInTeam.teamProjectedPointsThisWeek;
+  passedInTeam.oppTeamProjectedPoints =
+    gameInfoPassedInTeam.opponentThisWeek.teamProjectedPointsThisWeek;
+  passedInTeam.oppQBName = gameInfoPassedInTeam.opponentThisWeek.qbName;
+
   // console.log(sortedtempPassCatchersProjPoints);
   // console.log(`${passedInTeam.teamABV}: ${sortedtempPassCatchersProjPoints}`);
   //   passedInTeam.secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints =
@@ -1667,6 +1686,9 @@ populateTeamObjects(qbrawdata.texans, gameInfo.texans);
 populateTeamObjects(qbrawdata.titans, gameInfo.titans);
 populateTeamObjects(qbrawdata.vikings, gameInfo.vikings);
 
-console.log(qbrawdata);
+// console.log(qbrawdata.chargers);
+// console.log(qbrawdata.vikings);
+// console.log(qbrawdata.chiefs);
+// console.log(qbrawdata);
 
 module.exports = qbrawdata;

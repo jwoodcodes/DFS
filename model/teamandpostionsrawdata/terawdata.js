@@ -12,6 +12,10 @@ const allFlexGLSP = require('../datafilesmadefrom4for4CSVs/allFlexGLSP');
 const QBWeeklyStatExplorerLastFiveWeeksCategoryPassing = require('../datafilesmadefrom4for4CSVs/QBWeeklyStatExplorerLastFiveWeeksCategoryPassing');
 const gameInfo = require('./gameinfo');
 const allTeams = require('../teamandpositionvariables/allTeamLevelVariables');
+const allQBData = require('../dfs_positions_calc_funcs/qbValuesCalcs');
+const te4for4PlayerStatExplorerExpectedPPRPointsWeeklyLastFiveWeeks = require('../datafilesmadefrom4for4CSVs/te4for4PlayerStatExplorerExpectedPPRPointsWeeklyLastFiveWeeks');
+const te4for4FantasyPointsBrowserLastFiveWeeks = require('../datafilesmadefrom4for4CSVs/te4for4FantasyPointsBrowserLastFiveWeeks');
+const te4for4PlayerStatExplorerReceivingTab = require('../datafilesmadefrom4for4CSVs/te4for4PlayerStatExplorerReceivingtab');
 
 const terawdata = {
   SF49ers: {
