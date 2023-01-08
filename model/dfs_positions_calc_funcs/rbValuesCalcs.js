@@ -52,6 +52,7 @@ allRBs.forEach(function (rb, i) {
     }
   });
   rbOnenumOfMatchingRoleWeeks.push(rbOnematchingWeeks);
+  rb.RBOne.rbOnenumOfMatchingRoleWeeks = rbOnematchingWeeks;
 
   rbTworoleLastXNumOfWeeksUpToFiveArray.forEach(function (role) {
     if (role === rbTwoRoleThisWeek) {
@@ -59,6 +60,7 @@ allRBs.forEach(function (rb, i) {
     }
   });
   rbTwonumOfMatchingRoleWeeks.push(rbTwomatchingWeeks);
+  rb.RBTwo.rbTwonumOfMatchingRoleWeeks = rbTwomatchingWeeks;
 });
 
 const rbOnePercentageOfMatchingRoleWeeks = [];
@@ -68,17 +70,25 @@ allRBs.map(function (team, i) {
   let rbOnematchingWeeksPercentage =
     rbOnenumOfMatchingRoleWeeks[i] /
     team.RBOne.roleLastXNumOfWeeksUpToFive.length;
-
+  team.RBOne.rbOnematchingWeeksPercentage = rbOnematchingWeeksPercentage;
   rbOnePercentageOfMatchingRoleWeeks.push(rbOnematchingWeeksPercentage);
 
   let rbTwomatchingWeeksPercentage =
     rbTwonumOfMatchingRoleWeeks[i] /
     team.RBTwo.roleLastXNumOfWeeksUpToFive.length;
-
+  team.RBTwo.rbTwomatchingWeeksPercentage = rbTwomatchingWeeksPercentage;
   rbTwoPercentageOfMatchingRoleWeeks.push(rbTwomatchingWeeksPercentage);
 });
 
-/// have checked down to here for re-write. the rbOnematchingWeeksPercentage and rbTwomatchingWeeksPercentage above are working still. procedd down from here with the re-write
+/// have checked down to here for re-write. the rbOnematchingWeeksPercentage and rbTwomatchingWeeksPercentage above are working still. proceed down from here with the re-write
+
+class RbObject {
+  constructor(playerName) {
+    this.playerName = playerName;
+  }
+
+  //add methods here
+}
 
 const allRBCalcFunctions = {
   calcRBProjectionToUseOffBackfieldShare(rb, i) {
@@ -440,7 +450,7 @@ allRBs.forEach(function (team, i) {
 });
 
 allRBs.forEach(function (rb) {
-  // console.log(rb);
+  console.log(rb);
   // console.log(
   //   rb.RBOne.name,
   //   rb.RBOne.totalPercentOfTeamHighValueTouchesLastFiveweeks,
