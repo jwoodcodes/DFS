@@ -440,6 +440,7 @@ allRBs.forEach(function (team, i) {
 });
 
 allRBs.forEach(function (rb) {
+  // console.log(rb);
   // console.log(
   //   rb.RBOne.name,
   //   rb.RBOne.totalPercentOfTeamHighValueTouchesLastFiveweeks,

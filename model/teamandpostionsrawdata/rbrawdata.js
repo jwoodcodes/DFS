@@ -540,7 +540,7 @@ const rbrawdata = {
     opponentVTT: 0,
 
     teamTotalGreenZoneTouchesLastFiveWeeks: 0,
-    teamTotalReceptionsByRBsPerGameLastFiveWeeks: 0,
+
     teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
@@ -554,8 +554,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -575,22 +573,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -601,9 +588,6 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -622,22 +606,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -651,7 +624,7 @@ const rbrawdata = {
     opponentVTT: 0,
 
     teamTotalGreenZoneTouchesLastFiveWeeks: 0,
-    teamTotalReceptionsByRBsPerGameLastFiveWeeks: 0,
+
     teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
@@ -665,8 +638,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -686,22 +657,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -712,9 +672,6 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -733,22 +690,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -762,7 +708,7 @@ const rbrawdata = {
     opponentVTT: 0,
 
     teamTotalGreenZoneTouchesLastFiveWeeks: 0,
-    teamTotalReceptionsByRBsPerGameLastFiveWeeks: 0,
+
     teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
@@ -776,8 +722,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -797,22 +741,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -823,9 +756,6 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -844,22 +774,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -873,7 +792,7 @@ const rbrawdata = {
     opponentVTT: 0,
 
     teamTotalGreenZoneTouchesLastFiveWeeks: 0,
-    teamTotalReceptionsByRBsPerGameLastFiveWeeks: 0,
+
     teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
@@ -887,8 +806,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -908,22 +825,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -934,9 +840,6 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -955,22 +858,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -984,7 +876,7 @@ const rbrawdata = {
     opponentVTT: 0,
 
     teamTotalGreenZoneTouchesLastFiveWeeks: 0,
-    teamTotalReceptionsByRBsPerGameLastFiveWeeks: 0,
+
     teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
@@ -998,8 +890,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -1019,22 +909,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -1045,9 +924,6 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -1066,22 +942,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -1095,7 +960,7 @@ const rbrawdata = {
     opponentVTT: 0,
 
     teamTotalGreenZoneTouchesLastFiveWeeks: 0,
-    teamTotalReceptionsByRBsPerGameLastFiveWeeks: 0,
+
     teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
@@ -1109,8 +974,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -1130,22 +993,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -1156,9 +1008,6 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -1177,22 +1026,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -1206,7 +1044,7 @@ const rbrawdata = {
     opponentVTT: 0,
 
     teamTotalGreenZoneTouchesLastFiveWeeks: 0,
-    teamTotalReceptionsByRBsPerGameLastFiveWeeks: 0,
+
     teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
@@ -1220,8 +1058,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -1241,22 +1077,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -1267,9 +1092,6 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -1288,22 +1110,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -1317,7 +1128,7 @@ const rbrawdata = {
     opponentVTT: 0,
 
     teamTotalGreenZoneTouchesLastFiveWeeks: 0,
-    teamTotalReceptionsByRBsPerGameLastFiveWeeks: 0,
+
     teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
@@ -1331,8 +1142,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -1352,22 +1161,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -1378,9 +1176,6 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -1399,22 +1194,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -1428,7 +1212,7 @@ const rbrawdata = {
     opponentVTT: 0,
 
     teamTotalGreenZoneTouchesLastFiveWeeks: 0,
-    teamTotalReceptionsByRBsPerGameLastFiveWeeks: 0,
+
     teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
@@ -1442,8 +1226,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -1463,22 +1245,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -1489,9 +1260,6 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -1510,22 +1278,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -1539,7 +1296,7 @@ const rbrawdata = {
     opponentVTT: 0,
 
     teamTotalGreenZoneTouchesLastFiveWeeks: 0,
-    teamTotalReceptionsByRBsPerGameLastFiveWeeks: 0,
+
     teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
@@ -1553,8 +1310,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -1574,22 +1329,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -1600,9 +1344,6 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -1621,22 +1362,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -1650,7 +1380,7 @@ const rbrawdata = {
     opponentVTT: 0,
 
     teamTotalGreenZoneTouchesLastFiveWeeks: 0,
-    teamTotalReceptionsByRBsPerGameLastFiveWeeks: 0,
+
     teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
@@ -1664,8 +1394,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -1685,22 +1413,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -1711,9 +1428,6 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -1732,22 +1446,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -1762,7 +1465,7 @@ const rbrawdata = {
     opponentVTT: 0,
 
     teamTotalGreenZoneTouchesLastFiveWeeks: 0,
-    teamTotalReceptionsByRBsPerGameLastFiveWeeks: 0,
+
     teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
@@ -1776,8 +1479,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -1797,22 +1498,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -1823,9 +1513,6 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -1844,22 +1531,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -1873,7 +1549,7 @@ const rbrawdata = {
     opponentVTT: 0,
 
     teamTotalGreenZoneTouchesLastFiveWeeks: 0,
-    teamTotalReceptionsByRBsPerGameLastFiveWeeks: 0,
+
     teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
@@ -1887,8 +1563,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -1908,22 +1582,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -1934,9 +1597,6 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -1955,22 +1615,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -1984,7 +1633,7 @@ const rbrawdata = {
     opponentVTT: 0,
 
     teamTotalGreenZoneTouchesLastFiveWeeks: 0,
-    teamTotalReceptionsByRBsPerGameLastFiveWeeks: 0,
+
     teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
@@ -1998,8 +1647,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -2019,22 +1666,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -2045,9 +1681,6 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -2066,22 +1699,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -2095,7 +1717,7 @@ const rbrawdata = {
     opponentVTT: 0,
 
     teamTotalGreenZoneTouchesLastFiveWeeks: 0,
-    teamTotalReceptionsByRBsPerGameLastFiveWeeks: 0,
+
     teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
@@ -2109,8 +1731,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -2130,22 +1750,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -2156,9 +1765,6 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -2177,22 +1783,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -2206,7 +1801,7 @@ const rbrawdata = {
     opponentVTT: 0,
 
     teamTotalGreenZoneTouchesLastFiveWeeks: 0,
-    teamTotalReceptionsByRBsPerGameLastFiveWeeks: 0,
+
     teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
@@ -2220,8 +1815,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -2241,22 +1834,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -2267,9 +1849,6 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -2288,22 +1867,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -2317,7 +1885,7 @@ const rbrawdata = {
     opponentVTT: 0,
 
     teamTotalGreenZoneTouchesLastFiveWeeks: 0,
-    teamTotalReceptionsByRBsPerGameLastFiveWeeks: 0,
+
     teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
@@ -2331,8 +1899,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -2352,22 +1918,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -2378,9 +1933,6 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -2399,22 +1951,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -2428,7 +1969,7 @@ const rbrawdata = {
     opponentVTT: 0,
 
     teamTotalGreenZoneTouchesLastFiveWeeks: 0,
-    teamTotalReceptionsByRBsPerGameLastFiveWeeks: 0,
+
     teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
@@ -2442,8 +1983,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -2463,22 +2002,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -2489,9 +2017,6 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -2510,22 +2035,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -2540,7 +2054,7 @@ const rbrawdata = {
     opponentVTT: 0,
 
     teamTotalGreenZoneTouchesLastFiveWeeks: 0,
-    teamTotalReceptionsByRBsPerGameLastFiveWeeks: 0,
+
     teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
@@ -2554,8 +2068,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -2575,22 +2087,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -2601,9 +2102,6 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -2622,22 +2120,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -2651,7 +2138,7 @@ const rbrawdata = {
     opponentVTT: 0,
 
     teamTotalGreenZoneTouchesLastFiveWeeks: 0,
-    teamTotalReceptionsByRBsPerGameLastFiveWeeks: 0,
+
     teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
@@ -2665,8 +2152,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -2686,22 +2171,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -2712,9 +2186,6 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -2733,22 +2204,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -2757,113 +2217,12 @@ const rbrawdata = {
   },
   saints: {
     teamABV: 'NO',
-    opponentABV: 0,
-    teamVTT: 0,
-    opponentVTT: 0,
-    totalTeamPRojectedRBCarries: 0,
-    totalTeamProjectedRBTargets: 0,
-
-    weekFiveWeeksAgo: [],
-    weekFourWeeksAgo: [],
-    weekThreeWeeksAgo: [],
-    weekTwoWeeksAgo: [],
-    weekLastWeek: [],
-
-    teamRBTotalsFiveWeeksAgo: [],
-    teamRBTotalsFourWeeksAgo: [],
-
-    RBOne: {
-      name: '',
-      RBOneOrTwo: 1,
-      roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [],
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
-
-      halfTwentyFifthPercentProjectedPoints: 0,
-      halfFiftyithPercentProjectedPoints: 0,
-      halfSeventyFifthPercentProjectedPoints: 0,
-      PPRTwentyFifthPercentProjectedPoints: 0,
-      PPRFiftyithPercentProjectedPoints: 0,
-      PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
-      glspLessThanFive: 0,
-      glspFiveToTen: 0,
-      glspTenToFifteen: 0,
-      glspFifteenToTwenty: 0,
-      glspTwentyToTwentyFive: 0,
-      glspGreaterThanTwentyFive: 0,
-
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
-
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
-
-      yahooSalary: 0,
-      fanduelSalary: 0,
-      draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
-
-      percentOfSalaryCapDraftkings: 0,
-      percentOfSalaryCapFanduel: 0,
-      percentOfSalaryCapYahoo: 0,
-    },
-    RBTwo: {
-      name: '',
-      roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [],
-
-      numberOfGamesPlayedLastFiveWeeks: 0,
-      percentOfGamesPlayedLastFiveWeeks: 0,
-
-      halfTwentyFifthPercentProjectedPoints: 0,
-      halfFiftyithPercentProjectedPoints: 0,
-      halfSeventyFifthPercentProjectedPoints: 0,
-      PPRTwentyFifthPercentProjectedPoints: 0,
-      PPRFiftyithPercentProjectedPoints: 0,
-      PPRSeventyFifthPercentProjectedPoints: 0,
-      glspavg: 0,
-      glspLessThanFive: 0,
-      glspFiveToTen: 0,
-      glspTenToFifteen: 0,
-      glspFifteenToTwenty: 0,
-      glspTwentyToTwentyFive: 0,
-      glspGreaterThanTwentyFive: 0,
-
-      fourForFourHalfPPRProjectedPoints: 0,
-      fourForFourFullPPRProjectedPoints: 0,
-
-      prjCarries: 0,
-      prjTargets: 0,
-
-      percentOfTeamGreenZoneCarriesLastFiveGamesPlayerPlayed: 0,
-      TargetSharePercentageLastFiveWeeks: 0,
-
-      yahooSalary: 0,
-      fanduelSalary: 0,
-      draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
-
-      percentOfSalaryCapDraftkings: 0,
-      percentOfSalaryCapFanduel: 0,
-      percentOfSalaryCapYahoo: 0,
-    },
     opponentABV: '',
     teamVTT: 0,
     opponentVTT: 0,
 
     teamTotalGreenZoneTouchesLastFiveWeeks: 0,
-    teamTotalReceptionsByRBsPerGameLastFiveWeeks: 0,
+
     teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
@@ -2877,8 +2236,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -2898,22 +2255,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -2924,9 +2270,6 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -2945,22 +2288,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -2974,7 +2306,7 @@ const rbrawdata = {
     opponentVTT: 0,
 
     teamTotalGreenZoneTouchesLastFiveWeeks: 0,
-    teamTotalReceptionsByRBsPerGameLastFiveWeeks: 0,
+
     teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
@@ -2988,8 +2320,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -3009,22 +2339,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -3035,9 +2354,6 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -3056,22 +2372,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -3085,7 +2390,7 @@ const rbrawdata = {
     opponentVTT: 0,
 
     teamTotalGreenZoneTouchesLastFiveWeeks: 0,
-    teamTotalReceptionsByRBsPerGameLastFiveWeeks: 0,
+
     teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
@@ -3099,8 +2404,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -3120,22 +2423,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -3146,9 +2438,6 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -3167,22 +2456,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -3196,7 +2474,7 @@ const rbrawdata = {
     opponentVTT: 0,
 
     teamTotalGreenZoneTouchesLastFiveWeeks: 0,
-    teamTotalReceptionsByRBsPerGameLastFiveWeeks: 0,
+
     teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
@@ -3210,8 +2488,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -3231,22 +2507,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -3257,9 +2522,6 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -3278,22 +2540,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -3307,7 +2558,7 @@ const rbrawdata = {
     opponentVTT: 0,
 
     teamTotalGreenZoneTouchesLastFiveWeeks: 0,
-    teamTotalReceptionsByRBsPerGameLastFiveWeeks: 0,
+
     teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
@@ -3321,8 +2572,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -3342,22 +2591,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -3368,9 +2606,6 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -3389,22 +2624,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -3419,7 +2643,7 @@ const rbrawdata = {
     opponentVTT: 0,
 
     teamTotalGreenZoneTouchesLastFiveWeeks: 0,
-    teamTotalReceptionsByRBsPerGameLastFiveWeeks: 0,
+
     teamTotalHVTsLastFiveWeeks: 0,
 
     weekFiveWeeksAgo: [],
@@ -3433,8 +2657,6 @@ const rbrawdata = {
       RBOneOrTwo: 1,
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
 
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
@@ -3454,22 +2676,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -3480,9 +2691,6 @@ const rbrawdata = {
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
 
-      // numberOfGamesPlayedLastFiveWeeks: 0,
-      // percentOfGamesPlayedLastFiveWeeks: 0,
-
       halfTwentyFifthPercentProjectedPoints: 0,
       halfFiftyithPercentProjectedPoints: 0,
       halfSeventyFifthPercentProjectedPoints: 0,
@@ -3501,22 +2709,11 @@ const rbrawdata = {
       fourForFourHalfPPRProjectedPoints: 0,
       fourForFourFullPPRProjectedPoints: 0,
 
-      greenZoneTouchesLastFiveWeeks: 0,
-      percentOfTeamGreenZoneTouchesLastFiveGamesPlayerPlayed: 0,
-      receptionsLastFiveWeeks: 0,
-      percentageOfTeamBackfieldRecpetionsLastFiveWeeks: 0,
-      totalHighValueTouchesLastFiveWeeks: 0,
-      percentOfTotalTeamHVTsLastFiveWeeks: 0,
-
       FPOEPerGameLastFiveWeeks: 0,
 
       yahooSalary: 0,
       fanduelSalary: 0,
       draftkingsSalary: 0,
-
-      draftkingsProjectedOwnership: 0,
-      fanduelProjectedOwnership: 0,
-      yahooProjectedOwnership: 0,
 
       percentOfSalaryCapDraftkings: 0,
       percentOfSalaryCapFanduel: 0,
@@ -3845,6 +3042,14 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
         if (weekLastWeek === '-') {
           passedInTeam.fourthPassedInRBLastWeekInFantasyPointsScoredPointsScored = 0;
         }
+      }
+
+      if (passedInTeam.RBOne.name === 'Kenneth Walker') {
+        passedInTeam.RBOne.altName = 'Ken Walker';
+      }
+
+      if (passedInTeam.RBTwo.name === 'Kenneth Walker') {
+        passedInTeam.RBTwo.altName = 'Ken Walker';
       }
 
       if (passedInTeam.RBOne.name === rb.Player.slice(1, -1)) {
@@ -6622,7 +5827,24 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
     allFlexGLSP.forEach(function (team) {
       if (team['"POS"'].slice(1, -1) === 'RB') {
         // console.log(team['"Player"']);
-        if (passedInTeam.RBOne.name === team['"Player"'].slice(1, -1)) {
+        if (
+          team['"Player"'].slice(1, -1) === 'Brian Robinson Jr' &&
+          passedInTeam.teamABV === 'WAS'
+        ) {
+          passedInTeam.brob = team['"Player"'].slice(1, -4);
+        }
+        if (
+          team['"Player"'].slice(1, -1) === 'Kenneth Walker III' &&
+          passedInTeam.teamABV === 'SEA'
+        ) {
+          passedInTeam.walker = team['"Player"'].slice(1, -5);
+        }
+        if (
+          passedInTeam.RBOne.name === team['"Player"'].slice(1, -1) ||
+          passedInTeam.RBOne.altName === team['"Player"'].slice(1, -1) ||
+          passedInTeam.walker === team['"Player"'].slice(1, -5) ||
+          passedInTeam.brob === team['"Player"'].slice(1, -4)
+        ) {
           // console.log(team['"Player"'].slice(1, -1));
           // console.log(team['"Player"']);
           passedInTeam.RBOne.glspHalfavg = +team['"Half - AVG"'];
@@ -6647,7 +5869,15 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
           passedInTeam.RBOne.glspTwentyToTwentyFive = +team['"20 to 25"'];
           passedInTeam.RBOne.glspGreaterThanTwentyFive = +team['">25"'];
         }
-        if (passedInTeam.RBTwo.name === team['"Player"'].slice(1, -1)) {
+        if (
+          passedInTeam.RBTwo.name ===
+          team['"Player"'].slice(
+            1,
+            -1 ||
+              passedInTeam.RBTwo.altName === team['"Player"'].slice(1, -1) ||
+              passedInTeam.walker === team['"Player"'].slice(1, -5)
+          )
+        ) {
           // console.log(team['"Player"'].slice(1, -1));
           passedInTeam.RBTwo.glspHalfavg = +team['"Half - AVG"'];
           passedInTeam.RBTwo.glspPPRavg = +team['"PPR - AVG"'];
@@ -6720,18 +5950,24 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
 
     allHalfPPRProjectedPointsWithoutTeamDef.forEach(function (team) {
       if (team.Pos === 'RB') {
+        // if (passedInTeam.teamABV === 'SEA' && team.Player === 'Ken Walker') {
+        //   console.log(team.Player, passedInTeam.RBOne.altName);
+        // }
         if (
           passedInTeam.RBOne.name === team.Player ||
           passedInTeam.RBOne.name ===
-            team.Player.replace('.', '').replace('.', '')
+            team.Player.replace('.', '').replace('.', '') ||
+          passedInTeam.RBOne.altName === team.Player
         ) {
           // console.log(team);
+          // console.log(team.Player);
           passedInTeam.RBOne.fourForFourHalfPPRProjectedPoints = +team.FFPts;
         }
         if (
           passedInTeam.RBTwo.name === team.Player ||
           passedInTeam.RBTwo.name ===
-            team.Player.replace('.', '').replace('.', '')
+            team.Player.replace('.', '').replace('.', '') ||
+          passedInTeam.RBTwo.altName === team.Player
         ) {
           // console.log(team);
           passedInTeam.RBTwo.fourForFourHalfPPRProjectedPoints = +team.FFPts;
@@ -6744,7 +5980,8 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
         if (
           passedInTeam.RBOne.name === team.Player ||
           passedInTeam.RBOne.name ===
-            team.Player.replace('.', '').replace('.', '')
+            team.Player.replace('.', '').replace('.', '') ||
+          passedInTeam.RBOne.altName === team.Player
         ) {
           // console.log(team);
           passedInTeam.RBOne.fourForFourFullPPRProjectedPoints = +team.FFPts;
@@ -6758,7 +5995,8 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
         if (
           passedInTeam.RBTwo.name === team.Player ||
           passedInTeam.RBTwo.name ===
-            team.Player.replace('.', '').replace('.', '')
+            team.Player.replace('.', '').replace('.', '') ||
+          passedInTeam.RBTwo.altName === team.Player
         ) {
           // console.log(team);
           passedInTeam.RBTwo.fourForFourFullPPRProjectedPoints = +team.FFPts;
@@ -6770,7 +6008,8 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
       if (
         passedInTeam.RBOne.name === team['"full_name"'].slice(1, -1) ||
         passedInTeam.RBOne.name ===
-          team['"full_name"'].slice(1, -1).replace('.', '').replace('.', '')
+          team['"full_name"'].slice(1, -1).replace('.', '').replace('.', '') ||
+        passedInTeam.RBOne.altName === team['"full_name"'].slice(1, -1)
       ) {
         // console.log((team['"target_share"'] * 100).toFixed(2));
         passedInTeam.RBOne.targetSharePercentageLastFiveWeeks = +(
@@ -6795,7 +6034,8 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
         if (
           passedInTeam.RBOne.name === team.Player ||
           passedInTeam.RBOne.name ===
-            team.Player.replace('.', '').replace('.', '')
+            team.Player.replace('.', '').replace('.', '') ||
+          passedInTeam.RBOne.altName === team.Player
         ) {
           passedInTeam.RBOne.yahooSalary = +team['Y! ($)'];
           let tempRBOnePercentOfSalaryCap = +(team['Y! ($)'] / 200);
@@ -6806,7 +6046,8 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
         if (
           passedInTeam.RBTwo.name === team.Player ||
           passedInTeam.RBTwo.name ===
-            team.Player.replace('.', '').replace('.', '')
+            team.Player.replace('.', '').replace('.', '') ||
+          passedInTeam.RBTwo.altName === team.Player
         ) {
           passedInTeam.RBTwo.yahooSalary = +team['Y! ($)'];
           let tempRBTwoPercentOfSalaryCap = +(team['Y! ($)'] / 200);
@@ -6821,7 +6062,8 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
         if (
           passedInTeam.RBOne.name === team['"Player"'].slice(1, -1) ||
           passedInTeam.RBOne.name ===
-            team['"Player"'].slice(1, -1).replace('.', '').replace('.', '')
+            team['"Player"'].slice(1, -1).replace('.', '').replace('.', '') ||
+          passedInTeam.RBOne.altName === team['"Player"'].slice(1, -1)
         ) {
           passedInTeam.RBOne.fanduelSalary = +team['"FD Sal $"'].slice(1, -1);
           tempPercentOfCap = +team['"FD Sal $"'].slice(1, -1) / 60000;
@@ -6833,7 +6075,8 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
         if (
           passedInTeam.RBTwo.name === team['"Player"'].slice(1, -1) ||
           passedInTeam.RBTwo.name ===
-            team['"Player"'].slice(1, -1).replace('.', '').replace('.', '')
+            team['"Player"'].slice(1, -1).replace('.', '').replace('.', '') ||
+          passedInTeam.RBTwo.altName === team['"Player"'].slice(1, -1)
         ) {
           passedInTeam.RBTwo.fanduelSalary = +team['"FD Sal $"'].slice(1, -1);
           tempPercentOfCap = +team['"FD Sal $"'].slice(1, -1) / 60000;
@@ -6846,10 +6089,12 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
 
     gppLeverageScoresAndProjOwnershipDraftkings.forEach(function (team) {
       if (team['"Pos"'] === '"RB"') {
+        // console.log(team['"Player"']);
         if (
           passedInTeam.RBOne.name === team['"Player"'].slice(1, -1) ||
           passedInTeam.RBOne.name ===
-            team['"Player"'].slice(1, -1).replace('.', '').replace('.', '')
+            team['"Player"'].slice(1, -1).replace('.', '').replace('.', '') ||
+          passedInTeam.RBOne.altName === team['"Player"'].slice(1, -1)
         ) {
           passedInTeam.RBOne.draftkingsSalary = +team['"DK Sal $"'].slice(
             1,
@@ -6864,7 +6109,8 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
         if (
           passedInTeam.RBTwo.name === team['"Player"'].slice(1, -1) ||
           passedInTeam.RBTwo.name ===
-            team['"Player"'].slice(1, -1).replace('.', '').replace('.', '')
+            team['"Player"'].slice(1, -1).replace('.', '').replace('.', '') ||
+          passedInTeam.RBOne.altName === team['"Player"'].slice(1, -1)
         ) {
           passedInTeam.RBTwo.draftkingsSalary = +team['"DK Sal $"'].slice(
             1,
@@ -6920,6 +6166,9 @@ populateTeamObjects(rbrawdata.vikings, gameInfo.vikings);
 // console.log(rbrawdata.lions);
 // console.log(rbrawdata.panthers);
 // console.log(rbrawdata.SF49ers);
+// console.log(rbrawdata.saints);
+// console.log(rbrawdata.seahawks);
+// console.log(rbrawdata.commanders);
 
 // console.log(rbrawdata.packers);
 // console.log(rbrawdata.ravens);
