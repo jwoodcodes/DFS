@@ -2,6 +2,7 @@ const allTeams = require('../teamandpositionvariables/allTeamLevelVariables');
 const allRBs = require('../teamandpositionvariables/allRBVariables');
 const rbrawdata = require('../teamandpostionsrawdata/rbrawdata');
 const gameInfo = require('../teamandpostionsrawdata/gameinfo');
+const allQBData = require('./qbValuesCalcs');
 
 const allRBOneHalfPPRProjectedPointsValues = [];
 const allRBOneFullPPRProjectedPointsValues = [];
@@ -82,12 +83,80 @@ allRBs.map(function (team, i) {
 
 /// have checked down to here for re-write. the rbOnematchingWeeksPercentage and rbTwomatchingWeeksPercentage above are working still. proceed down from here with the re-write
 
+// ATTENTION: have you checked out a new branch yet today????????????
+
 class RbObject {
-  constructor(playerName) {
+  constructor(
+    playerName,
+    position,
+    teamName,
+    teamABV,
+    byeWeek,
+    homeOrAway,
+    slate,
+    teamProjectedPoints,
+    teamTotalHVTsLastFiveWeeks,
+    hadByeInLastFiveWeeksIsTrue,
+    teamProjectedForAHalfOfNegetiveGameScriptIsTrue,
+    teamProjectedForThreeQuartersOfNegetiveGameScriptIsTrue,
+
+    roleThisWeek,
+    percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek,
+
+    FPOEPerGameLastFiveWeeks,
+    HVTsLastFiveWeeks,
+    percentOfTeamHVTsLastFiveWeeks,
+    targetSharePercentageLastFiveWeeks,
+
+    yahooSalary,
+    fanduelSalary,
+    draftkingsSalary,
+    percentOfSalaryCapYahoo,
+    percentOfSalaryCapFanduel,
+    percentOfSalaryCapDraftkings,
+
+    opponentTeamName,
+    opponentABV,
+    opponentTeamProjectedPoints
+  ) {
     this.playerName = playerName;
+    this.position = position;
+    this.teamName = teamName;
+    this.teamABV = teamABV;
+    this.byeWeek = byeWeek;
+    this.homeOrAway = homeOrAway;
+    this.slate = slate;
+    this.teamProjectedPoints = teamProjectedPoints;
+    this.teamTotalHVTsLastFiveWeeks = teamTotalHVTsLastFiveWeeks;
+    this.hadByeInLastFiveWeeksIsTrue = hadByeInLastFiveWeeksIsTrue;
+    this.teamProjectedForAHalfOfNegetiveGameScriptIsTrue =
+      teamProjectedForAHalfOfNegetiveGameScriptIsTrue;
+    (this.teamProjectedForThreeQuartersOfNegetiveGameScriptIsTrue =
+      teamProjectedForThreeQuartersOfNegetiveGameScriptIsTrue),
+      (this.roleThisWeek = roleThisWeek);
+    this.percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek =
+      percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek;
+
+    this.FPOEPerGameLastFiveWeeks = FPOEPerGameLastFiveWeeks;
+    this.HVTsLastFiveWeeks = HVTsLastFiveWeeks;
+    this.percentOfTeamHVTsLastFiveWeeks = percentOfTeamHVTsLastFiveWeeks;
+    this.targetSharePercentageLastFiveWeeks =
+      targetSharePercentageLastFiveWeeks;
+
+    this.yahooSalary = yahooSalary;
+    this.fanduelSalary = fanduelSalary;
+    this.draftkingsSalary = draftkingsSalary;
+    this.percentOfSalaryCapYahoo = percentOfSalaryCapYahoo;
+    this.percentOfSalaryCapFanduel = percentOfSalaryCapFanduel;
+    this.percentOfSalaryCapDraftkings = percentOfSalaryCapDraftkings;
+
+    this.opponentTeamName = opponentTeamName;
+    this.opponentABV = opponentABV;
+    this.opponentTeamProjectedPoints = opponentTeamProjectedPoints;
   }
 
   //add methods here
+  //create method here to calculate and assign this.appProjectedPoints = appProjectedPoints; for ever player passed in
 }
 
 const allRBCalcFunctions = {
@@ -449,8 +518,93 @@ allRBs.forEach(function (team, i) {
   );
 });
 
+// class RbObject {
+//   constructor(
+//     playerName,
+//     position,
+//     teamName,
+//     teamABV,
+//     byeWeek,
+//     homeOrAway,
+//     slate,
+//     teamProjectedPoints,
+//     teamTotalHVTsLastFiveWeeks,
+//     hadByeInLastFiveWeeksIsTrue,
+//     teamProjectedForAHalfOfNegetiveGameScriptIsTrue,
+//     teamProjectedForThreeQuartersOfNegetiveGameScriptIsTrue,
+
+//     roleThisWeek,
+//     percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek,
+
+//     FPOEPerGameLastFiveWeeks,
+//     HVTsLastFiveWeeks,
+//     percentOfTeamHVTsLastFiveWeeks,
+//     targetSharePercentageLastFiveWeeks,
+
+//     yahooSalary,
+//     fanduelSalary,
+//     draftkingsSalary,
+//     percentOfSalaryCapYahoo,
+//     percentOfSalaryCapFanduel,
+//     percentOfSalaryCapDraftkings,
+
+//     opponentTeamName,
+//     opponentABV,
+//     opponentTeamProjectedPoints
+//   ) {
+//     this.playerName = playerName;
+//     this.position = position;
+//     this.teamName = teamName;
+//     this.teamABV = teamABV;
+//     this.byeWeek = byeWeek;
+//     this.homeOrAway = homeOrAway;
+//     this.slate = slate;
+//     this.teamProjectedPoints = teamProjectedPoints;
+//     this.teamTotalHVTsLastFiveWeeks = teamTotalHVTsLastFiveWeeks;
+//     this.hadByeInLastFiveWeeksIsTrue = hadByeInLastFiveWeeksIsTrue;
+//     this.teamProjectedForAHalfOfNegetiveGameScriptIsTrue =
+//       teamProjectedForAHalfOfNegetiveGameScriptIsTrue;
+//     (this.teamProjectedForThreeQuartersOfNegetiveGameScriptIsTrue =
+//       teamProjectedForThreeQuartersOfNegetiveGameScriptIsTrue),
+//       (this.roleThisWeek = roleThisWeek);
+//     this.percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek =
+//       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek;
+
+//     this.FPOEPerGameLastFiveWeeks = FPOEPerGameLastFiveWeeks;
+//     this.HVTsLastFiveWeeks = HVTsLastFiveWeeks;
+//     this.percentOfTeamHVTsLastFiveWeeks = percentOfTeamHVTsLastFiveWeeks;
+//     this.targetSharePercentageLastFiveWeeks =
+//       targetSharePercentageLastFiveWeeks;
+
+//     this.yahooSalary = yahooSalary;
+//     this.fanduelSalary = fanduelSalary;
+//     this.draftkingsSalary = draftkingsSalary;
+//     this.percentOfSalaryCapYahoo = percentOfSalaryCapYahoo;
+//     this.percentOfSalaryCapFanduel = percentOfSalaryCapFanduel;
+//     this.percentOfSalaryCapDraftkings = percentOfSalaryCapDraftkings;
+
+//     this.opponentTeamName = opponentTeamName;
+//     this.opponentABV = opponentABV;
+//     this.opponentTeamProjectedPoints = opponentTeamProjectedPoints;
+//   }
+
+//   //add methods here
+//   //create method here to calculate and assign this.appProjectedPoints = appProjectedPoints; for ever player passed in
+// }
+
+//constructing all RB objects
+
+allRBs.forEach(function (team, i) {
+  // console.log(team);
+  allTeams.forEach(function (giTeam) {
+    // console.log(giTeam);
+  });
+});
+
+///
+
 allRBs.forEach(function (rb) {
-  console.log(rb);
+  // console.log(rb);
   // console.log(
   //   rb.RBOne.name,
   //   rb.RBOne.totalPercentOfTeamHighValueTouchesLastFiveweeks,
@@ -460,8 +614,6 @@ allRBs.forEach(function (rb) {
   // console.log(rb.RBOne.name, rb.RBOne.HVTsFiveweeksAgo);
   // console.log(rb.RBOne.name, rb.RBOne.FPOEPerGameLastFiveWeeks);
 });
-
-//////////////calculating projected points per dollar
 
 const allRBData = {
   allRBOneHalfPPRProjectedPointsValues: allRBOneHalfPPRProjectedPointsValues,

@@ -23,6 +23,7 @@ const allQBNames = [];
 class QbObject {
   constructor(
     playerName,
+    position,
     teamName,
     teamABV,
     byeWeek,
@@ -31,7 +32,7 @@ class QbObject {
     teamProjectedPoints,
     hadByeInLastFiveWeeksIsTrue,
 
-    appQBProjectedPoints,
+    appProjectedPoints,
     percentOfGamesPlayedLastFiveWeeks,
     fantasyPointsFromRushingPerGameLastFiveWeeks,
     fantasyPointsFromPassingPerGameLastFiveWeeks,
@@ -52,6 +53,7 @@ class QbObject {
     bonusForHighExplosivePassVsBadExplosivePassDef
   ) {
     this.playerName = playerName;
+    this.position = position;
     this.teamName = teamName;
     this.teamABV = teamABV;
     this.byeWeek = byeWeek;
@@ -60,7 +62,7 @@ class QbObject {
     this.teamProjectedPoints = teamProjectedPoints;
     this.hadByeInLastFiveWeeksIsTrue = hadByeInLastFiveWeeksIsTrue;
 
-    this.appQBProjectedPoints = appQBProjectedPoints;
+    this.appProjectedPoints = appProjectedPoints;
     this.percentOfGamesPlayedLastFiveWeeks = percentOfGamesPlayedLastFiveWeeks;
     this.fantasyPointsFromRushingPerGameLastFiveWeeks =
       fantasyPointsFromRushingPerGameLastFiveWeeks;
@@ -868,80 +870,13 @@ allQBs.forEach(function (team, i) {
 
 //creating all QB objects
 
-// class qbObject {
-//   constructor(
-//     playerName,
-//     teamName,
-//     teamABV,
-//     byeWeek,
-//     homeOrAway,
-//     slate,
-//     teamProjectedPoints,
-//     hadByeInLastFiveWeeksIsTrue,
-
-//     appQBProjectedPoints,
-//     percentOfGamesPlayedLastFiveWeeks,
-//     fantasyPointsFromRushingPerGameLastFiveWeeks,
-//     fantasyPointsFromPassingPerGameLastFiveWeeks,
-//     passAttemptsPerGameLastFiveWeeks,
-//     fantasyPointsPerPassAttemptLastFiveWeeks,
-
-//     yahooSalary,
-//     fanduelSalary,
-//     draftkingsSalary,
-//     percentOfSalaryCapYahoo,
-//     percentOfSalaryCapFanduel,
-//     percentOfSalaryCapDraftkings,
-
-//     opponentTeamName,
-//     opponentABV,
-//     opponentqbName,
-//     opponentTeamProjectedPoints,
-//     bonusForHighExplosivePassVsBadExplosivePassDef
-//   ) {
-//     this.playerName = playerName;
-//     this.teamName = teamName;
-//     this.teamABV = teamABV;
-//     this.byeWeek = byeWeek;
-//     this.homeOrAway = homeOrAway;
-//     this.slate = slate;
-//     this.teamProjectedPoints = teamProjectedPoints;
-//     this.hadByeInLastFiveWeeksIsTrue = hadByeInLastFiveWeeksIsTrue;
-
-//     this.appQBProjectedPoints = appQBProjectedPoints;
-//     this.percentOfGamesPlayedLastFiveWeeks = percentOfGamesPlayedLastFiveWeeks;
-//     this.fantasyPointsFromRushingPerGameLastFiveWeeks =
-//       fantasyPointsFromRushingPerGameLastFiveWeeks;
-//     this.fantasyPointsFromPassingPerGameLastFiveWeeks =
-//       fantasyPointsFromPassingPerGameLastFiveWeeks;
-//     this.passAttemptsPerGameLastFiveWeeks = passAttemptsPerGameLastFiveWeeks;
-//     this.fantasyPointsPerPassAttemptLastFiveWeeks =
-//       fantasyPointsPerPassAttemptLastFiveWeeks;
-
-//     this.yahooSalary = yahooSalary;
-//     this.fanduelSalary = fanduelSalary;
-//     this.draftkingsSalary = draftkingsSalary;
-//     this.percentOfSalaryCapYahoo = percentOfSalaryCapYahoo;
-//     this.percentOfSalaryCapFanduel = percentOfSalaryCapFanduel;
-//     this.percentOfSalaryCapDraftkings = percentOfSalaryCapDraftkings;
-
-//     this.opponentTeamName = opponentTeamName;
-//     this.opponentABV = opponentABV;
-//     this.opponentqbName = opponentqbName;
-//     this.opponentTeamProjectedPoints = opponentTeamProjectedPoints;
-//     this.bonusForHighExplosivePassVsBadExplosivePassDef =
-//       bonusForHighExplosivePassVsBadExplosivePassDef;
-//   }
-
-//   //add methods here
-// }
-
 const allQBObjects = {};
 const allQBObjectsArray = [];
 const allQBsMap = new Map();
 
 allQBs.forEach(function (team, i) {
   let playerName = team.name;
+  let position = 'QB';
   let teamABV = team.teamABV;
   let homeOrAway = team.homeOrAway;
 
@@ -963,6 +898,7 @@ allQBs.forEach(function (team, i) {
 
   let qbObject = new QbObject(
     playerName,
+    position,
     teamName,
     teamABV,
     byeWeek,

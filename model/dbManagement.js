@@ -4,6 +4,8 @@ const allQBData = require('./dfs_positions_calc_funcs/qbValuesCalcs');
 
 const { MongoClient } = require('mongodb');
 
+// ATTENTION: have you checked out a new branch yet today????????????
+
 const url =
   'mongodb+srv://devJay:Hesstrucksarethebest@dailydynasties.syom4sb.mongodb.net/test';
 const client = new MongoClient(url);
