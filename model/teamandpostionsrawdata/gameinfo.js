@@ -5146,6 +5146,7 @@ allGameInfo.forEach(function (team) {
 
 // console.log(gameInfo.saints);
 // console.log(gameInfo.steelers);
+// console.log(gameInfo.seahawks);
 // console.log(gameInfo.vikings);
 // console.log(gameInfo.SF49ers);
 // console.log(gameInfo.bengals, gameInfo.titans);
