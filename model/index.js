@@ -13,16 +13,16 @@ app.set('views', path.join(__dirname, '/views'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // import mongoose from 'mongoose';
-const mongoose = require('mongoose');
-mongoose
-  .connect('mongodb://localhost:27017/DFS-2021-Week_16')
-  .then(() => {
-    console.log('Mongo connection open!!!');
-  })
-  .catch(err => {
-    console.log('Mongo Connection error');
-    console.log(err);
-  });
+// const mongoose = require('mongoose');
+// mongoose
+//   .connect('mongodb://localhost:27017/DFS-2021-Week_16')
+//   .then(() => {
+//     console.log('Mongo connection open!!!');
+//   })
+//   .catch(err => {
+//     console.log('Mongo Connection error');
+//     console.log(err);
+//   });
 
 ////////scraper
 
@@ -551,25 +551,25 @@ const { data } = require('autoprefixer');
 //     // console.log(data);
 //   });
 
-app.get('/', (req, res) => {
-  const group = 'home';
-  console.log('we got a new request');
-  res.render('home', { group });
-});
+// app.get('/', (req, res) => {
+//   const group = 'home';
+//   console.log('we got a new request');
+//   res.render('home', { group });
+// });
 
-app.get('/pos/:position', (req, res) => {
-  const group = req.params.position;
-  // console.log(group);
-  res.render('positions', {
-    group,
-    allQBData,
-    allRBData,
-    allWRData,
-    allTEData,
-    // allStackData,
-  });
-});
+// app.get('/pos/:position', (req, res) => {
+//   const group = req.params.position;
+//   // console.log(group);
+//   res.render('positions', {
+//     group,
+//     allQBData,
+//     allRBData,
+//     allWRData,
+//     allTEData,
+//     // allStackData,
+//   });
+// });
 
-app.listen(2022, () => {
-  console.log('listening on port 2022');
-});
+// app.listen(2022, () => {
+//   console.log('listening on port 2022');
+// });

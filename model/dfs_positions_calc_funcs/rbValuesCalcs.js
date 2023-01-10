@@ -98,7 +98,6 @@ class RbObject {
     teamTotalHVTsLastFiveWeeks,
     hadByeInLastFiveWeeksIsTrue,
     teamProjectedForAHalfOfNegetiveGameScriptIsTrue,
-    teamProjectedForThreeQuartersOfNegetiveGameScriptIsTrue,
 
     roleThisWeek,
     percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek,
@@ -131,9 +130,8 @@ class RbObject {
     this.hadByeInLastFiveWeeksIsTrue = hadByeInLastFiveWeeksIsTrue;
     this.teamProjectedForAHalfOfNegetiveGameScriptIsTrue =
       teamProjectedForAHalfOfNegetiveGameScriptIsTrue;
-    (this.teamProjectedForThreeQuartersOfNegetiveGameScriptIsTrue =
-      teamProjectedForThreeQuartersOfNegetiveGameScriptIsTrue),
-      (this.roleThisWeek = roleThisWeek);
+
+    this.roleThisWeek = roleThisWeek;
     this.percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek =
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek;
 
@@ -564,8 +562,7 @@ allRBs.forEach(function (team, i) {
 //     this.hadByeInLastFiveWeeksIsTrue = hadByeInLastFiveWeeksIsTrue;
 //     this.teamProjectedForAHalfOfNegetiveGameScriptIsTrue =
 //       teamProjectedForAHalfOfNegetiveGameScriptIsTrue;
-//     (this.teamProjectedForThreeQuartersOfNegetiveGameScriptIsTrue =
-//       teamProjectedForThreeQuartersOfNegetiveGameScriptIsTrue),
+//
 //       (this.roleThisWeek = roleThisWeek);
 //     this.percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek =
 //       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek;
@@ -594,14 +591,162 @@ allRBs.forEach(function (team, i) {
 
 //constructing all RB objects
 
+// populateTeamObjects(rbrawdata.SF49ers, gameInfo.SF49ers);
+// populateTeamObjects(rbrawdata.bears, gameInfo.bears);
+// populateTeamObjects(rbrawdata.bengals, gameInfo.bengals);
+// populateTeamObjects(rbrawdata.bills, gameInfo.bills);
+// populateTeamObjects(rbrawdata.broncos, gameInfo.broncos);
+// populateTeamObjects(rbrawdata.browns, gameInfo.browns);
+// populateTeamObjects(rbrawdata.buccaneers, gameInfo.buccaneers);
+// populateTeamObjects(rbrawdata.cardinals, gameInfo.cardinals);
+// populateTeamObjects(rbrawdata.chargers, gameInfo.chargers);
+// populateTeamObjects(rbrawdata.chiefs, gameInfo.chiefs);
+// populateTeamObjects(rbrawdata.colts, gameInfo.colts);
+// populateTeamObjects(rbrawdata.commanders, gameInfo.commanders);
+// populateTeamObjects(rbrawdata.cowboys, gameInfo.cowboys);
+// populateTeamObjects(rbrawdata.dolphins, gameInfo.dolphins);
+// populateTeamObjects(rbrawdata.eagles, gameInfo.eagles);
+// populateTeamObjects(rbrawdata.falcons, gameInfo.falcons);
+// populateTeamObjects(rbrawdata.giants, gameInfo.giants);
+// populateTeamObjects(rbrawdata.jaguars, gameInfo.jaguars);
+// populateTeamObjects(rbrawdata.jets, gameInfo.jets);
+// populateTeamObjects(rbrawdata.lions, gameInfo.lions);
+// populateTeamObjects(rbrawdata.packers, gameInfo.packers);
+// populateTeamObjects(rbrawdata.panthers, gameInfo.panthers);
+// populateTeamObjects(rbrawdata.patriots, gameInfo.patriots);
+// populateTeamObjects(rbrawdata.raiders, gameInfo.raiders);
+// populateTeamObjects(rbrawdata.rams, gameInfo.rams);
+// populateTeamObjects(rbrawdata.ravens, gameInfo.ravens);
+// populateTeamObjects(rbrawdata.saints, gameInfo.saints);
+// populateTeamObjects(rbrawdata.seahawks, gameInfo.seahawks);
+// populateTeamObjects(rbrawdata.steelers, gameInfo.steelers);
+// populateTeamObjects(rbrawdata.texans, gameInfo.texans);
+// populateTeamObjects(rbrawdata.titans, gameInfo.titans);
+// populateTeamObjects(rbrawdata.vikings, gameInfo.vikings);
+
+const allTeamRBObjects = {
+  SF49ers: {},
+  bears: {},
+  bengals: {},
+  bills: {},
+  broncos: {},
+  buccaneers: {},
+  cardinals: {},
+  chargers: {},
+  chiefs: {},
+  colts: {},
+  commanders: {},
+  cowboys: {},
+  dolphins: {},
+  eagles: {},
+  falcons: {},
+  giants: {},
+  jaguars: {},
+  jets: {},
+  lions: {},
+  packers: {},
+  panthers: {},
+  patriots: {},
+  raiders: {},
+  rams: {},
+  ravens: {},
+  saints: {},
+  seahawks: {},
+  steelers: {},
+  texans: {},
+  titans: {},
+  vikings: {},
+};
+const allRBObjectsArray = [];
+const allRBsMap = new Map();
+
 allRBs.forEach(function (team, i) {
   // console.log(team);
+
+  let teamName = '';
   allTeams.forEach(function (giTeam) {
-    // console.log(giTeam);
+    if (team.teamABV === giTeam.teamABV) {
+      // console.log(giTeam);
+      teamName = giTeam.teamName;
+      teamProjectedPoints = giTeam.teamProjectedPointsThisWeek;
+      hadByeInLastFiveWeeksIsTrue = giTeam.hadByeInTheLastFiveWeeks;
+    }
   });
+
+  let rbObject = new RbObject(
+    team.RBOne.name,
+    'RB',
+    teamName,
+    team.teamABV,
+    team.byeWeek,
+    team.homeOrAway,
+    team.slate,
+    teamProjectedPoints,
+    team.totalTeamHVTsLastFiveWeeks,
+    team.hadByeInTheLastFiveweeks,
+    team.teamProjectedForAHalfOfNegetiveGameScriptIsTrue,
+    team.RBOne.roleThisWeek
+  );
+  {
+  }
+
+  allRBsMap.set(`${teamName}RBOneThisWeek`, rbObject);
+
+  allRBObjectsArray.push(rbObject);
 });
 
-///
+allRBs.forEach(function (team, i) {
+  // console.log(team);
+
+  let teamName = '';
+  allTeams.forEach(function (giTeam) {
+    if (team.teamABV === giTeam.teamABV) {
+      // console.log(giTeam);
+      teamName = giTeam.teamName;
+      teamProjectedPoints = giTeam.teamProjectedPointsThisWeek;
+      hadByeInLastFiveWeeksIsTrue = giTeam.hadByeInTheLastFiveWeeks;
+    }
+  });
+
+  let rbObject = new RbObject(
+    team.RBTwo.name,
+    'RB',
+    teamName,
+    team.teamABV,
+    team.byeWeek,
+    team.homeOrAway,
+    team.slate,
+    teamProjectedPoints,
+    team.totalTeamHVTsLastFiveWeeks,
+    team.hadByeInTheLastFiveweeks,
+    team.teamProjectedForAHalfOfNegetiveGameScriptIsTrue,
+    team.RBTwo.roleThisWeek
+  );
+  {
+  }
+
+  allRBsMap.set(`${teamName}RBTwoThisWeek`, rbObject);
+  // allRBObjects.playerName = rbObject;
+  allRBObjectsArray.push(rbObject);
+});
+
+// console.log(allRBsMap);
+allRBObjectsArray.forEach(function (rb) {
+  // console.log(rb);
+
+  // console.log(rb.playerName);
+  if (rb.teamABV === 'SEA') {
+    // console.log(rb);
+    if (rb.roleThisWeek === 1) {
+      allTeamRBObjects.seahawks.RBOne = rb;
+    }
+    if (rb.roleThisWeek === 2) {
+      allTeamRBObjects.seahawks.RBTwo = rb;
+    }
+  }
+});
+
+console.log(allTeamRBObjects);
 
 allRBs.forEach(function (rb) {
   // console.log(rb);
@@ -685,6 +830,10 @@ const allRBData = {
     cashprojectedPointsPerDollarFanduelPlusNames,
   cashprojectedPointsPerDollarYahooPlusNames:
     cashprojectedPointsPerDollarYahooPlusNames,
+
+  allRBsMap: allRBsMap,
+  allTeamRBObjects: allTeamRBObjects,
+  allRBObjectsArray: allRBObjectsArray,
 };
 
 // console.log(allRBData);

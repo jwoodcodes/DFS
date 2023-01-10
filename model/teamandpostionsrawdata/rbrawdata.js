@@ -6123,6 +6123,18 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
         }
       }
     });
+
+    passedInTeam.hadByeInTheLastFiveweeks =
+      gameInfoPassedInTeam.hadByeInTheLastFiveweeks;
+
+    if (!gameInfoPassedInTeam.teamProjectedForAHalfOfNegetiveGameScriptIsTrue) {
+      passedInTeam.teamProjectedForAHalfOfNegetiveGameScriptIsTrue = false;
+    }
+    if (gameInfoPassedInTeam.teamProjectedForAHalfOfNegetiveGameScriptIsTrue) {
+      passedInTeam.teamProjectedForAHalfOfNegetiveGameScriptIsTrue = true;
+    }
+
+    
   });
 };
 
