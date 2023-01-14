@@ -6133,8 +6133,6 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
     if (gameInfoPassedInTeam.teamProjectedForAHalfOfNegetiveGameScriptIsTrue) {
       passedInTeam.teamProjectedForAHalfOfNegetiveGameScriptIsTrue = true;
     }
-
-    
   });
 };
 
@@ -6181,6 +6179,7 @@ populateTeamObjects(rbrawdata.vikings, gameInfo.vikings);
 // console.log(rbrawdata.saints);
 // console.log(rbrawdata.seahawks);
 // console.log(rbrawdata.commanders);
+// console.log(rbrawdata.rams);
 
 // console.log(rbrawdata.packers);
 // console.log(rbrawdata.ravens);
