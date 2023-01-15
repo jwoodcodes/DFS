@@ -91,6 +91,7 @@ class RbObject {
     position,
     teamName,
     teamABV,
+    vtt,
     byeWeek,
     homeOrAway,
     slate,
@@ -123,12 +124,15 @@ class RbObject {
     halfSeventyFifthPercentProjectedPoints,
     PPRTwentyFifthPercentProjectedPoints,
     PPRFiftyithPercentProjectedPoints,
-    PPRSeventyFifthPercentProjectedPoints
+    PPRSeventyFifthPercentProjectedPoints,
+    fourForFourHalfPPRProjectedPoints,
+    fourForFourFullPPRProjectedPoints
   ) {
     this.playerName = playerName;
     this.position = position;
     this.teamName = teamName;
     this.teamABV = teamABV;
+    this.vtt = vtt;
     this.byeWeek = byeWeek;
     this.homeOrAway = homeOrAway;
     this.slate = slate;
@@ -170,13 +174,21 @@ class RbObject {
     this.PPRFiftyithPercentProjectedPoints = PPRFiftyithPercentProjectedPoints;
     this.PPRSeventyFifthPercentProjectedPoints =
       PPRSeventyFifthPercentProjectedPoints;
+    this.fourForFourHalfPPRProjectedPoints = fourForFourHalfPPRProjectedPoints;
+    this.fourForFourFullPPRProjectedPoints = fourForFourFullPPRProjectedPoints;
   }
 
   //add methods here
-  //create method here to calculate and assign this.appProjectedPoints = appProjectedPoints; for ever player passed in
+
   //methods to make:
-  //  calculate and assign this.appProjectedPoints
-  //  calulate and assign appProjections per dollar on each site
+  //
+  //                   already done
+  //
+  //  calculate and assign this.appProjectedPoints -- done
+  //  calulate and assign appProjections per dollar on each site -- done
+  //
+  //                   still need to do
+  //
   //  calculate and assign 4for4 projections per percent of cap on each site
   //  calculate and assign appProjections per percent of cap on each site.
   //  assign every rb a price bucket for each site and make arrays for each bucket on each site that holds
@@ -292,38 +304,165 @@ class RbObject {
     }
     this.projecedPercentile = projecedPercentile;
 
-    if (projecedPercentile === 25) {
-      this.appProjectedHalfPPRPoints =
-        +this.halfTwentyFifthPercentProjectedPoints.toFixed(2);
-      this.appProjectedFullPPRPoints =
-        +this.PPRTwentyFifthPercentProjectedPoints.toFixed(2);
+    let currentWeek = gameInfo.week.currentWeek;
+
+    if (currentWeek > 5) {
+      if (
+        this.percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek >
+        0.49
+      ) {
+        if (projecedPercentile === 25) {
+          this.appProjectedHalfPPRPoints =
+            +this.halfTwentyFifthPercentProjectedPoints.toFixed(2);
+          this.appProjectedFullPPRPoints =
+            +this.PPRTwentyFifthPercentProjectedPoints.toFixed(2);
+        }
+
+        if (projecedPercentile === 32.5) {
+          this.appProjectedHalfPPRPoints = +(
+            (this.halfTwentyFifthPercentProjectedPoints +
+              this.halfFiftyithPercentProjectedPoints) /
+            2
+          ).toFixed(2);
+          this.appProjectedFullPPRPoints = +(
+            (this.PPRTwentyFifthPercentProjectedPoints +
+              this.PPRFiftyithPercentProjectedPoints) /
+            2
+          ).toFixed(2);
+        }
+
+        if (projecedPercentile === 50) {
+          this.appProjectedHalfPPRPoints =
+            +this.halfFiftyithPercentProjectedPoints.toFixed(2);
+          this.appProjectedFullPPRPoints =
+            +this.PPRFiftyithPercentProjectedPoints.toFixed(2);
+        }
+
+        if (projecedPercentile === 62.5) {
+          this.appProjectedHalfPPRPoints = +(
+            (this.halfFiftyithPercentProjectedPoints +
+              this.halfSeventyFifthPercentProjectedPoints) /
+            2
+          ).toFixed(2);
+          this.appProjectedFullPPRPoints = +(
+            (this.PPRFiftyithPercentProjectedPoints +
+              this.PPRSeventyFifthPercentProjectedPoints) /
+            2
+          ).toFixed(2);
+        }
+
+        if (projecedPercentile === 75) {
+          this.appProjectedHalfPPRPoints =
+            +this.halfSeventyFifthPercentProjectedPoints.toFixed(2);
+          this.appProjectedFullPPRPoints =
+            +this.PPRSeventyFifthPercentProjectedPoints.toFixed(2);
+        }
+      } else {
+        //use team projected points and HVT percentage last five weeks to get an adjustment factor on a scale from -20% to +20% and multiply the players 4for4 projection for the week by this adjustment factor to get appProjectedPoints for players whose percentage of matching roles week is less than 50% here
+        this.notEnoughMatchingWeeksToRoleThisWeek = true;
+
+        //less than 3, 3-4, 5-6, 7-8, 8+
+        let adjustmentPercent = 0;
+
+        if (tempValueForProjection > 8) {
+          adjustmentPercent = 0.2;
+        }
+
+        if (tempValueForProjection > 0.69 && tempValueForProjection < 9) {
+          adjustmentPercent = 0.1;
+        }
+
+        if (tempValueForProjection > 0.39 && tempValueForProjection < 7) {
+          adjustmentPercent = 0.05;
+        }
+
+        if (tempValueForProjection > 0.29 && tempValueForProjection < 5) {
+          adjustmentPercent = -0.1;
+        }
+
+        if (tempValueForProjection < 3) {
+          adjustmentPercent = -0.2;
+        }
+        this.adjustmentPercent = adjustmentPercent;
+
+        let halfAdjustmentValue = +(
+          this.fourForFourHalfPPRProjectedPoints * adjustmentPercent
+        ).toFixed(2);
+
+        this.appProjectedHalfPPRPoints = +(
+          this.fourForFourHalfPPRProjectedPoints + halfAdjustmentValue
+        ).toFixed(2);
+
+        let fullAdjustmentValue = +(
+          this.fourForFourFullPPRProjectedPoints * adjustmentPercent
+        ).toFixed(2);
+
+        this.appProjectedFullPPRPoints = +(
+          this.fourForFourFullPPRProjectedPoints + fullAdjustmentValue
+        ).toFixed(2);
+      }
     }
 
-    if (projecedPercentile === 32.5) {
+    if (currentWeek < 5) {
+      let adjustmentPercent = 0;
+
+      if (this.vtt > 25) {
+        adjustmentPercent = 0.2;
+      }
+
+      if (this.vtt > 19.9 && this.vtt < 25) {
+        adjustmentPercent = 0.1;
+      }
+
+      if (this.vtt > 17.4 && this.vtt < 20) {
+        adjustmentPercent = 0.05;
+      }
+
+      if (this.vtt > 14.9 && this.vtt < 17.5) {
+        adjustmentPercent = -0.1;
+      }
+
+      if (this.vtt < 15) {
+        adjustmentPercent = -0.2;
+      }
+      this.adjustmentPercent = adjustmentPercent;
+
+      let halfAdjustmentValue = +(
+        this.fourForFourHalfPPRProjectedPoints * adjustmentPercent
+      ).toFixed(2);
+
       this.appProjectedHalfPPRPoints = +(
-        (this.halfTwentyFifthPercentProjectedPoints +
-          this.halfFiftyithPercentProjectedPoints) /
-        2
+        this.fourForFourHalfPPRProjectedPoints + halfAdjustmentValue
       ).toFixed(2);
+
+      let fullAdjustmentValue = +(
+        this.fourForFourFullPPRProjectedPoints * adjustmentPercent
+      ).toFixed(2);
+
       this.appProjectedFullPPRPoints = +(
-        (this.PPRTwentyFifthPercentProjectedPoints +
-          this.PPRFiftyithPercentProjectedPoints) /
-        2
+        this.fourForFourFullPPRProjectedPoints + fullAdjustmentValue
       ).toFixed(2);
     }
-    // halfTwentyFifthPercentProjectedPoints
+  }
 
-    //   halfFiftyithPercentProjectedPoints
+  calcAppProjectedpointsPerDollarOnAllSites() {
+    this.yahooAppProjectedPointsPerDollar = +(
+      this.appProjectedHalfPPRPoints / this.yahooSalary
+    ).toFixed(2);
 
-    //   halfSeventyFifthPercentProjectedPoints
+    this.fanduelAppProjectedPointsPerThousandDollars = +(
+      this.appProjectedHalfPPRPoints /
+      (this.fanduelSalary / 1000)
+    ).toFixed(2);
 
-    //   PPRTwentyFifthPercentProjectedPoints
-
-    //   PPRFiftyithPercentProjectedPoints
-
-    //   PPRSeventyFifthPercentProjectedPoints
+    this.draftkingsAppProjectedPointsPerThousandDollars = +(
+      this.appProjectedFullPPRPoints /
+      (this.draftkingsSalary / 1000)
+    ).toFixed(2);
   }
 }
+
+//////old below down to calling the constructor
 
 const allRBCalcFunctions = {
   calcRBProjectionToUseOffBackfieldShare(rb, i) {
@@ -731,6 +870,7 @@ allRBs.forEach(function (team, i) {
     if (team.teamABV === giTeam.teamABV) {
       // console.log(giTeam);
       teamName = giTeam.teamName;
+      vtt = giTeam.vtt;
       teamProjectedPoints = giTeam.teamProjectedPointsThisWeek;
       hadByeInLastFiveWeeksIsTrue = giTeam.hadByeInTheLastFiveWeeks;
       opponentTeamName = giTeam.opponentThisWeek.teamName;
@@ -745,6 +885,7 @@ allRBs.forEach(function (team, i) {
     'RB',
     teamName,
     team.teamABV,
+    vtt,
     team.byeWeek,
     team.homeOrAway,
     team.slate,
@@ -772,10 +913,13 @@ allRBs.forEach(function (team, i) {
     team.RBOne.halfSeventyFifthPercentProjectedPoints,
     team.RBOne.PPRTwentyFifthPercentProjectedPoints,
     team.RBOne.PPRFiftyithPercentProjectedPoints,
-    team.RBOne.PPRSeventyFifthPercentProjectedPoints
+    team.RBOne.PPRSeventyFifthPercentProjectedPoints,
+    team.RBOne.fourForFourHalfPPRProjectedPoints,
+    team.RBOne.fourForFourFullPPRProjectedPoints
   );
 
   rbObject.calcAppProjectedPoints();
+  rbObject.calcAppProjectedpointsPerDollarOnAllSites();
 
   allRBsMap.set(`${teamName}RBOneThisWeek`, rbObject);
 
@@ -790,6 +934,7 @@ allRBs.forEach(function (team, i) {
     if (team.teamABV === giTeam.teamABV) {
       // console.log(giTeam);
       teamName = giTeam.teamName;
+      vtt = giTeam.vtt;
       teamProjectedPoints = giTeam.teamProjectedPointsThisWeek;
       hadByeInLastFiveWeeksIsTrue = giTeam.hadByeInTheLastFiveWeeks;
       opponentTeamName = giTeam.opponentThisWeek.teamName;
@@ -804,6 +949,7 @@ allRBs.forEach(function (team, i) {
     'RB',
     teamName,
     team.teamABV,
+    vtt,
     team.byeWeek,
     team.homeOrAway,
     team.slate,
@@ -831,10 +977,13 @@ allRBs.forEach(function (team, i) {
     team.RBTwo.halfSeventyFifthPercentProjectedPoints,
     team.RBTwo.PPRTwentyFifthPercentProjectedPoints,
     team.RBTwo.PPRFiftyithPercentProjectedPoints,
-    team.RBTwo.PPRSeventyFifthPercentProjectedPoints
+    team.RBTwo.PPRSeventyFifthPercentProjectedPoints,
+    team.RBTwo.fourForFourHalfPPRProjectedPoints,
+    team.RBTwo.fourForFourFullPPRProjectedPoints
   );
 
   rbObject.calcAppProjectedPoints();
+  rbObject.calcAppProjectedpointsPerDollarOnAllSites();
 
   allRBsMap.set(`${teamName}RBTwoThisWeek`, rbObject);
   // allRBObjects.playerName = rbObject;
