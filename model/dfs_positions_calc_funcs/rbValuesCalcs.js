@@ -186,11 +186,12 @@ class RbObject {
   //
   //  calculate and assign this.appProjectedPoints -- done
   //  calulate and assign appProjections per dollar on each site -- done
+  //  calculate and assign 4for4 projections per percent of cap on each site -- done
+  //  calculate and assign appProjections per percent of cap on each site.  -- done
+  //
   //
   //                   still need to do
   //
-  //  calculate and assign 4for4 projections per percent of cap on each site
-  //  calculate and assign appProjections per percent of cap on each site.
   //  assign every rb a price bucket for each site and make arrays for each bucket on each site that holds
   //the full rb object of every rb in that bucket on each site
   // use 4for4 projections per percent of cap, how many people are in that players price bucket on the site,
@@ -458,6 +459,34 @@ class RbObject {
     this.draftkingsAppProjectedPointsPerThousandDollars = +(
       this.appProjectedFullPPRPoints /
       (this.draftkingsSalary / 1000)
+    ).toFixed(2);
+  }
+
+  calcFourForFourProjectedPointsPerPercentOfSiteSalaryCap() {
+    this.yahooFourForFourProjectedPointsPerPercentOfSiteSalaryCap = +(
+      this.fourForFourHalfPPRProjectedPoints / this.percentOfSalaryCapYahoo
+    ).toFixed(2);
+
+    this.fanduelFourForFourProjectedPointsPerPercentOfSiteSalaryCap = +(
+      this.fourForFourHalfPPRProjectedPoints / this.percentOfSalaryCapFanduel
+    ).toFixed(2);
+
+    this.draftkingsFourForFourProjectedPointsPerPercentOfSiteSalaryCap = +(
+      this.fourForFourHalfPPRProjectedPoints / this.percentOfSalaryCapDraftkings
+    ).toFixed(2);
+  }
+
+  calcAppProjectionsPerPercentOfSiteSalaryCap() {
+    this.yahooAppProjectedPointsPerPercentOfSiteSalaryCap = +(
+      this.appProjectedHalfPPRPoints / this.percentOfSalaryCapYahoo
+    ).toFixed(2);
+
+    this.fanduelAppProjectedPointsPerPercentOfSiteSalaryCap = +(
+      this.appProjectedHalfPPRPoints / this.percentOfSalaryCapFanduel
+    ).toFixed(2);
+
+    this.draftkingsAppProjectedPointsPerPercentOfSiteSalaryCap = +(
+      this.appProjectedFullPPRPoints / this.percentOfSalaryCapDraftkings
     ).toFixed(2);
   }
 }
@@ -870,7 +899,7 @@ allRBs.forEach(function (team, i) {
     if (team.teamABV === giTeam.teamABV) {
       // console.log(giTeam);
       teamName = giTeam.teamName;
-      vtt = giTeam.vtt;
+      vtt = +giTeam.vtt;
       teamProjectedPoints = giTeam.teamProjectedPointsThisWeek;
       hadByeInLastFiveWeeksIsTrue = giTeam.hadByeInTheLastFiveWeeks;
       opponentTeamName = giTeam.opponentThisWeek.teamName;
@@ -897,7 +926,7 @@ allRBs.forEach(function (team, i) {
     team.RBOne.rbOnematchingWeeksPercentage,
     team.RBOne.FPOEPerGameLastFiveWeeks,
     team.RBOne.totalHVTsLastFiveWeeks,
-    team.RBOne.totalPercentOfTeamHighValueTouchesLastFiveweeks,
+    +team.RBOne.totalPercentOfTeamHighValueTouchesLastFiveweeks,
     team.RBOne.targetSharePercentageLastFiveWeeks,
     team.RBOne.yahooSalary,
     team.RBOne.fanduelSalary,
@@ -920,6 +949,8 @@ allRBs.forEach(function (team, i) {
 
   rbObject.calcAppProjectedPoints();
   rbObject.calcAppProjectedpointsPerDollarOnAllSites();
+  rbObject.calcFourForFourProjectedPointsPerPercentOfSiteSalaryCap();
+  rbObject.calcAppProjectionsPerPercentOfSiteSalaryCap();
 
   allRBsMap.set(`${teamName}RBOneThisWeek`, rbObject);
 
@@ -934,7 +965,7 @@ allRBs.forEach(function (team, i) {
     if (team.teamABV === giTeam.teamABV) {
       // console.log(giTeam);
       teamName = giTeam.teamName;
-      vtt = giTeam.vtt;
+      vtt = +giTeam.vtt;
       teamProjectedPoints = giTeam.teamProjectedPointsThisWeek;
       hadByeInLastFiveWeeksIsTrue = giTeam.hadByeInTheLastFiveWeeks;
       opponentTeamName = giTeam.opponentThisWeek.teamName;
@@ -961,7 +992,7 @@ allRBs.forEach(function (team, i) {
     team.RBTwo.rbTwomatchingWeeksPercentage,
     team.RBTwo.FPOEPerGameLastFiveWeeks,
     team.RBTwo.totalHVTsLastFiveWeeks,
-    team.RBTwo.totalPercentOfTeamHighValueTouchesLastFiveweeks,
+    +team.RBTwo.totalPercentOfTeamHighValueTouchesLastFiveweeks,
     team.RBTwo.targetSharePercentageLastFiveWeeks,
     team.RBTwo.yahooSalary,
     team.RBTwo.fanduelSalary,
@@ -984,6 +1015,8 @@ allRBs.forEach(function (team, i) {
 
   rbObject.calcAppProjectedPoints();
   rbObject.calcAppProjectedpointsPerDollarOnAllSites();
+  rbObject.calcFourForFourProjectedPointsPerPercentOfSiteSalaryCap();
+  rbObject.calcAppProjectionsPerPercentOfSiteSalaryCap();
 
   allRBsMap.set(`${teamName}RBTwoThisWeek`, rbObject);
   // allRBObjects.playerName = rbObject;
