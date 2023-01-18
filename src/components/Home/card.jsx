@@ -13,4 +13,5 @@ export default function Card(props) {
 const Heading = styled.div`
   padding-top: 2rem;
   margin-bottom: 1rem;
+  font-size: 3.25rem;
 `;

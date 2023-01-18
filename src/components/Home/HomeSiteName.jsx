@@ -19,6 +19,8 @@ const SiteName = styled.h1`
   width: 80%;
   margin-left: 12vw;
   margin-right: auto;
+  padding-bottom: 2rem;
+  padding-top: 3rem;
 
   /* display: grid;
   grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
