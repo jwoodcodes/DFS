@@ -3,6 +3,7 @@ const allRBs = require('../teamandpositionvariables/allRBVariables');
 const rbrawdata = require('../teamandpostionsrawdata/rbrawdata');
 const gameInfo = require('../teamandpostionsrawdata/gameinfo');
 const allQBData = require('./qbValuesCalcs');
+const { ThemeProvider } = require('styled-components');
 
 const allRBOneHalfPPRProjectedPointsValues = [];
 const allRBOneFullPPRProjectedPointsValues = [];
@@ -35,6 +36,87 @@ const allRBFullManagedAndCashProjectedPointsValuesPlusNames = [];
 
 const rbOnenumOfMatchingRoleWeeks = [];
 const rbTwonumOfMatchingRoleWeeks = [];
+
+//////////////////
+const yahooSalaryGreaterThanThirtyFiveWithFourProjections = [];
+const yahooSalaryGreaterThanThirtyFiveWithAppProjections = [];
+
+const yahooSalaryThirtyOneToThirtyFiveWithFourProjections = [];
+const yahooSalaryThirtyOneToThirtyFiveWithAppProjections = [];
+
+const yahooSalaryTwentySixToThirtyWithFourProjections = [];
+const yahooSalaryTwentySixToThirtyWithAppProjections = [];
+
+const yahooSalaryTwentyOneToTwentyFiveWithFourProjections = [];
+const yahooSalaryTwentyOneToTwentyFiveWithAppProjections = [];
+
+const yahooSalarySixteenToTwentyWithFourProjections = [];
+const yahooSalarySixteenToTwentyWithAppProjections = [];
+
+const yahooSalaryTwelveToFifteenWithFourProjections = [];
+const yahooSalaryTwelveToFifteenWithAppProjections = [];
+
+const yahooSalaryTenToElevenWithFourProjections = [];
+const yahooSalaryTenToElevenWithAppProjections = [];
+
+////////////////
+
+const fanduelSalaryGreaterThanNineThousandWithFourProjections = [];
+const fanduelSalaryGreaterThanNineThousandWithAppProjections = [];
+
+const fanduelSalaryEightThousandToEightThousandNineHundredNintyNineWithFourProjections =
+  [];
+const fanduelSalaryEightThousandToEightThousandNineHundredNintyNineWithAppProjections =
+  [];
+
+const fanduelSalarySevenThousandToSevenThousandNineHundredNintyNineWithFourProjections =
+  [];
+const fanduelSalarySevenThousandToSevenThousandNineHundredNintyNineWithAppProjections =
+  [];
+
+const fanduelSalarySixThousandToSixThousandNineHundredNintyNineWithFourProjections =
+  [];
+const fanduelSalarySixThousandToSixThousandNineHundredNintyNineWithAppProjections =
+  [];
+
+const fanduelSalaryFiveThousandToFiveThousandNineHundredNintyNineWithFourProjections =
+  [];
+const fanduelSalaryFiveThousandToFiveThousandNineHundredNintyNineWithAppProjections =
+  [];
+
+const fanduelSalaryFortyFiveHundredToFiveThousandWithFourProjections = [];
+const fanduelSalaryFortyFiveHundredToFiveThousandWithAppProjections = [];
+
+////////////////
+
+const draftkingsSalaryGreaterThanNineThousandWithFourProjections = [];
+const draftkingsSalaryGreaterThanNineThousandWithAppProjections = [];
+
+const draftkingsSalaryEightThousandToEightThousandNineHundredNintyNineWithFourProjections =
+  [];
+const draftkingsSalaryEightThousandToEightThousandNineHundredNintyNineWithAppProjections =
+  [];
+
+const draftkingsSalarySevenThousandToSevenThousandNineHundredNintyNineWithFourProjections =
+  [];
+const draftkingsSalarySevenThousandToSevenThousandNineHundredNintyNineWithAppProjections =
+  [];
+
+const draftkingsSalarySixThousandToSixThousandNineHundredNintyNineWithFourProjections =
+  [];
+const draftkingsSalarySixThousandToSixThousandNineHundredNintyNineWithAppProjections =
+  [];
+
+const draftkingsSalaryFiveThousandToFiveThousandNineHundredNintyNineWithFourProjections =
+  [];
+const draftkingsSalaryFiveThousandToFiveThousandNineHundredNintyNineWithAppProjections =
+  [];
+
+const draftkingsSalaryFortyFiveHundredToFiveThousandWithFourProjections = [];
+const draftkingsSalaryFortyFiveHundredToFiveThousandWithAppProjections = [];
+
+const draftkingsSalaryLessThanFortyFiveHundredWithFourProjections = [];
+const draftkingsSalaryLessThanFortyFiveHundredAppProjections = [];
 
 ///calculation percentage of weeks in the last x num of weeks up to 5 that a player has been in the role they will be in this week
 
@@ -80,10 +162,6 @@ allRBs.map(function (team, i) {
   team.RBTwo.rbTwomatchingWeeksPercentage = rbTwomatchingWeeksPercentage;
   rbTwoPercentageOfMatchingRoleWeeks.push(rbTwomatchingWeeksPercentage);
 });
-
-/// have checked down to here for re-write. the rbOnematchingWeeksPercentage and rbTwomatchingWeeksPercentage above are working still. proceed down from here with the re-write
-
-// ATTENTION: have you checked out a new branch yet today????????????
 
 class RbObject {
   constructor(
@@ -188,14 +266,14 @@ class RbObject {
   //  calulate and assign appProjections per dollar on each site -- done
   //  calculate and assign 4for4 projections per percent of cap on each site -- done
   //  calculate and assign appProjections per percent of cap on each site.  -- done
-  //
+  //  assign every rb a salary bucket for each site and make arrays for each bucket on each site that holds
+  //   the full rb object of every rb in that bucket on each site       -- DONE
   //
   //                   still need to do
   //
-  //  assign every rb a price bucket for each site and make arrays for each bucket on each site that holds
-  //the full rb object of every rb in that bucket on each site
-  // use 4for4 projections per percent of cap, how many people are in that players price bucket on the site,
-  //and how each players 4for4 projections per percent of cap relates to the average 4for4 ////projections per percent of cap of the other people in that players price bucket to create ownership projections for each player on each site and assign those to teach players object. in this same method also run the same calculations using appProjections per percent of cap on each site to get a "ownership should be" metric for each player on each site and calculate and assign the difference betweem the two to get a "how much more or less owned a player is projected to be than I think they should be" metric. make sure everything from all of these methods is assinged to every players object
+
+  // use 4for4 projections per dollar, how many people are in that players price bucket on the site,
+  //and how each players 4for4 projections per dollar relates to the average 4for4 projections per dollat of the other people in that players salary bucket to create ownership projections for each player on each site and assign those to each players object. in this same method also run the same calculations using appProjections per percent of cap on each site to get a "ownership should be" metric for each player on each site and calculate and assign the difference betweem the two to get a "how much more or less owned a player is projected to be than I think they should be" metric. make sure everything from all of these methods is assinged to every players object
 
   calcAppProjectedPoints() {
     //team projected points 12, 15-18, 20-24, 25-30, 30+
@@ -207,23 +285,23 @@ class RbObject {
     let tempValueForProjection = 0;
 
     if (this.teamProjectedPoints > 30) {
-      tempValueForProjection += 6;
+      tempValueForProjection += 7;
     }
 
     if (this.teamProjectedPoints > 24 && this.teamProjectedPoints < 31) {
-      tempValueForProjection += 4;
+      tempValueForProjection += 5;
     }
 
     if (this.teamProjectedPoints > 19 && this.teamProjectedPoints < 25) {
-      tempValueForProjection += 3;
+      tempValueForProjection += 4;
     }
 
     if (this.teamProjectedPoints > 14 && this.teamProjectedPoints < 20) {
-      tempValueForProjection += 2;
+      tempValueForProjection += 3;
     }
 
     if (this.teamProjectedPoints < 15) {
-      tempValueForProjection += 0;
+      tempValueForProjection += 2;
     }
     //
 
@@ -462,6 +540,22 @@ class RbObject {
     ).toFixed(2);
   }
 
+  calcFourForFourProjectedpointsPerDollarOnAllSites() {
+    this.yahooFourForFourProjectedPointsPerDollar = +(
+      this.fourForFourHalfPPRProjectedPoints / this.yahooSalary
+    ).toFixed(2);
+
+    this.fanduelFourForFourProjectedPointsPerThousandDollars = +(
+      this.fourForFourHalfPPRProjectedPoints /
+      (this.fanduelSalary / 1000)
+    ).toFixed(2);
+
+    this.draftkingsFourForFourProjectedPointsPerThousandDollars = +(
+      this.fourForFourFullPPRProjectedPoints /
+      (this.draftkingsSalary / 1000)
+    ).toFixed(2);
+  }
+
   calcFourForFourProjectedPointsPerPercentOfSiteSalaryCap() {
     this.yahooFourForFourProjectedPointsPerPercentOfSiteSalaryCap = +(
       this.fourForFourHalfPPRProjectedPoints / this.percentOfSalaryCapYahoo
@@ -488,6 +582,224 @@ class RbObject {
     this.draftkingsAppProjectedPointsPerPercentOfSiteSalaryCap = +(
       this.appProjectedFullPPRPoints / this.percentOfSalaryCapDraftkings
     ).toFixed(2);
+  }
+
+  assignPlayersToSalaryBucketsOnEachSite() {
+    //  assign every rb a price bucket for each site and make arrays for each bucket on each site that holds
+    //the full rb object of every rb in that bucket on each site
+
+    //do the calculating and assinging of projected ownership below where the constructor functions are called in the interation over the allRBObjectsArray object and creating the allRBObjects array. not in the actual constructor function itself!!!!!!!!
+
+    //do the calculating and assinging of projected ownership below where the constructor functions are called in the interation over the allRBObjectsArray object and creating the allRBObjects array. not in the actual constructor function itself!!!!!!!!
+
+    //do the calculating and assinging of projected ownership below where the constructor functions are called in the interation over the allRBObjectsArray object and creating the allRBObjects array. not in the actual constructor function itself!!!!!!!!
+
+    //do the calculating and assinging of projected ownership below where the constructor functions are called in the interation over the allRBObjectsArray object and creating the allRBObjects array. not in the actual constructor function itself!!!!!!!!
+
+    //do the calculating and assinging of projected ownership below where the constructor functions are called in the interation over the allRBObjectsArray object and creating the allRBObjects array. not in the actual constructor function itself!!!!!!!!
+
+    //do the calculating and assinging of projected ownership below where the constructor functions are called in the interation over the allRBObjectsArray object and creating the allRBObjects array. not in the actual constructor function itself!!!!!!!!
+
+    let yahooSalary = this.yahooSalary;
+    let fanduelSalary = this.fanduelSalary;
+    let draftkingsSalary = this.draftkingsSalary;
+
+    // assigning yahoo salary buckets
+
+    if (yahooSalary > 35) {
+      this.yahooSalaryBucket = 'greater than 35';
+      yahooSalaryGreaterThanThirtyFiveWithFourProjections.push(
+        this.yahooFourForFourProjectedPointsPerDollar
+      );
+      yahooSalaryGreaterThanThirtyFiveWithAppProjections.push(
+        this.yahooAppProjectedPointsPerDollar
+      );
+    }
+    if (yahooSalary > 30 && yahooSalary < 36) {
+      this.yahooSalaryBucket = '31 to 35';
+      yahooSalaryThirtyOneToThirtyFiveWithFourProjections.push(
+        this.yahooFourForFourProjectedPointsPerDollar
+      );
+      yahooSalaryThirtyOneToThirtyFiveWithAppProjections.push(
+        this.yahooAppProjectedPointsPerDollar
+      );
+    }
+    if (yahooSalary > 25 && yahooSalary < 31) {
+      this.yahooSalaryBucket = '26 to 30';
+      yahooSalaryTwentySixToThirtyWithFourProjections.push(
+        this.yahooFourForFourProjectedPointsPerDollar
+      );
+      yahooSalaryTwentySixToThirtyWithAppProjections.push(
+        this.yahooAppProjectedPointsPerDollar
+      );
+    }
+    if (yahooSalary > 20 && yahooSalary < 26) {
+      this.yahooSalaryBucket = '21 to 25';
+      yahooSalaryTwentyOneToTwentyFiveWithFourProjections.push(
+        this.yahooFourForFourProjectedPointsPerDollar
+      );
+      yahooSalaryTwentyOneToTwentyFiveWithAppProjections.push(
+        this.yahooAppProjectedPointsPerDollar
+      );
+    }
+    if (yahooSalary > 15 && yahooSalary < 21) {
+      this.yahooSalaryBucket = '16 to 20';
+      yahooSalarySixteenToTwentyWithFourProjections.push(
+        this.yahooFourForFourProjectedPointsPerDollar
+      );
+      yahooSalarySixteenToTwentyWithAppProjections.push(
+        this.yahooAppProjectedPointsPerDollar
+      );
+    }
+    if (yahooSalary > 11 && yahooSalary < 16) {
+      this.yahooSalaryBucket = '12 to 15';
+      yahooSalaryTwelveToFifteenWithFourProjections.push(
+        this.yahooFourForFourProjectedPointsPerDollar
+      );
+      yahooSalaryTwelveToFifteenWithAppProjections.push(
+        this.yahooAppProjectedPointsPerDollar
+      );
+    }
+    if (yahooSalary > 9 && yahooSalary < 12) {
+      this.yahooSalaryBucket = '10 to 11';
+      yahooSalaryTenToElevenWithFourProjections.push(
+        this.yahooFourForFourProjectedPointsPerDollar
+      );
+      yahooSalaryTenToElevenWithAppProjections.push(
+        this.yahooAppProjectedPointsPerDollar
+      );
+    }
+
+    // assigning fanduel salary buckets
+
+    if (fanduelSalary > 8999) {
+      this.fanduelSalaryBucket = 'greater than 9000';
+      fanduelSalaryGreaterThanNineThousandWithFourProjections.push(
+        this.fanduelFourForFourProjectedPointsPerDollar
+      );
+      fanduelSalaryGreaterThanNineThousandWithAppProjections.push(
+        this.fanduelAppProjectedPointsPerDollar
+      );
+    }
+
+    if (fanduelSalary > 7999 && fanduelSalary < 9000) {
+      this.fanduelSalaryBucket = '8000 to 8999';
+      fanduelSalaryEightThousandToEightThousandNineHundredNintyNineWithFourProjections.push(
+        this.fanduelFourForFourProjectedPointsPerDollar
+      );
+      fanduelSalaryEightThousandToEightThousandNineHundredNintyNineWithAppProjections.push(
+        this.fanduelAppProjectedPointsPerDollar
+      );
+    }
+
+    if (fanduelSalary > 6999 && fanduelSalary < 8000) {
+      this.fanduelSalaryBucket = '7000 to 7999';
+      fanduelSalarySevenThousandToSevenThousandNineHundredNintyNineWithFourProjections.push(
+        this.fanduelFourForFourProjectedPointsPerDollar
+      );
+      fanduelSalarySevenThousandToSevenThousandNineHundredNintyNineWithAppProjections.push(
+        this.fanduelAppProjectedPointsPerDollar
+      );
+    }
+
+    if (fanduelSalary > 5999 && fanduelSalary < 7000) {
+      this.fanduelSalaryBucket = '6000 to 6999';
+      fanduelSalarySixThousandToSixThousandNineHundredNintyNineWithFourProjections.push(
+        this.fanduelFourForFourProjectedPointsPerDollar
+      );
+      fanduelSalarySixThousandToSixThousandNineHundredNintyNineWithAppProjections.push(
+        this.fanduelAppProjectedPointsPerDollar
+      );
+    }
+
+    if (fanduelSalary > 5000 && fanduelSalary < 6000) {
+      this.fanduelSalaryBucket = '5001 to 5999';
+      fanduelSalaryFiveThousandToFiveThousandNineHundredNintyNineWithFourProjections.push(
+        this.fanduelFourForFourProjectedPointsPerDollar
+      );
+      fanduelSalaryFiveThousandToFiveThousandNineHundredNintyNineWithAppProjections.push(
+        this.fanduelAppProjectedPointsPerDollar
+      );
+    }
+    if (fanduelSalary > 4499 && fanduelSalary < 5001) {
+      this.fanduelSalaryBucket = '4500 to 5000';
+      fanduelSalaryFortyFiveHundredToFiveThousandWithFourProjections.push(
+        this.fanduelFourForFourProjectedPointsPerDollar
+      );
+      fanduelSalaryFortyFiveHundredToFiveThousandWithAppProjections.push(
+        this.fanduelAppProjectedPointsPerDollar
+      );
+    }
+
+    ///// assinging draftkings salary buckets
+
+    if (draftkingsSalary > 8999) {
+      this.draftkingsSalaryBucket = 'greater than 9000';
+      draftkingsSalaryGreaterThanNineThousandWithFourProjections.push(
+        this.draftkingsFourForFourProjectedPointsPerDollar
+      );
+      draftkingsSalaryGreaterThanNineThousandWithAppProjections.push(
+        this.draftkingsAppProjectedPointsPerDollar
+      );
+    }
+
+    if (draftkingsSalary > 7999 && draftkingsSalary < 9000) {
+      this.draftkingsSalaryBucket = '8000 to 8999';
+      draftkingsSalaryEightThousandToEightThousandNineHundredNintyNineWithFourProjections.push(
+        this.draftkingsFourForFourProjectedPointsPerDollar
+      );
+      draftkingsSalaryEightThousandToEightThousandNineHundredNintyNineWithAppProjections.push(
+        this.draftkingsAppProjectedPointsPerDollar
+      );
+    }
+
+    if (draftkingsSalary > 6999 && draftkingsSalary < 8000) {
+      this.draftkingsSalaryBucket = '7000 to 7999';
+      draftkingsSalarySevenThousandToSevenThousandNineHundredNintyNineWithFourProjections.push(
+        this.draftkingsFourForFourProjectedPointsPerDollar
+      );
+      draftkingsSalarySevenThousandToSevenThousandNineHundredNintyNineWithAppProjections.push(
+        this.draftkingsAppProjectedPointsPerDollar
+      );
+    }
+
+    if (draftkingsSalary > 5999 && draftkingsSalary < 7000) {
+      this.draftkingsSalaryBucket = '6000 to 6999';
+      draftkingsSalarySixThousandToSixThousandNineHundredNintyNineWithFourProjections.push(
+        this.draftkingsFourForFourProjectedPointsPerDollar
+      );
+      draftkingsSalarySixThousandToSixThousandNineHundredNintyNineWithAppProjections.push(
+        this.draftkingsAppProjectedPointsPerDollar
+      );
+    }
+
+    if (draftkingsSalary > 5000 && draftkingsSalary < 6000) {
+      this.draftkingsSalaryBucket = '5001 to 5999';
+      draftkingsSalaryFiveThousandToFiveThousandNineHundredNintyNineWithFourProjections.push(
+        this.draftkingsFourForFourProjectedPointsPerDollar
+      );
+      draftkingsSalaryFiveThousandToFiveThousandNineHundredNintyNineWithAppProjections.push(
+        this.draftkingsAppProjectedPointsPerDollar
+      );
+    }
+    if (draftkingsSalary > 4499 && draftkingsSalary < 5001) {
+      this.draftkingsSalaryBucket = '4500 to 5000';
+      draftkingsSalaryFortyFiveHundredToFiveThousandWithFourProjections.push(
+        this.draftkingsFourForFourProjectedPointsPerDollar
+      );
+      draftkingsSalaryFortyFiveHundredToFiveThousandWithAppProjections.push(
+        this.draftkingsAppProjectedPointsPerDollar
+      );
+    }
+    if (draftkingsSalary < 4500) {
+      this.draftkingsSalaryBucket = 'Less Than 4500';
+      draftkingsSalaryLessThanFortyFiveHundredWithFourProjections.push(
+        this.draftkingsFourForFourProjectedPointsPerDollar
+      );
+      draftkingsSalaryLessThanFortyFiveHundredAppProjections.push(
+        this.draftkingsAppProjectedPointsPerDollar
+      );
+    }
   }
 }
 
@@ -949,8 +1261,10 @@ allRBs.forEach(function (team, i) {
 
   rbObject.calcAppProjectedPoints();
   rbObject.calcAppProjectedpointsPerDollarOnAllSites();
+  rbObject.calcFourForFourProjectedpointsPerDollarOnAllSites();
   rbObject.calcFourForFourProjectedPointsPerPercentOfSiteSalaryCap();
   rbObject.calcAppProjectionsPerPercentOfSiteSalaryCap();
+  rbObject.assignPlayersToSalaryBucketsOnEachSite();
 
   allRBsMap.set(`${teamName}RBOneThisWeek`, rbObject);
 
@@ -1015,8 +1329,10 @@ allRBs.forEach(function (team, i) {
 
   rbObject.calcAppProjectedPoints();
   rbObject.calcAppProjectedpointsPerDollarOnAllSites();
+  rbObject.calcFourForFourProjectedpointsPerDollarOnAllSites();
   rbObject.calcFourForFourProjectedPointsPerPercentOfSiteSalaryCap();
   rbObject.calcAppProjectionsPerPercentOfSiteSalaryCap();
+  rbObject.assignPlayersToSalaryBucketsOnEachSite();
 
   allRBsMap.set(`${teamName}RBTwoThisWeek`, rbObject);
   // allRBObjects.playerName = rbObject;
@@ -1352,6 +1668,7 @@ allRBObjectsArray.forEach(function (rb) {
     // console.log(rb);
     if (rb.roleThisWeek === 1) {
       allTeamRBObjects.vikings.RBOne = rb;
+      rb.test = 'it worked';
     }
     if (rb.roleThisWeek === 2) {
       allTeamRBObjects.vikings.RBTwo = rb;
