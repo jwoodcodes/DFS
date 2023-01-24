@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import './App.css';
 
 import HomeSiteName from './components/Home/HomeSiteName';
 import DFSCard from './components/Home/DFSCard';
