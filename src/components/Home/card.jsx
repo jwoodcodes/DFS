@@ -1,11 +1,11 @@
 import HomeSiteName from './HomeSiteName';
 import styled from 'styled-components';
 
-export default function Card(props) {
+export default function Card({ message, items }) {
   return (
-    <div className={props.class}>
-      <Heading>{props.message}</Heading>
-      <ul>{props.items}</ul>
+    <div>
+      <Heading>{message}</Heading>
+      <ul>{items}</ul>
     </div>
   );
 }

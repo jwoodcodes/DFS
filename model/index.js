@@ -55,6 +55,8 @@ const allTeamObjectsArray = require('./dfs_positions_calc_funcs/stackingValuesCa
 
 const allDefData = require('./dfs_positions_calc_funcs/defValuesCalcs');
 
+const wholeTeamObjects = require('./dfs_positions_calc_funcs/createWholeTeamObjects');
+
 const { clearCache } = require('ejs');
 const { getSystemErrorName } = require('util');
 const { CommandStartedEvent, ConnectionClosedEvent } = require('mongodb');
