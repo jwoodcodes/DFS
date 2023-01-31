@@ -1,4 +1,5 @@
 import HomeSiteName from './HomeSiteName';
+import CardItemHome from './CardItemHome';
 import styled from 'styled-components';
 
 export default function Card({ message, items }) {
