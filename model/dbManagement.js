@@ -26,7 +26,7 @@ async function runQB() {
 
     // Construct a document
     let QBObjects = {
-      allQBsMap: allQBData.allQBsMap,
+      allTeamQBObjects: allQBData.allTeamQBObjects,
     };
 
     // Insert a single document, wait for promise so we can read it back

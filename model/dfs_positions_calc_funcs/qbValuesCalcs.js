@@ -2,7 +2,7 @@
 const allTeams = require('../teamandpositionvariables/allTeamLevelVariables');
 const allQBs = require('../teamandpositionvariables/allQBVariables');
 const qbrawdata = require('../teamandpostionsrawdata/qbrawdata');
-const wrrawdata = require('../teamandpostionsrawdata/wrrawdata');
+
 const gameInfo = require('../teamandpostionsrawdata/gameinfo');
 const { match } = require('assert');
 
@@ -16,6 +16,7 @@ const allQBSecondHighlyProjectedPassCatchers = [];
 
 const allQBNames = [];
 
+const allTeamQBObjects = {};
 // console.log(gameInfo);
 
 //////////all functions///////
@@ -932,17 +933,109 @@ allQBs.forEach(function (team, i) {
 
 // console.log(allQBsMap);
 
-const obj = Object.fromEntries(allQBsMap);
-// console.log(obj);
-// console.log(obj.JetsQB);
+// allTeamQBObjects.SF49ers = qb;
 
-// const test = Object.entries(obj);
-// console.log(test);
+allQBObjectsArray.forEach(function (qb) {
+  if (qb.teamABV === 'SF') {
+    allTeamQBObjects.SF49ers = qb;
+  }
+  if (qb.teamABV === 'CHI') {
+    allTeamQBObjects.bears = qb;
+  }
+  if (qb.teamABV === 'CIN') {
+    allTeamQBObjects.bengals = qb;
+  }
+  if (qb.teamABV === 'BUF') {
+    allTeamQBObjects.bills = qb;
+  }
+  if (qb.teamABV === 'DEN') {
+    allTeamQBObjects.broncos = qb;
+  }
+  if (qb.teamABV === 'CLE') {
+    allTeamQBObjects.browns = qb;
+  }
+  if (qb.teamABV === 'TB') {
+    allTeamQBObjects.buccaneers = qb;
+  }
+  if (qb.teamABV === 'ARI') {
+    allTeamQBObjects.cardinals = qb;
+  }
+  if (qb.teamABV === 'LAC') {
+    allTeamQBObjects.chargers = qb;
+  }
+  if (qb.teamABV === 'KC') {
+    allTeamQBObjects.chiefs = qb;
+  }
+  if (qb.teamABV === 'IND') {
+    allTeamQBObjects.colts = qb;
+  }
+  if (qb.teamABV === 'WAS') {
+    allTeamQBObjects.commanders = qb;
+  }
+  if (qb.teamABV === 'DAL') {
+    allTeamQBObjects.cowboys = qb;
+  }
+  if (qb.teamABV === 'MIA') {
+    allTeamQBObjects.dolphins = qb;
+  }
+  if (qb.teamABV === 'PHI') {
+    allTeamQBObjects.eagles = qb;
+  }
+  if (qb.teamABV === 'ATL') {
+    allTeamQBObjects.falcons = qb;
+  }
+  if (qb.teamABV === 'NYG') {
+    allTeamQBObjects.giants = qb;
+  }
+  if (qb.teamABV === 'JAC' || qb.teamABV === 'JAX') {
+    allTeamQBObjects.jaguars = qb;
+  }
+  if (qb.teamABV === 'NYJ') {
+    allTeamQBObjects.jets = qb;
+  }
+  if (qb.teamABV === 'DET') {
+    allTeamQBObjects.lions = qb;
+  }
+  if (qb.teamABV === 'GB') {
+    allTeamQBObjects.packers = qb;
+  }
+  if (qb.teamABV === 'CAR') {
+    allTeamQBObjects.panthers = qb;
+  }
+  if (qb.teamABV === 'NE') {
+    allTeamQBObjects.patriots = qb;
+  }
+  if (qb.teamABV === 'LV') {
+    allTeamQBObjects.raiders = qb;
+  }
+  if (qb.teamABV === 'LAR') {
+    allTeamQBObjects.rams = qb;
+  }
+  if (qb.teamABV === 'BAL') {
+    allTeamQBObjects.ravens = qb;
+  }
+  if (qb.teamABV === 'NO') {
+    allTeamQBObjects.saints = qb;
+  }
+  if (qb.teamABV === 'SEA') {
+    allTeamQBObjects.seahawks = qb;
+  }
+  if (qb.teamABV === 'PIT') {
+    allTeamQBObjects.steelers = qb;
+  }
+  if (qb.teamABV === 'HOU') {
+    allTeamQBObjects.texans = qb;
+  }
+  if (qb.teamABV === 'TEN') {
+    allTeamQBObjects.titans = qb;
+  }
+  if (qb.teamABV === 'MIN') {
+    allTeamQBObjects.vikings = qb;
+  }
+});
 
-// console.log(allQBObjectsArray);
-// allQBObjectsArray.forEach(function (team) {
-//   console.log(team);
-// });
+// console.log(allTeamQBObjects);
+
 //
 ////////////calc team def score///////////
 
@@ -994,38 +1087,39 @@ calcTeamDefScore(qbrawdata.vikings, gameInfo.vikings);
 /////////all QB data////////////
 
 const allQBData = {
-  allQBVtts: allQBvttValues,
-  allQBYPALastFiveGamesPlayeds: allQBYPALastFiveGamesPlayeds,
-  allQBTDRateLastFiveGamesPlayeds: allQBTDRateLastFiveGamesPlayeds,
-  allQBHomeOrAwayFavoriteOrUnderdogs: allQBHomeOrAwayFavoriteOrUnderdogs,
-  allQBSecondHighlyProjectedPassCatchers,
-  allQBSecondHighlyProjectedPassCatchers,
+  // allQBVtts: allQBvttValues,
+  // allQBYPALastFiveGamesPlayeds: allQBYPALastFiveGamesPlayeds,
+  // allQBTDRateLastFiveGamesPlayeds: allQBTDRateLastFiveGamesPlayeds,
+  // allQBHomeOrAwayFavoriteOrUnderdogs: allQBHomeOrAwayFavoriteOrUnderdogs,
+  // allQBSecondHighlyProjectedPassCatchers,
+  // allQBSecondHighlyProjectedPassCatchers,
 
-  allQBTotalScores: allQBTotalScores,
+  // allQBTotalScores: allQBTotalScores,
 
-  allQBFinalProjectedPointsValues: allQBFinalProjectedPointsValues,
-  allQBFinalProjectedPointsValuesPlusNames:
-    allQBFinalProjectedPointsValuesPlusNames,
+  // allQBFinalProjectedPointsValues: allQBFinalProjectedPointsValues,
+  // allQBFinalProjectedPointsValuesPlusNames:
+  //   allQBFinalProjectedPointsValuesPlusNames,
 
-  allQBManagedAndCashProjectedPointsValues:
-    allQBManagedAndCashProjectedPointsValues,
-  allQBManagedAndCashProjectedPointsValuesPlusNames:
-    allQBManagedAndCashProjectedPointsValuesPlusNames,
+  // allQBManagedAndCashProjectedPointsValues:
+  //   allQBManagedAndCashProjectedPointsValues,
+  // allQBManagedAndCashProjectedPointsValuesPlusNames:
+  //   allQBManagedAndCashProjectedPointsValuesPlusNames,
 
-  projectedPointsPerDollarDraftkings: projectedPointsPerDollarDraftkings,
-  projectedPointsPerDollarFanduel: projectedPointsPerDollarFanduel,
-  projectedPointsPerDollarYahoo: projectedPointsPerDollarYahoo,
+  // projectedPointsPerDollarDraftkings: projectedPointsPerDollarDraftkings,
+  // projectedPointsPerDollarFanduel: projectedPointsPerDollarFanduel,
+  // projectedPointsPerDollarYahoo: projectedPointsPerDollarYahoo,
 
-  managedAndCashprojectedPointsPerDollarDraftkings:
-    managedAndCashprojectedPointsPerDollarDraftkings,
-  managedAndCashprojectedPointsPerDollarFanduel:
-    managedAndCashprojectedPointsPerDollarFanduel,
-  managedAndCashprojectedPointsPerDollarYahoo:
-    managedAndCashprojectedPointsPerDollarYahoo,
+  // managedAndCashprojectedPointsPerDollarDraftkings:
+  //   managedAndCashprojectedPointsPerDollarDraftkings,
+  // managedAndCashprojectedPointsPerDollarFanduel:
+  //   managedAndCashprojectedPointsPerDollarFanduel,
+  // managedAndCashprojectedPointsPerDollarYahoo:
+  //   managedAndCashprojectedPointsPerDollarYahoo,
 
   allQBsMap: allQBsMap,
-  qbObectsObject: obj,
+
   allQBObjectsArray: allQBObjectsArray,
+  allTeamQBObjects: allTeamQBObjects,
 };
 
 // console.log(allQBObjs.allQBObjectsArray);
@@ -1034,7 +1128,5 @@ const allQBData = {
 // console.log(allQBData.allQBFinalProjectedPointsValuesPlusNames);
 
 // console.log(allQBData);
-
-module.exports = allQBCalcFunctions;
 
 module.exports = allQBData;
