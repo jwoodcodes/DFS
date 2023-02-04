@@ -7,11 +7,13 @@ const allHalfPPRProjectedPointsWithoutTeamDef = require('../datafilesmadefrom4fo
 const allFullPPRProjectedPointsWithoutTeamDef = require('../datafilesmadefrom4for4CSVs/allFullPPRProjectedPointsWithoutTeamDef');
 const allNFLTeamPace = require('../datafilesmadefrom4for4CSVs/allNFLTeamPace');
 const allQBGLSP = require('../datafilesmadefrom4for4CSVs/allQBGLSP');
-
 const allFlexGLSP = require('../datafilesmadefrom4for4CSVs/allFlexGLSP');
 const QBWeeklyStatExplorerLastFiveWeeksCategoryPassing = require('../datafilesmadefrom4for4CSVs/QBWeeklyStatExplorerLastFiveWeeksCategoryPassing');
 const gameInfo = require('./gameinfo');
+
 const allTeams = require('../teamandpositionvariables/allTeamLevelVariables');
+const allQBData = require('../dfs_positions_calc_funcs/qbValuesCalcs');
+
 const wr4for4PlayerStatExplorerRecievingByAverageLastFiveWeeks = require('../datafilesmadefrom4for4CSVs/wr4for4PlayerStatExplorerRecievingByAverageLastFiveWeeks');
 const wr4for4PlayerStatExplorerSnapsAndFantasyTabLastFiveWeeks = require('../datafilesmadefrom4for4CSVs/wr4for4PlayerStatExplorerSnapsAndFantasyTabLastFiveWeeks');
 const wr4for4FantasyPointsBrowserLastFiveWeeks = require('../datafilesmadefrom4for4CSVs/wr4for4FantasyPointsBrowserLastFiveWeeks');
@@ -3195,7 +3197,59 @@ const wrrawdata = {
   },
 };
 
-const populateTeamObjects = function (passedInTeam) {
+const populateTeamObjects = function (
+  passedInTeam,
+  gameInfoPassedInTeam,
+  qbDataPassedInTeam
+) {
+  // console.log(qbDataPassedInTeam);
+  passedInTeam.teamVTT = +gameInfoPassedInTeam.vtt;
+  passedInTeam.appQBProjectedPoints = qbDataPassedInTeam.appProjectedPoints;
+  passedInTeam.appTeamProjectedPoints =
+    gameInfoPassedInTeam.teamProjectedPointsThisWeek;
+
+  if (
+    gameInfoPassedInTeam.teamProjectedForAHalfOfNegetiveGameScriptIsTrue ===
+    true
+  ) {
+    passedInTeam.teamProjectedForAHalfOfNegetiveGameScriptIsTrue = 'true';
+  } else {
+    passedInTeam.teamProjectedForAHalfOfNegetiveGameScriptIsTrue = 'false';
+  }
+
+  tempWROneName = gameInfoPassedInTeam.WROneThisWeekName.replace(
+    '.',
+    ''
+  ).replace('.', '');
+
+  if (tempWROneName.includes("'")) {
+    tempWROneName = tempWROneName.replace("'", '');
+  }
+
+  passedInTeam.WROne.name = tempWROneName;
+
+  tempWRTwoName = gameInfoPassedInTeam.WRTwoThisWeekName.replace(
+    '.',
+    ''
+  ).replace('.', '');
+
+  if (tempWRTwoName.includes("'")) {
+    tempWRTwoName = tempWRTwoName.replace("'", '');
+  }
+
+  passedInTeam.WRTwo.name = tempWRTwoName;
+
+  tempWRThreeName = gameInfoPassedInTeam.WRThreeThisWeekName.replace(
+    '.',
+    ''
+  ).replace('.', '');
+
+  if (tempWRThreeName.includes("'")) {
+    tempWRThreeName = tempWRThreeName.replace("'", '');
+  }
+
+  passedInTeam.WRThree.name = tempWRThreeName;
+
   qbDownloadableSpreadSheetYahoo.forEach(function (playerobj, i) {
     passedInTeam.slate = '';
     allNFLTeamPace.forEach(function (teamObj) {
@@ -3258,43 +3312,254 @@ const populateTeamObjects = function (passedInTeam) {
           passedInTeam.slate = 'main';
         }
       }
+
+      passedInTeam.opponentVTT = gameInfoPassedInTeam.opponentThisWeek.vtt;
+
+      allFlexGLSP.forEach(function (team, i) {
+        // tempWROneName = gameInfoPassedInTeam.WROneThisWeekName.replace(
+        //   '.',
+        //   ''
+        // ).replace('.', '');
+        // if (tempWROneName.includes("'")) {
+        //   tempWROneName = tempWROneName.replace("'", '');
+        // }
+        // passedInTeam.WROne.name = tempWROneName;
+        // tempWRTwoName = gameInfoPassedInTeam.WRTwoThisWeekName.replace(
+        //   '.',
+        //   ''
+        // ).replace('.', '');
+        // if (tempWRTwoName.includes("'")) {
+        //   tempWRTwoName = tempWRTwoName.replace("'", '');
+        // }
+        // passedInTeam.WRTwo.name = tempWRTwoName;
+        // tempWRThreeName = gameInfoPassedInTeam.WRThreeThisWeekName.replace(
+        //   '.',
+        //   ''
+        // ).replace('.', '');
+        // if (tempWRThreeName.includes("'")) {
+        //   tempWRThreeName = tempWRThreeName.replace("'", '');
+        // }
+        // passedInTeam.WRThree.name = tempWRThreeName;
+
+        if (team['"POS"'].slice(1, -1) === 'WR') {
+          SanitizedPlayerName = team['"Player"']
+            .slice(1, -1)
+            .replace('.', '')
+            .replace('.', '')
+            .replace("'", '');
+
+          if (passedInTeam.WROne.name === SanitizedPlayerName) {
+            passedInTeam.WROne.halfTwentyFifthPercentProjectedPoints =
+              team['"Half - 25th"'];
+            passedInTeam.WROne.halfFiftyithPercentProjectedPoints =
+              team['"Half - 50th"'];
+            passedInTeam.WROne.halfSeventyFifthPercentProjectedPoints =
+              team['"Half - 75th"'];
+            passedInTeam.WROne.PPRTwentyFifthPercentProjectedPoints =
+              team['"PPR - 25th"'];
+            passedInTeam.WROne.PPRFiftyithPercentProjectedPoints =
+              team['"PPR - 50th"'];
+            passedInTeam.WROne.PPRSeventyFifthPercentProjectedPoints =
+              team['"PPR - 75th"'];
+          }
+
+          if (passedInTeam.WRTwo.name === SanitizedPlayerName) {
+            passedInTeam.WRTwo.halfTwentyFifthPercentProjectedPoints =
+              team['"Half - 25th"'];
+            passedInTeam.WRTwo.halfFiftyithPercentProjectedPoints =
+              team['"Half - 50th"'];
+            passedInTeam.WRTwo.halfSeventyFifthPercentProjectedPoints =
+              team['"Half - 75th"'];
+            passedInTeam.WRTwo.PPRTwentyFifthPercentProjectedPoints =
+              team['"PPR - 25th"'];
+            passedInTeam.WRTwo.PPRFiftyithPercentProjectedPoints =
+              team['"PPR - 50th"'];
+            passedInTeam.WRTwo.PPRSeventyFifthPercentProjectedPoints =
+              team['"PPR - 75th"'];
+          }
+
+          if (passedInTeam.WRThree.name === SanitizedPlayerName) {
+            passedInTeam.WRThree.halfTwentyFifthPercentProjectedPoints =
+              team['"Half - 25th"'];
+            passedInTeam.WRThree.halfFiftyithPercentProjectedPoints =
+              team['"Half - 50th"'];
+            passedInTeam.WRThree.halfSeventyFifthPercentProjectedPoints =
+              team['"Half - 75th"'];
+            passedInTeam.WRThree.PPRTwentyFifthPercentProjectedPoints =
+              team['"PPR - 25th"'];
+            passedInTeam.WRThree.PPRFiftyithPercentProjectedPoints =
+              team['"PPR - 50th"'];
+            passedInTeam.WRThree.PPRSeventyFifthPercentProjectedPoints =
+              team['"PPR - 75th"'];
+          }
+        }
+      });
     });
   });
 };
 
-populateTeamObjects(wrrawdata.SF49ers);
-populateTeamObjects(wrrawdata.bears);
-populateTeamObjects(wrrawdata.bengals);
-populateTeamObjects(wrrawdata.bills);
-populateTeamObjects(wrrawdata.broncos);
-populateTeamObjects(wrrawdata.browns);
-populateTeamObjects(wrrawdata.buccaneers);
-populateTeamObjects(wrrawdata.cardinals);
-populateTeamObjects(wrrawdata.chargers);
-populateTeamObjects(wrrawdata.chiefs);
-populateTeamObjects(wrrawdata.colts);
-populateTeamObjects(wrrawdata.commanders);
-populateTeamObjects(wrrawdata.cowboys);
-populateTeamObjects(wrrawdata.dolphins);
-populateTeamObjects(wrrawdata.eagles);
-populateTeamObjects(wrrawdata.falcons);
-populateTeamObjects(wrrawdata.giants);
-populateTeamObjects(wrrawdata.jaguars);
-populateTeamObjects(wrrawdata.jets);
-populateTeamObjects(wrrawdata.lions);
-populateTeamObjects(wrrawdata.packers);
-populateTeamObjects(wrrawdata.panthers);
-populateTeamObjects(wrrawdata.patriots);
-populateTeamObjects(wrrawdata.raiders);
-populateTeamObjects(wrrawdata.rams);
-populateTeamObjects(wrrawdata.ravens);
-populateTeamObjects(wrrawdata.saints);
-populateTeamObjects(wrrawdata.seahawks);
-populateTeamObjects(wrrawdata.steelers);
-populateTeamObjects(wrrawdata.texans);
-populateTeamObjects(wrrawdata.titans);
-populateTeamObjects(wrrawdata.vikings);
+populateTeamObjects(
+  wrrawdata.SF49ers,
+  gameInfo.SF49ers,
+  allQBData.allTeamQBObjects.SF49ers
+);
+populateTeamObjects(
+  wrrawdata.bears,
+  gameInfo.bears,
+  allQBData.allTeamQBObjects.bears
+);
+populateTeamObjects(
+  wrrawdata.bengals,
+  gameInfo.bengals,
+  allQBData.allTeamQBObjects.bengals
+);
+populateTeamObjects(
+  wrrawdata.bills,
+  gameInfo.bills,
+  allQBData.allTeamQBObjects.bills
+);
+populateTeamObjects(
+  wrrawdata.broncos,
+  gameInfo.broncos,
+  allQBData.allTeamQBObjects.broncos
+);
+populateTeamObjects(
+  wrrawdata.browns,
+  gameInfo.browns,
+  allQBData.allTeamQBObjects.browns
+);
+populateTeamObjects(
+  wrrawdata.buccaneers,
+  gameInfo.buccaneers,
+  allQBData.allTeamQBObjects.buccaneers
+);
+populateTeamObjects(
+  wrrawdata.cardinals,
+  gameInfo.cardinals,
+  allQBData.allTeamQBObjects.cardinals
+);
+populateTeamObjects(
+  wrrawdata.chargers,
+  gameInfo.chargers,
+  allQBData.allTeamQBObjects.chargers
+);
+populateTeamObjects(
+  wrrawdata.chiefs,
+  gameInfo.chiefs,
+  allQBData.allTeamQBObjects.chiefs
+);
+populateTeamObjects(
+  wrrawdata.colts,
+  gameInfo.colts,
+  allQBData.allTeamQBObjects.colts
+);
+populateTeamObjects(
+  wrrawdata.commanders,
+  gameInfo.commanders,
+  allQBData.allTeamQBObjects.commanders
+);
+populateTeamObjects(
+  wrrawdata.cowboys,
+  gameInfo.cowboys,
+  allQBData.allTeamQBObjects.cowboys
+);
+populateTeamObjects(
+  wrrawdata.dolphins,
+  gameInfo.dolphins,
+  allQBData.allTeamQBObjects.dolphins
+);
+populateTeamObjects(
+  wrrawdata.eagles,
+  gameInfo.eagles,
+  allQBData.allTeamQBObjects.eagles
+);
+populateTeamObjects(
+  wrrawdata.falcons,
+  gameInfo.falcons,
+  allQBData.allTeamQBObjects.falcons
+);
+populateTeamObjects(
+  wrrawdata.giants,
+  gameInfo.giants,
+  allQBData.allTeamQBObjects.giants
+);
+populateTeamObjects(
+  wrrawdata.jaguars,
+  gameInfo.jaguars,
+  allQBData.allTeamQBObjects.jaguars
+);
+populateTeamObjects(
+  wrrawdata.jets,
+  gameInfo.jets,
+  allQBData.allTeamQBObjects.jets
+);
+populateTeamObjects(
+  wrrawdata.lions,
+  gameInfo.lions,
+  allQBData.allTeamQBObjects.lions
+);
+populateTeamObjects(
+  wrrawdata.packers,
+  gameInfo.packers,
+  allQBData.allTeamQBObjects.packers
+);
+populateTeamObjects(
+  wrrawdata.panthers,
+  gameInfo.panthers,
+  allQBData.allTeamQBObjects.panthers
+);
+populateTeamObjects(
+  wrrawdata.patriots,
+  gameInfo.patriots,
+  allQBData.allTeamQBObjects.patriots
+);
+populateTeamObjects(
+  wrrawdata.raiders,
+  gameInfo.raiders,
+  allQBData.allTeamQBObjects.raiders
+);
+populateTeamObjects(
+  wrrawdata.rams,
+  gameInfo.rams,
+  allQBData.allTeamQBObjects.rams
+);
+populateTeamObjects(
+  wrrawdata.ravens,
+  gameInfo.ravens,
+  allQBData.allTeamQBObjects.ravens
+);
+populateTeamObjects(
+  wrrawdata.saints,
+  gameInfo.saints,
+  allQBData.allTeamQBObjects.saints
+);
+populateTeamObjects(
+  wrrawdata.seahawks,
+  gameInfo.seahawks,
+  allQBData.allTeamQBObjects.seahawks
+);
+populateTeamObjects(
+  wrrawdata.steelers,
+  gameInfo.steelers,
+  allQBData.allTeamQBObjects.steelers
+);
+populateTeamObjects(
+  wrrawdata.texans,
+  gameInfo.texans,
+  allQBData.allTeamQBObjects.texans
+);
+populateTeamObjects(
+  wrrawdata.titans,
+  gameInfo.titans,
+  allQBData.allTeamQBObjects.titans
+);
+populateTeamObjects(
+  wrrawdata.vikings,
+  gameInfo.vikings,
+  allQBData.allTeamQBObjects.vikings
+);
 
-// console.log(wrrawdata);
+// console.log(wrrawdata.vikings);
+console.log(wrrawdata.bengals);
 
 module.exports = wrrawdata;

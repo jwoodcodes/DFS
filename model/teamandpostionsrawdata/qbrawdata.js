@@ -1636,6 +1636,10 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
   // );
 
   // console.log(gameInfoPassedInTeam.WRTwoThisWeek4for4HalfProjPoints);
+  if (gameInfoPassedInTeam.WROneThisWeek4for4HalfProjPoints) {
+    passedInTeam.HighestProjectedPassCatcher4for4ProjectedPoints =
+      gameInfoPassedInTeam.WROneThisWeek4for4HalfProjPoints;
+  }
   if (gameInfoPassedInTeam.WRTwoThisWeek4for4HalfProjPoints) {
     passedInTeam.secondHighestProjectedPassCatcher4for4ProjectedPoints =
       gameInfoPassedInTeam.WRTwoThisWeek4for4HalfProjPoints;
