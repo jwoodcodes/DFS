@@ -42,10 +42,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 0,
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
@@ -73,10 +71,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
@@ -102,10 +98,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
       roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
@@ -141,10 +135,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 0,
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
@@ -172,10 +164,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
@@ -201,10 +191,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
       roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
@@ -240,10 +228,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 0,
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
@@ -271,10 +257,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
@@ -300,10 +284,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
       roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
@@ -339,10 +321,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 0,
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
@@ -370,10 +350,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
@@ -399,10 +377,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
       roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
@@ -438,10 +414,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 0,
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
@@ -469,10 +443,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
@@ -498,10 +470,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
       roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
@@ -537,10 +507,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 0,
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
@@ -568,10 +536,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
@@ -597,10 +563,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
       roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
@@ -637,10 +601,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 0,
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
@@ -668,10 +630,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
@@ -697,10 +657,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
       roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
@@ -736,10 +694,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 0,
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
@@ -767,10 +723,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeekstargetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
@@ -796,10 +750,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
       roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
@@ -835,10 +787,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 0,
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
@@ -866,10 +816,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
@@ -895,10 +843,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
       roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
@@ -934,10 +880,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 0,
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
@@ -965,10 +909,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
@@ -994,10 +936,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
       roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
@@ -1033,10 +973,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 0,
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
@@ -1064,10 +1002,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
@@ -1093,10 +1029,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
       roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
@@ -1132,10 +1066,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 0,
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
@@ -1163,10 +1095,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
@@ -1192,10 +1122,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
       roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
@@ -1231,10 +1159,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 0,
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
@@ -1262,10 +1188,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
@@ -1291,10 +1215,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
       roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
@@ -1330,10 +1252,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 0,
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
@@ -1361,10 +1281,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
@@ -1390,10 +1308,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
       roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
@@ -1429,10 +1345,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 0,
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
@@ -1460,10 +1374,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
@@ -1489,10 +1401,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
       roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
@@ -1528,10 +1438,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 0,
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
@@ -1559,10 +1467,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
@@ -1588,10 +1494,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
       roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
@@ -1627,10 +1531,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 0,
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
@@ -1658,10 +1560,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
@@ -1687,10 +1587,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
       roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
@@ -1727,10 +1625,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 0,
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
@@ -1758,10 +1654,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
@@ -1787,10 +1681,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
       roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
@@ -1826,10 +1718,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 0,
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
@@ -1857,10 +1747,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
@@ -1886,10 +1774,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
       roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
@@ -1925,10 +1811,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 0,
-
       targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      projectedReceptions4For4: 0,
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
@@ -1956,10 +1840,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
@@ -1985,10 +1867,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
       roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
@@ -2024,10 +1904,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 0,
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
@@ -2055,10 +1933,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
@@ -2084,10 +1960,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
       roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
@@ -2123,10 +1997,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 0,
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
@@ -2154,10 +2026,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
@@ -2183,10 +2053,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
       roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
@@ -2222,10 +2090,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 0,
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
@@ -2253,10 +2119,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
@@ -2282,10 +2146,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
       roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
@@ -2322,10 +2184,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 0,
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
@@ -2353,10 +2213,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
@@ -2382,10 +2240,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
       roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
@@ -2421,10 +2277,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 0,
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
@@ -2452,10 +2306,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
@@ -2481,10 +2333,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
       roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
@@ -2520,10 +2370,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 0,
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
@@ -2551,10 +2399,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
@@ -2580,10 +2426,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
       roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
@@ -2619,10 +2463,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 0,
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
@@ -2650,10 +2492,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
@@ -2679,10 +2519,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
       roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
@@ -2718,10 +2556,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 0,
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
@@ -2749,10 +2585,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
@@ -2778,10 +2612,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
       roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
@@ -2817,10 +2649,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 0,
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
@@ -2848,10 +2678,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
@@ -2877,10 +2705,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
       roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
@@ -2916,10 +2742,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 0,
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
@@ -2947,10 +2771,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
@@ -2976,10 +2798,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
       roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
@@ -3015,10 +2835,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 0,
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
@@ -3046,10 +2864,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
@@ -3075,10 +2891,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
       roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
@@ -3114,10 +2928,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 0,
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
@@ -3145,10 +2957,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
@@ -3174,10 +2984,8 @@ const wrrawdata = {
       PPRFiftyithPercentProjectedPoints: 0,
       PPRSeventyFifthPercentProjectedPoints: 0,
 
-      top12NFLTargetShareLastThreeWeeks: 'put 1 for yes and 0 for no here',
-
-      targetShareLastThreeGamesPlayed: 0,
-      projectedTargets4For4: 0,
+      targetShareLastFiveWeeks: 0,
+      projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
       roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
@@ -3350,47 +3158,648 @@ const populateTeamObjects = function (
 
           if (passedInTeam.WROne.name === SanitizedPlayerName) {
             passedInTeam.WROne.halfTwentyFifthPercentProjectedPoints =
-              team['"Half - 25th"'];
+              +team['"Half - 25th"'];
             passedInTeam.WROne.halfFiftyithPercentProjectedPoints =
-              team['"Half - 50th"'];
+              +team['"Half - 50th"'];
             passedInTeam.WROne.halfSeventyFifthPercentProjectedPoints =
-              team['"Half - 75th"'];
+              +team['"Half - 75th"'];
             passedInTeam.WROne.PPRTwentyFifthPercentProjectedPoints =
-              team['"PPR - 25th"'];
+              +team['"PPR - 25th"'];
             passedInTeam.WROne.PPRFiftyithPercentProjectedPoints =
-              team['"PPR - 50th"'];
+              +team['"PPR - 50th"'];
             passedInTeam.WROne.PPRSeventyFifthPercentProjectedPoints =
-              team['"PPR - 75th"'];
+              +team['"PPR - 75th"'];
           }
 
           if (passedInTeam.WRTwo.name === SanitizedPlayerName) {
             passedInTeam.WRTwo.halfTwentyFifthPercentProjectedPoints =
-              team['"Half - 25th"'];
+              +team['"Half - 25th"'];
             passedInTeam.WRTwo.halfFiftyithPercentProjectedPoints =
-              team['"Half - 50th"'];
+              +team['"Half - 50th"'];
             passedInTeam.WRTwo.halfSeventyFifthPercentProjectedPoints =
-              team['"Half - 75th"'];
+              +team['"Half - 75th"'];
             passedInTeam.WRTwo.PPRTwentyFifthPercentProjectedPoints =
-              team['"PPR - 25th"'];
+              +team['"PPR - 25th"'];
             passedInTeam.WRTwo.PPRFiftyithPercentProjectedPoints =
-              team['"PPR - 50th"'];
+              +team['"PPR - 50th"'];
             passedInTeam.WRTwo.PPRSeventyFifthPercentProjectedPoints =
-              team['"PPR - 75th"'];
+              +team['"PPR - 75th"'];
           }
 
           if (passedInTeam.WRThree.name === SanitizedPlayerName) {
             passedInTeam.WRThree.halfTwentyFifthPercentProjectedPoints =
-              team['"Half - 25th"'];
+              +team['"Half - 25th"'];
             passedInTeam.WRThree.halfFiftyithPercentProjectedPoints =
-              team['"Half - 50th"'];
+              +team['"Half - 50th"'];
             passedInTeam.WRThree.halfSeventyFifthPercentProjectedPoints =
-              team['"Half - 75th"'];
+              +team['"Half - 75th"'];
             passedInTeam.WRThree.PPRTwentyFifthPercentProjectedPoints =
-              team['"PPR - 25th"'];
+              +team['"PPR - 25th"'];
             passedInTeam.WRThree.PPRFiftyithPercentProjectedPoints =
-              team['"PPR - 50th"'];
+              +team['"PPR - 50th"'];
             passedInTeam.WRThree.PPRSeventyFifthPercentProjectedPoints =
-              team['"PPR - 75th"'];
+              +team['"PPR - 75th"'];
+          }
+        }
+      });
+
+      wr4for4PlayerStatExplorerRecievingByAverageLastFiveWeeks.forEach(
+        function (team) {
+          SanitizedPlayerName = team['"full_name"']
+            .slice(1, -1)
+            .replace('.', '')
+            .replace('.', '')
+            .replace("'", '');
+
+          if (passedInTeam.WROne.name === SanitizedPlayerName) {
+            // console.log(SanitizedPlayerName);
+            temp = +team['"target_share"'];
+            passedInTeam.WROne.targetShareLastFiveWeeks = +temp.toFixed(3);
+          }
+
+          if (passedInTeam.WRTwo.name === SanitizedPlayerName) {
+            // console.log(SanitizedPlayerName);
+            temp = +team['"target_share"'];
+            passedInTeam.WRTwo.targetShareLastFiveWeeks = +temp.toFixed(3);
+          }
+
+          if (passedInTeam.WRThree.name === SanitizedPlayerName) {
+            // console.log(SanitizedPlayerName);
+            temp = +team['"target_share"'];
+            passedInTeam.WRThree.targetShareLastFiveWeeks = +temp.toFixed(3);
+          }
+        }
+      );
+
+      allHalfPPRProjectedPointsWithoutTeamDef.forEach(function (team) {
+        if (team.Pos === 'WR') {
+          SanitizedPlayerName = team.Player.replace('.', '')
+            .replace('.', '')
+            .replace("'", '');
+
+          if (passedInTeam.WROne.name === SanitizedPlayerName) {
+            passedInTeam.WROne.projectedReceptions4For4 = +team.Rec;
+            passedInTeam.WROne.fourForFourHalfPPRProjectedPoints = +team.FFPts;
+          }
+          if (passedInTeam.WRTwo.name === SanitizedPlayerName) {
+            passedInTeam.WRTwo.projectedReceptions4For4 = +team.Rec;
+            passedInTeam.WRTwo.fourForFourHalfPPRProjectedPoints = +team.FFPts;
+          }
+          if (passedInTeam.WRThree.name === SanitizedPlayerName) {
+            passedInTeam.WRThree.projectedReceptions4For4 = +team.Rec;
+            passedInTeam.WRThree.fourForFourHalfPPRProjectedPoints =
+              +team.FFPts;
+          }
+        }
+      });
+
+      allFullPPRProjectedPointsWithoutTeamDef.forEach(function (team) {
+        if (team.Pos === 'WR') {
+          SanitizedPlayerName = team.Player.replace('.', '')
+            .replace('.', '')
+            .replace("'", '');
+
+          if (passedInTeam.WROne.name === SanitizedPlayerName) {
+            passedInTeam.WROne.fourForFourFullPPRProjectedPoints = +team.FFPts;
+          }
+          if (passedInTeam.WRTwo.name === SanitizedPlayerName) {
+            passedInTeam.WRTwo.fourForFourFullPPRProjectedPoints = +team.FFPts;
+          }
+          if (passedInTeam.WRThree.name === SanitizedPlayerName) {
+            passedInTeam.WRThree.fourForFourFullPPRProjectedPoints =
+              +team.FFPts;
+          }
+        }
+      });
+
+      wholeDownloadableSpreadSheetYahoo.forEach(function (team) {
+        if (team.Pos === 'WR') {
+          SanitizedPlayerName = team.Player.replace('.', '')
+            .replace('.', '')
+            .replace("'", '');
+
+          if (passedInTeam.WROne.name === SanitizedPlayerName) {
+            passedInTeam.WROne.yahooSalary = +team['Y! ($)'];
+            let tempWROnePercentOfSalaryCap = +(team['Y! ($)'] / 200);
+            passedInTeam.WROne.percentOfSalaryCapYahoo =
+              tempWROnePercentOfSalaryCap * 100;
+          }
+
+          if (passedInTeam.WRTwo.name === SanitizedPlayerName) {
+            passedInTeam.WRTwo.yahooSalary = +team['Y! ($)'];
+            let tempWRTwoPercentOfSalaryCap = +(team['Y! ($)'] / 200);
+            passedInTeam.WRTwo.percentOfSalaryCapYahoo =
+              tempWRTwoPercentOfSalaryCap * 100;
+          }
+          if (passedInTeam.WRThree.name === SanitizedPlayerName) {
+            passedInTeam.WRThree.yahooSalary = +team['Y! ($)'];
+            let tempWRThreePercentOfSalaryCap = +(team['Y! ($)'] / 200);
+            passedInTeam.WRThree.percentOfSalaryCapYahoo =
+              tempWRThreePercentOfSalaryCap * 100;
+          }
+        }
+      });
+
+      gppLeverageScoresAndProjOwnershipFanduel.forEach(function (team) {
+        if (team['"Pos"'] === '"WR"') {
+          SanitizedPlayerName = team['"Player"']
+            .slice(1, -1)
+            .replace('.', '')
+            .replace('.', '')
+            .replace("'", '');
+
+          if (passedInTeam.WROne.name === SanitizedPlayerName) {
+            passedInTeam.WROne.fanduelSalary = +team['"FD Sal $"'].slice(1, -1);
+            tempPercentOfCap = +team['"FD Sal $"'].slice(1, -1) / 60000;
+            passedInTeam.WROne.percentOfSalaryCapFanduel = +(
+              tempPercentOfCap * 100
+            ).toFixed();
+          }
+
+          if (passedInTeam.WRTwo.name === SanitizedPlayerName) {
+            passedInTeam.WRTwo.fanduelSalary = +team['"FD Sal $"'].slice(1, -1);
+            tempPercentOfCap = +team['"FD Sal $"'].slice(1, -1) / 60000;
+            passedInTeam.WRTwo.percentOfSalaryCapFanduel = +(
+              tempPercentOfCap * 100
+            ).toFixed();
+
+            if (passedInTeam.WRThree.name === SanitizedPlayerName) {
+              passedInTeam.WRThree.fanduelSalary = +team['"FD Sal $"'].slice(
+                1,
+                -1
+              );
+              tempPercentOfCap = +team['"FD Sal $"'].slice(1, -1) / 60000;
+              passedInTeam.WRThree.percentOfSalaryCapFanduel = +(
+                tempPercentOfCap * 100
+              ).toFixed();
+            }
+          }
+        }
+      });
+
+      gppLeverageScoresAndProjOwnershipDraftkings.forEach(function (team) {
+        if (team['"Pos"'] === '"WR"') {
+          // console.log(team['"Player"']);
+          SanitizedPlayerName = team['"Player"']
+            .slice(1, -1)
+            .replace('.', '')
+            .replace('.', '')
+            .replace("'", '');
+
+          if (passedInTeam.WROne.name === SanitizedPlayerName) {
+            passedInTeam.WROne.draftkingsSalary = +team['"DK Sal $"'].slice(
+              1,
+              -1
+            );
+            tempPercentOfCap = +team['"DK Sal $"'].slice(1, -1) / 50000;
+            passedInTeam.WROne.percentOfSalaryCapDraftkings = +(
+              tempPercentOfCap * 100
+            ).toFixed();
+          }
+
+          if (passedInTeam.WRTwo.name === SanitizedPlayerName) {
+            passedInTeam.WRTwo.draftkingsSalary = +team['"DK Sal $"'].slice(
+              1,
+              -1
+            );
+            tempPercentOfCap = +team['"DK Sal $"'].slice(1, -1) / 50000;
+            passedInTeam.WRTwo.percentOfSalaryCapDraftkings = +(
+              tempPercentOfCap * 100
+            ).toFixed();
+          }
+
+          if (passedInTeam.WRThree.name === SanitizedPlayerName) {
+            passedInTeam.WRThree.draftkingsSalary = +team['"DK Sal $"'].slice(
+              1,
+              -1
+            );
+            tempPercentOfCap = +team['"DK Sal $"'].slice(1, -1) / 50000;
+            passedInTeam.WRThree.percentOfSalaryCapDraftkings = +(
+              tempPercentOfCap * 100
+            ).toFixed();
+          }
+        }
+      });
+
+      ////////////////////////////
+      ///wr fantasy points scored per week last five weeks to help to determine what wr's roles were each week last five weeks
+      /////////////////////
+
+      wr4for4FantasyPointsBrowserLastFiveWeeks.forEach(function (wr) {
+        if (
+          passedInTeam.teamABV === wr.Team ||
+          passedInTeam.altTeamABV === wr.Team
+        ) {
+          // console.log(wr.Player);
+          // console.log(rb.W4);
+          // console.log(rb.G);
+
+          let weekFiveWeeksAgo = 0;
+          let weekFourWeeksAgo = 0;
+          let weekThreeWeeksAgo = 0;
+          let weekTwoWeeksAgo = 0;
+          let weekLastWeek = 0;
+
+          if (gameInfo.week.currentWeek === 3) {
+            weekTwoWeeksAgo = wr.W1;
+            weekLastWeek = wr.W2;
+          }
+
+          if (gameInfo.week.currentWeek === 4) {
+            weekThreeWeeksAgo = wr.W1;
+            weekTwoWeeksAgo = wr.W2;
+            weekLastWeek = wr.W3;
+          }
+
+          if (gameInfo.week.currentWeek === 5) {
+            weekFourWeeksAgo = wr.W1;
+            weekThreeWeeksAgo = wr.W2;
+            weekTwoWeeksAgo = wr.W3;
+            weekLastWeek = wr.W4;
+          }
+
+          if (gameInfo.week.currentWeek === 6) {
+            weekFiveWeeksAgo = wr.W1;
+            weekFourWeeksAgo = wr.W2;
+            weekThreeWeeksAgo = wr.W3;
+            weekTwoWeeksAgo = wr.W4;
+            weekLastWeek = wr.W5;
+          }
+
+          if (gameInfo.week.currentWeek === 7) {
+            weekFiveWeeksAgo = wr.W2;
+            weekFourWeeksAgo = wr.W3;
+            weekThreeWeeksAgo = wr.W4;
+            weekTwoWeeksAgo = wr.W5;
+            weekLastWeek = wr.W6;
+          }
+
+          if (gameInfo.week.currentWeek === 8) {
+            weekFiveWeeksAgo = wr.W3;
+            weekFourWeeksAgo = wr.W4;
+            weekThreeWeeksAgo = wr.W5;
+            weekTwoWeeksAgo = wr.W6;
+            weekLastWeek = wr.W7;
+          }
+
+          if (gameInfo.week.currentWeek === 9) {
+            weekFiveWeeksAgo = wr.W4;
+            weekFourWeeksAgo = wr.W5;
+            weekThreeWeeksAgo = wr.W6;
+            weekTwoWeeksAgo = wr.W7;
+            weekLastWeek = wr.W8;
+          }
+
+          if (gameInfo.week.currentWeek === 10) {
+            weekFiveWeeksAgo = wr.W5;
+            weekFourWeeksAgo = wr.W6;
+            weekThreeWeeksAgo = wr.W7;
+            weekTwoWeeksAgo = wr.W8;
+            weekLastWeek = wr.W9;
+          }
+
+          if (gameInfo.week.currentWeek === 11) {
+            weekFiveWeeksAgo = wr.W6;
+            weekFourWeeksAgo = wr.W7;
+            weekThreeWeeksAgo = wr.W8;
+            weekTwoWeeksAgo = wr.W9;
+            weekLastWeek = wr.W10;
+          }
+
+          if (gameInfo.week.currentWeek === 12) {
+            weekFiveWeeksAgo = wr.W7;
+            weekFourWeeksAgo = wr.W8;
+            weekThreeWeeksAgo = wr.W9;
+            weekTwoWeeksAgo = wr.W10;
+            weekLastWeek = wr.W11;
+          }
+
+          if (gameInfo.week.currentWeek === 13) {
+            weekFiveWeeksAgo = wr.W8;
+            weekFourWeeksAgo = wr.W9;
+            weekThreeWeeksAgo = wr.W10;
+            weekTwoWeeksAgo = wr.W11;
+            weekLastWeek = wr.W12;
+          }
+
+          if (gameInfo.week.currentWeek === 14) {
+            weekFiveWeeksAgo = wr.W9;
+            weekFourWeeksAgo = wr.W10;
+            weekThreeWeeksAgo = wr.W11;
+            weekTwoWeeksAgo = wr.W12;
+            weekLastWeek = wr.W13;
+          }
+
+          if (gameInfo.week.currentWeek === 15) {
+            weekFiveWeeksAgo = wr.W10;
+            weekFourWeeksAgo = wr.W11;
+            weekThreeWeeksAgo = wr.W12;
+            weekTwoWeeksAgo = wr.W13;
+            weekLastWeek = wr.W14;
+          }
+
+          if (gameInfo.week.currentWeek === 16) {
+            weekFiveWeeksAgo = wr.W11;
+            weekFourWeeksAgo = wr.W12;
+            weekThreeWeeksAgo = wr.W13;
+            weekTwoWeeksAgo = wr.W14;
+            weekLastWeek = wr.W15;
+          }
+
+          if (gameInfo.week.currentWeek === 17) {
+            weekFiveWeeksAgo = wr.W12;
+            weekFourWeeksAgo = wr.W13;
+            weekThreeWeeksAgo = wr.W14;
+            weekTwoWeeksAgo = wr.W15;
+            weekLastWeek = wr.W16;
+          }
+
+          if (gameInfo.week.currentWeek === 18) {
+            weekFiveWeeksAgo = wr.W13;
+            weekFourWeeksAgo = wr.W14;
+            weekThreeWeeksAgo = wr.W15;
+            weekTwoWeeksAgo = wr.W16;
+            weekLastWeek = wr.W17;
+          }
+
+          // console.log(wr['"Player"']);
+          SanitizedPlayerName = wr.Player.slice(1, -1)
+            .replace('.', '')
+            .replace('.', '')
+            .replace("'", '');
+
+          if (!passedInTeam.firstPassedInWRName) {
+            passedInTeam.firstPassedInWRName = SanitizedPlayerName;
+            // console.log(rbName, passedInTeam.firstPassedInRBName);
+            passedInTeam.firstPassedInWRFiveWeeksAgoInFantasyPointsScoredPointsScored =
+              +weekFiveWeeksAgo;
+
+            if (weekFiveWeeksAgo === '-') {
+              passedInTeam.firstPassedInWRFiveWeeksAgoInFantasyPointsScoredPointsScored = 0;
+            }
+
+            //
+            passedInTeam.firstPassedInWRFourWeeksAgoInFantasyPointsScoredPointsScored =
+              +weekFourWeeksAgo;
+            if (weekFourWeeksAgo === '-') {
+              passedInTeam.firstPassedInWRFourWeeksAgoInFantasyPointsScoredPointsScored = 0;
+            }
+            //
+            passedInTeam.firstPassedInWRThreeWeeksAgoInFantasyPointsScoredPointsScored =
+              +weekThreeWeeksAgo;
+            if (weekThreeWeeksAgo === '-') {
+              passedInTeam.firstPassedInWRThreeWeeksAgoInFantasyPointsScoredPointsScored = 0;
+            }
+            //   //
+            passedInTeam.firstPassedInWRTwoWeeksAgoInFantasyPointsScoredPointsScored =
+              +weekTwoWeeksAgo;
+            if (weekTwoWeeksAgo === '-') {
+              passedInTeam.firstPassedInWRTwoWeeksAgoInFantasyPointsScoredPointsScored = 0;
+            }
+            //   //
+            passedInTeam.firstPassedInWRLastWeekInFantasyPointsScoredPointsScored =
+              +weekLastWeek;
+            if (weekLastWeek === '-') {
+              passedInTeam.firstPassedInWRLastWeekInFantasyPointsScoredPointsScored = 0;
+            }
+          }
+
+          if (
+            passedInTeam.firstPassedInWRName &&
+            !passedInTeam.secondPassedInWRName &&
+            SanitizedPlayerName !== passedInTeam.firstPassedInWRName
+          ) {
+            passedInTeam.secondPassedInWRName = SanitizedPlayerName;
+
+            passedInTeam.secondPassedInWRFiveWeeksAgoInFantasyPointsScoredPointsScored =
+              +weekFiveWeeksAgo;
+            if (weekFiveWeeksAgo === '-') {
+              passedInTeam.secondPassedInWRFiveWeeksAgoInFantasyPointsScoredPointsScored = 0;
+            }
+            //
+            passedInTeam.secondPassedInWRFourWeeksAgoInFantasyPointsScoredPointsScored =
+              +weekFourWeeksAgo;
+            if (weekFourWeeksAgo === '-') {
+              passedInTeam.secondPassedInWRFourWeeksAgoInFantasyPointsScoredPointsScored = 0;
+            }
+            //
+            passedInTeam.secondPassedInWRThreeWeeksAgoInFantasyPointsScoredPointsScored =
+              +weekThreeWeeksAgo;
+            if (weekThreeWeeksAgo === '-') {
+              passedInTeam.secondPassedInWRThreeWeeksAgoInFantasyPointsScoredPointsScored = 0;
+            }
+            // //
+            passedInTeam.secondPassedInWRTwoWeeksAgoInFantasyPointsScoredPointsScored =
+              +weekTwoWeeksAgo;
+            if (weekTwoWeeksAgo === '-') {
+              passedInTeam.secondPassedInWRTwoWeeksAgoInFantasyPointsScoredPointsScored = 0;
+            }
+            // //
+            passedInTeam.secondPassedInWRLastWeekInFantasyPointsScoredPointsScored =
+              +weekLastWeek;
+            if (weekLastWeek === '-') {
+              passedInTeam.secondPassedInWRLastWeekInFantasyPointsScoredPointsScored = 0;
+            }
+          }
+
+          if (
+            passedInTeam.firstPassedInWRName &&
+            passedInTeam.secondPassedInWRName &&
+            !passedInTeam.thirdPassedInWRName &&
+            SanitizedPlayerName !== passedInTeam.firstPassedInWRName &&
+            SanitizedPlayerName !== passedInTeam.secondPassedInWRName
+          ) {
+            passedInTeam.thirdPassedInWRName = SanitizedPlayerName;
+            passedInTeam.thirdPassedInWRFiveWeeksAgoInFantasyPointsScoredPointsScored =
+              +weekFiveWeeksAgo;
+            if (weekFiveWeeksAgo === '-') {
+              passedInTeam.thirdPassedInWRFiveWeeksAgoInFantasyPointsScoredPointsScored = 0;
+            }
+            //
+            passedInTeam.thirdPassedInWRFourWeeksAgoInFantasyPointsScoredPointsScored =
+              +weekFourWeeksAgo;
+            if (weekFourWeeksAgo === '-') {
+              passedInTeam.thirdPassedInWRFourWeeksAgoInFantasyPointsScoredPointsScored = 0;
+            }
+            //
+            passedInTeam.thirdPassedInWRThreeWeeksAgoInFantasyPointsScoredPointsScored =
+              +weekThreeWeeksAgo;
+            if (weekThreeWeeksAgo === '-') {
+              passedInTeam.thirdPassedInWRThreeWeeksAgoInFantasyPointsScoredPointsScored = 0;
+            }
+            // //
+            passedInTeam.thirdPassedInWRTwoWeeksAgoInFantasyPointsScoredPointsScored =
+              +weekTwoWeeksAgo;
+            if (weekTwoWeeksAgo === '-') {
+              passedInTeam.thirdPassedInWRTwoWeeksAgoInFantasyPointsScoredPointsScored = 0;
+            }
+            // //
+            passedInTeam.thirdPassedInWRLastWeekInFantasyPointsScoredPointsScored =
+              +weekLastWeek;
+            if (weekLastWeek === '-') {
+              passedInTeam.thirdPassedInWRLastWeekInFantasyPointsScoredPointsScored = 0;
+            }
+          }
+
+          if (
+            passedInTeam.firstPassedInWRName &&
+            passedInTeam.secondPassedInWRName &&
+            passedInTeam.thirdPassedInWRName &&
+            !passedInTeam.fourthPassedInWRName &&
+            SanitizedPlayerName !== passedInTeam.firstPassedInWRName &&
+            SanitizedPlayerName !== passedInTeam.secondPassedInWRName &&
+            SanitizedPlayerName !== passedInTeam.thirdPassedInWRName
+          ) {
+            passedInTeam.fourthPassedInWRName = SanitizedPlayerName;
+            passedInTeam.fourthPassedInWRFiveWeeksAgoInFantasyPointsScoredPointsScored =
+              +weekFiveWeeksAgo;
+            if (weekFiveWeeksAgo === '-') {
+              passedInTeam.fourthPassedInWRFiveWeeksAgoInFantasyPointsScoredPointsScored = 0;
+            }
+            //
+            passedInTeam.fourthPassedInWRFourWeeksAgoInFantasyPointsScoredPointsScored =
+              +weekFourWeeksAgo;
+            if (weekFourWeeksAgo === '-') {
+              passedInTeam.fourthPassedInWRFourWeeksAgoInFantasyPointsScoredPointsScored = 0;
+            }
+            //
+            passedInTeam.fourthPassedInWRThreeWeeksAgoInFantasyPointsScoredPointsScored =
+              +weekThreeWeeksAgo;
+            if (weekThreeWeeksAgo === '-') {
+              passedInTeam.fourthPassedInWRThreeWeeksAgoInFantasyPointsScoredPointsScored = 0;
+            }
+            // //
+            passedInTeam.fourthPassedInWRTwoWeeksAgoInFantasyPointsScoredPointsScored =
+              +weekTwoWeeksAgo;
+            if (weekTwoWeeksAgo === '-') {
+              passedInTeam.fourthPassedInWRTwoWeeksAgoInFantasyPointsScoredPointsScored = 0;
+            }
+            // //
+            passedInTeam.fourthPassedInWRLastWeekInFantasyPointsScoredPointsScored =
+              +weekLastWeek;
+            if (weekLastWeek === '-') {
+              passedInTeam.fourthPassedInWRLastWeekInFantasyPointsScoredPointsScored = 0;
+            }
+          }
+
+          if (passedInTeam.WROne.name === SanitizedPlayerName) {
+            passedInTeam.WROne.numberOfGamesPlayedLastFiveWeeks = wr.G;
+
+            if (gameInfoPassedInTeam.hadByeInTheLastFiveweeks === false) {
+              if (gameInfo.week.currentWeek > 5) {
+                percentageOfRecentWeeksPlayed = wr.G / 5;
+                passedInTeam.WROne.percentOfGamesPlayedLastFiveWeeks =
+                  percentageOfRecentWeeksPlayed;
+              }
+              if (gameInfo.week.currentWeek === 5) {
+                percentageOfRecentWeeksPlayed = wr.G / 4;
+                passedInTeam.WROne.percentOfGamesPlayedLastFiveWeeks =
+                  percentageOfRecentWeeksPlayed;
+              }
+              if (gameInfo.week.currentWeek === 4) {
+                percentageOfRecentWeeksPlayed = wr.G / 3;
+                passedInTeam.WROne.percentOfGamesPlayedLastFiveWeeks =
+                  percentageOfRecentWeeksPlayed;
+              }
+            }
+
+            if (gameInfoPassedInTeam.hadByeInTheLastFiveweeks === true) {
+              if (gameInfo.week.currentWeek > 5) {
+                percentageOfRecentWeeksPlayed = wr.G / 4;
+                passedInTeam.WROne.percentOfGamesPlayedLastFiveWeeks =
+                  percentageOfRecentWeeksPlayed;
+              }
+              if (gameInfo.week.currentWeek === 5) {
+                percentageOfRecentWeeksPlayed = wr.G / 3;
+                passedInTeam.WROne.percentOfGamesPlayedLastFiveWeeks =
+                  percentageOfRecentWeeksPlayed;
+              }
+              if (gameInfo.week.currentWeek === 4) {
+                percentageOfRecentWeeksPlayed = wr.G / 2;
+                passedInTeam.WROne.percentOfGamesPlayedLastFiveWeeks =
+                  percentageOfRecentWeeksPlayed;
+              }
+            }
+          }
+
+          if (passedInTeam.WRTwo.name === SanitizedPlayerName) {
+            passedInTeam.WRTwo.numberOfGamesPlayedLastFiveWeeks = wr.G;
+
+            if (gameInfoPassedInTeam.hadByeInTheLastFiveweeks === false) {
+              if (gameInfo.week.currentWeek > 5) {
+                percentageOfRecentWeeksPlayed = wr.G / 5;
+                passedInTeam.WRTwo.percentOfGamesPlayedLastFiveWeeks =
+                  percentageOfRecentWeeksPlayed;
+              }
+              if (gameInfo.week.currentWeek === 5) {
+                percentageOfRecentWeeksPlayed = wr.G / 4;
+                passedInTeam.WRTwo.percentOfGamesPlayedLastFiveWeeks =
+                  percentageOfRecentWeeksPlayed;
+              }
+              if (gameInfo.week.currentWeek === 4) {
+                percentageOfRecentWeeksPlayed = wr.G / 3;
+                passedInTeam.WRTwo.percentOfGamesPlayedLastFiveWeeks =
+                  percentageOfRecentWeeksPlayed;
+              }
+            }
+
+            if (gameInfoPassedInTeam.hadByeInTheLastFiveweeks === true) {
+              if (gameInfo.week.currentWeek > 5) {
+                percentageOfRecentWeeksPlayed = wr.G / 4;
+                passedInTeam.WRTwo.percentOfGamesPlayedLastFiveWeeks =
+                  percentageOfRecentWeeksPlayed;
+              }
+              if (gameInfo.week.currentWeek === 5) {
+                percentageOfRecentWeeksPlayed = wr.G / 3;
+                passedInTeam.WRTwo.percentOfGamesPlayedLastFiveWeeks =
+                  percentageOfRecentWeeksPlayed;
+              }
+              if (gameInfo.week.currentWeek === 4) {
+                percentageOfRecentWeeksPlayed = wr.G / 2;
+                passedInTeam.WRTwo.percentOfGamesPlayedLastFiveWeeks =
+                  percentageOfRecentWeeksPlayed;
+              }
+            }
+          }
+
+          if (passedInTeam.WRThree.name === SanitizedPlayerName) {
+            passedInTeam.WRThree.numberOfGamesPlayedLastFiveWeeks = wr.G;
+
+            if (gameInfoPassedInTeam.hadByeInTheLastFiveweeks === false) {
+              if (gameInfo.week.currentWeek > 5) {
+                percentageOfRecentWeeksPlayed = wr.G / 5;
+                passedInTeam.WRThree.percentOfGamesPlayedLastFiveWeeks =
+                  percentageOfRecentWeeksPlayed;
+              }
+              if (gameInfo.week.currentWeek === 5) {
+                percentageOfRecentWeeksPlayed = wr.G / 4;
+                passedInTeam.WRThree.percentOfGamesPlayedLastFiveWeeks =
+                  percentageOfRecentWeeksPlayed;
+              }
+              if (gameInfo.week.currentWeek === 4) {
+                percentageOfRecentWeeksPlayed = wr.G / 3;
+                passedInTeam.WRThree.percentOfGamesPlayedLastFiveWeeks =
+                  percentageOfRecentWeeksPlayed;
+              }
+            }
+
+            if (gameInfoPassedInTeam.hadByeInTheLastFiveweeks === true) {
+              if (gameInfo.week.currentWeek > 5) {
+                percentageOfRecentWeeksPlayed = wr.G / 4;
+                passedInTeam.WRThree.percentOfGamesPlayedLastFiveWeeks =
+                  percentageOfRecentWeeksPlayed;
+              }
+              if (gameInfo.week.currentWeek === 5) {
+                percentageOfRecentWeeksPlayed = wr.G / 3;
+                passedInTeam.WRThree.percentOfGamesPlayedLastFiveWeeks =
+                  percentageOfRecentWeeksPlayed;
+              }
+              if (gameInfo.week.currentWeek === 4) {
+                percentageOfRecentWeeksPlayed = wr.G / 2;
+                passedInTeam.WRThree.percentOfGamesPlayedLastFiveWeeks =
+                  percentageOfRecentWeeksPlayed;
+              }
+            }
           }
         }
       });
@@ -3559,7 +3968,7 @@ populateTeamObjects(
   allQBData.allTeamQBObjects.vikings
 );
 
-// console.log(wrrawdata.vikings);
-console.log(wrrawdata.bengals);
+console.log(wrrawdata.vikings);
+// console.log(wrrawdata.bengals);
 
 module.exports = wrrawdata;
