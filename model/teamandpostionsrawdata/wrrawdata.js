@@ -47,7 +47,7 @@ const wrrawdata = {
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -75,7 +75,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -102,7 +102,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
-      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -140,7 +140,7 @@ const wrrawdata = {
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -168,7 +168,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -195,7 +195,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
-      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -233,7 +233,7 @@ const wrrawdata = {
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -261,7 +261,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -288,7 +288,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
-      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -326,7 +326,7 @@ const wrrawdata = {
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -354,7 +354,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -381,7 +381,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
-      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -419,7 +419,7 @@ const wrrawdata = {
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -447,7 +447,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -474,7 +474,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
-      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -512,7 +512,7 @@ const wrrawdata = {
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -540,7 +540,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -567,7 +567,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
-      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -606,7 +606,7 @@ const wrrawdata = {
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -634,7 +634,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -661,7 +661,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
-      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -699,7 +699,7 @@ const wrrawdata = {
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -727,7 +727,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -754,7 +754,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
-      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -792,7 +792,7 @@ const wrrawdata = {
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -820,7 +820,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -847,7 +847,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
-      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -885,7 +885,7 @@ const wrrawdata = {
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -913,7 +913,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -940,7 +940,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
-      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -978,7 +978,7 @@ const wrrawdata = {
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -1006,7 +1006,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -1033,7 +1033,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
-      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -1071,7 +1071,7 @@ const wrrawdata = {
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -1099,7 +1099,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -1126,7 +1126,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
-      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -1164,7 +1164,7 @@ const wrrawdata = {
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -1192,7 +1192,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -1219,7 +1219,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
-      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -1257,7 +1257,7 @@ const wrrawdata = {
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -1285,7 +1285,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -1312,7 +1312,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
-      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -1350,7 +1350,7 @@ const wrrawdata = {
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -1378,7 +1378,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -1405,7 +1405,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
-      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -1443,7 +1443,7 @@ const wrrawdata = {
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -1471,7 +1471,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -1498,7 +1498,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
-      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -1536,7 +1536,7 @@ const wrrawdata = {
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -1564,7 +1564,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -1591,7 +1591,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
-      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -1630,7 +1630,7 @@ const wrrawdata = {
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -1658,7 +1658,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -1685,7 +1685,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
-      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -1723,7 +1723,7 @@ const wrrawdata = {
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -1751,7 +1751,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -1778,7 +1778,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
-      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -1816,7 +1816,7 @@ const wrrawdata = {
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -1844,7 +1844,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -1871,7 +1871,7 @@ const wrrawdata = {
       projectedReceptions4For4projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
-      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -1909,7 +1909,7 @@ const wrrawdata = {
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -1937,7 +1937,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -1964,7 +1964,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
-      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -2002,7 +2002,7 @@ const wrrawdata = {
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -2030,7 +2030,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -2057,7 +2057,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
-      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -2095,7 +2095,7 @@ const wrrawdata = {
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -2123,7 +2123,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -2150,7 +2150,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
-      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -2189,7 +2189,7 @@ const wrrawdata = {
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -2217,7 +2217,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -2244,7 +2244,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
-      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -2282,7 +2282,7 @@ const wrrawdata = {
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -2310,7 +2310,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -2337,7 +2337,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
-      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -2375,7 +2375,7 @@ const wrrawdata = {
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -2403,7 +2403,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -2430,7 +2430,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
-      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -2468,7 +2468,7 @@ const wrrawdata = {
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -2496,7 +2496,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -2523,7 +2523,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
-      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -2561,7 +2561,7 @@ const wrrawdata = {
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -2589,7 +2589,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -2616,7 +2616,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
-      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -2654,7 +2654,7 @@ const wrrawdata = {
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -2682,7 +2682,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -2709,7 +2709,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
-      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -2747,7 +2747,7 @@ const wrrawdata = {
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -2775,7 +2775,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -2802,7 +2802,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
-      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -2840,7 +2840,7 @@ const wrrawdata = {
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -2868,7 +2868,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -2895,7 +2895,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
-      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -2933,7 +2933,7 @@ const wrrawdata = {
 
       //roleThisWeek determined to projected points of the top three WR's for the team0
       roleThisWeek: 1,
-      roleLastXNumOfWeeksUpToFive: [1, 1, 1, 1, 1],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -2961,7 +2961,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 2,
-      roleLastXNumOfWeeksUpToFive: [2, 2, 2, 2, 2],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -2988,7 +2988,7 @@ const wrrawdata = {
       projectedReceptions4For4: 0,
 
       roleThisWeek: 3,
-      roleLastXNumOfWeeksUpToFive: [3, 3, 3, 3, 3],
+      roleLastXNumOfWeeksUpToFive: [],
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek: 0,
 
       fourForFourHalfPPRProjectedPoints: 0,
@@ -4059,7 +4059,7 @@ const populateTeamObjects = function (
           }
 
           if (gameInfo.week.currentWeek === 17) {
-            weekFiveWeeksAgo = wr['"Wk 12'];
+            weekFiveWeeksAgo = wr['"Wk 12"'];
             weekFourWeeksAgo = wr['"Wk 13"'];
             weekThreeWeeksAgo = wr['"Wk 14"'];
             weekTwoWeeksAgo = wr['"Wk 15"'];
@@ -4081,10 +4081,766 @@ const populateTeamObjects = function (
             .replace("'", '');
 
           // console.log(SanitizedPlayerName);
+
+          if (passedInTeam.firstPassedInWRName === SanitizedPlayerName) {
+            // console.log(SanitizedPlayerName);
+            tempFiveWeeksAgo = +weekFiveWeeksAgo;
+            passedInTeam.firstPassedInWRFiveWeeksAgoExpectedPPRPoints =
+              tempFiveWeeksAgo.toFixed(2);
+            if (weekFiveWeeksAgo === '-') {
+              passedInTeam.firstPassedInWRFiveWeeksAgoExpectedPPRPoints = 0;
+            }
+            tempFourWeeksAgo = +weekFourWeeksAgo;
+            passedInTeam.firstPassedInWRFourWeeksAgoExpectedPPRPoints =
+              tempFourWeeksAgo.toFixed(2);
+            if (weekFourWeeksAgo === '-') {
+              passedInTeam.firstPassedInWRFourWeeksAgoExpectedPPRPoints = 0;
+            }
+            tempThreeWeeksAgo = +weekThreeWeeksAgo;
+            passedInTeam.firstPassedInWRThreeWeeksAgoExpectedPPRPoints =
+              tempThreeWeeksAgo.toFixed(2);
+            if (weekThreeWeeksAgo === '-') {
+              passedInTeam.firstPassedInWRThreeWeeksAgoExpectedPPRPoints = 0;
+            }
+            tempTwoWeeksAgo = +weekTwoWeeksAgo;
+            passedInTeam.firstPassedInWRTwoWeeksAgoExpectedPPRPoints =
+              tempTwoWeeksAgo.toFixed(2);
+            if (weekTwoWeeksAgo === '-') {
+              passedInTeam.firstPassedInWRTwoWeeksAgoExpectedPPRPoints = 0;
+            }
+            tempLastWeek = +weekLastWeek;
+            passedInTeam.firstPassedInWRLastWeekExpectedPPRPoints =
+              tempLastWeek.toFixed(2);
+            if (weekLastWeek === '-') {
+              passedInTeam.firstPassedInWRLastWeekExpectedPPRPoints = 0;
+            }
+          }
+          if (passedInTeam.secondPassedInWRName === SanitizedPlayerName) {
+            // console.log(SanitizedPlayerName);
+            tempFiveWeeksAgo = +weekFiveWeeksAgo;
+            passedInTeam.secondPassedInWRFiveWeeksAgoExpectedPPRPoints =
+              tempFiveWeeksAgo.toFixed(2);
+            if (weekFiveWeeksAgo === '-') {
+              passedInTeam.secondPassedInWRFiveWeeksAgoExpectedPPRPoints = 0;
+            }
+            tempFourWeeksAgo = +weekFourWeeksAgo;
+            passedInTeam.secondPassedInWRFourWeeksAgoExpectedPPRPoints =
+              tempFourWeeksAgo.toFixed(2);
+            if (weekFourWeeksAgo === '-') {
+              passedInTeam.secondPassedInWRFourWeeksAgoExpectedPPRPoints = 0;
+            }
+            tempThreeWeeksAgo = +weekThreeWeeksAgo;
+            passedInTeam.secondPassedInWRThreeWeeksAgoExpectedPPRPoints =
+              tempThreeWeeksAgo.toFixed(2);
+            if (weekThreeWeeksAgo === '-') {
+              passedInTeam.secondPassedInWRThreeWeeksAgoExpectedPPRPoints = 0;
+            }
+            tempTwoWeeksAgo = +weekTwoWeeksAgo;
+            passedInTeam.secondPassedInWRTwoWeeksAgoExpectedPPRPoints =
+              tempTwoWeeksAgo.toFixed(2);
+            if (weekTwoWeeksAgo === '-') {
+              passedInTeam.secondPassedInWRTwoWeeksAgoExpectedPPRPoints = 0;
+            }
+            tempLastWeek = +weekLastWeek;
+            passedInTeam.secondPassedInWRLastWeekExpectedPPRPoints =
+              tempLastWeek.toFixed(2);
+            if (weekLastWeek === '-') {
+              passedInTeam.secondPassedInWRLastWeekExpectedPPRPoints = 0;
+            }
+          }
+          if (passedInTeam.thirdPassedInWRName === SanitizedPlayerName) {
+            // console.log(SanitizedPlayerName);
+            tempFiveWeeksAgo = +weekFiveWeeksAgo;
+            passedInTeam.thirdPassedInWRFiveWeeksAgoExpectedPPRPoints =
+              tempFiveWeeksAgo.toFixed(2);
+            if (weekFiveWeeksAgo === '-') {
+              passedInTeam.thirdPassedInWRFiveWeeksAgoExpectedPPRPoints = 0;
+            }
+            tempFourWeeksAgo = +weekFourWeeksAgo;
+            passedInTeam.thirdPassedInWRFourWeeksAgoExpectedPPRPoints =
+              tempFourWeeksAgo.toFixed(2);
+            if (weekFourWeeksAgo === '-') {
+              passedInTeam.thirdPassedInWRFourWeeksAgoExpectedPPRPoints = 0;
+            }
+            tempThreeWeeksAgo = +weekThreeWeeksAgo;
+            passedInTeam.thirdPassedInWRThreeWeeksAgoExpectedPPRPoints =
+              tempThreeWeeksAgo.toFixed(2);
+            if (weekThreeWeeksAgo === '-') {
+              passedInTeam.thirdPassedInWRThreeWeeksAgoExpectedPPRPoints = 0;
+            }
+            tempTwoWeeksAgo = +weekTwoWeeksAgo;
+            passedInTeam.thirdPassedInWRTwoWeeksAgoExpectedPPRPoints =
+              tempTwoWeeksAgo.toFixed(2);
+            if (weekTwoWeeksAgo === '-') {
+              passedInTeam.thirdPassedInWRTwoWeeksAgoExpectedPPRPoints = 0;
+            }
+            tempLastWeek = +weekLastWeek;
+            passedInTeam.thirdPassedInWRLastWeekExpectedPPRPoints =
+              tempLastWeek.toFixed(2);
+            if (weekLastWeek === '-') {
+              passedInTeam.thirdPassedInWRLastWeekExpectedPPRPoints = 0;
+            }
+          }
+          if (passedInTeam.fourthPassedInWRName === SanitizedPlayerName) {
+            // console.log(SanitizedPlayerName);
+            tempFiveWeeksAgo = +weekFiveWeeksAgo;
+            passedInTeam.fourthPassedInWRFiveWeeksAgoExpectedPPRPoints =
+              tempFiveWeeksAgo.toFixed(2);
+            if (weekFiveWeeksAgo === '-') {
+              passedInTeam.fourthPassedInWRFiveWeeksAgoExpectedPPRPoints = 0;
+            }
+            tempFourWeeksAgo = +weekFourWeeksAgo;
+            passedInTeam.fourthPassedInWRFourWeeksAgoExpectedPPRPoints =
+              tempFourWeeksAgo.toFixed(2);
+            if (weekFourWeeksAgo === '-') {
+              passedInTeam.fourthPassedInWRFourWeeksAgoExpectedPPRPoints = 0;
+            }
+            tempThreeWeeksAgo = +weekThreeWeeksAgo;
+            passedInTeam.fourthPassedInWRThreeWeeksAgoExpectedPPRPoints =
+              tempThreeWeeksAgo.toFixed(2);
+            if (weekThreeWeeksAgo === '-') {
+              passedInTeam.fourthPassedInWRThreeWeeksAgoExpectedPPRPoints = 0;
+            }
+            tempTwoWeeksAgo = +weekTwoWeeksAgo;
+            passedInTeam.fourthPassedInWRTwoWeeksAgoExpectedPPRPoints =
+              tempTwoWeeksAgo.toFixed(2);
+            if (weekTwoWeeksAgo === '-') {
+              passedInTeam.fourthPassedInWRTwoWeeksAgoExpectedPPRPoints = 0;
+            }
+            tempLastWeek = +weekLastWeek;
+            passedInTeam.fourthPassedInWRLastWeekExpectedPPRPoints =
+              tempLastWeek.toFixed(2);
+            if (weekLastWeek === '-') {
+              passedInTeam.fourthPassedInWRLastWeekExpectedPPRPoints = 0;
+            }
+          }
+
+          ////assinging percent of highBarBumber for each WR in each of the last five weeks
+
+          const expectedPPRPointsHighBarNumber = 40;
+
+          //five weeks ago
+
+          passedInTeam.firstPassedInWRExpectedPPRPointsPercentOfHighBarNumberFiveWeeksAgo =
+            +(
+              (passedInTeam.firstPassedInWRFiveWeeksAgoExpectedPPRPoints /
+                expectedPPRPointsHighBarNumber) *
+              100
+            ).toFixed(2);
+
+          passedInTeam.secondPassedInWRExpectedPPRPointsPercentOfHighBarNumberFiveWeeksAgo =
+            +(
+              (passedInTeam.secondPassedInWRFiveWeeksAgoExpectedPPRPoints /
+                expectedPPRPointsHighBarNumber) *
+              100
+            ).toFixed(2);
+          passedInTeam.thirdPassedInWRExpectedPPRPointsPercentOfHighBarNumberFiveWeeksAgo =
+            +(
+              (passedInTeam.thirdPassedInWRFiveWeeksAgoExpectedPPRPoints /
+                expectedPPRPointsHighBarNumber) *
+              100
+            ).toFixed(2);
+          passedInTeam.fourthPassedInWRExpectedPPRPointsPercentOfHighBarNumberFiveWeeksAgo =
+            +(
+              (passedInTeam.fourthPassedInWRFiveWeeksAgoExpectedPPRPoints /
+                expectedPPRPointsHighBarNumber) *
+              100
+            ).toFixed(2);
+
+          ////////////four weeks ago
+
+          passedInTeam.firstPassedInWRExpectedPPRPointsPercentOfHighBarNumberFourWeeksAgo =
+            +(
+              (passedInTeam.firstPassedInWRFourWeeksAgoExpectedPPRPoints /
+                expectedPPRPointsHighBarNumber) *
+              100
+            ).toFixed(2);
+
+          passedInTeam.secondPassedInWRExpectedPPRPointsPercentOfHighBarNumberFourWeeksAgo =
+            +(
+              (passedInTeam.secondPassedInWRFourWeeksAgoExpectedPPRPoints /
+                expectedPPRPointsHighBarNumber) *
+              100
+            ).toFixed(2);
+          passedInTeam.thirdPassedInWRExpectedPPRPointsPercentOfHighBarNumberFourWeeksAgo =
+            +(
+              (passedInTeam.thirdPassedInWRFourWeeksAgoExpectedPPRPoints /
+                expectedPPRPointsHighBarNumber) *
+              100
+            ).toFixed(2);
+          passedInTeam.fourthPassedInWRExpectedPPRPointsPercentOfHighBarNumberFourWeeksAgo =
+            +(
+              (passedInTeam.fourthPassedInWRFourWeeksAgoExpectedPPRPoints /
+                expectedPPRPointsHighBarNumber) *
+              100
+            ).toFixed(2);
+
+          ////////////three weeks ago
+
+          passedInTeam.firstPassedInWRExpectedPPRPointsPercentOfHighBarNumberThreeWeeksAgo =
+            +(
+              (passedInTeam.firstPassedInWRThreeWeeksAgoExpectedPPRPoints /
+                expectedPPRPointsHighBarNumber) *
+              100
+            ).toFixed(2);
+
+          passedInTeam.secondPassedInWRExpectedPPRPointsPercentOfHighBarNumberThreeWeeksAgo =
+            +(
+              (passedInTeam.secondPassedInWRThreeWeeksAgoExpectedPPRPoints /
+                expectedPPRPointsHighBarNumber) *
+              100
+            ).toFixed(2);
+          passedInTeam.thirdPassedInWRExpectedPPRPointsPercentOfHighBarNumberThreeWeeksAgo =
+            +(
+              (passedInTeam.thirdPassedInWRThreeWeeksAgoExpectedPPRPoints /
+                expectedPPRPointsHighBarNumber) *
+              100
+            ).toFixed(2);
+          passedInTeam.fourthPassedInWRExpectedPPRPointsPercentOfHighBarNumberThreeWeeksAgo =
+            +(
+              (passedInTeam.fourthPassedInWRThreeWeeksAgoExpectedPPRPoints /
+                expectedPPRPointsHighBarNumber) *
+              100
+            ).toFixed(2);
+
+          ////////////two weeks ago
+
+          passedInTeam.firstPassedInWRExpectedPPRPointsPercentOfHighBarNumberTwoWeeksAgo =
+            +(
+              (passedInTeam.firstPassedInWRTwoWeeksAgoExpectedPPRPoints /
+                expectedPPRPointsHighBarNumber) *
+              100
+            ).toFixed(2);
+
+          passedInTeam.secondPassedInWRExpectedPPRPointsPercentOfHighBarNumberTwoWeeksAgo =
+            +(
+              (passedInTeam.secondPassedInWRTwoWeeksAgoExpectedPPRPoints /
+                expectedPPRPointsHighBarNumber) *
+              100
+            ).toFixed(2);
+          passedInTeam.thirdPassedInWRExpectedPPRPointsPercentOfHighBarNumberTwoWeeksAgo =
+            +(
+              (passedInTeam.thirdPassedInWRTwoWeeksAgoExpectedPPRPoints /
+                expectedPPRPointsHighBarNumber) *
+              100
+            ).toFixed(2);
+          passedInTeam.fourthPassedInWRExpectedPPRPointsPercentOfHighBarNumberTwoWeeksAgo =
+            +(
+              (passedInTeam.fourthPassedInWRTwoWeeksAgoExpectedPPRPoints /
+                expectedPPRPointsHighBarNumber) *
+              100
+            ).toFixed(2);
+
+          ////////////Last Week
+
+          passedInTeam.firstPassedInWRExpectedPPRPointsPercentOfHighBarNumberLastWeek =
+            +(
+              (passedInTeam.firstPassedInWRLastWeekExpectedPPRPoints /
+                expectedPPRPointsHighBarNumber) *
+              100
+            ).toFixed(2);
+
+          passedInTeam.secondPassedInWRExpectedPPRPointsPercentOfHighBarNumberLastWeek =
+            +(
+              (passedInTeam.secondPassedInWRLastWeekExpectedPPRPoints /
+                expectedPPRPointsHighBarNumber) *
+              100
+            ).toFixed(2);
+          passedInTeam.thirdPassedInWRExpectedPPRPointsPercentOfHighBarNumberLastWeek =
+            +(
+              (passedInTeam.thirdPassedInWRLastWeekExpectedPPRPoints /
+                expectedPPRPointsHighBarNumber) *
+              100
+            ).toFixed(2);
+          passedInTeam.fourthPassedInWRExpectedPPRPointsPercentOfHighBarNumberLastWeek =
+            +(
+              (passedInTeam.fourthPassedInWRLastWeekExpectedPPRPoints /
+                expectedPPRPointsHighBarNumber) *
+              100
+            ).toFixed(2);
         }
+
+        //assigning total scores for each WR for each week to determine role that week
+
+        FiveWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray = [];
+        fourWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray = [];
+        threeWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray = [];
+        twoWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray = [];
+        lastWeekWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray = [];
+
+        //five weeks ago
+
+        passedInTeam.firstPassedInWRTotalScoreFiveWeeksAgo =
+          +passedInTeam.firstPassedInWRPercentOfHighBarNumberFiveWeeksAgo +
+          +passedInTeam.firstPassedInWRExpectedPPRPointsPercentOfHighBarNumberFiveWeeksAgo;
+        FiveWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray.push(
+          passedInTeam.firstPassedInWRTotalScoreFiveWeeksAgo
+        );
+
+        passedInTeam.secondPassedInWRTotalScoreFiveWeeksAgo =
+          +passedInTeam.secondPassedInWRPercentOfHighBarNumberFiveWeeksAgo +
+          +passedInTeam.secondPassedInWRExpectedPPRPointsPercentOfHighBarNumberFiveWeeksAgo;
+        FiveWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray.push(
+          passedInTeam.secondPassedInWRTotalScoreFiveWeeksAgo
+        );
+
+        passedInTeam.thirdPassedInWRTotalScoreFiveWeeksAgo =
+          +passedInTeam.thirdPassedInWRPercentOfHighBarNumberFiveWeeksAgo +
+          +passedInTeam.thirdPassedInWRExpectedPPRPointsPercentOfHighBarNumberFiveWeeksAgo;
+        FiveWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray.push(
+          passedInTeam.thirdPassedInWRTotalScoreFiveWeeksAgo
+        );
+
+        passedInTeam.fourthPassedInWRTotalScoreFiveWeeksAgo =
+          +passedInTeam.fourthPassedInWRPercentOfHighBarNumberFiveWeeksAgo +
+          +passedInTeam.fourthPassedInWRExpectedPPRPointsPercentOfHighBarNumberFiveWeeksAgo;
+        FiveWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray.push(
+          passedInTeam.fourthPassedInWRTotalScoreFiveWeeksAgo
+        );
+
+        passedInTeam.FiveWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray =
+          FiveWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray;
+
+        //four weeks ago
+
+        passedInTeam.firstPassedInWRTotalScoreFourWeeksAgo =
+          +passedInTeam.firstPassedInWRPercentOfHighBarNumberFourWeeksAgo +
+          +passedInTeam.firstPassedInWRExpectedPPRPointsPercentOfHighBarNumberFourWeeksAgo;
+        fourWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray.push(
+          passedInTeam.firstPassedInWRTotalScoreFourWeeksAgo
+        );
+
+        passedInTeam.secondPassedInWRTotalScoreFourWeeksAgo =
+          +passedInTeam.secondPassedInWRPercentOfHighBarNumberFourWeeksAgo +
+          +passedInTeam.secondPassedInWRExpectedPPRPointsPercentOfHighBarNumberFourWeeksAgo;
+        fourWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray.push(
+          passedInTeam.secondPassedInWRTotalScoreFourWeeksAgo
+        );
+
+        passedInTeam.thirdPassedInWRTotalScoreFourWeeksAgo =
+          +passedInTeam.thirdPassedInWRPercentOfHighBarNumberFourWeeksAgo +
+          +passedInTeam.thirdPassedInWRExpectedPPRPointsPercentOfHighBarNumberFourWeeksAgo;
+        fourWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray.push(
+          passedInTeam.thirdPassedInWRTotalScoreFourWeeksAgo
+        );
+
+        passedInTeam.fourthPassedInWRTotalScoreFourWeeksAgo =
+          +passedInTeam.fourthPassedInWRPercentOfHighBarNumberFourWeeksAgo +
+          +passedInTeam.fourthPassedInWRExpectedPPRPointsPercentOfHighBarNumberFourWeeksAgo;
+        fourWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray.push(
+          passedInTeam.fourthPassedInWRTotalScoreFourWeeksAgo
+        );
+
+        passedInTeam.FourWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray =
+          fourWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray;
+
+        //three weeks ago
+
+        passedInTeam.firstPassedInWRTotalScoreThreeWeeksAgo =
+          +passedInTeam.firstPassedInWRPercentOfHighBarNumberThreeWeeksAgo +
+          +passedInTeam.firstPassedInWRExpectedPPRPointsPercentOfHighBarNumberThreeWeeksAgo;
+        threeWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray.push(
+          passedInTeam.firstPassedInWRTotalScoreThreeWeeksAgo
+        );
+
+        passedInTeam.secondPassedInWRTotalScoreThreeWeeksAgo =
+          +passedInTeam.secondPassedInWRPercentOfHighBarNumberThreeWeeksAgo +
+          +passedInTeam.secondPassedInWRExpectedPPRPointsPercentOfHighBarNumberThreeWeeksAgo;
+        threeWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray.push(
+          passedInTeam.secondPassedInWRTotalScoreThreeWeeksAgo
+        );
+
+        passedInTeam.thirdPassedInWRTotalScoreThreeWeeksAgo =
+          +passedInTeam.thirdPassedInWRPercentOfHighBarNumberThreeWeeksAgo +
+          +passedInTeam.thirdPassedInWRExpectedPPRPointsPercentOfHighBarNumberThreeWeeksAgo;
+        threeWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray.push(
+          passedInTeam.thirdPassedInWRTotalScoreThreeWeeksAgo
+        );
+
+        passedInTeam.fourthPassedInWRTotalScoreThreeWeeksAgo =
+          +passedInTeam.fourthPassedInWRPercentOfHighBarNumberThreeWeeksAgo +
+          +passedInTeam.fourthPassedInWRExpectedPPRPointsPercentOfHighBarNumberThreeWeeksAgo;
+        threeWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray.push(
+          passedInTeam.fourthPassedInWRTotalScoreThreeWeeksAgo
+        );
+
+        passedInTeam.ThreeWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray =
+          threeWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray;
+
+        //two weeks ago
+
+        passedInTeam.firstPassedInWRTotalScoreTwoWeeksAgo =
+          +passedInTeam.firstPassedInWRPercentOfHighBarNumberTwoWeeksAgo +
+          +passedInTeam.firstPassedInWRExpectedPPRPointsPercentOfHighBarNumberTwoWeeksAgo;
+        twoWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray.push(
+          passedInTeam.firstPassedInWRTotalScoreTwoWeeksAgo
+        );
+
+        passedInTeam.secondPassedInWRTotalScoreTwoWeeksAgo =
+          +passedInTeam.secondPassedInWRPercentOfHighBarNumberTwoWeeksAgo +
+          +passedInTeam.secondPassedInWRExpectedPPRPointsPercentOfHighBarNumberTwoWeeksAgo;
+        twoWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray.push(
+          passedInTeam.secondPassedInWRTotalScoreTwoWeeksAgo
+        );
+
+        passedInTeam.thirdPassedInWRTotalScoreTwoWeeksAgo =
+          +passedInTeam.thirdPassedInWRPercentOfHighBarNumberTwoWeeksAgo +
+          +passedInTeam.thirdPassedInWRExpectedPPRPointsPercentOfHighBarNumberTwoWeeksAgo;
+        twoWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray.push(
+          passedInTeam.thirdPassedInWRTotalScoreTwoWeeksAgo
+        );
+
+        passedInTeam.fourthPassedInWRTotalScoreTwoWeeksAgo =
+          +passedInTeam.fourthPassedInWRPercentOfHighBarNumberTwoWeeksAgo +
+          +passedInTeam.fourthPassedInWRExpectedPPRPointsPercentOfHighBarNumberTwoWeeksAgo;
+        twoWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray.push(
+          passedInTeam.fourthPassedInWRTotalScoreTwoWeeksAgo
+        );
+
+        passedInTeam.TwoWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray =
+          twoWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray;
+
+        //last week
+
+        passedInTeam.firstPassedInWRTotalScoreLastWeek =
+          +passedInTeam.firstPassedInWRPercentOfHighBarNumberLastWeek +
+          +passedInTeam.firstPassedInWRExpectedPPRPointsPercentOfHighBarNumberLastWeek;
+        lastWeekWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray.push(
+          passedInTeam.firstPassedInWRTotalScoreLastWeek
+        );
+
+        passedInTeam.secondPassedInWRTotalScoreLastWeek =
+          +passedInTeam.secondPassedInWRPercentOfHighBarNumberLastWeek +
+          +passedInTeam.secondPassedInWRExpectedPPRPointsPercentOfHighBarNumberLastWeek;
+        lastWeekWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray.push(
+          passedInTeam.secondPassedInWRTotalScoreLastWeek
+        );
+
+        passedInTeam.thirdPassedInWRTotalScoreLastWeek =
+          +passedInTeam.thirdPassedInWRPercentOfHighBarNumberLastWeek +
+          +passedInTeam.thirdPassedInWRExpectedPPRPointsPercentOfHighBarNumberLastWeek;
+        lastWeekWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray.push(
+          passedInTeam.thirdPassedInWRTotalScoreLastWeek
+        );
+
+        passedInTeam.fourthPassedInWRTotalScoreLastWeek =
+          +passedInTeam.fourthPassedInWRPercentOfHighBarNumberLastWeek +
+          +passedInTeam.fourthPassedInWRExpectedPPRPointsPercentOfHighBarNumberLastWeek;
+        lastWeekWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray.push(
+          passedInTeam.fourthPassedInWRTotalScoreLastWeek
+        );
+
+        passedInTeam.LastWeekWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray =
+          lastWeekWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray;
       });
     });
+
+    // // let sortedallHalfFlexValuesWithNames = allHalfFlexValuesWithNames.sort(
+    // //   (a, b) => {
+    // //     if (a > b) return 1;
+    // //     if (a < b) return -1;
+    // //   }
+    // // );
+
+    passedInTeam.sortedFiveWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray =
+      passedInTeam.FiveWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray.sort(
+        (a, b) => {
+          if (a > b) return -1;
+          if (a < b) return 1;
+        }
+      );
+    passedInTeam.sortedFourWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray =
+      passedInTeam.FourWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray.sort(
+        (a, b) => {
+          if (a > b) return -1;
+          if (a < b) return 1;
+        }
+      );
+    passedInTeam.sortedThreeWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray =
+      passedInTeam.ThreeWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray.sort(
+        (a, b) => {
+          if (a > b) return -1;
+          if (a < b) return 1;
+        }
+      );
+    passedInTeam.sortedTwoWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray =
+      passedInTeam.TwoWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray.sort(
+        (a, b) => {
+          if (a > b) return -1;
+          if (a < b) return 1;
+        }
+      );
+    passedInTeam.sortedLastWeekWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray =
+      passedInTeam.LastWeekWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray.sort(
+        (a, b) => {
+          if (a > b) return -1;
+          if (a < b) return 1;
+        }
+      );
+
+    //assign what the values that will be pushed into players arrays for the week at each role will be
+
+    ///////////////five weeks ago
+
+    if (
+      passedInTeam
+        .sortedFiveWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[0] -
+        passedInTeam
+          .sortedFiveWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[1] <
+      16
+    ) {
+      passedInTeam.WROneFiveWeeksAgoValue = 1.5;
+    } else {
+      passedInTeam.WROneFiveWeeksAgoValue = 1;
+    }
+
+    if (
+      passedInTeam
+        .sortedFiveWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[0] -
+        passedInTeam
+          .sortedFiveWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[1] <
+      16
+    ) {
+      passedInTeam.WRTwoFiveWeeksAgoValue = 1.5;
+    } else {
+      passedInTeam.WRTwoFiveWeeksAgoValue = 2;
+    }
+
+    if (
+      passedInTeam
+        .sortedFiveWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[1] -
+        passedInTeam
+          .sortedFiveWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[2] <
+      16
+    ) {
+      if (passedInTeam.WRTwoFiveWeeksAgoValue === 2) {
+        passedInTeam.WRTwoFiveWeeksAgoValue = 2.5;
+        passedInTeam.WRThreeFiveWeeksAgoValue = 2.5;
+      } else {
+        passedInTeam.WRThreeFiveWeeksAgoValue = 2.5;
+      }
+    } else {
+      passedInTeam.WRThreeFiveWeeksAgoValue = 3;
+    }
+    if (
+      passedInTeam
+        .sortedFiveWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[2] -
+        passedInTeam
+          .sortedFiveWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[3] <
+      16
+    ) {
+      if (passedInTeam.WRThreeFiveWeeksAgoValue === 3) {
+        passedInTeam.WRThreeFiveWeeksAgoValue = 3.5;
+        passedInTeam.WRFourFiveWeeksAgoValue = 3.5;
+      } else {
+        passedInTeam.WRFourFiveWeeksAgoValue = 3.5;
+      }
+    } else {
+      passedInTeam.WRFourFiveWeeksAgoValue = 4;
+    }
   });
+
+  ////setting which WR was in what role to their names each of the last five weeks
+
+  //first passed in WR
+
+  if (
+    passedInTeam.firstPassedInWRTotalScoreFiveWeeksAgo ===
+    passedInTeam
+      .sortedFiveWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[0]
+  ) {
+    passedInTeam.wrOneFiveWeeksAgo = passedInTeam.firstPassedInWRName;
+  }
+  if (
+    passedInTeam.firstPassedInWRTotalScoreFiveWeeksAgo ===
+    passedInTeam
+      .sortedFiveWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[1]
+  ) {
+    passedInTeam.wrTwoFiveWeeksAgo = passedInTeam.firstPassedInWRName;
+  }
+  if (
+    passedInTeam.firstPassedInWRTotalScoreFiveWeeksAgo ===
+    passedInTeam
+      .sortedFiveWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[2]
+  ) {
+    passedInTeam.wrThreeFiveWeeksAgo = passedInTeam.firstPassedInWRName;
+  }
+  if (
+    passedInTeam.firstPassedInWRTotalScoreFiveWeeksAgo ===
+    passedInTeam
+      .sortedFiveWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[3]
+  ) {
+    passedInTeam.wrFourFiveWeeksAgo = passedInTeam.firstPassedInWRName;
+  }
+
+  //second passed in WR
+
+  if (
+    passedInTeam.secondPassedInWRTotalScoreFiveWeeksAgo ===
+    passedInTeam
+      .sortedFiveWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[0]
+  ) {
+    passedInTeam.wrOneFiveWeeksAgo = passedInTeam.secondPassedInWRName;
+  }
+  if (
+    passedInTeam.secondPassedInWRTotalScoreFiveWeeksAgo ===
+    passedInTeam
+      .sortedFiveWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[1]
+  ) {
+    passedInTeam.wrTwoFiveWeeksAgo = passedInTeam.secondPassedInWRName;
+  }
+  if (
+    passedInTeam.secondPassedInWRTotalScoreFiveWeeksAgo ===
+    passedInTeam
+      .sortedFiveWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[2]
+  ) {
+    passedInTeam.wrThreeFiveWeeksAgo = passedInTeam.secondPassedInWRName;
+  }
+  if (
+    passedInTeam.secondPassedInWRTotalScoreFiveWeeksAgo ===
+    passedInTeam
+      .sortedFiveWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[3]
+  ) {
+    passedInTeam.wrFourFiveWeeksAgo = passedInTeam.secondPassedInWRName;
+  }
+
+  //third passed in WR
+
+  if (
+    passedInTeam.thirdPassedInWRTotalScoreFiveWeeksAgo ===
+    passedInTeam
+      .sortedFiveWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[0]
+  ) {
+    passedInTeam.wrOneFiveWeeksAgo = passedInTeam.thirdPassedInWRName;
+  }
+  if (
+    passedInTeam.thirdPassedInWRTotalScoreFiveWeeksAgo ===
+    passedInTeam
+      .sortedFiveWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[1]
+  ) {
+    passedInTeam.wrTwoFiveWeeksAgo = passedInTeam.thirdPassedInWRName;
+  }
+  if (
+    passedInTeam.thirdPassedInWRTotalScoreFiveWeeksAgo ===
+    passedInTeam
+      .sortedFiveWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[2]
+  ) {
+    passedInTeam.wrThreeFiveWeeksAgo = passedInTeam.thirdPassedInWRName;
+  }
+  if (
+    passedInTeam.thirdPassedInWRTotalScoreFiveWeeksAgo ===
+    passedInTeam
+      .sortedFiveWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[3]
+  ) {
+    passedInTeam.wrFourFiveWeeksAgo = passedInTeam.thirdPassedInWRName;
+  }
+
+  //fourth passed in WR
+
+  if (
+    passedInTeam.fourthPassedInWRTotalScoreFiveWeeksAgo ===
+    passedInTeam
+      .sortedFiveWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[0]
+  ) {
+    passedInTeam.wrOneFiveWeeksAgo = passedInTeam.fourthPassedInWRName;
+  }
+  if (
+    passedInTeam.fourthPassedInWRTotalScoreFiveWeeksAgo ===
+    passedInTeam
+      .sortedFiveWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[1]
+  ) {
+    passedInTeam.wrTwoFiveWeeksAgo = passedInTeam.fourthPassedInWRName;
+  }
+  if (
+    passedInTeam.fourthPassedInWRTotalScoreFiveWeeksAgo ===
+    passedInTeam
+      .sortedFiveWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[2]
+  ) {
+    passedInTeam.wrThreeFiveWeeksAgo = passedInTeam.fourthPassedInWRName;
+  }
+  if (
+    passedInTeam.fourthPassedInWRTotalScoreFiveWeeksAgo ===
+    passedInTeam
+      .sortedFiveWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[3]
+  ) {
+    passedInTeam.wrFourFiveWeeksAgo = passedInTeam.fourthPassedInWRName;
+  }
+
+  //
+
+  //WROne this week
+
+  if (passedInTeam.wrOneFiveWeeksAgo === passedInTeam.WROne.name) {
+    passedInTeam.WROne.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WROneFiveWeeksAgoValue
+    );
+  }
+  if (passedInTeam.wrTwoFiveWeeksAgo === passedInTeam.WROne.name) {
+    passedInTeam.WROne.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WRTwoFiveWeeksAgoValue
+    );
+  }
+  if (passedInTeam.wrThreeFiveWeeksAgo === passedInTeam.WROne.name) {
+    passedInTeam.WROne.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WRThreeFiveWeeksAgoValue
+    );
+  }
+  if (passedInTeam.wrFourFiveWeeksAgo === passedInTeam.WROne.name) {
+    passedInTeam.WROne.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WRFourFiveWeeksAgoValue
+    );
+  }
+
+  //WRTwo this week
+
+  if (passedInTeam.wrOneFiveWeeksAgo === passedInTeam.WRTwo.name) {
+    passedInTeam.WRTwo.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WROneFiveWeeksAgoValue
+    );
+  }
+  if (passedInTeam.wrTwoFiveWeeksAgo === passedInTeam.WRTwo.name) {
+    passedInTeam.WRTwo.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WRTwoFiveWeeksAgoValue
+    );
+  }
+  if (passedInTeam.wrThreeFiveWeeksAgo === passedInTeam.WRTwo.name) {
+    passedInTeam.WRTwo.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WRThreeFiveWeeksAgoValue
+    );
+  }
+  if (passedInTeam.wrFourFiveWeeksAgo === passedInTeam.WRTwo.name) {
+    passedInTeam.WRTwo.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WRFourFiveWeeksAgoValue
+    );
+  }
+
+  //WRThree this week
+
+  if (passedInTeam.wrOneFiveWeeksAgo === passedInTeam.WRThree.name) {
+    passedInTeam.WRThree.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WROneFiveWeeksAgoValue
+    );
+  }
+  if (passedInTeam.wrTwoFiveWeeksAgo === passedInTeam.WRThree.name) {
+    passedInTeam.WRThree.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WRTwoFiveWeeksAgoValue
+    );
+  }
+  if (passedInTeam.wrThreeFiveWeeksAgo === passedInTeam.WRThree.name) {
+    passedInTeam.WRThree.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WRThreeFiveWeeksAgoValue
+    );
+  }
+  if (passedInTeam.wrFourFiveWeeksAgo === passedInTeam.WRThree.name) {
+    passedInTeam.WRThree.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WRFourFiveWeeksAgoValue
+    );
+  }
+
+  ///////////////four weeks ago
+  //
+  //scroll all the way up to where is say five weeks ago and copy that whole section down below here and adjust what needs to be adjusted to make it work for four weeks ago. repeat that process until each othe the last five weeks is covered
+  //
 };
 
 populateTeamObjects(
@@ -4249,7 +5005,8 @@ populateTeamObjects(
 );
 
 // console.log(wrrawdata);
+// console.log(wrrawdata.seahawks);
 // console.log(wrrawdata.vikings);
-// console.log(wrrawdata.bengals);
+console.log(wrrawdata.bengals);
 
 module.exports = wrrawdata;
