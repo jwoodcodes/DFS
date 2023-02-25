@@ -28,6 +28,108 @@ const allWROneIfTopTwelveTargetShareLasThreeWeeks = [];
 const allWRTwoIfTopTwelveTargetShareLasThreeWeeks = [];
 const allWRThreeIfTopTwelveTargetShareLasThreeWeeks = [];
 
+///////////////////
+
+class WrObject {
+  constructor(
+    playerName,
+    position,
+    teamName,
+    teamABV,
+    vtt,
+    opponentVTT,
+    byeWeek,
+    homeOrAway,
+    slate,
+    teamProjectedPoints,
+    hadByeInLastFiveWeeksIsTrue,
+    teamProjectedForAHalfOfNegetiveGameScriptIsTrue,
+    roleThisWeek,
+    numberOfGamesPlayedInTheLastFiveWeeks,
+    percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek,
+
+    appQBProjectedPoints,
+    projectedTargetsThisWeekFourForFour,
+    targetShareLastFiveWeeks,
+
+    yahooSalary,
+    fanduelSalary,
+    draftkingsSalary,
+    percentOfSalaryCapYahoo,
+    percentOfSalaryCapFanduel,
+    percentOfSalaryCapDraftkings,
+
+    opponentTeamName,
+    opponentABV,
+    opponentTeamProjectedPoints,
+
+    halfTwentyFifthPercentProjectedPoints,
+    halfFiftyithPercentProjectedPoints,
+    halfSeventyFifthPercentProjectedPoints,
+    PPRTwentyFifthPercentProjectedPoints,
+    PPRFiftyithPercentProjectedPoints,
+    PPRSeventyFifthPercentProjectedPoints,
+    fourForFourHalfPPRProjectedPoints,
+    fourForFourFullPPRProjectedPoints
+  ) {
+    this.playerName = playerName;
+
+    this.position = position;
+    this.teamName = teamName;
+    this.teamABV = teamABV;
+    this.vtt = vtt;
+    this.opponentVTT = opponentVTT;
+    this.byeWeek = byeWeek;
+    this.homeOrAway = homeOrAway;
+    this.slate = slate;
+    this.teamProjectedPoints = teamProjectedPoints;
+
+    this.hadByeInLastFiveWeeksIsTrue = hadByeInLastFiveWeeksIsTrue;
+    this.teamProjectedForAHalfOfNegetiveGameScriptIsTrue =
+      teamProjectedForAHalfOfNegetiveGameScriptIsTrue;
+
+    this.roleThisWeek = roleThisWeek;
+    this.numberOfGamesPlayedInTheLastFiveWeeks =
+      numberOfGamesPlayedInTheLastFiveWeeks;
+    this.percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek =
+      percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek;
+
+    this.appQBProjectedPoints = appQBProjectedPoints;
+    this.projectedTargetsThisWeekFourForFour =
+      projectedTargetsThisWeekFourForFour;
+    this.targetShareLastFiveWeeks = targetShareLastFiveWeeks;
+
+    this.yahooSalary = yahooSalary;
+    this.fanduelSalary = fanduelSalary;
+    this.draftkingsSalary = draftkingsSalary;
+    this.percentOfSalaryCapYahoo = percentOfSalaryCapYahoo;
+    this.percentOfSalaryCapFanduel = percentOfSalaryCapFanduel;
+    this.percentOfSalaryCapDraftkings = percentOfSalaryCapDraftkings;
+
+    this.opponentTeamName = opponentTeamName;
+    this.opponentABV = opponentABV;
+    this.opponentTeamProjectedPoints = opponentTeamProjectedPoints;
+
+    this.halfTwentyFifthPercentProjectedPoints =
+      halfTwentyFifthPercentProjectedPoints;
+    this.halfFiftyithPercentProjectedPoints =
+      halfFiftyithPercentProjectedPoints;
+    this.halfSeventyFifthPercentProjectedPoints =
+      halfSeventyFifthPercentProjectedPoints;
+    this.PPRTwentyFifthPercentProjectedPoints =
+      PPRTwentyFifthPercentProjectedPoints;
+    this.PPRFiftyithPercentProjectedPoints = PPRFiftyithPercentProjectedPoints;
+    this.PPRSeventyFifthPercentProjectedPoints =
+      PPRSeventyFifthPercentProjectedPoints;
+    this.fourForFourHalfPPRProjectedPoints = fourForFourHalfPPRProjectedPoints;
+    this.fourForFourFullPPRProjectedPoints = fourForFourFullPPRProjectedPoints;
+  }
+
+  //add methods here
+}
+
+//////////////////////
+
 // const allWRCalcFunctions = {
 //   calcWRHomeOrAwayFavoriteOrUnderdogs(team, i) {
 //     let WROne = team.WROne;

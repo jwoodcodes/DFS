@@ -4839,8 +4839,1069 @@ const populateTeamObjects = function (
 
   ///////////////four weeks ago
   //
-  //scroll all the way up to where is say five weeks ago and copy that whole section down below here and adjust what needs to be adjusted to make it work for four weeks ago. repeat that process until each othe the last five weeks is covered
+
+  if (
+    passedInTeam
+      .sortedFourWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[0] -
+      passedInTeam
+        .sortedFourWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[1] <
+    16
+  ) {
+    passedInTeam.WROneFourWeeksAgoValue = 1.5;
+  } else {
+    passedInTeam.WROneFourWeeksAgoValue = 1;
+  }
+
+  if (
+    passedInTeam
+      .sortedFourWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[0] -
+      passedInTeam
+        .sortedFourWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[1] <
+    16
+  ) {
+    passedInTeam.WRTwoFourWeeksAgoValue = 1.5;
+  } else {
+    passedInTeam.WRTwoFourWeeksAgoValue = 2;
+  }
+
+  if (
+    passedInTeam
+      .sortedFourWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[1] -
+      passedInTeam
+        .sortedFourWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[2] <
+    16
+  ) {
+    if (passedInTeam.WRTwoFourWeeksAgoValue === 2) {
+      passedInTeam.WRTwoFourWeeksAgoValue = 2.5;
+      passedInTeam.WRThreeFourWeeksAgoValue = 2.5;
+    } else {
+      passedInTeam.WRThreeFourWeeksAgoValue = 2.5;
+    }
+  } else {
+    passedInTeam.WRThreeFourWeeksAgoValue = 3;
+  }
+  if (
+    passedInTeam
+      .sortedFourWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[2] -
+      passedInTeam
+        .sortedFourWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[3] <
+    16
+  ) {
+    if (passedInTeam.WRThreeFourWeeksAgoValue === 3) {
+      passedInTeam.WRThreeFourWeeksAgoValue = 3.5;
+      passedInTeam.WRFourFourWeeksAgoValue = 3.5;
+    } else {
+      passedInTeam.WRFourFourWeeksAgoValue = 3.5;
+    }
+  } else {
+    passedInTeam.WRFourFourWeeksAgoValue = 4;
+  }
+
+  ////setting which WR was in what role to their names each of the last five weeks
+
+  //first passed in WR
+
+  if (
+    passedInTeam.firstPassedInWRTotalScoreFourWeeksAgo ===
+    passedInTeam
+      .sortedFourWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[0]
+  ) {
+    passedInTeam.wrOneFourWeeksAgo = passedInTeam.firstPassedInWRName;
+  }
+  if (
+    passedInTeam.firstPassedInWRTotalScoreFourWeeksAgo ===
+    passedInTeam
+      .sortedFourWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[1]
+  ) {
+    passedInTeam.wrTwoFourWeeksAgo = passedInTeam.firstPassedInWRName;
+  }
+  if (
+    passedInTeam.firstPassedInWRTotalScoreFourWeeksAgo ===
+    passedInTeam
+      .sortedFourWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[2]
+  ) {
+    passedInTeam.wrThreeFourWeeksAgo = passedInTeam.firstPassedInWRName;
+  }
+  if (
+    passedInTeam.firstPassedInWRTotalScoreFourWeeksAgo ===
+    passedInTeam
+      .sortedFourWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[3]
+  ) {
+    passedInTeam.wrFourFourWeeksAgo = passedInTeam.firstPassedInWRName;
+  }
+
+  //second passed in WR
+
+  if (
+    passedInTeam.secondPassedInWRTotalScoreFourWeeksAgo ===
+    passedInTeam
+      .sortedFourWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[0]
+  ) {
+    passedInTeam.wrOneFourWeeksAgo = passedInTeam.secondPassedInWRName;
+  }
+  if (
+    passedInTeam.secondPassedInWRTotalScoreFourWeeksAgo ===
+    passedInTeam
+      .sortedFourWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[1]
+  ) {
+    passedInTeam.wrTwoFourWeeksAgo = passedInTeam.secondPassedInWRName;
+  }
+  if (
+    passedInTeam.secondPassedInWRTotalScoreFourWeeksAgo ===
+    passedInTeam
+      .sortedFourWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[2]
+  ) {
+    passedInTeam.wrThreeFourWeeksAgo = passedInTeam.secondPassedInWRName;
+  }
+  if (
+    passedInTeam.secondPassedInWRTotalScoreFourWeeksAgo ===
+    passedInTeam
+      .sortedFourWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[3]
+  ) {
+    passedInTeam.wrFourFourWeeksAgo = passedInTeam.secondPassedInWRName;
+  }
+
+  //third passed in WR
+
+  if (
+    passedInTeam.thirdPassedInWRTotalScoreFourWeeksAgo ===
+    passedInTeam
+      .sortedFourWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[0]
+  ) {
+    passedInTeam.wrOneFourWeeksAgo = passedInTeam.thirdPassedInWRName;
+  }
+  if (
+    passedInTeam.thirdPassedInWRTotalScoreFourWeeksAgo ===
+    passedInTeam
+      .sortedFourWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[1]
+  ) {
+    passedInTeam.wrTwoFourWeeksAgo = passedInTeam.thirdPassedInWRName;
+  }
+  if (
+    passedInTeam.thirdPassedInWRTotalScoreFourWeeksAgo ===
+    passedInTeam
+      .sortedFourWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[2]
+  ) {
+    passedInTeam.wrThreeFourWeeksAgo = passedInTeam.thirdPassedInWRName;
+  }
+  if (
+    passedInTeam.thirdPassedInWRTotalScoreFourWeeksAgo ===
+    passedInTeam
+      .sortedFourWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[3]
+  ) {
+    passedInTeam.wrFourFourWeeksAgo = passedInTeam.thirdPassedInWRName;
+  }
+
+  //fourth passed in WR
+
+  if (
+    passedInTeam.fourthPassedInWRTotalScoreFourWeeksAgo ===
+    passedInTeam
+      .sortedFourWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[0]
+  ) {
+    passedInTeam.wrOneFourWeeksAgo = passedInTeam.fourthPassedInWRName;
+  }
+  if (
+    passedInTeam.fourthPassedInWRTotalScoreFourWeeksAgo ===
+    passedInTeam
+      .sortedFourWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[1]
+  ) {
+    passedInTeam.wrTwoFourWeeksAgo = passedInTeam.fourthPassedInWRName;
+  }
+  if (
+    passedInTeam.fourthPassedInWRTotalScoreFourWeeksAgo ===
+    passedInTeam
+      .sortedFourWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[2]
+  ) {
+    passedInTeam.wrThreeFourWeeksAgo = passedInTeam.fourthPassedInWRName;
+  }
+  if (
+    passedInTeam.fourthPassedInWRTotalScoreFourWeeksAgo ===
+    passedInTeam
+      .sortedFourWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[3]
+  ) {
+    passedInTeam.wrFourFourWeeksAgo = passedInTeam.fourthPassedInWRName;
+  }
+
   //
+
+  //WROne this week
+
+  if (passedInTeam.wrOneFourWeeksAgo === passedInTeam.WROne.name) {
+    passedInTeam.WROne.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WROneFourWeeksAgoValue
+    );
+  }
+  if (passedInTeam.wrTwoFourWeeksAgo === passedInTeam.WROne.name) {
+    passedInTeam.WROne.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WRTwoFourWeeksAgoValue
+    );
+  }
+  if (passedInTeam.wrThreeFourWeeksAgo === passedInTeam.WROne.name) {
+    passedInTeam.WROne.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WRThreeFourWeeksAgoValue
+    );
+  }
+  if (passedInTeam.wrFourFourWeeksAgo === passedInTeam.WROne.name) {
+    passedInTeam.WROne.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WRFourFourWeeksAgoValue
+    );
+  }
+
+  //WRTwo this week
+
+  if (passedInTeam.wrOneFourWeeksAgo === passedInTeam.WRTwo.name) {
+    passedInTeam.WRTwo.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WROneFourWeeksAgoValue
+    );
+  }
+  if (passedInTeam.wrTwoFourWeeksAgo === passedInTeam.WRTwo.name) {
+    passedInTeam.WRTwo.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WRTwoFourWeeksAgoValue
+    );
+  }
+  if (passedInTeam.wrThreeFourWeeksAgo === passedInTeam.WRTwo.name) {
+    passedInTeam.WRTwo.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WRThreeFourWeeksAgoValue
+    );
+  }
+  if (passedInTeam.wrFourFourWeeksAgo === passedInTeam.WRTwo.name) {
+    passedInTeam.WRTwo.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WRFourFourWeeksAgoValue
+    );
+  }
+
+  //WRThree this week
+
+  if (passedInTeam.wrOneFourWeeksAgo === passedInTeam.WRThree.name) {
+    passedInTeam.WRThree.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WROneFourWeeksAgoValue
+    );
+  }
+  if (passedInTeam.wrTwoFourWeeksAgo === passedInTeam.WRThree.name) {
+    passedInTeam.WRThree.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WRTwoFourWeeksAgoValue
+    );
+  }
+  if (passedInTeam.wrThreeFourWeeksAgo === passedInTeam.WRThree.name) {
+    passedInTeam.WRThree.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WRThreeFourWeeksAgoValue
+    );
+  }
+  if (passedInTeam.wrFourFourWeeksAgo === passedInTeam.WRThree.name) {
+    passedInTeam.WRThree.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WRFourFourWeeksAgoValue
+    );
+  }
+
+  //Three Weeks Ago
+
+  if (
+    passedInTeam
+      .sortedThreeWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[0] -
+      passedInTeam
+        .sortedThreeWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[1] <
+    16
+  ) {
+    passedInTeam.WROneThreeWeeksAgoValue = 1.5;
+  } else {
+    passedInTeam.WROneThreeWeeksAgoValue = 1;
+  }
+
+  if (
+    passedInTeam
+      .sortedThreeWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[0] -
+      passedInTeam
+        .sortedThreeWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[1] <
+    16
+  ) {
+    passedInTeam.WRTwoThreeWeeksAgoValue = 1.5;
+  } else {
+    passedInTeam.WRTwoThreeWeeksAgoValue = 2;
+  }
+
+  if (
+    passedInTeam
+      .sortedThreeWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[1] -
+      passedInTeam
+        .sortedThreeWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[2] <
+    16
+  ) {
+    if (passedInTeam.WRTwoThreeWeeksAgoValue === 2) {
+      passedInTeam.WRTwoThreeWeeksAgoValue = 2.5;
+      passedInTeam.WRThreeThreeWeeksAgoValue = 2.5;
+    } else {
+      passedInTeam.WRThreeThreeWeeksAgoValue = 2.5;
+    }
+  } else {
+    passedInTeam.WRThreeThreeWeeksAgoValue = 3;
+  }
+  if (
+    passedInTeam
+      .sortedThreeWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[2] -
+      passedInTeam
+        .sortedThreeWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[3] <
+    16
+  ) {
+    if (passedInTeam.WRThreeThreeWeeksAgoValue === 3) {
+      passedInTeam.WRThreeThreeWeeksAgoValue = 3.5;
+      passedInTeam.WRFourThreeWeeksAgoValue = 3.5;
+    } else {
+      passedInTeam.WRFourThreeWeeksAgoValue = 3.5;
+    }
+  } else {
+    passedInTeam.WRFourThreeWeeksAgoValue = 4;
+  }
+
+  ////setting which WR was in what role to their names each of the last five weeks
+
+  //first passed in WR
+
+  if (
+    passedInTeam.firstPassedInWRTotalScoreThreeWeeksAgo ===
+    passedInTeam
+      .sortedThreeWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[0]
+  ) {
+    passedInTeam.wrOneThreeWeeksAgo = passedInTeam.firstPassedInWRName;
+  }
+  if (
+    passedInTeam.firstPassedInWRTotalScoreThreeWeeksAgo ===
+    passedInTeam
+      .sortedThreeWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[1]
+  ) {
+    passedInTeam.wrTwoThreeWeeksAgo = passedInTeam.firstPassedInWRName;
+  }
+  if (
+    passedInTeam.firstPassedInWRTotalScoreThreeWeeksAgo ===
+    passedInTeam
+      .sortedThreeWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[2]
+  ) {
+    passedInTeam.wrThreeThreeWeeksAgo = passedInTeam.firstPassedInWRName;
+  }
+  if (
+    passedInTeam.firstPassedInWRTotalScoreThreeWeeksAgo ===
+    passedInTeam
+      .sortedThreeWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[3]
+  ) {
+    passedInTeam.wrFourThreeWeeksAgo = passedInTeam.firstPassedInWRName;
+  }
+
+  //second passed in WR
+
+  if (
+    passedInTeam.secondPassedInWRTotalScoreThreeWeeksAgo ===
+    passedInTeam
+      .sortedThreeWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[0]
+  ) {
+    passedInTeam.wrOneThreeWeeksAgo = passedInTeam.secondPassedInWRName;
+  }
+  if (
+    passedInTeam.secondPassedInWRTotalScoreThreeWeeksAgo ===
+    passedInTeam
+      .sortedThreeWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[1]
+  ) {
+    passedInTeam.wrTwoThreeWeeksAgo = passedInTeam.secondPassedInWRName;
+  }
+  if (
+    passedInTeam.secondPassedInWRTotalScoreThreeWeeksAgo ===
+    passedInTeam
+      .sortedThreeWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[2]
+  ) {
+    passedInTeam.wrThreeThreeWeeksAgo = passedInTeam.secondPassedInWRName;
+  }
+  if (
+    passedInTeam.secondPassedInWRTotalScoreThreeWeeksAgo ===
+    passedInTeam
+      .sortedThreeWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[3]
+  ) {
+    passedInTeam.wrFourThreeWeeksAgo = passedInTeam.secondPassedInWRName;
+  }
+
+  //third passed in WR
+
+  if (
+    passedInTeam.thirdPassedInWRTotalScoreThreeWeeksAgo ===
+    passedInTeam
+      .sortedThreeWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[0]
+  ) {
+    passedInTeam.wrOneThreeWeeksAgo = passedInTeam.thirdPassedInWRName;
+  }
+  if (
+    passedInTeam.thirdPassedInWRTotalScoreThreeWeeksAgo ===
+    passedInTeam
+      .sortedThreeWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[1]
+  ) {
+    passedInTeam.wrTwoThreeWeeksAgo = passedInTeam.thirdPassedInWRName;
+  }
+  if (
+    passedInTeam.thirdPassedInWRTotalScoreThreeWeeksAgo ===
+    passedInTeam
+      .sortedThreeWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[2]
+  ) {
+    passedInTeam.wrThreeThreeWeeksAgo = passedInTeam.thirdPassedInWRName;
+  }
+  if (
+    passedInTeam.thirdPassedInWRTotalScoreThreeWeeksAgo ===
+    passedInTeam
+      .sortedThreeWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[3]
+  ) {
+    passedInTeam.wrFourThreeWeeksAgo = passedInTeam.thirdPassedInWRName;
+  }
+
+  //fourth passed in WR
+
+  if (
+    passedInTeam.fourthPassedInWRTotalScoreThreeWeeksAgo ===
+    passedInTeam
+      .sortedThreeWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[0]
+  ) {
+    passedInTeam.wrOneThreeWeeksAgo = passedInTeam.fourthPassedInWRName;
+  }
+  if (
+    passedInTeam.fourthPassedInWRTotalScoreThreeWeeksAgo ===
+    passedInTeam
+      .sortedThreeWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[1]
+  ) {
+    passedInTeam.wrTwoThreeWeeksAgo = passedInTeam.fourthPassedInWRName;
+  }
+  if (
+    passedInTeam.fourthPassedInWRTotalScoreThreeWeeksAgo ===
+    passedInTeam
+      .sortedThreeWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[2]
+  ) {
+    passedInTeam.wrThreeThreeWeeksAgo = passedInTeam.fourthPassedInWRName;
+  }
+  if (
+    passedInTeam.fourthPassedInWRTotalScoreThreeWeeksAgo ===
+    passedInTeam
+      .sortedThreeWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[3]
+  ) {
+    passedInTeam.wrFourThreeWeeksAgo = passedInTeam.fourthPassedInWRName;
+  }
+
+  //
+
+  //WROne this week
+
+  if (passedInTeam.wrOneThreeWeeksAgo === passedInTeam.WROne.name) {
+    passedInTeam.WROne.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WROneThreeWeeksAgoValue
+    );
+  }
+  if (passedInTeam.wrTwoThreeWeeksAgo === passedInTeam.WROne.name) {
+    passedInTeam.WROne.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WRTwoThreeWeeksAgoValue
+    );
+  }
+  if (passedInTeam.wrThreeThreeWeeksAgo === passedInTeam.WROne.name) {
+    passedInTeam.WROne.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WRThreeThreeWeeksAgoValue
+    );
+  }
+  if (passedInTeam.wrFourThreeWeeksAgo === passedInTeam.WROne.name) {
+    passedInTeam.WROne.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WRFourThreeWeeksAgoValue
+    );
+  }
+
+  //WRTwo this week
+
+  if (passedInTeam.wrOneThreeWeeksAgo === passedInTeam.WRTwo.name) {
+    passedInTeam.WRTwo.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WROneThreeWeeksAgoValue
+    );
+  }
+  if (passedInTeam.wrTwoThreeWeeksAgo === passedInTeam.WRTwo.name) {
+    passedInTeam.WRTwo.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WRTwoThreeWeeksAgoValue
+    );
+  }
+  if (passedInTeam.wrThreeThreeWeeksAgo === passedInTeam.WRTwo.name) {
+    passedInTeam.WRTwo.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WRThreeThreeWeeksAgoValue
+    );
+  }
+  if (passedInTeam.wrFourThreeWeeksAgo === passedInTeam.WRTwo.name) {
+    passedInTeam.WRTwo.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WRFourThreeWeeksAgoValue
+    );
+  }
+
+  //WRThree this week
+
+  if (passedInTeam.wrOneThreeWeeksAgo === passedInTeam.WRThree.name) {
+    passedInTeam.WRThree.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WROneThreeWeeksAgoValue
+    );
+  }
+  if (passedInTeam.wrTwoThreeWeeksAgo === passedInTeam.WRThree.name) {
+    passedInTeam.WRThree.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WRTwoThreeWeeksAgoValue
+    );
+  }
+  if (passedInTeam.wrThreeThreeWeeksAgo === passedInTeam.WRThree.name) {
+    passedInTeam.WRThree.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WRThreeThreeWeeksAgoValue
+    );
+  }
+  if (passedInTeam.wrFourThreeWeeksAgo === passedInTeam.WRThree.name) {
+    passedInTeam.WRThree.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WRFourThreeWeeksAgoValue
+    );
+  }
+
+  //Two Weeks Ago
+
+  if (
+    passedInTeam
+      .sortedTwoWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[0] -
+      passedInTeam
+        .sortedTwoWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[1] <
+    16
+  ) {
+    passedInTeam.WROneTwoWeeksAgoValue = 1.5;
+  } else {
+    passedInTeam.WROneTwoWeeksAgoValue = 1;
+  }
+
+  if (
+    passedInTeam
+      .sortedTwoWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[0] -
+      passedInTeam
+        .sortedTwoWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[1] <
+    16
+  ) {
+    passedInTeam.WRTwoTwoWeeksAgoValue = 1.5;
+  } else {
+    passedInTeam.WRTwoTwoWeeksAgoValue = 2;
+  }
+
+  if (
+    passedInTeam
+      .sortedTwoWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[1] -
+      passedInTeam
+        .sortedTwoWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[2] <
+    16
+  ) {
+    if (passedInTeam.WRTwoTwoWeeksAgoValue === 2) {
+      passedInTeam.WRTwoTwoWeeksAgoValue = 2.5;
+      passedInTeam.WRThreeTwoWeeksAgoValue = 2.5;
+    } else {
+      passedInTeam.WRThreeTwoWeeksAgoValue = 2.5;
+    }
+  } else {
+    passedInTeam.WRThreeTwoWeeksAgoValue = 3;
+  }
+  if (
+    passedInTeam
+      .sortedTwoWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[2] -
+      passedInTeam
+        .sortedTwoWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[3] <
+    16
+  ) {
+    if (passedInTeam.WRThreeTwoWeeksAgoValue === 3) {
+      passedInTeam.WRThreeTwoWeeksAgoValue = 3.5;
+      passedInTeam.WRFourTwoWeeksAgoValue = 3.5;
+    } else {
+      passedInTeam.WRFourTwoWeeksAgoValue = 3.5;
+    }
+  } else {
+    passedInTeam.WRFourTwoWeeksAgoValue = 4;
+  }
+
+  ////setting which WR was in what role to their names each of the last five weeks
+
+  //first passed in WR
+
+  if (
+    passedInTeam.firstPassedInWRTotalScoreTwoWeeksAgo ===
+    passedInTeam
+      .sortedTwoWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[0]
+  ) {
+    passedInTeam.wrOneTwoWeeksAgo = passedInTeam.firstPassedInWRName;
+  }
+  if (
+    passedInTeam.firstPassedInWRTotalScoreTwoWeeksAgo ===
+    passedInTeam
+      .sortedTwoWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[1]
+  ) {
+    passedInTeam.wrTwoTwoWeeksAgo = passedInTeam.firstPassedInWRName;
+  }
+  if (
+    passedInTeam.firstPassedInWRTotalScoreTwoWeeksAgo ===
+    passedInTeam
+      .sortedTwoWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[2]
+  ) {
+    passedInTeam.wrThreeTwoWeeksAgo = passedInTeam.firstPassedInWRName;
+  }
+  if (
+    passedInTeam.firstPassedInWRTotalScoreTwoWeeksAgo ===
+    passedInTeam
+      .sortedTwoWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[3]
+  ) {
+    passedInTeam.wrFourTwoWeeksAgo = passedInTeam.firstPassedInWRName;
+  }
+
+  //second passed in WR
+
+  if (
+    passedInTeam.secondPassedInWRTotalScoreTwoWeeksAgo ===
+    passedInTeam
+      .sortedTwoWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[0]
+  ) {
+    passedInTeam.wrOneTwoWeeksAgo = passedInTeam.secondPassedInWRName;
+  }
+  if (
+    passedInTeam.secondPassedInWRTotalScoreTwoWeeksAgo ===
+    passedInTeam
+      .sortedTwoWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[1]
+  ) {
+    passedInTeam.wrTwoTwoWeeksAgo = passedInTeam.secondPassedInWRName;
+  }
+  if (
+    passedInTeam.secondPassedInWRTotalScoreTwoWeeksAgo ===
+    passedInTeam
+      .sortedTwoWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[2]
+  ) {
+    passedInTeam.wrThreeTwoWeeksAgo = passedInTeam.secondPassedInWRName;
+  }
+  if (
+    passedInTeam.secondPassedInWRTotalScoreTwoWeeksAgo ===
+    passedInTeam
+      .sortedTwoWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[3]
+  ) {
+    passedInTeam.wrFourTwoWeeksAgo = passedInTeam.secondPassedInWRName;
+  }
+
+  //third passed in WR
+
+  if (
+    passedInTeam.thirdPassedInWRTotalScoreTwoWeeksAgo ===
+    passedInTeam
+      .sortedTwoWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[0]
+  ) {
+    passedInTeam.wrOneTwoWeeksAgo = passedInTeam.thirdPassedInWRName;
+  }
+  if (
+    passedInTeam.thirdPassedInWRTotalScoreTwoWeeksAgo ===
+    passedInTeam
+      .sortedTwoWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[1]
+  ) {
+    passedInTeam.wrTwoTwoWeeksAgo = passedInTeam.thirdPassedInWRName;
+  }
+  if (
+    passedInTeam.thirdPassedInWRTotalScoreTwoWeeksAgo ===
+    passedInTeam
+      .sortedTwoWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[2]
+  ) {
+    passedInTeam.wrThreeTwoWeeksAgo = passedInTeam.thirdPassedInWRName;
+  }
+  if (
+    passedInTeam.thirdPassedInWRTotalScoreTwoWeeksAgo ===
+    passedInTeam
+      .sortedTwoWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[3]
+  ) {
+    passedInTeam.wrFourTwoWeeksAgo = passedInTeam.thirdPassedInWRName;
+  }
+
+  //fourth passed in WR
+
+  if (
+    passedInTeam.fourthPassedInWRTotalScoreTwoWeeksAgo ===
+    passedInTeam
+      .sortedTwoWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[0]
+  ) {
+    passedInTeam.wrOneTwoWeeksAgo = passedInTeam.fourthPassedInWRName;
+  }
+  if (
+    passedInTeam.fourthPassedInWRTotalScoreTwoWeeksAgo ===
+    passedInTeam
+      .sortedTwoWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[1]
+  ) {
+    passedInTeam.wrTwoTwoWeeksAgo = passedInTeam.fourthPassedInWRName;
+  }
+  if (
+    passedInTeam.fourthPassedInWRTotalScoreTwoWeeksAgo ===
+    passedInTeam
+      .sortedTwoWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[2]
+  ) {
+    passedInTeam.wrThreeTwoWeeksAgo = passedInTeam.fourthPassedInWRName;
+  }
+  if (
+    passedInTeam.fourthPassedInWRTotalScoreTwoWeeksAgo ===
+    passedInTeam
+      .sortedTwoWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[3]
+  ) {
+    passedInTeam.wrFourTwoWeeksAgo = passedInTeam.fourthPassedInWRName;
+  }
+
+  //
+
+  //WROne this week
+
+  if (passedInTeam.wrOneTwoWeeksAgo === passedInTeam.WROne.name) {
+    passedInTeam.WROne.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WROneTwoWeeksAgoValue
+    );
+  }
+  if (passedInTeam.wrTwoTwoWeeksAgo === passedInTeam.WROne.name) {
+    passedInTeam.WROne.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WRTwoTwoWeeksAgoValue
+    );
+  }
+  if (passedInTeam.wrThreeTwoWeeksAgo === passedInTeam.WROne.name) {
+    passedInTeam.WROne.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WRThreeTwoWeeksAgoValue
+    );
+  }
+  if (passedInTeam.wrFourTwoWeeksAgo === passedInTeam.WROne.name) {
+    passedInTeam.WROne.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WRFourTwoWeeksAgoValue
+    );
+  }
+
+  //WRTwo this week
+
+  if (passedInTeam.wrOneTwoWeeksAgo === passedInTeam.WRTwo.name) {
+    passedInTeam.WRTwo.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WROneTwoWeeksAgoValue
+    );
+  }
+  if (passedInTeam.wrTwoTwoWeeksAgo === passedInTeam.WRTwo.name) {
+    passedInTeam.WRTwo.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WRTwoTwoWeeksAgoValue
+    );
+  }
+  if (passedInTeam.wrThreeTwoWeeksAgo === passedInTeam.WRTwo.name) {
+    passedInTeam.WRTwo.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WRThreeTwoWeeksAgoValue
+    );
+  }
+  if (passedInTeam.wrFourTwoWeeksAgo === passedInTeam.WRTwo.name) {
+    passedInTeam.WRTwo.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WRFourTwoWeeksAgoValue
+    );
+  }
+
+  //WRThree this week
+
+  if (passedInTeam.wrOneTwoWeeksAgo === passedInTeam.WRThree.name) {
+    passedInTeam.WRThree.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WROneTwoWeeksAgoValue
+    );
+  }
+  if (passedInTeam.wrTwoTwoWeeksAgo === passedInTeam.WRThree.name) {
+    passedInTeam.WRThree.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WRTwoTwoWeeksAgoValue
+    );
+  }
+  if (passedInTeam.wrThreeTwoWeeksAgo === passedInTeam.WRThree.name) {
+    passedInTeam.WRThree.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WRThreeTwoWeeksAgoValue
+    );
+  }
+  if (passedInTeam.wrFourTwoWeeksAgo === passedInTeam.WRThree.name) {
+    passedInTeam.WRThree.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WRFourTwoWeeksAgoValue
+    );
+  }
+
+  //Last Week
+
+  if (
+    passedInTeam
+      .sortedLastWeekWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[0] -
+      passedInTeam
+        .sortedLastWeekWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[1] <
+    16
+  ) {
+    passedInTeam.WROneLastWeekValue = 1.5;
+  } else {
+    passedInTeam.WROneLastWeekValue = 1;
+  }
+
+  if (
+    passedInTeam
+      .sortedLastWeekWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[0] -
+      passedInTeam
+        .sortedLastWeekWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[1] <
+    16
+  ) {
+    passedInTeam.WRTwoLastWeekValue = 1.5;
+  } else {
+    passedInTeam.WRTwoLastWeekValue = 2;
+  }
+
+  if (
+    passedInTeam
+      .sortedLastWeekWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[1] -
+      passedInTeam
+        .sortedLastWeekWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[2] <
+    16
+  ) {
+    if (passedInTeam.WRTwoLastWeekValue === 2) {
+      passedInTeam.WRTwoLastWeekValue = 2.5;
+      passedInTeam.WRThreeLastWeekValue = 2.5;
+    } else {
+      passedInTeam.WRThreeLastWeekValue = 2.5;
+    }
+  } else {
+    passedInTeam.WRThreeLastWeekValue = 3;
+  }
+  if (
+    passedInTeam
+      .sortedLastWeekWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[2] -
+      passedInTeam
+        .sortedLastWeekWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[3] <
+    16
+  ) {
+    if (passedInTeam.WRThreeLastWeekValue === 3) {
+      passedInTeam.WRThreeLastWeekValue = 3.5;
+      passedInTeam.WRFourLastWeekValue = 3.5;
+    } else {
+      passedInTeam.WRFourLastWeekValue = 3.5;
+    }
+  } else {
+    passedInTeam.WRFourLastWeekValue = 4;
+  }
+
+  ////setting which WR was in what role to their names each of the last five weeks
+
+  //first passed in WR
+
+  if (
+    passedInTeam.firstPassedInWRTotalScoreLastWeek ===
+    passedInTeam
+      .sortedLastWeekWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[0]
+  ) {
+    passedInTeam.wrOneLastWeek = passedInTeam.firstPassedInWRName;
+  }
+  if (
+    passedInTeam.firstPassedInWRTotalScoreLastWeek ===
+    passedInTeam
+      .sortedLastWeekWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[1]
+  ) {
+    passedInTeam.wrTwoLastWeek = passedInTeam.firstPassedInWRName;
+  }
+  if (
+    passedInTeam.firstPassedInWRTotalScoreLastWeek ===
+    passedInTeam
+      .sortedLastWeekWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[2]
+  ) {
+    passedInTeam.wrThreeLastWeek = passedInTeam.firstPassedInWRName;
+  }
+  if (
+    passedInTeam.firstPassedInWRTotalScoreLastWeek ===
+    passedInTeam
+      .sortedLastWeekWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[3]
+  ) {
+    passedInTeam.wrFourLastWeek = passedInTeam.firstPassedInWRName;
+  }
+
+  //second passed in WR
+
+  if (
+    passedInTeam.secondPassedInWRTotalScoreLastWeek ===
+    passedInTeam
+      .sortedLastWeekWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[0]
+  ) {
+    passedInTeam.wrOneLastWeek = passedInTeam.secondPassedInWRName;
+  }
+  if (
+    passedInTeam.secondPassedInWRTotalScoreLastWeek ===
+    passedInTeam
+      .sortedLastWeekWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[1]
+  ) {
+    passedInTeam.wrTwoLastWeek = passedInTeam.secondPassedInWRName;
+  }
+  if (
+    passedInTeam.secondPassedInWRTotalScoreLastWeek ===
+    passedInTeam
+      .sortedLastWeekWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[2]
+  ) {
+    passedInTeam.wrThreeLastWeek = passedInTeam.secondPassedInWRName;
+  }
+  if (
+    passedInTeam.secondPassedInWRTotalScoreLastWeek ===
+    passedInTeam
+      .sortedLastWeekWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[3]
+  ) {
+    passedInTeam.wrFourLastWeek = passedInTeam.secondPassedInWRName;
+  }
+
+  //third passed in WR
+
+  if (
+    passedInTeam.thirdPassedInWRTotalScoreLastWeek ===
+    passedInTeam
+      .sortedLastWeekWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[0]
+  ) {
+    passedInTeam.wrOneLastWeek = passedInTeam.thirdPassedInWRName;
+  }
+  if (
+    passedInTeam.thirdPassedInWRTotalScoreLastWeek ===
+    passedInTeam
+      .sortedLastWeekWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[1]
+  ) {
+    passedInTeam.wrTwoLastWeek = passedInTeam.thirdPassedInWRName;
+  }
+  if (
+    passedInTeam.thirdPassedInWRTotalScoreLastWeek ===
+    passedInTeam
+      .sortedLastWeekWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[2]
+  ) {
+    passedInTeam.wrThreeLastWeek = passedInTeam.thirdPassedInWRName;
+  }
+  if (
+    passedInTeam.thirdPassedInWRTotalScoreLastWeek ===
+    passedInTeam
+      .sortedLastWeekWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[3]
+  ) {
+    passedInTeam.wrFourLastWeek = passedInTeam.thirdPassedInWRName;
+  }
+
+  //fourth passed in WR
+
+  if (
+    passedInTeam.fourthPassedInWRTotalScoreLastWeek ===
+    passedInTeam
+      .sortedLastWeekWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[0]
+  ) {
+    passedInTeam.wrOneLastWeek = passedInTeam.fourthPassedInWRName;
+  }
+  if (
+    passedInTeam.fourthPassedInWRTotalScoreLastWeek ===
+    passedInTeam
+      .sortedLastWeekWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[1]
+  ) {
+    passedInTeam.wrTwoLastWeek = passedInTeam.fourthPassedInWRName;
+  }
+  if (
+    passedInTeam.fourthPassedInWRTotalScoreLastWeek ===
+    passedInTeam
+      .sortedLastWeekWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[2]
+  ) {
+    passedInTeam.wrThreeLastWeek = passedInTeam.fourthPassedInWRName;
+  }
+  if (
+    passedInTeam.fourthPassedInWRTotalScoreLastWeek ===
+    passedInTeam
+      .sortedLastWeekWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray[3]
+  ) {
+    passedInTeam.wrFourLastWeek = passedInTeam.fourthPassedInWRName;
+  }
+
+  //
+
+  //WROne this week
+
+  if (passedInTeam.wrOneLastWeek === passedInTeam.WROne.name) {
+    passedInTeam.WROne.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WROneLastWeekValue
+    );
+  }
+  if (passedInTeam.wrTwoLastWeek === passedInTeam.WROne.name) {
+    passedInTeam.WROne.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WRTwoLastWeekValue
+    );
+  }
+  if (passedInTeam.wrThreeLastWeek === passedInTeam.WROne.name) {
+    passedInTeam.WROne.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WRThreeLastWeekValue
+    );
+  }
+  if (passedInTeam.wrFourLastWeek === passedInTeam.WROne.name) {
+    passedInTeam.WROne.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WRFourLastWeekValue
+    );
+  }
+
+  //WRTwo this week
+
+  if (passedInTeam.wrOneLastWeek === passedInTeam.WRTwo.name) {
+    passedInTeam.WRTwo.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WROneLastWeekValue
+    );
+  }
+  if (passedInTeam.wrTwoLastWeek === passedInTeam.WRTwo.name) {
+    passedInTeam.WRTwo.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WRTwoLastWeekValue
+    );
+  }
+  if (passedInTeam.wrThreeLastWeek === passedInTeam.WRTwo.name) {
+    passedInTeam.WRTwo.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WRThreeLastWeekValue
+    );
+  }
+  if (passedInTeam.wrFourLastWeek === passedInTeam.WRTwo.name) {
+    passedInTeam.WRTwo.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WRFourLastWeekValue
+    );
+  }
+
+  //WRThree this week
+
+  if (passedInTeam.wrOneLastWeek === passedInTeam.WRThree.name) {
+    passedInTeam.WRThree.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WROneLastWeekValue
+    );
+  }
+  if (passedInTeam.wrTwoLastWeek === passedInTeam.WRThree.name) {
+    passedInTeam.WRThree.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WRTwoLastWeekValue
+    );
+  }
+  if (passedInTeam.wrThreeLastWeek === passedInTeam.WRThree.name) {
+    passedInTeam.WRThree.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WRThreeLastWeekValue
+    );
+  }
+  if (passedInTeam.wrFourLastWeek === passedInTeam.WRThree.name) {
+    passedInTeam.WRThree.roleLastXNumOfWeeksUpToFive.push(
+      passedInTeam.WRFourLastWeekValue
+    );
+  }
+
+  // calculating each WR's percentage of matching role weeks last five weeks to this week
+
+  //WROne
+
+  let tempWROneMatchingWeeks = 0;
+
+  passedInTeam.WROne.roleLastXNumOfWeeksUpToFive.map(function (role) {
+    if (role < 1.6) {
+      tempWROneMatchingWeeks = tempWROneMatchingWeeks + 1;
+    }
+  });
+  passedInTeam.WROne.percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek =
+    tempWROneMatchingWeeks /
+    passedInTeam.WROne.numberOfGamesPlayedLastFiveWeeks;
+
+  //WRTwo
+
+  let tempWRTwoMatchingWeeks = 0;
+
+  passedInTeam.WRTwo.roleLastXNumOfWeeksUpToFive.map(function (role) {
+    if (role < 2.6 && role > 1.4) {
+      tempWRTwoMatchingWeeks = tempWRTwoMatchingWeeks + 1;
+    }
+  });
+  passedInTeam.WRTwo.percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek =
+    tempWRTwoMatchingWeeks /
+    passedInTeam.WRTwo.numberOfGamesPlayedLastFiveWeeks;
+
+  //WRThree
+
+  let tempWRThreeMatchingWeeks = 0;
+
+  passedInTeam.WRThree.roleLastXNumOfWeeksUpToFive.map(function (role) {
+    if (role < 3.6 && role > 2.4) {
+      tempWRThreeMatchingWeeks = tempWRThreeMatchingWeeks + 1;
+    }
+  });
+  passedInTeam.WRThree.percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek =
+    tempWRThreeMatchingWeeks /
+    passedInTeam.WRThree.numberOfGamesPlayedLastFiveWeeks;
 };
 
 populateTeamObjects(
@@ -5007,6 +6068,6 @@ populateTeamObjects(
 // console.log(wrrawdata);
 // console.log(wrrawdata.seahawks);
 // console.log(wrrawdata.vikings);
-console.log(wrrawdata.bengals);
+// console.log(wrrawdata.bengals);
 
 module.exports = wrrawdata;
