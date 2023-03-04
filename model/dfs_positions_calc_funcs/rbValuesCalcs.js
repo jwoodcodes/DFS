@@ -245,8 +245,9 @@ class RbObject {
   //                   still need to do
   //
 
-  // calculate projeted ownership: use 4for4 projections per dollar, QB projected ownership, how many people are in that players price bucket on the site,
-  //and how each players 4for4 projections per dollar relates to the average 4for4 projections per dollat of the other people in that players salary bucket to create ownership projections for each player on each site and assign those to each players object. in this same method also run the same calculations using appProjections per percent of cap on each site to get a "ownership should be" metric for each player on each site and calculate and assign the difference betweem the two to get a "how much more or less owned a player is projected to be than I think they should be" metric. make sure everything from all of these methods is assinged to every players object
+  //  - assign each RB a number for how many players are in his salary bucket that are also in his 4for4   projections per percent of cap bucket. do the same for how many are in his salary bucket that are also in a higher/better 4for4 projections per percent of cap bucket
+  //
+  // - calculate projeted ownership: use 4for4 projections per dollar and QB projected ownership to assin a baseline projected ownership and then adjust that using the two numbers from the step above for each player on each site.
 
   calcAppProjectedPoints() {
     //team projected points 12, 15-18, 20-24, 25-30, 30+

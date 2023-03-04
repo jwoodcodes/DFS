@@ -3015,6 +3015,7 @@ const populateTeamObjects = function (
   passedInTeam.appQBProjectedPoints = qbDataPassedInTeam.appProjectedPoints;
   passedInTeam.appTeamProjectedPoints =
     gameInfoPassedInTeam.teamProjectedPointsThisWeek;
+  passedInTeam.byeWeek = gameInfoPassedInTeam.byeWeek2022;
 
   if (
     gameInfoPassedInTeam.teamProjectedForAHalfOfNegetiveGameScriptIsTrue ===
