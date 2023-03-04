@@ -90,7 +90,17 @@ class QbObject {
 
   //add methods here
 
-  //add method(s) to calculate projected ownership on all three sites here
+  //            --methods still to be done--
+
+  //  - calulate and assign appProjections per dollar on each site
+  //  - calculate and assign 4for4 projections per percent of cap on each site
+  //  - calculate and assign appProjections per percent of cap on each site.
+  //   -assign every qb a salary bucket for each site and make arrays for each bucket on each site that holds
+  //   the full qb object of every qb in that bucket on each site
+  // - assign to each QB a 4for4 projections per percent of cap bucket on each site.
+  //  - assign each QB a number for how many players are in his salary bucket that are also in his 4for4   projections per percent of cap bucket. do the same for how many are in his salary bucket that are also in a higher/better 4for4 projections per percent of cap bucket
+  //
+  // - calculate projeted ownership: use 4for4 projections per dollar to assign a baseline projected ownership and then adjust that using the two numbers from the step above for each player on each site.
 }
 
 const allQBCalcFunctions = {
