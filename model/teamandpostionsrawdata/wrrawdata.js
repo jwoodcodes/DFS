@@ -3016,6 +3016,10 @@ const populateTeamObjects = function (
   passedInTeam.appTeamProjectedPoints =
     gameInfoPassedInTeam.teamProjectedPointsThisWeek;
   passedInTeam.byeWeek = gameInfoPassedInTeam.byeWeek2022;
+  passedInTeam.QBpercentageOffFantasyPointsFromPassingLastFiveWeeks =
+    qbDataPassedInTeam.percentageOfFantasyPointsFromPassingLastFiveWeeks;
+  passedInTeam.QBProjectedPassAttemptsThisWeek =
+    qbDataPassedInTeam.projectedPassAttempts;
 
   if (
     gameInfoPassedInTeam.teamProjectedForAHalfOfNegetiveGameScriptIsTrue ===

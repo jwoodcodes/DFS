@@ -34,6 +34,7 @@ class QbObject {
     hadByeInLastFiveWeeksIsTrue,
 
     appProjectedPoints,
+    projectedPassAttempts,
     percentOfGamesPlayedLastFiveWeeks,
     fantasyPointsFromRushingPerGameLastFiveWeeks,
     fantasyPointsFromPassingPerGameLastFiveWeeks,
@@ -51,7 +52,8 @@ class QbObject {
     opponentABV,
     opponentqbName,
     opponentTeamProjectedPoints,
-    bonusForHighExplosivePassVsBadExplosivePassDef
+    bonusForHighExplosivePassVsBadExplosivePassDef,
+    percentageOfFantasyPointsFromPassingLastFiveWeeks
   ) {
     this.playerName = playerName;
     this.position = position;
@@ -64,6 +66,7 @@ class QbObject {
     this.hadByeInLastFiveWeeksIsTrue = hadByeInLastFiveWeeksIsTrue;
 
     this.appProjectedPoints = appProjectedPoints;
+    this.projectedPassAttempts = projectedPassAttempts;
     this.percentOfGamesPlayedLastFiveWeeks = percentOfGamesPlayedLastFiveWeeks;
     this.fantasyPointsFromRushingPerGameLastFiveWeeks =
       fantasyPointsFromRushingPerGameLastFiveWeeks;
@@ -86,6 +89,8 @@ class QbObject {
     this.opponentTeamProjectedPoints = opponentTeamProjectedPoints;
     this.bonusForHighExplosivePassVsBadExplosivePassDef =
       bonusForHighExplosivePassVsBadExplosivePassDef;
+    this.percentageOfFantasyPointsFromPassingLastFiveWeeks =
+      percentageOfFantasyPointsFromPassingLastFiveWeeks;
   }
 
   //add methods here
@@ -918,6 +923,7 @@ allQBs.forEach(function (team, i) {
     team.teamProjectedPoints,
     hadByeInLastFiveWeeksIsTrue,
     team.appQBProjectedPoints,
+    team.prjpassattempts,
     team.percentOfGamesPlayedLastFiveWeeks,
     team.fantasyPointsFromRushingPerGameLastFiveWeeks,
     team.fantasyPointsFromPassingPerGameLastFiveWeeks,
@@ -933,7 +939,8 @@ allQBs.forEach(function (team, i) {
     opponentABV,
     opponentqbName,
     opponentTeamProjectedPoints,
-    bonusForHighExplosivePassVsBadExplosivePassDef
+    bonusForHighExplosivePassVsBadExplosivePassDef,
+    team.percentageOfFantasyPointsFromPassingLastFiveWeeks
   );
 
   allQBsMap.set(`${teamName}QB`, qbObject);

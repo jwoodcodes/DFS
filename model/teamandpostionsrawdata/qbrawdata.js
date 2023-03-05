@@ -1651,6 +1651,11 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
     gameInfoPassedInTeam.opponentThisWeek.teamProjectedPointsThisWeek;
   passedInTeam.oppQBName = gameInfoPassedInTeam.opponentThisWeek.qbName;
 
+  passedInTeam.percentageOfFantasyPointsFromPassingLastFiveWeeks = +(
+    passedInTeam.totalFantasyPointsFromPassingLastFiveWeeks /
+    passedInTeam.totalFantasyPointsScoredLastFiveWeeks
+  ).toFixed(2);
+
   // console.log(sortedtempPassCatchersProjPoints);
   // console.log(`${passedInTeam.teamABV}: ${sortedtempPassCatchersProjPoints}`);
   //   passedInTeam.secondHighestProjectedPassCatcherFiftyithPercentProjectedPoints =
