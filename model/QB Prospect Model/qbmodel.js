@@ -1,5 +1,13 @@
 'use strict';
 
+//conference adjustment scale
+
+// SEC or Big Ten- +7.5%
+// ACC or pac12 - +5%
+// big12- +2.5%
+// non power five D1- -2.5%
+// below D1- -7.5%
+
 const qbs = {
   RWilson: {
     name: 'Russell Wilson',
@@ -19,6 +27,7 @@ const qbs = {
     ageWhenDrafted: 23.3,
     collegeQBR: 93.9,
     numberOfGamesWithTenPlusPassAttempts: 49,
+    conferenceAdjustment: 0.075,
   },
 
   goff: {
@@ -39,6 +48,7 @@ const qbs = {
     ageWhenDrafted: 21.5,
     collegeQBR: 82.2,
     numberOfGamesWithTenPlusPassAttempts: 36,
+    conferenceAdjustment: 0.05,
   },
 
   wentz: {
@@ -59,6 +69,7 @@ const qbs = {
     ageWhenDrafted: 23.2,
     collegeQBR: 80.1,
     numberOfGamesWithTenPlusPassAttempts: 21,
+    conferenceAdjustment: -0.025,
   },
 
   lynch: {
@@ -79,6 +90,7 @@ const qbs = {
     ageWhenDrafted: 22.1,
     collegeQBR: 77.4,
     numberOfGamesWithTenPlusPassAttempts: 38,
+    conferenceAdjustment: 0.05,
   },
 
   dak: {
@@ -99,6 +111,7 @@ const qbs = {
     ageWhenDrafted: 22.7,
     collegeQBR: 83.8,
     numberOfGamesWithTenPlusPassAttempts: 36,
+    conferenceAdjustment: 0.075,
   },
 
   trubisky: {
@@ -119,6 +132,7 @@ const qbs = {
     ageWhenDrafted: 22.6,
     collegeQBR: 83.6,
     numberOfGamesWithTenPlusPassAttempts: 18,
+    conferenceAdjustment: 0.05,
   },
 
   mahomes: {
@@ -139,6 +153,7 @@ const qbs = {
     ageWhenDrafted: 21.5,
     collegeQBR: 82.5,
     numberOfGamesWithTenPlusPassAttempts: 30,
+    conferenceAdjustment: 0.025,
   },
 
   watson: {
@@ -159,6 +174,7 @@ const qbs = {
     ageWhenDrafted: 21.5,
     collegeQBR: 85.3,
     numberOfGamesWithTenPlusPassAttempts: 34,
+    conferenceAdjustment: 0.05,
   },
 
   mayfield: {
@@ -179,6 +195,7 @@ const qbs = {
     ageWhenDrafted: 23.0,
     collegeQBR: 92.6,
     numberOfGamesWithTenPlusPassAttempts: 48,
+    conferenceAdjustment: 0.025,
   },
 
   darnold: {
@@ -199,6 +216,7 @@ const qbs = {
     ageWhenDrafted: 19.8,
     collegeQBR: 80.4,
     numberOfGamesWithTenPlusPassAttempts: 24,
+    conferenceAdjustment: 0.05,
   },
 
   allen: {
@@ -219,6 +237,7 @@ const qbs = {
     ageWhenDrafted: 21.8,
     collegeQBR: 63.2,
     numberOfGamesWithTenPlusPassAttempts: 25,
+    conferenceAdjustment: -0.025,
   },
 
   rosen: {
@@ -239,6 +258,7 @@ const qbs = {
     ageWhenDrafted: 21.1,
     collegeQBR: 67.1,
     numberOfGamesWithTenPlusPassAttempts: 30,
+    conferenceAdjustment: 0.05,
   },
 
   jackson: {
@@ -259,6 +279,7 @@ const qbs = {
     ageWhenDrafted: 21.2,
     collegeQBR: 85,
     numberOfGamesWithTenPlusPassAttempts: 36,
+    conferenceAdjustment: -0.025,
   },
 
   murray: {
@@ -279,6 +300,7 @@ const qbs = {
     ageWhenDrafted: 21.6,
     collegeQBR: 95.8,
     numberOfGamesWithTenPlusPassAttempts: 18,
+    conferenceAdjustment: 0.025,
   },
 
   djones: {
@@ -299,6 +321,7 @@ const qbs = {
     ageWhenDrafted: 21.8,
     collegeQBR: 72,
     numberOfGamesWithTenPlusPassAttempts: 36,
+    conferenceAdjustment: 0.05,
   },
 
   haskins: {
@@ -319,6 +342,7 @@ const qbs = {
     ageWhenDrafted: 21.9,
     collegeQBR: 86.3,
     numberOfGamesWithTenPlusPassAttempts: 15,
+    conferenceAdjustment: 0.075,
   },
 
   burrow: {
@@ -339,6 +363,7 @@ const qbs = {
     ageWhenDrafted: 23.0,
     collegeQBR: 94.9,
     numberOfGamesWithTenPlusPassAttempts: 32,
+    conferenceAdjustment: 0.075,
   },
 
   tagovailoa: {
@@ -359,6 +384,7 @@ const qbs = {
     ageWhenDrafted: 22.1,
     collegeQBR: 94.8,
     numberOfGamesWithTenPlusPassAttempts: 27,
+    conferenceAdjustment: 0.075,
   },
 
   herbert: {
@@ -379,6 +405,7 @@ const qbs = {
     ageWhenDrafted: 22.0,
     collegeQBR: 77.4,
     numberOfGamesWithTenPlusPassAttempts: 41,
+    conferenceAdjustment: 0.05,
   },
 
   love: {
@@ -399,6 +426,7 @@ const qbs = {
     ageWhenDrafted: 21.4,
     collegeQBR: 59.8,
     numberOfGamesWithTenPlusPassAttempts: 35,
+    conferenceAdjustment: -0.025,
   },
 
   lawrence: {
@@ -419,6 +447,7 @@ const qbs = {
     ageWhenDrafted: 21.5,
     collegeQBR: 87.3,
     numberOfGamesWithTenPlusPassAttempts: 37,
+    conferenceAdjustment: 0.05,
   },
 
   zwilson: {
@@ -439,6 +468,7 @@ const qbs = {
     ageWhenDrafted: 21.6,
     collegeQBR: 88.6,
     numberOfGamesWithTenPlusPassAttempts: 28,
+    conferenceAdjustment: -0.025,
   },
 
   lance: {
@@ -459,6 +489,7 @@ const qbs = {
     ageWhenDrafted: 20.9,
     collegeQBR: 75,
     numberOfGamesWithTenPlusPassAttempts: 16,
+    conferenceAdjustment: -0.075,
   },
 
   fields: {
@@ -479,6 +510,7 @@ const qbs = {
     ageWhenDrafted: 22.1,
     collegeQBR: 92.1,
     numberOfGamesWithTenPlusPassAttempts: 22,
+    conferenceAdjustment: 0.075,
   },
 
   mjones: {
@@ -499,11 +531,12 @@ const qbs = {
     ageWhenDrafted: 22.6,
     collegeQBR: 96.1,
     numberOfGamesWithTenPlusPassAttempts: 19,
+    conferenceAdjustment: 0.075,
   },
 
   willis: {
     name: 'Malik Willis',
-    draftCapital: 6,
+    draftCapital: 34,
     height: 73,
     weight: 219,
     careerYPA: 8.4,
@@ -519,11 +552,12 @@ const qbs = {
     ageWhenDrafted: 22.8,
     collegeQBR: 78.7,
     numberOfGamesWithTenPlusPassAttempts: 24,
+    conferenceAdjustment: -0.075,
   },
 
   corall: {
     name: 'Matt Corall',
-    draftCapital: 15,
+    draftCapital: 34,
     height: 74,
     weight: 212,
     careerYPA: 9.1,
@@ -539,11 +573,12 @@ const qbs = {
     ageWhenDrafted: 23.2,
     collegeQBR: 89.9,
     numberOfGamesWithTenPlusPassAttempts: 31,
+    conferenceAdjustment: 0.075,
   },
 
   howell: {
     name: 'Sam Howell',
-    draftCapital: 15,
+    draftCapital: 34,
     height: 73,
     weight: 218,
     careerYPA: 9.2,
@@ -559,11 +594,12 @@ const qbs = {
     ageWhenDrafted: 21.5,
     collegeQBR: 79.3,
     numberOfGamesWithTenPlusPassAttempts: 37,
+    conferenceAdjustment: 0.05,
   },
 
   ridder: {
     name: 'Desmond Ridder',
-    draftCapital: 15,
+    draftCapital: 34,
     height: 75,
     weight: 207,
     careerYPA: 7.9,
@@ -579,6 +615,7 @@ const qbs = {
     ageWhenDrafted: 22.6,
     collegeQBR: 80.9,
     numberOfGamesWithTenPlusPassAttempts: 49,
+    conferenceAdjustment: -0.025,
   },
 
   pickett: {
@@ -599,6 +636,112 @@ const qbs = {
     ageWhenDrafted: 23.8,
     collegeQBR: 60.9,
     numberOfGamesWithTenPlusPassAttempts: 51,
+    conferenceAdjustment: 0.075,
+  },
+
+  Richardson: {
+    name: 'Anthony Richardson',
+    draftCapital: 10,
+    height: 76,
+    weight: 244,
+    careerYPA: 7.9,
+    bestSeasonYPA: 8.3,
+    careerComplationPercentage: 54.7,
+    bestFullSeasonCompletionPercentage: 59.4,
+    totalCareerPassAttempts: 393,
+    bestSeasonTotalPassingYards: 2549,
+    bestSeasonTotalTDs: 26,
+    bestSeasonRushingYards: 654,
+    fortyTime: 4.43,
+    careerInterceptionRate: 3.8,
+    ageWhenDrafted: 20.9,
+    collegeQBR: 70.6,
+    numberOfGamesWithTenPlusPassAttempts: 14,
+    conferenceAdjustment: 0.075,
+  },
+
+  Young: {
+    name: 'Bryce Young',
+    draftCapital: 10,
+    height: 70,
+    weight: 204,
+    careerYPA: 8.8,
+    bestSeasonYPA: 8.9,
+    careerComplationPercentage: 65.8,
+    bestFullSeasonCompletionPercentage: 66.9,
+    totalCareerPassAttempts: 949,
+    bestSeasonTotalPassingYards: 4872,
+    bestSeasonTotalTDs: 50,
+    bestSeasonRushingYards: 185,
+    fortyTime: 4.7,
+    careerInterceptionRate: 1.2,
+    ageWhenDrafted: 21.7,
+    collegeQBR: 95,
+    numberOfGamesWithTenPlusPassAttempts: 27,
+    conferenceAdjustment: 0.075,
+  },
+
+  Stroud: {
+    name: 'CJ Stroud',
+    draftCapital: 10,
+    height: 75,
+    weight: 214,
+    careerYPA: 9.8,
+    bestSeasonYPA: 10.1,
+    careerComplationPercentage: 69.3,
+    bestFullSeasonCompletionPercentage: 71.9,
+    totalCareerPassAttempts: 575,
+    bestSeasonTotalPassingYards: 44,
+    bestSeasonTotalTDs: 4435,
+    bestSeasonRushingYards: 108,
+    fortyTime: 4.7,
+    careerInterceptionRate: 1.4,
+    ageWhenDrafted: 21.5,
+    collegeQBR: 88,
+    numberOfGamesWithTenPlusPassAttempts: 25,
+    conferenceAdjustment: 0.075,
+  },
+
+  Levis: {
+    name: 'Will Levis',
+    draftCapital: 15,
+    height: 76,
+    weight: 229,
+    careerYPA: 8.0,
+    bestSeasonYPA: 8.2,
+    careerComplationPercentage: 64.9,
+    bestFullSeasonCompletionPercentage: 66.0,
+    totalCareerPassAttempts: 738,
+    bestSeasonTotalPassingYards: 2826,
+    bestSeasonTotalTDs: 33,
+    bestSeasonRushingYards: 376,
+    fortyTime: 4.7,
+    careerInterceptionRate: 3.4,
+    ageWhenDrafted: 23.8,
+    collegeQBR: 60.9,
+    numberOfGamesWithTenPlusPassAttempts: 31,
+    conferenceAdjustment: 0.065,
+  },
+
+  Hooker: {
+    name: 'Hendon Hooker',
+    draftCapital: 33,
+    height: 75,
+    weight: 217,
+    careerYPA: 9.5,
+    bestSeasonYPA: 9.7,
+    careerComplationPercentage: 66.9,
+    bestFullSeasonCompletionPercentage: 69.6,
+    totalCareerPassAttempts: 944,
+    bestSeasonTotalPassingYards: 3135,
+    bestSeasonTotalTDs: 36,
+    bestSeasonRushingYards: 620,
+    fortyTime: 4.7,
+    careerInterceptionRate: 1.2,
+    ageWhenDrafted: 25.2,
+    collegeQBR: 89.5,
+    numberOfGamesWithTenPlusPassAttempts: 38,
+    conferenceAdjustment: 0.065,
   },
 };
 
@@ -632,6 +775,11 @@ const corall = qbs.corall;
 const howell = qbs.howell;
 const ridder = qbs.ridder;
 const pickett = qbs.pickett;
+const Richardson = qbs.Richardson;
+const Young = qbs.Young;
+const Stroud = qbs.Stroud;
+const Levis = qbs.Levis;
+const Hooker = qbs.Hooker;
 
 const allQBs = [
   RWilson,
@@ -664,6 +812,11 @@ const allQBs = [
   howell,
   ridder,
   pickett,
+  Richardson,
+  Young,
+  Stroud,
+  Levis,
+  Hooker,
 ];
 const allQBNames = [];
 
@@ -694,7 +847,7 @@ const calcDraftCapitolScore = function (player) {
   } else if (score < 33) {
     score = 0.25;
   } else {
-    score = 0.17;
+    score = 0;
   }
 
   return score;
@@ -869,7 +1022,9 @@ const calccareerInterceptionRate = function (player) {
 const calcageWhenDrafted = function (player) {
   let AWD = player.ageWhenDrafted;
 
-  if (AWD > 22.5) {
+  if (AWD > 24.9) {
+    AWD = 0;
+  } else if (AWD > 22.5) {
     AWD = 0.32;
   } else if (AWD > 22.0 && AWD < 22.6) {
     AWD = 0.5;
@@ -977,6 +1132,8 @@ allQBs.map(function (player, i) {
   let NOGWTPPAS = calcnumberOfGamesWithTenPlusPassAttempts(player);
   NGWTPPAs.push(NOGWTPPAS);
   totalScore += NOGWTPPAS;
+
+  totalScore += totalScore * player.conferenceAdjustment;
 
   allTotalScores.push(totalScore);
 });

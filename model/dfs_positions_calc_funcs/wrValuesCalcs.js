@@ -163,6 +163,158 @@ class WrObject {
   //  - assign each WR a number for how many players are in his salary bucket that are also in his 4for4   projections per percent of cap bucket. do the same for how many are in his salary bucket that are also in a higher/better 4for4 projections per percent of cap bucket
   //
   // - calculate projeted ownership: use 4for4 projections per dollar and QB projected ownership to assin a baseline projected ownership and then adjust that using the two numbers from the step above for each player on each site.
+
+  calcAppProjectedPoints() {
+    let tempValueForProjection = 0;
+
+    if (this.teamProjectedPoints > 30) {
+      tempValueForProjection += 7;
+    }
+
+    if (this.teamProjectedPoints > 24 && this.teamProjectedPoints < 31) {
+      tempValueForProjection += 5;
+    }
+
+    if (this.teamProjectedPoints > 19 && this.teamProjectedPoints < 25) {
+      tempValueForProjection += 4;
+    }
+
+    if (this.teamProjectedPoints > 14 && this.teamProjectedPoints < 20) {
+      tempValueForProjection += 3;
+    }
+
+    if (this.teamProjectedPoints < 15) {
+      tempValueForProjection += 2;
+    }
+    //
+
+    if (this.appQBProjectedPointsFromPassing) {
+      if (this.appQBProjectedPointsFromPassing > 19.9) {
+        tempValueForProjection += 9;
+      }
+      if (
+        this.appQBProjectedPointsFromPassing > 17.9 &&
+        this.appQBProjectedPointsFromPassing < 20
+      ) {
+        tempValueForProjection += 7;
+      }
+      if (
+        this.appQBProjectedPointsFromPassing > 15.9 &&
+        this.appQBProjectedPointsFromPassing < 18
+      ) {
+        tempValueForProjection += 5;
+      }
+      if (
+        this.appQBProjectedPointsFromPassing > 13.9 &&
+        this.appQBProjectedPointsFromPassing < 16
+      ) {
+        tempValueForProjection += 3;
+      }
+      if (
+        this.appQBProjectedPointsFromPassing > 11.9 &&
+        this.appQBProjectedPointsFromPassing < 14
+      ) {
+        tempValueForProjection += 1;
+      }
+      if (this.appQBProjectedPointsFromPassing < 12) {
+        tempValueForProjection += -1;
+      }
+    } else {
+      let valueForHere = this.appQBProjectedPoints * 0.9;
+
+      if (valueForHere > 19.9) {
+        tempValueForProjection += 9;
+      }
+      if (valueForHere > 17.9 && valueForHere < 20) {
+        tempValueForProjection += 7;
+      }
+      if (valueForHere > 15.9 && valueForHere < 18) {
+        tempValueForProjection += 5;
+      }
+      if (valueForHere > 13.9 && valueForHere < 16) {
+        tempValueForProjection += 3;
+      }
+      if (valueForHere > 11.9 && valueForHere < 14) {
+        tempValueForProjection += 1;
+      }
+      if (valueForHere < 12) {
+        tempValueForProjection += -1;
+      }
+    }
+
+    //
+
+    if (this.projectedReceptions4For4 > 6.9) {
+      tempValueForProjection += 7;
+    }
+
+    if (
+      this.projectedReceptions4For4 > 5.9 &&
+      this.projectedReceptions4For4 < 7
+    ) {
+      tempValueForProjection += 5;
+    }
+
+    if (
+      this.projectedReceptions4For4 > 4.9 &&
+      this.projectedReceptions4For4 < 6
+    ) {
+      tempValueForProjection += 3;
+    }
+
+    if (
+      this.projectedReceptions4For4 > 3.9 &&
+      this.projectedReceptions4For4 < 5
+    ) {
+      tempValueForProjection += 1;
+    }
+
+    if (
+      this.projectedReceptions4For4 > 2.9 &&
+      this.projectedReceptions4For4 < 4
+    ) {
+      tempValueForProjection += 0;
+    }
+
+    if (this.projectedReceptions4For4 < 3) {
+      tempValueForProjection += -2;
+    }
+    //
+
+    // this.homeOrAway
+    //this.vtt = vtt;
+    //this.opponentVTT = opponentVTT;
+    if (this.homeOrAway === 'Home' && this.vtt > this.opponentVTT) {
+      tempValueForProjection += 6;
+    }
+    if (this.homeOrAway === 'Away' && this.vtt < this.opponentVTT) {
+      tempValueForProjection += 4;
+    }
+    if (this.homeOrAway === 'Away' && this.vtt > this.opponentVTT) {
+      tempValueForProjection += 2;
+    }
+    if (this.homeOrAway === 'Home' && this.vtt < this.opponentVTT) {
+      tempValueForProjection += 2;
+    }
+
+    if (tempValueForProjection > 16) {
+      this.appHalfProjectedPoints = this.halfSeventyFifthPercentProjectedPoints;
+      this.appFullProjectedPoints = this.PPRSeventyFifthPercentProjectedPoints;
+      this.percentileUsedForProjection = 75;
+    }
+
+    if (tempValueForProjection > 5 && tempValueForProjection < 17) {
+      this.appHalfProjectedPoints = this.halfFiftyithPercentProjectedPoints;
+      this.appFullProjectedPoints = this.PPRFiftyithPercentProjectedPoints;
+      this.percentileUsedForProjection = 50;
+    }
+
+    if (tempValueForProjection < 6) {
+      this.appHalfProjectedPoints = this.halfTwentyFifthPercentProjectedPoints;
+      this.appFullProjectedPoints = this.PPRTwentyFifthPercentProjectedPoints;
+      this.percentileUsedForProjection = 25;
+    }
+  }
 }
 
 const allTeamWRObjects = {
@@ -275,6 +427,8 @@ allWRs.forEach(function (team, i) {
     team.WROne.fourForFourFullPPRProjectedPoints
   );
 
+  wrObject.calcAppProjectedPoints();
+
   allWRsMap.set(`${teamName}WROneThisWeek`, wrObject);
 
   allWRObjectsArray.push(wrObject);
@@ -353,6 +507,8 @@ allWRs.forEach(function (team, i) {
     team.WRTwo.fourForFourFullPPRProjectedPoints
   );
 
+  wrObject.calcAppProjectedPoints();
+
   allWRsMap.set(`${teamName}WROneThisWeek`, wrObject);
 
   allWRObjectsArray.push(wrObject);
@@ -430,6 +586,8 @@ allWRs.forEach(function (team, i) {
     team.WRThree.fourForFourHalfPPRProjectedPoints,
     team.WRThree.fourForFourFullPPRProjectedPoints
   );
+
+  wrObject.calcAppProjectedPoints();
 
   allWRsMap.set(`${teamName}WROneThisWeek`, wrObject);
 
@@ -867,7 +1025,7 @@ const allWRData = {
   allWRObjectsArray: allWRObjectsArray,
 };
 
-console.log(allTeamWRObjects);
+console.log(allTeamWRObjects.jets);
 
 //////////////////////
 
