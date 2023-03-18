@@ -110,7 +110,8 @@ class QbObject {
 
 const allQBCalcFunctions = {
   calcQBvtt(team) {
-    let qbvtt = team.teamProjectedPointsThisWeek;
+    let qbvtt = +(+team.teamProjectedPointsThisWeek + +team.teamVTT) / 2;
+
     // console.log(team.teamProjectedPointsThisWeek);
 
     if (qbvtt > 29.9) {
@@ -612,7 +613,9 @@ allQBs.map(function (team, i) {
     suggestionProjectionFromTotalScore = 25;
   }
   // console.log(ScoreFromGLSP);
-  // console.log(`${team.name} ${totalScore} ${ScoreFromGLSP}`);
+  console.log(
+    `${team.name} ${totalScore} ${suggestionProjectionFromTotalScore} ${ScoreFromGLSP}`
+  );
   // console.log(suggestionProjectionFromTotalScore);
   let FinalTotalScore = 0;
 
@@ -1114,8 +1117,8 @@ const allQBData = {
   // allQBTotalScores: allQBTotalScores,
 
   // allQBFinalProjectedPointsValues: allQBFinalProjectedPointsValues,
-  // allQBFinalProjectedPointsValuesPlusNames:
-  //   allQBFinalProjectedPointsValuesPlusNames,
+  allQBFinalProjectedPointsValuesPlusNames:
+    allQBFinalProjectedPointsValuesPlusNames,
 
   // allQBManagedAndCashProjectedPointsValues:
   //   allQBManagedAndCashProjectedPointsValues,
@@ -1142,7 +1145,7 @@ const allQBData = {
 // console.log(allQBObjs.allQBObjectsArray);
 
 // console.log(allQBData.projectedPointsPerDollarYahoo);
-// console.log(allQBData.allQBFinalProjectedPointsValuesPlusNames);
+console.log(allQBData.allQBFinalProjectedPointsValuesPlusNames);
 
 // console.log(allQBData);
 

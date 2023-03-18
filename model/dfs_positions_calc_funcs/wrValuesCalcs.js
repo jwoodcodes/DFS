@@ -1065,7 +1065,7 @@ const allWRData = {
   allWRObjectsArray: allWRObjectsArray,
 };
 
-console.log(arrayOfProjectedPointsForMyDevUse);
+// console.log(arrayOfProjectedPointsForMyDevUse);
 
 // console.log(allTeamWRObjects.panthers.WROne);
 // console.log(
