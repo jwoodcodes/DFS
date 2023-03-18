@@ -1700,4 +1700,9 @@ populateTeamObjects(qbrawdata.vikings, gameInfo.vikings);
 // console.log(qbrawdata.chiefs);
 // console.log(qbrawdata);
 
+// console.log(
+//   qbrawdata.cardinals.fourForFourFullPPRProjectedPoints,
+//   qbrawdata.falcons.fourForFourFullPPRProjectedPoints
+// );
+
 module.exports = qbrawdata;
