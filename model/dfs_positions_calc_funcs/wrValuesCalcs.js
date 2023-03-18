@@ -28,6 +28,8 @@ const allWROneIfTopTwelveTargetShareLasThreeWeeks = [];
 const allWRTwoIfTopTwelveTargetShareLasThreeWeeks = [];
 const allWRThreeIfTopTwelveTargetShareLasThreeWeeks = [];
 
+const arrayOfProjectedPointsForMyDevUse = [];
+
 ///////////////////
 
 class WrObject {
@@ -167,54 +169,35 @@ class WrObject {
   calcAppProjectedPoints() {
     let tempValueForProjection = 0;
 
-    if (this.teamProjectedPoints > 30) {
-      tempValueForProjection += 7;
-    }
-
-    if (this.teamProjectedPoints > 24 && this.teamProjectedPoints < 31) {
-      tempValueForProjection += 5;
-    }
-
-    if (this.teamProjectedPoints > 19 && this.teamProjectedPoints < 25) {
-      tempValueForProjection += 4;
-    }
-
-    if (this.teamProjectedPoints > 14 && this.teamProjectedPoints < 20) {
-      tempValueForProjection += 3;
-    }
-
-    if (this.teamProjectedPoints < 15) {
-      tempValueForProjection += 2;
-    }
     //
 
     if (this.appQBProjectedPointsFromPassing) {
       if (this.appQBProjectedPointsFromPassing > 19.9) {
-        tempValueForProjection += 9;
+        tempValueForProjection += 6;
       }
       if (
         this.appQBProjectedPointsFromPassing > 17.9 &&
         this.appQBProjectedPointsFromPassing < 20
       ) {
-        tempValueForProjection += 7;
+        tempValueForProjection += 4;
       }
       if (
         this.appQBProjectedPointsFromPassing > 15.9 &&
         this.appQBProjectedPointsFromPassing < 18
       ) {
-        tempValueForProjection += 5;
+        tempValueForProjection += 2;
       }
       if (
         this.appQBProjectedPointsFromPassing > 13.9 &&
         this.appQBProjectedPointsFromPassing < 16
       ) {
-        tempValueForProjection += 3;
+        tempValueForProjection += 1;
       }
       if (
         this.appQBProjectedPointsFromPassing > 11.9 &&
         this.appQBProjectedPointsFromPassing < 14
       ) {
-        tempValueForProjection += 1;
+        tempValueForProjection += 0;
       }
       if (this.appQBProjectedPointsFromPassing < 12) {
         tempValueForProjection += -1;
@@ -223,97 +206,154 @@ class WrObject {
       let valueForHere = this.appQBProjectedPoints * 0.9;
 
       if (valueForHere > 19.9) {
-        tempValueForProjection += 9;
+        tempValueForProjection += 6;
       }
       if (valueForHere > 17.9 && valueForHere < 20) {
-        tempValueForProjection += 7;
+        tempValueForProjection += 4;
       }
       if (valueForHere > 15.9 && valueForHere < 18) {
-        tempValueForProjection += 5;
+        tempValueForProjection += 2;
       }
       if (valueForHere > 13.9 && valueForHere < 16) {
-        tempValueForProjection += 3;
+        tempValueForProjection += 1;
       }
       if (valueForHere > 11.9 && valueForHere < 14) {
-        tempValueForProjection += 1;
+        tempValueForProjection += 0;
       }
       if (valueForHere < 12) {
         tempValueForProjection += -1;
       }
     }
 
-    //
+    ///////////////////
 
-    if (this.projectedReceptions4For4 > 6.9) {
-      tempValueForProjection += 7;
+    this.averageOfProjectedTeamTotals =
+      +(this.teamProjectedPoints + this.vtt) / 2;
+
+    // console.log(this.averageOfProjectedTeamTotals);
+
+    // console.log(this.vtt);
+
+    if (this.averageOfProjectedTeamTotals > 28) {
+      tempValueForProjection += 6;
     }
 
     if (
-      this.projectedReceptions4For4 > 5.9 &&
-      this.projectedReceptions4For4 < 7
+      this.averageOfProjectedTeamTotals > 23.9 &&
+      this.averageOfProjectedTeamTotals < 28.1
     ) {
-      tempValueForProjection += 5;
+      tempValueForProjection += 4;
     }
 
     if (
-      this.projectedReceptions4For4 > 4.9 &&
-      this.projectedReceptions4For4 < 6
+      this.averageOfProjectedTeamTotals > 19.9 &&
+      this.averageOfProjectedTeamTotals < 24
     ) {
-      tempValueForProjection += 3;
+      tempValueForProjection += 2;
     }
 
     if (
-      this.projectedReceptions4For4 > 3.9 &&
-      this.projectedReceptions4For4 < 5
-    ) {
-      tempValueForProjection += 1;
-    }
-
-    if (
-      this.projectedReceptions4For4 > 2.9 &&
-      this.projectedReceptions4For4 < 4
+      this.averageOfProjectedTeamTotals > 14.9 &&
+      this.averageOfProjectedTeamTotals < 20
     ) {
       tempValueForProjection += 0;
     }
 
-    if (this.projectedReceptions4For4 < 3) {
-      tempValueForProjection += -2;
+    if (this.averageOfProjectedTeamTotals < 15) {
+      tempValueForProjection += -4;
     }
-    //
+
+    ///////////////////////
+
+    if (
+      this.targetShareLastFiveWeeks > 0.25 &&
+      this.percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek > 0.49
+    ) {
+      tempValueForProjection += 6;
+    } else {
+      if (this.projectedReceptions4For4 > 6.9) {
+        tempValueForProjection += 6;
+      }
+      if (
+        this.projectedReceptions4For4 > 5.9 &&
+        this.projectedReceptions4For4 < 7
+      ) {
+        tempValueForProjection += 4;
+      }
+
+      if (
+        this.projectedReceptions4For4 > 4.9 &&
+        this.projectedReceptions4For4 < 6
+      ) {
+        tempValueForProjection += 1;
+      }
+
+      if (
+        this.projectedReceptions4For4 > 3.9 &&
+        this.projectedReceptions4For4 < 5
+      ) {
+        tempValueForProjection += 0;
+      }
+
+      if (
+        this.projectedReceptions4For4 > 2.9 &&
+        this.projectedReceptions4For4 < 4
+      ) {
+        tempValueForProjection += -1;
+      }
+
+      if (this.projectedReceptions4For4 < 3) {
+        tempValueForProjection += -4;
+      }
+    }
 
     // this.homeOrAway
     //this.vtt = vtt;
     //this.opponentVTT = opponentVTT;
-    if (this.homeOrAway === 'Home' && this.vtt > this.opponentVTT) {
-      tempValueForProjection += 6;
-    }
-    if (this.homeOrAway === 'Away' && this.vtt < this.opponentVTT) {
-      tempValueForProjection += 4;
-    }
-    if (this.homeOrAway === 'Away' && this.vtt > this.opponentVTT) {
-      tempValueForProjection += 2;
-    }
-    if (this.homeOrAway === 'Home' && this.vtt < this.opponentVTT) {
-      tempValueForProjection += 2;
-    }
+    // if (this.homeOrAway === 'Home' && this.vtt > this.opponentVTT) {
+    //   tempValueForProjection += 2;
+    // }
+    // if (this.homeOrAway === 'Away' && this.vtt < this.opponentVTT) {
+    //   tempValueForProjection += 1;
+    // }
+    // if (this.homeOrAway === 'Away' && this.vtt > this.opponentVTT) {
+    //   tempValueForProjection += 0;
+    // }
+    // if (this.homeOrAway === 'Home' && this.vtt < this.opponentVTT) {
+    //   tempValueForProjection += -1;
+    // }
 
-    if (tempValueForProjection > 16) {
+    // console.log(tempValueForProjection);
+
+    if (tempValueForProjection > 9) {
       this.appHalfProjectedPoints = this.halfSeventyFifthPercentProjectedPoints;
       this.appFullProjectedPoints = this.PPRSeventyFifthPercentProjectedPoints;
       this.percentileUsedForProjection = 75;
     }
 
-    if (tempValueForProjection > 5 && tempValueForProjection < 17) {
+    if (tempValueForProjection >= 0 && tempValueForProjection < 10) {
       this.appHalfProjectedPoints = this.halfFiftyithPercentProjectedPoints;
       this.appFullProjectedPoints = this.PPRFiftyithPercentProjectedPoints;
       this.percentileUsedForProjection = 50;
     }
 
-    if (tempValueForProjection < 6) {
+    if (tempValueForProjection < 0) {
       this.appHalfProjectedPoints = this.halfTwentyFifthPercentProjectedPoints;
       this.appFullProjectedPoints = this.PPRTwentyFifthPercentProjectedPoints;
       this.percentileUsedForProjection = 25;
     }
+
+    if (this.appHalfProjectedPoints === 0) {
+      this.appHalfProjectedPoints = this.fourForFourHalfPPRProjectedPoints;
+    }
+    if (this.appFullProjectedPoints === 0) {
+      this.appFullProjectedPoints = this.fourForFourFullPPRProjectedPoints;
+    }
+
+    this.valueForProjection = tempValueForProjection;
+    arrayOfProjectedPointsForMyDevUse.push(
+      `${this.appFullProjectedPoints} (${this.fourForFourFullPPRProjectedPoints}), ${this.playerName} ${this.projectedReceptions4For4} (${this.valueForProjection}) (${this.percentileUsedForProjection})`
+    );
   }
 }
 
@@ -1025,7 +1065,15 @@ const allWRData = {
   allWRObjectsArray: allWRObjectsArray,
 };
 
-console.log(allTeamWRObjects.jets);
+console.log(arrayOfProjectedPointsForMyDevUse);
+
+// console.log(allTeamWRObjects.panthers.WROne);
+// console.log(
+//   allTeamWRObjects.cowboys.WROne,
+
+//   allTeamWRObjects.titans.WROne
+// );
+// console.log(allTeamWRObjects);
 
 //////////////////////
 
