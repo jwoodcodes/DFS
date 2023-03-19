@@ -171,48 +171,309 @@ class WrObject {
 
     //
 
-    if (this.appQBProjectedPointsFromPassing) {
+    if (
+      this.appQBProjectedPointsFromPassing &&
+      this.appQBProjectedPointsFromPassing !== NaN
+    ) {
       if (this.appQBProjectedPointsFromPassing > 19.9) {
-        tempValueForProjection += 6;
+        // tempValueForProjection += 8;
+
+        if (
+          this.targetShareLastFiveWeeks > 0.25 &&
+          this.percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek >
+            0.49
+        ) {
+          tempValueForProjection += 12;
+        } else {
+          if (this.projectedReceptions4For4 > 6.9) {
+            tempValueForProjection += 12;
+          }
+          if (
+            this.projectedReceptions4For4 > 5.9 &&
+            this.projectedReceptions4For4 < 7
+          ) {
+            tempValueForProjection += 10;
+          }
+
+          if (
+            this.projectedReceptions4For4 > 4.9 &&
+            this.projectedReceptions4For4 < 6
+          ) {
+            tempValueForProjection += 8;
+          }
+
+          if (
+            this.projectedReceptions4For4 > 3.9 &&
+            this.projectedReceptions4For4 < 5
+          ) {
+            tempValueForProjection += 6;
+          }
+
+          if (
+            this.projectedReceptions4For4 > 2.9 &&
+            this.projectedReceptions4For4 < 4
+          ) {
+            tempValueForProjection += 4;
+          }
+
+          if (this.projectedReceptions4For4 < 3) {
+            tempValueForProjection += 2;
+          }
+        }
       }
       if (
         this.appQBProjectedPointsFromPassing > 17.9 &&
         this.appQBProjectedPointsFromPassing < 20
       ) {
-        tempValueForProjection += 4;
+        // tempValueForProjection += 6;
+
+        if (
+          this.targetShareLastFiveWeeks > 0.25 &&
+          this.percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek >
+            0.49
+        ) {
+          tempValueForProjection += 10;
+        } else {
+          if (this.projectedReceptions4For4 > 6.9) {
+            tempValueForProjection += 10;
+          }
+          if (
+            this.projectedReceptions4For4 > 5.9 &&
+            this.projectedReceptions4For4 < 7
+          ) {
+            tempValueForProjection += 8;
+          }
+
+          if (
+            this.projectedReceptions4For4 > 4.9 &&
+            this.projectedReceptions4For4 < 6
+          ) {
+            tempValueForProjection += 6;
+          }
+
+          if (
+            this.projectedReceptions4For4 > 3.9 &&
+            this.projectedReceptions4For4 < 5
+          ) {
+            tempValueForProjection += 4;
+          }
+
+          if (
+            this.projectedReceptions4For4 > 2.9 &&
+            this.projectedReceptions4For4 < 4
+          ) {
+            tempValueForProjection += 2;
+          }
+
+          if (this.projectedReceptions4For4 < 3) {
+            tempValueForProjection += 0;
+          }
+        }
       }
       if (
         this.appQBProjectedPointsFromPassing > 15.9 &&
         this.appQBProjectedPointsFromPassing < 18
       ) {
-        tempValueForProjection += 2;
+        // tempValueForProjection += 4;
+
+        if (
+          this.targetShareLastFiveWeeks > 0.25 &&
+          this.percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek >
+            0.49
+        ) {
+          tempValueForProjection += 8;
+        } else {
+          if (this.projectedReceptions4For4 > 6.9) {
+            tempValueForProjection += 8;
+          }
+          if (
+            this.projectedReceptions4For4 > 5.9 &&
+            this.projectedReceptions4For4 < 7
+          ) {
+            tempValueForProjection += 6;
+          }
+
+          if (
+            this.projectedReceptions4For4 > 4.9 &&
+            this.projectedReceptions4For4 < 6
+          ) {
+            tempValueForProjection += 4;
+          }
+
+          if (
+            this.projectedReceptions4For4 > 3.9 &&
+            this.projectedReceptions4For4 < 5
+          ) {
+            tempValueForProjection += 2;
+          }
+
+          if (
+            this.projectedReceptions4For4 > 2.9 &&
+            this.projectedReceptions4For4 < 4
+          ) {
+            tempValueForProjection += 0;
+          }
+
+          if (this.projectedReceptions4For4 < 3) {
+            tempValueForProjection += -2;
+          }
+        }
       }
       if (
         this.appQBProjectedPointsFromPassing > 13.9 &&
         this.appQBProjectedPointsFromPassing < 16
       ) {
-        tempValueForProjection += 1;
+        // tempValueForProjection += 1;
+
+        if (
+          this.targetShareLastFiveWeeks > 0.25 &&
+          this.percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek >
+            0.49
+        ) {
+          tempValueForProjection += 6;
+        } else {
+          if (this.projectedReceptions4For4 > 6.9) {
+            tempValueForProjection += 6;
+          }
+          if (
+            this.projectedReceptions4For4 > 5.9 &&
+            this.projectedReceptions4For4 < 7
+          ) {
+            tempValueForProjection += 4;
+          }
+
+          if (
+            this.projectedReceptions4For4 > 4.9 &&
+            this.projectedReceptions4For4 < 6
+          ) {
+            tempValueForProjection += 2;
+          }
+
+          if (
+            this.projectedReceptions4For4 > 3.9 &&
+            this.projectedReceptions4For4 < 5
+          ) {
+            tempValueForProjection += 0;
+          }
+
+          if (
+            this.projectedReceptions4For4 > 2.9 &&
+            this.projectedReceptions4For4 < 4
+          ) {
+            tempValueForProjection += -2;
+          }
+
+          if (this.projectedReceptions4For4 < 3) {
+            tempValueForProjection += -4;
+          }
+        }
       }
       if (
         this.appQBProjectedPointsFromPassing > 11.9 &&
         this.appQBProjectedPointsFromPassing < 14
       ) {
-        tempValueForProjection += 0;
+        // tempValueForProjection += 0;
+
+        if (
+          this.targetShareLastFiveWeeks > 0.25 &&
+          this.percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek >
+            0.49
+        ) {
+          tempValueForProjection += 4;
+        } else {
+          if (this.projectedReceptions4For4 > 6.9) {
+            tempValueForProjection += 4;
+          }
+          if (
+            this.projectedReceptions4For4 > 5.9 &&
+            this.projectedReceptions4For4 < 7
+          ) {
+            tempValueForProjection += 2;
+          }
+
+          if (
+            this.projectedReceptions4For4 > 4.9 &&
+            this.projectedReceptions4For4 < 6
+          ) {
+            tempValueForProjection += 0;
+          }
+
+          if (
+            this.projectedReceptions4For4 > 3.9 &&
+            this.projectedReceptions4For4 < 5
+          ) {
+            tempValueForProjection += -2;
+          }
+
+          if (
+            this.projectedReceptions4For4 > 2.9 &&
+            this.projectedReceptions4For4 < 4
+          ) {
+            tempValueForProjection += -4;
+          }
+
+          if (this.projectedReceptions4For4 < 3) {
+            tempValueForProjection += -6;
+          }
+        }
       }
       if (this.appQBProjectedPointsFromPassing < 12) {
-        tempValueForProjection += -1;
+        // tempValueForProjection += -1;
+
+        if (
+          this.targetShareLastFiveWeeks > 0.25 &&
+          this.percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek >
+            0.49
+        ) {
+          tempValueForProjection += 2;
+        } else {
+          if (this.projectedReceptions4For4 > 6.9) {
+            tempValueForProjection += 2;
+          }
+          if (
+            this.projectedReceptions4For4 > 5.9 &&
+            this.projectedReceptions4For4 < 7
+          ) {
+            tempValueForProjection += 0;
+          }
+
+          if (
+            this.projectedReceptions4For4 > 4.9 &&
+            this.projectedReceptions4For4 < 6
+          ) {
+            tempValueForProjection += -2;
+          }
+
+          if (
+            this.projectedReceptions4For4 > 3.9 &&
+            this.projectedReceptions4For4 < 5
+          ) {
+            tempValueForProjection += -4;
+          }
+
+          if (
+            this.projectedReceptions4For4 > 2.9 &&
+            this.projectedReceptions4For4 < 4
+          ) {
+            tempValueForProjection += -6;
+          }
+
+          if (this.projectedReceptions4For4 < 3) {
+            tempValueForProjection += -8;
+          }
+        }
       }
     } else {
       let valueForHere = this.appQBProjectedPoints * 0.9;
 
       if (valueForHere > 19.9) {
-        tempValueForProjection += 6;
+        tempValueForProjection += 8;
       }
       if (valueForHere > 17.9 && valueForHere < 20) {
-        tempValueForProjection += 4;
+        tempValueForProjection += 6;
       }
       if (valueForHere > 15.9 && valueForHere < 18) {
-        tempValueForProjection += 2;
+        tempValueForProjection += 4;
       }
       if (valueForHere > 13.9 && valueForHere < 16) {
         tempValueForProjection += 1;
@@ -230,6 +491,12 @@ class WrObject {
     this.averageOfProjectedTeamTotals =
       +(this.teamProjectedPoints + this.vtt) / 2;
 
+    // console.log(
+    //   this.teamName,
+    //   this.teamProjectedPoints,
+    //   this.vtt,
+    //   this.averageOfProjectedTeamTotals
+    // );
     // console.log(this.averageOfProjectedTeamTotals);
 
     // console.log(this.vtt);
@@ -260,52 +527,52 @@ class WrObject {
     }
 
     if (this.averageOfProjectedTeamTotals < 15) {
-      tempValueForProjection += -4;
+      tempValueForProjection += -1;
     }
 
     ///////////////////////
 
-    if (
-      this.targetShareLastFiveWeeks > 0.25 &&
-      this.percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek > 0.49
-    ) {
-      tempValueForProjection += 6;
-    } else {
-      if (this.projectedReceptions4For4 > 6.9) {
-        tempValueForProjection += 6;
-      }
-      if (
-        this.projectedReceptions4For4 > 5.9 &&
-        this.projectedReceptions4For4 < 7
-      ) {
-        tempValueForProjection += 4;
-      }
+    // if (
+    //   this.targetShareLastFiveWeeks > 0.25 &&
+    //   this.percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek > 0.49
+    // ) {
+    //   tempValueForProjection += 6;
+    // } else {
+    //   if (this.projectedReceptions4For4 > 6.9) {
+    //     tempValueForProjection += 6;
+    //   }
+    //   if (
+    //     this.projectedReceptions4For4 > 5.9 &&
+    //     this.projectedReceptions4For4 < 7
+    //   ) {
+    //     tempValueForProjection += 4;
+    //   }
 
-      if (
-        this.projectedReceptions4For4 > 4.9 &&
-        this.projectedReceptions4For4 < 6
-      ) {
-        tempValueForProjection += 1;
-      }
+    //   if (
+    //     this.projectedReceptions4For4 > 4.9 &&
+    //     this.projectedReceptions4For4 < 6
+    //   ) {
+    //     tempValueForProjection += 2;
+    //   }
 
-      if (
-        this.projectedReceptions4For4 > 3.9 &&
-        this.projectedReceptions4For4 < 5
-      ) {
-        tempValueForProjection += 0;
-      }
+    //   if (
+    //     this.projectedReceptions4For4 > 3.9 &&
+    //     this.projectedReceptions4For4 < 5
+    //   ) {
+    //     tempValueForProjection += 1;
+    //   }
 
-      if (
-        this.projectedReceptions4For4 > 2.9 &&
-        this.projectedReceptions4For4 < 4
-      ) {
-        tempValueForProjection += -1;
-      }
+    //   if (
+    //     this.projectedReceptions4For4 > 2.9 &&
+    //     this.projectedReceptions4For4 < 4
+    //   ) {
+    //     tempValueForProjection += 0;
+    //   }
 
-      if (this.projectedReceptions4For4 < 3) {
-        tempValueForProjection += -4;
-      }
-    }
+    //   if (this.projectedReceptions4For4 < 3) {
+    //     tempValueForProjection += -1;
+    //   }
+    // }
 
     // this.homeOrAway
     //this.vtt = vtt;
@@ -352,7 +619,7 @@ class WrObject {
 
     this.valueForProjection = tempValueForProjection;
     arrayOfProjectedPointsForMyDevUse.push(
-      `${this.appFullProjectedPoints} (${this.fourForFourFullPPRProjectedPoints}), ${this.playerName} ${this.projectedReceptions4For4} (${this.valueForProjection}) (${this.percentileUsedForProjection})`
+      `${this.appFullProjectedPoints} (${this.fourForFourFullPPRProjectedPoints}), ${this.playerName} ${this.projectedReceptions4For4} ${this.appQBProjectedPointsFromPassing} ${this.averageOfProjectedTeamTotals} (${this.valueForProjection}) (${this.percentileUsedForProjection})`
     );
   }
 }
@@ -1065,9 +1332,9 @@ const allWRData = {
   allWRObjectsArray: allWRObjectsArray,
 };
 
-// console.log(arrayOfProjectedPointsForMyDevUse);
+console.log(arrayOfProjectedPointsForMyDevUse);
 
-// console.log(allTeamWRObjects.panthers.WROne);
+// console.log(allTeamWRObjects.giants.WROne);
 // console.log(
 //   allTeamWRObjects.cowboys.WROne,
 
