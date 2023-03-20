@@ -5,7 +5,11 @@
 
 
 
-
+//////////// you need to automate teamPointsPerGameLastFiveWeeks in gameInfo before 2023 season!!! //////
+//////////// you need to automate teamPointsPerGameLastFiveWeeks in gameInfo before 2023 season!!! //////
+//////////// you need to automate teamPointsPerGameLastFiveWeeks in gameInfo before 2023 season!!! //////
+//////////// you need to automate teamPointsPerGameLastFiveWeeks in gameInfo before 2023 season!!! //////
+//////////// you need to automate teamPointsPerGameLastFiveWeeks in gameInfo before 2023 season!!! //////
 
 
 

@@ -51,12 +51,21 @@ class WrObject {
     percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek,
 
     appQBProjectedPoints,
+    qbFantasyPointsPerGameLastFiveWeeks,
+    qbProjectedPointsThisWeekPercentage,
     QBProjectedPassAttemptsThisWeek,
     percentOfQBFantasyPointsFromPassingLastFiveWeeks,
     appQBProjectedPointsFromPassing,
     projectedReceptions4For4,
+    receptionsPerGameInGamesPlayedLastFiveWeeks,
+    percentOfAveragesReceptionsLastFiveWeeksThatThisWeeksProjectedReceptionsIs,
     projectedRecpetionsPerQBPassAttempt,
     targetShareLastFiveWeeks,
+
+    halfPPRPointsPerGameLastFiveWeeks,
+    percentProjectedfantasyPointsThisWeekIsHigherOrLowerThanFantasyPointsScoredLastFiveWeeks,
+    roleScorePercentageThisWeek,
+    teamProjectedPointsThisWeekPercentage,
 
     yahooSalary,
     fanduelSalary,
@@ -69,9 +78,11 @@ class WrObject {
     opponentABV,
     opponentTeamProjectedPoints,
 
+    halfGLSPAvg,
     halfTwentyFifthPercentProjectedPoints,
     halfFiftyithPercentProjectedPoints,
     halfSeventyFifthPercentProjectedPoints,
+    PPRGLSPAvg,
     PPRTwentyFifthPercentProjectedPoints,
     PPRFiftyithPercentProjectedPoints,
     PPRSeventyFifthPercentProjectedPoints,
@@ -101,15 +112,29 @@ class WrObject {
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek;
 
     this.appQBProjectedPoints = appQBProjectedPoints;
+    this.qbFantasyPointsPerGameLastFiveWeeks =
+      qbFantasyPointsPerGameLastFiveWeeks;
+    this.qbProjectedPointsThisWeekPercentage =
+      qbProjectedPointsThisWeekPercentage;
     this.QBProjectedPassAttemptsThisWeek = QBProjectedPassAttemptsThisWeek;
     this.percentOfQBFantasyPointsFromPassingLastFiveWeeks =
       percentOfQBFantasyPointsFromPassingLastFiveWeeks;
     this.appQBProjectedPointsFromPassing = appQBProjectedPointsFromPassing;
     this.projectedReceptions4For4 = projectedReceptions4For4;
+    this.receptionsPerGameInGamesPlayedLastFiveWeeks =
+      receptionsPerGameInGamesPlayedLastFiveWeeks;
+    this.percentOfAveragesReceptionsLastFiveWeeksThatThisWeeksProjectedReceptionsIs =
+      percentOfAveragesReceptionsLastFiveWeeksThatThisWeeksProjectedReceptionsIs;
     this.projectedRecpetionsPerQBPassAttempt =
       projectedRecpetionsPerQBPassAttempt;
 
     this.targetShareLastFiveWeeks = targetShareLastFiveWeeks;
+    this.halfPPRPointsPerGameLastFiveWeeks = halfPPRPointsPerGameLastFiveWeeks;
+    this.percentProjectedfantasyPointsThisWeekIsHigherOrLowerThanFantasyPointsScoredLastFiveWeeks =
+      percentProjectedfantasyPointsThisWeekIsHigherOrLowerThanFantasyPointsScoredLastFiveWeeks;
+    this.roleScorePercentageThisWeek = roleScorePercentageThisWeek;
+    this.teamProjectedPointsThisWeekPercentage =
+      teamProjectedPointsThisWeekPercentage;
 
     this.yahooSalary = yahooSalary;
     this.fanduelSalary = fanduelSalary;
@@ -122,12 +147,14 @@ class WrObject {
     this.opponentABV = opponentABV;
     this.opponentTeamProjectedPoints = opponentTeamProjectedPoints;
 
+    this.halfGLSPAvg = halfGLSPAvg;
     this.halfTwentyFifthPercentProjectedPoints =
       halfTwentyFifthPercentProjectedPoints;
     this.halfFiftyithPercentProjectedPoints =
       halfFiftyithPercentProjectedPoints;
     this.halfSeventyFifthPercentProjectedPoints =
       halfSeventyFifthPercentProjectedPoints;
+    this.PPRGLSPAvg = PPRGLSPAvg;
     this.PPRTwentyFifthPercentProjectedPoints =
       PPRTwentyFifthPercentProjectedPoints;
     this.PPRFiftyithPercentProjectedPoints = PPRFiftyithPercentProjectedPoints;
@@ -690,6 +717,29 @@ allWRs.forEach(function (team, i) {
     team.WROne.projectedReceptions4For4 / team.QBProjectedPassAttemptsThisWeek
   ).toFixed(3);
 
+  percentProjectedfantasyPointsThisWeekIsHigherOrLowerThanFantasyPointsScoredLastFiveWeeks =
+    +(
+      team.WROne.fourForFourHalfPPRProjectedPoints /
+      team.WROne.halfPPRPointsPerGameLastFiveWeeks
+    ).toFixed(2);
+
+  roleScorePercentageThisWeek = +(
+    (percentProjectedfantasyPointsThisWeekIsHigherOrLowerThanFantasyPointsScoredLastFiveWeeks +
+      team.WROne
+        .percentProjectedReceptionsThisWeekIsHigherOrLowerThanAverageReceptionsLastFiveWeeks) /
+    2
+  ).toFixed(3);
+
+  qbProjectedPointsThisWeekPercentage = +(
+    team.appQBProjectedPoints /
+    team.WROne.qbFantasyPointsScoredPerGameLastFiveWeeks
+  ).toFixed(3);
+
+  teamProjectedPointsThisWeekPercentage = +(
+    team.appTeamProjectedPoints /
+    team.WROne.teamRealLifePointsScoredPerGameLastFiveWeeks
+  ).toFixed(2);
+
   let wrObject = new WrObject(
     team.WROne.name,
     'WR',
@@ -709,12 +759,20 @@ allWRs.forEach(function (team, i) {
       2
     ),
     team.appQBProjectedPoints,
+    team.WROne.qbFantasyPointsScoredPerGameLastFiveWeeks,
+    qbProjectedPointsThisWeekPercentage,
     team.QBProjectedPassAttemptsThisWeek,
     team.QBpercentageOffFantasyPointsFromPassingLastFiveWeeks,
     appQBProjectedPointsFromPassing,
     team.WROne.projectedReceptions4For4,
+    team.WROne.receptionsPerGameInGamesPlayedLastFiveWeeks,
+    team.WROne.percentProjectedReceptionsThisWeekIsHigherOrLowerThanAverageReceptionsLastFiveWeeks,
     projectedRecpetionsPerQBPassAttempt,
     team.WROne.targetShareLastFiveWeeks,
+    team.WROne.halfPPRPointsPerGameLastFiveWeeks,
+    percentProjectedfantasyPointsThisWeekIsHigherOrLowerThanFantasyPointsScoredLastFiveWeeks,
+    roleScorePercentageThisWeek,
+    teamProjectedPointsThisWeekPercentage,
     team.WROne.yahooSalary,
     team.WROne.fanduelSalary,
     team.WROne.draftkingsSalary,
@@ -724,9 +782,11 @@ allWRs.forEach(function (team, i) {
     opponentTeamName,
     opponentABV,
     opponentTeamProjectedPoints,
+    team.WROne.glspHalfAvg,
     team.WROne.halfTwentyFifthPercentProjectedPoints,
     team.WROne.halfFiftyithPercentProjectedPoints,
     team.WROne.halfSeventyFifthPercentProjectedPoints,
+    team.WROne.glspPPRAvg,
     team.WROne.PPRTwentyFifthPercentProjectedPoints,
     team.WROne.PPRFiftyithPercentProjectedPoints,
     team.WROne.PPRSeventyFifthPercentProjectedPoints,
@@ -770,6 +830,29 @@ allWRs.forEach(function (team, i) {
     team.WRTwo.projectedReceptions4For4 / team.QBProjectedPassAttemptsThisWeek
   ).toFixed(2);
 
+  percentProjectedfantasyPointsThisWeekIsHigherOrLowerThanFantasyPointsScoredLastFiveWeeks =
+    +(
+      team.WRTwo.fourForFourHalfPPRProjectedPoints /
+      team.WRTwo.halfPPRPointsPerGameLastFiveWeeks
+    ).toFixed(2);
+
+  roleScorePercentageThisWeek = +(
+    (percentProjectedfantasyPointsThisWeekIsHigherOrLowerThanFantasyPointsScoredLastFiveWeeks +
+      team.WRTwo
+        .percentProjectedReceptionsThisWeekIsHigherOrLowerThanAverageReceptionsLastFiveWeeks) /
+    2
+  ).toFixed(3);
+
+  qbProjectedPointsThisWeekPercentage = +(
+    team.appQBProjectedPoints /
+    team.WRTwo.qbFantasyPointsScoredPerGameLastFiveWeeks
+  ).toFixed(3);
+
+  teamProjectedPointsThisWeekPercentage = +(
+    team.appTeamProjectedPoints /
+    team.WRTwo.teamRealLifePointsScoredPerGameLastFiveWeeks
+  ).toFixed(2);
+
   let wrObject = new WrObject(
     team.WRTwo.name,
     'WR',
@@ -789,12 +872,20 @@ allWRs.forEach(function (team, i) {
       2
     ),
     team.appQBProjectedPoints,
+    team.WRTwo.qbFantasyPointsScoredPerGameLastFiveWeeks,
+    qbProjectedPointsThisWeekPercentage,
     team.QBProjectedPassAttemptsThisWeek,
     team.QBpercentageOffFantasyPointsFromPassingLastFiveWeeks,
     appQBProjectedPointsFromPassing,
     team.WRTwo.projectedReceptions4For4,
+    team.WRTwo.receptionsPerGameInGamesPlayedLastFiveWeeks,
+    team.WRTwo.percentProjectedReceptionsThisWeekIsHigherOrLowerThanAverageReceptionsLastFiveWeeks,
     projectedRecpetionsPerQBPassAttempt,
     team.WRTwo.targetShareLastFiveWeeks,
+    team.WRTwo.halfPPRPointsPerGameLastFiveWeeks,
+    percentProjectedfantasyPointsThisWeekIsHigherOrLowerThanFantasyPointsScoredLastFiveWeeks,
+    roleScorePercentageThisWeek,
+    teamProjectedPointsThisWeekPercentage,
     team.WRTwo.yahooSalary,
     team.WRTwo.fanduelSalary,
     team.WRTwo.draftkingsSalary,
@@ -804,9 +895,11 @@ allWRs.forEach(function (team, i) {
     opponentTeamName,
     opponentABV,
     opponentTeamProjectedPoints,
+    team.WRTwo.glspHalfAvg,
     team.WRTwo.halfTwentyFifthPercentProjectedPoints,
     team.WRTwo.halfFiftyithPercentProjectedPoints,
     team.WRTwo.halfSeventyFifthPercentProjectedPoints,
+    team.WRTwo.glspPPRAvg,
     team.WRTwo.PPRTwentyFifthPercentProjectedPoints,
     team.WRTwo.PPRFiftyithPercentProjectedPoints,
     team.WRTwo.PPRSeventyFifthPercentProjectedPoints,
@@ -850,6 +943,29 @@ allWRs.forEach(function (team, i) {
     team.WRThree.projectedReceptions4For4 / team.QBProjectedPassAttemptsThisWeek
   ).toFixed(2);
 
+  percentProjectedfantasyPointsThisWeekIsHigherOrLowerThanFantasyPointsScoredLastFiveWeeks =
+    +(
+      team.WRThree.fourForFourHalfPPRProjectedPoints /
+      team.WRThree.halfPPRPointsPerGameLastFiveWeeks
+    ).toFixed(2);
+
+  roleScorePercentageThisWeek = +(
+    (percentProjectedfantasyPointsThisWeekIsHigherOrLowerThanFantasyPointsScoredLastFiveWeeks +
+      team.WRThree
+        .percentProjectedReceptionsThisWeekIsHigherOrLowerThanAverageReceptionsLastFiveWeeks) /
+    2
+  ).toFixed(3);
+
+  qbProjectedPointsThisWeekPercentage = +(
+    team.appQBProjectedPoints /
+    team.WRThree.qbFantasyPointsScoredPerGameLastFiveWeeks
+  ).toFixed(3);
+
+  teamProjectedPointsThisWeekPercentage = +(
+    team.appTeamProjectedPoints /
+    team.WRThree.teamRealLifePointsScoredPerGameLastFiveWeeks
+  ).toFixed(2);
+
   let wrObject = new WrObject(
     team.WRThree.name,
     'WR',
@@ -869,12 +985,20 @@ allWRs.forEach(function (team, i) {
       2
     ),
     team.appQBProjectedPoints,
+    team.WRThree.qbFantasyPointsScoredPerGameLastFiveWeeks,
+    qbProjectedPointsThisWeekPercentage,
     team.QBProjectedPassAttemptsThisWeek,
     team.QBpercentageOffFantasyPointsFromPassingLastFiveWeeks,
     appQBProjectedPointsFromPassing,
     team.WRThree.projectedReceptions4For4,
+    team.WRThree.receptionsPerGameInGamesPlayedLastFiveWeeks,
+    team.WRThree.percentProjectedReceptionsThisWeekIsHigherOrLowerThanAverageReceptionsLastFiveWeeks,
     projectedRecpetionsPerQBPassAttempt,
     team.WRThree.targetShareLastFiveWeeks,
+    team.WRThree.halfPPRPointsPerGameLastFiveWeeks,
+    percentProjectedfantasyPointsThisWeekIsHigherOrLowerThanFantasyPointsScoredLastFiveWeeks,
+    roleScorePercentageThisWeek,
+    teamProjectedPointsThisWeekPercentage,
     team.WRThree.yahooSalary,
     team.WRThree.fanduelSalary,
     team.WRThree.draftkingsSalary,
@@ -884,9 +1008,11 @@ allWRs.forEach(function (team, i) {
     opponentTeamName,
     opponentABV,
     opponentTeamProjectedPoints,
+    team.WRThree.glspHalfAvg,
     team.WRThree.halfTwentyFifthPercentProjectedPoints,
     team.WRThree.halfFiftyithPercentProjectedPoints,
     team.WRThree.halfSeventyFifthPercentProjectedPoints,
+    team.WRThree.glspPPRAvg,
     team.WRThree.PPRTwentyFifthPercentProjectedPoints,
     team.WRThree.PPRFiftyithPercentProjectedPoints,
     team.WRThree.PPRSeventyFifthPercentProjectedPoints,
@@ -1332,9 +1458,14 @@ const allWRData = {
   allWRObjectsArray: allWRObjectsArray,
 };
 
-console.log(arrayOfProjectedPointsForMyDevUse);
+// console.log(arrayOfProjectedPointsForMyDevUse);
 
-// console.log(allTeamWRObjects.giants.WROne);
+////////////////////////////////////////////////////////////////
+//how you need to rewrite your WR projections: is the team projected points this week a good amount higher or lower then the average of the last five weeks? if the qb projected points a goos amount higher or lower than they have averaged the last five weeks? and is the players projected receptions a good amount higher or lower then they have averaged the last five weeks
+
+/////////////////////////////////////////////////////////////
+
+console.log(allTeamWRObjects.giants.WRThree);
 // console.log(
 //   allTeamWRObjects.cowboys.WROne,
 

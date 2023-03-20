@@ -3174,6 +3174,8 @@ const populateTeamObjects = function (
               +team['"PPR - 50th"'];
             passedInTeam.WROne.PPRSeventyFifthPercentProjectedPoints =
               +team['"PPR - 75th"'];
+            passedInTeam.WROne.glspHalfAvg = +team['"Half - AVG"'];
+            passedInTeam.WROne.glspPPRAvg = +team['"PPR - AVG"'];
           }
 
           if (passedInTeam.WRTwo.name === SanitizedPlayerName) {
@@ -3189,6 +3191,8 @@ const populateTeamObjects = function (
               +team['"PPR - 50th"'];
             passedInTeam.WRTwo.PPRSeventyFifthPercentProjectedPoints =
               +team['"PPR - 75th"'];
+            passedInTeam.WRTwo.glspHalfAvg = +team['"Half - AVG"'];
+            passedInTeam.WRTwo.glspPPRAvg = +team['"PPR - AVG"'];
           }
 
           if (passedInTeam.WRThree.name === SanitizedPlayerName) {
@@ -3204,6 +3208,8 @@ const populateTeamObjects = function (
               +team['"PPR - 50th"'];
             passedInTeam.WRThree.PPRSeventyFifthPercentProjectedPoints =
               +team['"PPR - 75th"'];
+            passedInTeam.WRThree.glspHalfAvg = +team['"Half - AVG"'];
+            passedInTeam.WRThree.glspPPRAvg = +team['"PPR - AVG"'];
           }
         }
       });
@@ -3218,20 +3224,36 @@ const populateTeamObjects = function (
 
           if (passedInTeam.WROne.name === SanitizedPlayerName) {
             // console.log(SanitizedPlayerName);
+
             temp = +team['"target_share"'];
             passedInTeam.WROne.targetShareLastFiveWeeks = +temp.toFixed(3);
+
+            tempReceptions = +team['"receptions"'];
+            passedInTeam.WROne.receptionsLastFiveWeeks =
+              +tempReceptions.toFixed(3);
           }
 
           if (passedInTeam.WRTwo.name === SanitizedPlayerName) {
             // console.log(SanitizedPlayerName);
+            // if (team['"posteam"'] === '"CIN"') {
+            //   console.log(team);
+            // }
             temp = +team['"target_share"'];
             passedInTeam.WRTwo.targetShareLastFiveWeeks = +temp.toFixed(3);
+
+            tempReceptions = +team['"receptions"'];
+            passedInTeam.WRTwo.receptionsLastFiveWeeks =
+              +tempReceptions.toFixed(3);
           }
 
           if (passedInTeam.WRThree.name === SanitizedPlayerName) {
             // console.log(SanitizedPlayerName);
             temp = +team['"target_share"'];
             passedInTeam.WRThree.targetShareLastFiveWeeks = +temp.toFixed(3);
+
+            tempReceptions = +team['"receptions"'];
+            passedInTeam.WRThree.receptionsLastFiveWeeks =
+              +tempReceptions.toFixed(3);
           }
         }
       );
@@ -3384,6 +3406,43 @@ const populateTeamObjects = function (
             ).toFixed();
           }
         }
+
+        //assigning receptions per game in games played last five weeks
+
+        passedInTeam.WROne.receptionsPerGameInGamesPlayedLastFiveWeeks = +(
+          passedInTeam.WROne.receptionsLastFiveWeeks /
+          passedInTeam.WROne.numberOfGamesPlayedLastFiveWeeks
+        );
+
+        passedInTeam.WRTwo.receptionsPerGameInGamesPlayedLastFiveWeeks = +(
+          passedInTeam.WRTwo.receptionsLastFiveWeeks /
+          passedInTeam.WRTwo.numberOfGamesPlayedLastFiveWeeks
+        );
+
+        passedInTeam.WRThree.receptionsPerGameInGamesPlayedLastFiveWeeks = +(
+          passedInTeam.WRThree.receptionsLastFiveWeeks /
+          passedInTeam.WRThree.numberOfGamesPlayedLastFiveWeeks
+        );
+
+        //assigning percent higher or lower projected receptions this week is than per game average last five weeks
+
+        passedInTeam.WROne.percentProjectedReceptionsThisWeekIsHigherOrLowerThanAverageReceptionsLastFiveWeeks =
+          +(
+            passedInTeam.WROne.projectedReceptions4For4 /
+            passedInTeam.WROne.receptionsPerGameInGamesPlayedLastFiveWeeks
+          ).toFixed(3);
+
+        passedInTeam.WRTwo.percentProjectedReceptionsThisWeekIsHigherOrLowerThanAverageReceptionsLastFiveWeeks =
+          +(
+            passedInTeam.WRTwo.projectedReceptions4For4 /
+            passedInTeam.WRTwo.receptionsPerGameInGamesPlayedLastFiveWeeks
+          ).toFixed(3);
+
+        passedInTeam.WRThree.percentProjectedReceptionsThisWeekIsHigherOrLowerThanAverageReceptionsLastFiveWeeks =
+          +(
+            passedInTeam.WRThree.projectedReceptions4For4 /
+            passedInTeam.WRThree.receptionsPerGameInGamesPlayedLastFiveWeeks
+          ).toFixed(3);
       });
 
       ////////////////////////////
@@ -3532,6 +3591,28 @@ const populateTeamObjects = function (
             .replace('.', '')
             .replace('.', '')
             .replace("'", '');
+
+          //assign half ppr points per game last five weeks
+
+          if (passedInTeam.WROne.name === SanitizedPlayerName) {
+            // console.log(wr);
+            passedInTeam.WROne.halfPPRPointsPerGameLastFiveWeeks =
+              +wr['"0.5 PPR Pts/G"'];
+          }
+
+          if (passedInTeam.WRTwo.name === SanitizedPlayerName) {
+            // console.log(wr);
+            passedInTeam.WRTwo.halfPPRPointsPerGameLastFiveWeeks =
+              +wr['"0.5 PPR Pts/G"'];
+          }
+
+          if (passedInTeam.WRThree.name === SanitizedPlayerName) {
+            // console.log(wr);
+            passedInTeam.WRThree.halfPPRPointsPerGameLastFiveWeeks =
+              +wr['"0.5 PPR Pts/G"'];
+          }
+
+          //
 
           if (!passedInTeam.firstPassedInWRName) {
             passedInTeam.firstPassedInWRName = SanitizedPlayerName;
@@ -5907,6 +5988,30 @@ const populateTeamObjects = function (
   passedInTeam.WRThree.percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek =
     tempWRThreeMatchingWeeks /
     passedInTeam.WRThree.numberOfGamesPlayedLastFiveWeeks;
+
+  ///
+
+  passedInTeam.WROne.qbFantasyPointsScoredPerGameLastFiveWeeks =
+    qbDataPassedInTeam.fantasyPointsFromRushingPerGameLastFiveWeeks +
+    qbDataPassedInTeam.fantasyPointsFromPassingPerGameLastFiveWeeks;
+
+  passedInTeam.WRTwo.qbFantasyPointsScoredPerGameLastFiveWeeks =
+    qbDataPassedInTeam.fantasyPointsFromRushingPerGameLastFiveWeeks +
+    qbDataPassedInTeam.fantasyPointsFromPassingPerGameLastFiveWeeks;
+
+  passedInTeam.WRThree.qbFantasyPointsScoredPerGameLastFiveWeeks =
+    qbDataPassedInTeam.fantasyPointsFromRushingPerGameLastFiveWeeks +
+    qbDataPassedInTeam.fantasyPointsFromPassingPerGameLastFiveWeeks;
+
+  //
+  passedInTeam.WROne.teamRealLifePointsScoredPerGameLastFiveWeeks =
+    +gameInfoPassedInTeam.teamPointsPerGameLastFiveWeeks;
+
+  passedInTeam.WRTwo.teamRealLifePointsScoredPerGameLastFiveWeeks =
+    +gameInfoPassedInTeam.teamPointsPerGameLastFiveWeeks;
+
+  passedInTeam.WRThree.teamRealLifePointsScoredPerGameLastFiveWeeks =
+    +gameInfoPassedInTeam.teamPointsPerGameLastFiveWeeks;
 };
 
 populateTeamObjects(
@@ -6073,6 +6178,8 @@ populateTeamObjects(
 // console.log(wrrawdata);
 // console.log(wrrawdata.seahawks);
 // console.log(wrrawdata.vikings);
+// console.log(wrrawdata.buccaneers);
 // console.log(wrrawdata.bengals);
+// console.log(wrrawdata.giants);
 
 module.exports = wrrawdata;
