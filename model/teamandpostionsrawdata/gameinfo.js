@@ -35,6 +35,12 @@ const gameInfo = {
     teamPlaysPerSixtyMinNeutralSituations: 0,
     teamPlaysPerSixtyMinAllSituations: 0,
 
+    ///////////////////////////////////////////////////////////////////////
+    //////// Need to automate this below before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    teamPointsPerGameLastFiveWeeks: 26.5,
+    //////// Need to automate this above before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+
     def4for4projectedpoints: 0,
     teamDefDraftkingsSalary: 0,
     teamDefFanduelSalary: 0,
@@ -60,6 +66,12 @@ const gameInfo = {
     opponentABV: '',
     teamPlaysPerSixtyMinNeutralSituations: 0,
     teamPlaysPerSixtyMinAllSituations: 0,
+
+    ///////////////////////////////////////////////////////////////////////
+    //////// Need to automate this below before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    teamPointsPerGameLastFiveWeeks: 19.2,
+    //////// Need to automate this above before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    ////////////////////////////////////////////////////////////////////////////
 
     def4for4projectedpoints: 0,
     teamDefDraftkingsSalary: 0,
@@ -87,6 +99,12 @@ const gameInfo = {
     teamPlaysPerSixtyMinNeutralSituations: 0,
     teamPlaysPerSixtyMinAllSituations: 0,
 
+    ///////////////////////////////////////////////////////////////////////
+    //////// Need to automate this below before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    teamPointsPerGameLastFiveWeeks: 26.1,
+    //////// Need to automate this above before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+
     def4for4projectedpoints: 0,
     teamDefDraftkingsSalary: 0,
     teamDefFanduelSalary: 0,
@@ -112,6 +130,12 @@ const gameInfo = {
     opponentABV: '',
     teamPlaysPerSixtyMinNeutralSituations: 0,
     teamPlaysPerSixtyMinAllSituations: 0,
+
+    ///////////////////////////////////////////////////////////////////////
+    //////// Need to automate this below before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    teamPointsPerGameLastFiveWeeks: 28.4,
+    //////// Need to automate this above before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    ////////////////////////////////////////////////////////////////////////////
 
     def4for4projectedpoints: 0,
     teamDefDraftkingsSalary: 0,
@@ -139,6 +163,12 @@ const gameInfo = {
     teamPlaysPerSixtyMinNeutralSituations: 0,
     teamPlaysPerSixtyMinAllSituations: 0,
 
+    ///////////////////////////////////////////////////////////////////////
+    //////// Need to automate this below before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    teamPointsPerGameLastFiveWeeks: 16.9,
+    //////// Need to automate this above before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+
     def4for4projectedpoints: 0,
     teamDefDraftkingsSalary: 0,
     teamDefFanduelSalary: 0,
@@ -164,6 +194,12 @@ const gameInfo = {
     opponentABV: '',
     teamPlaysPerSixtyMinNeutralSituations: 0,
     teamPlaysPerSixtyMinAllSituations: 0,
+
+    ///////////////////////////////////////////////////////////////////////
+    //////// Need to automate this below before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    teamPointsPerGameLastFiveWeeks: 21.2,
+    //////// Need to automate this above before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    ////////////////////////////////////////////////////////////////////////////
 
     def4for4projectedpoints: 0,
     teamDefDraftkingsSalary: 0,
@@ -191,6 +227,12 @@ const gameInfo = {
     teamPlaysPerSixtyMinNeutralSituations: 0,
     teamPlaysPerSixtyMinAllSituations: 0,
 
+    ///////////////////////////////////////////////////////////////////////
+    //////// Need to automate this below before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    teamPointsPerGameLastFiveWeeks: 18.4,
+    //////// Need to automate this above before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+
     def4for4projectedpoints: 0,
     teamDefDraftkingsSalary: 0,
     teamDefFanduelSalary: 0,
@@ -216,6 +258,12 @@ const gameInfo = {
     opponentABV: '',
     teamPlaysPerSixtyMinNeutralSituations: 0,
     teamPlaysPerSixtyMinAllSituations: 0,
+
+    ///////////////////////////////////////////////////////////////////////
+    //////// Need to automate this below before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    teamPointsPerGameLastFiveWeeks: 20,
+    //////// Need to automate this above before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    ////////////////////////////////////////////////////////////////////////////
 
     def4for4projectedpoints: 0,
     teamDefDraftkingsSalary: 0,
@@ -243,6 +291,12 @@ const gameInfo = {
     teamPlaysPerSixtyMinNeutralSituations: 0,
     teamPlaysPerSixtyMinAllSituations: 0,
 
+    ///////////////////////////////////////////////////////////////////////
+    //////// Need to automate this below before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    teamPointsPerGameLastFiveWeeks: 23,
+    //////// Need to automate this above before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+
     def4for4projectedpoints: 0,
     teamDefDraftkingsSalary: 0,
     teamDefFanduelSalary: 0,
@@ -268,6 +322,12 @@ const gameInfo = {
     opponentABV: '',
     teamPlaysPerSixtyMinNeutralSituations: 0,
     teamPlaysPerSixtyMinAllSituations: 0,
+
+    ///////////////////////////////////////////////////////////////////////
+    //////// Need to automate this below before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    teamPointsPerGameLastFiveWeeks: 29.2,
+    //////// Need to automate this above before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    ////////////////////////////////////////////////////////////////////////////
 
     def4for4projectedpoints: 0,
     teamDefDraftkingsSalary: 0,
@@ -295,6 +355,12 @@ const gameInfo = {
     teamPlaysPerSixtyMinNeutralSituations: 0,
     teamPlaysPerSixtyMinAllSituations: 0,
 
+    ///////////////////////////////////////////////////////////////////////
+    //////// Need to automate this below before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    teamPointsPerGameLastFiveWeeks: 17,
+    //////// Need to automate this above before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+
     def4for4projectedpoints: 0,
     teamDefDraftkingsSalary: 0,
     teamDefFanduelSalary: 0,
@@ -320,6 +386,12 @@ const gameInfo = {
     opponentABV: '',
     teamPlaysPerSixtyMinNeutralSituations: 0,
     teamPlaysPerSixtyMinAllSituations: 0,
+
+    ///////////////////////////////////////////////////////////////////////
+    //////// Need to automate this below before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    teamPointsPerGameLastFiveWeeks: 18.9,
+    //////// Need to automate this above before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    ////////////////////////////////////////////////////////////////////////////
 
     def4for4projectedpoints: 0,
     teamDefDraftkingsSalary: 0,
@@ -347,6 +419,12 @@ const gameInfo = {
     teamPlaysPerSixtyMinNeutralSituations: 0,
     teamPlaysPerSixtyMinAllSituations: 0,
 
+    ///////////////////////////////////////////////////////////////////////
+    //////// Need to automate this below before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    teamPointsPerGameLastFiveWeeks: 27.5,
+    //////// Need to automate this above before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+
     def4for4projectedpoints: 0,
     teamDefDraftkingsSalary: 0,
     teamDefFanduelSalary: 0,
@@ -372,6 +450,12 @@ const gameInfo = {
     opponentABV: '',
     teamPlaysPerSixtyMinNeutralSituations: 0,
     teamPlaysPerSixtyMinAllSituations: 0,
+
+    ///////////////////////////////////////////////////////////////////////
+    //////// Need to automate this below before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    teamPointsPerGameLastFiveWeeks: 23.4,
+    //////// Need to automate this above before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    ////////////////////////////////////////////////////////////////////////////
 
     def4for4projectedpoints: 0,
     teamDefDraftkingsSalary: 0,
@@ -399,6 +483,12 @@ const gameInfo = {
     teamPlaysPerSixtyMinNeutralSituations: 0,
     teamPlaysPerSixtyMinAllSituations: 0,
 
+    ///////////////////////////////////////////////////////////////////////
+    //////// Need to automate this below before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    teamPointsPerGameLastFiveWeeks: 28.1,
+    //////// Need to automate this above before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+
     def4for4projectedpoints: 0,
     teamDefDraftkingsSalary: 0,
     teamDefFanduelSalary: 0,
@@ -425,6 +515,12 @@ const gameInfo = {
     teamPlaysPerSixtyMinNeutralSituations: 0,
     teamPlaysPerSixtyMinAllSituations: 0,
 
+    ///////////////////////////////////////////////////////////////////////
+    //////// Need to automate this below before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    teamPointsPerGameLastFiveWeeks: 21.5,
+    //////// Need to automate this above before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+
     def4for4projectedpoints: 0,
     teamDefDraftkingsSalary: 0,
     teamDefFanduelSalary: 0,
@@ -450,6 +546,12 @@ const gameInfo = {
     opponentABV: '',
     teamPlaysPerSixtyMinNeutralSituations: 0,
     teamPlaysPerSixtyMinAllSituations: 0,
+
+    ///////////////////////////////////////////////////////////////////////
+    //////// Need to automate this below before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    teamPointsPerGameLastFiveWeeks: 21.5,
+    //////// Need to automate this above before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    ////////////////////////////////////////////////////////////////////////////
 
     def4for4projectedpoints: 0,
     teamDefDraftkingsSalary: 0,
@@ -478,6 +580,12 @@ const gameInfo = {
     teamPlaysPerSixtyMinNeutralSituations: 0,
     teamPlaysPerSixtyMinAllSituations: 0,
 
+    ///////////////////////////////////////////////////////////////////////
+    //////// Need to automate this below before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    teamPointsPerGameLastFiveWeeks: 23.8,
+    //////// Need to automate this above before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+
     def4for4projectedpoints: 0,
     teamDefDraftkingsSalary: 0,
     teamDefFanduelSalary: 0,
@@ -503,6 +611,12 @@ const gameInfo = {
     opponentABV: '',
     teamPlaysPerSixtyMinNeutralSituations: 0,
     teamPlaysPerSixtyMinAllSituations: 0,
+
+    ///////////////////////////////////////////////////////////////////////
+    //////// Need to automate this below before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    teamPointsPerGameLastFiveWeeks: 17.4,
+    //////// Need to automate this above before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    ////////////////////////////////////////////////////////////////////////////
 
     def4for4projectedpoints: 0,
     teamDefDraftkingsSalary: 0,
@@ -530,6 +644,12 @@ const gameInfo = {
     teamPlaysPerSixtyMinNeutralSituations: 0,
     teamPlaysPerSixtyMinAllSituations: 0,
 
+    ///////////////////////////////////////////////////////////////////////
+    //////// Need to automate this below before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    teamPointsPerGameLastFiveWeeks: 26.6,
+    //////// Need to automate this above before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+
     def4for4projectedpoints: 0,
     teamDefDraftkingsSalary: 0,
     teamDefFanduelSalary: 0,
@@ -555,6 +675,12 @@ const gameInfo = {
     opponentABV: '',
     teamPlaysPerSixtyMinNeutralSituations: 0,
     teamPlaysPerSixtyMinAllSituations: 0,
+
+    ///////////////////////////////////////////////////////////////////////
+    //////// Need to automate this below before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    teamPointsPerGameLastFiveWeeks: 21.8,
+    //////// Need to automate this above before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    ////////////////////////////////////////////////////////////////////////////
 
     def4for4projectedpoints: 0,
     teamDefDraftkingsSalary: 0,
@@ -582,6 +708,12 @@ const gameInfo = {
     teamPlaysPerSixtyMinNeutralSituations: 0,
     teamPlaysPerSixtyMinAllSituations: 0,
 
+    ///////////////////////////////////////////////////////////////////////
+    //////// Need to automate this below before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    teamPointsPerGameLastFiveWeeks: 20.4,
+    //////// Need to automate this above before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+
     def4for4projectedpoints: 0,
     teamDefDraftkingsSalary: 0,
     teamDefFanduelSalary: 0,
@@ -608,6 +740,12 @@ const gameInfo = {
     teamPlaysPerSixtyMinNeutralSituations: 0,
     teamPlaysPerSixtyMinAllSituations: 0,
 
+    ///////////////////////////////////////////////////////////////////////
+    //////// Need to automate this below before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    teamPointsPerGameLastFiveWeeks: 21.4,
+    //////// Need to automate this above before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+
     def4for4projectedpoints: 0,
     teamDefDraftkingsSalary: 0,
     teamDefFanduelSalary: 0,
@@ -633,6 +771,12 @@ const gameInfo = {
     opponentABV: '',
     teamPlaysPerSixtyMinNeutralSituations: 0,
     teamPlaysPerSixtyMinAllSituations: 0,
+
+    ///////////////////////////////////////////////////////////////////////
+    //////// Need to automate this below before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    teamPointsPerGameLastFiveWeeks: 23.2,
+    //////// Need to automate this above before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    ////////////////////////////////////////////////////////////////////////////
 
     def4for4projectedpoints: 0,
     teamDefDraftkingsSalary: 0,
@@ -661,6 +805,12 @@ const gameInfo = {
     teamPlaysPerSixtyMinNeutralSituations: 0,
     teamPlaysPerSixtyMinAllSituations: 0,
 
+    ///////////////////////////////////////////////////////////////////////
+    //////// Need to automate this below before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    teamPointsPerGameLastFiveWeeks: 18.1,
+    //////// Need to automate this above before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+
     def4for4projectedpoints: 0,
     teamDefDraftkingsSalary: 0,
     teamDefFanduelSalary: 0,
@@ -686,6 +836,12 @@ const gameInfo = {
     opponentABV: '',
     teamPlaysPerSixtyMinNeutralSituations: 0,
     teamPlaysPerSixtyMinAllSituations: 0,
+
+    ///////////////////////////////////////////////////////////////////////
+    //////// Need to automate this below before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    teamPointsPerGameLastFiveWeeks: 20.6,
+    //////// Need to automate this above before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    ////////////////////////////////////////////////////////////////////////////
 
     def4for4projectedpoints: 0,
     teamDefDraftkingsSalary: 0,
@@ -713,6 +869,12 @@ const gameInfo = {
     teamPlaysPerSixtyMinNeutralSituations: 0,
     teamPlaysPerSixtyMinAllSituations: 0,
 
+    ///////////////////////////////////////////////////////////////////////
+    //////// Need to automate this below before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    teamPointsPerGameLastFiveWeeks: 19.4,
+    //////// Need to automate this above before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+
     def4for4projectedpoints: 0,
     teamDefDraftkingsSalary: 0,
     teamDefFanduelSalary: 0,
@@ -738,6 +900,12 @@ const gameInfo = {
     opponentABV: '',
     teamPlaysPerSixtyMinNeutralSituations: 0,
     teamPlaysPerSixtyMinAllSituations: 0,
+
+    ///////////////////////////////////////////////////////////////////////
+    //////// Need to automate this below before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    teamPointsPerGameLastFiveWeeks: 23.9,
+    //////// Need to automate this above before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    ////////////////////////////////////////////////////////////////////////////
 
     def4for4projectedpoints: 0,
     teamDefDraftkingsSalary: 0,
@@ -765,6 +933,12 @@ const gameInfo = {
     teamPlaysPerSixtyMinNeutralSituations: 0,
     teamPlaysPerSixtyMinAllSituations: 0,
 
+    ///////////////////////////////////////////////////////////////////////
+    //////// Need to automate this below before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    teamPointsPerGameLastFiveWeeks: 18.1,
+    //////// Need to automate this above before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+
     def4for4projectedpoints: 0,
     teamDefDraftkingsSalary: 0,
     teamDefFanduelSalary: 0,
@@ -791,6 +965,12 @@ const gameInfo = {
     teamPlaysPerSixtyMinNeutralSituations: 0,
     teamPlaysPerSixtyMinAllSituations: 0,
 
+    ///////////////////////////////////////////////////////////////////////
+    //////// Need to automate this below before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    teamPointsPerGameLastFiveWeeks: 17,
+    //////// Need to automate this above before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+
     def4for4projectedpoints: 0,
     teamDefDraftkingsSalary: 0,
     teamDefFanduelSalary: 0,
@@ -816,6 +996,12 @@ const gameInfo = {
     opponentABV: '',
     teamPlaysPerSixtyMinNeutralSituations: 0,
     teamPlaysPerSixtyMinAllSituations: 0,
+
+    ///////////////////////////////////////////////////////////////////////
+    //////// Need to automate this below before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    teamPointsPerGameLastFiveWeeks: 17.5,
+    //////// Need to automate this above before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    ////////////////////////////////////////////////////////////////////////////
 
     def4for4projectedpoints: 0,
     teamDefDraftkingsSalary: 0,
@@ -844,6 +1030,12 @@ const gameInfo = {
     opponentABV: '',
     teamPlaysPerSixtyMinNeutralSituations: 0,
     teamPlaysPerSixtyMinAllSituations: 0,
+
+    ///////////////////////////////////////////////////////////////////////
+    //////// Need to automate this below before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    teamPointsPerGameLastFiveWeeks: 24.9,
+    //////// Need to automate this above before 2023 season!!!!!!!!!!!!!!!!!!!!!///////////////////////
+    ////////////////////////////////////////////////////////////////////////////
 
     def4for4projectedpoints: 0,
     teamDefDraftkingsSalary: 0,
