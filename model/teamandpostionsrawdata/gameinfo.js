@@ -1077,8 +1077,11 @@ const populateTeamObjects = function (passedInTeam) {
     wholeDownloadableSpreadSheetYahoo.forEach(function (object, i) {
       if (i < qbDownloadableSpreadSheetYahoo.length) {
         settingTeamName = qbDownloadableSpreadSheetYahoo[i].Team;
-        // console.log(settingTeamName);
-        if (passedInTeam.teamABV === settingTeamName) {
+        // console.log(settingTeamName, passedInTeam.teamABV);
+        if (
+          passedInTeam.teamABV === settingTeamName ||
+          passedInTeam.altTeamABV === settingTeamName
+        ) {
           // console.log(
           //   `${passedInTeam.teamABV}: ${qbDownloadableSpreadSheetYahoo[i]['Team O/U']}`
           // );

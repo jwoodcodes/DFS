@@ -172,11 +172,8 @@ class WrObject {
   //
   //  -calculate and assign this.appProjectedPoints
   //
+  //
   //                   still need to do
-
-  //
-  //
-  //
 
   //  - calulate and assign appProjections per dollar on each site
   //  - calculate and assign 4for4 projections per percent of cap on each site
@@ -189,6 +186,52 @@ class WrObject {
   // - calculate projeted ownership: use 4for4 projections per dollar and QB projected ownership to assin a baseline projected ownership and then adjust that using the two numbers from the step above for each player on each site.
 
   calcAppProjectedPoints() {
+    // for weeks 1 & 2
+
+    if (gameInfo.week.currentWeek < 3) {
+      let tempHalfProjection = +(
+        (this.fourForFourHalfPPRProjectedPoints +
+          this.fourForFourHalfPPRProjectedPoints +
+          this.fourForFourHalfPPRProjectedPoints +
+          this.halfGLSPAvg) /
+        4
+      ).toFixed(2);
+
+      let tempPPRProjection = +(
+        (this.fourForFourFullPPRProjectedPoints +
+          this.fourForFourFullPPRProjectedPoints +
+          this.fourForFourFullPPRProjectedPoints +
+          this.PPRGLSPAvg) /
+        4
+      ).toFixed(2);
+
+      this.appHalfProjectedPoints = tempHalfProjection;
+      this.appFullProjectedPoints = tempPPRProjection;
+    }
+
+    // for weeks 3 & 4
+
+    if (gameInfo.week.currentWeek === 3 || gameInfo.week.currentWeek === 4) {
+      let tempHalfProjection = +(
+        (this.fourForFourHalfPPRProjectedPoints +
+          this.fourForFourHalfPPRProjectedPoints +
+          this.halfGLSPAvg) /
+        3
+      ).toFixed(2);
+
+      let tempPPRProjection = +(
+        (this.fourForFourFullPPRProjectedPoints +
+          this.fourForFourFullPPRProjectedPoints +
+          this.PPRGLSPAvg) /
+        3
+      ).toFixed(2);
+
+      this.appHalfProjectedPoints = tempHalfProjection;
+      this.appFullProjectedPoints = tempPPRProjection;
+    }
+
+    // for weeks 4-18
+
     if (gameInfo.week.currentWeek > 4) {
       if (
         this.roleScorePercentageThisWeek &&
