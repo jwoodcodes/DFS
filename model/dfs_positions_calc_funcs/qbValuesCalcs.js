@@ -5,6 +5,7 @@ const qbrawdata = require('../teamandpostionsrawdata/qbrawdata');
 
 const gameInfo = require('../teamandpostionsrawdata/gameinfo');
 const { match } = require('assert');
+const { jaguars } = require('../teamandpostionsrawdata/gameinfo');
 
 const allQBTotalScores = [];
 const allQBGLSPScores = [];
@@ -31,7 +32,9 @@ class QbObject {
     byeWeek,
     homeOrAway,
     slate,
+    vtt,
     teamProjectedPoints,
+    teamPointsPerGameLastFiveWeeks,
     hadByeInLastFiveWeeksIsTrue,
 
     appProjectedPoints,
@@ -41,6 +44,10 @@ class QbObject {
     fantasyPointsFromPassingPerGameLastFiveWeeks,
     passAttemptsPerGameLastFiveWeeks,
     fantasyPointsPerPassAttemptLastFiveWeeks,
+    glspavg,
+    twentyFifthPercentProjectedPoints,
+    seventyFifthPercentProjectedPoints,
+    fourForFourFullPPRProjectedPoints,
 
     yahooSalary,
     fanduelSalary,
@@ -63,7 +70,9 @@ class QbObject {
     this.byeWeek = byeWeek;
     this.homeOrAway = homeOrAway;
     this.slate = slate;
+    this.vtt = vtt;
     this.teamProjectedPoints = teamProjectedPoints;
+    this.teamPointsPerGameLastFiveWeeks = teamPointsPerGameLastFiveWeeks;
     this.hadByeInLastFiveWeeksIsTrue = hadByeInLastFiveWeeksIsTrue;
 
     this.appProjectedPoints = appProjectedPoints;
@@ -76,6 +85,10 @@ class QbObject {
     this.passAttemptsPerGameLastFiveWeeks = passAttemptsPerGameLastFiveWeeks;
     this.fantasyPointsPerPassAttemptLastFiveWeeks =
       fantasyPointsPerPassAttemptLastFiveWeeks;
+    this.glspavg = glspavg;
+    this.twentyFifthPercentProjectedPoints;
+    this.seventyFifthPercentProjectedPoints;
+    this.fourForFourFullPPRProjectedPoints = fourForFourFullPPRProjectedPoints;
 
     this.yahooSalary = yahooSalary;
     this.fanduelSalary = fanduelSalary;
@@ -710,13 +723,17 @@ if (gameInfo.week.currentWeek < 3) {
       valueFromGLSP = +allQBs[i].seventyFifthPercentProjectedPoints;
     }
 
-    let tempTotalValue =
-      +team.fourForFourHalfPPRProjectedPoints.toFixed(2) +
-      +team.fourForFourHalfPPRProjectedPoints.toFixed(2) +
-      +team.fourForFourHalfPPRProjectedPoints.toFixed(2) +
-      valueFromGLSP;
+    if (valueFromGLSP && valueFromGLSP > 0) {
+      let tempTotalValue =
+        +team.fourForFourHalfPPRProjectedPoints.toFixed(2) +
+        +team.fourForFourHalfPPRProjectedPoints.toFixed(2) +
+        +team.fourForFourHalfPPRProjectedPoints.toFixed(2) +
+        valueFromGLSP;
 
-    let tempValue = +(tempTotalValue / 4).toFixed(2);
+      let tempValue = +(tempTotalValue / 4).toFixed(2);
+    } else {
+      let tempValue = +team.fourForFourHalfPPRProjectedPoints.toFixed(2);
+    }
 
     QBProjectedPoints = tempValue;
     team.appQBProjectedPoints = +QBProjectedPoints;
@@ -745,12 +762,16 @@ if (gameInfo.week.currentWeek > 2 && gameInfo.week.currentWeek < 5) {
       valueFromGLSP = +allQBs[i].seventyFifthPercentProjectedPoints;
     }
 
-    let tempTotalValue =
-      +team.fourForFourHalfPPRProjectedPoints.toFixed(2) +
-      +team.fourForFourHalfPPRProjectedPoints.toFixed(2) +
-      valueFromGLSP;
+    if (valueFromGLSP && valueFromGLSP > 0) {
+      let tempTotalValue =
+        +team.fourForFourHalfPPRProjectedPoints.toFixed(2) +
+        +team.fourForFourHalfPPRProjectedPoints.toFixed(2) +
+        valueFromGLSP;
 
-    let tempValue = +(tempTotalValue / 3).toFixed(2);
+      let tempValue = +(tempTotalValue / 3).toFixed(2);
+    } else {
+      let tempValue = +team.fourForFourHalfPPRProjectedPoints.toFixed(2);
+    }
 
     QBProjectedPoints = tempValue;
     team.appQBProjectedPoints = +QBProjectedPoints;
@@ -976,8 +997,9 @@ allQBs.forEach(function (team, i) {
 
   let teamName = '';
   allTeams.forEach(function (giTeam) {
-    if (team.teamABV === giTeam.teamABV) {
+    if (team.teamABV === giTeam.teamABV || team.teamABV === giTeam.altTeamABV) {
       teamName = giTeam.teamName;
+      teamPointsPerGameLastFiveWeeks = giTeam.teamPointsPerGameLastFiveWeeks;
       byeWeek = giTeam.byeWeek2022;
       hadByeInLastFiveWeeksIsTrue = giTeam.hadByeInTheLastFiveweeks;
       opponentTeamName = giTeam.opponentThisWeek.teamName;
@@ -998,7 +1020,9 @@ allQBs.forEach(function (team, i) {
     byeWeek,
     homeOrAway,
     team.slate,
-    team.teamProjectedPoints,
+    +team.teamVTT,
+    +team.teamProjectedPoints,
+    +teamPointsPerGameLastFiveWeeks,
     hadByeInLastFiveWeeksIsTrue,
     team.appQBProjectedPoints,
     team.prjpassattempts,
@@ -1007,6 +1031,10 @@ allQBs.forEach(function (team, i) {
     team.fantasyPointsFromPassingPerGameLastFiveWeeks,
     team.passAttemptsPerGameLastFiveWeeks,
     team.fantasyPointsPerPassAttemptLastFiveWeeks,
+    team.glspavg,
+    team.twentyFifthPercentProjectedPoints,
+    team.seventyFifthPercentProjectedPoints,
+    team.fourForFourFullPPRProjectedPoints,
     team.yahooSalary,
     team.fanduelSalary,
     team.draftkingsSalary,
