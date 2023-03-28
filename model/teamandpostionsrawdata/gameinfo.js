@@ -1527,6 +1527,7 @@ const populateTeamObjects = function (passedInTeam) {
         let teamDefScoreForGameEvironmentAndGameScript = 0;
 
         passedInTeam.defEPAPerPlayRank = +team['"total_epa_pp"'];
+        passedInTeam.defEPAAgainstTheRun = +team['"rush_epa_pp"'];
         passedInTeam.defPointsPerGameAllowedRank = +team['"ppg"'];
         passedInTeam.defPlaySuccessRatePercentageAgainstRank =
           +team['"play_sr"'];

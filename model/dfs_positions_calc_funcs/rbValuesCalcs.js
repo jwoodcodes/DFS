@@ -175,6 +175,7 @@ class RbObject {
     opponentTeamName,
     opponentABV,
     opponentTeamProjectedPoints,
+    opposingTeamRankInDefEPAAgainstTheRunLastFiveWeeks,
 
     halfGLSPAVG,
     fullGLSPAVG,
@@ -185,7 +186,8 @@ class RbObject {
     PPRFiftyithPercentProjectedPoints,
     PPRSeventyFifthPercentProjectedPoints,
     fourForFourHalfPPRProjectedPoints,
-    fourForFourFullPPRProjectedPoints
+    fourForFourFullPPRProjectedPoints,
+    halfFantasyPointsPerGameLastFiveWeeks
   ) {
     this.playerName = playerName;
     this.position = position;
@@ -231,6 +233,8 @@ class RbObject {
     this.opponentTeamName = opponentTeamName;
     this.opponentABV = opponentABV;
     this.opponentTeamProjectedPoints = opponentTeamProjectedPoints;
+    this.opposingTeamRankInDefEPAAgainstTheRunLastFiveWeeks =
+      opposingTeamRankInDefEPAAgainstTheRunLastFiveWeeks;
 
     this.halfGLSPAVG = halfGLSPAVG;
     this.fullGLSPAVG = fullGLSPAVG;
@@ -247,6 +251,8 @@ class RbObject {
       PPRSeventyFifthPercentProjectedPoints;
     this.fourForFourHalfPPRProjectedPoints = fourForFourHalfPPRProjectedPoints;
     this.fourForFourFullPPRProjectedPoints = fourForFourFullPPRProjectedPoints;
+    this.halfFantasyPointsPerGameLastFiveWeeks =
+      halfFantasyPointsPerGameLastFiveWeeks;
   }
 
   //add methods here
@@ -342,71 +348,157 @@ class RbObject {
       homeORAwayFavOrDog = 0.75;
     }
 
+    let fanastyPointsProjectedComparedToLastFiveWeeksAdjustor = +(
+      this.fourForFourHalfPPRProjectedPoints /
+      this.halfFantasyPointsPerGameLastFiveWeeks
+    ).toFixed(3);
+
     ////////////////
+
+    //weeks 1 and 2
+
+    if (gameInfo.week.currentWeek < 3) {
+      if (this.halfGLSPAVG) {
+        this.appProjectedHalfPPRPoints = +(
+          (this.fourForFourHalfPPRProjectedPoints +
+            this.fourForFourHalfPPRProjectedPoints +
+            this.fourForFourHalfPPRProjectedPoints +
+            this.halfGLSPAVG) /
+          4
+        ).toFixed(2);
+      } else {
+        this.appProjectedHalfPPRPoints = this.fourForFourHalfPPRProjectedPoints;
+      }
+
+      if (this.fullGLSPAVG) {
+        this.appProjectedFullPPRPoints = +(
+          (this.fourForFourFullPPRProjectedPoints +
+            this.fourForFourFullPPRProjectedPoints +
+            this.fourForFourFullPPRProjectedPoints +
+            this.fullGLSPAVG) /
+          4
+        ).toFixed(2);
+      } else {
+        this.appProjectedFullPPRPoints = this.fourForFourFullPPRProjectedPoints;
+      }
+    }
+
+    //weeks 3 and 4
+
+    if (gameInfo.week.currentWeek > 2 && gameInfo.week.currentWeek < 5) {
+      if (this.halfGLSPAVG) {
+        this.appProjectedHalfPPRPoints = +(
+          (this.fourForFourHalfPPRProjectedPoints +
+            this.fourForFourHalfPPRProjectedPoints +
+            this.halfGLSPAVG) /
+          3
+        ).toFixed(2);
+      } else {
+        this.appProjectedHalfPPRPoints = this.fourForFourHalfPPRProjectedPoints;
+      }
+
+      if (this.fullGLSPAVG) {
+        this.appProjectedFullPPRPoints = +(
+          (this.fourForFourFullPPRProjectedPoints +
+            this.fourForFourFullPPRProjectedPoints +
+            this.fullGLSPAVG) /
+          3
+        ).toFixed(2);
+      } else {
+        this.appProjectedFullPPRPoints = this.fourForFourFullPPRProjectedPoints;
+      }
+    }
+
+    //weeks 5-18
 
     if (gameInfo.week.currentWeek > 4) {
       if (
         this.percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek >
         0.49
       ) {
-        if (roleAdjustor) {
-          this.baselineAppHalfProjection = +(+this.halfGLSPAVG).toFixed(2);
-          this.baselineAppPPRProjection = +(+this.fullGLSPAVG).toFixed(2);
+        if (this.halfGLSPAVG) {
+          if (roleAdjustor) {
+            this.baselineAppHalfProjection = +(+this.halfGLSPAVG).toFixed(2);
+            this.baselineAppPPRProjection = +(+this.fullGLSPAVG).toFixed(2);
 
-          this.appProjectedHalfPPRPoints = +(
-            (this.baselineAppHalfProjection +
-              this.fourForFourHalfPPRProjectedPoints) /
-            2
-          ).toFixed(2);
-          this.appProjectedFullPPRPoints = +(
-            (this.baselineAppPPRProjection +
-              this.fourForFourFullPPRProjectedPoints) /
-            2
-          ).toFixed(2);
+            this.appProjectedHalfPPRPoints = +(
+              (this.baselineAppHalfProjection +
+                this.fourForFourHalfPPRProjectedPoints) /
+              2
+            ).toFixed(2);
+            this.appProjectedFullPPRPoints = +(
+              (this.baselineAppPPRProjection +
+                this.fourForFourFullPPRProjectedPoints) /
+              2
+            ).toFixed(2);
 
-          // console.log(
-          //   this.playerName,
-          //   this.fourForFourFullPPRProjectedPoints,
-          //   this.fullGLSPAVG,
-          //   this.appProjectedHalfPPRPoints,
-          //   +this.appProjectedFullPPRPoints
-          //   // homeORAwayFavOrDog
-          //   // teamScoringAdjustor,
-          //   // this.percentOfTeamHVTsLastFiveWeeks,
-          //   // this.FPOEPerGameLastFiveWeeks
-          // );
+            // console.log(
+            //   this.playerName,
+
+            //   +this.appProjectedFullPPRPoints,
+
+            // );
+
+            // console.log(
+            //   this.playerName,
+            //   this.fourForFourFullPPRProjectedPoints
+
+            // +this.appProjectedFullPPRPoints,
+            // fanastyPointsProjectedComparedToLastFiveWeeksAdjustor
+            // homeORAwayFavOrDog
+            // teamScoringAdjustor,
+            // this.percentOfTeamHVTsLastFiveWeeks,
+            // this.FPOEPerGameLastFiveWeeks
+            // );
+          } else {
+            // console.log(this.playerName)
+
+            this.appProjectedHalfPPRPoints =
+              this.fourForFourHalfPPRProjectedPoints;
+            this.appProjectedFullPPRPoints =
+              this.fourForFourFullPPRProjectedPoints;
+          }
         } else {
+          // console.log(this.playerName);
+          this.appProjectedHalfPPRPoints =
+            this.fourForFourHalfPPRProjectedPoints;
+          this.appProjectedFullPPRPoints =
+            this.fourForFourFullPPRProjectedPoints;
         }
       } else {
-        if (roleAdjustor) {
-          this.baselineAppHalfProjection = +(
-            +this.halfGLSPAVG * +roleAdjustor
-          ).toFixed(2);
-          this.baselineAppPPRProjection = +(
-            +this.fullGLSPAVG * +roleAdjustor
-          ).toFixed(2);
+        if (this.halfGLSPAVG) {
+          if (roleAdjustor) {
+            this.baselineAppHalfProjection = +(
+              +this.halfGLSPAVG * +roleAdjustor
+            ).toFixed(2);
+            this.baselineAppPPRProjection = +(
+              +this.fullGLSPAVG * +roleAdjustor
+            ).toFixed(2);
 
-          this.testHalfProjection = +(
-            (this.baselineAppHalfProjection +
-              this.fourForFourHalfPPRProjectedPoints) /
-            2
-          ).toFixed(2);
+            this.testHalfProjection = +(
+              (this.baselineAppHalfProjection +
+                this.fourForFourHalfPPRProjectedPoints) /
+              2
+            ).toFixed(2);
 
-          this.testPPRProjection = +(
-            (this.baselineAppPPRProjection +
-              this.fourForFourFullPPRProjectedPoints) /
-            2
-          ).toFixed(2);
+            this.testPPRProjection = +(
+              (this.baselineAppPPRProjection +
+                this.fourForFourFullPPRProjectedPoints) /
+              2
+            ).toFixed(2);
 
-          this.appProjectedHalfPPRPoints = this.testHalfProjection;
-          this.appProjectedFullPPRPoints = this.testPPRProjection;
+            this.appProjectedHalfPPRPoints = this.testHalfProjection;
+            this.appProjectedFullPPRPoints = this.testPPRProjection;
 
-          // console.log(
-          //   this.playerName,
-          //   this.fourForFourFullPPRProjectedPoints,
-          //   this.appProjectedFullPPRPoints
+            // console.log(this.playerName, this.fourForFourFullPPRProjectedPoints);
+          } else {
+            // console.log(this.playerName);
 
-          // );
+            this.appProjectedHalfPPRPoints =
+              this.fourForFourHalfPPRProjectedPoints;
+            this.appProjectedFullPPRPoints =
+              this.fourForFourFullPPRProjectedPoints;
+          }
         } else {
           // console.log(this.playerName);
 
@@ -1045,6 +1137,7 @@ allRBs.forEach(function (team, i) {
     opponentTeamName,
     opponentABV,
     opponentTeamProjectedPoints,
+    team.RBOne.opposingTeamRankInDefEPAAgainstTheRunLastFiveWeeks,
     team.RBOne.glspHalfavg,
     team.RBOne.glspPPRavg,
     team.RBOne.halfTwentyFifthPercentProjectedPoints,
@@ -1054,7 +1147,8 @@ allRBs.forEach(function (team, i) {
     team.RBOne.PPRFiftyithPercentProjectedPoints,
     team.RBOne.PPRSeventyFifthPercentProjectedPoints,
     team.RBOne.fourForFourHalfPPRProjectedPoints,
-    team.RBOne.fourForFourFullPPRProjectedPoints
+    team.RBOne.fourForFourFullPPRProjectedPoints,
+    team.RBOne.fantasyPointsPerGameLastFiveWeeks
   );
 
   rbObject.calcAppProjectedPoints();
@@ -1127,6 +1221,7 @@ allRBs.forEach(function (team, i) {
     opponentTeamName,
     opponentABV,
     opponentTeamProjectedPoints,
+    team.RBTwo.opposingTeamRankInDefEPAAgainstTheRunLastFiveWeeks,
     team.RBTwo.glspHalfavg,
     team.RBTwo.glspPPRavg,
     team.RBTwo.halfTwentyFifthPercentProjectedPoints,
@@ -1136,7 +1231,8 @@ allRBs.forEach(function (team, i) {
     team.RBTwo.PPRFiftyithPercentProjectedPoints,
     team.RBTwo.PPRSeventyFifthPercentProjectedPoints,
     team.RBTwo.fourForFourHalfPPRProjectedPoints,
-    team.RBTwo.fourForFourFullPPRProjectedPoints
+    team.RBTwo.fourForFourFullPPRProjectedPoints,
+    team.RBTwo.fantasyPointsPerGameLastFiveWeeks
   );
 
   rbObject.calcAppProjectedPoints();
