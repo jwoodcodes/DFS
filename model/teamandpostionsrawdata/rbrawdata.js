@@ -3135,6 +3135,75 @@ const populateTeamObjects = function (
           }
         }
       }
+      ///////////////////////////////////////////////////////////////////
+
+      // assinging total fantasy points scored last five weeks
+
+      if (rbName === passedInTeam.RBOne.name) {
+        if (weekFiveWeeksAgo === '-') {
+          weekFiveWeeksAgo = 0;
+        }
+        if (weekFourWeeksAgo === '-') {
+          weekFourWeeksAgo = 0;
+        }
+        if (weekThreeWeeksAgo === '-') {
+          weekThreeWeeksAgo = 0;
+        }
+        if (weekTwoWeeksAgo === '-') {
+          weekTwoWeeksAgo = 0;
+        }
+        if (weekLastWeek === '-') {
+          weekLastWeek = 0;
+        }
+        let tempTotalNumberOfFantasypointsScoredLastFiveWeeks = +(
+          +weekFiveWeeksAgo +
+          +weekFourWeeksAgo +
+          +weekThreeWeeksAgo +
+          +weekTwoWeeksAgo +
+          +weekLastWeek
+        ).toFixed(2);
+        // console.log(
+        //   passedInTeam.RBOne.name,
+        //   tempTotalNumberOfFantasypointsScoredLastFiveWeeks
+        // );
+        passedInTeam.RBOne.totalNumberOfFantasyPointsScoredLastFiveWeeks =
+          +tempTotalNumberOfFantasypointsScoredLastFiveWeeks;
+      }
+
+      if (rbName === passedInTeam.RBTwo.name) {
+        // console.log(passedInTeam.RBTwo.name);
+        if (weekFiveWeeksAgo === '-') {
+          weekFiveWeeksAgo = 0;
+        }
+        if (weekFourWeeksAgo === '-') {
+          weekFourWeeksAgo = 0;
+        }
+        if (weekThreeWeeksAgo === '-') {
+          weekThreeWeeksAgo = 0;
+        }
+        if (weekTwoWeeksAgo === '-') {
+          weekTwoWeeksAgo = 0;
+        }
+        if (weekLastWeek === '-') {
+          weekLastWeek = 0;
+        }
+        let tempTotalNumberOfFantasypointsScoredLastFiveWeeks = +(
+          +weekFiveWeeksAgo +
+          +weekFourWeeksAgo +
+          +weekThreeWeeksAgo +
+          +weekTwoWeeksAgo +
+          +weekLastWeek
+        ).toFixed(2);
+        // console.log(
+        //   passedInTeam.RBTwo.name,
+        //   tempTotalNumberOfFantasypointsScoredLastFiveWeeks
+        // );
+
+        passedInTeam.RBTwo.totalNumberOfFantasyPointsScoredLastFiveWeeks =
+          +tempTotalNumberOfFantasypointsScoredLastFiveWeeks;
+      }
+
+      //////////////////////////////////////////////////////////////////////////////
     }
   });
 
@@ -6256,6 +6325,25 @@ const populateTeamObjects = function (
     passedInTeam.projectedQBPassAttemptsThisWeek =
       qbInfoPassedInTeam.prjpassattempts;
   });
+
+  //
+
+  passedInTeam.RBOne.fantasyPointsPerGameLastFiveWeeks = +(
+    passedInTeam.RBOne.totalNumberOfFantasyPointsScoredLastFiveWeeks /
+    passedInTeam.RBOne.numberOfGamesPlayedLastFiveWeeks
+  ).toFixed(2);
+
+  passedInTeam.RBTwo.fantasyPointsPerGameLastFiveWeeks = +(
+    passedInTeam.RBTwo.totalNumberOfFantasyPointsScoredLastFiveWeeks /
+    passedInTeam.RBTwo.numberOfGamesPlayedLastFiveWeeks
+  ).toFixed(2);
+
+  //
+
+  passedInTeam.RBOne.opposingTeamRankInDefEPAAgainstTheRunLastFiveWeeks =
+    gameInfoPassedInTeam.defEPAAgainstTheRun;
+  passedInTeam.RBTwo.opposingTeamRankInDefEPAAgainstTheRunLastFiveWeeks =
+    gameInfoPassedInTeam.defEPAAgainstTheRun;
 };
 
 populateTeamObjects(rbrawdata.SF49ers, gameInfo.SF49ers, qbrawdata.SF49ers);
