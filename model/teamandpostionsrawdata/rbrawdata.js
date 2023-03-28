@@ -6408,6 +6408,7 @@ populateTeamObjects(rbrawdata.vikings, gameInfo.vikings, qbrawdata.vikings);
 // console.log(rbrawdata.ravens);
 // console.log(rbrawdata.saints);
 // console.log(rbrawdata.vikings);
+//
 
 // console.log(rbrawdata);
 
