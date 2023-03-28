@@ -2728,7 +2728,11 @@ const tempteamRBTotalsthreeWeeksAgo = [];
 const tempteamRBTotalstwoWeeksAgo = [];
 const tempteamRBTotalslasWeek = [];
 
-const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
+const populateTeamObjects = function (
+  passedInTeam,
+  gameInfoPassedInTeam,
+  qbInfoPassedInTeam
+) {
   passedInTeam.RBOne.name = gameInfoPassedInTeam.RBOneThisWeekName;
   passedInTeam.RBTwo.name = gameInfoPassedInTeam.RBTwoThisWeekName;
 
@@ -5910,13 +5914,31 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
         passedInTeam.teamABV === team['"posteam"'].slice(1, -1) ||
         passedInTeam.altTeamABV === team['"posteam"'].slice(1, -1)
       ) {
+        // console.log(team);
         if (!passedInTeam.teamTotalGreenZoneTouchesLastFiveWeeks) {
           passedInTeam.teamTotalGreenZoneTouchesLastFiveWeeks = +(
             +team['"i10_carries"'] / +team['"pct_team_i10_carries"']
           ).toFixed(2);
         }
       }
-      // }
+
+      if (
+        passedInTeam.RBOne.name === team['"full_name"'].slice(1, -1) ||
+        passedInTeam.RBOne.altname === team['"full_name"'].slice(1, -1)
+      ) {
+        passedInTeam.RBOne.I10CarriesLastFiveWeeks = +team['"i10_carries"'];
+        passedInTeam.RBOne.totalCarriesLastFiveWeeks = +team['"carries"'];
+        passedInTeam.RBOne.carriesPerGameLastFiveWeeks = +team['"carries_pg"'];
+      }
+
+      if (
+        passedInTeam.RBTwo.name === team['"full_name"'].slice(1, -1) ||
+        passedInTeam.RBTwo.altname === team['"full_name"'].slice(1, -1)
+      ) {
+        passedInTeam.RBTwo.I10CarriesLastFiveWeeks = +team['"i10_carries"'];
+        passedInTeam.RBTwo.totalCarriesLastFiveWeeks = +team['"carries"'];
+        passedInTeam.RBTwo.carriesPerGameLastFiveWeeks = +team['"carries_pg"'];
+      }
     });
     // console.log(
     //   (passedInTeam.teamABV, passedInTeam.teamI10CarriesLastFiveWeeks)
@@ -5930,6 +5952,7 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
           passedInTeam.RBOne.altname === rb['"full_name"'].slice(1, -1)
         )
           passedInTeam.RBOne.FPOEPerGameLastFiveWeeks = +rb['"fpoe_pg"'];
+
         // console.log(
         //   passedInTeam.RBOne.name,
         //   passedInTeam.RBOne.FPOEPerGameLastFiveWeeks
@@ -5940,6 +5963,7 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
           passedInTeam.RBTwo.altname === rb['"full_name"'].slice(1, -1)
         ) {
           passedInTeam.RBTwo.FPOEPerGameLastFiveWeeks = +rb['"fpoe_pg"'];
+
           // console.log(
           //   passedInTeam.RBOne.name,
           //   passedInTeam.RBOne.FPOEPerGameLastFiveWeeks
@@ -5985,6 +6009,8 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
         ) {
           // console.log(team);
           passedInTeam.RBOne.fourForFourFullPPRProjectedPoints = +team.FFPts;
+          passedInTeam.RBOne.projectedCarriesThisWeek = +team['Rush Att'];
+          passedInTeam.RBOne.projectedReceptionsThisWeek = +team.Rec;
         }
         // if (passedInTeam.RBTwo.name === 'AJ Dillon') {
         //   console.log(
@@ -6000,6 +6026,8 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
         ) {
           // console.log(team);
           passedInTeam.RBTwo.fourForFourFullPPRProjectedPoints = +team.FFPts;
+          passedInTeam.RBTwo.projectedCarriesThisWeek = +team['Rush Att'];
+          passedInTeam.RBTwo.projectedReceptionsThisWeek = +team.Rec;
         }
       }
     });
@@ -6015,6 +6043,8 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
         passedInTeam.RBOne.targetSharePercentageLastFiveWeeks = +(
           team['"target_share"'] * 100
         ).toFixed(2);
+
+        passedInTeam.RBOne.receptionsPerGameLastFiveWeeks = +team['"rec_pg"'];
       }
 
       if (
@@ -6023,9 +6053,12 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
           team['"full_name"'].slice(1, -1).replace('.', '').replace('.', '')
       ) {
         // console.log((team['"target_share"'] * 100).toFixed(2));
+
         passedInTeam.RBTwo.targetSharePercentageLastFiveWeeks = +(
           team['"target_share"'] * 100
         ).toFixed(2);
+
+        passedInTeam.RBTwo.receptionsPerGameLastFiveWeeks = +team['"rec_pg"'];
       }
     });
 
@@ -6133,41 +6166,142 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
     if (gameInfoPassedInTeam.teamProjectedForAHalfOfNegetiveGameScriptIsTrue) {
       passedInTeam.teamProjectedForAHalfOfNegetiveGameScriptIsTrue = true;
     }
+
+    ////
+
+    passedInTeam.RBOne.totalReceptionsLastFiveWeeks = +(
+      passedInTeam.RBOne.totalHVTsLastFiveWeeks -
+      passedInTeam.RBOne.I10CarriesLastFiveWeeks
+    );
+    passedInTeam.RBTwo.totalReceptionsLastFiveWeeks = +(
+      passedInTeam.RBTwo.totalHVTsLastFiveWeeks -
+      passedInTeam.RBTwo.I10CarriesLastFiveWeeks
+    );
+
+    ///////
+
+    passedInTeam.RBOne.receptionsPerGameLastFiveWeeksWayTwo = +(
+      passedInTeam.RBOne.totalReceptionsLastFiveWeeks /
+      passedInTeam.RBOne.numberOfGamesPlayedLastFiveWeeks
+    ).toFixed(2);
+
+    passedInTeam.RBTwo.receptionsPerGameLastFiveWeeksWayTwo = +(
+      passedInTeam.RBTwo.totalReceptionsLastFiveWeeks /
+      passedInTeam.RBTwo.numberOfGamesPlayedLastFiveWeeks
+    ).toFixed(2);
+
+    ///////
+
+    if (passedInTeam.RBOne.receptionsPerGameLastFiveWeeks) {
+      passedInTeam.RBOne.carriesPlusReceptionsPerGameLastFiveWeeks = +(
+        passedInTeam.RBOne.carriesPerGameLastFiveWeeks +
+        passedInTeam.RBOne.receptionsPerGameLastFiveWeeks
+      ).toFixed(2);
+    } else {
+      passedInTeam.RBOne.carriesPlusReceptionsPerGameLastFiveWeeks = +(
+        passedInTeam.RBOne.carriesPerGameLastFiveWeeks +
+        passedInTeam.RBOne.receptionsPerGameLastFiveWeeksWayTwo
+      ).toFixed(2);
+    }
+
+    if (passedInTeam.RBTwo.receptionsPerGameLastFiveWeeks) {
+      passedInTeam.RBTwo.carriesPlusReceptionsPerGameLastFiveWeeks = +(
+        passedInTeam.RBTwo.carriesPerGameLastFiveWeeks +
+        passedInTeam.RBTwo.receptionsPerGameLastFiveWeeks
+      ).toFixed(2);
+    } else {
+      passedInTeam.RBTwo.carriesPlusReceptionsPerGameLastFiveWeeks = +(
+        passedInTeam.RBTwo.carriesPerGameLastFiveWeeks +
+        passedInTeam.RBTwo.receptionsPerGameLastFiveWeeksWayTwo
+      ).toFixed(2);
+    }
+
+    /////
+
+    passedInTeam.RBOne.projectedCarriesPlusReceptionsThisWeek = +(
+      passedInTeam.RBOne.projectedCarriesThisWeek +
+      passedInTeam.RBOne.projectedReceptionsThisWeek
+    ).toFixed(2);
+
+    passedInTeam.RBTwo.projectedCarriesPlusReceptionsThisWeek = +(
+      passedInTeam.RBTwo.projectedCarriesThisWeek +
+      passedInTeam.RBTwo.projectedReceptionsThisWeek
+    ).toFixed(2);
+
+    ////////////
+
+    passedInTeam.RBOne.teamRealLifePointsScoredPerGameLastFiveWeeks =
+      +gameInfoPassedInTeam.teamPointsPerGameLastFiveWeeks;
+
+    passedInTeam.RBTwo.teamRealLifePointsScoredPerGameLastFiveWeeks =
+      +gameInfoPassedInTeam.teamPointsPerGameLastFiveWeeks;
+
+    ////////
+
+    // console.log(gameInfoPassedInTeam);
+    passedInTeam.RBOne.appTeamProjectedPoints =
+      gameInfoPassedInTeam.teamProjectedPointsThisWeek;
+    passedInTeam.RBTwo.appTeamProjectedPoints =
+      gameInfoPassedInTeam.teamProjectedPointsThisWeek;
+
+    passedInTeam.RBOne.oppAppTeamProjectedPoints =
+      gameInfoPassedInTeam.opponentThisWeek.teamProjectedPointsThisWeek;
+    passedInTeam.RBTwo.oppAppTeamProjectedPoints =
+      gameInfoPassedInTeam.opponentThisWeek.teamProjectedPointsThisWeek;
+
+    //////
+
+    passedInTeam.qbPassAttemptsPerGameLastFiveWeeks =
+      qbInfoPassedInTeam.passAttemptsPerGameLastFiveWeeks;
+    passedInTeam.projectedQBPassAttemptsThisWeek =
+      qbInfoPassedInTeam.prjpassattempts;
   });
 };
 
-populateTeamObjects(rbrawdata.SF49ers, gameInfo.SF49ers);
-populateTeamObjects(rbrawdata.bears, gameInfo.bears);
-populateTeamObjects(rbrawdata.bengals, gameInfo.bengals);
-populateTeamObjects(rbrawdata.bills, gameInfo.bills);
-populateTeamObjects(rbrawdata.broncos, gameInfo.broncos);
-populateTeamObjects(rbrawdata.browns, gameInfo.browns);
-populateTeamObjects(rbrawdata.buccaneers, gameInfo.buccaneers);
-populateTeamObjects(rbrawdata.cardinals, gameInfo.cardinals);
-populateTeamObjects(rbrawdata.chargers, gameInfo.chargers);
-populateTeamObjects(rbrawdata.chiefs, gameInfo.chiefs);
-populateTeamObjects(rbrawdata.colts, gameInfo.colts);
-populateTeamObjects(rbrawdata.commanders, gameInfo.commanders);
-populateTeamObjects(rbrawdata.cowboys, gameInfo.cowboys);
-populateTeamObjects(rbrawdata.dolphins, gameInfo.dolphins);
-populateTeamObjects(rbrawdata.eagles, gameInfo.eagles);
-populateTeamObjects(rbrawdata.falcons, gameInfo.falcons);
-populateTeamObjects(rbrawdata.giants, gameInfo.giants);
-populateTeamObjects(rbrawdata.jaguars, gameInfo.jaguars);
-populateTeamObjects(rbrawdata.jets, gameInfo.jets);
-populateTeamObjects(rbrawdata.lions, gameInfo.lions);
-populateTeamObjects(rbrawdata.packers, gameInfo.packers);
-populateTeamObjects(rbrawdata.panthers, gameInfo.panthers);
-populateTeamObjects(rbrawdata.patriots, gameInfo.patriots);
-populateTeamObjects(rbrawdata.raiders, gameInfo.raiders);
-populateTeamObjects(rbrawdata.rams, gameInfo.rams);
-populateTeamObjects(rbrawdata.ravens, gameInfo.ravens);
-populateTeamObjects(rbrawdata.saints, gameInfo.saints);
-populateTeamObjects(rbrawdata.seahawks, gameInfo.seahawks);
-populateTeamObjects(rbrawdata.steelers, gameInfo.steelers);
-populateTeamObjects(rbrawdata.texans, gameInfo.texans);
-populateTeamObjects(rbrawdata.titans, gameInfo.titans);
-populateTeamObjects(rbrawdata.vikings, gameInfo.vikings);
+populateTeamObjects(rbrawdata.SF49ers, gameInfo.SF49ers, qbrawdata.SF49ers);
+populateTeamObjects(rbrawdata.bears, gameInfo.bears, qbrawdata.bears);
+populateTeamObjects(rbrawdata.bengals, gameInfo.bengals, qbrawdata.bengals);
+populateTeamObjects(rbrawdata.bills, gameInfo.bills, qbrawdata.bills);
+populateTeamObjects(rbrawdata.broncos, gameInfo.broncos, qbrawdata.broncos);
+populateTeamObjects(rbrawdata.browns, gameInfo.browns, qbrawdata.browns);
+populateTeamObjects(
+  rbrawdata.buccaneers,
+  gameInfo.buccaneers,
+  qbrawdata.buccaneers
+);
+populateTeamObjects(
+  rbrawdata.cardinals,
+  gameInfo.cardinals,
+  qbrawdata.cardinals
+);
+populateTeamObjects(rbrawdata.chargers, gameInfo.chargers, qbrawdata.chargers);
+populateTeamObjects(rbrawdata.chiefs, gameInfo.chiefs, qbrawdata.chiefs);
+populateTeamObjects(rbrawdata.colts, gameInfo.colts, qbrawdata.colts);
+populateTeamObjects(
+  rbrawdata.commanders,
+  gameInfo.commanders,
+  qbrawdata.commanders
+);
+populateTeamObjects(rbrawdata.cowboys, gameInfo.cowboys, qbrawdata.cowboys);
+populateTeamObjects(rbrawdata.dolphins, gameInfo.dolphins, qbrawdata.dolphins);
+populateTeamObjects(rbrawdata.eagles, gameInfo.eagles, qbrawdata.eagles);
+populateTeamObjects(rbrawdata.falcons, gameInfo.falcons, qbrawdata.falcons);
+populateTeamObjects(rbrawdata.giants, gameInfo.giants, qbrawdata.giants);
+populateTeamObjects(rbrawdata.jaguars, gameInfo.jaguars, qbrawdata.jaguars);
+populateTeamObjects(rbrawdata.jets, gameInfo.jets, qbrawdata.jets);
+populateTeamObjects(rbrawdata.lions, gameInfo.lions, qbrawdata.lions);
+populateTeamObjects(rbrawdata.packers, gameInfo.packers, qbrawdata.packers);
+populateTeamObjects(rbrawdata.panthers, gameInfo.panthers, qbrawdata.panthers);
+populateTeamObjects(rbrawdata.patriots, gameInfo.patriots, qbrawdata.patriots);
+populateTeamObjects(rbrawdata.raiders, gameInfo.raiders, qbrawdata.raiders);
+populateTeamObjects(rbrawdata.rams, gameInfo.rams, qbrawdata.rams);
+populateTeamObjects(rbrawdata.ravens, gameInfo.ravens, qbrawdata.ravens);
+populateTeamObjects(rbrawdata.saints, gameInfo.saints, qbrawdata.saints);
+populateTeamObjects(rbrawdata.seahawks, gameInfo.seahawks, qbrawdata.seahawks);
+populateTeamObjects(rbrawdata.steelers, gameInfo.steelers, qbrawdata.steelers);
+populateTeamObjects(rbrawdata.texans, gameInfo.texans, qbrawdata.texans);
+populateTeamObjects(rbrawdata.titans, gameInfo.titans, qbrawdata.titans);
+populateTeamObjects(rbrawdata.vikings, gameInfo.vikings, qbrawdata.vikings);
 
 // console.log(rbrawdata.bengals);
 // console.log(rbrawdata.bills);
@@ -6180,6 +6314,7 @@ populateTeamObjects(rbrawdata.vikings, gameInfo.vikings);
 // console.log(rbrawdata.seahawks);
 // console.log(rbrawdata.commanders);
 // console.log(rbrawdata.rams);
+// console.log(rbrawdata.titans);
 
 // console.log(rbrawdata.packers);
 // console.log(rbrawdata.ravens);

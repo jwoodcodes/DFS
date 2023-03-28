@@ -147,6 +147,8 @@ class RbObject {
     homeOrAway,
     slate,
     teamProjectedPoints,
+    teamPointsPerGameLastFiveWeeks,
+    teamProjectedPointsThisWeekPercentage,
     teamTotalHVTsLastFiveWeeks,
     hadByeInLastFiveWeeksIsTrue,
     teamProjectedForAHalfOfNegetiveGameScriptIsTrue,
@@ -158,6 +160,10 @@ class RbObject {
     HVTsLastFiveWeeks,
     percentOfTeamHVTsLastFiveWeeks,
     targetSharePercentageLastFiveWeeks,
+    carriesPlusReceptionsPerGameLastFiveWeeks,
+    projectedCarriesPlusReceptionsThisWeek,
+    qbPassAttemptsPerGameLastFiveWeeks,
+    projectedQBPassAttemptsThisWeek,
 
     yahooSalary,
     fanduelSalary,
@@ -170,6 +176,8 @@ class RbObject {
     opponentABV,
     opponentTeamProjectedPoints,
 
+    halfGLSPAVG,
+    fullGLSPAVG,
     halfTwentyFifthPercentProjectedPoints,
     halfFiftyithPercentProjectedPoints,
     halfSeventyFifthPercentProjectedPoints,
@@ -188,6 +196,9 @@ class RbObject {
     this.homeOrAway = homeOrAway;
     this.slate = slate;
     this.teamProjectedPoints = teamProjectedPoints;
+    this.teamPointsPerGameLastFiveWeeks = teamPointsPerGameLastFiveWeeks;
+    this.teamProjectedPointsThisWeekPercentage =
+      teamProjectedPointsThisWeekPercentage;
     this.teamTotalHVTsLastFiveWeeks = teamTotalHVTsLastFiveWeeks;
     this.hadByeInLastFiveWeeksIsTrue = hadByeInLastFiveWeeksIsTrue;
     this.teamProjectedForAHalfOfNegetiveGameScriptIsTrue =
@@ -202,6 +213,13 @@ class RbObject {
     this.percentOfTeamHVTsLastFiveWeeks = percentOfTeamHVTsLastFiveWeeks;
     this.targetSharePercentageLastFiveWeeks =
       targetSharePercentageLastFiveWeeks;
+    this.carriesPlusReceptionsPerGameLastFiveWeeks =
+      carriesPlusReceptionsPerGameLastFiveWeeks;
+    this.projectedCarriesPlusReceptionsThisWeek =
+      projectedCarriesPlusReceptionsThisWeek;
+    this.qbPassAttemptsPerGameLastFiveWeeks =
+      qbPassAttemptsPerGameLastFiveWeeks;
+    this.projectedQBPassAttemptsThisWeek = projectedQBPassAttemptsThisWeek;
 
     this.yahooSalary = yahooSalary;
     this.fanduelSalary = fanduelSalary;
@@ -214,6 +232,8 @@ class RbObject {
     this.opponentABV = opponentABV;
     this.opponentTeamProjectedPoints = opponentTeamProjectedPoints;
 
+    this.halfGLSPAVG = halfGLSPAVG;
+    this.fullGLSPAVG = fullGLSPAVG;
     this.halfTwentyFifthPercentProjectedPoints =
       halfTwentyFifthPercentProjectedPoints;
     this.halfFiftyithPercentProjectedPoints =
@@ -256,246 +276,397 @@ class RbObject {
 
     //less than 3, 3-4, 5-6, 7-8, 8+
 
-    let tempValueForProjection = 0;
+    /////////////////////////////////
 
-    if (this.teamProjectedPoints > 30) {
-      tempValueForProjection += 7;
+    /////////////////////////////////
+    //        new way      /////////
+    ////////////////////////////////
+
+    ///////////////////////////////////////////////////////////
+
+    // what i'm going to need access to for new way:
+    // - opportunities (carries + receptions) per game last five weeks -- ready
+    // - projected opportunities this week -- ready
+    // - team points per game last five weeks -- ready
+    // - app projected team points this week (remember to use the average of app and vtt here) -- ready
+    // - team HVT percentage last five weeks -- ready
+    // - target share last five weeks -- ready
+    //- QB pass attempts per game last five weeks -- ready
+    // -QB projeted pass attempts this week -- ready
+    //  -home or away, fav or dog usig my  app projected team points this week (remember to use the average of app and vtt here) -- ready
+
+    let adjusterPercentage = 0;
+
+    let roleAdjustor = +(
+      this.projectedCarriesPlusReceptionsThisWeek /
+      this.carriesPlusReceptionsPerGameLastFiveWeeks
+    ).toFixed(3);
+
+    let teamScoringAdjustor = +this.teamProjectedPointsThisWeekPercentage;
+
+    if (teamScoringAdjustor > 1.2) {
+      teamScoringAdjustor = 1.2;
     }
 
-    if (this.teamProjectedPoints > 24 && this.teamProjectedPoints < 31) {
-      tempValueForProjection += 5;
+    if (teamScoringAdjustor < 0.8) {
+      teamScoringAdjustor = 0.8;
     }
 
-    if (this.teamProjectedPoints > 19 && this.teamProjectedPoints < 25) {
-      tempValueForProjection += 4;
-    }
+    let homeORAwayFavOrDog = 1;
 
-    if (this.teamProjectedPoints > 14 && this.teamProjectedPoints < 20) {
-      tempValueForProjection += 3;
-    }
-
-    if (this.teamProjectedPoints < 15) {
-      tempValueForProjection += 2;
-    }
-    //
-
-    if (this.percentOfTeamHVTsLastFiveWeeks > 0.7) {
-      tempValueForProjection += 6;
+    if (
+      this.homeOrAway === 'Home' &&
+      this.teamProjectedPoints > this.opponentTeamProjectedPoints
+    ) {
+      homeORAwayFavOrDog = 1.3;
     }
 
     if (
-      this.percentOfTeamHVTsLastFiveWeeks > 0.6 &&
-      this.percentOfTeamHVTsLastFiveWeeks < 0.71
+      this.homeOrAway === 'Away' &&
+      this.teamProjectedPoints < this.opponentTeamProjectedPoints
     ) {
-      tempValueForProjection += 4;
+      homeORAwayFavOrDog = 1.1;
     }
 
     if (
-      this.percentOfTeamHVTsLastFiveWeeks > 0.5 &&
-      this.percentOfTeamHVTsLastFiveWeeks < 0.61
+      this.homeOrAway === 'Away' &&
+      this.teamProjectedPoints > this.opponentTeamProjectedPoints
     ) {
-      tempValueForProjection += 3;
+      homeORAwayFavOrDog = 0.9;
     }
 
     if (
-      this.percentOfTeamHVTsLastFiveWeeks > 0.3 &&
-      this.percentOfTeamHVTsLastFiveWeeks < 0.51
+      this.homeOrAway === 'Home' &&
+      this.teamProjectedPoints < this.opponentTeamProjectedPoints
     ) {
-      tempValueForProjection += 2;
+      homeORAwayFavOrDog = 0.75;
     }
 
-    if (this.percentOfTeamHVTsLastFiveWeeks < 0.31) {
-      tempValueForProjection += 0;
-    }
+    ////////////////
 
-    //
-    //less than 3, 3-4, 5-6, 7-8, 8+
-    let projecedPercentile = 0;
-
-    if (tempValueForProjection > 8) {
-      projecedPercentile = 75;
-      if (this.FPOEPerGameLastFiveWeeks < -2) {
-        projecedPercentile = 62.5;
-      }
-    }
-
-    if (tempValueForProjection > 0.69 && tempValueForProjection < 9) {
-      projecedPercentile = 62.5;
-      if (this.FPOEPerGameLastFiveWeeks > 2) {
-        projecedPercentile = 75;
-      }
-      if (this.FPOEPerGameLastFiveWeeks < -2) {
-        projecedPercentile = 50;
-      }
-    }
-
-    if (tempValueForProjection > 0.39 && tempValueForProjection < 7) {
-      projecedPercentile = 50;
-      if (this.FPOEPerGameLastFiveWeeks > 2) {
-        projecedPercentile = 62.5;
-      }
-      if (this.FPOEPerGameLastFiveWeeks < -2) {
-        projecedPercentile = 32.5;
-      }
-    }
-
-    if (tempValueForProjection > 0.29 && tempValueForProjection < 5) {
-      projecedPercentile = 32.5;
-      if (this.FPOEPerGameLastFiveWeeks > 2) {
-        projecedPercentile = 50;
-      }
-      if (this.FPOEPerGameLastFiveWeeks < -2) {
-        projecedPercentile = 25;
-      }
-    }
-
-    if (tempValueForProjection < 3) {
-      projecedPercentile = 25;
-      if (this.FPOEPerGameLastFiveWeeks > 2) {
-        projecedPercentile = 32.5;
-      }
-    }
-    this.projecedPercentile = projecedPercentile;
-
-    let currentWeek = gameInfo.week.currentWeek;
-
-    if (currentWeek > 5) {
+    if (gameInfo.week.currentWeek > 4) {
       if (
         this.percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek >
         0.49
       ) {
-        if (projecedPercentile === 25) {
-          this.appProjectedHalfPPRPoints =
-            +this.halfTwentyFifthPercentProjectedPoints.toFixed(2);
-          this.appProjectedFullPPRPoints =
-            +this.PPRTwentyFifthPercentProjectedPoints.toFixed(2);
-        }
+        if (roleAdjustor) {
+          this.baselineAppHalfProjection = +(+this.halfGLSPAVG).toFixed(2);
+          this.baselineAppPPRProjection = +(+this.fullGLSPAVG).toFixed(2);
 
-        if (projecedPercentile === 32.5) {
           this.appProjectedHalfPPRPoints = +(
-            (this.halfTwentyFifthPercentProjectedPoints +
-              this.halfFiftyithPercentProjectedPoints) /
+            (this.baselineAppHalfProjection +
+              this.fourForFourHalfPPRProjectedPoints) /
             2
           ).toFixed(2);
           this.appProjectedFullPPRPoints = +(
-            (this.PPRTwentyFifthPercentProjectedPoints +
-              this.PPRFiftyithPercentProjectedPoints) /
+            (this.baselineAppPPRProjection +
+              this.fourForFourFullPPRProjectedPoints) /
             2
           ).toFixed(2);
-        }
 
-        if (projecedPercentile === 50) {
-          this.appProjectedHalfPPRPoints =
-            +this.halfFiftyithPercentProjectedPoints.toFixed(2);
-          this.appProjectedFullPPRPoints =
-            +this.PPRFiftyithPercentProjectedPoints.toFixed(2);
-        }
-
-        if (projecedPercentile === 62.5) {
-          this.appProjectedHalfPPRPoints = +(
-            (this.halfFiftyithPercentProjectedPoints +
-              this.halfSeventyFifthPercentProjectedPoints) /
-            2
-          ).toFixed(2);
-          this.appProjectedFullPPRPoints = +(
-            (this.PPRFiftyithPercentProjectedPoints +
-              this.PPRSeventyFifthPercentProjectedPoints) /
-            2
-          ).toFixed(2);
-        }
-
-        if (projecedPercentile === 75) {
-          this.appProjectedHalfPPRPoints =
-            +this.halfSeventyFifthPercentProjectedPoints.toFixed(2);
-          this.appProjectedFullPPRPoints =
-            +this.PPRSeventyFifthPercentProjectedPoints.toFixed(2);
+          // console.log(
+          //   this.playerName,
+          //   this.fourForFourFullPPRProjectedPoints,
+          //   this.fullGLSPAVG,
+          //   this.appProjectedHalfPPRPoints,
+          //   +this.appProjectedFullPPRPoints
+          //   // homeORAwayFavOrDog
+          //   // teamScoringAdjustor,
+          //   // this.percentOfTeamHVTsLastFiveWeeks,
+          //   // this.FPOEPerGameLastFiveWeeks
+          // );
+        } else {
         }
       } else {
-        //use team projected points and HVT percentage last five weeks to get an adjustment factor on a scale from -20% to +20% and multiply the players 4for4 projection for the week by this adjustment factor to get appProjectedPoints for players whose percentage of matching roles week is less than 50% here
-        this.notEnoughMatchingWeeksToRoleThisWeek = true;
+        if (roleAdjustor) {
+          this.baselineAppHalfProjection = +(
+            +this.halfGLSPAVG * +roleAdjustor
+          ).toFixed(2);
+          this.baselineAppPPRProjection = +(
+            +this.fullGLSPAVG * +roleAdjustor
+          ).toFixed(2);
 
-        //less than 3, 3-4, 5-6, 7-8, 8+
-        let adjustmentPercent = 0;
+          this.testHalfProjection = +(
+            (this.baselineAppHalfProjection +
+              this.fourForFourHalfPPRProjectedPoints) /
+            2
+          ).toFixed(2);
 
-        if (tempValueForProjection > 8) {
-          adjustmentPercent = 0.2;
+          this.testPPRProjection = +(
+            (this.baselineAppPPRProjection +
+              this.fourForFourFullPPRProjectedPoints) /
+            2
+          ).toFixed(2);
+
+          this.appProjectedHalfPPRPoints = this.testHalfProjection;
+          this.appProjectedFullPPRPoints = this.testPPRProjection;
+
+          // console.log(
+          //   this.playerName,
+          //   this.fourForFourFullPPRProjectedPoints,
+          //   this.appProjectedFullPPRPoints
+
+          // );
+        } else {
+          // console.log(this.playerName);
+
+          this.appProjectedHalfPPRPoints =
+            this.fourForFourHalfPPRProjectedPoints;
+          this.appProjectedFullPPRPoints =
+            this.fourForFourFullPPRProjectedPoints;
         }
-
-        if (tempValueForProjection > 0.69 && tempValueForProjection < 9) {
-          adjustmentPercent = 0.1;
-        }
-
-        if (tempValueForProjection > 0.39 && tempValueForProjection < 7) {
-          adjustmentPercent = 0.05;
-        }
-
-        if (tempValueForProjection > 0.29 && tempValueForProjection < 5) {
-          adjustmentPercent = -0.1;
-        }
-
-        if (tempValueForProjection < 3) {
-          adjustmentPercent = -0.2;
-        }
-        this.adjustmentPercent = adjustmentPercent;
-
-        let halfAdjustmentValue = +(
-          this.fourForFourHalfPPRProjectedPoints * adjustmentPercent
-        ).toFixed(2);
-
-        this.appProjectedHalfPPRPoints = +(
-          this.fourForFourHalfPPRProjectedPoints + halfAdjustmentValue
-        ).toFixed(2);
-
-        let fullAdjustmentValue = +(
-          this.fourForFourFullPPRProjectedPoints * adjustmentPercent
-        ).toFixed(2);
-
-        this.appProjectedFullPPRPoints = +(
-          this.fourForFourFullPPRProjectedPoints + fullAdjustmentValue
-        ).toFixed(2);
       }
     }
 
-    if (currentWeek < 5) {
-      let adjustmentPercent = 0;
+    /////////////////////////////////////////////////////////////////////
 
-      if (this.vtt > 25) {
-        adjustmentPercent = 0.2;
-      }
+    ////////////////////////
+    //     old way  /////
+    /////////////////////////
 
-      if (this.vtt > 19.9 && this.vtt < 25) {
-        adjustmentPercent = 0.1;
-      }
+    /////////////////////////////
 
-      if (this.vtt > 17.4 && this.vtt < 20) {
-        adjustmentPercent = 0.05;
-      }
+    //   let tempValueForProjection = 0;
 
-      if (this.vtt > 14.9 && this.vtt < 17.5) {
-        adjustmentPercent = -0.1;
-      }
+    //   if (this.teamProjectedPoints > 30) {
+    //     tempValueForProjection += 7;
+    //   }
 
-      if (this.vtt < 15) {
-        adjustmentPercent = -0.2;
-      }
-      this.adjustmentPercent = adjustmentPercent;
+    //   if (this.teamProjectedPoints > 24 && this.teamProjectedPoints < 31) {
+    //     tempValueForProjection += 5;
+    //   }
 
-      let halfAdjustmentValue = +(
-        this.fourForFourHalfPPRProjectedPoints * adjustmentPercent
-      ).toFixed(2);
+    //   if (this.teamProjectedPoints > 19 && this.teamProjectedPoints < 25) {
+    //     tempValueForProjection += 4;
+    //   }
 
-      this.appProjectedHalfPPRPoints = +(
-        this.fourForFourHalfPPRProjectedPoints + halfAdjustmentValue
-      ).toFixed(2);
+    //   if (this.teamProjectedPoints > 14 && this.teamProjectedPoints < 20) {
+    //     tempValueForProjection += 3;
+    //   }
 
-      let fullAdjustmentValue = +(
-        this.fourForFourFullPPRProjectedPoints * adjustmentPercent
-      ).toFixed(2);
+    //   if (this.teamProjectedPoints < 15) {
+    //     tempValueForProjection += 2;
+    //   }
+    //   //
 
-      this.appProjectedFullPPRPoints = +(
-        this.fourForFourFullPPRProjectedPoints + fullAdjustmentValue
-      ).toFixed(2);
-    }
+    //   if (this.percentOfTeamHVTsLastFiveWeeks > 0.7) {
+    //     tempValueForProjection += 6;
+    //   }
+
+    //   if (
+    //     this.percentOfTeamHVTsLastFiveWeeks > 0.6 &&
+    //     this.percentOfTeamHVTsLastFiveWeeks < 0.71
+    //   ) {
+    //     tempValueForProjection += 4;
+    //   }
+
+    //   if (
+    //     this.percentOfTeamHVTsLastFiveWeeks > 0.5 &&
+    //     this.percentOfTeamHVTsLastFiveWeeks < 0.61
+    //   ) {
+    //     tempValueForProjection += 3;
+    //   }
+
+    //   if (
+    //     this.percentOfTeamHVTsLastFiveWeeks > 0.3 &&
+    //     this.percentOfTeamHVTsLastFiveWeeks < 0.51
+    //   ) {
+    //     tempValueForProjection += 2;
+    //   }
+
+    //   if (this.percentOfTeamHVTsLastFiveWeeks < 0.31) {
+    //     tempValueForProjection += 0;
+    //   }
+
+    //   //
+    //   //less than 3, 3-4, 5-6, 7-8, 8+
+    //   let projecedPercentile = 0;
+
+    //   if (tempValueForProjection > 8) {
+    //     projecedPercentile = 75;
+    //     if (this.FPOEPerGameLastFiveWeeks < -2) {
+    //       projecedPercentile = 62.5;
+    //     }
+    //   }
+
+    //   if (tempValueForProjection > 0.69 && tempValueForProjection < 9) {
+    //     projecedPercentile = 62.5;
+    //     if (this.FPOEPerGameLastFiveWeeks > 2) {
+    //       projecedPercentile = 75;
+    //     }
+    //     if (this.FPOEPerGameLastFiveWeeks < -2) {
+    //       projecedPercentile = 50;
+    //     }
+    //   }
+
+    //   if (tempValueForProjection > 0.39 && tempValueForProjection < 7) {
+    //     projecedPercentile = 50;
+    //     if (this.FPOEPerGameLastFiveWeeks > 2) {
+    //       projecedPercentile = 62.5;
+    //     }
+    //     if (this.FPOEPerGameLastFiveWeeks < -2) {
+    //       projecedPercentile = 32.5;
+    //     }
+    //   }
+
+    //   if (tempValueForProjection > 0.29 && tempValueForProjection < 5) {
+    //     projecedPercentile = 32.5;
+    //     if (this.FPOEPerGameLastFiveWeeks > 2) {
+    //       projecedPercentile = 50;
+    //     }
+    //     if (this.FPOEPerGameLastFiveWeeks < -2) {
+    //       projecedPercentile = 25;
+    //     }
+    //   }
+
+    //   if (tempValueForProjection < 3) {
+    //     projecedPercentile = 25;
+    //     if (this.FPOEPerGameLastFiveWeeks > 2) {
+    //       projecedPercentile = 32.5;
+    //     }
+    //   }
+    //   this.projecedPercentile = projecedPercentile;
+
+    //   let currentWeek = gameInfo.week.currentWeek;
+
+    //   if (currentWeek > 5) {
+    //     if (
+    //       this.percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek >
+    //       0.49
+    //     ) {
+    //       if (projecedPercentile === 25) {
+    //         this.appProjectedHalfPPRPoints =
+    //           +this.halfTwentyFifthPercentProjectedPoints.toFixed(2);
+    //         this.appProjectedFullPPRPoints =
+    //           +this.PPRTwentyFifthPercentProjectedPoints.toFixed(2);
+    //       }
+
+    //       if (projecedPercentile === 32.5) {
+    //         this.appProjectedHalfPPRPoints = +(
+    //           (this.halfTwentyFifthPercentProjectedPoints +
+    //             this.halfFiftyithPercentProjectedPoints) /
+    //           2
+    //         ).toFixed(2);
+    //         this.appProjectedFullPPRPoints = +(
+    //           (this.PPRTwentyFifthPercentProjectedPoints +
+    //             this.PPRFiftyithPercentProjectedPoints) /
+    //           2
+    //         ).toFixed(2);
+    //       }
+
+    //       if (projecedPercentile === 50) {
+    //         this.appProjectedHalfPPRPoints =
+    //           +this.halfFiftyithPercentProjectedPoints.toFixed(2);
+    //         this.appProjectedFullPPRPoints =
+    //           +this.PPRFiftyithPercentProjectedPoints.toFixed(2);
+    //       }
+
+    //       if (projecedPercentile === 62.5) {
+    //         this.appProjectedHalfPPRPoints = +(
+    //           (this.halfFiftyithPercentProjectedPoints +
+    //             this.halfSeventyFifthPercentProjectedPoints) /
+    //           2
+    //         ).toFixed(2);
+    //         this.appProjectedFullPPRPoints = +(
+    //           (this.PPRFiftyithPercentProjectedPoints +
+    //             this.PPRSeventyFifthPercentProjectedPoints) /
+    //           2
+    //         ).toFixed(2);
+    //       }
+
+    //       if (projecedPercentile === 75) {
+    //         this.appProjectedHalfPPRPoints =
+    //           +this.halfSeventyFifthPercentProjectedPoints.toFixed(2);
+    //         this.appProjectedFullPPRPoints =
+    //           +this.PPRSeventyFifthPercentProjectedPoints.toFixed(2);
+    //       }
+    //     } else {
+    //       //use team projected points and HVT percentage last five weeks to get an adjustment factor on a scale from -20% to +20% and multiply the players 4for4 projection for the week by this adjustment factor to get appProjectedPoints for players whose percentage of matching roles week is less than 50% here
+    //       this.notEnoughMatchingWeeksToRoleThisWeek = true;
+
+    //       //less than 3, 3-4, 5-6, 7-8, 8+
+    //       let adjustmentPercent = 0;
+
+    //       if (tempValueForProjection > 8) {
+    //         adjustmentPercent = 0.2;
+    //       }
+
+    //       if (tempValueForProjection > 0.69 && tempValueForProjection < 9) {
+    //         adjustmentPercent = 0.1;
+    //       }
+
+    //       if (tempValueForProjection > 0.39 && tempValueForProjection < 7) {
+    //         adjustmentPercent = 0.05;
+    //       }
+
+    //       if (tempValueForProjection > 0.29 && tempValueForProjection < 5) {
+    //         adjustmentPercent = -0.1;
+    //       }
+
+    //       if (tempValueForProjection < 3) {
+    //         adjustmentPercent = -0.2;
+    //       }
+    //       this.adjustmentPercent = adjustmentPercent;
+
+    //       let halfAdjustmentValue = +(
+    //         this.fourForFourHalfPPRProjectedPoints * adjustmentPercent
+    //       ).toFixed(2);
+
+    //       this.appProjectedHalfPPRPoints = +(
+    //         this.fourForFourHalfPPRProjectedPoints + halfAdjustmentValue
+    //       ).toFixed(2);
+
+    //       let fullAdjustmentValue = +(
+    //         this.fourForFourFullPPRProjectedPoints * adjustmentPercent
+    //       ).toFixed(2);
+
+    //       this.appProjectedFullPPRPoints = +(
+    //         this.fourForFourFullPPRProjectedPoints + fullAdjustmentValue
+    //       ).toFixed(2);
+    //     }
+    //   }
+
+    //   if (currentWeek < 5) {
+    //     let adjustmentPercent = 0;
+
+    //     if (this.vtt > 25) {
+    //       adjustmentPercent = 0.2;
+    //     }
+
+    //     if (this.vtt > 19.9 && this.vtt < 25) {
+    //       adjustmentPercent = 0.1;
+    //     }
+
+    //     if (this.vtt > 17.4 && this.vtt < 20) {
+    //       adjustmentPercent = 0.05;
+    //     }
+
+    //     if (this.vtt > 14.9 && this.vtt < 17.5) {
+    //       adjustmentPercent = -0.1;
+    //     }
+
+    //     if (this.vtt < 15) {
+    //       adjustmentPercent = -0.2;
+    //     }
+    //     this.adjustmentPercent = adjustmentPercent;
+
+    //     let halfAdjustmentValue = +(
+    //       this.fourForFourHalfPPRProjectedPoints * adjustmentPercent
+    //     ).toFixed(2);
+
+    //     this.appProjectedHalfPPRPoints = +(
+    //       this.fourForFourHalfPPRProjectedPoints + halfAdjustmentValue
+    //     ).toFixed(2);
+
+    //     let fullAdjustmentValue = +(
+    //       this.fourForFourFullPPRProjectedPoints * adjustmentPercent
+    //     ).toFixed(2);
+
+    //     this.appProjectedFullPPRPoints = +(
+    //       this.fourForFourFullPPRProjectedPoints + fullAdjustmentValue
+    //     ).toFixed(2);
+    //   }
+    // }
   }
 
   calcAppProjectedpointsPerDollarOnAllSites() {
@@ -834,6 +1005,12 @@ allRBs.forEach(function (team, i) {
     }
   });
 
+  tempTeamScoring = +((teamProjectedPoints + vtt) / 2).toFixed(2);
+
+  teamProjectedPointsThisWeekPercentage = +(
+    tempTeamScoring / team.RBOne.teamRealLifePointsScoredPerGameLastFiveWeeks
+  ).toFixed(2);
+
   let rbObject = new RbObject(
     team.RBOne.name,
     'RB',
@@ -844,6 +1021,8 @@ allRBs.forEach(function (team, i) {
     team.homeOrAway,
     team.slate,
     teamProjectedPoints,
+    team.RBOne.teamRealLifePointsScoredPerGameLastFiveWeeks,
+    teamProjectedPointsThisWeekPercentage,
     team.totalTeamHVTsLastFiveWeeks,
     team.hadByeInTheLastFiveweeks,
     team.teamProjectedForAHalfOfNegetiveGameScriptIsTrue,
@@ -853,6 +1032,10 @@ allRBs.forEach(function (team, i) {
     team.RBOne.totalHVTsLastFiveWeeks,
     +team.RBOne.totalPercentOfTeamHighValueTouchesLastFiveweeks,
     team.RBOne.targetSharePercentageLastFiveWeeks,
+    team.RBOne.carriesPlusReceptionsPerGameLastFiveWeeks,
+    team.RBOne.projectedCarriesPlusReceptionsThisWeek,
+    team.qbPassAttemptsPerGameLastFiveWeeks,
+    team.projectedQBPassAttemptsThisWeek,
     team.RBOne.yahooSalary,
     team.RBOne.fanduelSalary,
     team.RBOne.draftkingsSalary,
@@ -862,6 +1045,8 @@ allRBs.forEach(function (team, i) {
     opponentTeamName,
     opponentABV,
     opponentTeamProjectedPoints,
+    team.RBOne.glspHalfavg,
+    team.RBOne.glspPPRavg,
     team.RBOne.halfTwentyFifthPercentProjectedPoints,
     team.RBOne.halfFiftyithPercentProjectedPoints,
     team.RBOne.halfSeventyFifthPercentProjectedPoints,
@@ -902,6 +1087,12 @@ allRBs.forEach(function (team, i) {
     }
   });
 
+  tempTeamScoring = +((teamProjectedPoints + vtt) / 2).toFixed(2);
+
+  teamProjectedPointsThisWeekPercentage = +(
+    tempTeamScoring / team.RBTwo.teamRealLifePointsScoredPerGameLastFiveWeeks
+  ).toFixed(2);
+
   let rbObject = new RbObject(
     team.RBTwo.name,
     'RB',
@@ -912,6 +1103,8 @@ allRBs.forEach(function (team, i) {
     team.homeOrAway,
     team.slate,
     teamProjectedPoints,
+    team.RBTwo.teamRealLifePointsScoredPerGameLastFiveWeeks,
+    teamProjectedPointsThisWeekPercentage,
     team.totalTeamHVTsLastFiveWeeks,
     team.hadByeInTheLastFiveweeks,
     team.teamProjectedForAHalfOfNegetiveGameScriptIsTrue,
@@ -921,6 +1114,10 @@ allRBs.forEach(function (team, i) {
     team.RBTwo.totalHVTsLastFiveWeeks,
     +team.RBTwo.totalPercentOfTeamHighValueTouchesLastFiveweeks,
     team.RBTwo.targetSharePercentageLastFiveWeeks,
+    team.RBTwo.carriesPlusReceptionsPerGameLastFiveWeeks,
+    team.RBTwo.projectedCarriesPlusReceptionsThisWeek,
+    team.qbPassAttemptsPerGameLastFiveWeeks,
+    team.projectedQBPassAttemptsThisWeek,
     team.RBTwo.yahooSalary,
     team.RBTwo.fanduelSalary,
     team.RBTwo.draftkingsSalary,
@@ -930,6 +1127,8 @@ allRBs.forEach(function (team, i) {
     opponentTeamName,
     opponentABV,
     opponentTeamProjectedPoints,
+    team.RBTwo.glspHalfavg,
+    team.RBTwo.glspPPRavg,
     team.RBTwo.halfTwentyFifthPercentProjectedPoints,
     team.RBTwo.halfFiftyithPercentProjectedPoints,
     team.RBTwo.halfSeventyFifthPercentProjectedPoints,
@@ -1271,7 +1470,6 @@ allRBObjectsArray.forEach(function (rb) {
     // console.log(rb);
     if (rb.roleThisWeek === 1) {
       allTeamRBObjects.vikings.RBOne = rb;
-      rb.test = 'it worked';
     }
     if (rb.roleThisWeek === 2) {
       allTeamRBObjects.vikings.RBTwo = rb;
@@ -1291,6 +1489,16 @@ allRBs.forEach(function (rb) {
   // );
   // console.log(rb.RBOne.name, rb.RBOne.HVTsFiveweeksAgo);
   // console.log(rb.RBOne.name, rb.RBOne.FPOEPerGameLastFiveWeeks);
+  // console.log(
+  //   rb.RBOne.name,
+  //   rb.RBOne.appProjectedFullPPRPoints,
+  //   rb.RBOne.fourForFourFullPPRProjectedPoints
+  // );
+  // console.log(
+  //   rb.RBTwo.name,
+  //   rb.RBTwo.appProjectedFullPPRPoints,
+  //   rb.RBTwo.fourForFourFullPPRProjectedPoints
+  // );
 });
 
 const allRBData = {
@@ -1299,6 +1507,6 @@ const allRBData = {
   allRBObjectsArray: allRBObjectsArray,
 };
 
-// console.log(allRBData);
+// console.log(allTeamRBObjects);
 
 module.exports = allRBData;
