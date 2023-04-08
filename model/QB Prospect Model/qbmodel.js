@@ -743,6 +743,27 @@ const qbs = {
     numberOfGamesWithTenPlusPassAttempts: 38,
     conferenceAdjustment: 0.065,
   },
+
+  Hurts: {
+    name: 'Jalen Hurts',
+    draftCapital: 33,
+    height: 73,
+    weight: 218,
+    careerYPA: 9.1,
+    bestSeasonYPA: 11.3,
+    careerComplationPercentage: 65.1,
+    bestFullSeasonCompletionPercentage: 72.0,
+    totalCareerPassAttempts: 1047,
+    bestSeasonTotalPassingYards: 3851,
+    bestSeasonTotalTDs: 52,
+    bestSeasonRushingYards: 1298,
+    fortyTime: 4.59,
+    careerInterceptionRate: 1.9,
+    ageWhenDrafted: 21.6,
+    collegeQBR: 89.7,
+    numberOfGamesWithTenPlusPassAttempts: 42,
+    conferenceAdjustment: 0.065,
+  },
 };
 
 const RWilson = qbs.RWilson;
@@ -780,6 +801,7 @@ const Young = qbs.Young;
 const Stroud = qbs.Stroud;
 const Levis = qbs.Levis;
 const Hooker = qbs.Hooker;
+const Hurts = qbs.Hurts;
 
 const allQBs = [
   RWilson,
@@ -817,6 +839,7 @@ const allQBs = [
   Stroud,
   Levis,
   Hooker,
+  Hurts,
 ];
 const allQBNames = [];
 
@@ -1154,9 +1177,9 @@ let sortFinalScore = finalScore.sort((a, b) => {
   if (a < b) return 1;
 });
 
-console.log(sortFinalScore);
+// console.log(sortFinalScore);
 
-const allData = {
+const allQBModelDataData = {
   draftCapitalScore: allDraftCapitolScores,
   heightScores: allHeights,
   weightScores: allWeights,
@@ -1175,6 +1198,8 @@ const allData = {
   numberOfGamesWithTenPlusPassAttempts: NGWTPPAs,
 
   FinalScore: {
-    finalScore: finalScore,
+    sortFinalScore: sortFinalScore,
   },
 };
+
+module.exports = allQBModelDataData;
