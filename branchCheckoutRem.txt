@@ -51,7 +51,7 @@
         -worth 2 seconds more in dynasty value vs. market value or 2 tiers higher in dynasty than market value gets 2 here
         -worth 1 first or more more in dynasty value vs. market value or 3 tiers higher in dynasty than market gets 4 here
 
-3) age relative to players positional age apex and combinators with other factors(scale from -8 to 8):
+3) age relative to players positional age apex and combinators with other factors(scale from -5 to 5):
 
         ps = production score
         mvds= market vs dynasty value score
@@ -59,12 +59,18 @@
 
         --age apex by position: QB-28, RB-25, WR-27, TE-28
 
+        how you should be thinking about it as you do these is:
+          if a player who is x number of years before or after the age apex for their positon, 
+          and is x amount over or under valued by the market, scores
+          the way that a ps of x says they will this year then how much higher or lower will their
+          market value likely be next offseason
+
         combined -5:
 
           - ps = -1 && mvds = -4:
            -player is at least 2 years below age apex: gets  here
            -player is within 2 years of age apex: gets here
-           -player is past age apex: gets -8 here
+           -player is past age apex: gets -5 here
 
         //
 
@@ -73,7 +79,7 @@
          - ps = 0 && mvds = -4:
           -player is at least 2 years below age apex: gets  here
           -player is within 2 years of age apex: gets here
-          -player is past age apex: gets -7 hre
+          -player is past age apex: gets -5 hre
 
         //
 
@@ -82,7 +88,7 @@
          - ps = -1 && mvds = -2:
           -player is at least 2 years below age apex: gets  here
           -player is within 2 years of age apex: gets here
-          -player is past age apex: get -6 here
+          -player is past age apex: get -4 here
 
         //
 
@@ -132,24 +138,24 @@
           combined 0: 
 
          - ps = -1 && mvds = 1:
-          -player is at least 2 years below age apex: gets 0 here
-          -player is within 2 years of age apex: gets 0 here
+          -player is at least 2 years below age apex: gets here
+          -player is within 2 years of age apex: gets here
           -player is past age apex: gets -2 here
 
           - ps = 0 && mvds = 0:
-          -player is at least 2 years below age apex: gets 0 here
-          -player is within 2 years of age apex: gets 0 here
-          -player is past age apex: get -1 here
+          -player is at least 2 years below age apex: gets here
+          -player is within 2 years of age apex: gets here
+          -player is past age apex: get here
 
           - ps = 1 && mvds = -1:
-          -player is at least 2 years below age apex: gets 0 here
-          -player is within 2 years of age apex: gets 0 here
-          -player is past age apex: gets -1 here
+          -player is at least 2 years below age apex: gets  here
+          -player is within 2 years of age apex: gets  here
+          -player is past age apex: gets  here
 
           - ps = 2 && mvds = -2:
-          -player is at least 2 years below age apex: gets 0 here
-          -player is within 2 years of age apex: gets 0 here
-          -player is past age apex: gets -1 here
+          -player is at least 2 years below age apex: gets  here
+          -player is within 2 years of age apex: gets  here
+          -player is past age apex: gets  here
 
          // 
 
@@ -274,7 +280,7 @@
         combined 7:
 
         - ps = 3  && mvds = 4:
-          -player is at least 2 years below age apex: gets 8 here
+          -player is at least 2 years below age apex: gets 5 here
           -player is within 2 years of age apex: gets here
           -player is past age apex: get
 
