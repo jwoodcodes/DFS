@@ -36,310 +36,372 @@
 
 1) projected production this year (scale from  0-3):
         -all rankings from rotoviz redraft rankings in offseason and 4for4 rest of season in season-
-        - below tier 4 gets -1 here
-        -tier 4 gets 0 here
-        -tier 3 gets 1 point here
-        -tier 2 gets 2 points here 
-        -tier 1 gets 3 here
+        below tier 5 gets -1
+        -tier 5 gets 0 here
+        -tier 4 gets 1 here
+        -tier 3 gets 2 point here
+        -tier 2 gets 3 points here 
+        -tier 1 gets 5 here
 
  2) market value vs. dynasty value (scale from -3 to 3):
-        -worth 1 first or more less in dynasty value vs. market value or 3 tiers lower in dynasty than market gets -4 here
-        -worth 2 seconds less in dynasty value vs. market value or 2 tiers less in dynasty than market value gets -2 here
-        -within 2 seconds in dynasty value vs. market value and 1 tier less in dynasty than market value gets -1 here
-        -same tier in both dynasty and market value and within one second gets 0
-        -within 2 seconds in dynasty value vs. market value and 1 tier higher in dynasty than market value gets 1 here
-        -worth 2 seconds more in dynasty value vs. market value or 2 tiers higher in dynasty than market value gets 2 here
-        -worth 1 first or more more in dynasty value vs. market value or 3 tiers higher in dynasty than market gets 4 here
 
-3) age relative to players positional age apex and combinators with other factors(scale from -5 to 5):
+        - market value >= (1) first or more compared to dynasty value || 3 tiers lower in dynasty
+            than market && >= (2) seconds + (1) third higher in dynasty value compared to market  
+            value gets -4 here
+
+         - (2) tiers higher in market value than dynasty value tiers && 
+              market value is > (1) second + (2) thirds higher   
+               compared to dynasty value gets -3 here
+
+        - market value >= (2) seconds but < (1) first higher compared to dynasty value || one tier 
+           higher in market value than dynasty value && market value is > (1) second higher compared 
+           to dynasty value gets -2 here
+
+        - market value >= (1) second but < (2) seconds higher compared to dynasty value && in same 
+           tier in both gets -1 here  
+
+        -same tier in both dynasty and market value and within one second gets 0
+
+        -dynasty value >= (1) second but < (2) seconds higher compared market value && in same tier 
+          in both gets +1 here
+
+        - dynasty value >= (2) seconds but < (1) first higher compared to market value || one tier 
+           higher in dynasty value than market value && dynasty value is > (1) second higher compared 
+           to market value gets +2 here
+
+        - (2) tiers higher in dynasty value than market value tiers && 
+              dynasty value is > (1) second + (2) thirds higher   
+               compared to market value gets +3 here
+
+        - dynasty value >= (1) first or more compared to market value || 3 tiers lower in market
+            than dynasty && >= (2) seconds + (1) third higher in market value compared to dynasty  
+            value gets -4 here
+
+************************************************************************
+**************this value calculated here is only to be used in number 3 and is not actually added into a players final player score!!!!!!!!!!!!!only the players score from part 1 and part 3 added together!!!!!!!!!!!!!!!!!!!!!!***********************************
+*********************************************************************8********
+
+3) how up or down a players dynasty value will likely be next offseaon with given traits:
+        scale(-4 to 4 here)
 
         ps = production score
         mvds= market vs dynasty value score
-        combined = ps + mvds
+        tier = player current rotoviz dynasty rankings tier
+        pvs = player value score
 
         --age apex by position: QB-28, RB-25, WR-27, TE-28
+
 
         how you should be thinking about it as you do these is:
           if a player who is x number of years before or after the age apex for their positon, 
           and is x amount over or under valued by the market, scores
-          the way that a ps of x says they will this year then how much higher or lower will their
+          the way that a redraft player score of x says they will this year then how much higher or lower will their
           market value likely be next offseason
 
-        combined -5:
+          
+        how picks should be valued:
 
-          - ps = -1 && mvds = -4:
-           -player is at least 2 years below age apex: gets  here
-           -player is within 2 years of age apex: gets here
-           -player is past age apex: gets -5 here
+        future years pick:
+                1st- pvs = 2
+                2nd- pvs = 1
+        when you know a current years pick number for certain:
+                top 3 1st round pick- pvs = 3
+                pick 4-9 1st round pick- pvs = 2
+                pick 10-14 pvs = 1
+                all picks later than 14 pvs = 0
 
-        //
+        combined -5
 
-        combined -4:
+         ps- -1, mvds- -4
+          player is two or more years pre age apex: -3
+          player is under but within two years of age apex: -4
+          player is over age apex: -4
 
-         - ps = 0 && mvds = -4:
-          -player is at least 2 years below age apex: gets  here
-          -player is within 2 years of age apex: gets here
-          -player is past age apex: gets -5 hre
+        combined -4
 
-        //
+         ps- 0, mvds- -4
+          player is two or more years pre age apex: -3
+          player is under but within two years of age apex: -4
+          player is over age apex: -4
+          
+        combined -3
 
-        combined -3:
+        ps- -1, mvds- -2
+          player is two or more years pre age apex: -3
+          player is under but within two years of age apex: -3
+          player is over age apex: -4
 
-         - ps = -1 && mvds = -2:
-          -player is at least 2 years below age apex: gets  here
-          -player is within 2 years of age apex: gets here
-          -player is past age apex: get -4 here
+          ps- 0, mvds- -3
+          player is two or more years pre age apex: -2
+          player is under but within two years of age apex: -3
+          player is over age apex: -4
 
-        //
-
-          combined -2:
-
-         - ps = -1 && mvds = -1:
-          -player is at least 2 years below age apex: gets  here
-          -player is within 2 years of age apex: gets here
-          -player is past age apex: get -4 here
-
-          - ps = 0 && mvds = -2:
-          -player is at least 2 years below age apex: gets  here
-          -player is within 2 years of age apex: gets here
-          -player is past age apex: get
-
-          - ps = 2 && mvds = -4:
-          -player is at least 2 years below age apex: gets  here
-          -player is within 2 years of age apex: gets here
-          -player is past age apex: get
-
-        //
-
-          combined -1:
-
-         - ps = -1 && mvds = 0:
-          -player is at least 2 years below age apex: gets  here
-          -player is within 2 years of age apex: gets here
-          -player is past age apex: get -3 here
-
-          - ps = 0 && mvds = -1:
-          -player is at least 2 years below age apex: gets  here
-          -player is within 2 years of age apex: gets here
-          -player is past age apex: get
-
-          - ps = 1 && mvds = -2:
-          -player is at least 2 years below age apex: gets  here
-          -player is within 2 years of age apex: gets here
-          -player is past age apex: get
-
-          - ps = 3 && mvds = -4:
-          -player is at least 2 years below age apex: gets  here
-          -player is within 2 years of age apex: gets here
-          -player is past age apex: get
-
-         // 
-
-          combined 0: 
-
-         - ps = -1 && mvds = 1:
-          -player is at least 2 years below age apex: gets here
-          -player is within 2 years of age apex: gets here
-          -player is past age apex: gets -2 here
-
-          - ps = 0 && mvds = 0:
-          -player is at least 2 years below age apex: gets here
-          -player is within 2 years of age apex: gets here
-          -player is past age apex: get here
-
-          - ps = 1 && mvds = -1:
-          -player is at least 2 years below age apex: gets  here
-          -player is within 2 years of age apex: gets  here
-          -player is past age apex: gets  here
-
-          - ps = 2 && mvds = -2:
-          -player is at least 2 years below age apex: gets  here
-          -player is within 2 years of age apex: gets  here
-          -player is past age apex: gets  here
-
-         // 
-
-           combined 1:
-
-         - ps = -1 && mvds = 2:
-          -player is at least 2 years below age apex: gets  here
-          -player is within 2 years of age apex: gets here
-          -player is past age apex: get
-
-          - ps = 0 && mvds = 1:
-          -player is at least 2 years below age apex: gets  here
-          -player is within 2 years of age apex: gets here
-          -player is past age apex: get
-
-           - ps = 1 && mvds = 0:
-          -player is at least 2 years below age apex: gets  here
-          -player is within 2 years of age apex: gets here
-          -player is past age apex: get
-
-          - ps = 2 && mvds = -1:
-          -player is at least 2 years below age apex: gets  here
-          -player is within 2 years of age apex: gets here
-          -player is past age apex: get
-
-          - ps = 3 && mvds = -2:
-          -player is at least 2 years below age apex: gets  here
-          -player is within 2 years of age apex: gets here
-          -player is past age apex: get
-
-          //
-
-          combined 2:
-
-          - ps = 0 && mvds = 2:
-          -player is at least 2 years below age apex: gets  here
-          -player is within 2 years of age apex: gets here
-          -player is past age apex: get
-
-           - ps = 1 && mvds = 1:
-          -player is at least 2 years below age apex: gets  here
-          -player is within 2 years of age apex: gets here
-          -player is past age apex: get
-
-          - ps = 2 && mvds = 0:
-          -player is at least 2 years below age apex: gets  here
-          -player is within 2 years of age apex: gets here
-          -player is past age apex: get
-
-          - ps = 3 && mvds = -1:
-          -player is at least 2 years below age apex: gets  here
-          -player is within 2 years of age apex: gets here
-          -player is past age apex: get
-
-          //
-
-          combined 3:
-
-        - ps = -1 && mvds = 4:
-          -player is at least 2 years below age apex: gets  here
-          -player is within 2 years of age apex: gets here
-          -player is past age apex: get
+         ps- 1, mvds- -4
+          player is two or more years pre age apex: -2
+          player is under but within two years of age apex: -3
+          player is over age apex: -4
 
           
 
-           - ps = 1 && mvds = 2:
-          -player is at least 2 years below age apex: gets  here
-          -player is within 2 years of age apex: gets here
-          -player is past age apex: get
+        combined -2
 
-          - ps = 2 && mvds = 1:
-          -player is at least 2 years below age apex: gets  here
-          -player is within 2 years of age apex: gets here
-          -player is past age apex: get
+         ps- -1, mvds- -1
+          player is two or more years pre age apex: -2
+          player is under but within two years of age apex: -3
+          player is over age apex: -4
 
-          - ps = 3 && mvds = 0:
-          -player is at least 2 years below age apex: gets  here
-          -player is within 2 years of age apex: gets here
-          -player is past age apex: get
+         ps- 0, mvds- -2
+          player is two or more years pre age apex: -2
+          player is under but within two years of age apex: -3
+          player is over age apex: -4
 
-          //
+          ps- 1, mvds- -3
+          player is two or more years pre age apex: -1
+          player is under but within two years of age apex: -2
+          player is over age apex: -4
 
-          combined 4:
+         ps- 2, mvds- -4
+          player is two or more years pre age apex: -1
+          player is under but within two years of age apex: -2
+          player is over age apex: -4
 
-        - ps = 0  && mvds = 4:
-          -player is at least 2 years below age apex: gets  here
-          -player is within 2 years of age apex: gets here
-          -player is past age apex: get
+        combined -1
 
-          - ps = 2 && mvds = 2:
-          -player is at least 2 years below age apex: gets  here
-          -player is within 2 years of age apex: gets here
-          -player is past age apex: get
+         ps: -1, mvds: 0
+          player is two or more years pre age apex: -1
+          player is under but within two years of age apex: -2
+          player is over age apex: -4
 
-          - ps = 3 && mvds = 1:
-          -player is at least 2 years below age apex: gets  here
-          -player is within 2 years of age apex: gets here
-          -player is past age apex: get
+         ps: 0, mvds: -1
+          player is two or more years pre age apex: -1
+          player is under but within two years of age apex: -2
+          player is over age apex: -4
 
-          //
+         ps: 1, mvds: -2
+          player is two or more years pre age apex: -2
+          player is under but within two years of age apex: -3
+          player is over age apex: -4
 
-          combined 5:
+          ps: 2, mvds: -3
+          player is two or more years pre age apex: -1
+          player is under but within two years of age apex: -2
+          player is over age apex: -4
 
-        - ps = 1  && mvds = 4:
-          -player is at least 2 years below age apex: gets  here
-          -player is within 2 years of age apex: gets here
-          -player is past age apex: get
+        ps: 3, mvds: -4
+          player is two or more years pre age apex: -1
+          player is under but within two years of age apex: -2
+          player is over age apex: -3
 
+        combined 0
 
-          - ps = 3 && mvds = 2:
-          -player is at least 2 years below age apex: gets  here
-          -player is within 2 years of age apex: gets here
-          -player is past age apex: get
+         ps- -1, mvds: 1
+          player is two or more years pre age apex: 
+          player is under but within two years of age apex: 
+          player is over age apex: 
 
-           combined 6:
+         ps: 0, mvds: 0
+          player is two or more years pre age apex: 
+          player is under but within two years of age apex: 
+          player is over age apex: 
 
-        - ps = 2  && mvds = 4:
-          -player is at least 2 years below age apex: gets  here
-          -player is within 2 years of age apex: gets here
-          -player is past age apex: get
+         ps: 1, mvds: -1
+          player is two or more years pre age apex: 
+          player is under but within two years of age apex: 
+          player is over age apex: 
 
-        combined 7:
+        ps: 2, mvds: -2
+          player is two or more years pre age apex: 
+          player is under but within two years of age apex: 
+          player is over age apex: 
 
-        - ps = 3  && mvds = 4:
-          -player is at least 2 years below age apex: gets 5 here
-          -player is within 2 years of age apex: gets here
-          -player is past age apex: get
+         ps: 3, mvds: -3
+          player is two or more years pre age apex: 
+          player is under but within two years of age apex: 
+          player is over age apex:
 
-         
-         
+        combined +1
 
-          
+         ps- -1, mvds: 2
+          player is two or more years pre age apex: 
+          player is under but within two years of age apex: 
+          player is over age apex: 
 
-        
+         ps: 0, mvds: 1
+          player is two or more years pre age apex: 
+          player is under but within two years of age apex: 
+          player is over age apex: 
 
-          /////////
+         ps: 1, mvds: 0
+          player is two or more years pre age apex: 
+          player is under but within two years of age apex: 
+          player is over age apex: 
 
-          - score from above 2 categories is -2:
-          -player is at least 2 years below age apex: gets -2 here
-          -player is within 2 years of age apex: gets - 3 here
-          -player is past age apex: gets -5
+        ps: 2, mvds: -1
+          player is two or more years pre age apex: 
+          player is under but within two years of age apex: 
+          player is over age apex: 
 
-          - score from above 2 categories is -1:
-          -player is at least 2 years below age apex: gets 0 here
-          -player is within 2 years of age apex: gets -1 here
-          -player is past age apex: gets -4
+         ps: 3, mvds: -2 
+          player is two or more years pre age apex: 
+          player is under but within two years of age apex: 
+          player is over age apex:
 
-          - score from above 2 categories is 0:
-          -player is at least 2 years below age apex: gets 0 here
-          -player is within 2 years of age apex: gets 0 here
-          -player is past age apex: gets -2 here
+        ps: 5, mvds: -4 
+          player is two or more years pre age apex: 
+          player is under but within two years of age apex: 
+          player is over age apex:
 
-          - score from above 2 categories is 1:
-          -player is at least 2 years below age apex: gets 1
-          -player is within 2 years of age apex: gets 0 here
-          -player is past age apex: gets -1 here
+        combined +2
 
-          - score from above 2 categories is 2:
-          -player is at least 2 years below age apex: gets 2 here
-          -player is within 2 years of age apex: gets 0 here
-          -player is past age apex: gets 0 here
+         ps- -1, mvds: 3
+          player is two or more years pre age apex: 
+          player is under but within two years of age apex: 
+          player is over age apex: 
 
-          - score from above 2 categories is 3:
-          -player is at least 2 years below age apex: gets 3 here
-          -player is within 2 years of age apex: gets 1 here
-          -player is past age apex: gets 0 here
+         ps: 0, mvds: 2
+          player is two or more years pre age apex: 
+          player is under but within two years of age apex: 
+          player is over age apex: 
 
-          - score from above 2 categories is 4:
-          -player is at least 2 years below age apex: gets 4 here
-          -player is within 2 years of age apex: gets 2 here
-          -player is past age apex: gets 0 here
+         ps: 1, mvds: 1
+          player is two or more years pre age apex: 
+          player is under but within two years of age apex: 
+          player is over age apex: 
 
-          - score from above 2 categories is 5:
-          -player is at least 2 years below age apex: gets 5 here
-          -player is within 2 years of age apex: gets 3 here
-          -player is past age apex: gets 1 here
+        ps: 2, mvds: 0
+          player is two or more years pre age apex: 
+          player is under but within two years of age apex: 
+          player is over age apex: 
 
-          - score from above 2 categories is 6:
-          -player is at least 2 years below age apex: gets 6 here
-          -player is within 2 years of age apex: gets 4 here
-          -player is past age apex: gets 2 here
+         ps: 3, mvds: -1
+          player is two or more years pre age apex: 
+          player is under but within two years of age apex: 
+          player is over age apex:
 
+        ps: 5, mvds: -3
+          player is two or more years pre age apex: 
+          player is under but within two years of age apex: 
+          player is over age apex:
+
+        combined +3
+
+         ps- -1, mvds: 4
+          player is two or more years pre age apex: 
+          player is under but within two years of age apex: 
+          player is over age apex: 
+
+         ps: 0, mvds: 3
+          player is two or more years pre age apex: 
+          player is under but within two years of age apex: 
+          player is over age apex: 
+
+         ps: 1, mvds: 2
+          player is two or more years pre age apex: 
+          player is under but within two years of age apex: 
+          player is over age apex: 
+
+        ps: 2, mvds: 1
+          player is two or more years pre age apex: 
+          player is under but within two years of age apex: 
+          player is over age apex: 
+
+         ps: 3, mvds: 0
+          player is two or more years pre age apex: 
+          player is under but within two years of age apex: 
+          player is over age apex:
+
+        ps: 5, mvds: -2
+          player is two or more years pre age apex: 
+          player is under but within two years of age apex: 
+          player is over age apex:
+
+          combined +4
+
+         ps: 0, mvds: 4
+          player is two or more years pre age apex: 
+          player is under but within two years of age apex: 
+          player is over age apex: 
+
+         ps: 1, mvds: 3
+          player is two or more years pre age apex: 
+          player is under but within two years of age apex: 
+          player is over age apex: 
+
+        ps: 2, mvds: 2
+          player is two or more years pre age apex: 
+          player is under but within two years of age apex: 
+          player is over age apex: 
+
+         ps: 3, mvds: 1
+          player is two or more years pre age apex: 
+          player is under but within two years of age apex: 
+          player is over age apex:
+
+        ps: 5, mvds: -1
+          player is two or more years pre age apex: 
+          player is under but within two years of age apex: 
+          player is over age apex:
+
+        combined +5
+
+         ps: 1, mvds: 4
+          player is two or more years pre age apex: 
+          player is under but within two years of age apex: 
+          player is over age apex: 
+
+        ps: 2, mvds: 3
+          player is two or more years pre age apex: 
+          player is under but within two years of age apex: 
+          player is over age apex: 
+
+         ps: 3, mvds: 2
+          player is two or more years pre age apex: 
+          player is under but within two years of age apex: 
+          player is over age apex:
+
+        ps: 5, mvds: 0
+          player is two or more years pre age apex: 
+          player is under but within two years of age apex: 
+          player is over age apex:
+
+        combined +6 
+
+        ps: 2, mvds: 4
+          player is two or more years pre age apex: 
+          player is under but within two years of age apex: 
+          player is over age apex: 
+
+         ps: 3, mvds: 3
+          player is two or more years pre age apex: 
+          player is under but within two years of age apex: 
+          player is over age apex:
+
+        ps: 5, mvds: 1
+          player is two or more years pre age apex: 
+          player is under but within two years of age apex: 
+          player is over age apex:
+
+         combined +7
+
+         ps: 3, mvds: 4
+          player is two or more years pre age apex: 
+          player is under but within two years of age apex: 
+          player is over age apex:
+
+        ps: 5, mvds: 2
+          player is two or more years pre age apex: 
+          player is under but within two years of age apex: 
+          player is over age apex:
+
+        combined +8
+
+        ps: 5, mvds: 8
+          player is two or more years pre age apex: 
+          player is under but within two years of age apex: 
+          player is over age apex:
+
+       
 4) players magnitude of importance adjustor:
-
 
         using my dynasty value tiers
         -if tier 6 move towards zero by 1
