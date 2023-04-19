@@ -15,7 +15,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <div>Daily Dynasties Home</div>
+        <div>Daily Dynasties home</div>
       </main>
     </>
   );
