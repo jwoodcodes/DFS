@@ -23,9 +23,10 @@ const FCDataFetch = async function () {
       // Use the collection "people"
       const col = db.collection('fantasycalcData');
       console.log(res.data);
+      let data = res.data;
       // Construct a document
       let allFantasyCalcData = {
-        allFantasyCalcData: res.data,
+        data,
       };
 
       // Insert a single document, wait for promise so we can read it back
@@ -41,8 +42,8 @@ const FCDataFetch = async function () {
     }
   }
 
-  //   pushFantasyCalcData().catch(console.dir);
-  //   return res.data;
+  // pushFantasyCalcData().catch(console.dir);
+  // return res.data;
 };
 
 // FCDataFetch();
