@@ -1,7 +1,6 @@
 const allQBData = require('./dfs_positions_calc_funcs/qbValuesCalcs');
 const allRBData = require('./dfs_positions_calc_funcs/rbValuesCalcs');
 const allQBModelDataData = require('./QB Prospect Model/qbmodel');
-const fantasyCalcData = require('./fantasyCalcData/FantasyCalcData');
 
 const wholeTeamObjects = require('./dfs_positions_calc_funcs/createWholeTeamObjects');
 
@@ -131,38 +130,8 @@ async function runQBProspectModel() {
   }
 }
 
-////////////////
-
-async function runFantasyCalcData() {
-  try {
-    await client.connect();
-
-    const db = client.db(dbName);
-
-    // Use the collection "people"
-    const col = db.collection('fantasycalcData');
-
-    // Construct a document
-    let FantasyCalcData = {
-      fantasyCalcData,
-    };
-
-    // Insert a single document, wait for promise so we can read it back
-    const p = await col.insertOne(FantasyCalcData);
-    // Find one document
-    const myDoc = await col.findOne();
-    // Print to the console
-    // console.log(myDoc);
-  } catch (err) {
-    console.log(err.stack);
-  } finally {
-    await client.close();
-  }
-}
-
 // runQB().catch(console.dir);
 // runRB().catch(console.dir);
 // runQBProspectModel().catch(console.dir);
-// runFantasyCalcData().catch(console.dir);
 
 // runWholeTeamObjects().catch(console.dir);

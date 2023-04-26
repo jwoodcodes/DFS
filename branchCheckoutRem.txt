@@ -45,6 +45,8 @@
 
  2) market value vs. dynasty value (scale from -3 to 3):
 
+ change below to go by percent higher or lower in percent of cap market vs my dynasty value
+
         - market value >= (1) first or more compared to dynasty value || 3 tiers lower in dynasty
             than market && >= (2) seconds + (1) third higher in dynasty value compared to market  
             value gets -4 here
