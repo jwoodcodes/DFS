@@ -27,7 +27,7 @@
 
         Have you Checked out the Branch from git for today yet?
 
-        Have you Checked out the Branch from git for today yet?
+        Have you Checkd out the Branch from git for today yet?
 
 
 //// scale and how to build for PCW trade calculator/ calculating my player value score
