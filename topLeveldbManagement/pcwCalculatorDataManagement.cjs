@@ -1,5 +1,7 @@
 const axios = require('axios');
 const { MongoClient } = require('mongodb');
+const ppSFTEPDynastyRankingsWithRookiesNoPicks = require('../model/datafilesmadefrom4for4CSVs/ppSFTEPDynastyRankingsWithRookiesNoPicks');
+const ppSFTEPDynastyRankingsWithPicksNoRookies = require('../model/datafilesmadefrom4for4CSVs/ppSFTEPDynastyRankingsWithPickNoRookies');
 
 ///////fetching fantasyCalc data from API and pushing rawFantasyCalc data to db
 
@@ -61,8 +63,8 @@ const FCDataFetch = async function () {
 // making trimmed fantasyCalc data
 
 const newData = [];
-const allTrimedFantasyCalcPlayerDataAray = [];
-const FinalTrimedFantasyCalcPlayerDataAray = [];
+const alltradeCalculaterDataArray = [];
+const FinaltradeCalculaterDataArray = [];
 
 async function fetchRawFantasyCalcDataFromMongodb() {
   const url =
@@ -98,17 +100,21 @@ async function fetchRawFantasyCalcDataFromMongodb() {
   }
 }
 
-let maxValue = 0;
+let fcMaxValue = 0;
+let ppMaxValue = 0;
+let ppSFTEPValue = 0;
+let ppSFTEPPercentOfMax = 0;
+let ppOverallRank = 0;
 
 const testfunc = async function () {
-  const test = await allTrimedFantasyCalcPlayerDataAray;
+  const test = await alltradeCalculaterDataArray;
   // console.log(test);
   const testDoc = await fetchRawFantasyCalcDataFromMongodb();
   // console.log(testDoc);
   newData.push(testDoc);
   // console.log(newData);
 
-  class trimmedFantasyCalcData {
+  class tradeCalculaterData {
     constructor(
       name,
       fantasyCalcID,
@@ -120,7 +126,9 @@ const testfunc = async function () {
       fantasyCalcValue,
       fantasyCalcRank,
       fantasyCalcPositionRank,
-      percentOfFantasyCalcMaxValue
+      percentOfFantasyCalcMaxValue,
+      ppSFTEPValue,
+      ppSFTEPPercentOfMax
     ) {
       this.name = name;
       this.fantasyCalcID = fantasyCalcID;
@@ -133,6 +141,8 @@ const testfunc = async function () {
       this.fantasyCalcRank = fantasyCalcRank;
       this.fantasyCalcPositionRank = fantasyCalcPositionRank;
       this.percentOfFantasyCalcMaxValue = percentOfFantasyCalcMaxValue;
+      this.ppSFTEPValue = ppSFTEPValue;
+      this.ppSFTEPPercentOfMax = ppSFTEPPercentOfMax;
     }
   }
 
@@ -140,27 +150,81 @@ const testfunc = async function () {
     // console.log(topLevelObject.data);
     const PlayerArray = topLevelObject.data;
 
+    //for fantasycalc
+
     PlayerArray.forEach(function (player) {
-      let percentOfMax = 0;
+      if (player.player.name.includes("'")) {
+        player.player.name = player.player.name.replace("'", '');
+      }
+
+      let sanitizedFCPlayerName = player.player.name
+
+        .replace("'", '')
+        .replace('.', '')
+        .replace('.', '');
+
+      // console.log(SanitizedFCPlayerName);
+
+      let fcPercentOfMax = 0;
 
       // console.log(player);
       // console.log(player.player.ID);
 
       if (player.overallRank === 1) {
-        maxValue = maxValue += player.value;
-        percentOfMax = 100;
+        fcMaxValue = fcMaxValue += player.value;
+        fcPercentOfMax = 100;
       }
 
       if (player.overallRank === 2) {
-        maxValue = +(maxValue += player.value) / 2;
+        fcMaxValue = +(fcMaxValue += player.value) / 2;
       }
-      const testMaxValue = maxValue;
-      if (player.overallRank > 1) {
-        percentOfMax = +(player.value / testMaxValue).toFixed(2);
+      const testFCMaxValue = fcMaxValue;
+      if (player.overallRank > 2) {
+        fcPercentOfMax = +(player.value / testFCMaxValue).toFixed(2);
       }
 
-      let trimmedFantasyCalcDataObject = new trimmedFantasyCalcData(
-        player.player.name,
+      //for pp
+
+      ppSFTEPDynastyRankingsWithRookiesNoPicks.forEach(function (ppPlayer) {
+        // console.log(ppPlayer['"Full Name"']);
+
+        if (ppPlayer['"Full Name"'].includes("'")) {
+          ppPlayer['"Full Name"'] = ppPlayer['"Full Name"'].replace("'", '');
+        }
+
+        let sanitizedPPPlayerName = ppPlayer['"Full Name"']
+          .slice(1, -1)
+          .replace("'", '')
+          .replace('.', '')
+          .replace('.', '');
+        // console.log(sanitizedPPPlayerName);
+
+        // console.log(sanitizedPPPlayerName, sanitizedFCPlayerName);
+        if (sanitizedPPPlayerName === sanitizedFCPlayerName) {
+          // console.log(sanitizedFCPlayerName);
+          ppSFTEPValue = +ppPlayer['"Lifetime Value"'].slice(1, -1);
+          // console.log(ppPlayer['"Overall Rank"']);
+          ppOverallRank = +ppPlayer['"Rank"'].slice(1, -1);
+
+          if (+ppOverallRank === 1) {
+            // console.log(ppPlayer['"Full Name"']);
+            ppMaxValue = +(ppMaxValue += ppSFTEPValue);
+            ppSFTEPPercentOfMax = 100;
+            // console.log(ppSFTEPValue);
+          }
+
+          if (+ppOverallRank === 2) {
+            ppMaxValue = +(ppMaxValue += ppSFTEPValue) / 2;
+          }
+          const testPPMaxValue = ppMaxValue;
+          if (+ppOverallRank > 2) {
+            ppSFTEPPercentOfMax = +(+ppSFTEPValue / +testPPMaxValue).toFixed(2);
+          }
+        }
+      });
+
+      let tradeCalculaterDataObject = new tradeCalculaterData(
+        sanitizedFCPlayerName,
         player.player.id,
         player.player.mflId,
         player.player.sleeperId,
@@ -170,18 +234,20 @@ const testfunc = async function () {
         player.value,
         player.overallRank,
         player.positionRank,
-        percentOfMax
+        fcPercentOfMax,
+        +ppSFTEPValue,
+        +ppSFTEPPercentOfMax
       );
 
-      allTrimedFantasyCalcPlayerDataAray.push(trimmedFantasyCalcDataObject);
-      // if (player.overallRank === 15) {
-      //   console.log(allTrimedFantasyCalcPlayerDataAray);
-      // }
-      allTrimedFantasyCalcPlayerDataAray.map(function (obj) {
+      alltradeCalculaterDataArray.push(tradeCalculaterDataObject);
+      if (player.overallRank === 15) {
+        console.log(alltradeCalculaterDataArray);
+      }
+      alltradeCalculaterDataArray.map(function (obj) {
         // console.log(obj);
         const newObj = { ...obj };
         // console.log(newObj);
-        FinalTrimedFantasyCalcPlayerDataAray.push(newObj);
+        FinaltradeCalculaterDataArray.push(newObj);
       });
     });
   });
