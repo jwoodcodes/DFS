@@ -107,6 +107,10 @@ let ppSFTEPValue = 0;
 let ppSFTEPPercentOfMax = 0;
 let ppOverallRank = 0;
 let highestighestValuePlayerValueArray = [];
+let fcPickYear = 0;
+let fcPickRound = 0;
+let fcPickNumber = 0;
+let fcPickRoundAndNumberFormattedForPP = 0;
 
 const testfunc = async function () {
   const test = await alltradeCalculaterDataArray;
@@ -191,7 +195,6 @@ const testfunc = async function () {
       }
 
       let sanitizedFCPlayerName = player.player.name
-
         .replace("'", '')
         .replace('.', '')
         .replace('.', '');
@@ -218,6 +221,35 @@ const testfunc = async function () {
         fcPercentOfMax = +(player.value / testFCMaxValue).toFixed(2);
       }
 
+      if (player.player.position === 'PICK') {
+        // console.log(sanitizedFCPlayerName);
+        fcPickYear = +sanitizedFCPlayerName.slice(0, 4);
+        // console.log(fcPickYear);
+        fcPickRound = +sanitizedFCPlayerName.slice(10, 12);
+        // console.log(fcPickRound);
+        fcPickNumber = +sanitizedFCPlayerName.slice(17);
+        // console.log(fcPickYear, fcPickRound, fcPickNumber);
+        if (fcPickNumber < 10) {
+          fcPickRoundAndNumberFormattedForPP =
+            `${fcPickRound}0${fcPickNumber}`.replace(/\s/g, '');
+
+          // console.log(fcPickRoundAndNumberFormattedForPP);
+        }
+        if (fcPickNumber === 10) {
+          fcPickRoundAndNumberFormattedForPP = `${fcPickRound}${fcPickNumber}`
+            .replace(/\s/g, '')
+            .slice(0, 2);
+
+          // console.log(fcPickRoundAndNumberFormattedForPP);
+        }
+        if (fcPickNumber === 11 || fcPickNumber === 12) {
+          fcPickRoundAndNumberFormattedForPP =
+            `${fcPickRound}${fcPickNumber}`.replace(/\s/g, '');
+
+          // console.log(fcPickRoundAndNumberFormattedForPP);
+        }
+      }
+
       //for pp
 
       ppMaxValue = ppMaxValueArray[0];
@@ -238,14 +270,19 @@ const testfunc = async function () {
 
         if (player.player.position === 'PICK') {
           // console.log(sanitizedFCPlayerName);
+          // console.log(sanitizedPPPWithPicksPlayerName);
           // console.log(player);
-        }
+          // console.log(fcPickYear, fcPickRound, fcPickNumber);
+          if (
+            fcPickRoundAndNumberFormattedForPP ===
+            sanitizedPPPWithPicksPlayerName
+          ) {
+            // console.log(ppWithPicksPlayer);
+            // console.log(sanitizedPPPWithPicksPlayerName);
 
-        if (ppWithPicksPlayer['"Position"'] === '""') {
-          ppSFTEPValue = +ppWithPicksPlayer['"Team Abbrev"'].slice(1, -1);
-          // console.log(ppSFTEPValue);
-
-          ppSFTEPPercentOfMax = +(ppSFTEPValue / ppMaxValue).toFixed(3);
+            ppSFTEPValue = +ppWithPicksPlayer['"Team Abbrev"'].slice(1, -1);
+            ppSFTEPPercentOfMax = +(ppSFTEPValue / ppMaxValue).toFixed(3);
+          }
         }
       });
 
@@ -288,7 +325,11 @@ const testfunc = async function () {
             // console.log(ppSFTEPValue);
           }
 
-          if (+ppSFTEPValue > 450 && ppPlayer['"Position"'] !== '""') {
+          if (
+            +ppSFTEPValue > 450 &&
+            ppPlayer['"Position"'] !== '""' &&
+            +ppOverallRank > 1
+          ) {
             // console.log(ppMaxValue);
             // console.log(ppPlayer);
             // console.log(highestighestValuePlayerValueArray[0]);
