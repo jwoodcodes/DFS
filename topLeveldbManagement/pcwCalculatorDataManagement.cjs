@@ -2,6 +2,7 @@ const axios = require('axios');
 const { MongoClient } = require('mongodb');
 const ppSFTEPDynastyRankingsWithRookies = require('../model/datafilesmadefrom4for4CSVs/ppSFTEPDynastyRankingsWithRookies');
 const ppSFTEPDynastyRankingsWithPicks = require('../model/datafilesmadefrom4for4CSVs/ppSFTEPDynastyRankingsWithPicks');
+const rvDynastyRankingsTEP = require('../model/datafilesmadefrom4for4CSVs/rvDynastyRankingsTEP');
 
 ///////fetching fantasyCalc data from API and pushing rawFantasyCalc data to db
 
@@ -111,6 +112,8 @@ let fcPickYear = 0;
 let fcPickRound = 0;
 let fcPickNumber = 0;
 let fcPickRoundAndNumberFormattedForPP = 0;
+let rvValue = 0;
+let rvPercentOfMax = 0;
 
 const testfunc = async function () {
   const test = await alltradeCalculaterDataArray;
@@ -134,7 +137,9 @@ const testfunc = async function () {
       fantasyCalcPositionRank,
       percentOfFantasyCalcMaxValue,
       ppSFTEPValue,
-      ppSFTEPPercentOfMax
+      ppSFTEPPercentOfMax,
+      rvValue,
+      rvPercentOfMax
     ) {
       this.name = name;
       this.fantasyCalcID = fantasyCalcID;
@@ -149,6 +154,8 @@ const testfunc = async function () {
       this.percentOfFantasyCalcMaxValue = percentOfFantasyCalcMaxValue;
       this.ppSFTEPValue = ppSFTEPValue;
       this.ppSFTEPPercentOfMax = ppSFTEPPercentOfMax;
+      this.rvValue = rvValue;
+      this.rvPercentOfMax = rvPercentOfMax;
     }
   }
 
@@ -233,7 +240,7 @@ const testfunc = async function () {
           fcPickRoundAndNumberFormattedForPP =
             `${fcPickRound}0${fcPickNumber}`.replace(/\s/g, '');
 
-          // console.log(fcPickRoundAndNumberFormattedForPP);
+          console.log(fcPickRoundAndNumberFormattedForPP);
         }
         if (fcPickNumber === 10) {
           fcPickRoundAndNumberFormattedForPP = `${fcPickRound}${fcPickNumber}`
@@ -247,6 +254,7 @@ const testfunc = async function () {
             `${fcPickRound}${fcPickNumber}`.replace(/\s/g, '');
 
           // console.log(fcPickRoundAndNumberFormattedForPP);
+          // rvValue = ;
         }
       }
 
@@ -347,6 +355,109 @@ const testfunc = async function () {
         }
       });
 
+      rvDynastyRankingsTEP.forEach(function (rvPlayer) {
+        if (rvPlayer['"Player"'].includes("'")) {
+          rvPlayer['"Player"'] = rvPlayer['"Player"'].replace("'", '');
+        }
+
+        let sanitizedRVPlayerName = rvPlayer['"Player"']
+          .slice(1, -1)
+          .replace("'", '')
+          .replace('.', '')
+          .replace('.', '');
+
+        if (sanitizedRVPlayerName === sanitizedFCPlayerName) {
+          // console.log(sanitizedRVPlayerName);
+          if (
+            sanitizedRVPlayerName === 'Patrick Mahomes' ||
+            sanitizedRVPlayerName === 'Josh Allen'
+          ) {
+            // console.log(rvPlayer);
+            rvValue = 3.33;
+            rvPercentOfMax = 100;
+          }
+          if (
+            +rvPlayer['"AVGTier"'] === 1 &&
+            sanitizedRVPlayerName !== 'Patrick Mahomes' &&
+            sanitizedRVPlayerName !== 'Josh Allen'
+          ) {
+            // console.log(sanitizedRVPlayerName);
+            rvValue = 3;
+            rvPercentOfMax = 0.9;
+          }
+          if (+rvPlayer['"AVGTier"'] > 1 && +rvPlayer['"AVGTier"'] < 2) {
+            // console.log(sanitizedRVPlayerName);
+            rvValue = 2.5;
+            rvPercentOfMax = 0.75;
+          }
+          if (+rvPlayer['"AVGTier"'] === 2) {
+            // console.log(sanitizedRVPlayerName);
+            rvValue = 2;
+            rvPercentOfMax = 0.6;
+          }
+          if (+rvPlayer['"AVGTier"'] > 2 && +rvPlayer['"AVGTier"'] < 3) {
+            // console.log(sanitizedRVPlayerName);
+            rvValue = 1.67;
+            rvPercentOfMax = 0.5;
+          }
+          if (+rvPlayer['"AVGTier"'] === 3) {
+            // console.log(sanitizedRVPlayerName);
+            rvValue = 1.33;
+            rvPercentOfMax = 0.4;
+          }
+          if (+rvPlayer['"AVGTier"'] > 3 && +rvPlayer['"AVGTier"'] < 4) {
+            // console.log(sanitizedRVPlayerName);
+            rvValue = 1.17;
+            rvPercentOfMax = 0.35;
+          }
+          if (+rvPlayer['"AVGTier"'] === 4) {
+            // console.log(sanitizedRVPlayerName);
+            rvValue = 1;
+            rvPercentOfMax = 0.3;
+          }
+          if (+rvPlayer['"AVGTier"'] > 4 && +rvPlayer['"AVGTier"'] < 5) {
+            // console.log(sanitizedRVPlayerName);
+            rvValue = 0.83;
+            rvPercentOfMax = 0.25;
+          }
+          if (+rvPlayer['"AVGTier"'] === 5) {
+            // console.log(sanitizedRVPlayerName);
+            rvValue = 0.67;
+            rvPercentOfMax = 0.2;
+          }
+          if (+rvPlayer['"AVGTier"'] > 5 && +rvPlayer['"AVGTier"'] < 6) {
+            // console.log(sanitizedRVPlayerName);
+            rvValue = 0.55;
+            rvPercentOfMax = 0.17;
+          }
+          if (+rvPlayer['"AVGTier"'] === 6) {
+            // console.log(sanitizedRVPlayerName);
+            rvValue = 0.44;
+            rvPercentOfMax = 0.13;
+          }
+          if (+rvPlayer['"AVGTier"'] > 6 && +rvPlayer['"AVGTier"'] < 7) {
+            // console.log(sanitizedRVPlayerName);
+            rvValue = 0.385;
+            rvPercentOfMax = 0.12;
+          }
+          if (+rvPlayer['"AVGTier"'] === 7) {
+            // console.log(sanitizedRVPlayerName);
+            rvValue = 0.33;
+            rvPercentOfMax = 0.1;
+          }
+          if (+rvPlayer['"AVGTier"'] > 7 && +rvPlayer['"AVGTier"'] < 8) {
+            // console.log(sanitizedRVPlayerName);
+            rvValue = 0.22;
+            rvPercentOfMax = 0.07;
+          }
+          if (+rvPlayer['"AVGTier"'] === 8) {
+            // console.log(sanitizedRVPlayerName);
+            rvValue = 0.11;
+            rvPercentOfMax = 0.03;
+          }
+        }
+      });
+
       let tradeCalculaterDataObject = new tradeCalculaterData(
         sanitizedFCPlayerName,
         player.player.id,
@@ -360,13 +471,16 @@ const testfunc = async function () {
         player.positionRank,
         fcPercentOfMax,
         +ppSFTEPValue,
-        +ppSFTEPPercentOfMax
+        +ppSFTEPPercentOfMax,
+        +rvValue,
+        +rvPercentOfMax
       );
 
       alltradeCalculaterDataArray.push(tradeCalculaterDataObject);
-      if (player.overallRank === 15) {
-        console.log(alltradeCalculaterDataArray);
-      }
+      // console.log(alltradeCalculaterDataArray);
+      // if (player.overallRank === 15) {
+      //   console.log(alltradeCalculaterDataArray);
+      // }
       alltradeCalculaterDataArray.map(function (obj) {
         // console.log(obj);
         const newObj = { ...obj };
