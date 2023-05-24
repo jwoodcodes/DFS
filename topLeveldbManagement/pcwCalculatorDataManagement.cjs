@@ -132,6 +132,7 @@ const testfunc = async function () {
       position,
       team,
       age,
+      sanitizedFCPlayerName,
       fantasyCalcValue,
       fantasyCalcRank,
       fantasyCalcPositionRank,
@@ -148,6 +149,7 @@ const testfunc = async function () {
       this.position = position;
       this.team = team;
       this.age = age;
+      this.sanitizedFCPlayerName = sanitizedFCPlayerName;
       this.fantasyCalcValue = fantasyCalcValue;
       this.fantasyCalcRank = fantasyCalcRank;
       this.fantasyCalcPositionRank = fantasyCalcPositionRank;
@@ -156,6 +158,226 @@ const testfunc = async function () {
       this.ppSFTEPPercentOfMax = ppSFTEPPercentOfMax;
       this.rvValue = rvValue;
       this.rvPercentOfMax = rvPercentOfMax;
+    }
+
+    rvData(
+      sanitizedFCPlayerName,
+      fcPickYear,
+      fcPickRound,
+      fcPickNumber,
+      fcPosition,
+      SleeperIDFromMe
+    ) {
+      rvDynastyRankingsTEP.forEach(function (rvPlayer) {
+        if (rvPlayer['"Player"'].includes("'")) {
+          rvPlayer['"Player"'] = rvPlayer['"Player"'].replace("'", '');
+        }
+
+        let sanitizedRVPlayerName = rvPlayer['"Player"']
+          .slice(1, -1)
+          .replace("'", '')
+          .replace('.', '')
+          .replace('.', '');
+
+        if (sanitizedRVPlayerName === sanitizedFCPlayerName) {
+          // console.log(sanitizedRVPlayerName);
+
+          if (fcPosition !== 'PICK') {
+            if (
+              sanitizedRVPlayerName === 'Patrick Mahomes' ||
+              sanitizedRVPlayerName === 'Josh Allen'
+            ) {
+              // console.log(rvPlayer);
+              rvValue = 3.33;
+              rvPercentOfMax = 100;
+            }
+            if (
+              +rvPlayer['"AVGTier"'] === 1 &&
+              sanitizedRVPlayerName !== 'Patrick Mahomes' &&
+              sanitizedRVPlayerName !== 'Josh Allen'
+            ) {
+              // console.log(sanitizedRVPlayerName);
+              rvValue = 3;
+              rvPercentOfMax = 0.9;
+            }
+            if (+rvPlayer['"AVGTier"'] > 1 && +rvPlayer['"AVGTier"'] < 2) {
+              // console.log(sanitizedRVPlayerName);
+              rvValue = 2.5;
+              rvPercentOfMax = 0.75;
+            }
+            if (+rvPlayer['"AVGTier"'] === 2) {
+              // console.log(sanitizedRVPlayerName);
+              rvValue = 2;
+              rvPercentOfMax = 0.6;
+            }
+            if (+rvPlayer['"AVGTier"'] > 2 && +rvPlayer['"AVGTier"'] < 3) {
+              // console.log(sanitizedRVPlayerName);
+              rvValue = 1.67;
+              rvPercentOfMax = 0.5;
+            }
+            if (+rvPlayer['"AVGTier"'] === 3) {
+              // console.log(sanitizedRVPlayerName);
+              rvValue = 1.33;
+              rvPercentOfMax = 0.4;
+            }
+            if (+rvPlayer['"AVGTier"'] > 3 && +rvPlayer['"AVGTier"'] < 4) {
+              // console.log(sanitizedRVPlayerName);
+              rvValue = 1.17;
+              rvPercentOfMax = 0.35;
+            }
+            if (+rvPlayer['"AVGTier"'] === 4) {
+              // console.log(sanitizedRVPlayerName);
+              rvValue = 1;
+              rvPercentOfMax = 0.3;
+            }
+            if (+rvPlayer['"AVGTier"'] > 4 && +rvPlayer['"AVGTier"'] < 5) {
+              // console.log(sanitizedRVPlayerName);
+              rvValue = 0.83;
+              rvPercentOfMax = 0.25;
+            }
+            if (+rvPlayer['"AVGTier"'] === 5) {
+              // console.log(sanitizedRVPlayerName);
+              rvValue = 0.67;
+              rvPercentOfMax = 0.2;
+            }
+            if (+rvPlayer['"AVGTier"'] > 5 && +rvPlayer['"AVGTier"'] < 6) {
+              // console.log(sanitizedRVPlayerName);
+              rvValue = 0.55;
+              rvPercentOfMax = 0.17;
+            }
+            if (+rvPlayer['"AVGTier"'] === 6) {
+              // console.log(sanitizedRVPlayerName);
+              rvValue = 0.44;
+              rvPercentOfMax = 0.13;
+            }
+            if (+rvPlayer['"AVGTier"'] > 6 && +rvPlayer['"AVGTier"'] < 7) {
+              // console.log(sanitizedRVPlayerName);
+              rvValue = 0.385;
+              rvPercentOfMax = 0.12;
+            }
+            if (+rvPlayer['"AVGTier"'] === 7) {
+              // console.log(sanitizedRVPlayerName);
+              rvValue = 0.33;
+              rvPercentOfMax = 0.1;
+            }
+            if (+rvPlayer['"AVGTier"'] > 7 && +rvPlayer['"AVGTier"'] < 8) {
+              // console.log(sanitizedRVPlayerName);
+              rvValue = 0.22;
+              rvPercentOfMax = 0.07;
+            }
+            if (+rvPlayer['"AVGTier"'] === 8) {
+              // console.log(sanitizedRVPlayerName);
+              rvValue = 0.11;
+              rvPercentOfMax = 0.03;
+            }
+          }
+
+          // console.log(fcPickYear);
+          // console.log(fcPickRoundAndNumberFormattedForPP);
+
+          ////////////////////////////////////////////////
+          ////////////////////////////////////////////////////
+          /////////below needs to be updated once a year!!!!!!////
+          /////////below needs to be updated once a year!!!!!!////
+          /////////below needs to be updated once a year!!!!!!////
+          /////////below needs to be updated once a year!!!!!!////
+          /////////below needs to be updated once a year!!!!!!////
+          /////////below needs to be updated once a year!!!!!!////
+          /////////below needs to be updated once a year!!!!!!////
+          /////////below needs to be updated once a year!!!!!!////
+          /////////below needs to be updated once a year!!!!!!////
+          /////////below needs to be updated once a year!!!!!!////
+          /////////below needs to be updated once a year!!!!!!////
+          /////////below needs to be updated once a year!!!!!!////
+          /////////below needs to be updated once a year!!!!!!////
+          /////////////////////////////////////////////////////////
+
+          if (fcPosition === 'PICK') {
+            console.log(SleeperIDFromMe);
+            if (+fcPickRoundAndNumberFormattedForPP === 201) {
+              this.rvValue = 0.67;
+              this.rvPercentOfMax = 0.2;
+            }
+            if (fcPickYear === 2023) {
+              // console.log(fcPickRoundAndNumberFormattedForPP);
+              if (+fcPickRound === 1 && +fcPickNumber === 1) {
+                // console.log(fcPickNumber);
+                this.rvValue = 3;
+                this.rvPercentOfMax = 0.9;
+              }
+              if (
+                +fcPickRound === 1 &&
+                +fcPickNumber > 1 &&
+                +fcPickNumber < 6
+              ) {
+                // console.log(fcPickYear, fcPickRound, fcPickNumber);
+                this.rvValue = 2;
+                this.rvPercentOfMax = 0.6;
+              }
+
+              if (
+                +fcPickRoundAndNumberFormattedForPP > 105 &&
+                +fcPickRoundAndNumberFormattedForPP < 111
+              ) {
+                // console.log(fcPickRoundAndNumberFormattedForPP);
+                this.rvValue = 1.17;
+                this.rvPercentOfMax = 0.35;
+              }
+              if (
+                (+fcPickRoundAndNumberFormattedForPP > 109 &&
+                  +fcPickRoundAndNumberFormattedForPP < 202) ||
+                +fcPickRoundAndNumberFormattedForPP === 11
+              ) {
+                // console.log(fcPickRoundAndNumberFormattedForPP);
+                this.rvValue = 0.67;
+                this.rvPercentOfMax = 0.2;
+              }
+              if (
+                +fcPickRoundAndNumberFormattedForPP > 201 &&
+                +fcPickRoundAndNumberFormattedForPP < 211
+              ) {
+                // console.log(fcPickRoundAndNumberFormattedForPP);
+                rvValue = 0.44;
+                rvPercentOfMax = 0.13;
+              }
+              if (
+                (+fcPickRoundAndNumberFormattedForPP > 209 &&
+                  +fcPickRoundAndNumberFormattedForPP < 307) ||
+                +fcPickRoundAndNumberFormattedForPP === 21
+              ) {
+                // console.log(fcPickRoundAndNumberFormattedForPP);
+                rvValue = 0.33;
+                rvPercentOfMax = 0.1;
+              }
+              if (+fcPickRoundAndNumberFormattedForPP > 306) {
+                rvValue = 0.11;
+                rvPercentOfMax = 0.03;
+              }
+            }
+            if (fcPickYear === 2024) {
+              // console.log(fcPickRoundAndNumberFormattedForPP);
+              if (+fcPickRoundAndNumberFormattedForPP < 201) {
+                rvValue = 0.83;
+                rvPercentOfMax = 0.25;
+              }
+              if (
+                +fcPickRoundAndNumberFormattedForPP > 111 &&
+                +fcPickRoundAndNumberFormattedForPP < 301
+              ) {
+                rvValue = 0.33;
+                rvPercentOfMax = 0.1;
+              }
+              if (
+                +fcPickRoundAndNumberFormattedForPP > 211 &&
+                +fcPickRoundAndNumberFormattedForPP < 401
+              ) {
+                rvValue = 0.11;
+                rvPercentOfMax = 0.03;
+              }
+            }
+          }
+        }
+      });
     }
   }
 
@@ -189,6 +411,7 @@ const testfunc = async function () {
   });
 
   ////////////////////////
+  let SleeperIDFromMe = '';
 
   newData.forEach(function (topLevelObject) {
     // console.log(topLevelObject.data);
@@ -207,6 +430,7 @@ const testfunc = async function () {
         .replace('.', '');
 
       // console.log(SanitizedFCPlayerName);
+      let fcPosition = player.player.position;
 
       let fcPercentOfMax = 0;
 
@@ -236,25 +460,28 @@ const testfunc = async function () {
         // console.log(fcPickRound);
         fcPickNumber = +sanitizedFCPlayerName.slice(17);
         // console.log(fcPickYear, fcPickRound, fcPickNumber);
-        if (fcPickNumber < 10) {
-          fcPickRoundAndNumberFormattedForPP =
-            `${fcPickRound}0${fcPickNumber}`.replace(/\s/g, '');
+        SleeperIDFromMe = player.player.sleeperId;
+        if (fcPickYear === 2023) {
+          if (fcPickNumber < 10) {
+            fcPickRoundAndNumberFormattedForPP =
+              `${fcPickRound}0${fcPickNumber}`.replace(/\s/g, '');
 
-          console.log(fcPickRoundAndNumberFormattedForPP);
-        }
-        if (fcPickNumber === 10) {
-          fcPickRoundAndNumberFormattedForPP = `${fcPickRound}${fcPickNumber}`
-            .replace(/\s/g, '')
-            .slice(0, 2);
+            // console.log(fcPickRoundAndNumberFormattedForPP, fcPickYear);
+          }
+          if (fcPickNumber === 10) {
+            fcPickRoundAndNumberFormattedForPP = `${fcPickRound}${fcPickNumber}`
+              .replace(/\s/g, '')
+              .slice(0, 2);
 
-          // console.log(fcPickRoundAndNumberFormattedForPP);
-        }
-        if (fcPickNumber === 11 || fcPickNumber === 12) {
-          fcPickRoundAndNumberFormattedForPP =
-            `${fcPickRound}${fcPickNumber}`.replace(/\s/g, '');
+            // console.log(fcPickRoundAndNumberFormattedForPP);
+          }
+          if (fcPickNumber === 11 || fcPickNumber === 12) {
+            fcPickRoundAndNumberFormattedForPP =
+              `${fcPickRound}${fcPickNumber}`.replace(/\s/g, '');
 
-          // console.log(fcPickRoundAndNumberFormattedForPP);
-          // rvValue = ;
+            // console.log(fcPickRoundAndNumberFormattedForPP);
+            // rvValue = ;
+          }
         }
       }
 
@@ -277,10 +504,13 @@ const testfunc = async function () {
           .replace('.', '');
 
         if (player.player.position === 'PICK') {
+          // console.log(ppWithPicksPlayer);
           // console.log(sanitizedFCPlayerName);
           // console.log(sanitizedPPPWithPicksPlayerName);
           // console.log(player);
           // console.log(fcPickYear, fcPickRound, fcPickNumber);
+          SleeperIDFromMe = player.player.sleeperId;
+
           if (
             fcPickRoundAndNumberFormattedForPP ===
             sanitizedPPPWithPicksPlayerName
@@ -355,108 +585,205 @@ const testfunc = async function () {
         }
       });
 
-      rvDynastyRankingsTEP.forEach(function (rvPlayer) {
-        if (rvPlayer['"Player"'].includes("'")) {
-          rvPlayer['"Player"'] = rvPlayer['"Player"'].replace("'", '');
-        }
+      // rvDynastyRankingsTEP.forEach(function (rvPlayer) {
+      //   if (rvPlayer['"Player"'].includes("'")) {
+      //     rvPlayer['"Player"'] = rvPlayer['"Player"'].replace("'", '');
+      //   }
 
-        let sanitizedRVPlayerName = rvPlayer['"Player"']
-          .slice(1, -1)
-          .replace("'", '')
-          .replace('.', '')
-          .replace('.', '');
+      //   let sanitizedRVPlayerName = rvPlayer['"Player"']
+      //     .slice(1, -1)
+      //     .replace("'", '')
+      //     .replace('.', '')
+      //     .replace('.', '');
 
-        if (sanitizedRVPlayerName === sanitizedFCPlayerName) {
-          // console.log(sanitizedRVPlayerName);
-          if (
-            sanitizedRVPlayerName === 'Patrick Mahomes' ||
-            sanitizedRVPlayerName === 'Josh Allen'
-          ) {
-            // console.log(rvPlayer);
-            rvValue = 3.33;
-            rvPercentOfMax = 100;
-          }
-          if (
-            +rvPlayer['"AVGTier"'] === 1 &&
-            sanitizedRVPlayerName !== 'Patrick Mahomes' &&
-            sanitizedRVPlayerName !== 'Josh Allen'
-          ) {
-            // console.log(sanitizedRVPlayerName);
-            rvValue = 3;
-            rvPercentOfMax = 0.9;
-          }
-          if (+rvPlayer['"AVGTier"'] > 1 && +rvPlayer['"AVGTier"'] < 2) {
-            // console.log(sanitizedRVPlayerName);
-            rvValue = 2.5;
-            rvPercentOfMax = 0.75;
-          }
-          if (+rvPlayer['"AVGTier"'] === 2) {
-            // console.log(sanitizedRVPlayerName);
-            rvValue = 2;
-            rvPercentOfMax = 0.6;
-          }
-          if (+rvPlayer['"AVGTier"'] > 2 && +rvPlayer['"AVGTier"'] < 3) {
-            // console.log(sanitizedRVPlayerName);
-            rvValue = 1.67;
-            rvPercentOfMax = 0.5;
-          }
-          if (+rvPlayer['"AVGTier"'] === 3) {
-            // console.log(sanitizedRVPlayerName);
-            rvValue = 1.33;
-            rvPercentOfMax = 0.4;
-          }
-          if (+rvPlayer['"AVGTier"'] > 3 && +rvPlayer['"AVGTier"'] < 4) {
-            // console.log(sanitizedRVPlayerName);
-            rvValue = 1.17;
-            rvPercentOfMax = 0.35;
-          }
-          if (+rvPlayer['"AVGTier"'] === 4) {
-            // console.log(sanitizedRVPlayerName);
-            rvValue = 1;
-            rvPercentOfMax = 0.3;
-          }
-          if (+rvPlayer['"AVGTier"'] > 4 && +rvPlayer['"AVGTier"'] < 5) {
-            // console.log(sanitizedRVPlayerName);
-            rvValue = 0.83;
-            rvPercentOfMax = 0.25;
-          }
-          if (+rvPlayer['"AVGTier"'] === 5) {
-            // console.log(sanitizedRVPlayerName);
-            rvValue = 0.67;
-            rvPercentOfMax = 0.2;
-          }
-          if (+rvPlayer['"AVGTier"'] > 5 && +rvPlayer['"AVGTier"'] < 6) {
-            // console.log(sanitizedRVPlayerName);
-            rvValue = 0.55;
-            rvPercentOfMax = 0.17;
-          }
-          if (+rvPlayer['"AVGTier"'] === 6) {
-            // console.log(sanitizedRVPlayerName);
-            rvValue = 0.44;
-            rvPercentOfMax = 0.13;
-          }
-          if (+rvPlayer['"AVGTier"'] > 6 && +rvPlayer['"AVGTier"'] < 7) {
-            // console.log(sanitizedRVPlayerName);
-            rvValue = 0.385;
-            rvPercentOfMax = 0.12;
-          }
-          if (+rvPlayer['"AVGTier"'] === 7) {
-            // console.log(sanitizedRVPlayerName);
-            rvValue = 0.33;
-            rvPercentOfMax = 0.1;
-          }
-          if (+rvPlayer['"AVGTier"'] > 7 && +rvPlayer['"AVGTier"'] < 8) {
-            // console.log(sanitizedRVPlayerName);
-            rvValue = 0.22;
-            rvPercentOfMax = 0.07;
-          }
-          if (+rvPlayer['"AVGTier"'] === 8) {
-            // console.log(sanitizedRVPlayerName);
-            rvValue = 0.11;
-            rvPercentOfMax = 0.03;
-          }
-        }
-      });
+      //   if (sanitizedRVPlayerName === sanitizedFCPlayerName) {
+      //     // console.log(sanitizedRVPlayerName);
+      //     if (
+      //       sanitizedRVPlayerName === 'Patrick Mahomes' ||
+      //       sanitizedRVPlayerName === 'Josh Allen'
+      //     ) {
+      //       // console.log(rvPlayer);
+      //       rvValue = 3.33;
+      //       rvPercentOfMax = 100;
+      //     }
+      //     if (
+      //       +rvPlayer['"AVGTier"'] === 1 &&
+      //       sanitizedRVPlayerName !== 'Patrick Mahomes' &&
+      //       sanitizedRVPlayerName !== 'Josh Allen'
+      //     ) {
+      //       // console.log(sanitizedRVPlayerName);
+      //       rvValue = 3;
+      //       rvPercentOfMax = 0.9;
+      //     }
+      //     if (+rvPlayer['"AVGTier"'] > 1 && +rvPlayer['"AVGTier"'] < 2) {
+      //       // console.log(sanitizedRVPlayerName);
+      //       rvValue = 2.5;
+      //       rvPercentOfMax = 0.75;
+      //     }
+      //     if (+rvPlayer['"AVGTier"'] === 2) {
+      //       // console.log(sanitizedRVPlayerName);
+      //       rvValue = 2;
+      //       rvPercentOfMax = 0.6;
+      //     }
+      //     if (+rvPlayer['"AVGTier"'] > 2 && +rvPlayer['"AVGTier"'] < 3) {
+      //       // console.log(sanitizedRVPlayerName);
+      //       rvValue = 1.67;
+      //       rvPercentOfMax = 0.5;
+      //     }
+      //     if (+rvPlayer['"AVGTier"'] === 3) {
+      //       // console.log(sanitizedRVPlayerName);
+      //       rvValue = 1.33;
+      //       rvPercentOfMax = 0.4;
+      //     }
+      //     if (+rvPlayer['"AVGTier"'] > 3 && +rvPlayer['"AVGTier"'] < 4) {
+      //       // console.log(sanitizedRVPlayerName);
+      //       rvValue = 1.17;
+      //       rvPercentOfMax = 0.35;
+      //     }
+      //     if (+rvPlayer['"AVGTier"'] === 4) {
+      //       // console.log(sanitizedRVPlayerName);
+      //       rvValue = 1;
+      //       rvPercentOfMax = 0.3;
+      //     }
+      //     if (+rvPlayer['"AVGTier"'] > 4 && +rvPlayer['"AVGTier"'] < 5) {
+      //       // console.log(sanitizedRVPlayerName);
+      //       rvValue = 0.83;
+      //       rvPercentOfMax = 0.25;
+      //     }
+      //     if (+rvPlayer['"AVGTier"'] === 5) {
+      //       // console.log(sanitizedRVPlayerName);
+      //       rvValue = 0.67;
+      //       rvPercentOfMax = 0.2;
+      //     }
+      //     if (+rvPlayer['"AVGTier"'] > 5 && +rvPlayer['"AVGTier"'] < 6) {
+      //       // console.log(sanitizedRVPlayerName);
+      //       rvValue = 0.55;
+      //       rvPercentOfMax = 0.17;
+      //     }
+      //     if (+rvPlayer['"AVGTier"'] === 6) {
+      //       // console.log(sanitizedRVPlayerName);
+      //       rvValue = 0.44;
+      //       rvPercentOfMax = 0.13;
+      //     }
+      //     if (+rvPlayer['"AVGTier"'] > 6 && +rvPlayer['"AVGTier"'] < 7) {
+      //       // console.log(sanitizedRVPlayerName);
+      //       rvValue = 0.385;
+      //       rvPercentOfMax = 0.12;
+      //     }
+      //     if (+rvPlayer['"AVGTier"'] === 7) {
+      //       // console.log(sanitizedRVPlayerName);
+      //       rvValue = 0.33;
+      //       rvPercentOfMax = 0.1;
+      //     }
+      //     if (+rvPlayer['"AVGTier"'] > 7 && +rvPlayer['"AVGTier"'] < 8) {
+      //       // console.log(sanitizedRVPlayerName);
+      //       rvValue = 0.22;
+      //       rvPercentOfMax = 0.07;
+      //     }
+      //     if (+rvPlayer['"AVGTier"'] === 8) {
+      //       // console.log(sanitizedRVPlayerName);
+      //       rvValue = 0.11;
+      //       rvPercentOfMax = 0.03;
+      //     }
+
+      //     // console.log(fcPickYear);
+      //     // console.log(fcPickRoundAndNumberFormattedForPP);
+
+      //     ////////////////////////////////////////////////
+      //     ////////////////////////////////////////////////////
+      //     /////////below needs to be updated once a year!!!!!!////
+      //     /////////below needs to be updated once a year!!!!!!////
+      //     /////////below needs to be updated once a year!!!!!!////
+      //     /////////below needs to be updated once a year!!!!!!////
+      //     /////////below needs to be updated once a year!!!!!!////
+      //     /////////below needs to be updated once a year!!!!!!////
+      //     /////////below needs to be updated once a year!!!!!!////
+      //     /////////below needs to be updated once a year!!!!!!////
+      //     /////////below needs to be updated once a year!!!!!!////
+      //     /////////below needs to be updated once a year!!!!!!////
+      //     /////////below needs to be updated once a year!!!!!!////
+      //     /////////below needs to be updated once a year!!!!!!////
+      //     /////////below needs to be updated once a year!!!!!!////
+      //     /////////////////////////////////////////////////////////
+      //     if (+fcPickRoundAndNumberFormattedForPP === 201) {
+      //       rvValue = 0.67;
+      //       rvPercentOfMax = 0.2;
+      //     }
+      //     if (fcPickYear === 2023) {
+      //       // console.log(fcPickRoundAndNumberFormattedForPP);
+      //       if (+fcPickRoundAndNumberFormattedForPP === 101) {
+      //         rvValue = 3;
+      //         rvPercentOfMax = 0.9;
+      //       }
+      //       if (
+      //         +fcPickRoundAndNumberFormattedForPP > 101 &&
+      //         +fcPickRoundAndNumberFormattedForPP < 106
+      //       ) {
+      //         rvValue = 2;
+      //         rvPercentOfMax = 0.6;
+      //       }
+      //       if (
+      //         +fcPickRoundAndNumberFormattedForPP > 105 &&
+      //         +fcPickRoundAndNumberFormattedForPP < 111
+      //       ) {
+      //         // console.log(fcPickRoundAndNumberFormattedForPP);
+      //         rvValue = 1.17;
+      //         rvPercentOfMax = 0.35;
+      //       }
+      //       if (
+      //         (+fcPickRoundAndNumberFormattedForPP > 109 &&
+      //           +fcPickRoundAndNumberFormattedForPP < 202) ||
+      //         +fcPickRoundAndNumberFormattedForPP === 11
+      //       ) {
+      //         // console.log(fcPickRoundAndNumberFormattedForPP);
+      //         rvValue = 0.67;
+      //         rvPercentOfMax = 0.2;
+      //       }
+      //       if (
+      //         +fcPickRoundAndNumberFormattedForPP > 201 &&
+      //         +fcPickRoundAndNumberFormattedForPP < 211
+      //       ) {
+      //         // console.log(fcPickRoundAndNumberFormattedForPP);
+      //         rvValue = 0.44;
+      //         rvPercentOfMax = 0.13;
+      //       }
+      //       if (
+      //         (+fcPickRoundAndNumberFormattedForPP > 209 &&
+      //           +fcPickRoundAndNumberFormattedForPP < 307) ||
+      //         +fcPickRoundAndNumberFormattedForPP === 21
+      //       ) {
+      //         // console.log(fcPickRoundAndNumberFormattedForPP);
+      //         rvValue = 0.33;
+      //         rvPercentOfMax = 0.1;
+      //       }
+      //       if (+fcPickRoundAndNumberFormattedForPP > 306) {
+      //         rvValue = 0.11;
+      //         rvPercentOfMax = 0.03;
+      //       }
+      //     }
+      //     if (fcPickYear === 2024) {
+      //       // console.log(fcPickRoundAndNumberFormattedForPP);
+      //       if (+fcPickRoundAndNumberFormattedForPP < 201) {
+      //         rvValue = 0.83;
+      //         rvPercentOfMax = 0.25;
+      //       }
+      //       if (
+      //         +fcPickRoundAndNumberFormattedForPP > 111 &&
+      //         +fcPickRoundAndNumberFormattedForPP < 301
+      //       ) {
+      //         rvValue = 0.33;
+      //         rvPercentOfMax = 0.1;
+      //       }
+      //       if (
+      //         +fcPickRoundAndNumberFormattedForPP > 211 &&
+      //         +fcPickRoundAndNumberFormattedForPP < 401
+      //       ) {
+      //         rvValue = 0.11;
+      //         rvPercentOfMax = 0.03;
+      //       }
+      //     }
+      //   }
+      // });
 
       let tradeCalculaterDataObject = new tradeCalculaterData(
         sanitizedFCPlayerName,
@@ -466,6 +793,7 @@ const testfunc = async function () {
         player.player.position,
         player.player.maybeTeam,
         player.player.maybeAge,
+        sanitizedFCPlayerName,
         player.value,
         player.overallRank,
         player.positionRank,
@@ -476,10 +804,23 @@ const testfunc = async function () {
         +rvPercentOfMax
       );
 
+      tradeCalculaterDataObject.rvData(
+        sanitizedFCPlayerName,
+        fcPickYear,
+        fcPickRound,
+        fcPickNumber,
+        fcPosition,
+        SleeperIDFromMe
+      );
+
       alltradeCalculaterDataArray.push(tradeCalculaterDataObject);
       // console.log(alltradeCalculaterDataArray);
-      // if (player.overallRank === 15) {
-      //   console.log(alltradeCalculaterDataArray);
+      // if (player.player.overallRank < 30) {
+      //   console.log(tradeCalculaterDataObject);
+      // }
+
+      // if (player.player.position === 'PICK') {
+      //   console.log(tradeCalculaterDataObject);
       // }
       alltradeCalculaterDataArray.map(function (obj) {
         // console.log(obj);
