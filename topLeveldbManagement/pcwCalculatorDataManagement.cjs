@@ -115,6 +115,8 @@ let fcPickRoundAndNumberFormattedForPP = 0;
 let rvValue = 0;
 let rvPercentOfMax = 0;
 
+const curYear = new Date().getFullYear();
+
 const testfunc = async function () {
   const test = await alltradeCalculaterDataArray;
   // console.log(test);
@@ -293,7 +295,7 @@ const testfunc = async function () {
           /////////////////////////////////////////////////////////
 
           if (fcPosition === 'PICK') {
-            console.log(SleeperIDFromMe);
+            // console.log(SleeperIDFromMe);
             if (+fcPickRoundAndNumberFormattedForPP === 201) {
               this.rvValue = 0.67;
               this.rvPercentOfMax = 0.2;
@@ -485,6 +487,13 @@ const testfunc = async function () {
         }
       }
 
+      if (fcPosition === 'PICK') {
+        // console.log(fcPickYear);
+        if (+fcPickYear === curYear + 1 && +fcPickRound === 1) {
+          // console.log(rvPlayer);
+          console.log(fcPickYear);
+        }
+      }
       //for pp
 
       ppMaxValue = ppMaxValueArray[0];
@@ -584,206 +593,6 @@ const testfunc = async function () {
           }
         }
       });
-
-      // rvDynastyRankingsTEP.forEach(function (rvPlayer) {
-      //   if (rvPlayer['"Player"'].includes("'")) {
-      //     rvPlayer['"Player"'] = rvPlayer['"Player"'].replace("'", '');
-      //   }
-
-      //   let sanitizedRVPlayerName = rvPlayer['"Player"']
-      //     .slice(1, -1)
-      //     .replace("'", '')
-      //     .replace('.', '')
-      //     .replace('.', '');
-
-      //   if (sanitizedRVPlayerName === sanitizedFCPlayerName) {
-      //     // console.log(sanitizedRVPlayerName);
-      //     if (
-      //       sanitizedRVPlayerName === 'Patrick Mahomes' ||
-      //       sanitizedRVPlayerName === 'Josh Allen'
-      //     ) {
-      //       // console.log(rvPlayer);
-      //       rvValue = 3.33;
-      //       rvPercentOfMax = 100;
-      //     }
-      //     if (
-      //       +rvPlayer['"AVGTier"'] === 1 &&
-      //       sanitizedRVPlayerName !== 'Patrick Mahomes' &&
-      //       sanitizedRVPlayerName !== 'Josh Allen'
-      //     ) {
-      //       // console.log(sanitizedRVPlayerName);
-      //       rvValue = 3;
-      //       rvPercentOfMax = 0.9;
-      //     }
-      //     if (+rvPlayer['"AVGTier"'] > 1 && +rvPlayer['"AVGTier"'] < 2) {
-      //       // console.log(sanitizedRVPlayerName);
-      //       rvValue = 2.5;
-      //       rvPercentOfMax = 0.75;
-      //     }
-      //     if (+rvPlayer['"AVGTier"'] === 2) {
-      //       // console.log(sanitizedRVPlayerName);
-      //       rvValue = 2;
-      //       rvPercentOfMax = 0.6;
-      //     }
-      //     if (+rvPlayer['"AVGTier"'] > 2 && +rvPlayer['"AVGTier"'] < 3) {
-      //       // console.log(sanitizedRVPlayerName);
-      //       rvValue = 1.67;
-      //       rvPercentOfMax = 0.5;
-      //     }
-      //     if (+rvPlayer['"AVGTier"'] === 3) {
-      //       // console.log(sanitizedRVPlayerName);
-      //       rvValue = 1.33;
-      //       rvPercentOfMax = 0.4;
-      //     }
-      //     if (+rvPlayer['"AVGTier"'] > 3 && +rvPlayer['"AVGTier"'] < 4) {
-      //       // console.log(sanitizedRVPlayerName);
-      //       rvValue = 1.17;
-      //       rvPercentOfMax = 0.35;
-      //     }
-      //     if (+rvPlayer['"AVGTier"'] === 4) {
-      //       // console.log(sanitizedRVPlayerName);
-      //       rvValue = 1;
-      //       rvPercentOfMax = 0.3;
-      //     }
-      //     if (+rvPlayer['"AVGTier"'] > 4 && +rvPlayer['"AVGTier"'] < 5) {
-      //       // console.log(sanitizedRVPlayerName);
-      //       rvValue = 0.83;
-      //       rvPercentOfMax = 0.25;
-      //     }
-      //     if (+rvPlayer['"AVGTier"'] === 5) {
-      //       // console.log(sanitizedRVPlayerName);
-      //       rvValue = 0.67;
-      //       rvPercentOfMax = 0.2;
-      //     }
-      //     if (+rvPlayer['"AVGTier"'] > 5 && +rvPlayer['"AVGTier"'] < 6) {
-      //       // console.log(sanitizedRVPlayerName);
-      //       rvValue = 0.55;
-      //       rvPercentOfMax = 0.17;
-      //     }
-      //     if (+rvPlayer['"AVGTier"'] === 6) {
-      //       // console.log(sanitizedRVPlayerName);
-      //       rvValue = 0.44;
-      //       rvPercentOfMax = 0.13;
-      //     }
-      //     if (+rvPlayer['"AVGTier"'] > 6 && +rvPlayer['"AVGTier"'] < 7) {
-      //       // console.log(sanitizedRVPlayerName);
-      //       rvValue = 0.385;
-      //       rvPercentOfMax = 0.12;
-      //     }
-      //     if (+rvPlayer['"AVGTier"'] === 7) {
-      //       // console.log(sanitizedRVPlayerName);
-      //       rvValue = 0.33;
-      //       rvPercentOfMax = 0.1;
-      //     }
-      //     if (+rvPlayer['"AVGTier"'] > 7 && +rvPlayer['"AVGTier"'] < 8) {
-      //       // console.log(sanitizedRVPlayerName);
-      //       rvValue = 0.22;
-      //       rvPercentOfMax = 0.07;
-      //     }
-      //     if (+rvPlayer['"AVGTier"'] === 8) {
-      //       // console.log(sanitizedRVPlayerName);
-      //       rvValue = 0.11;
-      //       rvPercentOfMax = 0.03;
-      //     }
-
-      //     // console.log(fcPickYear);
-      //     // console.log(fcPickRoundAndNumberFormattedForPP);
-
-      //     ////////////////////////////////////////////////
-      //     ////////////////////////////////////////////////////
-      //     /////////below needs to be updated once a year!!!!!!////
-      //     /////////below needs to be updated once a year!!!!!!////
-      //     /////////below needs to be updated once a year!!!!!!////
-      //     /////////below needs to be updated once a year!!!!!!////
-      //     /////////below needs to be updated once a year!!!!!!////
-      //     /////////below needs to be updated once a year!!!!!!////
-      //     /////////below needs to be updated once a year!!!!!!////
-      //     /////////below needs to be updated once a year!!!!!!////
-      //     /////////below needs to be updated once a year!!!!!!////
-      //     /////////below needs to be updated once a year!!!!!!////
-      //     /////////below needs to be updated once a year!!!!!!////
-      //     /////////below needs to be updated once a year!!!!!!////
-      //     /////////below needs to be updated once a year!!!!!!////
-      //     /////////////////////////////////////////////////////////
-      //     if (+fcPickRoundAndNumberFormattedForPP === 201) {
-      //       rvValue = 0.67;
-      //       rvPercentOfMax = 0.2;
-      //     }
-      //     if (fcPickYear === 2023) {
-      //       // console.log(fcPickRoundAndNumberFormattedForPP);
-      //       if (+fcPickRoundAndNumberFormattedForPP === 101) {
-      //         rvValue = 3;
-      //         rvPercentOfMax = 0.9;
-      //       }
-      //       if (
-      //         +fcPickRoundAndNumberFormattedForPP > 101 &&
-      //         +fcPickRoundAndNumberFormattedForPP < 106
-      //       ) {
-      //         rvValue = 2;
-      //         rvPercentOfMax = 0.6;
-      //       }
-      //       if (
-      //         +fcPickRoundAndNumberFormattedForPP > 105 &&
-      //         +fcPickRoundAndNumberFormattedForPP < 111
-      //       ) {
-      //         // console.log(fcPickRoundAndNumberFormattedForPP);
-      //         rvValue = 1.17;
-      //         rvPercentOfMax = 0.35;
-      //       }
-      //       if (
-      //         (+fcPickRoundAndNumberFormattedForPP > 109 &&
-      //           +fcPickRoundAndNumberFormattedForPP < 202) ||
-      //         +fcPickRoundAndNumberFormattedForPP === 11
-      //       ) {
-      //         // console.log(fcPickRoundAndNumberFormattedForPP);
-      //         rvValue = 0.67;
-      //         rvPercentOfMax = 0.2;
-      //       }
-      //       if (
-      //         +fcPickRoundAndNumberFormattedForPP > 201 &&
-      //         +fcPickRoundAndNumberFormattedForPP < 211
-      //       ) {
-      //         // console.log(fcPickRoundAndNumberFormattedForPP);
-      //         rvValue = 0.44;
-      //         rvPercentOfMax = 0.13;
-      //       }
-      //       if (
-      //         (+fcPickRoundAndNumberFormattedForPP > 209 &&
-      //           +fcPickRoundAndNumberFormattedForPP < 307) ||
-      //         +fcPickRoundAndNumberFormattedForPP === 21
-      //       ) {
-      //         // console.log(fcPickRoundAndNumberFormattedForPP);
-      //         rvValue = 0.33;
-      //         rvPercentOfMax = 0.1;
-      //       }
-      //       if (+fcPickRoundAndNumberFormattedForPP > 306) {
-      //         rvValue = 0.11;
-      //         rvPercentOfMax = 0.03;
-      //       }
-      //     }
-      //     if (fcPickYear === 2024) {
-      //       // console.log(fcPickRoundAndNumberFormattedForPP);
-      //       if (+fcPickRoundAndNumberFormattedForPP < 201) {
-      //         rvValue = 0.83;
-      //         rvPercentOfMax = 0.25;
-      //       }
-      //       if (
-      //         +fcPickRoundAndNumberFormattedForPP > 111 &&
-      //         +fcPickRoundAndNumberFormattedForPP < 301
-      //       ) {
-      //         rvValue = 0.33;
-      //         rvPercentOfMax = 0.1;
-      //       }
-      //       if (
-      //         +fcPickRoundAndNumberFormattedForPP > 211 &&
-      //         +fcPickRoundAndNumberFormattedForPP < 401
-      //       ) {
-      //         rvValue = 0.11;
-      //         rvPercentOfMax = 0.03;
-      //       }
-      //     }
-      //   }
-      // });
 
       let tradeCalculaterDataObject = new tradeCalculaterData(
         sanitizedFCPlayerName,
