@@ -490,8 +490,8 @@ const testfunc = async function () {
       if (fcPosition === 'PICK') {
         // console.log(fcPickYear);
         if (+fcPickYear === curYear + 1 && +fcPickRound === 1) {
-          // console.log(rvPlayer);
-          console.log(fcPickYear);
+          // console.log(fcPickYear);
+          let fcNextYearFirstValue = +player.value;
         }
       }
       //for pp
