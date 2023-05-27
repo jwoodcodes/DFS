@@ -102,10 +102,16 @@ async function fetchRawFantasyCalcDataFromMongodb() {
 }
 
 let fcMaxValue = 0;
+let fcQBMaxValue = 0;
+let fcNonQBMaxValue = 0;
 let ppMaxValue = 0;
 let ppMaxValueArray = [];
+let ppSFTEPQBMaxValue = 0;
+let ppSFTEPNonQBMaxValue = 0;
 let ppSFTEPValue = 0;
 let ppSFTEPPercentOfMax = 0;
+let ppSFQBTEPPercentOfMax = 0;
+let ppSFNonQBTEPPercentOfMax = 0;
 let ppOverallRank = 0;
 let highestighestValuePlayerValueArray = [];
 let fcPickYear = 0;
@@ -138,9 +144,11 @@ const testfunc = async function () {
       fantasyCalcValue,
       fantasyCalcRank,
       fantasyCalcPositionRank,
-      percentOfFantasyCalcMaxValue,
+      fcQBPercentOfMax,
+      fcNonQBPercentOfMax,
       ppSFTEPValue,
-      ppSFTEPPercentOfMax,
+      ppSFQBTEPPercentOfMax,
+      ppSFNonQBTEPPercentOfMax,
       rvValue,
       rvPercentOfMax
     ) {
@@ -155,11 +163,218 @@ const testfunc = async function () {
       this.fantasyCalcValue = fantasyCalcValue;
       this.fantasyCalcRank = fantasyCalcRank;
       this.fantasyCalcPositionRank = fantasyCalcPositionRank;
-      this.percentOfFantasyCalcMaxValue = percentOfFantasyCalcMaxValue;
+      this.fcQBPercentOfMax = fcQBPercentOfMax;
+      this.fcNonQBPercentOfMax = fcNonQBPercentOfMax;
       this.ppSFTEPValue = ppSFTEPValue;
-      this.ppSFTEPPercentOfMax = ppSFTEPPercentOfMax;
+      this.ppSFQBTEPPercentOfMax = ppSFQBTEPPercentOfMax;
+      this.ppSFNonQBTEPPercentOfMax = ppSFNonQBTEPPercentOfMax;
       this.rvValue = rvValue;
       this.rvPercentOfMax = rvPercentOfMax;
+    }
+
+    ppData(player, sanitizedFCPlayerName) {
+      // pp with picks
+      let counter = 0;
+      ppSFTEPDynastyRankingsWithPicks.forEach(function (ppWithPicksPlayer) {
+        if (ppWithPicksPlayer['"Full Name"'].includes("'")) {
+          ppWithPicksPlayer['"Full Name"'] = ppWithPicksPlayer[
+            '"Full Name"'
+          ].replace("'", '');
+        }
+
+        let sanitizedPPPWithPicksPlayerName = ppWithPicksPlayer['"Full Name"']
+          .slice(1, -1)
+          .replace("'", '')
+          .replace('.', '')
+          .replace('.', '');
+
+        // console.log(ppWithPicksPlayer['"Position"'].slice(1, -1));
+        if (
+          +ppWithPicksPlayer['"Rank"'].slice(1, -1) === 1 ||
+          (+ppWithPicksPlayer['"Rank"'].slice(1, -1) === 2 &&
+            ppWithPicksPlayer['"Position"'].slice(1, -1) === 'QB')
+        ) {
+          // console.log(ppWithPicksPlayer);
+        }
+        if (
+          +ppWithPicksPlayer['"Rank"'].slice(1, -1) === 1 ||
+          (+ppWithPicksPlayer['"Rank"'].slice(1, -1) === 2 &&
+            ppWithPicksPlayer['"Position"'].slice(1, -1) === 'QB')
+        ) {
+          let playerOneValue = 0;
+          let playerTwoValue = 0;
+          // console.log(player);
+          if (+ppWithPicksPlayer['"Rank"'].slice(1, -1) === 1) {
+            playerOneValue = +ppWithPicksPlayer['"Lifetime Value"'];
+            ppSFTEPQBMaxValue = +ppWithPicksPlayer['"Lifetime Value"'].slice(
+              1,
+              -1
+            );
+            // console.log(playerOneValue);
+          }
+          if (+ppWithPicksPlayer['"Rank"'].slice(1, -1) === 2) {
+            playerTwoValue = +ppWithPicksPlayer['"Lifetime Value"'];
+            ppSFTEPQBMaxValue =
+              +ppSFTEPQBMaxValue +
+              +ppWithPicksPlayer['"Lifetime Value"'].slice(1, -1);
+            // console.log(fcQBMaxValue);
+            ppSFTEPQBMaxValue = +(ppSFTEPQBMaxValue / 2);
+          }
+          // console.log(fcQBMaxValue);
+          // fcQBMaxValue = +((fcQBPercentOfMax += player.value) / 2).toFixed(2);
+
+          ///
+        }
+        if (
+          ppWithPicksPlayer['"Position"'].slice(1, -1) !== 'QB' &&
+          ppSFTEPNonQBMaxValue === 0
+        ) {
+          // console.log(player.player.name);
+          ppSFTEPNonQBMaxValue = +ppWithPicksPlayer['"Lifetime Value"'].slice(
+            1,
+            -1
+          );
+          // console.log(ppSFTEPNonQBMaxValue);
+          counter = 1;
+        }
+        if (
+          ppWithPicksPlayer['"Position"'].slice(1, -1) !== 'QB' &&
+          counter === 1 &&
+          ppSFTEPNonQBMaxValue !==
+            +ppWithPicksPlayer['"Lifetime Value"'].slice(1, -1)
+        ) {
+          // console.log(player.player.name);
+          ppSFTEPNonQBMaxValue =
+            +ppSFTEPNonQBMaxValue +
+            +ppWithPicksPlayer['"Lifetime Value"'].slice(1, -1);
+          // console.log(fcQBMaxValue);
+          ppSFTEPNonQBMaxValue = +(ppSFTEPNonQBMaxValue / 2);
+          // console.log(ppSFTEPNonQBMaxValue);
+          // console.log(ppSFTEPQBMaxValue);
+          counter = 0;
+        }
+
+        /////////////////
+
+        ppSFTEPDynastyRankingsWithPicks.forEach(function (ppWithPicksPlayer) {
+          if (ppWithPicksPlayer['"Full Name"'].includes("'")) {
+            ppWithPicksPlayer['"Full Name"'] = ppWithPicksPlayer[
+              '"Full Name"'
+            ].replace("'", '');
+          }
+
+          let sanitizedPPPWithPicksPlayerName = ppWithPicksPlayer['"Full Name"']
+            .slice(1, -1)
+            .replace("'", '')
+            .replace('.', '')
+            .replace('.', '');
+
+          // console.log(ppSFTEPNonQBMaxValue);
+
+          if (player.player.position === 'PICK') {
+            // console.log(ppWithPicksPlayer);
+            // console.log(sanitizedFCPlayerName);
+            // console.log(sanitizedPPPWithPicksPlayerName);
+            // console.log(player);
+            // console.log(fcPickYear, fcPickRound, fcPickNumber);
+            SleeperIDFromMe = player.player.sleeperId;
+
+            if (
+              fcPickRoundAndNumberFormattedForPP ===
+              sanitizedPPPWithPicksPlayerName
+            ) {
+              // console.log(ppWithPicksPlayer);
+              // console.log(sanitizedPPPWithPicksPlayerName);
+
+              ppSFTEPValue = +ppWithPicksPlayer['"Team Abbrev"'].slice(1, -1);
+              ppSFTEPPercentOfMax = +(ppSFTEPValue / ppMaxValue).toFixed(3);
+            }
+          }
+        });
+
+        //with rookies no picks
+
+        ppSFTEPDynastyRankingsWithRookies.forEach(function (ppPlayer) {
+          // console.log(ppPlayer['"Full Name"']);
+
+          if (ppPlayer['"Full Name"'].includes("'")) {
+            ppPlayer['"Full Name"'] = ppPlayer['"Full Name"'].replace("'", '');
+          }
+
+          let sanitizedPPPlayerName = ppPlayer['"Full Name"']
+            .slice(1, -1)
+            .replace("'", '')
+            .replace('.', '')
+            .replace('.', '');
+          // console.log(sanitizedPPPlayerName);
+
+          // console.log(sanitizedPPPlayerName, sanitizedFCPlayerName);
+          // console.log(ppMaxValue);
+
+          if (sanitizedPPPlayerName === sanitizedFCPlayerName) {
+            // console.log(sanitizedFCPlayerName);
+
+            // console.log(ppSFTEPNonQBMaxValue);
+
+            ppSFTEPValue = +ppPlayer['"Lifetime Value"'].slice(1, -1);
+            // // console.log(ppPlayer['"Overall Rank"']);
+            // ppOverallRank = +ppPlayer['"Rank"'].slice(1, -1);
+
+            // if (+ppOverallRank === 1) {
+            //   // console.log(ppPlayer['"Full Name"']);
+            //   let tempHighestValuePlayerValue = ppPlayer[
+            //     '"Lifetime Value"'
+            //   ].slice(1, -1);
+            //   let highestighestValuePlayerValue = +tempHighestValuePlayerValue;
+            //   highestighestValuePlayerValueArray.push(
+            //     highestighestValuePlayerValue
+            //   );
+            //   ppSFTEPPercentOfMax = 100;
+            //   // console.log(ppSFTEPValue);
+            // }
+
+            // if (
+            //   +ppSFTEPValue > 450 &&
+            //   ppPlayer['"Position"'] !== '""' &&
+            //   +ppOverallRank > 1
+            // ) {
+            //   // console.log(ppMaxValue);
+            //   // console.log(ppPlayer);
+            //   // console.log(highestighestValuePlayerValueArray[0]);
+            //   let percentOfUnAdjustedMax = +(
+            //     ppSFTEPValue / highestighestValuePlayerValueArray[0]
+            //   ).toFixed(3);
+            //   // console.log(percentOfUnAdjustedMax);
+            //   ppSFTEPPercentOfMax = +percentOfUnAdjustedMax;
+            // }
+
+            // if (+ppSFTEPValue < 451 && ppPlayer['"Position"'] !== '""') {
+            //   // console.log(ppMaxValue);
+            //   ppSFTEPPercentOfMax = +(+ppSFTEPValue / +ppMaxValue).toFixed(2);
+            // }
+
+            //   ppSFQBTEPPercentOfMax
+            // ppSFNonQBTEPPercentOfMax
+
+            if (ppPlayer['"Position"'].slice(1, -1) === 'QB') {
+              // console.log(ppSFTEPQBMaxValue);
+              // console.log(ppPlayer['"Full Name"']);
+              ppSFQBTEPPercentOfMax = +(
+                +ppPlayer['"Lifetime Value"'].slice(1, -1) / +ppSFTEPQBMaxValue
+              ).toFixed(3);
+            }
+          }
+
+          if (ppPlayer['"Position"'].slice(1, -1) !== 'QB') {
+            // console.log(ppSFTEPQBMaxValue);
+            // console.log(ppPlayer['"Full Name"']);
+            // console.log(ppPlayer['"Position"'].slice(1, -1));
+            ppSFNonQBTEPPercentOfMax = +(
+              +ppPlayer['"Lifetime Value"'].slice(1, -1) / +ppSFTEPNonQBMaxValue
+            ).toFixed(3);
+          }
+        });
+      });
     }
 
     rvData(
@@ -383,36 +598,19 @@ const testfunc = async function () {
     }
   }
 
+  ///////////end of methods///////////////////////
+
   //////////////////////////////
 
-  ppSFTEPDynastyRankingsWithPicks.forEach(function (ppWithPicksPlayer) {
-    if (ppWithPicksPlayer['"Full Name"'].includes("'")) {
-      ppWithPicksPlayer['"Full Name"'] = ppWithPicksPlayer[
-        '"Full Name"'
-      ].replace("'", '');
-    }
+  //////////////////////////////////
 
-    let sanitizedPPPWithPicksPlayerName = ppWithPicksPlayer['"Full Name"']
-      .slice(1, -1)
-      .replace("'", '')
-      .replace('.', '')
-      .replace('.', '');
+  //////////////////////////////////
 
-    // sanitizedPPPWithPicksPlayerName.length < 5
-    if (ppWithPicksPlayer['"Position"'] === '""') {
-      if (sanitizedPPPWithPicksPlayerName === '106') {
-        // console.log(ppWithPicksPlayer);
-        let value = +ppWithPicksPlayer['"Team Abbrev"'].slice(1, -1);
+  ////////////////////fantasyCalc below///////////////////////////////////////////
 
-        ppMaxValue = +(value * 4).toFixed(3);
-        // console.log(ppMaxValue);
-        ppMaxValueArray.push(ppMaxValue);
-      }
-      // console.log(ppMaxValue);
-    }
-  });
+  /////////////////////////////////////////
+  ////////////////////////////
 
-  ////////////////////////
   let SleeperIDFromMe = '';
 
   newData.forEach(function (topLevelObject) {
@@ -420,6 +618,51 @@ const testfunc = async function () {
     const PlayerArray = topLevelObject.data;
 
     //for fantasycalc
+
+    let counter = 0;
+    PlayerArray.forEach(function (player) {
+      if (
+        player.overallRank === 1 ||
+        (player.overallRank === 2 && player.player.position === 'QB')
+      ) {
+        let playerOneValue = 0;
+        let playerTwoValue = 0;
+        // console.log(player);
+        if (player.overallRank === 1) {
+          playerOneValue = +player.value;
+          fcQBMaxValue = +player.value;
+          // console.log(playerOneValue);
+        }
+        if (player.overallRank === 2) {
+          playerTwoValue = +player.value;
+          fcQBMaxValue = +fcQBMaxValue + +player.value;
+          // console.log(fcQBMaxValue);
+          fcQBMaxValue = +(fcQBMaxValue / 2);
+        }
+        // console.log(fcQBMaxValue);
+        // fcQBMaxValue = +((fcQBPercentOfMax += player.value) / 2).toFixed(2);
+
+        ///
+      }
+      if (player.player.position !== 'QB' && fcNonQBMaxValue === 0) {
+        // console.log(player.player.name);
+        fcNonQBMaxValue = +player.value;
+        // console.log(fcNonQBMaxValue);
+        counter = 1;
+      }
+      if (
+        player.player.position !== 'QB' &&
+        counter === 1 &&
+        fcNonQBMaxValue !== +player.value
+      ) {
+        // console.log(player.player.name);
+        fcNonQBMaxValue = +fcNonQBMaxValue + +player.value;
+        // console.log(fcQBMaxValue);
+        fcNonQBMaxValue = +(fcNonQBMaxValue / 2);
+        // console.log(fcNonQBMaxValue);
+        counter = 0;
+      }
+    });
 
     PlayerArray.forEach(function (player) {
       if (player.player.name.includes("'")) {
@@ -434,28 +677,27 @@ const testfunc = async function () {
       // console.log(SanitizedFCPlayerName);
       let fcPosition = player.player.position;
 
-      let fcPercentOfMax = 0;
+      let fcQBPercentOfMax = 0;
+      let fcNonQBPercentOfMax = 0;
 
       // console.log(player);
       // console.log(player.player.ID);
 
-      if (player.overallRank === 1) {
-        fcMaxValue = fcMaxValue += player.value;
-
-        fcPercentOfMax = 100;
+      if (player.player.position === 'QB') {
+        // console.log(player.player.name);
+        fcQBPercentOfMax = +(+player.value / fcQBMaxValue).toFixed(3);
+        // console.log(player.player.name, fcQBPercentOfMax);
       }
 
-      if (player.overallRank === 2) {
-        fcMaxValue = +(fcMaxValue += player.value) / 2;
-        fcPercentOfMax = +(player.value / fcMaxValue).toFixed(2);
-      }
-      const testFCMaxValue = fcMaxValue;
-      if (player.overallRank > 2) {
-        fcPercentOfMax = +(player.value / testFCMaxValue).toFixed(2);
+      if (player.player.position !== 'QB') {
+        // console.log(player.player.name);
+        fcNonQBPercentOfMax = +(+player.value / fcNonQBMaxValue).toFixed(3);
+        // console.log(player.player.name, fcNonQBPercentOfMax);
       }
 
       if (player.player.position === 'PICK') {
         // console.log(sanitizedFCPlayerName);
+        fcNonQBPercentOfMax = +(+player.value / fcNonQBMaxValue).toFixed(3);
         fcPickYear = +sanitizedFCPlayerName.slice(0, 4);
         // console.log(fcPickYear);
         fcPickRound = +sanitizedFCPlayerName.slice(10, 12);
@@ -492,107 +734,13 @@ const testfunc = async function () {
         if (+fcPickYear === curYear + 1 && +fcPickRound === 1) {
           // console.log(fcPickYear);
           let fcNextYearFirstValue = +player.value;
+          // console.log(player);
+          // console.log(fcNextYearFirstValue);
         }
       }
-      //for pp
 
       ppMaxValue = ppMaxValueArray[0];
       // console.log(ppMaxValue);
-
-      ppSFTEPDynastyRankingsWithPicks.forEach(function (ppWithPicksPlayer) {
-        if (ppWithPicksPlayer['"Full Name"'].includes("'")) {
-          ppWithPicksPlayer['"Full Name"'] = ppWithPicksPlayer[
-            '"Full Name"'
-          ].replace("'", '');
-        }
-
-        let sanitizedPPPWithPicksPlayerName = ppWithPicksPlayer['"Full Name"']
-          .slice(1, -1)
-          .replace("'", '')
-          .replace('.', '')
-          .replace('.', '');
-
-        if (player.player.position === 'PICK') {
-          // console.log(ppWithPicksPlayer);
-          // console.log(sanitizedFCPlayerName);
-          // console.log(sanitizedPPPWithPicksPlayerName);
-          // console.log(player);
-          // console.log(fcPickYear, fcPickRound, fcPickNumber);
-          SleeperIDFromMe = player.player.sleeperId;
-
-          if (
-            fcPickRoundAndNumberFormattedForPP ===
-            sanitizedPPPWithPicksPlayerName
-          ) {
-            // console.log(ppWithPicksPlayer);
-            // console.log(sanitizedPPPWithPicksPlayerName);
-
-            ppSFTEPValue = +ppWithPicksPlayer['"Team Abbrev"'].slice(1, -1);
-            ppSFTEPPercentOfMax = +(ppSFTEPValue / ppMaxValue).toFixed(3);
-          }
-        }
-      });
-
-      //with rookies no picks
-
-      ppSFTEPDynastyRankingsWithRookies.forEach(function (ppPlayer) {
-        // console.log(ppPlayer['"Full Name"']);
-
-        if (ppPlayer['"Full Name"'].includes("'")) {
-          ppPlayer['"Full Name"'] = ppPlayer['"Full Name"'].replace("'", '');
-        }
-
-        let sanitizedPPPlayerName = ppPlayer['"Full Name"']
-          .slice(1, -1)
-          .replace("'", '')
-          .replace('.', '')
-          .replace('.', '');
-        // console.log(sanitizedPPPlayerName);
-
-        // console.log(sanitizedPPPlayerName, sanitizedFCPlayerName);
-        // console.log(ppMaxValue);
-
-        if (sanitizedPPPlayerName === sanitizedFCPlayerName) {
-          // console.log(sanitizedFCPlayerName);
-
-          ppSFTEPValue = +ppPlayer['"Lifetime Value"'].slice(1, -1);
-          // console.log(ppPlayer['"Overall Rank"']);
-          ppOverallRank = +ppPlayer['"Rank"'].slice(1, -1);
-
-          if (+ppOverallRank === 1) {
-            // console.log(ppPlayer['"Full Name"']);
-            let tempHighestValuePlayerValue = ppPlayer[
-              '"Lifetime Value"'
-            ].slice(1, -1);
-            let highestighestValuePlayerValue = +tempHighestValuePlayerValue;
-            highestighestValuePlayerValueArray.push(
-              highestighestValuePlayerValue
-            );
-            ppSFTEPPercentOfMax = 100;
-            // console.log(ppSFTEPValue);
-          }
-
-          if (
-            +ppSFTEPValue > 450 &&
-            ppPlayer['"Position"'] !== '""' &&
-            +ppOverallRank > 1
-          ) {
-            // console.log(ppMaxValue);
-            // console.log(ppPlayer);
-            // console.log(highestighestValuePlayerValueArray[0]);
-            let percentOfUnAdjustedMax = +(
-              ppSFTEPValue / highestighestValuePlayerValueArray[0]
-            ).toFixed(3);
-            // console.log(percentOfUnAdjustedMax);
-            ppSFTEPPercentOfMax = +percentOfUnAdjustedMax;
-          }
-
-          if (+ppSFTEPValue < 451 && ppPlayer['"Position"'] !== '""') {
-            // console.log(ppMaxValue);
-            ppSFTEPPercentOfMax = +(+ppSFTEPValue / +ppMaxValue).toFixed(2);
-          }
-        }
-      });
 
       let tradeCalculaterDataObject = new tradeCalculaterData(
         sanitizedFCPlayerName,
@@ -606,12 +754,16 @@ const testfunc = async function () {
         player.value,
         player.overallRank,
         player.positionRank,
-        fcPercentOfMax,
+        +fcQBPercentOfMax,
+        +fcNonQBPercentOfMax,
         +ppSFTEPValue,
-        +ppSFTEPPercentOfMax,
+        +ppSFQBTEPPercentOfMax,
+        +ppSFNonQBTEPPercentOfMax,
         +rvValue,
         +rvPercentOfMax
       );
+
+      tradeCalculaterDataObject.ppData(player, sanitizedFCPlayerName);
 
       tradeCalculaterDataObject.rvData(
         sanitizedFCPlayerName,
@@ -629,6 +781,15 @@ const testfunc = async function () {
       // }
 
       // if (player.player.position === 'PICK') {
+      //   console.log(tradeCalculaterDataObject);
+      // }
+      // if (player.player.position === 'QB') {
+      //   console.log(tradeCalculaterDataObject);
+      // }
+      // if (
+      //   player.player.position !== 'QB' &&
+      //   player.player.position !== 'PICK'
+      // ) {
       //   console.log(tradeCalculaterDataObject);
       // }
       alltradeCalculaterDataArray.map(function (obj) {
