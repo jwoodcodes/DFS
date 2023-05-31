@@ -184,12 +184,7 @@ const testfunc = async function () {
       // console.log(ppSFTEPNonQBMaxValue);
 
       if (player.player.position === 'PICK') {
-        // console.log(ppPlayerObject);
-        // console.log(sanitizedFCPlayerName);
-        // console.log(sanitizedPPPWithPicksPlayerName);
-        // console.log(player);
-        // console.log(fcPickYear, fcPickRound, fcPickNumber);
-        SleeperIDFromMe = player.player.sleeperId;
+        this.SleeperIDFromMe = player.player.sleeperId;
 
         if (
           fcPickRoundAndNumberFormattedForPP === sanitizedPPPWithPicksPlayerName
@@ -211,7 +206,7 @@ const testfunc = async function () {
         player.player.position !== 'PICK'
       ) {
         // console.log(sanitizedFCPlayerName);
-        SleeperIDFromMe = player.player.sleeperId;
+        this.SleeperIDFromMe = player.player.sleeperId;
 
         // console.log(ppSFTEPNonQBMaxValue);
         // console.log(sanitizedPPPlayerName, ppPlayer);
