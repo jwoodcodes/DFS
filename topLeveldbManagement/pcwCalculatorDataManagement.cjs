@@ -177,223 +177,77 @@ const testfunc = async function () {
       sanitizedFCPlayerName,
       ppPlayerObject,
       sanitizedPPPlayerName,
-      sanitizedPPPWithPicksPlayerName
+      sanitizedPPPWithPicksPlayerName,
+      ppSFTEPQBMaxValue,
+      ppSFTEPNonQBMaxValue
     ) {
-      // pp with picks
-      let counter = 0;
+      // console.log(ppSFTEPNonQBMaxValue);
 
-      // console.log(ppPlayerObject);
-      // console.log(player);
-      // console.log(sanitizedPPPlayerName, player, sanitizedFCPlayerName);
-      // console.log(
-      //   sanitizedPPPlayerName,
-      //   sanitizedFCPlayerName,
-      //   // sanitizedPPPWithPicksPlayerName
-      // );
+      if (player.player.position === 'PICK') {
+        // console.log(ppPlayerObject);
+        // console.log(sanitizedFCPlayerName);
+        // console.log(sanitizedPPPWithPicksPlayerName);
+        // console.log(player);
+        // console.log(fcPickYear, fcPickRound, fcPickNumber);
+        SleeperIDFromMe = player.player.sleeperId;
 
-      // for picks not players here
-
-      ppSFTEPDynastyRankingsWithPicks.forEach(function (ppWithPicksPlayer) {
-        // if (ppWithPicksPlayer['"Full Name"'].includes("'")) {
-        //   ppWithPicksPlayer['"Full Name"'] = ppWithPicksPlayer[
-        //     '"Full Name"'
-        //   ].replace("'", '');
-        // }
-
-        // let sanitizedPPPWithPicksPlayerName = ppWithPicksPlayer['"Full Name"']
-        //   .slice(1, -1)
-        //   .replace("'", '')
-        //   .replace('.', '')
-        //   .replace('.', '');
-
-        // console.log(ppWithPicksPlayer['"Position"'].slice(1, -1));
         if (
-          +ppWithPicksPlayer['"Rank"'].slice(1, -1) === 1 ||
-          (+ppWithPicksPlayer['"Rank"'].slice(1, -1) === 2 &&
-            ppWithPicksPlayer['"Position"'].slice(1, -1) === 'QB')
+          fcPickRoundAndNumberFormattedForPP === sanitizedPPPWithPicksPlayerName
         ) {
           // console.log(ppWithPicksPlayer);
-        }
-        if (
-          +ppWithPicksPlayer['"Rank"'].slice(1, -1) === 1 ||
-          (+ppWithPicksPlayer['"Rank"'].slice(1, -1) === 2 &&
-            ppWithPicksPlayer['"Position"'].slice(1, -1) === 'QB')
-        ) {
-          let playerOneValue = 0;
-          let playerTwoValue = 0;
-          // console.log(player);
-          if (+ppWithPicksPlayer['"Rank"'].slice(1, -1) === 1) {
-            playerOneValue = +ppWithPicksPlayer['"Lifetime Value"'];
-            ppSFTEPQBMaxValue = +ppWithPicksPlayer['"Lifetime Value"'].slice(
-              1,
-              -1
-            );
-            // console.log(playerOneValue);
-          }
-          if (+ppWithPicksPlayer['"Rank"'].slice(1, -1) === 2) {
-            playerTwoValue = +ppWithPicksPlayer['"Lifetime Value"'];
-            ppSFTEPQBMaxValue =
-              +ppSFTEPQBMaxValue +
-              +ppWithPicksPlayer['"Lifetime Value"'].slice(1, -1);
-            // console.log(fcQBMaxValue);
-            ppSFTEPQBMaxValue = +(ppSFTEPQBMaxValue / 2);
-          }
-          // console.log(fcQBMaxValue);
-          // fcQBMaxValue = +((fcQBPercentOfMax += player.value) / 2).toFixed(2);
+          // console.log(sanitizedPPPWithPicksPlayerName);
 
-          ///
+          ppSFTEPValue = +ppPlayerObject['"Team Abbrev"'].slice(1, -1);
+          ppSFQBTEPPercentOfMax = +(
+            ppSFTEPValue / ppSFTEPNonQBMaxValue
+          ).toFixed(3);
+          this.ppSFTEPValue = ppSFTEPValue;
+          this.ppSFQBTEPPercentOfMax = ppSFQBTEPPercentOfMax;
         }
-        if (
-          ppWithPicksPlayer['"Position"'].slice(1, -1) !== 'QB' &&
-          ppSFTEPNonQBMaxValue === 0
-        ) {
-          // console.log(player.player.name);
-          ppSFTEPNonQBMaxValue = +ppWithPicksPlayer['"Lifetime Value"'].slice(
-            1,
-            -1
-          );
-          // console.log(ppSFTEPNonQBMaxValue);
-          counter = 1;
-        }
-        if (
-          ppWithPicksPlayer['"Position"'].slice(1, -1) !== 'QB' &&
-          counter === 1 &&
-          ppSFTEPNonQBMaxValue !==
-            +ppWithPicksPlayer['"Lifetime Value"'].slice(1, -1)
-        ) {
-          // console.log(player.player.name);
-          ppSFTEPNonQBMaxValue =
-            +ppSFTEPNonQBMaxValue +
-            +ppWithPicksPlayer['"Lifetime Value"'].slice(1, -1);
-          // console.log(fcQBMaxValue);
-          ppSFTEPNonQBMaxValue = +(ppSFTEPNonQBMaxValue / 2);
-          // console.log(ppSFTEPNonQBMaxValue);
+      }
+
+      if (
+        sanitizedPPPlayerName === sanitizedFCPlayerName &&
+        player.player.position !== 'PICK'
+      ) {
+        // console.log(sanitizedFCPlayerName);
+        SleeperIDFromMe = player.player.sleeperId;
+
+        // console.log(ppSFTEPNonQBMaxValue);
+        // console.log(sanitizedPPPlayerName, ppPlayer);
+
+        ppSFTEPValue = +ppPlayerObject['"Lifetime Value"'].slice(1, -1);
+        this.ppSFTEPValue = ppSFTEPValue;
+        // if (SleeperIDFromMe === '4046') {
+        //   console.log(ppSFTEPValue, ppPlayerObject['"Position"'].slice(1, -1));
+        // }
+        if (ppPlayerObject['"Position"'].slice(1, -1) === 'QB') {
           // console.log(ppSFTEPQBMaxValue);
-          counter = 0;
+
+          ppSFQBTEPPercentOfMax = +(
+            +ppPlayerObject['"Lifetime Value"'].slice(1, -1) /
+            +ppSFTEPQBMaxValue
+          ).toFixed(3);
+          // console.log(
+          //   ppPlayerObject['"Full Name"'],
+          //   +ppPlayerObject['"Lifetime Value"'].slice(1, -1),
+          //   +ppSFTEPQBMaxValue,
+          //   ppSFQBTEPPercentOfMax
+          // );
+          this.ppSFQBTEPPercentOfMax = ppSFQBTEPPercentOfMax;
         }
 
-        /////////////////
-
-        ppSFTEPDynastyRankingsWithPicks.forEach(function (ppWithPicksPlayer) {
-          if (ppWithPicksPlayer['"Full Name"'].includes("'")) {
-            ppWithPicksPlayer['"Full Name"'] = ppWithPicksPlayer[
-              '"Full Name"'
-            ].replace("'", '');
-          }
-
-          let sanitizedPPPWithPicksPlayerName = ppWithPicksPlayer['"Full Name"']
-            .slice(1, -1)
-            .replace("'", '')
-            .replace('.', '')
-            .replace('.', '');
-
-          // console.log(ppSFTEPNonQBMaxValue);
-
-          if (player.player.position === 'PICK') {
-            // console.log(ppWithPicksPlayer);
-            // console.log(sanitizedFCPlayerName);
-            // console.log(sanitizedPPPWithPicksPlayerName);
-            // console.log(player);
-            // console.log(fcPickYear, fcPickRound, fcPickNumber);
-            SleeperIDFromMe = player.player.sleeperId;
-
-            if (
-              fcPickRoundAndNumberFormattedForPP ===
-              sanitizedPPPWithPicksPlayerName
-            ) {
-              // console.log(ppWithPicksPlayer);
-              // console.log(sanitizedPPPWithPicksPlayerName);
-
-              ppSFTEPValue = +ppWithPicksPlayer['"Team Abbrev"'].slice(1, -1);
-              ppSFTEPPercentOfMax = +(ppSFTEPValue / ppMaxValue).toFixed(3);
-            }
-          }
-        });
-
-        //with rookies no picks
-
-        ppSFTEPDynastyRankingsWithRookies.forEach(function (ppPlayer) {
+        if (ppPlayerObject['"Position"'].slice(1, -1) !== 'QB') {
+          // console.log(ppSFTEPQBMaxValue);
           // console.log(ppPlayer['"Full Name"']);
-
-          // if (ppPlayer['"Full Name"'].includes("'")) {
-          //   ppPlayer['"Full Name"'] = ppPlayer['"Full Name"'].replace("'", '');
-          // }
-
-          // let sanitizedPPPlayerName = ppPlayer['"Full Name"']
-          //   .slice(1, -1)
-          //   .replace("'", '')
-          //   .replace('.', '')
-          //   .replace('.', '');
-          // console.log(sanitizedPPPlayerName);
-
-          // console.log(sanitizedPPPlayerName, sanitizedFCPlayerName);
-          // console.log(ppMaxValue);
-
-          if (sanitizedPPPlayerName === sanitizedFCPlayerName) {
-            // console.log(sanitizedFCPlayerName);
-
-            // console.log(ppSFTEPNonQBMaxValue);
-            // console.log(sanitizedPPPlayerName, ppPlayer);
-
-            ppSFTEPValue = +ppPlayer['"Lifetime Value"'].slice(1, -1);
-            // // console.log(ppPlayer['"Overall Rank"']);
-            // ppOverallRank = +ppPlayer['"Rank"'].slice(1, -1);
-
-            // if (+ppOverallRank === 1) {
-            //   // console.log(ppPlayer['"Full Name"']);
-            //   let tempHighestValuePlayerValue = ppPlayer[
-            //     '"Lifetime Value"'
-            //   ].slice(1, -1);
-            //   let highestighestValuePlayerValue = +tempHighestValuePlayerValue;
-            //   highestighestValuePlayerValueArray.push(
-            //     highestighestValuePlayerValue
-            //   );
-            //   ppSFTEPPercentOfMax = 100;
-            //   // console.log(ppSFTEPValue);
-            // }
-
-            // if (
-            //   +ppSFTEPValue > 450 &&
-            //   ppPlayer['"Position"'] !== '""' &&
-            //   +ppOverallRank > 1
-            // ) {
-            //   // console.log(ppMaxValue);
-            //   // console.log(ppPlayer);
-            //   // console.log(highestighestValuePlayerValueArray[0]);
-            //   let percentOfUnAdjustedMax = +(
-            //     ppSFTEPValue / highestighestValuePlayerValueArray[0]
-            //   ).toFixed(3);
-            //   // console.log(percentOfUnAdjustedMax);
-            //   ppSFTEPPercentOfMax = +percentOfUnAdjustedMax;
-            // }
-
-            // if (+ppSFTEPValue < 451 && ppPlayer['"Position"'] !== '""') {
-            //   // console.log(ppMaxValue);
-            //   ppSFTEPPercentOfMax = +(+ppSFTEPValue / +ppMaxValue).toFixed(2);
-            // }
-
-            //   ppSFQBTEPPercentOfMax
-            // ppSFNonQBTEPPercentOfMax
-
-            if (ppPlayer['"Position"'].slice(1, -1) === 'QB') {
-              // console.log(ppSFTEPQBMaxValue);
-              // console.log(ppPlayer['"Full Name"']);
-              ppSFQBTEPPercentOfMax = +(
-                +ppPlayer['"Lifetime Value"'].slice(1, -1) / +ppSFTEPQBMaxValue
-              ).toFixed(3);
-            }
-          }
-
-          if (ppPlayer['"Position"'].slice(1, -1) !== 'QB') {
-            // console.log(ppSFTEPQBMaxValue);
-            // console.log(ppPlayer['"Full Name"']);
-            // console.log(ppPlayer['"Position"'].slice(1, -1));
-            ppSFNonQBTEPPercentOfMax = +(
-              +ppPlayer['"Lifetime Value"'].slice(1, -1) / +ppSFTEPNonQBMaxValue
-            ).toFixed(3);
-          }
-        });
-      });
+          // console.log(ppPlayer['"Position"'].slice(1, -1));
+          ppSFNonQBTEPPercentOfMax = +(
+            +ppPlayerObject['"Lifetime Value"'].slice(1, -1) /
+            +ppSFTEPNonQBMaxValue
+          ).toFixed(3);
+          this.ppSFNonQBTEPPercentOfMax = ppSFNonQBTEPPercentOfMax;
+        }
+      }
     }
 
     rvData(
@@ -713,7 +567,7 @@ const testfunc = async function () {
       // console.log(player.player.name, fcQBPercentOfMax);
     }
 
-    if (player.player.position !== 'QB') {
+    if (player.player.position !== 'QB' && player.player.position !== 'PICK') {
       // console.log(player.player.name);
       fcNonQBPercentOfMax = +(+player.value / fcNonQBMaxValue).toFixed(3);
       // console.log(player.player.name, fcNonQBPercentOfMax);
@@ -721,33 +575,87 @@ const testfunc = async function () {
 
     if (player.player.position === 'PICK') {
       // console.log(sanitizedFCPlayerName);
+      // console.log(fcNonQBPercentOfMax);
       fcNonQBPercentOfMax = +(+player.value / fcNonQBMaxValue).toFixed(3);
-      fcPickYear = +sanitizedFCPlayerName.slice(0, 4);
-      // console.log(fcPickYear);
-      fcPickRound = +sanitizedFCPlayerName.slice(10, 12);
-      // console.log(fcPickRound);
-      fcPickNumber = +sanitizedFCPlayerName.slice(17);
-      // console.log(fcPickYear, fcPickRound, fcPickNumber);
+
+      // console.log(sanitizedFCPlayerName, +sanitizedFCPlayerName.slice(11, 12));
+
+      if (+sanitizedFCPlayerName.slice(11, 12) === 0) {
+        fcPickYear = +sanitizedFCPlayerName.slice(0, 4);
+        // console.log(fcPickYear);
+        fcPickRound = +sanitizedFCPlayerName.slice(10, 11);
+        // console.log(fcPickRound);
+        fcPickNumber = +sanitizedFCPlayerName.slice(12);
+        // console.log(sanitizedFCPlayerName, fcPickYear, fcPickRound, fcPickNumber);
+      }
+      // console.log(sanitizedFCPlayerName.slice(5, 6));
+      if (
+        +sanitizedFCPlayerName.slice(11, 12) !== 0 &&
+        sanitizedFCPlayerName.slice(5, 6) === 'P'
+      ) {
+        fcPickYear = +sanitizedFCPlayerName.slice(0, 4);
+        // console.log(fcPickYear);
+        fcPickRound = +sanitizedFCPlayerName.slice(10, 11);
+        // console.log(fcPickRound);
+        fcPickNumber = +sanitizedFCPlayerName.slice(11);
+        // console.log(
+        //   sanitizedFCPlayerName,
+        //   fcPickYear,
+        //   fcPickRound,
+        //   fcPickNumber
+        // );
+      }
+      // console.log(sanitizedFCPlayerName, +sanitizedFCPlayerName.slice(11, 12));
+      if (
+        +sanitizedFCPlayerName.slice(11, 12) !== 0 &&
+        sanitizedFCPlayerName.slice(5, 6) === 'R'
+      ) {
+        fcPickYear = +sanitizedFCPlayerName.slice(0, 4);
+        // console.log(fcPickYear);
+        fcPickRound = +sanitizedFCPlayerName.slice(11, 12);
+        // console.log(fcPickRound);
+        fcPickNumber = 0;
+        // console.log(
+        //   sanitizedFCPlayerName,
+        //   fcPickYear,
+        //   fcPickRound,
+        //   fcPickNumber
+        // );
+      }
+
       SleeperIDFromMe = player.player.sleeperId;
-      if (fcPickYear === 2023) {
+      // console.log(curYear);
+      if (fcPickYear === curYear) {
         if (fcPickNumber < 10) {
           fcPickRoundAndNumberFormattedForPP =
             `${fcPickRound}0${fcPickNumber}`.replace(/\s/g, '');
-
-          // console.log(fcPickRoundAndNumberFormattedForPP, fcPickYear);
+          // console.log(`${fcPickRound}0${fcPickNumber}`.replace(/\s/g, ''));
+          // console.log(
+          //   sanitizedFCPlayerName,
+          //   fcPickRoundAndNumberFormattedForPP,
+          //   fcPickYear
+          // );
         }
         if (fcPickNumber === 10) {
           fcPickRoundAndNumberFormattedForPP = `${fcPickRound}${fcPickNumber}`
             .replace(/\s/g, '')
             .slice(0, 2);
-
-          // console.log(fcPickRoundAndNumberFormattedForPP);
+          // console.log(
+          //   sanitizedFCPlayerName,
+          //   fcPickRoundAndNumberFormattedForPP,
+          //   fcPickYear
+          // );
         }
         if (fcPickNumber === 11 || fcPickNumber === 12) {
           fcPickRoundAndNumberFormattedForPP =
             `${fcPickRound}${fcPickNumber}`.replace(/\s/g, '');
 
-          // console.log(fcPickRoundAndNumberFormattedForPP);
+          // console.log(
+          //   sanitizedFCPlayerName,
+          //   fcPickRoundAndNumberFormattedForPP,
+          //   fcPickYear,
+          //
+          // );
           // rvValue = ;
         }
       }
@@ -767,6 +675,7 @@ const testfunc = async function () {
 
     let sanitizedPPPlayerName = '';
     let sanitizedPPPWithPicksPlayerName = '';
+    let tempSanitizedPPPWithPicksPlayerName = '';
 
     if (player.player.position === 'PICK') {
       // console.log(player.player.name);
@@ -782,24 +691,39 @@ const testfunc = async function () {
         if (!ppWithPicksPlayer['"Age"'].slice(1, -1)) {
           // console.log(ppWithPicksPlayer);
 
-          sanitizedPPPWithPicksPlayerName = ppWithPicksPlayer['"Full Name"']
+          tempSanitizedPPPWithPicksPlayerName = ppWithPicksPlayer['"Full Name"']
             .slice(1, -1)
             .replace("'", '')
             .replace('.', '')
             .replace('.', '');
           // console.log(sanitizedPPPWithPicksPlayerName);
+
           // console.log(
           //   sanitizedPPPWithPicksPlayerName,
           //   fcPickRoundAndNumberFormattedForPP
           // );
 
-          if (
-            sanitizedPPPWithPicksPlayerName ===
-            fcPickRoundAndNumberFormattedForPP
-          ) {
-            // console.log(player);
+          // console.log(sanitizedPPPWithPicksPlayerName);
+          // sanitizedPPPWithPicksPlayerName =
+          //   tempSanitizedPPPWithPicksPlayerName;
+
+          if (tempSanitizedPPPWithPicksPlayerName.slice(0, 1) < 4) {
+            if (
+              tempSanitizedPPPWithPicksPlayerName ===
+                fcPickRoundAndNumberFormattedForPP &&
+              fcPickYear === curYear
+            ) {
+              sanitizedPPPWithPicksPlayerName =
+                tempSanitizedPPPWithPicksPlayerName;
+              // console.log(player);
+              // console.log(
+              //   sanitizedPPPWithPicksPlayerName,
+              //   fcPickRoundAndNumberFormattedForPP,
+              //   sanitizedFCPlayerName
+              // );
+              ppPlayerObject = ppWithPicksPlayer;
+            }
           }
-          ppPlayerObject = ppWithPicksPlayer;
         }
       });
     }
@@ -819,20 +743,74 @@ const testfunc = async function () {
           .replace('.', '');
         // console.log(sanitizedPPPlayerName);
 
-        // console.log(sanitizedPPPlayerName, sanitizedFCPlayerName);
-        // console.log(ppMaxValue);
-        // console.log(
-        //   tempSanitizedPPPlayerName,
-        //   sanitizedFCPlayerName,
-        //   ppPlayer['"Position"'].slice(1, -1)
-        // );
-
         // console.log(player.player.position);
         if (ppPlayer['"Age"'].slice(1, -1)) {
           if (tempSanitizedPPPlayerName === sanitizedFCPlayerName) {
             // console.log(sanitizedFCPlayerName);
             // console.log(ppSFTEPNonQBMaxValue);
             // console.log(sanitizedPPPlayerName, ppPlayer);
+
+            ppPlayerObject = ppPlayer;
+
+            let counter = 0;
+
+            if (
+              +ppPlayerObject['"Rank"'].slice(1, -1) === 1 ||
+              (+ppPlayerObject['"Rank"'].slice(1, -1) === 2 &&
+                ppPlayerObject['"Position"'].slice(1, -1) === 'QB')
+            ) {
+              let playerOneValue = 0;
+              let playerTwoValue = 0;
+              // console.log(player);
+              if (+ppPlayerObject['"Rank"'].slice(1, -1) === 1) {
+                playerOneValue = +ppPlayerObject['"Lifetime Value"'];
+                ppSFTEPQBMaxValue = +ppPlayerObject['"Lifetime Value"'].slice(
+                  1,
+                  -1
+                );
+                // console.log(playerOneValue);
+              }
+              if (+ppPlayerObject['"Rank"'].slice(1, -1) === 2) {
+                playerTwoValue = +ppPlayerObject['"Lifetime Value"'];
+                ppSFTEPQBMaxValue =
+                  +ppSFTEPQBMaxValue +
+                  +ppPlayerObject['"Lifetime Value"'].slice(1, -1);
+                // console.log(fcQBMaxValue);
+                ppSFTEPQBMaxValue = +(ppSFTEPQBMaxValue / 2);
+              }
+              // console.log(fcQBMaxValue);
+              // fcQBMaxValue = +((fcQBPercentOfMax += player.value) / 2).toFixed(2);
+
+              ///
+            }
+            if (
+              ppPlayerObject['"Position"'].slice(1, -1) !== 'QB' &&
+              ppSFTEPNonQBMaxValue === 0
+            ) {
+              // console.log(player.player.name);
+              ppSFTEPNonQBMaxValue = +ppPlayerObject['"Lifetime Value"'].slice(
+                1,
+                -1
+              );
+              // console.log(ppSFTEPNonQBMaxValue);
+              counter = 1;
+            }
+            if (
+              ppPlayerObject['"Position"'].slice(1, -1) !== 'QB' &&
+              counter === 1 &&
+              ppSFTEPNonQBMaxValue !==
+                +ppPlayerObject['"Lifetime Value"'].slice(1, -1)
+            ) {
+              // console.log(player.player.name);
+              ppSFTEPNonQBMaxValue =
+                +ppSFTEPNonQBMaxValue +
+                +ppPlayerObject['"Lifetime Value"'].slice(1, -1);
+              // console.log(fcQBMaxValue);
+              ppSFTEPNonQBMaxValue = +(ppSFTEPNonQBMaxValue / 2);
+              // console.log(ppSFTEPNonQBMaxValue);
+              // console.log(ppSFTEPQBMaxValue);
+              counter = 0;
+            }
 
             sanitizedPPPlayerName = tempSanitizedPPPlayerName;
             ppPlayerObject = ppPlayer;
@@ -873,7 +851,9 @@ const testfunc = async function () {
       sanitizedFCPlayerName,
       ppPlayerObject,
       sanitizedPPPlayerName,
-      sanitizedPPPWithPicksPlayerName
+      sanitizedPPPWithPicksPlayerName,
+      ppSFTEPQBMaxValue,
+      ppSFTEPNonQBMaxValue
     );
 
     tradeCalculaterDataObject.rvData(
