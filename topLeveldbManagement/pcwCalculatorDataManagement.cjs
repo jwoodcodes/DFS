@@ -149,8 +149,7 @@ const testfunc = async function () {
       ppSFTEPValue,
       ppSFQBTEPPercentOfMax,
       ppSFNonQBTEPPercentOfMax,
-      rvValue,
-      rvPercentOfMax
+      rvValue
     ) {
       this.name = name;
       this.fantasyCalcID = fantasyCalcID;
@@ -169,7 +168,6 @@ const testfunc = async function () {
       this.ppSFQBTEPPercentOfMax = ppSFQBTEPPercentOfMax;
       this.ppSFNonQBTEPPercentOfMax = ppSFNonQBTEPPercentOfMax;
       this.rvValue = rvValue;
-      this.rvPercentOfMax = rvPercentOfMax;
     }
 
     ppData(
@@ -675,6 +673,8 @@ const testfunc = async function () {
         }
       }
     }
+
+    myRanksAndMyValuesAgainstMarketValue() {}
   }
 
   ///////////end of methods///////////////////////
@@ -1080,8 +1080,7 @@ const testfunc = async function () {
       +ppSFTEPValue,
       +ppSFQBTEPPercentOfMax,
       +ppSFNonQBTEPPercentOfMax,
-      +rvValue,
-      +rvPercentOfMax
+      +rvValue
     );
 
     // console.log(sanitizedPPPlayerName, ppPlayerObject);
@@ -1107,6 +1106,8 @@ const testfunc = async function () {
       fcPosition,
       SleeperIDFromMe
     );
+
+    tradeCalculaterDataObject.myRanksAndMyValuesAgainstMarketValue();
 
     alltradeCalculaterDataArray.push(tradeCalculaterDataObject);
     // console.log(alltradeCalculaterDataArray);
