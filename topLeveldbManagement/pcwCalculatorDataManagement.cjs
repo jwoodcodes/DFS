@@ -67,6 +67,13 @@ const newData = [];
 const alltradeCalculaterDataArray = [];
 const FinaltradeCalculaterDataArray = [];
 
+let allPlayersArray = [];
+let allQBsArray = [];
+let allRBsArray = [];
+let allWRsArray = [];
+let allTEsArray = [];
+let allPicksArray = [];
+
 async function fetchRawFantasyCalcDataFromMongodb() {
   const url =
     'mongodb+srv://devJay:Hesstrucksarethebest@dailydynasties.syom4sb.mongodb.net/fantasycalcData';
@@ -148,8 +155,7 @@ const testfunc = async function () {
       fcNonQBPercentOfMax,
       ppSFTEPValue,
       ppSFQBTEPPercentOfMax,
-      ppSFNonQBTEPPercentOfMax,
-      rvValue
+      ppSFNonQBTEPPercentOfMax
     ) {
       this.name = name;
       this.fantasyCalcID = fantasyCalcID;
@@ -167,7 +173,6 @@ const testfunc = async function () {
       this.ppSFTEPValue = ppSFTEPValue;
       this.ppSFQBTEPPercentOfMax = ppSFQBTEPPercentOfMax;
       this.ppSFNonQBTEPPercentOfMax = ppSFNonQBTEPPercentOfMax;
-      this.rvValue = rvValue;
     }
 
     ppData(
@@ -227,6 +232,14 @@ const testfunc = async function () {
           //   +ppSFTEPQBMaxValue,
           //   ppSFQBTEPPercentOfMax
           // );
+          // if (player.player.name === 'Patrick Mahomes') {
+          //   console.log(
+          //     player.player.name,
+          //     +ppPlayerObject['"Lifetime Value"'].slice(1, -1),
+          //     +ppSFTEPQBMaxValue,
+          //     ppSFQBTEPPercentOfMax
+          //   );
+          // }
           this.ppSFQBTEPPercentOfMax = ppSFQBTEPPercentOfMax;
         }
 
@@ -244,6 +257,7 @@ const testfunc = async function () {
     }
 
     rvData(
+      player,
       sanitizedFCPlayerName,
       sanitizedRVPlayerName,
       rvPlayer,
@@ -261,8 +275,9 @@ const testfunc = async function () {
           //Tier 1A QB's only
           if (+rvPlayer['"Rank"'] === 1 || +rvPlayer['"Rank"'] === 2) {
             // console.log(rvPlayer);
-            this.rvValue = 3.33;
-            this.rvPercentOfQBMax = 100;
+            this.rvTier = +rvPlayer['"AVGTier"'];
+            this.rvValue = +3.33;
+            this.rvPercentOfQBMax = 1;
           }
           //Tier 1 non QB's
           if (
@@ -270,18 +285,21 @@ const testfunc = async function () {
             rvPlayer['"POS"'].slice(1, -1) !== 'QB'
           ) {
             // console.log(rvPlayer);
+            this.rvTier = +rvPlayer['"AVGTier"'];
             this.rvValue = 3;
-            this.rvPercentOfNonQBMax = 100;
+            this.rvPercentOfNonQBMax = 1;
           }
           // tier 1B QB's
           if (
             +rvPlayer['"AVGTier"'] === 1 &&
             rvPlayer['"POS"'].slice(1, -1) === 'QB'
           ) {
-            if (+rvPlayer['"Rank"'] !== 1 && +rvPlayer['"Rank"'] !== 2)
+            if (+rvPlayer['"Rank"'] !== 1 && +rvPlayer['"Rank"'] !== 2) {
               // console.log(sanitizedRVPlayerName, rvPlayer['"POS"']);
+              this.rvTier = +rvPlayer['"AVGTier"'];
               this.rvValue = 3;
-            this.rvPercentOfQBMax = 0.9;
+              this.rvPercentOfQBMax = 0.9;
+            }
           }
           //
           //Tier 1.5 QB's
@@ -292,7 +310,8 @@ const testfunc = async function () {
           ) {
             if (+rvPlayer['"Rank"'] !== 1 && +rvPlayer['"Rank"'] !== 2)
               // console.log(sanitizedRVPlayerName, rvPlayer['"POS"']);
-              this.rvValue = 2.5;
+              this.rvTier = +rvPlayer['"AVGTier"'];
+            this.rvValue = 2.5;
             this.rvPercentOfQBMax = 0.75;
           }
           //Tier 1.5 non QB's
@@ -302,6 +321,7 @@ const testfunc = async function () {
             rvPlayer['"POS"'].slice(1, -1) !== 'QB'
           ) {
             // console.log(sanitizedRVPlayerName);
+            this.rvTier = +rvPlayer['"AVGTier"'];
             this.rvValue = 2.5;
             this.rvPercentOfNonQBMax = 0.83;
           }
@@ -312,6 +332,7 @@ const testfunc = async function () {
             rvPlayer['"POS"'].slice(1, -1) === 'QB'
           ) {
             // console.log(sanitizedRVPlayerName);
+            this.rvTier = +rvPlayer['"AVGTier"'];
             this.rvValue = 2;
             this.rvPercentOfQBMax = 0.6;
           }
@@ -321,6 +342,7 @@ const testfunc = async function () {
             rvPlayer['"POS"'].slice(1, -1) !== 'QB'
           ) {
             // console.log(sanitizedRVPlayerName);
+            this.rvTier = +rvPlayer['"AVGTier"'];
             this.rvValue = 2;
             this.rvPercentOfNonQBMax = 0.67;
           }
@@ -332,6 +354,7 @@ const testfunc = async function () {
             rvPlayer['"POS"'].slice(1, -1) === 'QB'
           ) {
             // console.log(sanitizedRVPlayerName);
+            this.rvTier = +rvPlayer['"AVGTier"'];
             this.rvValue = 1.67;
             this.rvPercentOfQBMax = 0.5;
           }
@@ -342,6 +365,7 @@ const testfunc = async function () {
             rvPlayer['"POS"'].slice(1, -1) !== 'QB'
           ) {
             // console.log(sanitizedRVPlayerName);
+            this.rvTier = +rvPlayer['"AVGTier"'];
             this.rvValue = 1.67;
             this.rvPercentOfNonQBMax = 0.56;
           }
@@ -352,6 +376,7 @@ const testfunc = async function () {
             rvPlayer['"POS"'].slice(1, -1) === 'QB'
           ) {
             // console.log(sanitizedRVPlayerName);
+            this.rvTier = +rvPlayer['"AVGTier"'];
             this.rvValue = 1.33;
             this.rvPercentOfQBMax = 0.4;
           }
@@ -361,6 +386,7 @@ const testfunc = async function () {
             rvPlayer['"POS"'].slice(1, -1) !== 'QB'
           ) {
             // console.log(sanitizedRVPlayerName);
+            this.rvTier = +rvPlayer['"AVGTier"'];
             this.rvValue = 1.33;
             this.rvPercentOfNonQBMax = 0.44;
           }
@@ -372,6 +398,8 @@ const testfunc = async function () {
             rvPlayer['"POS"'].slice(1, -1) === 'QB'
           ) {
             // console.log(sanitizedRVPlayerName);
+            this.rvTier = +rvPlayer['"AVGTier"'];
+
             this.rvValue = 1.17;
             this.rvPercentOfQBMax = 0.35;
           }
@@ -382,6 +410,7 @@ const testfunc = async function () {
             rvPlayer['"POS"'].slice(1, -1) !== 'QB'
           ) {
             // console.log(sanitizedRVPlayerName);
+            this.rvTier = +rvPlayer['"AVGTier"'];
             this.rvValue = 1.17;
             this.rvPercentOfNonQBMax = 0.39;
           }
@@ -392,6 +421,7 @@ const testfunc = async function () {
             rvPlayer['"POS"'].slice(1, -1) === 'QB'
           ) {
             // console.log(sanitizedRVPlayerName);
+            this.rvTier = +rvPlayer['"AVGTier"'];
             this.rvValue = 1;
             this.rvPercentOfQBMax = 0.3;
           }
@@ -401,6 +431,7 @@ const testfunc = async function () {
             rvPlayer['"POS"'].slice(1, -1) !== 'QB'
           ) {
             // console.log(sanitizedRVPlayerName);
+            this.rvTier = +rvPlayer['"AVGTier"'];
             this.rvValue = 1;
             this.rvPercentOfNonQBMax = 0.33;
           }
@@ -412,6 +443,7 @@ const testfunc = async function () {
             rvPlayer['"POS"'].slice(1, -1) === 'QB'
           ) {
             // console.log(sanitizedRVPlayerName);
+            this.rvTier = +rvPlayer['"AVGTier"'];
             this.rvValue = 0.83;
             this.rvPercentOfQBMax = 0.25;
           }
@@ -422,6 +454,7 @@ const testfunc = async function () {
             rvPlayer['"POS"'].slice(1, -1) !== 'QB'
           ) {
             // console.log(sanitizedRVPlayerName);
+            this.rvTier = +rvPlayer['"AVGTier"'];
             this.rvValue = 0.83;
             this.rvPercentOfNonQBMax = 0.28;
           }
@@ -432,6 +465,7 @@ const testfunc = async function () {
             rvPlayer['"POS"'].slice(1, -1) === 'QB'
           ) {
             // console.log(sanitizedRVPlayerName);
+            this.rvTier = +rvPlayer['"AVGTier"'];
             this.rvValue = 0.67;
             this.rvPercentOfQBMax = 0.2;
           }
@@ -441,6 +475,7 @@ const testfunc = async function () {
             rvPlayer['"POS"'].slice(1, -1) !== 'QB'
           ) {
             // console.log(sanitizedRVPlayerName);
+            this.rvTier = +rvPlayer['"AVGTier"'];
             this.rvValue = 0.67;
             this.rvPercentOfNonQBMax = 0.22;
           }
@@ -452,6 +487,7 @@ const testfunc = async function () {
             rvPlayer['"POS"'].slice(1, -1) === 'QB'
           ) {
             // console.log(sanitizedRVPlayerName);
+            this.rvTier = +rvPlayer['"AVGTier"'];
             this.rvValue = 0.55;
             this.rvPercentOfQBMax = 0.17;
           }
@@ -462,6 +498,7 @@ const testfunc = async function () {
             rvPlayer['"POS"'].slice(1, -1) !== 'QB'
           ) {
             // console.log(sanitizedRVPlayerName);
+            this.rvTier = +rvPlayer['"AVGTier"'];
             this.rvValue = 0.55;
             this.rvPercentOfNonQBMax = 0.18;
           }
@@ -472,6 +509,7 @@ const testfunc = async function () {
             rvPlayer['"POS"'].slice(1, -1) === 'QB'
           ) {
             // console.log(sanitizedRVPlayerName);
+            this.rvTier = +rvPlayer['"AVGTier"'];
             this.rvValue = 0.44;
             this.rvPercentOfQBMax = 0.13;
           }
@@ -481,6 +519,7 @@ const testfunc = async function () {
             rvPlayer['"POS"'].slice(1, -1) !== 'QB'
           ) {
             // console.log(sanitizedRVPlayerName);
+            this.rvTier = +rvPlayer['"AVGTier"'];
             this.rvValue = 0.44;
             this.rvPercentOfNonQBMax = 0.15;
           }
@@ -492,6 +531,7 @@ const testfunc = async function () {
             rvPlayer['"POS"'].slice(1, -1) === 'QB'
           ) {
             // console.log(sanitizedRVPlayerName);
+            this.rvTier = +rvPlayer['"AVGTier"'];
             this.rvValue = 0.385;
             this.rvPercentOfQBMax = 0.12;
           }
@@ -502,6 +542,7 @@ const testfunc = async function () {
             rvPlayer['"POS"'].slice(1, -1) !== 'QB'
           ) {
             // console.log(sanitizedRVPlayerName);
+            this.rvTier = +rvPlayer['"AVGTier"'];
             this.rvValue = 0.385;
             this.rvPercentOfNonQBMax = 0.13;
           }
@@ -512,6 +553,7 @@ const testfunc = async function () {
             rvPlayer['"POS"'].slice(1, -1) === 'QB'
           ) {
             // console.log(sanitizedRVPlayerName);
+            this.rvTier = +rvPlayer['"AVGTier"'];
             this.rvValue = 0.33;
             this.rvPercentOfQBMax = 0.1;
           }
@@ -521,6 +563,7 @@ const testfunc = async function () {
             rvPlayer['"POS"'].slice(1, -1) !== 'QB'
           ) {
             // console.log(sanitizedRVPlayerName);
+            this.rvTier = +rvPlayer['"AVGTier"'];
             this.rvValue = 0.33;
             this.rvPercentOfNonQBMax = 0.11;
           }
@@ -532,6 +575,7 @@ const testfunc = async function () {
             rvPlayer['"POS"'].slice(1, -1) === 'QB'
           ) {
             // console.log(sanitizedRVPlayerName);
+            this.rvTier = +rvPlayer['"AVGTier"'];
             this.rvValue = 0.22;
             this.rvPercentOfQBMax = 0.07;
           }
@@ -542,6 +586,7 @@ const testfunc = async function () {
             rvPlayer['"POS"'].slice(1, -1) !== 'QB'
           ) {
             // console.log(sanitizedRVPlayerName);
+            this.rvTier = +rvPlayer['"AVGTier"'];
             this.rvValue = 0.22;
             this.rvPercentOfNonQBMax = 0.07;
           }
@@ -551,6 +596,7 @@ const testfunc = async function () {
             rvPlayer['"POS"'].slice(1, -1) === 'QB'
           ) {
             // console.log(sanitizedRVPlayerName);
+            this.rvTier = +rvPlayer['"AVGTier"'];
             this.rvValue = 0.11;
             this.rvPercentOfQBMax = 0.03;
           }
@@ -560,54 +606,63 @@ const testfunc = async function () {
             rvPlayer['"POS"'].slice(1, -1) !== 'QB'
           ) {
             // console.log(sanitizedRVPlayerName);
+            this.rvTier = +rvPlayer['"AVGTier"'];
             this.rvValue = 0.11;
             this.rvPercentOfNonQBMax = 0.03;
           }
 
-          if (+rvPlayer['"AVGTier"'] === 8) {
-            // console.log(sanitizedRVPlayerName);
-            rvValue = 0.11;
-            rvPercentOfMax = 0.03;
+          if (+rvPlayer['"AVGTier"'] > 8) {
+            this.rvTier = +rvPlayer['"AVGTier"'];
+            this.rvValue = 0.05;
+            this.rvPercentOfQBMax = 0.01;
+            this.rvPercentOfNonQBMax = 0.015;
           }
         }
+      }
 
-        // console.log(fcPickYear);
-        // console.log(fcPickRoundAndNumberFormattedForPP);
+      if (!+rvPlayer['"AVGTier"']) {
+        if (fcPosition !== 'PICK') {
+          this.rvTier = 11;
+          this.rvValue = 0.05;
+          this.rvPercentOfQBMax = 0.01;
+          this.rvPercentOfNonQBMax = 0.015;
+        }
+      }
 
-        ////////////////////////////////////////////////
-        ////////////////////////////////////////////////////
-        /////////below needs to be updated once a year!!!!!!////
-        /////////below needs to be updated once a year!!!!!!////
-        /////////below needs to be updated once a year!!!!!!////
-        /////////below needs to be updated once a year!!!!!!////
-        /////////below needs to be updated once a year!!!!!!////
-        /////////below needs to be updated once a year!!!!!!////
-        /////////below needs to be updated once a year!!!!!!////
-        /////////below needs to be updated once a year!!!!!!////
-        /////////below needs to be updated once a year!!!!!!////
-        /////////below needs to be updated once a year!!!!!!////
-        /////////below needs to be updated once a year!!!!!!////
-        /////////below needs to be updated once a year!!!!!!////
-        /////////below needs to be updated once a year!!!!!!////
-        /////////////////////////////////////////////////////////
+      // console.log(fcPickYear);
+      // console.log(fcPickRoundAndNumberFormattedForPP);
 
+      ////////////////////////////////////////////////
+      ////////////////////////////////////////////////////
+      /////////below needs to be updated once a year!!!!!!////
+      /////////below needs to be updated once a year!!!!!!////
+      /////////below needs to be updated once a year!!!!!!////
+      /////////below needs to be updated once a year!!!!!!////
+      /////////below needs to be updated once a year!!!!!!////
+      /////////below needs to be updated once a year!!!!!!////
+      /////////below needs to be updated once a year!!!!!!////
+      /////////below needs to be updated once a year!!!!!!////
+      /////////below needs to be updated once a year!!!!!!////
+      /////////below needs to be updated once a year!!!!!!////
+      /////////below needs to be updated once a year!!!!!!////
+      /////////below needs to be updated once a year!!!!!!////
+      /////////below needs to be updated once a year!!!!!!////
+      /////////////////////////////////////////////////////////
+      if (!+rvPlayer['"AVGTier"']) {
         if (fcPosition === 'PICK') {
           // console.log(SleeperIDFromMe);
-          if (+fcPickRoundAndNumberFormattedForPP === 201) {
-            this.rvValue = 0.67;
-            this.rvPercentOfMax = 0.2;
-          }
-          if (fcPickYear === 2023) {
+
+          if (fcPickYear === curYear) {
             // console.log(fcPickRoundAndNumberFormattedForPP);
             if (+fcPickRound === 1 && +fcPickNumber === 1) {
               // console.log(fcPickNumber);
               this.rvValue = 3;
-              this.rvPercentOfMax = 0.9;
+              this.rvPercentOfNonQBMax = 0.9;
             }
             if (+fcPickRound === 1 && +fcPickNumber > 1 && +fcPickNumber < 6) {
               // console.log(fcPickYear, fcPickRound, fcPickNumber);
               this.rvValue = 2;
-              this.rvPercentOfMax = 0.6;
+              this.rvPercentOfNonQBMax = 0.6;
             }
 
             if (
@@ -616,7 +671,7 @@ const testfunc = async function () {
             ) {
               // console.log(fcPickRoundAndNumberFormattedForPP);
               this.rvValue = 1.17;
-              this.rvPercentOfMax = 0.35;
+              this.rvPercentOfNonQBMax = 0.35;
             }
             if (
               (+fcPickRoundAndNumberFormattedForPP > 109 &&
@@ -625,15 +680,15 @@ const testfunc = async function () {
             ) {
               // console.log(fcPickRoundAndNumberFormattedForPP);
               this.rvValue = 0.67;
-              this.rvPercentOfMax = 0.2;
+              this.rvPercentOfNonQBMax = 0.2;
             }
             if (
               +fcPickRoundAndNumberFormattedForPP > 201 &&
               +fcPickRoundAndNumberFormattedForPP < 211
             ) {
               // console.log(fcPickRoundAndNumberFormattedForPP);
-              rvValue = 0.44;
-              rvPercentOfMax = 0.13;
+              this.rvValue = 0.44;
+              this.rvPercentOfNonQBMax = 0.13;
             }
             if (
               (+fcPickRoundAndNumberFormattedForPP > 209 &&
@@ -641,40 +696,183 @@ const testfunc = async function () {
               +fcPickRoundAndNumberFormattedForPP === 21
             ) {
               // console.log(fcPickRoundAndNumberFormattedForPP);
-              rvValue = 0.33;
-              rvPercentOfMax = 0.1;
+              this.rvValue = 0.33;
+              this.rvPercentOfNonQBMax = 0.1;
             }
             if (+fcPickRoundAndNumberFormattedForPP > 306) {
-              rvValue = 0.11;
-              rvPercentOfMax = 0.03;
+              this.rvValue = 0.11;
+              this.rvPercentOfNonQBMax = 0.03;
             }
           }
-          if (fcPickYear === 2024) {
+          if (fcPickYear === +(curYear + 1)) {
+            // console.log(fcPickYear);
+            // console.log(player.player.name);
             // console.log(fcPickRoundAndNumberFormattedForPP);
             if (+fcPickRoundAndNumberFormattedForPP < 201) {
-              rvValue = 0.83;
-              rvPercentOfMax = 0.25;
+              this.rvValue = 0.83;
+              this.rvPercentOfNonQBMax = 0.25;
             }
             if (
               +fcPickRoundAndNumberFormattedForPP > 111 &&
               +fcPickRoundAndNumberFormattedForPP < 301
             ) {
-              rvValue = 0.33;
-              rvPercentOfMax = 0.1;
+              this.rvValue = 0.33;
+              this.rvPercentOfNonQBMax = 0.1;
             }
             if (
               +fcPickRoundAndNumberFormattedForPP > 211 &&
               +fcPickRoundAndNumberFormattedForPP < 401
             ) {
-              rvValue = 0.11;
-              rvPercentOfMax = 0.03;
+              this.rvValue = 0.11;
+              this.rvPercentOfNonQBMax = 0.03;
+            }
+          }
+          if (fcPickYear === +(curYear + 2)) {
+            // console.log(fcPickYear);
+            // console.log(player.player.name);
+            // console.log(fcPickRoundAndNumberFormattedForPP);
+            if (+fcPickRoundAndNumberFormattedForPP < 201) {
+              this.rvValue = 0.5;
+              this.rvPercentOfNonQBMax = 0.16;
+            }
+            if (
+              +fcPickRoundAndNumberFormattedForPP > 111 &&
+              +fcPickRoundAndNumberFormattedForPP < 301
+            ) {
+              this.rvValue = 0.16;
+              this.rvPercentOfNonQBMax = 0.05;
+            }
+            if (
+              +fcPickRoundAndNumberFormattedForPP > 211 &&
+              +fcPickRoundAndNumberFormattedForPP < 401
+            ) {
+              this.rvValue = 0.05;
+              this.rvPercentOfNonQBMax = 0.016;
             }
           }
         }
       }
     }
 
-    myRanksAndMyValuesAgainstMarketValue() {}
+    myRanksAndMyValuesAgainstMarketValue(
+      player,
+      fcQBMaxValue,
+      fcNonQBMaxValue
+    ) {
+      // console.log(
+      //   this.rvValue,
+      //   player.player.name,
+      //   this.rvPercentOfQBMax,
+      //   this.rvPercentOfNonQBMax
+      // );
+      let myPercentOfQBMax = 0;
+      let myPercentOfNonQBMax = 0;
+      let myValue = 0;
+      let myOverallRank = 0;
+      let temppercentValueDiffBetweenMyValueAndMarket = 0;
+      let temptemppercentValueDiffBetweenMyValueAndMarket = 0;
+
+      //QB's
+
+      if (player.player.position === 'QB') {
+        // console.log(player.player.name);
+
+        this.myPercentOfQBMax = +(
+          (+this.ppSFQBTEPPercentOfMax +
+            +this.rvPercentOfQBMax +
+            +this.rvPercentOfQBMax +
+            +this.rvPercentOfQBMax) /
+          4
+        ).toFixed(2);
+        // console.log(player.player.name, this.myPercentOfQBMax);
+        // console.log(fcQBMaxValue);
+
+        this.myValue = +(fcQBMaxValue * this.myPercentOfQBMax).toFixed(2);
+
+        this.valueDiffBetweenMyValueAndMarketValue = +(
+          this.myValue - +player.value
+        ).toFixed(2);
+
+        if (this.myValue >= +player.value) {
+          temppercentValueDiffBetweenMyValueAndMarket = +(
+            +player.value / this.myValue
+          ).toFixed(2);
+        }
+
+        if (this.myValue <= +player.value) {
+          temppercentValueDiffBetweenMyValueAndMarket = +(
+            this.myValue / +player.value
+          ).toFixed(2);
+        }
+
+        temptemppercentValueDiffBetweenMyValueAndMarket =
+          1 - temppercentValueDiffBetweenMyValueAndMarket.toFixed(2);
+
+        this.percentValueDiffBetweenMyValueAndMarket = +(
+          temptemppercentValueDiffBetweenMyValueAndMarket * 100
+        ).toFixed(2);
+
+        if (this.myValue <= +player.value) {
+          this.percentValueDiffBetweenMyValueAndMarket =
+            -this.percentValueDiffBetweenMyValueAndMarket;
+        }
+      }
+
+      // non QB's
+
+      if (player.player.position !== 'QB') {
+        // console.log(player.player.name);
+
+        this.myPercentOfNonQBMax = +(
+          (+this.ppSFNonQBTEPPercentOfMax +
+            +this.rvPercentOfNonQBMax +
+            +this.rvPercentOfNonQBMax +
+            +this.rvPercentOfNonQBMax) /
+          4
+        ).toFixed(2);
+        // console.log(+fcNonQBMaxValue);
+        this.myValue = +(+fcNonQBMaxValue * +this.myPercentOfNonQBMax).toFixed(
+          2
+        );
+
+        this.valueDiffBetweenMyValueAndMarketValue = +(
+          this.myValue - +player.value
+        ).toFixed(2);
+
+        if (this.myValue >= +player.value) {
+          temppercentValueDiffBetweenMyValueAndMarket = +(
+            +player.value / this.myValue
+          ).toFixed(2);
+        }
+
+        if (this.myValue <= +player.value) {
+          temppercentValueDiffBetweenMyValueAndMarket = +(
+            this.myValue / +player.value
+          ).toFixed(2);
+        }
+
+        temptemppercentValueDiffBetweenMyValueAndMarket =
+          1 - temppercentValueDiffBetweenMyValueAndMarket.toFixed(2);
+
+        this.percentValueDiffBetweenMyValueAndMarket = +(
+          temptemppercentValueDiffBetweenMyValueAndMarket * 100
+        ).toFixed(2);
+
+        if (this.myValue <= +player.value) {
+          this.percentValueDiffBetweenMyValueAndMarket =
+            -this.percentValueDiffBetweenMyValueAndMarket;
+        }
+
+        // console.log(
+        //   player.player.name,
+        //   this.myPercentOfNonQBMax,
+        //   player.value,
+        //   this.myValue,
+        //   this.valueDiffBetweenMyValueAndMarketValue,
+        //   this.percentValueDiffBetweenMyValueAndMarket
+        // );
+      }
+    }
   }
 
   ///////////end of methods///////////////////////
@@ -1055,7 +1253,12 @@ const testfunc = async function () {
         }
       }
 
-      if (player.player.position === 'PICK') {
+      if (
+        player.player.position === 'PICK' &&
+        InitialrvPlayer['"POS"'].slice(1, -1) === ''
+      ) {
+        // console.log(InitialrvPlayer);
+        // rvPlayer = InitialrvPlayer;
       }
     });
 
@@ -1079,8 +1282,7 @@ const testfunc = async function () {
       +fcNonQBPercentOfMax,
       +ppSFTEPValue,
       +ppSFQBTEPPercentOfMax,
-      +ppSFNonQBTEPPercentOfMax,
-      +rvValue
+      +ppSFNonQBTEPPercentOfMax
     );
 
     // console.log(sanitizedPPPlayerName, ppPlayerObject);
@@ -1097,6 +1299,7 @@ const testfunc = async function () {
     // console.log(rvPlayer);
 
     tradeCalculaterDataObject.rvData(
+      player,
       sanitizedFCPlayerName,
       sanitizedRVPlayerName,
       rvPlayer,
@@ -1107,7 +1310,43 @@ const testfunc = async function () {
       SleeperIDFromMe
     );
 
-    tradeCalculaterDataObject.myRanksAndMyValuesAgainstMarketValue();
+    tradeCalculaterDataObject.myRanksAndMyValuesAgainstMarketValue(
+      player,
+      fcQBMaxValue,
+      fcNonQBMaxValue
+    );
+
+    // let allPlayersArray = [];
+    // let allQBsArray = [];
+    // let allRBsArray = [];
+    // let allWRsArray = [];
+    // let allTEsArray = [];
+    // let allPicksArray = [];
+
+    allPlayersArray.push(tradeCalculaterDataObject);
+    //
+    if (player.player.position === 'QB') {
+      allQBsArray.push(tradeCalculaterDataObject);
+    }
+    if (player.player.position === 'RB') {
+      allRBsArray.push(tradeCalculaterDataObject);
+    }
+    if (player.player.position === 'WR') {
+      allWRsArray.push(tradeCalculaterDataObject);
+    }
+    if (player.player.position === 'TE') {
+      allTEsArray.push(tradeCalculaterDataObject);
+    }
+    if (player.player.position === 'PICK') {
+      allPicksArray.push(tradeCalculaterDataObject);
+    }
+
+    // console.log(allPlayersArray);
+    // console.log(allQBsArray);
+    // console.log(allRBsArray);
+    // console.log(allWRsArray);
+    // console.log(allTEsArray);
+    // console.log(allPicksArray);
 
     alltradeCalculaterDataArray.push(tradeCalculaterDataObject);
     // console.log(alltradeCalculaterDataArray);
