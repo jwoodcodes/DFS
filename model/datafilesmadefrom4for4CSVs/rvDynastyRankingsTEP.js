@@ -1480,7 +1480,7 @@ const rvDynastyRankingsTEP = [
     '"Rank"': '124',
     '"Player"': '"Dalvin Cook"',
     '"POS"': '"RB"',
-    '"Team"': '"MIN"',
+    '"Team"': '"FA"',
     '"PosRank"': '32',
     '"AVGRank"': '122.5',
     '"AVGTier"': '6',

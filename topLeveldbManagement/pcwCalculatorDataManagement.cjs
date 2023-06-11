@@ -816,6 +816,14 @@ const testfunc = async function () {
           this.percentValueDiffBetweenMyValueAndMarket =
             -this.percentValueDiffBetweenMyValueAndMarket;
         }
+        console.log(
+          player.player.name,
+          this.myPercentOfQBMax,
+          player.value,
+          this.myValue,
+          this.valueDiffBetweenMyValueAndMarketValue,
+          this.percentValueDiffBetweenMyValueAndMarket
+        );
       }
 
       // non QB's
