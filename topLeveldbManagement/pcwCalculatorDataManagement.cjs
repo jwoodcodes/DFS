@@ -3,6 +3,10 @@ const { MongoClient } = require('mongodb');
 const ppSFTEPDynastyRankingsWithRookies = require('../model/datafilesmadefrom4for4CSVs/ppSFTEPDynastyRankingsWithRookies');
 const ppSFTEPDynastyRankingsWithPicks = require('../model/datafilesmadefrom4for4CSVs/ppSFTEPDynastyRankingsWithPicks');
 const rvDynastyRankingsTEP = require('../model/datafilesmadefrom4for4CSVs/rvDynastyRankingsTEP');
+const rvRedraftRankingsTEP = require('../model/datafilesmadefrom4for4CSVs/rvRedraftRankingsTEP');
+const fpMarketRedraftRankings = require('../model/datafilesmadefrom4for4CSVs/fpMarketRedraftRankings');
+
+let myJSON = {};
 
 ///////fetching fantasyCalc data from API and pushing rawFantasyCalc data to db
 
@@ -816,14 +820,14 @@ const testfunc = async function () {
           this.percentValueDiffBetweenMyValueAndMarket =
             -this.percentValueDiffBetweenMyValueAndMarket;
         }
-        console.log(
-          player.player.name,
-          this.myPercentOfQBMax,
-          player.value,
-          this.myValue,
-          this.valueDiffBetweenMyValueAndMarketValue,
-          this.percentValueDiffBetweenMyValueAndMarket
-        );
+        // console.log(
+        //   player.player.name,
+        //   this.myPercentOfQBMax,
+        //   player.value,
+        //   this.myValue,
+        //   this.valueDiffBetweenMyValueAndMarketValue,
+        //   this.percentValueDiffBetweenMyValueAndMarket
+        // );
       }
 
       // non QB's
@@ -1371,6 +1375,13 @@ const testfunc = async function () {
     // if (player.player.position !== 'QB' && player.player.position !== 'PICK') {
     //   console.log(tradeCalculaterDataObject);
     // }
+
+    ////////////////////////
+    //
+    myJSON = JSON.stringify(Object.assign({}, alltradeCalculaterDataArray));
+    // console.log(myJSON);
+
+    /////////////////////////////////////////////////
     alltradeCalculaterDataArray.map(function (obj) {
       // console.log(obj);
       const newObj = { ...obj };
@@ -1378,5 +1389,43 @@ const testfunc = async function () {
       FinaltradeCalculaterDataArray.push(newObj);
     });
   });
+  // console.log(myJSON);
+
+  const url =
+    'mongodb+srv://devJay:Hesstrucksarethebest@dailydynasties.syom4sb.mongodb.net/test';
+  const client = new MongoClient(url);
+
+  // The database to use
+  const dbName = 'dailydynasties';
+
+  async function runTradeCalculatorData() {
+    try {
+      await client.connect();
+      console.log('Connected correctly to server');
+      const db = client.db(dbName);
+
+      // Use the collection "people"
+      const col = db.collection('tradeCalculatorObjects');
+
+      // Construct a document
+      let tradeCaclculatorObjectsJSON = {
+        myJSON,
+      };
+
+      // Insert a single document, wait for promise so we can read it back
+      const p = await col.insertOne(tradeCaclculatorObjectsJSON);
+      // Find one document
+      const myDoc = await col.findOne();
+      // Print to the console
+      // console.log(myDoc);
+    } catch (err) {
+      console.log(err.stack);
+    } finally {
+      await client.close();
+    }
+  }
+
+  // runTradeCalculatorData().catch(console.dir);
 };
+// console.log(myJSON);
 testfunc();
