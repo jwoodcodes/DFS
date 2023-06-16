@@ -822,12 +822,12 @@ const testfunc = async function () {
         }
         // console.log(
         //   player.player.name,
-        //   this.myPercentOfQBMax,
         //   player.value,
         //   this.myValue,
         //   this.valueDiffBetweenMyValueAndMarketValue,
         //   this.percentValueDiffBetweenMyValueAndMarket
         // );
+        // this.myPercentOfQBMax,
       }
 
       // non QB's
@@ -875,14 +875,15 @@ const testfunc = async function () {
             -this.percentValueDiffBetweenMyValueAndMarket;
         }
 
-        // console.log(
-        //   player.player.name,
+        console.log(
+          player.player.name,
+
+          player.value,
+          this.myValue,
+          this.valueDiffBetweenMyValueAndMarketValue,
+          this.percentValueDiffBetweenMyValueAndMarket
+        );
         //   this.myPercentOfNonQBMax,
-        //   player.value,
-        //   this.myValue,
-        //   this.valueDiffBetweenMyValueAndMarketValue,
-        //   this.percentValueDiffBetweenMyValueAndMarket
-        // );
       }
     }
   }
