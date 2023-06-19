@@ -875,17 +875,159 @@ const testfunc = async function () {
             -this.percentValueDiffBetweenMyValueAndMarket;
         }
 
-        console.log(
-          player.player.name,
+        // console.log(
+        //   player.player.name,
 
-          player.value,
-          this.myValue,
-          this.valueDiffBetweenMyValueAndMarketValue,
-          this.percentValueDiffBetweenMyValueAndMarket
-        );
+        //   player.value,
+        //   this.myValue,
+        //   this.valueDiffBetweenMyValueAndMarketValue,
+        //   this.percentValueDiffBetweenMyValueAndMarket
+        // );
         //   this.myPercentOfNonQBMax,
       }
     }
+
+    fpRedraftData(
+      playerObject,
+      sanitizedFCPlayerName,
+      fcPosition,
+      fpRedraftPlayerObject,
+      sanitizedFPRedraftPlayerName
+    ) {
+      // console.log(sanitizedFPRedraftPlayerName);
+
+      if (sanitizedFPRedraftPlayerName === sanitizedFCPlayerName) {
+        if (fcPosition !== 'PICK') {
+          // console.log(fpRedraftPlayerObject);
+          // console.log(fpRedraftPlayerObject);
+          let tempOverallRank = fpRedraftPlayerObject['"RK"'].slice(1, -1);
+          let fpRedraftOverallRank = +tempOverallRank;
+
+          if (fpRedraftOverallRank) {
+            // console.log(fpRedraftOverallRank);
+            this.fpRedraftOverallRank = +fpRedraftOverallRank;
+          }
+
+          // console.log(fpRedraftPlayerObject['"POS"'].slice(3, -1));
+          let tempPositionRank = fpRedraftPlayerObject['"POS"'].slice(3, -1);
+          // console.log(tempPositionRank);
+          let fpRedraftPositionRank = +tempPositionRank;
+          // console.log(fpRedraftPositionRank);
+          if (fpRedraftPositionRank) {
+            // console.log(fpRedraftPositionRank);
+            this.fpRedraftPositionRank = +fpRedraftPositionRank;
+          }
+
+          // // console.log(fpRedraftPlayerObject);
+          // let tempfpRedraftTier = fpRedraftPlayerObject['TIERS'];
+          // // console.log(tempfpRedraftTier);
+          // let fpRedraftTier = +tempfpRedraftTier;
+          // // console.log(fpRedraftTier);
+          // if (fpRedraftTier) {
+          //   // console.log(fpRedraftTier);
+          //   this.fpRedraftTier = +fpRedraftTier;
+          // }
+        }
+      }
+    }
+
+    rvRedraftData(
+      player,
+      sanitizedFCPlayerName,
+      rvRedraftPlayerObject,
+      sanitizedRVRedraftPlayerName
+    ) {
+      // console.log(rvRedraftPlayerObject);
+
+      if (sanitizedRVRedraftPlayerName === sanitizedFCPlayerName) {
+        // console.log(fpRedraftPlayerObject);
+        // console.log(fpRedraftPlayerObject);
+        let tempOverallRank = rvRedraftPlayerObject['"Rank"'];
+        // console.log(tempOverallRank);
+        let rvRedraftOverallRank = +tempOverallRank;
+
+        if (rvRedraftOverallRank) {
+          // console.log(rvRedraftOverallRank);
+          this.rvRedraftOverallRank = +rvRedraftOverallRank;
+        }
+
+        // console.log(fpRedraftPlayerObject['"POS"'].slice(3, -1));
+        let tempPositionRank = rvRedraftPlayerObject['"PosRank"'];
+        // console.log(tempPositionRank);
+        let rvRedraftPositionRank = +tempPositionRank;
+        // console.log(fpRedraftPositionRank);
+        if (rvRedraftPositionRank) {
+          // console.log(fpRedraftPositionRank);
+          this.rvRedraftPositionRank = +rvRedraftPositionRank;
+        }
+
+        // console.log(rvRedraftPlayerObject);
+        let temprvRedraftTier = rvRedraftPlayerObject['"AVGTier"'];
+        // console.log(temprvRedraftTier);
+        let rvRedraftTier = +temprvRedraftTier;
+        // console.log(fpRedraftTier);
+        if (rvRedraftTier) {
+          // console.log(rvRedraftTier);
+          this.rvRedraftTier = +rvRedraftTier;
+        }
+      }
+    }
+
+    puttingItAllTogetherRedraft(
+      sanitizedFCPlayerName,
+      sanitizedRVRedraftPlayerName,
+      fcPosition
+    ) {
+      if (sanitizedRVRedraftPlayerName === sanitizedFCPlayerName) {
+        if (fcPosition === 'QB') {
+          // console.log(fcPosition);
+          if (this.rvRedraftTier === 3) {
+            this.myRedraftScoreFromPlayersRedraftTier = 6;
+          }
+          if (this.rvRedraftTier === 4) {
+            this.myRedraftScoreFromPlayersRedraftTier = 4;
+          }
+          if (this.rvRedraftTier === 5) {
+            this.myRedraftScoreFromPlayersRedraftTier = 3;
+          }
+          if (this.rvRedraftTier === 6) {
+            this.myRedraftScoreFromPlayersRedraftTier = 2;
+          }
+          if (this.rvRedraftTier === 7) {
+            this.myRedraftScoreFromPlayersRedraftTier = 1;
+          }
+          if (this.rvRedraftTier > 7) {
+            this.myRedraftScoreFromPlayersRedraftTier = 0;
+          }
+        }
+
+        if (fcPosition !== 'QB') {
+          // console.log(fcPosition);
+          if (this.rvRedraftTier === 1) {
+            this.myRedraftScoreFromPlayersRedraftTier = 6;
+          }
+          if (this.rvRedraftTier === 2) {
+            this.myRedraftScoreFromPlayersRedraftTier = 4;
+          }
+          if (this.rvRedraftTier === 3) {
+            this.myRedraftScoreFromPlayersRedraftTier = 3;
+          }
+          if (this.rvRedraftTier === 4) {
+            this.myRedraftScoreFromPlayersRedraftTier = 2;
+          }
+          if (this.rvRedraftTier === 5) {
+            this.myRedraftScoreFromPlayersRedraftTier = 1;
+          }
+          if (this.rvRedraftTier > 5) {
+            this.myRedraftScoreFromPlayersRedraftTier = 0;
+          }
+        }
+
+        // console.log(sanitizedRVRedraftPlayerName, this.rvRedraftTier);
+      }
+    }
+
+    calculatingProjectedNextOffseasonDynastyValue() {}
   }
 
   ///////////end of methods///////////////////////
@@ -904,6 +1046,11 @@ const testfunc = async function () {
   let SleeperIDFromMe = '';
   let PlayerArray = [];
   let ppPlayerObject;
+  let fpRedraftPlayerObject;
+  let sanitizedFPRedraftPlayerName = '';
+  let rvRedraftPlayerObject;
+  let sanitizedRVRedraftPlayerName = '';
+
   // let sanitizedPPPlayerName = '';
   // let sanitizedPPPWithPicksPlayerName = '';
 
@@ -1279,6 +1426,48 @@ const testfunc = async function () {
     // console.log(ppMaxValue);
     // console.log(ppSFNonQBTEPPercentOfMax);
 
+    ///for fp redraft
+
+    fpMarketRedraftRankings.forEach(function (playerObject) {
+      if (playerObject['"PLAYER NAME"'].includes("'")) {
+        playerObject['"PLAYER NAME"'] = playerObject['"PLAYER NAME"'].replace(
+          "'",
+          ''
+        );
+      }
+
+      let tempsanitizedFPRedraftPlayerName = playerObject['"PLAYER NAME"']
+        .replace("'", '')
+        .replace('.', '')
+        .replace('.', '')
+        .slice(1, -1);
+
+      if (tempsanitizedFPRedraftPlayerName === sanitizedFCPlayerName) {
+        sanitizedFPRedraftPlayerName = tempsanitizedFPRedraftPlayerName;
+        fpRedraftPlayerObject = playerObject;
+      }
+    });
+
+    /////for rv redraft
+
+    rvRedraftRankingsTEP.forEach(function (playerObject) {
+      // console.log(playerObject);
+      if (playerObject['"Player"'].includes("'")) {
+        playerObject['"Player"'] = playerObject['"Player"'].replace("'", '');
+      }
+
+      let tempsanitizedRVRedraftPlayerName = playerObject['"Player"']
+        .replace("'", '')
+        .replace('.', '')
+        .replace('.', '')
+        .slice(1, -1);
+
+      if (tempsanitizedRVRedraftPlayerName === sanitizedFCPlayerName) {
+        sanitizedRVRedraftPlayerName = tempsanitizedRVRedraftPlayerName;
+        rvRedraftPlayerObject = playerObject;
+      }
+    });
+
     let tradeCalculaterDataObject = new tradeCalculaterData(
       sanitizedFCPlayerName,
       player.player.id,
@@ -1328,6 +1517,29 @@ const testfunc = async function () {
       fcQBMaxValue,
       fcNonQBMaxValue
     );
+
+    tradeCalculaterDataObject.fpRedraftData(
+      player,
+      sanitizedFCPlayerName,
+      fcPosition,
+      fpRedraftPlayerObject,
+      sanitizedFPRedraftPlayerName
+    );
+
+    tradeCalculaterDataObject.rvRedraftData(
+      player,
+      sanitizedFCPlayerName,
+      rvRedraftPlayerObject,
+      sanitizedRVRedraftPlayerName
+    );
+
+    tradeCalculaterDataObject.puttingItAllTogetherRedraft(
+      sanitizedFCPlayerName,
+      sanitizedRVRedraftPlayerName,
+      fcPosition
+    );
+
+    tradeCalculaterDataObject.calculatingProjectedNextOffseasonDynastyValue();
 
     // let allPlayersArray = [];
     // let allQBsArray = [];
@@ -1392,39 +1604,39 @@ const testfunc = async function () {
   });
   // console.log(myJSON);
 
-  const url =
-    'mongodb+srv://devJay:Hesstrucksarethebest@dailydynasties.syom4sb.mongodb.net/test';
-  const client = new MongoClient(url);
+  // const url =
+  //   'mongodb+srv://devJay:Hesstrucksarethebest@dailydynasties.syom4sb.mongodb.net/test';
+  // const client = new MongoClient(url);
 
-  // The database to use
-  const dbName = 'dailydynasties';
+  // // The database to use
+  // const dbName = 'dailydynasties';
 
-  async function runTradeCalculatorData() {
-    try {
-      await client.connect();
-      console.log('Connected correctly to server');
-      const db = client.db(dbName);
+  // async function runTradeCalculatorData() {
+  //   try {
+  //     await client.connect();
+  //     console.log('Connected correctly to server');
+  //     const db = client.db(dbName);
 
-      // Use the collection "people"
-      const col = db.collection('tradeCalculatorObjects');
+  //     // Use the collection "people"
+  //     const col = db.collection('tradeCalculatorObjects');
 
-      // Construct a document
-      let tradeCaclculatorObjectsJSON = {
-        myJSON,
-      };
+  //     // Construct a document
+  //     let tradeCaclculatorObjectsJSON = {
+  //       myJSON,
+  //     };
 
-      // Insert a single document, wait for promise so we can read it back
-      const p = await col.insertOne(tradeCaclculatorObjectsJSON);
-      // Find one document
-      const myDoc = await col.findOne();
-      // Print to the console
-      // console.log(myDoc);
-    } catch (err) {
-      console.log(err.stack);
-    } finally {
-      await client.close();
-    }
-  }
+  //     // Insert a single document, wait for promise so we can read it back
+  //     const p = await col.insertOne(tradeCaclculatorObjectsJSON);
+  //     // Find one document
+  //     const myDoc = await col.findOne();
+  //     // Print to the console
+  //     // console.log(myDoc);
+  //   } catch (err) {
+  //     console.log(err.stack);
+  //   } finally {
+  //     await client.close();
+  //   }
+  // }
 
   // runTradeCalculatorData().catch(console.dir);
 };
