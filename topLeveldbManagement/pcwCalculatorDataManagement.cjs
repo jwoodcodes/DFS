@@ -5,6 +5,7 @@ const ppSFTEPDynastyRankingsWithPicks = require('../model/datafilesmadefrom4for4
 const rvDynastyRankingsTEP = require('../model/datafilesmadefrom4for4CSVs/rvDynastyRankingsTEP');
 const rvRedraftRankingsTEP = require('../model/datafilesmadefrom4for4CSVs/rvRedraftRankingsTEP');
 const fpMarketRedraftRankings = require('../model/datafilesmadefrom4for4CSVs/fpMarketRedraftRankings');
+const qbTwoOrMoreYearsPreAgeApexAndWillBeSameNextMarch = require('./PNODVCalcFunctions/QB/qbTwoOrMoreYearsPreAgeApexAndWillBeSameNextMarch');
 
 let myJSON = {};
 
@@ -58,6 +59,33 @@ const FCDataFetch = async function () {
 };
 
 // FCDataFetch();
+
+//so you remember change the future date once a year !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!below
+
+const curDate = new Date();
+const curMonth = curDate.getMonth() + 1;
+// console.log(curMonth);
+
+const futureDate = new Date('03/14/2024');
+
+const time1 = curDate.getTime();
+const futureTime = futureDate.getTime();
+
+// console.log(time1);
+// console.log(futureTime);
+
+const timeDifference = futureTime - time1;
+
+// console.log(timeDifference);
+
+const dayDifference = timeDifference / (1000 * 3600 * 24);
+
+// console.log(dayDifference);
+
+const amountToBeAddedToPlayersAgeToKnowWhatAgeTheyWillBeNextMarch =
+  dayDifference / 365;
+
+// console.log(amountToBeAddedToPlayersAgeToKnowWhatAgeTheyWillBeNextMarch);
 
 /////////////////////////////
 /////////////////////////////////////
@@ -1365,7 +1393,320 @@ const testfunc = async function () {
       }
     }
 
-    calculatingProjectedNextOffseasonDynastyValue() {}
+    calculatingProjectedNextOffseasonDynastyValue(
+      sanitizedFCPlayerName,
+      sanitizedRVPlayerName
+    ) {
+      //things ill need to do this
+      //current date, age, position, position age apex, current market value, dynasty value difference from mine to market, my projected redraft postional tier score, my redraft difference score
+
+      // console.log(curDate);
+
+      // console.log(amountToBeAddedToPlayersAgeToKnowWhatAgeTheyWillBeNextMarch);
+      this.ageNextMarch =
+        this.age + amountToBeAddedToPlayersAgeToKnowWhatAgeTheyWillBeNextMarch;
+
+      const qbAgeApex = 28;
+      const rbAgeApex = 25;
+      const wrAgeApex = 27;
+      const teAgeApex = 28;
+
+      if (sanitizedFCPlayerName === sanitizedRVPlayerName) {
+        // console.log(this.age);
+        // console.log(this.position);
+        // console.log(this.fantasyCalcValue);
+        // console.log(this.valueDiffBetweenMyValueAndMarketValue);
+        // console.log(this.myRedraftScoreFromPlayersRedraftTier);
+        // console.log(this.myRedraftDifferenceScore);
+        // console.log(this.fcQBPercentOfMax);
+
+        //
+        //
+
+        ///////////////////////////////
+        //QB
+        ///////////////////////////////
+        ///////////////////////////////
+
+        if (this.position === 'QB') {
+          // console.log(this.position);
+          // console.log(this.name);
+          // console.log(this.age, this.ageNextMarch);
+
+          // 2 or more years pre age apex
+          if (qbAgeApex - this.age >= 2) {
+            // console.log(this.name);
+            //
+            //wont age into the next age bucket by next march
+            if (qbAgeApex - this.ageNextMarch >= 2) {
+              // console.log(this.name, this.age, this.ageNextMarch);
+              qbTwoOrMoreYearsPreAgeApexAndWillBeSameNextMarch(
+                curMonth,
+                this.name,
+                this.fantasyCalcValue,
+                this.valueDiffBetweenMyValueAndMarketValue,
+                this.myRedraftScoreFromPlayersRedraftTier,
+                this.myRedraftDifferenceScore,
+                this.fcQBPercentOfMax
+              );
+            }
+            //
+            //will age into next age bucket by next march
+            else {
+              // console.log(this.name, this.age, this.ageNextMarch);
+            }
+          }
+
+          //within 2 years of age apex but not past age apex
+
+          if (qbAgeApex - this.age >= 0 && qbAgeApex - this.age < 2) {
+            // console.log(this.name);
+            //
+            //wont age into the next age bucket by next march
+            if (
+              qbAgeApex - this.ageNextMarch >= 0 &&
+              qbAgeApex - this.ageNextMarch < 2
+            ) {
+              // console.log(this.name, this.age, this.ageNextMarch);
+            }
+            //
+            //will age into next age bucket by next march
+            else {
+              // console.log(this.name, this.age, this.ageNextMarch);
+            }
+          }
+
+          //past age apex but 2 years or less past it
+
+          if (qbAgeApex - this.age <= 0 && qbAgeApex - this.age > -2) {
+            // console.log(this.name);
+            //
+            //wont age into the next age bucket by next march
+            if (
+              qbAgeApex - this.ageNextMarch <= 0 &&
+              qbAgeApex - this.ageNextMarch > -2
+            ) {
+              // console.log(this.name, this.age, this.ageNextMarch);
+            }
+            //
+            //will age into next age bucket by next march
+            else {
+              // console.log(this.name, this.age, this.ageNextMarch);
+            }
+          }
+
+          //more than 2 years post age apex
+
+          if (qbAgeApex - this.age <= -2) {
+            // console.log(this.name);
+          }
+        }
+
+        ///////////////////////////////
+        //RB
+        ///////////////////////////////
+        ///////////////////////////////
+
+        if (this.position === 'RB') {
+          // console.log(this.position);
+
+          // 2 or more years pre age apex
+          if (rbAgeApex - this.age >= 2) {
+            // console.log(this.name);
+            //
+            //wont age into the next age bucket by next march
+            if (rbAgeApex - this.ageNextMarch >= 2) {
+              // console.log(this.name, this.age, this.ageNextMarch);
+            }
+            //
+            //will age into next age bucket by next march
+            else {
+              // console.log(this.name, this.age, this.ageNextMarch);
+            }
+          }
+
+          //within 2 years of age apex but not past age apex
+
+          if (rbAgeApex - this.age >= 0 && rbAgeApex - this.age < 2) {
+            // console.log(this.name);
+            //
+            //wont age into the next age bucket by next march
+            if (
+              rbAgeApex - this.ageNextMarch >= 0 &&
+              rbAgeApex - this.ageNextMarch < 2
+            ) {
+              // console.log(this.name, this.age, this.ageNextMarch);
+            }
+            //
+            //will age into next age bucket by next march
+            else {
+              // console.log(this.name, this.age, this.ageNextMarch);
+            }
+          }
+
+          //past age apex but 2 years or less past it
+
+          if (rbAgeApex - this.age <= 0 && rbAgeApex - this.age > -2) {
+            // console.log(this.name);
+            //
+            //wont age into the next age bucket by next march
+            if (
+              rbAgeApex - this.ageNextMarch <= 0 &&
+              rbAgeApex - this.ageNextMarch > -2
+            ) {
+              // console.log(this.name, this.age, this.ageNextMarch);
+            }
+            //
+            //will age into next age bucket by next march
+            else {
+              // console.log(this.name, this.age, this.ageNextMarch);
+            }
+          }
+
+          //more than 2 years post age apex
+
+          if (rbAgeApex - this.age <= -2) {
+            // console.log(this.name);
+          }
+        }
+
+        ///////////////////////////////
+        //WR
+        ///////////////////////////////
+        ///////////////////////////////
+
+        if (this.position === 'WR') {
+          // console.log(this.position);
+
+          // 2 or more years pre age apex
+          if (wrAgeApex - this.age >= 2) {
+            // console.log(this.name);
+            //
+            //wont age into the next age bucket by next march
+            if (wrAgeApex - this.ageNextMarch >= 2) {
+              // console.log(this.name, this.age, this.ageNextMarch);
+            }
+            //
+            //will age into next age bucket by next march
+            else {
+              // console.log(this.name, this.age, this.ageNextMarch);
+            }
+          }
+
+          //within 2 years of age apex but not past age apex
+
+          if (wrAgeApex - this.age >= 0 && wrAgeApex - this.age < 2) {
+            // console.log(this.name);
+            //
+            //wont age into the next age bucket by next march
+            if (
+              wrAgeApex - this.ageNextMarch >= 0 &&
+              wrAgeApex - this.ageNextMarch < 2
+            ) {
+              // console.log(this.name, this.age, this.ageNextMarch);
+            }
+            //
+            //will age into next age bucket by next march
+            else {
+              // console.log(this.name, this.age, this.ageNextMarch);
+            }
+          }
+
+          //past age apex but 2 years or less past it
+
+          if (wrAgeApex - this.age <= 0 && wrAgeApex - this.age > -2) {
+            // console.log(this.name);
+            //
+            //wont age into the next age bucket by next march
+            if (
+              wrAgeApex - this.ageNextMarch <= 0 &&
+              wrAgeApex - this.ageNextMarch > -2
+            ) {
+              // console.log(this.name, this.age, this.ageNextMarch);
+            }
+            //
+            //will age into next age bucket by next march
+            else {
+              // console.log(this.name, this.age, this.ageNextMarch);
+            }
+          }
+
+          //more than 2 years post age apex
+
+          if (wrAgeApex - this.age <= -2) {
+            // console.log(this.name);
+          }
+        }
+
+        ///////////////////////////////
+        //TE
+        ///////////////////////////////
+        ///////////////////////////////
+
+        if (this.position === 'TE') {
+          // console.log(this.position);
+
+          // 2 or more years pre age apex
+          if (teAgeApex - this.age >= 2) {
+            // console.log(this.name);
+            //
+            //wont age into the next age bucket by next march
+            if (teAgeApex - this.ageNextMarch >= 2) {
+              // console.log(this.name, this.age, this.ageNextMarch);
+            }
+            //
+            //will age into next age bucket by next march
+            else {
+              // console.log(this.name, this.age, this.ageNextMarch);
+            }
+          }
+
+          //within 2 years of age apex but not past age apex
+
+          if (teAgeApex - this.age >= 0 && teAgeApex - this.age < 2) {
+            // console.log(this.name);
+            //
+            //wont age into the next age bucket by next march
+            if (
+              teAgeApex - this.ageNextMarch >= 0 &&
+              teAgeApex - this.ageNextMarch < 2
+            ) {
+              // console.log(this.name, this.age, this.ageNextMarch);
+            }
+            //
+            //will age into next age bucket by next march
+            else {
+              // console.log(this.name, this.age, this.ageNextMarch);
+            }
+          }
+
+          //past age apex but 2 years or less past it
+
+          if (teAgeApex - this.age <= 0 && teAgeApex - this.age > -2) {
+            // console.log(this.name);
+            //
+            //wont age into the next age bucket by next march
+            if (
+              teAgeApex - this.ageNextMarch <= 0 &&
+              teAgeApex - this.ageNextMarch > -2
+            ) {
+              // console.log(this.name, this.age, this.ageNextMarch);
+            }
+            //
+            //will age into next age bucket by next march
+            else {
+              // console.log(this.name, this.age, this.ageNextMarch);
+            }
+          }
+
+          //more than 2 years post age apex
+
+          if (teAgeApex - this.age <= -2) {
+            // console.log(this.name);
+          }
+        }
+      }
+    }
   }
 
   ///////////end of methods///////////////////////
@@ -1910,7 +2251,10 @@ const testfunc = async function () {
       fcPosition
     );
 
-    tradeCalculaterDataObject.calculatingProjectedNextOffseasonDynastyValue();
+    tradeCalculaterDataObject.calculatingProjectedNextOffseasonDynastyValue(
+      sanitizedFCPlayerName,
+      sanitizedRVPlayerName
+    );
 
     // let allPlayersArray = [];
     // let allQBsArray = [];
@@ -1953,12 +2297,24 @@ const testfunc = async function () {
     // if (player.player.position === 'PICK') {
     //   console.log(tradeCalculaterDataObject);
     // }
-    // if (player.player.position === 'QB') {
+    // if (
+    //   (player.player.position === 'QB' &&
+    //     sanitizedFCPlayerName === 'Sam Darnold') ||
+    //   sanitizedFCPlayerName === 'Joe Burrow'
+    // ) {
     //   console.log(tradeCalculaterDataObject);
     // }
-    if (player.player.position === 'WR') {
-      console.log(tradeCalculaterDataObject);
-    }
+    // if (
+    //   player.player.position === 'WR' &&
+    //   sanitizedFCPlayerName === 'Jerry Jeudy'
+    // ) {
+    //   console.log(tradeCalculaterDataObject);
+    // }
+    // if (
+    //   (player.player.position === 'RB')
+    // ) {
+    //   console.log(tradeCalculaterDataObject);
+    // }
     // if (player.player.position !== 'QB' && player.player.position !== 'PICK') {
     //   console.log(tradeCalculaterDataObject);
     // }
