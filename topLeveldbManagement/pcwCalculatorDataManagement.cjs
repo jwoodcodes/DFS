@@ -2334,41 +2334,45 @@ const testfunc = async function () {
   });
   // console.log(myJSON);
 
-  // const url =
-  //   'mongodb+srv://devJay:Hesstrucksarethebest@dailydynasties.syom4sb.mongodb.net/test';
-  // const client = new MongoClient(url);
+  ///////////////////////
+  //////////////
+  ///////////uncomment below to push all data from above to db named dynastyAndRedraftPlayerObjects
 
-  // // The database to use
-  // const dbName = 'dailydynasties';
+  //   const url =
+  //     'mongodb+srv://devJay:Hesstrucksarethebest@dailydynasties.syom4sb.mongodb.net/test';
+  //   const client = new MongoClient(url);
 
-  // async function runTradeCalculatorData() {
-  //   try {
-  //     await client.connect();
-  //     console.log('Connected correctly to server');
-  //     const db = client.db(dbName);
+  //   // The database to use
+  //   const dbName = 'dailydynasties';
 
-  //     // Use the collection "people"
-  //     const col = db.collection('tradeCalculatorObjects');
+  //   async function runDynastyAndRedraftPlayerObjects() {
+  //     try {
+  //       await client.connect();
+  //       console.log('Connected correctly to server');
+  //       const db = client.db(dbName);
 
-  //     // Construct a document
-  //     let tradeCaclculatorObjectsJSON = {
-  //       myJSON,
-  //     };
+  //       // Use the collection "people"
+  //       const col = db.collection('dynastyAndRedraftPlayerObjects');
 
-  //     // Insert a single document, wait for promise so we can read it back
-  //     const p = await col.insertOne(tradeCaclculatorObjectsJSON);
-  //     // Find one document
-  //     const myDoc = await col.findOne();
-  //     // Print to the console
-  //     // console.log(myDoc);
-  //   } catch (err) {
-  //     console.log(err.stack);
-  //   } finally {
-  //     await client.close();
+  //       // Construct a document
+  //       let dynastyAndRedraftPlayerObjects = {
+  //         alltradeCalculaterDataArray,
+  //       };
+
+  //       // Insert a single document, wait for promise so we can read it back
+  //       const p = await col.insertOne(dynastyAndRedraftPlayerObjects);
+  //       // Find one document
+  //       const myDoc = await col.findOne();
+  //       // Print to the console
+  //       // console.log(myDoc);
+  //     } catch (err) {
+  //       console.log(err.stack);
+  //     } finally {
+  //       await client.close();
+  //     }
   //   }
-  // }
 
-  // runTradeCalculatorData().catch(console.dir);
+  //   runDynastyAndRedraftPlayerObjects().catch(console.dir);
 };
 // console.log(myJSON);
 testfunc();
