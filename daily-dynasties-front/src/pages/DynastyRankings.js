@@ -13,9 +13,9 @@ export async function getStaticProps() {
 
     const dynastyAndRedraftPlayerObjects = await db
       .collection('dynastyAndRedraftPlayerObjects')
-      .find({});
-    //   .toArray();
-    // console.log(fantasycalcData);
+      .find({})
+      .toArray();
+    // console.log(dynastyAndRedraftPlayerObjects);
     return {
       props: {
         dynastyAndRedraftPlayerObjects: JSON.parse(
