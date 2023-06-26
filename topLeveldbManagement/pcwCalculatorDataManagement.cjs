@@ -2376,3 +2376,9 @@ const testfunc = async function () {
 };
 // console.log(myJSON);
 testfunc();
+
+/***************************************************************!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/////////////////////////////////
+//create a couple new constructor functions down here that will take in alltradeCalculaterDataArray as an input and loop over it and make player object arrays for specific purposes that only contain the info I am going to render for a page. one for dynasty rankings, one for redraft/rest of season rankings, and one for 3d trade view. then send these to the db in their own collections so you only have to call getstaticprops for the smaller objects that contain only the data that will be rendered on that page
+/////////////////////////////////////// */
+//********************************************************************!!!!!!!!!!!!!!!!!!!!!!!!!!!111 */
