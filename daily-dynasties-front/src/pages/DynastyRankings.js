@@ -1,9 +1,15 @@
 import MainNav from '@/components/MainNav';
+import styles from '@/styles/dynastyRankings.module.css';
 import clientPromise from '@/lib/mongodb';
 
 export default function DynastyRankings(dynastyAndRedraftPlayerObjects) {
   console.log(dynastyAndRedraftPlayerObjects);
-  return <MainNav />;
+  return (
+    <div>
+      <MainNav />
+      <div className={styles.pageTitle}>Dynasty Rankings</div>
+    </div>
+  );
 }
 
 export async function getStaticProps() {

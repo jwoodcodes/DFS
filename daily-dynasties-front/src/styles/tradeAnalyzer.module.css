@@ -1,8 +1,8 @@
-.mainSiteTitle {
+.pageTitle {
   text-align: center;
-  margin-top: 4rem;
-  font-size: 4.8rem;
-  letter-spacing: 0.4rem;
+  margin-top: 5rem;
+  font-size: 4.5rem;
+  letter-spacing: 0.25rem;
   background: linear-gradient(to right bottom, #420c47, #065a60);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
