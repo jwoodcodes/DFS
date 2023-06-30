@@ -17,7 +17,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <MainNav />
-        <div className={styles.mainSiteTitle}>Daily Dynasties home</div>
+        <div className={styles.mainSiteTitle}>Daily Dynasties</div>
       </main>
     </>
   );

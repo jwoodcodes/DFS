@@ -23,14 +23,14 @@ export default function MainNav() {
           <Link href="/">Home</Link>
         </li>
         <li>
-          <Link href="/DynastyRankings">Dynasty Rankings</Link>
+          <Link href="/DynastyRankings">Dynasty Rankings vs. Market</Link>
         </li>
         <li>
           <Link href="/WeeklyProjections">Weekly Projections</Link>
         </li>
 
         <li>
-          <Link href="/3DTradeView">3D Trade View</Link>
+          <Link href="/3DTradeAnalyzer">3D Trade Analyzer</Link>
         </li>
         {/* <li>
           <Link href="/Contact">Contact</Link>
