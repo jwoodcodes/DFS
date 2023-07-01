@@ -98,6 +98,7 @@ const amountToBeAddedToPlayersAgeToKnowWhatAgeTheyWillBeNextMarch =
 const newData = [];
 const alltradeCalculaterDataArray = [];
 const FinaltradeCalculaterDataArray = [];
+const dynastyRankingsDataObjectsArray = [];
 
 let allPlayersArray = [];
 let allQBsArray = [];
@@ -2373,12 +2374,204 @@ const testfunc = async function () {
   //   }
 
   //   runDynastyAndRedraftPlayerObjects().catch(console.dir);
+
+  // console.log(alltradeCalculaterDataArray);
+
+  const justMyDynastyValuesWithNames = [];
+  const sortedDynastyRankingsWithNamesValuesAndRank = [];
+  const sortedDynastyRankingsWithNamesValuesAndRankAndPositionalRank = [];
+
+  alltradeCalculaterDataArray.forEach(function (playerObject) {
+    justMyDynastyValuesWithNames.push({
+      value: playerObject.myValue,
+      name: playerObject.name,
+      pos: playerObject.position,
+    });
+  });
+
+  function compare(a, b) {
+    if (a.value < b.value) {
+      return 1;
+    }
+    if (a.value > b.value) {
+      return -1;
+    }
+    return 0;
+  }
+
+  let SortedjustMyDynastyValuesWithNames =
+    justMyDynastyValuesWithNames.sort(compare);
+
+  function addRank(SortedjustMyDynastyValuesWithNames) {
+    let rank = 0;
+    let posRank;
+    let playerPlusPosRank;
+    let QBRank = 0;
+    let RBRank = 0;
+    let WRRank = 0;
+    let TERank = 0;
+
+    SortedjustMyDynastyValuesWithNames.forEach(function (player) {
+      rank = rank + 1;
+      let playerPlusRank = { ...player, rank };
+      sortedDynastyRankingsWithNamesValuesAndRank.push(playerPlusRank);
+
+      if (player.pos === 'QB') {
+        QBRank = QBRank + 1;
+
+        let posRank = QBRank;
+
+        playerPlusPosRank = { ...player, posRank };
+      }
+      if (player.pos === 'RB') {
+        RBRank = RBRank + 1;
+        let posRank = RBRank;
+        playerPlusPosRank = { ...player, posRank };
+      }
+      if (player.pos === 'WR') {
+        WRRank = WRRank + 1;
+        let posRank = WRRank;
+        playerPlusPosRank = { ...player, posRank };
+      }
+      if (player.pos === 'TE') {
+        TERank = TERank + 1;
+        let posRank = TERank;
+        playerPlusPosRank = { ...player, posRank };
+      }
+      // console.log(playerPlusPosRank);
+      sortedDynastyRankingsWithNamesValuesAndRankAndPositionalRank.push(
+        playerPlusPosRank
+      );
+    });
+  }
+
+  addRank(SortedjustMyDynastyValuesWithNames);
+
+  // console.log(sortedDynastyRankingsWithNamesValuesAndRank);
+
+  class dynastyRankingsDataConstructor {
+    constructor(
+      name,
+      position,
+      team,
+      marketValue,
+      marketOverallRank,
+      marketPositionRank,
+      myValue,
+      myOverallRank,
+      myPositionRank,
+      valueDiffBetweenMyValueAndMarketValue
+    ) {
+      this.name = name;
+      this.position = position;
+      this.team = team;
+      this.marketValue = marketValue;
+      this.marketOverallRank = marketOverallRank;
+      this.marketPositionRank = marketPositionRank;
+      this.myValue = myValue;
+      this.myOverallRank = myOverallRank;
+      this.myPositionRank = myPositionRank;
+      this.valueDiffBetweenMyValueAndMarketValue =
+        valueDiffBetweenMyValueAndMarketValue;
+    }
+  }
+
+  alltradeCalculaterDataArray.forEach(function (playerObject) {
+    // console.log(playerObject.name, playerObject.myValue);
+
+    // console.log(SortedjustMyDynastyValuesWithNames);
+    let name = playerObject.name;
+    let overallRank;
+    let posRank;
+
+    sortedDynastyRankingsWithNamesValuesAndRank.forEach(function (player) {
+      // console.log(player);
+      if (player.name) {
+        if (player.name === name) {
+          // console.log(player.rank);
+          overallRank = +player.rank;
+        }
+      }
+    });
+
+    // console.log(sortedDynastyRankingsWithNamesValuesAndRankAndPositionalRank);
+
+    sortedDynastyRankingsWithNamesValuesAndRankAndPositionalRank.forEach(
+      function (player) {
+        // console.log(player);
+        // console.log(player.name);
+        if (player.name) {
+          if (player.name === name) {
+            posRank = +player.posRank;
+          }
+        }
+      }
+    );
+
+    let dynastyRankingsDataObject = new dynastyRankingsDataConstructor(
+      playerObject.name,
+      playerObject.position,
+      playerObject.team,
+      playerObject.fantasyCalcValue,
+      playerObject.fantasyCalcRank,
+      playerObject.fantasyCalcPositionRank,
+      playerObject.myValue,
+      overallRank,
+      posRank,
+      playerObject.valueDiffBetweenMyValueAndMarketValue
+    );
+
+    // console.log(sortedDynastyRankingsWithNamesValuesAndRank);
+
+    dynastyRankingsDataObjectsArray.push(dynastyRankingsDataObject);
+  });
+  // console.log(dynastyRankingsDataObjectsArray);
+
+  ///////////////////////
+  //////////////
+  ///////////uncomment below to push all dynasty ranking data from above to db named dynastyRankingsData
+
+  //   const url =
+  //     'mongodb+srv://devJay:Hesstrucksarethebest@dailydynasties.syom4sb.mongodb.net/test';
+  //   const client = new MongoClient(url);
+
+  //   // The database to use
+  //   const dbName = 'dailydynasties';
+
+  //   async function runDynastyRankingsData() {
+  //     try {
+  //       await client.connect();
+  //       console.log('Connected correctly to server');
+  //       const db = client.db(dbName);
+
+  //       // Use the collection "people"
+  //       const col = db.collection('dynastyRankingsData');
+
+  //       // Construct a document
+  //       let dynastyRankingsData = {
+  //         dynastyRankingsDataObjectsArray,
+  //       };
+
+  //       // Insert a single document, wait for promise so we can read it back
+  //       const p = await col.insertOne(dynastyRankingsData);
+  //       // Find one document
+  //       const myDoc = await col.findOne();
+  //       // Print to the console
+  //       // console.log(myDoc);
+  //     } catch (err) {
+  //       console.log(err.stack);
+  //     } finally {
+  //       await client.close();
+  //     }
+  //   }
+
+  //   runDynastyRankingsData().catch(console.dir);
 };
 // console.log(myJSON);
 testfunc();
 
 /***************************************************************!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 /////////////////////////////////
-//create a couple new constructor functions down here that will take in alltradeCalculaterDataArray as an input and loop over it and make player object arrays for specific purposes that only contain the info I am going to render for a page. one for dynasty rankings, one for redraft/rest of season rankings, and one for 3d trade view. then send these to the db in their own collections so you only have to call getstaticprops for the smaller objects that contain only the data that will be rendered on that page
+//create a couple new constructor functions down here that will take in alltradeCalculaterDataArray as an input and loop over it and make player object arrays for specific purposes that only contain the info I am going to render for a page. one for dynasty rankings (done), one for redraft/rest of season rankings, and one for 3d trade view. then send these to the db in their own collections so you only have to call getstaticprops for the smaller objects that contain only the data that will be rendered on that page
 /////////////////////////////////////// */
 //********************************************************************!!!!!!!!!!!!!!!!!!!!!!!!!!!111 */
