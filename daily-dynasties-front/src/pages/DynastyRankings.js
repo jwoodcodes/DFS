@@ -20,18 +20,6 @@ export default function DynastyRankings(dynastyRankingsData) {
       <MainNav />
       <div className={styles.pageTitle}>Dynasty Rankings</div>
       <Table data={dataArray} />
-      {/* <ul>
-        {dataArray.map(function (player) {
-          console.log(player);
-          return (
-            <li>
-              {player.name} {'  '}
-              {player.myValue} {''}
-              {player.valueDiffBetweenMyValueAndMarketValue}
-            </li>
-          );
-        })}
-      </ul> */}
     </div>
   );
 }
