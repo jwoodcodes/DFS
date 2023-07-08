@@ -19,13 +19,13 @@ export default function ThreeDTradeAnalyzer(dynastyRankingsData) {
     <div>
       <MainNav />
       <div className={styles.pageTitle}>3D Trade Analyzer</div>
-      {dataArray.map(function (player) {
+      {/* {dataArray.map(function (player, index) {
         return (
-          <li>
+          <li key={index}>
             {player.name} {player.age}
           </li>
         );
-      })}
+      })} */}
     </div>
   );
 }
