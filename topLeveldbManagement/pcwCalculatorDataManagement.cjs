@@ -6,6 +6,7 @@ const rvDynastyRankingsTEP = require('../model/datafilesmadefrom4for4CSVs/rvDyna
 const rvRedraftRankingsTEP = require('../model/datafilesmadefrom4for4CSVs/rvRedraftRankingsTEP');
 const fpMarketRedraftRankings = require('../model/datafilesmadefrom4for4CSVs/fpMarketRedraftRankings');
 const qbTwoOrMoreYearsPreAgeApexAndWillBeSameNextMarch = require('./PNODVCalcFunctions/QB/qbTwoOrMoreYearsPreAgeApexAndWillBeSameNextMarch');
+const qbTwoOrMoreYearsPreAgeApexButWillBeWorseAgeBucketNextMarch = require('./PNODVCalcFunctions/QB/qbTwoOrMoreYearsPreAgeApexButWillBeWorseAgeBucketNextMarch');
 
 let myJSON = {};
 
@@ -1432,13 +1433,19 @@ const testfunc = async function () {
         if (this.position === 'QB') {
           // console.log(this.position);
           // console.log(this.name);
-          // console.log(this.age, this.ageNextMarch);
+          // console.log(this.name, this.age, this.ageNextMarch);
 
+          //
           // 2 or more years pre age apex
+          //
           if (qbAgeApex - this.age >= 2) {
             // console.log(this.name);
+            // console.log(this.name, this.age, this.ageNextMarch);
+
+            //
             //
             //wont age into the next age bucket by next march
+            //
             if (qbAgeApex - this.ageNextMarch >= 2) {
               // console.log(this.name, this.age, this.ageNextMarch);
               qbTwoOrMoreYearsPreAgeApexAndWillBeSameNextMarch(
@@ -1448,13 +1455,26 @@ const testfunc = async function () {
                 this.valueDiffBetweenMyValueAndMarketValue,
                 this.myRedraftScoreFromPlayersRedraftTier,
                 this.myRedraftDifferenceScore,
-                this.fcQBPercentOfMax
+                this.fcQBPercentOfMax,
+                this.rvTier,
+                this.percentValueDiffBetweenMyValueAndMarket
               );
             }
             //
             //will age into next age bucket by next march
             else {
               // console.log(this.name, this.age, this.ageNextMarch);
+              qbTwoOrMoreYearsPreAgeApexButWillBeWorseAgeBucketNextMarch(
+                curMonth,
+                this.name,
+                this.fantasyCalcValue,
+                this.valueDiffBetweenMyValueAndMarketValue,
+                this.myRedraftScoreFromPlayersRedraftTier,
+                this.myRedraftDifferenceScore,
+                this.fcQBPercentOfMax,
+                this.rvTier,
+                this.percentValueDiffBetweenMyValueAndMarket
+              );
             }
           }
 
@@ -2377,6 +2397,14 @@ const testfunc = async function () {
 
   // console.log(alltradeCalculaterDataArray);
 
+  ///////////////////
+  //////////////////////////
+  ////////////////////////////////////
+  ///////////// for dynasty rankings
+  ////////////////////////////////////
+  /////////////////////////////
+  /////////////////////////
+
   const justMyDynastyValuesWithNames = [];
   const sortedDynastyRankingsWithNamesValuesAndRank = [];
   const sortedDynastyRankingsWithNamesValuesAndRankAndPositionalRank = [];
@@ -2531,41 +2559,157 @@ const testfunc = async function () {
   //////////////
   ///////////uncomment below to push all dynasty ranking data from above to db named dynastyRankingsData
 
-  const url =
-    'mongodb+srv://devJay:Hesstrucksarethebest@dailydynasties.syom4sb.mongodb.net/test';
-  const client = new MongoClient(url);
+  // const url =
+  //   'mongodb+srv://devJay:Hesstrucksarethebest@dailydynasties.syom4sb.mongodb.net/test';
+  // const client = new MongoClient(url);
 
-  // The database to use
-  const dbName = 'dailydynasties';
+  // // The database to use
+  // const dbName = 'dailydynasties';
 
-  async function runDynastyRankingsData() {
-    try {
-      await client.connect();
-      console.log('Connected correctly to server');
-      const db = client.db(dbName);
+  // async function runDynastyRankingsData() {
+  //   try {
+  //     await client.connect();
+  //     console.log('Connected correctly to server');
+  //     const db = client.db(dbName);
 
-      // Use the collection "people"
-      const col = db.collection('dynastyRankingsData');
+  //     // Use the collection "people"
+  //     const col = db.collection('dynastyRankingsData');
 
-      // Construct a document
-      let dynastyRankingsData = {
-        dynastyRankingsDataObjectsArray,
-      };
+  //     // Construct a document
+  //     let dynastyRankingsData = {
+  //       dynastyRankingsDataObjectsArray,
+  //     };
 
-      // Insert a single document, wait for promise so we can read it back
-      const p = await col.insertOne(dynastyRankingsData);
-      // Find one document
-      const myDoc = await col.findOne();
-      // Print to the console
-      // console.log(myDoc);
-    } catch (err) {
-      console.log(err.stack);
-    } finally {
-      await client.close();
+  //     // Insert a single document, wait for promise so we can read it back
+  //     const p = await col.insertOne(dynastyRankingsData);
+  //     // Find one document
+  //     const myDoc = await col.findOne();
+  //     // Print to the console
+  //     // console.log(myDoc);
+  //   } catch (err) {
+  //     console.log(err.stack);
+  //   } finally {
+  //     await client.close();
+  //   }
+  // }
+
+  // runDynastyRankingsData().catch(console.dir);
+
+  ///////////////////
+  //////////////////////////
+  ////////////////////////////////////
+  ///////////// for 3D trade Analyzer
+  ////////////////////////////////////
+  /////////////////////////////
+  /////////////////////////
+
+  let tradeAnalyzerDataObjectsArray = [];
+
+  class tradeAnalyzerDataConstructor {
+    constructor(
+      name,
+      position,
+      team,
+      age,
+      ageNextMarch,
+      marketValue,
+
+      myValue,
+
+      valueDiffBetweenMyValueAndMarketValue,
+      marketRedraftOverallRank,
+      marketRedraftPositionRank,
+      myRedraftOverallRank,
+      myRedraftPositionRank,
+      myRedraftTier,
+      myRedraftScoreFromPlayersRedraftTier,
+      myRedraftDifferenceScore,
+      projectedNextOffseasonDynastyValue
+    ) {
+      this.name = name;
+      this.position = position;
+      this.team = team;
+      this.age = age;
+      this.ageNextMarch = ageNextMarch;
+      this.marketValue = marketValue;
+
+      this.myValue = myValue;
+
+      this.valueDiffBetweenMyValueAndMarketValue =
+        valueDiffBetweenMyValueAndMarketValue;
+      this.marketRedraftOverallRank = marketRedraftOverallRank;
+      this.marketRedraftPositionRank = marketRedraftPositionRank;
+      this.myRedraftOverallRank = myRedraftOverallRank;
+      this.myRedraftPositionRank = myRedraftPositionRank;
+      this.myRedraftTier = myRedraftTier;
+      this.myRedraftScoreFromPlayersRedraftTier =
+        myRedraftScoreFromPlayersRedraftTier;
+      this.myRedraftDifferenceScore = myRedraftDifferenceScore;
+      this.projectedNextOffseasonDynastyValue =
+        projectedNextOffseasonDynastyValue;
     }
   }
 
-  runDynastyRankingsData().catch(console.dir);
+  alltradeCalculaterDataArray.forEach(function (playerObject) {
+    let tradeAnalyzerDataObject = new tradeAnalyzerDataConstructor(
+      playerObject.name,
+      playerObject.position,
+      playerObject.team,
+      playerObject.age,
+      playerObject.ageNextMarch,
+      playerObject.fantasyCalcValue,
+      playerObject.myValue,
+      playerObject.valueDiffBetweenMyValueAndMarketValue,
+      playerObject.fpRedraftOverallRank,
+      playerObject.fpRedraftPositionRank,
+      playerObject.rvRedraftOverallRank,
+      playerObject.rvRedraftPositionRank,
+      playerObject.rvRedraftTier,
+      playerObject.myRedraftScoreFromPlayersRedraftTier,
+      playerObject.myRedraftDifferenceScore,
+      playerObject.projectedNextOffseasonDynastyValue
+    );
+
+    tradeAnalyzerDataObjectsArray.push(tradeAnalyzerDataObject);
+  });
+  // console.log(tradeAnalyzerDataObjectsArray);
+
+  ///////////uncomment below to push all trade analyzer data from above to db named dynastyRankingsData
+
+  // const url =
+  //   'mongodb+srv://devJay:Hesstrucksarethebest@dailydynasties.syom4sb.mongodb.net/test';
+  // const client = new MongoClient(url);
+
+  // // The database to use
+  // const dbName = 'dailydynasties';
+
+  // async function runTradeAnalyzerData() {
+  //   try {
+  //     await client.connect();
+  //     console.log('Connected correctly to server');
+  //     const db = client.db(dbName);
+
+  //     const col = db.collection('tradeAnalyzerData');
+
+  //     // Construct a document
+  //     let tradeAnalyzerData = {
+  //       tradeAnalyzerDataObjectsArray,
+  //     };
+
+  //     // Insert a single document, wait for promise so we can read it back
+  //     const p = await col.insertOne(tradeAnalyzerData);
+  //     // Find one document
+  //     const myDoc = await col.findOne();
+  //     // Print to the console
+  //     // console.log(myDoc);
+  //   } catch (err) {
+  //     console.log(err.stack);
+  //   } finally {
+  //     await client.close();
+  //   }
+  // }
+
+  // runTradeAnalyzerData().catch(console.dir);
 };
 // console.log(myJSON);
 testfunc();
