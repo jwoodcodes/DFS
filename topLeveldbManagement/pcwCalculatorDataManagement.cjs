@@ -5,8 +5,8 @@ const ppSFTEPDynastyRankingsWithPicks = require('../model/datafilesmadefrom4for4
 const rvDynastyRankingsTEP = require('../model/datafilesmadefrom4for4CSVs/rvDynastyRankingsTEP');
 const rvRedraftRankingsTEP = require('../model/datafilesmadefrom4for4CSVs/rvRedraftRankingsTEP');
 const fpMarketRedraftRankings = require('../model/datafilesmadefrom4for4CSVs/fpMarketRedraftRankings');
-const qbTwoOrMoreYearsPreAgeApexAndWillBeSameNextMarch = require('./PNODVCalcFunctions/QB/qbTwoOrMoreYearsPreAgeApexAndWillBeSameNextMarch');
-const qbTwoOrMoreYearsPreAgeApexButWillBeWorseAgeBucketNextMarch = require('./PNODVCalcFunctions/QB/qbTwoOrMoreYearsPreAgeApexButWillBeWorseAgeBucketNextMarch');
+const qbTwoOrMoreYearsPreAgeApexAndWillBeSameNextMarch = require('./PNODVCalcFunctions/QB/qbTwoOrMoreYearsPreAgeApexAndWillBeSameNextMarch/qbTwoOrMoreYearsPreAgeApexAndWillBeSameNextMarch');
+const qbTwoOrMoreYearsPreAgeApexButWillBeWorseAgeBucketNextMarch = require('./PNODVCalcFunctions/QB/qbTwoOrMoreYearsPreAgeApexButWillBeWorseAgeBucketNextMarch/qbTwoOrMoreYearsPreAgeApexButWillBeWorseAgeBucketNextMarch');
 
 let myJSON = {};
 
@@ -1434,6 +1434,7 @@ const testfunc = async function () {
           // console.log(this.position);
           // console.log(this.name);
           // console.log(this.name, this.age, this.ageNextMarch);
+          // console.log(this.name, this.myRedraftDifferenceScore);
 
           //
           // 2 or more years pre age apex
