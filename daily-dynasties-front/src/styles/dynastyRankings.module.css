@@ -8,3 +8,9 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.lastUpdated {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
