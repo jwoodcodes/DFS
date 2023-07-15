@@ -10,13 +10,13 @@ const greaterThanZeroNineLessThanTwo = function (
   percentValueDiffBetweenMyValueAndMarket
 ) {
   //   console.log(name);
-  //   console.log(
-  //     name,
-  //     fantasyCalcValue,
-  //     valueDiffBetweenMyValueAndMarketValue,
-  //     percentValueDiffBetweenMyValueAndMarket,
-  //     myRedraftDifferenceScore
-  //   );
+  console.log(
+    name,
+    fantasyCalcValue,
+    valueDiffBetweenMyValueAndMarketValue,
+    percentValueDiffBetweenMyValueAndMarket,
+    myRedraftDifferenceScore
+  );
   //
   ///
   ///////

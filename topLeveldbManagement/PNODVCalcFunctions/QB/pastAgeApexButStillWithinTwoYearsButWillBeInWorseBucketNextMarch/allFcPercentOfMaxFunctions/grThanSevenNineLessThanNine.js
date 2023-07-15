@@ -9,7 +9,7 @@ const greaterThanSevenNineLessThanNine = function (
   rvTier,
   percentValueDiffBetweenMyValueAndMarket
 ) {
-  //   console.log(name);
+  // console.log(name);
   // console.log(
   //   name,
   //   fantasyCalcValue,
