@@ -1,4 +1,4 @@
-const greaterThanZeroNineLessThanTwo = function (
+const greaterThanPointZeroThreeLessThanOne = function (
   curMonth,
   name,
   fantasyCalcValue,
@@ -35,7 +35,7 @@ const greaterThanZeroNineLessThanTwo = function (
     ///
 
     if (myRedraftDifferenceScore >= 0) {
-      if (percentValueDiffBetweenMyValueAndMarket >= 30) {
+      if (percentValueDiffBetweenMyValueAndMarket >= 75) {
         // console.log(
         //   name,
         //   fantasyCalcValue,
@@ -68,8 +68,8 @@ const greaterThanZeroNineLessThanTwo = function (
       }
       //
       if (
-        percentValueDiffBetweenMyValueAndMarket >= 25 &&
-        percentValueDiffBetweenMyValueAndMarket < 30
+        percentValueDiffBetweenMyValueAndMarket >= 50 &&
+        percentValueDiffBetweenMyValueAndMarket < 75
       ) {
         if (myRedraftDifferenceScore > 500) {
           // console.log(
@@ -90,8 +90,8 @@ const greaterThanZeroNineLessThanTwo = function (
       //
 
       if (
-        percentValueDiffBetweenMyValueAndMarket >= 20 &&
-        percentValueDiffBetweenMyValueAndMarket < 25
+        percentValueDiffBetweenMyValueAndMarket >= 25 &&
+        percentValueDiffBetweenMyValueAndMarket < 50
       ) {
         if (myRedraftDifferenceScore > 500) {
           // console.log(
@@ -110,28 +110,7 @@ const greaterThanZeroNineLessThanTwo = function (
         }
       }
       //
-      if (
-        percentValueDiffBetweenMyValueAndMarket >= 15 &&
-        percentValueDiffBetweenMyValueAndMarket < 20
-      ) {
-        if (myRedraftDifferenceScore > 500) {
-          // console.log(
-          //   name,
-          //   fantasyCalcValue,
-          //   valueDiffBetweenMyValueAndMarketValue,
-          //   percentValueDiffBetweenMyValueAndMarket,
-          //   myRedraftDifferenceScore
-          // );
-        }
-        if (myRedraftDifferenceScore > 300 && myRedraftDifferenceScore < 600) {
-        }
-        if (myRedraftDifferenceScore > 100 && myRedraftDifferenceScore < 400) {
-        }
-        if (myRedraftDifferenceScore <= 100) {
-        }
-      }
-      //
-      if (percentValueDiffBetweenMyValueAndMarket <= 14.99) {
+      if (percentValueDiffBetweenMyValueAndMarket <= 24.99) {
         if (myRedraftDifferenceScore > 500) {
           // console.log(
           //   name,
@@ -166,7 +145,7 @@ const greaterThanZeroNineLessThanTwo = function (
       //     percentValueDiffBetweenMyValueAndMarket,
       //     myRedraftDifferenceScore
       //   );
-      if (percentValueDiffBetweenMyValueAndMarket >= 30) {
+      if (percentValueDiffBetweenMyValueAndMarket >= 75) {
         // console.log(
         //   name,
         //   fantasyCalcValue,
@@ -205,8 +184,8 @@ const greaterThanZeroNineLessThanTwo = function (
       }
       //
       if (
-        percentValueDiffBetweenMyValueAndMarket >= 25 &&
-        percentValueDiffBetweenMyValueAndMarket < 30
+        percentValueDiffBetweenMyValueAndMarket >= 50 &&
+        percentValueDiffBetweenMyValueAndMarket < 75
       ) {
         if (Math.abs(myRedraftDifferenceScore) > 500) {
           // console.log(
@@ -240,8 +219,8 @@ const greaterThanZeroNineLessThanTwo = function (
       //
 
       if (
-        percentValueDiffBetweenMyValueAndMarket >= 20 &&
-        percentValueDiffBetweenMyValueAndMarket < 25
+        percentValueDiffBetweenMyValueAndMarket >= 25 &&
+        percentValueDiffBetweenMyValueAndMarket < 50
       ) {
         if (Math.abs(myRedraftDifferenceScore) > 500) {
           // console.log(
@@ -273,41 +252,7 @@ const greaterThanZeroNineLessThanTwo = function (
         }
       }
       //
-      if (
-        percentValueDiffBetweenMyValueAndMarket >= 15 &&
-        percentValueDiffBetweenMyValueAndMarket < 20
-      ) {
-        if (Math.abs(myRedraftDifferenceScore) > 500) {
-          // console.log(
-          //   name,
-          //   fantasyCalcValue,
-          //   valueDiffBetweenMyValueAndMarketValue,
-          //   percentValueDiffBetweenMyValueAndMarket,
-          //   myRedraftDifferenceScore
-          // );
-        }
-        if (
-          Math.abs(myRedraftDifferenceScore) > 300 &&
-          Math.abs(myRedraftDifferenceScore) > 600
-        ) {
-        }
-        if (
-          Math.abs(myRedraftDifferenceScore) > 100 &&
-          Math.abs(myRedraftDifferenceScore) > 400
-        ) {
-        }
-        if (Math.abs(myRedraftDifferenceScore) > 100) {
-          // console.log(
-          //   name,
-          //   fantasyCalcValue,
-          //   valueDiffBetweenMyValueAndMarketValue,
-          //   percentValueDiffBetweenMyValueAndMarket,
-          //   myRedraftDifferenceScore
-          // );
-        }
-      }
-      //
-      if (percentValueDiffBetweenMyValueAndMarket <= 14.99) {
+      if (percentValueDiffBetweenMyValueAndMarket <= 24.99) {
         if (Math.abs(myRedraftDifferenceScore) > 500) {
           // console.log(
           //   name,
@@ -367,7 +312,7 @@ const greaterThanZeroNineLessThanTwo = function (
     ///
 
     if (myRedraftDifferenceScore >= 0) {
-      if (percentValueDiffBetweenMyValueAndMarket <= -30) {
+      if (percentValueDiffBetweenMyValueAndMarket <= -75) {
         // console.log(
         //   name,
         //   fantasyCalcValue,
@@ -400,8 +345,8 @@ const greaterThanZeroNineLessThanTwo = function (
       }
       //
       if (
-        percentValueDiffBetweenMyValueAndMarket <= -25 &&
-        percentValueDiffBetweenMyValueAndMarket > -30
+        percentValueDiffBetweenMyValueAndMarket <= -50 &&
+        percentValueDiffBetweenMyValueAndMarket > -75
       ) {
         // console.log(
         //   name,
@@ -427,8 +372,8 @@ const greaterThanZeroNineLessThanTwo = function (
       //
 
       if (
-        percentValueDiffBetweenMyValueAndMarket <= -20 &&
-        percentValueDiffBetweenMyValueAndMarket > -25
+        percentValueDiffBetweenMyValueAndMarket <= -25 &&
+        percentValueDiffBetweenMyValueAndMarket > -50
       ) {
         if (myRedraftDifferenceScore > 500) {
           // console.log(
@@ -447,28 +392,7 @@ const greaterThanZeroNineLessThanTwo = function (
         }
       }
       //
-      if (
-        percentValueDiffBetweenMyValueAndMarket <= -15 &&
-        percentValueDiffBetweenMyValueAndMarket > -20
-      ) {
-        if (myRedraftDifferenceScore > 500) {
-          // console.log(
-          //   name,
-          //   fantasyCalcValue,
-          //   valueDiffBetweenMyValueAndMarketValue,
-          //   percentValueDiffBetweenMyValueAndMarket,
-          //   myRedraftDifferenceScore
-          // );
-        }
-        if (myRedraftDifferenceScore > 300 && myRedraftDifferenceScore < 600) {
-        }
-        if (myRedraftDifferenceScore > 100 && myRedraftDifferenceScore < 400) {
-        }
-        if (myRedraftDifferenceScore <= 100) {
-        }
-      }
-      //
-      if (percentValueDiffBetweenMyValueAndMarket >= -14.99) {
+      if (percentValueDiffBetweenMyValueAndMarket >= -24.99) {
         if (myRedraftDifferenceScore > 500) {
           // console.log(
           //   name,
@@ -496,7 +420,7 @@ const greaterThanZeroNineLessThanTwo = function (
     ///
 
     if (myRedraftDifferenceScore < 0) {
-      if (percentValueDiffBetweenMyValueAndMarket <= -30) {
+      if (percentValueDiffBetweenMyValueAndMarket <= -75) {
         // console.log(
         //   name,
         //   fantasyCalcValue,
@@ -535,8 +459,8 @@ const greaterThanZeroNineLessThanTwo = function (
       }
       //
       if (
-        percentValueDiffBetweenMyValueAndMarket <= -25 &&
-        percentValueDiffBetweenMyValueAndMarket > -30
+        percentValueDiffBetweenMyValueAndMarket <= -50 &&
+        percentValueDiffBetweenMyValueAndMarket > -75
       ) {
         if (Math.abs(myRedraftDifferenceScore) > 500) {
           // console.log(
@@ -570,8 +494,8 @@ const greaterThanZeroNineLessThanTwo = function (
       //
 
       if (
-        percentValueDiffBetweenMyValueAndMarket <= -20 &&
-        percentValueDiffBetweenMyValueAndMarket > -25
+        percentValueDiffBetweenMyValueAndMarket <= -25 &&
+        percentValueDiffBetweenMyValueAndMarket > -50
       ) {
         if (Math.abs(myRedraftDifferenceScore) > 500) {
           // console.log(
@@ -603,41 +527,7 @@ const greaterThanZeroNineLessThanTwo = function (
         }
       }
       //
-      if (
-        percentValueDiffBetweenMyValueAndMarket <= -15 &&
-        percentValueDiffBetweenMyValueAndMarket > -20
-      ) {
-        if (Math.abs(myRedraftDifferenceScore) > 500) {
-          // console.log(
-          //   name,
-          //   fantasyCalcValue,
-          //   valueDiffBetweenMyValueAndMarketValue,
-          //   percentValueDiffBetweenMyValueAndMarket,
-          //   myRedraftDifferenceScore
-          // );
-        }
-        if (
-          Math.abs(myRedraftDifferenceScore) > 300 &&
-          Math.abs(myRedraftDifferenceScore) > 600
-        ) {
-        }
-        if (
-          Math.abs(myRedraftDifferenceScore) > 100 &&
-          Math.abs(myRedraftDifferenceScore) > 400
-        ) {
-        }
-        if (Math.abs(myRedraftDifferenceScore) > 100) {
-          // console.log(
-          //   name,
-          //   fantasyCalcValue,
-          //   valueDiffBetweenMyValueAndMarketValue,
-          //   percentValueDiffBetweenMyValueAndMarket,
-          //   myRedraftDifferenceScore
-          // );
-        }
-      }
-      //
-      if (percentValueDiffBetweenMyValueAndMarket >= -14.99) {
+      if (percentValueDiffBetweenMyValueAndMarket >= -24.99) {
         if (Math.abs(myRedraftDifferenceScore) > 500) {
           // console.log(
           //   name,
@@ -671,4 +561,4 @@ const greaterThanZeroNineLessThanTwo = function (
   }
 };
 
-module.exports = greaterThanZeroNineLessThanTwo;
+module.exports = greaterThanPointZeroThreeLessThanOne;

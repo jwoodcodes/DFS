@@ -8,7 +8,7 @@ const greaterThanZeroNineLessThanTwo = require('./allFcPercentOfMaxFunctions/grT
 const greaterThanPointZeroThreeLessThanOne = require('./allFcPercentOfMaxFunctions/grThanZeroThreeLessThanOne');
 const greaterThanZeroThree = require('./allFcPercentOfMaxFunctions/lessThanZeroThree');
 
-const qbTwoOrMoreYearsPreAgeApexAndWillBeSameNextMarch = function (
+const qbPastAgeApexButWithinTwoYearsAndWillBeSameNextMarch = function (
   curMonth,
   name,
   fantasyCalcValue,
@@ -29,12 +29,12 @@ const qbTwoOrMoreYearsPreAgeApexAndWillBeSameNextMarch = function (
   // console.log(
   //   // curMonth,
   //   name,
-  //   // fantasyCalcValue,
+  //   fantasyCalcValue,
   //   valueDiffBetweenMyValueAndMarketValue,
-  //   // myRedraftScoreFromPlayersRedraftTier,
-  //   // myRedraftDifferenceScore,
+  //   myRedraftScoreFromPlayersRedraftTier,
+  //   myRedraftDifferenceScore,
   //   fcQBPercentOfMax,
-  //   // rvTier,
+  //   rvTier,
   //   percentValueDiffBetweenMyValueAndMarket
   // );
 
@@ -307,4 +307,4 @@ const qbTwoOrMoreYearsPreAgeApexAndWillBeSameNextMarch = function (
   }
 };
 
-module.exports = qbTwoOrMoreYearsPreAgeApexAndWillBeSameNextMarch;
+module.exports = qbPastAgeApexButWithinTwoYearsAndWillBeSameNextMarch;

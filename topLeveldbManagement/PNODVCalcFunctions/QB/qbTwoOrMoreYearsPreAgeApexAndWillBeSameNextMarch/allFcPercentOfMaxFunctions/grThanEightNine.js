@@ -307,7 +307,7 @@ const greaterThanPointEightNine = function (
         }
       }
       //
-      if (percentValueDiffBetweenMyValueAndMarket <= 24.99) {
+      if (percentValueDiffBetweenMyValueAndMarket <= 4.99) {
         if (Math.abs(myRedraftDifferenceScore) > 500) {
           // console.log(
           //   name,
