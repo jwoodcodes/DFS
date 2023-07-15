@@ -7,6 +7,11 @@ const rvRedraftRankingsTEP = require('../model/datafilesmadefrom4for4CSVs/rvRedr
 const fpMarketRedraftRankings = require('../model/datafilesmadefrom4for4CSVs/fpMarketRedraftRankings');
 const qbTwoOrMoreYearsPreAgeApexAndWillBeSameNextMarch = require('./PNODVCalcFunctions/QB/qbTwoOrMoreYearsPreAgeApexAndWillBeSameNextMarch/qbTwoOrMoreYearsPreAgeApexAndWillBeSameNextMarch');
 const qbTwoOrMoreYearsPreAgeApexButWillBeWorseAgeBucketNextMarch = require('./PNODVCalcFunctions/QB/qbTwoOrMoreYearsPreAgeApexButWillBeWorseAgeBucketNextMarch/qbTwoOrMoreYearsPreAgeApexButWillBeWorseAgeBucketNextMarch');
+const qbWithinTwoYearsOfAgeApexButNotPastAndWillBeSameNextMarch = require('./PNODVCalcFunctions/QB/withinTwoYearsOfAgeApexButNotPast/qbWithinTwoYearsOfAgeApexButNotPastAndWillBeSameNextMarch');
+const qbWithinTwoYearsOfAgeApexButNotPastButWillBeInWorseBucketNextMarch = require('./PNODVCalcFunctions/QB/withinTwoYearsOfAgeApexButNotPastAndWillBeInWorseBucketNextMarch/qbWithinTwoYearsOfAgeApexButNotPastButWillBeInWorseBucketNextMarch');
+const qbPastAgeApexButWithinTwoYearsAndWillBeSameNextMarch = require('./PNODVCalcFunctions/QB/PastAgeApexButStillWithinTwoYearsAndWillBeInSameNextMarch/qbPastAgeApexButStillWithinTwoYearsAndWillBeSameNextMarch');
+const qbPastAgeApexButWithinTwoYearsButWillBeInWorseBucketNextMarch = require('./PNODVCalcFunctions/QB/pastAgeApexButStillWithinTwoYearsButWillBeInWorseBucketNextMarch/qbPastAgeApexButStillWithinTwoYearsButWillBeInWorseBucketNextMarch');
+const qbMoreThanTwoYearsPostAgeApex = require('./PNODVCalcFunctions/QB/moreThanTwoYearsPostAgeApex/qbMoreThanTwoYearsPostAgeApex');
 
 let myJSON = {};
 
@@ -1490,11 +1495,33 @@ const testfunc = async function () {
               qbAgeApex - this.ageNextMarch < 2
             ) {
               // console.log(this.name, this.age, this.ageNextMarch);
+              qbWithinTwoYearsOfAgeApexButNotPastAndWillBeSameNextMarch(
+                curMonth,
+                this.name,
+                this.fantasyCalcValue,
+                this.valueDiffBetweenMyValueAndMarketValue,
+                this.myRedraftScoreFromPlayersRedraftTier,
+                this.myRedraftDifferenceScore,
+                this.fcQBPercentOfMax,
+                this.rvTier,
+                this.percentValueDiffBetweenMyValueAndMarket
+              );
             }
             //
             //will age into next age bucket by next march
             else {
               // console.log(this.name, this.age, this.ageNextMarch);
+              qbWithinTwoYearsOfAgeApexButNotPastButWillBeInWorseBucketNextMarch(
+                curMonth,
+                this.name,
+                this.fantasyCalcValue,
+                this.valueDiffBetweenMyValueAndMarketValue,
+                this.myRedraftScoreFromPlayersRedraftTier,
+                this.myRedraftDifferenceScore,
+                this.fcQBPercentOfMax,
+                this.rvTier,
+                this.percentValueDiffBetweenMyValueAndMarket
+              );
             }
           }
 
@@ -1509,11 +1536,33 @@ const testfunc = async function () {
               qbAgeApex - this.ageNextMarch > -2
             ) {
               // console.log(this.name, this.age, this.ageNextMarch);
+              qbPastAgeApexButWithinTwoYearsAndWillBeSameNextMarch(
+                curMonth,
+                this.name,
+                this.fantasyCalcValue,
+                this.valueDiffBetweenMyValueAndMarketValue,
+                this.myRedraftScoreFromPlayersRedraftTier,
+                this.myRedraftDifferenceScore,
+                this.fcQBPercentOfMax,
+                this.rvTier,
+                this.percentValueDiffBetweenMyValueAndMarket
+              );
             }
             //
             //will age into next age bucket by next march
             else {
               // console.log(this.name, this.age, this.ageNextMarch);
+              qbPastAgeApexButWithinTwoYearsButWillBeInWorseBucketNextMarch(
+                curMonth,
+                this.name,
+                this.fantasyCalcValue,
+                this.valueDiffBetweenMyValueAndMarketValue,
+                this.myRedraftScoreFromPlayersRedraftTier,
+                this.myRedraftDifferenceScore,
+                this.fcQBPercentOfMax,
+                this.rvTier,
+                this.percentValueDiffBetweenMyValueAndMarket
+              );
             }
           }
 
@@ -1521,6 +1570,17 @@ const testfunc = async function () {
 
           if (qbAgeApex - this.age <= -2) {
             // console.log(this.name);
+            qbMoreThanTwoYearsPostAgeApex(
+              curMonth,
+              this.name,
+              this.fantasyCalcValue,
+              this.valueDiffBetweenMyValueAndMarketValue,
+              this.myRedraftScoreFromPlayersRedraftTier,
+              this.myRedraftDifferenceScore,
+              this.fcQBPercentOfMax,
+              this.rvTier,
+              this.percentValueDiffBetweenMyValueAndMarket
+            );
           }
         }
 
