@@ -19,7 +19,7 @@ export default function DynastyRankings(dynastyRankingsData) {
     <div>
       <MainNav />
       <div className={styles.pageTitle}>Dynasty Rankings</div>
-      <div className={styles.lastUpdated}>Last updated: 7/10/23</div>
+      <div className={styles.lastUpdated}>Last updated: 7/19/23</div>
       <Table data={dataArray} />
     </div>
   );

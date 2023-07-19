@@ -1696,41 +1696,41 @@ const testfunc = async function () {
   //////////////
   ///////////uncomment below to push all data from above to db named dynastyAndRedraftPlayerObjects
 
-  //   const url =
-  //     'mongodb+srv://devJay:Hesstrucksarethebest@dailydynasties.syom4sb.mongodb.net/test';
-  //   const client = new MongoClient(url);
+  // const url =
+  //   'mongodb+srv://devJay:Hesstrucksarethebest@dailydynasties.syom4sb.mongodb.net/test';
+  // const client = new MongoClient(url);
 
-  //   // The database to use
-  //   const dbName = 'dailydynasties';
+  // // The database to use
+  // const dbName = 'dailydynasties';
 
-  //   async function runDynastyAndRedraftPlayerObjects() {
-  //     try {
-  //       await client.connect();
-  //       console.log('Connected correctly to server');
-  //       const db = client.db(dbName);
+  // async function runDynastyAndRedraftPlayerObjects() {
+  //   try {
+  //     await client.connect();
+  //     console.log('Connected correctly to server');
+  //     const db = client.db(dbName);
 
-  //       // Use the collection "people"
-  //       const col = db.collection('dynastyAndRedraftPlayerObjects');
+  //     // Use the collection "people"
+  //     const col = db.collection('dynastyAndRedraftPlayerObjects');
 
-  //       // Construct a document
-  //       let dynastyAndRedraftPlayerObjects = {
-  //         alltradeCalculaterDataArray,
-  //       };
+  //     // Construct a document
+  //     let dynastyAndRedraftPlayerObjects = {
+  //       alltradeCalculaterDataArray,
+  //     };
 
-  //       // Insert a single document, wait for promise so we can read it back
-  //       const p = await col.insertOne(dynastyAndRedraftPlayerObjects);
-  //       // Find one document
-  //       const myDoc = await col.findOne();
-  //       // Print to the console
-  //       // console.log(myDoc);
-  //     } catch (err) {
-  //       console.log(err.stack);
-  //     } finally {
-  //       await client.close();
-  //     }
+  //     // Insert a single document, wait for promise so we can read it back
+  //     const p = await col.insertOne(dynastyAndRedraftPlayerObjects);
+  //     // Find one document
+  //     const myDoc = await col.findOne();
+  //     // Print to the console
+  //     // console.log(myDoc);
+  //   } catch (err) {
+  //     console.log(err.stack);
+  //   } finally {
+  //     await client.close();
   //   }
+  // }
 
-  //   runDynastyAndRedraftPlayerObjects().catch(console.dir);
+  // runDynastyAndRedraftPlayerObjects().catch(console.dir);
 
   // console.log(alltradeCalculaterDataArray);
 
