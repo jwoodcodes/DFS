@@ -2006,12 +2006,12 @@ const testfunc = async function () {
     // if (player.player.position === 'PICK') {
     //   console.log(tradeCalculaterDataObject);
     // }
-    if (
-      player.player.position === 'QB' &&
-      sanitizedFCPlayerName === 'Justin Fields'
-    ) {
-      console.log(tradeCalculaterDataObject);
-    }
+    // if (
+    //   player.player.position === 'QB' &&
+    //   sanitizedFCPlayerName === 'Justin Fields'
+    // ) {
+    //   console.log(tradeCalculaterDataObject);
+    // }
     // if (
     //   player.player.position === 'WR'
     //   //&&
