@@ -7,7 +7,9 @@ const greaterThanFiveNineLessThanEight = function (
   myRedraftDifferenceScore,
   fcQBPercentOfMax,
   rvTier,
-  percentValueDiffBetweenMyValueAndMarket
+  percentValueDiffBetweenMyValueAndMarket,
+  fcQBMaxValue,
+  fcNonQBMaxValue
 ) {
   //   console.log(name);
   // console.log(

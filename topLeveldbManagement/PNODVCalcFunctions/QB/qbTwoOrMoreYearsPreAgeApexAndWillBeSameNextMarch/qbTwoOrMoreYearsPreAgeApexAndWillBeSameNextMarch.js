@@ -17,7 +17,9 @@ const qbTwoOrMoreYearsPreAgeApexAndWillBeSameNextMarch = function (
   myRedraftDifferenceScore,
   fcQBPercentOfMax,
   rvTier,
-  percentValueDiffBetweenMyValueAndMarket
+  percentValueDiffBetweenMyValueAndMarket,
+  fcQBMaxValue,
+  fcNonQBMaxValue
 ) {
   if (myRedraftScoreFromPlayersRedraftTier === undefined) {
     myRedraftScoreFromPlayersRedraftTier = 0;
@@ -65,7 +67,9 @@ const qbTwoOrMoreYearsPreAgeApexAndWillBeSameNextMarch = function (
       myRedraftDifferenceScore,
       fcQBPercentOfMax,
       rvTier,
-      percentValueDiffBetweenMyValueAndMarket
+      percentValueDiffBetweenMyValueAndMarket,
+      fcQBMaxValue,
+      fcNonQBMaxValue
     );
   }
   //
@@ -95,7 +99,9 @@ const qbTwoOrMoreYearsPreAgeApexAndWillBeSameNextMarch = function (
       myRedraftDifferenceScore,
       fcQBPercentOfMax,
       rvTier,
-      percentValueDiffBetweenMyValueAndMarket
+      percentValueDiffBetweenMyValueAndMarket,
+      fcQBMaxValue,
+      fcNonQBMaxValue
     );
   }
   //
@@ -120,7 +126,9 @@ const qbTwoOrMoreYearsPreAgeApexAndWillBeSameNextMarch = function (
       myRedraftDifferenceScore,
       fcQBPercentOfMax,
       rvTier,
-      percentValueDiffBetweenMyValueAndMarket
+      percentValueDiffBetweenMyValueAndMarket,
+      fcQBMaxValue,
+      fcNonQBMaxValue
     );
   }
   //
@@ -141,7 +149,7 @@ const qbTwoOrMoreYearsPreAgeApexAndWillBeSameNextMarch = function (
     //   percentValueDiffBetweenMyValueAndMarket
     // );
 
-    greaterThanThreeNineLessThanSix(
+    const test = greaterThanThreeNineLessThanSix(
       curMonth,
       name,
       fantasyCalcValue,
@@ -150,8 +158,14 @@ const qbTwoOrMoreYearsPreAgeApexAndWillBeSameNextMarch = function (
       myRedraftDifferenceScore,
       fcQBPercentOfMax,
       rvTier,
-      percentValueDiffBetweenMyValueAndMarket
+      percentValueDiffBetweenMyValueAndMarket,
+      fcQBMaxValue,
+      fcNonQBMaxValue
     );
+
+    if (test) {
+      return test;
+    }
   }
   //
   //
@@ -180,7 +194,9 @@ const qbTwoOrMoreYearsPreAgeApexAndWillBeSameNextMarch = function (
       myRedraftDifferenceScore,
       fcQBPercentOfMax,
       rvTier,
-      percentValueDiffBetweenMyValueAndMarket
+      percentValueDiffBetweenMyValueAndMarket,
+      fcQBMaxValue,
+      fcNonQBMaxValue
     );
   }
   //
@@ -210,7 +226,9 @@ const qbTwoOrMoreYearsPreAgeApexAndWillBeSameNextMarch = function (
       myRedraftDifferenceScore,
       fcQBPercentOfMax,
       rvTier,
-      percentValueDiffBetweenMyValueAndMarket
+      percentValueDiffBetweenMyValueAndMarket,
+      fcQBMaxValue,
+      fcNonQBMaxValue
     );
   }
   //
@@ -241,7 +259,9 @@ const qbTwoOrMoreYearsPreAgeApexAndWillBeSameNextMarch = function (
       myRedraftDifferenceScore,
       fcQBPercentOfMax,
       rvTier,
-      percentValueDiffBetweenMyValueAndMarket
+      percentValueDiffBetweenMyValueAndMarket,
+      fcQBMaxValue,
+      fcNonQBMaxValue
     );
   }
 
@@ -272,7 +292,9 @@ const qbTwoOrMoreYearsPreAgeApexAndWillBeSameNextMarch = function (
       myRedraftDifferenceScore,
       fcQBPercentOfMax,
       rvTier,
-      percentValueDiffBetweenMyValueAndMarket
+      percentValueDiffBetweenMyValueAndMarket,
+      fcQBMaxValue,
+      fcNonQBMaxValue
     );
   }
   //
@@ -302,7 +324,9 @@ const qbTwoOrMoreYearsPreAgeApexAndWillBeSameNextMarch = function (
       myRedraftDifferenceScore,
       fcQBPercentOfMax,
       rvTier,
-      percentValueDiffBetweenMyValueAndMarket
+      percentValueDiffBetweenMyValueAndMarket,
+      fcQBMaxValue,
+      fcNonQBMaxValue
     );
   }
 };

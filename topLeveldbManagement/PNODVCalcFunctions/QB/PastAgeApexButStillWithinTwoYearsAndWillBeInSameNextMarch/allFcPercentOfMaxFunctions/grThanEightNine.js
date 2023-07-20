@@ -7,16 +7,18 @@ const greaterThanPointEightNine = function (
   myRedraftDifferenceScore,
   fcQBPercentOfMax,
   rvTier,
-  percentValueDiffBetweenMyValueAndMarket
+  percentValueDiffBetweenMyValueAndMarket,
+  fcQBMaxValue,
+  fcNonQBMaxValue
 ) {
   //   console.log(name);
-  console.log(
-    name,
-    fantasyCalcValue,
-    valueDiffBetweenMyValueAndMarketValue,
-    percentValueDiffBetweenMyValueAndMarket,
-    myRedraftDifferenceScore
-  );
+  // console.log(
+  //   name,
+  //   fantasyCalcValue,
+  //   valueDiffBetweenMyValueAndMarketValue,
+  //   percentValueDiffBetweenMyValueAndMarket,
+  //   myRedraftDifferenceScore
+  // );
   //
   ///
   ///////

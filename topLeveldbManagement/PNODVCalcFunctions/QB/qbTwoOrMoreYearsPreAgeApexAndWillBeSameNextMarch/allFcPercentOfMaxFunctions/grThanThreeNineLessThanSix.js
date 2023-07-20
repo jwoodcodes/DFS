@@ -7,7 +7,9 @@ const greaterThanThreeNineLessThanSix = function (
   myRedraftDifferenceScore,
   fcQBPercentOfMax,
   rvTier,
-  percentValueDiffBetweenMyValueAndMarket
+  percentValueDiffBetweenMyValueAndMarket,
+  fcQBMaxValue,
+  fcNonQBMaxValue
 ) {
   //   console.log(name);
   // console.log(
@@ -40,7 +42,8 @@ const greaterThanThreeNineLessThanSix = function (
         //   name,
         //   fantasyCalcValue,
         //   valueDiffBetweenMyValueAndMarketValue,
-        //   percentValueDiffBetweenMyValueAndMarket
+        //   percentValueDiffBetweenMyValueAndMarket,
+        //   myRedraftDifferenceScore
         // );
 
         if (myRedraftDifferenceScore > 500) {
@@ -64,6 +67,18 @@ const greaterThanThreeNineLessThanSix = function (
           //   percentValueDiffBetweenMyValueAndMarket,
           //   myRedraftDifferenceScore
           // );
+          let tempValue = valueDiffBetweenMyValueAndMarketValue * 0.5;
+          // console.log(
+          //   name,
+          //   fantasyCalcValue,
+          //   valueDiffBetweenMyValueAndMarketValue,
+          //   fcQBMaxValue,
+          //   tempValue
+          // );
+
+          let value = (fantasyCalcValue + tempValue) / fcQBMaxValue;
+
+          return value;
         }
       }
       //

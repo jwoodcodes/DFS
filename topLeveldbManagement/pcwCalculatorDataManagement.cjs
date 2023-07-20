@@ -5,7 +5,7 @@ const ppSFTEPDynastyRankingsWithPicks = require('../model/datafilesmadefrom4for4
 const rvDynastyRankingsTEP = require('../model/datafilesmadefrom4for4CSVs/rvDynastyRankingsTEP');
 const rvRedraftRankingsTEP = require('../model/datafilesmadefrom4for4CSVs/rvRedraftRankingsTEP');
 const fpMarketRedraftRankings = require('../model/datafilesmadefrom4for4CSVs/fpMarketRedraftRankings');
-const puttingItAllTogetherRedraft = require('./puttingItAllTogetherRedraft');
+
 const PNODVCalcFunction = require('./PNODVCalcFunctions/PNODVCalcFunction');
 
 let myJSON = {};
@@ -1021,22 +1021,359 @@ const testfunc = async function () {
         //setting myRedraftScoreFromPlayersRedraftTier
         ////////////////
 
-        puttingItAllTogetherRedraft(
-          sanitizedFCPlayerName,
-          sanitizedRVRedraftPlayerName,
-          fcPosition,
-          this.rvRedraftTier,
-          this.myRedraftScoreFromPlayersRedraftTier,
-          this.rvRedraftPositionRank,
-          this.myRedraftDifferenceScore,
-          this.fpRedraftPositionRank
-        );
+        if (fcPosition === 'QB') {
+          // console.log(fcPosition);
+          if (this.rvRedraftTier <= 3) {
+            this.myRedraftScoreFromPlayersRedraftTier = 600;
+          }
+          if (this.rvRedraftTier === 4) {
+            this.myRedraftScoreFromPlayersRedraftTier = 400;
+          }
+          if (this.rvRedraftTier === 5) {
+            this.myRedraftScoreFromPlayersRedraftTier = 300;
+          }
+          if (this.rvRedraftTier === 6) {
+            this.myRedraftScoreFromPlayersRedraftTier = 200;
+          }
+          if (this.rvRedraftTier === 7) {
+            this.myRedraftScoreFromPlayersRedraftTier = 100;
+          }
+          if (this.rvRedraftTier > 7) {
+            this.myRedraftScoreFromPlayersRedraftTier = 0;
+          }
+        }
+        if (fcPosition !== 'QB') {
+          // console.log(fcPosition);
+          if (this.rvRedraftTier === 1) {
+            this.myRedraftScoreFromPlayersRedraftTier = 600;
+          }
+          if (this.rvRedraftTier === 2) {
+            this.myRedraftScoreFromPlayersRedraftTier = 400;
+          }
+          if (this.rvRedraftTier === 3) {
+            this.myRedraftScoreFromPlayersRedraftTier = 300;
+          }
+          if (this.rvRedraftTier === 4) {
+            this.myRedraftScoreFromPlayersRedraftTier = 200;
+          }
+          if (this.rvRedraftTier === 5) {
+            this.myRedraftScoreFromPlayersRedraftTier = 100;
+          }
+          if (this.rvRedraftTier > 5) {
+            this.myRedraftScoreFromPlayersRedraftTier = 0;
+          }
+        }
+        //   ///////////////
+        //   ////////////////////////////
+        //   // comparing my redraft rank to marker redraft rank
+        //   //////////////////////////////
+        //   // console.log(
+        //   //   sanitizedFCPlayerName,
+        //   //   fpRedraftPositionRank,
+        //   //   rvRedraftPositionRank
+        //   // );
+        this.myRedraftDifferenceScore = 0;
+        //1-10 average
+        if (
+          (this.rvRedraftPositionRank + this.fpRedraftPositionRank) / 2 <
+          11
+        ) {
+          // console.log(
+          //   sanitizedFCPlayerName,
+          //   this.fpRedraftPositionRank,
+          //   this.rvRedraftPositionRank
+          // );
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank === 3) {
+            this.myRedraftDifferenceScore = 100;
+          }
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank === -3) {
+            this.myRedraftDifferenceScore = -100;
+          }
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank === 4) {
+            this.myRedraftDifferenceScore = 300;
+          }
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank === -4) {
+            this.myRedraftDifferenceScore = -300;
+          }
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank === 5) {
+            this.myRedraftDifferenceScore = 500;
+          }
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank === -5) {
+            this.myRedraftDifferenceScore = -500;
+          }
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank > 5) {
+            this.myRedraftDifferenceScore = 600;
+          }
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank < -5) {
+            this.myRedraftDifferenceScore = -600;
+            if (this.fpRedraftPositionRank - this.rvRedraftPositionRank > 7) {
+              this.myRedraftDifferenceScore = 700;
+            }
+            if (this.fpRedraftPositionRank - this.rvRedraftPositionRank < -7) {
+              this.myRedraftDifferenceScore = -700;
+            }
+          }
+        }
+        //11-20 average
+        if (
+          (this.rvRedraftPositionRank + this.fpRedraftPositionRank) / 2 > 10 &&
+          (this.rvRedraftPositionRank + this.fpRedraftPositionRank) / 2 < 21
+        ) {
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank === 4) {
+            this.myRedraftDifferenceScore = 100;
+          }
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank === -4) {
+            this.myRedraftDifferenceScore = -100;
+          }
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank === 5) {
+            this.myRedraftDifferenceScore = 300;
+          }
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank === -5) {
+            this.myRedraftDifferenceScore = -300;
+          }
+          if (
+            this.fpRedraftPositionRank - this.rvRedraftPositionRank === 6 ||
+            this.fpRedraftPositionRank - this.rvRedraftPositionRank === 7
+          ) {
+            this.myRedraftDifferenceScore = 500;
+          }
+          if (
+            this.fpRedraftPositionRank - this.rvRedraftPositionRank === -6 ||
+            this.fpRedraftPositionRank - this.rvRedraftPositionRank === -7
+          ) {
+            this.myRedraftDifferenceScore = -500;
+          }
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank > 7) {
+            this.myRedraftDifferenceScore = 600;
+          }
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank < -7) {
+            this.myRedraftDifferenceScore = -600;
+          }
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank > 9) {
+            this.myRedraftDifferenceScore = 700;
+          }
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank < -9) {
+            this.myRedraftDifferenceScore = -700;
+          }
+        }
+        //21-30 average
+        if (
+          (this.rvRedraftPositionRank + this.fpRedraftPositionRank) / 2 > 20 &&
+          (this.rvRedraftPositionRank + this.fpRedraftPositionRank) / 2 < 31
+        ) {
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank === 4) {
+            this.myRedraftDifferenceScore = 100;
+          }
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank === -4) {
+            this.myRedraftDifferenceScore = -100;
+          }
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank === 5) {
+            this.myRedraftDifferenceScore = 200;
+          }
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank === -5) {
+            this.myRedraftDifferenceScore = -200;
+          }
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank === 6) {
+            this.myRedraftDifferenceScore = 300;
+          }
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank === -6) {
+            this.myRedraftDifferenceScore = -300;
+          }
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank === 7) {
+            this.myRedraftDifferenceScore = 400;
+          }
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank === -7) {
+            this.myRedraftDifferenceScore = -400;
+          }
+          if (
+            this.fpRedraftPositionRank - this.rvRedraftPositionRank === 8 ||
+            this.fpRedraftPositionRank - this.rvRedraftPositionRank === 9
+          ) {
+            this.myRedraftDifferenceScore = 500;
+          }
+          if (
+            this.fpRedraftPositionRank - this.rvRedraftPositionRank === -8 ||
+            this.fpRedraftPositionRank - this.rvRedraftPositionRank === -9
+          ) {
+            this.myRedraftDifferenceScore = -500;
+          }
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank > 9) {
+            this.myRedraftDifferenceScore = 600;
+          }
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank < -9) {
+            this.myRedraftDifferenceScore = -600;
+          }
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank > 13) {
+            this.myRedraftDifferenceScore = 700;
+          }
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank < -13) {
+            this.myRedraftDifferenceScore = -700;
+          }
+        }
+        //31-50 avarage
+        if (
+          (this.rvRedraftPositionRank + this.fpRedraftPositionRank) / 2 > 30 &&
+          (this.rvRedraftPositionRank + this.fpRedraftPositionRank) / 2 < 51
+        ) {
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank === 5) {
+            this.myRedraftDifferenceScore = 100;
+          }
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank === -5) {
+            this.myRedraftDifferenceScore = -100;
+          }
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank === 6) {
+            this.myRedraftDifferenceScore = 200;
+          }
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank === -6) {
+            this.myRedraftDifferenceScore = -200;
+          }
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank === 7) {
+            this.myRedraftDifferenceScore = 300;
+          }
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank === -7) {
+            this.myRedraftDifferenceScore = -300;
+          }
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank === 8) {
+            this.myRedraftDifferenceScore = 400;
+          }
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank === -8) {
+            this.myRedraftDifferenceScore = -400;
+          }
+          if (
+            this.fpRedraftPositionRank - this.rvRedraftPositionRank === 9 ||
+            this.fpRedraftPositionRank - this.rvRedraftPositionRank === 10
+          ) {
+            this.myRedraftDifferenceScore = 500;
+          }
+          if (
+            this.fpRedraftPositionRank - this.rvRedraftPositionRank === -9 ||
+            this.fpRedraftPositionRank - this.rvRedraftPositionRank === -10
+          ) {
+            this.myRedraftDifferenceScore = -500;
+          }
+          if (
+            this.fpRedraftPositionRank - this.rvRedraftPositionRank > 10 &&
+            this.fpRedraftPositionRank - this.rvRedraftPositionRank < 14
+          ) {
+            this.myRedraftDifferenceScore = 600;
+          }
+          if (
+            this.fpRedraftPositionRank - this.rvRedraftPositionRank < -10 &&
+            this.fpRedraftPositionRank - this.rvRedraftPositionRank > -14
+          ) {
+            this.myRedraftDifferenceScore = -600;
+          }
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank > 13) {
+            this.myRedraftDifferenceScore = 700;
+          }
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank < -13) {
+            this.myRedraftDifferenceScore = -700;
+          }
+        }
+        //average 51-90
+        if (
+          (this.rvRedraftPositionRank + this.fpRedraftPositionRank) / 2 > 40 &&
+          (this.rvRedraftPositionRank + this.fpRedraftPositionRank) / 2 < 91
+        ) {
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank === 19) {
+            this.myRedraftDifferenceScore = 100;
+          }
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank === -19) {
+            this.myRedraftDifferenceScore = -100;
+          }
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank === 20) {
+            this.myRedraftDifferenceScore = 200;
+          }
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank === -20) {
+            this.myRedraftDifferenceScore = -200;
+          }
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank === 21) {
+            this.myRedraftDifferenceScore = 300;
+          }
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank === -21) {
+            this.myRedraftDifferenceScore = -300;
+          }
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank === 22) {
+            this.myRedraftDifferenceScore = 400;
+          }
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank === -22) {
+            this.myRedraftDifferenceScore = -400;
+          }
+          if (
+            this.fpRedraftPositionRank - this.rvRedraftPositionRank === 23 ||
+            this.fpRedraftPositionRank - this.rvRedraftPositionRank === 24
+          ) {
+            this.myRedraftDifferenceScore = 500;
+          }
+          if (
+            this.fpRedraftPositionRank - this.rvRedraftPositionRank === -23 ||
+            this.fpRedraftPositionRank - this.rvRedraftPositionRank === -24
+          ) {
+            this.myRedraftDifferenceScore = -500;
+          }
+          if (
+            this.fpRedraftPositionRank - this.rvRedraftPositionRank > 24 &&
+            this.fpRedraftPositionRank - this.rvRedraftPositionRank < 30
+          ) {
+            this.myRedraftDifferenceScore = 600;
+          }
+          if (
+            this.fpRedraftPositionRank - this.rvRedraftPositionRank < -24 &&
+            this.fpRedraftPositionRank - this.rvRedraftPositionRank > -30
+          ) {
+            this.myRedraftDifferenceScore = -600;
+          }
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank > 30) {
+            this.myRedraftDifferenceScore = 700;
+          }
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank < -30) {
+            this.myRedraftDifferenceScore = -700;
+          }
+        }
+        //average greater than 90
+        if (
+          (this.rvRedraftPositionRank + this.fpRedraftPositionRank) / 2 >
+          90
+        ) {
+          if (
+            this.fpRedraftPositionRank - this.rvRedraftPositionRank > 40 &&
+            this.fpRedraftPositionRank - this.rvRedraftPositionRank < 46
+          ) {
+            this.myRedraftDifferenceScore = 200;
+          }
+          if (
+            this.fpRedraftPositionRank - this.rvRedraftPositionRank > -40 &&
+            this.fpRedraftPositionRank - this.rvRedraftPositionRank < -46
+          ) {
+            this.myRedraftDifferenceScore = -200;
+          }
+          if (
+            this.fpRedraftPositionRank - this.rvRedraftPositionRank > 45 &&
+            this.fpRedraftPositionRank - this.rvRedraftPositionRank < 51
+          ) {
+            this.myRedraftDifferenceScore = 400;
+          }
+          if (
+            this.fpRedraftPositionRank - this.rvRedraftPositionRank > -45 &&
+            this.fpRedraftPositionRank - this.rvRedraftPositionRank < -51
+          ) {
+            this.myRedraftDifferenceScore = -400;
+          }
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank > 50) {
+            this.myRedraftDifferenceScore = 600;
+          }
+          if (this.fpRedraftPositionRank - this.rvRedraftPositionRank < -50) {
+            this.myRedraftDifferenceScore = -600;
+          }
+        }
       }
     }
 
     calculatingProjectedNextOffseasonDynastyValue(
       sanitizedFCPlayerName,
-      sanitizedRVPlayerName
+      sanitizedRVPlayerName,
+      fcQBMaxValue,
+      fcNonQBMaxValue
     ) {
       //things ill need to do this
       //current date, age, position, position age apex, current market value, dynasty value difference from mine to market, my projected redraft postional tier score, my redraft difference score
@@ -1046,7 +1383,12 @@ const testfunc = async function () {
       // console.log(amountToBeAddedToPlayersAgeToKnowWhatAgeTheyWillBeNextMarch);
 
       if (sanitizedFCPlayerName === sanitizedRVPlayerName) {
-        PNODVCalcFunction(
+        // console.log(
+        //   sanitizedFCPlayerName,
+        //   this.myRedraftScoreFromPlayersRedraftTier,
+        //   this.myRedraftDifferenceScore
+        // );
+        let value = PNODVCalcFunction(
           sanitizedFCPlayerName,
           sanitizedRVPlayerName,
           this.position,
@@ -1061,8 +1403,15 @@ const testfunc = async function () {
           this.fcQBPercentOfMax,
           this.fcNonQBPercentOfMax,
           this.rvTier,
-          this.percentValueDiffBetweenMyValueAndMarket
+          this.percentValueDiffBetweenMyValueAndMarket,
+          fcQBMaxValue,
+          fcNonQBMaxValue
         );
+
+        if (value) {
+          // console.log(sanitizedFCPlayerName, value);
+          this.projectedNextOffseasonMarketPercentOfMax = value;
+        }
       }
     }
   }
@@ -1611,7 +1960,9 @@ const testfunc = async function () {
 
     tradeCalculaterDataObject.calculatingProjectedNextOffseasonDynastyValue(
       sanitizedFCPlayerName,
-      sanitizedRVPlayerName
+      sanitizedRVPlayerName,
+      fcQBMaxValue,
+      fcNonQBMaxValue
     );
 
     // let allPlayersArray = [];
@@ -1655,18 +2006,24 @@ const testfunc = async function () {
     // if (player.player.position === 'PICK') {
     //   console.log(tradeCalculaterDataObject);
     // }
+    if (
+      player.player.position === 'QB' &&
+      sanitizedFCPlayerName === 'Justin Fields'
+    ) {
+      console.log(tradeCalculaterDataObject);
+    }
     // if (
-    //   (player.player.position === 'QB' &&
-    //     sanitizedFCPlayerName === 'Sam Darnold') ||
-    //   sanitizedFCPlayerName === 'Joe Burrow'
+    //   player.player.position === 'WR'
+    //   //&&
+    //   //   sanitizedFCPlayerName === 'Diontae Johnson') ||
+    //   // sanitizedFCPlayerName === 'Jaylen Waddle' ||
+    //   // sanitizedFCPlayerName === 'Jahan Dotson' ||
+    //   // sanitizedFCPlayerName === 'Drake London'
     // ) {
-    //   console.log(tradeCalculaterDataObject);
-    // }
-    // if (
-    //   player.player.position === 'WR' &&
-    //   sanitizedFCPlayerName === 'Jerry Jeudy'
-    // ) {
-    //   console.log(tradeCalculaterDataObject);
+    //   console.log(
+    //     tradeCalculaterDataObject.name,
+    //     tradeCalculaterDataObject.myRedraftDifferenceScore
+    //   );
     // }
     // if (
     //   (player.player.position === 'RB')

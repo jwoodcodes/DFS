@@ -18,7 +18,9 @@ const withinTwoYearsOfAgeApexButNotPastButWillBeInWorseBucketNextMarch =
     myRedraftDifferenceScore,
     fcQBPercentOfMax,
     rvTier,
-    percentValueDiffBetweenMyValueAndMarket
+    percentValueDiffBetweenMyValueAndMarket,
+    fcQBMaxValue,
+    fcNonQBMaxValue
   ) {
     if (myRedraftScoreFromPlayersRedraftTier === undefined) {
       myRedraftScoreFromPlayersRedraftTier = 0;
@@ -66,7 +68,9 @@ const withinTwoYearsOfAgeApexButNotPastButWillBeInWorseBucketNextMarch =
         myRedraftDifferenceScore,
         fcQBPercentOfMax,
         rvTier,
-        percentValueDiffBetweenMyValueAndMarket
+        percentValueDiffBetweenMyValueAndMarket,
+        fcQBMaxValue,
+        fcNonQBMaxValue
       );
     }
     //
@@ -96,7 +100,9 @@ const withinTwoYearsOfAgeApexButNotPastButWillBeInWorseBucketNextMarch =
         myRedraftDifferenceScore,
         fcQBPercentOfMax,
         rvTier,
-        percentValueDiffBetweenMyValueAndMarket
+        percentValueDiffBetweenMyValueAndMarket,
+        fcQBMaxValue,
+        fcNonQBMaxValue
       );
     }
     //
@@ -121,7 +127,9 @@ const withinTwoYearsOfAgeApexButNotPastButWillBeInWorseBucketNextMarch =
         myRedraftDifferenceScore,
         fcQBPercentOfMax,
         rvTier,
-        percentValueDiffBetweenMyValueAndMarket
+        percentValueDiffBetweenMyValueAndMarket,
+        fcQBMaxValue,
+        fcNonQBMaxValue
       );
     }
     //
@@ -151,7 +159,9 @@ const withinTwoYearsOfAgeApexButNotPastButWillBeInWorseBucketNextMarch =
         myRedraftDifferenceScore,
         fcQBPercentOfMax,
         rvTier,
-        percentValueDiffBetweenMyValueAndMarket
+        percentValueDiffBetweenMyValueAndMarket,
+        fcQBMaxValue,
+        fcNonQBMaxValue
       );
     }
     //
@@ -181,7 +191,9 @@ const withinTwoYearsOfAgeApexButNotPastButWillBeInWorseBucketNextMarch =
         myRedraftDifferenceScore,
         fcQBPercentOfMax,
         rvTier,
-        percentValueDiffBetweenMyValueAndMarket
+        percentValueDiffBetweenMyValueAndMarket,
+        fcQBMaxValue,
+        fcNonQBMaxValue
       );
     }
     //
@@ -211,7 +223,9 @@ const withinTwoYearsOfAgeApexButNotPastButWillBeInWorseBucketNextMarch =
         myRedraftDifferenceScore,
         fcQBPercentOfMax,
         rvTier,
-        percentValueDiffBetweenMyValueAndMarket
+        percentValueDiffBetweenMyValueAndMarket,
+        fcQBMaxValue,
+        fcNonQBMaxValue
       );
     }
     //
@@ -242,7 +256,9 @@ const withinTwoYearsOfAgeApexButNotPastButWillBeInWorseBucketNextMarch =
         myRedraftDifferenceScore,
         fcQBPercentOfMax,
         rvTier,
-        percentValueDiffBetweenMyValueAndMarket
+        percentValueDiffBetweenMyValueAndMarket,
+        fcQBMaxValue,
+        fcNonQBMaxValue
       );
     }
 
@@ -273,7 +289,9 @@ const withinTwoYearsOfAgeApexButNotPastButWillBeInWorseBucketNextMarch =
         myRedraftDifferenceScore,
         fcQBPercentOfMax,
         rvTier,
-        percentValueDiffBetweenMyValueAndMarket
+        percentValueDiffBetweenMyValueAndMarket,
+        fcQBMaxValue,
+        fcNonQBMaxValue
       );
     }
     //
@@ -303,7 +321,9 @@ const withinTwoYearsOfAgeApexButNotPastButWillBeInWorseBucketNextMarch =
         myRedraftDifferenceScore,
         fcQBPercentOfMax,
         rvTier,
-        percentValueDiffBetweenMyValueAndMarket
+        percentValueDiffBetweenMyValueAndMarket,
+        fcQBMaxValue,
+        fcNonQBMaxValue
       );
     }
   };
