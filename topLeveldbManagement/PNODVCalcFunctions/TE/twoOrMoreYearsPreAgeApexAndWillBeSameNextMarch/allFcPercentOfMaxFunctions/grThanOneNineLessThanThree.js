@@ -9,14 +9,14 @@ const greaterThanOneNineLessThanThree = function (
   rvTier,
   percentValueDiffBetweenMyValueAndMarket
 ) {
-  //   console.log(name);
-  //   console.log(
-  //     name,
-  //     fantasyCalcValue,
-  //     valueDiffBetweenMyValueAndMarketValue,
-  //     percentValueDiffBetweenMyValueAndMarket,
-  //     myRedraftDifferenceScore
-  //   );
+  // console.log(name);
+  // console.log(
+  //   name,
+  //   fantasyCalcValue,
+  //   valueDiffBetweenMyValueAndMarketValue,
+  //   percentValueDiffBetweenMyValueAndMarket,
+  //   myRedraftDifferenceScore
+  // );
   //
   ///
   ///////
