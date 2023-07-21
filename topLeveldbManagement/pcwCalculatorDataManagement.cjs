@@ -1411,6 +1411,16 @@ const testfunc = async function () {
         if (value) {
           // console.log(sanitizedFCPlayerName, value);
           this.projectedNextOffseasonMarketPercentOfMax = value;
+          if (this.position === 'QB') {
+            this.projectedNextOffseasonDynastyValue = +(
+              fcQBMaxValue * value
+            ).toFixed(2);
+          }
+          if (this.position !== 'QB') {
+            this.projectedNextOffseasonDynastyValue = +(
+              fcNonQBMaxValue * value
+            ).toFixed(2);
+          }
         }
       }
     }
@@ -2006,12 +2016,18 @@ const testfunc = async function () {
     // if (player.player.position === 'PICK') {
     //   console.log(tradeCalculaterDataObject);
     // }
-    // if (
-    //   player.player.position === 'QB' &&
-    //   sanitizedFCPlayerName === 'Justin Fields'
-    // ) {
+    // if (player.player.position === 'QB') {
     //   console.log(tradeCalculaterDataObject);
     // }
+    // if (player.player.position === 'RB') {
+    //   console.log(tradeCalculaterDataObject);
+    // }
+    // if (player.player.position === 'WR') {
+    //   console.log(tradeCalculaterDataObject);
+    // }
+    if (player.player.position === 'TE') {
+      console.log(tradeCalculaterDataObject);
+    }
     // if (
     //   player.player.position === 'WR'
     //   //&&
@@ -2020,11 +2036,15 @@ const testfunc = async function () {
     //   // sanitizedFCPlayerName === 'Jahan Dotson' ||
     //   // sanitizedFCPlayerName === 'Drake London'
     // ) {
-    //   console.log(
-    //     tradeCalculaterDataObject.name,
-    //     tradeCalculaterDataObject.myRedraftDifferenceScore
-    //   );
+    // console.log(
+    //   tradeCalculaterDataObject.name,
+    //   tradeCalculaterDataObject.myRedraftDifferenceScore
+    // );
     // }
+    // console.log(
+    //   tradeCalculaterDataObject.name,
+    //   tradeCalculaterDataObject.myRedraftDifferenceScore
+    // );
     // if (
     //   (player.player.position === 'RB')
     // ) {
