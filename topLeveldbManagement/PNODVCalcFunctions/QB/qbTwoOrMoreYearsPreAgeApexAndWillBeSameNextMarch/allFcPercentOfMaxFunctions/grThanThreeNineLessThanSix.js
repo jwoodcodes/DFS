@@ -78,7 +78,7 @@ const greaterThanThreeNineLessThanSix = function (
 
           let value = (fantasyCalcValue + tempValue) / fcQBMaxValue;
 
-          return value;
+          // return value;
         }
       }
       //

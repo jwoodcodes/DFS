@@ -17,7 +17,7 @@ const greaterThanThreeNineLessThanSix = function (
   //   percentValueDiffBetweenMyValueAndMarket,
   //   myRedraftDifferenceScore
   // );
-  //
+
   ///
   ///////
   ///////// if percentValueDiffBetweenMyValueAndMarket is positive or 0 ////////////////

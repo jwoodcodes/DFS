@@ -40,6 +40,335 @@ const qbMoreThanTwoYearsPostAgeApex = function (
   //   percentValueDiffBetweenMyValueAndMarket
   // );
 
+  //////////////////////////////////////////////////////////////////////////////////////////////////
+
+  //
+  ///
+  ///////
+  ///////// if percentValueDiffBetweenMyValueAndMarket is positive or 0 ////////////////
+  ///////
+  ///
+  //
+
+  if (percentValueDiffBetweenMyValueAndMarket >= 0) {
+    ///
+    /////
+    ///////
+    ///////// if myRedraftDifferenceScore is positive or 0 //////////////////
+    ///////
+    /////
+    ///
+    if (myRedraftDifferenceScore >= 0) {
+      //
+      // console.log(
+      //   name,
+      //   fantasyCalcValue,
+      //   valueDiffBetweenMyValueAndMarketValue,
+      //   percentValueDiffBetweenMyValueAndMarket,
+      //   myRedraftDifferenceScore
+      // );
+      if (myRedraftDifferenceScore === 700) {
+        let tempValue = valueDiffBetweenMyValueAndMarketValue * 1.25;
+        let value = (fantasyCalcValue + tempValue) / fcQBMaxValue;
+        if (value) {
+          return value;
+        }
+      }
+      if (myRedraftDifferenceScore === 600) {
+        let tempValue = valueDiffBetweenMyValueAndMarketValue * 1.1;
+        let value = (fantasyCalcValue + tempValue) / fcQBMaxValue;
+        if (value) {
+          return value;
+        }
+      }
+      if (myRedraftDifferenceScore === 500) {
+        let tempValue = valueDiffBetweenMyValueAndMarketValue * 0.8;
+        let value = (fantasyCalcValue + tempValue) / fcQBMaxValue;
+        if (value) {
+          return value;
+        }
+      }
+      if (myRedraftDifferenceScore === 400) {
+        let tempValue = valueDiffBetweenMyValueAndMarketValue * 0.5;
+        let value = (fantasyCalcValue + tempValue) / fcQBMaxValue;
+        if (value) {
+          return value;
+        }
+      }
+      if (myRedraftDifferenceScore === 300) {
+        let tempValue = valueDiffBetweenMyValueAndMarketValue * 0.3;
+        let value = (fantasyCalcValue + tempValue) / fcQBMaxValue;
+        if (value) {
+          return value;
+        }
+      }
+      if (myRedraftDifferenceScore === 200) {
+        let tempValue = valueDiffBetweenMyValueAndMarketValue * 0.2;
+        let value = (fantasyCalcValue + tempValue) / fcQBMaxValue;
+        if (value) {
+          return value;
+        }
+      }
+      if (myRedraftDifferenceScore === 100) {
+        // console.log(
+        //   name,
+        //   fantasyCalcValue,
+        //   valueDiffBetweenMyValueAndMarketValue,
+        //   percentValueDiffBetweenMyValueAndMarket,
+        //   myRedraftDifferenceScore
+        // );
+        let tempValue = valueDiffBetweenMyValueAndMarketValue;
+        let value = (fantasyCalcValue + tempValue) / fcQBMaxValue;
+        if (value) {
+          // console.log(name, value);
+          return value;
+        }
+      }
+      if (myRedraftDifferenceScore === 0) {
+        let tempValue = valueDiffBetweenMyValueAndMarketValue;
+        let value = (fantasyCalcValue + tempValue) / fcQBMaxValue;
+        if (value) {
+          return value;
+        }
+      }
+    }
+
+    ///
+    /////
+    ///////
+    ///////// if myRedraftDifferenceScore is negetive //////////////////
+    ///////
+    /////
+    ///
+
+    if (myRedraftDifferenceScore < 0) {
+      //
+      // console.log(
+      //   name,
+      //   fantasyCalcValue,
+      //   valueDiffBetweenMyValueAndMarketValue,
+      //   percentValueDiffBetweenMyValueAndMarket,
+      //   myRedraftDifferenceScore
+      // );
+      if (Math.abs(myRedraftDifferenceScore) === 700) {
+        let value = fantasyCalcValue - (fantasyCalcValue * 0.4) / fcQBMaxValue;
+        if (value) {
+          return value;
+        }
+      }
+      if (Math.abs(myRedraftDifferenceScore) === 600) {
+        let value = fantasyCalcValue - (fantasyCalcValue * 0.35) / fcQBMaxValue;
+        if (value) {
+          return value;
+        }
+      }
+
+      if (Math.abs(myRedraftDifferenceScore) === 500) {
+        let value = fantasyCalcValue - (fantasyCalcValue * 0.3) / fcQBMaxValue;
+        if (value) {
+          return value;
+        }
+      }
+
+      if (Math.abs(myRedraftDifferenceScore) === 400) {
+        let value = fantasyCalcValue - (fantasyCalcValue * 0.25) / fcQBMaxValue;
+        if (value) {
+          return value;
+        }
+      }
+      if (Math.abs(myRedraftDifferenceScore) === 300) {
+        let value = fantasyCalcValue - (fantasyCalcValue * 0.15) / fcQBMaxValue;
+        if (value) {
+          return value;
+        }
+      }
+      if (Math.abs(myRedraftDifferenceScore) === 200) {
+        let value =
+          fantasyCalcValue - (fantasyCalcValue * 0.125) / fcQBMaxValue;
+        if (value) {
+          return value;
+        }
+      }
+      if (Math.abs(myRedraftDifferenceScore) === 100) {
+        let value = fantasyCalcValue - (fantasyCalcValue * 0.1) / fcQBMaxValue;
+        if (value) {
+          return value;
+        }
+      }
+      if (Math.abs(myRedraftDifferenceScore) === 0) {
+        let value =
+          fantasyCalcValue - (fantasyCalcValue * 0.075) / fcQBMaxValue;
+        if (value) {
+          return value;
+        }
+      }
+    }
+  }
+
+  //
+  ///
+  ///////
+  ///////// if percentValueDiffBetweenMyValueAndMarket is negetive ////////////////
+  ///////
+  ///
+  //
+
+  if (percentValueDiffBetweenMyValueAndMarket < 0) {
+    ///
+    /////
+    ///////
+    ///////// if myRedraftDifferenceScore is positive or 0 //////////////////
+    ///////
+    /////
+    ///
+    if (myRedraftDifferenceScore >= 0) {
+      //
+      // console.log(
+      //   name,
+      //   fantasyCalcValue,
+      //   valueDiffBetweenMyValueAndMarketValue,
+      //   percentValueDiffBetweenMyValueAndMarket,
+      //   myRedraftDifferenceScore
+      // );
+      if (myRedraftDifferenceScore === 700) {
+        let value = fantasyCalcValue + (fantasyCalcValue * 0.1) / fcQBMaxValue;
+        if (value) {
+          return value;
+        }
+      }
+      if (myRedraftDifferenceScore === 600) {
+        // console.log(name, value);
+        let value =
+          fantasyCalcValue + (fantasyCalcValue * 0.065) / fcQBMaxValue;
+        if (value) {
+          // console.log(name, value);
+          return value;
+        }
+      }
+      if (myRedraftDifferenceScore === 500) {
+        let value = fantasyCalcValue + (fantasyCalcValue * 0.05) / fcQBMaxValue;
+        if (value) {
+          return value;
+        }
+      }
+      if (myRedraftDifferenceScore === 400) {
+        let value =
+          fantasyCalcValue + (fantasyCalcValue * 0.035) / fcQBMaxValue;
+        if (value) {
+          return value;
+        }
+      }
+      if (myRedraftDifferenceScore === 300) {
+        let tempValue = Math.abs(valueDiffBetweenMyValueAndMarketValue * 0.75);
+        let value = (fantasyCalcValue - tempValue) / fcQBMaxValue;
+        if (value) {
+          return value;
+        }
+      }
+      if (myRedraftDifferenceScore === 200) {
+        let tempValue = Math.abs(valueDiffBetweenMyValueAndMarketValue * 1.1);
+        let value = (fantasyCalcValue - tempValue) / fcQBMaxValue;
+        if (value) {
+          return value;
+        }
+      }
+      if (myRedraftDifferenceScore === 100) {
+        let tempValue = Math.abs(valueDiffBetweenMyValueAndMarketValue * 1.2);
+        let value = (fantasyCalcValue - tempValue) / fcQBMaxValue;
+        if (value) {
+          return value;
+        }
+      }
+      if (myRedraftDifferenceScore === 0) {
+        let tempValue = Math.abs(valueDiffBetweenMyValueAndMarketValue * 1.3);
+        let value = (fantasyCalcValue - tempValue) / fcQBMaxValue;
+        if (value) {
+          return value;
+        }
+      }
+    }
+
+    ///
+    /////
+    ///////
+    ///////// if myRedraftDifferenceScore is negetive //////////////////
+    ///////
+    /////
+    ///
+
+    if (myRedraftDifferenceScore < 0) {
+      //
+      // console.log(
+      //   name,
+      //   fantasyCalcValue,
+      //   valueDiffBetweenMyValueAndMarketValue,
+      //   percentValueDiffBetweenMyValueAndMarket,
+      //   myRedraftDifferenceScore
+      // );
+      if (Math.abs(myRedraftDifferenceScore) === 700) {
+        let tempValue = Math.abs(valueDiffBetweenMyValueAndMarketValue * 2.5);
+        let value = (fantasyCalcValue - tempValue) / fcQBMaxValue;
+        if (value) {
+          return value;
+        }
+      }
+
+      if (Math.abs(myRedraftDifferenceScore) === 600) {
+        let tempValue = Math.abs(valueDiffBetweenMyValueAndMarketValue * 2.25);
+
+        let value = (fantasyCalcValue - tempValue) / fcQBMaxValue;
+        if (value) {
+          return value;
+        }
+      }
+
+      if (Math.abs(myRedraftDifferenceScore) === 500) {
+        let tempValue = Math.abs(valueDiffBetweenMyValueAndMarketValue * 2);
+
+        let value = (fantasyCalcValue - tempValue) / fcQBMaxValue;
+        if (value) {
+          return value;
+        }
+      }
+
+      if (Math.abs(myRedraftDifferenceScore) === 400) {
+        let tempValue = Math.abs(valueDiffBetweenMyValueAndMarketValue * 1.75);
+
+        let value = (fantasyCalcValue - tempValue) / fcQBMaxValue;
+        if (value) {
+          return value;
+        }
+      }
+      if (Math.abs(myRedraftDifferenceScore) === 300) {
+        let tempValue = Math.abs(valueDiffBetweenMyValueAndMarketValue * 1.5);
+
+        let value = (fantasyCalcValue - tempValue) / fcQBMaxValue;
+        if (value) {
+          return value;
+        }
+      }
+      if (Math.abs(myRedraftDifferenceScore) === 200) {
+        let tempValue = Math.abs(valueDiffBetweenMyValueAndMarketValue * 1.25);
+
+        let value = (fantasyCalcValue - tempValue) / fcQBMaxValue;
+        1;
+        if (value) {
+          return value;
+        }
+      }
+      if (Math.abs(myRedraftDifferenceScore) === 100) {
+        let tempValue = Math.abs(valueDiffBetweenMyValueAndMarketValue * 1);
+
+        let value = (fantasyCalcValue - tempValue) / fcQBMaxValue;
+        if (value) {
+          return value;
+        }
+      }
+    }
+  }
+
+  //////////////////////////////////////////////////////////////////////////////////////////////////
+
   //
   ///
   ////

@@ -119,19 +119,24 @@ const PNODVCalcFunction = function (
         //will age into next age bucket by next march
         else {
           // console.log(name, age, ageNextMarch);
-          qbTwoOrMoreYearsPreAgeApexButWillBeWorseAgeBucketNextMarch(
-            curMonth,
-            name,
-            fantasyCalcValue,
-            valueDiffBetweenMyValueAndMarketValue,
-            myRedraftScoreFromPlayersRedraftTier,
-            myRedraftDifferenceScore,
-            fcQBPercentOfMax,
-            rvTier,
-            percentValueDiffBetweenMyValueAndMarket,
-            fcQBMaxValue,
-            fcNonQBMaxValue
-          );
+          let value =
+            qbTwoOrMoreYearsPreAgeApexButWillBeWorseAgeBucketNextMarch(
+              curMonth,
+              name,
+              fantasyCalcValue,
+              valueDiffBetweenMyValueAndMarketValue,
+              myRedraftScoreFromPlayersRedraftTier,
+              myRedraftDifferenceScore,
+              fcQBPercentOfMax,
+              rvTier,
+              percentValueDiffBetweenMyValueAndMarket,
+              fcQBMaxValue,
+              fcNonQBMaxValue
+            );
+          if (value) {
+            // console.log(name, value);
+            return value;
+          }
         }
       }
 
@@ -143,7 +148,7 @@ const PNODVCalcFunction = function (
         //wont age into the next age bucket by next march
         if (qbAgeApex - ageNextMarch >= 0 && qbAgeApex - ageNextMarch < 2) {
           // console.log(name, age, ageNextMarch);
-          qbWithinTwoYearsOfAgeApexButNotPastAndWillBeSameNextMarch(
+          let value = qbWithinTwoYearsOfAgeApexButNotPastAndWillBeSameNextMarch(
             curMonth,
             name,
             fantasyCalcValue,
@@ -156,24 +161,33 @@ const PNODVCalcFunction = function (
             fcQBMaxValue,
             fcNonQBMaxValue
           );
+          if (value) {
+            // console.log(name, value);
+            return value;
+          }
         }
         //
         //will age into next age bucket by next march
         else {
           // console.log(name, age, ageNextMarch);
-          qbWithinTwoYearsOfAgeApexButNotPastButWillBeInWorseBucketNextMarch(
-            curMonth,
-            name,
-            fantasyCalcValue,
-            valueDiffBetweenMyValueAndMarketValue,
-            myRedraftScoreFromPlayersRedraftTier,
-            myRedraftDifferenceScore,
-            fcQBPercentOfMax,
-            rvTier,
-            percentValueDiffBetweenMyValueAndMarket,
-            fcQBMaxValue,
-            fcNonQBMaxValue
-          );
+          let value =
+            qbWithinTwoYearsOfAgeApexButNotPastButWillBeInWorseBucketNextMarch(
+              curMonth,
+              name,
+              fantasyCalcValue,
+              valueDiffBetweenMyValueAndMarketValue,
+              myRedraftScoreFromPlayersRedraftTier,
+              myRedraftDifferenceScore,
+              fcQBPercentOfMax,
+              rvTier,
+              percentValueDiffBetweenMyValueAndMarket,
+              fcQBMaxValue,
+              fcNonQBMaxValue
+            );
+          if (value) {
+            // console.log(name, value);
+            return value;
+          }
         }
       }
 
@@ -185,7 +199,7 @@ const PNODVCalcFunction = function (
         //wont age into the next age bucket by next march
         if (qbAgeApex - ageNextMarch <= 0 && qbAgeApex - ageNextMarch > -2) {
           // console.log(name, age, ageNextMarch);
-          qbPastAgeApexButWithinTwoYearsAndWillBeSameNextMarch(
+          let value = qbPastAgeApexButWithinTwoYearsAndWillBeSameNextMarch(
             curMonth,
             name,
             fantasyCalcValue,
@@ -198,24 +212,33 @@ const PNODVCalcFunction = function (
             fcQBMaxValue,
             fcNonQBMaxValue
           );
+          if (value) {
+            // console.log(name, value);
+            return value;
+          }
         }
         //
         //will age into next age bucket by next march
         else {
           // console.log(name, age, ageNextMarch);
-          qbPastAgeApexButWithinTwoYearsButWillBeInWorseBucketNextMarch(
-            curMonth,
-            name,
-            fantasyCalcValue,
-            valueDiffBetweenMyValueAndMarketValue,
-            myRedraftScoreFromPlayersRedraftTier,
-            myRedraftDifferenceScore,
-            fcQBPercentOfMax,
-            rvTier,
-            percentValueDiffBetweenMyValueAndMarket,
-            fcQBMaxValue,
-            fcNonQBMaxValue
-          );
+          let value =
+            qbPastAgeApexButWithinTwoYearsButWillBeInWorseBucketNextMarch(
+              curMonth,
+              name,
+              fantasyCalcValue,
+              valueDiffBetweenMyValueAndMarketValue,
+              myRedraftScoreFromPlayersRedraftTier,
+              myRedraftDifferenceScore,
+              fcQBPercentOfMax,
+              rvTier,
+              percentValueDiffBetweenMyValueAndMarket,
+              fcQBMaxValue,
+              fcNonQBMaxValue
+            );
+          if (value) {
+            // console.log(name, value);
+            return value;
+          }
         }
       }
 
@@ -223,7 +246,7 @@ const PNODVCalcFunction = function (
 
       if (qbAgeApex - age <= -2) {
         // console.log(name);
-        qbMoreThanTwoYearsPostAgeApex(
+        let value = qbMoreThanTwoYearsPostAgeApex(
           curMonth,
           name,
           fantasyCalcValue,
@@ -236,6 +259,10 @@ const PNODVCalcFunction = function (
           fcQBMaxValue,
           fcNonQBMaxValue
         );
+        if (value) {
+          // console.log(name, value);
+          return value;
+        }
       }
     }
 
@@ -265,7 +292,7 @@ const PNODVCalcFunction = function (
         //wont age into the next age bucket by next march
         if (rbAgeApex - ageNextMarch >= 2) {
           // console.log(name, age, ageNextMarch);
-          rbTwoOrMoreYearsPreAgeApexAndWillBeSameNextMarch(
+          let value = rbTwoOrMoreYearsPreAgeApexAndWillBeSameNextMarch(
             curMonth,
             name,
             fantasyCalcValue,
@@ -278,24 +305,33 @@ const PNODVCalcFunction = function (
             fcQBMaxValue,
             fcNonQBMaxValue
           );
+          if (value) {
+            // console.log(name, value);
+            return value;
+          }
         }
         //
         //will age into next age bucket by next march
         else {
           // console.log(name, age, ageNextMarch);
-          rbTwoOrMoreYearsPreAgeApexButWillBeWorseAgeBucketNextMarch(
-            curMonth,
-            name,
-            fantasyCalcValue,
-            valueDiffBetweenMyValueAndMarketValue,
-            myRedraftScoreFromPlayersRedraftTier,
-            myRedraftDifferenceScore,
-            fcNonQBPercentOfMax,
-            rvTier,
-            percentValueDiffBetweenMyValueAndMarket,
-            fcQBMaxValue,
-            fcNonQBMaxValue
-          );
+          let value =
+            rbTwoOrMoreYearsPreAgeApexButWillBeWorseAgeBucketNextMarch(
+              curMonth,
+              name,
+              fantasyCalcValue,
+              valueDiffBetweenMyValueAndMarketValue,
+              myRedraftScoreFromPlayersRedraftTier,
+              myRedraftDifferenceScore,
+              fcNonQBPercentOfMax,
+              rvTier,
+              percentValueDiffBetweenMyValueAndMarket,
+              fcQBMaxValue,
+              fcNonQBMaxValue
+            );
+          if (value) {
+            // console.log(name, value);
+            return value;
+          }
         }
       }
 
@@ -307,7 +343,7 @@ const PNODVCalcFunction = function (
         //wont age into the next age bucket by next march
         if (rbAgeApex - ageNextMarch >= 0 && rbAgeApex - ageNextMarch < 2) {
           // console.log(name, age, ageNextMarch);
-          rbWithinTwoYearsOfAgeApexButNotPastAndWillBeSameNextMarch(
+          let value = rbWithinTwoYearsOfAgeApexButNotPastAndWillBeSameNextMarch(
             curMonth,
             name,
             fantasyCalcValue,
@@ -320,24 +356,33 @@ const PNODVCalcFunction = function (
             fcQBMaxValue,
             fcNonQBMaxValue
           );
+          if (value) {
+            // console.log(name, value);
+            return value;
+          }
         }
         //
         //will age into next age bucket by next march
         else {
           // console.log(name, age, ageNextMarch);
-          rbWithinTwoYearsOfAgeApexButNotPastButWillBeInWorseBucketNextMarch(
-            curMonth,
-            name,
-            fantasyCalcValue,
-            valueDiffBetweenMyValueAndMarketValue,
-            myRedraftScoreFromPlayersRedraftTier,
-            myRedraftDifferenceScore,
-            fcNonQBPercentOfMax,
-            rvTier,
-            percentValueDiffBetweenMyValueAndMarket,
-            fcQBMaxValue,
-            fcNonQBMaxValue
-          );
+          let value =
+            rbWithinTwoYearsOfAgeApexButNotPastButWillBeInWorseBucketNextMarch(
+              curMonth,
+              name,
+              fantasyCalcValue,
+              valueDiffBetweenMyValueAndMarketValue,
+              myRedraftScoreFromPlayersRedraftTier,
+              myRedraftDifferenceScore,
+              fcNonQBPercentOfMax,
+              rvTier,
+              percentValueDiffBetweenMyValueAndMarket,
+              fcQBMaxValue,
+              fcNonQBMaxValue
+            );
+          if (value) {
+            // console.log(name, value);
+            return value;
+          }
         }
       }
 
@@ -349,7 +394,7 @@ const PNODVCalcFunction = function (
         //wont age into the next age bucket by next march
         if (rbAgeApex - ageNextMarch <= 0 && rbAgeApex - ageNextMarch > -2) {
           // console.log(this.name, age, this.ageNextMarch);
-          rbPastAgeApexButWithinTwoYearsAndWillBeSameNextMarch(
+          let value = rbPastAgeApexButWithinTwoYearsAndWillBeSameNextMarch(
             curMonth,
             name,
             fantasyCalcValue,
@@ -362,24 +407,33 @@ const PNODVCalcFunction = function (
             fcQBMaxValue,
             fcNonQBMaxValue
           );
+          if (value) {
+            // console.log(name, value);
+            return value;
+          }
         }
         //
         //will age into next age bucket by next march
         else {
           // console.log(name, age, ageNextMarch);
-          rbPastAgeApexButWithinTwoYearsButWillBeInWorseBucketNextMarch(
-            curMonth,
-            name,
-            fantasyCalcValue,
-            valueDiffBetweenMyValueAndMarketValue,
-            myRedraftScoreFromPlayersRedraftTier,
-            myRedraftDifferenceScore,
-            fcNonQBPercentOfMax,
-            rvTier,
-            percentValueDiffBetweenMyValueAndMarket,
-            fcQBMaxValue,
-            fcNonQBMaxValue
-          );
+          let value =
+            rbPastAgeApexButWithinTwoYearsButWillBeInWorseBucketNextMarch(
+              curMonth,
+              name,
+              fantasyCalcValue,
+              valueDiffBetweenMyValueAndMarketValue,
+              myRedraftScoreFromPlayersRedraftTier,
+              myRedraftDifferenceScore,
+              fcNonQBPercentOfMax,
+              rvTier,
+              percentValueDiffBetweenMyValueAndMarket,
+              fcQBMaxValue,
+              fcNonQBMaxValue
+            );
+          if (value) {
+            // console.log(name, value);
+            return value;
+          }
         }
       }
 
@@ -387,7 +441,7 @@ const PNODVCalcFunction = function (
 
       if (rbAgeApex - age <= -2) {
         // console.log(this.name);
-        rbMoreThanTwoYearsPostAgeApex(
+        let value = rbMoreThanTwoYearsPostAgeApex(
           curMonth,
           name,
           fantasyCalcValue,
@@ -400,6 +454,10 @@ const PNODVCalcFunction = function (
           fcQBMaxValue,
           fcNonQBMaxValue
         );
+        if (value) {
+          // console.log(name, value);
+          return value;
+        }
       }
     }
 
@@ -418,7 +476,7 @@ const PNODVCalcFunction = function (
         //wont age into the next age bucket by next march
         if (wrAgeApex - ageNextMarch >= 2) {
           // console.log(name, age, ageNextMarch);
-          wrTwoOrMoreYearsPreAgeApexAndWillBeSameNextMarch(
+          let value = wrTwoOrMoreYearsPreAgeApexAndWillBeSameNextMarch(
             curMonth,
             name,
             fantasyCalcValue,
@@ -431,24 +489,33 @@ const PNODVCalcFunction = function (
             fcQBMaxValue,
             fcNonQBMaxValue
           );
+          if (value) {
+            // console.log(name, value);
+            return value;
+          }
         }
         //
         //will age into next age bucket by next march
         else {
           // console.log(name, age, ageNextMarch);
-          wrTwoOrMoreYearsPreAgeApexButWillBeWorseAgeBucketNextMarch(
-            curMonth,
-            name,
-            fantasyCalcValue,
-            valueDiffBetweenMyValueAndMarketValue,
-            myRedraftScoreFromPlayersRedraftTier,
-            myRedraftDifferenceScore,
-            fcNonQBPercentOfMax,
-            rvTier,
-            percentValueDiffBetweenMyValueAndMarket,
-            fcQBMaxValue,
-            fcNonQBMaxValue
-          );
+          let value =
+            wrTwoOrMoreYearsPreAgeApexButWillBeWorseAgeBucketNextMarch(
+              curMonth,
+              name,
+              fantasyCalcValue,
+              valueDiffBetweenMyValueAndMarketValue,
+              myRedraftScoreFromPlayersRedraftTier,
+              myRedraftDifferenceScore,
+              fcNonQBPercentOfMax,
+              rvTier,
+              percentValueDiffBetweenMyValueAndMarket,
+              fcQBMaxValue,
+              fcNonQBMaxValue
+            );
+          if (value) {
+            // console.log(name, value);
+            return value;
+          }
         }
       }
 
@@ -463,7 +530,7 @@ const PNODVCalcFunction = function (
           wrAgeApex - this.ageNextMarch < 2
         ) {
           // console.log(name, age, ageNextMarch);
-          wrWithinTwoYearsOfAgeApexButNotPastAndWillBeSameNextMarch(
+          let value = wrWithinTwoYearsOfAgeApexButNotPastAndWillBeSameNextMarch(
             curMonth,
             name,
             fantasyCalcValue,
@@ -476,24 +543,33 @@ const PNODVCalcFunction = function (
             fcQBMaxValue,
             fcNonQBMaxValue
           );
+          if (value) {
+            // console.log(name, value);
+            return value;
+          }
         }
         //
         //will age into next age bucket by next march
         else {
           // console.log(name, age, ageNextMarch);
-          wrWithinTwoYearsOfAgeApexButNotPastButWillBeInWorseBucketNextMarch(
-            curMonth,
-            name,
-            fantasyCalcValue,
-            valueDiffBetweenMyValueAndMarketValue,
-            myRedraftScoreFromPlayersRedraftTier,
-            myRedraftDifferenceScore,
-            fcNonQBPercentOfMax,
-            rvTier,
-            percentValueDiffBetweenMyValueAndMarket,
-            fcQBMaxValue,
-            fcNonQBMaxValue
-          );
+          let value =
+            wrWithinTwoYearsOfAgeApexButNotPastButWillBeInWorseBucketNextMarch(
+              curMonth,
+              name,
+              fantasyCalcValue,
+              valueDiffBetweenMyValueAndMarketValue,
+              myRedraftScoreFromPlayersRedraftTier,
+              myRedraftDifferenceScore,
+              fcNonQBPercentOfMax,
+              rvTier,
+              percentValueDiffBetweenMyValueAndMarket,
+              fcQBMaxValue,
+              fcNonQBMaxValue
+            );
+          if (value) {
+            // console.log(name, value);
+            return value;
+          }
         }
       }
 
@@ -505,7 +581,7 @@ const PNODVCalcFunction = function (
         //wont age into the next age bucket by next march
         if (wrAgeApex - ageNextMarch <= 0 && wrAgeApex - ageNextMarch > -2) {
           // console.log(name, age, ageNextMarch);
-          wrPastAgeApexButWithinTwoYearsAndWillBeSameNextMarch(
+          let value = wrPastAgeApexButWithinTwoYearsAndWillBeSameNextMarch(
             curMonth,
             name,
             fantasyCalcValue,
@@ -518,24 +594,33 @@ const PNODVCalcFunction = function (
             fcQBMaxValue,
             fcNonQBMaxValue
           );
+          if (value) {
+            // console.log(name, value);
+            return value;
+          }
         }
         //
         //will age into next age bucket by next march
         else {
           // console.log(name, age, ageNextMarch);
-          wrPastAgeApexButWithinTwoYearsButWillBeInWorseBucketNextMarch(
-            curMonth,
-            name,
-            fantasyCalcValue,
-            valueDiffBetweenMyValueAndMarketValue,
-            myRedraftScoreFromPlayersRedraftTier,
-            myRedraftDifferenceScore,
-            fcNonQBPercentOfMax,
-            rvTier,
-            percentValueDiffBetweenMyValueAndMarket,
-            fcQBMaxValue,
-            fcNonQBMaxValue
-          );
+          let value =
+            wrPastAgeApexButWithinTwoYearsButWillBeInWorseBucketNextMarch(
+              curMonth,
+              name,
+              fantasyCalcValue,
+              valueDiffBetweenMyValueAndMarketValue,
+              myRedraftScoreFromPlayersRedraftTier,
+              myRedraftDifferenceScore,
+              fcNonQBPercentOfMax,
+              rvTier,
+              percentValueDiffBetweenMyValueAndMarket,
+              fcQBMaxValue,
+              fcNonQBMaxValue
+            );
+          if (value) {
+            // console.log(name, value);
+            return value;
+          }
         }
       }
 
@@ -543,7 +628,7 @@ const PNODVCalcFunction = function (
 
       if (wrAgeApex - age <= -2) {
         // console.log(name);
-        wrMoreThanTwoYearsPostAgeApex(
+        let value = wrMoreThanTwoYearsPostAgeApex(
           curMonth,
           name,
           fantasyCalcValue,
@@ -556,6 +641,10 @@ const PNODVCalcFunction = function (
           fcQBMaxValue,
           fcNonQBMaxValue
         );
+        if (value) {
+          // console.log(name, value);
+          return value;
+        }
       }
     }
 
@@ -574,7 +663,7 @@ const PNODVCalcFunction = function (
         //wont age into the next age bucket by next march
         if (teAgeApex - ageNextMarch >= 2) {
           // console.log(name, age, ageNextMarch);
-          teTwoOrMoreYearsPreAgeApexAndWillBeSameNextMarch(
+          let value = teTwoOrMoreYearsPreAgeApexAndWillBeSameNextMarch(
             curMonth,
             name,
             fantasyCalcValue,
@@ -587,24 +676,33 @@ const PNODVCalcFunction = function (
             fcQBMaxValue,
             fcNonQBMaxValue
           );
+          if (value) {
+            // console.log(name, value);
+            return value;
+          }
         }
         //
         //will age into next age bucket by next march
         else {
           // console.log(name, age, ageNextMarch);
-          teTwoOrMoreYearsPreAgeApexButWillBeWorseAgeBucketNextMarch(
-            curMonth,
-            name,
-            fantasyCalcValue,
-            valueDiffBetweenMyValueAndMarketValue,
-            myRedraftScoreFromPlayersRedraftTier,
-            myRedraftDifferenceScore,
-            fcNonQBPercentOfMax,
-            rvTier,
-            percentValueDiffBetweenMyValueAndMarket,
-            fcQBMaxValue,
-            fcNonQBMaxValue
-          );
+          let value =
+            teTwoOrMoreYearsPreAgeApexButWillBeWorseAgeBucketNextMarch(
+              curMonth,
+              name,
+              fantasyCalcValue,
+              valueDiffBetweenMyValueAndMarketValue,
+              myRedraftScoreFromPlayersRedraftTier,
+              myRedraftDifferenceScore,
+              fcNonQBPercentOfMax,
+              rvTier,
+              percentValueDiffBetweenMyValueAndMarket,
+              fcQBMaxValue,
+              fcNonQBMaxValue
+            );
+          if (value) {
+            // console.log(name, value);
+            return value;
+          }
         }
       }
 
@@ -616,7 +714,7 @@ const PNODVCalcFunction = function (
         //wont age into the next age bucket by next march
         if (teAgeApex - ageNextMarch >= 0 && teAgeApex - ageNextMarch < 2) {
           // console.log(name, age, ageNextMarch);
-          teWithinTwoYearsOfAgeApexButNotPastAndWillBeSameNextMarch(
+          let value = teWithinTwoYearsOfAgeApexButNotPastAndWillBeSameNextMarch(
             curMonth,
             name,
             fantasyCalcValue,
@@ -629,24 +727,33 @@ const PNODVCalcFunction = function (
             fcQBMaxValue,
             fcNonQBMaxValue
           );
+          if (value) {
+            // console.log(name, value);
+            return value;
+          }
         }
         //
         //will age into next age bucket by next march
         else {
           // console.log(name, age, ageNextMarch);
-          teWithinTwoYearsOfAgeApexButNotPastButWillBeInWorseBucketNextMarch(
-            curMonth,
-            name,
-            fantasyCalcValue,
-            valueDiffBetweenMyValueAndMarketValue,
-            myRedraftScoreFromPlayersRedraftTier,
-            myRedraftDifferenceScore,
-            fcNonQBPercentOfMax,
-            rvTier,
-            percentValueDiffBetweenMyValueAndMarket,
-            fcQBMaxValue,
-            fcNonQBMaxValue
-          );
+          let value =
+            teWithinTwoYearsOfAgeApexButNotPastButWillBeInWorseBucketNextMarch(
+              curMonth,
+              name,
+              fantasyCalcValue,
+              valueDiffBetweenMyValueAndMarketValue,
+              myRedraftScoreFromPlayersRedraftTier,
+              myRedraftDifferenceScore,
+              fcNonQBPercentOfMax,
+              rvTier,
+              percentValueDiffBetweenMyValueAndMarket,
+              fcQBMaxValue,
+              fcNonQBMaxValue
+            );
+          if (value) {
+            // console.log(name, value);
+            return value;
+          }
         }
       }
 
@@ -658,7 +765,7 @@ const PNODVCalcFunction = function (
         //wont age into the next age bucket by next march
         if (teAgeApex - ageNextMarch <= 0 && teAgeApex - ageNextMarch > -2) {
           // console.log(name, age, ageNextMarch);
-          tePastAgeApexButWithinTwoYearsAndWillBeSameNextMarch(
+          let value = tePastAgeApexButWithinTwoYearsAndWillBeSameNextMarch(
             curMonth,
             name,
             fantasyCalcValue,
@@ -671,24 +778,33 @@ const PNODVCalcFunction = function (
             fcQBMaxValue,
             fcNonQBMaxValue
           );
+          if (value) {
+            // console.log(name, value);
+            return value;
+          }
         }
         //
         //will age into next age bucket by next march
         else {
           // console.log(name, age, ageNextMarch);
-          tePastAgeApexButWithinTwoYearsButWillBeInWorseBucketNextMarch(
-            curMonth,
-            name,
-            fantasyCalcValue,
-            valueDiffBetweenMyValueAndMarketValue,
-            myRedraftScoreFromPlayersRedraftTier,
-            myRedraftDifferenceScore,
-            fcNonQBPercentOfMax,
-            rvTier,
-            percentValueDiffBetweenMyValueAndMarket,
-            fcQBMaxValue,
-            fcNonQBMaxValue
-          );
+          let value =
+            tePastAgeApexButWithinTwoYearsButWillBeInWorseBucketNextMarch(
+              curMonth,
+              name,
+              fantasyCalcValue,
+              valueDiffBetweenMyValueAndMarketValue,
+              myRedraftScoreFromPlayersRedraftTier,
+              myRedraftDifferenceScore,
+              fcNonQBPercentOfMax,
+              rvTier,
+              percentValueDiffBetweenMyValueAndMarket,
+              fcQBMaxValue,
+              fcNonQBMaxValue
+            );
+          if (value) {
+            // console.log(name, value);
+            return value;
+          }
         }
       }
 
@@ -696,7 +812,7 @@ const PNODVCalcFunction = function (
 
       if (teAgeApex - age <= -2) {
         // console.log(name);
-        teMoreThanTwoYearsPostAgeApex(
+        let value = teMoreThanTwoYearsPostAgeApex(
           curMonth,
           name,
           fantasyCalcValue,
@@ -709,6 +825,10 @@ const PNODVCalcFunction = function (
           fcQBMaxValue,
           fcNonQBMaxValue
         );
+        if (value) {
+          // console.log(name, value);
+          return value;
+        }
       }
     }
   }
