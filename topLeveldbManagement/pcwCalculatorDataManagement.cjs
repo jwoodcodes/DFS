@@ -1023,27 +1023,54 @@ const testfunc = async function () {
 
         if (fcPosition === 'QB') {
           // console.log(fcPosition);
-          if (this.rvRedraftTier <= 3) {
-            this.myRedraftScoreFromPlayersRedraftTier = 600;
+          let bestQBTier = 2;
+          if (this.rvRedraftTier === 1) {
+            bestQBTier = 1;
           }
-          if (this.rvRedraftTier === 4) {
+          if (bestQBTier > 1 && this.rvRedraftTier === 2) {
+            bestQBTier = 2;
+          }
+          if (bestQBTier > 2 && this.rvRedraftTier === 3) {
+            bestQBTier = 3;
+          }
+          if (bestQBTier > 3 && this.rvRedraftTier === 4) {
+            bestQBTier = 4;
+          }
+
+          this.curBestQBTier = bestQBTier;
+
+          if (this.rvRedraftTier === bestQBTier) {
+            // console.log(this.name, this.rvRedraftTier, bestQBTier);
+            this.myRedraftScoreFromPlayersRedraftTier = 700;
+          }
+          if (this.rvRedraftTier === bestQBTier + 1) {
+            // console.log(this.name, this.rvRedraftTier, bestQBTier);
+            this.myRedraftScoreFromPlayersRedraftTier = 500;
+          }
+          if (this.rvRedraftTier === bestQBTier + 2) {
+            // console.log(this.name, this.rvRedraftTier, bestQBTier);
             this.myRedraftScoreFromPlayersRedraftTier = 400;
           }
-          if (this.rvRedraftTier === 5) {
+          if (this.rvRedraftTier === bestQBTier + 3) {
+            // console.log(this.name, this.rvRedraftTier, bestQBTier);
             this.myRedraftScoreFromPlayersRedraftTier = 300;
           }
-          if (this.rvRedraftTier === 6) {
+          if (this.rvRedraftTier === bestQBTier + 4) {
+            // console.log(this.name, this.rvRedraftTier, bestQBTier);
             this.myRedraftScoreFromPlayersRedraftTier = 200;
           }
-          if (this.rvRedraftTier === 7) {
+          if (this.rvRedraftTier === bestQBTier + 5) {
+            // console.log(this.name, this.rvRedraftTier, bestQBTier);
             this.myRedraftScoreFromPlayersRedraftTier = 100;
           }
-          if (this.rvRedraftTier > 7) {
+          if (this.rvRedraftTier > bestQBTier + 5) {
+            // console.log(this.name, this.rvRedraftTier, bestQBTier);
             this.myRedraftScoreFromPlayersRedraftTier = 0;
           }
         }
         if (fcPosition !== 'QB') {
           // console.log(fcPosition);
+
           if (this.rvRedraftTier === 1) {
             this.myRedraftScoreFromPlayersRedraftTier = 600;
           }
@@ -1382,12 +1409,17 @@ const testfunc = async function () {
 
       // console.log(amountToBeAddedToPlayersAgeToKnowWhatAgeTheyWillBeNextMarch);
 
-      if (sanitizedFCPlayerName === sanitizedRVPlayerName) {
+      if (
+        sanitizedFCPlayerName &&
+        sanitizedFCPlayerName === sanitizedRVPlayerName
+      ) {
+        // console.log(sanitizedFCPlayerName);
         // console.log(
         //   sanitizedFCPlayerName,
         //   this.myRedraftScoreFromPlayersRedraftTier,
         //   this.myRedraftDifferenceScore
         // );
+
         let value = PNODVCalcFunction(
           sanitizedFCPlayerName,
           sanitizedRVPlayerName,
@@ -1408,17 +1440,235 @@ const testfunc = async function () {
           fcNonQBMaxValue
         );
 
+        // if (!value) {
+        //   console.log(sanitizedFCPlayerName, this.fantasyCalcValue);
+        // }
+
         if (value) {
           // console.log(sanitizedFCPlayerName, value);
-          this.projectedNextOffseasonMarketPercentOfMax = value;
+
           if (this.position === 'QB') {
-            this.projectedNextOffseasonDynastyValue = +(
+            let tempprojectedNextOffseasonDynastyValue = +(
               fcQBMaxValue * value
+            ).toFixed(2);
+
+            let percentageChange = (
+              (this.fantasyCalcValue - tempprojectedNextOffseasonDynastyValue) /
+              this.fantasyCalcValue
+            ).toFixed(2);
+
+            let positivePercentageChange = (
+              (tempprojectedNextOffseasonDynastyValue - this.fantasyCalcValue) /
+              this.fantasyCalcValue
+            ).toFixed(2);
+
+            if (percentageChange < 0.3 && positivePercentageChange < 0.59) {
+              this.projectedNextOffseasonDynastyValue = +(
+                fcQBMaxValue * value
+              ).toFixed(2);
+              this.projectedNextOffseasonMarketPercentOfMax = value;
+
+              // console.log(
+              //   this.name,
+              //   this.fantasyCalcValue,
+              //   tempprojectedNextOffseasonDynastyValue,
+              //   this.projectedNextOffseasonDynastyValue,
+
+              //   this.projectedNextOffseasonMarketPercentOfMax
+              // );
+            }
+
+            if (percentageChange >= 0.3 && positivePercentageChange < 0.59) {
+              this.projectedNextOffseasonDynastyValue = +(
+                this.fantasyCalcValue * 0.7
+              ).toFixed(2);
+
+              this.projectedNextOffseasonMarketPercentOfMax = +(
+                this.projectedNextOffseasonDynastyValue / fcQBMaxValue
+              ).toFixed(2);
+
+              // console.log(
+              //   this.name,
+              //   this.fantasyCalcValue,
+              //   tempprojectedNextOffseasonDynastyValue,
+              //   this.projectedNextOffseasonDynastyValue,
+
+              //   this.projectedNextOffseasonMarketPercentOfMax
+              // );
+            }
+
+            if (positivePercentageChange >= 0.59) {
+              // console.log(this.name, positivePercentageChange);
+              let tempValue = this.fantasyCalcValue * 0.6;
+              let newValue = this.fantasyCalcValue + tempValue;
+              // console.log(this.name, this.fantasyCalcValue, newValue);
+              this.projectedNextOffseasonDynastyValue = +newValue;
+
+              this.projectedNextOffseasonMarketPercentOfMax = +(
+                this.projectedNextOffseasonDynastyValue / fcQBMaxValue
+              ).toFixed(2);
+            }
+          }
+
+          /////////////////////////
+
+          if (this.position !== 'QB') {
+            let tempprojectedNextOffseasonDynastyValue = +(
+              fcNonQBMaxValue * value
+            ).toFixed(2);
+
+            let percentageChange = (
+              (this.fantasyCalcValue - tempprojectedNextOffseasonDynastyValue) /
+              this.fantasyCalcValue
+            ).toFixed(2);
+
+            let positivePercentageChange = (
+              (tempprojectedNextOffseasonDynastyValue - this.fantasyCalcValue) /
+              this.fantasyCalcValue
+            ).toFixed(2);
+
+            if (percentageChange < 0.3 && positivePercentageChange < 0.59) {
+              //
+
+              if (this.rvRedraftTier === 1 && percentageChange > 0.1) {
+                let tempValue = this.fantasyCalcValue * 0.1;
+                let newValue = this.fantasyCalcValue - tempValue;
+
+                this.projectedNextOffseasonDynastyValue = newValue;
+                this.projectedNextOffseasonMarketPercentOfMax = +(
+                  this.projectedNextOffseasonDynastyValue / fcNonQBMaxValue
+                ).toFixed(2);
+
+                // console.log(
+                //   this.name,
+                //   this.fantasyCalcValue,
+                //   this.projectedNextOffseasonDynastyValue,
+                //   percentageChange
+                // );
+              }
+
+              if (this.rvRedraftTier === 2 && percentageChange > 0.2) {
+                let tempValue = this.fantasyCalcValue * 0.2;
+                let newValue = this.fantasyCalcValue - tempValue;
+
+                this.projectedNextOffseasonDynastyValue = newValue;
+                this.projectedNextOffseasonMarketPercentOfMax = +(
+                  this.projectedNextOffseasonDynastyValue / fcNonQBMaxValue
+                ).toFixed(2);
+
+                // console.log(
+                //   this.name,
+                //   this.fantasyCalcValue,
+                //   this.projectedNextOffseasonDynastyValue,
+                //   percentageChange
+                // );
+              }
+
+              if (
+                this.rvRedraftTier > 2 ||
+                (this.rvRedraftTier === 1 && percentageChange < 0.1) ||
+                (this.rvRedraftTier === 2 && percentageChange < 0.2)
+              ) {
+                // if (this.name === 'Saquon Barkley') {
+                //   console.log(
+                //     tempprojectedNextOffseasonDynastyValue,
+                //     percentageChange,
+                //     this.fantasyCalcValue,
+                //     this.myValue
+                //   );
+                // }
+                this.projectedNextOffseasonDynastyValue = +(
+                  fcNonQBMaxValue * value
+                ).toFixed(2);
+                this.projectedNextOffseasonMarketPercentOfMax = value;
+              }
+            }
+
+            if (percentageChange >= 0.3 && positivePercentageChange < 0.59) {
+              if (this.rvRedraftTier === 1 && percentageChange > 0.1) {
+                this.projectedNextOffseasonDynastyValue = +(
+                  this.fantasyCalcValue * 0.9
+                ).toFixed(2);
+
+                this.projectedNextOffseasonMarketPercentOfMax = +(
+                  this.projectedNextOffseasonDynastyValue / fcNonQBMaxValue
+                ).toFixed(2);
+              }
+
+              if (this.rvRedraftTier === 2 && percentageChange > 0.2) {
+                this.projectedNextOffseasonDynastyValue = +(
+                  this.fantasyCalcValue * 0.8
+                ).toFixed(2);
+
+                this.projectedNextOffseasonMarketPercentOfMax = +(
+                  this.projectedNextOffseasonDynastyValue / fcNonQBMaxValue
+                ).toFixed(2);
+              }
+
+              if (this.rvRedraftTier > 2) {
+                this.projectedNextOffseasonDynastyValue = +(
+                  this.fantasyCalcValue * 0.7
+                ).toFixed(2);
+
+                this.projectedNextOffseasonMarketPercentOfMax = +(
+                  this.projectedNextOffseasonDynastyValue / fcNonQBMaxValue
+                ).toFixed(2);
+
+                // console.log(
+                //   this.name,
+                //   this.fantasyCalcValue,
+                //   tempprojectedNextOffseasonDynastyValue,
+                //   this.projectedNextOffseasonDynastyValue,
+
+                //   this.projectedNextOffseasonMarketPercentOfMax
+                // );
+              }
+            }
+
+            if (positivePercentageChange >= 0.59) {
+              // console.log(this.name, positivePercentageChange);
+              let tempValue = this.fantasyCalcValue * 0.6;
+              let newValue = this.fantasyCalcValue + tempValue;
+              // console.log(this.name, this.fantasyCalcValue, newValue);
+              this.projectedNextOffseasonDynastyValue = +newValue;
+
+              this.projectedNextOffseasonMarketPercentOfMax = +(
+                this.projectedNextOffseasonDynastyValue / fcNonQBMaxValue
+              ).toFixed(2);
+            }
+          }
+
+          // console.log(
+          //   this.name,
+          //   this.fantasyCalcValue,
+
+          //   this.projectedNextOffseasonDynastyValue
+
+          //   // this.projectedNextOffseasonMarketPercentOfMax
+          // );
+        }
+      }
+    }
+
+    assigningPNODVToThoseThatFellThroug(
+      sanitizedFCPlayerName,
+      sanitizedRVPlayerName,
+      fcQBMaxValue,
+      fcNonQBMaxValue
+    ) {
+      if (!this.projectedNextOffseasonDynastyValue) {
+        if (this.position !== 'PICK') {
+          // console.log(this.name);
+          this.projectedNextOffseasonDynastyValue = this.fantasyCalcValue;
+          if (this.position === 'QB') {
+            // console.log(this.name);
+            this.projectedNextOffseasonMarketPercentOfMax = +(
+              this.projectedNextOffseasonDynastyValue / fcQBMaxValue
             ).toFixed(2);
           }
           if (this.position !== 'QB') {
-            this.projectedNextOffseasonDynastyValue = +(
-              fcNonQBMaxValue * value
+            this.projectedNextOffseasonMarketPercentOfMax = +(
+              this.projectedNextOffseasonDynastyValue / fcNonQBMaxValue
             ).toFixed(2);
           }
         }
@@ -1968,12 +2218,23 @@ const testfunc = async function () {
       fcPosition
     );
 
-    tradeCalculaterDataObject.calculatingProjectedNextOffseasonDynastyValue(
-      sanitizedFCPlayerName,
-      sanitizedRVPlayerName,
-      fcQBMaxValue,
-      fcNonQBMaxValue
-    );
+    if (sanitizedFCPlayerName) {
+      tradeCalculaterDataObject.calculatingProjectedNextOffseasonDynastyValue(
+        sanitizedFCPlayerName,
+        sanitizedRVPlayerName,
+        fcQBMaxValue,
+        fcNonQBMaxValue
+      );
+    }
+
+    if (sanitizedFCPlayerName) {
+      tradeCalculaterDataObject.assigningPNODVToThoseThatFellThroug(
+        sanitizedFCPlayerName,
+        sanitizedRVPlayerName,
+        fcQBMaxValue,
+        fcNonQBMaxValue
+      );
+    }
 
     // let allPlayersArray = [];
     // let allQBsArray = [];
@@ -2025,9 +2286,39 @@ const testfunc = async function () {
     // if (player.player.position === 'WR') {
     //   console.log(tradeCalculaterDataObject);
     // }
-    if (player.player.position === 'TE') {
-      console.log(tradeCalculaterDataObject);
-    }
+    // if (player.player.position === 'TE') {
+    //   console.log(tradeCalculaterDataObject);
+    // }
+    // if (player.player.position === 'QB') {
+    //   console.log(
+    //     tradeCalculaterDataObject.name,
+    //     tradeCalculaterDataObject.fantasyCalcValue,
+    //     tradeCalculaterDataObject.myValue,
+    //     tradeCalculaterDataObject.projectedNextOffseasonDynastyValue
+    //   );
+    // }
+    // if (player.player.position === 'RB') {
+    //   console.log(
+    //     tradeCalculaterDataObject.name,
+    //     tradeCalculaterDataObject.fantasyCalcValue,
+    //     tradeCalculaterDataObject.myValue,
+    //     tradeCalculaterDataObject.projectedNextOffseasonDynastyValue
+    //   );
+    // }
+    // if (player.player.position === 'WR') {
+    //   console.log(
+    //     tradeCalculaterDataObject.name,
+    //     tradeCalculaterDataObject.fantasyCalcValue,
+    //     tradeCalculaterDataObject.projectedNextOffseasonDynastyValue
+    //   );
+    // }
+    // if (player.player.position === 'TE') {
+    //   console.log(
+    //     tradeCalculaterDataObject.name,
+    //     tradeCalculaterDataObject.fantasyCalcValue,
+    //     tradeCalculaterDataObject.projectedNextOffseasonDynastyValue
+    //   );
+    // }
     // if (
     //   player.player.position === 'WR'
     //   //&&
@@ -2202,7 +2493,8 @@ const testfunc = async function () {
       myValue,
       myOverallRank,
       myPositionRank,
-      valueDiffBetweenMyValueAndMarketValue
+      valueDiffBetweenMyValueAndMarketValue,
+      projectedNextOffseasonDynastyValue
     ) {
       this.name = name;
       this.position = position;
@@ -2215,6 +2507,8 @@ const testfunc = async function () {
       this.myPositionRank = myPositionRank;
       this.valueDiffBetweenMyValueAndMarketValue =
         valueDiffBetweenMyValueAndMarketValue;
+      this.projectedNextOffseasonDynastyValue =
+        projectedNextOffseasonDynastyValue;
     }
   }
 
@@ -2250,6 +2544,13 @@ const testfunc = async function () {
       }
     );
 
+    // console.log(
+    //   playerObject.name,
+    //   playerObject.fantasyCalcValue,
+    //   playerObject.myValue,
+    //   playerObject.projectedNextOffseasonDynastyValue
+    // );
+
     let dynastyRankingsDataObject = new dynastyRankingsDataConstructor(
       playerObject.name,
       playerObject.position,
@@ -2260,7 +2561,8 @@ const testfunc = async function () {
       playerObject.myValue,
       overallRank,
       posRank,
-      playerObject.valueDiffBetweenMyValueAndMarketValue
+      playerObject.valueDiffBetweenMyValueAndMarketValue,
+      playerObject.projectedNextOffseasonDynastyValue
     );
 
     // console.log(sortedDynastyRankingsWithNamesValuesAndRank);
