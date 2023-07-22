@@ -59,7 +59,10 @@ const PNODVCalcFunction = function (
   const wrAgeApex = 27;
   const teAgeApex = 28;
 
-  if (sanitizedFCPlayerName === sanitizedRVPlayerName) {
+  if (
+    sanitizedFCPlayerName &&
+    sanitizedFCPlayerName === sanitizedRVPlayerName
+  ) {
     // console.log(age);
     // console.log(position);
     // console.log(fantasyCalcValue);
@@ -393,7 +396,7 @@ const PNODVCalcFunction = function (
         //
         //wont age into the next age bucket by next march
         if (rbAgeApex - ageNextMarch <= 0 && rbAgeApex - ageNextMarch > -2) {
-          // console.log(this.name, age, this.ageNextMarch);
+          // console.log(name, age, this.ageNextMarch);
           let value = rbPastAgeApexButWithinTwoYearsAndWillBeSameNextMarch(
             curMonth,
             name,

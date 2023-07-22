@@ -1,13 +1,3 @@
-const greaterThanPointEightNine = require('./allFcPercentOfMaxFunctions/grThanEightNine');
-const greaterThanSevenNineLessThanNine = require('./allFcPercentOfMaxFunctions/grThanSevenNineLessThanNine');
-const greaterThanFiveNineLessThanEight = require('./allFcPercentOfMaxFunctions/grThanFiveNineLessThanEight');
-const greaterThanThreeNineLessThanSix = require('./allFcPercentOfMaxFunctions/grThanThreeNineLessThanSix');
-const greaterThanTwoNineLessThanFour = require('./allFcPercentOfMaxFunctions/grThanTwoNineLessThanFour');
-const greaterThanOneNineLessThanThree = require('./allFcPercentOfMaxFunctions/grThanOneNineLessThanThree');
-const greaterThanZeroNineLessThanTwo = require('./allFcPercentOfMaxFunctions/grThanZeroNineLessThanTwo');
-const greaterThanPointZeroThreeLessThanOne = require('./allFcPercentOfMaxFunctions/grThanZeroThreeLessThanOne');
-const greaterThanZeroThree = require('./allFcPercentOfMaxFunctions/lessThanZeroThree');
-
 const qbTwoOrMoreYearsPreAgeApexAndWillBeSameNextMarch = function (
   curMonth,
   name,
@@ -69,56 +59,67 @@ const qbTwoOrMoreYearsPreAgeApexAndWillBeSameNextMarch = function (
       // );
       if (myRedraftDifferenceScore === 700) {
         let tempValue = valueDiffBetweenMyValueAndMarketValue * 1.75;
-        let value = (fantasyCalcValue + tempValue) / fcQBMaxValue;
+        let value = ((fantasyCalcValue + tempValue) / fcQBMaxValue).toFixed(2);
         if (value) {
           return value;
         }
       }
       if (myRedraftDifferenceScore === 600) {
         let tempValue = valueDiffBetweenMyValueAndMarketValue * 1.5625;
-        let value = (fantasyCalcValue + tempValue) / fcQBMaxValue;
+        let value = ((fantasyCalcValue + tempValue) / fcQBMaxValue).toFixed(2);
         if (value) {
           return value;
         }
       }
       if (myRedraftDifferenceScore === 500) {
         let tempValue = valueDiffBetweenMyValueAndMarketValue * 1.375;
-        let value = (fantasyCalcValue + tempValue) / fcQBMaxValue;
+        let value = ((fantasyCalcValue + tempValue) / fcQBMaxValue).toFixed(2);
         if (value) {
           return value;
         }
       }
       if (myRedraftDifferenceScore === 400) {
         let tempValue = valueDiffBetweenMyValueAndMarketValue * 1.1875;
-        let value = (fantasyCalcValue + tempValue) / fcQBMaxValue;
+        let value = ((fantasyCalcValue + tempValue) / fcQBMaxValue).toFixed(2);
         if (value) {
           return value;
         }
       }
       if (myRedraftDifferenceScore === 300) {
         let tempValue = valueDiffBetweenMyValueAndMarketValue * 1;
-        let value = (fantasyCalcValue + tempValue) / fcQBMaxValue;
+        let value = ((fantasyCalcValue + tempValue) / fcQBMaxValue).toFixed(2);
         if (value) {
           return value;
         }
       }
       if (myRedraftDifferenceScore === 200) {
         let tempValue = valueDiffBetweenMyValueAndMarketValue * 0.75;
-        let value = (fantasyCalcValue + tempValue) / fcQBMaxValue;
+        let value = ((fantasyCalcValue + tempValue) / fcQBMaxValue).toFixed(2);
         if (value) {
           return value;
         }
       }
       if (myRedraftDifferenceScore === 100) {
         let tempValue = valueDiffBetweenMyValueAndMarketValue * 0.5;
-        let value = (fantasyCalcValue + tempValue) / fcQBMaxValue;
+        let value = ((fantasyCalcValue + tempValue) / fcQBMaxValue).toFixed(2);
         if (value) {
           return value;
         }
       }
       if (myRedraftDifferenceScore === 0) {
+        // console.log(
+        //   name,
+        //   fantasyCalcValue,
+        //   valueDiffBetweenMyValueAndMarketValue,
+        //   percentValueDiffBetweenMyValueAndMarket,
+        //   myRedraftDifferenceScore
+        // );
         let tempValue = valueDiffBetweenMyValueAndMarketValue * 0.25;
-        let value = (fantasyCalcValue + tempValue) / fcQBMaxValue;
+        // console.log(name, tempValue);
+        let newValue = fantasyCalcValue + tempValue;
+        // console.log(name, newValue, fcQBMaxValue);
+        let value = newValue / fcQBMaxValue;
+        // console.log(name, value);
         if (value) {
           return value;
         }
@@ -223,26 +224,37 @@ const qbTwoOrMoreYearsPreAgeApexAndWillBeSameNextMarch = function (
       //   myRedraftDifferenceScore
       // );
       if (myRedraftDifferenceScore === 700) {
-        let value = fantasyCalcValue + (fantasyCalcValue * 0.2) / fcQBMaxValue;
+        let tempValue = fantasyCalcValue * 0.12;
+        let newValue = +fantasyCalcValue + +tempValue;
+
+        let value = newValue / fcQBMaxValue;
         if (value) {
           return value;
         }
       }
       if (myRedraftDifferenceScore === 600) {
-        let value = fantasyCalcValue + (fantasyCalcValue * 0.15) / fcQBMaxValue;
+        let tempValue = fantasyCalcValue * 0.085;
+        let newValue = +fantasyCalcValue + +tempValue;
+
+        let value = newValue / fcQBMaxValue;
         if (value) {
           return value;
         }
       }
       if (myRedraftDifferenceScore === 500) {
-        let value =
-          fantasyCalcValue + (fantasyCalcValue * 0.125) / fcQBMaxValue;
+        let tempValue = fantasyCalcValue * 0.07;
+        let newValue = +fantasyCalcValue + +tempValue;
+
+        let value = newValue / fcQBMaxValue;
         if (value) {
           return value;
         }
       }
       if (myRedraftDifferenceScore === 400) {
-        let value = fantasyCalcValue + (fantasyCalcValue * 0.1) / fcQBMaxValue;
+        let tempValue = fantasyCalcValue * 0.055;
+        let newValue = +fantasyCalcValue + +tempValue;
+
+        let value = newValue / fcQBMaxValue;
         if (value) {
           return value;
         }
@@ -356,296 +368,6 @@ const qbTwoOrMoreYearsPreAgeApexAndWillBeSameNextMarch = function (
   }
 
   //////////////////////////////////////////////////////////////////////////////////////////////////
-
-  //
-  ///
-  ////
-  /////
-  ////// new main category
-  /////
-  ////
-  ///
-  //
-
-  if (fcQBPercentOfMax > 0.899) {
-    // / console.log(
-    //   name,
-    //   fantasyCalcValue,
-    //   valueDiffBetweenMyValueAndMarketValue,
-    //   percentValueDiffBetweenMyValueAndMarket
-    // );
-
-    greaterThanPointEightNine(
-      curMonth,
-      name,
-      fantasyCalcValue,
-      valueDiffBetweenMyValueAndMarketValue,
-      myRedraftScoreFromPlayersRedraftTier,
-      myRedraftDifferenceScore,
-      fcQBPercentOfMax,
-      rvTier,
-      percentValueDiffBetweenMyValueAndMarket,
-      fcQBMaxValue,
-      fcNonQBMaxValue
-    );
-  }
-  //
-  //
-  ///
-  ////
-  /////
-  ////// new main category
-  /////
-  ////
-  ///
-  //
-  if (fcQBPercentOfMax > 0.799 && fcQBPercentOfMax < 0.9) {
-    // console.log(
-    //   name,
-    //   fantasyCalcValue,
-    //   valueDiffBetweenMyValueAndMarketValue,
-    //   percentValueDiffBetweenMyValueAndMarket
-    // );
-
-    greaterThanSevenNineLessThanNine(
-      curMonth,
-      name,
-      fantasyCalcValue,
-      valueDiffBetweenMyValueAndMarketValue,
-      myRedraftScoreFromPlayersRedraftTier,
-      myRedraftDifferenceScore,
-      fcQBPercentOfMax,
-      rvTier,
-      percentValueDiffBetweenMyValueAndMarket,
-      fcQBMaxValue,
-      fcNonQBMaxValue
-    );
-  }
-  //
-  //
-  ///
-  ////
-  /////
-  ////// new main category
-  /////
-  ////
-  ///
-  //
-  if (fcQBPercentOfMax > 0.599 && fcQBPercentOfMax < 0.8) {
-    // console.log(name);
-
-    greaterThanFiveNineLessThanEight(
-      curMonth,
-      name,
-      fantasyCalcValue,
-      valueDiffBetweenMyValueAndMarketValue,
-      myRedraftScoreFromPlayersRedraftTier,
-      myRedraftDifferenceScore,
-      fcQBPercentOfMax,
-      rvTier,
-      percentValueDiffBetweenMyValueAndMarket,
-      fcQBMaxValue,
-      fcNonQBMaxValue
-    );
-  }
-  //
-  //
-  ///
-  ////
-  /////
-  ////// new main category
-  /////
-  ////
-  ///
-  //
-  if (fcQBPercentOfMax > 0.399 && fcQBPercentOfMax < 0.6) {
-    // console.log(
-    //   name,
-    //   fantasyCalcValue,
-    //   valueDiffBetweenMyValueAndMarketValue,
-    //   percentValueDiffBetweenMyValueAndMarket
-    // );
-
-    const test = greaterThanThreeNineLessThanSix(
-      curMonth,
-      name,
-      fantasyCalcValue,
-      valueDiffBetweenMyValueAndMarketValue,
-      myRedraftScoreFromPlayersRedraftTier,
-      myRedraftDifferenceScore,
-      fcQBPercentOfMax,
-      rvTier,
-      percentValueDiffBetweenMyValueAndMarket,
-      fcQBMaxValue,
-      fcNonQBMaxValue
-    );
-
-    if (test) {
-      return test;
-    }
-  }
-  //
-  //
-  ///
-  ////
-  /////
-  ////// new main category
-  /////
-  ////
-  ///
-  //
-  if (fcQBPercentOfMax > 0.299 && fcQBPercentOfMax < 0.4) {
-    // console.log(
-    //   name,
-    //   fantasyCalcValue,
-    //   valueDiffBetweenMyValueAndMarketValue,
-    //   percentValueDiffBetweenMyValueAndMarket
-    // );
-
-    greaterThanTwoNineLessThanFour(
-      curMonth,
-      name,
-      fantasyCalcValue,
-      valueDiffBetweenMyValueAndMarketValue,
-      myRedraftScoreFromPlayersRedraftTier,
-      myRedraftDifferenceScore,
-      fcQBPercentOfMax,
-      rvTier,
-      percentValueDiffBetweenMyValueAndMarket,
-      fcQBMaxValue,
-      fcNonQBMaxValue
-    );
-  }
-  //
-  //
-  ///
-  ////
-  /////
-  ////// new main category
-  /////
-  ////
-  ///
-  //
-  if (fcQBPercentOfMax > 0.199 && fcQBPercentOfMax < 0.3) {
-    // console.log(
-    //   name,
-    //   fantasyCalcValue,
-    //   valueDiffBetweenMyValueAndMarketValue,
-    //   percentValueDiffBetweenMyValueAndMarket
-    // );
-
-    greaterThanOneNineLessThanThree(
-      curMonth,
-      name,
-      fantasyCalcValue,
-      valueDiffBetweenMyValueAndMarketValue,
-      myRedraftScoreFromPlayersRedraftTier,
-      myRedraftDifferenceScore,
-      fcQBPercentOfMax,
-      rvTier,
-      percentValueDiffBetweenMyValueAndMarket,
-      fcQBMaxValue,
-      fcNonQBMaxValue
-    );
-  }
-  //
-  //
-  ///
-  ////
-  /////
-  ////// new main category
-  /////
-  ////
-  ///
-  //
-  if (fcQBPercentOfMax > 0.09 && fcQBPercentOfMax < 0.2) {
-    // console.log(
-    //   name,
-    //   fcQBPercentOfMax,
-    //   fantasyCalcValue,
-    //   valueDiffBetweenMyValueAndMarketValue,
-    //   percentValueDiffBetweenMyValueAndMarket
-    // );
-
-    greaterThanZeroNineLessThanTwo(
-      curMonth,
-      name,
-      fantasyCalcValue,
-      valueDiffBetweenMyValueAndMarketValue,
-      myRedraftScoreFromPlayersRedraftTier,
-      myRedraftDifferenceScore,
-      fcQBPercentOfMax,
-      rvTier,
-      percentValueDiffBetweenMyValueAndMarket,
-      fcQBMaxValue,
-      fcNonQBMaxValue
-    );
-  }
-
-  //
-  ///
-  ////
-  /////
-  ////// new main category
-  /////
-  ////
-  ///
-  //
-
-  if (fcQBPercentOfMax > 0.03 && fcQBPercentOfMax < 0.1) {
-    // console.log(
-    //   name,
-    //   fantasyCalcValue,
-    //   valueDiffBetweenMyValueAndMarketValue,
-    //   percentValueDiffBetweenMyValueAndMarket
-    // );
-
-    greaterThanPointZeroThreeLessThanOne(
-      curMonth,
-      name,
-      fantasyCalcValue,
-      valueDiffBetweenMyValueAndMarketValue,
-      myRedraftScoreFromPlayersRedraftTier,
-      myRedraftDifferenceScore,
-      fcQBPercentOfMax,
-      rvTier,
-      percentValueDiffBetweenMyValueAndMarket,
-      fcQBMaxValue,
-      fcNonQBMaxValue
-    );
-  }
-  //
-  //
-  ///
-  ////
-  /////
-  ////// new main category
-  /////
-  ////
-  ///
-  //
-  if (fcQBPercentOfMax <= 0.03) {
-    // console.log(
-    //   name,
-    //   fantasyCalcValue,
-    //   valueDiffBetweenMyValueAndMarketValue,
-    //   percentValueDiffBetweenMyValueAndMarket
-    // );
-
-    greaterThanZeroThree(
-      curMonth,
-      name,
-      fantasyCalcValue,
-      valueDiffBetweenMyValueAndMarketValue,
-      myRedraftScoreFromPlayersRedraftTier,
-      myRedraftDifferenceScore,
-      fcQBPercentOfMax,
-      rvTier,
-      percentValueDiffBetweenMyValueAndMarket,
-      fcQBMaxValue,
-      fcNonQBMaxValue
-    );
-  }
 };
 
 module.exports = qbTwoOrMoreYearsPreAgeApexAndWillBeSameNextMarch;
