@@ -2956,7 +2956,7 @@ const rvRedraftRankingsTEP = [
     '"Rank"': '247',
     '"Player"': '"Tucker Kraft"',
     '"POS"': '"TE"',
-    '"Team"': '"GB"',
+    '"Team"': '""',
     '"PosRank"': '40',
     '"AVGRank"': '248',
     '"AVGTier"': '11',

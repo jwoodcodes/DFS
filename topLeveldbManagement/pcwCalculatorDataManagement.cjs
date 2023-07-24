@@ -1527,10 +1527,19 @@ const testfunc = async function () {
               this.fantasyCalcValue
             ).toFixed(2);
 
+            // if (this.name === 'Christian McCaffrey') {
+            //   console.log(
+            //     tempprojectedNextOffseasonDynastyValue,
+            //     percentageChange,
+            //     this.fantasyCalcValue,
+            //     this.myValue
+            //   );
+            // }
+
             if (percentageChange < 0.3 && positivePercentageChange < 0.59) {
               //
 
-              if (this.rvRedraftTier === 1 && percentageChange > 0.1) {
+              if (this.rvRedraftTier === 1 && percentageChange >= 0.1) {
                 let tempValue = this.fantasyCalcValue * 0.1;
                 let newValue = this.fantasyCalcValue - tempValue;
 
@@ -1547,7 +1556,7 @@ const testfunc = async function () {
                 // );
               }
 
-              if (this.rvRedraftTier === 2 && percentageChange > 0.2) {
+              if (this.rvRedraftTier === 2 && percentageChange >= 0.2) {
                 let tempValue = this.fantasyCalcValue * 0.2;
                 let newValue = this.fantasyCalcValue - tempValue;
 
@@ -1577,6 +1586,7 @@ const testfunc = async function () {
                 //     this.myValue
                 //   );
                 // }
+
                 this.projectedNextOffseasonDynastyValue = +(
                   fcNonQBMaxValue * value
                 ).toFixed(2);
@@ -1636,16 +1646,34 @@ const testfunc = async function () {
                 this.projectedNextOffseasonDynastyValue / fcNonQBMaxValue
               ).toFixed(2);
             }
+
+            if (
+              positivePercentageChange >= 0.29 &&
+              this.fantasyCalcValue > 4000
+            ) {
+              // console.log(this.name, positivePercentageChange);
+
+              let tempValue = this.fantasyCalcValue * 0.3;
+              let newValue = this.fantasyCalcValue + tempValue;
+              // console.log(this.name, this.fantasyCalcValue, newValue);
+              this.projectedNextOffseasonDynastyValue = +newValue;
+
+              this.projectedNextOffseasonMarketPercentOfMax = +(
+                this.projectedNextOffseasonDynastyValue / fcNonQBMaxValue
+              ).toFixed(2);
+
+              // console.log(this.name, this.projectedNextOffseasonDynastyValue);
+            }
+
+            // console.log(
+            //   this.name,
+            //   this.fantasyCalcValue,
+
+            //   this.projectedNextOffseasonDynastyValue
+
+            //   // this.projectedNextOffseasonMarketPercentOfMax
+            // );
           }
-
-          // console.log(
-          //   this.name,
-          //   this.fantasyCalcValue,
-
-          //   this.projectedNextOffseasonDynastyValue
-
-          //   // this.projectedNextOffseasonMarketPercentOfMax
-          // );
         }
       }
     }
@@ -2690,7 +2718,7 @@ const testfunc = async function () {
   });
   // console.log(tradeAnalyzerDataObjectsArray);
 
-  ///////////uncomment below to push all trade analyzer data from above to db named dynastyRankingsData
+  ///////////uncomment below to push all trade analyzer data from above to db named tradeAnalyzerData
 
   // const url =
   //   'mongodb+srv://devJay:Hesstrucksarethebest@dailydynasties.syom4sb.mongodb.net/test';

@@ -13,13 +13,13 @@ export default function DynastyRankings(dynastyRankingsData) {
   });
   //   console.log(dataLevelTwo.dynastyRankingsDataObjectsArray);
   const dataArray = dataLevelTwo.dynastyRankingsDataObjectsArray;
-  //   console.log(dataArray);
+  // console.log(dataArray);
 
   return (
     <div>
       <MainNav />
       <div className={styles.pageTitle}>Dynasty Rankings</div>
-      <div className={styles.lastUpdated}>Last updated: 7/19/23</div>
+      <div className={styles.lastUpdated}>Last updated: 7/23/23</div>
       <Table data={dataArray} />
     </div>
   );
