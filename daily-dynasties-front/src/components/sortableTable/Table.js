@@ -20,7 +20,13 @@ export default function Table({ data }) {
       label: 'Value Difference Between My Ranks & Market',
       accessor: 'valueDiffBetweenMyValueAndMarketValue',
     },
+    {
+      label: 'Projected Next Offseason Dynasty Value',
+      accessor: 'projectedNextOffseasonDynastyValue',
+    },
   ];
+
+  // projectedNextOffseasonDynastyValue
 
   const handleSorting = (sortField, sortOrder) => {
     // console.log(sortField, sortOrder);

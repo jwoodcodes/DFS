@@ -1,4 +1,4 @@
-const qbMoreThanTwoYearsPostAgeApex = function (
+const withinTwoYearsOfAgeApexButNotPastAndWillBeSameNextMarch = function (
   curMonth,
   name,
   fantasyCalcValue,
@@ -9,7 +9,8 @@ const qbMoreThanTwoYearsPostAgeApex = function (
   rvTier,
   percentValueDiffBetweenMyValueAndMarket,
   fcQBMaxValue,
-  fcNonQBMaxValue
+  fcNonQBMaxValue,
+  position
 ) {
   if (myRedraftScoreFromPlayersRedraftTier === undefined) {
     myRedraftScoreFromPlayersRedraftTier = 0;
@@ -18,17 +19,13 @@ const qbMoreThanTwoYearsPostAgeApex = function (
     myRedraftDifferenceScore = 0;
   }
 
-  // console.log(
-  //   // curMonth,
-  //   name,
-  //   fantasyCalcValue,
-  //   valueDiffBetweenMyValueAndMarketValue,
-  //   myRedraftScoreFromPlayersRedraftTier,
-  //   myRedraftDifferenceScore,
-  //   fcQBPercentOfMax,
-  //   rvTier,
-  //   percentValueDiffBetweenMyValueAndMarket
-  // );
+  let maxValue = 0;
+  if (position === 'QB') {
+    maxValue = fcQBMaxValue;
+  }
+  if (position !== 'QB') {
+    maxValue = fcNonQBMaxValue;
+  }
 
   //////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -58,43 +55,43 @@ const qbMoreThanTwoYearsPostAgeApex = function (
       //   myRedraftDifferenceScore
       // );
       if (myRedraftDifferenceScore === 700) {
-        let tempValue = valueDiffBetweenMyValueAndMarketValue * 1.25;
-        let value = (fantasyCalcValue + tempValue) / fcQBMaxValue;
+        let tempValue = valueDiffBetweenMyValueAndMarketValue * 1.6;
+        let value = (fantasyCalcValue + tempValue) / maxValue;
         if (value) {
           return value;
         }
       }
       if (myRedraftDifferenceScore === 600) {
-        let tempValue = valueDiffBetweenMyValueAndMarketValue * 1.1;
-        let value = (fantasyCalcValue + tempValue) / fcQBMaxValue;
+        let tempValue = valueDiffBetweenMyValueAndMarketValue * 1.4;
+        let value = (fantasyCalcValue + tempValue) / maxValue;
         if (value) {
           return value;
         }
       }
       if (myRedraftDifferenceScore === 500) {
-        let tempValue = valueDiffBetweenMyValueAndMarketValue * 0.8;
-        let value = (fantasyCalcValue + tempValue) / fcQBMaxValue;
+        let tempValue = valueDiffBetweenMyValueAndMarketValue * 1.225;
+        let value = (fantasyCalcValue + tempValue) / maxValue;
         if (value) {
           return value;
         }
       }
       if (myRedraftDifferenceScore === 400) {
-        let tempValue = valueDiffBetweenMyValueAndMarketValue * 0.5;
-        let value = (fantasyCalcValue + tempValue) / fcQBMaxValue;
+        let tempValue = valueDiffBetweenMyValueAndMarketValue * 0.85;
+        let value = (fantasyCalcValue + tempValue) / maxValue;
         if (value) {
           return value;
         }
       }
       if (myRedraftDifferenceScore === 300) {
-        let tempValue = valueDiffBetweenMyValueAndMarketValue * 0.3;
-        let value = (fantasyCalcValue + tempValue) / fcQBMaxValue;
+        let tempValue = valueDiffBetweenMyValueAndMarketValue * 0.8;
+        let value = (fantasyCalcValue + tempValue) / maxValue;
         if (value) {
           return value;
         }
       }
       if (myRedraftDifferenceScore === 200) {
-        let tempValue = valueDiffBetweenMyValueAndMarketValue * 0.2;
-        let value = (fantasyCalcValue + tempValue) / fcQBMaxValue;
+        let tempValue = valueDiffBetweenMyValueAndMarketValue * 0.6;
+        let value = (fantasyCalcValue + tempValue) / maxValue;
         if (value) {
           return value;
         }
@@ -107,16 +104,16 @@ const qbMoreThanTwoYearsPostAgeApex = function (
         //   percentValueDiffBetweenMyValueAndMarket,
         //   myRedraftDifferenceScore
         // );
-        let tempValue = valueDiffBetweenMyValueAndMarketValue;
-        let value = (fantasyCalcValue + tempValue) / fcQBMaxValue;
+        let tempValue = valueDiffBetweenMyValueAndMarketValue * 0.35;
+        let value = (fantasyCalcValue + tempValue) / maxValue;
         if (value) {
           // console.log(name, value);
           return value;
         }
       }
       if (myRedraftDifferenceScore === 0) {
-        let tempValue = valueDiffBetweenMyValueAndMarketValue;
-        let value = (fantasyCalcValue + tempValue) / fcQBMaxValue;
+        let tempValue = valueDiffBetweenMyValueAndMarketValue * 0.1;
+        let value = (fantasyCalcValue + tempValue) / maxValue;
         if (value) {
           return value;
         }
@@ -141,53 +138,51 @@ const qbMoreThanTwoYearsPostAgeApex = function (
       //   myRedraftDifferenceScore
       // );
       if (Math.abs(myRedraftDifferenceScore) === 700) {
-        let value = fantasyCalcValue - (fantasyCalcValue * 0.4) / fcQBMaxValue;
+        let value = fantasyCalcValue - (fantasyCalcValue * 0.25) / maxValue;
         if (value) {
           return value;
         }
       }
       if (Math.abs(myRedraftDifferenceScore) === 600) {
-        let value = fantasyCalcValue - (fantasyCalcValue * 0.35) / fcQBMaxValue;
+        let value = fantasyCalcValue - (fantasyCalcValue * 0.2) / maxValue;
         if (value) {
           return value;
         }
       }
 
       if (Math.abs(myRedraftDifferenceScore) === 500) {
-        let value = fantasyCalcValue - (fantasyCalcValue * 0.3) / fcQBMaxValue;
+        let value = fantasyCalcValue - (fantasyCalcValue * 0.14) / maxValue;
         if (value) {
           return value;
         }
       }
 
       if (Math.abs(myRedraftDifferenceScore) === 400) {
-        let value = fantasyCalcValue - (fantasyCalcValue * 0.25) / fcQBMaxValue;
+        let value = fantasyCalcValue - (fantasyCalcValue * 0.09) / maxValue;
         if (value) {
           return value;
         }
       }
       if (Math.abs(myRedraftDifferenceScore) === 300) {
-        let value = fantasyCalcValue - (fantasyCalcValue * 0.15) / fcQBMaxValue;
+        let value = fantasyCalcValue - (fantasyCalcValue * 0.065) / maxValue;
         if (value) {
           return value;
         }
       }
       if (Math.abs(myRedraftDifferenceScore) === 200) {
-        let value =
-          fantasyCalcValue - (fantasyCalcValue * 0.125) / fcQBMaxValue;
+        let value = fantasyCalcValue - (fantasyCalcValue * 0.04) / maxValue;
         if (value) {
           return value;
         }
       }
       if (Math.abs(myRedraftDifferenceScore) === 100) {
-        let value = fantasyCalcValue - (fantasyCalcValue * 0.1) / fcQBMaxValue;
+        let value = fantasyCalcValue - (fantasyCalcValue * 0.03) / maxValue;
         if (value) {
           return value;
         }
       }
       if (Math.abs(myRedraftDifferenceScore) === 0) {
-        let value =
-          fantasyCalcValue - (fantasyCalcValue * 0.075) / fcQBMaxValue;
+        let value = fantasyCalcValue - (fantasyCalcValue * 0.02) / maxValue;
         if (value) {
           return value;
         }
@@ -220,67 +215,68 @@ const qbMoreThanTwoYearsPostAgeApex = function (
       //   percentValueDiffBetweenMyValueAndMarket,
       //   myRedraftDifferenceScore
       // );
+
       if (myRedraftDifferenceScore === 700) {
-        let tempValue = fantasyCalcValue * 0.1;
+        let tempValue = fantasyCalcValue * 0.17;
         let newValue = +fantasyCalcValue + +tempValue;
 
-        let value = newValue / fcQBMaxValue;
+        let value = newValue / maxValue;
         if (value) {
           return value;
         }
       }
       if (myRedraftDifferenceScore === 600) {
-        let tempValue = fantasyCalcValue * 0.065;
+        let tempValue = fantasyCalcValue * 0.12;
         let newValue = +fantasyCalcValue + +tempValue;
 
-        let value = newValue / fcQBMaxValue;
+        let value = newValue / maxValue;
         if (value) {
           return value;
         }
       }
       if (myRedraftDifferenceScore === 500) {
-        let tempValue = fantasyCalcValue * 0.05;
+        let tempValue = fantasyCalcValue * 0.09;
         let newValue = +fantasyCalcValue + +tempValue;
 
-        let value = newValue / fcQBMaxValue;
+        let value = newValue / maxValue;
         if (value) {
           return value;
         }
       }
       if (myRedraftDifferenceScore === 400) {
-        let tempValue = fantasyCalcValue * 0.035;
+        let tempValue = fantasyCalcValue * 0.08;
         let newValue = +fantasyCalcValue + +tempValue;
 
-        let value = newValue / fcQBMaxValue;
+        let value = newValue / maxValue;
         if (value) {
           return value;
         }
       }
 
       if (myRedraftDifferenceScore === 300) {
-        let tempValue = Math.abs(valueDiffBetweenMyValueAndMarketValue * 0.75);
-        let value = (fantasyCalcValue - tempValue) / fcQBMaxValue;
+        let tempValue = Math.abs(valueDiffBetweenMyValueAndMarketValue * 0.4);
+        let value = (fantasyCalcValue - tempValue) / maxValue;
         if (value) {
           return value;
         }
       }
       if (myRedraftDifferenceScore === 200) {
-        let tempValue = Math.abs(valueDiffBetweenMyValueAndMarketValue * 1.1);
-        let value = (fantasyCalcValue - tempValue) / fcQBMaxValue;
+        let tempValue = Math.abs(valueDiffBetweenMyValueAndMarketValue * 0.7);
+        let value = (fantasyCalcValue - tempValue) / maxValue;
         if (value) {
           return value;
         }
       }
       if (myRedraftDifferenceScore === 100) {
-        let tempValue = Math.abs(valueDiffBetweenMyValueAndMarketValue * 1.2);
-        let value = (fantasyCalcValue - tempValue) / fcQBMaxValue;
+        let tempValue = Math.abs(valueDiffBetweenMyValueAndMarketValue * 0.8);
+        let value = (fantasyCalcValue - tempValue) / maxValue;
         if (value) {
           return value;
         }
       }
       if (myRedraftDifferenceScore === 0) {
-        let tempValue = Math.abs(valueDiffBetweenMyValueAndMarketValue * 1.3);
-        let value = (fantasyCalcValue - tempValue) / fcQBMaxValue;
+        let tempValue = Math.abs(valueDiffBetweenMyValueAndMarketValue * 0.9);
+        let value = (fantasyCalcValue - tempValue) / maxValue;
         if (value) {
           return value;
         }
@@ -305,60 +301,59 @@ const qbMoreThanTwoYearsPostAgeApex = function (
       //   myRedraftDifferenceScore
       // );
       if (Math.abs(myRedraftDifferenceScore) === 700) {
-        let tempValue = Math.abs(valueDiffBetweenMyValueAndMarketValue * 2.5);
-        let value = (fantasyCalcValue - tempValue) / fcQBMaxValue;
+        let tempValue = Math.abs(valueDiffBetweenMyValueAndMarketValue * 1.9);
+        let value = (fantasyCalcValue - tempValue) / maxValue;
         if (value) {
           return value;
         }
       }
 
       if (Math.abs(myRedraftDifferenceScore) === 600) {
-        let tempValue = Math.abs(valueDiffBetweenMyValueAndMarketValue * 2.25);
+        let tempValue = Math.abs(valueDiffBetweenMyValueAndMarketValue * 1.7);
 
-        let value = (fantasyCalcValue - tempValue) / fcQBMaxValue;
+        let value = (fantasyCalcValue - tempValue) / maxValue;
         if (value) {
           return value;
         }
       }
 
       if (Math.abs(myRedraftDifferenceScore) === 500) {
-        let tempValue = Math.abs(valueDiffBetweenMyValueAndMarketValue * 2);
+        let tempValue = Math.abs(valueDiffBetweenMyValueAndMarketValue * 1.45);
 
-        let value = (fantasyCalcValue - tempValue) / fcQBMaxValue;
+        let value = (fantasyCalcValue - tempValue) / maxValue;
         if (value) {
           return value;
         }
       }
 
       if (Math.abs(myRedraftDifferenceScore) === 400) {
-        let tempValue = Math.abs(valueDiffBetweenMyValueAndMarketValue * 1.75);
+        let tempValue = Math.abs(valueDiffBetweenMyValueAndMarketValue * 1.25);
 
-        let value = (fantasyCalcValue - tempValue) / fcQBMaxValue;
+        let value = (fantasyCalcValue - tempValue) / maxValue;
         if (value) {
           return value;
         }
       }
       if (Math.abs(myRedraftDifferenceScore) === 300) {
-        let tempValue = Math.abs(valueDiffBetweenMyValueAndMarketValue * 1.5);
+        let tempValue = Math.abs(valueDiffBetweenMyValueAndMarketValue * 0.95);
 
-        let value = (fantasyCalcValue - tempValue) / fcQBMaxValue;
+        let value = (fantasyCalcValue - tempValue) / maxValue;
         if (value) {
           return value;
         }
       }
       if (Math.abs(myRedraftDifferenceScore) === 200) {
-        let tempValue = Math.abs(valueDiffBetweenMyValueAndMarketValue * 1.25);
+        let tempValue = Math.abs(valueDiffBetweenMyValueAndMarketValue * 0.75);
 
-        let value = (fantasyCalcValue - tempValue) / fcQBMaxValue;
-        1;
+        let value = (fantasyCalcValue - tempValue) / maxValue;
         if (value) {
           return value;
         }
       }
       if (Math.abs(myRedraftDifferenceScore) === 100) {
-        let tempValue = Math.abs(valueDiffBetweenMyValueAndMarketValue * 1);
+        let tempValue = Math.abs(valueDiffBetweenMyValueAndMarketValue * 0.45);
 
-        let value = (fantasyCalcValue - tempValue) / fcQBMaxValue;
+        let value = (fantasyCalcValue - tempValue) / maxValue;
         if (value) {
           return value;
         }
@@ -369,4 +364,4 @@ const qbMoreThanTwoYearsPostAgeApex = function (
   //////////////////////////////////////////////////////////////////////////////////////////////////
 };
 
-module.exports = qbMoreThanTwoYearsPostAgeApex;
+module.exports = withinTwoYearsOfAgeApexButNotPastAndWillBeSameNextMarch;
