@@ -10,23 +10,28 @@ export default function Table({ data }) {
     { label: 'Player Name', accessor: 'name' },
     { label: 'Position', accessor: 'position' },
     { label: 'Team', accessor: 'team' },
-    { label: 'Market Overall Rank', accessor: 'marketOverallRank' },
+    { label: 'Market Rank', accessor: 'marketOverallRank' },
     { label: 'Market Position Rank', accessor: 'marketPositionRank' },
     { label: 'Market Dynasty Value', accessor: 'marketValue' },
-    { label: 'My Overall Rank', accessor: 'myOverallRank' },
+    { label: 'My Rank', accessor: 'myOverallRank' },
     { label: 'My Position Rank', accessor: 'myPositionRank' },
     { label: 'My Dynasty Value', accessor: 'myValue' },
     {
-      label: 'Value Difference Between My Ranks & Market',
+      label: 'My Value vs. Market',
       accessor: 'valueDiffBetweenMyValueAndMarketValue',
     },
     {
-      label: 'Projected Next Offseason Dynasty Value',
+      label: 'PNODV',
       accessor: 'projectedNextOffseasonDynastyValue',
+    },
+    {
+      label: 'Current Market Vs. PNODV',
+      accessor: 'valueDifferenceBetweenCurrentMarketValueAndPNODV',
     },
   ];
 
   // projectedNextOffseasonDynastyValue
+  //valueDifferenceBetweenCurrentMarketValueAndPNODV
 
   const handleSorting = (sortField, sortOrder) => {
     // console.log(sortField, sortOrder);

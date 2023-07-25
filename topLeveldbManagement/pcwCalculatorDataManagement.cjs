@@ -1702,6 +1702,24 @@ const testfunc = async function () {
         }
       }
     }
+
+    assigningDifferenceBetweenCurrentMarketDynastyValueAndPNODV(
+      sanitizedFCPlayerName,
+      sanitizedRVPlayerName,
+      fcQBMaxValue,
+      fcNonQBMaxValue
+    ) {
+      let tempValueDifference = +(
+        this.projectedNextOffseasonDynastyValue - this.fantasyCalcValue
+      ).toFixed(2);
+      // console.log(this.name, tempValueDifference);
+      this.valueDifferenceBetweenCurrentMarketValueAndPNODV =
+        tempValueDifference;
+      // console.log(
+      //   this.name,
+      //   this.valueDifferenceBetweenCurrentMarketValueAndPNODV
+      // );
+    }
   }
 
   ///////////end of methods///////////////////////
@@ -2253,10 +2271,15 @@ const testfunc = async function () {
         fcQBMaxValue,
         fcNonQBMaxValue
       );
-    }
 
-    if (sanitizedFCPlayerName) {
       tradeCalculaterDataObject.assigningPNODVToThoseThatFellThroug(
+        sanitizedFCPlayerName,
+        sanitizedRVPlayerName,
+        fcQBMaxValue,
+        fcNonQBMaxValue
+      );
+
+      tradeCalculaterDataObject.assigningDifferenceBetweenCurrentMarketDynastyValueAndPNODV(
         sanitizedFCPlayerName,
         sanitizedRVPlayerName,
         fcQBMaxValue,
@@ -2522,7 +2545,8 @@ const testfunc = async function () {
       myOverallRank,
       myPositionRank,
       valueDiffBetweenMyValueAndMarketValue,
-      projectedNextOffseasonDynastyValue
+      projectedNextOffseasonDynastyValue,
+      valueDifferenceBetweenCurrentMarketValueAndPNODV
     ) {
       this.name = name;
       this.position = position;
@@ -2537,6 +2561,8 @@ const testfunc = async function () {
         valueDiffBetweenMyValueAndMarketValue;
       this.projectedNextOffseasonDynastyValue =
         projectedNextOffseasonDynastyValue;
+      this.valueDifferenceBetweenCurrentMarketValueAndPNODV =
+        valueDifferenceBetweenCurrentMarketValueAndPNODV;
     }
   }
 
@@ -2590,7 +2616,8 @@ const testfunc = async function () {
       overallRank,
       posRank,
       playerObject.valueDiffBetweenMyValueAndMarketValue,
-      playerObject.projectedNextOffseasonDynastyValue
+      playerObject.projectedNextOffseasonDynastyValue,
+      playerObject.valueDifferenceBetweenCurrentMarketValueAndPNODV
     );
 
     // console.log(sortedDynastyRankingsWithNamesValuesAndRank);
@@ -2668,7 +2695,8 @@ const testfunc = async function () {
       myRedraftTier,
       myRedraftScoreFromPlayersRedraftTier,
       myRedraftDifferenceScore,
-      projectedNextOffseasonDynastyValue
+      projectedNextOffseasonDynastyValue,
+      valueDifferenceBetweenCurrentMarketValueAndPNODV
     ) {
       this.name = name;
       this.position = position;
@@ -2691,6 +2719,8 @@ const testfunc = async function () {
       this.myRedraftDifferenceScore = myRedraftDifferenceScore;
       this.projectedNextOffseasonDynastyValue =
         projectedNextOffseasonDynastyValue;
+      this.valueDifferenceBetweenCurrentMarketValueAndPNODV =
+        valueDifferenceBetweenCurrentMarketValueAndPNODV;
     }
   }
 

@@ -19,7 +19,10 @@ export default function DynastyRankings(dynastyRankingsData) {
     <div>
       <MainNav />
       <div className={styles.pageTitle}>Dynasty Rankings</div>
-      <div className={styles.lastUpdated}>Last updated: 7/23/23</div>
+      <div className={styles.lastUpdated}>Last updated: 7/25/23</div>
+      <div className={styles.lastUpdated}>
+        *PNODV is projected next offseason dynasty value
+      </div>
       <Table data={dataArray} />
     </div>
   );
