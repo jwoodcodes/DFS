@@ -113,7 +113,8 @@ const allTeamABV = [
 const testAllTeams = [];
 
 allEveryTeamEvenOnesOnByeThisWeek.forEach(function (team, i) {
-  if (team.slate !== '') {
+  // console.log(team);
+  if (team.slate && team.slate !== '') {
     // console.log(team.opponentABV);
     allTeamABV.forEach(function (ABV) {
       // console.log(team.opponentABV);

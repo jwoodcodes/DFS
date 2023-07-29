@@ -1242,6 +1242,69 @@ const allWRData = {
   allWRObjectsArray: allWRObjectsArray,
 };
 
+const allWRProjectionsObjects = [];
+
+allWRObjectsArray.forEach(function (player) {
+  // console.log(player.appHalfProjectedPoints);
+  class ProjectionsObject {
+    constructor(name, appHalfProjectedPoints, appFullProjectedPoints) {
+      this.name = name;
+      (this.appHalfProjectedPoints = appHalfProjectedPoints),
+        (this.appFullProjectedPoints = appFullProjectedPoints);
+    }
+  }
+
+  let wrProjectionsObject = new ProjectionsObject(
+    player.playerName,
+    player.appHalfProjectedPoints,
+    player.appFullProjectedPoints
+  );
+
+  allWRProjectionsObjects.push(wrProjectionsObject);
+});
+
+// console.log(allWRProjectionsObjects);
+
+///uncoment below to add wr projections to db
+
+// const { MongoClient } = require('mongodb');
+
+// const url =
+//   'mongodb+srv://devJay:Hesstrucksarethebest@dailydynasties.syom4sb.mongodb.net/test';
+// const client = new MongoClient(url);
+
+// // The database to use
+// const dbName = 'dailydynasties';
+
+// async function runWRProjections() {
+//   try {
+//     await client.connect();
+//     console.log('Connected correctly to server');
+//     const db = client.db(dbName);
+
+//     // Use the collection "people"
+//     const col = db.collection('WRProjections');
+
+//     // Construct a document
+//     let WRProjections = {
+//       allWRProjectionsObjects: allWRProjectionsObjects,
+//     };
+
+//     // Insert a single document, wait for promise so we can read it back
+//     const p = await col.insertOne(WRProjections);
+//     // Find one document
+//     const myDoc = await col.findOne();
+//     // Print to the console
+//     // console.log(myDoc);
+//   } catch (err) {
+//     console.log(err.stack);
+//   } finally {
+//     await client.close();
+//   }
+// }
+
+// runWRProjections().catch(console.dir);
+
 // console.log(arrayOfProjectedPointsForMyDevUse);
 
 // console.log(allTeamWRObjects.giants.WRThree);

@@ -1,5 +1,6 @@
 const allQBData = require('./dfs_positions_calc_funcs/qbValuesCalcs');
 const allRBData = require('./dfs_positions_calc_funcs/rbValuesCalcs');
+const allWRData = require('./dfs_positions_calc_funcs/wrValuesCalcs');
 const allQBModelDataData = require('./QB Prospect Model/qbmodel');
 
 const wholeTeamObjects = require('./dfs_positions_calc_funcs/createWholeTeamObjects');
