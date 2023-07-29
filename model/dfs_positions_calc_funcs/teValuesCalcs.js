@@ -382,56 +382,50 @@ allTEs.forEach(function (team, i) {
 });
 
 const allTEData = {
-  allTEVTTs: allTEVTTs,
-  allTEHighProjectedTargetsBonus: allTEHighProjectedTargetsBonus,
-  allTEPPRPointsPerGameLastThreeGamesPlayed:
-    allTEPPRPointsPerGameLastThreeGamesPlayed,
-  allTEProjectedReceptions: allTEProjectedReceptions,
-  allTETotalScores: allTETotalScores,
-  allHalfTEFinalProjectedPointsValues: allHalfTEFinalProjectedPointsValues,
-  allHalfTEFinalProjectedPointsValuesPlusNames:
-    allHalfTEFinalProjectedPointsValuesPlusNames,
-  allFullTEFinalProjectedPointsValues: allFullTEFinalProjectedPointsValues,
-  allFullTEFinalProjectedPointsValuesPlusNames:
-    allFullTEFinalProjectedPointsValuesPlusNames,
-  allTEPremiuimFinalProjectedPointsValues:
-    allTEPremiuimFinalProjectedPointsValues,
-  allTEPremiuimFinalProjectedPointsValuesPlusNames:
-    allTEPremiuimFinalProjectedPointsValuesPlusNames,
-
-  halfProjectedPointsPerDollarFanduel: halfProjectedPointsPerDollarFanduel,
-  halfProjectedPointsPerDollarYahoo: halfProjectedPointsPerDollarYahoo,
-  fullProjectedPointsPerDollarDraftkings:
-    fullProjectedPointsPerDollarDraftkings,
-
-  //managed and cash
-  allTEHalfManagedAndCashProjectedPointsValues:
-    allTEHalfManagedAndCashProjectedPointsValues,
-  allTEFullManagedAndCashProjectedPointsValues:
-    allTEFullManagedAndCashProjectedPointsValues,
-  allTETEPManagedAndCashProjectedPointsValues:
-    allTETEPManagedAndCashProjectedPointsValues,
-
-  allTEHalfManagedAndCashProjectedPointsValuesPlusNames:
-    allTEHalfManagedAndCashProjectedPointsValuesPlusNames,
-  allTEFullManagedAndCashProjectedPointsValuesPlusNames:
-    allTEFullManagedAndCashProjectedPointsValuesPlusNames,
-  allTETEPManagedAndCashProjectedPointsValuesPlusNames:
-    allTETEPManagedAndCashProjectedPointsValuesPlusNames,
-
-  //managed and cash per dollar
-
-  cashprojectedPointsPerDollarDraftkings:
-    cashprojectedPointsPerDollarDraftkings,
-  cashprojectedPointsPerDollarFanduel: cashprojectedPointsPerDollarFanduel,
-  cashprojectedPointsPerDollarYahoo: cashprojectedPointsPerDollarYahoo,
-
-  cashprojectedPointsPerDollarDraftkingsPlusNames:
-    cashprojectedPointsPerDollarDraftkingsPlusNames,
-  cashprojectedPointsPerDollarFanduelPlusNames:
-    cashprojectedPointsPerDollarFanduelPlusNames,
-  cashprojectedPointsPerDollarYahooPlusNames:
-    cashprojectedPointsPerDollarYahooPlusNames,
+  // allTEVTTs: allTEVTTs,
+  // allTEHighProjectedTargetsBonus: allTEHighProjectedTargetsBonus,
+  // allTEPPRPointsPerGameLastThreeGamesPlayed:
+  //   allTEPPRPointsPerGameLastThreeGamesPlayed,
+  // allTEProjectedReceptions: allTEProjectedReceptions,
+  // allTETotalScores: allTETotalScores,
+  // allHalfTEFinalProjectedPointsValues: allHalfTEFinalProjectedPointsValues,
+  // allHalfTEFinalProjectedPointsValuesPlusNames:
+  //   allHalfTEFinalProjectedPointsValuesPlusNames,
+  // allFullTEFinalProjectedPointsValues: allFullTEFinalProjectedPointsValues,
+  // allFullTEFinalProjectedPointsValuesPlusNames:
+  //   allFullTEFinalProjectedPointsValuesPlusNames,
+  // allTEPremiuimFinalProjectedPointsValues:
+  //   allTEPremiuimFinalProjectedPointsValues,
+  // allTEPremiuimFinalProjectedPointsValuesPlusNames:
+  //   allTEPremiuimFinalProjectedPointsValuesPlusNames,
+  // halfProjectedPointsPerDollarFanduel: halfProjectedPointsPerDollarFanduel,
+  // halfProjectedPointsPerDollarYahoo: halfProjectedPointsPerDollarYahoo,
+  // fullProjectedPointsPerDollarDraftkings:
+  //   fullProjectedPointsPerDollarDraftkings,
+  // //managed and cash
+  // allTEHalfManagedAndCashProjectedPointsValues:
+  //   allTEHalfManagedAndCashProjectedPointsValues,
+  // allTEFullManagedAndCashProjectedPointsValues:
+  //   allTEFullManagedAndCashProjectedPointsValues,
+  // allTETEPManagedAndCashProjectedPointsValues:
+  //   allTETEPManagedAndCashProjectedPointsValues,
+  // allTEHalfManagedAndCashProjectedPointsValuesPlusNames:
+  //   allTEHalfManagedAndCashProjectedPointsValuesPlusNames,
+  // allTEFullManagedAndCashProjectedPointsValuesPlusNames:
+  //   allTEFullManagedAndCashProjectedPointsValuesPlusNames,
+  // allTETEPManagedAndCashProjectedPointsValuesPlusNames:
+  //   allTETEPManagedAndCashProjectedPointsValuesPlusNames,
+  // //managed and cash per dollar
+  // cashprojectedPointsPerDollarDraftkings:
+  //   cashprojectedPointsPerDollarDraftkings,
+  // cashprojectedPointsPerDollarFanduel: cashprojectedPointsPerDollarFanduel,
+  // cashprojectedPointsPerDollarYahoo: cashprojectedPointsPerDollarYahoo,
+  // cashprojectedPointsPerDollarDraftkingsPlusNames:
+  //   cashprojectedPointsPerDollarDraftkingsPlusNames,
+  // cashprojectedPointsPerDollarFanduelPlusNames:
+  //   cashprojectedPointsPerDollarFanduelPlusNames,
+  // cashprojectedPointsPerDollarYahooPlusNames:
+  //   cashprojectedPointsPerDollarYahooPlusNames,
 };
 
 // console.log(allTEData);
