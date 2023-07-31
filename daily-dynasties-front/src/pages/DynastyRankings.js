@@ -111,12 +111,20 @@ export default function DynastyRankings(dynastyRankingsData) {
       <div className={styles.lastUpdated}>
         *PNODV is projected next offseason dynasty value
       </div>
+      <div className={styles.glosseryWrapper}>
+        <ul className={styles.glosseryUl}>
+          <li>MR= Market Rank</li>
+          <li>MPR= Market Position Rank</li>
+          <li>MDV= Market Dynasty Value</li>
+          <li>DDR= daily dynasties Rank</li>
+          <li>DDPR= daily dynasties Position Rank</li>
+          <li>DDPR= daily dynasties Position Rank</li>
+          <li>DDDV= daily dynasties Dynasty Value</li>
+          <li>DDVM= daily dynasties Value vs. Market Value</li>
+          <li>CM= Current Market</li>
+        </ul>
+      </div>
 
-      {/* {positionToShow === 'Overall' ? (
-        <Table data={dataArray} />
-      ) : (
-        <IndividualPositions data={dataToUse} positionToShow={positionToShow} />
-      )} */}
       {positionToShow === 'Overall' && <Table data={dataArray} />}
       {positionToShow === 'QB' && (
         <IndividualPositions

@@ -7,12 +7,33 @@
   background: linear-gradient(to right bottom, #420c47, #065a60);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  @media (max-width: 550px) {
+    font-size: 3.5rem;
+    letter-spacing: 0.25rem;
+    margin-right: auto;
+    margin-left: 6rem;
+  }
+  @media (max-width: 450px) {
+    margin-right: auto;
+    margin-left: 12rem;
+    font-size: 2.5rem;
+    letter-spacing: 0.1rem;
+  }
 }
 
 .lastUpdated {
   text-align: center;
   margin-bottom: 2rem;
   font-size: 1.5rem;
+  @media (max-width: 550px) {
+    margin-right: auto;
+    margin-left: 6rem;
+  }
+  @media (max-width: 450px) {
+    margin-right: auto;
+    margin-left: 12rem;
+    font-size: 1rem;
+  }
 }
 
 .btnsWrapper {
@@ -20,6 +41,18 @@
   width: 80%;
   justify-content: space-evenly;
   margin: 4rem auto;
+  @media (max-width: 550px) {
+    margin-right: auto;
+    margin-left: 6rem;
+  }
+  @media (max-width: 450px) {
+    margin-right: auto;
+    margin-left: 12rem;
+  }
+  @media (max-width: 400px) {
+    margin-right: auto;
+    margin-left: 9rem;
+  }
 }
 
 .posBtn {
@@ -36,6 +69,9 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  @media (max-width: 450px) {
+    margin: 0.25rem;
+  }
 }
 
 .posBtn:hover {
@@ -49,4 +85,28 @@
 .posBtn:active {
   transform: translateY(0);
   transition: all 0.15s;
+}
+
+.glosseryWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem auto;
+  @media (max-width: 550px) {
+    margin-right: auto;
+    margin-left: 6rem;
+  }
+  @media (max-width: 450px) {
+    margin-right: auto;
+    margin-left: 10rem;
+    width: 80%;
+  }
+}
+
+.glosseryUl {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem auto;
+  list-style-type: none;
 }

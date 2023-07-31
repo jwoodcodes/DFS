@@ -39,11 +39,11 @@ export default function MainNav() {
           <Link href="/Venue">Venue</Link>
         </li> */}
       </div>
-      <div className={styles.SignInAndCart}>
+      {/* <div className={styles.SignInAndCart}>
         <li>
           <button className={styles.loginButton}>Login</button>
         </li>
-      </div>
+      </div> */}
     </nav>
   );
 }
