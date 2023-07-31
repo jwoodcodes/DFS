@@ -1,12 +1,31 @@
 .table_container {
-  max-width: 750px;
+  /* max-width: 1500px; */
+  max-width: 100%;
   /* max-height: 500px; */
   margin: 0 auto;
-  overflow: auto;
+  overflow: hidden;
+  padding: 0 16px;
+
+  @media (max-width: 1115px) {
+    padding: 0;
+  }
+  @media (max-width: 550px) {
+    max-width: 125%;
+    width: 125%;
+  }
+  @media (max-width: 450px) {
+    max-width: 150%;
+    width: 150%;
+  }
+  @media (max-width: 370px) {
+    max-width: 175%;
+    width: 175%;
+  }
 }
 
 .table {
   width: 100%;
+
   border-spacing: 0;
 }
 
@@ -22,6 +41,31 @@
   border-bottom: 1px solid #1a1a1a;
   font-weight: bold;
   text-align: left;
+  cursor: pointer;
+  width: fit-content;
+
+  @media (max-width: 1350px) {
+    padding: 7px 9px;
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  @media (max-width: 865px) {
+    padding: 6px 8px;
+    font-size: 0.9rem;
+    font-weight: 300;
+  }
+  @media (max-width: 775px) {
+    padding: 5px 7px;
+    font-size: 0.75rem;
+  }
+  @media (max-width: 660px) {
+    padding: 4px 6px;
+    font-size: 0.65rem;
+  }
+  @media (max-width: 550px) {
+    padding: 15px 4px;
+    font-size: 0.65rem;
+  }
 }
 
 /* .table th.up { */
@@ -46,6 +90,26 @@ th.down {
 .table td {
   border-top: 1px solid #ddd;
   padding: 8px 20px;
+  width: fit-content;
+  @media (max-width: 1115px) {
+    padding: 6px 10px;
+  }
+  @media (max-width: 865px) {
+    padding: 5px 9px;
+    font-size: 0.9rem;
+  }
+  @media (max-width: 775px) {
+    padding: 4px 8px;
+    font-size: 0.75rem;
+  }
+  @media (max-width: 660px) {
+    padding: 3px 7px;
+    font-size: 0.6rem;
+  }
+  @media (max-width: 550px) {
+    padding: 2px 4px;
+    font-size: 0.6rem;
+  }
 }
 
 .table tbody tr:first-child td {
@@ -58,4 +122,8 @@ th.down {
 
 .table tbody tr:nth-child(2n) td {
   background: #fff;
+}
+
+.table tr {
+  width: fit-content;
 }

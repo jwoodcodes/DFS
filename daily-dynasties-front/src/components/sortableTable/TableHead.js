@@ -18,6 +18,7 @@ export default function TableHead({ columns, handleSorting }) {
   return (
     <thead>
       <tr>
+        <th>Rank</th>
         {columns.map(({ label, accessor }) => {
           return (
             <th key={accessor} onClick={() => handleSortingChange(accessor)}>

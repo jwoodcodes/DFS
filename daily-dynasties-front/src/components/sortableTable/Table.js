@@ -8,16 +8,16 @@ export default function Table({ data }) {
 
   const columns = [
     { label: 'Player Name', accessor: 'name' },
-    { label: 'Position', accessor: 'position' },
-    { label: 'Team', accessor: 'team' },
-    { label: 'Market Rank', accessor: 'marketOverallRank' },
-    { label: 'Market Position Rank', accessor: 'marketPositionRank' },
-    { label: 'Market Dynasty Value', accessor: 'marketValue' },
-    { label: 'My Rank', accessor: 'myOverallRank' },
-    { label: 'My Position Rank', accessor: 'myPositionRank' },
-    { label: 'My Dynasty Value', accessor: 'myValue' },
+    { label: 'Pos.', accessor: 'position' },
+    // { label: 'Team', accessor: 'team' },
+    { label: 'MR', accessor: 'marketOverallRank' },
+    { label: 'MPR', accessor: 'marketPositionRank' },
+    { label: 'MDV', accessor: 'marketValue' },
+    { label: 'DDR', accessor: 'myOverallRank' },
+    { label: 'DDPR', accessor: 'myPositionRank' },
+    { label: 'DDDV', accessor: 'myValue' },
     {
-      label: 'My Value vs. Market',
+      label: 'DDVM',
       accessor: 'valueDiffBetweenMyValueAndMarketValue',
     },
     {
@@ -25,7 +25,7 @@ export default function Table({ data }) {
       accessor: 'projectedNextOffseasonDynastyValue',
     },
     {
-      label: 'Current Market Vs. PNODV',
+      label: 'CM Vs PNODV',
       accessor: 'valueDifferenceBetweenCurrentMarketValueAndPNODV',
     },
   ];
@@ -54,13 +54,15 @@ export default function Table({ data }) {
 
   return (
     <>
-      <table className={styles.table}>
-        <caption className={styles.caption}>
-          My Dynasty Rankings & Values vs. Current Market Rankings & Values
-        </caption>
-        <TableHead columns={columns} handleSorting={handleSorting} />
-        <TableBody columns={columns} tableData={tableData} />
-      </table>
+      <div className={styles.table_container}>
+        <table className={styles.table}>
+          <caption className={styles.caption}>
+            My Dynasty Rankings & Values vs. Current Market Rankings & Values
+          </caption>
+          <TableHead columns={columns} handleSorting={handleSorting} />
+          <TableBody columns={columns} tableData={tableData} />
+        </table>
+      </div>
     </>
   );
 }
