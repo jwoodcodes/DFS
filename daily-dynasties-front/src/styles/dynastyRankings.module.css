@@ -14,3 +14,39 @@
   margin-bottom: 2rem;
   font-size: 1.5rem;
 }
+
+.btnsWrapper {
+  display: flex;
+  width: 80%;
+  justify-content: space-evenly;
+  margin: 4rem auto;
+}
+
+.posBtn {
+  background-color: oklch(46.76% 0.128 239.29 / 98%);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+  font-size: 1.25rem;
+  height: 2rem;
+  width: 7rem;
+  max-width: 7rem;
+  border-radius: 10px;
+  border: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.posBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+  background-color: oklch(46.76% 0.128 239.29 / 98%);
+  transform: translateY(-0.25rem);
+  transition: all 0.15s;
+}
+
+.posBtn:active {
+  transform: translateY(0);
+  transition: all 0.15s;
+}

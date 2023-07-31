@@ -975,7 +975,7 @@ const terawdata = {
 
       pprFantasyPointsPerGameLastThreeGamesPlayed: 0,
 
-      targetShareLastThreeGamesPlayed0,
+      targetShareLastThreeGamesPlayed: 0,
       projectedTargets4For4: 0,
 
       catchRateLastFiveGames: 0,
