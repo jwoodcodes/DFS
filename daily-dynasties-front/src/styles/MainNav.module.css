@@ -1,6 +1,6 @@
 .mainNav {
   /* background-color: #212f45; */
-  background-color: oklch(46.76% 0.128 239.29 / 98%);
+  background-color: oklch(46.76% 0.128 239.29 / 98%), #44bcd3;
   color: #fff;
   /* font-family: "Playfair Display", serif; */
   border-bottom: 1px solid #fff;
