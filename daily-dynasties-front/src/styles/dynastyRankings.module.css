@@ -98,7 +98,8 @@
 }
 
 .posBtn {
-  background-color: oklch(46.76% 0.128 239.29 / 98%);
+  /* background-color: oklch(46.76% 0.128 239.29 / 98%); */
+  background-color: #02688f;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   color: #ffffff;
   font-size: 1.25rem;
