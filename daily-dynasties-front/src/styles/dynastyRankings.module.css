@@ -12,12 +12,49 @@
     letter-spacing: 0.25rem;
     margin-right: auto;
     margin-left: 6rem;
+    margin-bottom: 2rem;
   }
   @media (max-width: 450px) {
     margin-right: auto;
     margin-left: 12rem;
     font-size: 2.5rem;
     letter-spacing: 0.1rem;
+  }
+  @media (max-width: 450px) {
+    margin-right: auto;
+    margin-left: 12rem;
+    font-size: 2.5rem;
+    letter-spacing: 0.1rem;
+  }
+  @media (max-width: 375px) {
+    margin-right: auto;
+    margin-left: 14rem;
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+  }
+  @media (max-width: 355px) {
+    margin-right: auto;
+    margin-left: 12rem;
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+  }
+  @media (max-width: 325px) {
+    margin-right: auto;
+    margin-left: 10rem;
+    font-size: 2rem;
+    letter-spacing: 0;
+  }
+  @media (max-width: 280px) {
+    margin-right: auto;
+    margin-left: 9rem;
+    font-size: 2rem;
+    letter-spacing: 0;
+  }
+  @media (max-width: 265px) {
+    margin-right: auto;
+    margin-left: 10rem;
+    font-size: 1.5rem;
+    letter-spacing: 0;
   }
 }
 
@@ -28,11 +65,14 @@
   @media (max-width: 550px) {
     margin-right: auto;
     margin-left: 6rem;
+    margin-bottom: 0.5rem;
   }
+
   @media (max-width: 450px) {
     margin-right: auto;
     margin-left: 12rem;
     font-size: 1rem;
+    margin-bottom: 0;
   }
 }
 
@@ -44,14 +84,16 @@
   @media (max-width: 550px) {
     margin-right: auto;
     margin-left: 6rem;
+    margin: 2rem auto 2rem 6rem;
   }
   @media (max-width: 450px) {
     margin-right: auto;
-    margin-left: 12rem;
+    margin-left: 9rem;
   }
   @media (max-width: 400px) {
     margin-right: auto;
     margin-left: 9rem;
+    margin: 1rem auto 1rem 8rem;
   }
 }
 
@@ -69,6 +111,9 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  @media (max-width: 600px) {
+    margin: 0.5rem;
+  }
   @media (max-width: 450px) {
     margin: 0.25rem;
   }
@@ -95,11 +140,18 @@
   @media (max-width: 550px) {
     margin-right: auto;
     margin-left: 6rem;
+    font-size: 0.75rem;
   }
   @media (max-width: 450px) {
     margin-right: auto;
     margin-left: 10rem;
     width: 80%;
+    margin-top: 0.25rem;
+  }
+  @media (max-width: 350px) {
+    margin-right: auto;
+    margin-left: 8rem;
+    width: 90%;
   }
 }
 
