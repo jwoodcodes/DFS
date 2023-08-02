@@ -9,7 +9,9 @@
 }
 
 .table {
-  width: 100%;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 
   border-spacing: 0;
 }
@@ -26,7 +28,7 @@
   border-bottom: 1px solid #1a1a1a;
   /* font-weight: bold; */
   font-weight: 300;
-  text-align: left;
+  text-align: center;
   cursor: pointer;
   width: fit-content;
 }
@@ -54,6 +56,13 @@ th.down {
   border-top: 1px solid #ddd;
   padding: 8px 20px;
   width: fit-content;
+  text-align: center;
+}
+
+@media (max-width: 1450px) {
+  .table {
+    width: 100%;
+  }
 }
 
 @media (max-width: 1050px) {
@@ -62,7 +71,7 @@ th.down {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 915px) {
   .table_container {
     padding: 0;
   }
@@ -71,7 +80,7 @@ th.down {
   }
 }
 
-@media (max-width: 840px) {
+@media (max-width: 860px) {
   .tableHead {
     font-size: 0.9rem;
   }
@@ -81,7 +90,7 @@ th.down {
   }
 }
 
-@media (max-width: 795px) {
+@media (max-width: 810px) {
   .tableHead {
     font-size: 0.85rem;
     padding: 4px 5px;
@@ -93,7 +102,7 @@ th.down {
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 735px) {
   .tableHead {
     font-size: 0.8rem;
   }
@@ -105,7 +114,7 @@ th.down {
   }
 }
 
-@media (max-width: 595px) {
+@media (max-width: 610px) {
   .tableHead {
     font-size: 0.75rem;
   }
@@ -116,7 +125,7 @@ th.down {
   }
 }
 
-@media (max-width: 555px) {
+@media (max-width: 570px) {
   .tableHead {
     overflow: hidden;
   }
@@ -131,7 +140,7 @@ th.down {
   }
 }
 
-@media (max-width: 510px) {
+@media (max-width: 525px) {
   .tableHead {
     font-size: 0.65rem;
     padding: 4px 2px;
@@ -143,13 +152,13 @@ th.down {
   }
 }
 
-@media (max-width: 475px) {
+@media (max-width: 490px) {
   .caption {
     display: none;
   }
 }
 
-@media (max-width: 465px) {
+@media (max-width: 480px) {
   .table td {
     padding: 4px 2px;
     font-size: 0.7rem;
@@ -166,7 +175,7 @@ th.down {
   }
 }
 
-@media (max-width: 415px) {
+@media (max-width: 390px) {
   .tableHead {
     font-size: 0.5rem;
     padding: 4px 1.5px;
@@ -176,19 +185,19 @@ th.down {
   }
 }
 
-@media (max-width: 345px) {
+@media (max-width: 360px) {
   .table td {
     font-size: 0.55rem;
   }
 }
 
-@media (max-width: 325px) {
+@media (max-width: 340px) {
   .table td {
     font-size: 0.5rem;
   }
 }
 
-@media (max-width: 305px) {
+@media (max-width: 320px) {
   .table td {
     font-size: 0.45rem;
   }
@@ -201,7 +210,7 @@ th.down {
   }
 }
 
-@media (max-width: 305px) {
+@media (max-width: 290px) {
   .table td {
     font-size: 0.4rem;
   }
