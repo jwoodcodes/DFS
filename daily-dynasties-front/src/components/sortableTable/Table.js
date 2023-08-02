@@ -10,14 +10,14 @@ export default function Table({ data }) {
     { label: 'Player Name', accessor: 'name' },
     { label: 'Pos.', accessor: 'position' },
     // { label: 'Team', accessor: 'team' },
-    { label: 'MR', accessor: 'marketOverallRank' },
-    { label: 'MPR', accessor: 'marketPositionRank' },
-    { label: 'MDV', accessor: 'marketValue' },
-    { label: 'DDR', accessor: 'myOverallRank' },
-    { label: 'DDPR', accessor: 'myPositionRank' },
-    { label: 'DDDV', accessor: 'myValue' },
+    { label: 'MK Rank', accessor: 'marketOverallRank' },
+    { label: 'MK Pos. Rank', accessor: 'marketPositionRank' },
+    { label: 'MK Value', accessor: 'marketValue' },
+    { label: 'My Rank', accessor: 'myOverallRank' },
+    { label: 'My Pos. Rank', accessor: 'myPositionRank' },
+    { label: 'My Value', accessor: 'myValue' },
     {
-      label: 'DDVM',
+      label: 'MK vs My Value',
       accessor: 'valueDiffBetweenMyValueAndMarketValue',
     },
     {
@@ -25,7 +25,7 @@ export default function Table({ data }) {
       accessor: 'projectedNextOffseasonDynastyValue',
     },
     {
-      label: 'CM Vs PNODV',
+      label: 'CMV Vs PNODV',
       accessor: 'valueDifferenceBetweenCurrentMarketValueAndPNODV',
     },
   ];

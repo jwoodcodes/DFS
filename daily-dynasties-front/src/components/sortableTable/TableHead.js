@@ -18,10 +18,14 @@ export default function TableHead({ columns, handleSorting }) {
   return (
     <thead>
       <tr>
-        <th>Rank</th>
+        <th className={styles.tableHead}>Rank</th>
         {columns.map(({ label, accessor }) => {
           return (
-            <th key={accessor} onClick={() => handleSortingChange(accessor)}>
+            <th
+              className={styles.tableHead}
+              key={accessor}
+              onClick={() => handleSortingChange(accessor)}
+            >
               {label}
             </th>
           );

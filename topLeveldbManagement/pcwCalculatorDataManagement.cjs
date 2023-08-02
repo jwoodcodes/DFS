@@ -821,7 +821,11 @@ const testfunc = async function () {
         // console.log(player.player.name, this.myPercentOfQBMax);
         // console.log(fcQBMaxValue);
 
-        this.myValue = +(fcQBMaxValue * this.myPercentOfQBMax).toFixed(2);
+        // this.myValue = +(fcQBMaxValue * this.myPercentOfQBMax).toFixed(2);
+        let tempValue = +(fcQBMaxValue * this.myPercentOfQBMax).toFixed(2);
+        this.myValue = Math.round(tempValue);
+
+        // console.log(this.name, this.myValue);
 
         this.valueDiffBetweenMyValueAndMarketValue = +(
           this.myValue - +player.value
@@ -873,9 +877,16 @@ const testfunc = async function () {
           4
         ).toFixed(2);
         // console.log(+fcNonQBMaxValue);
-        this.myValue = +(+fcNonQBMaxValue * +this.myPercentOfNonQBMax).toFixed(
+        // this.myValue = +(+fcNonQBMaxValue * +this.myPercentOfNonQBMax).toFixed(
+        //   2
+        // );
+
+        let tempValue = +(fcNonQBMaxValue * this.myPercentOfNonQBMax).toFixed(
           2
         );
+        this.myValue = Math.round(tempValue);
+
+        // console.log(this.name, this.myValue);
 
         this.valueDiffBetweenMyValueAndMarketValue = +(
           this.myValue - +player.value
