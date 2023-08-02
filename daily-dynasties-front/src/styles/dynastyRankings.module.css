@@ -73,6 +73,14 @@
   list-style-type: none;
 }
 
+.fantasyCalc {
+  margin-top: 10px;
+}
+
+.fantasyCalcLink {
+  color: #065a60;
+}
+
 @media (max-width: 775px) {
   .pageTitle {
     margin-top: 3rem;

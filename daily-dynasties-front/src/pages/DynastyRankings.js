@@ -96,6 +96,15 @@ export default function DynastyRankings(dynastyRankingsData) {
           <li>MK= Market</li>
           <li>PNODV= projected next offseason dynasty value</li>
           <li>CMV= Current Market Value</li>
+          <li className={styles.fantasyCalc}>
+            <strong>
+              ** All Market Values From{' '}
+              <a href="fantasyCalc.com" className={styles.fantasyCalcLink}>
+                FantasyCalc.com
+              </a>{' '}
+              **
+            </strong>
+          </li>
         </ul>
       </div>
       <div className={styles.btnsWrapper}>
