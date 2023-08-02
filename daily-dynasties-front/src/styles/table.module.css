@@ -165,7 +165,7 @@ th.down {
   }
 }
 
-@media (max-width: 415px) {
+@media (max-width: 420px) {
   .tableHead {
     font-size: 0.55rem;
     padding: 4px 1.5px;
