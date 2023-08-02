@@ -1,26 +1,11 @@
 .table_container {
   /* max-width: 1500px; */
   max-width: 100%;
+  width: 100dvw;
   /* max-height: 500px; */
   margin: 0 auto;
-  overflow: hidden;
+  overflow: auto;
   padding: 0 16px;
-
-  @media (max-width: 1115px) {
-    padding: 0;
-  }
-  @media (max-width: 550px) {
-    max-width: 125%;
-    width: 125%;
-  }
-  @media (max-width: 450px) {
-    max-width: 150%;
-    width: 150%;
-  }
-  @media (max-width: 390px) {
-    max-width: 175%;
-    width: 175%;
-  }
 }
 
 .table {
@@ -35,37 +20,15 @@
   margin-bottom: 10px;
 }
 
-.table th {
+.tableHead {
   background: #fff;
   padding: 8px 10px;
   border-bottom: 1px solid #1a1a1a;
-  font-weight: bold;
+  /* font-weight: bold; */
+  font-weight: 300;
   text-align: left;
   cursor: pointer;
   width: fit-content;
-
-  @media (max-width: 1350px) {
-    padding: 7px 9px;
-    font-size: 1rem;
-    font-weight: 300;
-  }
-  @media (max-width: 865px) {
-    padding: 6px 8px;
-    font-size: 0.9rem;
-    font-weight: 300;
-  }
-  @media (max-width: 775px) {
-    padding: 5px 7px;
-    font-size: 0.75rem;
-  }
-  @media (max-width: 660px) {
-    padding: 4px 6px;
-    font-size: 0.65rem;
-  }
-  @media (max-width: 550px) {
-    padding: 15px 4px;
-    font-size: 0.65rem;
-  }
 }
 
 /* .table th.up { */
@@ -91,24 +54,156 @@ th.down {
   border-top: 1px solid #ddd;
   padding: 8px 20px;
   width: fit-content;
-  @media (max-width: 1115px) {
-    padding: 6px 10px;
+}
+
+@media (max-width: 1050px) {
+  .table td {
+    padding: 8px 15px;
   }
-  @media (max-width: 865px) {
-    padding: 5px 9px;
+}
+
+@media (max-width: 900px) {
+  .table_container {
+    padding: 0;
+  }
+  .table td {
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 840px) {
+  .tableHead {
     font-size: 0.9rem;
   }
-  @media (max-width: 775px) {
-    padding: 4px 8px;
+
+  .table td {
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 795px) {
+  .tableHead {
+    font-size: 0.85rem;
+    padding: 4px 5px;
+  }
+
+  .table td {
+    padding: 6px 8px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .tableHead {
+    font-size: 0.8rem;
+  }
+
+  .table td {
+    padding: 4px 6px;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 595px) {
+  .tableHead {
     font-size: 0.75rem;
   }
-  @media (max-width: 660px) {
-    padding: 3px 7px;
+
+  .table td {
+    padding: 4px 4px;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 555px) {
+  .tableHead {
+    overflow: hidden;
+  }
+  .table_container {
+    overflow: hidden;
+    margin: 0;
+  }
+
+  .caption {
+    font-size: 70%;
+    margin-bottom: 7.5px;
+  }
+}
+
+@media (max-width: 510px) {
+  .tableHead {
+    font-size: 0.65rem;
+    padding: 4px 2px;
+  }
+
+  .table td {
+    padding: 3px 3px;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 475px) {
+  .caption {
+    display: none;
+  }
+}
+
+@media (max-width: 465px) {
+  .table td {
+    padding: 4px 2px;
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 415px) {
+  .tableHead {
+    font-size: 0.55rem;
+    padding: 4px 1.5px;
+  }
+  .table td {
+    font-size: 0.65rem;
+  }
+}
+
+@media (max-width: 415px) {
+  .tableHead {
+    font-size: 0.5rem;
+    padding: 4px 1.5px;
+  }
+  .table td {
     font-size: 0.6rem;
   }
-  @media (max-width: 550px) {
-    padding: 2px 4px;
-    font-size: 0.6rem;
+}
+
+@media (max-width: 345px) {
+  .table td {
+    font-size: 0.55rem;
+  }
+}
+
+@media (max-width: 325px) {
+  .table td {
+    font-size: 0.5rem;
+  }
+}
+
+@media (max-width: 305px) {
+  .table td {
+    font-size: 0.45rem;
+  }
+}
+
+@media (max-width: 305px) {
+  .table td {
+    font-size: 0.45rem;
+    padding: 4px 1px;
+  }
+}
+
+@media (max-width: 305px) {
+  .table td {
+    font-size: 0.4rem;
   }
 }
 

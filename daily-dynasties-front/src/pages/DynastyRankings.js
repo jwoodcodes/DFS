@@ -61,7 +61,7 @@ export default function DynastyRankings(dynastyRankingsData) {
   });
 
   function posToUse() {
-    console.log(teDataArray);
+    // console.log(teDataArray);
     if (positionToShow === 'QB') {
       //   console.log(player);
       dataToUse = qbDataArray;
@@ -86,23 +86,16 @@ export default function DynastyRankings(dynastyRankingsData) {
   posToUse();
 
   return (
-    <div>
+    <div className={styles.wholePageWrapper}>
       <MainNav />
       <div className={styles.pageTitle}>Dynasty Rankings</div>
       <div className={styles.lastUpdated}>Last updated: 7/25/23</div>
 
       <div className={styles.glosseryWrapper}>
         <ul className={styles.glosseryUl}>
-          <li>MR= Market Rank</li>
-          <li>MPR= Market Position Rank</li>
-          <li>MDV= Market Dynasty Value</li>
-          <li>DDR= daily dynasties Rank</li>
-          <li>DDPR= daily dynasties Position Rank</li>
-          <li>DDPR= daily dynasties Position Rank</li>
-          <li>DDDV= daily dynasties Dynasty Value</li>
-          <li>DDVM= daily dynasties Value vs. Market Value</li>
+          <li>MK= Market</li>
           <li>PNODV= projected next offseason dynasty value</li>
-          <li>CM= Current Market</li>
+          <li>CMV= Current Market Value</li>
         </ul>
       </div>
       <div className={styles.btnsWrapper}>
