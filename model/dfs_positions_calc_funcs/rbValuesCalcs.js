@@ -1610,22 +1610,37 @@ const allRBProjectionsObjects = [];
 allRBObjectsArray.forEach(function (player) {
   // console.log(player);
   class ProjectionsObject {
-    constructor(name, appHalfProjectedPoints, appFullProjectedPoints) {
+    constructor(
+      name,
+      position,
+      team,
+      appHalfProjectedPoints,
+      appFullProjectedPoints,
+      appTEPProjectedPoints
+    ) {
       this.name = name;
-      (this.appHalfProjectedPoints = appHalfProjectedPoints),
-        (this.appFullProjectedPoints = appFullProjectedPoints);
+      this.position = position;
+      this.team = team;
+      this.appHalfProjectedPoints = appHalfProjectedPoints;
+
+      this.appFullProjectedPoints = appFullProjectedPoints;
+      this.appTEPProjectedPoints = appTEPProjectedPoints;
     }
   }
 
   let rbProjectionsObject = new ProjectionsObject(
     player.playerName,
+    player.position,
+    player.teamABV,
     player.appProjectedHalfPPRPoints,
+    player.appProjectedFullPPRPoints,
     player.appProjectedFullPPRPoints
   );
 
   allRBProjectionsObjects.push(rbProjectionsObject);
 });
 
+allRBData.allRBProjectionsObjects = allRBProjectionsObjects;
 // console.log(allRBProjectionsObjects);
 
 ///uncoment below to add rb projections to db
