@@ -131,8 +131,51 @@ async function runQBProspectModel() {
   }
 }
 
+///
+
+// console.log(allQBData.allQBProjectionsObjects);
+// console.log(allRBData.allRBProjectionsObjects);
+let qbProjectionArray = allQBData.allQBProjectionsObjects;
+let tempRbProjectionArray = allRBData.allRBProjectionsObjects;
+let rbProjectionArray = [...tempRbProjectionArray];
+
+let allProjectionsArray = [qbProjectionArray, rbProjectionArray];
+
+// console.log(allProjectionsArray);
+
+async function runQBProjections() {
+  try {
+    await client.connect();
+
+    const db = client.db(dbName);
+
+    // Use the collection "people"
+    const col = db.collection('allProjections');
+
+    // Construct a document
+    let allProjections = {
+      allProjectionsArray: allProjectionsArray,
+    };
+
+    // Insert a single document, wait for promise so we can read it back
+    const p = await col.insertOne(allProjections);
+    // Find one document
+    const myDoc = await col.findOne();
+    // Print to the console
+    // console.log(myDoc);
+  } catch (err) {
+    console.log(err.stack);
+  } finally {
+    await client.close();
+  }
+}
+
+/////////////////////////////////////////////////////////////////////////
+
 // runQB().catch(console.dir);
 // runRB().catch(console.dir);
 // runQBProspectModel().catch(console.dir);
 
 // runWholeTeamObjects().catch(console.dir);
+
+// runQBProjections().catch(console.dir);

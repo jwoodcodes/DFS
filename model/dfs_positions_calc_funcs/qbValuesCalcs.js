@@ -1257,20 +1257,42 @@ const allQBProjectionsObjects = [];
 allQBObjectsArray.forEach(function (player) {
   // console.log(player);
   class ProjectionsObject {
-    constructor(name, appProjectedPoints) {
+    constructor(
+      currentWeek,
+      name,
+      position,
+      team,
+      appHalfProjectedPoints,
+      appFullProjectedPoints,
+      appTEPProjectedPoints
+    ) {
+      this.currentWeek = currentWeek;
       this.name = name;
-      this.appProjectedPoints = appProjectedPoints;
+      this.position = position;
+      this.team = team;
+      this.appHalfProjectedPoints = appHalfProjectedPoints;
+      this.appFullProjectedPoints = appFullProjectedPoints;
+      this.appTEPProjectedPoints = appTEPProjectedPoints;
     }
   }
 
+  let projectionToUse = +player.appProjectedPoints.toFixed(1);
+
   let qbProjectionsObject = new ProjectionsObject(
+    gameInfo.week.currentWeek,
     player.playerName,
-    player.appProjectedPoints
+    player.position,
+    player.teamABV,
+
+    projectionToUse,
+    projectionToUse,
+    projectionToUse
   );
 
   allQBProjectionsObjects.push(qbProjectionsObject);
 });
 
+allQBData.allQBProjectionsObjects = allQBProjectionsObjects;
 // console.log(allQBProjectionsObjects);
 
 ///uncoment below to add qb projections to db
