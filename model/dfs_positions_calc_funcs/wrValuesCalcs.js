@@ -1247,21 +1247,39 @@ const allWRProjectionsObjects = [];
 allWRObjectsArray.forEach(function (player) {
   // console.log(player.appHalfProjectedPoints);
   class ProjectionsObject {
-    constructor(name, appHalfProjectedPoints, appFullProjectedPoints) {
+    constructor(
+      name,
+      position,
+      team,
+      appHalfProjectedPoints,
+      appFullProjectedPoints,
+      appTEPProjectedPoints
+    ) {
       this.name = name;
-      (this.appHalfProjectedPoints = appHalfProjectedPoints),
-        (this.appFullProjectedPoints = appFullProjectedPoints);
+      this.position = position;
+      this.team = team;
+      this.appHalfProjectedPoints = appHalfProjectedPoints;
+      this.appFullProjectedPoints = appFullProjectedPoints;
+      this.appTEPProjectedPoints = appTEPProjectedPoints
     }
   }
 
+  // console.log(player);
+
   let wrProjectionsObject = new ProjectionsObject(
     player.playerName,
+    player.position,
+    player.teamABV,
     player.appHalfProjectedPoints,
-    player.appFullProjectedPoints
+    player.appFullProjectedPoints,
+    player.appFullProjectedPoints,
   );
 
   allWRProjectionsObjects.push(wrProjectionsObject);
 });
+
+ allWRData.allWRProjectionsObjects = allWRProjectionsObjects
+
 
 // console.log(allWRProjectionsObjects);
 

@@ -138,12 +138,18 @@ async function runQBProspectModel() {
 let qbProjectionArray = allQBData.allQBProjectionsObjects;
 let tempRbProjectionArray = allRBData.allRBProjectionsObjects;
 let rbProjectionArray = [...tempRbProjectionArray];
+let tempWrProjectionArray = allWRData.allWRProjectionsObjects;
+let wrProjectionArray = [...tempWrProjectionArray];
 
-let allProjectionsArray = [qbProjectionArray, rbProjectionArray];
+let allProjectionsArray = [
+  qbProjectionArray,
+  rbProjectionArray,
+  wrProjectionArray,
+];
 
 // console.log(allProjectionsArray);
 
-async function runQBProjections() {
+async function runAllProjections() {
   try {
     await client.connect();
 
@@ -151,7 +157,7 @@ async function runQBProjections() {
 
     // Use the collection "people"
     const col = db.collection('allProjections');
-
+    console.log('connected');
     // Construct a document
     let allProjections = {
       allProjectionsArray: allProjectionsArray,
@@ -178,4 +184,6 @@ async function runQBProjections() {
 
 // runWholeTeamObjects().catch(console.dir);
 
-// runQBProjections().catch(console.dir);
+//
+
+// runAllProjections().catch(console.dir);

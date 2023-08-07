@@ -7,9 +7,11 @@ export default function WeeklyProjections(allProjections) {
   // console.log(allProjections.allProjections[0].allProjectionsArray[0]);
   let tempQBArray = allProjections.allProjections[0].allProjectionsArray[0];
   let tempRBArray = allProjections.allProjections[0].allProjectionsArray[1];
+  let tempWRArray = allProjections.allProjections[0].allProjectionsArray[2];
   let qbArray = [...tempQBArray];
   let rbArray = [...tempRBArray];
-  let newArray = [...qbArray, ...rbArray];
+  let wrArray = [...tempWRArray];
+  let newArray = [...qbArray, ...rbArray, ...wrArray];
   // console.log(newArray[0]);
   const curWeek = newArray[0].currentWeek;
 
