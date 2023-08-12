@@ -1,16 +1,16 @@
 'use strict';
 // const { EPROTO } = require('constants');
 
-const express = require('express');
-const app = express();
-const path = require('path');
+// const express = require('express');
+// const app = express();
+// const path = require('path');
 
 // const console = require('console');
 
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, '/views'));
+// app.set('view engine', 'ejs');
+// app.set('views', path.join(__dirname, '/views'));
 
-app.use(express.static(path.join(__dirname, 'public')));
+// app.use(express.static(path.join(__dirname, 'public')));
 
 // import mongoose from 'mongoose';
 // const mongoose = require('mongoose');

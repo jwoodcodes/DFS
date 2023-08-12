@@ -8,6 +8,63 @@ const allTEHighProjectedTargetsBonus = [];
 const allTEPPRPointsPerGameLastThreeGamesPlayed = [];
 const allTEProjectedReceptions = [];
 
+const allTEObjectsArray = [];
+
+class TeObject {
+  constructor(
+    name,
+    teamABV,
+    QBFantasyPointsPerGameLastFiveWeeks,
+    QBAppProjectedPointsThisWeek,
+    teamPointsPerGameLastFiveWeeks,
+    teamAppProjectedPointsThisWeek
+  ) {
+    this.name = name;
+    this.teamABV = teamABV;
+    this.QBFantasyPointsPerGameLastFiveWeeks =
+      QBFantasyPointsPerGameLastFiveWeeks;
+    this.QBAppProjectedPointsThisWeek = QBAppProjectedPointsThisWeek;
+    this.teamPointsPerGameLastFiveWeeks = teamPointsPerGameLastFiveWeeks;
+    this.teamAppProjectedPointsThisWeek = teamAppProjectedPointsThisWeek;
+  }
+
+  //* add methods here
+  calcProjectedPoints() {}
+}
+
+//TE1's
+
+allTEs.forEach(function (team) {
+  let teObject = new TeObject(
+    team.TE1.name,
+    team.teamABV,
+    team.QBFantasyPointsPerGameLastFiveWeeks
+  );
+
+  allTEObjectsArray.push(teObject);
+});
+
+//TE2's
+
+allTEs.forEach(function (team) {
+  let teObject = new TeObject(
+    team.TE2.nameteam.teamABV,
+    team.QBFantasyPointsPerGameLastFiveWeeks
+  );
+
+  allTEObjectsArray.push(teObject);
+});
+
+console.log(allTEObjectsArray);
+
+// terawdata.forEach(function (team) {
+//   if (team.TE1) {
+//     console.log(team.TE1.roleThisWeek);
+//   }
+// });
+
+/////////////////////////////////////////////////////////////////
+
 // const allTECalcFunctions = {
 //   calcTEvtt(team) {
 //     let tevtt = team.teamVTT;
