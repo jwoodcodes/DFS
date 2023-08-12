@@ -44,8 +44,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
@@ -76,8 +76,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
@@ -119,8 +119,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
@@ -151,8 +151,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
@@ -195,8 +195,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
@@ -227,8 +227,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
@@ -270,8 +270,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
@@ -302,8 +302,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
@@ -345,8 +345,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
@@ -377,8 +377,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
@@ -420,8 +420,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
@@ -452,8 +452,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
@@ -495,8 +495,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
@@ -527,8 +527,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
@@ -570,8 +570,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
@@ -602,8 +602,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
@@ -645,8 +645,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
@@ -677,8 +677,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
@@ -720,8 +720,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
@@ -752,8 +752,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
@@ -795,8 +795,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
@@ -827,8 +827,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
@@ -870,8 +870,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
@@ -902,8 +902,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
@@ -945,8 +945,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
@@ -977,8 +977,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
@@ -1020,8 +1020,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
@@ -1052,8 +1052,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
@@ -1095,8 +1095,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
@@ -1127,8 +1127,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
@@ -1170,8 +1170,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
@@ -1202,8 +1202,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
@@ -1245,8 +1245,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
@@ -1277,8 +1277,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
@@ -1321,8 +1321,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
@@ -1353,8 +1353,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
@@ -1396,8 +1396,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
@@ -1428,8 +1428,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
@@ -1471,8 +1471,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
@@ -1503,8 +1503,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
@@ -1546,8 +1546,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
@@ -1578,8 +1578,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
@@ -1621,8 +1621,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
@@ -1653,8 +1653,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
@@ -1696,8 +1696,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
@@ -1728,8 +1728,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
@@ -1771,8 +1771,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
@@ -1803,8 +1803,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
@@ -1846,8 +1846,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
@@ -1878,8 +1878,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
@@ -1921,8 +1921,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
@@ -1953,8 +1953,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
@@ -1996,8 +1996,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
@@ -2028,8 +2028,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
@@ -2071,8 +2071,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
@@ -2103,8 +2103,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
@@ -2146,8 +2146,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
@@ -2178,8 +2178,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
@@ -2221,8 +2221,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
@@ -2253,8 +2253,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
@@ -2296,8 +2296,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
@@ -2328,8 +2328,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
@@ -2371,8 +2371,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 1,
       roleLastXNumOfWeeksUpToFive: [],
@@ -2403,8 +2403,8 @@ const terawdata = {
       fullGLSPAvg: 0,
       TEPGLSPAvg: 0,
 
-      targetsPerGameLastFiveWeeks: 0,
-      projectedTargets4For4: 0,
+      receptionsPerGameLastFiveWeeks: 0,
+      projectedReceptions4for4: 0,
 
       roleThisWeek: 2,
       roleLastXNumOfWeeksUpToFive: [],
@@ -2685,12 +2685,146 @@ const populateTeamObjects = function (
     //
     if (player['"full_name"'].slice(1, -1) === passedInTeam.TE1.name) {
       // console.log(player['"full_name"'].slice(1, -1));
+      let one = +player['"rec_pg"'];
+      let tempReceptionsPerGame = one.toFixed(2);
+      passedInTeam.TE1.receptionsPerGameLastFiveWeeks = tempReceptionsPerGame;
     }
 
     // team TE2's
     //
     if (player['"full_name"'].slice(1, -1) === passedInTeam.TE2.name) {
       // console.log(player['"full_name"'].slice(1, -1));
+      let one = +player['"rec_pg"'];
+      let tempReceptionsPerGame = one.toFixed(2);
+      passedInTeam.TE2.receptionsPerGameLastFiveWeeks = tempReceptionsPerGame;
+    }
+  });
+
+  //
+
+  allHalfPPRProjectedPointsWithoutTeamDef.forEach(function (player) {
+    if (player.Pos === 'TE') {
+      if (player.Player === passedInTeam.TE1.name) {
+        let temp = +player.Rec;
+        let tempTwo = temp.toFixed(2);
+        passedInTeam.TE1.projectedReceptions4for4 = tempTwo;
+        //
+        let tempProjPoints = +player.FFPts;
+        let tempProjPointsTwo = tempProjPoints.toFixed(2);
+        passedInTeam.TE1.fourForFourHalfPPRProjectedPoints = tempProjPointsTwo;
+      }
+      if (player.Player === passedInTeam.TE2.name) {
+        let temp = +player.Rec;
+        let tempTwo = temp.toFixed(2);
+        passedInTeam.TE2.projectedReceptions4for4 = tempTwo;
+        //
+        let tempProjPoints = +player.FFPts;
+        let tempProjPointsTwo = tempProjPoints.toFixed(2);
+        passedInTeam.TE2.fourForFourHalfPPRProjectedPoints = tempProjPointsTwo;
+      }
+    }
+  });
+
+  //
+
+  allFullPPRProjectedPointsWithoutTeamDef.forEach(function (player) {
+    if (player.Pos === 'TE') {
+      if (player.Player === passedInTeam.TE1.name) {
+        let temp = +player.Rec;
+        let tempTwo = temp.toFixed(2);
+        passedInTeam.TE1.projectedReceptions4for4 = tempTwo;
+        //
+        let tempProjPoints = +player.FFPts;
+        let tempProjPointsTwo = tempProjPoints.toFixed(2);
+        passedInTeam.TE1.fourForFourFullPPRProjectedPoints = tempProjPointsTwo;
+      }
+      if (player.Player === passedInTeam.TE2.name) {
+        let temp = +player.Rec;
+        let tempTwo = temp.toFixed(2);
+        passedInTeam.TE2.projectedReceptions4for4 = tempTwo;
+        //
+        let tempProjPoints = +player.FFPts;
+        let tempProjPointsTwo = tempProjPoints.toFixed(2);
+        passedInTeam.TE2.fourForFourFullPPRProjectedPoints = tempProjPointsTwo;
+      }
+    }
+  });
+
+  //
+
+  //DFS data below
+  //
+
+  //yahoo
+  wholeDownloadableSpreadSheetYahoo.forEach(function (player) {
+    if (player.Pos === 'TE') {
+      if (player.Player === passedInTeam.TE1.name) {
+        // console.log(player);
+        let tempSal = +player['Y! ($)'];
+        passedInTeam.TE1.yahooSalary = tempSal;
+      }
+      if (player.Player === passedInTeam.TE2.name) {
+        // console.log(player);
+        let tempSal = +player['Y! ($)'];
+        passedInTeam.TE2.yahooSalary = tempSal;
+      }
+    }
+  });
+
+  //fanduel
+
+  gppLeverageScoresAndProjOwnershipFanduel.forEach(function (player) {
+    if (player['"Pos"'].slice(1, -1) === 'TE') {
+      // console.log(player);
+      if (player['"Player"'].slice(1, -1) === passedInTeam.TE1.name) {
+        let tempSal = player['"FD Sal $"'].slice(1, -1);
+        let tempSalTwo = +tempSal;
+        passedInTeam.TE1.fanduelSalary = tempSalTwo;
+        //
+        // console.log(player['"Projected Own%"']);
+        let tempProjOwn = player['"Projected Own%"'].slice(1, -2);
+        let tempProjOwnTwo = +tempProjOwn;
+        passedInTeam.TE1.fanduelProjectedOwnership = tempProjOwnTwo;
+      }
+      if (player['"Player"'].slice(1, -1) === passedInTeam.TE2.name) {
+        // console.log(player);
+
+        let tempSal = player['"FD Sal $"'].slice(1, -1);
+        let tempSalTwo = +tempSal;
+        passedInTeam.TE2.fanduelSalary = tempSalTwo;
+        //
+        let tempProjOwn = player['"Projected Own%"'].slice(1, -2);
+        let tempProjOwnTwo = +tempProjOwn;
+        passedInTeam.TE2.fanduelProjectedOwnership = tempProjOwnTwo;
+      }
+    }
+  });
+
+  //draftkings
+
+  gppLeverageScoresAndProjOwnershipDraftkings.forEach(function (player) {
+    if (player['"Pos"'].slice(1, -1) === 'TE') {
+      // console.log(player);
+      if (player['"Player"'].slice(1, -1) === passedInTeam.TE1.name) {
+        // console.log(player);
+        let tempSal = player['"DK Sal $"'].slice(1, -1);
+        let tempSalTwo = +tempSal;
+        passedInTeam.TE1.draftkingsSalary = tempSalTwo;
+        //
+        let tempProjOwn = player['"Projected Own%"'].slice(1, -2);
+        let tempProjOwnTwo = +tempProjOwn;
+        passedInTeam.TE1.draftkingsProjectedOwnership = tempProjOwnTwo;
+      }
+      if (player['"Player"'].slice(1, -1) === passedInTeam.TE2.name) {
+        // console.log(player);
+        let tempSal = player['"DK Sal $"'].slice(1, -1);
+        let tempSalTwo = +tempSal;
+        passedInTeam.TE2.draftkingsSalary = tempSalTwo;
+        //
+        let tempProjOwn = player['"Projected Own%"'].slice(1, -2);
+        let tempProjOwnTwo = +tempProjOwn;
+        passedInTeam.TE2.draftkingsProjectedOwnership = tempProjOwnTwo;
+      }
     }
   });
 };
@@ -2859,5 +2993,6 @@ populateTeamObjects(
 // console.log(allQBData.allTeamQBObjects.chiefs);
 // console.log(gameInfo.jets);
 console.log(terawdata.chiefs);
+// console.log(terawdata.cowboys);
 
 module.exports = terawdata;
