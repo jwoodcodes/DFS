@@ -34,12 +34,16 @@ export default function DynastyRankings(dynastyRankingsData) {
   function te(event) {
     setPositionToShow('TE');
   }
+  function pick(event) {
+    setPositionToShow('PICK');
+  }
 
   let dataToUse = [];
   let qbDataArray = [];
   let rbDataArray = [];
   let wrDataArray = [];
   let teDataArray = [];
+  let pickArray = [];
 
   dataArray.map(function (player) {
     if (player.position === 'QB') {
@@ -57,6 +61,10 @@ export default function DynastyRankings(dynastyRankingsData) {
     if (player.position === 'TE') {
       //   console.log(player);
       teDataArray.push(player);
+    }
+    if (player.position === 'PICK') {
+      // console.log(player);
+      pickArray.push(player);
     }
   });
 
@@ -81,6 +89,11 @@ export default function DynastyRankings(dynastyRankingsData) {
       //   console.log(player);
       dataToUse = teDataArray;
       return teDataArray;
+    }
+    if (positionToShow === 'PICK') {
+      //   console.log(player);
+      dataToUse = pickArray;
+      return pickArray;
     }
   }
   posToUse();
@@ -123,6 +136,9 @@ export default function DynastyRankings(dynastyRankingsData) {
         <button className={styles.posBtn} onClick={te}>
           TE
         </button>
+        <button className={styles.posBtn} onClick={pick}>
+          PICK
+        </button>
       </div>
 
       {positionToShow === 'Overall' && <Table data={dataArray} />}
@@ -149,6 +165,9 @@ export default function DynastyRankings(dynastyRankingsData) {
           data={teDataArray}
           positionToShow={positionToShow}
         />
+      )}
+      {positionToShow === 'PICK' && (
+        <IndividualPositions data={pickArray} positionToShow={positionToShow} />
       )}
     </div>
   );

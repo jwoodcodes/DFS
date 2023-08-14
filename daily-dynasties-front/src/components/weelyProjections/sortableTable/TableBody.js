@@ -16,9 +16,12 @@ export default function TableBody({ tableData, columns }) {
             <td>{num}</td>
             {columns.map(({ accessor }) => {
               //   console.log(data.myOverallRank);
+              let uniqueNum = Math.random();
 
               const tData = data[accessor] ? data[accessor] : '——';
-              return <td key={`${id}-${accessor}`}>{tData}</td>;
+              return (
+                <td key={`${id}-${accessor}-${num}-${uniqueNum}`}>{tData}</td>
+              );
             })}
           </tr>
         );
