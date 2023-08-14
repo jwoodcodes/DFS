@@ -39,7 +39,7 @@ export default function Table({ data }) {
     <>
       <div className={styles.table_container}>
         <table className={styles.table}>
-          <caption className={styles.caption}>Weekly Projections</caption>
+          {/* <caption className={styles.caption}>Weekly Projections</caption> */}
           <TableHead columns={columns} handleSorting={handleSorting} />
           <TableBody columns={columns} tableData={tableData} />
         </table>

@@ -740,48 +740,57 @@ const testfunc = async function () {
           }
           if (fcPickYear === +(curYear + 1)) {
             // console.log(fcPickYear);
+            // console.log(fcPickRound);
+            // console.log(fcNonQBMaxValue);
             // console.log(player.player.name);
             // console.log(fcPickRoundAndNumberFormattedForPP);
-            if (+fcPickRoundAndNumberFormattedForPP < 201) {
-              this.rvValue = 0.83;
-              this.rvPercentOfNonQBMax = 0.25;
+            if (+fcPickRound === 1) {
+              this.rvValue = 1.15;
+              this.rvPercentOfNonQBMax = 0.33;
             }
-            if (
-              +fcPickRoundAndNumberFormattedForPP > 111 &&
-              +fcPickRoundAndNumberFormattedForPP < 301
-            ) {
+            if (+fcPickRound === 2) {
               this.rvValue = 0.33;
-              this.rvPercentOfNonQBMax = 0.1;
+              this.rvPercentOfNonQBMax = 0.11;
             }
-            if (
-              +fcPickRoundAndNumberFormattedForPP > 211 &&
-              +fcPickRoundAndNumberFormattedForPP < 401
-            ) {
-              this.rvValue = 0.11;
-              this.rvPercentOfNonQBMax = 0.03;
+            if (+fcPickRound === 3) {
+              this.rvValue = 0.12;
+              this.rvPercentOfNonQBMax = 0.04;
             }
           }
           if (fcPickYear === +(curYear + 2)) {
             // console.log(fcPickYear);
             // console.log(player.player.name);
             // console.log(fcPickRoundAndNumberFormattedForPP);
-            if (+fcPickRoundAndNumberFormattedForPP < 201) {
-              this.rvValue = 0.5;
-              this.rvPercentOfNonQBMax = 0.16;
+
+            if (+fcPickRound === 1) {
+              this.rvValue = 0.92;
+              this.rvPercentOfNonQBMax = 0.25;
             }
-            if (
-              +fcPickRoundAndNumberFormattedForPP > 111 &&
-              +fcPickRoundAndNumberFormattedForPP < 301
-            ) {
-              this.rvValue = 0.16;
-              this.rvPercentOfNonQBMax = 0.05;
+            if (+fcPickRound === 2) {
+              this.rvValue = 0.22;
+              this.rvPercentOfNonQBMax = 0.08;
             }
-            if (
-              +fcPickRoundAndNumberFormattedForPP > 211 &&
-              +fcPickRoundAndNumberFormattedForPP < 401
-            ) {
+            if (+fcPickRound === 3) {
+              this.rvValue = 0.08;
+              this.rvPercentOfNonQBMax = 0.0275;
+            }
+          }
+          if (fcPickYear === +(curYear + 3)) {
+            // console.log(fcPickYear);
+            // console.log(player.player.name);
+            // console.log(fcPickRoundAndNumberFormattedForPP);
+
+            if (+fcPickRound === 1) {
+              this.rvValue = 0.65;
+              this.rvPercentOfNonQBMax = 0.19;
+            }
+            if (+fcPickRound === 2) {
+              this.rvValue = 0.17;
+              this.rvPercentOfNonQBMax = 0.06;
+            }
+            if (+fcPickRound === 3) {
               this.rvValue = 0.05;
-              this.rvPercentOfNonQBMax = 0.016;
+              this.rvPercentOfNonQBMax = 0.02;
             }
           }
         }
@@ -916,6 +925,62 @@ const testfunc = async function () {
             -this.percentValueDiffBetweenMyValueAndMarket;
         }
 
+        // if (player.player.position === 'PICK') {
+        //   // console.log(player);
+        //   // console.log(fcPickYear);
+        //   console.log();
+        //   if (fcPickYear === curYear + 1) {
+        //     // console.log(player);
+        //     // console.log(fcNonQBMaxValue);
+        //     if (!myNextYearFirstValue) {
+        //       let myNextYearFirstValue = 0;
+        //     }
+        //     if (fcPickRound === 1) {
+        //       let tempValue = +(fcNonQBMaxValue / 3);
+        //       let tempTwo = Math.round(tempValue);
+        //       // console.log(tempTwo);
+        //       myNextYearFirstValue = tempTwo;
+        //       this.myValue = tempTwo;
+        //     }
+        //     if (fcPickRound === 2) {
+        //       let tempValue = +(myNextYearFirstValue / 3);
+        //       let tempTwo = Math.round(tempValue);
+        //       console.log(tempTwo);
+        //       myNextYearSecondValue = tempTwo;
+        //       this.myValue = tempTwo;
+        //     }
+        //   }
+
+        //   //
+
+        //   this.valueDiffBetweenMyValueAndMarketValue = +(
+        //     this.myValue - +player.value
+        //   ).toFixed(2);
+
+        //   if (this.myValue >= +player.value) {
+        //     temppercentValueDiffBetweenMyValueAndMarket = +(
+        //       +player.value / this.myValue
+        //     ).toFixed(2);
+        //   }
+
+        //   if (this.myValue <= +player.value) {
+        //     temppercentValueDiffBetweenMyValueAndMarket = +(
+        //       this.myValue / +player.value
+        //     ).toFixed(2);
+        //   }
+
+        //   temptemppercentValueDiffBetweenMyValueAndMarket =
+        //     1 - temppercentValueDiffBetweenMyValueAndMarket.toFixed(2);
+
+        //   this.percentValueDiffBetweenMyValueAndMarket = +(
+        //     temptemppercentValueDiffBetweenMyValueAndMarket * 100
+        //   ).toFixed(2);
+
+        //   if (this.myValue <= +player.value) {
+        //     this.percentValueDiffBetweenMyValueAndMarket =
+        //       -this.percentValueDiffBetweenMyValueAndMarket;
+        //   }
+        // }
         // console.log(
         //   player.player.name,
 

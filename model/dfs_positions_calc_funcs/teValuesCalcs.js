@@ -48,7 +48,8 @@ allTEs.forEach(function (team) {
 
 allTEs.forEach(function (team) {
   let teObject = new TeObject(
-    team.TE2.nameteam.teamABV,
+    team.TE2.name,
+    team.teamABV,
     team.QBFantasyPointsPerGameLastFiveWeeks
   );
 
