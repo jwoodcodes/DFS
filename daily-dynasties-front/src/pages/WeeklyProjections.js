@@ -3,7 +3,7 @@ import clientPromise from '@/lib/mongodb';
 import Table from '@/components/weelyProjections/sortableTable/Table';
 import React from 'react';
 import MainNav from '@/components/MainNav';
-import ProjIndividualPositions from '@/components/weelyProjections/proIndividualPositions';
+import ProjIndividualPositions from '@/components/weelyProjections/ProjIndividualPositions';
 
 export default function WeeklyProjections(allProjections) {
   const [positionToShow, setPositionToShow] = React.useState('Overall');
