@@ -1476,39 +1476,39 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
         qbrushing
       ) {
         if (qbrushing['"Player"'].slice(1, -1) === passedInTeam.name) {
-          pointsFromRuYards = qbrushing['"Yards"'] / 10;
-          pointsFromRuTDs = qbrushing['"TD"'] * 6;
-          totalPointsFromRushing = pointsFromRuYards + pointsFromRuTDs;
+          pointsFromRuYards = +qbrushing['"Yards"'] / 10;
+          pointsFromRuTDs = +qbrushing['"TD"'] * 6;
+          totalPointsFromRushing = +pointsFromRuYards + +pointsFromRuTDs;
 
           passedInTeam.totalPointsFromRushingLastFiveWeeks =
-            totalPointsFromRushing;
+            +totalPointsFromRushing;
         }
       });
 
       passedInTeam.fantasyPointsFromRushingPerGameLastFiveWeeks = +(
-        passedInTeam.totalPointsFromRushingLastFiveWeeks /
-        passedInTeam.numberOfGamesPlayedLastFiveWeeks
+        +passedInTeam.totalPointsFromRushingLastFiveWeeks /
+        +passedInTeam.numberOfGamesPlayedLastFiveWeeks
       ).toFixed(2);
 
       passedInTeam.totalFantasyPointsFromPassingLastFiveWeeks = +(
-        passedInTeam.totalFantasyPointsScoredLastFiveWeeks -
-        passedInTeam.totalPointsFromRushingLastFiveWeeks
+        +passedInTeam.totalFantasyPointsScoredLastFiveWeeks -
+        +passedInTeam.totalPointsFromRushingLastFiveWeeks
       ).toFixed(2);
 
       passedInTeam.fantasyPointsFromPassingPerGameLastFiveWeeks = +(
-        passedInTeam.totalFantasyPointsFromPassingLastFiveWeeks /
-        passedInTeam.numberOfGamesPlayedLastFiveWeeks
+        +passedInTeam.totalFantasyPointsFromPassingLastFiveWeeks /
+        +passedInTeam.numberOfGamesPlayedLastFiveWeeks
       ).toFixed(2);
 
-      passedInTeam.totalPassAttemptsLastFiveWeeks = qb['"Att"'];
+      passedInTeam.totalPassAttemptsLastFiveWeeks = +qb['"Att"'];
 
       passedInTeam.passAttemptsPerGameLastFiveWeeks = +(
-        passedInTeam.totalPassAttemptsLastFiveWeeks /
-        passedInTeam.numberOfGamesPlayedLastFiveWeeks
+        +passedInTeam.totalPassAttemptsLastFiveWeeks /
+        +passedInTeam.numberOfGamesPlayedLastFiveWeeks
       ).toFixed(2);
 
       passedInTeam.fantasyPointsPerPassAttemptLastFiveWeeks = +(
-        passedInTeam.totalFantasyPointsFromPassingLastFiveWeeks / qb['"Att"']
+        +passedInTeam.totalFantasyPointsFromPassingLastFiveWeeks / +qb['"Att"']
       ).toFixed(4);
     }
   });

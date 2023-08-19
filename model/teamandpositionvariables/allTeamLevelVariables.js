@@ -110,7 +110,7 @@ const allTeamABV = [
 const testAllTeams = [];
 
 allEveryTeamEvenOnesOnByeThisWeek.forEach(function (team, i) {
-  if (team.slate !== '') {
+  if (team.slate !== undefined && team.slate && team.slate !== '') {
     // console.log(team.opponentABV);
     allTeamABV.forEach(function (ABV) {
       // console.log(`${team.teamName}: ${ABV.teamName}`);

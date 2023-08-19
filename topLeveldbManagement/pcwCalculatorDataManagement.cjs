@@ -10,6 +10,44 @@ const PNODVCalcFunction = require('./PNODVCalcFunctions/PNODVCalcFunction');
 
 let myJSON = {};
 
+//////////////////////below is to push old data to OnePreviousFantasyCalcData db before pulling in new fantasycalc data
+
+// const url =
+//   'mongodb+srv://devJay:Hesstrucksarethebest@dailydynasties.syom4sb.mongodb.net/test';
+// const client = new MongoClient(url);
+
+// // The database to use
+// const dbName = 'dailydynasties';
+
+// async function runOnePreviousFantasyCalcData() {
+//   try {
+//     await client.connect();
+//     console.log('Connected correctly to server');
+//     const db = client.db(dbName);
+
+//     // Use the collection "people"
+//     const col = db.collection('OnePreviousFantasyCalcData');
+
+//     // Construct a document
+//     let OnePreviousFantasyCalcData = {
+//       newData,
+//     };
+
+//     // Insert a single document, wait for promise so we can read it back
+//     const p = await col.insertOne(OnePreviousFantasyCalcData);
+//     // Find one document
+//     const myDoc = await col.findOne();
+//     // Print to the console
+//     // console.log(myDoc);
+//   } catch (err) {
+//     console.log(err.stack);
+//   } finally {
+//     await client.close();
+//   }
+// }
+
+// runOnePreviousFantasyCalcData().catch(console.dir);
+
 ///////fetching fantasyCalc data from API and pushing rawFantasyCalc data to db
 
 const FCDataFetch = async function () {
@@ -100,6 +138,7 @@ const newData = [];
 const alltradeCalculaterDataArray = [];
 const FinaltradeCalculaterDataArray = [];
 const dynastyRankingsDataObjectsArray = [];
+const oneOlderFantasyCalcData = [];
 
 let allPlayersArray = [];
 let allQBsArray = [];
@@ -108,6 +147,8 @@ let allWRsArray = [];
 let allTEsArray = [];
 let allPicksArray = [];
 
+//to fetch newest fantasyCalc data
+//
 async function fetchRawFantasyCalcDataFromMongodb() {
   const url =
     'mongodb+srv://devJay:Hesstrucksarethebest@dailydynasties.syom4sb.mongodb.net/fantasycalcData';
@@ -122,6 +163,42 @@ async function fetchRawFantasyCalcDataFromMongodb() {
 
     // Use the collection "fantasycalcData"
     const col = db.collection('fantasycalcData');
+
+    // Construct a document
+
+    // Insert a single document, wait for promise so we can read it back
+    // const p = await col.insertOne(allFantasyCalcData);
+    // Find one document
+    const myDoc = await col.findOne();
+
+    return myDoc;
+    // Print to the console
+    // console.log(myDoc);
+
+    ////////////////////////////////////
+  } catch (err) {
+    console.log(err.stack);
+  } finally {
+    await client.close();
+  }
+}
+
+///////to fetch one older fantasyCalc data
+
+async function fetchRawOneOlderFantasyCalcDataFromMongodb() {
+  const url =
+    'mongodb+srv://devJay:Hesstrucksarethebest@dailydynasties.syom4sb.mongodb.net/fantasycalcData';
+  const client = new MongoClient(url);
+
+  // The database to use
+  const dbName = 'dailydynasties';
+  try {
+    await client.connect();
+    console.log('Connected correctly to server');
+    const db = client.db(dbName);
+
+    // Use the collection "OnePreviousFantasyCalcData"
+    const col = db.collection('OnePreviousFantasyCalcData');
 
     // Construct a document
 
@@ -172,6 +249,16 @@ const testfunc = async function () {
   newData.push(testDoc);
   // console.log(newData);
 
+  const test2 = await alltradeCalculaterDataArray;
+  // console.log(test);
+  const testDoc2 = await fetchRawOneOlderFantasyCalcDataFromMongodb();
+  // console.log(testDoc);
+  oneOlderFantasyCalcData.push(testDoc2);
+  // console.log(newData);
+
+  ////////////////////////////////////
+  /////////////////////////////////
+
   class tradeCalculaterData {
     constructor(
       name,
@@ -183,6 +270,7 @@ const testfunc = async function () {
       age,
       sanitizedFCPlayerName,
       fantasyCalcValue,
+      playerOneOlderFantasyCalc,
       fantasyCalcRank,
       fantasyCalcPositionRank,
       fcQBPercentOfMax,
@@ -200,6 +288,7 @@ const testfunc = async function () {
       this.age = age;
       this.sanitizedFCPlayerName = sanitizedFCPlayerName;
       this.fantasyCalcValue = fantasyCalcValue;
+      this.playerOneOlderFantasyCalc = playerOneOlderFantasyCalc;
       this.fantasyCalcRank = fantasyCalcRank;
       this.fantasyCalcPositionRank = fantasyCalcPositionRank;
       this.fcQBPercentOfMax = fcQBPercentOfMax;
@@ -1813,6 +1902,8 @@ const testfunc = async function () {
 
   let SleeperIDFromMe = '';
   let PlayerArray = [];
+  let oneOlderPlayerArray = [];
+  let oneOlderPlayerValues = [];
   let ppPlayerObject;
   let fpRedraftPlayerObject;
   let sanitizedFPRedraftPlayerName = '';
@@ -1825,6 +1916,13 @@ const testfunc = async function () {
   newData.forEach(function (topLevelObject) {
     PlayerArray = topLevelObject.data;
   });
+
+  oneOlderFantasyCalcData.forEach(function (oneOlderTopLevelObject) {
+    // console.log(oneOlderTopLevelObject.newData);
+    oneOlderPlayerArray = oneOlderTopLevelObject.newData;
+  });
+
+  // console.log(oneOlderPlayerArray);
 
   //for fantasycalc
 
@@ -2269,6 +2367,33 @@ const testfunc = async function () {
       }
     });
 
+    // for one older player fantasycalc value
+
+    let oneOlderPlayerNext = [];
+    let playerOneOlderFantasyCalc = 0;
+
+    oneOlderPlayerArray.forEach(function (oneOlderplayer) {
+      oneOlderPlayerNext = oneOlderplayer.data;
+    });
+
+    oneOlderPlayerNext.forEach(function (player) {
+      if (player.player.name === sanitizedFCPlayerName) {
+        // console.log(player);
+        playerOneOlderFantasyCalc = player.value;
+      }
+    });
+
+    let valueToUseForFantasyCalcValue = +(
+      (+player.value + +playerOneOlderFantasyCalc) /
+      2
+    ).toFixed(0);
+    // console.log(
+    //   player.player.name,
+    //   player.value,
+    //   playerOneOlderFantasyCalc,
+    //   valueToUseForFantasyCalcValue
+    // );
+
     let tradeCalculaterDataObject = new tradeCalculaterData(
       sanitizedFCPlayerName,
       player.player.id,
@@ -2278,7 +2403,8 @@ const testfunc = async function () {
       player.player.maybeTeam,
       player.player.maybeAge,
       sanitizedFCPlayerName,
-      player.value,
+      valueToUseForFantasyCalcValue,
+      playerOneOlderFantasyCalc,
       player.overallRank,
       player.positionRank,
       +fcQBPercentOfMax,

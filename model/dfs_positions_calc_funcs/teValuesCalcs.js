@@ -14,32 +14,127 @@ class TeObject {
   constructor(
     name,
     teamABV,
+    curWeek,
     QBFantasyPointsPerGameLastFiveWeeks,
     QBAppProjectedPointsThisWeek,
     teamPointsPerGameLastFiveWeeks,
-    teamAppProjectedPointsThisWeek
+    teamAppProjectedPointsThisWeek,
+    halfGLSPAvg,
+    fullGLSPAvg,
+    TEPGLSPAvg,
+    receptionsPerGameLastFiveWeeks,
+    projectedReceptions4for4,
+
+    fourForFourHalfPPRProjectedPoints,
+    fourForFourFullPPRProjectedPoints
   ) {
     this.name = name;
     this.teamABV = teamABV;
+    this.curWeek = curWeek;
     this.QBFantasyPointsPerGameLastFiveWeeks =
       QBFantasyPointsPerGameLastFiveWeeks;
     this.QBAppProjectedPointsThisWeek = QBAppProjectedPointsThisWeek;
     this.teamPointsPerGameLastFiveWeeks = teamPointsPerGameLastFiveWeeks;
     this.teamAppProjectedPointsThisWeek = teamAppProjectedPointsThisWeek;
+    this.halfGLSPAvg = halfGLSPAvg;
+    this.fullGLSPAvg = fullGLSPAvg;
+    this.TEPGLSPAvg = TEPGLSPAvg;
+    this.receptionsPerGameLastFiveWeeks = receptionsPerGameLastFiveWeeks;
+    this.projectedReceptions4for4 = projectedReceptions4for4;
+    this.fourForFourHalfPPRProjectedPoints = fourForFourHalfPPRProjectedPoints;
+    this.fourForFourFullPPRProjectedPoints = fourForFourFullPPRProjectedPoints;
   }
 
   //* add methods here
-  calcProjectedPoints() {}
+  calcProjectedPoints() {
+    //
+    //
+    // weeks 1 and 2/////////////////////////////////////////////////
+    //
+    // half PPR
+    //
+    if (this.curWeek < 3) {
+      let tempOne = +(this.fourForFourHalfPPRProjectedPoints * 3).toFixed(1);
+      if (this.halfGLSPAvg) {
+        let tempTwo = +tempOne + +this.halfGLSPAvg;
+        let final = +(tempTwo / 4).toFixed(1);
+      } else {
+        let tempTwo = +tempOne;
+        let final = +(tempTwo / 3).toFixed(1);
+      }
+      this.appHalfProjectedPoints = +final;
+
+      //
+      //Full PPR
+      //
+      let pprTempOne = +(this.fourForFourFullPPRProjectedPoints * 3).toFixed(1);
+      if (this.fullGLSPAvg) {
+        let pprTempTwo = +pprTempOne + +this.fullGLSPAvg;
+        let pprFinal = +(pprTempTwo / 4).toFixed(1);
+      } else {
+        let pprTempTwo = +pprTempOne;
+        let pprFinal = +(pprTempTwo / 3).toFixed(1);
+      }
+      this.appFullProjectedPoints = +pprFinal;
+      //
+      // TEP
+      //
+      let amountToAdd =
+        +this.fourForFourFullPPRProjectedPoints -
+        +this.fourForFourHalfPPRProjectedPoints;
+      let fourForFourTEPPPRProjectedPoints =
+        +this.fourForFourFullPPRProjectedPoints + +amountToAdd;
+
+      let tepTempOne = +(fourForFourTEPPPRProjectedPoints * 3).toFixed(1);
+      if (this.TEPGLSPAvg) {
+        let tepTempTwo = +tepTempOne + +this.TEPGLSPAvg;
+        let tepFinal = +(tepTempTwo / 4).toFixed(1);
+      } else {
+        let tepTempTwo = +tepTempOne;
+        let tepFinal = +(tepTempTwo / 3).toFixed(1);
+      }
+      this.appTEPProjectedPoints = +tepFinal;
+    }
+
+    //
+    //
+    // weeks 3 and 4
+    //
+    //
+    if (this.curWeek === 3 || this.curWeek === 4) {
+    }
+    //
+    //
+    //weeks 5-18
+    //
+    //
+    if (this.curWeek > 4) {
+    }
+  }
 }
 
 //TE1's
 
 allTEs.forEach(function (team) {
+  // console.log(team.halfGLSPAvg);
   let teObject = new TeObject(
     team.TE1.name,
     team.teamABV,
-    team.QBFantasyPointsPerGameLastFiveWeeks
+    team.curWeek,
+    team.QBFantasyPointsPerGameLastFiveWeeks,
+    team.QBAppProjectedPointsThisWeek,
+    team.teamPointsPerGameLastFiveWeeks,
+    team.teamAppProjectedPointsThisWeek,
+    team.TE1.halfGLSPAvg,
+    team.TE1.fullGLSPAvg,
+    team.TE1.TEPGLSPAvg,
+    team.TE1.receptionsPerGameLastFiveWeeks,
+    team.TE1.projectedReceptions4for4,
+    team.TE1.fourForFourHalfPPRProjectedPoints,
+    team.TE1.fourForFourFullPPRProjectedPoints
   );
+
+  teObject.calcProjectedPoints();
 
   allTEObjectsArray.push(teObject);
 });
@@ -50,19 +145,26 @@ allTEs.forEach(function (team) {
   let teObject = new TeObject(
     team.TE2.name,
     team.teamABV,
-    team.QBFantasyPointsPerGameLastFiveWeeks
+    team.curWeek,
+    team.QBFantasyPointsPerGameLastFiveWeeks,
+    team.QBAppProjectedPointsThisWeek,
+    team.teamPointsPerGameLastFiveWeeks,
+    team.teamAppProjectedPointsThisWeek,
+    team.TE2.halfGLSPAvg,
+    team.TE2.fullGLSPAvg,
+    team.TE2.TEPGLSPAvg,
+    team.TE2.receptionsPerGameLastFiveWeeks,
+    team.TE2.projectedReceptions4for4,
+    team.TE2.fourForFourHalfPPRProjectedPoints,
+    team.TE2.fourForFourFullPPRProjectedPoints
   );
+
+  teObject.calcProjectedPoints();
 
   allTEObjectsArray.push(teObject);
 });
 
-console.log(allTEObjectsArray);
-
-// terawdata.forEach(function (team) {
-//   if (team.TE1) {
-//     console.log(team.TE1.roleThisWeek);
-//   }
-// });
+// console.log(allTEObjectsArray);
 
 /////////////////////////////////////////////////////////////////
 
