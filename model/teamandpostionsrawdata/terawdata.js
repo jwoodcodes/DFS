@@ -2432,6 +2432,8 @@ const populateTeamObjects = function (
   passedInTeam.TE1.name = gameInfoPassedInTeam.TEOneThisWeekName;
   passedInTeam.TE2.name = gameInfoPassedInTeam.TETwoThisWeekName;
 
+  passedInTeam.curWeek = gameInfo.week.currentWeek;
+
   let teOneName = gameInfoPassedInTeam.TEOneThisWeekName;
   let teTwoName = gameInfoPassedInTeam.TETwoThisWeekName;
 
@@ -2501,12 +2503,12 @@ const populateTeamObjects = function (
 
   //
   let tempQbPointsPerGameLastFiveWeeks = +(
-    qbInfoPassedInTeam.fantasyPointsFromRushingPerGameLastFiveWeeks +
-    qbInfoPassedInTeam.fantasyPointsFromPassingPerGameLastFiveWeeks
+    +qbInfoPassedInTeam.fantasyPointsFromRushingPerGameLastFiveWeeks +
+    +qbInfoPassedInTeam.fantasyPointsFromPassingPerGameLastFiveWeeks
   );
 
   passedInTeam.QBFantasyPointsPerGameLastFiveWeeks =
-    tempQbPointsPerGameLastFiveWeeks;
+    +tempQbPointsPerGameLastFiveWeeks;
   //
   passedInTeam.QBAppProjectedPointsThisWeek =
     qbInfoPassedInTeam.appProjectedPoints;
@@ -2587,20 +2589,21 @@ const populateTeamObjects = function (
     // console.log(player['"Player"']);
     if (passedInTeam.TE1.name === player['"Player"'].slice(1, -1)) {
       // console.log(player);
-      passedInTeam.TE1.halfGLSPAvg = player['"Half - AVG"'];
-      passedInTeam.TE1.fullGLSPAvg = player['"PPR - AVG"'];
+
+      passedInTeam.TE1.halfGLSPAvg = +player['"Half - AVG"'];
+      passedInTeam.TE1.fullGLSPAvg = +player['"PPR - AVG"'];
       passedInTeam.TE1.halfTwentyFifthPercentProjectedPoints =
-        player['"Half - 25th"'];
+        +player['"Half - 25th"'];
       passedInTeam.TE1.halfFiftyithPercentProjectedPoints =
-        player['"Half - 50th"'];
+        +player['"Half - 50th"'];
       passedInTeam.TE1.halfSeventyFifthPercentProjectedPoints =
-        player['"Half - 75th"'];
+        +player['"Half - 75th"'];
       passedInTeam.TE1.PPRTwentyFifthPercentProjectedPoints =
-        player['"PPR - 25th"'];
+        +player['"PPR - 25th"'];
       passedInTeam.TE1.PPRFiftyithPercentProjectedPoints =
-        player['"PPR - 50th"'];
+        +player['"PPR - 50th"'];
       passedInTeam.TE1.PPRSeventyFifthPercentProjectedPoints =
-        player['"PPR - 75th"'];
+        +player['"PPR - 75th"'];
 
       let tempGLSPAvgPPRToHalfDifference = +(
         +player['"PPR - AVG"'] +
@@ -2632,20 +2635,20 @@ const populateTeamObjects = function (
 
     if (passedInTeam.TE2.name === player['"Player"'].slice(1, -1)) {
       // console.log(player);
-      passedInTeam.TE2.halfGLSPAvg = player['"Half - AVG"'];
-      passedInTeam.TE2.fullGLSPAvg = player['"PPR - AVG"'];
+      passedInTeam.TE2.halfGLSPAvg = +player['"Half - AVG"'];
+      passedInTeam.TE2.fullGLSPAvg = +player['"PPR - AVG"'];
       passedInTeam.TE2.halfTwentyFifthPercentProjectedPoints =
-        player['"Half - 25th"'];
+        +player['"Half - 25th"'];
       passedInTeam.TE2.halfFiftyithPercentProjectedPoints =
-        player['"Half - 50th"'];
+        +player['"Half - 50th"'];
       passedInTeam.TE2.halfSeventyFifthPercentProjectedPoints =
-        player['"Half - 75th"'];
+        +player['"Half - 75th"'];
       passedInTeam.TE2.PPRTwentyFifthPercentProjectedPoints =
-        player['"PPR - 25th"'];
+        +player['"PPR - 25th"'];
       passedInTeam.TE2.PPRFiftyithPercentProjectedPoints =
-        player['"PPR - 50th"'];
+        +player['"PPR - 50th"'];
       passedInTeam.TE2.PPRSeventyFifthPercentProjectedPoints =
-        player['"PPR - 75th"'];
+        +player['"PPR - 75th"'];
 
       let tempGLSPAvgPPRToHalfDifference = +(
         +player['"PPR - AVG"'] +
@@ -2686,8 +2689,8 @@ const populateTeamObjects = function (
     if (player['"full_name"'].slice(1, -1) === passedInTeam.TE1.name) {
       // console.log(player['"full_name"'].slice(1, -1));
       let one = +player['"rec_pg"'];
-      let tempReceptionsPerGame = one.toFixed(2);
-      passedInTeam.TE1.receptionsPerGameLastFiveWeeks = tempReceptionsPerGame;
+      let tempReceptionsPerGame = +one.toFixed(2);
+      passedInTeam.TE1.receptionsPerGameLastFiveWeeks = +tempReceptionsPerGame;
     }
 
     // team TE2's
@@ -2695,8 +2698,8 @@ const populateTeamObjects = function (
     if (player['"full_name"'].slice(1, -1) === passedInTeam.TE2.name) {
       // console.log(player['"full_name"'].slice(1, -1));
       let one = +player['"rec_pg"'];
-      let tempReceptionsPerGame = one.toFixed(2);
-      passedInTeam.TE2.receptionsPerGameLastFiveWeeks = tempReceptionsPerGame;
+      let tempReceptionsPerGame = +one.toFixed(2);
+      passedInTeam.TE2.receptionsPerGameLastFiveWeeks = +tempReceptionsPerGame;
     }
   });
 
@@ -2706,21 +2709,21 @@ const populateTeamObjects = function (
     if (player.Pos === 'TE') {
       if (player.Player === passedInTeam.TE1.name) {
         let temp = +player.Rec;
-        let tempTwo = temp.toFixed(2);
-        passedInTeam.TE1.projectedReceptions4for4 = tempTwo;
+        let tempTwo = +temp.toFixed(2);
+        passedInTeam.TE1.projectedReceptions4for4 = +tempTwo;
         //
         let tempProjPoints = +player.FFPts;
-        let tempProjPointsTwo = tempProjPoints.toFixed(2);
-        passedInTeam.TE1.fourForFourHalfPPRProjectedPoints = tempProjPointsTwo;
+        let tempProjPointsTwo = +tempProjPoints.toFixed(2);
+        passedInTeam.TE1.fourForFourHalfPPRProjectedPoints = +tempProjPointsTwo;
       }
       if (player.Player === passedInTeam.TE2.name) {
         let temp = +player.Rec;
-        let tempTwo = temp.toFixed(2);
-        passedInTeam.TE2.projectedReceptions4for4 = tempTwo;
+        let tempTwo = +temp.toFixed(2);
+        passedInTeam.TE2.projectedReceptions4for4 = +tempTwo;
         //
         let tempProjPoints = +player.FFPts;
-        let tempProjPointsTwo = tempProjPoints.toFixed(2);
-        passedInTeam.TE2.fourForFourHalfPPRProjectedPoints = tempProjPointsTwo;
+        let tempProjPointsTwo = +tempProjPoints.toFixed(2);
+        passedInTeam.TE2.fourForFourHalfPPRProjectedPoints = +tempProjPointsTwo;
       }
     }
   });
@@ -2731,21 +2734,23 @@ const populateTeamObjects = function (
     if (player.Pos === 'TE') {
       if (player.Player === passedInTeam.TE1.name) {
         let temp = +player.Rec;
-        let tempTwo = temp.toFixed(2);
-        passedInTeam.TE1.projectedReceptions4for4 = tempTwo;
+
+        let tempTwo = +temp.toFixed(2);
+
+        passedInTeam.TE1.projectedReceptions4for4 = +tempTwo;
         //
         let tempProjPoints = +player.FFPts;
-        let tempProjPointsTwo = tempProjPoints.toFixed(2);
-        passedInTeam.TE1.fourForFourFullPPRProjectedPoints = tempProjPointsTwo;
+        let tempProjPointsTwo = +tempProjPoints.toFixed(2);
+        passedInTeam.TE1.fourForFourFullPPRProjectedPoints = +tempProjPointsTwo;
       }
       if (player.Player === passedInTeam.TE2.name) {
         let temp = +player.Rec;
-        let tempTwo = temp.toFixed(2);
-        passedInTeam.TE2.projectedReceptions4for4 = tempTwo;
+        let tempTwo = +temp.toFixed(2);
+        passedInTeam.TE2.projectedReceptions4for4 = +tempTwo;
         //
         let tempProjPoints = +player.FFPts;
-        let tempProjPointsTwo = tempProjPoints.toFixed(2);
-        passedInTeam.TE2.fourForFourFullPPRProjectedPoints = tempProjPointsTwo;
+        let tempProjPointsTwo = +tempProjPoints.toFixed(2);
+        passedInTeam.TE2.fourForFourFullPPRProjectedPoints = +tempProjPointsTwo;
       }
     }
   });
@@ -2992,7 +2997,7 @@ populateTeamObjects(
 
 // console.log(allQBData.allTeamQBObjects.chiefs);
 // console.log(gameInfo.jets);
-console.log(terawdata.chiefs);
+// console.log(terawdata.chiefs);
 // console.log(terawdata.cowboys);
 
 module.exports = terawdata;
