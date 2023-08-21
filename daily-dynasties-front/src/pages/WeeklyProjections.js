@@ -12,10 +12,12 @@ export default function WeeklyProjections(allProjections) {
   let tempQBArray = allProjections.allProjections[0].allProjectionsArray[0];
   let tempRBArray = allProjections.allProjections[0].allProjectionsArray[1];
   let tempWRArray = allProjections.allProjections[0].allProjectionsArray[2];
+  let tempTEArray = allProjections.allProjections[0].allProjectionsArray[3];
   let qbArray = [...tempQBArray];
   let rbArray = [...tempRBArray];
   let wrArray = [...tempWRArray];
-  let newArray = [...qbArray, ...rbArray, ...wrArray];
+  let teArray = [...tempTEArray];
+  let newArray = [...qbArray, ...rbArray, ...wrArray, ...teArray];
   // console.log(newArray[0]);
   const curWeek = newArray[0].currentWeek;
 
@@ -78,20 +80,18 @@ export default function WeeklyProjections(allProjections) {
           positionToShow={positionToShow}
         />
       )}
-      {/* {positionToShow === 'TE' && (
+      {positionToShow === 'TE' && (
         <ProjIndividualPositions
           data={teArray}
           positionToShow={positionToShow}
-          
         />
-      )} */}
+      )}
     </>
   );
 }
 
 //////data fetching
 
-//QB
 export async function getStaticProps() {
   try {
     const client = await clientPromise;
@@ -101,27 +101,10 @@ export async function getStaticProps() {
       .collection('allProjections')
       .find({})
       .toArray();
-    // console.log(QBProjections);
-
-    // const QBProjections = await db
-    //   .collection('QBProjections')
-    //   .find({})
-    //   .toArray();
-    // // console.log(QBProjections);
-
-    // //RB
-
-    // const RBProjections = await db
-    //   .collection('RBProjections')
-    //   .find({})
-    //   .toArray();
-    // // console.log(RBProjections);
 
     return {
       props: {
         allProjections: JSON.parse(JSON.stringify(allProjections)),
-        // QBProjections: JSON.parse(JSON.stringify(QBProjections)),
-        // RBProjections: JSON.parse(JSON.stringify(RBProjections)),
       },
     };
   } catch (e) {

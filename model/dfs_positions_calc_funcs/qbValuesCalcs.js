@@ -1295,44 +1295,4 @@ allQBObjectsArray.forEach(function (player) {
 allQBData.allQBProjectionsObjects = allQBProjectionsObjects;
 // console.log(allQBProjectionsObjects);
 
-///uncoment below to add qb projections to db
-
-// const { MongoClient } = require('mongodb');
-
-// const url =
-//   'mongodb+srv://devJay:Hesstrucksarethebest@dailydynasties.syom4sb.mongodb.net/test';
-// const client = new MongoClient(url);
-
-// // The database to use
-// const dbName = 'dailydynasties';
-
-// async function runQBProjections() {
-//   try {
-//     await client.connect();
-//     console.log('Connected correctly to server');
-//     const db = client.db(dbName);
-
-//     // Use the collection "people"
-//     const col = db.collection('QBProjections');
-
-//     // Construct a document
-//     let QBProjections = {
-//       allQBProjectionsObjects: allQBProjectionsObjects,
-//     };
-
-//     // Insert a single document, wait for promise so we can read it back
-//     const p = await col.insertOne(QBProjections);
-//     // Find one document
-//     const myDoc = await col.findOne();
-//     // Print to the console
-//     // console.log(myDoc);
-//   } catch (err) {
-//     console.log(err.stack);
-//   } finally {
-//     await client.close();
-//   }
-// }
-
-// runQBProjections().catch(console.dir);
-
 module.exports = allQBData;
