@@ -2883,68 +2883,226 @@ const testfunc = async function () {
       name,
       position,
       team,
-      age,
-      ageNextMarch,
+      // age,
+      // ageNextMarch,
       marketValue,
-
       myValue,
-
       valueDiffBetweenMyValueAndMarketValue,
-      marketRedraftOverallRank,
-      marketRedraftPositionRank,
-      myRedraftOverallRank,
-      myRedraftPositionRank,
-      myRedraftTier,
-      myRedraftScoreFromPlayersRedraftTier,
-      myRedraftDifferenceScore,
+      // marketRedraftOverallRank,
+      // marketRedraftPositionRank,
+      // myRedraftOverallRank,
+      // myRedraftPositionRank,
+      // myRedraftTier,
+      PRPScore,
+      // myRedraftDifferenceScore,
       projectedNextOffseasonDynastyValue,
       valueDifferenceBetweenCurrentMarketValueAndPNODV
     ) {
       this.name = name;
       this.position = position;
       this.team = team;
-      this.age = age;
-      this.ageNextMarch = ageNextMarch;
+      // this.age = age;
+      // this.ageNextMarch = ageNextMarch;
       this.marketValue = marketValue;
 
       this.myValue = myValue;
 
       this.valueDiffBetweenMyValueAndMarketValue =
         valueDiffBetweenMyValueAndMarketValue;
-      this.marketRedraftOverallRank = marketRedraftOverallRank;
-      this.marketRedraftPositionRank = marketRedraftPositionRank;
-      this.myRedraftOverallRank = myRedraftOverallRank;
-      this.myRedraftPositionRank = myRedraftPositionRank;
-      this.myRedraftTier = myRedraftTier;
-      this.myRedraftScoreFromPlayersRedraftTier =
-        myRedraftScoreFromPlayersRedraftTier;
-      this.myRedraftDifferenceScore = myRedraftDifferenceScore;
+      // this.marketRedraftOverallRank = marketRedraftOverallRank;
+      // this.marketRedraftPositionRank = marketRedraftPositionRank;
+      // this.myRedraftOverallRank = myRedraftOverallRank;
+      // this.myRedraftPositionRank = myRedraftPositionRank;
+      // this.myRedraftTier = myRedraftTier;
+      this.PRPScore = PRPScore;
+      // this.myRedraftDifferenceScore = myRedraftDifferenceScore;
       this.projectedNextOffseasonDynastyValue =
         projectedNextOffseasonDynastyValue;
       this.valueDifferenceBetweenCurrentMarketValueAndPNODV =
         valueDifferenceBetweenCurrentMarketValueAndPNODV;
     }
+
+    calcScoreFromDifferenceBetweenCurrentMarketValueAndPNODV() {
+      if (this.valueDifferenceBetweenCurrentMarketValueAndPNODV > 899) {
+        // console.log(
+        //   this.name,
+        //   this.valueDifferenceBetweenCurrentMarketValueAndPNODV
+        // );
+
+        this.PNODVScore = 700;
+      }
+      //
+      if (
+        this.valueDifferenceBetweenCurrentMarketValueAndPNODV > 599 &&
+        this.valueDifferenceBetweenCurrentMarketValueAndPNODV < 900
+      ) {
+        // console.log(
+        //   this.name,
+        //   this.valueDifferenceBetweenCurrentMarketValueAndPNODV
+        // );
+        this.PNODVScore = 600;
+      }
+      //
+      if (
+        this.valueDifferenceBetweenCurrentMarketValueAndPNODV > 499 &&
+        this.valueDifferenceBetweenCurrentMarketValueAndPNODV < 600
+      ) {
+        // console.log(
+        //   this.name,
+        //   this.valueDifferenceBetweenCurrentMarketValueAndPNODV
+        // );
+        this.PNODVScore = 500;
+      }
+      //
+      if (
+        this.valueDifferenceBetweenCurrentMarketValueAndPNODV > 399 &&
+        this.valueDifferenceBetweenCurrentMarketValueAndPNODV < 500
+      ) {
+        // console.log(
+        //   this.name,
+        //   this.valueDifferenceBetweenCurrentMarketValueAndPNODV
+        // );
+        this.PNODVScore = 400;
+      }
+      //
+      if (
+        this.valueDifferenceBetweenCurrentMarketValueAndPNODV > 299 &&
+        this.valueDifferenceBetweenCurrentMarketValueAndPNODV < 400
+      ) {
+        // console.log(
+        //   this.name,
+        //   this.valueDifferenceBetweenCurrentMarketValueAndPNODV
+        // );
+        this.PNODVScore = 300;
+      }
+      //
+      if (
+        this.valueDifferenceBetweenCurrentMarketValueAndPNODV > 199 &&
+        this.valueDifferenceBetweenCurrentMarketValueAndPNODV < 300
+      ) {
+        // console.log(
+        //   this.name,
+        //   this.valueDifferenceBetweenCurrentMarketValueAndPNODV
+        // );
+        this.PNODVScore = 200;
+      }
+      //
+      if (
+        this.valueDifferenceBetweenCurrentMarketValueAndPNODV > 99 &&
+        this.valueDifferenceBetweenCurrentMarketValueAndPNODV < 200
+      ) {
+        // console.log(
+        //   this.name,
+        //   this.valueDifferenceBetweenCurrentMarketValueAndPNODV
+        // );
+        this.PNODVScore = 100;
+      }
+      //
+      if (
+        this.valueDifferenceBetweenCurrentMarketValueAndPNODV > -201 &&
+        this.valueDifferenceBetweenCurrentMarketValueAndPNODV < 100
+      ) {
+        // console.log(
+        //   this.name,
+        //   this.valueDifferenceBetweenCurrentMarketValueAndPNODV
+        // );
+        this.PNODVScore = 0;
+      }
+      //
+      if (
+        this.valueDifferenceBetweenCurrentMarketValueAndPNODV > -401 &&
+        this.valueDifferenceBetweenCurrentMarketValueAndPNODV < -200
+      ) {
+        // console.log(
+        //   this.name,
+        //   this.valueDifferenceBetweenCurrentMarketValueAndPNODV
+        // );
+        this.PNODVScore = -100;
+      }
+      //
+      if (
+        this.valueDifferenceBetweenCurrentMarketValueAndPNODV > -501 &&
+        this.valueDifferenceBetweenCurrentMarketValueAndPNODV < -400
+      ) {
+        // console.log(
+        //   this.name,
+        //   this.valueDifferenceBetweenCurrentMarketValueAndPNODV
+        // );
+        this.PNODVScore = -200;
+      }
+      //
+      if (
+        this.valueDifferenceBetweenCurrentMarketValueAndPNODV > -601 &&
+        this.valueDifferenceBetweenCurrentMarketValueAndPNODV < -500
+      ) {
+        // console.log(
+        //   this.name,
+        //   this.valueDifferenceBetweenCurrentMarketValueAndPNODV
+        // );
+        this.PNODVScore = -300;
+      }
+      //
+      if (
+        this.valueDifferenceBetweenCurrentMarketValueAndPNODV > -701 &&
+        this.valueDifferenceBetweenCurrentMarketValueAndPNODV < -600
+      ) {
+        // console.log(
+        //   this.name,
+        //   this.valueDifferenceBetweenCurrentMarketValueAndPNODV
+        // );
+        this.PNODVScore = -400;
+      }
+      //
+      if (
+        this.valueDifferenceBetweenCurrentMarketValueAndPNODV > -801 &&
+        this.valueDifferenceBetweenCurrentMarketValueAndPNODV < -700
+      ) {
+        // console.log(
+        //   this.name,
+        //   this.valueDifferenceBetweenCurrentMarketValueAndPNODV
+        // );
+        this.PNODVScore = -500;
+      }
+      //
+      if (this.valueDifferenceBetweenCurrentMarketValueAndPNODV < -800) {
+        // console.log(
+        //   this.name,
+        //   this.valueDifferenceBetweenCurrentMarketValueAndPNODV
+        // );
+        this.PNODVScore = -600;
+      }
+    }
+
+    calcRVS() {
+      this.RVSScore = +this.PRPScore + +this.PNODVScore;
+    }
   }
 
   alltradeCalculaterDataArray.forEach(function (playerObject) {
+    // console.log(playerObject);
     let tradeAnalyzerDataObject = new tradeAnalyzerDataConstructor(
       playerObject.name,
       playerObject.position,
       playerObject.team,
-      playerObject.age,
-      playerObject.ageNextMarch,
+      // playerObject.age,
+      // playerObject.ageNextMarch,
       playerObject.fantasyCalcValue,
       playerObject.myValue,
       playerObject.valueDiffBetweenMyValueAndMarketValue,
-      playerObject.fpRedraftOverallRank,
-      playerObject.fpRedraftPositionRank,
-      playerObject.rvRedraftOverallRank,
-      playerObject.rvRedraftPositionRank,
-      playerObject.rvRedraftTier,
+      // playerObject.fpRedraftOverallRank,
+      // playerObject.fpRedraftPositionRank,
+      // playerObject.rvRedraftOverallRank,
+      // playerObject.rvRedraftPositionRank,
+      // playerObject.rvRedraftTier,
       playerObject.myRedraftScoreFromPlayersRedraftTier,
-      playerObject.myRedraftDifferenceScore,
-      playerObject.projectedNextOffseasonDynastyValue
+      // playerObject.myRedraftDifferenceScore,
+      playerObject.projectedNextOffseasonDynastyValue,
+      playerObject.valueDifferenceBetweenCurrentMarketValueAndPNODV
     );
+
+    tradeAnalyzerDataObject.calcScoreFromDifferenceBetweenCurrentMarketValueAndPNODV();
+
+    tradeAnalyzerDataObject.calcRVS();
 
     tradeAnalyzerDataObjectsArray.push(tradeAnalyzerDataObject);
   });
