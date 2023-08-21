@@ -17,6 +17,7 @@ class TeObject {
     curWeek,
     QBFantasyPointsPerGameLastFiveWeeks,
     QBAppProjectedPointsThisWeek,
+    QBFourForFourProjectedPoints,
     teamPointsPerGameLastFiveWeeks,
     teamAppProjectedPointsThisWeek,
     halfGLSPAvg,
@@ -34,6 +35,7 @@ class TeObject {
     this.QBFantasyPointsPerGameLastFiveWeeks =
       QBFantasyPointsPerGameLastFiveWeeks;
     this.QBAppProjectedPointsThisWeek = QBAppProjectedPointsThisWeek;
+    this.QBFourForFourProjectedPoints = QBFourForFourProjectedPoints;
     this.teamPointsPerGameLastFiveWeeks = teamPointsPerGameLastFiveWeeks;
     this.teamAppProjectedPointsThisWeek = teamAppProjectedPointsThisWeek;
     this.halfGLSPAvg = halfGLSPAvg;
@@ -47,68 +49,274 @@ class TeObject {
 
   //* add methods here
   calcProjectedPoints() {
-    //
-    //
-    // weeks 1 and 2/////////////////////////////////////////////////
-    //
-    // half PPR
-    //
-    if (this.curWeek < 3) {
-      let tempOne = +(this.fourForFourHalfPPRProjectedPoints * 3).toFixed(1);
-      if (this.halfGLSPAvg) {
-        let tempTwo = +tempOne + +this.halfGLSPAvg;
-        let final = +(tempTwo / 4).toFixed(1);
-      } else {
-        let tempTwo = +tempOne;
-        let final = +(tempTwo / 3).toFixed(1);
-      }
-      this.appHalfProjectedPoints = +final;
-
-      //
-      //Full PPR
-      //
-      let pprTempOne = +(this.fourForFourFullPPRProjectedPoints * 3).toFixed(1);
-      if (this.fullGLSPAvg) {
-        let pprTempTwo = +pprTempOne + +this.fullGLSPAvg;
-        let pprFinal = +(pprTempTwo / 4).toFixed(1);
-      } else {
-        let pprTempTwo = +pprTempOne;
-        let pprFinal = +(pprTempTwo / 3).toFixed(1);
-      }
-      this.appFullProjectedPoints = +pprFinal;
-      //
-      // TEP
-      //
+    // console.log(this.name, this.teamABV, this.fullGLSPAvg);
+    if (this.name) {
       let amountToAdd =
         +this.fourForFourFullPPRProjectedPoints -
         +this.fourForFourHalfPPRProjectedPoints;
-      let fourForFourTEPPPRProjectedPoints =
+      this.fourForFourTEPProjectedPoints =
         +this.fourForFourFullPPRProjectedPoints + +amountToAdd;
+      //
+      //
+      // weeks 1 and 2/////////////////////////////////////////////////
+      //
+      // half PPR
+      //
+      if (this.curWeek < 3) {
+        let tempOne = +(this.fourForFourHalfPPRProjectedPoints * 3).toFixed(1);
+        if (this.halfGLSPAvg) {
+          let tempTwo = +tempOne + +this.halfGLSPAvg;
+          let final = +(tempTwo / 4).toFixed(1);
+        } else {
+          let tempTwo = +tempOne;
+          let final = +(tempTwo / 3).toFixed(1);
+        }
+        this.appHalfProjectedPoints = +final;
 
-      let tepTempOne = +(fourForFourTEPPPRProjectedPoints * 3).toFixed(1);
-      if (this.TEPGLSPAvg) {
-        let tepTempTwo = +tepTempOne + +this.TEPGLSPAvg;
-        let tepFinal = +(tepTempTwo / 4).toFixed(1);
-      } else {
-        let tepTempTwo = +tepTempOne;
-        let tepFinal = +(tepTempTwo / 3).toFixed(1);
+        //
+        //Full PPR
+        //
+        let pprTempOne = +(this.fourForFourFullPPRProjectedPoints * 3).toFixed(
+          1
+        );
+        if (this.fullGLSPAvg) {
+          let pprTempTwo = +pprTempOne + +this.fullGLSPAvg;
+          let pprFinal = +(pprTempTwo / 4).toFixed(1);
+        } else {
+          let pprTempTwo = +pprTempOne;
+          let pprFinal = +(pprTempTwo / 3).toFixed(1);
+        }
+        this.appFullProjectedPoints = +pprFinal;
+        //
+        // TEP
+        //
+
+        let tepTempOne = +(this.fourForFourTEPProjectedPoints * 3).toFixed(1);
+        if (this.TEPGLSPAvg) {
+          let tepTempTwo = +tepTempOne + +this.TEPGLSPAvg;
+          let tepFinal = +(tepTempTwo / 4).toFixed(1);
+        } else {
+          let tepTempTwo = +tepTempOne;
+          let tepFinal = +(tepTempTwo / 3).toFixed(1);
+        }
+        this.appTEPProjectedPoints = +tepFinal;
       }
-      this.appTEPProjectedPoints = +tepFinal;
-    }
 
-    //
-    //
-    // weeks 3 and 4
-    //
-    //
-    if (this.curWeek === 3 || this.curWeek === 4) {
-    }
-    //
-    //
-    //weeks 5-18
-    //
-    //
-    if (this.curWeek > 4) {
+      //
+      //
+      // weeks 3 and 4
+      //
+      //
+      if (this.curWeek === 3 || this.curWeek === 4) {
+        // half PPR
+        //
+
+        let tempOne = +(this.fourForFourHalfPPRProjectedPoints * 2).toFixed(1);
+        if (this.halfGLSPAvg) {
+          let tempGLSP = +this.halfGLSPAvg * 2;
+          let tempTwo = +tempOne + +tempGLSP;
+          let final = +(tempTwo / 4).toFixed(1);
+        } else {
+          let tempTwo = +tempOne;
+          let final = +(tempTwo / 2).toFixed(1);
+        }
+        this.appHalfProjectedPoints = +final;
+
+        //
+        //Full PPR
+        //
+        let pprTempOne = +(this.fourForFourFullPPRProjectedPoints * 2).toFixed(
+          1
+        );
+        if (this.fullGLSPAvg) {
+          let tempFullGLSP = +this.fullGLSPAvg * 2;
+          let pprTempTwo = +pprTempOne + +tempFullGLSP;
+          let pprFinal = +(pprTempTwo / 4).toFixed(1);
+        } else {
+          let pprTempTwo = +pprTempOne;
+          let pprFinal = +(pprTempTwo / 2).toFixed(1);
+        }
+        this.appFullProjectedPoints = +pprFinal;
+        //
+        // TEP
+        //
+        let amountToAdd =
+          +this.fourForFourFullPPRProjectedPoints -
+          +this.fourForFourHalfPPRProjectedPoints;
+        let fourForFourTEPPPRProjectedPoints =
+          +this.fourForFourFullPPRProjectedPoints + +amountToAdd;
+
+        let tepTempOne = +(this.fourForFourTEPProjectedPoints * 2).toFixed(1);
+        if (this.TEPGLSPAvg) {
+          let tempTEPGLSP = +this.TEPGLSPAvg * 2;
+
+          let tepTempTwo = +tepTempOne + +tempTEPGLSP;
+          let tepFinal = +(tepTempTwo / 4).toFixed(1);
+        } else {
+          let tepTempTwo = +tepTempOne;
+          let tepFinal = +(tepTempTwo / 2).toFixed(1);
+        }
+        this.appTEPProjectedPoints = +tepFinal;
+      }
+
+      //
+      //
+      //weeks 5-18
+      //
+      //
+      if (this.curWeek > 4) {
+        //
+        //
+        // setting percentDifferenceProjectedTargetsComparedToLastFiveWeeks
+        if (
+          this.projectedReceptions4for4 &&
+          this.receptionsPerGameLastFiveWeeks
+        ) {
+          this.percentDifferenceProjectedTargetsComparedToLastFiveWeeks = +(
+            this.projectedReceptions4for4 / this.receptionsPerGameLastFiveWeeks
+          ).toFixed(2);
+          // console.log(
+          //   this.name,
+          //   this.projectedReceptions4for4,
+          //   this.receptionsPerGameLastFiveWeeks
+          // );
+        } else {
+          // console.log(
+          //   this.name,
+          //   this.projectedReceptions4for4,
+          //   this.receptionsPerGameLastFiveWeeks
+          // );
+          this.percentDifferenceProjectedTargetsComparedToLastFiveWeeks = 1;
+        }
+        if (
+          this.percentDifferenceProjectedTargetsComparedToLastFiveWeeks < 0.25
+        ) {
+          this.percentDifferenceProjectedTargetsComparedToLastFiveWeeks = 0.25;
+        }
+        if (
+          this.percentDifferenceProjectedTargetsComparedToLastFiveWeeks > 1.5
+        ) {
+          this.percentDifferenceProjectedTargetsComparedToLastFiveWeeks = 1.5;
+        }
+
+        // console.log(
+        //   this.name,
+        //   this.receptionsPerGameLastFiveWeeks,
+        //   this.projectedReceptions4for4,
+        //   this.percentDifferenceProjectedTargetsComparedToLastFiveWeeks
+        // );
+
+        //
+        // setting percentDifferenceQBProjectedPointsComparedToLastFiveWeeks
+        if (
+          this.QBAppProjectedPointsThisWeek &&
+          this.QBFantasyPointsPerGameLastFiveWeeks
+        ) {
+          this.percentDifferenceQBProjectedPointsComparedToLastFiveWeeks = +(
+            this.QBAppProjectedPointsThisWeek /
+            this.QBFantasyPointsPerGameLastFiveWeeks
+          ).toFixed(2);
+        } else {
+          this.percentDifferenceQBProjectedPointsComparedToLastFiveWeeks = +(
+            this.QBAppProjectedPointsThisWeek /
+            this.QBFourForFourProjectedPoints
+          ).toFixed(2);
+        }
+        if (
+          this.percentDifferenceQBProjectedPointsComparedToLastFiveWeeks < 0.26
+        ) {
+          this.percentDifferenceQBProjectedPointsComparedToLastFiveWeeks = 0.75;
+        }
+        if (
+          this.percentDifferenceQBProjectedPointsComparedToLastFiveWeeks > 1.5
+        ) {
+          this.percentDifferenceQBProjectedPointsComparedToLastFiveWeeks = 1.5;
+        }
+        //
+        //
+        // setting percentDifferenceTeamProjectedPointsComparedToLastFiveWeeks
+        if (
+          this.teamAppProjectedPointsThisWeek &&
+          this.teamPointsPerGameLastFiveWeeks
+        ) {
+          this.percentDifferenceTeamProjectedPointsComparedToLastFiveWeeks = +(
+            this.teamAppProjectedPointsThisWeek /
+            this.teamPointsPerGameLastFiveWeeks
+          ).toFixed(2);
+        } else {
+          // console.log(this.name);
+          this.percentDifferenceTeamProjectedPointsComparedToLastFiveWeeks = 1;
+        }
+        if (
+          this.percentDifferenceTeamProjectedPointsComparedToLastFiveWeeks <
+          0.26
+        ) {
+          this.percentDifferenceTeamProjectedPointsComparedToLastFiveWeeks = 0.75;
+        }
+        if (
+          this.percentDifferenceTeamProjectedPointsComparedToLastFiveWeeks > 1.5
+        ) {
+          this.percentDifferenceTeamProjectedPointsComparedToLastFiveWeeks = 1.5;
+        }
+
+        // console.log(
+        //   this.name,
+        //   this.teamAppProjectedPointsThisWeek,
+        //   this.teamPointsPerGameLastFiveWeeks,
+        //   this.percentDifferenceTeamProjectedPointsComparedToLastFiveWeeks
+        // );
+
+        //
+        this.thisWeeksGLSPAdjustmentPercentage = +(
+          (this.percentDifferenceProjectedTargetsComparedToLastFiveWeeks +
+            this.percentDifferenceQBProjectedPointsComparedToLastFiveWeeks +
+            this.percentDifferenceTeamProjectedPointsComparedToLastFiveWeeks) /
+          3
+        ).toFixed(2);
+
+        //
+        //
+
+        //assinging projection from GLSP
+        //
+        this.halfProjectionFromGLSP = +(
+          +this.halfGLSPAvg * this.thisWeeksGLSPAdjustmentPercentage
+        ).toFixed(1);
+        this.fullProjectionFromGLSP = +(
+          +this.fullGLSPAvg * this.thisWeeksGLSPAdjustmentPercentage
+        ).toFixed(1);
+        this.TEPProjectionFromGLSP = +(
+          +this.TEPGLSPAvg * this.thisWeeksGLSPAdjustmentPercentage
+        ).toFixed(1);
+
+        //
+        //
+
+        this.appHalfProjectedPoints = +(
+          (this.halfProjectionFromGLSP +
+            this.fourForFourHalfPPRProjectedPoints) /
+          2
+        ).toFixed(1);
+        //
+        this.appFullProjectedPoints = +(
+          (this.fullProjectionFromGLSP +
+            this.fourForFourFullPPRProjectedPoints) /
+          2
+        ).toFixed(1);
+        //
+        this.appTEPProjectedPoints = +(
+          (this.TEPProjectionFromGLSP + this.fourForFourTEPProjectedPoints) /
+          2
+        ).toFixed(1);
+
+        console.log(
+          this.name,
+
+          this.appHalfProjectedPoints,
+          this.appFullProjectedPoints,
+          this.appTEPProjectedPoints
+        );
+      }
     }
   }
 }
@@ -123,6 +331,7 @@ allTEs.forEach(function (team) {
     team.curWeek,
     team.QBFantasyPointsPerGameLastFiveWeeks,
     team.QBAppProjectedPointsThisWeek,
+    team.QBFourForFourProjectedPoints,
     team.teamPointsPerGameLastFiveWeeks,
     team.teamAppProjectedPointsThisWeek,
     team.TE1.halfGLSPAvg,
@@ -148,6 +357,7 @@ allTEs.forEach(function (team) {
     team.curWeek,
     team.QBFantasyPointsPerGameLastFiveWeeks,
     team.QBAppProjectedPointsThisWeek,
+    team.QBFourForFourProjectedPoints,
     team.teamPointsPerGameLastFiveWeeks,
     team.teamAppProjectedPointsThisWeek,
     team.TE2.halfGLSPAvg,
