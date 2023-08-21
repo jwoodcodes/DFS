@@ -2513,6 +2513,9 @@ const populateTeamObjects = function (
   passedInTeam.QBAppProjectedPointsThisWeek =
     qbInfoPassedInTeam.appProjectedPoints;
 
+  passedInTeam.QBFourForFourProjectedPoints =
+    qbInfoPassedInTeam.fourForFourFullPPRProjectedPoints;
+
   passedInTeam.teamPointsPerGameLastFiveWeeks =
     qbInfoPassedInTeam.teamPointsPerGameLastFiveWeeks;
 
@@ -2587,7 +2590,10 @@ const populateTeamObjects = function (
 
   allFlexGLSP.forEach(function (player) {
     // console.log(player['"Player"']);
-    if (passedInTeam.TE1.name === player['"Player"'].slice(1, -1)) {
+    if (
+      player['"Player"'].slice(1, -1) === passedInTeam.TE1.name ||
+      player['"Player"'].slice(1, -1) === passedInTeam.TE1.sanitizedTEOneName
+    ) {
       // console.log(player);
 
       passedInTeam.TE1.halfGLSPAvg = +player['"Half - AVG"'];
@@ -2633,7 +2639,10 @@ const populateTeamObjects = function (
         tempSeventyFifthPPRToHalfDifference;
     }
 
-    if (passedInTeam.TE2.name === player['"Player"'].slice(1, -1)) {
+    if (
+      player['"Player"'].slice(1, -1) === passedInTeam.TE2.name ||
+      player['"Player"'].slice(1, -1) === passedInTeam.TE2.sanitizedTETwoName
+    ) {
       // console.log(player);
       passedInTeam.TE2.halfGLSPAvg = +player['"Half - AVG"'];
       passedInTeam.TE2.fullGLSPAvg = +player['"PPR - AVG"'];
@@ -2685,17 +2694,31 @@ const populateTeamObjects = function (
 
   te4for4PlayerStatExplorerReceivingTab.forEach(function (player) {
     // team TE1's
-    //
-    if (player['"full_name"'].slice(1, -1) === passedInTeam.TE1.name) {
+
+    // let teOneName = gameInfoPassedInTeam.TEOneThisWeekName;
+
+    // console.log(
+    //   player['"full_name"'].slice(1, -1),
+    //   gameInfoPassedInTeam.TEOneThisWeekName,
+    //   passedInTeam.TE1.sanitizedTEOneName
+    // );
+    if (
+      player['"full_name"'].slice(1, -1) === passedInTeam.TE1.name ||
+      player['"full_name"'].slice(1, -1) === passedInTeam.TE1.sanitizedTEOneName
+    ) {
       // console.log(player['"full_name"'].slice(1, -1));
       let one = +player['"rec_pg"'];
       let tempReceptionsPerGame = +one.toFixed(2);
       passedInTeam.TE1.receptionsPerGameLastFiveWeeks = +tempReceptionsPerGame;
+      // console.log(player['"full_name"'], player['"rec_pg"']);
     }
 
     // team TE2's
     //
-    if (player['"full_name"'].slice(1, -1) === passedInTeam.TE2.name) {
+    if (
+      player['"full_name"'].slice(1, -1) === passedInTeam.TE2.name ||
+      player['"full_name"'].slice(1, -1) === passedInTeam.TE2.sanitizedTETwoName
+    ) {
       // console.log(player['"full_name"'].slice(1, -1));
       let one = +player['"rec_pg"'];
       let tempReceptionsPerGame = +one.toFixed(2);
