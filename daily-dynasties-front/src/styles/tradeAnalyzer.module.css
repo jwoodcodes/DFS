@@ -7,3 +7,102 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.wholeMainSectionWrapper {
+  height: 50dvw;
+  display: flex;
+  margin-top: 5rem;
+  border-top: 1px solid black;
+  /* justify-content: center;
+  align-items: center; */
+  /* background-color: #01043e; */
+}
+
+.teamOneWrapper {
+  /* background-color: #02688f; */
+
+  width: 50%;
+  border-right: 1px solid black;
+}
+
+.teamTwoWrapper {
+  /* background-color: #02688f; */
+  width: 50%;
+}
+
+.teamTitle {
+  color: #02688f;
+  font-size: 2rem;
+  font-family: 'Playfair Display', 'Segoe UI', Tahoma, Geneva, Verdana,
+    sans-serif, sans-serif;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.insideTeamWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.searchInputAndButtonWrapper {
+  display: flex;
+  flex: column;
+  /* justify-content: center;
+  align-items: center; */
+}
+
+.addPlayerButton {
+  background-color: #02688f;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+  font-size: 1.25rem;
+  height: 2rem;
+  width: 7rem;
+  max-width: 7rem;
+  border-radius: 10px;
+  border: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.teamOneSearchInput {
+  border-radius: 10px;
+  margin-right: 0.5rem;
+}
+.teamTwoSearchInput {
+  border-radius: 10px;
+  margin-right: 0.5rem;
+}
+
+.playersSelectedForTeam {
+  margin-top: 3rem;
+}
+
+.individualPlayerRow {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  margin: 0.25rem;
+  border: 1px solid #02688f;
+  border-radius: 10px;
+  font-size: 1.5rem;
+}
+
+.PRPSpan {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.PNODVSpan {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.RVSSpan {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}

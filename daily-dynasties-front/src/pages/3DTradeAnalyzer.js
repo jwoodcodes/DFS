@@ -1,6 +1,9 @@
 import MainNav from '@/components/MainNav';
 import styles from '@/styles/tradeAnalyzer.module.css';
 import clientPromise from '@/lib/mongodb';
+import React from 'react';
+import TeamOne from '@/components/tradeAnalyzer/TeamOne';
+import TeamTwo from '@/components/tradeAnalyzer/TeamTwo';
 
 export default function ThreeDTradeAnalyzer(dynastyRankingsData) {
   let dataLevelOne = dynastyRankingsData.dynastyRankingsData;
@@ -10,22 +13,32 @@ export default function ThreeDTradeAnalyzer(dynastyRankingsData) {
     // console.log(data);
     dataLevelTwo = data;
   });
-  // console.log(dataLevelTwo);
-  // console.log(dataLevelTwo.tradeAnalyzerDataObjectsArray);
+
   const dataArray = dataLevelTwo.tradeAnalyzerDataObjectsArray;
-  console.log(dataArray);
+  // console.log(dataArray);
+  //
+  //
+  const [teamOnePlayers, setTeamOnePlayers] = React.useState([]);
+  const [teamTwoPlayers, setTeamTwoPlayers] = React.useState([]);
 
   return (
     <div>
       <MainNav />
       <div className={styles.pageTitle}>3D Trade Analyzer</div>
-      {/* {dataArray.map(function (player, index) {
-        return (
-          <li key={index}>
-            {player.name} {player.age}
-          </li>
-        );
-      })} */}
+      <div className={styles.wholeMainSectionWrapper}>
+        {/* team 1 */}
+        <TeamOne
+          dataArray={dataArray}
+          teamOnePlayers={teamOnePlayers}
+          setTeamOnePlayers={setTeamOnePlayers}
+        />
+        {/* team 2 */}
+        <TeamTwo
+          dataArray={dataArray}
+          teamTwoPlayers={teamTwoPlayers}
+          setTeamTwoPlayers={setTeamTwoPlayers}
+        />
+      </div>
     </div>
   );
 }
