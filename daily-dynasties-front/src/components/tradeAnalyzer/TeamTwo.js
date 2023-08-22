@@ -67,7 +67,7 @@ export default function TeamTwo({
         <div className={styles.playersSelectedForTeam}>
           {teamTwoPlayers.map(function (player) {
             return (
-              <div className={styles.individualPlayerRow}>
+              <div className={styles.individualPlayerRow} key={player.name}>
                 <span>{player.name}:</span>
                 <span className={styles.PRPSpan}>
                   PRP-Score:{''} {player.PRPScore}
