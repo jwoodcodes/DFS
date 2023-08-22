@@ -18,16 +18,32 @@
   /* background-color: #01043e; */
 }
 
+@media (max-width: 1500px) {
+  .wholeMainSectionWrapper {
+    flex-direction: column;
+  }
+}
+
 .teamOneWrapper {
   /* background-color: #02688f; */
 
   width: 50%;
   border-right: 1px solid black;
 }
+@media (max-width: 1500px) {
+  .teamOneWrapper {
+    width: 100%;
+  }
+}
 
 .teamTwoWrapper {
   /* background-color: #02688f; */
   width: 50%;
+}
+@media (max-width: 1500px) {
+  .teamTwoWrapper {
+    width: 100%;
+  }
 }
 
 .teamTitle {
@@ -90,6 +106,11 @@
   border: 1px solid #02688f;
   border-radius: 10px;
   font-size: 1.25rem;
+}
+@media (max-width: 500px) {
+  .individualPlayerRow {
+    font-size: 1rem;
+  }
 }
 
 .PRPSpan {
