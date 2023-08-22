@@ -89,20 +89,25 @@
   margin: 0.25rem;
   border: 1px solid #02688f;
   border-radius: 10px;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .PRPSpan {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .PNODVSpan {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .RVSSpan {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.marketValueSpan {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }

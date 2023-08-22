@@ -71,14 +71,17 @@ export default function TeamOne({
               <div className={styles.individualPlayerRow} key={player.name}>
                 <span>{player.name}:</span>
                 <span className={styles.PRPSpan}>
-                  PRP-Score:{''} {player.PRPScore}
+                  PRP Score:{''} {player.PRPScore}
                 </span>
                 <span className={styles.PNODVSpan}>
-                  PNODV-Score: {''}
+                  PNODV Score: {''}
                   {player.PNODVScore}{' '}
                 </span>
                 <span className={styles.RVSSpan}>
-                  RVS-Score: {''} {player.RVSScore}
+                  RVS Score: {''} {player.RVSScore}
+                </span>
+                <span className={styles.marketValueSpan}>
+                  Market Value: {player.marketValue}
                 </span>
               </div>
             );
