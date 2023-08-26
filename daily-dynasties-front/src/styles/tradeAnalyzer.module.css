@@ -12,6 +12,8 @@
   height: 50dvw;
   display: flex;
   margin-top: 5rem;
+  margin-bottom: 5rem;
+  padding-bottom: 5rem;
   border-top: 1px solid black;
   /* justify-content: center;
   align-items: center; */
@@ -21,6 +23,12 @@
 @media (max-width: 1500px) {
   .wholeMainSectionWrapper {
     flex-direction: column;
+  }
+}
+@media (max-width: 500px) {
+  .wholeMainSectionWrapper {
+    height: 100dvw;
+    margin-bottom: 4rem;
   }
 }
 
@@ -102,63 +110,103 @@
 
 .playersSelectedForTeam {
   margin-top: 3rem;
+  width: 90%;
+}
+
+.selectMenuItem {
+  cursor: pointer;
+  margin-right: 5rem;
+}
+
+.selectMenuItem:hover {
+  background-color: #065a60;
+  color: #ffffff;
+  border-radius: 10px;
+  padding-left: 1rem;
+  padding-right: 0.5rem;
 }
 
 .individualPlayerRow {
+  width: 50%;
   padding: 0.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
   margin: 0.25rem;
   border: 1px solid #02688f;
   border-radius: 10px;
   font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 @media (max-width: 500px) {
   .individualPlayerRow {
-    font-size: 0.8rem;
+    width: 100%;
+    font-size: 0.9rem;
   }
+}
+@media (max-width: 390px) {
+  .individualPlayerRow {
+    font-size: 0.9rem;
+  }
+}
+
+.namecolumn {
+  width: 30%;
+  padding-left: 0.5rem;
+}
+
+.infoColumn {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1.75rem;
 }
 
 .PRPSpan {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
+  /* padding-left: 1.25rem;
+  padding-right: 1.25rem; */
 }
 
 .PNODVSpan {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
+  /* padding-left: 1.25rem;
+  padding-right: 1.25rem; */
 }
 
 .RVSSpan {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
+  /* padding-left: 1.25rem;
+  padding-right: 1.25rem; */
 }
 
 .marketValueSpan {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
+  /* padding-left: 1.25rem;
+  padding-right: 1.25rem; */
 }
 
-@media (max-width: 500px) {
-  .PRPSpan {
-    padding-left: 0.8rem;
-    padding-right: 0.8rem;
-  }
+.PNODVSpan {
+}
+
+.myValueSpan {
+}
+
+.removePlayer {
+  background-color: #02688f;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+  font-size: 1rem;
+  height: 2rem;
+  width: 4rem;
+  max-width: 4rem;
+  border-radius: 10px;
+  border: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  position: absolute;
+  top: 5px;
+  right: 5px;
 }
 @media (max-width: 500px) {
-  .PNODVSpan {
-    padding-left: 0.8rem;
-    padding-right: 0.8rem;
-  }
-}
-@media (max-width: 500px) {
-  .RVSSpan {
-    padding-left: 0.8rem;
-    padding-right: 0.8rem;
-  }
-}
-@media (max-width: 500px) {
-  .marketValueSpan {
-    padding-left: 0.8rem;
-    padding-right: 0.8rem;
+  .removePlayer {
+    font-size: 0.75rem;
   }
 }
