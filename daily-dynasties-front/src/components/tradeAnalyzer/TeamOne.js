@@ -8,6 +8,12 @@ export default function TeamOne({
 }) {
   //   console.log(dataArray);
   const [teamOneSearchValue, setTeamOneSearchValue] = React.useState('');
+  let teamTotalPRP = 0;
+  let teamTotalPNODVScore = 0;
+  let teamTotalRVS = 0;
+  let teamTotalMarketValue = 0;
+  let teamTotalMyValue = 0;
+  let teamTotalPNODV = 0;
 
   function teamOneSearchOnChange(event) {
     setTeamOneSearchValue(event.target.value);
@@ -15,14 +21,30 @@ export default function TeamOne({
   function onPlayerSelectFromList(searchTerm, player) {
     setTeamOneSearchValue(searchTerm);
     setTeamOnePlayers([player, ...teamOnePlayers]);
-    console.log(teamOnePlayers);
+    // console.log(teamOnePlayers);
+    setTeamOneSearchValue('');
   }
   function onSearch(searchTerm, player) {
     // console.log('search', player);
+    dataArray.map(player => {
+      //   console.log(player.name);
+      //   console.log(teamOneSearchValue);
+      if (player.name.toLowerCase() === teamOneSearchValue) {
+        setTeamOneSearchValue(searchTerm);
+        setTeamOnePlayers([player, ...teamOnePlayers]);
+        setTeamOneSearchValue('');
+      }
+    });
 
-    setTeamOneSearchValue('');
+    // console.log(teamOnePlayers);
+  }
 
-    console.log(teamOnePlayers);
+  function removePlayer(name) {
+    const newPlayerArray = teamOnePlayers.filter(player => {
+      return player.name !== name;
+    });
+
+    setTeamOnePlayers(newPlayerArray);
   }
 
   return (
@@ -43,15 +65,22 @@ export default function TeamOne({
             Add Player
           </button>
         </div>
-        <div>
+        <form>
           {dataArray
             .filter(player => {
               const searchTerm = teamOneSearchValue.toLowerCase();
+
               const name = player.name.toLowerCase();
 
-              return (
-                searchTerm && name.startsWith(searchTerm) && name !== searchTerm
-              );
+              let tempLast = name.split(/\s/);
+              let lastName = tempLast[1];
+              const searchLength = searchTerm.length > 0 ? true : false;
+
+              if (searchLength === true && name !== searchTerm) {
+                return (
+                  name.startsWith(searchTerm) || lastName.startsWith(searchTerm)
+                );
+              }
             })
             .slice(0, 15)
             .map(function (player) {
@@ -59,33 +88,86 @@ export default function TeamOne({
                 <div
                   onClick={() => onPlayerSelectFromList(player.name, player)}
                   key={player.name}
+                  className={styles.selectMenuItem}
                 >
                   {player.name}
                 </div>
               );
             })}
-        </div>
+        </form>
         <div className={styles.playersSelectedForTeam}>
           {teamOnePlayers.map(function (player) {
+            teamTotalPRP = teamTotalPRP + player.PRPScore;
+            teamTotalPNODVScore = teamTotalPNODVScore + player.PNODVScore;
+            teamTotalRVS = teamTotalRVS + player.RVSScore;
+            teamTotalMarketValue = teamTotalMarketValue + player.marketValue;
+            teamTotalMyValue = teamTotalMyValue + player.myValue;
+            teamTotalPNODV =
+              teamTotalPNODV + player.projectedNextOffseasonDynastyValue;
             return (
               <div className={styles.individualPlayerRow} key={player.name}>
-                <span>{player.name}:</span>
-                <span className={styles.PRPSpan}>
-                  PRP Score:{''} {player.PRPScore}
-                </span>
-                <span className={styles.PNODVSpan}>
-                  PNODV Score: {''}
-                  {player.PNODVScore}{' '}
-                </span>
-                <span className={styles.RVSSpan}>
-                  RVS Score: {''} {player.RVSScore}
-                </span>
-                <span className={styles.marketValueSpan}>
-                  Market Value: {player.marketValue}
-                </span>
+                <div className={styles.namecolumn}>
+                  <span>{player.name}:</span>
+                </div>
+                <div className={styles.infoColumn}>
+                  <span className={styles.PRPSpan}>
+                    PRP Score:{''} {player.PRPScore}
+                  </span>
+
+                  <span className={styles.PNODVSpan}>
+                    PNODV Score: {''}
+                    {player.PNODVScore}{' '}
+                  </span>
+                  <span className={styles.RVSSpan}>
+                    RVS Score: {''} {player.RVSScore}
+                  </span>
+                  <span className={styles.marketValueSpan}>
+                    Market Value: {player.marketValue}
+                  </span>
+                  <span className={styles.myValueSpan}>
+                    My Value: {player.myValue}
+                  </span>
+                  <span className={styles.PNODVSpan}>
+                    PNODV: {player.projectedNextOffseasonDynastyValue}
+                  </span>
+                </div>
+                <button
+                  className={styles.removePlayer}
+                  onClick={() => removePlayer(player.name)}
+                >
+                  Remove
+                </button>
               </div>
             );
           })}
+          {teamOnePlayers.length > 0 ? (
+            <div className={styles.individualPlayerRow}>
+              <div className={styles.namecolumn}>
+                <span>Team Totals:</span>
+              </div>
+              <div className={styles.infoColumn}>
+                <span className={styles.PRPSpan}>
+                  PRP Score:{''} {teamTotalPRP}
+                </span>
+                <span className={styles.PNODVSpan}>
+                  PNODV Score: {''}
+                  {teamTotalPNODVScore}{' '}
+                </span>
+                <span className={styles.RVSSpan}>
+                  RVS Score: {''} {teamTotalRVS}
+                </span>
+                <span className={styles.marketValueSpan}>
+                  Market Value: {teamTotalMarketValue}
+                </span>
+                <span className={styles.myValueSpan}>
+                  My Value: {teamTotalMyValue}
+                </span>
+                <span className={styles.PNODVSpan}>
+                  PNODV: {teamTotalPNODV}
+                </span>
+              </div>
+            </div>
+          ) : null}
         </div>
       </div>
     </div>
