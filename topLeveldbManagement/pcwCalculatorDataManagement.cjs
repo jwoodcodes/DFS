@@ -2397,12 +2397,12 @@ const testfunc = async function () {
     //   2
     // ).toFixed(0);
     let valueToUseForFantasyCalcValue = +(+player.value).toFixed(0);
-    console.log(
-      player.player.name,
-      player.value,
-      playerOneOlderFantasyCalc,
-      valueToUseForFantasyCalcValue
-    );
+    // console.log(
+    //   player.player.name,
+    //   player.value,
+    //   playerOneOlderFantasyCalc,
+    //   valueToUseForFantasyCalcValue
+    // );
 
     let tradeCalculaterDataObject = new tradeCalculaterData(
       sanitizedFCPlayerName,
