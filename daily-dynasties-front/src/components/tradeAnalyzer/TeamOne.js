@@ -49,7 +49,7 @@ export default function TeamOne({
 
   return (
     <div className={styles.teamOneWrapper}>
-      <div className={styles.teamTitle}>Team 1</div>
+      <div className={styles.teamTitle}>Team 1 Gives</div>
       <div className={styles.insideTeamWrapper}>
         <div className={styles.searchInputAndButtonWrapper}>
           <input

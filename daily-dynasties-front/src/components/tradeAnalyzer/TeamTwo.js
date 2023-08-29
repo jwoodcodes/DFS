@@ -48,7 +48,7 @@ export default function TeamTwo({
 
   return (
     <div className={styles.teamTwoWrapper}>
-      <div className={styles.teamTitle}>Team 2</div>
+      <div className={styles.teamTitle}>Team 2 Gives</div>
       <div className={styles.insideTeamWrapper}>
         <div className={styles.searchInputAndButtonWrapper}>
           <input

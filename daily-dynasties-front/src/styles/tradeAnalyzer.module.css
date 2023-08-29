@@ -1,30 +1,73 @@
 .pageTitle {
   text-align: center;
-  margin-top: 5rem;
-  font-size: 4.5rem;
+  margin-top: 4rem;
+  font-size: 4rem;
+  font-weight: 400;
   letter-spacing: 0.25rem;
   background: linear-gradient(to right bottom, #420c47, #065a60);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+@media (max-width: 600px) {
+  .pageTitle {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 500px) {
+  .pageTitle {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 425px) {
+  .pageTitle {
+    font-size: 2rem;
+  }
+}
+
+.secondaryHeading {
+  font-size: 1.2rem;
+  background: linear-gradient(to right bottom, #420c47, #065a60);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 400;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+@media (max-width: 900px) {
+  .secondaryHeading {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 500px) {
+  .secondaryHeading {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+}
+@media (max-width: 400px) {
+  .secondaryHeading {
+    font-size: 0.9rem;
+  }
+}
 
 .wholeMainSectionWrapper {
   height: 50dvw;
   display: flex;
-  margin-top: 5rem;
+  margin-top: 1rem;
   margin-bottom: 5rem;
   padding-bottom: 5rem;
-  border-top: 1px solid black;
+  /* border-top: 1px solid black; */
   /* justify-content: center;
   align-items: center; */
   /* background-color: #01043e; */
 }
-
-@media (max-width: 1500px) {
+@media (max-width: 1050px) {
   .wholeMainSectionWrapper {
     flex-direction: column;
   }
 }
+
 @media (max-width: 500px) {
   .wholeMainSectionWrapper {
     height: 100dvw;
@@ -35,10 +78,22 @@
 .teamOneWrapper {
   /* background-color: #02688f; */
 
-  width: 50%;
-  border-right: 1px solid black;
+  width: 33%;
+  /* border-right: 1px solid black; */
 }
-@media (max-width: 1500px) {
+@media (max-width: 1050px) {
+  .teamOneWrapper {
+    width: 75%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+@media (max-width: 800px) {
+  .teamOneWrapper {
+    width: 90%;
+  }
+}
+@media (max-width: 500px) {
   .teamOneWrapper {
     width: 100%;
   }
@@ -46,22 +101,241 @@
 
 .teamTwoWrapper {
   /* background-color: #02688f; */
-  width: 50%;
+  width: 33%;
+  /* border-left: 1px solid black; */
 }
-@media (max-width: 1500px) {
+@media (max-width: 1050px) {
+  .teamTwoWrapper {
+    width: 75%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+@media (max-width: 800px) {
+  .teamTwoWrapper {
+    width: 90%;
+  }
+}
+@media (max-width: 500px) {
   .teamTwoWrapper {
     width: 100%;
   }
 }
 
-.teamTitle {
+.overviewCardWrapper {
+  width: 80%;
+  padding: 0.5rem;
+  margin-bottom: 3rem;
+  margin: 0.25rem;
+  border: 1px solid #02688f;
+  border-radius: 10px;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+@media (max-width: 1525px) {
+  .overviewCardWrapper {
+    width: 95%;
+  }
+}
+@media (max-width: 1275px) {
+  .overviewCardWrapper {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 1100px) {
+  .overviewCardWrapper {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 1050px) {
+  .overviewCardWrapper {
+    width: 75%;
+  }
+}
+@media (max-width: 500px) {
+  .overviewCardWrapper {
+    width: 95%;
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 450px) {
+  .overviewCardWrapper {
+    width: 95%;
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 375px) {
+  .overviewCardWrapper {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 350px) {
+  .overviewCardWrapper {
+    font-size: 1rem;
+  }
+}
+
+.tradeOverviewTitle {
+  color: #02688f;
+  font-size: 2.5rem;
+
+  font-family: 'Playfair Display', 'Segoe UI', Tahoma, Geneva, Verdana,
+    sans-serif, sans-serif;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 4.25rem;
+}
+@media (max-width: 1275px) {
+  .tradeOverviewTitle {
+    margin-top: 2rem;
+    margin-bottom: 4.6rem;
+  }
+}
+@media (max-width: 1100px) {
+  .tradeOverviewTitle {
+    margin-top: 2rem;
+    margin-bottom: 4.7rem;
+  }
+}
+@media (max-width: 500px) {
+  .tradeOverviewTitle {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.overviewWarning {
+  color: red;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+@media (max-width: 1700px) {
+  .overviewWarning {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 1375px) {
+  .overviewWarning {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 1230px) {
+  .overviewWarning {
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 1100px) {
+  .overviewWarning {
+    font-size: 0.65rem;
+  }
+}
+@media (max-width: 1050px) {
+  .overviewWarning {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 575px) {
+  .overviewWarning {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 500px) {
+  .overviewWarning {
+    text-align: center;
+    padding: 0 20px;
+    font-size: 1rem;
+  }
+}
+
+.tradeOvervireWrapper {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 1050px) {
+  .tradeOvervireWrapper {
+    width: 75%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+@media (max-width: 800px) {
+  .tradeOvervireWrapper {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+@media (max-width: 500px) {
+  .tradeOvervireWrapper {
+    width: 100%;
+  }
+}
+
+.teamOverviewWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.legendTitle {
+  color: #02688f;
+  font-size: 1.5rem;
+  font-family: 'Playfair Display', 'Segoe UI', Tahoma, Geneva, Verdana,
+    sans-serif, sans-serif;
+  text-align: center;
+
+  margin-bottom: 0.5rem;
+}
+
+.prpLegendWrapper {
+  /* color: #065a60; */
+  text-align: center;
+}
+
+.legendSpan {
+  color: #9c0d0d;
+  font-weight: 700;
+  margin-right: 0.25rem;
+}
+
+.legendBlock {
+  margin-bottom: 1rem;
+  margin-top: 0.75rem;
+}
+@media (max-width: 500px) {
+  .legendBlock {
+    font-size: 1rem;
+  }
+}
+
+.teamTitleSpan {
   color: #02688f;
   font-size: 2rem;
   font-family: 'Playfair Display', 'Segoe UI', Tahoma, Geneva, Verdana,
     sans-serif, sans-serif;
   text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.teamTitle {
+  color: #02688f;
+  font-size: 2.5rem;
+  font-family: 'Playfair Display', 'Segoe UI', Tahoma, Geneva, Verdana,
+    sans-serif, sans-serif;
+  text-align: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+@media (max-width: 500px) {
+  .teamTitle {
+    font-size: 2rem;
+  }
 }
 
 .insideTeamWrapper {
@@ -127,7 +401,7 @@
 }
 
 .individualPlayerRow {
-  width: 50%;
+  width: 100%;
   padding: 0.5rem;
   margin-bottom: 3rem;
   margin: 0.25rem;
@@ -137,6 +411,11 @@
   display: flex;
   align-items: center;
   position: relative;
+}
+@media (max-width: 1300px) {
+  .individualPlayerRow {
+    font-size: 1rem;
+  }
 }
 @media (max-width: 500px) {
   .individualPlayerRow {
@@ -154,6 +433,12 @@
   width: 30%;
   padding-left: 0.5rem;
 }
+@media (max-width: 1300px) {
+  .namecolumn {
+    width: 20%;
+    padding-left: 0.25rem;
+  }
+}
 
 .infoColumn {
   display: flex;
@@ -161,30 +446,30 @@
   padding-left: 1.75rem;
 }
 
-.PRPSpan {
+.PRPTotalSpan {
   /* padding-left: 1.25rem;
   padding-right: 1.25rem; */
 }
 
-.PNODVSpan {
+.PNODVTotalSpan {
   /* padding-left: 1.25rem;
   padding-right: 1.25rem; */
 }
 
-.RVSSpan {
+.RVSTotalSpan {
   /* padding-left: 1.25rem;
   padding-right: 1.25rem; */
 }
 
-.marketValueSpan {
+.marketValueTotalSpan {
   /* padding-left: 1.25rem;
   padding-right: 1.25rem; */
 }
 
-.PNODVSpan {
+.PNODVTotalSpan {
 }
 
-.myValueSpan {
+.myValueTotalSpan {
 }
 
 .removePlayer {
@@ -208,5 +493,75 @@
 @media (max-width: 500px) {
   .removePlayer {
     font-size: 0.75rem;
+  }
+}
+
+.bigWin {
+  background-color: #044728;
+  color: #fff;
+  padding-left: 10px;
+  padding-right: 5px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+@media (max-width: 1275px) {
+  .bigWin {
+    margin-bottom: 20px;
+  }
+}
+
+.smallWin {
+  background-color: #07a15a;
+  color: #fff;
+  padding-left: 10px;
+  padding-right: 5px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+@media (max-width: 1275px) {
+  .smallWin {
+    margin-bottom: 20px;
+  }
+}
+
+.neutral {
+  background-color: #0709a1;
+  color: #fff;
+  padding-left: 10px;
+  padding-right: 5px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+@media (max-width: 1275px) {
+  .neutral {
+    margin-bottom: 20px;
+  }
+}
+
+.smallLoss {
+  background-color: #c52f2fc4;
+  color: #fff;
+  padding-left: 10px;
+  padding-right: 5px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+@media (max-width: 1275px) {
+  .smallLoss {
+    margin-bottom: 20px;
+  }
+}
+
+.bigLoss {
+  background-color: #9c0d0d;
+  color: #fff;
+  padding-left: 10px;
+  padding-right: 5px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+@media (max-width: 1275px) {
+  .bigLoss {
+    margin-bottom: 20px;
   }
 }
