@@ -10,44 +10,6 @@ const PNODVCalcFunction = require('./PNODVCalcFunctions/PNODVCalcFunction');
 
 let myJSON = {};
 
-//////////////////////below is to push old data to OnePreviousFantasyCalcData db before pulling in new fantasycalc data
-
-// const url =
-//   'mongodb+srv://devJay:Hesstrucksarethebest@dailydynasties.syom4sb.mongodb.net/test';
-// const client = new MongoClient(url);
-
-// // The database to use
-// const dbName = 'dailydynasties';
-
-// async function runOnePreviousFantasyCalcData() {
-//   try {
-//     await client.connect();
-//     console.log('Connected correctly to server');
-//     const db = client.db(dbName);
-
-//     // Use the collection "people"
-//     const col = db.collection('OnePreviousFantasyCalcData');
-
-//     // Construct a document
-//     let OnePreviousFantasyCalcData = {
-//       newData,
-//     };
-
-//     // Insert a single document, wait for promise so we can read it back
-//     const p = await col.insertOne(OnePreviousFantasyCalcData);
-//     // Find one document
-//     const myDoc = await col.findOne();
-//     // Print to the console
-//     // console.log(myDoc);
-//   } catch (err) {
-//     console.log(err.stack);
-//   } finally {
-//     await client.close();
-//   }
-// }
-
-// runOnePreviousFantasyCalcData().catch(console.dir);
-
 ///////fetching fantasyCalc data from API and pushing rawFantasyCalc data to db
 
 const FCDataFetch = async function () {
@@ -248,6 +210,53 @@ const testfunc = async function () {
   // console.log(testDoc);
   newData.push(testDoc);
   // console.log(newData);
+
+  //////////////////////below is to push old data to OnePreviousFantasyCalcData db before pulling in new fantasycalc data
+  /////////////////////////////////////
+  //////////////////////////////////////////
+  /////////////////////////////////
+  //////////////////////////////////////////////////////////
+  ////////////////////////////////////////////
+  /////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////
+  ////////////////////////////////////////////////
+  //when pushing new data to db's Always do below first!
+
+  // const url =
+  //   'mongodb+srv://devJay:Hesstrucksarethebest@dailydynasties.syom4sb.mongodb.net/test';
+  // const client = new MongoClient(url);
+
+  // // The database to use
+  // const dbName = 'dailydynasties';
+
+  // async function runOnePreviousFantasyCalcData() {
+  //   try {
+  //     await client.connect();
+  //     console.log('Connected correctly to server');
+  //     const db = client.db(dbName);
+
+  //     // Use the collection "people"
+  //     const col = db.collection('OnePreviousFantasyCalcData');
+
+  //     // Construct a document
+  //     let OnePreviousFantasyCalcData = {
+  //       newData,
+  //     };
+
+  //     // Insert a single document, wait for promise so we can read it back
+  //     const p = await col.insertOne(OnePreviousFantasyCalcData);
+  //     // Find one document
+  //     const myDoc = await col.findOne();
+  //     // Print to the console
+  //     // console.log(myDoc);
+  //   } catch (err) {
+  //     console.log(err.stack);
+  //   } finally {
+  //     await client.close();
+  //   }
+  // }
+
+  // runOnePreviousFantasyCalcData().catch(console.dir);
 
   const test2 = await alltradeCalculaterDataArray;
   // console.log(test);
@@ -3152,4 +3161,4 @@ testfunc();
 /////////////////////////////////
 //create a couple new constructor functions down here that will take in alltradeCalculaterDataArray as an input and loop over it and make player object arrays for specific purposes that only contain the info I am going to render for a page. one for dynasty rankings (done), one for redraft/rest of season rankings, and one for 3d trade view. then send these to the db in their own collections so you only have to call getstaticprops for the smaller objects that contain only the data that will be rendered on that page
 /////////////////////////////////////// */
-//********************************************************************!!!!!!!!!!!!!!!!!!!!!!!!!!!111 */
+//********************************************************************!!!!!!!!!!!!!!!!!!!!!!!
