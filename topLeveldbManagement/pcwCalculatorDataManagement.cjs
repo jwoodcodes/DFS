@@ -2392,16 +2392,17 @@ const testfunc = async function () {
       }
     });
 
-    let valueToUseForFantasyCalcValue = +(
-      (+player.value + +playerOneOlderFantasyCalc) /
-      2
-    ).toFixed(0);
-    // console.log(
-    //   player.player.name,
-    //   player.value,
-    //   playerOneOlderFantasyCalc,
-    //   valueToUseForFantasyCalcValue
-    // );
+    // let valueToUseForFantasyCalcValue = +(
+    //   (+player.value + +playerOneOlderFantasyCalc) /
+    //   2
+    // ).toFixed(0);
+    let valueToUseForFantasyCalcValue = +(+player.value).toFixed(0);
+    console.log(
+      player.player.name,
+      player.value,
+      playerOneOlderFantasyCalc,
+      valueToUseForFantasyCalcValue
+    );
 
     let tradeCalculaterDataObject = new tradeCalculaterData(
       sanitizedFCPlayerName,
