@@ -1936,16 +1936,19 @@ const testfunc = async function () {
       fcQBMaxValue,
       fcNonQBMaxValue
     ) {
+      // if (this.position === 'PICK') {
+      //   console.log(
+      //     this.position,
+      //     this.projectedNextOffseasonDynastyValue,
+      //     this.fantasyCalcValue
+      //   );
+      // }
       let tempValueDifference = +(
         this.projectedNextOffseasonDynastyValue - this.fantasyCalcValue
       ).toFixed(2);
       // console.log(this.name, tempValueDifference);
       this.valueDifferenceBetweenCurrentMarketValueAndPNODV =
         tempValueDifference;
-      // console.log(
-      //   this.name,
-      //   this.valueDifferenceBetweenCurrentMarketValueAndPNODV
-      // );
     }
   }
 
@@ -3038,6 +3041,13 @@ const testfunc = async function () {
         //   this.valueDifferenceBetweenCurrentMarketValueAndPNODV
         // );
         this.PNODVScore = 600;
+        if (this.position === 'PICK') {
+          // console.log(
+          //   this.name,
+          //   this.valueDifferenceBetweenCurrentMarketValueAndPNODV,
+          //   this.PNODVScore
+          // );
+        }
       }
       //
       if (
