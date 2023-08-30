@@ -12,7 +12,7 @@ export default function TableBody({ tableData, columns }) {
         num = num + 1;
 
         return (
-          <tr key={data.id}>
+          <tr key={`${data.id}-${num}`}>
             <td>{num}</td>
             {columns.map(({ accessor }) => {
               //   console.log(data.myOverallRank);

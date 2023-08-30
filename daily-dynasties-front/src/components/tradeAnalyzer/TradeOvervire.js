@@ -458,6 +458,18 @@ export default function TradeOverview({ teamOnePlayers, teamTwoPlayers }) {
           <span
             className={clsx(
               styles.PNODVTotalSpan,
+              teamOnePNODVBigLoss && styles.bigLoss,
+              teamOnePNODVSmallLoss && styles.smallLoss,
+              teamOnePNODVNeutral && styles.neutral,
+              teamOnePNODVSmallWin && styles.smallWin,
+              teamOnePNODVBigWin && styles.bigWin
+            )}
+          >
+            PNODV: {teamOneTradePNODVDifference}
+          </span>
+          {/* <span
+            className={clsx(
+              styles.PNODVTotalSpan,
               teamOnePNODVScoreBigLoss && styles.bigLoss,
               teamOnePNODVScoreSmallLoss && styles.smallLoss,
               teamOnePNODVScoreNeutral && styles.neutral,
@@ -466,7 +478,7 @@ export default function TradeOverview({ teamOnePlayers, teamTwoPlayers }) {
             )}
           >
             PNODV Score: {teamOneTradePNODVScoreDifference}
-          </span>
+          </span> */}
           <span
             className={clsx(
               styles.RVSTotalSpan,
@@ -503,19 +515,6 @@ export default function TradeOverview({ teamOnePlayers, teamTwoPlayers }) {
           >
             My Value: {teamOneTradeMyValueDifference}
           </span>
-
-          <span
-            className={clsx(
-              styles.PNODVTotalSpan,
-              teamOnePNODVBigLoss && styles.bigLoss,
-              teamOnePNODVSmallLoss && styles.smallLoss,
-              teamOnePNODVNeutral && styles.neutral,
-              teamOnePNODVSmallWin && styles.smallWin,
-              teamOnePNODVBigWin && styles.bigWin
-            )}
-          >
-            PNODV: {teamOneTradePNODVDifference}
-          </span>
         </div>
         <div className={styles.teamOverviewWrapper}>
           <span className={styles.teamTitleSpan}>Team 2</span>
@@ -535,6 +534,18 @@ export default function TradeOverview({ teamOnePlayers, teamTwoPlayers }) {
           <span
             className={clsx(
               styles.PNODVTotalSpan,
+              teamTwoPNODVBigLoss && styles.bigLoss,
+              teamTwoPNODVSmallLoss && styles.smallLoss,
+              teamTwoPNODVNeutral && styles.neutral,
+              teamTwoPNODVSmallWin && styles.smallWin,
+              teamTwoPNODVBigWin && styles.bigWin
+            )}
+          >
+            PNODV: {teamTwoTradePNODVDifference}
+          </span>
+          {/* <span
+            className={clsx(
+              styles.PNODVTotalSpan,
               teamTwoPNODVScoreBigLoss && styles.bigLoss,
               teamTwoPNODVScoreSmallLoss && styles.smallLoss,
               teamTwoPNODVScoreNeutral && styles.neutral,
@@ -543,7 +554,7 @@ export default function TradeOverview({ teamOnePlayers, teamTwoPlayers }) {
             )}
           >
             PNODV Score: {teamTwoTradePNODVScoreDifference}
-          </span>
+          </span> */}
 
           <span
             className={clsx(
@@ -581,18 +592,6 @@ export default function TradeOverview({ teamOnePlayers, teamTwoPlayers }) {
           >
             My Value: {teamTwoTradeMyValueDifference}
           </span>
-          <span
-            className={clsx(
-              styles.PNODVTotalSpan,
-              teamTwoPNODVBigLoss && styles.bigLoss,
-              teamTwoPNODVSmallLoss && styles.smallLoss,
-              teamTwoPNODVNeutral && styles.neutral,
-              teamTwoPNODVSmallWin && styles.smallWin,
-              teamTwoPNODVBigWin && styles.bigWin
-            )}
-          >
-            PNODV: {teamTwoTradePNODVDifference}
-          </span>
         </div>
       </div>
       <div className={styles.overviewCardWrapper}>
@@ -603,20 +602,31 @@ export default function TradeOverview({ teamOnePlayers, teamTwoPlayers }) {
               <span className={styles.legendSpan}>PRP Score:</span> Projected
               Redraft Production, a score based off the player's redraft tier
               and a measure of how much they will help your team win your league
-              this year.
+              this year. The PRP score in the trade overview shows how much more
+              or less your team is projected to score this year after the trade.
             </div>
             <div className={styles.legendBlock}>
+              <span className={styles.legendSpan}>PNODV:</span>Projected Next
+              Offseason Dynasty Value caclulated by Daily Dynasties proprietary
+              algorithm. PNODV in the trade overview is how much more or less
+              dynasty Value your team is projected to have next offseason after
+              the trade.
+            </div>
+            {/* <div className={styles.legendBlock}>
               <span className={styles.legendSpan}>PNODV Score:</span> Projected
               Next Offseason Dynasty Value Score. Daily Dynasties proprietary
               metric, a score computed off how much the player(s) on a side are
               projected to go up or down in dynasty value by next offseason
-            </div>
+            </div> */}
             <div className={styles.legendBlock}>
               <span className={styles.legendSpan}>RVS Score:</span> Roster Value
-              Score. A composite score from PRP and PNODV scores, is a metric
-              for how valuable a player is to a roster given their projected
-              production this year AND their likelihood to hold or gain in
-              dynasty value.
+              Score. A composite score from PRP and PNODV, is a metric for how
+              valuable a player is to a roster given their projected production
+              this year AND their likelihood to hold or gain in dynasty value.
+              Players that score highly in RVS are the best assets to have in
+              dynasty as they can help you win this year AND go up or maintain
+              in value by next offseason. Having rostes high in RVS is key to a
+              permanant championship window.
             </div>
             <div className={styles.legendBlock}>
               <span className={styles.legendSpan}>Market Value:</span> A
@@ -626,12 +636,10 @@ export default function TradeOverview({ teamOnePlayers, teamTwoPlayers }) {
             </div>
             <div className={styles.legendBlock}>
               <span className={styles.legendSpan}>My Value:</span> A player's
-              current value in Daily Dynasties dyanasty rankings
-            </div>
-            <div className={styles.legendBlock}>
-              <span className={styles.legendSpan}>PNODV:</span>The raw value
-              Daily Dynasties currently projects a player to be worth in dynasty
-              value next offseason.
+              current value in Daily Dynasties dynasty rankings. Always use
+              market value to determine if the trade is "fair" but this gives an
+              insight in to how much better or worse the trade is viewed using
+              my rankings than the market.
             </div>
           </div>
         </div>

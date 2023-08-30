@@ -97,9 +97,16 @@ export default function TeamOne({
         </form>
         <div className={styles.playersSelectedForTeam}>
           {teamOnePlayers.map(function (player) {
+            if (!player.PRPScore) {
+              player.PRPScore = 0;
+            }
             teamTotalPRP = teamTotalPRP + player.PRPScore;
             teamTotalPNODVScore = teamTotalPNODVScore + player.PNODVScore;
+            if (!player.RVSScore) {
+              player.RVSScore = 0;
+            }
             teamTotalRVS = teamTotalRVS + player.RVSScore;
+
             teamTotalMarketValue = teamTotalMarketValue + player.marketValue;
             teamTotalMyValue = teamTotalMyValue + player.myValue;
             teamTotalPNODV =
@@ -113,11 +120,14 @@ export default function TeamOne({
                   <span className={styles.PRPSpan}>
                     PRP Score:{''} {player.PRPScore}
                   </span>
-
                   <span className={styles.PNODVSpan}>
+                    PNODV: {player.projectedNextOffseasonDynastyValue}
+                  </span>
+
+                  {/* <span className={styles.PNODVSpan}>
                     PNODV Score: {''}
                     {player.PNODVScore}{' '}
-                  </span>
+                  </span> */}
                   <span className={styles.RVSSpan}>
                     RVS Score: {''} {player.RVSScore}
                   </span>
@@ -126,9 +136,6 @@ export default function TeamOne({
                   </span>
                   <span className={styles.myValueSpan}>
                     My Value: {player.myValue}
-                  </span>
-                  <span className={styles.PNODVSpan}>
-                    PNODV: {player.projectedNextOffseasonDynastyValue}
                   </span>
                 </div>
                 <button
