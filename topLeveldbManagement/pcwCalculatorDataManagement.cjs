@@ -1574,7 +1574,9 @@ const testfunc = async function () {
       sanitizedFCPlayerName,
       sanitizedRVPlayerName,
       fcQBMaxValue,
-      fcNonQBMaxValue
+      fcNonQBMaxValue,
+      fcPickYear,
+      fcPickRound
     ) {
       //things ill need to do this
       //current date, age, position, position age apex, current market value, dynasty value difference from mine to market, my projected redraft postional tier score, my redraft difference score
@@ -1582,6 +1584,57 @@ const testfunc = async function () {
       // console.log(curDate);
 
       // console.log(amountToBeAddedToPlayersAgeToKnowWhatAgeTheyWillBeNextMarch);
+
+      if (this.position === 'PICK') {
+        // console.log(this.name, this.fantasyCalcValue, this.myValue);
+        // console.log(fcPickYear);
+        this.projectedNextOffseasonDynastyValue = this.fantasyCalcValue;
+
+        if (fcPickYear === curYear + 1) {
+          // console.log(this.name);
+          if (fcPickRound === 1) {
+            this.projectedNextOffseasonDynastyValue = 3500;
+          }
+          if (fcPickRound === 2) {
+            // console.log(this.name);
+            this.projectedNextOffseasonDynastyValue = 1750;
+          }
+          if (fcPickRound === 3) {
+            // console.log(this.name);
+            this.projectedNextOffseasonDynastyValue = 1000;
+          }
+        }
+        if (fcPickYear === curYear + 2) {
+          // console.log(this.name);
+          if (fcPickRound === 1) {
+            // console.log(this.name);
+            this.projectedNextOffseasonDynastyValue = 2800;
+          }
+          if (fcPickRound === 2) {
+            // console.log(this.name);
+            this.projectedNextOffseasonDynastyValue = 1500;
+          }
+          if (fcPickRound === 3) {
+            // console.log(this.name);
+            this.projectedNextOffseasonDynastyValue = 1000;
+          }
+        }
+        if (fcPickYear === curYear + 3) {
+          // console.log(this.name);
+          if (fcPickRound === 1) {
+            // console.log(this.name);
+            this.projectedNextOffseasonDynastyValue = 2200;
+          }
+          if (fcPickRound === 2) {
+            // console.log(this.name);
+            this.projectedNextOffseasonDynastyValue = 1300;
+          }
+          if (fcPickRound === 3) {
+            // console.log(this.name);
+            this.projectedNextOffseasonDynastyValue = 1000;
+          }
+        }
+      }
 
       if (
         sanitizedFCPlayerName &&
@@ -1639,7 +1692,7 @@ const testfunc = async function () {
             if (percentageChange < 0.3 && positivePercentageChange < 0.59) {
               this.projectedNextOffseasonDynastyValue = +(
                 fcQBMaxValue * value
-              ).toFixed(2);
+              ).toFixed(0);
               this.projectedNextOffseasonMarketPercentOfMax = value;
 
               // console.log(
@@ -1655,11 +1708,11 @@ const testfunc = async function () {
             if (percentageChange >= 0.3 && positivePercentageChange < 0.59) {
               this.projectedNextOffseasonDynastyValue = +(
                 this.fantasyCalcValue * 0.7
-              ).toFixed(2);
+              ).toFixed(0);
 
               this.projectedNextOffseasonMarketPercentOfMax = +(
                 this.projectedNextOffseasonDynastyValue / fcQBMaxValue
-              ).toFixed(2);
+              ).toFixed(0);
 
               // console.log(
               //   this.name,
@@ -1680,7 +1733,7 @@ const testfunc = async function () {
 
               this.projectedNextOffseasonMarketPercentOfMax = +(
                 this.projectedNextOffseasonDynastyValue / fcQBMaxValue
-              ).toFixed(2);
+              ).toFixed(0);
             }
           }
 
@@ -1720,7 +1773,7 @@ const testfunc = async function () {
                 this.projectedNextOffseasonDynastyValue = newValue;
                 this.projectedNextOffseasonMarketPercentOfMax = +(
                   this.projectedNextOffseasonDynastyValue / fcNonQBMaxValue
-                ).toFixed(2);
+                ).toFixed(0);
 
                 // console.log(
                 //   this.name,
@@ -1737,7 +1790,7 @@ const testfunc = async function () {
                 this.projectedNextOffseasonDynastyValue = newValue;
                 this.projectedNextOffseasonMarketPercentOfMax = +(
                   this.projectedNextOffseasonDynastyValue / fcNonQBMaxValue
-                ).toFixed(2);
+                ).toFixed(0);
 
                 // console.log(
                 //   this.name,
@@ -1763,7 +1816,7 @@ const testfunc = async function () {
 
                 this.projectedNextOffseasonDynastyValue = +(
                   fcNonQBMaxValue * value
-                ).toFixed(2);
+                ).toFixed(0);
                 this.projectedNextOffseasonMarketPercentOfMax = value;
               }
             }
@@ -1772,31 +1825,31 @@ const testfunc = async function () {
               if (this.rvRedraftTier === 1 && percentageChange > 0.1) {
                 this.projectedNextOffseasonDynastyValue = +(
                   this.fantasyCalcValue * 0.9
-                ).toFixed(2);
+                ).toFixed(0);
 
                 this.projectedNextOffseasonMarketPercentOfMax = +(
                   this.projectedNextOffseasonDynastyValue / fcNonQBMaxValue
-                ).toFixed(2);
+                ).toFixed(0);
               }
 
               if (this.rvRedraftTier === 2 && percentageChange > 0.2) {
                 this.projectedNextOffseasonDynastyValue = +(
                   this.fantasyCalcValue * 0.8
-                ).toFixed(2);
+                ).toFixed(0);
 
                 this.projectedNextOffseasonMarketPercentOfMax = +(
                   this.projectedNextOffseasonDynastyValue / fcNonQBMaxValue
-                ).toFixed(2);
+                ).toFixed(0);
               }
 
               if (this.rvRedraftTier > 2) {
                 this.projectedNextOffseasonDynastyValue = +(
                   this.fantasyCalcValue * 0.7
-                ).toFixed(2);
+                ).toFixed(0);
 
                 this.projectedNextOffseasonMarketPercentOfMax = +(
                   this.projectedNextOffseasonDynastyValue / fcNonQBMaxValue
-                ).toFixed(2);
+                ).toFixed(0);
 
                 // console.log(
                 //   this.name,
@@ -1818,7 +1871,7 @@ const testfunc = async function () {
 
               this.projectedNextOffseasonMarketPercentOfMax = +(
                 this.projectedNextOffseasonDynastyValue / fcNonQBMaxValue
-              ).toFixed(2);
+              ).toFixed(0);
             }
 
             if (
@@ -1834,7 +1887,7 @@ const testfunc = async function () {
 
               this.projectedNextOffseasonMarketPercentOfMax = +(
                 this.projectedNextOffseasonDynastyValue / fcNonQBMaxValue
-              ).toFixed(2);
+              ).toFixed(0);
 
               // console.log(this.name, this.projectedNextOffseasonDynastyValue);
             }
@@ -2392,11 +2445,11 @@ const testfunc = async function () {
       }
     });
 
-    // let valueToUseForFantasyCalcValue = +(
-    //   (+player.value + +playerOneOlderFantasyCalc) /
-    //   2
-    // ).toFixed(0);
-    let valueToUseForFantasyCalcValue = +(+player.value).toFixed(0);
+    let valueToUseForFantasyCalcValue = +(
+      (+player.value + +playerOneOlderFantasyCalc) /
+      2
+    ).toFixed(0);
+    // let valueToUseForFantasyCalcValue = +(+player.value).toFixed(0);
     // console.log(
     //   player.player.name,
     //   player.value,
@@ -2481,7 +2534,9 @@ const testfunc = async function () {
         sanitizedFCPlayerName,
         sanitizedRVPlayerName,
         fcQBMaxValue,
-        fcNonQBMaxValue
+        fcNonQBMaxValue,
+        fcPickYear,
+        fcPickRound
       );
 
       tradeCalculaterDataObject.assigningPNODVToThoseThatFellThroug(
@@ -2887,6 +2942,38 @@ const testfunc = async function () {
   /////////////////////////
 
   let tradeAnalyzerDataObjectsArray = [];
+  let ariRBOnePassed = 0;
+  let atlRBOnePassed = 0;
+  let balRBOnePassed = 0;
+  let bufRBOnePassed = 0;
+  let carRBOnePassed = 0;
+  let chiRBOnePassed = 0;
+  let cinRBOnePassed = 0;
+  let cleRBOnePassed = 0;
+  let dalRBOnePassed = 0;
+  let denRBOnePassed = 0;
+  let detRBOnePassed = 0;
+  let gbRBOnePassed = 0;
+  let houRBOnePassed = 0;
+  let indRBOnePassed = 0;
+  let jacRBOnePassed = 0;
+  let kcRBOnePassed = 0;
+  let lvRBOnePassed = 0;
+  let lacRBOnePassed = 0;
+  let larRBOnePassed = 0;
+  let miaRBOnePassed = 0;
+  let minRBOnePassed = 0;
+  let neRBOnePassed = 0;
+  let noRBOnePassed = 0;
+  let nygRBOnePassed = 0;
+  let nyjRBOnePassed = 0;
+  let phiRBOnePassed = 0;
+  let pitRBOnePassed = 0;
+  let sfRBOnePassed = 0;
+  let seaRBOnePassed = 0;
+  let tbRBOnePassed = 0;
+  let tenRBOnePassed = 0;
+  let wasRBOnePassed = 0;
 
   class tradeAnalyzerDataConstructor {
     constructor(
@@ -3083,6 +3170,254 @@ const testfunc = async function () {
       }
     }
 
+    setIfTeamRBOneHasBeenPassed() {
+      if (this.position === 'RB') {
+        // console.log(this.team);
+
+        if (this.team === 'ARI') {
+          ariRBOnePassed = ariRBOnePassed + 1;
+          if (ariRBOnePassed > 1) {
+            this.notTeamsRBOne = true;
+          }
+        }
+        if (this.team === 'ATL') {
+          atlRBOnePassed = atlRBOnePassed + 1;
+          if (atlRBOnePassed > 1) {
+            this.notTeamsRBOne = true;
+          }
+        }
+        if (this.team === 'BAL') {
+          balRBOnePassed = balRBOnePassed + 1;
+          if (balRBOnePassed > 1) {
+            this.notTeamsRBOne = true;
+          }
+        }
+        if (this.team === 'BUF') {
+          bufRBOnePassed = bufRBOnePassed + 1;
+          if (bufRBOnePassed > 1) {
+            this.notTeamsRBOne = true;
+          }
+        }
+        if (this.team === 'CAR') {
+          carRBOnePassed = carRBOnePassed + 1;
+          if (carRBOnePassed > 1) {
+            this.notTeamsRBOne = true;
+          }
+        }
+        if (this.team === 'CHI') {
+          chiRBOnePassed = chiRBOnePassed + 1;
+          if (chiRBOnePassed > 1) {
+            this.notTeamsRBOne = true;
+          }
+        }
+        if (this.team === 'CIN') {
+          cinRBOnePassed = cinRBOnePassed + 1;
+          if (cinRBOnePassed > 1) {
+            this.notTeamsRBOne = true;
+          }
+        }
+        if (this.team === 'CLE') {
+          cleRBOnePassed = cleRBOnePassed + 1;
+          if (cleRBOnePassed > 1) {
+            this.notTeamsRBOne = true;
+          }
+        }
+        if (this.team === 'DAL') {
+          dalRBOnePassed = dalRBOnePassed + 1;
+          if (dalRBOnePassed > 1) {
+            this.notTeamsRBOne = true;
+          }
+        }
+        if (this.team === 'DEN') {
+          denRBOnePassed = denRBOnePassed + 1;
+          if (denRBOnePassed > 1) {
+            this.notTeamsRBOne = true;
+          }
+        }
+        if (this.team === 'DET') {
+          detRBOnePassed = detRBOnePassed + 1;
+          if (detRBOnePassed > 1) {
+            this.notTeamsRBOne = true;
+          }
+        }
+        if (this.team === 'GB') {
+          gbRBOnePassed = gbRBOnePassed + 1;
+          if (gbRBOnePassed > 1) {
+            this.notTeamsRBOne = true;
+          }
+        }
+        if (this.team === 'HOU') {
+          houRBOnePassed = houRBOnePassed + 1;
+          if (houRBOnePassed > 1) {
+            this.notTeamsRBOne = true;
+          }
+        }
+        if (this.team === 'IND') {
+          indRBOnePassed = indRBOnePassed + 1;
+          if (indRBOnePassed > 1) {
+            this.notTeamsRBOne = true;
+          }
+        }
+        if (this.team === 'JAX') {
+          jacRBOnePassed = jacRBOnePassed + 1;
+          if (jacRBOnePassed > 1) {
+            this.notTeamsRBOne = true;
+          }
+        }
+        if (this.team === 'KC') {
+          kcRBOnePassed = kcRBOnePassed + 1;
+          if (kcRBOnePassed > 1) {
+            this.notTeamsRBOne = true;
+          }
+        }
+        if (this.team === 'LV') {
+          lvRBOnePassed = lvRBOnePassed + 1;
+          if (lvRBOnePassed > 1) {
+            this.notTeamsRBOne = true;
+          }
+        }
+        if (this.team === 'LAC') {
+          lacRBOnePassed = lacRBOnePassed + 1;
+          if (lacRBOnePassed > 1) {
+            this.notTeamsRBOne = true;
+          }
+        }
+        if (this.team === 'LAR') {
+          larRBOnePassed = larRBOnePassed + 1;
+          if (larRBOnePassed > 1) {
+            this.notTeamsRBOne = true;
+          }
+        }
+        if (this.team === 'MIA') {
+          miaRBOnePassed = miaRBOnePassed + 1;
+          if (miaRBOnePassed > 1) {
+            this.notTeamsRBOne = true;
+          }
+        }
+        if (this.team === 'MIN') {
+          minRBOnePassed = minRBOnePassed + 1;
+          if (minRBOnePassed > 1) {
+            this.notTeamsRBOne = true;
+          }
+        }
+        if (this.team === 'NE') {
+          neRBOnePassed = neRBOnePassed + 1;
+          if (neRBOnePassed > 1) {
+            this.notTeamsRBOne = true;
+          }
+        }
+        if (this.team === 'NO') {
+          noRBOnePassed = noRBOnePassed + 1;
+          if (noRBOnePassed > 1) {
+            this.notTeamsRBOne = true;
+          }
+        }
+        if (this.team === 'NYG') {
+          nygRBOnePassed = nygRBOnePassed + 1;
+          if (nygRBOnePassed > 1) {
+            this.notTeamsRBOne = true;
+          }
+        }
+        if (this.team === 'NYJ') {
+          nyjRBOnePassed = nyjRBOnePassed + 1;
+          if (nyjRBOnePassed > 1) {
+            this.notTeamsRBOne = true;
+          }
+        }
+        if (this.team === 'PHI') {
+          phiRBOnePassed = phiRBOnePassed + 1;
+          if (phiRBOnePassed > 1) {
+            this.notTeamsRBOne = true;
+          }
+        }
+        if (this.team === 'PIT') {
+          pitRBOnePassed = pitRBOnePassed + 1;
+          if (pitRBOnePassed > 1) {
+            this.notTeamsRBOne = true;
+          }
+        }
+        if (this.team === 'SF') {
+          sfRBOnePassed = sfRBOnePassed + 1;
+          if (sfRBOnePassed > 1) {
+            this.notTeamsRBOne = true;
+          }
+        }
+        if (this.team === 'SEA') {
+          seaRBOnePassed = seaRBOnePassed + 1;
+          if (seaRBOnePassed > 1) {
+            this.notTeamsRBOne = true;
+          }
+        }
+        if (this.team === 'TB') {
+          tbRBOnePassed = tbRBOnePassed + 1;
+          if (tbRBOnePassed > 1) {
+            this.notTeamsRBOne = true;
+          }
+        }
+        if (this.team === 'TEN') {
+          tenRBOnePassed = tenRBOnePassed + 1;
+          if (tenRBOnePassed > 1) {
+            this.notTeamsRBOne = true;
+          }
+        }
+        if (this.team === 'WAS') {
+          wasRBOnePassed = wasRBOnePassed + 1;
+          if (wasRBOnePassed > 1) {
+            this.notTeamsRBOne = true;
+          }
+        }
+      }
+    }
+
+    calcZeroRBPRPBonus() {
+      if (this.position === 'RB') {
+        // console.log(this.team);
+        let marketValue = +(
+          this.myValue - this.valueDiffBetweenMyValueAndMarketValue
+        );
+
+        if (this.notTeamsRBOne === true) {
+          // console.log(
+          //   this.name,
+
+          //   +marketValue,
+          //   this.myValue
+          // );
+
+          if (
+            ((this.marketValue > 500 && this.marketValue < 1001) ||
+              this.myValue > 500) &&
+            this.myValue < 1001
+          ) {
+            if (this.marketValue < 1000 && this.myValue < 1000) {
+              this.PRPScore = this.PRPScore + 25;
+            }
+          }
+          if (
+            ((this.marketValue > 1000 && this.marketValue < 1500) ||
+              this.myValue > 1000) &&
+            this.myValue < 1500
+          ) {
+            if (this.marketValue < 1500 && this.myValue < 1500) {
+              this.PRPScore = this.PRPScore + 50;
+            }
+          }
+          if (
+            ((this.marketValue > 1499 && this.marketValue < 2000) ||
+              this.myValue > 1499) &&
+            this.myValue < 2000
+          ) {
+            if (this.marketValue < 2000 && this.myValue < 2000) {
+              this.PRPScore = this.PRPScore + 75;
+            }
+          }
+          if (this.marketValue > 2000 || this.myValue > 2000) {
+            this.PRPScore = this.PRPScore + 100;
+          }
+        }
+      }
+    }
+
     calcRVS() {
       this.RVSScore = +this.PRPScore + +this.PNODVScore;
     }
@@ -3090,6 +3425,7 @@ const testfunc = async function () {
 
   alltradeCalculaterDataArray.forEach(function (playerObject) {
     // console.log(playerObject);
+
     let tradeAnalyzerDataObject = new tradeAnalyzerDataConstructor(
       playerObject.name,
       playerObject.position,
@@ -3112,6 +3448,10 @@ const testfunc = async function () {
 
     tradeAnalyzerDataObject.calcScoreFromDifferenceBetweenCurrentMarketValueAndPNODV();
 
+    tradeAnalyzerDataObject.setIfTeamRBOneHasBeenPassed();
+
+    tradeAnalyzerDataObject.calcZeroRBPRPBonus();
+
     tradeAnalyzerDataObject.calcRVS();
 
     tradeAnalyzerDataObjectsArray.push(tradeAnalyzerDataObject);
@@ -3119,7 +3459,7 @@ const testfunc = async function () {
   // console.log(tradeAnalyzerDataObjectsArray);
 
   ///////////uncomment below to push all trade analyzer data from above to db named tradeAnalyzerData
-
+  //
   // const url =
   //   'mongodb+srv://devJay:Hesstrucksarethebest@dailydynasties.syom4sb.mongodb.net/test';
   // const client = new MongoClient(url);

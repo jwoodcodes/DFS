@@ -99,9 +99,15 @@ export default function TeamTwo({
         </div>
         <div className={styles.playersSelectedForTeam}>
           {teamTwoPlayers.map(function (player) {
+            if (!player.PRPScore) {
+              player.PRPScore = 0;
+            }
             teamTotalPRP = teamTotalPRP + player.PRPScore;
             teamTotalPNODVScore = teamTotalPNODVScore + player.PNODVScore;
             teamTotalRVS = teamTotalRVS + player.RVSScore;
+            if (!player.RVSScore) {
+              player.RVSScore = 0;
+            }
             teamTotalMarketValue = teamTotalMarketValue + player.marketValue;
             teamTotalMyValue = teamTotalMyValue + player.myValue;
             teamTotalPNODV =
@@ -115,11 +121,14 @@ export default function TeamTwo({
                   <span className={styles.PRPSpan}>
                     PRP Score:{''} {player.PRPScore}
                   </span>
-
                   <span className={styles.PNODVSpan}>
+                    PNODV: {player.projectedNextOffseasonDynastyValue}
+                  </span>
+
+                  {/* <span className={styles.PNODVSpan}>
                     PNODV Score: {''}
                     {player.PNODVScore}{' '}
-                  </span>
+                  </span> */}
                   <span className={styles.RVSSpan}>
                     RVS Score: {''} {player.RVSScore}
                   </span>
@@ -128,9 +137,6 @@ export default function TeamTwo({
                   </span>
                   <span className={styles.myValueSpan}>
                     My Value: {player.myValue}
-                  </span>
-                  <span className={styles.PNODVSpan}>
-                    PNODV: {player.projectedNextOffseasonDynastyValue}
                   </span>
                 </div>
                 <button
