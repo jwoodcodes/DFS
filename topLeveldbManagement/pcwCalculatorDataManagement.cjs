@@ -2447,11 +2447,16 @@ const testfunc = async function () {
         playerOneOlderFantasyCalc = player.value;
       }
     });
-
-    let valueToUseForFantasyCalcValue = +(
-      (+player.value + +playerOneOlderFantasyCalc) /
-      2
-    ).toFixed(0);
+    let valueToUseForFantasyCalcValue = +(+player.value).toFixed(0);
+    if (playerOneOlderFantasyCalc === 0) {
+      valueToUseForFantasyCalcValue = +(+player.value).toFixed(0);
+    }
+    if (playerOneOlderFantasyCalc > 0) {
+      valueToUseForFantasyCalcValue = +(
+        (+player.value + +playerOneOlderFantasyCalc) /
+        2
+      ).toFixed(0);
+    }
     // let valueToUseForFantasyCalcValue = +(+player.value).toFixed(0);
     // console.log(
     //   player.player.name,
@@ -2683,7 +2688,7 @@ const testfunc = async function () {
 
   ///////////////////////
   //////////////
-  ///////////uncomment below to push all data from above to db named dynastyAndRedraftPlayerObjects
+  // ///////////uncomment below to push all data from above to db named dynastyAndRedraftPlayerObjects
 
   // const url =
   //   'mongodb+srv://devJay:Hesstrucksarethebest@dailydynasties.syom4sb.mongodb.net/test';
@@ -3468,8 +3473,8 @@ const testfunc = async function () {
   });
   // console.log(tradeAnalyzerDataObjectsArray);
 
-  ///////////uncomment below to push all trade analyzer data from above to db named tradeAnalyzerData
-  //
+  // ///////////uncomment below to push all trade analyzer data from above to db named tradeAnalyzerData
+
   // const url =
   //   'mongodb+srv://devJay:Hesstrucksarethebest@dailydynasties.syom4sb.mongodb.net/test';
   // const client = new MongoClient(url);

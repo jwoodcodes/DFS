@@ -625,7 +625,7 @@ export default function TradeOverview({ teamOnePlayers, teamTwoPlayers }) {
               this year AND their likelihood to hold or gain in dynasty value.
               Players that score highly in RVS are the best assets to have in
               dynasty as they can help you win this year AND go up or maintain
-              in value by next offseason. Having rostes high in RVS is key to a
+              in value by next offseason. Having rosters high in RVS is key to a
               permanant championship window.
             </div>
             <div className={styles.legendBlock}>
