@@ -4,6 +4,7 @@ const allWRData = require('./dfs_positions_calc_funcs/wrValuesCalcs');
 const allTEProjectionsObjects = require('./dfs_positions_calc_funcs/teValuesCalcs');
 const allQBModelDataData = require('./QB Prospect Model/qbmodel');
 
+
 const wholeTeamObjects = require('./dfs_positions_calc_funcs/createWholeTeamObjects');
 
 // console.log(allQBData);
@@ -142,6 +143,10 @@ let rbProjectionArray = [...tempRbProjectionArray];
 let tempWrProjectionArray = allWRData.allWRProjectionsObjects;
 let wrProjectionArray = [...tempWrProjectionArray];
 let teProjectionsArray = [...allTEProjectionsObjects];
+
+
+
+
 
 // console.log(teProjectionsArray);
 

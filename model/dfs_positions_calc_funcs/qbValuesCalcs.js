@@ -710,6 +710,7 @@ const allQBManagedAndCashProjectedPointsValuesPlusNames = [];
 // });
 
 if (gameInfo.week.currentWeek < 3) {
+  let tempValue = 0
   allQBs.map(function (team, i) {
     let QBProjectedPoints = 0;
     let valueFromGLSP = 0;
@@ -730,12 +731,15 @@ if (gameInfo.week.currentWeek < 3) {
         +team.fourForFourHalfPPRProjectedPoints.toFixed(2) +
         valueFromGLSP;
 
-      let tempValue = +(tempTotalValue / 4).toFixed(2);
+       tempValue = +(tempTotalValue / 4).toFixed(2);
     } else {
-      let tempValue = +team.fourForFourHalfPPRProjectedPoints.toFixed(2);
+       tempValue = +team.fourForFourHalfPPRProjectedPoints.toFixed(2);
     }
 
+    
+    if(tempValue) {
     QBProjectedPoints = tempValue;
+    }
     team.appQBProjectedPoints = +QBProjectedPoints;
     allQBFinalProjectedPointsValues.push(QBProjectedPoints);
     allQBFinalProjectedPointsValuesPlusNames.push(

@@ -2437,6 +2437,7 @@ const populateTeamObjects = function (
   let teOneName = gameInfoPassedInTeam.TEOneThisWeekName;
   let teTwoName = gameInfoPassedInTeam.TETwoThisWeekName;
 
+  if(teOneName) {
   if (teOneName.includes("'")) {
     teOneName = teOneName.replace("'", '');
   }
@@ -2466,6 +2467,8 @@ const populateTeamObjects = function (
 
   // console.log(sanitizedTEOneName);
   passedInTeam.TE1.sanitizedTEOneName = sanitizedTEOneName;
+}
+
 
   if (teTwoName) {
     if (teTwoName.includes("'")) {
@@ -2590,6 +2593,7 @@ const populateTeamObjects = function (
 
   allFlexGLSP.forEach(function (player) {
     // console.log(player['"Player"']);
+    if(player['"Player"']) {
     if (
       player['"Player"'].slice(1, -1) === passedInTeam.TE1.name ||
       player['"Player"'].slice(1, -1) === passedInTeam.TE1.sanitizedTEOneName
@@ -2638,7 +2642,9 @@ const populateTeamObjects = function (
       passedInTeam.TE1.TEPSeventyFifthPercentProjectedPoints =
         tempSeventyFifthPPRToHalfDifference;
     }
+  }
 
+  if(player['"Player"']) {
     if (
       player['"Player"'].slice(1, -1) === passedInTeam.TE2.name ||
       player['"Player"'].slice(1, -1) === passedInTeam.TE2.sanitizedTETwoName
@@ -2686,6 +2692,7 @@ const populateTeamObjects = function (
       passedInTeam.TE2.TEPSeventyFifthPercentProjectedPoints =
         tempSeventyFifthPPRToHalfDifference;
     }
+  }
   });
 
   //
