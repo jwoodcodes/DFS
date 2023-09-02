@@ -3029,7 +3029,7 @@ const populateTeamObjects = function (
   } else {
     passedInTeam.teamProjectedForAHalfOfNegetiveGameScriptIsTrue = 'false';
   }
-
+if(gameInfoPassedInTeam.WROneThisWeekName) {
   tempWROneName = gameInfoPassedInTeam.WROneThisWeekName.replace(
     '.',
     ''
@@ -3045,13 +3045,13 @@ const populateTeamObjects = function (
     '.',
     ''
   ).replace('.', '');
-
+  }
   if (tempWRTwoName.includes("'")) {
     tempWRTwoName = tempWRTwoName.replace("'", '');
   }
 
   passedInTeam.WRTwo.name = tempWRTwoName;
-
+if(gameInfoPassedInTeam.WRThreeThisWeekName) {
   tempWRThreeName = gameInfoPassedInTeam.WRThreeThisWeekName.replace(
     '.',
     ''
@@ -3062,6 +3062,7 @@ const populateTeamObjects = function (
   }
 
   passedInTeam.WRThree.name = tempWRThreeName;
+}
 
   qbDownloadableSpreadSheetYahoo.forEach(function (playerobj, i) {
     passedInTeam.slate = '';
@@ -3153,7 +3154,8 @@ const populateTeamObjects = function (
         //   tempWRThreeName = tempWRThreeName.replace("'", '');
         // }
         // passedInTeam.WRThree.name = tempWRThreeName;
-
+        
+        if(team['"POS"']) {
         if (team['"POS"'].slice(1, -1) === 'WR') {
           SanitizedPlayerName = team['"Player"']
             .slice(1, -1)
@@ -3212,6 +3214,7 @@ const populateTeamObjects = function (
             passedInTeam.WRThree.glspPPRAvg = +team['"PPR - AVG"'];
           }
         }
+      }
       });
 
       wr4for4PlayerStatExplorerRecievingByAverageLastFiveWeeks.forEach(

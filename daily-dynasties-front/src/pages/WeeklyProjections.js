@@ -18,6 +18,7 @@ export default function WeeklyProjections(allProjections) {
   let wrArray = [...tempWRArray];
   let teArray = [...tempTEArray];
   let newArray = [...qbArray, ...rbArray, ...wrArray, ...teArray];
+  let flexArray = [...rbArray, ...wrArray, ...teArray];
   // console.log(newArray[0]);
   const curWeek = newArray[0].currentWeek;
 
@@ -36,6 +37,9 @@ export default function WeeklyProjections(allProjections) {
   function te(event) {
     setPositionToShow('TE');
   }
+  function flex(event) {
+    setPositionToShow('FLEX');
+  }
 
   let dataToUse = [];
 
@@ -46,7 +50,7 @@ export default function WeeklyProjections(allProjections) {
       <div className={styles.curWeek}>{`Week ${curWeek} Projections`}</div>
       <div className={styles.btnsWrapper}>
         <button className={styles.posBtn} onClick={overall}>
-          Overall
+          Superflex
         </button>
         <button className={styles.posBtn} onClick={qb}>
           QB
@@ -59,6 +63,9 @@ export default function WeeklyProjections(allProjections) {
         </button>
         <button className={styles.posBtn} onClick={te}>
           TE
+        </button>
+        <button className={styles.posBtn} onClick={flex}>
+          Flex
         </button>
       </div>
       {positionToShow === 'Overall' && <Table data={newArray} />}
@@ -83,6 +90,12 @@ export default function WeeklyProjections(allProjections) {
       {positionToShow === 'TE' && (
         <ProjIndividualPositions
           data={teArray}
+          positionToShow={positionToShow}
+        />
+      )}
+      {positionToShow === 'FLEX' && (
+        <ProjIndividualPositions
+          data={flexArray}
           positionToShow={positionToShow}
         />
       )}

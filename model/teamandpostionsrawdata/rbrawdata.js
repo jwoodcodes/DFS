@@ -3567,11 +3567,11 @@ const populateTeamObjects = function (
     ) {
       // console.log(rb);
 
-      // let weekFiveWeeksAgo = 0;
-      // let weekFourWeeksAgo = 0;
-      // let weekThreeWeeksAgo = 0;
-      // let weekTwoWeeksAgo = 0;
-      // let weekLastWeek = 0;
+      let weekFiveWeeksAgo = 0;
+      let weekFourWeeksAgo = 0;
+      let weekThreeWeeksAgo = 0;
+      let weekTwoWeeksAgo = 0;
+      let weekLastWeek = 0;
 
       if (gameInfo.week.currentWeek === 3) {
         weekTwoWeeksAgo = rb['"Wk 1"'];
@@ -3739,11 +3739,21 @@ const populateTeamObjects = function (
         rbName === passedInTeam.firstPassedInRBName ||
         rbName === passedInTeam.firstPassedInRBAltName
       ) {
+        if(weekFiveWeeksAgo) {
         tempweekFiveWeeksAgo = (+weekFiveWeeksAgo).toFixed(2);
+        }
+        if(tempweekFourWeeksAgo ) {
         tempweekFourWeeksAgo = (+weekFourWeeksAgo).toFixed(2);
+        }
+        if(tempweekThreeWeeksAgo) {
         tempweekThreeWeeksAgo = (+weekThreeWeeksAgo).toFixed(2);
+        }
+        if(tempweekTwoWeeksAgo) {
         tempweekTwoWeeksAgo = (+weekTwoWeeksAgo).toFixed(2);
+        }
+        if(tempweekLastWeek) {
         tempweekLastWeek = (+weekLastWeek).toFixed(2);
+        }
         // console.log(tempweekFiveWeeksAgo);
         passedInTeam.firstPassedInRBFiveWeeksagoTotal = (
           +passedInTeam.firstPassedInRBFiveWeeksagoFantasyPointsScoredPlusSnapPercentage +
@@ -5898,6 +5908,8 @@ const populateTeamObjects = function (
     });
 
     allFlexGLSP.forEach(function (team) {
+      if(team['"POS"']) {
+      if(passedInTeam.RBTwo) {
       if (team['"POS"'].slice(1, -1) === 'RB') {
         // console.log(team['"Player"']);
         if (
@@ -5974,6 +5986,8 @@ const populateTeamObjects = function (
           passedInTeam.RBTwo.glspGreaterThanTwentyFive = +team['">25"'];
         }
       }
+    }
+    }
     });
 
     rb4for4StatExplorerForRushingLastFiveWeeks.forEach(function (team) {
