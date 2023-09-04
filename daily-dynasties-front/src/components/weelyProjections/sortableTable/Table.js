@@ -1,4 +1,5 @@
-import styles from '@/styles/table.module.css';
+// import styles from '@/styles/table.module.css';
+import styles from '@/styles/tableWeeklyProjections.module.css';
 import React from 'react';
 import TableBody from './TableBody';
 import TableHead from './TableHead';
@@ -11,9 +12,9 @@ export default function Table({ data }) {
     { label: 'Pos.', accessor: 'position' },
     // { label: 'Team', accessor: 'team' },
     { label: 'Team', accessor: 'team' },
-    { label: 'Half PPR Projection', accessor: 'appHalfProjectedPoints' },
-    { label: 'Full PPR Projection', accessor: 'appFullProjectedPoints' },
-    { label: 'TEP PPR Projection', accessor: 'appTEPProjectedPoints' },
+    { label: 'Half PPR', accessor: 'appHalfProjectedPoints' },
+    { label: 'Full PPR', accessor: 'appFullProjectedPoints' },
+    { label: 'TEP PPR', accessor: 'appTEPProjectedPoints' },
   ];
 
   const handleSorting = (sortField, sortOrder) => {

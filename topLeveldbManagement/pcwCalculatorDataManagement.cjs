@@ -2918,8 +2918,9 @@ const testfunc = async function () {
   //     console.log('Connected correctly to server');
   //     const db = client.db(dbName);
 
-  //     // Use the collection "people"
+  //     // Use the collection "dynastyRankingsData"
   //     const col = db.collection('dynastyRankingsData');
+  //     // const col = db.collection('august-28-2023-snapshot');
 
   //     // Construct a document
   //     let dynastyRankingsData = {
