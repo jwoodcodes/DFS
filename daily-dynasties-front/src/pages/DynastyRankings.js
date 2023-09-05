@@ -4,6 +4,7 @@ import styles from '@/styles/dynastyRankings.module.css';
 import clientPromise from '@/lib/mongodb';
 import Table from '@/components/sortableTable/Table';
 import IndividualPositions from '@/components/dynastyRankings/IndividualPositions';
+import Footer from '@/components/Footer';
 
 export default function DynastyRankings(dynastyRankingsData) {
   const [positionToShow, setPositionToShow] = React.useState('Overall');
@@ -169,7 +170,9 @@ export default function DynastyRankings(dynastyRankingsData) {
       {positionToShow === 'PICK' && (
         <IndividualPositions data={pickArray} positionToShow={positionToShow} />
       )}
+      <Footer />
     </div>
+    
   );
 }
 

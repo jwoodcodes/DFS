@@ -28,12 +28,13 @@ export default function MainNav() {
             vs. Market
           </Link>
         </li>
-        <li>
-          <Link href="/WeeklyProjections">Weekly Projections</Link>
-        </li>
+        
 
         <li>
           <Link href="/3DTradeAnalyzer">3D Trade Analyzer</Link>
+        </li>
+        <li>
+          <Link href="/WeeklyProjections">Weekly Projections</Link>
         </li>
         {/* <li>
           <Link href="/Contact">Contact</Link>

@@ -5,6 +5,7 @@ import React from 'react';
 import TeamOne from '@/components/tradeAnalyzer/TeamOne';
 import TeamTwo from '@/components/tradeAnalyzer/TeamTwo';
 import TradeOverview from '@/components/tradeAnalyzer/TradeOvervire';
+import Footer from '@/components/Footer';
 
 export default function ThreeDTradeAnalyzer(dynastyRankingsData) {
   let dataLevelOne = dynastyRankingsData.dynastyRankingsData;
@@ -25,11 +26,12 @@ export default function ThreeDTradeAnalyzer(dynastyRankingsData) {
   return (
     <div>
       <MainNav />
+      
       <h1 className={styles.pageTitle}>3D Trade Analyzer</h1>
-      <h2 className={styles.secondaryHeading}>
+      {/* <h2 className={styles.secondaryHeading}>
         A trade calculator that tells you how a trade <b>actually</b> effects{' '}
         <b>your</b> team, not simply if a deal is fair
-      </h2>
+      </h2> */}
       <div className={styles.wholeMainSectionWrapper}>
         {/* team 1 */}
         <TeamOne
@@ -49,8 +51,11 @@ export default function ThreeDTradeAnalyzer(dynastyRankingsData) {
           teamOnePlayers={teamOnePlayers}
           teamTwoPlayers={teamTwoPlayers}
         />
+        <Footer />
       </div>
+      
     </div>
+    
   );
 }
 
