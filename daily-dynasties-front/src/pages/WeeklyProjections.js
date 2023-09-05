@@ -4,6 +4,7 @@ import Table from '@/components/weelyProjections/sortableTable/Table';
 import React from 'react';
 import MainNav from '@/components/MainNav';
 import ProjIndividualPositions from '@/components/weelyProjections/ProjIndividualPositions';
+import Footer from '@/components/Footer';
 
 export default function WeeklyProjections(allProjections) {
   const [positionToShow, setPositionToShow] = React.useState('Overall');
@@ -99,6 +100,7 @@ export default function WeeklyProjections(allProjections) {
           positionToShow={positionToShow}
         />
       )}
+      <Footer />
     </>
   );
 }

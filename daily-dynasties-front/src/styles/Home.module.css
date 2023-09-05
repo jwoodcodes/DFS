@@ -1,9 +1,73 @@
 .mainSiteTitle {
   text-align: center;
   margin-top: 4rem;
-  font-size: 4.8rem;
-  letter-spacing: 0.4rem;
+  font-size: 5.25rem;
+  font-weight: 100;
+  letter-spacing: 0.5rem;
   background: linear-gradient(to right bottom, #420c47, #065a60);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+@media (max-width: 500px) {
+  .mainSiteTitle {
+    font-size: 3.5rem;
+    letter-spacing: .25rem;
+  }
+}
+@media (max-width: 450px) {
+  .mainSiteTitle {
+    font-size: 3rem;
+    letter-spacing: .2rem;
+  }
+}
+@media (max-width: 390px) {
+  .mainSiteTitle {
+    font-size: 2.5rem;
+    letter-spacing: .15rem;
+  }
+}
+.mainContentWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin: 5rem auto;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.25;
+  letter-spacing: .1rem;
+  font-size: 1.25rem;
+  color: #065a60;
+}
+@media (min-width: 1750px) {
+  .mainContentWrapper {
+    width: 70%;
+  }
+}
+@media (max-width: 500px) {
+  .mainContentWrapper {
+    font-size: 1rem;
+    letter-spacing: .05rem;
+  }
+}
+@media (max-width: 400px) {
+  .mainContentWrapper {
+    width: 85%;
+  }
+}
+@media (max-width: 385px) {
+  .mainContentWrapper {
+    width: 85%;
+    font-size: .9rem;
+  }
+}
+
+.subHeading {
+  color: #420c47;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.paragraphOne {
+
 }
