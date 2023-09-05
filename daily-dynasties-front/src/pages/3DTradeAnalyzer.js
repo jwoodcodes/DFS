@@ -51,7 +51,7 @@ export default function ThreeDTradeAnalyzer(dynastyRankingsData) {
           teamOnePlayers={teamOnePlayers}
           teamTwoPlayers={teamTwoPlayers}
         />
-        <Footer />
+        {/* <Footer /> */}
       </div>
       
     </div>
