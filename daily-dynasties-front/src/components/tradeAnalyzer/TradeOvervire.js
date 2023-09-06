@@ -437,8 +437,8 @@ export default function TradeOverview({ teamOnePlayers, teamTwoPlayers }) {
     <div className={styles.tradeOvervireWrapper}>
       <div className={styles.tradeOverviewTitle}>Trade Overview</div>
       <div className={styles.overviewWarning}>
-        *Don't lose too much in market value even if everything else looks
-        good!*
+        
+        *Ideally Market Value is <span className={styles.overviewBlueSpan}>BLUE</span>, Never <span className={styles.overviewDarkRedSpan}>DARK RED</span>. Your side as <span className={styles.overviewGreenSpan}>GREEN</span> as possible.*
       </div>
       <div className={styles.overviewCardWrapper}>
         <div className={styles.teamOverviewWrapper}>
@@ -625,7 +625,7 @@ export default function TradeOverview({ teamOnePlayers, teamTwoPlayers }) {
               this year AND their likelihood to hold or gain in dynasty value.
               Players that score highly in RVS are the best assets to have in
               dynasty as they can help you win this year AND go up or maintain
-              in value by next offseason. Having rosters high in RVS is key to a
+              in value by next offseason. Having rosters high in total RVS is key to a
               permanant championship window.
             </div>
             <div className={styles.legendBlock}>

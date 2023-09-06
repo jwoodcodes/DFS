@@ -179,14 +179,15 @@
     font-size: 1.25rem;
   }
 }
-@media (max-width: 375px) {
+
+@media (max-width: 400px) {
   .overviewCardWrapper {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
   }
 }
-@media (max-width: 350px) {
+@media (max-width: 365px) {
   .overviewCardWrapper {
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
 }
 
@@ -197,8 +198,8 @@
   font-family: 'Playfair Display', 'Segoe UI', Tahoma, Geneva, Verdana,
     sans-serif, sans-serif;
   text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 4.25rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 @media (max-width: 1275px) {
   .tradeOverviewTitle {
@@ -220,10 +221,11 @@
 }
 
 .overviewWarning {
-  color: red;
+  /* color: red; */
   font-size: 1rem;
   font-weight: 700;
   margin-bottom: 1rem;
+  text-align: center;
 }
 @media (max-width: 1700px) {
   .overviewWarning {
@@ -261,6 +263,18 @@
     padding: 0 20px;
     font-size: 1rem;
   }
+}
+
+.overviewBlueSpan {
+  color: #0709a1;
+  
+}
+.overviewGreenSpan {
+  color: #044728;
+}
+
+.overviewDarkRedSpan {
+  color: #9c0d0d;
 }
 
 .tradeOvervireWrapper {
@@ -515,7 +529,7 @@
   padding-left: 10px;
   padding-right: 5px;
   border-radius: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 19px;
 }
 @media (max-width: 1275px) {
   .bigWin {
@@ -529,7 +543,7 @@
   padding-left: 10px;
   padding-right: 5px;
   border-radius: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 19px;
 }
 @media (max-width: 1275px) {
   .smallWin {
@@ -543,7 +557,7 @@
   padding-left: 10px;
   padding-right: 5px;
   border-radius: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 19px;
 }
 @media (max-width: 1275px) {
   .neutral {
@@ -557,7 +571,7 @@
   padding-left: 10px;
   padding-right: 5px;
   border-radius: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 19px;
 }
 @media (max-width: 1275px) {
   .smallLoss {
@@ -571,7 +585,7 @@
   padding-left: 10px;
   padding-right: 5px;
   border-radius: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 19px;
 }
 @media (max-width: 1275px) {
   .bigLoss {
