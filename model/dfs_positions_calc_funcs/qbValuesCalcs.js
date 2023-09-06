@@ -725,15 +725,17 @@ if (gameInfo.week.currentWeek < 3) {
     }
 
     if (valueFromGLSP && valueFromGLSP > 0) {
+      
       let tempTotalValue =
-        +team.fourForFourHalfPPRProjectedPoints.toFixed(2) +
-        +team.fourForFourHalfPPRProjectedPoints.toFixed(2) +
-        +team.fourForFourHalfPPRProjectedPoints.toFixed(2) +
+        +team.fourForFourHalfPPRProjectedPoints +
+        +team.fourForFourHalfPPRProjectedPoints +
+        +team.fourForFourHalfPPRProjectedPoints +
         valueFromGLSP;
 
-       tempValue = +(tempTotalValue / 4).toFixed(2);
+       tempValue = +(tempTotalValue.toFixed(2) / 4).toFixed(2);
     } else {
-       tempValue = +team.fourForFourHalfPPRProjectedPoints.toFixed(2);
+      firstTempvalue = +team.fourForFourHalfPPRProjectedPoints
+       tempValue = firstTempvalue.toFixed(2);
     }
 
     

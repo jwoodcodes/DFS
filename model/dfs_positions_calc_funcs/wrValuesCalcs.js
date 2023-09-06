@@ -189,21 +189,30 @@ class WrObject {
     // for weeks 1 & 2
 
     if (gameInfo.week.currentWeek < 3) {
-      let tempHalfProjection = +(
+      let tempHalfProjection = 0
+      if(this.halfGLSPAvg) {
+      tempHalfProjection = +(
         (this.fourForFourHalfPPRProjectedPoints +
           this.fourForFourHalfPPRProjectedPoints +
           this.fourForFourHalfPPRProjectedPoints +
           this.halfGLSPAvg) /
         4
       ).toFixed(2);
-
-      let tempPPRProjection = +(
+        } else {
+          tempHalfProjection = this.fourForFourHalfPPRProjectedPoints.toFixed(0)
+        }
+        let tempPPRProjection = 0
+        if(this.PPRGLSPAvg) {
+      tempPPRProjection = +(
         (this.fourForFourFullPPRProjectedPoints +
           this.fourForFourFullPPRProjectedPoints +
           this.fourForFourFullPPRProjectedPoints +
           this.PPRGLSPAvg) /
         4
       ).toFixed(2);
+        } else {
+          tempPPRProjection = this.fourForFourFullPPRProjectedPoints.toFixed(0)
+        }
 
       this.appHalfProjectedPoints = tempHalfProjection;
       this.appFullProjectedPoints = tempPPRProjection;
