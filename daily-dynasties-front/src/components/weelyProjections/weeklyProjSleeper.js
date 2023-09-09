@@ -23,7 +23,7 @@ export default function WeeklySleeperData({searchedUser}) {
        axiosFetch()
        
     
-  }, [])
+  }, [selectedUserName])
      
 
 
