@@ -189,6 +189,10 @@ class WrObject {
     // for weeks 1 & 2
 
     if (gameInfo.week.currentWeek < 3) {
+      // if(this.teamABV === 'LAR') {
+      //   console.log(this.name)
+      // }
+      
       let tempHalfProjection = 0
       if(this.halfGLSPAvg) {
       tempHalfProjection = +(
@@ -1296,7 +1300,7 @@ allWRData.allWRProjectionsObjects = allWRProjectionsObjects;
 // console.log(arrayOfProjectedPointsForMyDevUse);
 
 // console.log(allTeamWRObjects.giants.WRThree);
-// console.log(allTeamWRObjects.packers.WRTwo);
+// console.log(allTeamWRObjects.rams.WRTwo);
 
 // console.log(
 //   allTeamWRObjects.cowboys.WROne,
