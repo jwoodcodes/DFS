@@ -97,26 +97,32 @@ async function fetchRawSleeperDataFromMongodb() {
 
   const newData = [];
   const allSleeperDataArray = [];
-
+  const PlayerArray = []
   const testfunc = async function () {
   const test = await allSleeperDataArray;
   // console.log(test);
   const testDoc = await fetchRawSleeperDataFromMongodb();
   // console.log(testDoc);
   newData.push(testDoc);
-//   console.log(newData);
-  }
-
-  testfunc()
+  // console.log(newData);
+  
+// }
+  
+ let testnum = 1
+ let dataObject = {}
 
   newData.forEach(function (topLevelObject) {
-    PlayerArray = topLevelObject.data;
+    dataObject = topLevelObject.data
+    PlayerArray.push(topLevelObject.data);
+    
   });
 
+//  console.log(PlayerArray)
 
   const testUserFetch = async function () {
 
-    const usernameRes = await axios.get('https://api.sleeper.app/v1/user/tiger333')
+    let selectedUserName = 'tiger333'
+    const usernameRes = await axios.get(`https://api.sleeper.app/v1/user/${selectedUserName}`)
 
     // console.log(usernameRes.data.user_id)
     const userID = usernameRes.data.user_id
@@ -135,7 +141,57 @@ async function fetchRawSleeperDataFromMongodb() {
         userLeaguesNamesArray.push(league.name)
         userLeaguesArray.push(league)
     })
-    console.log(userLeaguesArray)
+    // console.log(userLeaguesArray)
+    let selectedLeagueName = 'FootClan Dynasty'
+    let selectedLeagueID = 0
+    let selectedLeagueNumOfTeams = 0
+    let selectedLeagueScoringSettings = {}
+    let selectedLeagueRosterPositions = []
+    userLeaguesArray.forEach(function(league) {
+      if(league.name === selectedLeagueName) {
+        // console.log(league)
+        selectedLeagueID = league.league_id
+        selectedLeagueNumOfTeams = league.total_rosters
+        selectedLeagueScoringSettings = league.scoring_settings
+        selectedLeagueRosterPositions = league.roster_positions
+      }
+    })
+    // console.log(selectedLeagueRosterPositions)
+    const selectedLeagueRostersRes = await axios.get(
+      `https://api.sleeper.app/v1/league/${selectedLeagueID}/rosters`
+    );
+    let selectedLeagueRostersData =  selectedLeagueRostersRes.data
+    let selectedUsersTeamObject = {}
+      let selectedUsersRoster = []
+
+    selectedLeagueRostersData.forEach(function(team) {
+      // console.log(team.owner_id)
+      if(team.owner_id === userID) {
+        // console.log(team)
+        selectedUsersTeamObject = team
+        selectedUsersRoster = team.players
+      }
+    })
+
+    let selectedUsersRosterPlayerObjects = []
+
+    for (const key in dataObject) {
+      // console.log(`${key}: ${dataObject[key].player_id}`)
+      selectedUsersRoster.forEach(function(player) {
+        
+        if(key === player) {
+          // console.log(dataObject[key].full_name)
+          selectedUsersRosterPlayerObjects.push(dataObject[key])
+        }
+      })
+    }
+
+
+   
+  }
+  testUserFetch()
   }
   
-  testUserFetch()
+  testfunc()
+  
+  

@@ -5,6 +5,7 @@ import React from 'react';
 import MainNav from '@/components/MainNav';
 import ProjIndividualPositions from '@/components/weelyProjections/ProjIndividualPositions';
 import Footer from '@/components/Footer';
+import WeeklySleeperData from '@/components/weelyProjections/weeklyProjSleeper';
 
 export default function WeeklyProjections(allProjections) {
   const [positionToShow, setPositionToShow] = React.useState('Overall');
@@ -44,11 +45,30 @@ export default function WeeklyProjections(allProjections) {
 
   let dataToUse = [];
 
+  // const [userSearchValue, setUserSearchValue] = React.useState('');
+  // const [searchedUser, setSearchedUser] = React.useState('')
+
+  // function searchOnChange() {
+  //   setUserSearchValue(event.target.value)
+  // }
+  // function onSearch() {
+  //   setSearchedUser(event.target.value)
+    
+  // }
+
   return (
     <>
       <MainNav />
       <div className={styles.mainTitle}>Weekly Projections</div>
       <div className={styles.curWeek}>{`Week ${curWeek} Projections`}</div>
+      {/* <form>
+        <input type='text' value={userSearchValue} onChange={searchOnChange}>
+
+        </input>
+        <button onClick={() => onSearch(userSearchValue)}>Search</button>
+      </form> */}
+      {/* <WeeklySleeperData searchedUser={setSearchedUser}/> */}
+      
       <div className={styles.btnsWrapper}>
         <button className={styles.posBtn} onClick={overall}>
           Superflex
@@ -126,3 +146,10 @@ export async function getStaticProps() {
     console.error(e);
   }
 }
+
+///
+
+
+ 
+
+

@@ -1275,6 +1275,7 @@ const populateTeamObjects = function (passedInTeam) {
   passedInTeam.RBTwoThisWeek4for4HalfProjPoints = 0;
   const setPlayerNamesAtPositionsToTheirTeams = function (PITeam) {
     wholeDownloadableSpreadSheetYahoo.forEach(function (team, i) {
+      
       //setting QB's
       ////////////
       if (PITeam.teamABV === team.Team) {
@@ -1328,7 +1329,9 @@ const populateTeamObjects = function (passedInTeam) {
 
       //setting WR's
       ///////////////
+      
       if (PITeam.teamABV === team.Team) {
+        // console.log(PITeam.teamABV)
         if (team.Pos === 'WR') {
           if (!passedInTeam.WROneThisWeekName) {
             passedInTeam.WROneThisWeekName = team.Player;
@@ -5346,7 +5349,7 @@ allGameInfo.forEach(function (team) {
 // console.log(gameInfo.vikings);
 // console.log(gameInfo.SF49ers);
 // console.log(gameInfo.bengals, gameInfo.titans);
-
+// console.log(gameInfo.rams)
 // console.log(gameInfo);
 
 module.exports = gameInfo;

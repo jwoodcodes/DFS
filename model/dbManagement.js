@@ -157,6 +157,8 @@ let allProjectionsArray = [
   teProjectionsArray,
 ];
 
+// console.log(qbProjectionArray)
+
 // console.log(allProjectionsArray);
 
 async function runAllProjections() {
