@@ -9,7 +9,7 @@ export default function WeeklySleeperData({searchedUser}) {
  
 
   let selectedUserName = 'tiger333'
-    let userID = 0;
+    
  
   React.useEffect(() => {
     
@@ -17,7 +17,7 @@ export default function WeeklySleeperData({searchedUser}) {
       async function axiosFetch() {
         const usernameRes =   await axios.get(`https://api.sleeper.app/v1/user/${selectedUserName}`)
         // console.log(usernameRes.data.user_id)
-        userID = usernameRes.data.user_id
+       let userID = usernameRes.data.user_id
         // console.log(userID)
        }
        axiosFetch()
