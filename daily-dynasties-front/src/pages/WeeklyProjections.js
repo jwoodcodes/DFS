@@ -5,16 +5,29 @@ import React from 'react';
 import MainNav from '@/components/MainNav';
 import ProjIndividualPositions from '@/components/weelyProjections/ProjIndividualPositions';
 import Footer from '@/components/Footer';
-import WeeklySleeperData from '@/components/weelyProjections/weeklyProjSleeper';
+import UserSleeperLeagueSearch from '@/components/userSleeperLeagueSearch';
 
-export default function WeeklyProjections(allProjections) {
+
+export default function WeeklyProjections(data ) {
+  //
+// console.log(data.allProjections)
+const initialSleeperPlayerData = data.sleeperPlayerData
+
+// initialSleeperPlayerData
+
+// const allProjections = data.allProjections[0].allProjectionsArray[0]
+
+// console.log(allProjections)
+
   const [positionToShow, setPositionToShow] = React.useState('Overall');
+  const [selectedLeagueData, setSelectedLeagueData] = React.useState({})
+  const [selectedUserID, setSelectedUserID] = React.useState(0)
 
   // console.log(allProjections.allProjections[0].allProjectionsArray[0]);
-  let tempQBArray = allProjections.allProjections[0].allProjectionsArray[0];
-  let tempRBArray = allProjections.allProjections[0].allProjectionsArray[1];
-  let tempWRArray = allProjections.allProjections[0].allProjectionsArray[2];
-  let tempTEArray = allProjections.allProjections[0].allProjectionsArray[3];
+  let tempQBArray = data.allProjections[0].allProjectionsArray[0];
+  let tempRBArray = data.allProjections[0].allProjectionsArray[1];
+  let tempWRArray = data.allProjections[0].allProjectionsArray[2];
+  let tempTEArray = data.allProjections[0].allProjectionsArray[3];
   let qbArray = [...tempQBArray];
   let rbArray = [...tempRBArray];
   let wrArray = [...tempWRArray];
@@ -45,29 +58,24 @@ export default function WeeklyProjections(allProjections) {
 
   let dataToUse = [];
 
-  // const [userSearchValue, setUserSearchValue] = React.useState('');
-  // const [searchedUser, setSearchedUser] = React.useState('')
+  
 
-  // function searchOnChange() {
-  //   setUserSearchValue(event.target.value)
-  // }
-  // function onSearch() {
-  //   setSearchedUser(event.target.value)
-    
-  // }
+  
 
   return (
     <>
       <MainNav />
       <div className={styles.mainTitle}>Weekly Projections</div>
       <div className={styles.curWeek}>{`Week ${curWeek} Projections`}</div>
-      {/* <form>
-        <input type='text' value={userSearchValue} onChange={searchOnChange}>
-
-        </input>
-        <button onClick={() => onSearch(userSearchValue)}>Search</button>
-      </form> */}
-      {/* <WeeklySleeperData searchedUser={setSearchedUser}/> */}
+      
+       {/* <UserSleeperLeagueSearch 
+       selectedLeagueData={selectedLeagueData} 
+       setSelectedLeagueData={setSelectedLeagueData} 
+       selectedUserID={selectedUserID}
+       setSelectedUserID={setSelectedUserID}
+       initialSleeperPlayerData={initialSleeperPlayerData}
+       /> */}
+       
       
       <div className={styles.btnsWrapper}>
         <button className={styles.posBtn} onClick={overall}>
@@ -89,35 +97,40 @@ export default function WeeklyProjections(allProjections) {
           Flex
         </button>
       </div>
-      {positionToShow === 'Overall' && <Table data={newArray} />}
+      {positionToShow === 'Overall' && <Table data={newArray} selectedLeagueData={selectedLeagueData}/>}
       {positionToShow === 'QB' && (
         <ProjIndividualPositions
           data={qbArray}
           positionToShow={positionToShow}
+selectedLeagueData={selectedLeagueData}
         />
       )}
       {positionToShow === 'RB' && (
         <ProjIndividualPositions
           data={rbArray}
           positionToShow={positionToShow}
+          selectedLeagueData={selectedLeagueData}
         />
       )}
       {positionToShow === 'WR' && (
         <ProjIndividualPositions
           data={wrArray}
           positionToShow={positionToShow}
+          selectedLeagueData={selectedLeagueData}
         />
       )}
       {positionToShow === 'TE' && (
         <ProjIndividualPositions
           data={teArray}
           positionToShow={positionToShow}
+          selectedLeagueData={selectedLeagueData}
         />
       )}
       {positionToShow === 'FLEX' && (
         <ProjIndividualPositions
           data={flexArray}
           positionToShow={positionToShow}
+          selectedLeagueData={selectedLeagueData}
         />
       )}
       <Footer />
@@ -132,14 +145,30 @@ export async function getStaticProps() {
     const client = await clientPromise;
     const db = client.db('dailydynasties');
 
+    
+
+    // projections data
     const allProjections = await db
       .collection('allProjections')
       .find({})
       .toArray();
+      //
+      // console.log(allProjections)
 
+      const sleeperPlayerData = await db
+      .collection('formattedSleeperData')
+      .find({})
+      // .toArray()
+      
+
+      // console.log(sleeperPlayerData)
+      
     return {
       props: {
+        
         allProjections: JSON.parse(JSON.stringify(allProjections)),
+        sleeperPlayerData: JSON.parse(JSON.stringify(sleeperPlayerData)),
+       
       },
     };
   } catch (e) {

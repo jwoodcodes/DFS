@@ -6,6 +6,7 @@ import TeamOne from '@/components/tradeAnalyzer/TeamOne';
 import TeamTwo from '@/components/tradeAnalyzer/TeamTwo';
 import TradeOverview from '@/components/tradeAnalyzer/TradeOvervire';
 import Footer from '@/components/Footer';
+// import UserSleeperLeagueSearch from '@/components/userSleeperLeagueSearch';
 
 export default function ThreeDTradeAnalyzer(dynastyRankingsData) {
   let dataLevelOne = dynastyRankingsData.dynastyRankingsData;
@@ -32,6 +33,7 @@ export default function ThreeDTradeAnalyzer(dynastyRankingsData) {
         A trade calculator that tells you how a trade <b>actually</b> effects{' '}
         <b>your</b> team, not simply if a deal is fair
       </h2> */}
+      {/* <UserSleeperLeagueSearch /> */}
       <div className={styles.wholeMainSectionWrapper}>
         {/* team 1 */}
         <TeamOne

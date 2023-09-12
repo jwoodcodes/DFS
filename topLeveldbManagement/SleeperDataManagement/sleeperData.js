@@ -16,6 +16,7 @@ const sleeperDataFetch = async function () {
     const url =
       'mongodb+srv://devJay:Hesstrucksarethebest@dailydynasties.syom4sb.mongodb.net/sleeperData';
     const client = new MongoClient(url);
+    
   
     // The database to use
     const dbName = 'dailydynasties';
@@ -126,7 +127,7 @@ async function fetchRawSleeperDataFromMongodb() {
 
     // console.log(usernameRes.data.user_id)
     const userID = usernameRes.data.user_id
-
+    
     let userLeaguesArray = []
     let userLeaguesNamesArray = []
 
@@ -174,6 +175,40 @@ async function fetchRawSleeperDataFromMongodb() {
     })
 
     let selectedUsersRosterPlayerObjects = []
+
+    // console.log(dataObject)
+
+    //
+
+    async function pushFormattedSleeperData() {
+      const url =
+  'mongodb+srv://devJay:Hesstrucksarethebest@dailydynasties.syom4sb.mongodb.net/test';
+const client = new MongoClient(url);
+const dbName = 'dailydynasties';
+      try {
+        await client.connect();
+    
+        const db = client.db(dbName);
+    
+        // Use the collection "people"
+        const col = db.collection('formattedSleeperData');
+        console.log('connected');
+        // Construct a document
+        let formattedSleeperData = dataObject
+    
+        // Insert a single document, wait for promise so we can read it back
+        const p = await col.insertOne(formattedSleeperData);
+        // Find one document
+        const myDoc = await col.findOne();
+        // Print to the console
+        // console.log(myDoc);
+      } catch (err) {
+        console.log(err.stack);
+      } finally {
+        await client.close();
+      }
+    }
+    // pushFormattedSleeperData()
 
     for (const key in dataObject) {
       // console.log(`${key}: ${dataObject[key].player_id}`)

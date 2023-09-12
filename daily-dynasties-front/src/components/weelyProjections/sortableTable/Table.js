@@ -3,9 +3,12 @@ import styles from '@/styles/tableWeeklyProjections.module.css';
 import React from 'react';
 import TableBody from './TableBody';
 import TableHead from './TableHead';
+import { Libre_Caslon_Display } from 'next/font/google';
 
-export default function Table({ data }) {
+export default function Table({ data, selectedLeagueData }) {
   const [tableData, setTableData] = React.useState(data);
+
+  // console.log(selectedLeagueData.league_id)
 
   const columns = [
     { label: 'Player Name', accessor: 'name' },
@@ -36,14 +39,24 @@ export default function Table({ data }) {
     }
   };
 
+
+  tableData.map(function(data2) {
+// console.log(data2.name)
+
+  })
+  
+
   return (
     <>
       <div className={styles.table_container}>
+        
         <table className={styles.table}>
           {/* <caption className={styles.caption}>Weekly Projections</caption> */}
           <TableHead columns={columns} handleSorting={handleSorting} />
           <TableBody columns={columns} tableData={tableData} />
         </table>
+
+
       </div>
     </>
   );

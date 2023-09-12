@@ -31,11 +31,11 @@
   background-color: #02688f;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   color: #ffffff;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   height: 2rem;
-  width: 7rem;
-  max-width: 7rem;
-  border-radius: 10px;
+  width: 6.5rem;
+  max-width: 6.5rem;
+  border-radius: 20px;
   border: white;
   display: flex;
   justify-content: center;
