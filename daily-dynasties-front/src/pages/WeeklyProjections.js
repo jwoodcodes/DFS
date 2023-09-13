@@ -13,7 +13,8 @@ export default function WeeklyProjections(data ) {
 // console.log(data.allProjections)
 const initialSleeperPlayerData = data.sleeperPlayerData
 
-// initialSleeperPlayerData
+// console.log(initialSleeperPlayerData)
+
 
 // const allProjections = data.allProjections[0].allProjectionsArray[0]
 
@@ -22,6 +23,7 @@ const initialSleeperPlayerData = data.sleeperPlayerData
   const [positionToShow, setPositionToShow] = React.useState('Overall');
   const [selectedLeagueData, setSelectedLeagueData] = React.useState({})
   const [selectedUserID, setSelectedUserID] = React.useState(0)
+  const [selectedLeagueRosterNamesArray, setSelectedLeagueRosterNamesArray] = React.useState([])
 
   // console.log(allProjections.allProjections[0].allProjectionsArray[0]);
   let tempQBArray = data.allProjections[0].allProjectionsArray[0];
@@ -29,9 +31,73 @@ const initialSleeperPlayerData = data.sleeperPlayerData
   let tempWRArray = data.allProjections[0].allProjectionsArray[2];
   let tempTEArray = data.allProjections[0].allProjectionsArray[3];
   let qbArray = [...tempQBArray];
+  qbArray.map(function(qb) {
+    // console.log(qb)
+    qb.isOnSelectedTeam = false
+    if(selectedLeagueRosterNamesArray) {
+      // console.log(data2.name)
+      selectedLeagueRosterNamesArray.map(function(player) {
+        // console.log(player)
+        if(player === qb.name) {
+          qb.isOnSelectedTeam = true
+          // console.log(qb.isOnSelectedTeam)
+          
+        }
+        // console.log(data.isOnSelectedTeam)
+      })
+    }
+  })
   let rbArray = [...tempRBArray];
+  rbArray.map(function(rb) {
+    // console.log(qb)
+    rb.isOnSelectedTeam = false
+    if(selectedLeagueRosterNamesArray) {
+      // console.log(data2.name)
+      selectedLeagueRosterNamesArray.map(function(player) {
+        // console.log(rb.name)
+        if(player === rb.name) {
+          rb.isOnSelectedTeam = true
+          // console.log(rb.isOnSelectedTeam)
+          
+        }
+        // console.log(data.isOnSelectedTeam)
+      })
+    }
+  })
   let wrArray = [...tempWRArray];
+  wrArray.map(function(wr) {
+    // console.log(qb)
+    wr.isOnSelectedTeam = false
+    if(selectedLeagueRosterNamesArray) {
+      // console.log(data2.name)
+      selectedLeagueRosterNamesArray.map(function(player) {
+        // console.log(wr.name)
+        if(player === wr.name) {
+          wr.isOnSelectedTeam = true
+          // console.log(wr.isOnSelectedTeam)
+          
+        }
+        // console.log(data.isOnSelectedTeam)
+      })
+    }
+  })
   let teArray = [...tempTEArray];
+  teArray.map(function(te) {
+    // console.log(te)
+    te.isOnSelectedTeam = false
+    if(selectedLeagueRosterNamesArray) {
+      // console.log(data2.name)
+      selectedLeagueRosterNamesArray.map(function(player) {
+        // console.log(te.name)
+        if(player === te.name) {
+          te.isOnSelectedTeam = true
+          // console.log(te.isOnSelectedTeam)
+          
+        }
+        // console.log(data.isOnSelectedTeam)
+      })
+    }
+  })
   let newArray = [...qbArray, ...rbArray, ...wrArray, ...teArray];
   let flexArray = [...rbArray, ...wrArray, ...teArray];
   // console.log(newArray[0]);
@@ -68,13 +134,14 @@ const initialSleeperPlayerData = data.sleeperPlayerData
       <div className={styles.mainTitle}>Weekly Projections</div>
       <div className={styles.curWeek}>{`Week ${curWeek} Projections`}</div>
       
-       {/* <UserSleeperLeagueSearch 
+       <UserSleeperLeagueSearch 
        selectedLeagueData={selectedLeagueData} 
        setSelectedLeagueData={setSelectedLeagueData} 
        selectedUserID={selectedUserID}
        setSelectedUserID={setSelectedUserID}
        initialSleeperPlayerData={initialSleeperPlayerData}
-       /> */}
+       setSelectedLeagueRosterNamesArray={setSelectedLeagueRosterNamesArray}
+       />
        
       
       <div className={styles.btnsWrapper}>
@@ -97,40 +164,40 @@ const initialSleeperPlayerData = data.sleeperPlayerData
           Flex
         </button>
       </div>
-      {positionToShow === 'Overall' && <Table data={newArray} selectedLeagueData={selectedLeagueData}/>}
+      {positionToShow === 'Overall' && <Table data={newArray} selectedLeagueRosterNamesArray={selectedLeagueRosterNamesArray}/>}
       {positionToShow === 'QB' && (
         <ProjIndividualPositions
           data={qbArray}
           positionToShow={positionToShow}
-selectedLeagueData={selectedLeagueData}
+          selectedLeagueRosterNamesArray={selectedLeagueRosterNamesArray}
         />
       )}
       {positionToShow === 'RB' && (
         <ProjIndividualPositions
           data={rbArray}
           positionToShow={positionToShow}
-          selectedLeagueData={selectedLeagueData}
+          selectedLeagueRosterNamesArray={selectedLeagueRosterNamesArray}
         />
       )}
       {positionToShow === 'WR' && (
         <ProjIndividualPositions
           data={wrArray}
           positionToShow={positionToShow}
-          selectedLeagueData={selectedLeagueData}
+          selectedLeagueRosterNamesArray={selectedLeagueRosterNamesArray}
         />
       )}
       {positionToShow === 'TE' && (
         <ProjIndividualPositions
           data={teArray}
           positionToShow={positionToShow}
-          selectedLeagueData={selectedLeagueData}
+          selectedLeagueRosterNamesArray={selectedLeagueRosterNamesArray}
         />
       )}
       {positionToShow === 'FLEX' && (
         <ProjIndividualPositions
           data={flexArray}
           positionToShow={positionToShow}
-          selectedLeagueData={selectedLeagueData}
+          selectedLeagueRosterNamesArray={selectedLeagueRosterNamesArray}
         />
       )}
       <Footer />
@@ -156,9 +223,9 @@ export async function getStaticProps() {
       // console.log(allProjections)
 
       const sleeperPlayerData = await db
-      .collection('formattedSleeperData')
+      .collection('justSleeperKeysAndNames')
       .find({})
-      // .toArray()
+      .toArray()
       
 
       // console.log(sleeperPlayerData)

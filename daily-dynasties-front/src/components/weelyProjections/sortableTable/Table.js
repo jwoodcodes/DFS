@@ -5,10 +5,10 @@ import TableBody from './TableBody';
 import TableHead from './TableHead';
 import { Libre_Caslon_Display } from 'next/font/google';
 
-export default function Table({ data, selectedLeagueData }) {
+export default function Table({ data, selectedLeagueRosterNamesArray }) {
   const [tableData, setTableData] = React.useState(data);
 
-  // console.log(selectedLeagueData.league_id)
+  // console.log(selectedLeagueRosterNamesArray)
 
   const columns = [
     { label: 'Player Name', accessor: 'name' },
@@ -40,10 +40,7 @@ export default function Table({ data, selectedLeagueData }) {
   };
 
 
-  tableData.map(function(data2) {
-// console.log(data2.name)
-
-  })
+ 
   
 
   return (
@@ -53,7 +50,7 @@ export default function Table({ data, selectedLeagueData }) {
         <table className={styles.table}>
           {/* <caption className={styles.caption}>Weekly Projections</caption> */}
           <TableHead columns={columns} handleSorting={handleSorting} />
-          <TableBody columns={columns} tableData={tableData} />
+          <TableBody columns={columns} tableData={tableData} selectedLeagueRosterNamesArray={selectedLeagueRosterNamesArray}/>
         </table>
 
 

@@ -180,24 +180,94 @@ async function fetchRawSleeperDataFromMongodb() {
 
     //
 
-    async function pushFormattedSleeperData() {
+//     async function pushFormattedSleeperData() {
+//       const url =
+//   'mongodb+srv://devJay:Hesstrucksarethebest@dailydynasties.syom4sb.mongodb.net/test';
+// const client = new MongoClient(url);
+// const dbName = 'dailydynasties';
+//       try {
+//         await client.connect();
+    
+//         const db = client.db(dbName);
+    
+//         // Use the collection "people"
+//         const col = db.collection('formattedSleeperData');
+//         console.log('connected');
+//         // Construct a document
+//         let formattedSleeperData = dataObject
+    
+//         // Insert a single document, wait for promise so we can read it back
+//         const p = await col.insertOne(formattedSleeperData);
+//         // Find one document
+//         const myDoc = await col.findOne();
+//         // Print to the console
+//         // console.log(myDoc);
+//       } catch (err) {
+//         console.log(err.stack);
+//       } finally {
+//         await client.close();
+//       }
+//     }
+//     // pushFormattedSleeperData()
+
+    const JustSleeperKeysAndNamesObjectsArray = []
+
+    class JustKeyAndName {
+      constructor(
+        id, 
+        name
+      ) {
+        this.id = id;
+        this.name = name;
+      }
+
+      
+    }
+
+    for (const key in dataObject) {
+      // console.log(`${key}: ${dataObject[key].player_id}`)
+      // console.log(`${key}: ${dataObject[key].full_name}`)
+
+     let justSleeperKeysAndNamesObject = new JustKeyAndName(
+      key, 
+      dataObject[key].full_name,
+     )
+      JustSleeperKeysAndNamesObjectsArray.push(justSleeperKeysAndNamesObject)
+     
+
+      selectedUsersRoster.forEach(function(player) {
+        
+        if(key === player) {
+          // console.log(dataObject[key].full_name)
+          selectedUsersRosterPlayerObjects.push(dataObject[key])
+        }
+      })
+    }
+
+    // console.log(JustSleeperKeysAndNamesObjectsArray)
+    // JustSleeperKeysAndNamesObjectsArray.forEach(function(playerObj) {
+    //   console.log(playerObj)
+    // })
+
+    async function pushJustSleeperKeysAndNames() {
       const url =
   'mongodb+srv://devJay:Hesstrucksarethebest@dailydynasties.syom4sb.mongodb.net/test';
-const client = new MongoClient(url);
-const dbName = 'dailydynasties';
+      const client = new MongoClient(url);
+      const dbName = 'dailydynasties';
       try {
         await client.connect();
     
         const db = client.db(dbName);
     
-        // Use the collection "people"
-        const col = db.collection('formattedSleeperData');
+        // Use the collection "justSleeperKeysAndNames"
+        const col = db.collection('justSleeperKeysAndNames');
         console.log('connected');
         // Construct a document
-        let formattedSleeperData = dataObject
+        let justSleeperKeysAndNames
+        = { JustSleeperKeysAndNamesObjectsArray }
     
         // Insert a single document, wait for promise so we can read it back
-        const p = await col.insertOne(formattedSleeperData);
+        const p = await col.insertOne(justSleeperKeysAndNames);
         // Find one document
         const myDoc = await col.findOne();
         // Print to the console
@@ -208,20 +278,7 @@ const dbName = 'dailydynasties';
         await client.close();
       }
     }
-    // pushFormattedSleeperData()
-
-    for (const key in dataObject) {
-      // console.log(`${key}: ${dataObject[key].player_id}`)
-      selectedUsersRoster.forEach(function(player) {
-        
-        if(key === player) {
-          // console.log(dataObject[key].full_name)
-          selectedUsersRosterPlayerObjects.push(dataObject[key])
-        }
-      })
-    }
-
-
+    // pushJustSleeperKeysAndNames()
    
   }
   testUserFetch()

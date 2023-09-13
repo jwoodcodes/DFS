@@ -5,10 +5,11 @@ import styles from '@/styles/sleeperLeagueSearch.module.css';
 
 
 
-export default function UserSleeperLeagueSearch({ selectedLeagueData, setSelectedLeagueData, selectedUserID, setSelectedUserID, initialSleeperPlayerData }) {
+export default function UserSleeperLeagueSearch({ selectedLeagueData, setSelectedLeagueData, selectedUserID, setSelectedUserID, initialSleeperPlayerData, setSelectedLeagueRosterNamesArray }) {
 
     // console.log(searchedUser)
     // const [data, setData] = React.useState(null)
+    // console.log(initialSleeperPlayerData)
 
     const [userSearchValue, setUserSearchValue] = React.useState('');
     const [initialUserLeaguesArray, setInitialUserLeaguesArray] = React.useState([])
@@ -117,25 +118,32 @@ export default function UserSleeperLeagueSearch({ selectedLeagueData, setSelecte
         // console.log(team)
         selectedUsersTeamObject = team
         selectedUsersRoster = team.players
+        // console.log(selectedUsersRoster)
       }
     })
 
     let selectedUsersRosterPlayerObjects = []
 
     
-   
-    
+  //  console.log(initialSleeperPlayerData)
+   let sleeperJustIDsAndNamesArray = initialSleeperPlayerData[0].JustSleeperKeysAndNamesObjectsArray
 
-    for (const key in initialSleeperPlayerData) {
-      console.log(`${key}: ${initialSleeperPlayerData[key].player_id}`)
+  //  console.log(sleeperJustIDsAndNamesArray)
+    let selectedLeagueRosterNamesArray = []
+
+    for (const key in sleeperJustIDsAndNamesArray) {
+      // console.log(sleeperJustIDsAndNamesArray[key].name)
+      // console.log(selectedUsersRoster)
       selectedUsersRoster.forEach(function(player) {
-        
-        if(key === player) {
-          // console.log(initialSleeperPlayerData[key].full_name)
-          selectedUsersRosterPlayerObjects.push(initialSleeperPlayerData[key])
+        // console.log(player)
+        if(sleeperJustIDsAndNamesArray[key].id === player) {
+          // console.log(sleeperJustIDsAndNamesArray[key].name)
+          selectedLeagueRosterNamesArray.push(sleeperJustIDsAndNamesArray[key].name)
+          // selectedUsersRosterPlayerObjects.push(initialSleeperPlayerData[key])
         }
       })
     }
+    setSelectedLeagueRosterNamesArray(selectedLeagueRosterNamesArray)
   }
 
         getRostersOfSelectedLeague()
