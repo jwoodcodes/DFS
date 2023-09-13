@@ -3,11 +3,15 @@ import styles from '@/styles/table.module.css';
 
 export default function TableHead({ columns, handleSorting }) {
   //   console.log(columns);
-  const [sortField, setSortField] = React.useState('');
+  const [sortField, setSortField] = React.useState('appFullProjectedPoints');
   const [order, setOrder] = React.useState('asc');
 
+  React.useEffect(() => {
+    handleSorting('appFullProjectedPoints', 'desc')
+  }, [])
+
   const handleSortingChange = accessor => {
-    // console.log(accessor);
+    console.log(accessor);
     const sortOrder =
       accessor === sortField && order === 'asc' ? 'desc' : 'asc';
     setSortField(accessor);
