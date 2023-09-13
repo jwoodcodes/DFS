@@ -1061,7 +1061,7 @@ const qbDownloadableSpreadSheetYahoo = [
 		"PID": "staffm1",
 		"Player": "Matthew Stafford",
 		"Pos": "QB",
-		"Team": "",
+		"Team": "LAR",
 		"Opp": "@",
 		"aFPA": "0.0",
 		"aFPA Rk": "",

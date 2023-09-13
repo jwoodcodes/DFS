@@ -1177,7 +1177,7 @@ let sortFinalScore = finalScore.sort((a, b) => {
   if (a < b) return 1;
 });
 
-console.log(sortFinalScore);
+// console.log(sortFinalScore);
 
 const allQBModelDataData = {
   draftCapitalScore: allDraftCapitolScores,

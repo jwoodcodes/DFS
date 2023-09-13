@@ -231,3 +231,11 @@ th.down {
 .table tr {
   width: fit-content;
 }
+
+.isOnTeam {
+  background-color: #000;
+  font-size: 1.25rem;
+  transform: scale(1.01);
+  font-weight: 700;
+  color: #9c0d0d;
+}
