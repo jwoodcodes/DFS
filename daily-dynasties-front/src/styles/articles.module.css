@@ -44,6 +44,11 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+@media (max-width: 500px) {
+  .title {
+    font-size: 1.25rem;
+  }
+}
 
 .subheading {
   color: #420c47;
