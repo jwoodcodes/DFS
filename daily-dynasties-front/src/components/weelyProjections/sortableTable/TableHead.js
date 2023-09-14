@@ -7,8 +7,8 @@ export default function TableHead({ columns, handleSorting }) {
   const [order, setOrder] = React.useState('asc');
 
   React.useEffect(() => {
-    handleSorting('appFullProjectedPoints', 'desc')
-  }, [])
+    handleSorting('appFullProjectedPoints', 'desc');
+  }, [handleSorting]);
 
   const handleSortingChange = accessor => {
     console.log(accessor);
