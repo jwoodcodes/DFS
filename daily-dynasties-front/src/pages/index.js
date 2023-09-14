@@ -21,7 +21,7 @@ export default function Home() {
         <MainNav />
         <h1 className={styles.mainSiteTitle}>Daily Dynasties</h1>
         <section className={styles.mainContentWrapper}>
-          <Link href="/articles">Articles</Link>
+          <Link href="/articles">Articles? Fantasy Musings</Link>
           <p className={styles.paragraphOne}>
             Daily Dynasties is a collection of tools with an overarching focus
             on zooming out and providing more context while looking at things in
