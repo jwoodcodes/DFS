@@ -71,7 +71,6 @@ export default function PostWeekOne2023() {
           More on two of these guys in the buys section!
         </p>
         <br />
-        //
         <h2 className={styles.subheading}>
           Stop being afraid to be wrong when the price is low{' '}
         </h2>
