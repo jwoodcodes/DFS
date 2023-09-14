@@ -9,6 +9,11 @@
   -webkit-text-fill-color: transparent;
 }
 
+@media (max-width: 500px) {
+  .mainArticlePageMainHeading {
+    font-size: 2rem;
+  }
+}
 .wholeArticlesWrapper {
   width: 80%;
   margin-left: auto;
@@ -18,7 +23,7 @@
   font-size: 1.25rem;
   color: #065a60;
 }
-@media (max-width: 305px) {
+@media (max-width: 500px) {
   .wholeArticlesWrapper {
     font-size: 1rem;
   }
