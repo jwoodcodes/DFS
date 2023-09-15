@@ -2437,38 +2437,37 @@ const populateTeamObjects = function (
   let teOneName = gameInfoPassedInTeam.TEOneThisWeekName;
   let teTwoName = gameInfoPassedInTeam.TETwoThisWeekName;
 
-  if(teOneName) {
-  if (teOneName.includes("'")) {
-    teOneName = teOneName.replace("'", '');
+  if (teOneName) {
+    if (teOneName.includes("'")) {
+      teOneName = teOneName.replace("'", '');
+    }
+
+    if (teOneName.includes('III')) {
+      teOneName = teOneName.replace('III', 'II');
+    }
+
+    if (teOneName.includes('II')) {
+      teOneName = teOneName.replace('II', '');
+      teOneName = teOneName.slice(0, -1) + '"';
+      // console.log(playerObject['"PLAYER NAME"']);
+    }
+
+    if (teOneName.includes('Jr.')) {
+      // console.log(playerObject['"PLAYER NAME"']);
+      teOneName = teOneName.replace('Jr.', '');
+      teOneName = teOneName.slice(0, -1) + '"';
+      // console.log(playerObject['"PLAYER NAME"']);
+    }
+
+    let sanitizedTEOneName = teOneName
+      .replace("'", '')
+      .replace('.', '')
+      .replace('.', '');
+    // .slice(1, -1);
+
+    // console.log(sanitizedTEOneName);
+    passedInTeam.TE1.sanitizedTEOneName = sanitizedTEOneName;
   }
-
-  if (teOneName.includes('III')) {
-    teOneName = teOneName.replace('III', 'II');
-  }
-
-  if (teOneName.includes('II')) {
-    teOneName = teOneName.replace('II', '');
-    teOneName = teOneName.slice(0, -1) + '"';
-    // console.log(playerObject['"PLAYER NAME"']);
-  }
-
-  if (teOneName.includes('Jr.')) {
-    // console.log(playerObject['"PLAYER NAME"']);
-    teOneName = teOneName.replace('Jr.', '');
-    teOneName = teOneName.slice(0, -1) + '"';
-    // console.log(playerObject['"PLAYER NAME"']);
-  }
-
-  let sanitizedTEOneName = teOneName
-    .replace("'", '')
-    .replace('.', '')
-    .replace('.', '');
-  // .slice(1, -1);
-
-  // console.log(sanitizedTEOneName);
-  passedInTeam.TE1.sanitizedTEOneName = sanitizedTEOneName;
-}
-
 
   if (teTwoName) {
     if (teTwoName.includes("'")) {
@@ -2593,106 +2592,106 @@ const populateTeamObjects = function (
 
   allFlexGLSP.forEach(function (player) {
     // console.log(player['"Player"']);
-    if(player['"Player"']) {
-    if (
-      player['"Player"'].slice(1, -1) === passedInTeam.TE1.name ||
-      player['"Player"'].slice(1, -1) === passedInTeam.TE1.sanitizedTEOneName
-    ) {
-      // console.log(player);
+    if (player['"Player"']) {
+      if (
+        player['"Player"'].slice(1, -1) === passedInTeam.TE1.name ||
+        player['"Player"'].slice(1, -1) === passedInTeam.TE1.sanitizedTEOneName
+      ) {
+        // console.log(player);
 
-      passedInTeam.TE1.halfGLSPAvg = +player['"Half - AVG"'];
-      passedInTeam.TE1.fullGLSPAvg = +player['"PPR - AVG"'];
-      passedInTeam.TE1.halfTwentyFifthPercentProjectedPoints =
-        +player['"Half - 25th"'];
-      passedInTeam.TE1.halfFiftyithPercentProjectedPoints =
-        +player['"Half - 50th"'];
-      passedInTeam.TE1.halfSeventyFifthPercentProjectedPoints =
-        +player['"Half - 75th"'];
-      passedInTeam.TE1.PPRTwentyFifthPercentProjectedPoints =
-        +player['"PPR - 25th"'];
-      passedInTeam.TE1.PPRFiftyithPercentProjectedPoints =
-        +player['"PPR - 50th"'];
-      passedInTeam.TE1.PPRSeventyFifthPercentProjectedPoints =
-        +player['"PPR - 75th"'];
+        passedInTeam.TE1.halfGLSPAvg = +player['"Half - AVG"'];
+        passedInTeam.TE1.fullGLSPAvg = +player['"PPR - AVG"'];
+        passedInTeam.TE1.halfTwentyFifthPercentProjectedPoints =
+          +player['"Half - 25th"'];
+        passedInTeam.TE1.halfFiftyithPercentProjectedPoints =
+          +player['"Half - 50th"'];
+        passedInTeam.TE1.halfSeventyFifthPercentProjectedPoints =
+          +player['"Half - 75th"'];
+        passedInTeam.TE1.PPRTwentyFifthPercentProjectedPoints =
+          +player['"PPR - 25th"'];
+        passedInTeam.TE1.PPRFiftyithPercentProjectedPoints =
+          +player['"PPR - 50th"'];
+        passedInTeam.TE1.PPRSeventyFifthPercentProjectedPoints =
+          +player['"PPR - 75th"'];
 
-      let tempGLSPAvgPPRToHalfDifference = +(
-        +player['"PPR - AVG"'] +
-        (+player['"PPR - AVG"'] - +player['"Half - AVG"'])
-      ).toFixed(1);
-      passedInTeam.TE1.TEPGLSPAvg = tempGLSPAvgPPRToHalfDifference;
+        let tempGLSPAvgPPRToHalfDifference = +(
+          +player['"PPR - AVG"'] +
+          (+player['"PPR - AVG"'] - +player['"Half - AVG"'])
+        ).toFixed(1);
+        passedInTeam.TE1.TEPGLSPAvg = tempGLSPAvgPPRToHalfDifference;
 
-      let tempTwentyFifthPPRToHalfDifference = +(
-        +player['"PPR - 25th"'] +
-        (+player['"PPR - 25th"'] - +player['"Half - 25th"'])
-      ).toFixed(1);
-      passedInTeam.TE1.TEPTwentyFifthPercentProjectedPoints =
-        tempTwentyFifthPPRToHalfDifference;
+        let tempTwentyFifthPPRToHalfDifference = +(
+          +player['"PPR - 25th"'] +
+          (+player['"PPR - 25th"'] - +player['"Half - 25th"'])
+        ).toFixed(1);
+        passedInTeam.TE1.TEPTwentyFifthPercentProjectedPoints =
+          tempTwentyFifthPPRToHalfDifference;
 
-      let tempFiftyithPPRToHalfDifference = +(
-        +player['"PPR - 50th"'] +
-        (+player['"PPR - 50th"'] - +player['"Half - 50th"'])
-      ).toFixed(1);
-      passedInTeam.TE1.TEPFiftyithPercentProjectedPoints =
-        tempFiftyithPPRToHalfDifference;
+        let tempFiftyithPPRToHalfDifference = +(
+          +player['"PPR - 50th"'] +
+          (+player['"PPR - 50th"'] - +player['"Half - 50th"'])
+        ).toFixed(1);
+        passedInTeam.TE1.TEPFiftyithPercentProjectedPoints =
+          tempFiftyithPPRToHalfDifference;
 
-      let tempSeventyFifthPPRToHalfDifference = +(
-        +player['"PPR - 75th"'] +
-        (+player['"PPR - 75th"'] - +player['"Half - 75th"'])
-      ).toFixed(1);
-      passedInTeam.TE1.TEPSeventyFifthPercentProjectedPoints =
-        tempSeventyFifthPPRToHalfDifference;
+        let tempSeventyFifthPPRToHalfDifference = +(
+          +player['"PPR - 75th"'] +
+          (+player['"PPR - 75th"'] - +player['"Half - 75th"'])
+        ).toFixed(1);
+        passedInTeam.TE1.TEPSeventyFifthPercentProjectedPoints =
+          tempSeventyFifthPPRToHalfDifference;
+      }
     }
-  }
 
-  if(player['"Player"']) {
-    if (
-      player['"Player"'].slice(1, -1) === passedInTeam.TE2.name ||
-      player['"Player"'].slice(1, -1) === passedInTeam.TE2.sanitizedTETwoName
-    ) {
-      // console.log(player);
-      passedInTeam.TE2.halfGLSPAvg = +player['"Half - AVG"'];
-      passedInTeam.TE2.fullGLSPAvg = +player['"PPR - AVG"'];
-      passedInTeam.TE2.halfTwentyFifthPercentProjectedPoints =
-        +player['"Half - 25th"'];
-      passedInTeam.TE2.halfFiftyithPercentProjectedPoints =
-        +player['"Half - 50th"'];
-      passedInTeam.TE2.halfSeventyFifthPercentProjectedPoints =
-        +player['"Half - 75th"'];
-      passedInTeam.TE2.PPRTwentyFifthPercentProjectedPoints =
-        +player['"PPR - 25th"'];
-      passedInTeam.TE2.PPRFiftyithPercentProjectedPoints =
-        +player['"PPR - 50th"'];
-      passedInTeam.TE2.PPRSeventyFifthPercentProjectedPoints =
-        +player['"PPR - 75th"'];
+    if (player['"Player"']) {
+      if (
+        player['"Player"'].slice(1, -1) === passedInTeam.TE2.name ||
+        player['"Player"'].slice(1, -1) === passedInTeam.TE2.sanitizedTETwoName
+      ) {
+        // console.log(player);
+        passedInTeam.TE2.halfGLSPAvg = +player['"Half - AVG"'];
+        passedInTeam.TE2.fullGLSPAvg = +player['"PPR - AVG"'];
+        passedInTeam.TE2.halfTwentyFifthPercentProjectedPoints =
+          +player['"Half - 25th"'];
+        passedInTeam.TE2.halfFiftyithPercentProjectedPoints =
+          +player['"Half - 50th"'];
+        passedInTeam.TE2.halfSeventyFifthPercentProjectedPoints =
+          +player['"Half - 75th"'];
+        passedInTeam.TE2.PPRTwentyFifthPercentProjectedPoints =
+          +player['"PPR - 25th"'];
+        passedInTeam.TE2.PPRFiftyithPercentProjectedPoints =
+          +player['"PPR - 50th"'];
+        passedInTeam.TE2.PPRSeventyFifthPercentProjectedPoints =
+          +player['"PPR - 75th"'];
 
-      let tempGLSPAvgPPRToHalfDifference = +(
-        +player['"PPR - AVG"'] +
-        (+player['"PPR - AVG"'] - +player['"Half - AVG"'])
-      ).toFixed(1);
-      passedInTeam.TE2.TEPGLSPAvg = tempGLSPAvgPPRToHalfDifference;
+        let tempGLSPAvgPPRToHalfDifference = +(
+          +player['"PPR - AVG"'] +
+          (+player['"PPR - AVG"'] - +player['"Half - AVG"'])
+        ).toFixed(1);
+        passedInTeam.TE2.TEPGLSPAvg = tempGLSPAvgPPRToHalfDifference;
 
-      let tempTwentyFifthPPRToHalfDifference = +(
-        +player['"PPR - 25th"'] +
-        (+player['"PPR - 25th"'] - +player['"Half - 25th"'])
-      ).toFixed(1);
-      passedInTeam.TE2.TEPTwentyFifthPercentProjectedPoints =
-        tempTwentyFifthPPRToHalfDifference;
+        let tempTwentyFifthPPRToHalfDifference = +(
+          +player['"PPR - 25th"'] +
+          (+player['"PPR - 25th"'] - +player['"Half - 25th"'])
+        ).toFixed(1);
+        passedInTeam.TE2.TEPTwentyFifthPercentProjectedPoints =
+          tempTwentyFifthPPRToHalfDifference;
 
-      let tempFiftyithPPRToHalfDifference = +(
-        +player['"PPR - 50th"'] +
-        (+player['"PPR - 50th"'] - +player['"Half - 50th"'])
-      ).toFixed(1);
-      passedInTeam.TE2.TEPFiftyithPercentProjectedPoints =
-        tempFiftyithPPRToHalfDifference;
+        let tempFiftyithPPRToHalfDifference = +(
+          +player['"PPR - 50th"'] +
+          (+player['"PPR - 50th"'] - +player['"Half - 50th"'])
+        ).toFixed(1);
+        passedInTeam.TE2.TEPFiftyithPercentProjectedPoints =
+          tempFiftyithPPRToHalfDifference;
 
-      let tempSeventyFifthPPRToHalfDifference = +(
-        +player['"PPR - 75th"'] +
-        (+player['"PPR - 75th"'] - +player['"Half - 75th"'])
-      ).toFixed(1);
-      passedInTeam.TE2.TEPSeventyFifthPercentProjectedPoints =
-        tempSeventyFifthPPRToHalfDifference;
+        let tempSeventyFifthPPRToHalfDifference = +(
+          +player['"PPR - 75th"'] +
+          (+player['"PPR - 75th"'] - +player['"Half - 75th"'])
+        ).toFixed(1);
+        passedInTeam.TE2.TEPSeventyFifthPercentProjectedPoints =
+          tempSeventyFifthPPRToHalfDifference;
+      }
     }
-  }
   });
 
   //

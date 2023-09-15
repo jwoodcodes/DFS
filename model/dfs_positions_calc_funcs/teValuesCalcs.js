@@ -65,7 +65,7 @@ class TeObject {
       // half PPR
       //
       if (this.curWeek < 3) {
-        let final = 0
+        let final = 0;
         let tempOne = +(this.fourForFourHalfPPRProjectedPoints * 3).toFixed(1);
         if (this.halfGLSPAvg) {
           let tempTwo = +tempOne + +this.halfGLSPAvg;
@@ -82,7 +82,7 @@ class TeObject {
         let pprTempOne = +(this.fourForFourFullPPRProjectedPoints * 3).toFixed(
           1
         );
-        let pprFinal = 0
+        let pprFinal = 0;
         if (this.fullGLSPAvg) {
           let pprTempTwo = +pprTempOne + +this.fullGLSPAvg;
           pprFinal = +(pprTempTwo / 4).toFixed(1);
@@ -94,7 +94,7 @@ class TeObject {
         //
         // TEP
         //
-        let tepFinal = 0
+        let tepFinal = 0;
         let tepTempOne = +(this.fourForFourTEPProjectedPoints * 3).toFixed(1);
         if (this.TEPGLSPAvg) {
           let tepTempTwo = +tepTempOne + +this.TEPGLSPAvg;
