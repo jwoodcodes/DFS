@@ -22,7 +22,7 @@ export default function Home() {
         <h1 className={styles.mainSiteTitle}>Daily Dynasties</h1>
         <section className={styles.mainContentWrapper}>
           <Link href="/articles" className={styles.articlesLink}>
-            Articles/Fantasy Musings
+            Articles & Fantasy Musings
           </Link>
           <p className={styles.paragraphOne}>
             Daily Dynasties is a collection of tools with an overarching focus
