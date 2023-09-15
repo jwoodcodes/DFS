@@ -23,12 +23,8 @@ export default function MainNav() {
           <Link href="/">Home</Link>
         </li>
         <li>
-          <Link href="/DynastyRankings">
-            Dynasty Rankings <br />
-            vs. Market
-          </Link>
+          <Link href="/DynastyRankings">Dynasty Rankings</Link>
         </li>
-        
 
         <li>
           <Link href="/3DTradeAnalyzer">3D Trade Analyzer</Link>

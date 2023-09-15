@@ -1729,7 +1729,7 @@ const testfunc = async function () {
               let tempValue = this.fantasyCalcValue * 0.6;
               let newValue = this.fantasyCalcValue + tempValue;
               // console.log(this.name, this.fantasyCalcValue, newValue);
-              this.projectedNextOffseasonDynastyValue = +newValue;
+              this.projectedNextOffseasonDynastyValue = +newValue.toFixed(0);
 
               this.projectedNextOffseasonMarketPercentOfMax = +(
                 this.projectedNextOffseasonDynastyValue / fcQBMaxValue
@@ -1770,7 +1770,7 @@ const testfunc = async function () {
                 let tempValue = this.fantasyCalcValue * 0.1;
                 let newValue = this.fantasyCalcValue - tempValue;
 
-                this.projectedNextOffseasonDynastyValue = newValue;
+                this.projectedNextOffseasonDynastyValue = newValue.toFixed(0);
                 this.projectedNextOffseasonMarketPercentOfMax = +(
                   this.projectedNextOffseasonDynastyValue / fcNonQBMaxValue
                 ).toFixed(0);
@@ -1787,7 +1787,7 @@ const testfunc = async function () {
                 let tempValue = this.fantasyCalcValue * 0.2;
                 let newValue = this.fantasyCalcValue - tempValue;
 
-                this.projectedNextOffseasonDynastyValue = newValue;
+                this.projectedNextOffseasonDynastyValue = newValue.toFixed(0);
                 this.projectedNextOffseasonMarketPercentOfMax = +(
                   this.projectedNextOffseasonDynastyValue / fcNonQBMaxValue
                 ).toFixed(0);
@@ -1867,7 +1867,7 @@ const testfunc = async function () {
               let tempValue = this.fantasyCalcValue * 0.6;
               let newValue = this.fantasyCalcValue + tempValue;
               // console.log(this.name, this.fantasyCalcValue, newValue);
-              this.projectedNextOffseasonDynastyValue = +newValue;
+              this.projectedNextOffseasonDynastyValue = +newValue.toFixed(0);
 
               this.projectedNextOffseasonMarketPercentOfMax = +(
                 this.projectedNextOffseasonDynastyValue / fcNonQBMaxValue
@@ -1883,7 +1883,7 @@ const testfunc = async function () {
               let tempValue = this.fantasyCalcValue * 0.3;
               let newValue = this.fantasyCalcValue + tempValue;
               // console.log(this.name, this.fantasyCalcValue, newValue);
-              this.projectedNextOffseasonDynastyValue = +newValue;
+              this.projectedNextOffseasonDynastyValue = +newValue.toFixed(0);
 
               this.projectedNextOffseasonMarketPercentOfMax = +(
                 this.projectedNextOffseasonDynastyValue / fcNonQBMaxValue
@@ -1919,12 +1919,12 @@ const testfunc = async function () {
             // console.log(this.name);
             this.projectedNextOffseasonMarketPercentOfMax = +(
               this.projectedNextOffseasonDynastyValue / fcQBMaxValue
-            ).toFixed(2);
+            ).toFixed(0);
           }
           if (this.position !== 'QB') {
             this.projectedNextOffseasonMarketPercentOfMax = +(
               this.projectedNextOffseasonDynastyValue / fcNonQBMaxValue
-            ).toFixed(2);
+            ).toFixed(0);
           }
         }
       }
@@ -2879,6 +2879,8 @@ const testfunc = async function () {
     //   playerObject.myValue,
     //   playerObject.projectedNextOffseasonDynastyValue
     // );
+    let temp = +playerObject.projectedNextOffseasonDynastyValue;
+    let PNODVToUse = temp.toFixed(0);
 
     let dynastyRankingsDataObject = new dynastyRankingsDataConstructor(
       playerObject.name,
@@ -2891,7 +2893,7 @@ const testfunc = async function () {
       overallRank,
       posRank,
       playerObject.valueDiffBetweenMyValueAndMarketValue,
-      playerObject.projectedNextOffseasonDynastyValue,
+      PNODVToUse,
       playerObject.valueDifferenceBetweenCurrentMarketValueAndPNODV
     );
 
@@ -2920,7 +2922,7 @@ const testfunc = async function () {
 
   //     // Use the collection "dynastyRankingsData"
   //     const col = db.collection('dynastyRankingsData');
-  //     // const col = db.collection('august-28-2023-snapshot');
+  //     // const col = db.collection('dynastyRankingsData');
 
   //     // Construct a document
   //     let dynastyRankingsData = {

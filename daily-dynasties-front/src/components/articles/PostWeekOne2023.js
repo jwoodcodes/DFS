@@ -26,8 +26,8 @@ export default function PostWeekOne2023() {
           talent kept his price depressed far below what it should have been. We
           gave far too much credence to Tua the individual and the belief that
           he was the driver of his fantasy success or failure when that was just
-          an illusion of of those things being orthogonal. The relatively low
-          cost for his situation should have trumped any concerns over him the
+          an illusion of those things being orthogonal. The relatively low cost
+          for his situation should have trumped any concerns over him the
           individual. There was no reason to believe he couldn't come back from
           the concussions and be the same quarterback he was last year, and
           given his fantasy success last year in the same offense with the same
