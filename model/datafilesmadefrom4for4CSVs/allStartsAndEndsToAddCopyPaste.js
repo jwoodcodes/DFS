@@ -144,4 +144,5 @@
 // module.exports = rvRedraftRankingsTEP;
 //
 //
-// 
+// const fourForFourRestOfSeasonRedraftRankings =
+// module.exports = fourForFourRestOfSeasonRedraftRankings

@@ -7,6 +7,7 @@ const rvRedraftRankingsTEP = require('../model/datafilesmadefrom4for4CSVs/rvRedr
 const fpMarketRedraftRankings = require('../model/datafilesmadefrom4for4CSVs/fpMarketRedraftRankings');
 
 const PNODVCalcFunction = require('./PNODVCalcFunctions/PNODVCalcFunction');
+const fourForFourRestOfSeasonRedraftRankings = require('../model/datafilesmadefrom4for4CSVs/fourForFourRestOfSeasonRedraftRankings')
 
 let myJSON = {};
 
@@ -1096,7 +1097,8 @@ const testfunc = async function () {
       sanitizedFCPlayerName,
       fcPosition,
       fpRedraftPlayerObject,
-      sanitizedFPRedraftPlayerName
+      sanitizedFPRedraftPlayerName,
+      
     ) {
       // console.log(sanitizedFPRedraftPlayerName);
       // if (fcPosition !== 'PICK') {
@@ -1144,12 +1146,19 @@ const testfunc = async function () {
 
     rvRedraftData(
       player,
+      fcPosition,
       sanitizedFCPlayerName,
       rvRedraftPlayerObject,
-      sanitizedRVRedraftPlayerName
+      sanitizedRVRedraftPlayerName,
+      fourForFourRestOfSeasonRedraftPlayerGroup,
+      sanitizedFourForFourRedraftPlayerName 
     ) {
       // console.log(rvRedraftPlayerObject);
 
+      // fourForFourRestOfSeasonRedraftRankings
+
+      // console.log(curMonth)
+    if(curMonth < 9) {
       if (sanitizedRVRedraftPlayerName === sanitizedFCPlayerName) {
         // console.log(sanitizedRVRedraftPlayerName);
         // console.log(fpRedraftPlayerObject);
@@ -1184,20 +1193,109 @@ const testfunc = async function () {
         }
       }
     }
+    if(curMonth > 8) {
+      //setting this.rvRedraftPositionRank
+      if (sanitizedFourForFourRedraftPlayerName === sanitizedFCPlayerName) {
+      let initialTempPosRank = fourForFourRestOfSeasonRedraftPlayerGroup['"Rank"'].slice(1,-1)
+      let tempPosRank = +initialTempPosRank
+      this.rvRedraftPositionRank = tempPosRank
+      // console.log(sanitizedFCPlayerName, this.rvRedraftPositionRank)
+      //
+      // setting this.rvRedraftTier
+      if(fcPosition === 'QB') {
+        // console.log(sanitizedFourForFourRedraftPlayerName, this.rvRedraftPositionRank)
+        if(this.rvRedraftPositionRank < 4) {
+          this.rvRedraftTier = 1
+        }
+        if(this.rvRedraftPositionRank > 3 && this.rvRedraftPositionRank < 9) {
+          this.rvRedraftTier = 2
+        }
+        if(this.rvRedraftPositionRank > 8 && this.rvRedraftPositionRank < 11) {
+          this.rvRedraftTier = 3
+        }
+        if(this.rvRedraftPositionRank > 10 && this.rvRedraftPositionRank < 16) {
+          this.rvRedraftTier = 4
+        }
+        if(this.rvRedraftPositionRank > 15 && this.rvRedraftPositionRank < 20) {
+          this.rvRedraftTier = 5
+        }
+        if(this.rvRedraftPositionRank > 19 && this.rvRedraftPositionRank < 26) {
+          this.rvRedraftTier = 6
+        }
+        if(this.rvRedraftPositionRank > 25) {
+          this.rvRedraftTier = 7
+        }
+      }
+
+      if(fcPosition === 'RB' || fcPosition === 'WR') {
+        // console.log(sanitizedFourForFourRedraftPlayerName, this.rvRedraftPositionRank)
+        if(this.rvRedraftPositionRank < 7) {
+          this.rvRedraftTier = 1
+        }
+        if(this.rvRedraftPositionRank > 6 && this.rvRedraftPositionRank < 14) {
+          this.rvRedraftTier = 2
+        }
+        if(this.rvRedraftPositionRank > 13 && this.rvRedraftPositionRank < 21) {
+          this.rvRedraftTier = 3
+        }
+        if(this.rvRedraftPositionRank > 20 && this.rvRedraftPositionRank < 30) {
+          this.rvRedraftTier = 4
+        }
+        if(this.rvRedraftPositionRank > 29 && this.rvRedraftPositionRank < 36) {
+          this.rvRedraftTier = 5
+        }
+        if(this.rvRedraftPositionRank > 35 && this.rvRedraftPositionRank < 41) {
+          this.rvRedraftTier = 6
+        }
+        if(this.rvRedraftPositionRank > 40) {
+          this.rvRedraftTier = 7
+        }
+      }
+
+      if(fcPosition === 'TE') {
+        // console.log(sanitizedFourForFourRedraftPlayerName, this.rvRedraftPositionRank)
+        if(this.rvRedraftPositionRank < 3) {
+          this.rvRedraftTier = 1
+        }
+        if(this.rvRedraftPositionRank > 2 && this.rvRedraftPositionRank < 8) {
+          this.rvRedraftTier = 2
+        }
+        if(this.rvRedraftPositionRank > 7 && this.rvRedraftPositionRank < 12) {
+          this.rvRedraftTier = 3
+        }
+        if(this.rvRedraftPositionRank > 11 && this.rvRedraftPositionRank < 16) {
+          this.rvRedraftTier = 4
+        }
+        if(this.rvRedraftPositionRank > 15 && this.rvRedraftPositionRank < 20) {
+          this.rvRedraftTier = 5
+        }
+        if(this.rvRedraftPositionRank > 19 && this.rvRedraftPositionRank < 23) {
+          this.rvRedraftTier = 6
+        }
+        if(this.rvRedraftPositionRank > 22) {
+          this.rvRedraftTier = 7
+        }
+      }
+      }
+    }
+    }
 
     puttingItAllTogetherRedraft(
       sanitizedFCPlayerName,
       sanitizedRVRedraftPlayerName,
-      fcPosition
+      fcPosition,
+      fourForFourRestOfSeasonRedraftPlayerGroup,
+      sanitizedFourForFourRedraftPlayerName 
     ) {
       if (sanitizedRVRedraftPlayerName === sanitizedFCPlayerName) {
         //////////////
         //setting myRedraftScoreFromPlayersRedraftTier
         ////////////////
-
+        let bestQBTier = 1
         if (fcPosition === 'QB') {
           // console.log(fcPosition);
-          let bestQBTier = 2;
+          if(curMonth < 9) {
+          bestQBTier = 2;
           if (this.rvRedraftTier === 1) {
             bestQBTier = 1;
           }
@@ -1210,7 +1308,10 @@ const testfunc = async function () {
           if (bestQBTier > 3 && this.rvRedraftTier === 4) {
             bestQBTier = 4;
           }
-
+        }
+        if(curMonth > 8) {
+          bestQBTier = 1;
+        }
           this.curBestQBTier = bestQBTier;
 
           if (this.rvRedraftTier === bestQBTier) {
@@ -1974,6 +2075,8 @@ const testfunc = async function () {
   let sanitizedFPRedraftPlayerName = '';
   let rvRedraftPlayerObject;
   let sanitizedRVRedraftPlayerName = '';
+  let fourForFourRestOfSeasonRedraftPlayerObject;
+  let sanitizedFourForFourRedraftPlayerName = '';
 
   // let sanitizedPPPlayerName = '';
   // let sanitizedPPPWithPicksPlayerName = '';
@@ -2432,6 +2535,250 @@ const testfunc = async function () {
       }
     });
 
+    // for four for four rest of season redraft rankings in season
+
+    let fourForFourRestOfSeasonRedraftPlayerGroup;
+  let sanitizedFourForFourRedraftPlayerName = '';
+
+    fourForFourRestOfSeasonRedraftRankings.forEach(function (initial) {
+      
+      //
+     let tempsanitizedFourForFourPlayerName = ''
+     
+      //
+      initial.forEach(function(group) {
+        
+        //QB
+        if(group['"QB"']) {
+          let teamABVLength = 3
+        if(player.player.maybeTeam) {
+          if(player.player.maybeTeam.length === 2) {
+            teamABVLength = 2
+          }
+        
+        }
+          let qbNameOne = ''
+          if(teamABVLength === 2) {
+            if(group['"QB"'].slice(-1) !== ")") {
+              // console.log(group['"QB"'])
+              qbNameOne = group['"QB"'].slice(1, -6)
+            }
+            if(group['"QB"'].slice(-1) === ")") {
+              // console.log(group['"QB"'])
+              qbNameOne = group['"QB"'].slice(1, -5)
+            }
+        
+        
+          }
+          if(teamABVLength === 3) {
+            if(group['"QB"'].slice(-1) !== ")") {
+              // console.log(group['"QB"'])
+              qbNameOne = group['"QB"'].slice(1, -7)
+            }
+            if(group['"QB"'].slice(-1) === ")") {
+              // console.log(group['"QB"'])
+              qbNameOne = group['"QB"'].slice(1, -6)
+            }
+
+            
+              }
+         if (qbNameOne.includes("'")) {
+          qbNameOne = qbNameOne.replace("'", '');
+      }
+      tempsanitizedFourForFourPlayerName = qbNameOne
+        .replace("'", '')
+        .replace('.', '')
+        .replace('.', '')
+        
+
+        // console.log(tempsanitizedFourForFourPlayerName)
+        if(tempsanitizedFourForFourPlayerName && tempsanitizedFourForFourPlayerName === sanitizedFCPlayerName) {
+          // console.log(tempsanitizedFourForFourPlayerName, group)
+          fourForFourRestOfSeasonRedraftPlayerGroup = group
+          sanitizedFourForFourRedraftPlayerName = tempsanitizedFourForFourPlayerName
+        }
+        }
+        // RB
+        if(group['"RB"']) {
+          let teamABVLength = 3
+        if(player.player.maybeTeam) {
+          if(player.player.maybeTeam.length === 2) {
+            teamABVLength = 2
+          }
+        
+        }
+          let rbNameOne = ''
+          
+          if(teamABVLength === 2) {
+            if(group['"RB"'].slice(-1) !== ")") {
+              // console.log(group['"RB"'])
+              rbNameOne = group['"RB"'].slice(1, -6)
+            }
+            if(group['"RB"'].slice(-1) === ")") {
+              // console.log(group['"RB"'])
+              rbNameOne = group['"RB"'].slice(1, -5)
+            }
+        
+        
+          }
+          if(teamABVLength === 3) {
+            if(group['"RB"'].slice(-1) !== ")") {
+              // console.log(group['"RB"'])
+              rbNameOne = group['"RB"'].slice(1, -7)
+            }
+            if(group['"RB"'].slice(-1) === ")") {
+              // console.log(group['"RB"'])
+              rbNameOne = group['"RB"'].slice(1, -6)
+            }
+
+            
+              }
+         if (rbNameOne.includes("'")) {
+          rbNameOne = rbNameOne.replace("'", '');
+      }
+      tempsanitizedFourForFourPlayerName = rbNameOne
+        .replace("'", '')
+        .replace('.', '')
+        .replace('.', '')
+        
+
+        // console.log(tempsanitizedFourForFourPlayerName)
+        if(tempsanitizedFourForFourPlayerName && tempsanitizedFourForFourPlayerName === sanitizedFCPlayerName) {
+          // console.log(tempsanitizedFourForFourPlayerName, group)
+          fourForFourRestOfSeasonRedraftPlayerGroup = group
+          sanitizedFourForFourRedraftPlayerName = tempsanitizedFourForFourPlayerName
+        }
+        }
+        //WR
+        if(group['"WR"']) {
+          let teamABVLength = 3
+        if(player.player.maybeTeam) {
+          if(player.player.maybeTeam.length === 2) {
+            teamABVLength = 2
+          }
+        
+        }
+          let wrNameOne = ''
+          if(teamABVLength === 2) {
+            if(group['"WR"'].slice(-1) !== ")") {
+              // console.log(group['"WR"'])
+              wrNameOne = group['"WR"'].slice(1, -6)
+            }
+            if(group['"WR"'].slice(-1) === ")") {
+              // console.log(group['"WR"'])
+              wrNameOne = group['"WR"'].slice(1, -5)
+            }
+        
+        
+          }
+          if(teamABVLength === 3) {
+            if(group['"WR"'].slice(-1) !== ")") {
+              // console.log(group['"WR"'])
+              wrNameOne = group['"WR"'].slice(1, -7)
+            }
+            if(group['"WR"'].slice(-1) === ")") {
+              // console.log(group['"WR"'])
+              wrNameOne = group['"WR"'].slice(1, -6)
+            }
+
+            
+              }
+         if (wrNameOne.includes("'")) {
+          wrNameOne = wrNameOne.replace("'", '');
+      }
+      tempsanitizedFourForFourPlayerName = wrNameOne
+        .replace("'", '')
+        .replace('.', '')
+        .replace('.', '')
+        
+
+        // console.log(tempsanitizedFourForFourPlayerName)
+        if(tempsanitizedFourForFourPlayerName && tempsanitizedFourForFourPlayerName === sanitizedFCPlayerName) {
+          // console.log(tempsanitizedFourForFourPlayerName, group)
+          fourForFourRestOfSeasonRedraftPlayerGroup = group
+          sanitizedFourForFourRedraftPlayerName = tempsanitizedFourForFourPlayerName
+        }
+        }
+        //TE
+        if(group['"TE"']) {
+          let teamABVLength = 3
+        if(player.player.maybeTeam) {
+          if(player.player.maybeTeam.length === 2) {
+            teamABVLength = 2
+          }
+        
+        }
+          // console.log(teamABVLength)
+          let teNameOne = ''
+          if(teamABVLength === 2) {
+            if(group['"TE"'].slice(-1) !== ")") {
+              // console.log(group['"TE"'])
+              teNameOne = group['"TE"'].slice(1, -6)
+            }
+            if(group['"TE"'].slice(-1) === ")") {
+              // console.log(group['"TE"'])
+              teNameOne = group['"TE"'].slice(1, -5)
+            }
+        
+        
+          }
+          if(teamABVLength === 3) {
+            if(group['"TE"'].slice(-1) !== ")") {
+              // console.log(group['"TE"'])
+              teNameOne = group['"TE"'].slice(1, -7)
+            }
+            if(group['"TE"'].slice(-1) === ")") {
+              // console.log(group['"TE"'])
+              teNameOne = group['"TE"'].slice(1, -6)
+            }
+
+            
+              }
+         if (teNameOne.includes("'")) {
+          teNameOne = teNameOne.replace("'", '');
+          
+      }
+     
+      tempsanitizedFourForFourPlayerName = teNameOne
+        .replace("'", '')
+        .replace('.', '')
+        .replace('.', '')
+        
+
+        // console.log(tempsanitizedFourForFourPlayerName)
+        if(tempsanitizedFourForFourPlayerName && tempsanitizedFourForFourPlayerName === sanitizedFCPlayerName) {
+          // console.log(tempsanitizedFourForFourPlayerName, group)
+          fourForFourRestOfSeasonRedraftPlayerGroup = group
+          sanitizedFourForFourRedraftPlayerName = tempsanitizedFourForFourPlayerName
+        }
+        }
+      })
+      //
+      
+
+      
+
+
+
+
+
+      //////////////////////////////////////////////////////
+      // if (playerObject['"Player"'].includes("'")) {
+      //   playerObject['"Player"'] = playerObject['"Player"'].replace("'", '');
+      // }
+
+      // let tempsanitizedRVRedraftPlayerName = playerObject['"Player"']
+      //   .replace("'", '')
+      //   .replace('.', '')
+      //   .replace('.', '')
+      //   .slice(1, -1);
+
+      // if (tempsanitizedRVRedraftPlayerName === sanitizedFCPlayerName) {
+      //   sanitizedFourForFourRedraftPlayerName = tempsanitizedRVRedraftPlayerName;
+      //   fourForFourRestOfSeasonRedraftPlayerObject = playerObject;
+      // }
+    });
+
     // for one older player fantasycalc value
 
     let oneOlderPlayerNext = [];
@@ -2521,20 +2868,26 @@ const testfunc = async function () {
       sanitizedFCPlayerName,
       fcPosition,
       fpRedraftPlayerObject,
-      sanitizedFPRedraftPlayerName
+      sanitizedFPRedraftPlayerName,
+      
     );
 
     tradeCalculaterDataObject.rvRedraftData(
       player,
+      fcPosition,
       sanitizedFCPlayerName,
       rvRedraftPlayerObject,
-      sanitizedRVRedraftPlayerName
+      sanitizedRVRedraftPlayerName,
+      fourForFourRestOfSeasonRedraftPlayerGroup,
+      sanitizedFourForFourRedraftPlayerName 
     );
 
     tradeCalculaterDataObject.puttingItAllTogetherRedraft(
       sanitizedFCPlayerName,
       sanitizedRVRedraftPlayerName,
-      fcPosition
+      fcPosition,
+      fourForFourRestOfSeasonRedraftPlayerGroup,
+      sanitizedFourForFourRedraftPlayerName 
     );
 
     if (sanitizedFCPlayerName) {
