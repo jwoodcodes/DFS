@@ -139,51 +139,83 @@ const withinTwoYearsOfAgeApexButNotPastButWillBeInWorseBucketNextMarch =
         //   myRedraftDifferenceScore
         // );
         if (Math.abs(myRedraftDifferenceScore) === 700) {
-          let value = fantasyCalcValue - (fantasyCalcValue * 0.275) / maxValue;
+          let tempOne = +fantasyCalcValue * 0.275;
+          let tempTwo = +fantasyCalcValue - tempOne;
+
+          // console.log(fantasyCalcValue, test);
+          let value = tempTwo / maxValue;
           if (value) {
             return value;
           }
         }
         if (Math.abs(myRedraftDifferenceScore) === 600) {
-          let value = fantasyCalcValue - (fantasyCalcValue * 0.225) / maxValue;
+          let tempOne = +fantasyCalcValue * 0.225;
+          let tempTwo = +fantasyCalcValue - tempOne;
+
+          // console.log(fantasyCalcValue, test);
+          let value = tempTwo / maxValue;
           if (value) {
             return value;
           }
         }
 
         if (Math.abs(myRedraftDifferenceScore) === 500) {
-          let value = fantasyCalcValue - (fantasyCalcValue * 0.16) / maxValue;
+          let tempOne = +fantasyCalcValue * 0.16;
+          let tempTwo = +fantasyCalcValue - tempOne;
+
+          // console.log(fantasyCalcValue, test6)
+          let value = tempTwo / maxValue;
           if (value) {
             return value;
           }
         }
 
         if (Math.abs(myRedraftDifferenceScore) === 400) {
-          let value = fantasyCalcValue - (fantasyCalcValue * 0.12) / maxValue;
+          let tempOne = +fantasyCalcValue * 0.12;
+          let tempTwo = +fantasyCalcValue - tempOne;
+
+          // console.log(fantasyCalcValue, test);
+          let value = tempTwo / maxValue;
           if (value) {
             return value;
           }
         }
         if (Math.abs(myRedraftDifferenceScore) === 300) {
-          let value = fantasyCalcValue - (fantasyCalcValue * 0.075) / maxValue;
+          let tempOne = +fantasyCalcValue * 0.075;
+          let tempTwo = +fantasyCalcValue - tempOne;
+
+          // console.log(fantasyCalcValue, test);
+          let value = tempTwo / maxValue;
           if (value) {
             return value;
           }
         }
         if (Math.abs(myRedraftDifferenceScore) === 200) {
-          let value = fantasyCalcValue - (fantasyCalcValue * 0.05) / maxValue;
+          let tempOne = +fantasyCalcValue * 0.05;
+          let tempTwo = +fantasyCalcValue - tempOne;
+
+          // console.log(fantasyCalcValue, test);
+          let value = tempTwo / maxValue;
           if (value) {
             return value;
           }
         }
         if (Math.abs(myRedraftDifferenceScore) === 100) {
-          let value = fantasyCalcValue - (fantasyCalcValue * 0.04) / maxValue;
+          let tempOne = +fantasyCalcValue * 0.04;
+          let tempTwo = +fantasyCalcValue - tempOne;
+
+          // console.log(fantasyCalcValue, test);
+          let value = tempTwo / maxValue;
           if (value) {
             return value;
           }
         }
         if (Math.abs(myRedraftDifferenceScore) === 0) {
-          let value = fantasyCalcValue - (fantasyCalcValue * 0.03) / maxValue;
+          let tempOne = +fantasyCalcValue * 0.3;
+          let tempTwo = +fantasyCalcValue - tempOne;
+
+          // console.log(fantasyCalcValue, test);
+          let value = tempTwo / maxValue;
           if (value) {
             return value;
           }
