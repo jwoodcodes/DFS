@@ -158,3 +158,49 @@
   transform: translateY(0);
   transition: all 0.15s;
 }
+
+.isOnSelectedTeamSortCheckboxForm {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  
+}
+
+.checkboxWrapper {
+  text-align: center;
+  
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media (max-width: 900px) {
+  .checkboxWrapper {
+    font-size: .9rem;
+  }
+}
+@media (max-width: 775px) {
+  .checkboxWrapper {
+    font-size: .8rem;
+  }
+}
+@media (max-width: 500px) {
+  .checkboxWrapper {
+    font-size: .7rem;
+  }
+}
+@media (max-width: 375px) {
+  .checkboxWrapper {
+    font-size: .6rem;
+  }
+}
+
+.isOnSelectedTeamSortCheckboxInput {
+  margin-right: .5rem;
+}

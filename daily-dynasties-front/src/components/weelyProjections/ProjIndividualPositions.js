@@ -1,7 +1,7 @@
 import Table from '@/components/weelyProjections/sortableTable/Table';
 import React from 'react';
 
-export default function ProjIndividualPositions({ data, positionToShow }) {
+export default function ProjIndividualPositions({ data, positionToShow, isSortBySelectedTeamChecked }) {
   //   console.log(data);
   const [dataToUse, setDataToUse] = React.useState(data);
   //   console.log(positionToShow);
@@ -13,5 +13,5 @@ export default function ProjIndividualPositions({ data, positionToShow }) {
     [data]
   );
 
-  return <Table data={dataToUse} />;
+  return <Table data={dataToUse} isSortBySelectedTeamChecked={isSortBySelectedTeamChecked}/>;
 }

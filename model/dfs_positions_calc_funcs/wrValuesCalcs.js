@@ -201,7 +201,7 @@ class WrObject {
             this.fourForFourHalfPPRProjectedPoints +
             this.halfGLSPAvg) /
           4
-        ).toFixed(2);
+        ).toFixed(1);
       } else {
         tempHalfProjection = this.fourForFourHalfPPRProjectedPoints.toFixed(0);
       }
@@ -213,7 +213,7 @@ class WrObject {
             this.fourForFourFullPPRProjectedPoints +
             this.PPRGLSPAvg) /
           4
-        ).toFixed(2);
+        ).toFixed(1);
       } else {
         tempPPRProjection = this.fourForFourFullPPRProjectedPoints.toFixed(0);
       }
@@ -230,14 +230,14 @@ class WrObject {
           this.fourForFourHalfPPRProjectedPoints +
           this.halfGLSPAvg) /
         3
-      ).toFixed(2);
+      ).toFixed(1);
 
       let tempPPRProjection = +(
         (this.fourForFourFullPPRProjectedPoints +
           this.fourForFourFullPPRProjectedPoints +
           this.PPRGLSPAvg) /
         3
-      ).toFixed(2);
+      ).toFixed(1);
 
       this.appHalfProjectedPoints = tempHalfProjection;
       this.appFullProjectedPoints = tempPPRProjection;
@@ -282,9 +282,9 @@ class WrObject {
 
           let tempHalfProjection = +(
             this.halfGLSPAvg * adjustmentFactor
-          ).toFixed(2);
+          ).toFixed(1);
           let tempPPRProjection = +(this.PPRGLSPAvg * adjustmentFactor).toFixed(
-            2
+            1
           );
 
           if (
@@ -342,9 +342,9 @@ class WrObject {
 
           let tempHalfProjection = +(
             this.halfGLSPAvg * adjustmentFactor
-          ).toFixed(2);
+          ).toFixed(1);
           let tempPPRProjection = +(this.PPRGLSPAvg * adjustmentFactor).toFixed(
-            2
+            1
           );
 
           if (
@@ -427,8 +427,8 @@ class WrObject {
           tempPPRProjection = this.fourForFourFullPPRProjectedPoints;
         }
 
-        this.appHalfProjectedPoints = +tempHalfProjection.toFixed(2);
-        this.appFullProjectedPoints = +tempPPRProjection.toFixed(2);
+        this.appHalfProjectedPoints = +tempHalfProjection.toFixed(1);
+        this.appFullProjectedPoints = +tempPPRProjection.toFixed(1);
 
         // console.log(
         //   this.playerName,

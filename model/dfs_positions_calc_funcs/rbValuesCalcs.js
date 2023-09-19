@@ -365,7 +365,7 @@ class RbObject {
             this.fourForFourHalfPPRProjectedPoints +
             this.halfGLSPAVG) /
           4
-        ).toFixed(2);
+        ).toFixed(1);
       } else {
         this.appProjectedHalfPPRPoints = this.fourForFourHalfPPRProjectedPoints;
       }
@@ -377,7 +377,7 @@ class RbObject {
             this.fourForFourFullPPRProjectedPoints +
             this.fullGLSPAVG) /
           4
-        ).toFixed(2);
+        ).toFixed(1);
       } else {
         this.appProjectedFullPPRPoints = this.fourForFourFullPPRProjectedPoints;
       }
@@ -392,7 +392,7 @@ class RbObject {
             this.fourForFourHalfPPRProjectedPoints +
             this.halfGLSPAVG) /
           3
-        ).toFixed(2);
+        ).toFixed(1);
       } else {
         this.appProjectedHalfPPRPoints = this.fourForFourHalfPPRProjectedPoints;
       }
@@ -403,7 +403,7 @@ class RbObject {
             this.fourForFourFullPPRProjectedPoints +
             this.fullGLSPAVG) /
           3
-        ).toFixed(2);
+        ).toFixed(1);
       } else {
         this.appProjectedFullPPRPoints = this.fourForFourFullPPRProjectedPoints;
       }
@@ -425,12 +425,12 @@ class RbObject {
               (this.baselineAppHalfProjection +
                 this.fourForFourHalfPPRProjectedPoints) /
               2
-            ).toFixed(2);
+            ).toFixed(1);
             this.appProjectedFullPPRPoints = +(
               (this.baselineAppPPRProjection +
                 this.fourForFourFullPPRProjectedPoints) /
               2
-            ).toFixed(2);
+            ).toFixed(1);
 
             // console.log(
             //   this.playerName,
@@ -470,22 +470,22 @@ class RbObject {
           if (roleAdjustor) {
             this.baselineAppHalfProjection = +(
               +this.halfGLSPAVG * +roleAdjustor
-            ).toFixed(2);
+            ).toFixed(1);
             this.baselineAppPPRProjection = +(
               +this.fullGLSPAVG * +roleAdjustor
-            ).toFixed(2);
+            ).toFixed(1);
 
             this.testHalfProjection = +(
               (this.baselineAppHalfProjection +
                 this.fourForFourHalfPPRProjectedPoints) /
               2
-            ).toFixed(2);
+            ).toFixed(1);
 
             this.testPPRProjection = +(
               (this.baselineAppPPRProjection +
                 this.fourForFourFullPPRProjectedPoints) /
               2
-            ).toFixed(2);
+            ).toFixed(1);
 
             this.appProjectedHalfPPRPoints = this.testHalfProjection;
             this.appProjectedFullPPRPoints = this.testPPRProjection;
@@ -1627,6 +1627,8 @@ allRBObjectsArray.forEach(function (player) {
       this.appTEPProjectedPoints = appTEPProjectedPoints;
     }
   }
+
+  
 
   let rbProjectionsObject = new ProjectionsObject(
     player.playerName,

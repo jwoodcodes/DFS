@@ -85,8 +85,8 @@
     }
   }
   
-  @media (max-width: 860px) {
-    .tableHead {
+  @media (max-width: 900px) {
+    .table th {
       font-size: 0.9rem;
     }
   
@@ -96,9 +96,9 @@
   }
   
   @media (max-width: 810px) {
-    .tableHead {
-      font-size: 0.85rem;
-      padding: 4px 5px;
+    .table th {
+      font-size: 0.75rem;
+      padding: 3px 4px;
     }
   
     .table td {
@@ -108,8 +108,8 @@
   }
   
   @media (max-width: 735px) {
-    .tableHead {
-      font-size: 0.8rem;
+    .table th {
+      font-size: 0.7rem;
     }
   
     .table td {
@@ -120,8 +120,8 @@
   }
   
   @media (max-width: 610px) {
-    .tableHead {
-      font-size: 0.75rem;
+    .table th {
+      font-size: 0.6rem;
     }
   
     .table td {
@@ -131,7 +131,7 @@
   }
   
   @media (max-width: 570px) {
-    .tableHead {
+    .table th {
       overflow: hidden;
     }
     .table_container {
@@ -144,10 +144,11 @@
       margin-bottom: 7.5px;
     }
   }
-  
+
+ 
   @media (max-width: 525px) {
-    .tableHead {
-      font-size: 0.65rem;
+    .table th {
+      font-size: 0.5rem;
       padding: 4px 2px;
     }
   
@@ -171,8 +172,8 @@
   }
   
   @media (max-width: 420px) {
-    .tableHead {
-      font-size: 0.55rem;
+    .table th {
+      font-size: 0.45rem;
       padding: 4px 1.5px;
     }
     .table td {
@@ -181,8 +182,8 @@
   }
   
   @media (max-width: 390px) {
-    .tableHead {
-      font-size: 0.5rem;
+    .table th {
+      font-size: 0.4rem;
       padding: 4px 1.5px;
     }
     .table td {
@@ -226,5 +227,10 @@
   
   .table tr {
     width: fit-content;
+  }
+
+  .table td:last-child {
+    width: .025rem;
+    border-left: 1px solid grey;
   }
   
