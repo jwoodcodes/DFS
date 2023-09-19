@@ -24,6 +24,9 @@ const initialSleeperPlayerData = data.sleeperPlayerData
   const [selectedLeagueData, setSelectedLeagueData] = React.useState({})
   const [selectedUserID, setSelectedUserID] = React.useState(0)
   const [selectedLeagueRosterNamesArray, setSelectedLeagueRosterNamesArray] = React.useState([])
+  const [isSortBySelectedTeamChecked, setIsSortBySelectedTeamChecked] = React.useState(false)
+  const [showSortBySelectedLeaguesPlayersCheckbox,  setShowSortBySelectedLeaguesPlayersCheckbox] = React.useState(false)
+  
 
   // console.log(allProjections.allProjections[0].allProjectionsArray[0]);
   let tempQBArray = data.allProjections[0].allProjectionsArray[0];
@@ -126,7 +129,7 @@ const initialSleeperPlayerData = data.sleeperPlayerData
 
   
 
-  
+  // console.log(isSortBySelectedTeamChecked)
 
   return (
     <>
@@ -141,8 +144,16 @@ const initialSleeperPlayerData = data.sleeperPlayerData
        setSelectedUserID={setSelectedUserID}
        initialSleeperPlayerData={initialSleeperPlayerData}
        setSelectedLeagueRosterNamesArray={setSelectedLeagueRosterNamesArray}
-       />
+       setShowSortBySelectedLeaguesPlayersCheckbox={setShowSortBySelectedLeaguesPlayersCheckbox}
        
+       />
+
+    {showSortBySelectedLeaguesPlayersCheckbox && 
+      <div className={styles.checkboxWrapper}>
+    
+      To sort by players on selected team, <br />first sort by scoring in that league, then click isOnSelectedTeam header
+      </div>
+}
       
       <div className={styles.btnsWrapper}>
         <button className={styles.posBtn} onClick={overall}>
@@ -164,12 +175,21 @@ const initialSleeperPlayerData = data.sleeperPlayerData
           Flex
         </button>
       </div>
-      {positionToShow === 'Overall' && <Table data={newArray} selectedLeagueRosterNamesArray={selectedLeagueRosterNamesArray}/>}
+      {positionToShow === 'Overall' && <Table data={newArray} selectedLeagueRosterNamesArray={selectedLeagueRosterNamesArray}
+      isSortBySelectedTeamChecked={isSortBySelectedTeamChecked}
+      setIsSortBySelectedTeamChecked={setIsSortBySelectedTeamChecked}
+     
+      
+      />}
       {positionToShow === 'QB' && (
         <ProjIndividualPositions
           data={qbArray}
           positionToShow={positionToShow}
           selectedLeagueRosterNamesArray={selectedLeagueRosterNamesArray}
+          isSortBySelectedTeamChecked={isSortBySelectedTeamChecked}
+          setIsSortBySelectedTeamChecked={setIsSortBySelectedTeamChecked}
+          
+         
         />
       )}
       {positionToShow === 'RB' && (
@@ -177,6 +197,10 @@ const initialSleeperPlayerData = data.sleeperPlayerData
           data={rbArray}
           positionToShow={positionToShow}
           selectedLeagueRosterNamesArray={selectedLeagueRosterNamesArray}
+          isSortBySelectedTeamChecked={isSortBySelectedTeamChecked}
+          setIsSortBySelectedTeamChecked={setIsSortBySelectedTeamChecked}
+         
+          
         />
       )}
       {positionToShow === 'WR' && (
@@ -184,6 +208,10 @@ const initialSleeperPlayerData = data.sleeperPlayerData
           data={wrArray}
           positionToShow={positionToShow}
           selectedLeagueRosterNamesArray={selectedLeagueRosterNamesArray}
+          isSortBySelectedTeamChecked={isSortBySelectedTeamChecked}
+          setIsSortBySelectedTeamChecked={setIsSortBySelectedTeamChecked}
+         
+          
         />
       )}
       {positionToShow === 'TE' && (
@@ -191,6 +219,10 @@ const initialSleeperPlayerData = data.sleeperPlayerData
           data={teArray}
           positionToShow={positionToShow}
           selectedLeagueRosterNamesArray={selectedLeagueRosterNamesArray}
+          isSortBySelectedTeamChecked={isSortBySelectedTeamChecked}
+          setIsSortBySelectedTeamChecked={setIsSortBySelectedTeamChecked}
+          
+          
         />
       )}
       {positionToShow === 'FLEX' && (
@@ -198,6 +230,10 @@ const initialSleeperPlayerData = data.sleeperPlayerData
           data={flexArray}
           positionToShow={positionToShow}
           selectedLeagueRosterNamesArray={selectedLeagueRosterNamesArray}
+          isSortBySelectedTeamChecked={isSortBySelectedTeamChecked}
+          setIsSortBySelectedTeamChecked={setIsSortBySelectedTeamChecked}
+          
+          
         />
       )}
       <Footer />

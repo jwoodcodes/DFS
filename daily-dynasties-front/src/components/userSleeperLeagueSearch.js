@@ -9,6 +9,7 @@ export default function UserSleeperLeagueSearch({
   setSelectedUserID,
   initialSleeperPlayerData,
   setSelectedLeagueRosterNamesArray,
+  setShowSortBySelectedLeaguesPlayersCheckbox,
 }) {
   // console.log(searchedUser)
   // const [data, setData] = React.useState(null)
@@ -85,6 +86,7 @@ export default function UserSleeperLeagueSearch({
         // console.log(league)
         setSelectedLeagueData(league);
         setShowLeagues(false);
+        setShowSortBySelectedLeaguesPlayersCheckbox(true);
         setUserLeaguesNamesArray([]);
         //
 

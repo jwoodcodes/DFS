@@ -5,10 +5,11 @@ import TableBody from './TableBody';
 import TableHead from './TableHead';
 import { Libre_Caslon_Display } from 'next/font/google';
 
-export default function Table({ data, selectedLeagueRosterNamesArray }) {
+export default function Table({ data, selectedLeagueRosterNamesArray,
+  isSortBySelectedTeamChecked, setIsSortBySelectedTeamChecked,   }) {
   const [tableData, setTableData] = React.useState(data);
 
-  // console.log(selectedLeagueRosterNamesArray)
+  // console.log(isSortBySelectedTeamChecked)
 
   const columns = [
     { label: 'Player Name', accessor: 'name' },
@@ -18,6 +19,7 @@ export default function Table({ data, selectedLeagueRosterNamesArray }) {
     { label: 'Half PPR', accessor: 'appHalfProjectedPoints' },
     { label: 'Full PPR', accessor: 'appFullProjectedPoints' },
     { label: 'TEP PPR', accessor: 'appTEPProjectedPoints' },
+    { label: 'isOnSelectedTeam', accessor: 'isOnSelectedTeam'}
   ];
 
   const handleSorting = (sortField, sortOrder) => {
@@ -49,8 +51,13 @@ export default function Table({ data, selectedLeagueRosterNamesArray }) {
         
         <table className={styles.table}>
           {/* <caption className={styles.caption}>Weekly Projections</caption> */}
-          <TableHead columns={columns} handleSorting={handleSorting} />
-          <TableBody columns={columns} tableData={tableData} selectedLeagueRosterNamesArray={selectedLeagueRosterNamesArray}/>
+          <TableHead columns={columns} handleSorting={handleSorting} isSortBySelectedTeamChecked={isSortBySelectedTeamChecked}
+          setIsSortBySelectedTeamChecked={setIsSortBySelectedTeamChecked} 
+          
+          />
+          <TableBody columns={columns} tableData={tableData} selectedLeagueRosterNamesArray={selectedLeagueRosterNamesArray}
+          
+          />
         </table>
 
 
