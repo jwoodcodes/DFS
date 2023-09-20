@@ -1273,7 +1273,7 @@ const qbrawdata = {
 
 const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
   qbDownloadableSpreadSheetYahoo.forEach(function (playerobj, i) {
-    // console.log(playerobj);
+    
 
     let teamName = playerobj.Team;
     let teamvtt = playerobj['Team O/U'];
@@ -1317,6 +1317,7 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
       passedInTeam.fourForFourFullPPRProjectedPoints = projpts;
       passedInTeam.fourForFourHalfPPRProjectedPoints = projpts;
       passedInTeam.prjpassattempts = playerObject['Pass Att'];
+      passedInTeam.projectedPassingTDs = playerobj['Pass TD'];
       // console.log(projpts);
       let yahooSalary = +playerobj['Y! ($)'];
       passedInTeam.yahooSalary = yahooSalary;

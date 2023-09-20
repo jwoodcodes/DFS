@@ -6,7 +6,7 @@ import TableHead from './TableHead';
 import { Libre_Caslon_Display } from 'next/font/google';
 
 export default function Table({ data, selectedLeagueRosterNamesArray,
-  isSortBySelectedTeamChecked, setIsSortBySelectedTeamChecked,   }) {
+  isSortBySelectedTeamChecked, setIsSortBySelectedTeamChecked, pointsPerPassingTD, qbProjectionToUseBasedOffPointsPerTD  }) {
   const [tableData, setTableData] = React.useState(data);
 
   // console.log(isSortBySelectedTeamChecked)
@@ -56,6 +56,7 @@ export default function Table({ data, selectedLeagueRosterNamesArray,
           
           />
           <TableBody columns={columns} tableData={tableData} selectedLeagueRosterNamesArray={selectedLeagueRosterNamesArray}
+          pointsPerPassingTD={pointsPerPassingTD}
           
           />
         </table>
