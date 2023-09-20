@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '@/styles/table.module.css';
 
-export default function TableHead({ columns, handleSorting, isSortBySelectedTeamChecked, setIsSortBySelectedTeamChecked }) {
+export default function TableHead({ columns, handleSorting, isSortBySelectedTeamChecked, setIsSortBySelectedTeamChecked, pointsPerPassingTD }) {
   //   console.log(columns);
   const [sortField, setSortField] = React.useState('appFullProjectedPoints');
   const [order, setOrder] = React.useState('desc');
@@ -9,6 +9,8 @@ export default function TableHead({ columns, handleSorting, isSortBySelectedTeam
   React.useEffect(() => {
     handleSorting('appFullProjectedPoints', 'desc');
   }, []);
+
+  
 
 //  console.log(isSortBySelectedTeamChecked)
 

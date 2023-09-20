@@ -1,12 +1,12 @@
 // import styles from '@/styles/table.module.css';
 import styles from '@/styles/tableWeeklyProjections.module.css';
-import React from 'react';
+import React, { useEffect } from 'react';
 import TableBody from './TableBody';
 import TableHead from './TableHead';
 import { Libre_Caslon_Display } from 'next/font/google';
 
 export default function Table({ data, selectedLeagueRosterNamesArray,
-  isSortBySelectedTeamChecked, setIsSortBySelectedTeamChecked, pointsPerPassingTD, qbProjectionToUseBasedOffPointsPerTD  }) {
+  isSortBySelectedTeamChecked, setIsSortBySelectedTeamChecked, pointsPerPassingTD  }) {
   const [tableData, setTableData] = React.useState(data);
 
   // console.log(isSortBySelectedTeamChecked)
@@ -42,7 +42,10 @@ export default function Table({ data, selectedLeagueRosterNamesArray,
   };
 
 
- 
+ React,useEffect(() => {
+  
+  handleSorting('appFullProjectedPoints', 'desc');
+ }, [pointsPerPassingTD])
   
 
   return (
@@ -53,6 +56,7 @@ export default function Table({ data, selectedLeagueRosterNamesArray,
           {/* <caption className={styles.caption}>Weekly Projections</caption> */}
           <TableHead columns={columns} handleSorting={handleSorting} isSortBySelectedTeamChecked={isSortBySelectedTeamChecked}
           setIsSortBySelectedTeamChecked={setIsSortBySelectedTeamChecked} 
+          pointsPerPassingTD={pointsPerPassingTD}
           
           />
           <TableBody columns={columns} tableData={tableData} selectedLeagueRosterNamesArray={selectedLeagueRosterNamesArray}

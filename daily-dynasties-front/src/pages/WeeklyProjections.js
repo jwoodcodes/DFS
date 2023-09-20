@@ -167,9 +167,9 @@ const initialSleeperPlayerData = data.sleeperPlayerData
         className={styles.pointPerPassingTDWrapper}
       >
         {/* <fieldset> */}
-          {/* <legend>
-            Do you agree?
-          </legend> */}
+          <legend className={styles.legend}>
+            Select point per passing TD, <br/ >then sort by PPR Setting
+          </legend>
           <div>
           <input
             type="radio"

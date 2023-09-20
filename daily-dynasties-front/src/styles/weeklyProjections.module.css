@@ -217,6 +217,11 @@
   color: #065a60
 }
 
+.legend {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
 .PointPerRadioBtn {
   margin-right: .5rem;
  
