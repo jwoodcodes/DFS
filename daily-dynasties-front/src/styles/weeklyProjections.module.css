@@ -204,3 +204,20 @@
 .isOnSelectedTeamSortCheckboxInput {
   margin-right: .5rem;
 }
+
+.pointPerPassingTDWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 55%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 1rem;
+  color: #065a60
+}
+
+.PointPerRadioBtn {
+  margin-right: .5rem;
+ 
+}

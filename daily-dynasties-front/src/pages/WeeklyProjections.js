@@ -27,6 +27,8 @@ const initialSleeperPlayerData = data.sleeperPlayerData
   const [isSortBySelectedTeamChecked, setIsSortBySelectedTeamChecked] = React.useState(false)
   const [showSortBySelectedLeaguesPlayersCheckbox,  setShowSortBySelectedLeaguesPlayersCheckbox] = React.useState(false)
   
+  const [pointsPerPassingTD, setPointsPerPassingTD] = React.useState('4');
+  const [qbProjectionToUseBasedOffPointsPerTD, setQbProjectionToUseBasedOffPointsPerTD] = React.useState()
 
   // console.log(allProjections.allProjections[0].allProjectionsArray[0]);
   let tempQBArray = data.allProjections[0].allProjectionsArray[0];
@@ -50,6 +52,7 @@ const initialSleeperPlayerData = data.sleeperPlayerData
       })
     }
   })
+
   let rbArray = [...tempRBArray];
   rbArray.map(function(rb) {
     // console.log(qb)
@@ -154,6 +157,55 @@ const initialSleeperPlayerData = data.sleeperPlayerData
       To sort by players on selected team, <br />first sort by scoring in that league, then click isOnSelectedTeam header
       </div>
 }
+
+
+
+<form
+        onSubmit={(event) => {
+          event.preventDefault();
+        }}
+        className={styles.pointPerPassingTDWrapper}
+      >
+        {/* <fieldset> */}
+          {/* <legend>
+            Do you agree?
+          </legend> */}
+          <div>
+          <input
+            type="radio"
+            name="point-per-passing-td"
+            id="four-per-td"
+            value="4"
+            checked={pointsPerPassingTD === "4"}
+            className={styles.PointPerRadioBtn}
+            onChange={event => {
+              setPointsPerPassingTD(event.target.value)
+            }}
+          />
+          <label htmlFor="four-per-td">
+            4 Point Per Passing TD
+          </label>
+          <br />
+          </div>
+          <div>
+          <input
+            type="radio"
+            name="point-per-passing-td"
+            id="six-per-td"
+            value="6"
+            checked={pointsPerPassingTD === "6"}
+            className={styles.PointPerRadioBtn}
+            onChange={event => {
+              setPointsPerPassingTD(event.target.value)
+            }}
+          />
+          <label htmlFor="six-per-td">
+          6 Point Per Passing TD
+          </label>
+          </div>
+        {/* </fieldset> */}
+      </form>
+     
       
       <div className={styles.btnsWrapper}>
         <button className={styles.posBtn} onClick={overall}>
@@ -178,7 +230,7 @@ const initialSleeperPlayerData = data.sleeperPlayerData
       {positionToShow === 'Overall' && <Table data={newArray} selectedLeagueRosterNamesArray={selectedLeagueRosterNamesArray}
       isSortBySelectedTeamChecked={isSortBySelectedTeamChecked}
       setIsSortBySelectedTeamChecked={setIsSortBySelectedTeamChecked}
-     
+      pointsPerPassingTD={pointsPerPassingTD}
       
       />}
       {positionToShow === 'QB' && (
@@ -188,6 +240,7 @@ const initialSleeperPlayerData = data.sleeperPlayerData
           selectedLeagueRosterNamesArray={selectedLeagueRosterNamesArray}
           isSortBySelectedTeamChecked={isSortBySelectedTeamChecked}
           setIsSortBySelectedTeamChecked={setIsSortBySelectedTeamChecked}
+          pointsPerPassingTD={pointsPerPassingTD}
           
          
         />
@@ -199,7 +252,7 @@ const initialSleeperPlayerData = data.sleeperPlayerData
           selectedLeagueRosterNamesArray={selectedLeagueRosterNamesArray}
           isSortBySelectedTeamChecked={isSortBySelectedTeamChecked}
           setIsSortBySelectedTeamChecked={setIsSortBySelectedTeamChecked}
-         
+          pointsPerPassingTD={pointsPerPassingTD}
           
         />
       )}
@@ -210,7 +263,7 @@ const initialSleeperPlayerData = data.sleeperPlayerData
           selectedLeagueRosterNamesArray={selectedLeagueRosterNamesArray}
           isSortBySelectedTeamChecked={isSortBySelectedTeamChecked}
           setIsSortBySelectedTeamChecked={setIsSortBySelectedTeamChecked}
-         
+          pointsPerPassingTD={pointsPerPassingTD}
           
         />
       )}
@@ -221,7 +274,7 @@ const initialSleeperPlayerData = data.sleeperPlayerData
           selectedLeagueRosterNamesArray={selectedLeagueRosterNamesArray}
           isSortBySelectedTeamChecked={isSortBySelectedTeamChecked}
           setIsSortBySelectedTeamChecked={setIsSortBySelectedTeamChecked}
-          
+          pointsPerPassingTD={pointsPerPassingTD}
           
         />
       )}
@@ -232,7 +285,7 @@ const initialSleeperPlayerData = data.sleeperPlayerData
           selectedLeagueRosterNamesArray={selectedLeagueRosterNamesArray}
           isSortBySelectedTeamChecked={isSortBySelectedTeamChecked}
           setIsSortBySelectedTeamChecked={setIsSortBySelectedTeamChecked}
-          
+          pointsPerPassingTD={pointsPerPassingTD}
           
         />
       )}

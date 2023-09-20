@@ -38,6 +38,7 @@ class QbObject {
     hadByeInLastFiveWeeksIsTrue,
 
     appProjectedPoints,
+    appQBSixPointForPassingTDProjectedPoints,
     projectedPassAttempts,
     percentOfGamesPlayedLastFiveWeeks,
     fantasyPointsFromRushingPerGameLastFiveWeeks,
@@ -76,6 +77,7 @@ class QbObject {
     this.hadByeInLastFiveWeeksIsTrue = hadByeInLastFiveWeeksIsTrue;
 
     this.appProjectedPoints = appProjectedPoints;
+    this.appQBSixPointForPassingTDProjectedPoints = appQBSixPointForPassingTDProjectedPoints
     this.projectedPassAttempts = projectedPassAttempts;
     this.percentOfGamesPlayedLastFiveWeeks = percentOfGamesPlayedLastFiveWeeks;
     this.fantasyPointsFromRushingPerGameLastFiveWeeks =
@@ -741,6 +743,9 @@ if (gameInfo.week.currentWeek < 3) {
       QBProjectedPoints = tempValue;
     }
     team.appQBProjectedPoints = +QBProjectedPoints;
+    
+    let valueToAddForSixPointsForPassingTD = +(team.projectedPassingTDs * 2)
+    team.appQBSixPointForPassingTDProjectedPoints = +(+QBProjectedPoints + +valueToAddForSixPointsForPassingTD).toFixed(1)
     allQBFinalProjectedPointsValues.push(QBProjectedPoints);
     allQBFinalProjectedPointsValuesPlusNames.push(
       `${QBProjectedPoints}: ${allQBs[i].name}`
@@ -779,6 +784,8 @@ if (gameInfo.week.currentWeek > 2 && gameInfo.week.currentWeek < 5) {
 
     QBProjectedPoints = tempValue;
     team.appQBProjectedPoints = +QBProjectedPoints;
+    let valueToAddForSixPointsForPassingTD = +(team.projectedPassingTDs * 2)
+    team.appQBSixPointForPassingTDProjectedPoints = +(+QBProjectedPoints + +valueToAddForSixPointsForPassingTD).toFixed(1)
     allQBFinalProjectedPointsValues.push(QBProjectedPoints);
     allQBFinalProjectedPointsValuesPlusNames.push(
       `${QBProjectedPoints}: ${allQBs[i].name}`
@@ -888,6 +895,8 @@ if (gameInfo.week.currentWeek > 4) {
       let QBProjectedPoints = +(total / 2).toFixed(2);
 
       team.appQBProjectedPoints = +initialQBProjectedPoints;
+      let valueToAddForSixPointsForPassingTD = +(team.projectedPassingTDs * 2)
+    team.appQBSixPointForPassingTDProjectedPoints = +(+QBProjectedPoints + +valueToAddForSixPointsForPassingTD).toFixed(1)
 
       // console.log(team);
 
@@ -925,6 +934,8 @@ if (gameInfo.week.currentWeek > 4) {
       initialQBProjectedPoints = tempValue;
 
       team.appQBProjectedPoints = +initialQBProjectedPoints;
+      let valueToAddForSixPointsForPassingTD = +(team.projectedPassingTDs * 2)
+    team.appQBSixPointForPassingTDProjectedPoints = +(+QBProjectedPoints + +valueToAddForSixPointsForPassingTD).toFixed(1)
 
       allQBFinalProjectedPointsValues.push(
         +initialQBProjectedPoints.toFixed(2)
@@ -999,6 +1010,8 @@ allQBs.forEach(function (team, i) {
   let teamABV = team.teamABV;
   let homeOrAway = team.homeOrAway;
 
+  // console.log(team)
+
   let teamName = '';
   allTeams.forEach(function (giTeam) {
     if (team.teamABV === giTeam.teamABV || team.teamABV === giTeam.altTeamABV) {
@@ -1029,6 +1042,7 @@ allQBs.forEach(function (team, i) {
     +teamPointsPerGameLastFiveWeeks,
     hadByeInLastFiveWeeksIsTrue,
     team.appQBProjectedPoints,
+    team.appQBSixPointForPassingTDProjectedPoints,
     team.prjpassattempts,
     team.percentOfGamesPlayedLastFiveWeeks,
     team.fantasyPointsFromRushingPerGameLastFiveWeeks,
@@ -1268,7 +1282,9 @@ allQBObjectsArray.forEach(function (player) {
       team,
       appHalfProjectedPoints,
       appFullProjectedPoints,
-      appTEPProjectedPoints
+      appTEPProjectedPoints,
+      appQBSixPointForPassingTDProjectedPoints,
+      staticFourPointPerProjection
     ) {
       this.currentWeek = currentWeek;
       this.name = name;
@@ -1277,10 +1293,14 @@ allQBObjectsArray.forEach(function (player) {
       this.appHalfProjectedPoints = appHalfProjectedPoints;
       this.appFullProjectedPoints = appFullProjectedPoints;
       this.appTEPProjectedPoints = appTEPProjectedPoints;
+      this.appQBSixPointForPassingTDProjectedPoints = appQBSixPointForPassingTDProjectedPoints
+      this.staticFourPointPerProjection = staticFourPointPerProjection
     }
   }
 
   let projectionToUse = +player.appProjectedPoints.toFixed(1);
+
+ 
 
   let qbProjectionsObject = new ProjectionsObject(
     gameInfo.week.currentWeek,
@@ -1290,6 +1310,8 @@ allQBObjectsArray.forEach(function (player) {
 
     projectionToUse,
     projectionToUse,
+    projectionToUse,
+    player.appQBSixPointForPassingTDProjectedPoints,
     projectionToUse
   );
 
