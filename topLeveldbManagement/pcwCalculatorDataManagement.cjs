@@ -2589,9 +2589,18 @@ const testfunc = async function () {
     fourForFourRestOfSeasonRedraftRankings.forEach(function (initial) {
       //
       let tempsanitizedFourForFourPlayerName = '';
+      // console.log(typeof initial)
+
+      // for(const key of initial) {
+      //   console.log(key)
+      // }
+
+      let test = Object.values(initial)
+      // console.log(test)
 
       //
-      initial.forEach(function (group) {
+      test.forEach(function (group) {
+        // console.log(group)
         //QB
         if (group['"QB"']) {
           let teamABVLength = 3;

@@ -771,16 +771,26 @@ if (gameInfo.week.currentWeek > 2 && gameInfo.week.currentWeek < 5) {
       valueFromGLSP = +allQBs[i].seventyFifthPercentProjectedPoints;
     }
 
+    // console.log(team, +team.fourForFourHalfPPRProjectedPoints)
+    let tempValue = 0
     if (valueFromGLSP && valueFromGLSP > 0) {
+      let initialTempValue = +team.fourForFourHalfPPRProjectedPoints
+      
+      let secondTempValue = initialTempValue.toFixed(2)
       let tempTotalValue =
-        +team.fourForFourHalfPPRProjectedPoints.toFixed(2) +
-        +team.fourForFourHalfPPRProjectedPoints.toFixed(2) +
+        +secondTempValue +
+        +secondTempValue +
         valueFromGLSP;
 
-      let tempValue = +(tempTotalValue / 3).toFixed(2);
+      tempValue = +(tempTotalValue / 3).toFixed(2);
     } else {
-      let tempValue = +team.fourForFourHalfPPRProjectedPoints.toFixed(2);
+      let initialTempValue = +team.fourForFourHalfPPRProjectedPoints
+      
+      let secondTempValue = initialTempValue.toFixed(2)
+      tempValue = +secondTempValue
     }
+  
+    
 
     QBProjectedPoints = tempValue;
     team.appQBProjectedPoints = +QBProjectedPoints;

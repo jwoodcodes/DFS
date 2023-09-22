@@ -116,13 +116,14 @@ class TeObject {
         //
 
         let tempOne = +(this.fourForFourHalfPPRProjectedPoints * 2).toFixed(1);
+        let final = 0
         if (this.halfGLSPAvg) {
           let tempGLSP = +this.halfGLSPAvg * 2;
           let tempTwo = +tempOne + +tempGLSP;
-          let final = +(tempTwo / 4).toFixed(1);
+        final = +(tempTwo / 4).toFixed(1);
         } else {
           let tempTwo = +tempOne;
-          let final = +(tempTwo / 2).toFixed(1);
+        final = +(tempTwo / 2).toFixed(1);
         }
         this.appHalfProjectedPoints = +final;
 
@@ -132,13 +133,14 @@ class TeObject {
         let pprTempOne = +(this.fourForFourFullPPRProjectedPoints * 2).toFixed(
           1
         );
+        let pprFinal = 0
         if (this.fullGLSPAvg) {
           let tempFullGLSP = +this.fullGLSPAvg * 2;
           let pprTempTwo = +pprTempOne + +tempFullGLSP;
-          let pprFinal = +(pprTempTwo / 4).toFixed(1);
+          pprFinal = +(pprTempTwo / 4).toFixed(1);
         } else {
           let pprTempTwo = +pprTempOne;
-          let pprFinal = +(pprTempTwo / 2).toFixed(1);
+          pprFinal = +(pprTempTwo / 2).toFixed(1);
         }
         this.appFullProjectedPoints = +pprFinal;
         //
@@ -151,14 +153,15 @@ class TeObject {
           +this.fourForFourFullPPRProjectedPoints + +amountToAdd;
 
         let tepTempOne = +(this.fourForFourTEPProjectedPoints * 2).toFixed(1);
+        let tepFinal = 0
         if (this.TEPGLSPAvg) {
           let tempTEPGLSP = +this.TEPGLSPAvg * 2;
 
           let tepTempTwo = +tepTempOne + +tempTEPGLSP;
-          let tepFinal = +(tepTempTwo / 4).toFixed(1);
+          tepFinal = +(tepTempTwo / 4).toFixed(1);
         } else {
           let tepTempTwo = +tepTempOne;
-          let tepFinal = +(tepTempTwo / 2).toFixed(1);
+          tepFinal = +(tepTempTwo / 2).toFixed(1);
         }
         this.appTEPProjectedPoints = +tepFinal;
       }
