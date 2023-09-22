@@ -26,7 +26,6 @@ const initialSleeperPlayerData = data.sleeperPlayerData
   const [selectedLeagueRosterNamesArray, setSelectedLeagueRosterNamesArray] = React.useState([])
   const [isSortBySelectedTeamChecked, setIsSortBySelectedTeamChecked] = React.useState(false)
   const [showSortBySelectedLeaguesPlayersCheckbox,  setShowSortBySelectedLeaguesPlayersCheckbox] = React.useState(false)
-  
   const [pointsPerPassingTD, setPointsPerPassingTD] = React.useState('4');
   const [qbProjectionToUseBasedOffPointsPerTD, setQbProjectionToUseBasedOffPointsPerTD] = React.useState()
 
