@@ -1192,9 +1192,12 @@ const testfunc = async function () {
           }
         }
       }
+      
       if (curMonth > 8) {
         //setting this.rvRedraftPositionRank
+        // console.log(sanitizedFourForFourRedraftPlayerName)
         if (sanitizedFourForFourRedraftPlayerName === sanitizedFCPlayerName) {
+          // console.log(sanitizedFourForFourRedraftPlayerName)
           let initialTempPosRank = fourForFourRestOfSeasonRedraftPlayerGroup[
             '"Rank"'
           ].slice(1, -1);
@@ -2586,21 +2589,26 @@ const testfunc = async function () {
     let fourForFourRestOfSeasonRedraftPlayerGroup;
     let sanitizedFourForFourRedraftPlayerName = '';
 
-    fourForFourRestOfSeasonRedraftRankings.forEach(function (initial) {
+    fourForFourRestOfSeasonRedraftRankings.forEach(function (group) {
       //
       let tempsanitizedFourForFourPlayerName = '';
-      // console.log(typeof initial)
+      // console.log(initial['"QB"'])
 
       // for(const key of initial) {
       //   console.log(key)
       // }
+      
 
-      let test = Object.values(initial)
+      // let test = Object.values(initial)
       // console.log(test)
 
       //
-      test.forEach(function (group) {
+      // test.forEach(function (group) {
         // console.log(group)
+
+
+       
+
         //QB
         if (group['"QB"']) {
           let teamABVLength = 3;
@@ -2796,7 +2804,7 @@ const testfunc = async function () {
               tempsanitizedFourForFourPlayerName;
           }
         }
-      });
+    
       //
 
       //////////////////////////////////////////////////////
@@ -3420,6 +3428,10 @@ const testfunc = async function () {
     }
 
     calcScoreFromDifferenceBetweenCurrentMarketValueAndPNODV() {
+      // console.log(
+      //     this.name,
+      //     this.valueDifferenceBetweenCurrentMarketValueAndPNODV
+      //   );
       if (this.valueDifferenceBetweenCurrentMarketValueAndPNODV > 899) {
         // console.log(
         //   this.name,
