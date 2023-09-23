@@ -1,7 +1,14 @@
 import Table from '@/components/weelyProjections/sortableTable/Table';
 import React from 'react';
 
-export default function ProjIndividualPositions({ data, positionToShow, isSortBySelectedTeamChecked }) {
+export default function ProjIndividualPositions({
+  data,
+  positionToShow,
+  selectedLeagueRosterNamesArray,
+  isSortBySelectedTeamChecked,
+  setIsSortBySelectedTeamChecked,
+  pointsPerPassingTD,
+}) {
   //   console.log(data);
   const [dataToUse, setDataToUse] = React.useState(data);
   //   console.log(positionToShow);
@@ -13,5 +20,13 @@ export default function ProjIndividualPositions({ data, positionToShow, isSortBy
     [data]
   );
 
-  return <Table data={dataToUse} isSortBySelectedTeamChecked={isSortBySelectedTeamChecked}/>;
+  return (
+    <Table
+      data={dataToUse}
+      selectedLeagueRosterNamesArray={selectedLeagueRosterNamesArray}
+      isSortBySelectedTeamChecked={isSortBySelectedTeamChecked}
+      setIsSortBySelectedTeamChecked={setIsSortBySelectedTeamChecked}
+      pointsPerPassingTD={pointsPerPassingTD}
+    />
+  );
 }
