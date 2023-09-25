@@ -103,7 +103,7 @@ export default function TeamTwo({
               player.PRPScore = 0;
             }
             teamTotalPRP = teamTotalPRP + player.PRPScore;
-            teamTotalPNODVScore = teamTotalPNODVScore + +player.PNODVScore;
+            teamTotalPNODVScore = teamTotalPNODVScore + player.PNODVScore;
             teamTotalRVS = teamTotalRVS + player.RVSScore;
             if (!player.RVSScore) {
               player.RVSScore = 0;
