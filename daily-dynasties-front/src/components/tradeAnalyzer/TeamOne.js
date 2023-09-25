@@ -14,6 +14,7 @@ export default function TeamOne({
   let teamTotalMarketValue = 0;
   let teamTotalMyValue = 0;
   let teamTotalPNODV = 0;
+  let tempPNODVScore = 0;
 
   function teamOneSearchOnChange(event) {
     setTeamOneSearchValue(event.target.value);
@@ -102,7 +103,7 @@ export default function TeamOne({
             }
             teamTotalPRP = teamTotalPRP + player.PRPScore;
             tempPNODVScore = +player.PNODVScore
-            teamTotalPNODVScore = +teamTotalPNODVScore + player.PNODVScore;
+            teamTotalPNODVScore = +teamTotalPNODVScore + tempPNODVScore;
             if (!player.RVSScore) {
               player.RVSScore = +player.PRPScore + +player.PNODVScore;
             }

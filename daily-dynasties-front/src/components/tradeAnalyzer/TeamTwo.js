@@ -13,6 +13,7 @@ export default function TeamTwo({
   let teamTotalMarketValue = 0;
   let teamTotalMyValue = 0;
   let teamTotalPNODV = 0;
+  let tempPNODVScore = 0;
 
   function teamTwoSearchOnChange(event) {
     setTeamTwoSearchValue(event.target.value);
@@ -103,7 +104,8 @@ export default function TeamTwo({
               player.PRPScore = 0;
             }
             teamTotalPRP = teamTotalPRP + player.PRPScore;
-            teamTotalPNODVScore = teamTotalPNODVScore + player.PNODVScore;
+            tempPNODVScore = +player.PNODVScore
+            teamTotalPNODVScore = +teamTotalPNODVScore + tempPNODVScore;
             teamTotalRVS = teamTotalRVS + player.RVSScore;
             if (!player.RVSScore) {
               player.RVSScore = 0;
