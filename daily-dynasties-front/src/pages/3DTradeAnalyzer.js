@@ -70,7 +70,7 @@ export default function ThreeDTradeAnalyzer(data) {
           teamOnePlayers={teamOnePlayers}
           teamTwoPlayers={teamTwoPlayers}
         />
-        <Footer />
+        
       </div>
       
     </div>
