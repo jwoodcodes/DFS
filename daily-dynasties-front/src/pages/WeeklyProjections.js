@@ -25,7 +25,7 @@ const initialSleeperPlayerData = data.sleeperPlayerData
   const [selectedUserID, setSelectedUserID] = React.useState(0)
   const [selectedLeagueRosterNamesArray, setSelectedLeagueRosterNamesArray] = React.useState([])
   const [isSortBySelectedTeamChecked, setIsSortBySelectedTeamChecked] = React.useState(false)
-  const [showSortBySelectedLeaguesPlayersCheckbox,  setShowSortBySelectedLeaguesPlayersCheckbox] = React.useState(false)
+  // const [showSortBySelectedLeaguesPlayersCheckbox,  setShowSortBySelectedLeaguesPlayersCheckbox] = React.useState(false)
   const [pointsPerPassingTD, setPointsPerPassingTD] = React.useState('4');
   const [qbProjectionToUseBasedOffPointsPerTD, setQbProjectionToUseBasedOffPointsPerTD] = React.useState()
 
@@ -42,6 +42,29 @@ const initialSleeperPlayerData = data.sleeperPlayerData
       // console.log(data2.name)
       selectedLeagueRosterNamesArray.map(function(player) {
         // console.log(player)
+        player = player.replace("'", '')
+        .replace('.', '')
+        .replace('.', '');
+        if (player.includes('Jr')) {
+          // console.log(playerObject['"PLAYER NAME"']);
+          player = player.replace(
+            'Jr',
+            ''
+          );
+         
+        }
+
+        qb.name = qb.name.replace("'", '')
+        .replace('.', '')
+        .replace('.', '');
+        if (qb.name.includes('Jr')) {
+          // console.log(playerObject['"PLAYER NAME"']);
+          qb.name = qb.name.replace(
+            'Jr',
+            ''
+          );
+         qb.name = qb.name.slice(0, -1)
+        }
         if(player === qb.name) {
           qb.isOnSelectedTeam = true
           // console.log(qb.isOnSelectedTeam)
@@ -60,6 +83,29 @@ const initialSleeperPlayerData = data.sleeperPlayerData
       // console.log(data2.name)
       selectedLeagueRosterNamesArray.map(function(player) {
         // console.log(rb.name)
+        player = player.replace("'", '')
+        .replace('.', '')
+        .replace('.', '');
+        if (player.includes('Jr')) {
+          // console.log(playerObject['"PLAYER NAME"']);
+          player = player.replace(
+            'Jr',
+            ''
+          );
+         
+        }
+
+        rb.name = rb.name.replace("'", '')
+        .replace('.', '')
+        .replace('.', '');
+        if (rb.name.includes('Jr')) {
+          // console.log(playerObject['"PLAYER NAME"']);
+          rb.name = rb.name.replace(
+            'Jr',
+            ''
+          );
+         rb.name = rb.name.slice(0, -1)
+        }
         if(player === rb.name) {
           rb.isOnSelectedTeam = true
           // console.log(rb.isOnSelectedTeam)
@@ -76,7 +122,30 @@ const initialSleeperPlayerData = data.sleeperPlayerData
     if(selectedLeagueRosterNamesArray) {
       // console.log(data2.name)
       selectedLeagueRosterNamesArray.map(function(player) {
-        // console.log(wr.name)
+        player = player.replace("'", '')
+        .replace('.', '')
+        .replace('.', '');
+        if (player.includes('Jr')) {
+          // console.log(playerObject['"PLAYER NAME"']);
+          player = player.replace(
+            'Jr',
+            ''
+          );
+         
+        }
+
+        wr.name = wr.name.replace("'", '')
+        .replace('.', '')
+        .replace('.', '');
+        if (wr.name.includes('Jr')) {
+          // console.log(playerObject['"PLAYER NAME"']);
+          wr.name = wr.name.replace(
+            'Jr',
+            ''
+          );
+         wr.name = wr.name.slice(0, -1)
+        }
+        
         if(player === wr.name) {
           wr.isOnSelectedTeam = true
           // console.log(wr.isOnSelectedTeam)
@@ -94,6 +163,29 @@ const initialSleeperPlayerData = data.sleeperPlayerData
       // console.log(data2.name)
       selectedLeagueRosterNamesArray.map(function(player) {
         // console.log(te.name)
+        player = player.replace("'", '')
+        .replace('.', '')
+        .replace('.', '');
+        if (player.includes('Jr')) {
+          // console.log(playerObject['"PLAYER NAME"']);
+          player = player.replace(
+            'Jr',
+            ''
+          );
+         
+        }
+
+        te.name = te.name.replace("'", '')
+        .replace('.', '')
+        .replace('.', '');
+        if (te.name.includes('Jr')) {
+          // console.log(playerObject['"PLAYER NAME"']);
+          te.name = te.name.replace(
+            'Jr',
+            ''
+          );
+         te.name = te.name.slice(0, -1)
+        }
         if(player === te.name) {
           te.isOnSelectedTeam = true
           // console.log(te.isOnSelectedTeam)
@@ -146,16 +238,15 @@ const initialSleeperPlayerData = data.sleeperPlayerData
        setSelectedUserID={setSelectedUserID}
        initialSleeperPlayerData={initialSleeperPlayerData}
        setSelectedLeagueRosterNamesArray={setSelectedLeagueRosterNamesArray}
-       setShowSortBySelectedLeaguesPlayersCheckbox={setShowSortBySelectedLeaguesPlayersCheckbox}
-       
+      
        />
-
+{/* 
     {showSortBySelectedLeaguesPlayersCheckbox && 
       <div className={styles.checkboxWrapper}>
     
       To sort by players on selected team, <br />first sort by scoring in that league, then click isOnSelectedTeam header
-      </div>
-}
+      </div> */}
+{/* } */}
 
 
 

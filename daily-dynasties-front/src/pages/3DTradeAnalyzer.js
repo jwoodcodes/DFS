@@ -6,35 +6,52 @@ import TeamOne from '@/components/tradeAnalyzer/TeamOne';
 import TeamTwo from '@/components/tradeAnalyzer/TeamTwo';
 import TradeOverview from '@/components/tradeAnalyzer/TradeOvervire';
 import Footer from '@/components/Footer';
-// import UserSleeperLeagueSearch from '@/components/userSleeperLeagueSearch';
 
-export default function ThreeDTradeAnalyzer(dynastyRankingsData) {
-  let dataLevelOne = dynastyRankingsData.dynastyRankingsData;
-  // console.log(dataLevelOne);
-  let dataLevelTwo;
-  dataLevelOne.map(function (data) {
-    // console.log(data);
-    dataLevelTwo = data;
-  });
+import UserSleeperLeagueSearch from '@/components/userSleeperLeagueSearch';
+import SleeperLeagueStuff from '@/components/tradeAnalyzer/SleeperLeagueStuff';
 
-  const dataArray = dataLevelTwo.tradeAnalyzerDataObjectsArray;
-  // console.log(dataArray);
+export default function ThreeDTradeAnalyzer(data) {
+  // console.log(data.dynastyRankingsData[0].tradeAnalyzerDataObjectsArray
+  //   )
   //
+  const initialSleeperPlayerData = data.sleeperPlayerData
+  // console.log(initialSleeperPlayerData)
+  //
+  //
+  const dataArray = data.dynastyRankingsData[0].tradeAnalyzerDataObjectsArray
   //
   const [teamOnePlayers, setTeamOnePlayers] = React.useState([]);
   const [teamTwoPlayers, setTeamTwoPlayers] = React.useState([]);
+  //
+  const [selectedLeagueData, setSelectedLeagueData] = React.useState({});
+  const [selectedUserID, setSelectedUserID] = React.useState(0);
+  const [selectedLeagueRosterNamesArray, setSelectedLeagueRosterNamesArray] = React.useState([])
 
   return (
     <div>
       <MainNav />
       
       <h1 className={styles.pageTitle}>3D Trade Analyzer</h1>
-      {/* <h2 className={styles.secondaryHeading}>
-        A trade calculator that tells you how a trade <b>actually</b> effects{' '}
-        <b>your</b> team, not simply if a deal is fair
-      </h2> */}
-      {/* <UserSleeperLeagueSearch /> */}
+      
+      
       <div className={styles.wholeMainSectionWrapper}>
+
+      {/* <UserSleeperLeagueSearch 
+       selectedLeagueData={selectedLeagueData} 
+       setSelectedLeagueData={setSelectedLeagueData} 
+       selectedUserID={selectedUserID}
+       setSelectedUserID={setSelectedUserID}
+       initialSleeperPlayerData={initialSleeperPlayerData}
+       setSelectedLeagueRosterNamesArray={setSelectedLeagueRosterNamesArray}  
+       /> */}
+
+       {/* <SleeperLeagueStuff 
+       dataArray={dataArray}
+       selectedLeagueData={selectedLeagueData}
+       selectedUserID={selectedUserID}
+       selectedLeagueRosterNamesArray={selectedLeagueRosterNamesArray}
+       /> */}
+        
         {/* team 1 */}
         <TeamOne
           dataArray={dataArray}
@@ -53,7 +70,7 @@ export default function ThreeDTradeAnalyzer(dynastyRankingsData) {
           teamOnePlayers={teamOnePlayers}
           teamTwoPlayers={teamTwoPlayers}
         />
-        {/* <Footer /> */}
+        <Footer />
       </div>
       
     </div>
@@ -71,9 +88,15 @@ export async function getStaticProps() {
       .find({})
       .toArray();
     // console.log(dynastyRankingsData);
+    //
+    const sleeperPlayerData = await db
+      .collection('justSleeperKeysAndNames')
+      .find({})
+      .toArray()
     return {
       props: {
         dynastyRankingsData: JSON.parse(JSON.stringify(dynastyRankingsData)),
+        sleeperPlayerData: JSON.parse(JSON.stringify(sleeperPlayerData)),
       },
     };
   } catch (e) {
