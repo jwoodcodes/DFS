@@ -9,7 +9,7 @@ export default function UserSleeperLeagueSearch({
   setSelectedUserID,
   initialSleeperPlayerData,
   setSelectedLeagueRosterNamesArray,
-  setShowSortBySelectedLeaguesPlayersCheckbox,
+  // setShowSortBySelectedLeaguesPlayersCheckbox,
 }) {
   // console.log(searchedUser)
   // const [data, setData] = React.useState(null)
@@ -86,7 +86,7 @@ export default function UserSleeperLeagueSearch({
         // console.log(league)
         setSelectedLeagueData(league);
         setShowLeagues(false);
-        setShowSortBySelectedLeaguesPlayersCheckbox(true);
+        // setShowSortBySelectedLeaguesPlayersCheckbox(true);
         setUserLeaguesNamesArray([]);
         //
 
@@ -100,6 +100,7 @@ export default function UserSleeperLeagueSearch({
           // console.log(selectedLeagueRostersRes)
 
           let selectedLeagueRostersData = selectedLeagueRostersRes.data;
+          // console.log(selectedLeagueRostersData)
           let selectedUsersTeamObject = {};
           let selectedUsersRoster = [];
 
