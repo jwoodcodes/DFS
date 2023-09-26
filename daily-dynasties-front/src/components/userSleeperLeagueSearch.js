@@ -9,7 +9,7 @@ export default function UserSleeperLeagueSearch({
   setSelectedUserID,
   initialSleeperPlayerData,
   setSelectedLeagueRosterNamesArray,
-  // setShowSortBySelectedLeaguesPlayersCheckbox,
+  setSelectedUserName
 }) {
   // console.log(searchedUser)
   // const [data, setData] = React.useState(null)
@@ -37,6 +37,7 @@ export default function UserSleeperLeagueSearch({
     setShowLeagues(true);
     // console.log(userSearchValue)
     selectedUserName = userSearchValue;
+    setSelectedUserName(selectedUserName)
     async function axiosFetch() {
       // console.log(selectedUserName)
       const usernameRes = await axios.get(

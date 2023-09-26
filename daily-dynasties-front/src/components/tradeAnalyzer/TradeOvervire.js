@@ -33,23 +33,23 @@ export default function TradeOverview({ teamOnePlayers, teamTwoPlayers }) {
 
   //
   teamOnePlayers.map(player => {
-    teamOneTotalPRP = teamOneTotalPRP + player.PRPScore;
-    teamOneTotalPNODVScore = teamOneTotalPNODVScore + player.PNODVScore;
-    teamOneTotalRVS = teamOneTotalRVS + player.RVSScore;
-    teamOneTotalMarketValue = teamOneTotalMarketValue + player.marketValue;
-    teamOneTotalMyValue = teamOneTotalMyValue + player.myValue;
+    teamOneTotalPRP = +teamOneTotalPRP + +player.PRPScore;
+    teamOneTotalPNODVScore = +teamOneTotalPNODVScore + +player.PNODVScore;
+    teamOneTotalRVS = +teamOneTotalRVS + +player.RVSScore;
+    teamOneTotalMarketValue = +teamOneTotalMarketValue + +player.marketValue;
+    teamOneTotalMyValue = +teamOneTotalMyValue + +player.myValue;
     teamOneTotalPNODV =
-      teamOneTotalPNODV + player.projectedNextOffseasonDynastyValue;
+      +teamOneTotalPNODV + +player.projectedNextOffseasonDynastyValue;
   });
 
   teamTwoPlayers.map(player => {
-    teamTwoTotalPRP = teamTwoTotalPRP + player.PRPScore;
-    teamTwoTotalPNODVScore = teamTwoTotalPNODVScore + player.PNODVScore;
-    teamTwoTotalRVS = teamTwoTotalRVS + player.RVSScore;
-    teamTwoTotalMarketValue = teamTwoTotalMarketValue + player.marketValue;
-    teamTwoTotalMyValue = teamTwoTotalMyValue + player.myValue;
+    teamTwoTotalPRP = +teamTwoTotalPRP + +player.PRPScore;
+    teamTwoTotalPNODVScore = +teamTwoTotalPNODVScore + +player.PNODVScore;
+    teamTwoTotalRVS = +teamTwoTotalRVS + +player.RVSScore;
+    teamTwoTotalMarketValue = +teamTwoTotalMarketValue + +player.marketValue;
+    teamTwoTotalMyValue = +teamTwoTotalMyValue + +player.myValue;
     teamTwoTotalPNODV =
-      teamTwoTotalPNODV + player.projectedNextOffseasonDynastyValue;
+      +teamTwoTotalPNODV + +player.projectedNextOffseasonDynastyValue;
   });
 
   //
