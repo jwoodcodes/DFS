@@ -48,6 +48,10 @@ export default function TeamOne({
     setTeamOnePlayers(newPlayerArray);
   }
 
+  var regExp = /^0[0-9].*$/
+
+  // console.log(regExp.test("83"))
+
   return (
     <div className={styles.teamOneWrapper}>
       <div className={styles.teamTitle}>Team 1 Gives</div>
@@ -101,18 +105,19 @@ export default function TeamOne({
             if (!player.PRPScore) {
               player.PRPScore = 0;
             }
-            teamTotalPRP = teamTotalPRP + player.PRPScore;
+            teamTotalPRP = +teamTotalPRP + +player.PRPScore;
             tempPNODVScore = +player.PNODVScore
-            teamTotalPNODVScore = +teamTotalPNODVScore + tempPNODVScore;
+            teamTotalPNODVScore = +teamTotalPNODVScore + +tempPNODVScore;
             if (!player.RVSScore) {
               player.RVSScore = +player.PRPScore + +player.PNODVScore;
             }
-            teamTotalRVS = teamTotalRVS + player.RVSScore;
+            teamTotalRVS = +teamTotalRVS + +player.RVSScore;
 
-            teamTotalMarketValue = teamTotalMarketValue + player.marketValue;
-            teamTotalMyValue = teamTotalMyValue + player.myValue;
+            teamTotalMarketValue = +teamTotalMarketValue + +player.marketValue;
+            teamTotalMyValue = +teamTotalMyValue + +player.myValue;
             teamTotalPNODV =
-              teamTotalPNODV + player.projectedNextOffseasonDynastyValue;
+              +teamTotalPNODV + +player.projectedNextOffseasonDynastyValue;
+              // console.log(teamTotalPNODV)
             return (
               <div className={styles.individualPlayerRow} key={player.name}>
                 <div className={styles.namecolumn}>

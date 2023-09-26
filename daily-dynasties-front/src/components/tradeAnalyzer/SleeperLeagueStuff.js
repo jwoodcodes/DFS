@@ -1,13 +1,18 @@
+import styles from '@/styles/tradeAnalyzer.module.css';
 
-
-export default function SleeperLeagueStuff({dataArray, selectedLeagueData, selectedUserID, selectedLeagueRosterNamesArray}) {
+export default function SleeperLeagueStuff({dataArray, selectedLeagueData, selectedUserID, selectedLeagueRosterNamesArray, selectedUserName}) {
 
     // console.log(dataArray)
     // console.log(selectedLeagueRosterNamesArray)
+    // console.log(selectedLeagueData)
+
+    
 
     return (
         <div>
-            <div>
+            <div className={styles.playersOnSelectedLeagueWrapper}>
+            <div className={styles.selectedLeagueName}>{selectedLeagueData.name}</div>
+            <div className={styles.selectedUserName}>{selectedUserName}</div>
                 {dataArray.map((player) => {
                     
                     // console.log(player.name)
@@ -22,11 +27,19 @@ export default function SleeperLeagueStuff({dataArray, selectedLeagueData, selec
                       );
                      
                     }
+                    
+                    selectedLeagueRosterNamesArray.map((playerOnTeam) => {
+                      if(playerOnTeam === player.name) {
+                        console.log(player.position)
+                      }
+                    })
+                    
                     return(
                         
                     
                     // console.log(player.name)
                     //
+                    
                     selectedLeagueRosterNamesArray.map((playerOnTeam) => {
                         
                         playerOnTeam = playerOnTeam.replace("'", '')
@@ -47,19 +60,21 @@ export default function SleeperLeagueStuff({dataArray, selectedLeagueData, selec
                         }
                         return (
                             
-                        <div key={player.name}>
+                        <div key={player.name} className={styles.playerFromSelectedLeague}>
                             
-                            {player.name} {" "}
-                            PRP Score: {player.PRPScore}, {" "}
-                            PNODV: {player.projectedNextOffseasonDynastyValue}, {" "}
-                            RVS Score: {player.RVSScore}, {" "}
-                            Market Value: {player.marketValue}, {" "}
-                            My Value: {player.myValue}
+                            <span>{player.name} {" "}</span>
+                            <span>PRP Score: {player.PRPScore} {" "}</span>
+                            <span>PNODV: {player.projectedNextOffseasonDynastyValue} {" "}</span>
+                            <span>RVS Score: {player.RVSScore} {" "}</span>
+                            <span>Market Value: {player.marketValue} {" "}</span>
+                            <span>My Value: {player.myValue}</span>
+                            
                         </div>
                         )
                         
                         }
                     })
+                    
                     )
                     }
                 
