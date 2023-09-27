@@ -613,14 +613,55 @@
   font-size: .8rem;
 }
 
-.playerFromSelectedLeague {
+.qbsFromSelectedLeagueWrapper {
   display: flex;
   flex-direction: column;
   text-align: center;
   font-size: .75rem;
   padding: .25rem;
   margin: .25rem;
-  border: 1px solid #065a60;
+  border: 3px solid #065a60;
   border-radius: 20px;
   width: 47%;
+}
+
+.rbsFromSelectedLeagueWrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: .75rem;
+  padding: .25rem;
+  margin: .25rem;
+  border: 3px solid #420c47;
+  border-radius: 20px;
+  width: 47%;
+}
+
+.wrsFromSelectedLeagueWrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: .75rem;
+  padding: .25rem;
+  margin: .25rem;
+  border: 3px solid #02688f;
+  border-radius: 20px;
+  width: 47%;
+}
+
+.tesFromSelectedLeagueWrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: .75rem;
+  padding: .25rem;
+  margin: .25rem;
+  border: 3px solid #024123;
+  border-radius: 20px;
+  width: 47%;
+}
+
+.individualPlayerFromTeamCell {
+  display: flex;
+  flex-direction: column;
 }
