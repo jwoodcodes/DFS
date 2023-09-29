@@ -40,6 +40,8 @@
 // const qbRushingLastFiveGamesFromWeeklyStatExplorer =
 // module.exports = qbRushingLastFiveGamesFromWeeklyStatExplorer;
 //
+// const QBWeeklyStatExplorerLastFiveWeeksCategoryPassing =
+// module.exports = QBWeeklyStatExplorerLastFiveWeeksCategoryPassing;
 //
 // const rb4for4FantasyPointsBrowserLastFiveWeeks =
 // module.exports = rb4for4FantasyPointsBrowserLastFiveWeeks;
@@ -88,6 +90,8 @@
 // const te4for4PlayerStatExplorerReceivingTab =
 // module.exports = te4for4PlayerStatExplorerReceivingTab;
 //
+// const team4for4TeamStatExplorerTeamPointsScoredPerWeekLastFiveWeeks =
+// module.exports = team4for4TeamStatExplorerTeamPointsScoredPerWeekLastFiveWeeks
 //
 // const teamDefStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer =
 // module.exports = teamDefStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer;

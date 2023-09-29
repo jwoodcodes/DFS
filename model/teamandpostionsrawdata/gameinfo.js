@@ -15,6 +15,8 @@ const rotovizPositiveScriptOffensivePaceAndRunPassReportLastFiveWeeks = require(
 const teamDefStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer = require('../datafilesmadefrom4for4CSVs/teamDefStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer');
 const teamOffStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer = require('../datafilesmadefrom4for4CSVs/teamOffStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer');
 
+const team4for4TeamStatExplorerTeamPointsScoredPerWeekLastFiveWeeks = require('../datafilesmadefrom4for4CSVs/team4For4TeamStatExplorerTeamPointsScoredPerWeekLastFiveWeeks')
+
 const gameInfo = {
   week: {
     currentWeek: 0,
@@ -1070,6 +1072,18 @@ const populateTeamObjects = function (passedInTeam) {
   } else {
     passedInTeam.hadByeInTheLastFiveweeks = false;
   }
+
+  team4for4TeamStatExplorerTeamPointsScoredPerWeekLastFiveWeeks.forEach((team) => {
+    // console.log(team['"posteam"'])
+    // console.log(passedInTeam.teamABV)
+    if(team['"posteam"'].slice(1, -1) === passedInTeam.teamABV) {
+      // console.log(team)
+      let tempOne = +team['"ppg"']
+      // console.log(tempOne)
+      passedInTeam.teamPointsPerGameLastFiveWeeks = tempOne
+      
+    }
+  })
   ////////////////////////////
   const setteamABVandVTT = function (team) {
     let settingTeamName = '';
