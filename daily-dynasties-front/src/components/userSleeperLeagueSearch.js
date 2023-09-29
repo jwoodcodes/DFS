@@ -34,45 +34,47 @@ export default function UserSleeperLeagueSearch({
   //
   function onSearch(userSearchValue) {
     event.preventDefault();
-    setShowLeagues(true);
-    // console.log(userSearchValue)
-    selectedUserName = userSearchValue;
-    setSelectedUserName(selectedUserName);
-    async function axiosFetch() {
-      // console.log(selectedUserName)
-      const usernameRes = await axios.get(
-        `https://api.sleeper.app/v1/user/${selectedUserName}`
-      );
-      // console.log(usernameRes.data.user_id)
-      userID = usernameRes.data.user_id;
-      setSelectedUserID(userID);
-      // console.log(userID)
+    if (userSearchValue) {
+      setShowLeagues(true);
+      // console.log(userSearchValue)
+      selectedUserName = userSearchValue;
+      // setSelectedUserName(selectedUserName);
+      async function axiosFetch() {
+        // console.log(selectedUserName)
+        const usernameRes = await axios.get(
+          `https://api.sleeper.app/v1/user/${selectedUserName}`
+        );
+        // console.log(usernameRes.data.user_id)
+        userID = usernameRes.data.user_id;
+        setSelectedUserID(userID);
+        // console.log(userID)
 
-      //
+        //
 
-      const userLeaguesres = await axios.get(
-        `https://api.sleeper.app/v1/user/${userID}/leagues/nfl/2023`
-      );
-      // console.log(userLeaguesres.data);
-      // let initialUserLeaguesArray = userLeaguesres.data
-      setInitialUserLeaguesArray(userLeaguesres.data);
-      let newLeagueNameArray = [];
-      initialUserLeaguesArray.forEach(function (league) {
-        // console.log(league.name)
-        //  newLeagueNameArray = [...userLeaguesNamesArray, league.name]
-        newLeagueNameArray.push(league.name);
-        // console.log(newLeagueNameArray)
-        userLeaguesDataArray.push(league);
-        // setUserLeaguesNamesArray(newLeagueNameArray)
-      });
-      setUserLeaguesNamesArray(newLeagueNameArray);
-      let initialSelectedLeague = {};
+        const userLeaguesres = await axios.get(
+          `https://api.sleeper.app/v1/user/${userID}/leagues/nfl/2023`
+        );
+        // console.log(userLeaguesres.data);
+        // let initialUserLeaguesArray = userLeaguesres.data
+        setInitialUserLeaguesArray(userLeaguesres.data);
+        let newLeagueNameArray = [];
+        initialUserLeaguesArray.forEach(function (league) {
+          // console.log(league.name)
+          //  newLeagueNameArray = [...userLeaguesNamesArray, league.name]
+          newLeagueNameArray.push(league.name);
+          // console.log(newLeagueNameArray)
+          userLeaguesDataArray.push(league);
+          // setUserLeaguesNamesArray(newLeagueNameArray)
+        });
+        setUserLeaguesNamesArray(newLeagueNameArray);
+        let initialSelectedLeague = {};
 
-      //  console.log(selectedLeagueRostersRes)
-      //  console.log(selectedLeagueData.league_id)
+        //  console.log(selectedLeagueRostersRes)
+        //  console.log(selectedLeagueData.league_id)
+      }
+
+      axiosFetch();
     }
-
-    axiosFetch();
   }
 
   // console.log(userLeaguesNamesArray)
@@ -100,19 +102,19 @@ export default function UserSleeperLeagueSearch({
           );
           // console.log(selectedLeagueRostersRes)
 
-          // async function getPicks(){
-          //   const picksRes = await axios.get(
-          //     `https://api.sleeper.app/v1/league/${selectedLeagueID}/traded_picks`
-          //   );
-          //   let testpicks = picksRes.data
-          // // console.log(testpicks)
-          // testpicks.map((pickObj) => {
-          //   if(pickObj.season === "2024" && pickObj.round === 1) {
-          //   // console.log(pickObj)
-          //   }
-          // })
-          // }
-          // getPicks()
+          async function getPicks() {
+            const picksRes = await axios.get(
+              `https://api.sleeper.app/v1/league/${selectedLeagueID}/traded_picks`
+            );
+            let testpicks = picksRes.data;
+            // console.log(testpicks)
+            testpicks.map(pickObj => {
+              if (pickObj.season === '2024' && pickObj.round === 1) {
+                // console.log(pickObj)
+              }
+            });
+          }
+          getPicks();
 
           let selectedLeagueRostersData = selectedLeagueRostersRes.data;
           // console.log(selectedLeagueRostersData)

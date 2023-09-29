@@ -1192,7 +1192,7 @@ const testfunc = async function () {
           }
         }
       }
-      
+
       if (curMonth > 8) {
         //setting this.rvRedraftPositionRank
         // console.log(sanitizedFourForFourRedraftPlayerName)
@@ -2475,33 +2475,35 @@ const testfunc = async function () {
     let rvPlayer = {};
 
     rvDynastyRankingsTEP.forEach(function (InitialrvPlayer) {
-      if (InitialrvPlayer['"Player"'].includes("'")) {
-        InitialrvPlayer['"Player"'] = InitialrvPlayer['"Player"'].replace(
-          "'",
-          ''
-        );
-      }
-
-      if (player.player.position !== 'PICK') {
-        tempsanitizedRVPlayerName = InitialrvPlayer['"Player"']
-          .slice(1, -1)
-          .replace("'", '')
-          .replace('.', '')
-          .replace('.', '');
-
-        if (sanitizedFCPlayerName === tempsanitizedRVPlayerName) {
-          // console.log(sanitizedRVPlayerName, sanitizedFCPlayerName);
-          sanitizedRVPlayerName = tempsanitizedRVPlayerName;
-          rvPlayer = InitialrvPlayer;
+      if (InitialrvPlayer['"Player"']) {
+        if (InitialrvPlayer['"Player"'].includes("'")) {
+          InitialrvPlayer['"Player"'] = InitialrvPlayer['"Player"'].replace(
+            "'",
+            ''
+          );
         }
-      }
 
-      if (
-        player.player.position === 'PICK' &&
-        InitialrvPlayer['"POS"'].slice(1, -1) === ''
-      ) {
-        // console.log(InitialrvPlayer);
-        // rvPlayer = InitialrvPlayer;
+        if (player.player.position !== 'PICK') {
+          tempsanitizedRVPlayerName = InitialrvPlayer['"Player"']
+            .slice(1, -1)
+            .replace("'", '')
+            .replace('.', '')
+            .replace('.', '');
+
+          if (sanitizedFCPlayerName === tempsanitizedRVPlayerName) {
+            // console.log(sanitizedRVPlayerName, sanitizedFCPlayerName);
+            sanitizedRVPlayerName = tempsanitizedRVPlayerName;
+            rvPlayer = InitialrvPlayer;
+          }
+        }
+
+        if (
+          player.player.position === 'PICK' &&
+          InitialrvPlayer['"POS"'].slice(1, -1) === ''
+        ) {
+          // console.log(InitialrvPlayer);
+          // rvPlayer = InitialrvPlayer;
+        }
       }
     });
 
@@ -2597,214 +2599,210 @@ const testfunc = async function () {
       // for(const key of initial) {
       //   console.log(key)
       // }
-      
 
       // let test = Object.values(initial)
       // console.log(test)
 
       //
       // test.forEach(function (group) {
-        // console.log(group)
+      // console.log(group)
 
-
-       
-
-        //QB
-        if (group['"QB"']) {
-          let teamABVLength = 3;
-          if (player.player.maybeTeam) {
-            if (player.player.maybeTeam.length === 2) {
-              teamABVLength = 2;
-            }
-          }
-          let qbNameOne = '';
-          if (teamABVLength === 2) {
-            if (group['"QB"'].slice(-1) !== ')') {
-              // console.log(group['"QB"'])
-              qbNameOne = group['"QB"'].slice(1, -6);
-            }
-            if (group['"QB"'].slice(-1) === ')') {
-              // console.log(group['"QB"'])
-              qbNameOne = group['"QB"'].slice(1, -5);
-            }
-          }
-          if (teamABVLength === 3) {
-            if (group['"QB"'].slice(-1) !== ')') {
-              // console.log(group['"QB"'])
-              qbNameOne = group['"QB"'].slice(1, -7);
-            }
-            if (group['"QB"'].slice(-1) === ')') {
-              // console.log(group['"QB"'])
-              qbNameOne = group['"QB"'].slice(1, -6);
-            }
-          }
-          if (qbNameOne.includes("'")) {
-            qbNameOne = qbNameOne.replace("'", '');
-          }
-          tempsanitizedFourForFourPlayerName = qbNameOne
-            .replace("'", '')
-            .replace('.', '')
-            .replace('.', '');
-
-          // console.log(tempsanitizedFourForFourPlayerName)
-          if (
-            tempsanitizedFourForFourPlayerName &&
-            tempsanitizedFourForFourPlayerName === sanitizedFCPlayerName
-          ) {
-            // console.log(tempsanitizedFourForFourPlayerName, group)
-            fourForFourRestOfSeasonRedraftPlayerGroup = group;
-            sanitizedFourForFourRedraftPlayerName =
-              tempsanitizedFourForFourPlayerName;
+      //QB
+      if (group['"QB"']) {
+        let teamABVLength = 3;
+        if (player.player.maybeTeam) {
+          if (player.player.maybeTeam.length === 2) {
+            teamABVLength = 2;
           }
         }
-        // RB
-        if (group['"RB"']) {
-          let teamABVLength = 3;
-          if (player.player.maybeTeam) {
-            if (player.player.maybeTeam.length === 2) {
-              teamABVLength = 2;
-            }
+        let qbNameOne = '';
+        if (teamABVLength === 2) {
+          if (group['"QB"'].slice(-1) !== ')') {
+            // console.log(group['"QB"'])
+            qbNameOne = group['"QB"'].slice(1, -6);
           }
-          let rbNameOne = '';
-
-          if (teamABVLength === 2) {
-            if (group['"RB"'].slice(-1) !== ')') {
-              // console.log(group['"RB"'])
-              rbNameOne = group['"RB"'].slice(1, -6);
-            }
-            if (group['"RB"'].slice(-1) === ')') {
-              // console.log(group['"RB"'])
-              rbNameOne = group['"RB"'].slice(1, -5);
-            }
-          }
-          if (teamABVLength === 3) {
-            if (group['"RB"'].slice(-1) !== ')') {
-              // console.log(group['"RB"'])
-              rbNameOne = group['"RB"'].slice(1, -7);
-            }
-            if (group['"RB"'].slice(-1) === ')') {
-              // console.log(group['"RB"'])
-              rbNameOne = group['"RB"'].slice(1, -6);
-            }
-          }
-          if (rbNameOne.includes("'")) {
-            rbNameOne = rbNameOne.replace("'", '');
-          }
-          tempsanitizedFourForFourPlayerName = rbNameOne
-            .replace("'", '')
-            .replace('.', '')
-            .replace('.', '');
-
-          // console.log(tempsanitizedFourForFourPlayerName)
-          if (
-            tempsanitizedFourForFourPlayerName &&
-            tempsanitizedFourForFourPlayerName === sanitizedFCPlayerName
-          ) {
-            // console.log(tempsanitizedFourForFourPlayerName, group)
-            fourForFourRestOfSeasonRedraftPlayerGroup = group;
-            sanitizedFourForFourRedraftPlayerName =
-              tempsanitizedFourForFourPlayerName;
+          if (group['"QB"'].slice(-1) === ')') {
+            // console.log(group['"QB"'])
+            qbNameOne = group['"QB"'].slice(1, -5);
           }
         }
-        //WR
-        if (group['"WR"']) {
-          let teamABVLength = 3;
-          if (player.player.maybeTeam) {
-            if (player.player.maybeTeam.length === 2) {
-              teamABVLength = 2;
-            }
+        if (teamABVLength === 3) {
+          if (group['"QB"'].slice(-1) !== ')') {
+            // console.log(group['"QB"'])
+            qbNameOne = group['"QB"'].slice(1, -7);
           }
-          let wrNameOne = '';
-          if (teamABVLength === 2) {
-            if (group['"WR"'].slice(-1) !== ')') {
-              // console.log(group['"WR"'])
-              wrNameOne = group['"WR"'].slice(1, -6);
-            }
-            if (group['"WR"'].slice(-1) === ')') {
-              // console.log(group['"WR"'])
-              wrNameOne = group['"WR"'].slice(1, -5);
-            }
-          }
-          if (teamABVLength === 3) {
-            if (group['"WR"'].slice(-1) !== ')') {
-              // console.log(group['"WR"'])
-              wrNameOne = group['"WR"'].slice(1, -7);
-            }
-            if (group['"WR"'].slice(-1) === ')') {
-              // console.log(group['"WR"'])
-              wrNameOne = group['"WR"'].slice(1, -6);
-            }
-          }
-          if (wrNameOne.includes("'")) {
-            wrNameOne = wrNameOne.replace("'", '');
-          }
-          tempsanitizedFourForFourPlayerName = wrNameOne
-            .replace("'", '')
-            .replace('.', '')
-            .replace('.', '');
-
-          // console.log(tempsanitizedFourForFourPlayerName)
-          if (
-            tempsanitizedFourForFourPlayerName &&
-            tempsanitizedFourForFourPlayerName === sanitizedFCPlayerName
-          ) {
-            // console.log(tempsanitizedFourForFourPlayerName, group)
-            fourForFourRestOfSeasonRedraftPlayerGroup = group;
-            sanitizedFourForFourRedraftPlayerName =
-              tempsanitizedFourForFourPlayerName;
+          if (group['"QB"'].slice(-1) === ')') {
+            // console.log(group['"QB"'])
+            qbNameOne = group['"QB"'].slice(1, -6);
           }
         }
-        //TE
-        if (group['"TE"']) {
-          let teamABVLength = 3;
-          if (player.player.maybeTeam) {
-            if (player.player.maybeTeam.length === 2) {
-              teamABVLength = 2;
-            }
-          }
-          // console.log(teamABVLength)
-          let teNameOne = '';
-          if (teamABVLength === 2) {
-            if (group['"TE"'].slice(-1) !== ')') {
-              // console.log(group['"TE"'])
-              teNameOne = group['"TE"'].slice(1, -6);
-            }
-            if (group['"TE"'].slice(-1) === ')') {
-              // console.log(group['"TE"'])
-              teNameOne = group['"TE"'].slice(1, -5);
-            }
-          }
-          if (teamABVLength === 3) {
-            if (group['"TE"'].slice(-1) !== ')') {
-              // console.log(group['"TE"'])
-              teNameOne = group['"TE"'].slice(1, -7);
-            }
-            if (group['"TE"'].slice(-1) === ')') {
-              // console.log(group['"TE"'])
-              teNameOne = group['"TE"'].slice(1, -6);
-            }
-          }
-          if (teNameOne.includes("'")) {
-            teNameOne = teNameOne.replace("'", '');
-          }
+        if (qbNameOne.includes("'")) {
+          qbNameOne = qbNameOne.replace("'", '');
+        }
+        tempsanitizedFourForFourPlayerName = qbNameOne
+          .replace("'", '')
+          .replace('.', '')
+          .replace('.', '');
 
-          tempsanitizedFourForFourPlayerName = teNameOne
-            .replace("'", '')
-            .replace('.', '')
-            .replace('.', '');
-
-          // console.log(tempsanitizedFourForFourPlayerName)
-          if (
-            tempsanitizedFourForFourPlayerName &&
-            tempsanitizedFourForFourPlayerName === sanitizedFCPlayerName
-          ) {
-            // console.log(tempsanitizedFourForFourPlayerName, group)
-            fourForFourRestOfSeasonRedraftPlayerGroup = group;
-            sanitizedFourForFourRedraftPlayerName =
-              tempsanitizedFourForFourPlayerName;
+        // console.log(tempsanitizedFourForFourPlayerName)
+        if (
+          tempsanitizedFourForFourPlayerName &&
+          tempsanitizedFourForFourPlayerName === sanitizedFCPlayerName
+        ) {
+          // console.log(tempsanitizedFourForFourPlayerName, group)
+          fourForFourRestOfSeasonRedraftPlayerGroup = group;
+          sanitizedFourForFourRedraftPlayerName =
+            tempsanitizedFourForFourPlayerName;
+        }
+      }
+      // RB
+      if (group['"RB"']) {
+        let teamABVLength = 3;
+        if (player.player.maybeTeam) {
+          if (player.player.maybeTeam.length === 2) {
+            teamABVLength = 2;
           }
         }
-    
+        let rbNameOne = '';
+
+        if (teamABVLength === 2) {
+          if (group['"RB"'].slice(-1) !== ')') {
+            // console.log(group['"RB"'])
+            rbNameOne = group['"RB"'].slice(1, -6);
+          }
+          if (group['"RB"'].slice(-1) === ')') {
+            // console.log(group['"RB"'])
+            rbNameOne = group['"RB"'].slice(1, -5);
+          }
+        }
+        if (teamABVLength === 3) {
+          if (group['"RB"'].slice(-1) !== ')') {
+            // console.log(group['"RB"'])
+            rbNameOne = group['"RB"'].slice(1, -7);
+          }
+          if (group['"RB"'].slice(-1) === ')') {
+            // console.log(group['"RB"'])
+            rbNameOne = group['"RB"'].slice(1, -6);
+          }
+        }
+        if (rbNameOne.includes("'")) {
+          rbNameOne = rbNameOne.replace("'", '');
+        }
+        tempsanitizedFourForFourPlayerName = rbNameOne
+          .replace("'", '')
+          .replace('.', '')
+          .replace('.', '');
+
+        // console.log(tempsanitizedFourForFourPlayerName)
+        if (
+          tempsanitizedFourForFourPlayerName &&
+          tempsanitizedFourForFourPlayerName === sanitizedFCPlayerName
+        ) {
+          // console.log(tempsanitizedFourForFourPlayerName, group)
+          fourForFourRestOfSeasonRedraftPlayerGroup = group;
+          sanitizedFourForFourRedraftPlayerName =
+            tempsanitizedFourForFourPlayerName;
+        }
+      }
+      //WR
+      if (group['"WR"']) {
+        let teamABVLength = 3;
+        if (player.player.maybeTeam) {
+          if (player.player.maybeTeam.length === 2) {
+            teamABVLength = 2;
+          }
+        }
+        let wrNameOne = '';
+        if (teamABVLength === 2) {
+          if (group['"WR"'].slice(-1) !== ')') {
+            // console.log(group['"WR"'])
+            wrNameOne = group['"WR"'].slice(1, -6);
+          }
+          if (group['"WR"'].slice(-1) === ')') {
+            // console.log(group['"WR"'])
+            wrNameOne = group['"WR"'].slice(1, -5);
+          }
+        }
+        if (teamABVLength === 3) {
+          if (group['"WR"'].slice(-1) !== ')') {
+            // console.log(group['"WR"'])
+            wrNameOne = group['"WR"'].slice(1, -7);
+          }
+          if (group['"WR"'].slice(-1) === ')') {
+            // console.log(group['"WR"'])
+            wrNameOne = group['"WR"'].slice(1, -6);
+          }
+        }
+        if (wrNameOne.includes("'")) {
+          wrNameOne = wrNameOne.replace("'", '');
+        }
+        tempsanitizedFourForFourPlayerName = wrNameOne
+          .replace("'", '')
+          .replace('.', '')
+          .replace('.', '');
+
+        // console.log(tempsanitizedFourForFourPlayerName)
+        if (
+          tempsanitizedFourForFourPlayerName &&
+          tempsanitizedFourForFourPlayerName === sanitizedFCPlayerName
+        ) {
+          // console.log(tempsanitizedFourForFourPlayerName, group)
+          fourForFourRestOfSeasonRedraftPlayerGroup = group;
+          sanitizedFourForFourRedraftPlayerName =
+            tempsanitizedFourForFourPlayerName;
+        }
+      }
+      //TE
+      if (group['"TE"']) {
+        let teamABVLength = 3;
+        if (player.player.maybeTeam) {
+          if (player.player.maybeTeam.length === 2) {
+            teamABVLength = 2;
+          }
+        }
+        // console.log(teamABVLength)
+        let teNameOne = '';
+        if (teamABVLength === 2) {
+          if (group['"TE"'].slice(-1) !== ')') {
+            // console.log(group['"TE"'])
+            teNameOne = group['"TE"'].slice(1, -6);
+          }
+          if (group['"TE"'].slice(-1) === ')') {
+            // console.log(group['"TE"'])
+            teNameOne = group['"TE"'].slice(1, -5);
+          }
+        }
+        if (teamABVLength === 3) {
+          if (group['"TE"'].slice(-1) !== ')') {
+            // console.log(group['"TE"'])
+            teNameOne = group['"TE"'].slice(1, -7);
+          }
+          if (group['"TE"'].slice(-1) === ')') {
+            // console.log(group['"TE"'])
+            teNameOne = group['"TE"'].slice(1, -6);
+          }
+        }
+        if (teNameOne.includes("'")) {
+          teNameOne = teNameOne.replace("'", '');
+        }
+
+        tempsanitizedFourForFourPlayerName = teNameOne
+          .replace("'", '')
+          .replace('.', '')
+          .replace('.', '');
+
+        // console.log(tempsanitizedFourForFourPlayerName)
+        if (
+          tempsanitizedFourForFourPlayerName &&
+          tempsanitizedFourForFourPlayerName === sanitizedFCPlayerName
+        ) {
+          // console.log(tempsanitizedFourForFourPlayerName, group)
+          fourForFourRestOfSeasonRedraftPlayerGroup = group;
+          sanitizedFourForFourRedraftPlayerName =
+            tempsanitizedFourForFourPlayerName;
+        }
+      }
+
       //
 
       //////////////////////////////////////////////////////
