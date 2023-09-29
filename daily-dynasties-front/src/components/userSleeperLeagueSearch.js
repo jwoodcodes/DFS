@@ -9,7 +9,7 @@ export default function UserSleeperLeagueSearch({
   setSelectedUserID,
   initialSleeperPlayerData,
   setSelectedLeagueRosterNamesArray,
-  setSelectedUserName
+  setSelectedUserName,
 }) {
   // console.log(searchedUser)
   // const [data, setData] = React.useState(null)
@@ -37,7 +37,7 @@ export default function UserSleeperLeagueSearch({
     setShowLeagues(true);
     // console.log(userSearchValue)
     selectedUserName = userSearchValue;
-    setSelectedUserName(selectedUserName)
+    setSelectedUserName(selectedUserName);
     async function axiosFetch() {
       // console.log(selectedUserName)
       const usernameRes = await axios.get(
@@ -99,21 +99,20 @@ export default function UserSleeperLeagueSearch({
             `https://api.sleeper.app/v1/league/${selectedLeagueID}/rosters`
           );
           // console.log(selectedLeagueRostersRes)
-          
-        async function getPicks(){
-          const picksRes = await axios.get(
-            `https://api.sleeper.app/v1/league/${selectedLeagueID}/traded_picks`
-          );
-          let testpicks = picksRes.data
-        // console.log(testpicks)
-        testpicks.map((pickObj) => {
-          if(pickObj.season === "2024" && pickObj.round === 1) {
-          // console.log(pickObj)
-          }
-        })
-        }  
-        getPicks()
-        
+
+          // async function getPicks(){
+          //   const picksRes = await axios.get(
+          //     `https://api.sleeper.app/v1/league/${selectedLeagueID}/traded_picks`
+          //   );
+          //   let testpicks = picksRes.data
+          // // console.log(testpicks)
+          // testpicks.map((pickObj) => {
+          //   if(pickObj.season === "2024" && pickObj.round === 1) {
+          //   // console.log(pickObj)
+          //   }
+          // })
+          // }
+          // getPicks()
 
           let selectedLeagueRostersData = selectedLeagueRostersRes.data;
           // console.log(selectedLeagueRostersData)
