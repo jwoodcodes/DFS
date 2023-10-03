@@ -65,7 +65,9 @@ const initialSleeperPlayerData = data.sleeperPlayerData
           );
          qb.name = qb.name.slice(0, -1)
         }
-        if(player === qb.name) {
+        let tempPlayer = player.toLowerCase()
+        let tempQbName = qb.name.toLowerCase()
+        if(tempPlayer === tempQbName) {
           qb.isOnSelectedTeam = true
           // console.log(qb.isOnSelectedTeam)
           
@@ -106,7 +108,11 @@ const initialSleeperPlayerData = data.sleeperPlayerData
           );
          rb.name = rb.name.slice(0, -1)
         }
-        if(player === rb.name) {
+        
+        let tempPlayer = player.toLowerCase()
+        let tempRbName = rb.name.toLowerCase()
+        if(tempPlayer === tempRbName) {
+          console.log(player)
           rb.isOnSelectedTeam = true
           // console.log(rb.isOnSelectedTeam)
           
@@ -145,8 +151,9 @@ const initialSleeperPlayerData = data.sleeperPlayerData
           );
          wr.name = wr.name.slice(0, -1)
         }
-        
-        if(player === wr.name) {
+        let tempPlayer = player.toLowerCase()
+        let tempWrName = wr.name.toLowerCase()
+        if(tempPlayer === tempWrName) {
           wr.isOnSelectedTeam = true
           // console.log(wr.isOnSelectedTeam)
           
@@ -186,7 +193,9 @@ const initialSleeperPlayerData = data.sleeperPlayerData
           );
          te.name = te.name.slice(0, -1)
         }
-        if(player === te.name) {
+        let tempPlayer = player.toLowerCase()
+        let tempTeName = te.name.toLowerCase()
+        if(tempPlayer === tempTeName) {
           te.isOnSelectedTeam = true
           // console.log(te.isOnSelectedTeam)
           

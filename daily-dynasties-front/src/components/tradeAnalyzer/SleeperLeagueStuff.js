@@ -1,10 +1,12 @@
 import styles from '@/styles/tradeAnalyzer.module.css';
 
-export default function SleeperLeagueStuff({dataArray, selectedLeagueData, selectedUserID, selectedLeagueRosterNamesArray, selectedUserName}) {
+export default function SleeperLeagueStuff({dataArray, selectedLeagueData, selectedUserID, selectedLeagueRosterNamesArray, selectedUserName, selectedLeaguesTeamObjectsArray}) {
 
     // console.log(dataArray)
     // console.log(selectedLeagueRosterNamesArray)
     // console.log(selectedLeagueData)
+    // console.log(selectedUserName)
+    // console.log(selectedLeaguesTeamObjectsArray)
 
     let qbArray = []
     let rbArray = []
