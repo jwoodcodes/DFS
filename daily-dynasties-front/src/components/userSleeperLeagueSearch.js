@@ -10,6 +10,7 @@ export default function UserSleeperLeagueSearch({
   initialSleeperPlayerData,
   setSelectedLeagueRosterNamesArray,
   setSelectedUserName,
+  setSelectedLeaguesTeamObjectsArray
 }) {
   // console.log(searchedUser)
   // const [data, setData] = React.useState(null)
@@ -38,7 +39,18 @@ export default function UserSleeperLeagueSearch({
       setShowLeagues(true);
       // console.log(userSearchValue)
       selectedUserName = userSearchValue;
+
+
+      ////
+      ///
+      // comment and uncomment below when pushing to github until sleeperLeagueStuff fully implimented
+      // and also line 241 lower down!!!
+
       // setSelectedUserName(selectedUserName);
+
+
+
+      /////
       async function axiosFetch() {
         // console.log(selectedUserName)
         const usernameRes = await axios.get(
@@ -84,6 +96,24 @@ export default function UserSleeperLeagueSearch({
   function onLeagueSelect(team) {
     // console.log(team)
     // console.log(initialUserLeaguesArray)
+    
+
+    class TeamObject {
+      constructor (
+        userName,
+        ownerId,
+        teamsPlayers,
+        teamRosterId
+      ){
+        this.userName = userName;
+        this.ownerId = ownerId;
+        this.teamsPlayers = teamsPlayers
+        this.teamRosterId = teamRosterId
+      }
+    }
+
+    let tempSelectedLeaguesTeamObjectsArray = [];
+    
     initialUserLeaguesArray.map(function (league) {
       if (team === league.name) {
         // console.log(league)
@@ -93,31 +123,130 @@ export default function UserSleeperLeagueSearch({
         setUserLeaguesNamesArray([]);
         //
 
+          let curSeason = +(league.season)
+          let selectedLeaguesDraftData = []
+          let selectedLeaguesDraftStatus = ''
+          let numOfDraftRounds = 3
+
         let selectedLeagueID = league.league_id;
         // console.log(selectedLeagueID)
+        
+        
 
+        
+        
+        
         async function getRostersOfSelectedLeague() {
           const selectedLeagueRostersRes = await axios.get(
             `https://api.sleeper.app/v1/league/${selectedLeagueID}/rosters`
           );
           // console.log(selectedLeagueRostersRes)
-
+          let selectedLeagueRostersData = selectedLeagueRostersRes.data;
+          // console.log(selectedLeagueRostersData)
+          
           async function getPicks() {
+
+            
+
             const picksRes = await axios.get(
               `https://api.sleeper.app/v1/league/${selectedLeagueID}/traded_picks`
             );
             let testpicks = picksRes.data;
             // console.log(testpicks)
-            testpicks.map(pickObj => {
-              if (pickObj.season === '2024' && pickObj.round === 1) {
-                // console.log(pickObj)
-              }
-            });
+
+              // console.log(selectedLeagueRostersData)
+            
+                const draftsRes = await axios.get(`https://api.sleeper.app/v1/league/${selectedLeagueID}/drafts`)
+                console.log(draftsRes.data[0].settings.rounds)
+                numOfDraftRounds = draftsRes.data[0].settings.rounds
+                selectedLeaguesDraftStatus = draftsRes.data[0].status
+              
+              
+
+              selectedLeagueRostersData.forEach((team) => {
+                // console.log(team)
+
+                let userId = team.owner_id
+                // console.log(userId)
+                
+                let teamPlayerIdsArray = team.players
+                let teamRosterNamesArray = [];
+
+                for (const key in sleeperJustIDsAndNamesArray) {
+                  // console.log(sleeperJustIDsAndNamesArray[key].name)
+                  // console.log(selectedUsersRoster)
+                  teamPlayerIdsArray.forEach(function (player) {
+                    // console.log(player)
+                    if (sleeperJustIDsAndNamesArray[key].id === player) {
+                      // console.log(sleeperJustIDsAndNamesArray[key].name)
+                      teamRosterNamesArray.push(
+                        sleeperJustIDsAndNamesArray[key].name
+                      );
+                      // selectedUsersRosterPlayerObjects.push(initialSleeperPlayerData[key])
+                    }
+                  });
+                }
+                
+                testpicks.map((picks) => {
+                  // console.log(picks)
+                  // console.log(selectedLeaguesDraftStatus)
+                  // console.log(curSeason)
+                  // console.log(numOfDraftRounds)
+                  // console.log(teamRosterNamesArray)
+                  // console.log(team.roster_id)
+                  let pickYear = +(picks.season)
+                  if(selectedLeaguesDraftStatus === 'complete') {
+                    if(+pickYear !== curSeason) {
+                      // console.log(picks)
+                    }
+                  }
+                  if(picks.season === '2024') {
+                    // console.log(picks)
+                  }
+                })
+                // console.log(teamRosterNamesArray)
+
+                async function getUserName() {
+                const usernameRes = await axios.get(
+                  `https://api.sleeper.app/v1/user/${userId}`
+                );
+                // console.log(usernameRes.data.username)
+                let userName = usernameRes.data.username
+                // console.log(userName)
+
+                let teamObject = new TeamObject(
+                  userName,
+                  team.owner_id,
+                  teamRosterNamesArray,
+                  team.roster_id,
+                )
+
+                tempSelectedLeaguesTeamObjectsArray.push(teamObject)
+                }
+
+                
+                getUserName()
+
+                
+              })
+
           }
           getPicks();
 
-          let selectedLeagueRostersData = selectedLeagueRostersRes.data;
-          // console.log(selectedLeagueRostersData)
+           ////
+      ///
+      // comment and uncomment below when pushing to github until sleeperLeagueStuff fully implimented
+      // and also line 49 further up!!!!!
+
+      
+      // setSelectedLeaguesTeamObjectsArray(tempSelectedLeaguesTeamObjectsArray)
+
+
+      /////
+          
+          
+          
+          
           let selectedUsersTeamObject = {};
           let selectedUsersRoster = [];
 
@@ -154,9 +283,10 @@ export default function UserSleeperLeagueSearch({
               }
             });
           }
+          // console.log(selectedLeagueRosterNamesArray)
           setSelectedLeagueRosterNamesArray(selectedLeagueRosterNamesArray);
         }
-
+        // setSelectedLeaguesTeamObjectsArray()
         getRostersOfSelectedLeague();
       }
     });

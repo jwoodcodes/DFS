@@ -27,6 +27,7 @@ export default function ThreeDTradeAnalyzer(data) {
   const [selectedUserID, setSelectedUserID] = React.useState(0);
   const [selectedLeagueRosterNamesArray, setSelectedLeagueRosterNamesArray] = React.useState([])
   const [selectedUserName, setSelectedUserName] = React.useState('')
+  const [selectedLeaguesTeamObjectsArray, setSelectedLeaguesTeamObjectsArray] = React.useState([])
 
   return (
     <div>
@@ -45,6 +46,7 @@ export default function ThreeDTradeAnalyzer(data) {
        initialSleeperPlayerData={initialSleeperPlayerData}
        setSelectedLeagueRosterNamesArray={setSelectedLeagueRosterNamesArray} 
        setSelectedUserName={setSelectedUserName} 
+       setSelectedLeaguesTeamObjectsArray={setSelectedLeaguesTeamObjectsArray}
        /> */}
 
        {/* <SleeperLeagueStuff 
@@ -53,6 +55,7 @@ export default function ThreeDTradeAnalyzer(data) {
        selectedUserID={selectedUserID}
        selectedLeagueRosterNamesArray={selectedLeagueRosterNamesArray}
        selectedUserName={selectedUserName}
+       selectedLeaguesTeamObjectsArray={selectedLeaguesTeamObjectsArray}
        /> */}
         
         {/* team 1 */}
