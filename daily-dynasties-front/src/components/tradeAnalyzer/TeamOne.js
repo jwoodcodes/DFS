@@ -102,6 +102,7 @@ export default function TeamOne({
         </form>
         <div className={styles.playersSelectedForTeam}>
           {teamOnePlayers.map(function (player) {
+            // console.log(player)
             if (!player.PRPScore) {
               player.PRPScore = 0;
             }

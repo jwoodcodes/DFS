@@ -9,7 +9,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "1.5",
 		"\"AVGTier\"": "1",
 		"\"Siegele9.5\"": "2",
-		"\"Patrick9.27\"": "1"
+		"\"Patrick10.1\"": "1"
 	},
 	{
 		"\"\"": "\"2\"",
@@ -21,7 +21,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "2.5",
 		"\"AVGTier\"": "1",
 		"\"Siegele9.5\"": "3",
-		"\"Patrick9.27\"": "2"
+		"\"Patrick10.1\"": "2"
 	},
 	{
 		"\"\"": "\"3\"",
@@ -33,7 +33,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "3.5",
 		"\"AVGTier\"": "1",
 		"\"Siegele9.5\"": "1",
-		"\"Patrick9.27\"": "6"
+		"\"Patrick10.1\"": "6"
 	},
 	{
 		"\"\"": "\"4\"",
@@ -45,7 +45,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "4",
 		"\"AVGTier\"": "1",
 		"\"Siegele9.5\"": "5",
-		"\"Patrick9.27\"": "3"
+		"\"Patrick10.1\"": "3"
 	},
 	{
 		"\"\"": "\"5\"",
@@ -57,7 +57,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "5.5",
 		"\"AVGTier\"": "1",
 		"\"Siegele9.5\"": "7",
-		"\"Patrick9.27\"": "4"
+		"\"Patrick10.1\"": "4"
 	},
 	{
 		"\"\"": "\"6\"",
@@ -69,7 +69,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "6.5",
 		"\"AVGTier\"": "1",
 		"\"Siegele9.5\"": "6",
-		"\"Patrick9.27\"": "7"
+		"\"Patrick10.1\"": "7"
 	},
 	{
 		"\"\"": "\"7\"",
@@ -81,7 +81,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "8.5",
 		"\"AVGTier\"": "1",
 		"\"Siegele9.5\"": "4",
-		"\"Patrick9.27\"": "13"
+		"\"Patrick10.1\"": "13"
 	},
 	{
 		"\"\"": "\"8\"",
@@ -93,7 +93,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "8.5",
 		"\"AVGTier\"": "1",
 		"\"Siegele9.5\"": "8",
-		"\"Patrick9.27\"": "9"
+		"\"Patrick10.1\"": "9"
 	},
 	{
 		"\"\"": "\"9\"",
@@ -105,7 +105,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "8.5",
 		"\"AVGTier\"": "2",
 		"\"Siegele9.5\"": "9",
-		"\"Patrick9.27\"": "8"
+		"\"Patrick10.1\"": "8"
 	},
 	{
 		"\"\"": "\"10\"",
@@ -117,7 +117,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "11.5",
 		"\"AVGTier\"": "2",
 		"\"Siegele9.5\"": "11",
-		"\"Patrick9.27\"": "12"
+		"\"Patrick10.1\"": "12"
 	},
 	{
 		"\"\"": "\"11\"",
@@ -129,7 +129,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "11.5",
 		"\"AVGTier\"": "2",
 		"\"Siegele9.5\"": "13",
-		"\"Patrick9.27\"": "10"
+		"\"Patrick10.1\"": "10"
 	},
 	{
 		"\"\"": "\"12\"",
@@ -141,7 +141,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "12",
 		"\"AVGTier\"": "2",
 		"\"Siegele9.5\"": "10",
-		"\"Patrick9.27\"": "14"
+		"\"Patrick10.1\"": "14"
 	},
 	{
 		"\"\"": "\"13\"",
@@ -153,7 +153,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "13",
 		"\"AVGTier\"": "1",
 		"\"Siegele9.5\"": "21",
-		"\"Patrick9.27\"": "5"
+		"\"Patrick10.1\"": "5"
 	},
 	{
 		"\"\"": "\"14\"",
@@ -165,7 +165,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "14",
 		"\"AVGTier\"": "2",
 		"\"Siegele9.5\"": "12",
-		"\"Patrick9.27\"": "16"
+		"\"Patrick10.1\"": "16"
 	},
 	{
 		"\"\"": "\"15\"",
@@ -177,7 +177,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "15",
 		"\"AVGTier\"": "2",
 		"\"Siegele9.5\"": "15",
-		"\"Patrick9.27\"": "15"
+		"\"Patrick10.1\"": "15"
 	},
 	{
 		"\"\"": "\"16\"",
@@ -189,7 +189,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "15",
 		"\"AVGTier\"": "2",
 		"\"Siegele9.5\"": "19",
-		"\"Patrick9.27\"": "11"
+		"\"Patrick10.1\"": "11"
 	},
 	{
 		"\"\"": "\"17\"",
@@ -201,7 +201,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "17",
 		"\"AVGTier\"": "2",
 		"\"Siegele9.5\"": "17",
-		"\"Patrick9.27\"": "17"
+		"\"Patrick10.1\"": "17"
 	},
 	{
 		"\"\"": "\"18\"",
@@ -213,7 +213,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "19.5",
 		"\"AVGTier\"": "2",
 		"\"Siegele9.5\"": "16",
-		"\"Patrick9.27\"": "23"
+		"\"Patrick10.1\"": "23"
 	},
 	{
 		"\"\"": "\"19\"",
@@ -225,7 +225,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "19.5",
 		"\"AVGTier\"": "2",
 		"\"Siegele9.5\"": "20",
-		"\"Patrick9.27\"": "19"
+		"\"Patrick10.1\"": "19"
 	},
 	{
 		"\"\"": "\"20\"",
@@ -237,7 +237,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "20",
 		"\"AVGTier\"": "2",
 		"\"Siegele9.5\"": "22",
-		"\"Patrick9.27\"": "18"
+		"\"Patrick10.1\"": "18"
 	},
 	{
 		"\"\"": "\"21\"",
@@ -249,7 +249,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "22",
 		"\"AVGTier\"": "2",
 		"\"Siegele9.5\"": "23",
-		"\"Patrick9.27\"": "21"
+		"\"Patrick10.1\"": "21"
 	},
 	{
 		"\"\"": "\"22\"",
@@ -261,7 +261,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "22",
 		"\"AVGTier\"": "2",
 		"\"Siegele9.5\"": "24",
-		"\"Patrick9.27\"": "20"
+		"\"Patrick10.1\"": "20"
 	},
 	{
 		"\"\"": "\"23\"",
@@ -273,7 +273,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "23.5",
 		"\"AVGTier\"": "2",
 		"\"Siegele9.5\"": "25",
-		"\"Patrick9.27\"": "22"
+		"\"Patrick10.1\"": "22"
 	},
 	{
 		"\"\"": "\"24\"",
@@ -285,35 +285,23 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "26",
 		"\"AVGTier\"": "2",
 		"\"Siegele9.5\"": "28",
-		"\"Patrick9.27\"": "24"
+		"\"Patrick10.1\"": "24"
 	},
 	{
 		"\"\"": "\"25\"",
 		"\"Rank\"": "25",
-		"\"Player\"": "\"Bryce Young\"",
-		"\"POS\"": "\"QB\"",
-		"\"Team\"": "\"CAR\"",
-		"\"PosRank\"": "11",
-		"\"AVGRank\"": "27",
-		"\"AVGTier\"": "2",
-		"\"Siegele9.5\"": "29",
-		"\"Patrick9.27\"": "25"
-	},
-	{
-		"\"\"": "\"26\"",
-		"\"Rank\"": "26",
 		"\"Player\"": "\"Travis Etienne\"",
 		"\"POS\"": "\"RB\"",
 		"\"Team\"": "\"JAC\"",
 		"\"PosRank\"": "5",
-		"\"AVGRank\"": "28",
+		"\"AVGRank\"": "27.5",
 		"\"AVGTier\"": "2",
 		"\"Siegele9.5\"": "30",
-		"\"Patrick9.27\"": "26"
+		"\"Patrick10.1\"": "25"
 	},
 	{
-		"\"\"": "\"27\"",
-		"\"Rank\"": "27",
+		"\"\"": "\"26\"",
+		"\"Rank\"": "26",
 		"\"Player\"": "\"Jaxon Smith-Njigba\"",
 		"\"POS\"": "\"WR\"",
 		"\"Team\"": "\"SEA\"",
@@ -321,11 +309,11 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "28",
 		"\"AVGTier\"": "2",
 		"\"Siegele9.5\"": "18",
-		"\"Patrick9.27\"": "38"
+		"\"Patrick10.1\"": "38"
 	},
 	{
-		"\"\"": "\"28\"",
-		"\"Rank\"": "28",
+		"\"\"": "\"27\"",
+		"\"Rank\"": "27",
 		"\"Player\"": "\"T.J. Hockenson\"",
 		"\"POS\"": "\"TE\"",
 		"\"Team\"": "\"MIN\"",
@@ -333,11 +321,11 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "29",
 		"\"AVGTier\"": "2",
 		"\"Siegele9.5\"": "27",
-		"\"Patrick9.27\"": "31"
+		"\"Patrick10.1\"": "31"
 	},
 	{
-		"\"\"": "\"29\"",
-		"\"Rank\"": "29",
+		"\"\"": "\"28\"",
+		"\"Rank\"": "28",
 		"\"Player\"": "\"Sam LaPorta\"",
 		"\"POS\"": "\"TE\"",
 		"\"Team\"": "\"DET\"",
@@ -345,11 +333,11 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "29.5",
 		"\"AVGTier\"": "2",
 		"\"Siegele9.5\"": "26",
-		"\"Patrick9.27\"": "33"
+		"\"Patrick10.1\"": "33"
 	},
 	{
-		"\"\"": "\"30\"",
-		"\"Rank\"": "30",
+		"\"\"": "\"29\"",
+		"\"Rank\"": "29",
 		"\"Player\"": "\"Jonathan Taylor\"",
 		"\"POS\"": "\"RB\"",
 		"\"Team\"": "\"IND\"",
@@ -357,23 +345,23 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "30.5",
 		"\"AVGTier\"": "2",
 		"\"Siegele9.5\"": "33",
-		"\"Patrick9.27\"": "28"
+		"\"Patrick10.1\"": "28"
+	},
+	{
+		"\"\"": "\"30\"",
+		"\"Rank\"": "30",
+		"\"Player\"": "\"Justin Fields\"",
+		"\"POS\"": "\"QB\"",
+		"\"Team\"": "\"CHI\"",
+		"\"PosRank\"": "11",
+		"\"AVGRank\"": "31",
+		"\"AVGTier\"": "3",
+		"\"Siegele9.5\"": "14",
+		"\"Patrick10.1\"": "48"
 	},
 	{
 		"\"\"": "\"31\"",
 		"\"Rank\"": "31",
-		"\"Player\"": "\"Justin Fields\"",
-		"\"POS\"": "\"QB\"",
-		"\"Team\"": "\"CHI\"",
-		"\"PosRank\"": "12",
-		"\"AVGRank\"": "30.5",
-		"\"AVGTier\"": "3",
-		"\"Siegele9.5\"": "14",
-		"\"Patrick9.27\"": "47"
-	},
-	{
-		"\"\"": "\"32\"",
-		"\"Rank\"": "32",
 		"\"Player\"": "\"Brandon Aiyuk\"",
 		"\"POS\"": "\"WR\"",
 		"\"Team\"": "\"SF\"",
@@ -381,11 +369,11 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "33",
 		"\"AVGTier\"": "2",
 		"\"Siegele9.5\"": "36",
-		"\"Patrick9.27\"": "30"
+		"\"Patrick10.1\"": "30"
 	},
 	{
-		"\"\"": "\"33\"",
-		"\"Rank\"": "33",
+		"\"\"": "\"32\"",
+		"\"Rank\"": "32",
 		"\"Player\"": "\"Tee Higgins\"",
 		"\"POS\"": "\"WR\"",
 		"\"Team\"": "\"CIN\"",
@@ -393,11 +381,11 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "33.5",
 		"\"AVGTier\"": "2",
 		"\"Siegele9.5\"": "31",
-		"\"Patrick9.27\"": "36"
+		"\"Patrick10.1\"": "36"
 	},
 	{
-		"\"\"": "\"34\"",
-		"\"Rank\"": "34",
+		"\"\"": "\"33\"",
+		"\"Rank\"": "33",
 		"\"Player\"": "\"Drake London\"",
 		"\"POS\"": "\"WR\"",
 		"\"Team\"": "\"ATL\"",
@@ -405,11 +393,11 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "36",
 		"\"AVGTier\"": "2",
 		"\"Siegele9.5\"": "38",
-		"\"Patrick9.27\"": "34"
+		"\"Patrick10.1\"": "34"
 	},
 	{
-		"\"\"": "\"35\"",
-		"\"Rank\"": "35",
+		"\"\"": "\"34\"",
+		"\"Rank\"": "34",
 		"\"Player\"": "\"Jordan Addison\"",
 		"\"POS\"": "\"WR\"",
 		"\"Team\"": "\"MIN\"",
@@ -417,7 +405,19 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "36",
 		"\"AVGTier\"": "2",
 		"\"Siegele9.5\"": "35",
-		"\"Patrick9.27\"": "37"
+		"\"Patrick10.1\"": "37"
+	},
+	{
+		"\"\"": "\"35\"",
+		"\"Rank\"": "35",
+		"\"Player\"": "\"Bryce Young\"",
+		"\"POS\"": "\"QB\"",
+		"\"Team\"": "\"CAR\"",
+		"\"PosRank\"": "12",
+		"\"AVGRank\"": "36.5",
+		"\"AVGTier\"": "3",
+		"\"Siegele9.5\"": "29",
+		"\"Patrick10.1\"": "44"
 	},
 	{
 		"\"\"": "\"36\"",
@@ -429,7 +429,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "38",
 		"\"AVGTier\"": "2",
 		"\"Siegele9.5\"": "37",
-		"\"Patrick9.27\"": "39"
+		"\"Patrick10.1\"": "39"
 	},
 	{
 		"\"\"": "\"37\"",
@@ -441,7 +441,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "38.5",
 		"\"AVGTier\"": "2",
 		"\"Siegele9.5\"": "45",
-		"\"Patrick9.27\"": "32"
+		"\"Patrick10.1\"": "32"
 	},
 	{
 		"\"\"": "\"38\"",
@@ -450,10 +450,10 @@ const rvDynastyRankingsTEP = [
 		"\"POS\"": "\"TE\"",
 		"\"Team\"": "\"KC\"",
 		"\"PosRank\"": "4",
-		"\"AVGRank\"": "40",
+		"\"AVGRank\"": "40.5",
 		"\"AVGTier\"": "3",
 		"\"Siegele9.5\"": "32",
-		"\"Patrick9.27\"": "48"
+		"\"Patrick10.1\"": "49"
 	},
 	{
 		"\"\"": "\"39\"",
@@ -465,7 +465,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "40.5",
 		"\"AVGTier\"": "3",
 		"\"Siegele9.5\"": "52",
-		"\"Patrick9.27\"": "29"
+		"\"Patrick10.1\"": "29"
 	},
 	{
 		"\"\"": "\"40\"",
@@ -477,7 +477,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "41",
 		"\"AVGTier\"": "3",
 		"\"Siegele9.5\"": "55",
-		"\"Patrick9.27\"": "27"
+		"\"Patrick10.1\"": "27"
 	},
 	{
 		"\"\"": "\"41\"",
@@ -489,31 +489,31 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "41.5",
 		"\"AVGTier\"": "2",
 		"\"Siegele9.5\"": "41",
-		"\"Patrick9.27\"": "42"
+		"\"Patrick10.1\"": "42"
 	},
 	{
 		"\"\"": "\"42\"",
 		"\"Rank\"": "42",
-		"\"Player\"": "\"DK Metcalf\"",
+		"\"Player\"": "\"Puka Nacua\"",
 		"\"POS\"": "\"WR\"",
-		"\"Team\"": "\"SEA\"",
+		"\"Team\"": "\"LAR\"",
 		"\"PosRank\"": "17",
-		"\"AVGRank\"": "42",
-		"\"AVGTier\"": "3",
-		"\"Siegele9.5\"": "49",
-		"\"Patrick9.27\"": "35"
+		"\"AVGRank\"": "41.5",
+		"\"AVGTier\"": "2",
+		"\"Siegele9.5\"": "40",
+		"\"Patrick10.1\"": "43"
 	},
 	{
 		"\"\"": "\"43\"",
 		"\"Rank\"": "43",
-		"\"Player\"": "\"Zay Flowers\"",
+		"\"Player\"": "\"DK Metcalf\"",
 		"\"POS\"": "\"WR\"",
-		"\"Team\"": "\"BAL\"",
+		"\"Team\"": "\"SEA\"",
 		"\"PosRank\"": "18",
-		"\"AVGRank\"": "42.5",
-		"\"AVGTier\"": "2",
-		"\"Siegele9.5\"": "42",
-		"\"Patrick9.27\"": "43"
+		"\"AVGRank\"": "42",
+		"\"AVGTier\"": "3",
+		"\"Siegele9.5\"": "49",
+		"\"Patrick10.1\"": "35"
 	},
 	{
 		"\"\"": "\"44\"",
@@ -525,7 +525,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "44.5",
 		"\"AVGTier\"": "3",
 		"\"Siegele9.5\"": "48",
-		"\"Patrick9.27\"": "41"
+		"\"Patrick10.1\"": "41"
 	},
 	{
 		"\"\"": "\"45\"",
@@ -534,10 +534,10 @@ const rvDynastyRankingsTEP = [
 		"\"POS\"": "\"WR\"",
 		"\"Team\"": "\"PIT\"",
 		"\"PosRank\"": "19",
-		"\"AVGRank\"": "45.5",
+		"\"AVGRank\"": "46",
 		"\"AVGTier\"": "3",
 		"\"Siegele9.5\"": "39",
-		"\"Patrick9.27\"": "52"
+		"\"Patrick10.1\"": "53"
 	},
 	{
 		"\"\"": "\"46\"",
@@ -549,7 +549,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "47",
 		"\"AVGTier\"": "3",
 		"\"Siegele9.5\"": "54",
-		"\"Patrick9.27\"": "40"
+		"\"Patrick10.1\"": "40"
 	},
 	{
 		"\"\"": "\"47\"",
@@ -558,46 +558,46 @@ const rvDynastyRankingsTEP = [
 		"\"POS\"": "\"WR\"",
 		"\"Team\"": "\"SF\"",
 		"\"PosRank\"": "20",
-		"\"AVGRank\"": "47.5",
+		"\"AVGRank\"": "48",
 		"\"AVGTier\"": "4",
 		"\"Siegele9.5\"": "46",
-		"\"Patrick9.27\"": "49"
+		"\"Patrick10.1\"": "50"
 	},
 	{
 		"\"\"": "\"48\"",
 		"\"Rank\"": "48",
-		"\"Player\"": "\"Christian Watson\"",
+		"\"Player\"": "\"Zay Flowers\"",
 		"\"POS\"": "\"WR\"",
-		"\"Team\"": "\"GB\"",
+		"\"Team\"": "\"BAL\"",
 		"\"PosRank\"": "21",
-		"\"AVGRank\"": "49",
+		"\"AVGRank\"": "48.5",
 		"\"AVGTier\"": "3",
-		"\"Siegele9.5\"": "44",
-		"\"Patrick9.27\"": "54"
+		"\"Siegele9.5\"": "42",
+		"\"Patrick10.1\"": "55"
 	},
 	{
 		"\"\"": "\"49\"",
 		"\"Rank\"": "49",
-		"\"Player\"": "\"Kyler Murray\"",
-		"\"POS\"": "\"QB\"",
-		"\"Team\"": "\"ARI\"",
-		"\"PosRank\"": "13",
-		"\"AVGRank\"": "51.5",
-		"\"AVGTier\"": "4",
-		"\"Siegele9.5\"": "59",
-		"\"Patrick9.27\"": "44"
+		"\"Player\"": "\"Christian Watson\"",
+		"\"POS\"": "\"WR\"",
+		"\"Team\"": "\"GB\"",
+		"\"PosRank\"": "22",
+		"\"AVGRank\"": "50",
+		"\"AVGTier\"": "3",
+		"\"Siegele9.5\"": "44",
+		"\"Patrick10.1\"": "56"
 	},
 	{
 		"\"\"": "\"50\"",
 		"\"Rank\"": "50",
-		"\"Player\"": "\"Jerry Jeudy\"",
-		"\"POS\"": "\"WR\"",
-		"\"Team\"": "\"DEN\"",
-		"\"PosRank\"": "22",
-		"\"AVGRank\"": "53",
+		"\"Player\"": "\"Kyler Murray\"",
+		"\"POS\"": "\"QB\"",
+		"\"Team\"": "\"ARI\"",
+		"\"PosRank\"": "13",
+		"\"AVGRank\"": "52",
 		"\"AVGTier\"": "4",
-		"\"Siegele9.5\"": "47",
-		"\"Patrick9.27\"": "59"
+		"\"Siegele9.5\"": "59",
+		"\"Patrick10.1\"": "45"
 	},
 	{
 		"\"\"": "\"51\"",
@@ -606,22 +606,22 @@ const rvDynastyRankingsTEP = [
 		"\"POS\"": "\"WR\"",
 		"\"Team\"": "\"WAS\"",
 		"\"PosRank\"": "23",
-		"\"AVGRank\"": "53",
+		"\"AVGRank\"": "53.5",
 		"\"AVGTier\"": "4",
 		"\"Siegele9.5\"": "53",
-		"\"Patrick9.27\"": "53"
+		"\"Patrick10.1\"": "54"
 	},
 	{
 		"\"\"": "\"52\"",
 		"\"Rank\"": "52",
-		"\"Player\"": "\"Puka Nacua\"",
+		"\"Player\"": "\"Jerry Jeudy\"",
 		"\"POS\"": "\"WR\"",
-		"\"Team\"": "\"LAR\"",
+		"\"Team\"": "\"DEN\"",
 		"\"PosRank\"": "24",
-		"\"AVGRank\"": "53",
-		"\"AVGTier\"": "3",
-		"\"Siegele9.5\"": "40",
-		"\"Patrick9.27\"": "66"
+		"\"AVGRank\"": "54",
+		"\"AVGTier\"": "4",
+		"\"Siegele9.5\"": "47",
+		"\"Patrick10.1\"": "61"
 	},
 	{
 		"\"\"": "\"53\"",
@@ -630,10 +630,10 @@ const rvDynastyRankingsTEP = [
 		"\"POS\"": "\"QB\"",
 		"\"Team\"": "\"CLE\"",
 		"\"PosRank\"": "14",
-		"\"AVGRank\"": "54",
+		"\"AVGRank\"": "54.5",
 		"\"AVGTier\"": "4",
 		"\"Siegele9.5\"": "62",
-		"\"Patrick9.27\"": "46"
+		"\"Patrick10.1\"": "47"
 	},
 	{
 		"\"\"": "\"54\"",
@@ -642,34 +642,34 @@ const rvDynastyRankingsTEP = [
 		"\"POS\"": "\"QB\"",
 		"\"Team\"": "\"DAL\"",
 		"\"PosRank\"": "15",
-		"\"AVGRank\"": "54.5",
+		"\"AVGRank\"": "55",
 		"\"AVGTier\"": "4",
 		"\"Siegele9.5\"": "64",
-		"\"Patrick9.27\"": "45"
+		"\"Patrick10.1\"": "46"
 	},
 	{
 		"\"\"": "\"55\"",
 		"\"Rank\"": "55",
-		"\"Player\"": "\"Cooper Kupp\"",
+		"\"Player\"": "\"Calvin Ridley\"",
 		"\"POS\"": "\"WR\"",
-		"\"Team\"": "\"LAR\"",
+		"\"Team\"": "\"JAC\"",
 		"\"PosRank\"": "25",
-		"\"AVGRank\"": "55.5",
+		"\"AVGRank\"": "56",
 		"\"AVGTier\"": "4",
-		"\"Siegele9.5\"": "51",
-		"\"Patrick9.27\"": "60"
+		"\"Siegele9.5\"": "60",
+		"\"Patrick10.1\"": "52"
 	},
 	{
 		"\"\"": "\"56\"",
 		"\"Rank\"": "56",
-		"\"Player\"": "\"Calvin Ridley\"",
+		"\"Player\"": "\"Cooper Kupp\"",
 		"\"POS\"": "\"WR\"",
-		"\"Team\"": "\"JAC\"",
+		"\"Team\"": "\"LAR\"",
 		"\"PosRank\"": "26",
-		"\"AVGRank\"": "55.5",
+		"\"AVGRank\"": "56.5",
 		"\"AVGTier\"": "4",
-		"\"Siegele9.5\"": "60",
-		"\"Patrick9.27\"": "51"
+		"\"Siegele9.5\"": "51",
+		"\"Patrick10.1\"": "62"
 	},
 	{
 		"\"\"": "\"57\"",
@@ -678,10 +678,10 @@ const rvDynastyRankingsTEP = [
 		"\"POS\"": "\"RB\"",
 		"\"Team\"": "\"BUF\"",
 		"\"PosRank\"": "12",
-		"\"AVGRank\"": "56.5",
+		"\"AVGRank\"": "57.5",
 		"\"AVGTier\"": "4",
 		"\"Siegele9.5\"": "56",
-		"\"Patrick9.27\"": "57"
+		"\"Patrick10.1\"": "59"
 	},
 	{
 		"\"\"": "\"58\"",
@@ -690,26 +690,38 @@ const rvDynastyRankingsTEP = [
 		"\"POS\"": "\"WR\"",
 		"\"Team\"": "\"LAC\"",
 		"\"PosRank\"": "27",
-		"\"AVGRank\"": "56.5",
+		"\"AVGRank\"": "57.5",
 		"\"AVGTier\"": "4",
 		"\"Siegele9.5\"": "50",
-		"\"Patrick9.27\"": "63"
+		"\"Patrick10.1\"": "65"
 	},
 	{
 		"\"\"": "\"59\"",
 		"\"Rank\"": "59",
-		"\"Player\"": "\"Josh Jacobs\"",
+		"\"Player\"": "\"Devon Achane\"",
 		"\"POS\"": "\"RB\"",
-		"\"Team\"": "\"LV\"",
+		"\"Team\"": "\"MIA\"",
 		"\"PosRank\"": "13",
 		"\"AVGRank\"": "58",
 		"\"AVGTier\"": "4",
-		"\"Siegele9.5\"": "58",
-		"\"Patrick9.27\"": "58"
+		"\"Siegele9.5\"": "90",
+		"\"Patrick10.1\"": "26"
 	},
 	{
 		"\"\"": "\"60\"",
 		"\"Rank\"": "60",
+		"\"Player\"": "\"Josh Jacobs\"",
+		"\"POS\"": "\"RB\"",
+		"\"Team\"": "\"LV\"",
+		"\"PosRank\"": "14",
+		"\"AVGRank\"": "59",
+		"\"AVGTier\"": "4",
+		"\"Siegele9.5\"": "58",
+		"\"Patrick10.1\"": "60"
+	},
+	{
+		"\"\"": "\"61\"",
+		"\"Rank\"": "61",
 		"\"Player\"": "\"Kyle Pitts\"",
 		"\"POS\"": "\"TE\"",
 		"\"Team\"": "\"ATL\"",
@@ -717,11 +729,11 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "59",
 		"\"AVGTier\"": "3",
 		"\"Siegele9.5\"": "43",
-		"\"Patrick9.27\"": "75"
+		"\"Patrick10.1\"": "75"
 	},
 	{
-		"\"\"": "\"61\"",
-		"\"Rank\"": "61",
+		"\"\"": "\"62\"",
+		"\"Rank\"": "62",
 		"\"Player\"": "\"Daniel Jones\"",
 		"\"POS\"": "\"QB\"",
 		"\"Team\"": "\"NYG\"",
@@ -729,107 +741,107 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "59.5",
 		"\"AVGTier\"": "3",
 		"\"Siegele9.5\"": "34",
-		"\"Patrick9.27\"": "85"
-	},
-	{
-		"\"\"": "\"62\"",
-		"\"Rank\"": "62",
-		"\"Player\"": "\"Chris Godwin\"",
-		"\"POS\"": "\"WR\"",
-		"\"Team\"": "\"TB\"",
-		"\"PosRank\"": "28",
-		"\"AVGRank\"": "61.5",
-		"\"AVGTier\"": "4",
-		"\"Siegele9.5\"": "68",
-		"\"Patrick9.27\"": "55"
+		"\"Patrick10.1\"": "85"
 	},
 	{
 		"\"\"": "\"63\"",
 		"\"Rank\"": "63",
-		"\"Player\"": "\"Brock Purdy\"",
-		"\"POS\"": "\"QB\"",
-		"\"Team\"": "\"SF\"",
-		"\"PosRank\"": "17",
-		"\"AVGRank\"": "64",
+		"\"Player\"": "\"Chris Godwin\"",
+		"\"POS\"": "\"WR\"",
+		"\"Team\"": "\"TB\"",
+		"\"PosRank\"": "28",
+		"\"AVGRank\"": "62.5",
 		"\"AVGTier\"": "4",
-		"\"Siegele9.5\"": "61",
-		"\"Patrick9.27\"": "67"
+		"\"Siegele9.5\"": "68",
+		"\"Patrick10.1\"": "57"
 	},
 	{
 		"\"\"": "\"64\"",
 		"\"Rank\"": "64",
-		"\"Player\"": "\"Keenan Allen\"",
-		"\"POS\"": "\"WR\"",
-		"\"Team\"": "\"LAC\"",
-		"\"PosRank\"": "29",
-		"\"AVGRank\"": "66",
+		"\"Player\"": "\"Brock Purdy\"",
+		"\"POS\"": "\"QB\"",
+		"\"Team\"": "\"SF\"",
+		"\"PosRank\"": "17",
+		"\"AVGRank\"": "64.5",
 		"\"AVGTier\"": "4",
-		"\"Siegele9.5\"": "82",
-		"\"Patrick9.27\"": "50"
+		"\"Siegele9.5\"": "61",
+		"\"Patrick10.1\"": "68"
 	},
 	{
 		"\"\"": "\"65\"",
 		"\"Rank\"": "65",
-		"\"Player\"": "\"DJ Moore\"",
+		"\"Player\"": "\"Keenan Allen\"",
 		"\"POS\"": "\"WR\"",
-		"\"Team\"": "\"CHI\"",
-		"\"PosRank\"": "30",
-		"\"AVGRank\"": "67.5",
+		"\"Team\"": "\"LAC\"",
+		"\"PosRank\"": "29",
+		"\"AVGRank\"": "66.5",
 		"\"AVGTier\"": "4",
-		"\"Siegele9.5\"": "70",
-		"\"Patrick9.27\"": "65"
+		"\"Siegele9.5\"": "82",
+		"\"Patrick10.1\"": "51"
 	},
 	{
 		"\"\"": "\"66\"",
 		"\"Rank\"": "66",
-		"\"Player\"": "\"Kirk Cousins\"",
-		"\"POS\"": "\"QB\"",
-		"\"Team\"": "\"MIN\"",
-		"\"PosRank\"": "18",
-		"\"AVGRank\"": "67.5",
+		"\"Player\"": "\"DJ Moore\"",
+		"\"POS\"": "\"WR\"",
+		"\"Team\"": "\"CHI\"",
+		"\"PosRank\"": "30",
+		"\"AVGRank\"": "68.5",
 		"\"AVGTier\"": "4",
-		"\"Siegele9.5\"": "73",
-		"\"Patrick9.27\"": "62"
+		"\"Siegele9.5\"": "70",
+		"\"Patrick10.1\"": "67"
 	},
 	{
 		"\"\"": "\"67\"",
 		"\"Rank\"": "67",
-		"\"Player\"": "\"Davante Adams\"",
-		"\"POS\"": "\"WR\"",
-		"\"Team\"": "\"LV\"",
-		"\"PosRank\"": "31",
-		"\"AVGRank\"": "68",
+		"\"Player\"": "\"Kirk Cousins\"",
+		"\"POS\"": "\"QB\"",
+		"\"Team\"": "\"MIN\"",
+		"\"PosRank\"": "18",
+		"\"AVGRank\"": "68.5",
 		"\"AVGTier\"": "4",
-		"\"Siegele9.5\"": "75",
-		"\"Patrick9.27\"": "61"
+		"\"Siegele9.5\"": "73",
+		"\"Patrick10.1\"": "64"
 	},
 	{
 		"\"\"": "\"68\"",
 		"\"Rank\"": "68",
-		"\"Player\"": "\"Sam Howell\"",
-		"\"POS\"": "\"QB\"",
-		"\"Team\"": "\"WAS\"",
-		"\"PosRank\"": "19",
-		"\"AVGRank\"": "68.5",
-		"\"AVGTier\"": "5",
-		"\"Siegele9.5\"": "67",
-		"\"Patrick9.27\"": "70"
+		"\"Player\"": "\"Davante Adams\"",
+		"\"POS\"": "\"WR\"",
+		"\"Team\"": "\"LV\"",
+		"\"PosRank\"": "31",
+		"\"AVGRank\"": "69",
+		"\"AVGTier\"": "4",
+		"\"Siegele9.5\"": "75",
+		"\"Patrick10.1\"": "63"
 	},
 	{
 		"\"\"": "\"69\"",
 		"\"Rank\"": "69",
-		"\"Player\"": "\"Michael Pittman\"",
-		"\"POS\"": "\"WR\"",
-		"\"Team\"": "\"IND\"",
-		"\"PosRank\"": "32",
-		"\"AVGRank\"": "70",
-		"\"AVGTier\"": "4",
-		"\"Siegele9.5\"": "84",
-		"\"Patrick9.27\"": "56"
+		"\"Player\"": "\"Sam Howell\"",
+		"\"POS\"": "\"QB\"",
+		"\"Team\"": "\"WAS\"",
+		"\"PosRank\"": "19",
+		"\"AVGRank\"": "69",
+		"\"AVGTier\"": "5",
+		"\"Siegele9.5\"": "67",
+		"\"Patrick10.1\"": "71"
 	},
 	{
 		"\"\"": "\"70\"",
 		"\"Rank\"": "70",
+		"\"Player\"": "\"Michael Pittman\"",
+		"\"POS\"": "\"WR\"",
+		"\"Team\"": "\"IND\"",
+		"\"PosRank\"": "32",
+		"\"AVGRank\"": "71",
+		"\"AVGTier\"": "4",
+		"\"Siegele9.5\"": "84",
+		"\"Patrick10.1\"": "58"
+	},
+	{
+		"\"\"": "\"71\"",
+		"\"Rank\"": "71",
 		"\"Player\"": "\"Dalton Kincaid\"",
 		"\"POS\"": "\"TE\"",
 		"\"Team\"": "\"BUF\"",
@@ -837,23 +849,23 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "72.5",
 		"\"AVGTier\"": "5",
 		"\"Siegele9.5\"": "72",
-		"\"Patrick9.27\"": "73"
-	},
-	{
-		"\"\"": "\"71\"",
-		"\"Rank\"": "71",
-		"\"Player\"": "\"George Kittle\"",
-		"\"POS\"": "\"TE\"",
-		"\"Team\"": "\"SF\"",
-		"\"PosRank\"": "7",
-		"\"AVGRank\"": "74",
-		"\"AVGTier\"": "4",
-		"\"Siegele9.5\"": "80",
-		"\"Patrick9.27\"": "68"
+		"\"Patrick10.1\"": "73"
 	},
 	{
 		"\"\"": "\"72\"",
 		"\"Rank\"": "72",
+		"\"Player\"": "\"George Kittle\"",
+		"\"POS\"": "\"TE\"",
+		"\"Team\"": "\"SF\"",
+		"\"PosRank\"": "7",
+		"\"AVGRank\"": "74.5",
+		"\"AVGTier\"": "4",
+		"\"Siegele9.5\"": "80",
+		"\"Patrick10.1\"": "69"
+	},
+	{
+		"\"\"": "\"73\"",
+		"\"Rank\"": "73",
 		"\"Player\"": "\"Dallas Goedert\"",
 		"\"POS\"": "\"TE\"",
 		"\"Team\"": "\"PHI\"",
@@ -861,23 +873,23 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "74.5",
 		"\"AVGTier\"": "5",
 		"\"Siegele9.5\"": "77",
-		"\"Patrick9.27\"": "72"
-	},
-	{
-		"\"\"": "\"73\"",
-		"\"Rank\"": "73",
-		"\"Player\"": "\"Javonte Williams\"",
-		"\"POS\"": "\"RB\"",
-		"\"Team\"": "\"DEN\"",
-		"\"PosRank\"": "14",
-		"\"AVGRank\"": "74.5",
-		"\"AVGTier\"": "5",
-		"\"Siegele9.5\"": "57",
-		"\"Patrick9.27\"": "92"
+		"\"Patrick10.1\"": "72"
 	},
 	{
 		"\"\"": "\"74\"",
 		"\"Rank\"": "74",
+		"\"Player\"": "\"Javonte Williams\"",
+		"\"POS\"": "\"RB\"",
+		"\"Team\"": "\"DEN\"",
+		"\"PosRank\"": "15",
+		"\"AVGRank\"": "74.5",
+		"\"AVGTier\"": "5",
+		"\"Siegele9.5\"": "57",
+		"\"Patrick10.1\"": "92"
+	},
+	{
+		"\"\"": "\"75\"",
+		"\"Rank\"": "75",
 		"\"Player\"": "\"Pat Freiermuth\"",
 		"\"POS\"": "\"TE\"",
 		"\"Team\"": "\"PIT\"",
@@ -885,11 +897,11 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "75",
 		"\"AVGTier\"": "5",
 		"\"Siegele9.5\"": "76",
-		"\"Patrick9.27\"": "74"
+		"\"Patrick10.1\"": "74"
 	},
 	{
-		"\"\"": "\"75\"",
-		"\"Rank\"": "75",
+		"\"\"": "\"76\"",
+		"\"Rank\"": "76",
 		"\"Player\"": "\"Marvin Mims\"",
 		"\"POS\"": "\"WR\"",
 		"\"Team\"": "\"DEN\"",
@@ -897,11 +909,11 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "75.5",
 		"\"AVGTier\"": "5",
 		"\"Siegele9.5\"": "63",
-		"\"Patrick9.27\"": "88"
+		"\"Patrick10.1\"": "88"
 	},
 	{
-		"\"\"": "\"76\"",
-		"\"Rank\"": "76",
+		"\"\"": "\"77\"",
+		"\"Rank\"": "77",
 		"\"Player\"": "\"Jared Goff\"",
 		"\"POS\"": "\"QB\"",
 		"\"Team\"": "\"DET\"",
@@ -909,11 +921,11 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "77.5",
 		"\"AVGTier\"": "5",
 		"\"Siegele9.5\"": "78",
-		"\"Patrick9.27\"": "77"
+		"\"Patrick10.1\"": "77"
 	},
 	{
-		"\"\"": "\"77\"",
-		"\"Rank\"": "77",
+		"\"\"": "\"78\"",
+		"\"Rank\"": "78",
 		"\"Player\"": "\"Kenny Pickett\"",
 		"\"POS\"": "\"QB\"",
 		"\"Team\"": "\"PIT\"",
@@ -921,11 +933,11 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "78.5",
 		"\"AVGTier\"": "5",
 		"\"Siegele9.5\"": "81",
-		"\"Patrick9.27\"": "76"
+		"\"Patrick10.1\"": "76"
 	},
 	{
-		"\"\"": "\"78\"",
-		"\"Rank\"": "78",
+		"\"\"": "\"79\"",
+		"\"Rank\"": "79",
 		"\"Player\"": "\"Terry McLaurin\"",
 		"\"POS\"": "\"WR\"",
 		"\"Team\"": "\"WAS\"",
@@ -933,43 +945,31 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "79",
 		"\"AVGTier\"": "5",
 		"\"Siegele9.5\"": "74",
-		"\"Patrick9.27\"": "84"
-	},
-	{
-		"\"\"": "\"79\"",
-		"\"Rank\"": "79",
-		"\"Player\"": "\"D'Andre Swift\"",
-		"\"POS\"": "\"RB\"",
-		"\"Team\"": "\"PHI\"",
-		"\"PosRank\"": "15",
-		"\"AVGRank\"": "80",
-		"\"AVGTier\"": "5",
-		"\"Siegele9.5\"": "79",
-		"\"Patrick9.27\"": "81"
+		"\"Patrick10.1\"": "84"
 	},
 	{
 		"\"\"": "\"80\"",
 		"\"Rank\"": "80",
-		"\"Player\"": "\"Brian Robinson\"",
+		"\"Player\"": "\"D'Andre Swift\"",
 		"\"POS\"": "\"RB\"",
-		"\"Team\"": "\"WAS\"",
+		"\"Team\"": "\"PHI\"",
 		"\"PosRank\"": "16",
 		"\"AVGRank\"": "80",
 		"\"AVGTier\"": "5",
-		"\"Siegele9.5\"": "69",
-		"\"Patrick9.27\"": "91"
+		"\"Siegele9.5\"": "79",
+		"\"Patrick10.1\"": "81"
 	},
 	{
 		"\"\"": "\"81\"",
 		"\"Rank\"": "81",
-		"\"Player\"": "\"Devon Achane\"",
+		"\"Player\"": "\"Brian Robinson\"",
 		"\"POS\"": "\"RB\"",
-		"\"Team\"": "\"MIA\"",
+		"\"Team\"": "\"WAS\"",
 		"\"PosRank\"": "17",
-		"\"AVGRank\"": "80.5",
+		"\"AVGRank\"": "80",
 		"\"AVGTier\"": "5",
-		"\"Siegele9.5\"": "90",
-		"\"Patrick9.27\"": "71"
+		"\"Siegele9.5\"": "69",
+		"\"Patrick10.1\"": "91"
 	},
 	{
 		"\"\"": "\"82\"",
@@ -981,7 +981,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "83",
 		"\"AVGTier\"": "5",
 		"\"Siegele9.5\"": "86",
-		"\"Patrick9.27\"": "80"
+		"\"Patrick10.1\"": "80"
 	},
 	{
 		"\"\"": "\"83\"",
@@ -993,31 +993,31 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "83",
 		"\"AVGTier\"": "5",
 		"\"Siegele9.5\"": "87",
-		"\"Patrick9.27\"": "79"
+		"\"Patrick10.1\"": "79"
 	},
 	{
 		"\"\"": "\"84\"",
 		"\"Rank\"": "84",
-		"\"Player\"": "\"Amari Cooper\"",
-		"\"POS\"": "\"WR\"",
-		"\"Team\"": "\"CLE\"",
-		"\"PosRank\"": "37",
-		"\"AVGRank\"": "84",
-		"\"AVGTier\"": "5",
-		"\"Siegele9.5\"": "104",
-		"\"Patrick9.27\"": "64"
-	},
-	{
-		"\"\"": "\"85\"",
-		"\"Rank\"": "85",
 		"\"Player\"": "\"Evan Engram\"",
 		"\"POS\"": "\"TE\"",
 		"\"Team\"": "\"JAC\"",
 		"\"PosRank\"": "10",
-		"\"AVGRank\"": "84",
+		"\"AVGRank\"": "84.5",
 		"\"AVGTier\"": "5",
 		"\"Siegele9.5\"": "99",
-		"\"Patrick9.27\"": "69"
+		"\"Patrick10.1\"": "70"
+	},
+	{
+		"\"\"": "\"85\"",
+		"\"Rank\"": "85",
+		"\"Player\"": "\"Amari Cooper\"",
+		"\"POS\"": "\"WR\"",
+		"\"Team\"": "\"CLE\"",
+		"\"PosRank\"": "37",
+		"\"AVGRank\"": "85",
+		"\"AVGTier\"": "5",
+		"\"Siegele9.5\"": "104",
+		"\"Patrick10.1\"": "66"
 	},
 	{
 		"\"\"": "\"86\"",
@@ -1029,7 +1029,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "85.5",
 		"\"AVGTier\"": "5",
 		"\"Siegele9.5\"": "88",
-		"\"Patrick9.27\"": "83"
+		"\"Patrick10.1\"": "83"
 	},
 	{
 		"\"\"": "\"87\"",
@@ -1041,7 +1041,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "85.5",
 		"\"AVGTier\"": "5",
 		"\"Siegele9.5\"": "85",
-		"\"Patrick9.27\"": "86"
+		"\"Patrick10.1\"": "86"
 	},
 	{
 		"\"\"": "\"88\"",
@@ -1053,7 +1053,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "88.5",
 		"\"AVGTier\"": "5",
 		"\"Siegele9.5\"": "66",
-		"\"Patrick9.27\"": "111"
+		"\"Patrick10.1\"": "111"
 	},
 	{
 		"\"\"": "\"89\"",
@@ -1065,7 +1065,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "89.5",
 		"\"AVGTier\"": "5",
 		"\"Siegele9.5\"": "92",
-		"\"Patrick9.27\"": "87"
+		"\"Patrick10.1\"": "87"
 	},
 	{
 		"\"\"": "\"90\"",
@@ -1077,7 +1077,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "90.5",
 		"\"AVGTier\"": "5",
 		"\"Siegele9.5\"": "65",
-		"\"Patrick9.27\"": "116"
+		"\"Patrick10.1\"": "116"
 	},
 	{
 		"\"\"": "\"91\"",
@@ -1089,7 +1089,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "92",
 		"\"AVGTier\"": "5",
 		"\"Siegele9.5\"": "71",
-		"\"Patrick9.27\"": "113"
+		"\"Patrick10.1\"": "113"
 	},
 	{
 		"\"\"": "\"92\"",
@@ -1101,7 +1101,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "93",
 		"\"AVGTier\"": "5",
 		"\"Siegele9.5\"": "83",
-		"\"Patrick9.27\"": "103"
+		"\"Patrick10.1\"": "103"
 	},
 	{
 		"\"\"": "\"93\"",
@@ -1113,7 +1113,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "93.5",
 		"\"AVGTier\"": "6",
 		"\"Siegele9.5\"": "97",
-		"\"Patrick9.27\"": "90"
+		"\"Patrick10.1\"": "90"
 	},
 	{
 		"\"\"": "\"94\"",
@@ -1125,7 +1125,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "96",
 		"\"AVGTier\"": "6",
 		"\"Siegele9.5\"": "91",
-		"\"Patrick9.27\"": "101"
+		"\"Patrick10.1\"": "101"
 	},
 	{
 		"\"\"": "\"95\"",
@@ -1137,7 +1137,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "99.5",
 		"\"AVGTier\"": "6",
 		"\"Siegele9.5\"": "110",
-		"\"Patrick9.27\"": "89"
+		"\"Patrick10.1\"": "89"
 	},
 	{
 		"\"\"": "\"96\"",
@@ -1149,7 +1149,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "101",
 		"\"AVGTier\"": "6",
 		"\"Siegele9.5\"": "95",
-		"\"Patrick9.27\"": "107"
+		"\"Patrick10.1\"": "107"
 	},
 	{
 		"\"\"": "\"97\"",
@@ -1161,7 +1161,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "101",
 		"\"AVGTier\"": "6",
 		"\"Siegele9.5\"": "124",
-		"\"Patrick9.27\"": "78"
+		"\"Patrick10.1\"": "78"
 	},
 	{
 		"\"\"": "\"98\"",
@@ -1173,7 +1173,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "102",
 		"\"AVGTier\"": "6",
 		"\"Siegele9.5\"": "106",
-		"\"Patrick9.27\"": "98"
+		"\"Patrick10.1\"": "98"
 	},
 	{
 		"\"\"": "\"99\"",
@@ -1185,7 +1185,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "103",
 		"\"AVGTier\"": "5",
 		"\"Siegele9.5\"": "89",
-		"\"Patrick9.27\"": "117"
+		"\"Patrick10.1\"": "117"
 	},
 	{
 		"\"\"": "\"100\"",
@@ -1197,7 +1197,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "104.5",
 		"\"AVGTier\"": "6",
 		"\"Siegele9.5\"": "127",
-		"\"Patrick9.27\"": "82"
+		"\"Patrick10.1\"": "82"
 	},
 	{
 		"\"\"": "\"101\"",
@@ -1209,7 +1209,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "104.5",
 		"\"AVGTier\"": "6",
 		"\"Siegele9.5\"": "94",
-		"\"Patrick9.27\"": "115"
+		"\"Patrick10.1\"": "115"
 	},
 	{
 		"\"\"": "\"102\"",
@@ -1221,7 +1221,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "105.5",
 		"\"AVGTier\"": "6",
 		"\"Siegele9.5\"": "102",
-		"\"Patrick9.27\"": "109"
+		"\"Patrick10.1\"": "109"
 	},
 	{
 		"\"\"": "\"103\"",
@@ -1233,7 +1233,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "105.5",
 		"\"AVGTier\"": "6",
 		"\"Siegele9.5\"": "101",
-		"\"Patrick9.27\"": "110"
+		"\"Patrick10.1\"": "110"
 	},
 	{
 		"\"\"": "\"104\"",
@@ -1245,7 +1245,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "106.5",
 		"\"AVGTier\"": "6",
 		"\"Siegele9.5\"": "111",
-		"\"Patrick9.27\"": "102"
+		"\"Patrick10.1\"": "102"
 	},
 	{
 		"\"\"": "\"105\"",
@@ -1257,7 +1257,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "107",
 		"\"AVGTier\"": "6",
 		"\"Siegele9.5\"": "108",
-		"\"Patrick9.27\"": "106"
+		"\"Patrick10.1\"": "106"
 	},
 	{
 		"\"\"": "\"106\"",
@@ -1269,7 +1269,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "107",
 		"\"AVGTier\"": "6",
 		"\"Siegele9.5\"": "109",
-		"\"Patrick9.27\"": "105"
+		"\"Patrick10.1\"": "105"
 	},
 	{
 		"\"\"": "\"107\"",
@@ -1281,7 +1281,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "108.5",
 		"\"AVGTier\"": "6",
 		"\"Siegele9.5\"": "117",
-		"\"Patrick9.27\"": "100"
+		"\"Patrick10.1\"": "100"
 	},
 	{
 		"\"\"": "\"108\"",
@@ -1293,7 +1293,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "110.5",
 		"\"AVGTier\"": "6",
 		"\"Siegele9.5\"": "126",
-		"\"Patrick9.27\"": "95"
+		"\"Patrick10.1\"": "95"
 	},
 	{
 		"\"\"": "\"109\"",
@@ -1305,7 +1305,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "110.5",
 		"\"AVGTier\"": "6",
 		"\"Siegele9.5\"": "125",
-		"\"Patrick9.27\"": "96"
+		"\"Patrick10.1\"": "96"
 	},
 	{
 		"\"\"": "\"110\"",
@@ -1317,7 +1317,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "111",
 		"\"AVGTier\"": "6",
 		"\"Siegele9.5\"": "114",
-		"\"Patrick9.27\"": "108"
+		"\"Patrick10.1\"": "108"
 	},
 	{
 		"\"\"": "\"111\"",
@@ -1329,7 +1329,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "111.5",
 		"\"AVGTier\"": "6",
 		"\"Siegele9.5\"": "96",
-		"\"Patrick9.27\"": "127"
+		"\"Patrick10.1\"": "127"
 	},
 	{
 		"\"\"": "\"112\"",
@@ -1341,7 +1341,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "111.5",
 		"\"AVGTier\"": "6",
 		"\"Siegele9.5\"": "98",
-		"\"Patrick9.27\"": "125"
+		"\"Patrick10.1\"": "125"
 	},
 	{
 		"\"\"": "\"113\"",
@@ -1353,7 +1353,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "113",
 		"\"AVGTier\"": "6",
 		"\"Siegele9.5\"": "112",
-		"\"Patrick9.27\"": "114"
+		"\"Patrick10.1\"": "114"
 	},
 	{
 		"\"\"": "\"114\"",
@@ -1365,7 +1365,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "114.5",
 		"\"AVGTier\"": "6",
 		"\"Siegele9.5\"": "136",
-		"\"Patrick9.27\"": "93"
+		"\"Patrick10.1\"": "93"
 	},
 	{
 		"\"\"": "\"115\"",
@@ -1377,7 +1377,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "115",
 		"\"AVGTier\"": "6",
 		"\"Siegele9.5\"": "93",
-		"\"Patrick9.27\"": "137"
+		"\"Patrick10.1\"": "137"
 	},
 	{
 		"\"\"": "\"116\"",
@@ -1389,7 +1389,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "115.5",
 		"\"AVGTier\"": "6",
 		"\"Siegele9.5\"": "134",
-		"\"Patrick9.27\"": "97"
+		"\"Patrick10.1\"": "97"
 	},
 	{
 		"\"\"": "\"117\"",
@@ -1401,7 +1401,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "115.5",
 		"\"AVGTier\"": "6",
 		"\"Siegele9.5\"": "103",
-		"\"Patrick9.27\"": "128"
+		"\"Patrick10.1\"": "128"
 	},
 	{
 		"\"\"": "\"118\"",
@@ -1413,7 +1413,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "116.5",
 		"\"AVGTier\"": "6",
 		"\"Siegele9.5\"": "113",
-		"\"Patrick9.27\"": "120"
+		"\"Patrick10.1\"": "120"
 	},
 	{
 		"\"\"": "\"119\"",
@@ -1425,7 +1425,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "117",
 		"\"AVGTier\"": "6",
 		"\"Siegele9.5\"": "122",
-		"\"Patrick9.27\"": "112"
+		"\"Patrick10.1\"": "112"
 	},
 	{
 		"\"\"": "\"120\"",
@@ -1437,7 +1437,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "118",
 		"\"AVGTier\"": "6",
 		"\"Siegele9.5\"": "118",
-		"\"Patrick9.27\"": "118"
+		"\"Patrick10.1\"": "118"
 	},
 	{
 		"\"\"": "\"121\"",
@@ -1449,7 +1449,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "120",
 		"\"AVGTier\"": "6",
 		"\"Siegele9.5\"": "119",
-		"\"Patrick9.27\"": "121"
+		"\"Patrick10.1\"": "121"
 	},
 	{
 		"\"\"": "\"122\"",
@@ -1461,7 +1461,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "120.5",
 		"\"AVGTier\"": "7",
 		"\"Siegele9.5\"": "115",
-		"\"Patrick9.27\"": "126"
+		"\"Patrick10.1\"": "126"
 	},
 	{
 		"\"\"": "\"123\"",
@@ -1473,7 +1473,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "121",
 		"\"AVGTier\"": "7",
 		"\"Siegele9.5\"": "120",
-		"\"Patrick9.27\"": "122"
+		"\"Patrick10.1\"": "122"
 	},
 	{
 		"\"\"": "\"124\"",
@@ -1485,7 +1485,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "124.5",
 		"\"AVGTier\"": "6",
 		"\"Siegele9.5\"": "105",
-		"\"Patrick9.27\"": "144"
+		"\"Patrick10.1\"": "144"
 	},
 	{
 		"\"\"": "\"125\"",
@@ -1497,7 +1497,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "126.5",
 		"\"AVGTier\"": "7",
 		"\"Siegele9.5\"": "130",
-		"\"Patrick9.27\"": "123"
+		"\"Patrick10.1\"": "123"
 	},
 	{
 		"\"\"": "\"126\"",
@@ -1509,7 +1509,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "126.5",
 		"\"AVGTier\"": "7",
 		"\"Siegele9.5\"": "100",
-		"\"Patrick9.27\"": "153"
+		"\"Patrick10.1\"": "153"
 	},
 	{
 		"\"\"": "\"127\"",
@@ -1521,7 +1521,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "127.5",
 		"\"AVGTier\"": "7",
 		"\"Siegele9.5\"": "161",
-		"\"Patrick9.27\"": "94"
+		"\"Patrick10.1\"": "94"
 	},
 	{
 		"\"\"": "\"128\"",
@@ -1533,7 +1533,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "130",
 		"\"AVGTier\"": "7",
 		"\"Siegele9.5\"": "128",
-		"\"Patrick9.27\"": "132"
+		"\"Patrick10.1\"": "132"
 	},
 	{
 		"\"\"": "\"129\"",
@@ -1545,7 +1545,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "131",
 		"\"AVGTier\"": "7",
 		"\"Siegele9.5\"": "131",
-		"\"Patrick9.27\"": "131"
+		"\"Patrick10.1\"": "131"
 	},
 	{
 		"\"\"": "\"130\"",
@@ -1557,7 +1557,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "131.5",
 		"\"AVGTier\"": "7",
 		"\"Siegele9.5\"": "129",
-		"\"Patrick9.27\"": "134"
+		"\"Patrick10.1\"": "134"
 	},
 	{
 		"\"\"": "\"131\"",
@@ -1569,7 +1569,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "132",
 		"\"AVGTier\"": "7",
 		"\"Siegele9.5\"": "140",
-		"\"Patrick9.27\"": "124"
+		"\"Patrick10.1\"": "124"
 	},
 	{
 		"\"\"": "\"132\"",
@@ -1581,7 +1581,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "133.5",
 		"\"AVGTier\"": "7",
 		"\"Siegele9.5\"": "138",
-		"\"Patrick9.27\"": "129"
+		"\"Patrick10.1\"": "129"
 	},
 	{
 		"\"\"": "\"133\"",
@@ -1593,7 +1593,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "135",
 		"\"AVGTier\"": "7",
 		"\"Siegele9.5\"": "137",
-		"\"Patrick9.27\"": "133"
+		"\"Patrick10.1\"": "133"
 	},
 	{
 		"\"\"": "\"134\"",
@@ -1605,7 +1605,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "135",
 		"\"AVGTier\"": "7",
 		"\"Siegele9.5\"": "171",
-		"\"Patrick9.27\"": "99"
+		"\"Patrick10.1\"": "99"
 	},
 	{
 		"\"\"": "\"135\"",
@@ -1617,7 +1617,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "135.5",
 		"\"AVGTier\"": "7",
 		"\"Siegele9.5\"": "123",
-		"\"Patrick9.27\"": "148"
+		"\"Patrick10.1\"": "148"
 	},
 	{
 		"\"\"": "\"136\"",
@@ -1629,7 +1629,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "135.5",
 		"\"AVGTier\"": "7",
 		"\"Siegele9.5\"": "167",
-		"\"Patrick9.27\"": "104"
+		"\"Patrick10.1\"": "104"
 	},
 	{
 		"\"\"": "\"137\"",
@@ -1641,7 +1641,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "136.5",
 		"\"AVGTier\"": "7",
 		"\"Siegele9.5\"": "132",
-		"\"Patrick9.27\"": "141"
+		"\"Patrick10.1\"": "141"
 	},
 	{
 		"\"\"": "\"138\"",
@@ -1653,7 +1653,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "137",
 		"\"AVGTier\"": "7",
 		"\"Siegele9.5\"": "139",
-		"\"Patrick9.27\"": "135"
+		"\"Patrick10.1\"": "135"
 	},
 	{
 		"\"\"": "\"139\"",
@@ -1665,7 +1665,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "139.5",
 		"\"AVGTier\"": "7",
 		"\"Siegele9.5\"": "141",
-		"\"Patrick9.27\"": "138"
+		"\"Patrick10.1\"": "138"
 	},
 	{
 		"\"\"": "\"140\"",
@@ -1677,7 +1677,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "140.5",
 		"\"AVGTier\"": "7",
 		"\"Siegele9.5\"": "142",
-		"\"Patrick9.27\"": "139"
+		"\"Patrick10.1\"": "139"
 	},
 	{
 		"\"\"": "\"141\"",
@@ -1689,7 +1689,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "142",
 		"\"AVGTier\"": "7",
 		"\"Siegele9.5\"": "165",
-		"\"Patrick9.27\"": "119"
+		"\"Patrick10.1\"": "119"
 	},
 	{
 		"\"\"": "\"142\"",
@@ -1701,7 +1701,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "142.5",
 		"\"AVGTier\"": "7",
 		"\"Siegele9.5\"": "155",
-		"\"Patrick9.27\"": "130"
+		"\"Patrick10.1\"": "130"
 	},
 	{
 		"\"\"": "\"143\"",
@@ -1713,7 +1713,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "142.5",
 		"\"AVGTier\"": "7",
 		"\"Siegele9.5\"": "145",
-		"\"Patrick9.27\"": "140"
+		"\"Patrick10.1\"": "140"
 	},
 	{
 		"\"\"": "\"144\"",
@@ -1725,7 +1725,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "143",
 		"\"AVGTier\"": "7",
 		"\"Siegele9.5\"": "143",
-		"\"Patrick9.27\"": "143"
+		"\"Patrick10.1\"": "143"
 	},
 	{
 		"\"\"": "\"145\"",
@@ -1737,7 +1737,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "144.5",
 		"\"AVGTier\"": "7",
 		"\"Siegele9.5\"": "144",
-		"\"Patrick9.27\"": "145"
+		"\"Patrick10.1\"": "145"
 	},
 	{
 		"\"\"": "\"146\"",
@@ -1749,7 +1749,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "145",
 		"\"AVGTier\"": "7",
 		"\"Siegele9.5\"": "148",
-		"\"Patrick9.27\"": "142"
+		"\"Patrick10.1\"": "142"
 	},
 	{
 		"\"\"": "\"147\"",
@@ -1761,7 +1761,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "147",
 		"\"AVGTier\"": "7",
 		"\"Siegele9.5\"": "133",
-		"\"Patrick9.27\"": "161"
+		"\"Patrick10.1\"": "161"
 	},
 	{
 		"\"\"": "\"148\"",
@@ -1773,7 +1773,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "150",
 		"\"AVGTier\"": "7",
 		"\"Siegele9.5\"": "149",
-		"\"Patrick9.27\"": "151"
+		"\"Patrick10.1\"": "151"
 	},
 	{
 		"\"\"": "\"149\"",
@@ -1785,7 +1785,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "148.5",
 		"\"AVGTier\"": "7",
 		"\"Siegele9.5\"": "135",
-		"\"Patrick9.27\"": "162"
+		"\"Patrick10.1\"": "162"
 	},
 	{
 		"\"\"": "\"150\"",
@@ -1797,7 +1797,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "151",
 		"\"AVGTier\"": "7",
 		"\"Siegele9.5\"": "107",
-		"\"Patrick9.27\"": "195"
+		"\"Patrick10.1\"": "195"
 	},
 	{
 		"\"\"": "\"151\"",
@@ -1809,7 +1809,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "151",
 		"\"AVGTier\"": "7",
 		"\"Siegele9.5\"": "166",
-		"\"Patrick9.27\"": "136"
+		"\"Patrick10.1\"": "136"
 	},
 	{
 		"\"\"": "\"152\"",
@@ -1821,7 +1821,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "151",
 		"\"AVGTier\"": "7",
 		"\"Siegele9.5\"": "156",
-		"\"Patrick9.27\"": "146"
+		"\"Patrick10.1\"": "146"
 	},
 	{
 		"\"\"": "\"153\"",
@@ -1833,7 +1833,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "152",
 		"\"AVGTier\"": "7",
 		"\"Siegele9.5\"": "157",
-		"\"Patrick9.27\"": "147"
+		"\"Patrick10.1\"": "147"
 	},
 	{
 		"\"\"": "\"154\"",
@@ -1845,7 +1845,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "153",
 		"\"AVGTier\"": "7",
 		"\"Siegele9.5\"": "147",
-		"\"Patrick9.27\"": "159"
+		"\"Patrick10.1\"": "159"
 	},
 	{
 		"\"\"": "\"155\"",
@@ -1857,7 +1857,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "155",
 		"\"AVGTier\"": "8",
 		"\"Siegele9.5\"": "158",
-		"\"Patrick9.27\"": "152"
+		"\"Patrick10.1\"": "152"
 	},
 	{
 		"\"\"": "\"156\"",
@@ -1869,7 +1869,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "157.5",
 		"\"AVGTier\"": "8",
 		"\"Siegele9.5\"": "121",
-		"\"Patrick9.27\"": "194"
+		"\"Patrick10.1\"": "194"
 	},
 	{
 		"\"\"": "\"157\"",
@@ -1881,7 +1881,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "158.5",
 		"\"AVGTier\"": "8",
 		"\"Siegele9.5\"": "162",
-		"\"Patrick9.27\"": "155"
+		"\"Patrick10.1\"": "155"
 	},
 	{
 		"\"\"": "\"158\"",
@@ -1893,7 +1893,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "159.5",
 		"\"AVGTier\"": "7",
 		"\"Siegele9.5\"": "152",
-		"\"Patrick9.27\"": "167"
+		"\"Patrick10.1\"": "167"
 	},
 	{
 		"\"\"": "\"159\"",
@@ -1905,7 +1905,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "159.5",
 		"\"AVGTier\"": "7",
 		"\"Siegele9.5\"": "170",
-		"\"Patrick9.27\"": "149"
+		"\"Patrick10.1\"": "149"
 	},
 	{
 		"\"\"": "\"160\"",
@@ -1917,7 +1917,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "160",
 		"\"AVGTier\"": "8",
 		"\"Siegele9.5\"": "160",
-		"\"Patrick9.27\"": "160"
+		"\"Patrick10.1\"": "160"
 	},
 	{
 		"\"\"": "\"161\"",
@@ -1929,7 +1929,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "160",
 		"\"AVGTier\"": "8",
 		"\"Siegele9.5\"": "163",
-		"\"Patrick9.27\"": "157"
+		"\"Patrick10.1\"": "157"
 	},
 	{
 		"\"\"": "\"162\"",
@@ -1941,7 +1941,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "161",
 		"\"AVGTier\"": "7",
 		"\"Siegele9.5\"": "153",
-		"\"Patrick9.27\"": "169"
+		"\"Patrick10.1\"": "169"
 	},
 	{
 		"\"\"": "\"163\"",
@@ -1953,7 +1953,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "161",
 		"\"AVGTier\"": "8",
 		"\"Siegele9.5\"": "164",
-		"\"Patrick9.27\"": "158"
+		"\"Patrick10.1\"": "158"
 	},
 	{
 		"\"\"": "\"164\"",
@@ -1965,7 +1965,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "161.5",
 		"\"AVGTier\"": "8",
 		"\"Siegele9.5\"": "169",
-		"\"Patrick9.27\"": "154"
+		"\"Patrick10.1\"": "154"
 	},
 	{
 		"\"\"": "\"165\"",
@@ -1977,7 +1977,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "162",
 		"\"AVGTier\"": "7",
 		"\"Siegele9.5\"": "154",
-		"\"Patrick9.27\"": "170"
+		"\"Patrick10.1\"": "170"
 	},
 	{
 		"\"\"": "\"166\"",
@@ -1989,7 +1989,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "163.5",
 		"\"AVGTier\"": "8",
 		"\"Siegele9.5\"": "159",
-		"\"Patrick9.27\"": "168"
+		"\"Patrick10.1\"": "168"
 	},
 	{
 		"\"\"": "\"167\"",
@@ -2001,7 +2001,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "164.5",
 		"\"AVGTier\"": "8",
 		"\"Siegele9.5\"": "173",
-		"\"Patrick9.27\"": "156"
+		"\"Patrick10.1\"": "156"
 	},
 	{
 		"\"\"": "\"168\"",
@@ -2013,7 +2013,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "166",
 		"\"AVGTier\"": "8",
 		"\"Siegele9.5\"": "146",
-		"\"Patrick9.27\"": "186"
+		"\"Patrick10.1\"": "186"
 	},
 	{
 		"\"\"": "\"169\"",
@@ -2025,7 +2025,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "166.5",
 		"\"AVGTier\"": "8",
 		"\"Siegele9.5\"": "150",
-		"\"Patrick9.27\"": "183"
+		"\"Patrick10.1\"": "183"
 	},
 	{
 		"\"\"": "\"170\"",
@@ -2037,7 +2037,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "167.5",
 		"\"AVGTier\"": "8",
 		"\"Siegele9.5\"": "172",
-		"\"Patrick9.27\"": "163"
+		"\"Patrick10.1\"": "163"
 	},
 	{
 		"\"\"": "\"171\"",
@@ -2049,7 +2049,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "169",
 		"\"AVGTier\"": "8",
 		"\"Siegele9.5\"": "174",
-		"\"Patrick9.27\"": "164"
+		"\"Patrick10.1\"": "164"
 	},
 	{
 		"\"\"": "\"172\"",
@@ -2061,7 +2061,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "171",
 		"\"AVGTier\"": "8",
 		"\"Siegele9.5\"": "168",
-		"\"Patrick9.27\"": "174"
+		"\"Patrick10.1\"": "174"
 	},
 	{
 		"\"\"": "\"173\"",
@@ -2073,7 +2073,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "171.5",
 		"\"AVGTier\"": "8",
 		"\"Siegele9.5\"": "178",
-		"\"Patrick9.27\"": "165"
+		"\"Patrick10.1\"": "165"
 	},
 	{
 		"\"\"": "\"174\"",
@@ -2085,7 +2085,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "172.5",
 		"\"AVGTier\"": "8",
 		"\"Siegele9.5\"": "179",
-		"\"Patrick9.27\"": "166"
+		"\"Patrick10.1\"": "166"
 	},
 	{
 		"\"\"": "\"175\"",
@@ -2097,7 +2097,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "174.5",
 		"\"AVGTier\"": "8",
 		"\"Siegele9.5\"": "176",
-		"\"Patrick9.27\"": "173"
+		"\"Patrick10.1\"": "173"
 	},
 	{
 		"\"\"": "\"176\"",
@@ -2109,7 +2109,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "175.5",
 		"\"AVGTier\"": "8",
 		"\"Siegele9.5\"": "180",
-		"\"Patrick9.27\"": "171"
+		"\"Patrick10.1\"": "171"
 	},
 	{
 		"\"\"": "\"177\"",
@@ -2121,7 +2121,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "176.5",
 		"\"AVGTier\"": "8",
 		"\"Siegele9.5\"": "177",
-		"\"Patrick9.27\"": "176"
+		"\"Patrick10.1\"": "176"
 	},
 	{
 		"\"\"": "\"178\"",
@@ -2133,7 +2133,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "178",
 		"\"AVGTier\"": "9",
 		"\"Siegele9.5\"": "181",
-		"\"Patrick9.27\"": "175"
+		"\"Patrick10.1\"": "175"
 	},
 	{
 		"\"\"": "\"179\"",
@@ -2145,7 +2145,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "179.5",
 		"\"AVGTier\"": "9",
 		"\"Siegele9.5\"": "182",
-		"\"Patrick9.27\"": "177"
+		"\"Patrick10.1\"": "177"
 	},
 	{
 		"\"\"": "\"180\"",
@@ -2157,7 +2157,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "180.5",
 		"\"AVGTier\"": "9",
 		"\"Siegele9.5\"": "183",
-		"\"Patrick9.27\"": "178"
+		"\"Patrick10.1\"": "178"
 	},
 	{
 		"\"\"": "\"181\"",
@@ -2169,7 +2169,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "181.5",
 		"\"AVGTier\"": "9",
 		"\"Siegele9.5\"": "184",
-		"\"Patrick9.27\"": "179"
+		"\"Patrick10.1\"": "179"
 	},
 	{
 		"\"\"": "\"182\"",
@@ -2181,7 +2181,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "182.5",
 		"\"AVGTier\"": "9",
 		"\"Siegele9.5\"": "185",
-		"\"Patrick9.27\"": "180"
+		"\"Patrick10.1\"": "180"
 	},
 	{
 		"\"\"": "\"183\"",
@@ -2193,7 +2193,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "184",
 		"\"AVGTier\"": "9",
 		"\"Siegele9.5\"": "187",
-		"\"Patrick9.27\"": "181"
+		"\"Patrick10.1\"": "181"
 	},
 	{
 		"\"\"": "\"184\"",
@@ -2205,7 +2205,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "184",
 		"\"AVGTier\"": "8",
 		"\"Siegele9.5\"": "175",
-		"\"Patrick9.27\"": "193"
+		"\"Patrick10.1\"": "193"
 	},
 	{
 		"\"\"": "\"185\"",
@@ -2217,7 +2217,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "184.5",
 		"\"AVGTier\"": "8",
 		"\"Siegele9.5\"": "151",
-		"\"Patrick9.27\"": "218"
+		"\"Patrick10.1\"": "218"
 	},
 	{
 		"\"\"": "\"186\"",
@@ -2229,7 +2229,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "185",
 		"\"AVGTier\"": "9",
 		"\"Siegele9.5\"": "188",
-		"\"Patrick9.27\"": "182"
+		"\"Patrick10.1\"": "182"
 	},
 	{
 		"\"\"": "\"187\"",
@@ -2241,7 +2241,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "186.5",
 		"\"AVGTier\"": "9",
 		"\"Siegele9.5\"": "189",
-		"\"Patrick9.27\"": "184"
+		"\"Patrick10.1\"": "184"
 	},
 	{
 		"\"\"": "\"188\"",
@@ -2253,7 +2253,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "187.5",
 		"\"AVGTier\"": "9",
 		"\"Siegele9.5\"": "190",
-		"\"Patrick9.27\"": "185"
+		"\"Patrick10.1\"": "185"
 	},
 	{
 		"\"\"": "\"189\"",
@@ -2265,7 +2265,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "189",
 		"\"AVGTier\"": "9",
 		"\"Siegele9.5\"": "191",
-		"\"Patrick9.27\"": "187"
+		"\"Patrick10.1\"": "187"
 	},
 	{
 		"\"\"": "\"190\"",
@@ -2277,7 +2277,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "190",
 		"\"AVGTier\"": "9",
 		"\"Siegele9.5\"": "192",
-		"\"Patrick9.27\"": "188"
+		"\"Patrick10.1\"": "188"
 	},
 	{
 		"\"\"": "\"191\"",
@@ -2289,7 +2289,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "191",
 		"\"AVGTier\"": "9",
 		"\"Siegele9.5\"": "186",
-		"\"Patrick9.27\"": "196"
+		"\"Patrick10.1\"": "196"
 	},
 	{
 		"\"\"": "\"192\"",
@@ -2301,7 +2301,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "191",
 		"\"AVGTier\"": "9",
 		"\"Siegele9.5\"": "193",
-		"\"Patrick9.27\"": "189"
+		"\"Patrick10.1\"": "189"
 	},
 	{
 		"\"\"": "\"193\"",
@@ -2313,7 +2313,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "192",
 		"\"AVGTier\"": "9",
 		"\"Siegele9.5\"": "194",
-		"\"Patrick9.27\"": "190"
+		"\"Patrick10.1\"": "190"
 	},
 	{
 		"\"\"": "\"194\"",
@@ -2325,7 +2325,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "193",
 		"\"AVGTier\"": "9",
 		"\"Siegele9.5\"": "195",
-		"\"Patrick9.27\"": "191"
+		"\"Patrick10.1\"": "191"
 	},
 	{
 		"\"\"": "\"195\"",
@@ -2337,7 +2337,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "194",
 		"\"AVGTier\"": "9",
 		"\"Siegele9.5\"": "196",
-		"\"Patrick9.27\"": "192"
+		"\"Patrick10.1\"": "192"
 	},
 	{
 		"\"\"": "\"196\"",
@@ -2349,7 +2349,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "197",
 		"\"AVGTier\"": "9",
 		"\"Siegele9.5\"": "197",
-		"\"Patrick9.27\"": "197"
+		"\"Patrick10.1\"": "197"
 	},
 	{
 		"\"\"": "\"197\"",
@@ -2361,7 +2361,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "198",
 		"\"AVGTier\"": "9",
 		"\"Siegele9.5\"": "198",
-		"\"Patrick9.27\"": "198"
+		"\"Patrick10.1\"": "198"
 	},
 	{
 		"\"\"": "\"198\"",
@@ -2373,7 +2373,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "199",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "199",
-		"\"Patrick9.27\"": "199"
+		"\"Patrick10.1\"": "199"
 	},
 	{
 		"\"\"": "\"199\"",
@@ -2385,7 +2385,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "200",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "200",
-		"\"Patrick9.27\"": "200"
+		"\"Patrick10.1\"": "200"
 	},
 	{
 		"\"\"": "\"200\"",
@@ -2397,7 +2397,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "201",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "201",
-		"\"Patrick9.27\"": "201"
+		"\"Patrick10.1\"": "201"
 	},
 	{
 		"\"\"": "\"201\"",
@@ -2409,7 +2409,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "202",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "202",
-		"\"Patrick9.27\"": "202"
+		"\"Patrick10.1\"": "202"
 	},
 	{
 		"\"\"": "\"202\"",
@@ -2421,7 +2421,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "203",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "203",
-		"\"Patrick9.27\"": "203"
+		"\"Patrick10.1\"": "203"
 	},
 	{
 		"\"\"": "\"203\"",
@@ -2433,7 +2433,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "204",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "204",
-		"\"Patrick9.27\"": "204"
+		"\"Patrick10.1\"": "204"
 	},
 	{
 		"\"\"": "\"204\"",
@@ -2445,7 +2445,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "205",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "205",
-		"\"Patrick9.27\"": "205"
+		"\"Patrick10.1\"": "205"
 	},
 	{
 		"\"\"": "\"205\"",
@@ -2457,7 +2457,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "206",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "206",
-		"\"Patrick9.27\"": "206"
+		"\"Patrick10.1\"": "206"
 	},
 	{
 		"\"\"": "\"206\"",
@@ -2469,7 +2469,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "207",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "207",
-		"\"Patrick9.27\"": "207"
+		"\"Patrick10.1\"": "207"
 	},
 	{
 		"\"\"": "\"207\"",
@@ -2481,7 +2481,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "208",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "208",
-		"\"Patrick9.27\"": "208"
+		"\"Patrick10.1\"": "208"
 	},
 	{
 		"\"\"": "\"208\"",
@@ -2493,7 +2493,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "208.5",
 		"\"AVGTier\"": "9",
 		"\"Siegele9.5\"": "116",
-		"\"Patrick9.27\"": "301"
+		"\"Patrick10.1\"": "301"
 	},
 	{
 		"\"\"": "\"209\"",
@@ -2505,7 +2505,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "209",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "209",
-		"\"Patrick9.27\"": "209"
+		"\"Patrick10.1\"": "209"
 	},
 	{
 		"\"\"": "\"210\"",
@@ -2517,7 +2517,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "210",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "210",
-		"\"Patrick9.27\"": "210"
+		"\"Patrick10.1\"": "210"
 	},
 	{
 		"\"\"": "\"211\"",
@@ -2529,7 +2529,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "211",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "211",
-		"\"Patrick9.27\"": "211"
+		"\"Patrick10.1\"": "211"
 	},
 	{
 		"\"\"": "\"212\"",
@@ -2541,7 +2541,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "212",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "212",
-		"\"Patrick9.27\"": "212"
+		"\"Patrick10.1\"": "212"
 	},
 	{
 		"\"\"": "\"213\"",
@@ -2553,7 +2553,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "213",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "213",
-		"\"Patrick9.27\"": "213"
+		"\"Patrick10.1\"": "213"
 	},
 	{
 		"\"\"": "\"214\"",
@@ -2565,7 +2565,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "214",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "214",
-		"\"Patrick9.27\"": "214"
+		"\"Patrick10.1\"": "214"
 	},
 	{
 		"\"\"": "\"215\"",
@@ -2577,7 +2577,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "215",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "215",
-		"\"Patrick9.27\"": "215"
+		"\"Patrick10.1\"": "215"
 	},
 	{
 		"\"\"": "\"216\"",
@@ -2589,7 +2589,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "216",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "216",
-		"\"Patrick9.27\"": "216"
+		"\"Patrick10.1\"": "216"
 	},
 	{
 		"\"\"": "\"217\"",
@@ -2601,7 +2601,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "217",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "217",
-		"\"Patrick9.27\"": "217"
+		"\"Patrick10.1\"": "217"
 	},
 	{
 		"\"\"": "\"218\"",
@@ -2613,7 +2613,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "218.5",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "218",
-		"\"Patrick9.27\"": "219"
+		"\"Patrick10.1\"": "219"
 	},
 	{
 		"\"\"": "\"219\"",
@@ -2625,7 +2625,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "219.5",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "219",
-		"\"Patrick9.27\"": "220"
+		"\"Patrick10.1\"": "220"
 	},
 	{
 		"\"\"": "\"220\"",
@@ -2637,7 +2637,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "220.5",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "220",
-		"\"Patrick9.27\"": "221"
+		"\"Patrick10.1\"": "221"
 	},
 	{
 		"\"\"": "\"221\"",
@@ -2649,7 +2649,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "221.5",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "221",
-		"\"Patrick9.27\"": "222"
+		"\"Patrick10.1\"": "222"
 	},
 	{
 		"\"\"": "\"222\"",
@@ -2661,7 +2661,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "223.5",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "223",
-		"\"Patrick9.27\"": "224"
+		"\"Patrick10.1\"": "224"
 	},
 	{
 		"\"\"": "\"223\"",
@@ -2673,7 +2673,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "222.5",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "222",
-		"\"Patrick9.27\"": "223"
+		"\"Patrick10.1\"": "223"
 	},
 	{
 		"\"\"": "\"224\"",
@@ -2685,7 +2685,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "224.5",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "224",
-		"\"Patrick9.27\"": "225"
+		"\"Patrick10.1\"": "225"
 	},
 	{
 		"\"\"": "\"225\"",
@@ -2697,7 +2697,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "225.5",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "225",
-		"\"Patrick9.27\"": "226"
+		"\"Patrick10.1\"": "226"
 	},
 	{
 		"\"\"": "\"226\"",
@@ -2709,7 +2709,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "225.5",
 		"\"AVGTier\"": "9",
 		"\"Siegele9.5\"": "301",
-		"\"Patrick9.27\"": "150"
+		"\"Patrick10.1\"": "150"
 	},
 	{
 		"\"\"": "\"227\"",
@@ -2721,7 +2721,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "226.5",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "226",
-		"\"Patrick9.27\"": "227"
+		"\"Patrick10.1\"": "227"
 	},
 	{
 		"\"\"": "\"228\"",
@@ -2733,7 +2733,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "227.5",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "227",
-		"\"Patrick9.27\"": "228"
+		"\"Patrick10.1\"": "228"
 	},
 	{
 		"\"\"": "\"229\"",
@@ -2745,7 +2745,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "228.5",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "228",
-		"\"Patrick9.27\"": "229"
+		"\"Patrick10.1\"": "229"
 	},
 	{
 		"\"\"": "\"230\"",
@@ -2757,7 +2757,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "229.5",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "229",
-		"\"Patrick9.27\"": "230"
+		"\"Patrick10.1\"": "230"
 	},
 	{
 		"\"\"": "\"231\"",
@@ -2769,7 +2769,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "230.5",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "230",
-		"\"Patrick9.27\"": "231"
+		"\"Patrick10.1\"": "231"
 	},
 	{
 		"\"\"": "\"232\"",
@@ -2781,7 +2781,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "231.5",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "231",
-		"\"Patrick9.27\"": "232"
+		"\"Patrick10.1\"": "232"
 	},
 	{
 		"\"\"": "\"233\"",
@@ -2793,7 +2793,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "232.5",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "232",
-		"\"Patrick9.27\"": "233"
+		"\"Patrick10.1\"": "233"
 	},
 	{
 		"\"\"": "\"234\"",
@@ -2805,7 +2805,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "233",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "294",
-		"\"Patrick9.27\"": "172"
+		"\"Patrick10.1\"": "172"
 	},
 	{
 		"\"\"": "\"235\"",
@@ -2817,7 +2817,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "233.5",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "233",
-		"\"Patrick9.27\"": "234"
+		"\"Patrick10.1\"": "234"
 	},
 	{
 		"\"\"": "\"236\"",
@@ -2829,7 +2829,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "234.5",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "234",
-		"\"Patrick9.27\"": "235"
+		"\"Patrick10.1\"": "235"
 	},
 	{
 		"\"\"": "\"237\"",
@@ -2841,7 +2841,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "235.5",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "235",
-		"\"Patrick9.27\"": "236"
+		"\"Patrick10.1\"": "236"
 	},
 	{
 		"\"\"": "\"238\"",
@@ -2853,7 +2853,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "236.5",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "236",
-		"\"Patrick9.27\"": "237"
+		"\"Patrick10.1\"": "237"
 	},
 	{
 		"\"\"": "\"239\"",
@@ -2865,7 +2865,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "237.5",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "237",
-		"\"Patrick9.27\"": "238"
+		"\"Patrick10.1\"": "238"
 	},
 	{
 		"\"\"": "\"240\"",
@@ -2877,7 +2877,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "238.5",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "238",
-		"\"Patrick9.27\"": "239"
+		"\"Patrick10.1\"": "239"
 	},
 	{
 		"\"\"": "\"241\"",
@@ -2889,7 +2889,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "239.5",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "239",
-		"\"Patrick9.27\"": "240"
+		"\"Patrick10.1\"": "240"
 	},
 	{
 		"\"\"": "\"242\"",
@@ -2901,7 +2901,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "240.5",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "240",
-		"\"Patrick9.27\"": "241"
+		"\"Patrick10.1\"": "241"
 	},
 	{
 		"\"\"": "\"243\"",
@@ -2913,7 +2913,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "241.5",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "241",
-		"\"Patrick9.27\"": "242"
+		"\"Patrick10.1\"": "242"
 	},
 	{
 		"\"\"": "\"244\"",
@@ -2925,7 +2925,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "243.5",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "243",
-		"\"Patrick9.27\"": "244"
+		"\"Patrick10.1\"": "244"
 	},
 	{
 		"\"\"": "\"245\"",
@@ -2937,7 +2937,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "242.5",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "242",
-		"\"Patrick9.27\"": "243"
+		"\"Patrick10.1\"": "243"
 	},
 	{
 		"\"\"": "\"246\"",
@@ -2949,19 +2949,19 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "244.5",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "244",
-		"\"Patrick9.27\"": "245"
+		"\"Patrick10.1\"": "245"
 	},
 	{
 		"\"\"": "\"247\"",
 		"\"Rank\"": "247",
 		"\"Player\"": "\"KJ Hamler\"",
 		"\"POS\"": "\"WR\"",
-		"\"Team\"": "\"FA\"",
+		"\"Team\"": "\"IND\"",
 		"\"PosRank\"": "99",
 		"\"AVGRank\"": "245.5",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "245",
-		"\"Patrick9.27\"": "246"
+		"\"Patrick10.1\"": "246"
 	},
 	{
 		"\"\"": "\"248\"",
@@ -2973,7 +2973,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "246.5",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "246",
-		"\"Patrick9.27\"": "247"
+		"\"Patrick10.1\"": "247"
 	},
 	{
 		"\"\"": "\"249\"",
@@ -2985,7 +2985,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "247.5",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "247",
-		"\"Patrick9.27\"": "248"
+		"\"Patrick10.1\"": "248"
 	},
 	{
 		"\"\"": "\"250\"",
@@ -2997,7 +2997,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "248.5",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "248",
-		"\"Patrick9.27\"": "249"
+		"\"Patrick10.1\"": "249"
 	},
 	{
 		"\"\"": "\"251\"",
@@ -3009,7 +3009,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "249.5",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "249",
-		"\"Patrick9.27\"": "250"
+		"\"Patrick10.1\"": "250"
 	},
 	{
 		"\"\"": "\"252\"",
@@ -3021,7 +3021,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "250.5",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "250",
-		"\"Patrick9.27\"": "251"
+		"\"Patrick10.1\"": "251"
 	},
 	{
 		"\"\"": "\"253\"",
@@ -3033,7 +3033,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "251.5",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "251",
-		"\"Patrick9.27\"": "252"
+		"\"Patrick10.1\"": "252"
 	},
 	{
 		"\"\"": "\"254\"",
@@ -3045,7 +3045,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "252.5",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "252",
-		"\"Patrick9.27\"": "253"
+		"\"Patrick10.1\"": "253"
 	},
 	{
 		"\"\"": "\"255\"",
@@ -3057,7 +3057,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "253.5",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "253",
-		"\"Patrick9.27\"": "254"
+		"\"Patrick10.1\"": "254"
 	},
 	{
 		"\"\"": "\"256\"",
@@ -3069,7 +3069,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "254.5",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "254",
-		"\"Patrick9.27\"": "255"
+		"\"Patrick10.1\"": "255"
 	},
 	{
 		"\"\"": "\"257\"",
@@ -3081,7 +3081,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "255.5",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "255",
-		"\"Patrick9.27\"": "256"
+		"\"Patrick10.1\"": "256"
 	},
 	{
 		"\"\"": "\"258\"",
@@ -3093,7 +3093,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "256.5",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "256",
-		"\"Patrick9.27\"": "257"
+		"\"Patrick10.1\"": "257"
 	},
 	{
 		"\"\"": "\"259\"",
@@ -3105,7 +3105,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "257.5",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "257",
-		"\"Patrick9.27\"": "258"
+		"\"Patrick10.1\"": "258"
 	},
 	{
 		"\"\"": "\"260\"",
@@ -3117,7 +3117,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "258.5",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "258",
-		"\"Patrick9.27\"": "259"
+		"\"Patrick10.1\"": "259"
 	},
 	{
 		"\"\"": "\"261\"",
@@ -3129,7 +3129,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "259.5",
 		"\"AVGTier\"": "10",
 		"\"Siegele9.5\"": "259",
-		"\"Patrick9.27\"": "260"
+		"\"Patrick10.1\"": "260"
 	},
 	{
 		"\"\"": "\"262\"",
@@ -3141,7 +3141,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "260.5",
 		"\"AVGTier\"": "11",
 		"\"Siegele9.5\"": "260",
-		"\"Patrick9.27\"": "261"
+		"\"Patrick10.1\"": "261"
 	},
 	{
 		"\"\"": "\"263\"",
@@ -3153,7 +3153,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "261.5",
 		"\"AVGTier\"": "11",
 		"\"Siegele9.5\"": "261",
-		"\"Patrick9.27\"": "262"
+		"\"Patrick10.1\"": "262"
 	},
 	{
 		"\"\"": "\"264\"",
@@ -3165,7 +3165,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "81",
 		"\"AVGTier\"": "262.5",
 		"\"Siegele9.5\"": "11",
-		"\"Patrick9.27\"": "262"
+		"\"Patrick10.1\"": "262"
 	},
 	{
 		"\"\"": "\"265\"",
@@ -3177,7 +3177,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "263.5",
 		"\"AVGTier\"": "11",
 		"\"Siegele9.5\"": "263",
-		"\"Patrick9.27\"": "264"
+		"\"Patrick10.1\"": "264"
 	},
 	{
 		"\"\"": "\"266\"",
@@ -3189,7 +3189,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "264.5",
 		"\"AVGTier\"": "11",
 		"\"Siegele9.5\"": "264",
-		"\"Patrick9.27\"": "265"
+		"\"Patrick10.1\"": "265"
 	},
 	{
 		"\"\"": "\"267\"",
@@ -3201,7 +3201,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "265.5",
 		"\"AVGTier\"": "11",
 		"\"Siegele9.5\"": "265",
-		"\"Patrick9.27\"": "266"
+		"\"Patrick10.1\"": "266"
 	},
 	{
 		"\"\"": "\"268\"",
@@ -3213,7 +3213,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "266.5",
 		"\"AVGTier\"": "11",
 		"\"Siegele9.5\"": "266",
-		"\"Patrick9.27\"": "267"
+		"\"Patrick10.1\"": "267"
 	},
 	{
 		"\"\"": "\"269\"",
@@ -3225,7 +3225,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "267.5",
 		"\"AVGTier\"": "11",
 		"\"Siegele9.5\"": "267",
-		"\"Patrick9.27\"": "268"
+		"\"Patrick10.1\"": "268"
 	},
 	{
 		"\"\"": "\"270\"",
@@ -3237,7 +3237,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "268.5",
 		"\"AVGTier\"": "11",
 		"\"Siegele9.5\"": "268",
-		"\"Patrick9.27\"": "269"
+		"\"Patrick10.1\"": "269"
 	},
 	{
 		"\"\"": "\"271\"",
@@ -3249,7 +3249,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "269.5",
 		"\"AVGTier\"": "11",
 		"\"Siegele9.5\"": "269",
-		"\"Patrick9.27\"": "270"
+		"\"Patrick10.1\"": "270"
 	},
 	{
 		"\"\"": "\"272\"",
@@ -3261,7 +3261,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "270.5",
 		"\"AVGTier\"": "11",
 		"\"Siegele9.5\"": "270",
-		"\"Patrick9.27\"": "271"
+		"\"Patrick10.1\"": "271"
 	},
 	{
 		"\"\"": "\"273\"",
@@ -3273,7 +3273,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "271.5",
 		"\"AVGTier\"": "11",
 		"\"Siegele9.5\"": "271",
-		"\"Patrick9.27\"": "272"
+		"\"Patrick10.1\"": "272"
 	},
 	{
 		"\"\"": "\"274\"",
@@ -3285,7 +3285,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "272.5",
 		"\"AVGTier\"": "11",
 		"\"Siegele9.5\"": "272",
-		"\"Patrick9.27\"": "273"
+		"\"Patrick10.1\"": "273"
 	},
 	{
 		"\"\"": "\"275\"",
@@ -3297,7 +3297,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "273.5",
 		"\"AVGTier\"": "11",
 		"\"Siegele9.5\"": "273",
-		"\"Patrick9.27\"": "274"
+		"\"Patrick10.1\"": "274"
 	},
 	{
 		"\"\"": "\"276\"",
@@ -3309,7 +3309,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "274.5",
 		"\"AVGTier\"": "11",
 		"\"Siegele9.5\"": "274",
-		"\"Patrick9.27\"": "275"
+		"\"Patrick10.1\"": "275"
 	},
 	{
 		"\"\"": "\"277\"",
@@ -3321,7 +3321,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "275.5",
 		"\"AVGTier\"": "11",
 		"\"Siegele9.5\"": "275",
-		"\"Patrick9.27\"": "276"
+		"\"Patrick10.1\"": "276"
 	},
 	{
 		"\"\"": "\"278\"",
@@ -3333,7 +3333,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "277.5",
 		"\"AVGTier\"": "11",
 		"\"Siegele9.5\"": "277",
-		"\"Patrick9.27\"": "278"
+		"\"Patrick10.1\"": "278"
 	},
 	{
 		"\"\"": "\"279\"",
@@ -3345,7 +3345,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "276.5",
 		"\"AVGTier\"": "11",
 		"\"Siegele9.5\"": "276",
-		"\"Patrick9.27\"": "277"
+		"\"Patrick10.1\"": "277"
 	},
 	{
 		"\"\"": "\"280\"",
@@ -3357,7 +3357,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "278.5",
 		"\"AVGTier\"": "11",
 		"\"Siegele9.5\"": "278",
-		"\"Patrick9.27\"": "279"
+		"\"Patrick10.1\"": "279"
 	},
 	{
 		"\"\"": "\"281\"",
@@ -3369,7 +3369,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "279.5",
 		"\"AVGTier\"": "11",
 		"\"Siegele9.5\"": "279",
-		"\"Patrick9.27\"": "280"
+		"\"Patrick10.1\"": "280"
 	},
 	{
 		"\"\"": "\"282\"",
@@ -3381,7 +3381,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "280.5",
 		"\"AVGTier\"": "11",
 		"\"Siegele9.5\"": "280",
-		"\"Patrick9.27\"": "281"
+		"\"Patrick10.1\"": "281"
 	},
 	{
 		"\"\"": "\"283\"",
@@ -3393,7 +3393,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "281.5",
 		"\"AVGTier\"": "11",
 		"\"Siegele9.5\"": "281",
-		"\"Patrick9.27\"": "282"
+		"\"Patrick10.1\"": "282"
 	},
 	{
 		"\"\"": "\"284\"",
@@ -3405,7 +3405,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "282.5",
 		"\"AVGTier\"": "11",
 		"\"Siegele9.5\"": "282",
-		"\"Patrick9.27\"": "283"
+		"\"Patrick10.1\"": "283"
 	},
 	{
 		"\"\"": "\"285\"",
@@ -3417,7 +3417,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "283.5",
 		"\"AVGTier\"": "11",
 		"\"Siegele9.5\"": "283",
-		"\"Patrick9.27\"": "284"
+		"\"Patrick10.1\"": "284"
 	},
 	{
 		"\"\"": "\"286\"",
@@ -3429,7 +3429,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "284.5",
 		"\"AVGTier\"": "11",
 		"\"Siegele9.5\"": "284",
-		"\"Patrick9.27\"": "285"
+		"\"Patrick10.1\"": "285"
 	},
 	{
 		"\"\"": "\"287\"",
@@ -3441,7 +3441,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "285.5",
 		"\"AVGTier\"": "11",
 		"\"Siegele9.5\"": "285",
-		"\"Patrick9.27\"": "286"
+		"\"Patrick10.1\"": "286"
 	},
 	{
 		"\"\"": "\"288\"",
@@ -3453,7 +3453,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "286.5",
 		"\"AVGTier\"": "11",
 		"\"Siegele9.5\"": "286",
-		"\"Patrick9.27\"": "287"
+		"\"Patrick10.1\"": "287"
 	},
 	{
 		"\"\"": "\"289\"",
@@ -3465,7 +3465,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "287.5",
 		"\"AVGTier\"": "11",
 		"\"Siegele9.5\"": "287",
-		"\"Patrick9.27\"": "288"
+		"\"Patrick10.1\"": "288"
 	},
 	{
 		"\"\"": "\"290\"",
@@ -3477,7 +3477,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "288.5",
 		"\"AVGTier\"": "11",
 		"\"Siegele9.5\"": "288",
-		"\"Patrick9.27\"": "289"
+		"\"Patrick10.1\"": "289"
 	},
 	{
 		"\"\"": "\"291\"",
@@ -3489,7 +3489,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "289.5",
 		"\"AVGTier\"": "11",
 		"\"Siegele9.5\"": "289",
-		"\"Patrick9.27\"": "290"
+		"\"Patrick10.1\"": "290"
 	},
 	{
 		"\"\"": "\"292\"",
@@ -3501,7 +3501,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "290.5",
 		"\"AVGTier\"": "11",
 		"\"Siegele9.5\"": "290",
-		"\"Patrick9.27\"": "291"
+		"\"Patrick10.1\"": "291"
 	},
 	{
 		"\"\"": "\"293\"",
@@ -3513,7 +3513,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "291.5",
 		"\"AVGTier\"": "11",
 		"\"Siegele9.5\"": "291",
-		"\"Patrick9.27\"": "292"
+		"\"Patrick10.1\"": "292"
 	},
 	{
 		"\"\"": "\"294\"",
@@ -3525,7 +3525,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "292.5",
 		"\"AVGTier\"": "11",
 		"\"Siegele9.5\"": "292",
-		"\"Patrick9.27\"": "293"
+		"\"Patrick10.1\"": "293"
 	},
 	{
 		"\"\"": "\"295\"",
@@ -3537,7 +3537,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "293.5",
 		"\"AVGTier\"": "11",
 		"\"Siegele9.5\"": "293",
-		"\"Patrick9.27\"": "294"
+		"\"Patrick10.1\"": "294"
 	},
 	{
 		"\"\"": "\"296\"",
@@ -3549,7 +3549,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "295",
 		"\"AVGTier\"": "11",
 		"\"Siegele9.5\"": "295",
-		"\"Patrick9.27\"": "295"
+		"\"Patrick10.1\"": "295"
 	},
 	{
 		"\"\"": "\"297\"",
@@ -3561,7 +3561,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "297",
 		"\"AVGTier\"": "11",
 		"\"Siegele9.5\"": "297",
-		"\"Patrick9.27\"": "297"
+		"\"Patrick10.1\"": "297"
 	},
 	{
 		"\"\"": "\"298\"",
@@ -3573,7 +3573,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "296",
 		"\"AVGTier\"": "11",
 		"\"Siegele9.5\"": "296",
-		"\"Patrick9.27\"": "296"
+		"\"Patrick10.1\"": "296"
 	},
 	{
 		"\"\"": "\"299\"",
@@ -3585,7 +3585,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "298",
 		"\"AVGTier\"": "11",
 		"\"Siegele9.5\"": "298",
-		"\"Patrick9.27\"": "298"
+		"\"Patrick10.1\"": "298"
 	},
 	{
 		"\"\"": "\"300\"",
@@ -3597,9 +3597,9 @@ const rvDynastyRankingsTEP = [
 		"\"AVGRank\"": "299",
 		"\"AVGTier\"": "11",
 		"\"Siegele9.5\"": "299",
-		"\"Patrick9.27\"": "299"
+		"\"Patrick10.1\"": "299"
 	},
-
+	
 ]
 
 module.exports = rvDynastyRankingsTEP;
