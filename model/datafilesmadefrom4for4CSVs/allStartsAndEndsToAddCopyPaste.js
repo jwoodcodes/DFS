@@ -124,6 +124,8 @@
 ///////////not for weekly projections below////////////////
 //////////////////////////////////////////////////////////////
 //
+// const fourForFourRestOfSeasonRedraftRankings =
+// module.exports = fourForFourRestOfSeasonRedraftRankings
 //
 // const fpMarketRedraftRankings =
 // module.exports = fpMarketRedraftRankings;
@@ -145,5 +147,4 @@
 // module.exports = rvRedraftRankingsTEP;
 //
 //
-// const fourForFourRestOfSeasonRedraftRankings =
-// module.exports = fourForFourRestOfSeasonRedraftRankings
+
