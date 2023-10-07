@@ -2504,13 +2504,15 @@ const populateTeamObjects = function (
   passedInTeam.teamVTT = +gameInfoPassedInTeam.vtt;
 
   //
+  if(qbInfoPassedInTeam) {
   let tempQbPointsPerGameLastFiveWeeks = +(
     +qbInfoPassedInTeam.fantasyPointsFromRushingPerGameLastFiveWeeks +
     +qbInfoPassedInTeam.fantasyPointsFromPassingPerGameLastFiveWeeks
   );
-
+  
   passedInTeam.QBFantasyPointsPerGameLastFiveWeeks =
     +tempQbPointsPerGameLastFiveWeeks;
+  
   //
   passedInTeam.QBAppProjectedPointsThisWeek =
     qbInfoPassedInTeam.appProjectedPoints;
@@ -2523,7 +2525,7 @@ const populateTeamObjects = function (
 
   passedInTeam.teamAppProjectedPointsThisWeek =
     qbInfoPassedInTeam.teamProjectedPoints;
-
+  }
   //////////
   qbDownloadableSpreadSheetYahoo.forEach(function (playerobj, i) {
     passedInTeam.slate = '';

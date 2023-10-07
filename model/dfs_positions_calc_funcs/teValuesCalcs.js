@@ -111,7 +111,7 @@ class TeObject {
       // weeks 3 and 4
       //
       //
-      if (this.curWeek === 3 || this.curWeek === 4) {
+      if (this.curWeek > 2 && this.curWeek < 7) {
         // half PPR
         //
 
@@ -171,7 +171,7 @@ class TeObject {
       //weeks 5-18
       //
       //
-      if (this.curWeek > 4) {
+      if (this.curWeek > 6) {
         //
         //
         // setting percentDifferenceProjectedTargetsComparedToLastFiveWeeks

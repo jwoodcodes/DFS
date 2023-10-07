@@ -1648,10 +1648,12 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
 
   passedInTeam.teamProjectedPoints =
     gameInfoPassedInTeam.teamProjectedPointsThisWeek;
+    if(gameInfoPassedInTeam.opponentThisWeek) {
   passedInTeam.oppTeamProjectedPoints =
     gameInfoPassedInTeam.opponentThisWeek.teamProjectedPointsThisWeek;
+    
   passedInTeam.oppQBName = gameInfoPassedInTeam.opponentThisWeek.qbName;
-
+    }
   passedInTeam.percentageOfFantasyPointsFromPassingLastFiveWeeks = +(
     passedInTeam.totalFantasyPointsFromPassingLastFiveWeeks /
     passedInTeam.totalFantasyPointsScoredLastFiveWeeks

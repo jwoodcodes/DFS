@@ -757,7 +757,7 @@ if (gameInfo.week.currentWeek < 3) {
   });
 }
 
-if (gameInfo.week.currentWeek > 2 && gameInfo.week.currentWeek < 5) {
+if (gameInfo.week.currentWeek > 2 && gameInfo.week.currentWeek < 7) {
   allQBs.map(function (team, i) {
     let QBProjectedPoints = 0;
     let valueFromGLSP = 0;
@@ -870,7 +870,7 @@ if (gameInfo.week.currentWeek > 2 && gameInfo.week.currentWeek < 5) {
 //   });
 // }
 
-if (gameInfo.week.currentWeek > 4) {
+if (gameInfo.week.currentWeek > 6) {
   allQBs.map(function (team, i) {
     let fourForFour = team.fourForFourHalfPPRProjectedPoints;
 

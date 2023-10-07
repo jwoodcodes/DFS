@@ -1112,13 +1112,16 @@ const testfunc = async function () {
         // console.log(this.sanitizedFCPlayerName);
         // console.log(fpRedraftPlayerObject);
         // console.log(fpRedraftPlayerObject);
+        if(fpRedraftPlayerObject) {
         let tempOverallRank = fpRedraftPlayerObject['"RK"'].slice(1, -1);
         let fpRedraftOverallRank = +tempOverallRank;
+        
 
         if (fpRedraftOverallRank) {
           // console.log(fpRedraftOverallRank);
           this.fpRedraftOverallRank = +fpRedraftOverallRank;
         }
+      
 
         // console.log(fpRedraftPlayerObject['"POS"'].slice(3, -1));
         let tempPositionRank = fpRedraftPlayerObject['"POS"'].slice(3, -1);
@@ -1129,7 +1132,7 @@ const testfunc = async function () {
           // console.log(fpRedraftPositionRank);
           this.fpRedraftPositionRank = +fpRedraftPositionRank;
         }
-
+      }
         // // console.log(fpRedraftPlayerObject);
         // let tempfpRedraftTier = fpRedraftPlayerObject['TIERS'];
         // // console.log(tempfpRedraftTier);

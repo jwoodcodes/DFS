@@ -224,7 +224,7 @@ class WrObject {
 
     // for weeks 3 & 4
 
-    if (gameInfo.week.currentWeek === 3 || gameInfo.week.currentWeek === 4) {
+    if (gameInfo.week.currentWeek > 2 && gameInfo.week.currentWeek < 7) {
       let tempHalfProjection = +(
         (this.fourForFourHalfPPRProjectedPoints +
           this.fourForFourHalfPPRProjectedPoints +
@@ -245,7 +245,7 @@ class WrObject {
 
     // for weeks 4-18
 
-    if (gameInfo.week.currentWeek > 4) {
+    if (gameInfo.week.currentWeek > 6) {
       if (
         this.roleScorePercentageThisWeek &&
         this.roleScorePercentageThisWeek > 0.49 &&
