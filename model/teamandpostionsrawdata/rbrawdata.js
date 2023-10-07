@@ -6326,12 +6326,12 @@ const populateTeamObjects = function (
       gameInfoPassedInTeam.teamProjectedPointsThisWeek;
     passedInTeam.RBTwo.appTeamProjectedPoints =
       gameInfoPassedInTeam.teamProjectedPointsThisWeek;
-
+if(gameInfoPassedInTeam.opponentThisWeek) {
     passedInTeam.RBOne.oppAppTeamProjectedPoints =
       gameInfoPassedInTeam.opponentThisWeek.teamProjectedPointsThisWeek;
     passedInTeam.RBTwo.oppAppTeamProjectedPoints =
       gameInfoPassedInTeam.opponentThisWeek.teamProjectedPointsThisWeek;
-
+}
     //////
 
     passedInTeam.qbPassAttemptsPerGameLastFiveWeeks =

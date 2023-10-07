@@ -385,7 +385,7 @@ class RbObject {
 
     //weeks 3 and 4
 
-    if (gameInfo.week.currentWeek > 2 && gameInfo.week.currentWeek < 5) {
+    if (gameInfo.week.currentWeek > 2 && gameInfo.week.currentWeek < 7) {
       if (this.halfGLSPAVG) {
         this.appProjectedHalfPPRPoints = +(
           (this.fourForFourHalfPPRProjectedPoints +
@@ -411,7 +411,7 @@ class RbObject {
 
     //weeks 5-18
 
-    if (gameInfo.week.currentWeek > 4) {
+    if (gameInfo.week.currentWeek > 6) {
       if (
         this.percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek >
         0.49

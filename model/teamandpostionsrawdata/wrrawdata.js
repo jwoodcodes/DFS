@@ -3012,15 +3012,18 @@ const populateTeamObjects = function (
 ) {
   // console.log(qbDataPassedInTeam);
   passedInTeam.teamVTT = +gameInfoPassedInTeam.vtt;
+  if(qbDataPassedInTeam) {
   passedInTeam.appQBProjectedPoints = qbDataPassedInTeam.appProjectedPoints;
+  
   passedInTeam.appTeamProjectedPoints =
     gameInfoPassedInTeam.teamProjectedPointsThisWeek;
   passedInTeam.byeWeek = gameInfoPassedInTeam.byeWeek2022;
   passedInTeam.QBpercentageOffFantasyPointsFromPassingLastFiveWeeks =
     qbDataPassedInTeam.percentageOfFantasyPointsFromPassingLastFiveWeeks;
+  
   passedInTeam.QBProjectedPassAttemptsThisWeek =
     qbDataPassedInTeam.projectedPassAttempts;
-
+  }
   if (
     gameInfoPassedInTeam.teamProjectedForAHalfOfNegetiveGameScriptIsTrue ===
     true
@@ -3127,8 +3130,9 @@ if(gameInfoPassedInTeam.WRThreeThisWeekName) {
         }
       }
 
+      if(gameInfoPassedInTeam.opponentThisWeek) {
       passedInTeam.opponentVTT = gameInfoPassedInTeam.opponentThisWeek.vtt;
-
+      }
       allFlexGLSP.forEach(function (team, i) {
         // tempWROneName = gameInfoPassedInTeam.WROneThisWeekName.replace(
         //   '.',
@@ -5993,7 +5997,7 @@ if(gameInfoPassedInTeam.WRThreeThisWeekName) {
     passedInTeam.WRThree.numberOfGamesPlayedLastFiveWeeks;
 
   ///
-
+if(qbDataPassedInTeam) {
   passedInTeam.WROne.qbFantasyPointsScoredPerGameLastFiveWeeks =
     qbDataPassedInTeam.fantasyPointsFromRushingPerGameLastFiveWeeks +
     qbDataPassedInTeam.fantasyPointsFromPassingPerGameLastFiveWeeks;
@@ -6015,6 +6019,7 @@ if(gameInfoPassedInTeam.WRThreeThisWeekName) {
 
   passedInTeam.WRThree.teamRealLifePointsScoredPerGameLastFiveWeeks =
     +gameInfoPassedInTeam.teamPointsPerGameLastFiveWeeks;
+}
 };
 
 populateTeamObjects(

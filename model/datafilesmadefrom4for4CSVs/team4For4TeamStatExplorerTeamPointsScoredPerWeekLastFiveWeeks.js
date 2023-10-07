@@ -1,5 +1,4 @@
-const team4for4TeamStatExplorerTeamPointsScoredPerWeekLastFiveWeeks = 
-[
+const team4for4TeamStatExplorerTeamPointsScoredPerWeekLastFiveWeeks = [
 	{
 		"\"posteam\"": "\"ARI\"",
 		"\"total_ypg\"": "330.333333333333",
@@ -165,7 +164,7 @@ const team4for4TeamStatExplorerTeamPointsScoredPerWeekLastFiveWeeks =
 		"\"exp_pass_rate\"": "0.0374331550802139",
 		"\"pass_rate\"": "0.716577540106952",
 		"\"proe\"": "0.0441880952068829",
-		"\"pressure_rate\"": "0.0898622981956315",
+		"\"pressure_rate\"": "0.0820063145809415",
 		"\"rush_ypg\"": "70.6666666666667",
 		"\"rush_epa_pp\"": "-0.0810081886807413",
 		"\"exp_run_rate\"": "0.0267379679144385",
@@ -425,7 +424,7 @@ const team4for4TeamStatExplorerTeamPointsScoredPerWeekLastFiveWeeks =
 		"\"exp_pass_rate\"": "0.0930232558139535",
 		"\"pass_rate\"": "0.669767441860465",
 		"\"proe\"": "0.0627399679013463",
-		"\"pressure_rate\"": "0.0749593219257479",
+		"\"pressure_rate\"": "0.0988393287881004",
 		"\"rush_ypg\"": "84",
 		"\"rush_epa_pp\"": "-0.0161174310039021",
 		"\"exp_run_rate\"": "0.013953488372093",
@@ -450,7 +449,7 @@ const team4for4TeamStatExplorerTeamPointsScoredPerWeekLastFiveWeeks =
 		"\"pass_epa_pp\"": "0.224181047945207",
 		"\"exp_pass_rate\"": "0.089622641509434",
 		"\"pass_rate\"": "0.665094339622642",
-		"\"proe\"": "0.056830542759513",
+		"\"proe\"": "0.0569503787412958",
 		"\"pressure_rate\"": "0.0754134025556637",
 		"\"rush_ypg\"": "108.333333333333",
 		"\"rush_epa_pp\"": "-0.0497427023697192",
@@ -659,7 +658,7 @@ const team4for4TeamStatExplorerTeamPointsScoredPerWeekLastFiveWeeks =
 		"\"exp_pass_rate\"": "0.0588235294117647",
 		"\"pass_rate\"": "0.524886877828054",
 		"\"proe\"": "-0.00521905243194481",
-		"\"pressure_rate\"": "0.112244897959184",
+		"\"pressure_rate\"": "0.102418883914534",
 		"\"rush_ypg\"": "186",
 		"\"rush_epa_pp\"": "0.0602001855092003",
 		"\"exp_run_rate\"": "0.0452488687782805",
@@ -710,7 +709,7 @@ const team4for4TeamStatExplorerTeamPointsScoredPerWeekLastFiveWeeks =
 		"\"pass_epa_pp\"": "0.141732109437979",
 		"\"exp_pass_rate\"": "0.1",
 		"\"pass_rate\"": "0.636842105263158",
-		"\"proe\"": "0.0430290546464293",
+		"\"proe\"": "0.0458579761025153",
 		"\"pressure_rate\"": "0.135107364378877",
 		"\"rush_ypg\"": "105.666666666667",
 		"\"rush_epa_pp\"": "0.117794135322227",
@@ -763,7 +762,7 @@ const team4for4TeamStatExplorerTeamPointsScoredPerWeekLastFiveWeeks =
 		"\"exp_pass_rate\"": "0.0777777777777778",
 		"\"pass_rate\"": "0.594444444444444",
 		"\"proe\"": "-0.0315438744508558",
-		"\"pressure_rate\"": "0.0678011643528885",
+		"\"pressure_rate\"": "0.0783045270281731",
 		"\"rush_ypg\"": "79.6666666666667",
 		"\"rush_epa_pp\"": "-0.175544875183969",
 		"\"exp_run_rate\"": "0.0222222222222222",
@@ -835,6 +834,4 @@ const team4for4TeamStatExplorerTeamPointsScoredPerWeekLastFiveWeeks =
 	
 ]
 
-
-
-module.exports = team4for4TeamStatExplorerTeamPointsScoredPerWeekLastFiveWeeks
+module.exports = team4for4TeamStatExplorerTeamPointsScoredPerWeekLastFiveWeeks;
