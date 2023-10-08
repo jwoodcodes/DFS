@@ -225,20 +225,43 @@ class WrObject {
     // for weeks 3 & 4
 
     if (gameInfo.week.currentWeek > 2 && gameInfo.week.currentWeek < 7) {
-      let tempHalfProjection = +(
+
+      let tempHalfProjection = 0
+      let tempPPRProjection = 0
+
+      if(this.halfGLSPAvg) {
+
+      tempHalfProjection = +(
         (this.fourForFourHalfPPRProjectedPoints +
           this.fourForFourHalfPPRProjectedPoints +
           this.halfGLSPAvg) /
         3
       ).toFixed(1);
+        } else {
+          tempHalfProjection = this.fourForFourHalfPPRProjectedPoints.toFixed(1)
+        }
 
-      let tempPPRProjection = +(
+
+        if(this.PPRGLSPAvg) {
+      tempPPRProjection = +(
         (this.fourForFourFullPPRProjectedPoints +
           this.fourForFourFullPPRProjectedPoints +
           this.PPRGLSPAvg) /
         3
       ).toFixed(1);
+    } else {
+      tempPPRProjection = this.fourForFourFullPPRProjectedPoints.toFixed(1)
+    }
 
+    if(tempHalfProjection === 0) {
+      tempHalfProjection = this.fourForFourHalfPPRProjectedPoints.toFixed(1)
+    }
+    if(tempPPRProjection === 0) {
+      tempPPRProjection = this.fourForFourFullPPRProjectedPoints.toFixed(1)
+    }
+
+
+    
       this.appHalfProjectedPoints = tempHalfProjection;
       this.appFullProjectedPoints = tempPPRProjection;
     }
