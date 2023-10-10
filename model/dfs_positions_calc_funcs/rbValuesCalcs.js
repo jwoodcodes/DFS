@@ -354,6 +354,7 @@ class RbObject {
     ).toFixed(3);
 
     ////////////////
+    // console.log(this.name)
 
     //weeks 1 and 2
 
@@ -1038,6 +1039,12 @@ class RbObject {
       );
     }
   }
+
+  setTeamRBThreeProjections(halfProj, fullProj) {
+    // console.log(halfProj, fullProj)
+    this.appProjectedHalfPPRPoints = halfProj
+    this.appProjectedFullPPRPoints = fullProj
+  }
 }
 
 //constructing all RB objects
@@ -1164,7 +1171,7 @@ allRBs.forEach(function (team, i) {
 });
 
 allRBs.forEach(function (team, i) {
-  // console.log(team);
+  
 
   let teamName = '';
   allTeams.forEach(function (giTeam) {
@@ -1246,6 +1253,35 @@ allRBs.forEach(function (team, i) {
   // allRBObjects.playerName = rbObject;
   allRBObjectsArray.push(rbObject);
 });
+
+allRBs.forEach(function(team) {
+  if(team.teamRbThreeThisWeekName) {
+    allTeams.forEach(function (giTeam) {
+      if (team.teamABV === giTeam.teamABV) {
+        // console.log(giTeam);
+        teamName = giTeam.teamName;
+        vtt = +giTeam.vtt;
+        teamProjectedPoints = giTeam.teamProjectedPointsThisWeek;
+        hadByeInLastFiveWeeksIsTrue = giTeam.hadByeInTheLastFiveWeeks;
+        opponentTeamName = giTeam.opponentThisWeek.teamName;
+        opponentABV = giTeam.opponentThisWeek.teamABV;
+        opponentTeamProjectedPoints =
+          giTeam.opponentThisWeek.teamProjectedPointsThisWeek;
+      }
+    });
+    // console.log(team)
+    let rbObject = new RbObject(
+      team.teamRbThreeThisWeekName,
+      'RB',
+      teamName,
+      team.teamABV,
+    )
+
+    rbObject.setTeamRBThreeProjections(team.teamRbThreeThisWeekFourForFourHalfPPRProjectedPoints, team.teamRbThreeThisWeekFourForFourFullPPRProjectedPoints)
+
+    allRBObjectsArray.push(rbObject);
+  }
+})
 
 // console.log(allRBsMap);
 allRBObjectsArray.forEach(function (rb) {

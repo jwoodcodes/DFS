@@ -112,7 +112,7 @@ const initialSleeperPlayerData = data.sleeperPlayerData
         let tempPlayer = player.toLowerCase()
         let tempRbName = rb.name.toLowerCase()
         if(tempPlayer === tempRbName) {
-          console.log(player)
+          // console.log(player)
           rb.isOnSelectedTeam = true
           // console.log(rb.isOnSelectedTeam)
           

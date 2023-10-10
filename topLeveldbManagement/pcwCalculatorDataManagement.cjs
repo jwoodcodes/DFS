@@ -1200,6 +1200,7 @@ const testfunc = async function () {
         //setting this.rvRedraftPositionRank
         // console.log(sanitizedFourForFourRedraftPlayerName)
         if (sanitizedFourForFourRedraftPlayerName === sanitizedFCPlayerName) {
+          
           // console.log(sanitizedFourForFourRedraftPlayerName)
           let initialTempPosRank = fourForFourRestOfSeasonRedraftPlayerGroup[
             '"Rank"'
@@ -1207,6 +1208,7 @@ const testfunc = async function () {
           let tempPosRank = +initialTempPosRank;
           this.rvRedraftPositionRank = tempPosRank;
           // console.log(sanitizedFCPlayerName, this.rvRedraftPositionRank)
+          
           //
           // setting this.rvRedraftTier
           if (fcPosition === 'QB') {
@@ -1288,6 +1290,7 @@ const testfunc = async function () {
               this.rvRedraftTier = 7;
             }
           }
+          
 
           if (fcPosition === 'TE') {
             // console.log(sanitizedFourForFourRedraftPlayerName, this.rvRedraftPositionRank)
@@ -1339,7 +1342,18 @@ const testfunc = async function () {
       fourForFourRestOfSeasonRedraftPlayerGroup,
       sanitizedFourForFourRedraftPlayerName
     ) {
-      if (sanitizedRVRedraftPlayerName === sanitizedFCPlayerName) {
+
+      
+      let nameToUse = ''
+      
+      if (curMonth < 9) {
+        nameToUse = sanitizedRVRedraftPlayerName
+
+      }
+      if( curMonth > 8 ) {
+        nameToUse = sanitizedFourForFourRedraftPlayerName
+      }
+      if (nameToUse === sanitizedFCPlayerName) {
         //////////////
         //setting myRedraftScoreFromPlayersRedraftTier
         ////////////////
@@ -1417,15 +1431,20 @@ const testfunc = async function () {
             this.myRedraftScoreFromPlayersRedraftTier = 0;
           }
         }
+        }
+      
+        
+        
         //   ///////////////
         //   ////////////////////////////
-        //   // comparing my redraft rank to marker redraft rank
+        //   // comparing my redraft rank to market redraft rank
         //   //////////////////////////////
         //   // console.log(
         //   //   sanitizedFCPlayerName,
         //   //   fpRedraftPositionRank,
         //   //   rvRedraftPositionRank
         //   // );
+        if (sanitizedRVRedraftPlayerName === sanitizedFCPlayerName) {
         this.myRedraftDifferenceScore = 0;
         //1-10 average
         if (
@@ -1720,6 +1739,7 @@ const testfunc = async function () {
             this.myRedraftDifferenceScore = -600;
           }
         }
+      
       }
     }
 
@@ -3880,40 +3900,40 @@ const testfunc = async function () {
 
   // ///////////uncomment below to push all trade analyzer data from above to db named tradeAnalyzerData
 
-  const url =
-    'mongodb+srv://devJay:Hesstrucksarethebest@dailydynasties.syom4sb.mongodb.net/test';
-  const client = new MongoClient(url);
+  // const url =
+  //   'mongodb+srv://devJay:Hesstrucksarethebest@dailydynasties.syom4sb.mongodb.net/test';
+  // const client = new MongoClient(url);
 
-  // The database to use
-  const dbName = 'dailydynasties';
+  // // The database to use
+  // const dbName = 'dailydynasties';
 
-  async function runTradeAnalyzerData() {
-    try {
-      await client.connect();
-      console.log('Connected correctly to server');
-      const db = client.db(dbName);
+  // async function runTradeAnalyzerData() {
+  //   try {
+  //     await client.connect();
+  //     console.log('Connected correctly to server');
+  //     const db = client.db(dbName);
 
-      const col = db.collection('tradeAnalyzerData');
+  //     const col = db.collection('tradeAnalyzerData');
 
-      // Construct a document
-      let tradeAnalyzerData = {
-        tradeAnalyzerDataObjectsArray,
-      };
+  //     // Construct a document
+  //     let tradeAnalyzerData = {
+  //       tradeAnalyzerDataObjectsArray,
+  //     };
 
-      // Insert a single document, wait for promise so we can read it back
-      const p = await col.insertOne(tradeAnalyzerData);
-      // Find one document
-      const myDoc = await col.findOne();
-      // Print to the console
-      // console.log(myDoc);
-    } catch (err) {
-      console.log(err.stack);
-    } finally {
-      await client.close();
-    }
-  }
+  //     // Insert a single document, wait for promise so we can read it back
+  //     const p = await col.insertOne(tradeAnalyzerData);
+  //     // Find one document
+  //     const myDoc = await col.findOne();
+  //     // Print to the console
+  //     // console.log(myDoc);
+  //   } catch (err) {
+  //     console.log(err.stack);
+  //   } finally {
+  //     await client.close();
+  //   }
+  // }
 
-  runTradeAnalyzerData().catch(console.dir);
+  // runTradeAnalyzerData().catch(console.dir);
 };
 // console.log(myJSON);
 testfunc();
