@@ -977,6 +977,10 @@ const testfunc = async function () {
       if (player.player.position !== 'QB') {
         // console.log(player.player.name);
 
+        if(player.player.name === 'DeVon Achane') {
+          this.rvPercentOfNonQBMax = .67
+        }
+
         this.myPercentOfNonQBMax = +(
           (+this.ppSFNonQBTEPPercentOfMax +
             +this.rvPercentOfNonQBMax +
