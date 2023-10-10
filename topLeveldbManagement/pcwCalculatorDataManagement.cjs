@@ -400,8 +400,19 @@ const testfunc = async function () {
       fcPosition,
       SleeperIDFromMe
     ) {
+      let tempAchane = 0
+      if(fcPosition === 'RB') {
+        if(sanitizedFCPlayerName === 'DeVon Achane') {
+          if (!rvPlayer['"AVGTier"']) {
+            
+            tempAchane = 2
+          }
+        
+      }
+    }
       if (+rvPlayer['"AVGTier"']) {
         // console.log(+rvPlayer['"Rank"']);
+       
 
         if (fcPosition !== 'PICK') {
           //
@@ -472,7 +483,8 @@ const testfunc = async function () {
           // Tier 2 non QB's
           if (
             +rvPlayer['"AVGTier"'] === 2 &&
-            rvPlayer['"POS"'].slice(1, -1) !== 'QB'
+            rvPlayer['"POS"'].slice(1, -1) !== 'QB' ||
+            tempAchane === 2
           ) {
             // console.log(sanitizedRVPlayerName);
             this.rvTier = +rvPlayer['"AVGTier"'];
@@ -918,6 +930,7 @@ const testfunc = async function () {
 
       if (player.player.position === 'QB') {
         // console.log(player.player.name);
+        
 
         this.myPercentOfQBMax = +(
           (+this.ppSFQBTEPPercentOfMax +
@@ -976,6 +989,9 @@ const testfunc = async function () {
 
       if (player.player.position !== 'QB') {
         // console.log(player.player.name);
+        if(player.player.name === 'DeVon Achane') {
+          this.rvPercentOfNonQBMax = .67
+              }
 
         this.myPercentOfNonQBMax = +(
           (+this.ppSFNonQBTEPPercentOfMax +
@@ -988,7 +1004,7 @@ const testfunc = async function () {
         // this.myValue = +(+fcNonQBMaxValue * +this.myPercentOfNonQBMax).toFixed(
         //   2
         // );
-
+         
         let tempValue = +(fcNonQBMaxValue * this.myPercentOfNonQBMax).toFixed(
           2
         );
