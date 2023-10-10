@@ -1321,6 +1321,8 @@ const populateTeamObjects = function (passedInTeam) {
             rbName = 'Kenneth Walker';
           }
 
+          
+
           if (!passedInTeam.RBOneThisWeekName) {
             passedInTeam.RBOneThisWeekName = rbName;
             passedInTeam.RBOneThisWeek4for4HalfProjPoints = +team['Y! (Proj)'];
@@ -1338,7 +1340,21 @@ const populateTeamObjects = function (passedInTeam) {
             passedInTeam.RBTwoThisWeekName = 'no second RB';
             passedInTeam.RBTwoThisWeek4for4HalfProjPoints = 0;
           }
+
+          if (
+            passedInTeam.RBOneThisWeekName &&
+            passedInTeam.RBOneThisWeekName !== rbName &&
+            passedInTeam.RBTwoThisWeekName &&
+            passedInTeam.RBTwoThisWeekName !== rbName 
+         
+          ) {
+            passedInTeam.RBThreeThisWeekName = rbName;
+            passedInTeam.RBThreeThisWeek4for4HalfProjPoints = +team['Y! (Proj)'];
+          }
+
+          // console.log(team.Team, passedInTeam.RBOneThisWeekName, passedInTeam.RBTwoThisWeekName, passedInTeam.RBThreeThisWeekName)
         }
+        
       }
 
       //setting WR's

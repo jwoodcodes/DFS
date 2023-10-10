@@ -2735,6 +2735,9 @@ const populateTeamObjects = function (
 ) {
   passedInTeam.RBOne.name = gameInfoPassedInTeam.RBOneThisWeekName;
   passedInTeam.RBTwo.name = gameInfoPassedInTeam.RBTwoThisWeekName;
+  if(gameInfoPassedInTeam.RBThreeThisWeekName) {
+  passedInTeam.RBThreeName = gameInfoPassedInTeam.RBThreeThisWeekName;
+  }
 
   // console.log(passedInTeam.RBOne.name);
   ////////////////////////////
@@ -6079,6 +6082,17 @@ const populateTeamObjects = function (
           // console.log(team);
           passedInTeam.RBTwo.fourForFourHalfPPRProjectedPoints = +team.FFPts;
         }
+
+        if(gameInfoPassedInTeam.RBThreeThisWeekName) {
+          
+         if( gameInfoPassedInTeam.RBThreeThisWeekName === team.Player ||
+          gameInfoPassedInTeam.RBThreeThisWeekName ===
+            team.Player.replace('.', '').replace('.', '') ) {
+
+          passedInTeam.teamRbThreeThisWeekName = gameInfoPassedInTeam.RBThreeThisWeekName;
+          passedInTeam.teamRbThreeThisWeekFourForFourHalfPPRProjectedPoints = +team.FFPts
+            }
+        }
       }
     });
 
@@ -6112,6 +6126,17 @@ const populateTeamObjects = function (
           passedInTeam.RBTwo.projectedCarriesThisWeek = +team['Rush Att'];
           passedInTeam.RBTwo.projectedReceptionsThisWeek = +team.Rec;
         }
+
+        if(gameInfoPassedInTeam.RBThreeThisWeekName) {
+          
+          if( gameInfoPassedInTeam.RBThreeThisWeekName === team.Player ||
+           gameInfoPassedInTeam.RBThreeThisWeekName ===
+             team.Player.replace('.', '').replace('.', '') ) {
+ 
+           passedInTeam.teamRbThreeThisWeekName = gameInfoPassedInTeam.RBThreeThisWeekName;
+           passedInTeam.teamRbThreeThisWeekFourForFourFullPPRProjectedPoints = +team.FFPts
+             }
+         }
       }
     });
 
