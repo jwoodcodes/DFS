@@ -156,7 +156,7 @@ class RbObject {
     roleThisWeek,
     percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek,
 
-    FPOEPerGameLastFiveWeeks,
+   
     HVTsLastFiveWeeks,
     percentOfTeamHVTsLastFiveWeeks,
     targetSharePercentageLastFiveWeeks,
@@ -210,7 +210,7 @@ class RbObject {
     this.percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek =
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek;
 
-    this.FPOEPerGameLastFiveWeeks = FPOEPerGameLastFiveWeeks;
+   
     this.HVTsLastFiveWeeks = HVTsLastFiveWeeks;
     this.percentOfTeamHVTsLastFiveWeeks = percentOfTeamHVTsLastFiveWeeks;
     this.targetSharePercentageLastFiveWeeks =
@@ -1127,7 +1127,7 @@ allRBs.forEach(function (team, i) {
     team.teamProjectedForAHalfOfNegetiveGameScriptIsTrue,
     team.RBOne.roleThisWeek,
     team.RBOne.rbOnematchingWeeksPercentage,
-    team.RBOne.FPOEPerGameLastFiveWeeks,
+    
     team.RBOne.totalHVTsLastFiveWeeks,
     +team.RBOne.totalPercentOfTeamHighValueTouchesLastFiveweeks,
     team.RBOne.targetSharePercentageLastFiveWeeks,
@@ -1211,7 +1211,7 @@ allRBs.forEach(function (team, i) {
     team.teamProjectedForAHalfOfNegetiveGameScriptIsTrue,
     team.RBTwo.roleThisWeek,
     team.RBTwo.rbTwomatchingWeeksPercentage,
-    team.RBTwo.FPOEPerGameLastFiveWeeks,
+    
     team.RBTwo.totalHVTsLastFiveWeeks,
     +team.RBTwo.totalPercentOfTeamHighValueTouchesLastFiveweeks,
     team.RBTwo.targetSharePercentageLastFiveWeeks,
@@ -1620,7 +1620,7 @@ allRBs.forEach(function (rb) {
   //   rb.RBTwo.totalPercentOfTeamHighValueTouchesLastFiveweeks
   // );
   // console.log(rb.RBOne.name, rb.RBOne.HVTsFiveweeksAgo);
-  // console.log(rb.RBOne.name, rb.RBOne.FPOEPerGameLastFiveWeeks);
+  
   // console.log(
   //   rb.RBOne.name,
   //   rb.RBOne.appProjectedFullPPRPoints,
