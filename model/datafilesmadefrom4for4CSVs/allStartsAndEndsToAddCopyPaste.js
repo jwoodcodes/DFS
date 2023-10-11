@@ -47,17 +47,12 @@
 // module.exports = rb4for4FantasyPointsBrowserLastFiveWeeks;
 //
 //
-// const rb4for4PlayerStatExplorerForReceivingLastFiveWeeks =
-// module.exports = rb4for4PlayerStatExplorerForReceivingLastFiveWeeks;
-//
-//
 // const rb4for4PlayerStatExplorerPercentOfTeamSnapsLastFiveWeeks =
 // module.exports = rb4for4PlayerStatExplorerPercentOfTeamSnapsLastFiveWeeks;
 //
 //
-// const rb4for4PlayerStatExplorerSnapsAndFantasyTabThisHasFPOELastFiveWeeks =
-// module.exports = rb4for4PlayerStatExplorerSnapsAndFantasyTabThisHasFPOELastFiveWeeks;
-//
+// const rb4for4SnapsAppLastFiveWeeks = [
+// module.exports = rb4for4SnapsAppLastFiveWeeks;
 //
 // const rb4for4StatExplorerForRushingLastFiveWeeks =
 // module.exports = rb4for4StatExplorerForRushingLastFiveWeeks;
@@ -67,9 +62,8 @@
 // module.exports = rb4for4WeeklyStatExplorerHVTsLastFiveWeeks;
 //
 //
-// const rbOpportunitesPerWeekLastFiveWeeks4for4PlayerStatExplorer =
-// module.exports = rbOpportunitesPerWeekLastFiveWeeks4for4PlayerStatExplorer;
-//
+// const rbRvWeeklyStatExplorerRecievingTabLastFiveWeeks =
+// module.exports = rbRvWeeklyStatExplorerRecievingTabLastFiveWeeks;
 //
 // const rotovizNegativeScriptOffensivePaceAndRunPassReportLastFiveWeeks =
 // module.exports = rotovizNegativeScriptOffensivePaceAndRunPassReportLastFiveWeeks;
