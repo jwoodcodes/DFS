@@ -5974,8 +5974,11 @@ const populateTeamObjects = function (
 
     rbRvWeeklyStatExplorerRecievingTabLastFiveWeeks.forEach((player) => {
       // console.log(player)
-      let test = player
-      player.forEach((t) => {
+      let t = player
+      // console.log(typeof player)
+      
+      if(t) {
+        // test.forEach((t) => {
         // console.log(t['"Player"'])
         if (
           passedInTeam.RBOne.name === t['"Player"'].slice(1, -1) ||
@@ -6016,7 +6019,8 @@ const populateTeamObjects = function (
 
           passedInTeam.RBTwo.receptionsPerGameLastFiveWeeks = tempRecsPerGame
         }
-      })
+      // })
+    }
     })
 
     

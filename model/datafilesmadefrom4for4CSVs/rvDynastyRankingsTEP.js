@@ -1192,7 +1192,7 @@ const rvDynastyRankingsTEP = [
 		"\"Rank\"": "100",
 		"\"Player\"": "\"Matthew Stafford\"",
 		"\"POS\"": "\"QB\"",
-		"\"Team\"": "\"LAR\"",
+		"\"Team\"": "\"\"",
 		"\"PosRank\"": "24",
 		"\"AVGRank\"": "101.5",
 		"\"AVGTier\"": "6",
