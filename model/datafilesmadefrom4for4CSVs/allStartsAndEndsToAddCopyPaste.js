@@ -47,11 +47,7 @@
 // module.exports = rb4for4FantasyPointsBrowserLastFiveWeeks;
 //
 //
-// const rb4for4PlayerStatExplorerPercentOfTeamSnapsLastFiveWeeks =
-// module.exports = rb4for4PlayerStatExplorerPercentOfTeamSnapsLastFiveWeeks;
-//
-//
-// const rb4for4SnapsAppLastFiveWeeks = [
+// const rb4for4SnapsAppLastFiveWeeks = 
 // module.exports = rb4for4SnapsAppLastFiveWeeks;
 //
 // const rb4for4StatExplorerForRushingLastFiveWeeks =
