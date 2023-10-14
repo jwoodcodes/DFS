@@ -16,13 +16,12 @@ const rb4for4FantasyPointsBrowserLastFiveWeeks = require('../datafilesmadefrom4f
 
 const teamDefStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer = require('../datafilesmadefrom4for4CSVs/teamDefStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer');
 const teamOffStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer = require('../datafilesmadefrom4for4CSVs/teamOffStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer');
-const rb4for4StatExplorerForRushingLastFiveWeeks = require('../datafilesmadefrom4for4CSVs/rb4for4StatExplorerForRushingLastFiveWeeks');
-const rb4for4WeeklyStatExplorerHVTsLastFiveWeeks = require('../datafilesmadefrom4for4CSVs/rb4for4WeeklyStatExplorerHVTsLastFiveWeeks');
+
 
 
 const rbRvWeeklyStatExplorerRecievingTabLastFiveWeeks = require('../datafilesmadefrom4for4CSVs/rbRvWeeklystatExplorerRecievingTabLastFiveWeeks')
 const rb4for4SnapsAppLastFiveWeeks = require('../datafilesmadefrom4for4CSVs/rb4for4SnapsAppLastFiveWeeks')
-
+const rb4for4PlayerStatsApp = require('../datafilesmadefrom4for4CSVs/rb4for4PlayerStatsApp')
 
 const rbrawdata = {
   SF49ers: {
@@ -5222,485 +5221,7 @@ const populateTeamObjects = function (
 
   //end of settting RB Roles Last five week
 
-  let teamHVTweekFiveWeeksAgo = 0;
-  let teamHVTweekFourWeeksAgo = 0;
-  let teamHVTweekThreeWeeksAgo = 0;
-  let teamHVTweekTwoWeeksAgo = 0;
-  let teamHVTweekLastWeek = 0;
-  passedInTeam.RBOne.percentOfTeamHVTsLastFiveWeeksByWeek = [];
-  passedInTeam.RBTwo.percentOfTeamHVTsLastFiveWeeksByWeek = [];
-
-  rb4for4WeeklyStatExplorerHVTsLastFiveWeeks.forEach(function (rb) {
-    if (
-      passedInTeam.teamABV === rb['"posteam"'].slice(1, -1) ||
-      passedInTeam.altTeamABV === rb['"posteam"'].slice(1, -1)
-    ) {
-      let weekFiveWeeksAgo = 0;
-      let weekFourWeeksAgo = 0;
-      let weekThreeWeeksAgo = 0;
-      let weekTwoWeeksAgo = 0;
-      let weekLastWeek = 0;
-
-      if (gameInfo.week.currentWeek === 3) {
-        weekTwoWeeksAgo = rb['"Wk 1"'];
-        weekLastWeek = rb['"Wk 2"'];
-      }
-
-      if (gameInfo.week.currentWeek === 4) {
-        weekThreeWeeksAgo = rb['"Wk 1"'];
-        weekTwoWeeksAgo = rb['"Wk 2"'];
-        weekLastWeek = rb['"Wk 3"'];
-      }
-
-      if (gameInfo.week.currentWeek === 5) {
-        weekFourWeeksAgo = rb['"Wk 1"'];
-        weekThreeWeeksAgo = rb['"Wk 2"'];
-        weekTwoWeeksAgo = rb['"Wk 3"'];
-        weekLastWeek = rb['"Wk 4"'];
-      }
-
-      if (gameInfo.week.currentWeek === 6) {
-        weekFiveWeeksAgo = rb['"Wk 1"'];
-        weekFourWeeksAgo = rb['"Wk 2"'];
-        weekThreeWeeksAgo = rb['"Wk 3"'];
-        weekTwoWeeksAgo = rb['"Wk 4"'];
-        weekLastWeek = rb['"Wk 5"'];
-      }
-
-      if (gameInfo.week.currentWeek === 7) {
-        weekFiveWeeksAgo = rb['"Wk 2"'];
-        weekFourWeeksAgo = rb['"Wk 3"'];
-        weekThreeWeeksAgo = rb['"Wk 4"'];
-        weekTwoWeeksAgo = rb['"Wk 5"'];
-        weekLastWeek = rb['"Wk 6"'];
-      }
-
-      if (gameInfo.week.currentWeek === 8) {
-        weekFiveWeeksAgo = rb['"Wk 3"'];
-        weekFourWeeksAgo = rb['"Wk 4"'];
-        weekThreeWeeksAgo = rb['"Wk 5"'];
-        weekTwoWeeksAgo = rb['"Wk 6"'];
-        weekLastWeek = rb['"Wk 7"'];
-      }
-
-      if (gameInfo.week.currentWeek === 9) {
-        weekFiveWeeksAgo = rb['"Wk 4"'];
-        weekFourWeeksAgo = rb['"Wk 5"'];
-        weekThreeWeeksAgo = rb['"Wk 6"'];
-        weekTwoWeeksAgo = rb['"Wk 7"'];
-        weekLastWeek = rb['"Wk 8"'];
-      }
-
-      if (gameInfo.week.currentWeek === 10) {
-        weekFiveWeeksAgo = rb['"Wk 5"'];
-        weekFourWeeksAgo = rb['"Wk 6"'];
-        weekThreeWeeksAgo = rb['"Wk 7"'];
-        weekTwoWeeksAgo = rb['"Wk 8"'];
-        weekLastWeek = rb['"Wk 9"'];
-      }
-
-      if (gameInfo.week.currentWeek === 11) {
-        weekFiveWeeksAgo = rb['"Wk 6"'];
-        weekFourWeeksAgo = rb['"Wk 7"'];
-        weekThreeWeeksAgo = rb['"Wk 8"'];
-        weekTwoWeeksAgo = rb['"Wk 9"'];
-        weekLastWeek = rb['"Wk 10"'];
-      }
-
-      if (gameInfo.week.currentWeek === 12) {
-        weekFiveWeeksAgo = rb['"Wk 7"'];
-        weekFourWeeksAgo = rb['"Wk 8"'];
-        weekThreeWeeksAgo = rb['"Wk 9"'];
-        weekTwoWeeksAgo = rb['"Wk 10"'];
-        weekLastWeek = rb['"Wk 11"'];
-      }
-
-      if (gameInfo.week.currentWeek === 13) {
-        weekFiveWeeksAgo = rb['"Wk 8"'];
-        weekFourWeeksAgo = rb['"Wk 9"'];
-        weekThreeWeeksAgo = rb['"Wk 10"'];
-        weekTwoWeeksAgo = rb['"Wk 11"'];
-        weekLastWeek = rb['"Wk 12"'];
-      }
-
-      if (gameInfo.week.currentWeek === 14) {
-        weekFiveWeeksAgo = rb['"Wk 9"'];
-        weekFourWeeksAgo = rb['"Wk 10"'];
-        weekThreeWeeksAgo = rb['"Wk 11"'];
-        weekTwoWeeksAgo = rb['"Wk 12"'];
-        weekLastWeek = rb['"Wk 13"'];
-      }
-
-      if (gameInfo.week.currentWeek === 15) {
-        weekFiveWeeksAgo = rb['"Wk 10"'];
-        weekFourWeeksAgo = rb['"Wk 11"'];
-        weekThreeWeeksAgo = rb['"Wk 12"'];
-        weekTwoWeeksAgo = rb['"Wk 13"'];
-        weekLastWeek = rb['"Wk 14"'];
-      }
-
-      if (gameInfo.week.currentWeek === 16) {
-        weekFiveWeeksAgo = rb['"Wk 11"'];
-        weekFourWeeksAgo = rb['"Wk 12"'];
-        weekThreeWeeksAgo = rb['"Wk 13"'];
-        weekTwoWeeksAgo = rb['"Wk 14"'];
-        weekLastWeek = rb['"Wk 15"'];
-      }
-
-      if (gameInfo.week.currentWeek === 17) {
-        weekFiveWeeksAgo = rb['"Wk 12"'];
-        weekFourWeeksAgo = rb['"Wk 13"'];
-        weekThreeWeeksAgo = rb['"Wk 14"'];
-        weekTwoWeeksAgo = rb['"Wk 15"'];
-        weekLastWeek = rb['"Wk 16"'];
-      }
-
-      if (gameInfo.week.currentWeek === 18) {
-        weekFiveWeeksAgo = rb['"Wk 13"'];
-        weekFourWeeksAgo = rb['"Wk 14"'];
-        weekThreeWeeksAgo = rb['"Wk 15"'];
-        weekTwoWeeksAgo = rb['"Wk 16"'];
-        weekLastWeek = rb['"Wk 17"'];
-      }
-
-      let temprbName = rb['"full_name"'].slice(1, -1).replace('.', '');
-      // let alsotemprbName = temprbName.replace("'", '');
-      let rbName = temprbName.replace('.', '');
-
-      // console.log(altrbName);
-      teamHVTweekFiveWeeksAgo += +weekFiveWeeksAgo;
-      teamHVTweekFourWeeksAgo += +weekFourWeeksAgo;
-      teamHVTweekThreeWeeksAgo += +weekThreeWeeksAgo;
-      teamHVTweekTwoWeeksAgo += +weekTwoWeeksAgo;
-      teamHVTweekLastWeek += +weekLastWeek;
-
-      passedInTeam.teamHVTweekFiveWeeksAgo = +teamHVTweekFiveWeeksAgo;
-      passedInTeam.teamHVTweekFourWeeksAgo = +teamHVTweekFourWeeksAgo;
-      passedInTeam.teamHVTweekThreeWeeksAgo = +teamHVTweekThreeWeeksAgo;
-      passedInTeam.teamHVTweekTwoWeeksAgo = +teamHVTweekTwoWeeksAgo;
-      passedInTeam.teamHVTweekLastWeek = +teamHVTweekLastWeek;
-
-      let totalTeamHVTsLastFiveWeeks = 0;
-      totalTeamHVTsLastFiveWeeks += +teamHVTweekFiveWeeksAgo;
-      totalTeamHVTsLastFiveWeeks += +teamHVTweekFourWeeksAgo;
-      totalTeamHVTsLastFiveWeeks += +teamHVTweekThreeWeeksAgo;
-      totalTeamHVTsLastFiveWeeks += +teamHVTweekTwoWeeksAgo;
-      totalTeamHVTsLastFiveWeeks += +teamHVTweekLastWeek;
-
-      passedInTeam.totalTeamHVTsLastFiveWeeks = totalTeamHVTsLastFiveWeeks;
-      passedInTeam.teamTotalHVTsLastFiveWeeks = totalTeamHVTsLastFiveWeeks;
-      // totalTeamHVTsLastFiveWeeks += teamHVTweekFourWeeksAgo;
-      // totalTeamHVTsLastFiveWeeks += teamHVTweekThreeWeeksAgo;
-      // totalTeamHVTsLastFiveWeeks += teamHVTweekTwoWeeksAgo;
-      // totalTeamHVTsLastFiveWeeks += teamHVTweekLastWeek;
-      // console.log(
-      //   passedInTeam.RBOne.name,
-      //   rbName,
-      //   altrbName,
-      //   rb['"full_name"'].slice(1, -1)
-      // );
-      if (rbName === rb['"full_name"'].slice(1, -1)) {
-        // console.log(passedInTeam.RBOne.name, rbName);
-        if (
-          passedInTeam.RBOne.name === rbName ||
-          rbName === passedInTeam.RBOne.altname
-        ) {
-          // console.log(passedInTeam.RBOne.name, altrbName);
-          // console.log(rbName, passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive);
-          totalHVTCounter = 0;
-          totalHVTCounter += +weekFiveWeeksAgo;
-          totalHVTCounter += +weekFourWeeksAgo;
-          totalHVTCounter += +weekThreeWeeksAgo;
-          totalHVTCounter += +weekTwoWeeksAgo;
-          totalHVTCounter += +weekLastWeek;
-          passedInTeam.RBOne.totalHVTsLastFiveWeeks = +totalHVTCounter;
-
-          passedInTeam.RBOne.HVTsFiveweeksAgo = +weekFiveWeeksAgo;
-          passedInTeam.RBOne.HVTsFourweeksAgo = +weekFourWeeksAgo;
-          passedInTeam.RBOne.HVTsThreeweeksAgo = +weekThreeWeeksAgo;
-          passedInTeam.RBOne.HVTsTwoweeksAgo = +weekTwoWeeksAgo;
-          passedInTeam.RBOne.HVTsLastWeek = +weekLastWeek;
-        }
-        // console.log(
-        //   passedInTeam.RBOne.name,
-        //   passedInTeam.RBOne.HVTsFiveweeksAgo
-        // );
-        if (
-          rbName === passedInTeam.RBTwo.name ||
-          rbName === passedInTeam.RBTwo.altname
-        ) {
-          totalHVTCounter = 0;
-          totalHVTCounter += +weekFiveWeeksAgo;
-          totalHVTCounter += +weekFourWeeksAgo;
-          totalHVTCounter += +weekThreeWeeksAgo;
-          totalHVTCounter += +weekTwoWeeksAgo;
-          totalHVTCounter += +weekLastWeek;
-          passedInTeam.RBTwo.totalHVTsLastFiveWeeks = +totalHVTCounter;
-
-          passedInTeam.RBTwo.HVTsFiveweeksAgo = +weekFiveWeeksAgo;
-          passedInTeam.RBTwo.HVTsFourweeksAgo = +weekFourWeeksAgo;
-          passedInTeam.RBTwo.HVTsThreeweeksAgo = +weekThreeWeeksAgo;
-          passedInTeam.RBTwo.HVTsTwoweeksAgo = +weekTwoWeeksAgo;
-          passedInTeam.RBTwo.HVTsLastWeek = +weekLastWeek;
-        }
-      }
-
-      // console.log(passedInTeam.teamABV, weekLastWeek, teamHVTweekLastWeek);
-    }
-  });
-
-  rb4for4WeeklyStatExplorerHVTsLastFiveWeeks.forEach(function (rb) {
-    // console.log(
-    //   passedInTeam.RBOne.name,
-    //   passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive[0]
-    // );
-    if (passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive[0] < 3) {
-      if (passedInTeam.teamHVTweekFiveWeeksAgo > 0) {
-        // console.log(
-        //   passedInTeam.RBOne.name,
-        //   passedInTeam.RBOne.HVTsFiveweeksAgo,
-        //   passedInTeam.teamHVTweekFiveWeeksAgo
-        // );
-        percentHVTsFiveWeeksAgo = +(
-          passedInTeam.RBOne.HVTsFiveweeksAgo /
-          passedInTeam.teamHVTweekFiveWeeksAgo
-        ).toFixed(2);
-
-        if (
-          !passedInTeam.RBOne.percentOfTeamHVTsLastFiveWeeksByWeek[0] &&
-          passedInTeam.RBOne.percentOfTeamHVTsLastFiveWeeksByWeek[0] !== 0
-        ) {
-          // console.log(passedInTeam.RBOne.name, percentHVTsFiveWeeksAgo);
-          passedInTeam.RBOne.percentOfTeamHVTsLastFiveWeeksByWeek.push(
-            +percentHVTsFiveWeeksAgo
-          );
-        }
-      }
-    }
-
-    if (passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive[1] < 3) {
-      // console.log(rbName, 'played 5 weeks ago');
-      if (passedInTeam.teamHVTweekFourWeeksAgo > 0) {
-        percentHVTsFourWeeksAgo = +(
-          passedInTeam.RBOne.HVTsFourweeksAgo /
-          passedInTeam.teamHVTweekFourWeeksAgo
-        ).toFixed(2);
-        // console.log(rbName, percentHVTsFiveWeeksAgo);
-        if (
-          !passedInTeam.RBOne.percentOfTeamHVTsLastFiveWeeksByWeek[1] &&
-          passedInTeam.RBOne.percentOfTeamHVTsLastFiveWeeksByWeek[1] !== 0
-        ) {
-          passedInTeam.RBOne.percentOfTeamHVTsLastFiveWeeksByWeek.push(
-            +percentHVTsFourWeeksAgo
-          );
-        }
-      }
-    }
-
-    if (passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive[2] < 3) {
-      // console.log(rbName, 'played 5 weeks ago');
-      if (passedInTeam.teamHVTweekThreeWeeksAgo > 0) {
-        percentHVTsThreeWeeksAgo = +(
-          passedInTeam.RBOne.HVTsThreeweeksAgo /
-          passedInTeam.teamHVTweekThreeWeeksAgo
-        ).toFixed(2);
-        // console.log(rbName, percentHVTsFiveWeeksAgo);
-        if (
-          !passedInTeam.RBOne.percentOfTeamHVTsLastFiveWeeksByWeek[2] &&
-          passedInTeam.RBOne.percentOfTeamHVTsLastFiveWeeksByWeek[2] !== 0
-        ) {
-          passedInTeam.RBOne.percentOfTeamHVTsLastFiveWeeksByWeek.push(
-            +percentHVTsThreeWeeksAgo
-          );
-        }
-      }
-    }
-
-    if (passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive[3] < 3) {
-      // console.log(rbName, 'played 5 weeks ago');
-      if (passedInTeam.teamHVTweekTwoWeeksAgo > 0) {
-        percentHVTsTwoWeeksAgo = +(
-          passedInTeam.RBOne.HVTsTwoweeksAgo /
-          passedInTeam.teamHVTweekTwoWeeksAgo
-        ).toFixed(2);
-        // console.log(rbName, percentHVTsFiveWeeksAgo);
-        if (
-          !passedInTeam.RBOne.percentOfTeamHVTsLastFiveWeeksByWeek[3] &&
-          passedInTeam.RBOne.percentOfTeamHVTsLastFiveWeeksByWeek[3] !== 0
-        ) {
-          passedInTeam.RBOne.percentOfTeamHVTsLastFiveWeeksByWeek.push(
-            +percentHVTsTwoWeeksAgo
-          );
-        }
-      }
-    }
-
-    if (passedInTeam.RBOne.roleLastXNumOfWeeksUpToFive[4] < 3) {
-      // console.log(rbName, 'played 5 weeks ago');
-      if (passedInTeam.teamHVTweekLastWeek > 0) {
-        // console.log(passedInTeam.RBOne.name, passedInTeam.RBOne.HVTsLastWeek);
-        percentHVTsweekLastWeek = +(
-          passedInTeam.RBOne.HVTsLastWeek / passedInTeam.teamHVTweekLastWeek
-        ).toFixed(2);
-        // console.log(rbName, percentHVTsFiveWeeksAgo);
-        if (
-          !passedInTeam.RBOne.percentOfTeamHVTsLastFiveWeeksByWeek[4] &&
-          passedInTeam.RBOne.percentOfTeamHVTsLastFiveWeeksByWeek[4] !== 0
-        ) {
-          passedInTeam.RBOne.percentOfTeamHVTsLastFiveWeeksByWeek.push(
-            +percentHVTsweekLastWeek
-          );
-        }
-      }
-    }
-  });
-
-  let temprbOneHVTs = 0;
-
-  passedInTeam.RBOne.percentOfTeamHVTsLastFiveWeeksByWeek.forEach(function (
-    hvtWeek
-  ) {
-    temprbOneHVTs += +hvtWeek;
-  });
-
-  passedInTeam.RBOne.totalPercentOfTeamHighValueTouchesLastFiveweeks = (
-    +temprbOneHVTs /
-    +passedInTeam.RBOne.percentOfTeamHVTsLastFiveWeeksByWeek.length
-  ).toFixed(2);
-
-  // console.log(
-  //   passedInTeam.RBOne.name,
-  //   +temprbOneHVTs,
-  //   +passedInTeam.RBOne.percentOfTeamHVTsLastFiveWeeksByWeek.length,
-  //   passedInTeam.RBOne.totalPercentOfTeamHighValueTouchesLastFiveweeks
-  // );
-  // console.log(
-  //   passedInTeam.RBOne.name,
-  //   passedInTeam.RBOne.totalPercentOfTeamHighValueTouchesLastFiveweeks
-  // );
-
-  // console.log(
-  //   passedInTeam.RBOne.name,
-  //   passedInTeam.RBOne.percentOfTeamHVTsLastFiveWeeksByWeek
-  // );
-
-  rb4for4WeeklyStatExplorerHVTsLastFiveWeeks.forEach(function (rb) {
-    // console.log(
-    //   passedInTeam.RBTwo.name,
-    //   passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive[0]
-    // );
-    if (passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive[0] < 3) {
-      if (passedInTeam.teamHVTweekFiveWeeksAgo > 0) {
-        // console.log(
-        //   passedInTeam.RBTwo.name,
-        //   passedInTeam.RBTwo.HVTsFiveweeksAgo,
-        //   passedInTeam.teamHVTweekFiveWeeksAgo
-        // );
-        percentHVTsFiveWeeksAgo = +(
-          passedInTeam.RBTwo.HVTsFiveweeksAgo /
-          passedInTeam.teamHVTweekFiveWeeksAgo
-        ).toFixed(2);
-
-        if (
-          !passedInTeam.RBTwo.percentOfTeamHVTsLastFiveWeeksByWeek[0] &&
-          passedInTeam.RBTwo.percentOfTeamHVTsLastFiveWeeksByWeek[0] !== 0
-        ) {
-          // console.log(passedInTeam.RBTwo.name, percentHVTsFiveWeeksAgo);
-          passedInTeam.RBTwo.percentOfTeamHVTsLastFiveWeeksByWeek.push(
-            +percentHVTsFiveWeeksAgo
-          );
-        }
-      }
-
-      if (passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive[1] < 3) {
-        // console.log(rbName, 'played 5 weeks ago');
-        if (passedInTeam.teamHVTweekFourWeeksAgo > 0) {
-          percentHVTsFourWeeksAgo = +(
-            passedInTeam.RBTwo.HVTsFourweeksAgo /
-            passedInTeam.teamHVTweekFourWeeksAgo
-          ).toFixed(2);
-          // console.log(rbName, percentHVTsFiveWeeksAgo);
-          if (
-            !passedInTeam.RBTwo.percentOfTeamHVTsLastFiveWeeksByWeek[1] &&
-            passedInTeam.RBTwo.percentOfTeamHVTsLastFiveWeeksByWeek[1] !== 0
-          ) {
-            passedInTeam.RBTwo.percentOfTeamHVTsLastFiveWeeksByWeek.push(
-              +percentHVTsFourWeeksAgo
-            );
-          }
-        }
-      }
-
-      if (passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive[2] < 3) {
-        // console.log(rbName, 'played 5 weeks ago');
-        if (passedInTeam.teamHVTweekThreeWeeksAgo > 0) {
-          percentHVTsThreeWeeksAgo = +(
-            passedInTeam.RBTwo.HVTsThreeweeksAgo /
-            passedInTeam.teamHVTweekThreeWeeksAgo
-          ).toFixed(2);
-          // console.log(rbName, percentHVTsFiveWeeksAgo);
-          if (
-            !passedInTeam.RBTwo.percentOfTeamHVTsLastFiveWeeksByWeek[2] &&
-            passedInTeam.RBTwo.percentOfTeamHVTsLastFiveWeeksByWeek[2] !== 0
-          ) {
-            passedInTeam.RBTwo.percentOfTeamHVTsLastFiveWeeksByWeek.push(
-              +percentHVTsThreeWeeksAgo
-            );
-          }
-        }
-      }
-
-      if (passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive[3] < 3) {
-        // console.log(rbName, 'played 5 weeks ago');
-        if (passedInTeam.teamHVTweekTwoWeeksAgo > 0) {
-          percentHVTsTwoWeeksAgo = +(
-            passedInTeam.RBTwo.HVTsTwoweeksAgo /
-            passedInTeam.teamHVTweekTwoWeeksAgo
-          ).toFixed(2);
-          // console.log(rbName, percentHVTsFiveWeeksAgo);
-          if (
-            !passedInTeam.RBTwo.percentOfTeamHVTsLastFiveWeeksByWeek[3] &&
-            passedInTeam.RBTwo.percentOfTeamHVTsLastFiveWeeksByWeek[3] !== 0
-          ) {
-            passedInTeam.RBTwo.percentOfTeamHVTsLastFiveWeeksByWeek.push(
-              +percentHVTsTwoWeeksAgo
-            );
-          }
-        }
-      }
-
-      if (passedInTeam.RBTwo.roleLastXNumOfWeeksUpToFive[4] < 3) {
-        // console.log(rbName, 'played 5 weeks ago');
-        if (passedInTeam.teamHVTweekLastWeek > 0) {
-          percentHVTsweekLastWeek = +(
-            passedInTeam.RBTwo.HVTsLastWeek / passedInTeam.teamHVTweekLastWeek
-          ).toFixed(2);
-          // console.log(rbName, percentHVTsFiveWeeksAgo);
-          if (
-            !passedInTeam.RBTwo.percentOfTeamHVTsLastFiveWeeksByWeek[4] &&
-            passedInTeam.RBTwo.percentOfTeamHVTsLastFiveWeeksByWeek[4] !== 0
-          ) {
-            passedInTeam.RBTwo.percentOfTeamHVTsLastFiveWeeksByWeek.push(
-              +percentHVTsweekLastWeek
-            );
-          }
-        }
-      }
-    }
-  });
-
-  let temprbTwoHVTs = 0;
-
-  passedInTeam.RBTwo.percentOfTeamHVTsLastFiveWeeksByWeek.forEach(function (
-    hvtWeek
-  ) {
-    temprbTwoHVTs += +hvtWeek;
-  });
-
-  passedInTeam.RBTwo.totalPercentOfTeamHighValueTouchesLastFiveweeks = (
-    +temprbTwoHVTs /
-    +passedInTeam.RBTwo.percentOfTeamHVTsLastFiveWeeksByWeek.length
-  ).toFixed(2);
+  
 
   passedInTeam.teamVTT = gameInfoPassedInTeam.vtt;
   passedInTeam.opponentVTT = gameInfoPassedInTeam.opponentvtt;
@@ -5854,33 +5375,42 @@ const populateTeamObjects = function (
     }
     });
 
-    rb4for4StatExplorerForRushingLastFiveWeeks.forEach(function (team) {
+    rb4for4PlayerStatsApp.forEach(function (team) {
       // if (passedInTeam.RBOne.name === team['"full_name"'].slice(1, -1)) {
 
       if (
-        passedInTeam.teamABV === team['"posteam"'].slice(1, -1) ||
-        passedInTeam.altTeamABV === team['"posteam"'].slice(1, -1)
+        passedInTeam.teamABV === team.Team.slice(1, -1) ||
+        passedInTeam.altTeamABV === team.Team.slice(1, -1)
       ) {
         // console.log(team);
        
       }
 
       if (
-        passedInTeam.RBOne.name === team['"full_name"'].slice(1, -1) ||
-        passedInTeam.RBOne.altname === team['"full_name"'].slice(1, -1)
+        passedInTeam.RBOne.name === team['"Player Name"'].slice(1, -1) ||
+        passedInTeam.RBOne.altname === team['"Player Name"'].slice(1, -1)
       ) {
         
-        passedInTeam.RBOne.totalCarriesLastFiveWeeks = +team['"carries"'];
-        passedInTeam.RBOne.carriesPerGameLastFiveWeeks = +team['"carries_pg"'];
+        passedInTeam.RBOne.totalCarriesLastFiveWeeks = +team.RuAtt;
+        
+        let gamesPlayed = +team.G
+        // console.log(typeof tempGamesPlayed)
+        let carriesPerGame = team.RuAtt / gamesPlayed
+        
+        passedInTeam.RBOne.carriesPerGameLastFiveWeeks = carriesPerGame;
       }
-
       if (
-        passedInTeam.RBTwo.name === team['"full_name"'].slice(1, -1) ||
-        passedInTeam.RBTwo.altname === team['"full_name"'].slice(1, -1)
+        passedInTeam.RBTwo.name === team['"Player Name"'].slice(1, -1) ||
+        passedInTeam.RBTwo.altname === team['"Player Name"'].slice(1, -1)
       ) {
         
-        passedInTeam.RBTwo.totalCarriesLastFiveWeeks = +team['"carries"'];
-        passedInTeam.RBTwo.carriesPerGameLastFiveWeeks = +team['"carries_pg"'];
+        passedInTeam.RBTwo.totalCarriesLastFiveWeeks = +team.RuAtt;
+        // console.log(team.G)
+        let gamesPlayed = +team.G
+        // console.log(typeof tempGamesPlayed)
+        let carriesPerGame = team.RuAtt / gamesPlayed
+        
+        passedInTeam.RBTwo.carriesPerGameLastFiveWeeks = carriesPerGame;
       }
     });
     // console.log(

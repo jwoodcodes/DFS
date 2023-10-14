@@ -149,7 +149,7 @@ class RbObject {
     teamProjectedPoints,
     teamPointsPerGameLastFiveWeeks,
     teamProjectedPointsThisWeekPercentage,
-    teamTotalHVTsLastFiveWeeks,
+    
     hadByeInLastFiveWeeksIsTrue,
     teamProjectedForAHalfOfNegetiveGameScriptIsTrue,
 
@@ -157,8 +157,7 @@ class RbObject {
     percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek,
 
    
-    HVTsLastFiveWeeks,
-    percentOfTeamHVTsLastFiveWeeks,
+    
     targetSharePercentageLastFiveWeeks,
     carriesPlusReceptionsPerGameLastFiveWeeks,
     projectedCarriesPlusReceptionsThisWeek,
@@ -201,7 +200,7 @@ class RbObject {
     this.teamPointsPerGameLastFiveWeeks = teamPointsPerGameLastFiveWeeks;
     this.teamProjectedPointsThisWeekPercentage =
       teamProjectedPointsThisWeekPercentage;
-    this.teamTotalHVTsLastFiveWeeks = teamTotalHVTsLastFiveWeeks;
+  
     this.hadByeInLastFiveWeeksIsTrue = hadByeInLastFiveWeeksIsTrue;
     this.teamProjectedForAHalfOfNegetiveGameScriptIsTrue =
       teamProjectedForAHalfOfNegetiveGameScriptIsTrue;
@@ -211,8 +210,8 @@ class RbObject {
       percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek;
 
    
-    this.HVTsLastFiveWeeks = HVTsLastFiveWeeks;
-    this.percentOfTeamHVTsLastFiveWeeks = percentOfTeamHVTsLastFiveWeeks;
+   
+    
     this.targetSharePercentageLastFiveWeeks =
       targetSharePercentageLastFiveWeeks;
     this.carriesPlusReceptionsPerGameLastFiveWeeks =
@@ -1122,14 +1121,13 @@ allRBs.forEach(function (team, i) {
     teamProjectedPoints,
     team.RBOne.teamRealLifePointsScoredPerGameLastFiveWeeks,
     teamProjectedPointsThisWeekPercentage,
-    team.totalTeamHVTsLastFiveWeeks,
+   
     team.hadByeInTheLastFiveweeks,
     team.teamProjectedForAHalfOfNegetiveGameScriptIsTrue,
     team.RBOne.roleThisWeek,
     team.RBOne.rbOnematchingWeeksPercentage,
     
-    team.RBOne.totalHVTsLastFiveWeeks,
-    +team.RBOne.totalPercentOfTeamHighValueTouchesLastFiveweeks,
+    
     team.RBOne.targetSharePercentageLastFiveWeeks,
     team.RBOne.carriesPlusReceptionsPerGameLastFiveWeeks,
     team.RBOne.projectedCarriesPlusReceptionsThisWeek,
@@ -1206,14 +1204,13 @@ allRBs.forEach(function (team, i) {
     teamProjectedPoints,
     team.RBTwo.teamRealLifePointsScoredPerGameLastFiveWeeks,
     teamProjectedPointsThisWeekPercentage,
-    team.totalTeamHVTsLastFiveWeeks,
+   
     team.hadByeInTheLastFiveweeks,
     team.teamProjectedForAHalfOfNegetiveGameScriptIsTrue,
     team.RBTwo.roleThisWeek,
     team.RBTwo.rbTwomatchingWeeksPercentage,
     
-    team.RBTwo.totalHVTsLastFiveWeeks,
-    +team.RBTwo.totalPercentOfTeamHighValueTouchesLastFiveweeks,
+    
     team.RBTwo.targetSharePercentageLastFiveWeeks,
     team.RBTwo.carriesPlusReceptionsPerGameLastFiveWeeks,
     team.RBTwo.projectedCarriesPlusReceptionsThisWeek,

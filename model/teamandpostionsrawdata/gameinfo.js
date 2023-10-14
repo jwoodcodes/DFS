@@ -5374,12 +5374,15 @@ allGameInfo.forEach(function (team) {
 // console.log(gameInfo.browns);
 
 // console.log(gameInfo.saints);
+// console.log(gameInfo.bears);
 // console.log(gameInfo.steelers);
 // console.log(gameInfo.seahawks);
 // console.log(gameInfo.vikings);
 // console.log(gameInfo.SF49ers);
-// console.log(gameInfo.bengals, gameInfo.titans);
+// console.log(gameInfo.bengals);
 // console.log(gameInfo.rams)
+// console.log(gameInfo.dolphins)
+// console.log(gameInfo.panthers)
 // console.log(gameInfo);
 
 module.exports = gameInfo;

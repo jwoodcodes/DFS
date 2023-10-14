@@ -50,12 +50,8 @@
 // const rb4for4SnapsAppLastFiveWeeks = 
 // module.exports = rb4for4SnapsAppLastFiveWeeks;
 //
-// const rb4for4StatExplorerForRushingLastFiveWeeks =
-// module.exports = rb4for4StatExplorerForRushingLastFiveWeeks;
-//
-//
-// const rb4for4WeeklyStatExplorerHVTsLastFiveWeeks =
-// module.exports = rb4for4WeeklyStatExplorerHVTsLastFiveWeeks;
+// const rb4for4PlayerStatsApp =
+// module.exports = rb4for4PlayerStatsApp;
 //
 //
 // const rbRvWeeklyStatExplorerRecievingTabLastFiveWeeks =
