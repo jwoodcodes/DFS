@@ -1,7 +1,7 @@
 import clientPromise from '@/lib/mongodb';
 
 export default function PcwTrade(fantasycalcData) {
-  console.log({ fantasycalcData });
+  // console.log({ fantasycalcData });
   return (
     <div>
       <div>pcw calculator</div>

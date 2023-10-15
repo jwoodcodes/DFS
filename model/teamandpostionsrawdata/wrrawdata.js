@@ -20,6 +20,9 @@ const wr4for4FantasyPointsBrowserLastFiveWeeks = require('../datafilesmadefrom4f
 const wr4for4PlayerStatExplorerExpectedPPRPointsLastFiveWeeks = require('../datafilesmadefrom4for4CSVs/wr4for4PlayerStatExplorerExpectedPPRPointsLastFiveWeeks');
 const wr4for4PlayerStatExplorerTargetShareLastFiveWeeks = require('../datafilesmadefrom4for4CSVs/wr4for4PlayerStatExplorerTargetShareLasstFiveWeeks');
 
+const wr4for4PlayerTargetsAppLastFiveWeeks = require('../datafilesmadefrom4for4CSVs/wr4for4PlayerTargetsAppLastFiveWeeks')
+
+
 //WR target share the last x number of games can be found on the rotoviz monday review and the last 6 weeks should be used for a WR's target share number
 //WR projected targets should be QB prjpassattempts * target share(in decimal form!)
 
@@ -3879,7 +3882,8 @@ if(gameInfoPassedInTeam.WRThreeThisWeekName) {
 
           passedInTeam.firstPassedInWRPercentOfHighBarNumberLastWeek = +(
             (passedInTeam.firstPassedInWRLastWeekInFantasyPointsScoredPointsScored /
-              highBarNumber) *
+              highBarNumber) 
+              *
             100
           ).toFixed(2);
 
@@ -3898,6 +3902,8 @@ if(gameInfoPassedInTeam.WRThreeThisWeekName) {
               highBarNumber) *
             100
           ).toFixed(2);
+
+          
 
           ///////////////////////////////////////////////////assinging number of games played in last five weeks
 
@@ -4027,6 +4033,16 @@ if(gameInfoPassedInTeam.WRThreeThisWeekName) {
       ////////////////////////////
       ///wr expected PPR fantasy points per week last five weeks to help to determine what wr's roles were each week last five weeks
       /////////////////////
+
+
+      //
+      // replace wr4for4PlayerStatExplorerExpectedPPRPointsLastFiveWeeks
+      // below with wr4for4PlayerTargetsAppLastFiveWeeks
+      // first thing on 10/15/23
+      //
+      wr4for4PlayerTargetsAppLastFiveWeeks.forEach(function(wr) {
+        // console.log(wr.W1)
+      })
 
       wr4for4PlayerStatExplorerExpectedPPRPointsLastFiveWeeks.forEach(function (
         wr

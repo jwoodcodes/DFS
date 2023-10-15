@@ -407,6 +407,7 @@ class RbObject {
       } else {
         this.appProjectedFullPPRPoints = this.fourForFourFullPPRProjectedPoints;
       }
+      
     }
 
     //weeks 5-18
@@ -508,8 +509,9 @@ class RbObject {
             this.fourForFourFullPPRProjectedPoints;
         }
       }
+      
     }
-
+    
     /////////////////////////////////////////////////////////////////////
 
     ////////////////////////

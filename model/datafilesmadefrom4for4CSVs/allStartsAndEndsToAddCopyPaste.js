@@ -70,13 +70,9 @@
 // const te4for4FantasyPointsBrowserLastFiveWeeks =
 // module.exports = te4for4FantasyPointsBrowserLastFiveWeeks;
 //
+// const te4for4PlayerStatsAppLastFiveWeeks =
+// module.exports = te4for4PlayerStatsAppLastFiveWeeks;
 //
-// const te4for4PlayerStatExplorerExpectedPPRPointsWeeklyLastFiveWeeks =
-// module.exports = te4for4PlayerStatExplorerExpectedPPRPointsWeeklyLastFiveWeeks;
-//
-//
-// const te4for4PlayerStatExplorerReceivingTab =
-// module.exports = te4for4PlayerStatExplorerReceivingTab;
 //
 // const team4for4TeamStatExplorerTeamPointsScoredPerWeekLastFiveWeeks =
 // module.exports = team4for4TeamStatExplorerTeamPointsScoredPerWeekLastFiveWeeks
@@ -93,8 +89,9 @@
 // module.exports = wr4for4FantasyPointsBrowserLastFiveWeeks;
 //
 //
-// const wr4for4PlayerStatExplorerExpectedPPRPointsLastFiveWeeks =
-// module.exports = wr4for4PlayerStatExplorerExpectedPPRPointsLastFiveWeeks;
+// const wr4for4PlayerTargetsAppLastFiveWeeks = 
+// module.exports = wr4for4PlayerTargetsAppLastFiveWeeks
+//
 //
 //
 // const wr4for4PlayerStatExplorerRecievingByAverageLastFiveWeeks =
