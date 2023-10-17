@@ -14,14 +14,13 @@ const gameInfo = require('./gameinfo');
 const allTeams = require('../teamandpositionvariables/allTeamLevelVariables');
 const allQBData = require('../dfs_positions_calc_funcs/qbValuesCalcs');
 
-const wr4for4PlayerStatExplorerRecievingByAverageLastFiveWeeks = require('../datafilesmadefrom4for4CSVs/wr4for4PlayerStatExplorerRecievingByAverageLastFiveWeeks');
-const wr4for4PlayerStatExplorerSnapsAndFantasyTabLastFiveWeeks = require('../datafilesmadefrom4for4CSVs/wr4for4PlayerStatExplorerSnapsAndFantasyTabLastFiveWeeks');
+
+
 const wr4for4FantasyPointsBrowserLastFiveWeeks = require('../datafilesmadefrom4for4CSVs/wr4for4FantasyPointsBrowserLastFiveWeeks');
-const wr4for4PlayerStatExplorerExpectedPPRPointsLastFiveWeeks = require('../datafilesmadefrom4for4CSVs/wr4for4PlayerStatExplorerExpectedPPRPointsLastFiveWeeks');
-const wr4for4PlayerStatExplorerTargetShareLastFiveWeeks = require('../datafilesmadefrom4for4CSVs/wr4for4PlayerStatExplorerTargetShareLasstFiveWeeks');
+
 
 const wr4for4PlayerTargetsAppLastFiveWeeks = require('../datafilesmadefrom4for4CSVs/wr4for4PlayerTargetsAppLastFiveWeeks')
-
+const wrRotovizWeeklyStatExplorerRecievingTabLastFiveWeeks = require('../datafilesmadefrom4for4CSVs/wrRotovizWeeklyStatExplorerRecievingTabLastFiveWeeks')
 
 //WR target share the last x number of games can be found on the rotoviz monday review and the last 6 weeks should be used for a WR's target share number
 //WR projected targets should be QB prjpassattempts * target share(in decimal form!)
@@ -3224,9 +3223,11 @@ if(gameInfoPassedInTeam.WRThreeThisWeekName) {
       }
       });
 
-      wr4for4PlayerStatExplorerRecievingByAverageLastFiveWeeks.forEach(
+     
+
+      wrRotovizWeeklyStatExplorerRecievingTabLastFiveWeeks.forEach(
         function (team) {
-          SanitizedPlayerName = team['"full_name"']
+          SanitizedPlayerName = team['"Player"']
             .slice(1, -1)
             .replace('.', '')
             .replace('.', '')
@@ -3235,10 +3236,10 @@ if(gameInfoPassedInTeam.WRThreeThisWeekName) {
           if (passedInTeam.WROne.name === SanitizedPlayerName) {
             // console.log(SanitizedPlayerName);
 
-            temp = +team['"target_share"'];
+            temp = +team['"Tgt Shr"'].slice(1, -2);
             passedInTeam.WROne.targetShareLastFiveWeeks = +temp.toFixed(3);
 
-            tempReceptions = +team['"receptions"'];
+            tempReceptions = +team['"Rec"'];
             passedInTeam.WROne.receptionsLastFiveWeeks =
               +tempReceptions.toFixed(3);
           }
@@ -3248,20 +3249,20 @@ if(gameInfoPassedInTeam.WRThreeThisWeekName) {
             // if (team['"posteam"'] === '"CIN"') {
             //   console.log(team);
             // }
-            temp = +team['"target_share"'];
+            temp = +team['"Tgt Shr"'].slice(1, -2);
             passedInTeam.WRTwo.targetShareLastFiveWeeks = +temp.toFixed(3);
 
-            tempReceptions = +team['"receptions"'];
+            tempReceptions = +team['"Rec"'];
             passedInTeam.WRTwo.receptionsLastFiveWeeks =
               +tempReceptions.toFixed(3);
           }
 
           if (passedInTeam.WRThree.name === SanitizedPlayerName) {
             // console.log(SanitizedPlayerName);
-            temp = +team['"target_share"'];
+            temp = +team['"Tgt Shr"'].slice(1, -2);
             passedInTeam.WRThree.targetShareLastFiveWeeks = +temp.toFixed(3);
 
-            tempReceptions = +team['"receptions"'];
+            tempReceptions = +team['"Rec"'];
             passedInTeam.WRThree.receptionsLastFiveWeeks =
               +tempReceptions.toFixed(3);
           }
@@ -4038,22 +4039,25 @@ if(gameInfoPassedInTeam.WRThreeThisWeekName) {
       //
       // replace wr4for4PlayerStatExplorerExpectedPPRPointsLastFiveWeeks
       // below with wr4for4PlayerTargetsAppLastFiveWeeks
-      // first thing on 10/15/23
+      // first thing on 10/16/23
       //
       wr4for4PlayerTargetsAppLastFiveWeeks.forEach(function(wr) {
         // console.log(wr.W1)
+        // console.log(wr.Team)
+        
       })
 
-      wr4for4PlayerStatExplorerExpectedPPRPointsLastFiveWeeks.forEach(function (
+      //
+
+      wr4for4PlayerTargetsAppLastFiveWeeks.forEach(function (
         wr
       ) {
         if (
-          passedInTeam.teamABV === wr['"posteam"'].slice(1, -1) ||
-          passedInTeam.altTeamABV === wr['"posteam"'].slice(1, -1)
+          passedInTeam.teamABV === wr.Team ||
+          passedInTeam.altTeamABV === wr.Team
         ) {
           // console.log(wr.Player);
-          // console.log(rb.W4);
-          // console.log(rb.G);
+          // console.log(wr.W1)
 
           let weekFiveWeeksAgo = 0;
           let weekFourWeeksAgo = 0;
@@ -4062,128 +4066,128 @@ if(gameInfoPassedInTeam.WRThreeThisWeekName) {
           let weekLastWeek = 0;
 
           if (gameInfo.week.currentWeek === 3) {
-            weekTwoWeeksAgo = wr['"Wk 1"'];
-            weekLastWeek = wr['"Wk 2"'];
+            weekTwoWeeksAgo = wr.W1;
+            weekLastWeek = wr.W2;
           }
 
           if (gameInfo.week.currentWeek === 4) {
-            weekThreeWeeksAgo = wr['"Wk 1"'];
-            weekTwoWeeksAgo = wr['"Wk 2"'];
-            weekLastWeek = wr['"Wk 3"'];
+            weekThreeWeeksAgo = wr.W1;
+            weekTwoWeeksAgo = wr.W2;
+            weekLastWeek = wr.W3;
           }
 
           if (gameInfo.week.currentWeek === 5) {
-            weekFourWeeksAgo = wr['"Wk 1"'];
-            weekThreeWeeksAgo = wr['"Wk 2"'];
-            weekTwoWeeksAgo = wr['"Wk 3"'];
-            weekLastWeek = wr['"Wk 4"'];
+            weekFourWeeksAgo = wr.W1;
+            weekThreeWeeksAgo = wr.W2;
+            weekTwoWeeksAgo = wr.W3;
+            weekLastWeek = wr.W4;
           }
 
           if (gameInfo.week.currentWeek === 6) {
-            weekFiveWeeksAgo = wr['"Wk 1"'];
-            weekFourWeeksAgo = wr['"Wk 2"'];
-            weekThreeWeeksAgo = wr['"Wk 3"'];
-            weekTwoWeeksAgo = wr['"Wk 4"'];
-            weekLastWeek = wr['"Wk 5"'];
+            weekFiveWeeksAgo = wr.W1;
+            weekFourWeeksAgo = wr.W2;
+            weekThreeWeeksAgo = wr.W3;
+            weekTwoWeeksAgo = wr.W4;
+            weekLastWeek = wr.W5;
           }
 
           if (gameInfo.week.currentWeek === 7) {
-            weekFiveWeeksAgo = wr['"Wk 2"'];
-            weekFourWeeksAgo = wr['"Wk 3"'];
-            weekThreeWeeksAgo = wr['"Wk 4"'];
-            weekTwoWeeksAgo = wr['"Wk 5"'];
-            weekLastWeek = wr['"Wk 6"'];
+            weekFiveWeeksAgo = wr.W2;
+            weekFourWeeksAgo = wr.W3;
+            weekThreeWeeksAgo = wr.W4;
+            weekTwoWeeksAgo = wr.W5;
+            weekLastWeek = wr.W6;
           }
 
           if (gameInfo.week.currentWeek === 8) {
-            weekFiveWeeksAgo = wr['"Wk 3"'];
-            weekFourWeeksAgo = wr['"Wk 4"'];
-            weekThreeWeeksAgo = wr['"Wk 5"'];
-            weekTwoWeeksAgo = wr['"Wk 6"'];
-            weekLastWeek = wr['"Wk 7"'];
+            weekFiveWeeksAgo = wr.W3;
+            weekFourWeeksAgo = wr.W4;
+            weekThreeWeeksAgo = wr.W5;
+            weekTwoWeeksAgo = wr.W6;
+            weekLastWeek = wr.W7;
           }
 
           if (gameInfo.week.currentWeek === 9) {
-            weekFiveWeeksAgo = wr['"Wk 4"'];
-            weekFourWeeksAgo = wr['"Wk 5"'];
-            weekThreeWeeksAgo = wr['"Wk 6"'];
-            weekTwoWeeksAgo = wr['"Wk 7"'];
-            weekLastWeek = wr['"Wk 8"'];
+            weekFiveWeeksAgo = wr.W4;
+            weekFourWeeksAgo = wr.W5;
+            weekThreeWeeksAgo = wr.W6;
+            weekTwoWeeksAgo = wr.W7;
+            weekLastWeek = wr.W8;
           }
 
           if (gameInfo.week.currentWeek === 10) {
-            weekFiveWeeksAgo = wr['"Wk 5"'];
-            weekFourWeeksAgo = wr['"Wk 6"'];
-            weekThreeWeeksAgo = wr['"Wk 7"'];
-            weekTwoWeeksAgo = wr['"Wk 8"'];
-            weekLastWeek = wr['"Wk 9"'];
+            weekFiveWeeksAgo = wr.W5;
+            weekFourWeeksAgo = wr.W6;
+            weekThreeWeeksAgo = wr.W7;
+            weekTwoWeeksAgo = wr.W8;
+            weekLastWeek = wr.W9;
           }
 
           if (gameInfo.week.currentWeek === 11) {
-            weekFiveWeeksAgo = wr['"Wk 6"'];
-            weekFourWeeksAgo = wr['"Wk 7"'];
-            weekThreeWeeksAgo = wr['"Wk 8"'];
-            weekTwoWeeksAgo = wr['"Wk 9"'];
-            weekLastWeek = wr['"Wk 10"'];
+            weekFiveWeeksAgo = wr.W6;
+            weekFourWeeksAgo = wr.W7;
+            weekThreeWeeksAgo = wr.W8;
+            weekTwoWeeksAgo = wr.W9;
+            weekLastWeek = wr.W10;
           }
 
           if (gameInfo.week.currentWeek === 12) {
-            weekFiveWeeksAgo = wr['"Wk 7"'];
-            weekFourWeeksAgo = wr['"Wk 8"'];
-            weekThreeWeeksAgo = wr['"Wk 9"'];
-            weekTwoWeeksAgo = wr['"Wk 10"'];
-            weekLastWeek = wr['"Wk 11"'];
+            weekFiveWeeksAgo = wr.W7;
+            weekFourWeeksAgo = wr.W8;
+            weekThreeWeeksAgo = wr.W9;
+            weekTwoWeeksAgo = wr.W10;
+            weekLastWeek = wr.W11;
           }
 
           if (gameInfo.week.currentWeek === 13) {
-            weekFiveWeeksAgo = wr['"Wk 8"'];
-            weekFourWeeksAgo = wr['"Wk 9"'];
-            weekThreeWeeksAgo = wr['"Wk 10"'];
-            weekTwoWeeksAgo = wr['"Wk 11"'];
-            weekLastWeek = wr['"Wk 12"'];
+            weekFiveWeeksAgo = wr.W8;
+            weekFourWeeksAgo = wr.W9;
+            weekThreeWeeksAgo = wr.W10;
+            weekTwoWeeksAgo = wr.W11;
+            weekLastWeek = wr.W12;
           }
 
           if (gameInfo.week.currentWeek === 14) {
-            weekFiveWeeksAgo = wr['"Wk 9"'];
-            weekFourWeeksAgo = wr['"Wk 10"'];
-            weekThreeWeeksAgo = wr['"Wk 11"'];
-            weekTwoWeeksAgo = wr['"Wk 12"'];
-            weekLastWeek = wr['"Wk 13"'];
+            weekFiveWeeksAgo = wr.W9;
+            weekFourWeeksAgo = wr.W10;
+            weekThreeWeeksAgo = wr.W11;
+            weekTwoWeeksAgo = wr.W12;
+            weekLastWeek = wr.W13;
           }
 
           if (gameInfo.week.currentWeek === 15) {
-            weekFiveWeeksAgo = wr['"Wk 10"'];
-            weekFourWeeksAgo = wr['"Wk 11"'];
-            weekThreeWeeksAgo = wr['"Wk 12"'];
-            weekTwoWeeksAgo = wr['"Wk 13"'];
-            weekLastWeek = wr['"Wk 14"'];
+            weekFiveWeeksAgo = wr.W10;
+            weekFourWeeksAgo = wr.W11;
+            weekThreeWeeksAgo = wr.W12;
+            weekTwoWeeksAgo = wr.W13;
+            weekLastWeek = wr.W14;
           }
 
           if (gameInfo.week.currentWeek === 16) {
-            weekFiveWeeksAgo = wr['"Wk 11"'];
-            weekFourWeeksAgo = wr['"Wk 12"'];
-            weekThreeWeeksAgo = wr['"Wk 13"'];
-            weekTwoWeeksAgo = wr['"Wk 14"'];
-            weekLastWeek = wr['"Wk 15"'];
+            weekFiveWeeksAgo = wr.W11;
+            weekFourWeeksAgo = wr.W12;
+            weekThreeWeeksAgo = wr.W13;
+            weekTwoWeeksAgo = wr.W14;
+            weekLastWeek = wr.W15;
           }
 
           if (gameInfo.week.currentWeek === 17) {
-            weekFiveWeeksAgo = wr['"Wk 12"'];
-            weekFourWeeksAgo = wr['"Wk 13"'];
-            weekThreeWeeksAgo = wr['"Wk 14"'];
-            weekTwoWeeksAgo = wr['"Wk 15"'];
-            weekLastWeek = wr['"Wk 16"'];
+            weekFiveWeeksAgo = wr.W12;
+            weekFourWeeksAgo = wr.W13;
+            weekThreeWeeksAgo = wr.W14;
+            weekTwoWeeksAgo = wr.W15;
+            weekLastWeek = wr.W16;
           }
 
           if (gameInfo.week.currentWeek === 18) {
-            weekFiveWeeksAgo = wr['"Wk 13"'];
-            weekFourWeeksAgo = wr['"Wk 14"'];
-            weekThreeWeeksAgo = wr['"Wk 15"'];
-            weekTwoWeeksAgo = wr['"Wk 16"'];
-            weekLastWeek = wr['"Wk 17"'];
+            weekFiveWeeksAgo = wr.W13;
+            weekFourWeeksAgo = wr.W14;
+            weekThreeWeeksAgo = wr.W15;
+            weekTwoWeeksAgo = wr.W16;
+            weekLastWeek = wr.W17;
           }
 
-          SanitizedPlayerName = wr['"full_name"']
+          SanitizedPlayerName = wr.Player
             .slice(1, -1)
             .replace('.', '')
             .replace('.', '')
@@ -4195,31 +4199,32 @@ if(gameInfoPassedInTeam.WRThreeThisWeekName) {
             // console.log(SanitizedPlayerName);
             tempFiveWeeksAgo = +weekFiveWeeksAgo;
             passedInTeam.firstPassedInWRFiveWeeksAgoExpectedPPRPoints =
-              tempFiveWeeksAgo.toFixed(2);
+              tempFiveWeeksAgo;
+              // console.log(passedInTeam.firstPassedInWRFiveWeeksAgoExpectedPPRPoints)
             if (weekFiveWeeksAgo === '-') {
               passedInTeam.firstPassedInWRFiveWeeksAgoExpectedPPRPoints = 0;
             }
             tempFourWeeksAgo = +weekFourWeeksAgo;
             passedInTeam.firstPassedInWRFourWeeksAgoExpectedPPRPoints =
-              tempFourWeeksAgo.toFixed(2);
+              tempFourWeeksAgo;
             if (weekFourWeeksAgo === '-') {
               passedInTeam.firstPassedInWRFourWeeksAgoExpectedPPRPoints = 0;
             }
             tempThreeWeeksAgo = +weekThreeWeeksAgo;
             passedInTeam.firstPassedInWRThreeWeeksAgoExpectedPPRPoints =
-              tempThreeWeeksAgo.toFixed(2);
+              tempThreeWeeksAgo;
             if (weekThreeWeeksAgo === '-') {
               passedInTeam.firstPassedInWRThreeWeeksAgoExpectedPPRPoints = 0;
             }
             tempTwoWeeksAgo = +weekTwoWeeksAgo;
             passedInTeam.firstPassedInWRTwoWeeksAgoExpectedPPRPoints =
-              tempTwoWeeksAgo.toFixed(2);
+              tempTwoWeeksAgo;
             if (weekTwoWeeksAgo === '-') {
               passedInTeam.firstPassedInWRTwoWeeksAgoExpectedPPRPoints = 0;
             }
             tempLastWeek = +weekLastWeek;
             passedInTeam.firstPassedInWRLastWeekExpectedPPRPoints =
-              tempLastWeek.toFixed(2);
+              tempLastWeek;
             if (weekLastWeek === '-') {
               passedInTeam.firstPassedInWRLastWeekExpectedPPRPoints = 0;
             }
@@ -4228,31 +4233,31 @@ if(gameInfoPassedInTeam.WRThreeThisWeekName) {
             // console.log(SanitizedPlayerName);
             tempFiveWeeksAgo = +weekFiveWeeksAgo;
             passedInTeam.secondPassedInWRFiveWeeksAgoExpectedPPRPoints =
-              tempFiveWeeksAgo.toFixed(2);
+              tempFiveWeeksAgo;
             if (weekFiveWeeksAgo === '-') {
               passedInTeam.secondPassedInWRFiveWeeksAgoExpectedPPRPoints = 0;
             }
             tempFourWeeksAgo = +weekFourWeeksAgo;
             passedInTeam.secondPassedInWRFourWeeksAgoExpectedPPRPoints =
-              tempFourWeeksAgo.toFixed(2);
+              tempFourWeeksAgo;
             if (weekFourWeeksAgo === '-') {
               passedInTeam.secondPassedInWRFourWeeksAgoExpectedPPRPoints = 0;
             }
             tempThreeWeeksAgo = +weekThreeWeeksAgo;
             passedInTeam.secondPassedInWRThreeWeeksAgoExpectedPPRPoints =
-              tempThreeWeeksAgo.toFixed(2);
+              tempThreeWeeksAgo;
             if (weekThreeWeeksAgo === '-') {
               passedInTeam.secondPassedInWRThreeWeeksAgoExpectedPPRPoints = 0;
             }
             tempTwoWeeksAgo = +weekTwoWeeksAgo;
             passedInTeam.secondPassedInWRTwoWeeksAgoExpectedPPRPoints =
-              tempTwoWeeksAgo.toFixed(2);
+              tempTwoWeeksAgo;
             if (weekTwoWeeksAgo === '-') {
               passedInTeam.secondPassedInWRTwoWeeksAgoExpectedPPRPoints = 0;
             }
             tempLastWeek = +weekLastWeek;
             passedInTeam.secondPassedInWRLastWeekExpectedPPRPoints =
-              tempLastWeek.toFixed(2);
+              tempLastWeek;
             if (weekLastWeek === '-') {
               passedInTeam.secondPassedInWRLastWeekExpectedPPRPoints = 0;
             }
@@ -4261,31 +4266,31 @@ if(gameInfoPassedInTeam.WRThreeThisWeekName) {
             // console.log(SanitizedPlayerName);
             tempFiveWeeksAgo = +weekFiveWeeksAgo;
             passedInTeam.thirdPassedInWRFiveWeeksAgoExpectedPPRPoints =
-              tempFiveWeeksAgo.toFixed(2);
+              tempFiveWeeksAgo;
             if (weekFiveWeeksAgo === '-') {
               passedInTeam.thirdPassedInWRFiveWeeksAgoExpectedPPRPoints = 0;
             }
             tempFourWeeksAgo = +weekFourWeeksAgo;
             passedInTeam.thirdPassedInWRFourWeeksAgoExpectedPPRPoints =
-              tempFourWeeksAgo.toFixed(2);
+              tempFourWeeksAgo;
             if (weekFourWeeksAgo === '-') {
               passedInTeam.thirdPassedInWRFourWeeksAgoExpectedPPRPoints = 0;
             }
             tempThreeWeeksAgo = +weekThreeWeeksAgo;
             passedInTeam.thirdPassedInWRThreeWeeksAgoExpectedPPRPoints =
-              tempThreeWeeksAgo.toFixed(2);
+              tempThreeWeeksAgo;
             if (weekThreeWeeksAgo === '-') {
               passedInTeam.thirdPassedInWRThreeWeeksAgoExpectedPPRPoints = 0;
             }
             tempTwoWeeksAgo = +weekTwoWeeksAgo;
             passedInTeam.thirdPassedInWRTwoWeeksAgoExpectedPPRPoints =
-              tempTwoWeeksAgo.toFixed(2);
+              tempTwoWeeksAgo;
             if (weekTwoWeeksAgo === '-') {
               passedInTeam.thirdPassedInWRTwoWeeksAgoExpectedPPRPoints = 0;
             }
             tempLastWeek = +weekLastWeek;
             passedInTeam.thirdPassedInWRLastWeekExpectedPPRPoints =
-              tempLastWeek.toFixed(2);
+              tempLastWeek;
             if (weekLastWeek === '-') {
               passedInTeam.thirdPassedInWRLastWeekExpectedPPRPoints = 0;
             }
@@ -4294,31 +4299,31 @@ if(gameInfoPassedInTeam.WRThreeThisWeekName) {
             // console.log(SanitizedPlayerName);
             tempFiveWeeksAgo = +weekFiveWeeksAgo;
             passedInTeam.fourthPassedInWRFiveWeeksAgoExpectedPPRPoints =
-              tempFiveWeeksAgo.toFixed(2);
+              tempFiveWeeksAgo;
             if (weekFiveWeeksAgo === '-') {
               passedInTeam.fourthPassedInWRFiveWeeksAgoExpectedPPRPoints = 0;
             }
             tempFourWeeksAgo = +weekFourWeeksAgo;
             passedInTeam.fourthPassedInWRFourWeeksAgoExpectedPPRPoints =
-              tempFourWeeksAgo.toFixed(2);
+              tempFourWeeksAgo;
             if (weekFourWeeksAgo === '-') {
               passedInTeam.fourthPassedInWRFourWeeksAgoExpectedPPRPoints = 0;
             }
             tempThreeWeeksAgo = +weekThreeWeeksAgo;
             passedInTeam.fourthPassedInWRThreeWeeksAgoExpectedPPRPoints =
-              tempThreeWeeksAgo.toFixed(2);
+              tempThreeWeeksAgo;
             if (weekThreeWeeksAgo === '-') {
               passedInTeam.fourthPassedInWRThreeWeeksAgoExpectedPPRPoints = 0;
             }
             tempTwoWeeksAgo = +weekTwoWeeksAgo;
             passedInTeam.fourthPassedInWRTwoWeeksAgoExpectedPPRPoints =
-              tempTwoWeeksAgo.toFixed(2);
+              tempTwoWeeksAgo;
             if (weekTwoWeeksAgo === '-') {
               passedInTeam.fourthPassedInWRTwoWeeksAgoExpectedPPRPoints = 0;
             }
             tempLastWeek = +weekLastWeek;
             passedInTeam.fourthPassedInWRLastWeekExpectedPPRPoints =
-              tempLastWeek.toFixed(2);
+              tempLastWeek;
             if (weekLastWeek === '-') {
               passedInTeam.fourthPassedInWRLastWeekExpectedPPRPoints = 0;
             }
@@ -4326,7 +4331,7 @@ if(gameInfoPassedInTeam.WRThreeThisWeekName) {
 
           ////assinging percent of highBarBumber for each WR in each of the last five weeks
 
-          const expectedPPRPointsHighBarNumber = 40;
+          const expectedPPRPointsHighBarNumber = 20;
 
           //five weeks ago
 
@@ -4336,6 +4341,8 @@ if(gameInfoPassedInTeam.WRThreeThisWeekName) {
                 expectedPPRPointsHighBarNumber) *
               100
             ).toFixed(2);
+
+            // console.log(passedInTeam.firstPassedInWRExpectedPPRPointsPercentOfHighBarNumberFiveWeeksAgo)
 
           passedInTeam.secondPassedInWRExpectedPPRPointsPercentOfHighBarNumberFiveWeeksAgo =
             +(
@@ -4509,6 +4516,8 @@ if(gameInfoPassedInTeam.WRThreeThisWeekName) {
 
         passedInTeam.FiveWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray =
           FiveWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray;
+
+          // console.log(FiveWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray)
 
         //four weeks ago
 
@@ -4702,6 +4711,8 @@ if(gameInfoPassedInTeam.WRThreeThisWeekName) {
     } else {
       passedInTeam.WROneFiveWeeksAgoValue = 1;
     }
+
+    // console.log(passedInTeam.WROne.name, passedInTeam.WROneFiveWeeksAgoValue)
 
     if (
       passedInTeam

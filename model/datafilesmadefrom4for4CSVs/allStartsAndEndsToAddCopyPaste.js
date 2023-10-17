@@ -92,18 +92,9 @@
 // const wr4for4PlayerTargetsAppLastFiveWeeks = 
 // module.exports = wr4for4PlayerTargetsAppLastFiveWeeks
 //
-//
-//
-// const wr4for4PlayerStatExplorerRecievingByAverageLastFiveWeeks =
-// module.exports = wr4for4PlayerStatExplorerRecievingByAverageLastFiveWeeks;
-//
-//
-// const wr4for4PlayerStatExplorerSnapsAndFantasyTabLastFiveWeeks =
-// module.exports = wr4for4PlayerStatExplorerSnapsAndFantasyTabLastFiveWeeks;
-//
-//
-// const wr4for4PlayerStatExplorerTargetShareLastFiveWeeks =
-// module.exports = wr4for4PlayerStatExplorerTargetShareLastFiveWeeks;
+// const wrRotovizWeeklyStatExplorerRecievingTabLastFiveWeeks =
+// module.exxports = wrRotovizWeeklyStatExplorerRecievingTabLastFiveWeeks;
+
 
 //////////////////////////////////////////////////////////////
 ///////////not for weekly projections below////////////////
