@@ -385,7 +385,7 @@ class RbObject {
 
     //weeks 3 and 4
 
-    if (gameInfo.week.currentWeek > 2 && gameInfo.week.currentWeek < 7) {
+    if (gameInfo.week.currentWeek > 2 && gameInfo.week.currentWeek < 5) {
       if (this.halfGLSPAVG) {
         this.appProjectedHalfPPRPoints = +(
           (this.fourForFourHalfPPRProjectedPoints +
@@ -407,12 +407,40 @@ class RbObject {
       } else {
         this.appProjectedFullPPRPoints = this.fourForFourFullPPRProjectedPoints;
       }
-      
+      console.log(this.playerName, this.appProjectedFullPPRPoints)
     }
 
     //weeks 5-18
 
-    if (gameInfo.week.currentWeek > 6) {
+    if (gameInfo.week.currentWeek > 4) {
+
+      // calculating old way proj
+
+      let oldWayHalfProj = 0
+      let oldWayFullProj = 0
+
+      if (this.halfGLSPAVG) {
+        oldWayHalfProj = +(
+          (this.fourForFourHalfPPRProjectedPoints +
+            this.fourForFourHalfPPRProjectedPoints +
+            this.halfGLSPAVG) /
+          3
+        ).toFixed(1);
+      } else {
+        oldWayHalfProj = this.fourForFourHalfPPRProjectedPoints;
+      }
+
+      if (this.fullGLSPAVG) {
+        oldWayFullProj = +(
+          (this.fourForFourFullPPRProjectedPoints +
+            this.fourForFourFullPPRProjectedPoints +
+            this.fullGLSPAVG) /
+          3
+        ).toFixed(1);
+      } else {
+        oldWayFullProj = this.fourForFourFullPPRProjectedPoints;
+      }
+
       if (
         this.percentageOfWeeksInLastFiveWeeksPlayerWasInSameRoleAsThisWeek >
         0.49
@@ -424,13 +452,15 @@ class RbObject {
 
             this.appProjectedHalfPPRPoints = +(
               (this.baselineAppHalfProjection +
+                this.baselineAppHalfProjection +
                 this.fourForFourHalfPPRProjectedPoints) /
-              2
+              3
             ).toFixed(1);
             this.appProjectedFullPPRPoints = +(
               (this.baselineAppPPRProjection +
+                this.baselineAppPPRProjection +
                 this.fourForFourFullPPRProjectedPoints) /
-              2
+              3
             ).toFixed(1);
 
             // console.log(
@@ -478,14 +508,16 @@ class RbObject {
 
             this.testHalfProjection = +(
               (this.baselineAppHalfProjection +
+                this.baselineAppHalfProjection +
                 this.fourForFourHalfPPRProjectedPoints) /
-              2
+              3
             ).toFixed(1);
 
             this.testPPRProjection = +(
               (this.baselineAppPPRProjection +
+                this.baselineAppPPRProjection +
                 this.fourForFourFullPPRProjectedPoints) /
-              2
+              3
             ).toFixed(1);
 
             this.appProjectedHalfPPRPoints = this.testHalfProjection;
@@ -509,6 +541,9 @@ class RbObject {
             this.fourForFourFullPPRProjectedPoints;
         }
       }
+      this.appProjectedHalfPPRPoints = +((+this.appProjectedHalfPPRPoints + +oldWayHalfProj) / 2).toFixed(1)
+      this.appProjectedFullPPRPoints = +((+this.appProjectedFullPPRPoints + +oldWayFullProj) / 2).toFixed(1)
+
       
     }
     

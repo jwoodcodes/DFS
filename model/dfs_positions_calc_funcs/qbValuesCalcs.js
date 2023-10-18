@@ -711,7 +711,7 @@ const allQBManagedAndCashProjectedPointsValuesPlusNames = [];
 //   numOfMatchingRoleWeeks.push(matchingWeeks);
 // });
 
-if (gameInfo.week.currentWeek < 3) {
+if (gameInfo.week.currentWeek < 4) {
   let tempValue = 0;
   allQBs.map(function (team, i) {
     let QBProjectedPoints = 0;
@@ -725,6 +725,8 @@ if (gameInfo.week.currentWeek < 3) {
     if (allQBGLSPScores[i] === 75) {
       valueFromGLSP = +allQBs[i].seventyFifthPercentProjectedPoints;
     }
+
+    
 
     if (valueFromGLSP && valueFromGLSP > 0) {
       let tempTotalValue =
@@ -757,10 +759,11 @@ if (gameInfo.week.currentWeek < 3) {
   });
 }
 
-if (gameInfo.week.currentWeek > 2 && gameInfo.week.currentWeek < 7) {
+if (gameInfo.week.currentWeek > 3) {
   allQBs.map(function (team, i) {
     let QBProjectedPoints = 0;
     let valueFromGLSP = 0;
+    
     if (allQBGLSPScores[i] === 25) {
       valueFromGLSP = +allQBs[i].twentyFifthPercentProjectedPoints;
     }
@@ -770,7 +773,16 @@ if (gameInfo.week.currentWeek > 2 && gameInfo.week.currentWeek < 7) {
     if (allQBGLSPScores[i] === 75) {
       valueFromGLSP = +allQBs[i].seventyFifthPercentProjectedPoints;
     }
-
+    
+    let lowMax = +((+team.twentyFifthPercentProjectedPoints + +team.fiftyithPercentProjectedPoints) / 2).toFixed(1)
+    let highMax = +((+team.seventyFifthPercentProjectedPoints + +team.fiftyithPercentProjectedPoints) / 2).toFixed(1)
+    
+    if(valueFromGLSP < lowMax) {
+      valueFromGLSP = lowMax
+    }
+    if(valueFromGLSP > highMax) {
+      valueFromGLSP = highMax
+    }
     // console.log(team, +team.fourForFourHalfPPRProjectedPoints)
     let tempValue = 0
     if (valueFromGLSP && valueFromGLSP > 0) {
@@ -780,13 +792,15 @@ if (gameInfo.week.currentWeek > 2 && gameInfo.week.currentWeek < 7) {
       let tempTotalValue =
         +secondTempValue +
         +secondTempValue +
-        valueFromGLSP;
+        +secondTempValue +
+        valueFromGLSP +
+        valueFromGLSP
 
-      tempValue = +(tempTotalValue / 3).toFixed(2);
+      tempValue = +(tempTotalValue / 5).toFixed(1);
     } else {
       let initialTempValue = +team.fourForFourHalfPPRProjectedPoints
       
-      let secondTempValue = initialTempValue.toFixed(2)
+      let secondTempValue = initialTempValue.toFixed(1)
       tempValue = +secondTempValue
     }
   
@@ -794,6 +808,7 @@ if (gameInfo.week.currentWeek > 2 && gameInfo.week.currentWeek < 7) {
 
     QBProjectedPoints = tempValue;
     team.appQBProjectedPoints = +QBProjectedPoints;
+    // console.log(team.name, team.appQBProjectedPoints)
     let valueToAddForSixPointsForPassingTD = +(team.projectedPassingTDs * 2)
     team.appQBSixPointForPassingTDProjectedPoints = +(+QBProjectedPoints + +valueToAddForSixPointsForPassingTD).toFixed(1)
     allQBFinalProjectedPointsValues.push(QBProjectedPoints);
@@ -870,98 +885,98 @@ if (gameInfo.week.currentWeek > 2 && gameInfo.week.currentWeek < 7) {
 //   });
 // }
 
-if (gameInfo.week.currentWeek > 6) {
-  allQBs.map(function (team, i) {
-    let fourForFour = team.fourForFourHalfPPRProjectedPoints;
+// if (gameInfo.week.currentWeek > 6) {
+//   allQBs.map(function (team, i) {
+//     let fourForFour = team.fourForFourHalfPPRProjectedPoints;
 
-    let twentyFifthPercentProjection =
-      +allQBs[i].twentyFifthPercentProjectedPoints;
-    let fiftyithPercentProjection = +allQBs[i].fiftyithPercentProjectedPoints;
-    let seventyFifthPercentProjection =
-      +allQBs[i].seventyFifthPercentProjectedPoints;
+//     let twentyFifthPercentProjection =
+//       +allQBs[i].twentyFifthPercentProjectedPoints;
+//     let fiftyithPercentProjection = +allQBs[i].fiftyithPercentProjectedPoints;
+//     let seventyFifthPercentProjection =
+//       +allQBs[i].seventyFifthPercentProjectedPoints;
 
-    let initialQBProjectedPoints = 0;
+//     let initialQBProjectedPoints = 0;
 
-    if (allQBs[i].percentOfGamesPlayedLastFiveWeeks > 0.49) {
-      // console.log(`${team.name} ${allQBTotalScores[i]}`);
-      if (allQBTotalScores[i] === 75) {
-        initialQBProjectedPoints = seventyFifthPercentProjection;
-      } else if (allQBTotalScores[i] === 62.5) {
-        let temp = fiftyithPercentProjection + seventyFifthPercentProjection;
+//     if (allQBs[i].percentOfGamesPlayedLastFiveWeeks > 0.49) {
+//       // console.log(`${team.name} ${allQBTotalScores[i]}`);
+//       if (allQBTotalScores[i] === 75) {
+//         initialQBProjectedPoints = seventyFifthPercentProjection;
+//       } else if (allQBTotalScores[i] === 62.5) {
+//         let temp = fiftyithPercentProjection + seventyFifthPercentProjection;
 
-        initialQBProjectedPoints = temp / 2;
-      } else if (allQBTotalScores[i] === 50) {
-        initialQBProjectedPoints = fiftyithPercentProjection;
-      } else if (allQBTotalScores[i] === 37.5) {
-        let temp = fiftyithPercentProjection + twentyFifthPercentProjection;
-        initialQBProjectedPoints = temp / 2;
-      } else {
-        initialQBProjectedPoints = twentyFifthPercentProjection;
-      }
+//         initialQBProjectedPoints = temp / 2;
+//       } else if (allQBTotalScores[i] === 50) {
+//         initialQBProjectedPoints = fiftyithPercentProjection;
+//       } else if (allQBTotalScores[i] === 37.5) {
+//         let temp = fiftyithPercentProjection + twentyFifthPercentProjection;
+//         initialQBProjectedPoints = temp / 2;
+//       } else {
+//         initialQBProjectedPoints = twentyFifthPercentProjection;
+//       }
 
-      // console.log(`${initialQBProjectedPoints}: ${allQBs[i].name}`);
+//       // console.log(`${initialQBProjectedPoints}: ${allQBs[i].name}`);
 
-      let total = +initialQBProjectedPoints + +fourForFour;
-      let QBProjectedPoints = +(total / 2).toFixed(2);
+//       let total = +initialQBProjectedPoints + +fourForFour;
+//       let QBProjectedPoints = +(total / 2).toFixed(2);
 
-      team.appQBProjectedPoints = +initialQBProjectedPoints;
-      let valueToAddForSixPointsForPassingTD = +(team.projectedPassingTDs * 2)
-    team.appQBSixPointForPassingTDProjectedPoints = +(+QBProjectedPoints + +valueToAddForSixPointsForPassingTD).toFixed(1)
+//       team.appQBProjectedPoints = +initialQBProjectedPoints;
+//       let valueToAddForSixPointsForPassingTD = +(team.projectedPassingTDs * 2)
+//     team.appQBSixPointForPassingTDProjectedPoints = +(+QBProjectedPoints + +valueToAddForSixPointsForPassingTD).toFixed(1)
 
-      // console.log(team);
+//       // console.log(team);
 
-      allQBFinalProjectedPointsValues.push(initialQBProjectedPoints.toFixed(2));
-      allQBFinalProjectedPointsValuesPlusNames.push(
-        `${initialQBProjectedPoints.toFixed(2)}: ${allQBs[i].name}`
-      );
+//       allQBFinalProjectedPointsValues.push(initialQBProjectedPoints.toFixed(2));
+//       allQBFinalProjectedPointsValuesPlusNames.push(
+//         `${initialQBProjectedPoints.toFixed(2)}: ${allQBs[i].name}`
+//       );
 
-      allQBManagedAndCashProjectedPointsValues.push(
-        QBProjectedPoints.toFixed(2)
-      );
-      allQBManagedAndCashProjectedPointsValuesPlusNames.push(
-        `${QBProjectedPoints.toFixed(2)}: ${allQBs[i].name}`
-      );
-    } else {
-      let valueFromGLSP = 0;
-      if (allQBGLSPScores[i] === 25) {
-        valueFromGLSP = +allQBs[i].twentyFifthPercentProjectedPoints;
-      }
-      if (allQBGLSPScores[i] === 50) {
-        valueFromGLSP = +allQBs[i].fiftyithPercentProjectedPoints;
-      }
-      if (allQBGLSPScores[i] === 75) {
-        valueFromGLSP = +allQBs[i].seventyFifthPercentProjectedPoints;
-      }
+//       allQBManagedAndCashProjectedPointsValues.push(
+//         QBProjectedPoints.toFixed(2)
+//       );
+//       allQBManagedAndCashProjectedPointsValuesPlusNames.push(
+//         `${QBProjectedPoints.toFixed(2)}: ${allQBs[i].name}`
+//       );
+//     } else {
+//       let valueFromGLSP = 0;
+//       if (allQBGLSPScores[i] === 25) {
+//         valueFromGLSP = +allQBs[i].twentyFifthPercentProjectedPoints;
+//       }
+//       if (allQBGLSPScores[i] === 50) {
+//         valueFromGLSP = +allQBs[i].fiftyithPercentProjectedPoints;
+//       }
+//       if (allQBGLSPScores[i] === 75) {
+//         valueFromGLSP = +allQBs[i].seventyFifthPercentProjectedPoints;
+//       }
 
-      let tempTotalValue =
-        +team.fourForFourHalfPPRProjectedPoints +
-        +team.fourForFourHalfPPRProjectedPoints +
-        +team.fourForFourHalfPPRProjectedPoints +
-        valueFromGLSP;
+//       let tempTotalValue =
+//         +team.fourForFourHalfPPRProjectedPoints +
+//         +team.fourForFourHalfPPRProjectedPoints +
+//         +team.fourForFourHalfPPRProjectedPoints +
+//         valueFromGLSP;
 
-      let tempValue = +(tempTotalValue / 4).toFixed(2);
+//       let tempValue = +(tempTotalValue / 4).toFixed(2);
 
-      initialQBProjectedPoints = tempValue;
+//       initialQBProjectedPoints = tempValue;
 
-      team.appQBProjectedPoints = +initialQBProjectedPoints;
-      let valueToAddForSixPointsForPassingTD = +(team.projectedPassingTDs * 2)
-    team.appQBSixPointForPassingTDProjectedPoints = +(+QBProjectedPoints + +valueToAddForSixPointsForPassingTD).toFixed(1)
+//       team.appQBProjectedPoints = +initialQBProjectedPoints;
+//       let valueToAddForSixPointsForPassingTD = +(team.projectedPassingTDs * 2)
+//     team.appQBSixPointForPassingTDProjectedPoints = +(+QBProjectedPoints + +valueToAddForSixPointsForPassingTD).toFixed(1)
 
-      allQBFinalProjectedPointsValues.push(
-        +initialQBProjectedPoints.toFixed(2)
-      );
-      allQBFinalProjectedPointsValuesPlusNames.push(
-        `${initialQBProjectedPoints.toFixed(2)}: ${allQBs[i].name}`
-      );
-      allQBManagedAndCashProjectedPointsValues.push(
-        initialQBProjectedPoints.toFixed(2)
-      );
-      allQBManagedAndCashProjectedPointsValuesPlusNames.push(
-        `${initialQBProjectedPoints.toFixed(2)}: ${allQBs[i].name}`
-      );
-    }
-  });
-}
+//       allQBFinalProjectedPointsValues.push(
+//         +initialQBProjectedPoints.toFixed(2)
+//       );
+//       allQBFinalProjectedPointsValuesPlusNames.push(
+//         `${initialQBProjectedPoints.toFixed(2)}: ${allQBs[i].name}`
+//       );
+//       allQBManagedAndCashProjectedPointsValues.push(
+//         initialQBProjectedPoints.toFixed(2)
+//       );
+//       allQBManagedAndCashProjectedPointsValuesPlusNames.push(
+//         `${initialQBProjectedPoints.toFixed(2)}: ${allQBs[i].name}`
+//       );
+//     }
+//   });
+// }
 
 ////////////Calculating projected points per dollar, PP/d
 
