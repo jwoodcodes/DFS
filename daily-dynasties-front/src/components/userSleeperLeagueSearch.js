@@ -44,7 +44,7 @@ export default function UserSleeperLeagueSearch({
       ////
       ///
       // comment and uncomment below when pushing to github until sleeperLeagueStuff fully implimented
-      // and also line 338 lower down!!!
+      // and also line 385 lower down!!!
 
       // setSelectedUserName(selectedUserName);
 
@@ -289,8 +289,55 @@ export default function UserSleeperLeagueSearch({
               // console.log(pickYear)
               // tempTeamPicksArray.push()
 
-                })
+              // console.log(selectedLeaguesDraftStatus)
+
+              let intialPickSetArray = []
+              let curYearFirstArray = []
+              team.curYearFirstArray = []
+
+              if(selectedLeaguesDraftStatus === 'complete') {
+                curYearFirstArray = [{name: `${nextDraftYear} Round 1`, season: nextDraftYear, round: 1}]
+              
+
+              // console.log(intialPickSetArray)
+
+              
+              // taking out traded away picks
+              tradedPicksArray.forEach((tradedPick) => {
+                // console.log(tradedPick)
+                //
+                //curYearFirst
+                team.curYearFirstArray = curYearFirstArray
+                curYearFirstArray.forEach((curYearInitialFirst) => {
+                // console.log(curYearInitialFirst.season, +tradedPick.season)
+                if(curYearInitialFirst.season === +tradedPick.season) {
+                  // console.log(tradedPick)
+                  // console.log(curYearInitialFirst)
+                  team.curYearFirstArray = []
+                }
+               
+              }) 
+                //
+                // curYearSeconds
+              
+              
+            })
+            // adding in picks traded for
+            team.picksTradedForArray.forEach((tradedForPick) => {
+                  
+              if(+tradedForPick.data.season === nextDraftYear && +tradedForPick.data.round === 1) {
                 
+              // console.log(tradedForPick.data)
+              // curYearFirstArray.push(tradedForPick)
+              
+              if(tradedForPick.data.roster_id !== tradedForPick.data.owner_id) {
+              team.curYearFirstArray.push(tradedForPick)
+              }
+              }
+            })
+              }
+                })
+                // console.log(team.curYearFirstArray)
                 // console.log(teamRosterNamesArray)
                 
 

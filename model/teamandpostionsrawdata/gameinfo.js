@@ -1379,11 +1379,30 @@ const populateTeamObjects = function (passedInTeam) {
             passedInTeam.WROneThisWeekName &&
             passedInTeam.WRTwoThisWeekName &&
             passedInTeam.WROneThisWeekName !== team.Player &&
-            passedInTeam.WRTwoThisWeekName !== team.Player
+            passedInTeam.WRTwoThisWeekName !== team.Player &&
+            !passedInTeam.WRThreeThisWeekName
           ) {
+            
             passedInTeam.WRThreeThisWeekName = team.Player;
             passedInTeam.WRThreeThisWeek4for4HalfProjPoints =
               +team['Y! (Proj)'];
+              // console.log(passedInTeam.WRThreeThisWeekName)
+          }
+          if (
+            passedInTeam.WROneThisWeekName &&
+            passedInTeam.WRTwoThisWeekName &&
+            passedInTeam.WRThreeThisWeekName &&
+            passedInTeam.WROneThisWeekName !== team.Player &&
+            passedInTeam.WRTwoThisWeekName !== team.Player &&
+            passedInTeam.WRThreeThisWeekName !== team.Player &&
+            !passedInTeam.WRFourThisWeekName
+          ) {
+           
+            // console.log(team.Player)
+            // passedInTeam.WRFourThisWeekName = team.Player;
+            // passedInTeam.WRFourThisWeek4for4HalfProjPoints =
+            //   +team['Y! (Proj)'];
+            
           }
         }
       }

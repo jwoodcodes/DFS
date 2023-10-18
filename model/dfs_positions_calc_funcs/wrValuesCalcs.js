@@ -516,7 +516,7 @@ class WrObject {
       let finalHalfTemp = +((+this.appHalfProjectedPoints + +oldStyleHalfAdjustor + +oldStyleHalfAdjustor) / 3).toFixed(1)
       let finalFullTemp = +((+this.appFullProjectedPoints + +oldStylePPRAdjustor + +oldStylePPRAdjustor) / 3).toFixed(1)
 
-      console.log(this.playerName, finalFullTemp)
+      // console.log(this.playerName, finalFullTemp)
 
       this.appHalfProjectedPoints = +finalHalfTemp;
         this.appFullProjectedPoints = +finalFullTemp;
