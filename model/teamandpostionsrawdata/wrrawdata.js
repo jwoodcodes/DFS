@@ -3235,7 +3235,7 @@ if(gameInfoPassedInTeam.WRThreeThisWeekName) {
 
           if (passedInTeam.WROne.name === SanitizedPlayerName) {
             // console.log(SanitizedPlayerName);
-
+            if(team['"Tgt Shr"']) {
             temp = +team['"Tgt Shr"'].slice(1, -2);
             passedInTeam.WROne.targetShareLastFiveWeeks = +temp.toFixed(3);
 
@@ -3266,6 +3266,7 @@ if(gameInfoPassedInTeam.WRThreeThisWeekName) {
             passedInTeam.WRThree.receptionsLastFiveWeeks =
               +tempReceptions.toFixed(3);
           }
+        }
         }
       );
 
