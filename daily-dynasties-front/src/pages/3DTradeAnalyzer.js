@@ -9,6 +9,7 @@ import Footer from '@/components/Footer';
 
 import UserSleeperLeagueSearch from '@/components/userSleeperLeagueSearch';
 import SleeperLeagueStuff from '@/components/tradeAnalyzer/SleeperLeagueStuff';
+import ErrorBoundary from '@/components/ErrorBoundry';
 
 export default function ThreeDTradeAnalyzer(data) {
   // console.log(data.dynastyRankingsData[0].tradeAnalyzerDataObjectsArray
@@ -38,6 +39,7 @@ export default function ThreeDTradeAnalyzer(data) {
       
       <div className={styles.wholeMainSectionWrapper}>
 
+      <ErrorBoundary>
       {/* <UserSleeperLeagueSearch 
        selectedLeagueData={selectedLeagueData} 
        setSelectedLeagueData={setSelectedLeagueData} 
@@ -48,7 +50,8 @@ export default function ThreeDTradeAnalyzer(data) {
        setSelectedUserName={setSelectedUserName} 
        setSelectedLeaguesTeamObjectsArray={setSelectedLeaguesTeamObjectsArray}
        /> */}
-
+      </ErrorBoundary>
+      <ErrorBoundary>
        {/* <SleeperLeagueStuff 
        dataArray={dataArray}
        selectedLeagueData={selectedLeagueData}
@@ -57,7 +60,7 @@ export default function ThreeDTradeAnalyzer(data) {
        selectedUserName={selectedUserName}
        selectedLeaguesTeamObjectsArray={selectedLeaguesTeamObjectsArray}
        /> */}
-        
+        </ErrorBoundary>
         {/* team 1 */}
         <TeamOne
           dataArray={dataArray}
