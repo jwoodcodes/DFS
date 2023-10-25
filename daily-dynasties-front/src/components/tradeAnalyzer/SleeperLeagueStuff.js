@@ -1,4 +1,5 @@
 import styles from '@/styles/tradeAnalyzer.module.css';
+import React from 'react';
 
 export default function SleeperLeagueStuff({dataArray, selectedLeagueData, selectedUserID, selectedLeagueRosterNamesArray, selectedUserName, selectedLeaguesTeamObjectsArray}) {
 
@@ -7,12 +8,36 @@ export default function SleeperLeagueStuff({dataArray, selectedLeagueData, selec
     // console.log(selectedLeagueData)
     // console.log(selectedUserName)
     // console.log(selectedLeaguesTeamObjectsArray)
+    const [selectedUsersPicksArray, setSelectedUsersPicksArray] = React.useState([])
+    
 
     let qbArray = []
     let rbArray = []
     let wrArray = []
     let teArray = []
-    let picksArray = []
+    
+    let selectedTeamPicksArray = []
+    
+    
+  
+    if(selectedLeaguesTeamObjectsArray.length > 0) {
+      console.log(selectedLeaguesTeamObjectsArray.length)
+      selectedLeaguesTeamObjectsArray.map((teamFromSleeperTeamDataArray) => {
+      // console.log(teamFromSleeperTeamDataArray.teamData.allDraftPicksArray)
+       if(teamFromSleeperTeamDataArray.teamData.allDraftPicksArray.length > 0 ) {
+          if(selectedUserName === teamFromSleeperTeamDataArray.userName) {
+             // console.log(teamFromSleeperTeamDataArray.teamData.allDraftPicksArray)
+            if(selectedUsersPicksArray.length === 0) {
+               selectedTeamPicksArray = teamFromSleeperTeamDataArray.teamData.allDraftPicksArray
+                setSelectedUsersPicksArray(selectedTeamPicksArray)
+            }
+          }
+        }
+      })
+    }
+
+   
+    // console.log(selectedTeamPicksArray)
 
     dataArray.map((player) => {
       player.name = player.name.replace("'", '')
@@ -235,7 +260,42 @@ export default function SleeperLeagueStuff({dataArray, selectedLeagueData, selec
                   </>          
                   )          
                   }        
-                )}           
+                )}       
+
+                 {dataArray.map((player) => {                   
+                    // console.log(player.name)
+                     // console.log(selectedUserName)
+                        // console.log(selectedLeaguesTeamObjectsArray)
+                        
+                  return(
+                    //
+                  <>
+                    {selectedUsersPicksArray.map((pick) => {
+                        let num = Math.random()
+                       
+                        // console.log(selectedUserName, pick, player.name)
+
+                        if(pick.name === player.name || pick === player.name) {
+                          // console.log(pick)
+                          return (
+                           
+                            <div key={`${player.name}-${player.projectedNextOffseasonDynastyValue}-${num}`}>
+                              <div key={`${player.name}-${player.myValue}-${num}`} className={styles.wrsFromSelectedLeagueWrapper}>
+                                <span><strong><u>{player.name}</u></strong> {" "}</span>
+                                <span>PRP Score: {player.PRPScore} {" "}</span>
+                                <span>PNODV: {player.projectedNextOffseasonDynastyValue} {" "}</span>
+                                <span>RVS Score: {player.RVSScore} {" "}</span>
+                                <span>Market Value: {player.marketValue} {" "}</span>
+                                <span>My Value: {player.myValue}</span>
+                              </div>
+                            </div>  
+                          )    
+                        }  
+                    })}        
+                  </>          
+                  )          
+                  }        
+                )}       
             </div>              
         </div>                  
       )                      

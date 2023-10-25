@@ -10,7 +10,8 @@ export default function UserSleeperLeagueSearch({
   initialSleeperPlayerData,
   setSelectedLeagueRosterNamesArray,
   setSelectedUserName,
-  setSelectedLeaguesTeamObjectsArray
+  setSelectedLeaguesTeamObjectsArray,
+  
 }) {
   // console.log(searchedUser)
   // const [data, setData] = React.useState(null)
@@ -26,6 +27,7 @@ export default function UserSleeperLeagueSearch({
   let selectedUserName;
   let userLeaguesDataArray = [];
   let userID = 0;
+  
 
   // let userLeaguesNamesArray = []
 
@@ -39,12 +41,12 @@ export default function UserSleeperLeagueSearch({
       setShowLeagues(true);
       // console.log(userSearchValue)
       selectedUserName = userSearchValue;
-
+      
 
       ////
       ///
       // comment and uncomment below when pushing to github until sleeperLeagueStuff fully implimented
-      // and also line 329 lower down!!!
+      // and also line 408 lower down!!!
 
       // setSelectedUserName(selectedUserName);
 
@@ -148,6 +150,7 @@ export default function UserSleeperLeagueSearch({
           let selectedLeagueRostersData = selectedLeagueRostersRes.data;
           // console.log(selectedLeagueRostersData)
           
+          
         async function getPicks() {
 
           const picksRes = await axios.get(
@@ -198,10 +201,18 @@ export default function UserSleeperLeagueSearch({
                 let picksTradedForArray = []
                 
                 let tempCurYearFirstPicksArray = []
+                let tempCurYearSecondsPicksArray = []
+                let tempCurYearThirdsPicksArray = []
+                
+                  
+                
                 
                 let tempTeamPicksArray = []
 
                 team.nextDraftYearFirstArray = [`${nextDraftYear} Round 1`]
+                team.nextDraftYearSecondsArray = [`${nextDraftYear} Round 2`]
+                team.nextDraftYearThirdsArray = [`${nextDraftYear} Round 3`]
+                
 
                 
                 //
@@ -243,13 +254,30 @@ export default function UserSleeperLeagueSearch({
                   if(team.roster_id === picks.roster_id) {
  
                         if(pickYear === nextDraftYear) {
+                          // if team has their own next draft first
                           if(picks.round === 1) {
                             // console.log(picks, team.roster_id)
                             team.nextDraftYearFirstArray = []
                             if( picks.roster_id === picks.owner_id) {
                               team.nextDraftYearFirstArray = [`${nextDraftYear} Round 1`]
                             }                           
-                          }                                                             
+                          } 
+                          // if team has their own next draft seconds
+                          if(picks.round === 2) {                            
+                            team.nextDraftYearSecondsArray = []
+                            if( picks.roster_id === picks.owner_id) {
+                              team.nextDraftYearSecondsArray = [`${nextDraftYear} Round 2`]
+                            } 
+                          }  
+                          // if team has their own next draft third
+                          if(picks.round === 3) {                            
+                            team.nextDraftYearThirdsArray = []
+                            if( picks.roster_id === picks.owner_id) {
+                              team.nextDraftYearThirdsArray = [`${nextDraftYear} Round 3`]
+                            } 
+                          }  
+                          
+                          
                         }
 
                              tradedPicksArray.push(picks)
@@ -266,7 +294,8 @@ export default function UserSleeperLeagueSearch({
                   if(team.roster_id === picks.owner_id) {
                     for (let i = 0; i <= numOfTeamsInLeague; i++) {
                       if(team.roster_id === i) {
-                        if(pickYear === nextDraftYear) {                     
+                        if(pickYear === nextDraftYear) { 
+                          // next draft first                    
                           if(pickRound === 1) {
                              // console.log(picks)
                             if( picks.roster_id !== picks.owner_id) {
@@ -275,6 +304,25 @@ export default function UserSleeperLeagueSearch({
                                 data: picks})
                             }                                        
                           }
+                          // next draft seconds
+                          if(pickRound === 2) {
+                            // console.log(picks)
+                           if( picks.roster_id !== picks.owner_id) {
+                             // console.log(picks, team.roster_id)                           
+                               tempCurYearSecondsPicksArray.push({name: `${pickYear} Round ${pickRound}`,
+                               data: picks})
+                           }                                        
+                          }
+                          // next draft thirds
+                          if(pickRound === 3) {
+                            // console.log(picks)
+                           if( picks.roster_id !== picks.owner_id) {
+                             // console.log(picks, team.roster_id)                           
+                             tempCurYearThirdsPicksArray.push({name: `${pickYear} Round ${pickRound}`,
+                               data: picks})
+                            }                                        
+                          }
+                          
                         }
                       }                 
                     }
@@ -283,21 +331,38 @@ export default function UserSleeperLeagueSearch({
               } //if(selectedLeaguesDraftStatus === 'complete') {    
 
                      team.picksTradedForArray = picksTradedForArray 
-                     team.testArray = tempCurYearFirstPicksArray 
+                     
 
             }) //testpicks.forEach((picks) => {
 
                 team.nextDraftYearFirstArray = [...team.nextDraftYearFirstArray, ...tempCurYearFirstPicksArray]
+                team.nextDraftYearSecondsArray = [...team.nextDraftYearSecondsArray, ...tempCurYearSecondsPicksArray]
+                team.nextDraftYearThirdsArray = [...team.nextDraftYearThirdsArray, ...tempCurYearThirdsPicksArray]
+
+                team.allDraftPicksArray = [
+                  ...team.nextDraftYearFirstArray,
+                  ...team.nextDraftYearSecondsArray,
+                  ...team.nextDraftYearThirdsArray
+                ]
+                let tempPicksArray = team.allDraftPicksArray
+                
+                
                 
                 async function getUserName() {
                 const usernameRes = await axios.get(
                   `https://api.sleeper.app/v1/user/${userId}`
                 );
                 // console.log(team)
+                
                 let userName = usernameRes.data.username
                 // console.log(userName)
                 // console.log(userName, team.testArray)
                 // console.log(userName, team.nextDraftYearFirstArray)
+                // console.log(userName, team.nextDraftYearSecondsArray)
+                // console.log(userName, team.nextDraftYearThirdsArray)
+                // console.log(userName, team.allDraftPicksArray)
+                
+                
                 // console.log(userName, team.roster_id, team.curYearFirstArray)
                
                 let teamObject = new TeamObject(
@@ -309,28 +374,42 @@ export default function UserSleeperLeagueSearch({
                 )
 
                 tempSelectedLeaguesTeamObjectsArray.push(teamObject)
+
+                
                 }
 
                 
-                getUserName()
 
                 
-          })
+                
+                
+                // console.log(tempSelectedLeaguesTeamObjectsArray)
+                // setSelectedUserPicksArray(tempSelectedLeaguesTeamObjectsArray.teamData.allDraftPicksArray)
 
+
+                
+                
+                getUserName()
+                
+          })
+          // console.log(tempSelectedLeaguesTeamObjectsArray)
+          
         }
+       
           getPicks();
+
 
            ////
       ///
       // comment and uncomment below when pushing to github until sleeperLeagueStuff fully implimented
-      // and also line 49 further up!!!!!
+      // and also line 51 further up!!!!!
 
       // console.log(tempSelectedLeaguesTeamObjectsArray)
       // setSelectedLeaguesTeamObjectsArray(tempSelectedLeaguesTeamObjectsArray)
 
 
       /////
-          
+      
           
           
           
