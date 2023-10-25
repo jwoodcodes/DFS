@@ -6,10 +6,14 @@ export default function TableHead({ columns, handleSorting }) {
   const [sortField, setSortField] = React.useState('');
   const [order, setOrder] = React.useState('asc');
 
+  React.useEffect(() => {
+    handleSorting('myOverallRank', 'asc');
+  }, []);
+
   const handleSortingChange = accessor => {
     // console.log(accessor);
     const sortOrder =
-      accessor === sortField && order === 'asc' ? 'desc' : 'asc';
+      accessor === sortField && order === 'desc' ? 'asc' : 'desc';
     setSortField(accessor);
     setOrder(sortOrder);
     handleSorting(accessor, sortOrder);

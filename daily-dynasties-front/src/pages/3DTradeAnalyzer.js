@@ -29,6 +29,7 @@ export default function ThreeDTradeAnalyzer(data) {
   const [selectedLeagueRosterNamesArray, setSelectedLeagueRosterNamesArray] = React.useState([])
   const [selectedUserName, setSelectedUserName] = React.useState('')
   const [selectedLeaguesTeamObjectsArray, setSelectedLeaguesTeamObjectsArray] = React.useState([])
+ 
 
   return (
     <div>
@@ -39,8 +40,8 @@ export default function ThreeDTradeAnalyzer(data) {
       
       <div className={styles.wholeMainSectionWrapper}>
 
-      <ErrorBoundary>
-      {/* <UserSleeperLeagueSearch 
+      {/* <ErrorBoundary>
+      <UserSleeperLeagueSearch 
        selectedLeagueData={selectedLeagueData} 
        setSelectedLeagueData={setSelectedLeagueData} 
        selectedUserID={selectedUserID}
@@ -49,18 +50,20 @@ export default function ThreeDTradeAnalyzer(data) {
        setSelectedLeagueRosterNamesArray={setSelectedLeagueRosterNamesArray} 
        setSelectedUserName={setSelectedUserName} 
        setSelectedLeaguesTeamObjectsArray={setSelectedLeaguesTeamObjectsArray}
-       /> */}
+       
+       />
       </ErrorBoundary>
       <ErrorBoundary>
-       {/* <SleeperLeagueStuff 
+       <SleeperLeagueStuff 
        dataArray={dataArray}
        selectedLeagueData={selectedLeagueData}
        selectedUserID={selectedUserID}
        selectedLeagueRosterNamesArray={selectedLeagueRosterNamesArray}
        selectedUserName={selectedUserName}
        selectedLeaguesTeamObjectsArray={selectedLeaguesTeamObjectsArray}
-       /> */}
-        </ErrorBoundary>
+       
+       />
+        </ErrorBoundary> */}
         {/* team 1 */}
         <TeamOne
           dataArray={dataArray}
