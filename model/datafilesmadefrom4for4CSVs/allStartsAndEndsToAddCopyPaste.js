@@ -47,12 +47,11 @@
 // module.exports = rb4for4FantasyPointsBrowserLastFiveWeeks;
 //
 //
-// const rb4for4SnapsAppLastFiveWeeks = 
-// module.exports = rb4for4SnapsAppLastFiveWeeks;
-//
 // const rb4for4PlayerStatsApp =
 // module.exports = rb4for4PlayerStatsApp;
 //
+// const rb4for4SnapsAppLastFiveWeeks = 
+// module.exports = rb4for4SnapsAppLastFiveWeeks;
 //
 // const rbRvWeeklyStatExplorerRecievingTabLastFiveWeeks =
 // module.exports = rbRvWeeklyStatExplorerRecievingTabLastFiveWeeks;
@@ -93,7 +92,7 @@
 // module.exports = wr4for4PlayerTargetsAppLastFiveWeeks
 //
 // const wrRotovizWeeklyStatExplorerRecievingTabLastFiveWeeks =
-// module.exxports = wrRotovizWeeklyStatExplorerRecievingTabLastFiveWeeks;
+// module.exports = wrRotovizWeeklyStatExplorerRecievingTabLastFiveWeeks;
 
 
 //////////////////////////////////////////////////////////////

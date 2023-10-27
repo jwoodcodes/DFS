@@ -1,26 +1,26 @@
 const rotovizNegativeScriptOffensivePaceAndRunPassReportLastFiveWeeks = [
 	{
 		"\"Team\"": "\"LAR\"",
-		"\"GMs\"": "13",
-		"\"Plays\"": "44",
-		"\"Sec/Snap\"": "25.5",
+		"\"GMs\"": "14",
+		"\"Plays\"": "43",
+		"\"Sec/Snap\"": "25.4",
 		"\"No-Huddle\"": "\"16%\"",
 		"\"Pass%\"": "\"68%\"",
 		"\"Rush%\"": "\"32%\"",
-		"\"Pass\"": "30",
+		"\"Pass\"": "29",
 		"\"Rush\"": "14",
-		"\"No Play (Penalty)\"": "33"
+		"\"No Play (Penalty)\"": "34"
 	},
 	{
 		"\"Team\"": "\"NO\"",
-		"\"GMs\"": "12",
-		"\"Plays\"": "35",
+		"\"GMs\"": "13",
+		"\"Plays\"": "40",
 		"\"Sec/Snap\"": "24",
-		"\"No-Huddle\"": "\"15%\"",
-		"\"Pass%\"": "\"68%\"",
-		"\"Rush%\"": "\"32%\"",
-		"\"Pass\"": "24",
-		"\"Rush\"": "11",
+		"\"No-Huddle\"": "\"16%\"",
+		"\"Pass%\"": "\"67%\"",
+		"\"Rush%\"": "\"33%\"",
+		"\"Pass\"": "27",
+		"\"Rush\"": "13",
 		"\"No Play (Penalty)\"": "29"
 	},
 	{
@@ -33,30 +33,30 @@ const rotovizNegativeScriptOffensivePaceAndRunPassReportLastFiveWeeks = [
 		"\"Rush%\"": "\"32%\"",
 		"\"Pass\"": "29",
 		"\"Rush\"": "14",
-		"\"No Play (Penalty)\"": "30"
+		"\"No Play (Penalty)\"": "31"
 	},
 	{
 		"\"Team\"": "\"CHI\"",
 		"\"GMs\"": "19",
-		"\"Plays\"": "52",
+		"\"Plays\"": "48",
 		"\"Sec/Snap\"": "26.3",
 		"\"No-Huddle\"": "\"10%\"",
 		"\"Pass%\"": "\"52%\"",
 		"\"Rush%\"": "\"48%\"",
-		"\"Pass\"": "27",
-		"\"Rush\"": "25",
-		"\"No Play (Penalty)\"": "35"
+		"\"Pass\"": "25",
+		"\"Rush\"": "23",
+		"\"No Play (Penalty)\"": "34"
 	},
 	{
 		"\"Team\"": "\"SF\"",
-		"\"GMs\"": "9",
-		"\"Plays\"": "16",
-		"\"Sec/Snap\"": "26.4",
-		"\"No-Huddle\"": "\"10%\"",
-		"\"Pass%\"": "\"63%\"",
-		"\"Rush%\"": "\"37%\"",
-		"\"Pass\"": "10",
-		"\"Rush\"": "6",
+		"\"GMs\"": "10",
+		"\"Plays\"": "18",
+		"\"Sec/Snap\"": "26.8",
+		"\"No-Huddle\"": "\"9%\"",
+		"\"Pass%\"": "\"62%\"",
+		"\"Rush%\"": "\"38%\"",
+		"\"Pass\"": "11",
+		"\"Rush\"": "7",
 		"\"No Play (Penalty)\"": "24"
 	},
 	{
@@ -69,7 +69,7 @@ const rotovizNegativeScriptOffensivePaceAndRunPassReportLastFiveWeeks = [
 		"\"Rush%\"": "\"31%\"",
 		"\"Pass\"": "20",
 		"\"Rush\"": "9",
-		"\"No Play (Penalty)\"": "27"
+		"\"No Play (Penalty)\"": "28"
 	},
 	{
 		"\"Team\"": "\"PHI\"",
@@ -85,38 +85,38 @@ const rotovizNegativeScriptOffensivePaceAndRunPassReportLastFiveWeeks = [
 	},
 	{
 		"\"Team\"": "\"DET\"",
-		"\"GMs\"": "10",
-		"\"Plays\"": "24",
-		"\"Sec/Snap\"": "22.4",
+		"\"GMs\"": "11",
+		"\"Plays\"": "28",
+		"\"Sec/Snap\"": "22.6",
 		"\"No-Huddle\"": "\"13%\"",
-		"\"Pass%\"": "\"68%\"",
-		"\"Rush%\"": "\"32%\"",
-		"\"Pass\"": "16",
+		"\"Pass%\"": "\"71%\"",
+		"\"Rush%\"": "\"29%\"",
+		"\"Pass\"": "20",
 		"\"Rush\"": "8",
-		"\"No Play (Penalty)\"": "30"
+		"\"No Play (Penalty)\"": "29"
 	},
 	{
 		"\"Team\"": "\"IND\"",
-		"\"GMs\"": "16",
+		"\"GMs\"": "17",
 		"\"Plays\"": "56",
-		"\"Sec/Snap\"": "25.2",
+		"\"Sec/Snap\"": "25.3",
 		"\"No-Huddle\"": "\"20%\"",
-		"\"Pass%\"": "\"65%\"",
-		"\"Rush%\"": "\"35%\"",
+		"\"Pass%\"": "\"64%\"",
+		"\"Rush%\"": "\"36%\"",
 		"\"Pass\"": "36",
 		"\"Rush\"": "20",
-		"\"No Play (Penalty)\"": "31"
+		"\"No Play (Penalty)\"": "32"
 	},
 	{
 		"\"Team\"": "\"NE\"",
 		"\"GMs\"": "15",
-		"\"Plays\"": "50",
+		"\"Plays\"": "48",
 		"\"Sec/Snap\"": "25.1",
 		"\"No-Huddle\"": "\"12%\"",
 		"\"Pass%\"": "\"66%\"",
 		"\"Rush%\"": "\"34%\"",
-		"\"Pass\"": "33",
-		"\"Rush\"": "17",
+		"\"Pass\"": "32",
+		"\"Rush\"": "16",
 		"\"No Play (Penalty)\"": "33"
 	},
 	{
@@ -129,79 +129,79 @@ const rotovizNegativeScriptOffensivePaceAndRunPassReportLastFiveWeeks = [
 		"\"Rush%\"": "\"29%\"",
 		"\"Pass\"": "45",
 		"\"Rush\"": "19",
-		"\"No Play (Penalty)\"": "37"
+		"\"No Play (Penalty)\"": "38"
 	},
 	{
 		"\"Team\"": "\"JAC\"",
 		"\"GMs\"": "16",
-		"\"Plays\"": "38",
+		"\"Plays\"": "35",
 		"\"Sec/Snap\"": "23.7",
 		"\"No-Huddle\"": "\"11%\"",
 		"\"Pass%\"": "\"70%\"",
 		"\"Rush%\"": "\"30%\"",
-		"\"Pass\"": "26",
+		"\"Pass\"": "25",
 		"\"Rush\"": "11",
-		"\"No Play (Penalty)\"": "27"
+		"\"No Play (Penalty)\"": "26"
 	},
 	{
 		"\"Team\"": "\"WAS\"",
-		"\"GMs\"": "17",
-		"\"Plays\"": "54",
-		"\"Sec/Snap\"": "25.4",
-		"\"No-Huddle\"": "\"13%\"",
-		"\"Pass%\"": "\"69%\"",
-		"\"Rush%\"": "\"31%\"",
-		"\"Pass\"": "37",
-		"\"Rush\"": "16",
-		"\"No Play (Penalty)\"": "34"
+		"\"GMs\"": "18",
+		"\"Plays\"": "56",
+		"\"Sec/Snap\"": "25.3",
+		"\"No-Huddle\"": "\"12%\"",
+		"\"Pass%\"": "\"70%\"",
+		"\"Rush%\"": "\"30%\"",
+		"\"Pass\"": "39",
+		"\"Rush\"": "17",
+		"\"No Play (Penalty)\"": "33"
 	},
 	{
 		"\"Team\"": "\"NYG\"",
 		"\"GMs\"": "19",
-		"\"Plays\"": "59",
+		"\"Plays\"": "55",
 		"\"Sec/Snap\"": "26",
 		"\"No-Huddle\"": "\"17%\"",
 		"\"Pass%\"": "\"62%\"",
 		"\"Rush%\"": "\"38%\"",
-		"\"Pass\"": "36",
-		"\"Rush\"": "22",
-		"\"No Play (Penalty)\"": "29"
+		"\"Pass\"": "34",
+		"\"Rush\"": "21",
+		"\"No Play (Penalty)\"": "28"
 	},
 	{
 		"\"Team\"": "\"ARI\"",
-		"\"GMs\"": "17",
-		"\"Plays\"": "62",
-		"\"Sec/Snap\"": "23.8",
-		"\"No-Huddle\"": "\"38%\"",
+		"\"GMs\"": "18",
+		"\"Plays\"": "63",
+		"\"Sec/Snap\"": "24",
+		"\"No-Huddle\"": "\"36%\"",
 		"\"Pass%\"": "\"67%\"",
 		"\"Rush%\"": "\"33%\"",
 		"\"Pass\"": "42",
-		"\"Rush\"": "20",
+		"\"Rush\"": "21",
 		"\"No Play (Penalty)\"": "33"
 	},
 	{
 		"\"Team\"": "\"LV\"",
-		"\"GMs\"": "16",
-		"\"Plays\"": "41",
-		"\"Sec/Snap\"": "26.9",
+		"\"GMs\"": "17",
+		"\"Plays\"": "43",
+		"\"Sec/Snap\"": "26.4",
 		"\"No-Huddle\"": "\"6%\"",
-		"\"Pass%\"": "\"68%\"",
-		"\"Rush%\"": "\"32%\"",
-		"\"Pass\"": "28",
+		"\"Pass%\"": "\"69%\"",
+		"\"Rush%\"": "\"31%\"",
+		"\"Pass\"": "29",
 		"\"Rush\"": "13",
-		"\"No Play (Penalty)\"": "32"
+		"\"No Play (Penalty)\"": "31"
 	},
 	{
 		"\"Team\"": "\"GB\"",
-		"\"GMs\"": "15",
-		"\"Plays\"": "48",
-		"\"Sec/Snap\"": "27.1",
+		"\"GMs\"": "16",
+		"\"Plays\"": "49",
+		"\"Sec/Snap\"": "27",
 		"\"No-Huddle\"": "\"6%\"",
 		"\"Pass%\"": "\"63%\"",
 		"\"Rush%\"": "\"37%\"",
-		"\"Pass\"": "30",
-		"\"Rush\"": "17",
-		"\"No Play (Penalty)\"": "33"
+		"\"Pass\"": "31",
+		"\"Rush\"": "18",
+		"\"No Play (Penalty)\"": "34"
 	},
 	{
 		"\"Team\"": "\"DAL\"",
@@ -213,24 +213,24 @@ const rotovizNegativeScriptOffensivePaceAndRunPassReportLastFiveWeeks = [
 		"\"Rush%\"": "\"36%\"",
 		"\"Pass\"": "17",
 		"\"Rush\"": "10",
-		"\"No Play (Penalty)\"": "27"
+		"\"No Play (Penalty)\"": "28"
 	},
 	{
 		"\"Team\"": "\"DEN\"",
 		"\"GMs\"": "17",
-		"\"Plays\"": "66",
+		"\"Plays\"": "65",
 		"\"Sec/Snap\"": "23.8",
 		"\"No-Huddle\"": "\"14%\"",
 		"\"Pass%\"": "\"67%\"",
 		"\"Rush%\"": "\"33%\"",
-		"\"Pass\"": "44",
+		"\"Pass\"": "43",
 		"\"Rush\"": "22",
-		"\"No Play (Penalty)\"": "48"
+		"\"No Play (Penalty)\"": "49"
 	},
 	{
 		"\"Team\"": "\"KC\"",
 		"\"GMs\"": "11",
-		"\"Plays\"": "16",
+		"\"Plays\"": "15",
 		"\"Sec/Snap\"": "28.2",
 		"\"No-Huddle\"": "\"4%\"",
 		"\"Pass%\"": "\"64%\"",
@@ -241,39 +241,39 @@ const rotovizNegativeScriptOffensivePaceAndRunPassReportLastFiveWeeks = [
 	},
 	{
 		"\"Team\"": "\"LAC\"",
-		"\"GMs\"": "10",
-		"\"Plays\"": "29",
-		"\"Sec/Snap\"": "23.5",
-		"\"No-Huddle\"": "\"8%\"",
-		"\"Pass%\"": "\"76%\"",
-		"\"Rush%\"": "\"24%\"",
-		"\"Pass\"": "22",
-		"\"Rush\"": "7",
+		"\"GMs\"": "11",
+		"\"Plays\"": "31",
+		"\"Sec/Snap\"": "23.7",
+		"\"No-Huddle\"": "\"10%\"",
+		"\"Pass%\"": "\"74%\"",
+		"\"Rush%\"": "\"26%\"",
+		"\"Pass\"": "23",
+		"\"Rush\"": "8",
 		"\"No Play (Penalty)\"": "37"
 	},
 	{
 		"\"Team\"": "\"MIA\"",
-		"\"GMs\"": "15",
-		"\"Plays\"": "36",
-		"\"Sec/Snap\"": "26.9",
+		"\"GMs\"": "16",
+		"\"Plays\"": "38",
+		"\"Sec/Snap\"": "26.8",
 		"\"No-Huddle\"": "\"3%\"",
-		"\"Pass%\"": "\"68%\"",
-		"\"Rush%\"": "\"32%\"",
-		"\"Pass\"": "25",
-		"\"Rush\"": "11",
+		"\"Pass%\"": "\"69%\"",
+		"\"Rush%\"": "\"31%\"",
+		"\"Pass\"": "26",
+		"\"Rush\"": "12",
 		"\"No Play (Penalty)\"": "31"
 	},
 	{
 		"\"Team\"": "\"PIT\"",
-		"\"GMs\"": "15",
+		"\"GMs\"": "16",
 		"\"Plays\"": "52",
 		"\"Sec/Snap\"": "25.8",
-		"\"No-Huddle\"": "\"23%\"",
+		"\"No-Huddle\"": "\"22%\"",
 		"\"Pass%\"": "\"66%\"",
 		"\"Rush%\"": "\"34%\"",
-		"\"Pass\"": "35",
-		"\"Rush\"": "18",
-		"\"No Play (Penalty)\"": "35"
+		"\"Pass\"": "34",
+		"\"Rush\"": "17",
+		"\"No Play (Penalty)\"": "36"
 	},
 	{
 		"\"Team\"": "\"ATL\"",
@@ -285,17 +285,17 @@ const rotovizNegativeScriptOffensivePaceAndRunPassReportLastFiveWeeks = [
 		"\"Rush%\"": "\"46%\"",
 		"\"Pass\"": "30",
 		"\"Rush\"": "26",
-		"\"No Play (Penalty)\"": "37"
+		"\"No Play (Penalty)\"": "38"
 	},
 	{
 		"\"Team\"": "\"SEA\"",
 		"\"GMs\"": "14",
-		"\"Plays\"": "38",
+		"\"Plays\"": "37",
 		"\"Sec/Snap\"": "23.6",
 		"\"No-Huddle\"": "\"23%\"",
 		"\"Pass%\"": "\"71%\"",
 		"\"Rush%\"": "\"29%\"",
-		"\"Pass\"": "27",
+		"\"Pass\"": "26",
 		"\"Rush\"": "11",
 		"\"No Play (Penalty)\"": "37"
 	},
@@ -309,7 +309,7 @@ const rotovizNegativeScriptOffensivePaceAndRunPassReportLastFiveWeeks = [
 		"\"Rush%\"": "\"30%\"",
 		"\"Pass\"": "35",
 		"\"Rush\"": "16",
-		"\"No Play (Penalty)\"": "32"
+		"\"No Play (Penalty)\"": "34"
 	},
 	{
 		"\"Team\"": "\"TEN\"",
@@ -321,67 +321,67 @@ const rotovizNegativeScriptOffensivePaceAndRunPassReportLastFiveWeeks = [
 		"\"Rush%\"": "\"38%\"",
 		"\"Pass\"": "23",
 		"\"Rush\"": "14",
-		"\"No Play (Penalty)\"": "36"
+		"\"No Play (Penalty)\"": "37"
 	},
 	{
 		"\"Team\"": "\"MIN\"",
 		"\"GMs\"": "14",
-		"\"Plays\"": "42",
+		"\"Plays\"": "41",
 		"\"Sec/Snap\"": "23.6",
 		"\"No-Huddle\"": "\"20%\"",
 		"\"Pass%\"": "\"73%\"",
 		"\"Rush%\"": "\"27%\"",
-		"\"Pass\"": "31",
+		"\"Pass\"": "30",
 		"\"Rush\"": "11",
 		"\"No Play (Penalty)\"": "28"
 	},
 	{
 		"\"Team\"": "\"TB\"",
-		"\"GMs\"": "17",
-		"\"Plays\"": "49",
-		"\"Sec/Snap\"": "19.7",
+		"\"GMs\"": "18",
+		"\"Plays\"": "50",
+		"\"Sec/Snap\"": "19.8",
 		"\"No-Huddle\"": "\"30%\"",
 		"\"Pass%\"": "\"80%\"",
 		"\"Rush%\"": "\"20%\"",
 		"\"Pass\"": "40",
 		"\"Rush\"": "10",
-		"\"No Play (Penalty)\"": "33"
+		"\"No Play (Penalty)\"": "34"
 	},
 	{
 		"\"Team\"": "\"CLE\"",
-		"\"GMs\"": "12",
+		"\"GMs\"": "13",
 		"\"Plays\"": "41",
 		"\"Sec/Snap\"": "23.4",
 		"\"No-Huddle\"": "\"18%\"",
-		"\"Pass%\"": "\"65%\"",
-		"\"Rush%\"": "\"35%\"",
+		"\"Pass%\"": "\"64%\"",
+		"\"Rush%\"": "\"36%\"",
 		"\"Pass\"": "26",
-		"\"Rush\"": "14",
-		"\"No Play (Penalty)\"": "39"
+		"\"Rush\"": "15",
+		"\"No Play (Penalty)\"": "40"
 	},
 	{
 		"\"Team\"": "\"BUF\"",
-		"\"GMs\"": "9",
-		"\"Plays\"": "16",
-		"\"Sec/Snap\"": "24.4",
-		"\"No-Huddle\"": "\"18%\"",
+		"\"GMs\"": "10",
+		"\"Plays\"": "19",
+		"\"Sec/Snap\"": "25.3",
+		"\"No-Huddle\"": "\"16%\"",
 		"\"Pass%\"": "\"64%\"",
 		"\"Rush%\"": "\"36%\"",
-		"\"Pass\"": "10",
-		"\"Rush\"": "6",
-		"\"No Play (Penalty)\"": "28"
+		"\"Pass\"": "12",
+		"\"Rush\"": "7",
+		"\"No Play (Penalty)\"": "29"
 	},
 	{
 		"\"Team\"": "\"BAL\"",
 		"\"GMs\"": "6",
-		"\"Plays\"": "19",
+		"\"Plays\"": "17",
 		"\"Sec/Snap\"": "23.6",
 		"\"No-Huddle\"": "\"6%\"",
 		"\"Pass%\"": "\"63%\"",
 		"\"Rush%\"": "\"37%\"",
-		"\"Pass\"": "12",
-		"\"Rush\"": "7",
-		"\"No Play (Penalty)\"": "35"
+		"\"Pass\"": "11",
+		"\"Rush\"": "6",
+		"\"No Play (Penalty)\"": "34"
 	},
 	
 ]
