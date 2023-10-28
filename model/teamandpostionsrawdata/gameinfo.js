@@ -5393,6 +5393,7 @@ allGameInfo.forEach(function (team) {
 // console.log(gameInfo.browns);
 
 // console.log(gameInfo.saints);
+// console.log(gameInfo.texans);
 // console.log(gameInfo.bears);
 // console.log(gameInfo.steelers);
 // console.log(gameInfo.seahawks);
