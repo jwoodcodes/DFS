@@ -5,10 +5,11 @@ export default function SleeperLeagueStuff({dataArray, selectedLeagueData, selec
 
     // console.log(dataArray)
     // console.log(selectedLeagueRosterNamesArray)
-    // console.log(selectedLeagueData)
+    // console.log(selectedLeagueData.name)
     // console.log(selectedUserName)
     // console.log(selectedLeaguesTeamObjectsArray)
     const [selectedUsersPicksArray, setSelectedUsersPicksArray] = React.useState([])
+   
     
 
     let qbArray = []
@@ -21,7 +22,7 @@ export default function SleeperLeagueStuff({dataArray, selectedLeagueData, selec
     
   
     if(selectedLeaguesTeamObjectsArray.length > 0) {
-      console.log(selectedLeaguesTeamObjectsArray.length)
+      // console.log(selectedLeaguesTeamObjectsArray.length)
       selectedLeaguesTeamObjectsArray.map((teamFromSleeperTeamDataArray) => {
       // console.log(teamFromSleeperTeamDataArray.teamData.allDraftPicksArray)
        if(teamFromSleeperTeamDataArray.teamData.allDraftPicksArray.length > 0 ) {
@@ -296,7 +297,10 @@ export default function SleeperLeagueStuff({dataArray, selectedLeagueData, selec
                   )          
                   }        
                 )}       
-            </div>              
+            </div>    
+
+            
+                    
         </div>                  
       )                      
                         
