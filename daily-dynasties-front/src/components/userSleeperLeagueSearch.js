@@ -11,7 +11,7 @@ export default function UserSleeperLeagueSearch({
   setSelectedLeagueRosterNamesArray,
   setSelectedUserName,
   setSelectedLeaguesTeamObjectsArray,
-  
+  setOnLeagueSelectFunction
 }) {
   // console.log(searchedUser)
   // const [data, setData] = React.useState(null)
@@ -23,6 +23,7 @@ export default function UserSleeperLeagueSearch({
   );
   const [userLeaguesNamesArray, setUserLeaguesNamesArray] = React.useState([]);
   const [showLeagues, setShowLeagues] = React.useState(false);
+  const [showSelectedLeagueButton, setShowSelectedLeagueButton] = React.useState(false)
 
   let selectedUserName;
   let userLeaguesDataArray = [];
@@ -46,7 +47,7 @@ export default function UserSleeperLeagueSearch({
       ////
       ///
       // comment and uncomment below when pushing to github until sleeperLeagueStuff fully implimented
-      // and also line 408 lower down!!!
+      // and also line 410 lower down!!!
 
       // setSelectedUserName(selectedUserName);
 
@@ -125,6 +126,7 @@ export default function UserSleeperLeagueSearch({
         numOfTeamsInLeague = league.total_rosters
         setSelectedLeagueData(league);
         setShowLeagues(false);
+        setShowSelectedLeagueButton(team)
         // setShowSortBySelectedLeaguesPlayersCheckbox(true);
         setUserLeaguesNamesArray([]);
         //
@@ -456,8 +458,64 @@ export default function UserSleeperLeagueSearch({
         getRostersOfSelectedLeague();
       }
     });
-  }
 
+    
+  }
+  function secondCallForPicks(userSearchValue, team) {
+    event.preventDefault();
+    if (userSearchValue) {
+      setShowLeagues(false);
+      // console.log(userSearchValue)
+      selectedUserName = userSearchValue;
+      
+
+      
+      setSelectedUserName(selectedUserName);
+
+
+
+      /////
+      async function axiosFetch() {
+        // console.log(selectedUserName)
+        const usernameRes = await axios.get(
+          `https://api.sleeper.app/v1/user/${selectedUserName}`
+        );
+        // console.log(usernameRes.data.user_id)
+        userID = usernameRes.data.user_id;
+        setSelectedUserID(userID);
+        // console.log(userID)
+
+        //
+
+        const userLeaguesres = await axios.get(
+          `https://api.sleeper.app/v1/user/${userID}/leagues/nfl/2023`
+        );
+        // console.log(userLeaguesres.data);
+        // let initialUserLeaguesArray = userLeaguesres.data
+        setInitialUserLeaguesArray(userLeaguesres.data);
+        let newLeagueNameArray = [];
+        initialUserLeaguesArray.forEach(function (league) {
+          // console.log(league.name)
+          //  newLeagueNameArray = [...userLeaguesNamesArray, league.name]
+          newLeagueNameArray.push(league.name);
+          // console.log(newLeagueNameArray)
+          userLeaguesDataArray.push(league);
+          // setUserLeaguesNamesArray(newLeagueNameArray)
+        });
+        setUserLeaguesNamesArray([]);
+        let initialSelectedLeague = {};
+
+        //  console.log(selectedLeagueRostersRes)
+        //  console.log(selectedLeagueData.league_id)
+      }
+
+      axiosFetch();
+    }
+    
+    onLeagueSelect(team)
+    
+  }
+  
   return (
     <div className={styles.wholeWrapper}>
       <div className={styles.label}>Sleeper League Search</div>
@@ -487,11 +545,12 @@ export default function UserSleeperLeagueSearch({
       {userLeaguesNamesArray && (
         <div className={styles.leaguebtnsWrapper}>
           {userLeaguesNamesArray.map(function (team) {
+            
             return (
               <button
                 key={team}
                 className={styles.leaguesbtns}
-                onClick={() => onLeagueSelect(team)}
+                onClick={() => onLeagueSelect(team) }
               >
                 {team}
               </button>
@@ -499,6 +558,12 @@ export default function UserSleeperLeagueSearch({
           })}
         </div>
       )}
+      {/* {showSelectedLeagueButton && 
+        // console.log(showSelectedLeagueButton)
+        
+        <button className={styles.leaguesbtns} onClick={() => secondCallForPicks(userSearchValue, showSelectedLeagueButton)}>Show Teams Picks</button>
+        
+      } */}
     </div>
   );
 }
