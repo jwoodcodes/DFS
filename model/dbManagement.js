@@ -143,7 +143,7 @@ let tempWrProjectionArray = allWRData.allWRProjectionsObjects;
 let wrProjectionArray = [...tempWrProjectionArray];
 let teProjectionsArray = [...allTEProjectionsObjects];
 
-// console.log(teProjectionsArray);
+// console.log(wrProjectionArray);
 
 let allProjectionsArray = [
   qbProjectionArray,
