@@ -58,7 +58,7 @@ const gameInfo = {
   bears: {
     teamName: 'Bears',
     teamABV: 'CHI',
-    byeWeek2022: 14,
+    byeWeek2022: 13,
     vtt: 0,
     opponentvtt: 0,
     gameTotalVegasTotal: 0,
@@ -90,7 +90,7 @@ const gameInfo = {
   bengals: {
     teamName: 'Bengals',
     teamABV: 'CIN',
-    byeWeek2022: 10,
+    byeWeek2022: 7,
     vtt: 0,
     opponentvtt: 0,
     gameTotalVegasTotal: 0,
@@ -122,7 +122,7 @@ const gameInfo = {
   bills: {
     teamName: 'Bills',
     teamABV: 'BUF',
-    byeWeek2022: 7,
+    byeWeek2022: 13,
     vtt: 0,
     opponentvtt: 0,
     gameTotalVegasTotal: 0,
@@ -186,7 +186,7 @@ const gameInfo = {
   browns: {
     teamName: 'Browns',
     teamABV: 'CLE',
-    byeWeek2022: 9,
+    byeWeek2022: 5,
     vtt: 0,
     opponentvtt: 0,
     gameTotalVegasTotal: 0,
@@ -218,7 +218,7 @@ const gameInfo = {
   buccaneers: {
     teamName: 'Buccaneers',
     teamABV: 'TB',
-    byeWeek2022: 11,
+    byeWeek2022: 5,
     vtt: 0,
     opponentvtt: 0,
     gameTotalVegasTotal: 0,
@@ -250,7 +250,7 @@ const gameInfo = {
   cardinals: {
     teamName: 'Cardinals',
     teamABV: 'ARI',
-    byeWeek2022: 13,
+    byeWeek2022: 14,
     vtt: 0,
     opponentvtt: 0,
     gameTotalVegasTotal: 0,
@@ -282,7 +282,7 @@ const gameInfo = {
   chargers: {
     teamName: 'Chargers',
     teamABV: 'LAC',
-    byeWeek2022: 8,
+    byeWeek2022: 5,
     vtt: 0,
     opponentvtt: 0,
     gameTotalVegasTotal: 0,
@@ -314,7 +314,7 @@ const gameInfo = {
   chiefs: {
     teamName: 'Chiefs',
     teamABV: 'KC',
-    byeWeek2022: 8,
+    byeWeek2022: 10,
     vtt: 0,
     opponentvtt: 0,
     gameTotalVegasTotal: 0,
@@ -346,7 +346,7 @@ const gameInfo = {
   colts: {
     teamName: 'Colts',
     teamABV: 'IND',
-    byeWeek2022: 14,
+    byeWeek2022: 11,
     vtt: 0,
     opponentvtt: 0,
     gameTotalVegasTotal: 0,
@@ -410,7 +410,7 @@ const gameInfo = {
   cowboys: {
     teamName: 'Cowboys',
     teamABV: 'DAL',
-    byeWeek2022: 9,
+    byeWeek2022: 7,
     vtt: 0,
     opponentvtt: 0,
     gameTotalVegasTotal: 0,
@@ -442,7 +442,7 @@ const gameInfo = {
   dolphins: {
     teamName: 'Dolphins',
     teamABV: 'MIA',
-    byeWeek2022: 11,
+    byeWeek2022: 10,
     vtt: 0,
     opponentvtt: 0,
     gameTotalVegasTotal: 0,
@@ -474,7 +474,7 @@ const gameInfo = {
   eagles: {
     teamName: 'Eagles',
     teamABV: 'PHI',
-    byeWeek2022: 7,
+    byeWeek2022: 10,
     vtt: 0,
     opponentvtt: 0,
     gameTotalVegasTotal: 0,
@@ -506,7 +506,7 @@ const gameInfo = {
   falcons: {
     teamName: 'Falcons',
     teamABV: 'ATL',
-    byeWeek2022: 14,
+    byeWeek2022: 11,
     vtt: 0,
     opponentvtt: 0,
     gameTotalVegasTotal: 0,
@@ -538,7 +538,7 @@ const gameInfo = {
   giants: {
     teamName: 'Giants',
     teamABV: 'NYG',
-    byeWeek2022: 9,
+    byeWeek2022: 13,
     vtt: 0,
     opponentvtt: 0,
     gameTotalVegasTotal: 0,
@@ -571,7 +571,7 @@ const gameInfo = {
     teamName: 'Jaguars',
     teamABV: 'JAX',
     altTeamABV: 'JAC',
-    byeWeek2022: 11,
+    byeWeek2022: 9,
     vtt: 0,
     opponentvtt: 0,
     gameTotalVegasTotal: 0,
@@ -603,7 +603,7 @@ const gameInfo = {
   jets: {
     teamName: 'Jets',
     teamABV: 'NYJ',
-    byeWeek2022: 10,
+    byeWeek2022: 7,
     vtt: 0,
     opponentvtt: 0,
     gameTotalVegasTotal: 0,
@@ -635,7 +635,7 @@ const gameInfo = {
   lions: {
     teamName: 'Lions',
     teamABV: 'DET',
-    byeWeek2022: 6,
+    byeWeek2022: 9,
     vtt: 0,
     opponentvtt: 0,
     gameTotalVegasTotal: 0,
@@ -667,7 +667,7 @@ const gameInfo = {
   packers: {
     teamName: 'Packers',
     teamABV: 'GB',
-    byeWeek2022: 14,
+    byeWeek2022: 6,
     vtt: 0,
     opponentvtt: 0,
     gameTotalVegasTotal: 0,
@@ -699,7 +699,7 @@ const gameInfo = {
   panthers: {
     teamName: 'Panthers',
     teamABV: 'CAR',
-    byeWeek2022: 13,
+    byeWeek2022: 7,
     vtt: 0,
     opponentvtt: 0,
     gameTotalVegasTotal: 0,
@@ -731,7 +731,7 @@ const gameInfo = {
   patriots: {
     teamName: 'Patriots',
     teamABV: 'NE',
-    byeWeek2022: 10,
+    byeWeek2022: 11,
     vtt: 0,
     opponentvtt: 0,
     gameTotalVegasTotal: 0,
@@ -763,7 +763,7 @@ const gameInfo = {
   raiders: {
     teamName: 'Raiders',
     teamABV: 'LV',
-    byeWeek2022: 6,
+    byeWeek2022: 13,
     vtt: 0,
     opponentvtt: 0,
     gameTotalVegasTotal: 0,
@@ -796,7 +796,7 @@ const gameInfo = {
     teamName: 'Rams',
     teamABV: 'LAR',
     altTeamABV: 'LA',
-    byeWeek2022: 7,
+    byeWeek2022: 10,
     vtt: 0,
     opponentvtt: 0,
     gameTotalVegasTotal: 0,
@@ -828,7 +828,7 @@ const gameInfo = {
   ravens: {
     teamName: 'Ravens',
     teamABV: 'BAL',
-    byeWeek2022: 10,
+    byeWeek2022: 13,
     vtt: 0,
     opponentvtt: 0,
     gameTotalVegasTotal: 0,
@@ -860,7 +860,7 @@ const gameInfo = {
   saints: {
     teamName: 'Saints',
     teamABV: 'NO',
-    byeWeek2022: 14,
+    byeWeek2022: 11,
     vtt: 0,
     opponentvtt: 0,
     gameTotalVegasTotal: 0,
@@ -892,7 +892,7 @@ const gameInfo = {
   seahawks: {
     teamName: 'Seahawks',
     teamABV: 'SEA',
-    byeWeek2022: 11,
+    byeWeek2022: 5,
     vtt: 0,
     opponentvtt: 0,
     gameTotalVegasTotal: 0,
@@ -924,7 +924,7 @@ const gameInfo = {
   steelers: {
     teamName: 'Steelers',
     teamABV: 'PIT',
-    byeWeek2022: 9,
+    byeWeek2022: 6,
     vtt: 0,
     opponentvtt: 0,
     gameTotalVegasTotal: 0,
@@ -956,7 +956,7 @@ const gameInfo = {
   texans: {
     teamName: 'Texans',
     teamABV: 'HOU',
-    byeWeek2022: 6,
+    byeWeek2022: 7,
     vtt: 0,
     opponentvtt: 0,
     gameTotalVegasTotal: 0,
@@ -988,7 +988,7 @@ const gameInfo = {
   titans: {
     teamName: 'Titans',
     teamABV: 'TEN',
-    byeWeek2022: 6,
+    byeWeek2022: 7,
     vtt: 0,
     opponentvtt: 0,
     gameTotalVegasTotal: 0,
@@ -1022,7 +1022,7 @@ const gameInfo = {
   vikings: {
     teamName: 'Vikings',
     teamABV: 'MIN',
-    byeWeek2022: 7,
+    byeWeek2022: 13,
     vtt: 0,
     opponentvtt: 0,
     gameTotalVegasTotal: 0,
@@ -2386,8 +2386,13 @@ const assignOpponentObjectToPassedInTeam = function (team) {
     //   `${team.teamABV} ${team.InitialTeamLikelihoodOfOffensiveSuccess} ${team.teamProjectedPointsThisWeek}, ${team.opponentThisWeek.teamABV} ${team.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess} ${team.opponentThisWeek.teamProjectedPointsThisWeek}`
     // );
 
+    
+    // console.log(team.teamName, team.vtt, team.teamProjectedPointsThisWeek)
     /////////////////////////////////////////////////////////////////////////////
   };
+
+ 
+  
 
   if (team.opponentABV === 'ARI') {
     if (!team.opponentThisWeek) {
@@ -5375,14 +5380,45 @@ const allGameInfo = [
 ];
 
 allGameInfo.forEach(function (team) {
-  // if (team.teamProjectedPointsThisWeek) {
-  //   console.log(
-  //     team.teamName,
-  //     team.teamProjectedPointsThisWeek,
-  //     team.opponentABV,
-  //     team.opponentThisWeek.teamProjectedPointsThisWeek
-  //   );
-  // }
+ 
+
+if(team.teamProjectedPointsThisWeek - team.vtt > 3 || team.vtt - team.teamProjectedPointsThisWeek > 3) {
+  // console.log(team.teamName, team.vtt, team.teamProjectedPointsThisWeek)
+  team.teamProjectedPointsThisWeek = +((+team.teamProjectedPointsThisWeek + +team.vtt) / 2).toFixed(2)
+}
+
+
+if(team.opponentThisWeek) {
+  // console.log(team.opponentThisWeek)
+
+
+
+// console.log(team.opponentThisWeek.teamProjectedPointsThisWeek)
+
+if(team.opponentThisWeek.teamProjectedPointsThisWeek - team.opponentThisWeek.vtt > 3 || team.opponentThisWeek.vtt - team.opponentThisWeek.teamProjectedPointsThisWeek > 3) {
+  // console.log(team.teamName, team.vtt, team.teamProjectedPointsThisWeek)
+  team.opponentThisWeek.teamProjectedPointsThisWeek = +((+team.opponentThisWeek.teamProjectedPointsThisWeek + +team.opponentThisWeek.vtt) / 2).toFixed(2)
+}
+
+team.myProjectedGameTotal = +((+team.teamProjectedPointsThisWeek + +team.opponentThisWeek.teamProjectedPointsThisWeek)).toFixed(2)
+
+team.diffBetweenMyGameTotalAndVtt = +((+team.myProjectedGameTotal - +team.gameTotalVegasTotal)).toFixed(1)
+}
+
+});
+
+allGameInfo.forEach(function (team) {
+//  if (team.teamProjectedPointsThisWeek) {
+//     console.log(
+//       team.teamName,
+//       team.teamProjectedPointsThisWeek,
+//       team.opponentABV,
+//       team.opponentThisWeek.teamProjectedPointsThisWeek,
+//       team.diffBetweenMyGameTotalAndVtt
+//     );
+//   }
+
+
 });
 
 // console.log(
@@ -5403,6 +5439,7 @@ allGameInfo.forEach(function (team) {
 // console.log(gameInfo.rams)
 // console.log(gameInfo.dolphins)
 // console.log(gameInfo.panthers)
+// console.log(gameInfo.cowboys)
 // console.log(gameInfo);
 
 module.exports = gameInfo;

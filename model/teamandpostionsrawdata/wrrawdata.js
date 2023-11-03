@@ -3034,6 +3034,8 @@ const populateTeamObjects = function (
   } else {
     passedInTeam.teamProjectedForAHalfOfNegetiveGameScriptIsTrue = 'false';
   }
+  if(gameInfoPassedInTeam.byeWeek2022 !== gameInfo.week.currentWeek) {
+    // console.log(gameInfoPassedInTeam, gameInfo.week.currentWeek)
 if(gameInfoPassedInTeam.WROneThisWeekName) {
   tempWROneName = gameInfoPassedInTeam.WROneThisWeekName.replace(
     '.',
@@ -3051,6 +3053,7 @@ if(gameInfoPassedInTeam.WROneThisWeekName) {
     ''
   ).replace('.', '');
   }
+  
   if (tempWRTwoName.includes("'")) {
     tempWRTwoName = tempWRTwoName.replace("'", '');
   }
@@ -3061,12 +3064,13 @@ if(gameInfoPassedInTeam.WRThreeThisWeekName) {
     '.',
     ''
   ).replace('.', '');
-
+  
   if (tempWRThreeName.includes("'")) {
     tempWRThreeName = tempWRThreeName.replace("'", '');
   }
 
   passedInTeam.WRThree.name = tempWRThreeName;
+}
 }
 
   qbDownloadableSpreadSheetYahoo.forEach(function (playerobj, i) {
