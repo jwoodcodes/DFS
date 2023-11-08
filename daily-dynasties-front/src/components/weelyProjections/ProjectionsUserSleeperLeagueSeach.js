@@ -1,40 +1,31 @@
 import axios from 'axios';
 import React from 'react';
 import styles from '@/styles/sleeperLeagueSearch.module.css';
-import SleeperLeagueStuff from './tradeAnalyzer/SleeperLeagueStuff';
 
 export default function UserSleeperLeagueSearch({
-
+  selectedLeagueData,
+  setSelectedLeagueData,
+  selectedUserID,
+  setSelectedUserID,
   initialSleeperPlayerData,
-  dataArray
+  setSelectedLeagueRosterNamesArray,
+  setSelectedUserName,
+  setSelectedLeaguesTeamObjectsArray,
+  setOnLeagueSelectFunction
 }) {
   // console.log(searchedUser)
   // const [data, setData] = React.useState(null)
   // console.log(initialSleeperPlayerData)
 
-  // const [userSearchValue, setUserSearchValue] = React.useState('');
+  const [userSearchValue, setUserSearchValue] = React.useState('');
   const [initialUserLeaguesArray, setInitialUserLeaguesArray] = React.useState(
     []
   );
   const [userLeaguesNamesArray, setUserLeaguesNamesArray] = React.useState([]);
   const [showLeagues, setShowLeagues] = React.useState(false);
-  const [showSelectedLeagueButton, setShowSelectedLeagueButton] = React.useState(false);
+  const [showSelectedLeagueButton, setShowSelectedLeagueButton] = React.useState(false)
 
-  const [selectedLeagueData, setSelectedLeagueData] = React.useState({});
-  const [selectedLeagueRosterNamesArray, setSelectedLeagueRosterNamesArray] = React.useState([]);
-  const [selectedLeaguesTeamObjectsArray, setSelectedLeaguesTeamObjectsArray] = React.useState([]);
-
-  
-  const [selectedUserID, setSelectedUserID] = React.useState(0);
-  
-  const [selectedUserName, setSelectedUserName] = React.useState('')
-  
- 
-  const [userSearchValue, setUserSearchValue] = React.useState('');
-
-  const [selectedUsersPicksArray, setSelectedUsersPicksArray] = React.useState([])
-
-
+  let selectedUserName;
   let userLeaguesDataArray = [];
   let userID = 0;
   
@@ -47,12 +38,10 @@ export default function UserSleeperLeagueSearch({
   //
   function onSearch(userSearchValue) {
     event.preventDefault();
-    
     if (userSearchValue) {
       setShowLeagues(true);
-      setSelectedUserName(userSearchValue);
       // console.log(userSearchValue)
-      // selectedUserName = userSearchValue;
+      selectedUserName = userSearchValue;
       
 
       ////
@@ -60,24 +49,21 @@ export default function UserSleeperLeagueSearch({
       // comment and uncomment below when pushing to github until sleeperLeagueStuff fully implimented
       // and also line 410 lower down!!!
 
-      
+      // setSelectedUserName(selectedUserName);
 
 
 
       /////
       async function axiosFetch() {
-        // console.log(selectedUserName) 
-        
+        // console.log(selectedUserName)
         const usernameRes = await axios.get(
-          `https://api.sleeper.app/v1/user/${userSearchValue}`
+          `https://api.sleeper.app/v1/user/${selectedUserName}`
         );
-        
-        
         // console.log(usernameRes.data.user_id)
         userID = usernameRes.data.user_id;
         setSelectedUserID(userID);
         // console.log(userID)
-        
+
         //
 
         const userLeaguesres = await axios.get(
@@ -101,10 +87,8 @@ export default function UserSleeperLeagueSearch({
         //  console.log(selectedLeagueRostersRes)
         //  console.log(selectedLeagueData.league_id)
       }
-      // console.log(userSearchValue)
-      
+
       axiosFetch();
-      
     }
   }
 
@@ -169,7 +153,6 @@ export default function UserSleeperLeagueSearch({
           // console.log(selectedLeagueRostersData)
           
           
-          
         async function getPicks() {
 
           const picksRes = await axios.get(
@@ -192,7 +175,6 @@ export default function UserSleeperLeagueSearch({
 
                 let userId = team.owner_id
                 // console.log(userId)
-                
                 
                 let teamPlayerIdsArray = team.players
                 let teamRosterNamesArray = [];
@@ -366,27 +348,15 @@ export default function UserSleeperLeagueSearch({
                 ]
                 let tempPicksArray = team.allDraftPicksArray
                 
-                // console.log(tempPicksArray)
-                // console.log(team.owner_id, selectedUserID)
-
-
-                // setting teams picks
-                if(team.owner_id === selectedUserID) {
-                  // console.log(tempPicksArray)
-                  setSelectedUsersPicksArray(tempPicksArray)
-                }
                 
                 
-                let userName;
                 async function getUserName() {
                 const usernameRes = await axios.get(
                   `https://api.sleeper.app/v1/user/${userId}`
                 );
                 // console.log(team)
                 
-                userName = usernameRes.data.username
-              }
-              getUserName()
+                let userName = usernameRes.data.username
                 // console.log(userName)
                 // console.log(userName, team.testArray)
                 // console.log(userName, team.nextDraftYearFirstArray)
@@ -408,7 +378,8 @@ export default function UserSleeperLeagueSearch({
                 tempSelectedLeaguesTeamObjectsArray.push(teamObject)
 
                 
-                
+                }
+
                 
 
                 
@@ -420,8 +391,8 @@ export default function UserSleeperLeagueSearch({
 
                 
                 
+                getUserName()
                 
-               
           })
           // console.log(tempSelectedLeaguesTeamObjectsArray)
           
@@ -436,7 +407,7 @@ export default function UserSleeperLeagueSearch({
       // and also line 51 further up!!!!!
 
       // console.log(tempSelectedLeaguesTeamObjectsArray)
-      setSelectedLeaguesTeamObjectsArray(tempSelectedLeaguesTeamObjectsArray)
+      // setSelectedLeaguesTeamObjectsArray(tempSelectedLeaguesTeamObjectsArray)
 
 
       /////
@@ -490,10 +461,62 @@ export default function UserSleeperLeagueSearch({
 
     
   }
+  function secondCallForPicks(userSearchValue, team) {
+    event.preventDefault();
+    if (userSearchValue) {
+      setShowLeagues(false);
+      // console.log(userSearchValue)
+      selectedUserName = userSearchValue;
+      
 
+      
+      setSelectedUserName(selectedUserName);
+
+
+
+      /////
+      async function axiosFetch() {
+        // console.log(selectedUserName)
+        const usernameRes = await axios.get(
+          `https://api.sleeper.app/v1/user/${selectedUserName}`
+        );
+        // console.log(usernameRes.data.user_id)
+        userID = usernameRes.data.user_id;
+        setSelectedUserID(userID);
+        // console.log(userID)
+
+        //
+
+        const userLeaguesres = await axios.get(
+          `https://api.sleeper.app/v1/user/${userID}/leagues/nfl/2023`
+        );
+        // console.log(userLeaguesres.data);
+        // let initialUserLeaguesArray = userLeaguesres.data
+        setInitialUserLeaguesArray(userLeaguesres.data);
+        let newLeagueNameArray = [];
+        initialUserLeaguesArray.forEach(function (league) {
+          // console.log(league.name)
+          //  newLeagueNameArray = [...userLeaguesNamesArray, league.name]
+          newLeagueNameArray.push(league.name);
+          // console.log(newLeagueNameArray)
+          userLeaguesDataArray.push(league);
+          // setUserLeaguesNamesArray(newLeagueNameArray)
+        });
+        setUserLeaguesNamesArray([]);
+        let initialSelectedLeague = {};
+
+        //  console.log(selectedLeagueRostersRes)
+        //  console.log(selectedLeagueData.league_id)
+      }
+
+      axiosFetch();
+    }
+    
+    onLeagueSelect(team)
+    
+  }
   
   return (
-    <div>
     <div className={styles.wholeWrapper}>
       <div className={styles.label}>Sleeper League Search</div>
       <form onSubmit={() => onSearch(userSearchValue)} className={styles.form}>
@@ -535,21 +558,12 @@ export default function UserSleeperLeagueSearch({
           })}
         </div>
       )}
-      
-     
-      </div>
-      <div>
-        <SleeperLeagueStuff 
-       dataArray={dataArray}
-       selectedLeagueData={selectedLeagueData}
-       selectedUserID={selectedUserID}
-       selectedLeagueRosterNamesArray={selectedLeagueRosterNamesArray}
-       selectedUserName={selectedUserName}
-       selectedLeaguesTeamObjectsArray={selectedLeaguesTeamObjectsArray}  
-       selectedUsersPicksArray={selectedUsersPicksArray}
-       /> 
-      </div>
+      {/* {showSelectedLeagueButton && 
+        // console.log(showSelectedLeagueButton)
+        
+        <button className={styles.leaguesbtns} onClick={() => secondCallForPicks(userSearchValue, showSelectedLeagueButton)}>Show Teams Picks</button>
+        
+      } */}
     </div>
-
   );
 }

@@ -5,7 +5,8 @@ import React from 'react';
 import MainNav from '@/components/MainNav';
 import ProjIndividualPositions from '@/components/weelyProjections/ProjIndividualPositions';
 import Footer from '@/components/Footer';
-import UserSleeperLeagueSearch from '@/components/userSleeperLeagueSearch';
+// import UserSleeperLeagueSearch from '@/components/userSleeperLeagueSearch';
+import ProjectionsUserSleeperLeagueSearch from '@/components/weelyProjections/ProjectionsUserSleeperLeagueSeach';
 
 
 export default function WeeklyProjections(data ) {
@@ -21,7 +22,7 @@ const initialSleeperPlayerData = data.sleeperPlayerData
 // console.log(allProjections)
 
   const [positionToShow, setPositionToShow] = React.useState('Overall');
-  const [selectedLeagueData, setSelectedLeagueData] = React.useState({})
+  
   const [selectedUserID, setSelectedUserID] = React.useState(0)
   const [selectedLeagueRosterNamesArray, setSelectedLeagueRosterNamesArray] = React.useState([])
   const [isSortBySelectedTeamChecked, setIsSortBySelectedTeamChecked] = React.useState(false)
@@ -240,9 +241,9 @@ const initialSleeperPlayerData = data.sleeperPlayerData
       <div className={styles.mainTitle}>Weekly Projections</div>
       <div className={styles.curWeek}>{`Week ${curWeek} Projections`}</div>
       
-       <UserSleeperLeagueSearch 
-       selectedLeagueData={selectedLeagueData} 
-       setSelectedLeagueData={setSelectedLeagueData} 
+       <ProjectionsUserSleeperLeagueSearch 
+       
+       
        selectedUserID={selectedUserID}
        setSelectedUserID={setSelectedUserID}
        initialSleeperPlayerData={initialSleeperPlayerData}

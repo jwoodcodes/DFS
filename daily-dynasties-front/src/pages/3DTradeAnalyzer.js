@@ -13,6 +13,7 @@ import ErrorBoundary from '@/components/ErrorBoundry';
 
 
 
+
 export default function ThreeDTradeAnalyzer(data) {
   // console.log(data.dynastyRankingsData[0].tradeAnalyzerDataObjectsArray
   //   )
@@ -26,15 +27,11 @@ export default function ThreeDTradeAnalyzer(data) {
   const [teamOnePlayers, setTeamOnePlayers] = React.useState([]);
   const [teamTwoPlayers, setTeamTwoPlayers] = React.useState([]);
   //
-  const [selectedLeagueData, setSelectedLeagueData] = React.useState({});
-  const [selectedUserID, setSelectedUserID] = React.useState(0);
-  const [selectedLeagueRosterNamesArray, setSelectedLeagueRosterNamesArray] = React.useState([])
-  const [selectedUserName, setSelectedUserName] = React.useState('')
-  const [selectedLeaguesTeamObjectsArray, setSelectedLeaguesTeamObjectsArray] = React.useState([])
- 
- 
+  
 
   return (
+    
+    
     <div>
       <MainNav />
       
@@ -43,30 +40,15 @@ export default function ThreeDTradeAnalyzer(data) {
       
       <div className={styles.wholeMainSectionWrapper}>
 
+      
       {/* <ErrorBoundary>
-      <UserSleeperLeagueSearch 
-       selectedLeagueData={selectedLeagueData} 
-       setSelectedLeagueData={setSelectedLeagueData} 
-       selectedUserID={selectedUserID}
-       setSelectedUserID={setSelectedUserID}
-       initialSleeperPlayerData={initialSleeperPlayerData}
-       setSelectedLeagueRosterNamesArray={setSelectedLeagueRosterNamesArray} 
-       setSelectedUserName={setSelectedUserName} 
-       setSelectedLeaguesTeamObjectsArray={setSelectedLeaguesTeamObjectsArray}
-       
+      <UserSleeperLeagueSearch   
+       initialSleeperPlayerData={initialSleeperPlayerData}   
+       dataArray={dataArray}  
        />
-      </ErrorBoundary>
-      <ErrorBoundary>
-       <SleeperLeagueStuff 
-       dataArray={dataArray}
-       selectedLeagueData={selectedLeagueData}
-       selectedUserID={selectedUserID}
-       selectedLeagueRosterNamesArray={selectedLeagueRosterNamesArray}
-       selectedUserName={selectedUserName}
-       selectedLeaguesTeamObjectsArray={selectedLeaguesTeamObjectsArray}
+      </ErrorBoundary> */}
+     
        
-       />
-        </ErrorBoundary> */}
         {/* team 1 */}
         <TeamOne
           dataArray={dataArray}
