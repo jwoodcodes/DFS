@@ -1,44 +1,29 @@
 import styles from '@/styles/tradeAnalyzer.module.css';
 import React from 'react';
 
-export default function SleeperLeagueStuff({dataArray, selectedLeagueData, selectedUserID, selectedLeagueRosterNamesArray, selectedUserName, selectedLeaguesTeamObjectsArray}) {
+
+export default function SleeperLeagueStuff({dataArray, selectedLeagueData, selectedUserID, selectedLeagueRosterNamesArray, selectedUserName, selectedLeaguesTeamObjectsArray, onLeagueSelect, selectedUsersPicksArray}) {
 
     // console.log(dataArray)
     // console.log(selectedLeagueRosterNamesArray)
     // console.log(selectedLeagueData.name)
     // console.log(selectedUserName)
     // console.log(selectedLeaguesTeamObjectsArray)
-    const [selectedUsersPicksArray, setSelectedUsersPicksArray] = React.useState([])
    
-    
+   
+  // console.log(selectedUsersPicksArray, selectedLeaguesTeamObjectsArray)
+    // console.log(selectedUserName)
 
     let qbArray = []
     let rbArray = []
     let wrArray = []
     let teArray = []
     
-    let selectedTeamPicksArray = []
+    
     
     
   
-    if(selectedLeaguesTeamObjectsArray.length > 0) {
-      // console.log(selectedLeaguesTeamObjectsArray.length)
-      selectedLeaguesTeamObjectsArray.map((teamFromSleeperTeamDataArray) => {
-      // console.log(teamFromSleeperTeamDataArray.teamData.allDraftPicksArray)
-       if(teamFromSleeperTeamDataArray.teamData.allDraftPicksArray.length > 0 ) {
-          if(selectedUserName === teamFromSleeperTeamDataArray.userName) {
-             // console.log(teamFromSleeperTeamDataArray.teamData.allDraftPicksArray)
-            if(selectedUsersPicksArray.length === 0) {
-               selectedTeamPicksArray = teamFromSleeperTeamDataArray.teamData.allDraftPicksArray
-                setSelectedUsersPicksArray(selectedTeamPicksArray)
-            }
-          }
-        }
-      })
-    }
-
-   
-    // console.log(selectedTeamPicksArray)
+  
 
     dataArray.map((player) => {
       player.name = player.name.replace("'", '')
