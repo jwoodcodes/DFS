@@ -3,8 +3,8 @@ import React from 'react';
 import styles from '@/styles/sleeperLeagueSearch.module.css';
 
 export default function UserSleeperLeagueSearch({
-  selectedLeagueData,
-  setSelectedLeagueData,
+  // selectedLeagueData,
+  // setSelectedLeagueData,
   selectedUserID,
   setSelectedUserID,
   initialSleeperPlayerData,
@@ -124,7 +124,7 @@ export default function UserSleeperLeagueSearch({
       if (team === league.name) {
         
         numOfTeamsInLeague = league.total_rosters
-        setSelectedLeagueData(league);
+        // setSelectedLeagueData(league);
         setShowLeagues(false);
         setShowSelectedLeagueButton(team)
         // setShowSortBySelectedLeaguesPlayersCheckbox(true);
