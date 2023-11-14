@@ -928,8 +928,9 @@ const testfunc = async function () {
           (+this.ppSFQBTEPPercentOfMax +
             +this.rvPercentOfQBMax +
             +this.rvPercentOfQBMax +
+            +this.rvPercentOfQBMax +
             +this.rvPercentOfQBMax) /
-          4
+          5
         ).toFixed(2);
         // console.log(player.player.name, this.myPercentOfQBMax);
         // console.log(fcQBMaxValue);
@@ -995,8 +996,9 @@ const testfunc = async function () {
           (+this.ppSFNonQBTEPPercentOfMax +
             +this.rvPercentOfNonQBMax +
             +this.rvPercentOfNonQBMax +
+            +this.rvPercentOfNonQBMax +
             +this.rvPercentOfNonQBMax) /
-          4
+          5
         ).toFixed(2);
         // console.log(+fcNonQBMaxValue);
         // this.myValue = +(+fcNonQBMaxValue * +this.myPercentOfNonQBMax).toFixed(
