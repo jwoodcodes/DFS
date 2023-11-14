@@ -919,6 +919,11 @@ const testfunc = async function () {
       if (player.player.position === 'QB') {
         // console.log(player.player.name);
 
+        if(this.ppSFQBTEPPercentOfMax === Infinity) {
+          // console.log(this.name)
+          this.ppSFQBTEPPercentOfMax = 1
+        }
+
         this.myPercentOfQBMax = +(
           (+this.ppSFQBTEPPercentOfMax +
             +this.rvPercentOfQBMax +
@@ -930,8 +935,13 @@ const testfunc = async function () {
         // console.log(fcQBMaxValue);
 
         // this.myValue = +(fcQBMaxValue * this.myPercentOfQBMax).toFixed(2);
+        
         let tempValue = +(fcQBMaxValue * this.myPercentOfQBMax).toFixed(2);
         this.myValue = Math.round(tempValue);
+
+        // if(this.name === 'Patrick Mahomes') {
+        //   console.log(fcQBMaxValue, this.myPercentOfQBMax, tempValue, this.myValue, this.ppSFQBTEPPercentOfMax)
+        // }
 
         // console.log(this.name, this.myValue);
 
