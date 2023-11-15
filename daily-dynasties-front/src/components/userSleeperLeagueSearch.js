@@ -217,21 +217,39 @@ export default function UserSleeperLeagueSearch({
                 team.teamRosterNames = teamRosterNamesArray
                 
                 let nextDraftYear = +(+curSeason + 1)
+                let draftYearOfDraftAfterNextDraft = +(+curSeason + 2)
+                let draftYearOfDraftAfterDraftAfterNext = +(+curSeason + 3)
                 let tradedPicksArray = []
                 let picksTradedForArray = []
                 
                 let tempCurYearFirstPicksArray = []
                 let tempCurYearSecondsPicksArray = []
                 let tempCurYearThirdsPicksArray = []
+
+                let tempNextYearFirstPicksArray = []
+                let tempNextYearSecondsPicksArray = []
+                let tempNextYearThirdsPicksArray = []
+
+                let tempTwoYearsFromNowFirstPicksArray = []
+                let tempTwoYearsFromNowSecondsPicksArray = []
+                let tempTwoYearsFromNowThirdsPicksArray = []
                 
                   
                 
                 
                 let tempTeamPicksArray = []
 
-                team.nextDraftYearFirstArray = [`${nextDraftYear} Round 1`]
-                team.nextDraftYearSecondsArray = [`${nextDraftYear} Round 2`]
-                team.nextDraftYearThirdsArray = [`${nextDraftYear} Round 3`]
+                team.nextDraftYearFirstArray = [{name: `${nextDraftYear} Round 1`}]
+                team.nextDraftYearSecondsArray = [{name: `${nextDraftYear} Round 2`}]
+                team.nextDraftYearThirdsArray = [{name: `${nextDraftYear} Round 3`}]
+
+                team.draftAfterNextFirstArray = [{name: `${draftYearOfDraftAfterNextDraft} Round 1`}]
+                team.draftAfterNextSecondsArray = [{name: `${draftYearOfDraftAfterNextDraft} Round 2`}]
+                team.draftAfterNextThirdsArray = [{name: `${draftYearOfDraftAfterNextDraft} Round 3`}]
+
+                team.twoDraftsAfterNextFirstArray = [{name: `${draftYearOfDraftAfterDraftAfterNext} Round 1`}]
+                team.twoDraftsAfterNextSecondsArray = [{name: `${draftYearOfDraftAfterDraftAfterNext} Round 2`}]
+                team.twoDraftsAfterNextThirdsArray = [{name: `${draftYearOfDraftAfterDraftAfterNext} Round 3`}]
                 
 
                 
@@ -265,9 +283,12 @@ export default function UserSleeperLeagueSearch({
                     {
                       name: `${pickYear} Round ${pickRound}`,
                       data: picks
-                     })
+                     },
+                    
+                     )
                   }
 
+                  // console.log(picksTradedForArray)
                   //
                   //
                   
@@ -279,25 +300,78 @@ export default function UserSleeperLeagueSearch({
                             // console.log(picks, team.roster_id)
                             team.nextDraftYearFirstArray = []
                             if( picks.roster_id === picks.owner_id) {
-                              team.nextDraftYearFirstArray = [`${nextDraftYear} Round 1`]
+                              team.nextDraftYearFirstArray = [{name: `${nextDraftYear} Round 1`}]
                             }                           
                           } 
                           // if team has their own next draft seconds
                           if(picks.round === 2) {                            
                             team.nextDraftYearSecondsArray = []
                             if( picks.roster_id === picks.owner_id) {
-                              team.nextDraftYearSecondsArray = [`${nextDraftYear} Round 2`]
+                              // team.nextDraftYearSecondsArray = [`${nextDraftYear} Round 2`]
+                              team.nextDraftYearSecondsArray = [{name: `${nextDraftYear} Round 2`}]
                             } 
                           }  
                           // if team has their own next draft third
                           if(picks.round === 3) {                            
                             team.nextDraftYearThirdsArray = []
                             if( picks.roster_id === picks.owner_id) {
-                              team.nextDraftYearThirdsArray = [`${nextDraftYear} Round 3`]
+                              team.nextDraftYearThirdsArray = [{name: `${nextDraftYear} Round 3`}]
+                            } 
+                          }                           
+                        }
+
+                        //
+
+                        if(pickYear === twoYearsAwayDraftYear) {
+                          // if team has their own next draft first
+                          if(picks.round === 1) {
+                            // console.log(picks, team.roster_id)
+                            team.draftAfterNextFirstArray = []
+                            if( picks.roster_id === picks.owner_id) {
+                              team.draftAfterNextFirstArray = [{name: `${twoYearsAwayDraftYear} Round 1`}]
+                            }                           
+                          } 
+                          // if team has their own next draft seconds
+                          if(picks.round === 2) {                            
+                            team.draftAfterNextSecondsArray = []
+                            if( picks.roster_id === picks.owner_id) {
+                              team.draftAfterNextSecondsArray = [{name: `${twoYearsAwayDraftYear} Round 2`}]
                             } 
                           }  
-                          
-                          
+                          // if team has their own next draft third
+                          if(picks.round === 3) {                            
+                            team.draftAfterNextThirdsArray = []
+                            if( picks.roster_id === picks.owner_id) {
+                              team.draftAfterNextThirdsArray = [{name: `${twoYearsAwayDraftYear} Round 3`}]
+                            } 
+                          }                           
+                        }
+
+                        //
+
+                        if(pickYear === threeYearsAwayDraftYear) {
+                          // if team has their own next draft first
+                          if(picks.round === 1) {
+                            // console.log(picks, team.roster_id)
+                            team.twoDraftsAfterNextFirstArray = []
+                            if( picks.roster_id === picks.owner_id) {
+                              team.twoDraftsAfterNextFirstArray = [{name: `${threeYearsAwayDraftYear} Round 1`}]
+                            }                           
+                          } 
+                          // if team has their own next draft seconds
+                          if(picks.round === 2) {                            
+                            team.twoDraftsAfterNextSecondsArray = []
+                            if( picks.roster_id === picks.owner_id) {
+                              team.twoDraftsAfterNextSecondsArray = [{name: `${threeYearsAwayDraftYear} Round 2`}]
+                            } 
+                          }  
+                          // if team has their own next draft third
+                          if(picks.round === 3) {                            
+                            team.twoDraftsAfterNextThirdsArray = []
+                            if( picks.roster_id === picks.owner_id) {
+                              team.twoDraftsAfterNextThirdsArray = [{name: `${threeYearsAwayDraftYear} Round 3`}]
+                            } 
+                          }                           
                         }
 
                              tradedPicksArray.push(picks)
@@ -305,6 +379,7 @@ export default function UserSleeperLeagueSearch({
                             team.tradedPicksArray = tradedPicksArray                 
                   }
                      
+                 
                   // 
                   //
                   //adding traded for picks 
@@ -314,6 +389,9 @@ export default function UserSleeperLeagueSearch({
                   if(team.roster_id === picks.owner_id) {
                     for (let i = 0; i <= numOfTeamsInLeague; i++) {
                       if(team.roster_id === i) {
+
+                        // next draft
+
                         if(pickYear === nextDraftYear) { 
                           // next draft first                    
                           if(pickRound === 1) {
@@ -344,6 +422,72 @@ export default function UserSleeperLeagueSearch({
                           }
                           
                         }
+
+                        // draft after next draft 
+
+                        if(pickYear === twoYearsAwayDraftYear) { 
+                          // two drafts away first                    
+                          if(pickRound === 1) {
+                             // console.log(picks)
+                            if( picks.roster_id !== picks.owner_id) {
+                              // console.log(picks, team.roster_id)                           
+                              tempNextYearFirstPicksArray.push({name: `${pickYear} Round ${pickRound}`,
+                                data: picks})
+                            }                                        
+                          }
+                          // two drafts away seconds
+                          if(pickRound === 2) {
+                            // console.log(picks)
+                           if( picks.roster_id !== picks.owner_id) {
+                             // console.log(picks, team.roster_id)                           
+                             tempNextYearSecondsPicksArray.push({name: `${pickYear} Round ${pickRound}`,
+                               data: picks})
+                           }                                        
+                          }
+                          // two drafts away thirds
+                          if(pickRound === 3) {
+                            // console.log(picks)
+                           if( picks.roster_id !== picks.owner_id) {
+                             // console.log(picks, team.roster_id)                           
+                             tempNextYearThirdsPicksArray.push({name: `${pickYear} Round ${pickRound}`,
+                               data: picks})
+                            }                                        
+                          }
+                          
+                        }
+
+                        // draft after draft after next
+
+                        if(pickYear === threeYearsAwayDraftYear) { 
+                          // two drafts away first                    
+                          if(pickRound === 1) {
+                             // console.log(picks)
+                            if( picks.roster_id !== picks.owner_id) {
+                              // console.log(picks, team.roster_id)                           
+                              tempTwoYearsFromNowFirstPicksArray.push({name: `${pickYear} Round ${pickRound}`,
+                                data: picks})
+                            }                                        
+                          }
+                          // two drafts away seconds
+                          if(pickRound === 2) {
+                            // console.log(picks)
+                           if( picks.roster_id !== picks.owner_id) {
+                             // console.log(picks, team.roster_id)                           
+                             tempTwoYearsFromNowSecondsPicksArray.push({name: `${pickYear} Round ${pickRound}`,
+                               data: picks})
+                           }                                        
+                          }
+                          // two drafts away thirds
+                          if(pickRound === 3) {
+                            // console.log(picks)
+                           if( picks.roster_id !== picks.owner_id) {
+                             // console.log(picks, team.roster_id)                           
+                             tempTwoYearsFromNowThirdsPicksArray.push({name: `${pickYear} Round ${pickRound}`,
+                               data: picks})
+                            }                                        
+                          }
+                          
+                        }
                       }                 
                     }
                   }
@@ -359,10 +503,24 @@ export default function UserSleeperLeagueSearch({
                 team.nextDraftYearSecondsArray = [...team.nextDraftYearSecondsArray, ...tempCurYearSecondsPicksArray]
                 team.nextDraftYearThirdsArray = [...team.nextDraftYearThirdsArray, ...tempCurYearThirdsPicksArray]
 
+                team.draftAfterNextFirstArray = [...team.draftAfterNextFirstArray, ...tempNextYearFirstPicksArray]
+                team.draftAfterNextSecondsArray = [...team.draftAfterNextSecondsArray, ...tempNextYearSecondsPicksArray]
+                team.draftAfterNextThirdsArray = [...team.draftAfterNextThirdsArray, ...tempNextYearThirdsPicksArray]
+
+                team.twoDraftsAfterNextFirstArray = [...team.twoDraftsAfterNextFirstArray, ...tempTwoYearsFromNowFirstPicksArray]
+                team.twoDraftsAfterNextSecondsArray = [...team.twoDraftsAfterNextSecondsArray, ...tempTwoYearsFromNowSecondsPicksArray]
+                team.twoDraftsAfterNextThirdsArray = [... team.twoDraftsAfterNextThirdsArray, ...tempTwoYearsFromNowThirdsPicksArray]
+
                 team.allDraftPicksArray = [
                   ...team.nextDraftYearFirstArray,
                   ...team.nextDraftYearSecondsArray,
-                  ...team.nextDraftYearThirdsArray
+                  ...team.nextDraftYearThirdsArray,
+                  ...team.draftAfterNextFirstArray,
+                  ...team.draftAfterNextSecondsArray,
+                  ...team.draftAfterNextThirdsArray,
+                  ...team.twoDraftsAfterNextFirstArray,
+                  ...team.twoDraftsAfterNextSecondsArray,
+                  ...team.twoDraftsAfterNextThirdsArray
                 ]
                 let tempPicksArray = team.allDraftPicksArray
                 
