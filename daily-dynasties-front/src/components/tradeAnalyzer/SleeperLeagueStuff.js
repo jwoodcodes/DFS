@@ -14,14 +14,47 @@ export default function SleeperLeagueStuff({dataArray, selectedLeagueData, selec
   // console.log(selectedUsersPicksArray, selectedLeaguesTeamObjectsArray)
     // console.log(selectedUserName)
 
+    // console.log(selectedUsersPicksArray)
+
+
+    
+
     let qbArray = []
     let rbArray = []
     let wrArray = []
     let teArray = []
+
     
     
-    
-    
+    dataArray.map((player) => {
+      selectedUsersPicksArray.map((pick) => {
+
+        
+        
+
+        if(pick.name === player.name || pick === player.name) {
+
+          // console.log(pick)
+
+          // console.log(player)
+
+
+          pick.PRPScore = player.PRPScore
+          pick.projectedNextOffseasonDynastyValue = player.projectedNextOffseasonDynastyValue
+          pick.RVSScore = player.PNODVScore
+          pick.marketValue = player.marketValue
+          pick.myValue = player.myValue
+        }
+    })
+  })
+
+  console.log(selectedUsersPicksArray)
+
+
+
+
+
+
   
   
 
@@ -80,8 +113,8 @@ export default function SleeperLeagueStuff({dataArray, selectedLeagueData, selec
     })
 
     return (
-        <div>
-            <div className={styles.playersOnSelectedLeagueWrapper}>
+        <div className={styles.wholeSleeperPlayersSectionWrapper}>
+          <div className={styles.playersOnSelectedLeagueWrapper}>
             <div className={styles.selectedLeagueName}>{selectedLeagueData.name}</div>
             <div className={styles.selectedUserName}>{selectedUserName}</div>
                 {dataArray.map((player) => {                   
@@ -126,7 +159,7 @@ export default function SleeperLeagueStuff({dataArray, selectedLeagueData, selec
 
                   
 
-{dataArray.map((player) => {                   
+                {dataArray.map((player) => {                   
                     // console.log(player.name)
                   return(
                     //
@@ -248,42 +281,59 @@ export default function SleeperLeagueStuff({dataArray, selectedLeagueData, selec
                   }        
                 )}       
 
-                 {dataArray.map((player) => {                   
-                    // console.log(player.name)
+                 {/* {dataArray.map((player) => {                    */}
+                    {/* // console.log(player.name)
                      // console.log(selectedUserName)
                         // console.log(selectedLeaguesTeamObjectsArray)
                         
                   return(
-                    //
+                    // */}
                   <>
                     {selectedUsersPicksArray.map((pick) => {
                         let num = Math.random()
                        
                         // console.log(selectedUserName, pick, player.name)
+                        // console.log(selectedUserName, pick)
+                        
 
-                        if(pick.name === player.name || pick === player.name) {
+                        // if(pick.name === player.name || pick === player.name) {
                           // console.log(pick)
+                          // console.log(pick.name, player.name, pick, player.name)
                           return (
                            
-                            <div key={`${player.name}-${player.projectedNextOffseasonDynastyValue}-${num}`}>
-                              <div key={`${player.name}-${player.myValue}-${num}`} className={styles.wrsFromSelectedLeagueWrapper}>
-                                <span><strong><u>{player.name}</u></strong> {" "}</span>
-                                <span>PRP Score: {player.PRPScore} {" "}</span>
-                                <span>PNODV: {player.projectedNextOffseasonDynastyValue} {" "}</span>
-                                <span>RVS Score: {player.RVSScore} {" "}</span>
-                                <span>Market Value: {player.marketValue} {" "}</span>
-                                <span>My Value: {player.myValue}</span>
+                            <div key={`${pick.name}-${pick.projectedNextOffseasonDynastyValue}-${num}`}>
+                              <div key={`${pick.name}-${pick.myValue}-${num}`} className={styles.wrsFromSelectedLeagueWrapper}>
+                                <span className={styles.pickYear}><strong><u>{pick.name}</u></strong> {" "}</span>
+                                <span>PRP Score: {pick.PRPScore} {" "}</span>
+                                <span>PNODV: {pick.projectedNextOffseasonDynastyValue} {" "}</span>
+                                <span>RVS Score: {pick.RVSScore} {" "}</span>
+                                <span>Market Value: {pick.marketValue} {" "}</span>
+                                <span>My Value: {pick.myValue}</span>
                               </div>
                             </div>  
                           )    
-                        }  
+                        // }  
                     })}        
                   </>          
-                  )          
-                  }        
-                )}       
+                  {/* )           */}
+                  {/* }         */}
+                {/* )}        */}
             </div>    
 
+            <div className={styles.sleeperOtherTeamSectionWrapper}>
+              <button className={styles.leaguesbtns}>placeholder</button>
+              <button className={styles.leaguesbtns}>placeholder</button>
+              <button className={styles.leaguesbtns}>placeholder</button>
+              <button className={styles.leaguesbtns}>placeholder</button>
+              <button className={styles.leaguesbtns}>placeholder</button>
+              <button className={styles.leaguesbtns}>placeholder</button>
+              <button className={styles.leaguesbtns}>placeholder</button>
+              <button className={styles.leaguesbtns}>placeholder</button>
+              <button className={styles.leaguesbtns}>placeholder</button>
+              <button className={styles.leaguesbtns}>placeholder</button>
+              <button className={styles.leaguesbtns}>placeholder</button>
+              <button className={styles.leaguesbtns}>placeholder</button>
+            </div>
             
                     
         </div>                  
