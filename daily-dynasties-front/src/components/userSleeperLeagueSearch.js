@@ -35,6 +35,8 @@ export default function UserSleeperLeagueSearch({
   const [selectedUsersPicksArray, setSelectedUsersPicksArray] = React.useState([])
 
 
+
+
   let userLeaguesDataArray = [];
   let userID = 0;
   
@@ -535,17 +537,37 @@ export default function UserSleeperLeagueSearch({
                 }
                 
                 
-                let userName;
+                
                 async function getUserName() {
                 const usernameRes = await axios.get(
                   `https://api.sleeper.app/v1/user/${userId}`
                 );
                 // console.log(team)
                 
-                userName = usernameRes.data.username
+                let tempName = await usernameRes.data.username
+                // console.log(tempName)
+
+                
+                let teamObject = new TeamObject(
+                  tempName,
+                  team.owner_id,
+                  teamRosterNamesArray,
+                  team.roster_id,
+                  team
+                )
+
+                tempSelectedLeaguesTeamObjectsArray.push(teamObject)
+              //   if(tempName)  {
+              //  return tempName
+              //   }
               }
+
               getUserName()
-                // console.log(userName)
+              
+             
+            //  console.log(userName)
+             
+           
                 // console.log(userName, team.testArray)
                 // console.log(userName, team.nextDraftYearFirstArray)
                 // console.log(userName, team.nextDraftYearSecondsArray)
@@ -554,16 +576,18 @@ export default function UserSleeperLeagueSearch({
                 
                 
                 // console.log(userName, team.roster_id, team.curYearFirstArray)
-               
-                let teamObject = new TeamObject(
-                  userName,
-                  team.owner_id,
-                  teamRosterNamesArray,
-                  team.roster_id,
-                  team
-                )
+              //  console.log(userName)
 
-                tempSelectedLeaguesTeamObjectsArray.push(teamObject)
+
+                // let teamObject = new TeamObject(
+                //   userName,
+                //   team.owner_id,
+                //   teamRosterNamesArray,
+                //   team.roster_id,
+                //   team
+                // )
+
+                // tempSelectedLeaguesTeamObjectsArray.push(teamObject)
 
                 
                 
@@ -705,6 +729,7 @@ export default function UserSleeperLeagueSearch({
        selectedUserName={selectedUserName}
        selectedLeaguesTeamObjectsArray={selectedLeaguesTeamObjectsArray}  
        selectedUsersPicksArray={selectedUsersPicksArray}
+       
        /> 
       </div>
     </div>
