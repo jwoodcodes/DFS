@@ -9,6 +9,9 @@ export default function SleeperLeagueStuff({dataArray, selectedLeagueData, selec
     // console.log(selectedLeagueData.name)
     // console.log(selectedUserName)
     // console.log(selectedLeaguesTeamObjectsArray)
+    
+
+    // console.log(onLeagueSelect)
    
    
   // console.log(selectedUsersPicksArray, selectedLeaguesTeamObjectsArray)
@@ -16,7 +19,7 @@ export default function SleeperLeagueStuff({dataArray, selectedLeagueData, selec
 
     // console.log(selectedUsersPicksArray)
 
-
+  // console.log(selectedLeaguesTeamObjectsArray)
     
 
     let qbArray = []
@@ -48,7 +51,7 @@ export default function SleeperLeagueStuff({dataArray, selectedLeagueData, selec
     })
   })
 
-  console.log(selectedUsersPicksArray)
+  // console.log(selectedUsersPicksArray)
 
 
 
@@ -320,20 +323,23 @@ export default function SleeperLeagueStuff({dataArray, selectedLeagueData, selec
                 {/* )}        */}
             </div>    
 
-            <div className={styles.sleeperOtherTeamSectionWrapper}>
-              <button className={styles.leaguesbtns}>placeholder</button>
-              <button className={styles.leaguesbtns}>placeholder</button>
-              <button className={styles.leaguesbtns}>placeholder</button>
-              <button className={styles.leaguesbtns}>placeholder</button>
-              <button className={styles.leaguesbtns}>placeholder</button>
-              <button className={styles.leaguesbtns}>placeholder</button>
-              <button className={styles.leaguesbtns}>placeholder</button>
-              <button className={styles.leaguesbtns}>placeholder</button>
-              <button className={styles.leaguesbtns}>placeholder</button>
-              <button className={styles.leaguesbtns}>placeholder</button>
-              <button className={styles.leaguesbtns}>placeholder</button>
-              <button className={styles.leaguesbtns}>placeholder</button>
-            </div>
+          
+              <>
+              <div className={styles.sleeperOtherTeamSectionWrapper}>
+                Choose trade partner
+                
+            {selectedLeaguesTeamObjectsArray.map((team) => {
+              // console.log(team)
+              
+              return (
+                
+              <button key={team.userName} className={styles.leaguesbtns}>{team.userName}</button>
+              
+              )
+            })} 
+           
+           </div>
+           </>
             
                     
         </div>                  
