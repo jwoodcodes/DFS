@@ -333,7 +333,7 @@ export default function SleeperLeagueStuff({dataArray, selectedLeagueData, selec
               
               return (
                 
-              <button className={styles.leaguesbtns}>{team.userName}</button>
+              <button key={team.userName} className={styles.leaguesbtns}>{team.userName}</button>
               
               )
             })} 
