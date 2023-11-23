@@ -919,9 +919,9 @@ const testfunc = async function () {
       if (player.player.position === 'QB') {
         // console.log(player.player.name);
 
-        if(this.ppSFQBTEPPercentOfMax === Infinity) {
+        if (this.ppSFQBTEPPercentOfMax === Infinity) {
           // console.log(this.name)
-          this.ppSFQBTEPPercentOfMax = 1
+          this.ppSFQBTEPPercentOfMax = 1;
         }
 
         this.myPercentOfQBMax = +(
@@ -936,7 +936,7 @@ const testfunc = async function () {
         // console.log(fcQBMaxValue);
 
         // this.myValue = +(fcQBMaxValue * this.myPercentOfQBMax).toFixed(2);
-        
+
         let tempValue = +(fcQBMaxValue * this.myPercentOfQBMax).toFixed(2);
         this.myValue = Math.round(tempValue);
 
@@ -988,8 +988,8 @@ const testfunc = async function () {
       if (player.player.position !== 'QB') {
         // console.log(player.player.name);
 
-        if(player.player.name === 'DeVon Achane') {
-          this.rvPercentOfNonQBMax = .67
+        if (player.player.name === 'DeVon Achane') {
+          this.rvPercentOfNonQBMax = 0.67;
         }
 
         this.myPercentOfNonQBMax = +(
@@ -1128,27 +1128,25 @@ const testfunc = async function () {
         // console.log(this.sanitizedFCPlayerName);
         // console.log(fpRedraftPlayerObject);
         // console.log(fpRedraftPlayerObject);
-        if(fpRedraftPlayerObject) {
-        let tempOverallRank = fpRedraftPlayerObject['"RK"'].slice(1, -1);
-        let fpRedraftOverallRank = +tempOverallRank;
-        
+        if (fpRedraftPlayerObject) {
+          let tempOverallRank = fpRedraftPlayerObject['"RK"'].slice(1, -1);
+          let fpRedraftOverallRank = +tempOverallRank;
 
-        if (fpRedraftOverallRank) {
-          // console.log(fpRedraftOverallRank);
-          this.fpRedraftOverallRank = +fpRedraftOverallRank;
-        }
-      
+          if (fpRedraftOverallRank) {
+            // console.log(fpRedraftOverallRank);
+            this.fpRedraftOverallRank = +fpRedraftOverallRank;
+          }
 
-        // console.log(fpRedraftPlayerObject['"POS"'].slice(3, -1));
-        let tempPositionRank = fpRedraftPlayerObject['"POS"'].slice(3, -1);
-        // console.log(sanitizedFCPlayerName, tempPositionRank);
-        let fpRedraftPositionRank = +tempPositionRank;
-        // console.log(fpRedraftPositionRank);
-        if (fpRedraftPositionRank) {
+          // console.log(fpRedraftPlayerObject['"POS"'].slice(3, -1));
+          let tempPositionRank = fpRedraftPlayerObject['"POS"'].slice(3, -1);
+          // console.log(sanitizedFCPlayerName, tempPositionRank);
+          let fpRedraftPositionRank = +tempPositionRank;
           // console.log(fpRedraftPositionRank);
-          this.fpRedraftPositionRank = +fpRedraftPositionRank;
+          if (fpRedraftPositionRank) {
+            // console.log(fpRedraftPositionRank);
+            this.fpRedraftPositionRank = +fpRedraftPositionRank;
+          }
         }
-      }
         // // console.log(fpRedraftPlayerObject);
         // let tempfpRedraftTier = fpRedraftPlayerObject['TIERS'];
         // // console.log(tempfpRedraftTier);
@@ -1216,7 +1214,6 @@ const testfunc = async function () {
         //setting this.rvRedraftPositionRank
         // console.log(sanitizedFourForFourRedraftPlayerName)
         if (sanitizedFourForFourRedraftPlayerName === sanitizedFCPlayerName) {
-          
           // console.log(sanitizedFourForFourRedraftPlayerName)
           let initialTempPosRank = fourForFourRestOfSeasonRedraftPlayerGroup[
             '"Rank"'
@@ -1224,7 +1221,7 @@ const testfunc = async function () {
           let tempPosRank = +initialTempPosRank;
           this.rvRedraftPositionRank = tempPosRank;
           // console.log(sanitizedFCPlayerName, this.rvRedraftPositionRank)
-          
+
           //
           // setting this.rvRedraftTier
           if (fcPosition === 'QB') {
@@ -1306,7 +1303,6 @@ const testfunc = async function () {
               this.rvRedraftTier = 7;
             }
           }
-          
 
           if (fcPosition === 'TE') {
             // console.log(sanitizedFourForFourRedraftPlayerName, this.rvRedraftPositionRank)
@@ -1358,16 +1354,13 @@ const testfunc = async function () {
       fourForFourRestOfSeasonRedraftPlayerGroup,
       sanitizedFourForFourRedraftPlayerName
     ) {
+      let nameToUse = '';
 
-      
-      let nameToUse = ''
-      
       if (curMonth < 9) {
-        nameToUse = sanitizedRVRedraftPlayerName
-
+        nameToUse = sanitizedRVRedraftPlayerName;
       }
-      if( curMonth > 8 ) {
-        nameToUse = sanitizedFourForFourRedraftPlayerName
+      if (curMonth > 8) {
+        nameToUse = sanitizedFourForFourRedraftPlayerName;
       }
       if (nameToUse === sanitizedFCPlayerName) {
         //////////////
@@ -1447,20 +1440,18 @@ const testfunc = async function () {
             this.myRedraftScoreFromPlayersRedraftTier = 0;
           }
         }
-        }
-      
-        
-        
-        //   ///////////////
-        //   ////////////////////////////
-        //   // comparing my redraft rank to market redraft rank
-        //   //////////////////////////////
-        //   // console.log(
-        //   //   sanitizedFCPlayerName,
-        //   //   fpRedraftPositionRank,
-        //   //   rvRedraftPositionRank
-        //   // );
-        if (sanitizedRVRedraftPlayerName === sanitizedFCPlayerName) {
+      }
+
+      //   ///////////////
+      //   ////////////////////////////
+      //   // comparing my redraft rank to market redraft rank
+      //   //////////////////////////////
+      //   // console.log(
+      //   //   sanitizedFCPlayerName,
+      //   //   fpRedraftPositionRank,
+      //   //   rvRedraftPositionRank
+      //   // );
+      if (sanitizedRVRedraftPlayerName === sanitizedFCPlayerName) {
         this.myRedraftDifferenceScore = 0;
         //1-10 average
         if (
@@ -1755,7 +1746,6 @@ const testfunc = async function () {
             this.myRedraftDifferenceScore = -600;
           }
         }
-      
       }
     }
 

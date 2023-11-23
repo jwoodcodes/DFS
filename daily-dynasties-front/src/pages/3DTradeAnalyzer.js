@@ -11,44 +11,34 @@ import UserSleeperLeagueSearch from '@/components/userSleeperLeagueSearch';
 import SleeperLeagueStuff from '@/components/tradeAnalyzer/SleeperLeagueStuff';
 import ErrorBoundary from '@/components/ErrorBoundry';
 
-
-
-
 export default function ThreeDTradeAnalyzer(data) {
   // console.log(data.dynastyRankingsData[0].tradeAnalyzerDataObjectsArray
   //   )
   //
-  const initialSleeperPlayerData = data.sleeperPlayerData
+  const initialSleeperPlayerData = data.sleeperPlayerData;
   // console.log(initialSleeperPlayerData)
   //
   //
-  const dataArray = data.dynastyRankingsData[0].tradeAnalyzerDataObjectsArray
+  const dataArray = data.dynastyRankingsData[0].tradeAnalyzerDataObjectsArray;
   //
   const [teamOnePlayers, setTeamOnePlayers] = React.useState([]);
   const [teamTwoPlayers, setTeamTwoPlayers] = React.useState([]);
   //
-  
 
   return (
-    
-    
     <div>
       <MainNav />
-      
-      <h1 className={styles.pageTitle}>3D Trade Analyzer</h1>
-      
-      
-      <div className={styles.wholeMainSectionWrapper}>
 
-      
-      {/* <ErrorBoundary>
-      <UserSleeperLeagueSearch   
-       initialSleeperPlayerData={initialSleeperPlayerData}   
-       dataArray={dataArray}  
-       />
-      </ErrorBoundary> */}
-     
-       
+      <h1 className={styles.pageTitle}>3D Trade Analyzer</h1>
+
+      <div className={styles.wholeMainSectionWrapper}>
+        {/* <ErrorBoundary>
+          <UserSleeperLeagueSearch
+            initialSleeperPlayerData={initialSleeperPlayerData}
+            dataArray={dataArray}
+          />
+        </ErrorBoundary> */}
+
         {/* team 1 */}
         <TeamOne
           dataArray={dataArray}
@@ -67,11 +57,8 @@ export default function ThreeDTradeAnalyzer(data) {
           teamOnePlayers={teamOnePlayers}
           teamTwoPlayers={teamTwoPlayers}
         />
-        
       </div>
-      
     </div>
-    
   );
 }
 
@@ -89,7 +76,7 @@ export async function getStaticProps() {
     const sleeperPlayerData = await db
       .collection('justSleeperKeysAndNames')
       .find({})
-      .toArray()
+      .toArray();
     return {
       props: {
         dynastyRankingsData: JSON.parse(JSON.stringify(dynastyRankingsData)),
