@@ -24,8 +24,6 @@
   }
 }
 
-
-
 .secondaryHeading {
   font-size: 1.2rem;
   background: linear-gradient(to right bottom, #420c47, #065a60);
@@ -267,7 +265,6 @@
 
 .overviewBlueSpan {
   color: #0709a1;
-  
 }
 .overviewGreenSpan {
   color: #044728;
@@ -503,7 +500,7 @@
   background-color: #02688f;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   color: #ffffff;
-  font-size: .9rem;
+  font-size: 0.9rem;
   height: 2rem;
   width: 4rem;
   max-width: 4rem;
@@ -595,13 +592,13 @@
 
 /* sleeper league stuff styles */
 
-.wholeSleeperPlayersSectionWrapper{
+.wholeSleeperPlayersSectionWrapper {
   display: flex;
   width: 100%;
 }
 
 .playersOnSelectedLeagueWrapper {
- width: 47%;
+  width: 47%;
 }
 
 .sleeperOtherTeamSectionWrapper {
@@ -615,26 +612,25 @@
 }
 
 .selectedLeagueName {
-  
   width: 100%;
   text-align: center;
-  font-size: .8rem;
+  font-size: 0.8rem;
   margin-bottom: 1rem;
 }
 
-.selectedUserName{
+.selectedUserName {
   width: 100%;
   text-align: center;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .qbsFromSelectedLeagueWrapper {
   display: flex;
   flex-direction: column;
   text-align: center;
-  font-size: .75rem;
-  padding: .25rem;
-  margin: .25rem;
+  font-size: 0.75rem;
+  padding: 0.25rem;
+  margin: 0.25rem;
   border: 3px solid #065a60;
   border-radius: 20px;
   width: 100%;
@@ -644,9 +640,9 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  font-size: .75rem;
-  padding: .25rem;
-  margin: .25rem;
+  font-size: 0.75rem;
+  padding: 0.25rem;
+  margin: 0.25rem;
   border: 3px solid #420c47;
   border-radius: 20px;
   width: 100%;
@@ -656,9 +652,9 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  font-size: .75rem;
-  padding: .25rem;
-  margin: .25rem;
+  font-size: 0.75rem;
+  padding: 0.25rem;
+  margin: 0.25rem;
   border: 3px solid #02688f;
   border-radius: 20px;
   width: 100%;
@@ -668,9 +664,9 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  font-size: .75rem;
-  padding: .25rem;
-  margin: .25rem;
+  font-size: 0.75rem;
+  padding: 0.25rem;
+  margin: 0.25rem;
   border: 3px solid #024123;
   border-radius: 20px;
   width: 100%;
@@ -689,14 +685,27 @@
 .leaguesbtns {
   background-color: #065a60;
   color: #fff;
-  font-size: .75rem;
+  font-size: 0.85rem;
   border-radius: 20px;
   border: 1px solid #065a60;
   text-decoration: none;
   cursor: pointer;
-  width: 10rem;
+  width: 12rem;
   height: 2.75rem;
-  margin: .25rem;
+  margin: 0.25rem;
   /* margin-left: auto;
   margin-right: auto; */
+}
+
+.searchbtn {
+  background-color: #02688f;
+  color: #fff;
+  font-size: 0.85rem;
+  border-radius: 20px;
+  border: 1px solid #065a60;
+  text-decoration: none;
+  cursor: pointer;
+  width: 12rem;
+  height: 2.75rem;
+  margin: 0.25rem;
 }

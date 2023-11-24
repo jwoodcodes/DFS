@@ -695,6 +695,72 @@ export default function UserSleeperLeagueSearch({
     });
   }
 
+  ///////////////////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////////////////
+
+  function showAllLeagueManagers(userSearchValue, dontShow) {
+    // console.log(event);
+    // console.log(dontShow);
+    if (event) {
+      event.preventDefault();
+    }
+    if (userSearchValue) {
+      setShowLeagues(false);
+
+      setSelectedUserName(userSearchValue);
+      // console.log(userSearchValue)
+      // selectedUserName = userSearchValue;
+
+      ////
+      ///
+
+      /////
+      async function axiosFetch() {
+        // console.log(selectedUserName)
+
+        const usernameRes = await axios.get(
+          `https://api.sleeper.app/v1/user/${userSearchValue}`
+        );
+
+        // console.log(usernameRes.data.user_id)
+        userID = usernameRes.data.user_id;
+        setSelectedUserID(userID);
+        // console.log(userID)
+
+        //
+
+        const userLeaguesres = await axios.get(
+          `https://api.sleeper.app/v1/user/${userID}/leagues/nfl/2023`
+        );
+        // console.log(userLeaguesres.data);
+        // let initialUserLeaguesArray = userLeaguesres.data
+        setInitialUserLeaguesArray(userLeaguesres.data);
+        let newLeagueNameArray = [];
+        initialUserLeaguesArray.forEach(function (league) {
+          // console.log(league.name)
+          //  newLeagueNameArray = [...userLeaguesNamesArray, league.name]
+          newLeagueNameArray.push(league.name);
+          // console.log(newLeagueNameArray)
+          userLeaguesDataArray.push(league);
+          // setUserLeaguesNamesArray(newLeagueNameArray)
+        });
+        setUserLeaguesNamesArray(newLeagueNameArray);
+        let initialSelectedLeague = {};
+
+        //  console.log(selectedLeagueRostersRes)
+        //  console.log(selectedLeagueData.league_id)
+      }
+      // console.log(userSearchValue)
+
+      axiosFetch();
+    }
+  }
+
+  //////////////////////////////////////////////////////////////////////////////////
+  // ///////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////////
+
   return (
     <div>
       <div className={styles.wholeWrapper}>
@@ -725,7 +791,7 @@ export default function UserSleeperLeagueSearch({
             Show Leagues
           </button>
         )}
-        {userLeaguesNamesArray && (
+        {userLeaguesNamesArray && showLeagues && (
           <div className={styles.leaguebtnsWrapper}>
             {userLeaguesNamesArray.map(function (team) {
               return (
@@ -751,8 +817,8 @@ export default function UserSleeperLeagueSearch({
           selectedLeaguesTeamObjectsArray={selectedLeaguesTeamObjectsArray}
           selectedUsersPicksArray={selectedUsersPicksArray}
           onSearch={onSearch}
-          onLeagueSelect={onLeagueSelect}
           setShowLeagues={setShowLeagues}
+          showAllLeagueManagers={showAllLeagueManagers}
         />
       </div>
     </div>

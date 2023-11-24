@@ -11,7 +11,8 @@ export default function SleeperLeagueStuff({
   onSearch,
   selectedUsersPicksArray,
   setShowLeagues,
-  onLeagueSelect,
+
+  showAllLeagueManagers,
 }) {
   // console.log(dataArray)
   // console.log(selectedLeagueRosterNamesArray)
@@ -28,11 +29,19 @@ export default function SleeperLeagueStuff({
 
   // console.log(selectedLeaguesTeamObjectsArray);
 
+  // console.log(otherTeamsInLeague);
+
   function showOtherLeagueManagers() {
-    onLeagueSelect(selectedLeagueData.name);
+    // onLeagueSelect(selectedLeagueData.name);
     let dontShow = true;
-    onSearch(selectedUserName, dontShow);
-    setShowLeagues(false);
+    showAllLeagueManagers(selectedUserName, dontShow);
+    // setShowLeagues(false);
+  }
+
+  function otherTeamToTradeWithSelected(team) {
+    // e.stopPropagation();
+    console.log('clicked');
+    console.log(team);
   }
 
   let qbArray = [];
@@ -326,24 +335,27 @@ export default function SleeperLeagueStuff({
         {/* }         */}
         {/* )}        */}
       </div>
+      {/* <> */}
+      <div className={styles.sleeperOtherTeamSectionWrapper}>
+        Choose trade partner
+        <button onClick={showOtherLeagueManagers} className={styles.searchbtn}>
+          show other league managers
+        </button>
+        {selectedLeaguesTeamObjectsArray.map(function (team) {
+          // console.log(team);
 
-      <>
-        <div className={styles.sleeperOtherTeamSectionWrapper}>
-          Choose trade partner
-          <button onClick={showOtherLeagueManagers}>
-            show other league managers
-          </button>
-          {selectedLeaguesTeamObjectsArray.map(team => {
-            // console.log(team);
-
-            return (
-              <button key={team.userName} className={styles.leaguesbtns}>
-                {team.userName}
-              </button>
-            );
-          })}
-        </div>
-      </>
+          return (
+            <button
+              key={team.userName}
+              className={styles.leaguesbtns}
+              onClick={() => otherTeamToTradeWithSelected(team)}
+            >
+              {team.userName}
+            </button>
+          );
+        })}
+      </div>
+      ;{/* </> */}
     </div>
   );
 }
