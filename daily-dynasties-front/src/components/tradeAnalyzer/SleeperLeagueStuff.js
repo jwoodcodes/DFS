@@ -442,9 +442,9 @@ export default function SleeperLeagueStuff({
 
           {/* selected trade partner below */}
 
-
+         
       {/* <> */}
-      <div className={styles.sleeperOtherTeamSectionWrapper}>
+      <div className={styles.playersOnSelectedLeagueWrapper}>
         Choose trade partner
         <button onClick={showOtherLeagueManagers} className={styles.searchbtn}>
           show other league managers
@@ -692,6 +692,7 @@ export default function SleeperLeagueStuff({
             </>
           }
       </div>
+     
       ;{/* </> */}
     </div>
   );
