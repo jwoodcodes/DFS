@@ -32,12 +32,12 @@ export default function ThreeDTradeAnalyzer(data) {
       <h1 className={styles.pageTitle}>3D Trade Analyzer</h1>
 
       <div className={styles.wholeMainSectionWrapper}>
-        {/* <ErrorBoundary>
+        <ErrorBoundary>
           <UserSleeperLeagueSearch
             initialSleeperPlayerData={initialSleeperPlayerData}
             dataArray={dataArray}
           />
-        </ErrorBoundary> */}
+        </ErrorBoundary>
 
         {/* team 1 */}
         <TeamOne

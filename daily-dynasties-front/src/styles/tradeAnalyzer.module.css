@@ -614,11 +614,18 @@
 .selectedLeagueName {
   width: 100%;
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
 }
 
 .selectedUserName {
+  width: 100%;
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 1.5rem
+}
+
+.tradePartnerUserName {
   width: 100%;
   text-align: center;
   font-size: 0.8rem;
@@ -690,7 +697,7 @@
   border: 1px solid #065a60;
   text-decoration: none;
   cursor: pointer;
-  width: 12rem;
+  width: 10rem;
   height: 2.75rem;
   margin: 0.25rem;
   /* margin-left: auto;
@@ -708,4 +715,37 @@
   width: 12rem;
   height: 2.75rem;
   margin: 0.25rem;
+}
+
+.showOtherManagersBtnWrapper {
+ width: 100%;
+ display: flex;
+ justify-content: center;
+}
+
+.showOtherManagersBtn {
+  background-color: #02688f;
+  color: #fff;
+  font-size: 0.85rem;
+  border-radius: 20px;
+  border: 1px solid #065a60;
+  text-decoration: none;
+  cursor: pointer;
+  width: 50%;
+  height: 2.75rem;
+  margin: 0.25rem;
+ 
+}
+
+.chooseTradePartnerText {
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.otherManagersBtnsWrapper {
+  display: flex;
+  justify-content: center;
+  
 }

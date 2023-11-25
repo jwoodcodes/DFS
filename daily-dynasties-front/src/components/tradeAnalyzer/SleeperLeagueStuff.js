@@ -219,11 +219,19 @@ export default function SleeperLeagueStuff({
   });
 
   return (
-    <div className={styles.wholeSleeperPlayersSectionWrapper}>
-      <div className={styles.playersOnSelectedLeagueWrapper}>
-        <div className={styles.selectedLeagueName}>
+    <>
+    <div className={styles.selectedLeagueName}>
           {selectedLeagueData.name}
         </div>
+        <div className={styles.showOtherManagersBtnWrapper}>
+        <button onClick={showOtherLeagueManagers} className={styles.showOtherManagersBtn}>
+          show other league managers
+        </button>
+        </div>
+    <div className={styles.wholeSleeperPlayersSectionWrapper}>
+      
+      <div className={styles.playersOnSelectedLeagueWrapper}>
+        
         <div className={styles.selectedUserName}>{selectedUserName}</div>
         {dataArray.map(player => {
           // console.log(player.name)
@@ -445,15 +453,15 @@ export default function SleeperLeagueStuff({
          
       {/* <> */}
       <div className={styles.playersOnSelectedLeagueWrapper}>
-        Choose trade partner
-        <button onClick={showOtherLeagueManagers} className={styles.searchbtn}>
-          show other league managers
-        </button>
+        
+        <div className={styles.chooseTradePartnerText}>Choose trade partner</div>
         {isOtherManagersInLeagueShown && 
         selectedLeaguesTeamObjectsArray.map(function (team) {
           // console.log(team);
 
           return (
+            <div className={styles.otherManagersBtnsWrapper}>
+              
             <button
               key={team.userName}
               className={styles.leaguesbtns}
@@ -461,12 +469,12 @@ export default function SleeperLeagueStuff({
             >
               {team.userName}
             </button>
-            
+            </div>
           );
         })}
         {isSelectedTradePartnersPlayersShown && 
           <>
-          <div className={styles.selectedUserName}>{selectedTradePartnersName} </div>
+          <div className={styles.tradePartnerUserName}>{selectedTradePartnersName} </div>
             
             {/* trade partners QB's */}
            
@@ -695,5 +703,6 @@ export default function SleeperLeagueStuff({
      
       ;{/* </> */}
     </div>
+    </>
   );
 }
