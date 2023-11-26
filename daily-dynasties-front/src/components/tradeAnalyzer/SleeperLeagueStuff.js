@@ -545,7 +545,7 @@ export default function SleeperLeagueStuff({
           // console.log(team);
 
           return (
-            <div className={styles.otherManagersBtnsWrapper}>
+            <div key={team.userName} className={styles.otherManagersBtnsWrapper}>
               
             <button
               key={team.userName}
