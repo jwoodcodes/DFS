@@ -37,6 +37,8 @@ export default function UserSleeperLeagueSearch({
   );
   const [isSelectedTradePartnersPlayersShown, setIsSelectedTradePartnersPlayersShown] = React.useState(false)
 
+  const [isShowAndHidePlayersButtonsShown, setIsShowAndHidePlayersButtonsShown] = React.useState(false)
+
   let userLeaguesDataArray = [];
   let userID = 0;
   let allUserIDsFromSelectedLeagueArray = [];
@@ -60,6 +62,7 @@ export default function UserSleeperLeagueSearch({
 
       setIsSelectedTradePartnersPlayersShown(false)
       setSelectedUserName(userSearchValue);
+      setIsShowAndHidePlayersButtonsShown(false)
       // console.log(userSearchValue)
       // selectedUserName = userSearchValue;
 
@@ -130,6 +133,8 @@ export default function UserSleeperLeagueSearch({
     }
 
     let tempSelectedLeaguesTeamObjectsArray = [];
+
+    setIsShowAndHidePlayersButtonsShown(true)
 
     initialUserLeaguesArray.map(function (league) {
       if (team === league.name) {
@@ -823,6 +828,7 @@ export default function UserSleeperLeagueSearch({
           showAllLeagueManagers={showAllLeagueManagers}
           isSelectedTradePartnersPlayersShown={isSelectedTradePartnersPlayersShown}
           setIsSelectedTradePartnersPlayersShown={setIsSelectedTradePartnersPlayersShown}
+          isShowAndHidePlayersButtonsShown={isShowAndHidePlayersButtonsShown}
         />
       </div>
     </div>

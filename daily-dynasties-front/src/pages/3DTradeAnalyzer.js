@@ -31,13 +31,10 @@ export default function ThreeDTradeAnalyzer(data) {
 
       <h1 className={styles.pageTitle}>3D Trade Analyzer</h1>
 
+      <div className={styles.directionToSleeperSearchText}>Build trades for specific sleeper teams and leagues completely in one place with sleeper league search below the legend</div>
+
       <div className={styles.wholeMainSectionWrapper}>
-        <ErrorBoundary>
-          <UserSleeperLeagueSearch
-            initialSleeperPlayerData={initialSleeperPlayerData}
-            dataArray={dataArray}
-          />
-        </ErrorBoundary>
+        
 
         {/* team 1 */}
         <TeamOne
@@ -58,6 +55,12 @@ export default function ThreeDTradeAnalyzer(data) {
           teamTwoPlayers={teamTwoPlayers}
         />
       </div>
+      {/* <ErrorBoundary>
+          <UserSleeperLeagueSearch
+            initialSleeperPlayerData={initialSleeperPlayerData}
+            dataArray={dataArray}
+          />
+        </ErrorBoundary> */}
     </div>
   );
 }

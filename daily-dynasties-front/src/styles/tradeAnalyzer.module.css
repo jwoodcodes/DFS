@@ -24,7 +24,11 @@
   }
 }
 
-.secondaryHeading {
+.directionToSleeperSearchText {
+
+}
+
+.directionToSleeperSearchText {
   font-size: 1.2rem;
   background: linear-gradient(to right bottom, #420c47, #065a60);
   -webkit-background-clip: text;
@@ -35,33 +39,30 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 @media (max-width: 900px) {
-  .secondaryHeading {
+  .directionToSleeperSearchText {
     font-size: 1rem;
   }
 }
 @media (max-width: 500px) {
-  .secondaryHeading {
-    /* font-size: 1rem;
-    padding: 0 10px; */
-    display: none;
-    height: 0;
-    width: 0;
-    margin: 0;
-    padding: 0;
+  .directionToSleeperSearchText {
+    font-size: 1rem;
+    padding: 0 10px;
+    
   }
 }
 @media (max-width: 400px) {
-  .secondaryHeading {
+  .directionToSleeperSearchText {
     font-size: 0.9rem;
   }
 }
 
 .wholeMainSectionWrapper {
-  height: 50dvw;
+  height: fit-content;
   display: flex;
   margin-top: 1rem;
   margin-bottom: 5rem;
   padding-bottom: 5rem;
+  
   /* border-top: 1px solid black; */
   /* justify-content: center;
   align-items: center; */
@@ -75,7 +76,7 @@
 
 @media (max-width: 500px) {
   .wholeMainSectionWrapper {
-    height: 100dvw;
+    height: fit-content;
     margin-bottom: 4rem;
   }
 }
@@ -83,7 +84,7 @@
 .teamOneWrapper {
   /* background-color: #02688f; */
 
-  width: 33%;
+  width: 30%;
   /* border-right: 1px solid black; */
 }
 @media (max-width: 1050px) {
@@ -106,7 +107,7 @@
 
 .teamTwoWrapper {
   /* background-color: #02688f; */
-  width: 33%;
+  width: 30%;
   /* border-left: 1px solid black; */
 }
 @media (max-width: 1050px) {
@@ -128,7 +129,7 @@
 }
 
 .overviewCardWrapper {
-  width: 80%;
+  width: 75%;
   padding: 0.5rem;
   margin-bottom: 3rem;
   margin: 0.25rem;
@@ -597,8 +598,28 @@
   width: 100%;
 }
 
+@media (min-width: 1050px) {
+  .wholeSleeperPlayersSectionWrapper {
+   
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .playersOnSelectedLeagueWrapper {
   width: 100%;
+  /* margin-left: 1rem; */
+
+}
+
+@media (max-width: 400px) {
+  .playersOnSelectedLeagueWrapper {
+   
+    width: 40%;
+    
+    
+  }
 }
 
 .sleeperOtherTeamSectionWrapper {
@@ -621,14 +642,15 @@
 .selectedUserName {
   width: 100%;
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   margin-top: 1.5rem
 }
 
 .tradePartnerUserName {
-  width: 100%;
+  /* width: 100%; */
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
+  margin-top: 1.6rem;
 }
 
 .qbsFromSelectedLeagueWrapper {
@@ -706,6 +728,19 @@
 
 .searchbtn {
   background-color: #02688f;
+  color: #fff;
+  font-size: 0.85rem;
+  border-radius: 20px;
+  border: 1px solid #065a60;
+  text-decoration: none;
+  cursor: pointer;
+  width: 12rem;
+  height: 2.75rem;
+  margin: 0.25rem;
+}
+
+.hidebtn {
+  background-color: #9c0d0d;
   color: #fff;
   font-size: 0.85rem;
   border-radius: 20px;
