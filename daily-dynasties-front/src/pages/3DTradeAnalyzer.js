@@ -55,12 +55,12 @@ export default function ThreeDTradeAnalyzer(data) {
           teamTwoPlayers={teamTwoPlayers}
         />
       </div>
-      {/* <ErrorBoundary>
+      <ErrorBoundary>
           <UserSleeperLeagueSearch
             initialSleeperPlayerData={initialSleeperPlayerData}
             dataArray={dataArray}
           />
-        </ErrorBoundary> */}
+        </ErrorBoundary>
     </div>
   );
 }
