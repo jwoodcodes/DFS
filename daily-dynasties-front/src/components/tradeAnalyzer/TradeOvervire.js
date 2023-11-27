@@ -3,6 +3,9 @@ import styles from '@/styles/tradeAnalyzer.module.css';
 import clsx from 'clsx';
 
 export default function TradeOverview({ teamOnePlayers, teamTwoPlayers }) {
+
+  const [isLegendShown, setIsLegendShown] = React.useState(false)
+
   let teamOneTotalPRP = 0;
   let teamOneTotalPNODVScore = 0;
   let teamOneTotalRVS = 0;
@@ -597,6 +600,10 @@ export default function TradeOverview({ teamOnePlayers, teamTwoPlayers }) {
       <div className={styles.overviewCardWrapper}>
         <div className={styles.legendWrapper}>
           <div className={styles.legendTitle}>Legend</div>
+          <div className={styles.legendShowHideBtnWrapper}>
+          <button onClick={() => setIsLegendShown(!isLegendShown)} className={styles.showAndHideLegendBtn}>Show/Hide Legend</button>
+          </div>
+          {isLegendShown &&
           <div className={styles.prpLegendWrapper}>
             <div className={styles.legendBlock}>
               <span className={styles.legendSpan}>PRP Score:</span> Projected
@@ -642,6 +649,7 @@ export default function TradeOverview({ teamOnePlayers, teamTwoPlayers }) {
               my rankings than the market.
             </div>
           </div>
+}
         </div>
       </div>
     </div>
