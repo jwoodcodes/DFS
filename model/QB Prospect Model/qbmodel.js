@@ -764,6 +764,109 @@ const qbs = {
     numberOfGamesWithTenPlusPassAttempts: 42,
     conferenceAdjustment: 0.065,
   },
+
+  CWilliams: {
+    name: 'Caleb Williams',
+    draftCapital: 1,
+    height: 73,
+    weight: 218,
+    careerYPA: 9.2,
+    bestSeasonYPA: 9.4,
+    careerComplationPercentage: 66.9,
+    bestFullSeasonCompletionPercentage: 68.6,
+    totalCareerPassAttempts: 1099,
+    bestSeasonTotalPassingYards: 4537,
+    bestSeasonTotalTDs: 52,
+    bestSeasonRushingYards: 442,
+    fortyTime: 4.5,
+    careerInterceptionRate: 1.2,
+    ageWhenDrafted: 22,
+    collegeQBR: 86.5,
+    numberOfGamesWithTenPlusPassAttempts: 35,
+    conferenceAdjustment: .05,
+  },
+
+  Maye: {
+    name: 'Drake Maye',
+    draftCapital: 2,
+    height: 77,
+    weight: 220,
+    careerYPA: 8.4,
+    bestSeasonYPA: 8.9,
+    careerComplationPercentage: 64.9,
+    bestFullSeasonCompletionPercentage: 66.2,
+    totalCareerPassAttempts: 952,
+    bestSeasonTotalPassingYards: 4321,
+    bestSeasonTotalTDs: 45,
+    bestSeasonRushingYards: 184,
+    fortyTime: 4.55,
+    careerInterceptionRate: 1.6,
+    ageWhenDrafted: 21,
+    collegeQBR: 82.7,
+    numberOfGamesWithTenPlusPassAttempts: 26,
+    conferenceAdjustment: .05,
+  },
+
+  Nix: {
+    name: 'Bo Nix',
+    draftCapital: 15,
+    height: 75,
+    weight: 214,
+    careerYPA: 7.9,
+    bestSeasonYPA: 9.5,
+    careerComplationPercentage: 66.2,
+    bestFullSeasonCompletionPercentage: 77.2,
+    totalCareerPassAttempts: 1901,
+    bestSeasonTotalPassingYards: 4145,
+    bestSeasonTotalTDs: 46,
+    bestSeasonRushingYards: 510,
+    fortyTime: 4.71,
+    careerInterceptionRate: 1.3,
+    ageWhenDrafted: 24,
+    collegeQBR: 87,
+    numberOfGamesWithTenPlusPassAttempts: 50,
+    conferenceAdjustment: .05,
+  },
+  Daniels: {
+    name: 'Jayden Daniels',
+    draftCapital: 12,
+    height: 75,
+    weight: 185,
+    careerYPA: 8.9,
+    bestSeasonYPA: 11.7,
+    careerComplationPercentage: 66.3,
+    bestFullSeasonCompletionPercentage: 72.2,
+    totalCareerPassAttempts: 1438,
+    bestSeasonTotalPassingYards: 3812,
+    bestSeasonTotalTDs: 52,
+    bestSeasonRushingYards: 1134,
+    fortyTime: 4.45,
+    careerInterceptionRate: 1.3,
+    ageWhenDrafted: 23,
+    collegeQBR: 82.3,
+    numberOfGamesWithTenPlusPassAttempts: 50,
+    conferenceAdjustment: .05,
+  },
+  Penix: {
+    name: 'Michael Penix',
+    draftCapital: 15,
+    height: 73,
+    weight: 218,
+    careerYPA: 8.2,
+    bestSeasonYPA: 9.1,
+    careerComplationPercentage: 63.3,
+    bestFullSeasonCompletionPercentage: 65.9,
+    totalCareerPassAttempts: 1011,
+    bestSeasonTotalPassingYards: 4641,
+    bestSeasonTotalTDs: 36,
+    bestSeasonRushingYards: 119,
+    fortyTime: 4.71,
+    careerInterceptionRate: 3.1,
+    ageWhenDrafted: 23.9,
+    collegeQBR: 81.8,
+    numberOfGamesWithTenPlusPassAttempts: 46,
+    conferenceAdjustment: 0.065,
+  },
 };
 
 const RWilson = qbs.RWilson;
@@ -802,6 +905,11 @@ const Stroud = qbs.Stroud;
 const Levis = qbs.Levis;
 const Hooker = qbs.Hooker;
 const Hurts = qbs.Hurts;
+const CWilliams = qbs.CWilliams;
+const Maye = qbs.Maye;
+const Nix = qbs.Nix;
+const Daniels = qbs.Daniels;
+const Penix = qbs.Penix;
 
 const allQBs = [
   RWilson,
@@ -840,6 +948,11 @@ const allQBs = [
   Levis,
   Hooker,
   Hurts,
+  CWilliams,
+  Maye,
+  Nix,
+  Daniels,
+  Penix
 ];
 const allQBNames = [];
 
@@ -1177,7 +1290,7 @@ let sortFinalScore = finalScore.sort((a, b) => {
   if (a < b) return 1;
 });
 
-// console.log(sortFinalScore);
+// cd .log(sortFinalScore);
 
 const allQBModelDataData = {
   draftCapitalScore: allDraftCapitolScores,
