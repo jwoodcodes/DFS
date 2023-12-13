@@ -60,12 +60,20 @@
   margin-top: 1rem;
   margin-bottom: 1rem;
   padding-bottom: 1rem;
+ 
   
   /* border-top: 1px solid black; */
   /* justify-content: center;
   align-items: center; */
   /* background-color: #01043e; */
 }
+
+@media (max-width: 1800px) {
+  .wholeMainSectionWrapper {
+    flex-wrap: wrap;
+  }
+}
+
 @media (max-width: 1050px) {
   .wholeMainSectionWrapper {
     flex-direction: column;
@@ -84,6 +92,12 @@
 
   width: 30%;
   /* border-right: 1px solid black; */
+}
+@media (min-width: 1800px) {
+  .teamOneWrapper {
+    max-width: 22%;
+    min-width: 21%
+  }
 }
 @media (max-width: 1050px) {
   .teamOneWrapper {
@@ -108,6 +122,14 @@
   width: 30%;
   /* border-left: 1px solid black; */
 }
+
+@media (min-width: 1800px) {
+  .teamTwoWrapper {
+    max-width: 22%;
+    min-width: 21%
+  }
+}
+
 @media (max-width: 1050px) {
   .teamTwoWrapper {
     width: 75%;
@@ -279,6 +301,14 @@
   flex-direction: column;
   align-items: center;
 }
+
+@media (min-width: 1800px) {
+  .tradeOvervireWrapper {
+    max-width: 28%;
+    min-width: 28%;
+  }
+}
+
 @media (max-width: 1050px) {
   .tradeOvervireWrapper {
     width: 75%;
@@ -593,13 +623,24 @@
 
 .wholeSleeperPlayersSectionWrapper {
   display: flex;
+  
   width: 100%;
+  padding-bottom: 5rem;
+}
+
+@media (max-width: 1799px) {
+  .wholeSleeperPlayersSectionWrapper {
+   
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media (min-width: 1050px) {
   .wholeSleeperPlayersSectionWrapper {
    
-    width: 50%;
+    /* width: 50%; */
     margin-left: auto;
     margin-right: auto;
   }
@@ -735,6 +776,7 @@
   width: 10rem;
   height: 2.75rem;
   margin: 0.25rem;
+  
 }
 
 .hidebtn {

@@ -769,7 +769,7 @@ export default function UserSleeperLeagueSearch({
   ////////////////////////////////////////////////////////////////////////
 
   return (
-    <div>
+    <div className={styles.entireSleeperSectionWrapper}>
       <div className={styles.wholeWrapper}>
         <div className={styles.label}>Sleeper League Search</div>
         <form
@@ -809,7 +809,7 @@ export default function UserSleeperLeagueSearch({
                 >
                   {team}
                 </button>
-              );
+              )
             })}
           </div>
         )}

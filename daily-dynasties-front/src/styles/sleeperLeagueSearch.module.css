@@ -1,3 +1,13 @@
+.entireSleeperSectionWrapper {
+  flex-grow: 1;
+}
+
+@media (min-width: 1800px) {
+  .entireSleeperSectionWrapper {
+    
+  }
+}
+
 .wholeWrapper {
     margin: 3rem auto;
     width: 100%;
