@@ -502,7 +502,7 @@ const qbs = {
     careerComplationPercentage: 68.4,
     bestFullSeasonCompletionPercentage: 69.2,
     totalCareerPassAttempts: 618,
-    bestSeasonTotalPassingYards: 5701,
+    bestSeasonTotalPassingYards: 3273,
     bestSeasonTotalTDs: 51,
     bestSeasonRushingYards: 484,
     fortyTime: 4.51,
@@ -764,6 +764,11 @@ const qbs = {
     numberOfGamesWithTenPlusPassAttempts: 42,
     conferenceAdjustment: 0.065,
   },
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
 
   CWilliams: {
     name: 'Caleb Williams',
@@ -786,6 +791,11 @@ const qbs = {
     conferenceAdjustment: .05,
   },
 
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
   Maye: {
     name: 'Drake Maye',
     draftCapital: 2,
@@ -867,6 +877,10 @@ const qbs = {
     numberOfGamesWithTenPlusPassAttempts: 46,
     conferenceAdjustment: 0.065,
   },
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 };
 
 const RWilson = qbs.RWilson;
