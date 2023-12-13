@@ -261,6 +261,10 @@ export default function SleeperLeagueStuff({
         <button onClick={() => setIsTeamsQbsShown(true)} className={styles.searchbtn}>Show teams QB's</button>
         : null
         }
+        {isShowAndHidePlayersButtonsShown && isTeamsQbsShown === true ?    
+        <button onClick={() => setIsTeamsQbsShown(false)} className={styles.hidebtn}>Hide teams QB's</button>
+        : null
+        }
         {isTeamsQbsShown &&
         dataArray.map(player => {
           // console.log(player.name)
@@ -321,6 +325,10 @@ export default function SleeperLeagueStuff({
         <button onClick={() => setIsTeamsRbsShown(true)} className={styles.searchbtn}>Show teams RB's</button>
         : null
         }
+        {isShowAndHidePlayersButtonsShown && isTeamsRbsShown === true ?    
+        <button onClick={() => setIsTeamsRbsShown(false)} className={styles.hidebtn}>Hide teams RB's</button>
+        : null
+        }
 
         {isTeamsRbsShown &&
         dataArray.map(player => {
@@ -373,6 +381,10 @@ export default function SleeperLeagueStuff({
 
         {isShowAndHidePlayersButtonsShown && isTeamsWrsShown === false ?
         <button onClick={() => setIsTeamsWrsShown(true)} className={styles.searchbtn}>Show teams WR's</button>
+        : null
+        }
+        {isShowAndHidePlayersButtonsShown && isTeamsWrsShown === true ?    
+        <button onClick={() => setIsTeamsWrsShown(false)} className={styles.hidebtn}>Hide teams WR's</button>
         : null
         }
 
@@ -429,6 +441,10 @@ export default function SleeperLeagueStuff({
         <button onClick={() => setIsTeamsTEsShown(true)} className={styles.searchbtn}>Show teams TE's</button>
         : null
         }
+        {isShowAndHidePlayersButtonsShown && isTeamsTEsShown === true ?    
+        <button onClick={() => setIsTeamsTEsShown(false)} className={styles.hidebtn}>Hide teams TE's</button>
+        : null
+        }
 
         {isTeamsTEsShown &&
         dataArray.map(player => {
@@ -481,6 +497,10 @@ export default function SleeperLeagueStuff({
 
         {isShowAndHidePlayersButtonsShown && isTeamsPicksShown === false ?
         <button onClick={() => setIsTeamsPicksShown(true)} className={styles.searchbtn}>Show teams Pick's</button>
+        : null
+        }
+        {isShowAndHidePlayersButtonsShown && isTeamsPicksShown === true ?    
+        <button onClick={() => setIsTeamsPicksShown(false)} className={styles.hidebtn}>Hide teams Pick's</button>
         : null
         }
 
@@ -567,6 +587,10 @@ export default function SleeperLeagueStuff({
         <button onClick={() => setIsTradePartnersQbsShown(true)} className={styles.searchbtn}>Show teams QB's</button>
         : null
         }
+        {isShowAndHidePlayersButtonsShown && isTradePartnersQbsShown === true ?    
+        <button onClick={() => setIsTradePartnersQbsShown(false)} className={styles.hidebtn}>Hide teams QB's</button>
+        : null
+        }
             {/* trade partners QB's */}
           {isTradePartnersQbsShown &&
           dataArray.map(player => {
@@ -625,6 +649,11 @@ export default function SleeperLeagueStuff({
         <button onClick={() => setIsTradePartnersRbsShown(true)} className={styles.searchbtn}>Show teams RB's</button>
         : null
         }
+        {isShowAndHidePlayersButtonsShown && isTradePartnersRbsShown === true ?    
+        <button onClick={() => setIsTradePartnersRbsShown(false)} className={styles.hidebtn}>Hide teams RB's</button>
+        : null
+        }
+
 
         {isTradePartnersRbsShown &&
         dataArray.map(player => {
@@ -678,6 +707,10 @@ export default function SleeperLeagueStuff({
         
       {isShowAndHidePlayersButtonsShown && isTradePartnersWrsShown === false ?
         <button onClick={() => setIsTradePartnersWrsShown(true)} className={styles.searchbtn}>Show teams WR's</button>
+        : null
+        }
+        {isShowAndHidePlayersButtonsShown && isTradePartnersWrsShown === true ?    
+        <button onClick={() => setIsTradePartnersWrsShown(false)} className={styles.hidebtn}>Hide teams WR's</button>
         : null
         }
 
@@ -738,6 +771,10 @@ export default function SleeperLeagueStuff({
         <button onClick={() => setIsTradePartnersTEsShown(true)} className={styles.searchbtn}>Show teams TE's</button>
         : null
         }
+         {isShowAndHidePlayersButtonsShown && isTradePartnersTEsShown === true ?    
+        <button onClick={() => setIsTradePartnersTEsShown(false)} className={styles.hidebtn}>Hide teams TE's</button>
+        : null
+        }
 
         {isTradePartnersTEsShown &&
         dataArray.map(player => {
@@ -794,6 +831,10 @@ export default function SleeperLeagueStuff({
         <button onClick={() => setIsTradePartnersPicksShown(true)} className={styles.searchbtn}>Show teams Picks's</button>
         : null
         }
+        {isShowAndHidePlayersButtonsShown && isTradePartnersPicksShown === true ?    
+        <button onClick={() => setIsTradePartnersPicksShown(false)} className={styles.hidebtn}>Hide teams Pick's</button>
+        : null
+        }
 
         <>
         {isTradePartnersPicksShown &&
@@ -839,7 +880,7 @@ export default function SleeperLeagueStuff({
           }
       </div>
      
-      ;{/* </> */}
+      {/* </> */}
     </div>
     </>
   );
