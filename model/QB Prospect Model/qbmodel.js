@@ -764,11 +764,7 @@ const qbs = {
     numberOfGamesWithTenPlusPassAttempts: 42,
     conferenceAdjustment: 0.065,
   },
-<<<<<<< Updated upstream
-=======
-<<<<<<< Updated upstream
-=======
->>>>>>> Stashed changes
+
 
   CWilliams: {
     name: 'Caleb Williams',
@@ -791,11 +787,7 @@ const qbs = {
     conferenceAdjustment: .05,
   },
 
-<<<<<<< Updated upstream
-=======
 
-
->>>>>>> Stashed changes
   Maye: {
     name: 'Drake Maye',
     draftCapital: 2,
@@ -877,10 +869,7 @@ const qbs = {
     numberOfGamesWithTenPlusPassAttempts: 46,
     conferenceAdjustment: 0.065,
   },
-<<<<<<< Updated upstream
-=======
->>>>>>> Stashed changes
->>>>>>> Stashed changes
+
 };
 
 const RWilson = qbs.RWilson;
