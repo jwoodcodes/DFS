@@ -2358,7 +2358,7 @@ const rvDynastyRankingsTEP = [
 		"\"Rank\"": "215",
 		"\"Player\"": "\"Darrell Henderson\"",
 		"\"POS\"": "\"RB\"",
-		"\"Team\"": "\"LAR\"",
+		"\"Team\"": "\"FA\"",
 		"\"PosRank\"": "69",
 		"\"AVGRank\"": "215",
 		"\"AVGTier\"": "10",
@@ -2380,7 +2380,7 @@ const rvDynastyRankingsTEP = [
 		"\"Rank\"": "217",
 		"\"Player\"": "\"Zach Ertz\"",
 		"\"POS\"": "\"TE\"",
-		"\"Team\"": "\"ARI\"",
+		"\"Team\"": "\"FA\"",
 		"\"PosRank\"": "32",
 		"\"AVGRank\"": "217",
 		"\"AVGTier\"": "10",
@@ -3084,7 +3084,7 @@ const rvDynastyRankingsTEP = [
 		"\"Rank\"": "281",
 		"\"Player\"": "\"James Robinson\"",
 		"\"POS\"": "\"RB\"",
-		"\"Team\"": "\"FA\"",
+		"\"Team\"": "\"NO\"",
 		"\"PosRank\"": "89",
 		"\"AVGRank\"": "281",
 		"\"AVGTier\"": "11",
@@ -3299,7 +3299,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGTier\"": "11",
 		"\"Siegele11.11\"": "300"
 	},
-
+	
 ]
 
 module.exports = rvDynastyRankingsTEP;
