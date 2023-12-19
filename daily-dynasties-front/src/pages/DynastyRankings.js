@@ -103,7 +103,7 @@ export default function DynastyRankings(dynastyRankingsData) {
     <div className={styles.wholePageWrapper}>
       <MainNav />
       <div className={styles.pageTitle}>Dynasty Rankings</div>
-      <div className={styles.lastUpdated}>Last updated: 12/15/23</div>
+      <div className={styles.lastUpdated}>Last updated: 12/19/23</div>
 
       <div className={styles.glosseryWrapper}>
         <ul className={styles.glosseryUl}>
