@@ -640,7 +640,34 @@
 @media (min-width: 1050px) {
   .wholeSleeperPlayersSectionWrapper {
    
-    /* width: 50%; */
+    
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 1600px) {
+  .wholeSleeperPlayersSectionWrapper {
+   
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 1300px) {
+  .wholeSleeperPlayersSectionWrapper {
+   
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .wholeSleeperPlayersSectionWrapper {
+   
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
   }
@@ -655,7 +682,7 @@
 @media (max-width: 400px) {
   .playersOnSelectedLeagueWrapper {
    
-    width: 40%;
+    width: 70%;
     
     
   }
