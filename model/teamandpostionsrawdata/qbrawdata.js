@@ -1515,6 +1515,7 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
   });
 
   allQBGLSP.forEach(function (qb, i) {
+    if(qb['"Player"']) {
     let qbName = qb['"Player"'].slice(1, -1);
     if (qbName === passedInTeam.name) {
       // console.log(`${passedInTeam.name}: ${qb['"25th"']}`);
@@ -1522,6 +1523,7 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
       passedInTeam.fiftyithPercentProjectedPoints = qb['"50th"'];
       passedInTeam.seventyFifthPercentProjectedPoints = qb['"75th"'];
     }
+  }
   });
   // let tempPassCatchersProjPoints = [];
   // allHalfPPRProjectedPointsWithoutTeamDef.forEach(function (player, i) {
@@ -1616,6 +1618,7 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
   allQBGLSP.forEach(function (qb) {
     // console.log(qb['"Player"'].slice(1, -1));
     // console.log(passedInTeam.name);
+    if(qb['"Player"']) {
     if (passedInTeam.name === qb['"Player"'].slice(1, -1)) {
       passedInTeam.glspavg = +qb['"AVG"'];
       passedInTeam.glspLessThanFive = +(qb['"<5"'] * 100).toFixed(0);
@@ -1627,6 +1630,7 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
       );
       passedInTeam.glspGreaterThanTwentyFive = +(qb['">25"'] * 100).toFixed(0);
     }
+  }
   });
 
   // let sortedtempPassCatchersProjPoints = tempPassCatchersProjPoints.sort(
