@@ -163,7 +163,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	},
 	{
 		"\"Rank\"": "\"19\"",
-		"\"QB\"": "\"Gardner Minshew (IND)\"",
+		"\"QB\"": "\"Joe Flacco (CLE)\"",
 		"\"RB\"": "\"Chuba Hubbard (CAR)\"",
 		"\"WR\"": "\"Courtland Sutton (DEN)\"",
 		"\"TE\"": "\"Cade Otton (TB)\"",
@@ -172,7 +172,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	},
 	{
 		"\"Rank\"": "\"20\"",
-		"\"QB\"": "\"Sam Howell (WAS)\"",
+		"\"QB\"": "\"Nick Mullens (MIN)\"",
 		"\"RB\"": "\"Austin Ekeler (LAC)\"",
 		"\"WR\"": "\"DeAndre Hopkins (TEN)\"",
 		"\"TE\"": "\"Gerald Everett (LAC)\"",
@@ -181,7 +181,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	},
 	{
 		"\"Rank\"": "\"21\"",
-		"\"QB\"": "\"Joe Flacco (CLE)\"",
+		"\"QB\"": "\"Gardner Minshew (IND)\"",
 		"\"RB\"": "\"Breece Hall (NYJ)\"",
 		"\"WR\"": "\"Diontae Johnson (PIT)\"",
 		"\"TE\"": "\"Tucker Kraft (GB)\"",
@@ -190,7 +190,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	},
 	{
 		"\"Rank\"": "\"22\"",
-		"\"QB\"": "\"Nick Mullens (MIN)\"",
+		"\"QB\"": "\"Sam Howell (WAS)\"",
 		"\"RB\"": "\"Javonte Williams (DEN)\"",
 		"\"WR\"": "\"Garrett Wilson (NYJ)\"",
 		"\"TE\"": "\"Logan Thomas (WAS)\"",

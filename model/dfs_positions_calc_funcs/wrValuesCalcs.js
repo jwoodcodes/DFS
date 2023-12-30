@@ -570,7 +570,7 @@ const allWRsMap = new Map();
 allWRs.forEach(function (team, i) {
   let teamName = '';
   allTeams.forEach(function (giTeam) {
-    if (team.teamABV === giTeam.teamABV) {
+    if (team.teamABV === giTeam.teamABV || team.teamABV === giTeam.altTeamABV) {
       // console.log(giTeam);
       teamName = giTeam.teamName;
       vtt = +giTeam.vtt;
