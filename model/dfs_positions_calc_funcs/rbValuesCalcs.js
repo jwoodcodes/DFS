@@ -1124,10 +1124,16 @@ const allRBsMap = new Map();
 
 allRBs.forEach(function (team, i) {
   // console.log(team);
-
+  
+  
   let teamName = '';
+  if(team) {
   allTeams.forEach(function (giTeam) {
-    if (team.teamABV === giTeam.teamABV) {
+    //  console.log(giTeam)
+    //  console.log(giTeam.teamProjectedPointsThisWeek)
+    
+    if (team.teamABV === giTeam.teamABV || team.teamABV === giTeam.altTeamABV) {
+      // console.log(giTeam.teamName)
       // console.log(giTeam);
       teamName = giTeam.teamName;
       vtt = +giTeam.vtt;
@@ -1138,14 +1144,19 @@ allRBs.forEach(function (team, i) {
       opponentTeamProjectedPoints =
         giTeam.opponentThisWeek.teamProjectedPointsThisWeek;
     }
+    
   });
 
+  
+  
+  
   tempTeamScoring = +((teamProjectedPoints + vtt) / 2).toFixed(2);
+  
 
   teamProjectedPointsThisWeekPercentage = +(
     tempTeamScoring / team.RBOne.teamRealLifePointsScoredPerGameLastFiveWeeks
   ).toFixed(2);
-
+  
   let rbObject = new RbObject(
     team.RBOne.name,
     'RB',
@@ -1203,6 +1214,7 @@ allRBs.forEach(function (team, i) {
   allRBsMap.set(`${teamName}RBOneThisWeek`, rbObject);
 
   allRBObjectsArray.push(rbObject);
+  }
 });
 
 allRBs.forEach(function (team, i) {
@@ -1210,7 +1222,7 @@ allRBs.forEach(function (team, i) {
 
   let teamName = '';
   allTeams.forEach(function (giTeam) {
-    if (team.teamABV === giTeam.teamABV) {
+    if (team.teamABV === giTeam.teamABV || team.teamABV === giTeam.altTeamABV) {
       // console.log(giTeam);
       teamName = giTeam.teamName;
       vtt = +giTeam.vtt;
@@ -1222,6 +1234,8 @@ allRBs.forEach(function (team, i) {
         giTeam.opponentThisWeek.teamProjectedPointsThisWeek;
     }
   });
+
+  
 
   tempTeamScoring = +((teamProjectedPoints + vtt) / 2).toFixed(2);
 
@@ -1291,7 +1305,7 @@ allRBs.forEach(function (team, i) {
 allRBs.forEach(function(team) {
   if(team.teamRbThreeThisWeekName) {
     allTeams.forEach(function (giTeam) {
-      if (team.teamABV === giTeam.teamABV) {
+      if (team.teamABV === giTeam.teamABV || team.teamABV === giTeam.altTeamABV) {
         // console.log(giTeam);
         teamName = giTeam.teamName;
         vtt = +giTeam.vtt;
