@@ -6,10 +6,10 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Opp\"": "\"@WAS\"",
 		"\"DK Sal $\"": "\"$9",
 		"\"Projected Own%\"": "600\"",
-		"\"Cash Odds\"": "\"27.5%\"",
+		"\"Cash Odds\"": "\"32.5%\"",
 		"\"GPP Odds\"": "\"68%\"",
 		"\"Implied Own%\"": "\"36%\"",
-		"\"DK LEV\"": "\"40%\""
+		"\"DK LEV\"": "\"41%\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -19,9 +19,9 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK Sal $\"": "\"$9",
 		"\"Projected Own%\"": "300\"",
 		"\"Cash Odds\"": "\"12.5%\"",
-		"\"GPP Odds\"": "\"53%\"",
+		"\"GPP Odds\"": "\"54%\"",
 		"\"Implied Own%\"": "\"21%\"",
-		"\"DK LEV\"": "\"27%\""
+		"\"DK LEV\"": "\"26%\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -33,7 +33,7 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Cash Odds\"": "\"7.5%\"",
 		"\"GPP Odds\"": "\"45%\"",
 		"\"Implied Own%\"": "\"13%\"",
-		"\"DK LEV\"": "\"17%\""
+		"\"DK LEV\"": "\"16%\""
 	},
 	{
 		"\"Pos\"": "\"QB\"",
@@ -42,10 +42,10 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Opp\"": "\"ARI\"",
 		"\"DK Sal $\"": "\"$8",
 		"\"Projected Own%\"": "300\"",
-		"\"Cash Odds\"": "\"7.5%\"",
+		"\"Cash Odds\"": "\"12.5%\"",
 		"\"GPP Odds\"": "\"57%\"",
 		"\"Implied Own%\"": "\"28%\"",
-		"\"DK LEV\"": "\"11%\""
+		"\"DK LEV\"": "\"13%\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -54,10 +54,22 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Opp\"": "\"@NYG\"",
 		"\"DK Sal $\"": "\"$8",
 		"\"Projected Own%\"": "300\"",
-		"\"Cash Odds\"": "\"12.5%\"",
-		"\"GPP Odds\"": "\"46%\"",
-		"\"Implied Own%\"": "\"15%\"",
-		"\"DK LEV\"": "\"17%\""
+		"\"Cash Odds\"": "\"17.5%\"",
+		"\"GPP Odds\"": "\"44%\"",
+		"\"Implied Own%\"": "\"14%\"",
+		"\"DK LEV\"": "\"16%\""
+	},
+	{
+		"\"Pos\"": "\"QB\"",
+		"\"Player\"": "\"Josh Allen\"",
+		"\"Tm\"": "\"BUF\"",
+		"\"Opp\"": "\"NE\"",
+		"\"DK Sal $\"": "\"$8",
+		"\"Projected Own%\"": "200\"",
+		"\"Cash Odds\"": "\"3.0%\"",
+		"\"GPP Odds\"": "\"48%\"",
+		"\"Implied Own%\"": "\"21%\"",
+		"\"DK LEV\"": "\"10%\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -69,18 +81,6 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Cash Odds\"": "\"3.0%\"",
 		"\"GPP Odds\"": "\"34%\"",
 		"\"Implied Own%\"": "\"8%\"",
-		"\"DK LEV\"": "\"10%\""
-	},
-	{
-		"\"Pos\"": "\"QB\"",
-		"\"Player\"": "\"Josh Allen\"",
-		"\"Tm\"": "\"BUF\"",
-		"\"Opp\"": "\"NE\"",
-		"\"DK Sal $\"": "\"$8",
-		"\"Projected Own%\"": "200\"",
-		"\"Cash Odds\"": "\"7.5%\"",
-		"\"GPP Odds\"": "\"48%\"",
-		"\"Implied Own%\"": "\"21%\"",
 		"\"DK LEV\"": "\"9%\""
 	},
 	{
@@ -93,7 +93,7 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Cash Odds\"": "\"3.0%\"",
 		"\"GPP Odds\"": "\"34%\"",
 		"\"Implied Own%\"": "\"8%\"",
-		"\"DK LEV\"": "\"10%\""
+		"\"DK LEV\"": "\"9%\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -103,9 +103,9 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK Sal $\"": "\"$7",
 		"\"Projected Own%\"": "900\"",
 		"\"Cash Odds\"": "\"3.0%\"",
-		"\"GPP Odds\"": "\"34%\"",
-		"\"Implied Own%\"": "\"8%\"",
-		"\"DK LEV\"": "\"10%\""
+		"\"GPP Odds\"": "\"37%\"",
+		"\"Implied Own%\"": "\"9%\"",
+		"\"DK LEV\"": "\"11%\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -117,19 +117,7 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Cash Odds\"": "\"3.0%\"",
 		"\"GPP Odds\"": "\"42%\"",
 		"\"Implied Own%\"": "\"12%\"",
-		"\"DK LEV\"": "\"15%\""
-	},
-	{
-		"\"Pos\"": "\"WR\"",
-		"\"Player\"": "\"Jaylen Waddle\"",
-		"\"Tm\"": "\"MIA\"",
-		"\"Opp\"": "\"@BAL\"",
-		"\"DK Sal $\"": "\"$7",
-		"\"Projected Own%\"": "700\"",
-		"\"Cash Odds\"": "\"0.5%\"",
-		"\"GPP Odds\"": "\"25%\"",
-		"\"Implied Own%\"": "\"4%\"",
-		"\"DK LEV\"": "\"5%\""
+		"\"DK LEV\"": "\"14%\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -139,9 +127,9 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK Sal $\"": "\"$7",
 		"\"Projected Own%\"": "700\"",
 		"\"Cash Odds\"": "\"7.5%\"",
-		"\"GPP Odds\"": "\"48%\"",
-		"\"Implied Own%\"": "\"15%\"",
-		"\"DK LEV\"": "\"19%\""
+		"\"GPP Odds\"": "\"45%\"",
+		"\"Implied Own%\"": "\"14%\"",
+		"\"DK LEV\"": "\"17%\""
 	},
 	{
 		"\"Pos\"": "\"QB\"",
@@ -153,7 +141,7 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Cash Odds\"": "\"7.5%\"",
 		"\"GPP Odds\"": "\"48%\"",
 		"\"Implied Own%\"": "\"20%\"",
-		"\"DK LEV\"": "\"8%\""
+		"\"DK LEV\"": "\"9%\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -162,34 +150,10 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Opp\"": "\"NO\"",
 		"\"DK Sal $\"": "\"$7",
 		"\"Projected Own%\"": "600\"",
-		"\"Cash Odds\"": "\"7.5%\"",
+		"\"Cash Odds\"": "\"12.5%\"",
 		"\"GPP Odds\"": "\"43%\"",
 		"\"Implied Own%\"": "\"12%\"",
 		"\"DK LEV\"": "\"13%\""
-	},
-	{
-		"\"Pos\"": "\"WR\"",
-		"\"Player\"": "\"Ja'Marr Chase\"",
-		"\"Tm\"": "\"CIN\"",
-		"\"Opp\"": "\"@KC\"",
-		"\"DK Sal $\"": "\"$7",
-		"\"Projected Own%\"": "600\"",
-		"\"Cash Odds\"": "\"0.5%\"",
-		"\"GPP Odds\"": "\"0%\"",
-		"\"Implied Own%\"": "\"0%\"",
-		"\"DK LEV\"": "\"0%\""
-	},
-	{
-		"\"Pos\"": "\"WR\"",
-		"\"Player\"": "\"Michael Pittman Jr.\"",
-		"\"Tm\"": "\"IND\"",
-		"\"Opp\"": "\"LV\"",
-		"\"DK Sal $\"": "\"$7",
-		"\"Projected Own%\"": "500\"",
-		"\"Cash Odds\"": "\"3.0%\"",
-		"\"GPP Odds\"": "\"37%\"",
-		"\"Implied Own%\"": "\"8%\"",
-		"\"DK LEV\"": "\"10%\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -204,6 +168,18 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK LEV\"": "\"10%\""
 	},
 	{
+		"\"Pos\"": "\"WR\"",
+		"\"Player\"": "\"Michael Pittman Jr.\"",
+		"\"Tm\"": "\"IND\"",
+		"\"Opp\"": "\"LV\"",
+		"\"DK Sal $\"": "\"$7",
+		"\"Projected Own%\"": "500\"",
+		"\"Cash Odds\"": "\"7.5%\"",
+		"\"GPP Odds\"": "\"37%\"",
+		"\"Implied Own%\"": "\"8%\"",
+		"\"DK LEV\"": "\"10%\""
+	},
+	{
 		"\"Pos\"": "\"QB\"",
 		"\"Player\"": "\"Patrick Mahomes\"",
 		"\"Tm\"": "\"KC\"",
@@ -213,7 +189,7 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Cash Odds\"": "\"7.5%\"",
 		"\"GPP Odds\"": "\"45%\"",
 		"\"Implied Own%\"": "\"17%\"",
-		"\"DK LEV\"": "\"7%\""
+		"\"DK LEV\"": "\"8%\""
 	},
 	{
 		"\"Pos\"": "\"QB\"",
@@ -252,18 +228,6 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK LEV\"": "\"9%\""
 	},
 	{
-		"\"Pos\"": "\"RB\"",
-		"\"Player\"": "\"Jonathan Taylor\"",
-		"\"Tm\"": "\"IND\"",
-		"\"Opp\"": "\"LV\"",
-		"\"DK Sal $\"": "\"$7",
-		"\"Projected Own%\"": "300\"",
-		"\"Cash Odds\"": "\"3.0%\"",
-		"\"GPP Odds\"": "\"36%\"",
-		"\"Implied Own%\"": "\"8%\"",
-		"\"DK LEV\"": "\"9%\""
-	},
-	{
 		"\"Pos\"": "\"QB\"",
 		"\"Player\"": "\"Justin Fields\"",
 		"\"Tm\"": "\"CHI\"",
@@ -277,15 +241,27 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 	},
 	{
 		"\"Pos\"": "\"RB\"",
+		"\"Player\"": "\"Jonathan Taylor\"",
+		"\"Tm\"": "\"IND\"",
+		"\"Opp\"": "\"LV\"",
+		"\"DK Sal $\"": "\"$7",
+		"\"Projected Own%\"": "300\"",
+		"\"Cash Odds\"": "\"12.5%\"",
+		"\"GPP Odds\"": "\"36%\"",
+		"\"Implied Own%\"": "\"8%\"",
+		"\"DK LEV\"": "\"9%\""
+	},
+	{
+		"\"Pos\"": "\"RB\"",
 		"\"Player\"": "\"Travis Etienne\"",
 		"\"Tm\"": "\"JAX\"",
 		"\"Opp\"": "\"CAR\"",
 		"\"DK Sal $\"": "\"$7",
 		"\"Projected Own%\"": "200\"",
 		"\"Cash Odds\"": "\"7.5%\"",
-		"\"GPP Odds\"": "\"44%\"",
-		"\"Implied Own%\"": "\"12%\"",
-		"\"DK LEV\"": "\"13%\""
+		"\"GPP Odds\"": "\"40%\"",
+		"\"Implied Own%\"": "\"10%\"",
+		"\"DK LEV\"": "\"12%\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -294,10 +270,10 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Opp\"": "\"TEN\"",
 		"\"DK Sal $\"": "\"$7",
 		"\"Projected Own%\"": "200\"",
-		"\"Cash Odds\"": "\"7.5%\"",
-		"\"GPP Odds\"": "\"36%\"",
-		"\"Implied Own%\"": "\"8%\"",
-		"\"DK LEV\"": "\"11%\""
+		"\"Cash Odds\"": "\"12.5%\"",
+		"\"GPP Odds\"": "\"46%\"",
+		"\"Implied Own%\"": "\"13%\"",
+		"\"DK LEV\"": "\"15%\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -307,21 +283,9 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK Sal $\"": "\"$7",
 		"\"Projected Own%\"": "100\"",
 		"\"Cash Odds\"": "\"3.0%\"",
-		"\"GPP Odds\"": "\"35%\"",
-		"\"Implied Own%\"": "\"8%\"",
-		"\"DK LEV\"": "\"10%\""
-	},
-	{
-		"\"Pos\"": "\"QB\"",
-		"\"Player\"": "\"C.J. Stroud\"",
-		"\"Tm\"": "\"HOU\"",
-		"\"Opp\"": "\"TEN\"",
-		"\"DK Sal $\"": "\"$7",
-		"\"Projected Own%\"": "100\"",
-		"\"Cash Odds\"": "\"3.0%\"",
-		"\"GPP Odds\"": "\"37%\"",
-		"\"Implied Own%\"": "\"12%\"",
-		"\"DK LEV\"": "\"5%\""
+		"\"GPP Odds\"": "\"34%\"",
+		"\"Implied Own%\"": "\"7%\"",
+		"\"DK LEV\"": "\"9%\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -330,10 +294,22 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Opp\"": "\"NE\"",
 		"\"DK Sal $\"": "\"$7",
 		"\"Projected Own%\"": "100\"",
-		"\"Cash Odds\"": "\"12.5%\"",
+		"\"Cash Odds\"": "\"7.5%\"",
 		"\"GPP Odds\"": "\"40%\"",
 		"\"Implied Own%\"": "\"8%\"",
 		"\"DK LEV\"": "\"9%\""
+	},
+	{
+		"\"Pos\"": "\"QB\"",
+		"\"Player\"": "\"C.J. Stroud\"",
+		"\"Tm\"": "\"HOU\"",
+		"\"Opp\"": "\"TEN\"",
+		"\"DK Sal $\"": "\"$7",
+		"\"Projected Own%\"": "100\"",
+		"\"Cash Odds\"": "\"7.5%\"",
+		"\"GPP Odds\"": "\"37%\"",
+		"\"Implied Own%\"": "\"12%\"",
+		"\"DK LEV\"": "\"6%\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -369,7 +345,7 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Cash Odds\"": "\"12.5%\"",
 		"\"GPP Odds\"": "\"47%\"",
 		"\"Implied Own%\"": "\"13%\"",
-		"\"DK LEV\"": "\"16%\""
+		"\"DK LEV\"": "\"15%\""
 	},
 	{
 		"\"Pos\"": "\"QB\"",
@@ -381,7 +357,7 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Cash Odds\"": "\"12.5%\"",
 		"\"GPP Odds\"": "\"40%\"",
 		"\"Implied Own%\"": "\"13%\"",
-		"\"DK LEV\"": "\"5%\""
+		"\"DK LEV\"": "\"6%\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -393,7 +369,7 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Cash Odds\"": "\"3.0%\"",
 		"\"GPP Odds\"": "\"32%\"",
 		"\"Implied Own%\"": "\"7%\"",
-		"\"DK LEV\"": "\"7%\""
+		"\"DK LEV\"": "\"8%\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -405,7 +381,7 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Cash Odds\"": "\"17.5%\"",
 		"\"GPP Odds\"": "\"48%\"",
 		"\"Implied Own%\"": "\"14%\"",
-		"\"DK LEV\"": "\"19%\""
+		"\"DK LEV\"": "\"18%\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -417,7 +393,7 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Cash Odds\"": "\"12.5%\"",
 		"\"GPP Odds\"": "\"41%\"",
 		"\"Implied Own%\"": "\"10%\"",
-		"\"DK LEV\"": "\"11%\""
+		"\"DK LEV\"": "\"12%\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -429,19 +405,31 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Cash Odds\"": "\"12.5%\"",
 		"\"GPP Odds\"": "\"48%\"",
 		"\"Implied Own%\"": "\"12%\"",
-		"\"DK LEV\"": "\"16%\""
+		"\"DK LEV\"": "\"15%\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
-		"\"Player\"": "\"Austin Ekeler\"",
-		"\"Tm\"": "\"LAC\"",
-		"\"Opp\"": "\"@DEN\"",
+		"\"Player\"": "\"Isiah Pacheco\"",
+		"\"Tm\"": "\"KC\"",
+		"\"Opp\"": "\"CIN\"",
+		"\"DK Sal $\"": "\"$6",
+		"\"Projected Own%\"": "800\"",
+		"\"Cash Odds\"": "\"7.5%\"",
+		"\"GPP Odds\"": "\"42%\"",
+		"\"Implied Own%\"": "\"8%\"",
+		"\"DK LEV\"": "\"9%\""
+	},
+	{
+		"\"Pos\"": "\"WR\"",
+		"\"Player\"": "\"Calvin Ridley\"",
+		"\"Tm\"": "\"JAX\"",
+		"\"Opp\"": "\"CAR\"",
 		"\"DK Sal $\"": "\"$6",
 		"\"Projected Own%\"": "700\"",
 		"\"Cash Odds\"": "\"3.0%\"",
-		"\"GPP Odds\"": "\"40%\"",
-		"\"Implied Own%\"": "\"8%\"",
-		"\"DK LEV\"": "\"9%\""
+		"\"GPP Odds\"": "\"28%\"",
+		"\"Implied Own%\"": "\"5%\"",
+		"\"DK LEV\"": "\"6%\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -451,21 +439,21 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK Sal $\"": "\"$6",
 		"\"Projected Own%\"": "700\"",
 		"\"Cash Odds\"": "\"3.0%\"",
-		"\"GPP Odds\"": "\"26%\"",
-		"\"Implied Own%\"": "\"3%\"",
-		"\"DK LEV\"": "\"4%\""
+		"\"GPP Odds\"": "\"28%\"",
+		"\"Implied Own%\"": "\"4%\"",
+		"\"DK LEV\"": "\"5%\""
 	},
 	{
-		"\"Pos\"": "\"WR\"",
-		"\"Player\"": "\"Calvin Ridley\"",
-		"\"Tm\"": "\"JAX\"",
-		"\"Opp\"": "\"CAR\"",
+		"\"Pos\"": "\"RB\"",
+		"\"Player\"": "\"Austin Ekeler\"",
+		"\"Tm\"": "\"LAC\"",
+		"\"Opp\"": "\"@DEN\"",
 		"\"DK Sal $\"": "\"$6",
 		"\"Projected Own%\"": "700\"",
 		"\"Cash Odds\"": "\"7.5%\"",
-		"\"GPP Odds\"": "\"28%\"",
-		"\"Implied Own%\"": "\"5%\"",
-		"\"DK LEV\"": "\"6%\""
+		"\"GPP Odds\"": "\"38%\"",
+		"\"Implied Own%\"": "\"7%\"",
+		"\"DK LEV\"": "\"9%\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -487,9 +475,9 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK Sal $\"": "\"$6",
 		"\"Projected Own%\"": "600\"",
 		"\"Cash Odds\"": "\"7.5%\"",
-		"\"GPP Odds\"": "\"34%\"",
-		"\"Implied Own%\"": "\"6%\"",
-		"\"DK LEV\"": "\"8%\""
+		"\"GPP Odds\"": "\"38%\"",
+		"\"Implied Own%\"": "\"8%\"",
+		"\"DK LEV\"": "\"10%\""
 	},
 	{
 		"\"Pos\"": "\"QB\"",
@@ -501,7 +489,7 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Cash Odds\"": "\"3.0%\"",
 		"\"GPP Odds\"": "\"31%\"",
 		"\"Implied Own%\"": "\"8%\"",
-		"\"DK LEV\"": "\"3%\""
+		"\"DK LEV\"": "\"4%\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -513,7 +501,7 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Cash Odds\"": "\"3.0%\"",
 		"\"GPP Odds\"": "\"39%\"",
 		"\"Implied Own%\"": "\"8%\"",
-		"\"DK LEV\"": "\"11%\""
+		"\"DK LEV\"": "\"10%\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -522,10 +510,10 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Opp\"": "\"ARI\"",
 		"\"DK Sal $\"": "\"$6",
 		"\"Projected Own%\"": "500\"",
-		"\"Cash Odds\"": "\"7.5%\"",
-		"\"GPP Odds\"": "\"41%\"",
-		"\"Implied Own%\"": "\"8%\"",
-		"\"DK LEV\"": "\"9%\""
+		"\"Cash Odds\"": "\"12.5%\"",
+		"\"GPP Odds\"": "\"33%\"",
+		"\"Implied Own%\"": "\"5%\"",
+		"\"DK LEV\"": "\"6%\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -537,7 +525,7 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Cash Odds\"": "\"3.0%\"",
 		"\"GPP Odds\"": "\"36%\"",
 		"\"Implied Own%\"": "\"6%\"",
-		"\"DK LEV\"": "\"7%\""
+		"\"DK LEV\"": "\"8%\""
 	},
 	{
 		"\"Pos\"": "\"QB\"",
@@ -549,19 +537,7 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Cash Odds\"": "\"3.0%\"",
 		"\"GPP Odds\"": "\"34%\"",
 		"\"Implied Own%\"": "\"10%\"",
-		"\"DK LEV\"": "\"4%\""
-	},
-	{
-		"\"Pos\"": "\"RB\"",
-		"\"Player\"": "\"Kenneth Walker\"",
-		"\"Tm\"": "\"SEA\"",
-		"\"Opp\"": "\"PIT\"",
-		"\"DK Sal $\"": "\"$6",
-		"\"Projected Own%\"": "100\"",
-		"\"Cash Odds\"": "\"7.5%\"",
-		"\"GPP Odds\"": "\"42%\"",
-		"\"Implied Own%\"": "\"9%\"",
-		"\"DK LEV\"": "\"10%\""
+		"\"DK LEV\"": "\"5%\""
 	},
 	{
 		"\"Pos\"": "\"QB\"",
@@ -573,7 +549,19 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Cash Odds\"": "\"3.0%\"",
 		"\"GPP Odds\"": "\"35%\"",
 		"\"Implied Own%\"": "\"10%\"",
-		"\"DK LEV\"": "\"4%\""
+		"\"DK LEV\"": "\"5%\""
+	},
+	{
+		"\"Pos\"": "\"RB\"",
+		"\"Player\"": "\"Kenneth Walker\"",
+		"\"Tm\"": "\"SEA\"",
+		"\"Opp\"": "\"PIT\"",
+		"\"DK Sal $\"": "\"$6",
+		"\"Projected Own%\"": "100\"",
+		"\"Cash Odds\"": "\"7.5%\"",
+		"\"GPP Odds\"": "\"42%\"",
+		"\"Implied Own%\"": "\"9%\"",
+		"\"DK LEV\"": "\"11%\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -585,19 +573,7 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Cash Odds\"": "\"7.5%\"",
 		"\"GPP Odds\"": "\"31%\"",
 		"\"Implied Own%\"": "\"5%\"",
-		"\"DK LEV\"": "\"7%\""
-	},
-	{
-		"\"Pos\"": "\"WR\"",
-		"\"Player\"": "\"DeAndre Hopkins\"",
-		"\"Tm\"": "\"TEN\"",
-		"\"Opp\"": "\"@HOU\"",
-		"\"DK Sal $\"": "\"$6",
-		"\"Projected Own%\"": "000\"",
-		"\"Cash Odds\"": "\"17.5%\"",
-		"\"GPP Odds\"": "\"37%\"",
-		"\"Implied Own%\"": "\"8%\"",
-		"\"DK LEV\"": "\"10%\""
+		"\"DK LEV\"": "\"6%\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -606,10 +582,22 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Opp\"": "\"@BUF\"",
 		"\"DK Sal $\"": "\"$6",
 		"\"Projected Own%\"": "000\"",
-		"\"Cash Odds\"": "\"17.5%\"",
-		"\"GPP Odds\"": "\"45%\"",
+		"\"Cash Odds\"": "\"12.5%\"",
+		"\"GPP Odds\"": "\"44%\"",
 		"\"Implied Own%\"": "\"9%\"",
 		"\"DK LEV\"": "\"10%\""
+	},
+	{
+		"\"Pos\"": "\"WR\"",
+		"\"Player\"": "\"DeAndre Hopkins\"",
+		"\"Tm\"": "\"TEN\"",
+		"\"Opp\"": "\"@HOU\"",
+		"\"DK Sal $\"": "\"$6",
+		"\"Projected Own%\"": "000\"",
+		"\"Cash Odds\"": "\"12.5%\"",
+		"\"GPP Odds\"": "\"37%\"",
+		"\"Implied Own%\"": "\"8%\"",
+		"\"DK LEV\"": "\"9%\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -624,6 +612,18 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK LEV\"": "\"4%\""
 	},
 	{
+		"\"Pos\"": "\"RB\"",
+		"\"Player\"": "\"James Conner\"",
+		"\"Tm\"": "\"ARI\"",
+		"\"Opp\"": "\"@PHI\"",
+		"\"DK Sal $\"": "\"$5",
+		"\"Projected Own%\"": "900\"",
+		"\"Cash Odds\"": "\"3.0%\"",
+		"\"GPP Odds\"": "\"37%\"",
+		"\"Implied Own%\"": "\"6%\"",
+		"\"DK LEV\"": "\"7%\""
+	},
+	{
 		"\"Pos\"": "\"WR\"",
 		"\"Player\"": "\"Adam Thielen\"",
 		"\"Tm\"": "\"CAR\"",
@@ -633,7 +633,7 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Cash Odds\"": "\"3.0%\"",
 		"\"GPP Odds\"": "\"27%\"",
 		"\"Implied Own%\"": "\"4%\"",
-		"\"DK LEV\"": "\"5%\""
+		"\"DK LEV\"": "\"4%\""
 	},
 	{
 		"\"Pos\"": "\"QB\"",
@@ -645,19 +645,7 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Cash Odds\"": "\"3.0%\"",
 		"\"GPP Odds\"": "\"31%\"",
 		"\"Implied Own%\"": "\"8%\"",
-		"\"DK LEV\"": "\"3%\""
-	},
-	{
-		"\"Pos\"": "\"RB\"",
-		"\"Player\"": "\"James Conner\"",
-		"\"Tm\"": "\"ARI\"",
-		"\"Opp\"": "\"@PHI\"",
-		"\"DK Sal $\"": "\"$5",
-		"\"Projected Own%\"": "900\"",
-		"\"Cash Odds\"": "\"7.5%\"",
-		"\"GPP Odds\"": "\"37%\"",
-		"\"Implied Own%\"": "\"6%\"",
-		"\"DK LEV\"": "\"6%\""
+		"\"DK LEV\"": "\"4%\""
 	},
 	{
 		"\"Pos\"": "\"TE\"",
@@ -681,7 +669,7 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Cash Odds\"": "\"3.0%\"",
 		"\"GPP Odds\"": "\"30%\"",
 		"\"Implied Own%\"": "\"8%\"",
-		"\"DK LEV\"": "\"3%\""
+		"\"DK LEV\"": "\"4%\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -691,7 +679,7 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK Sal $\"": "\"$5",
 		"\"Projected Own%\"": "800\"",
 		"\"Cash Odds\"": "\"7.5%\"",
-		"\"GPP Odds\"": "\"37%\"",
+		"\"GPP Odds\"": "\"36%\"",
 		"\"Implied Own%\"": "\"6%\"",
 		"\"DK LEV\"": "\"7%\""
 	},
@@ -715,8 +703,20 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK Sal $\"": "\"$5",
 		"\"Projected Own%\"": "700\"",
 		"\"Cash Odds\"": "\"3.0%\"",
-		"\"GPP Odds\"": "\"30%\"",
+		"\"GPP Odds\"": "\"31%\"",
 		"\"Implied Own%\"": "\"8%\"",
+		"\"DK LEV\"": "\"4%\""
+	},
+	{
+		"\"Pos\"": "\"RB\"",
+		"\"Player\"": "\"Brian Robinson\"",
+		"\"Tm\"": "\"WAS\"",
+		"\"Opp\"": "\"SF\"",
+		"\"DK Sal $\"": "\"$5",
+		"\"Projected Own%\"": "700\"",
+		"\"Cash Odds\"": "\"3.0%\"",
+		"\"GPP Odds\"": "\"24%\"",
+		"\"Implied Own%\"": "\"2%\"",
 		"\"DK LEV\"": "\"3%\""
 	},
 	{
@@ -727,9 +727,9 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK Sal $\"": "\"$5",
 		"\"Projected Own%\"": "700\"",
 		"\"Cash Odds\"": "\"7.5%\"",
-		"\"GPP Odds\"": "\"29%\"",
-		"\"Implied Own%\"": "\"4%\"",
-		"\"DK LEV\"": "\"5%\""
+		"\"GPP Odds\"": "\"32%\"",
+		"\"Implied Own%\"": "\"5%\"",
+		"\"DK LEV\"": "\"6%\""
 	},
 	{
 		"\"Pos\"": "\"TE\"",
@@ -744,6 +744,18 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK LEV\"": "\"13%\""
 	},
 	{
+		"\"Pos\"": "\"RB\"",
+		"\"Player\"": "\"Javonte Williams\"",
+		"\"Tm\"": "\"DEN\"",
+		"\"Opp\"": "\"LAC\"",
+		"\"DK Sal $\"": "\"$5",
+		"\"Projected Own%\"": "600\"",
+		"\"Cash Odds\"": "\"7.5%\"",
+		"\"GPP Odds\"": "\"33%\"",
+		"\"Implied Own%\"": "\"5%\"",
+		"\"DK LEV\"": "\"5%\""
+	},
+	{
 		"\"Pos\"": "\"WR\"",
 		"\"Player\"": "\"Zay Flowers\"",
 		"\"Tm\"": "\"BAL\"",
@@ -753,7 +765,7 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Cash Odds\"": "\"12.5%\"",
 		"\"GPP Odds\"": "\"36%\"",
 		"\"Implied Own%\"": "\"7%\"",
-		"\"DK LEV\"": "\"9%\""
+		"\"DK LEV\"": "\"8%\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -768,28 +780,16 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK LEV\"": "\"6%\""
 	},
 	{
-		"\"Pos\"": "\"RB\"",
-		"\"Player\"": "\"Javonte Williams\"",
-		"\"Tm\"": "\"DEN\"",
-		"\"Opp\"": "\"LAC\"",
-		"\"DK Sal $\"": "\"$5",
-		"\"Projected Own%\"": "600\"",
-		"\"Cash Odds\"": "\"12.5%\"",
-		"\"GPP Odds\"": "\"33%\"",
-		"\"Implied Own%\"": "\"5%\"",
-		"\"DK LEV\"": "\"5%\""
-	},
-	{
 		"\"Pos\"": "\"WR\"",
 		"\"Player\"": "\"Gabe Davis\"",
 		"\"Tm\"": "\"BUF\"",
 		"\"Opp\"": "\"NE\"",
 		"\"DK Sal $\"": "\"$5",
 		"\"Projected Own%\"": "500\"",
-		"\"Cash Odds\"": "\"3.0%\"",
-		"\"GPP Odds\"": "\"24%\"",
+		"\"Cash Odds\"": "\"0.5%\"",
+		"\"GPP Odds\"": "\"22%\"",
 		"\"Implied Own%\"": "\"3%\"",
-		"\"DK LEV\"": "\"4%\""
+		"\"DK LEV\"": "\"3%\""
 	},
 	{
 		"\"Pos\"": "\"QB\"",
@@ -802,6 +802,18 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"GPP Odds\"": "\"29%\"",
 		"\"Implied Own%\"": "\"6%\"",
 		"\"DK LEV\"": "\"3%\""
+	},
+	{
+		"\"Pos\"": "\"WR\"",
+		"\"Player\"": "\"Terry McLaurin\"",
+		"\"Tm\"": "\"WAS\"",
+		"\"Opp\"": "\"SF\"",
+		"\"DK Sal $\"": "\"$5",
+		"\"Projected Own%\"": "500\"",
+		"\"Cash Odds\"": "\"7.5%\"",
+		"\"GPP Odds\"": "\"33%\"",
+		"\"Implied Own%\"": "\"5%\"",
+		"\"DK LEV\"": "\"6%\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -817,27 +829,15 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 	},
 	{
 		"\"Pos\"": "\"WR\"",
-		"\"Player\"": "\"Terry McLaurin\"",
-		"\"Tm\"": "\"WAS\"",
-		"\"Opp\"": "\"SF\"",
-		"\"DK Sal $\"": "\"$5",
-		"\"Projected Own%\"": "500\"",
-		"\"Cash Odds\"": "\"12.5%\"",
-		"\"GPP Odds\"": "\"33%\"",
-		"\"Implied Own%\"": "\"5%\"",
-		"\"DK LEV\"": "\"6%\""
-	},
-	{
-		"\"Pos\"": "\"WR\"",
 		"\"Player\"": "\"Josh Downs\"",
 		"\"Tm\"": "\"IND\"",
 		"\"Opp\"": "\"LV\"",
 		"\"DK Sal $\"": "\"$5",
 		"\"Projected Own%\"": "400\"",
-		"\"Cash Odds\"": "\"3.0%\"",
+		"\"Cash Odds\"": "\"0.5%\"",
 		"\"GPP Odds\"": "\"21%\"",
 		"\"Implied Own%\"": "\"2%\"",
-		"\"DK LEV\"": "\"3%\""
+		"\"DK LEV\"": "\"2%\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -846,7 +846,7 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Opp\"": "\"ATL\"",
 		"\"DK Sal $\"": "\"$5",
 		"\"Projected Own%\"": "400\"",
-		"\"Cash Odds\"": "\"3.0%\"",
+		"\"Cash Odds\"": "\"0.5%\"",
 		"\"GPP Odds\"": "\"19%\"",
 		"\"Implied Own%\"": "\"1%\"",
 		"\"DK LEV\"": "\"1%\""
@@ -858,20 +858,8 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Opp\"": "\"@SEA\"",
 		"\"DK Sal $\"": "\"$5",
 		"\"Projected Own%\"": "300\"",
-		"\"Cash Odds\"": "\"7.5%\"",
-		"\"GPP Odds\"": "\"32%\"",
-		"\"Implied Own%\"": "\"5%\"",
-		"\"DK LEV\"": "\"6%\""
-	},
-	{
-		"\"Pos\"": "\"WR\"",
-		"\"Player\"": "\"Jakobi Meyers\"",
-		"\"Tm\"": "\"LV\"",
-		"\"Opp\"": "\"@IND\"",
-		"\"DK Sal $\"": "\"$5",
-		"\"Projected Own%\"": "300\"",
-		"\"Cash Odds\"": "\"7.5%\"",
-		"\"GPP Odds\"": "\"30%\"",
+		"\"Cash Odds\"": "\"3.0%\"",
+		"\"GPP Odds\"": "\"31%\"",
 		"\"Implied Own%\"": "\"5%\"",
 		"\"DK LEV\"": "\"6%\""
 	},
@@ -883,8 +871,8 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK Sal $\"": "\"$5",
 		"\"Projected Own%\"": "300\"",
 		"\"Cash Odds\"": "\"3.0%\"",
-		"\"GPP Odds\"": "\"27%\"",
-		"\"Implied Own%\"": "\"6%\"",
+		"\"GPP Odds\"": "\"25%\"",
+		"\"Implied Own%\"": "\"5%\"",
 		"\"DK LEV\"": "\"2%\""
 	},
 	{
@@ -894,10 +882,22 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Opp\"": "\"CIN\"",
 		"\"DK Sal $\"": "\"$5",
 		"\"Projected Own%\"": "300\"",
-		"\"Cash Odds\"": "\"27.5%\"",
-		"\"GPP Odds\"": "\"42%\"",
-		"\"Implied Own%\"": "\"8%\"",
+		"\"Cash Odds\"": "\"0.5%\"",
+		"\"GPP Odds\"": "\"11%\"",
+		"\"Implied Own%\"": "\"1%\"",
 		"\"DK LEV\"": "\"9%\""
+	},
+	{
+		"\"Pos\"": "\"WR\"",
+		"\"Player\"": "\"Jakobi Meyers\"",
+		"\"Tm\"": "\"LV\"",
+		"\"Opp\"": "\"@IND\"",
+		"\"DK Sal $\"": "\"$5",
+		"\"Projected Own%\"": "300\"",
+		"\"Cash Odds\"": "\"7.5%\"",
+		"\"GPP Odds\"": "\"28%\"",
+		"\"Implied Own%\"": "\"4%\"",
+		"\"DK LEV\"": "\"5%\""
 	},
 	{
 		"\"Pos\"": "\"QB\"",
@@ -906,7 +906,7 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Opp\"": "\"@HOU\"",
 		"\"DK Sal $\"": "\"$5",
 		"\"Projected Own%\"": "200\"",
-		"\"Cash Odds\"": "\"0.5%\"",
+		"\"Cash Odds\"": "\"3.0%\"",
 		"\"GPP Odds\"": "\"28%\"",
 		"\"Implied Own%\"": "\"6%\"",
 		"\"DK LEV\"": "\"3%\""
@@ -918,10 +918,10 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Opp\"": "\"SF\"",
 		"\"DK Sal $\"": "\"$5",
 		"\"Projected Own%\"": "200\"",
-		"\"Cash Odds\"": "\"3.0%\"",
-		"\"GPP Odds\"": "\"26%\"",
-		"\"Implied Own%\"": "\"2%\"",
-		"\"DK LEV\"": "\"3%\""
+		"\"Cash Odds\"": "\"0.5%\"",
+		"\"GPP Odds\"": "\"11%\"",
+		"\"Implied Own%\"": "\"0%\"",
+		"\"DK LEV\"": "\"0%\""
 	},
 	{
 		"\"Pos\"": "\"QB\"",
@@ -949,14 +949,26 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 	},
 	{
 		"\"Pos\"": "\"WR\"",
+		"\"Player\"": "\"Noah Brown\"",
+		"\"Tm\"": "\"HOU\"",
+		"\"Opp\"": "\"TEN\"",
+		"\"DK Sal $\"": "\"$5",
+		"\"Projected Own%\"": "100\"",
+		"\"Cash Odds\"": "\"3.0%\"",
+		"\"GPP Odds\"": "\"29%\"",
+		"\"Implied Own%\"": "\"4%\"",
+		"\"DK LEV\"": "\"5%\""
+	},
+	{
+		"\"Pos\"": "\"WR\"",
 		"\"Player\"": "\"Jerry Jeudy\"",
 		"\"Tm\"": "\"DEN\"",
 		"\"Opp\"": "\"LAC\"",
 		"\"DK Sal $\"": "\"$5",
 		"\"Projected Own%\"": "100\"",
 		"\"Cash Odds\"": "\"3.0%\"",
-		"\"GPP Odds\"": "\"24%\"",
-		"\"Implied Own%\"": "\"2%\"",
+		"\"GPP Odds\"": "\"25%\"",
+		"\"Implied Own%\"": "\"3%\"",
 		"\"DK LEV\"": "\"3%\""
 	},
 	{
@@ -967,21 +979,9 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK Sal $\"": "\"$5",
 		"\"Projected Own%\"": "100\"",
 		"\"Cash Odds\"": "\"3.0%\"",
-		"\"GPP Odds\"": "\"27%\"",
-		"\"Implied Own%\"": "\"6%\"",
+		"\"GPP Odds\"": "\"25%\"",
+		"\"Implied Own%\"": "\"5%\"",
 		"\"DK LEV\"": "\"3%\""
-	},
-	{
-		"\"Pos\"": "\"WR\"",
-		"\"Player\"": "\"Noah Brown\"",
-		"\"Tm\"": "\"HOU\"",
-		"\"Opp\"": "\"TEN\"",
-		"\"DK Sal $\"": "\"$5",
-		"\"Projected Own%\"": "100\"",
-		"\"Cash Odds\"": "\"7.5%\"",
-		"\"GPP Odds\"": "\"28%\"",
-		"\"Implied Own%\"": "\"4%\"",
-		"\"DK LEV\"": "\"5%\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -990,22 +990,10 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Opp\"": "\"@IND\"",
 		"\"DK Sal $\"": "\"$5",
 		"\"Projected Own%\"": "100\"",
-		"\"Cash Odds\"": "\"12.5%\"",
-		"\"GPP Odds\"": "\"40%\"",
-		"\"Implied Own%\"": "\"6%\"",
-		"\"DK LEV\"": "\"7%\""
-	},
-	{
-		"\"Pos\"": "\"QB\"",
-		"\"Player\"": "\"Mason Rudolph\"",
-		"\"Tm\"": "\"PIT\"",
-		"\"Opp\"": "\"@SEA\"",
-		"\"DK Sal $\"": "\"$5",
-		"\"Projected Own%\"": "000\"",
-		"\"Cash Odds\"": "\"0.5%\"",
-		"\"GPP Odds\"": "\"20%\"",
-		"\"Implied Own%\"": "\"3%\"",
-		"\"DK LEV\"": "\"1%\""
+		"\"Cash Odds\"": "\"27.5%\"",
+		"\"GPP Odds\"": "\"42%\"",
+		"\"Implied Own%\"": "\"7%\"",
+		"\"DK LEV\"": "\"8%\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -1027,7 +1015,7 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK Sal $\"": "\"$5",
 		"\"Projected Own%\"": "000\"",
 		"\"Cash Odds\"": "\"3.0%\"",
-		"\"GPP Odds\"": "\"33%\"",
+		"\"GPP Odds\"": "\"32%\"",
 		"\"Implied Own%\"": "\"5%\"",
 		"\"DK LEV\"": "\"6%\""
 	},
@@ -1050,10 +1038,22 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Opp\"": "\"@SEA\"",
 		"\"DK Sal $\"": "\"$5",
 		"\"Projected Own%\"": "000\"",
-		"\"Cash Odds\"": "\"7.5%\"",
-		"\"GPP Odds\"": "\"29%\"",
-		"\"Implied Own%\"": "\"3%\"",
+		"\"Cash Odds\"": "\"3.0%\"",
+		"\"GPP Odds\"": "\"27%\"",
+		"\"Implied Own%\"": "\"2%\"",
 		"\"DK LEV\"": "\"3%\""
+	},
+	{
+		"\"Pos\"": "\"QB\"",
+		"\"Player\"": "\"Mason Rudolph\"",
+		"\"Tm\"": "\"PIT\"",
+		"\"Opp\"": "\"@SEA\"",
+		"\"DK Sal $\"": "\"$5",
+		"\"Projected Own%\"": "000\"",
+		"\"Cash Odds\"": "\"3.0%\"",
+		"\"GPP Odds\"": "\"24%\"",
+		"\"Implied Own%\"": "\"4%\"",
+		"\"DK LEV\"": "\"2%\""
 	},
 	{
 		"\"Pos\"": "\"TE\"",
@@ -1069,12 +1069,36 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 	},
 	{
 		"\"Pos\"": "\"QB\"",
+		"\"Player\"": "\"Taylor Heinicke\"",
+		"\"Tm\"": "\"ATL\"",
+		"\"Opp\"": "\"@CHI\"",
+		"\"DK Sal $\"": "\"$4",
+		"\"Projected Own%\"": "900\"",
+		"\"Cash Odds\"": "\"0.5%\"",
+		"\"GPP Odds\"": "\"17%\"",
+		"\"Implied Own%\"": "\"3%\"",
+		"\"DK LEV\"": "\"1%\""
+	},
+	{
+		"\"Pos\"": "\"RB\"",
+		"\"Player\"": "\"Roschon Johnson\"",
+		"\"Tm\"": "\"CHI\"",
+		"\"Opp\"": "\"ATL\"",
+		"\"DK Sal $\"": "\"$4",
+		"\"Projected Own%\"": "900\"",
+		"\"Cash Odds\"": "\"0.5%\"",
+		"\"GPP Odds\"": "\"13%\"",
+		"\"Implied Own%\"": "\"0%\"",
+		"\"DK LEV\"": "\"1%\""
+	},
+	{
+		"\"Pos\"": "\"QB\"",
 		"\"Player\"": "\"Bryce Young\"",
 		"\"Tm\"": "\"CAR\"",
 		"\"Opp\"": "\"@JAX\"",
 		"\"DK Sal $\"": "\"$4",
 		"\"Projected Own%\"": "900\"",
-		"\"Cash Odds\"": "\"0.5%\"",
+		"\"Cash Odds\"": "\"3.0%\"",
 		"\"GPP Odds\"": "\"25%\"",
 		"\"Implied Own%\"": "\"5%\"",
 		"\"DK LEV\"": "\"2%\""
@@ -1092,30 +1116,6 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK LEV\"": "\"4%\""
 	},
 	{
-		"\"Pos\"": "\"QB\"",
-		"\"Player\"": "\"Taylor Heinicke\"",
-		"\"Tm\"": "\"ATL\"",
-		"\"Opp\"": "\"@CHI\"",
-		"\"DK Sal $\"": "\"$4",
-		"\"Projected Own%\"": "900\"",
-		"\"Cash Odds\"": "\"3.0%\"",
-		"\"GPP Odds\"": "\"17%\"",
-		"\"Implied Own%\"": "\"3%\"",
-		"\"DK LEV\"": "\"1%\""
-	},
-	{
-		"\"Pos\"": "\"RB\"",
-		"\"Player\"": "\"Roschon Johnson\"",
-		"\"Tm\"": "\"CHI\"",
-		"\"Opp\"": "\"ATL\"",
-		"\"DK Sal $\"": "\"$4",
-		"\"Projected Own%\"": "900\"",
-		"\"Cash Odds\"": "\"3.0%\"",
-		"\"GPP Odds\"": "\"13%\"",
-		"\"Implied Own%\"": "\"0%\"",
-		"\"DK LEV\"": "\"1%\""
-	},
-	{
 		"\"Pos\"": "\"RB\"",
 		"\"Player\"": "\"Samaje Perine\"",
 		"\"Tm\"": "\"DEN\"",
@@ -1128,16 +1128,16 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK LEV\"": "\"1%\""
 	},
 	{
-		"\"Pos\"": "\"TE\"",
-		"\"Player\"": "\"Dallas Goedert\"",
-		"\"Tm\"": "\"PHI\"",
-		"\"Opp\"": "\"ARI\"",
+		"\"Pos\"": "\"QB\"",
+		"\"Player\"": "\"Bailey Zappe\"",
+		"\"Tm\"": "\"NE\"",
+		"\"Opp\"": "\"@BUF\"",
 		"\"DK Sal $\"": "\"$4",
 		"\"Projected Own%\"": "800\"",
-		"\"Cash Odds\"": "\"3.0%\"",
-		"\"GPP Odds\"": "\"32%\"",
+		"\"Cash Odds\"": "\"0.5%\"",
+		"\"GPP Odds\"": "\"17%\"",
 		"\"Implied Own%\"": "\"2%\"",
-		"\"DK LEV\"": "\"6%\""
+		"\"DK LEV\"": "\"1%\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -1149,18 +1149,6 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Cash Odds\"": "\"3.0%\"",
 		"\"GPP Odds\"": "\"28%\"",
 		"\"Implied Own%\"": "\"3%\"",
-		"\"DK LEV\"": "\"4%\""
-	},
-	{
-		"\"Pos\"": "\"QB\"",
-		"\"Player\"": "\"Jarrett Stidham\"",
-		"\"Tm\"": "\"DEN\"",
-		"\"Opp\"": "\"LAC\"",
-		"\"DK Sal $\"": "\"$4",
-		"\"Projected Own%\"": "800\"",
-		"\"Cash Odds\"": "\"3.0%\"",
-		"\"GPP Odds\"": "\"34%\"",
-		"\"Implied Own%\"": "\"9%\"",
 		"\"DK LEV\"": "\"4%\""
 	},
 	{
@@ -1176,6 +1164,30 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK LEV\"": "\"0%\""
 	},
 	{
+		"\"Pos\"": "\"TE\"",
+		"\"Player\"": "\"Dallas Goedert\"",
+		"\"Tm\"": "\"PHI\"",
+		"\"Opp\"": "\"ARI\"",
+		"\"DK Sal $\"": "\"$4",
+		"\"Projected Own%\"": "800\"",
+		"\"Cash Odds\"": "\"7.5%\"",
+		"\"GPP Odds\"": "\"32%\"",
+		"\"Implied Own%\"": "\"2%\"",
+		"\"DK LEV\"": "\"6%\""
+	},
+	{
+		"\"Pos\"": "\"QB\"",
+		"\"Player\"": "\"Jarrett Stidham\"",
+		"\"Tm\"": "\"DEN\"",
+		"\"Opp\"": "\"LAC\"",
+		"\"DK Sal $\"": "\"$4",
+		"\"Projected Own%\"": "800\"",
+		"\"Cash Odds\"": "\"7.5%\"",
+		"\"GPP Odds\"": "\"34%\"",
+		"\"Implied Own%\"": "\"9%\"",
+		"\"DK LEV\"": "\"4%\""
+	},
+	{
 		"\"Pos\"": "\"RB\"",
 		"\"Player\"": "\"Ameer Abdullah\"",
 		"\"Tm\"": "\"LV\"",
@@ -1183,20 +1195,44 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK Sal $\"": "\"$4",
 		"\"Projected Own%\"": "800\"",
 		"\"Cash Odds\"": "\"0.5%\"",
-		"\"GPP Odds\"": "\"10%\"",
+		"\"GPP Odds\"": "\"8%\"",
 		"\"Implied Own%\"": "\"0%\"",
 		"\"DK LEV\"": "\"0%\""
 	},
 	{
-		"\"Pos\"": "\"QB\"",
-		"\"Player\"": "\"Bailey Zappe\"",
-		"\"Tm\"": "\"NE\"",
-		"\"Opp\"": "\"@BUF\"",
+		"\"Pos\"": "\"RB\"",
+		"\"Player\"": "\"Elijah Mitchell\"",
+		"\"Tm\"": "\"SF\"",
+		"\"Opp\"": "\"@WAS\"",
 		"\"DK Sal $\"": "\"$4",
 		"\"Projected Own%\"": "800\"",
-		"\"Cash Odds\"": "\"3.0%\"",
-		"\"GPP Odds\"": "\"17%\"",
+		"\"Cash Odds\"": "\"0.5%\"",
+		"\"GPP Odds\"": "\"2%\"",
+		"\"Implied Own%\"": "\"0%\"",
+		"\"DK LEV\"": "\"0%\""
+	},
+	{
+		"\"Pos\"": "\"RB\"",
+		"\"Player\"": "\"Tyjae Spears\"",
+		"\"Tm\"": "\"TEN\"",
+		"\"Opp\"": "\"@HOU\"",
+		"\"DK Sal $\"": "\"$4",
+		"\"Projected Own%\"": "700\"",
+		"\"Cash Odds\"": "\"0.5%\"",
+		"\"GPP Odds\"": "\"28%\"",
 		"\"Implied Own%\"": "\"2%\"",
+		"\"DK LEV\"": "\"2%\""
+	},
+	{
+		"\"Pos\"": "\"RB\"",
+		"\"Player\"": "\"Justice Hill\"",
+		"\"Tm\"": "\"BAL\"",
+		"\"Opp\"": "\"MIA\"",
+		"\"DK Sal $\"": "\"$4",
+		"\"Projected Own%\"": "700\"",
+		"\"Cash Odds\"": "\"0.5%\"",
+		"\"GPP Odds\"": "\"20%\"",
+		"\"Implied Own%\"": "\"1%\"",
 		"\"DK LEV\"": "\"1%\""
 	},
 	{
@@ -1225,30 +1261,6 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 	},
 	{
 		"\"Pos\"": "\"RB\"",
-		"\"Player\"": "\"Tyjae Spears\"",
-		"\"Tm\"": "\"TEN\"",
-		"\"Opp\"": "\"@HOU\"",
-		"\"DK Sal $\"": "\"$4",
-		"\"Projected Own%\"": "700\"",
-		"\"Cash Odds\"": "\"3.0%\"",
-		"\"GPP Odds\"": "\"28%\"",
-		"\"Implied Own%\"": "\"2%\"",
-		"\"DK LEV\"": "\"2%\""
-	},
-	{
-		"\"Pos\"": "\"RB\"",
-		"\"Player\"": "\"Justice Hill\"",
-		"\"Tm\"": "\"BAL\"",
-		"\"Opp\"": "\"MIA\"",
-		"\"DK Sal $\"": "\"$4",
-		"\"Projected Own%\"": "700\"",
-		"\"Cash Odds\"": "\"3.0%\"",
-		"\"GPP Odds\"": "\"20%\"",
-		"\"Implied Own%\"": "\"1%\"",
-		"\"DK LEV\"": "\"1%\""
-	},
-	{
-		"\"Pos\"": "\"RB\"",
 		"\"Player\"": "\"Matt Breida\"",
 		"\"Tm\"": "\"NYG\"",
 		"\"Opp\"": "\"LAR\"",
@@ -1260,28 +1272,16 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK LEV\"": "\"0%\""
 	},
 	{
-		"\"Pos\"": "\"RB\"",
-		"\"Player\"": "\"Jordan Mason\"",
-		"\"Tm\"": "\"SF\"",
-		"\"Opp\"": "\"@WAS\"",
-		"\"DK Sal $\"": "\"$4",
-		"\"Projected Own%\"": "700\"",
-		"\"Cash Odds\"": "\"0.5%\"",
-		"\"GPP Odds\"": "\"2%\"",
-		"\"Implied Own%\"": "\"0%\"",
-		"\"DK LEV\"": "\"0%\""
-	},
-	{
 		"\"Pos\"": "\"TE\"",
 		"\"Player\"": "\"Isaiah Likely\"",
 		"\"Tm\"": "\"BAL\"",
 		"\"Opp\"": "\"MIA\"",
 		"\"DK Sal $\"": "\"$4",
 		"\"Projected Own%\"": "600\"",
-		"\"Cash Odds\"": "\"7.5%\"",
+		"\"Cash Odds\"": "\"3.0%\"",
 		"\"GPP Odds\"": "\"41%\"",
 		"\"Implied Own%\"": "\"4%\"",
-		"\"DK LEV\"": "\"11%\""
+		"\"DK LEV\"": "\"12%\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -1305,19 +1305,7 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Cash Odds\"": "\"3.0%\"",
 		"\"GPP Odds\"": "\"25%\"",
 		"\"Implied Own%\"": "\"3%\"",
-		"\"DK LEV\"": "\"4%\""
-	},
-	{
-		"\"Pos\"": "\"WR\"",
-		"\"Player\"": "\"Rashid Shaheed\"",
-		"\"Tm\"": "\"NO\"",
-		"\"Opp\"": "\"@TB\"",
-		"\"DK Sal $\"": "\"$4",
-		"\"Projected Own%\"": "600\"",
-		"\"Cash Odds\"": "\"7.5%\"",
-		"\"GPP Odds\"": "\"32%\"",
-		"\"Implied Own%\"": "\"5%\"",
-		"\"DK LEV\"": "\"6%\""
+		"\"DK LEV\"": "\"3%\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -1330,6 +1318,18 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"GPP Odds\"": "\"10%\"",
 		"\"Implied Own%\"": "\"0%\"",
 		"\"DK LEV\"": "\"0%\""
+	},
+	{
+		"\"Pos\"": "\"WR\"",
+		"\"Player\"": "\"Rashid Shaheed\"",
+		"\"Tm\"": "\"NO\"",
+		"\"Opp\"": "\"@TB\"",
+		"\"DK Sal $\"": "\"$4",
+		"\"Projected Own%\"": "600\"",
+		"\"Cash Odds\"": "\"12.5%\"",
+		"\"GPP Odds\"": "\"32%\"",
+		"\"Implied Own%\"": "\"5%\"",
+		"\"DK LEV\"": "\"6%\""
 	},
 	{
 		"\"Pos\"": "\"QB\"",
@@ -1351,7 +1351,7 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK Sal $\"": "\"$4",
 		"\"Projected Own%\"": "600\"",
 		"\"Cash Odds\"": "\"0.5%\"",
-		"\"GPP Odds\"": "\"6%\"",
+		"\"GPP Odds\"": "\"8%\"",
 		"\"Implied Own%\"": "\"0%\"",
 		"\"DK LEV\"": "\"0%\""
 	},
@@ -1363,7 +1363,7 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK Sal $\"": "\"$4",
 		"\"Projected Own%\"": "600\"",
 		"\"Cash Odds\"": "\"0.5%\"",
-		"\"GPP Odds\"": "\"0%\"",
+		"\"GPP Odds\"": "\"1%\"",
 		"\"Implied Own%\"": "\"0%\"",
 		"\"DK LEV\"": "\"0%\""
 	},
@@ -1399,7 +1399,7 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK Sal $\"": "\"$4",
 		"\"Projected Own%\"": "500\"",
 		"\"Cash Odds\"": "\"0.5%\"",
-		"\"GPP Odds\"": "\"8%\"",
+		"\"GPP Odds\"": "\"9%\"",
 		"\"Implied Own%\"": "\"0%\"",
 		"\"DK LEV\"": "\"0%\""
 	},
@@ -1411,7 +1411,7 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK Sal $\"": "\"$4",
 		"\"Projected Own%\"": "500\"",
 		"\"Cash Odds\"": "\"0.5%\"",
-		"\"GPP Odds\"": "\"8%\"",
+		"\"GPP Odds\"": "\"6%\"",
 		"\"Implied Own%\"": "\"0%\"",
 		"\"DK LEV\"": "\"0%\""
 	},
@@ -1477,15 +1477,15 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 	},
 	{
 		"\"Pos\"": "\"RB\"",
-		"\"Player\"": "\"Derrick Gore\"",
-		"\"Tm\"": "\"WAS\"",
-		"\"Opp\"": "\"SF\"",
+		"\"Player\"": "\"Miles Sanders\"",
+		"\"Tm\"": "\"CAR\"",
+		"\"Opp\"": "\"@JAX\"",
 		"\"DK Sal $\"": "\"$4",
 		"\"Projected Own%\"": "400\"",
 		"\"Cash Odds\"": "\"0.5%\"",
-		"\"GPP Odds\"": "\"14%\"",
+		"\"GPP Odds\"": "\"8%\"",
 		"\"Implied Own%\"": "\"0%\"",
-		"\"DK LEV\"": "\"1%\""
+		"\"DK LEV\"": "\"0%\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -1495,21 +1495,9 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK Sal $\"": "\"$4",
 		"\"Projected Own%\"": "400\"",
 		"\"Cash Odds\"": "\"12.5%\"",
-		"\"GPP Odds\"": "\"30%\"",
-		"\"Implied Own%\"": "\"4%\"",
-		"\"DK LEV\"": "\"5%\""
-	},
-	{
-		"\"Pos\"": "\"RB\"",
-		"\"Player\"": "\"Miles Sanders\"",
-		"\"Tm\"": "\"CAR\"",
-		"\"Opp\"": "\"@JAX\"",
-		"\"DK Sal $\"": "\"$4",
-		"\"Projected Own%\"": "400\"",
-		"\"Cash Odds\"": "\"0.5%\"",
-		"\"GPP Odds\"": "\"7%\"",
-		"\"Implied Own%\"": "\"0%\"",
-		"\"DK LEV\"": "\"0%\""
+		"\"GPP Odds\"": "\"28%\"",
+		"\"Implied Own%\"": "\"3%\"",
+		"\"DK LEV\"": "\"4%\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -1519,7 +1507,7 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK Sal $\"": "\"$4",
 		"\"Projected Own%\"": "400\"",
 		"\"Cash Odds\"": "\"0.5%\"",
-		"\"GPP Odds\"": "\"3%\"",
+		"\"GPP Odds\"": "\"4%\"",
 		"\"Implied Own%\"": "\"0%\"",
 		"\"DK LEV\"": "\"0%\""
 	},
@@ -1542,7 +1530,7 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Opp\"": "\"TEN\"",
 		"\"DK Sal $\"": "\"$4",
 		"\"Projected Own%\"": "300\"",
-		"\"Cash Odds\"": "\"7.5%\"",
+		"\"Cash Odds\"": "\"12.5%\"",
 		"\"GPP Odds\"": "\"31%\"",
 		"\"Implied Own%\"": "\"2%\"",
 		"\"DK LEV\"": "\"6%\""
@@ -1554,7 +1542,7 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Opp\"": "\"@BUF\"",
 		"\"DK Sal $\"": "\"$4",
 		"\"Projected Own%\"": "300\"",
-		"\"Cash Odds\"": "\"12.5%\"",
+		"\"Cash Odds\"": "\"17.5%\"",
 		"\"GPP Odds\"": "\"24%\"",
 		"\"Implied Own%\"": "\"2%\"",
 		"\"DK LEV\"": "\"3%\""
@@ -1687,7 +1675,7 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK Sal $\"": "\"$4",
 		"\"Projected Own%\"": "100\"",
 		"\"Cash Odds\"": "\"3.0%\"",
-		"\"GPP Odds\"": "\"16%\"",
+		"\"GPP Odds\"": "\"18%\"",
 		"\"Implied Own%\"": "\"1%\"",
 		"\"DK LEV\"": "\"1%\""
 	},
@@ -1716,18 +1704,6 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK LEV\"": "\"0%\""
 	},
 	{
-		"\"Pos\"": "\"DEF\"",
-		"\"Player\"": "\"Philadelphia Eagles\"",
-		"\"Tm\"": "\"PHI\"",
-		"\"Opp\"": "\"ARI\"",
-		"\"DK Sal $\"": "\"$4",
-		"\"Projected Own%\"": "000\"",
-		"\"Cash Odds\"": "\"3.0%\"",
-		"\"GPP Odds\"": "\"21%\"",
-		"\"Implied Own%\"": "\"5%\"",
-		"\"DK LEV\"": "\"9%\""
-	},
-	{
 		"\"Pos\"": "\"TE\"",
 		"\"Player\"": "\"Hunter Henry\"",
 		"\"Tm\"": "\"NE\"",
@@ -1738,6 +1714,18 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"GPP Odds\"": "\"23%\"",
 		"\"Implied Own%\"": "\"1%\"",
 		"\"DK LEV\"": "\"3%\""
+	},
+	{
+		"\"Pos\"": "\"DEF\"",
+		"\"Player\"": "\"Philadelphia Eagles\"",
+		"\"Tm\"": "\"PHI\"",
+		"\"Opp\"": "\"ARI\"",
+		"\"DK Sal $\"": "\"$4",
+		"\"Projected Own%\"": "000\"",
+		"\"Cash Odds\"": "\"3.0%\"",
+		"\"GPP Odds\"": "\"21%\"",
+		"\"Implied Own%\"": "\"5%\"",
+		"\"DK LEV\"": "\"9%\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -1759,7 +1747,7 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK Sal $\"": "\"$4",
 		"\"Projected Own%\"": "000\"",
 		"\"Cash Odds\"": "\"0.5%\"",
-		"\"GPP Odds\"": "\"5%\"",
+		"\"GPP Odds\"": "\"6%\"",
 		"\"Implied Own%\"": "\"0%\"",
 		"\"DK LEV\"": "\"0%\""
 	},
@@ -1789,21 +1777,33 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 	},
 	{
 		"\"Pos\"": "\"RB\"",
+		"\"Player\"": "\"Andrew Beck\"",
+		"\"Tm\"": "\"HOU\"",
+		"\"Opp\"": "\"TEN\"",
+		"\"DK Sal $\"": "\"$4",
+		"\"Projected Own%\"": "000\"",
+		"\"Cash Odds\"": "\"0.5%\"",
+		"\"GPP Odds\"": "\"1%\"",
+		"\"Implied Own%\"": "\"0%\"",
+		"\"DK LEV\"": "\"0%\""
+	},
+	{
+		"\"Pos\"": "\"RB\"",
 		"\"Player\"": "\"Dare Ogunbowale\"",
 		"\"Tm\"": "\"HOU\"",
 		"\"Opp\"": "\"TEN\"",
 		"\"DK Sal $\"": "\"$4",
 		"\"Projected Own%\"": "000\"",
 		"\"Cash Odds\"": "\"0.5%\"",
-		"\"GPP Odds\"": "\"2%\"",
+		"\"GPP Odds\"": "\"1%\"",
 		"\"Implied Own%\"": "\"0%\"",
 		"\"DK LEV\"": "\"0%\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
-		"\"Player\"": "\"Andrew Beck\"",
-		"\"Tm\"": "\"HOU\"",
-		"\"Opp\"": "\"TEN\"",
+		"\"Player\"": "\"Deneric Prince\"",
+		"\"Tm\"": "\"KC\"",
+		"\"Opp\"": "\"CIN\"",
 		"\"DK Sal $\"": "\"$4",
 		"\"Projected Own%\"": "000\"",
 		"\"Cash Odds\"": "\"0.5%\"",
@@ -1837,13 +1837,13 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 	},
 	{
 		"\"Pos\"": "\"WR\"",
-		"\"Player\"": "\"Darnell Mooney\"",
-		"\"Tm\"": "\"CHI\"",
-		"\"Opp\"": "\"ATL\"",
+		"\"Player\"": "\"Alec Pierce\"",
+		"\"Tm\"": "\"IND\"",
+		"\"Opp\"": "\"LV\"",
 		"\"DK Sal $\"": "\"$3",
 		"\"Projected Own%\"": "900\"",
 		"\"Cash Odds\"": "\"0.5%\"",
-		"\"GPP Odds\"": "\"17%\"",
+		"\"GPP Odds\"": "\"15%\"",
 		"\"Implied Own%\"": "\"1%\"",
 		"\"DK LEV\"": "\"1%\""
 	},
@@ -1861,14 +1861,14 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 	},
 	{
 		"\"Pos\"": "\"WR\"",
-		"\"Player\"": "\"Alec Pierce\"",
-		"\"Tm\"": "\"IND\"",
-		"\"Opp\"": "\"LV\"",
+		"\"Player\"": "\"Parker Washington\"",
+		"\"Tm\"": "\"JAX\"",
+		"\"Opp\"": "\"CAR\"",
 		"\"DK Sal $\"": "\"$3",
-		"\"Projected Own%\"": "900\"",
-		"\"Cash Odds\"": "\"3.0%\"",
-		"\"GPP Odds\"": "\"15%\"",
-		"\"Implied Own%\"": "\"1%\"",
+		"\"Projected Own%\"": "800\"",
+		"\"Cash Odds\"": "\"0.5%\"",
+		"\"GPP Odds\"": "\"13%\"",
+		"\"Implied Own%\"": "\"0%\"",
 		"\"DK LEV\"": "\"1%\""
 	},
 	{
@@ -1884,16 +1884,16 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK LEV\"": "\"1%\""
 	},
 	{
-		"\"Pos\"": "\"WR\"",
-		"\"Player\"": "\"Parker Washington\"",
-		"\"Tm\"": "\"JAX\"",
-		"\"Opp\"": "\"CAR\"",
+		"\"Pos\"": "\"TE\"",
+		"\"Player\"": "\"Pat Freiermuth\"",
+		"\"Tm\"": "\"PIT\"",
+		"\"Opp\"": "\"@SEA\"",
 		"\"DK Sal $\"": "\"$3",
-		"\"Projected Own%\"": "800\"",
+		"\"Projected Own%\"": "700\"",
 		"\"Cash Odds\"": "\"3.0%\"",
-		"\"GPP Odds\"": "\"13%\"",
-		"\"Implied Own%\"": "\"0%\"",
-		"\"DK LEV\"": "\"1%\""
+		"\"GPP Odds\"": "\"28%\"",
+		"\"Implied Own%\"": "\"2%\"",
+		"\"DK LEV\"": "\"5%\""
 	},
 	{
 		"\"Pos\"": "\"DEF\"",
@@ -1902,22 +1902,10 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Opp\"": "\"PIT\"",
 		"\"DK Sal $\"": "\"$3",
 		"\"Projected Own%\"": "700\"",
-		"\"Cash Odds\"": "\"0.5%\"",
+		"\"Cash Odds\"": "\"3.0%\"",
 		"\"GPP Odds\"": "\"17%\"",
 		"\"Implied Own%\"": "\"2%\"",
 		"\"DK LEV\"": "\"5%\""
-	},
-	{
-		"\"Pos\"": "\"TE\"",
-		"\"Player\"": "\"Pat Freiermuth\"",
-		"\"Tm\"": "\"PIT\"",
-		"\"Opp\"": "\"@SEA\"",
-		"\"DK Sal $\"": "\"$3",
-		"\"Projected Own%\"": "700\"",
-		"\"Cash Odds\"": "\"3.0%\"",
-		"\"GPP Odds\"": "\"25%\"",
-		"\"Implied Own%\"": "\"2%\"",
-		"\"DK LEV\"": "\"4%\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -1926,10 +1914,10 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Opp\"": "\"@DEN\"",
 		"\"DK Sal $\"": "\"$3",
 		"\"Projected Own%\"": "700\"",
-		"\"Cash Odds\"": "\"3.0%\"",
+		"\"Cash Odds\"": "\"7.5%\"",
 		"\"GPP Odds\"": "\"27%\"",
 		"\"Implied Own%\"": "\"3%\"",
-		"\"DK LEV\"": "\"4%\""
+		"\"DK LEV\"": "\"3%\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -1939,7 +1927,7 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK Sal $\"": "\"$3",
 		"\"Projected Own%\"": "700\"",
 		"\"Cash Odds\"": "\"0.5%\"",
-		"\"GPP Odds\"": "\"9%\"",
+		"\"GPP Odds\"": "\"7%\"",
 		"\"Implied Own%\"": "\"0%\"",
 		"\"DK LEV\"": "\"0%\""
 	},
@@ -1977,7 +1965,19 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Cash Odds\"": "\"3.0%\"",
 		"\"GPP Odds\"": "\"24%\"",
 		"\"Implied Own%\"": "\"2%\"",
-		"\"DK LEV\"": "\"3%\""
+		"\"DK LEV\"": "\"2%\""
+	},
+	{
+		"\"Pos\"": "\"WR\"",
+		"\"Player\"": "\"Cedrick Wilson\"",
+		"\"Tm\"": "\"MIA\"",
+		"\"Opp\"": "\"@BAL\"",
+		"\"DK Sal $\"": "\"$3",
+		"\"Projected Own%\"": "600\"",
+		"\"Cash Odds\"": "\"3.0%\"",
+		"\"GPP Odds\"": "\"24%\"",
+		"\"Implied Own%\"": "\"2%\"",
+		"\"DK LEV\"": "\"2%\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -1999,9 +1999,9 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK Sal $\"": "\"$3",
 		"\"Projected Own%\"": "600\"",
 		"\"Cash Odds\"": "\"12.5%\"",
-		"\"GPP Odds\"": "\"28%\"",
+		"\"GPP Odds\"": "\"30%\"",
 		"\"Implied Own%\"": "\"2%\"",
-		"\"DK LEV\"": "\"4%\""
+		"\"DK LEV\"": "\"5%\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -2014,18 +2014,6 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"GPP Odds\"": "\"23%\"",
 		"\"Implied Own%\"": "\"2%\"",
 		"\"DK LEV\"": "\"2%\""
-	},
-	{
-		"\"Pos\"": "\"WR\"",
-		"\"Player\"": "\" /player/cedrick-wilson Cedrick Wilson\"",
-		"\"Tm\"": "\"MIA\"",
-		"\"Opp\"": "\"@BAL\"",
-		"\"DK Sal $\"": "\"$3",
-		"\"Projected Own%\"": "600\"",
-		"\"Cash Odds\"": "\"3.0%\"",
-		"\"GPP Odds\"": "\"6%\"",
-		"\"Implied Own%\"": "\"0%\"",
-		"\"DK LEV\"": "\"0%\""
 	},
 	{
 		"\"Pos\"": "\"DEF\"",
@@ -2059,8 +2047,8 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK Sal $\"": "\"$3",
 		"\"Projected Own%\"": "500\"",
 		"\"Cash Odds\"": "\"3.0%\"",
-		"\"GPP Odds\"": "\"23%\"",
-		"\"Implied Own%\"": "\"2%\"",
+		"\"GPP Odds\"": "\"21%\"",
+		"\"Implied Own%\"": "\"1%\"",
 		"\"DK LEV\"": "\"2%\""
 	},
 	{
@@ -2070,10 +2058,10 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Opp\"": "\"@DEN\"",
 		"\"DK Sal $\"": "\"$3",
 		"\"Projected Own%\"": "500\"",
-		"\"Cash Odds\"": "\"12.5%\"",
-		"\"GPP Odds\"": "\"40%\"",
+		"\"Cash Odds\"": "\"22.5%\"",
+		"\"GPP Odds\"": "\"39%\"",
 		"\"Implied Own%\"": "\"4%\"",
-		"\"DK LEV\"": "\"10%\""
+		"\"DK LEV\"": "\"9%\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -2085,7 +2073,7 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Cash Odds\"": "\"7.5%\"",
 		"\"GPP Odds\"": "\"21%\"",
 		"\"Implied Own%\"": "\"1%\"",
-		"\"DK LEV\"": "\"2%\""
+		"\"DK LEV\"": "\"1%\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -2131,8 +2119,8 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK Sal $\"": "\"$3",
 		"\"Projected Own%\"": "400\"",
 		"\"Cash Odds\"": "\"0.5%\"",
-		"\"GPP Odds\"": "\"14%\"",
-		"\"Implied Own%\"": "\"0%\"",
+		"\"GPP Odds\"": "\"16%\"",
+		"\"Implied Own%\"": "\"1%\"",
 		"\"DK LEV\"": "\"1%\""
 	},
 	{
@@ -2184,28 +2172,52 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK LEV\"": "\"0%\""
 	},
 	{
-		"\"Pos\"": "\"WR\"",
-		"\"Player\"": "\"Tre Tucker\"",
-		"\"Tm\"": "\"LV\"",
-		"\"Opp\"": "\"@IND\"",
-		"\"DK Sal $\"": "\"$3",
-		"\"Projected Own%\"": "300\"",
-		"\"Cash Odds\"": "\"0.5%\"",
-		"\"GPP Odds\"": "\"22%\"",
-		"\"Implied Own%\"": "\"1%\"",
-		"\"DK LEV\"": "\"2%\""
-	},
-	{
 		"\"Pos\"": "\"TE\"",
 		"\"Player\"": "\"Tanner Hudson\"",
 		"\"Tm\"": "\"CIN\"",
 		"\"Opp\"": "\"@KC\"",
 		"\"DK Sal $\"": "\"$3",
 		"\"Projected Own%\"": "300\"",
-		"\"Cash Odds\"": "\"3.0%\"",
+		"\"Cash Odds\"": "\"0.5%\"",
 		"\"GPP Odds\"": "\"25%\"",
 		"\"Implied Own%\"": "\"1%\"",
 		"\"DK LEV\"": "\"3%\""
+	},
+	{
+		"\"Pos\"": "\"WR\"",
+		"\"Player\"": "\"Brandon Johnson\"",
+		"\"Tm\"": "\"DEN\"",
+		"\"Opp\"": "\"LAC\"",
+		"\"DK Sal $\"": "\"$3",
+		"\"Projected Own%\"": "300\"",
+		"\"Cash Odds\"": "\"0.5%\"",
+		"\"GPP Odds\"": "\"21%\"",
+		"\"Implied Own%\"": "\"1%\"",
+		"\"DK LEV\"": "\"2%\""
+	},
+	{
+		"\"Pos\"": "\"WR\"",
+		"\"Player\"": "\"Nelson Agholor\"",
+		"\"Tm\"": "\"BAL\"",
+		"\"Opp\"": "\"MIA\"",
+		"\"DK Sal $\"": "\"$3",
+		"\"Projected Own%\"": "300\"",
+		"\"Cash Odds\"": "\"0.5%\"",
+		"\"GPP Odds\"": "\"16%\"",
+		"\"Implied Own%\"": "\"1%\"",
+		"\"DK LEV\"": "\"1%\""
+	},
+	{
+		"\"Pos\"": "\"WR\"",
+		"\"Player\"": "\"Braxton Berrios\"",
+		"\"Tm\"": "\"MIA\"",
+		"\"Opp\"": "\"@BAL\"",
+		"\"DK Sal $\"": "\"$3",
+		"\"Projected Own%\"": "300\"",
+		"\"Cash Odds\"": "\"0.5%\"",
+		"\"GPP Odds\"": "\"14%\"",
+		"\"Implied Own%\"": "\"0%\"",
+		"\"DK LEV\"": "\"1%\""
 	},
 	{
 		"\"Pos\"": "\"DEF\"",
@@ -2245,6 +2257,18 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 	},
 	{
 		"\"Pos\"": "\"WR\"",
+		"\"Player\"": "\"Tre Tucker\"",
+		"\"Tm\"": "\"LV\"",
+		"\"Opp\"": "\"@IND\"",
+		"\"DK Sal $\"": "\"$3",
+		"\"Projected Own%\"": "300\"",
+		"\"Cash Odds\"": "\"3.0%\"",
+		"\"GPP Odds\"": "\"22%\"",
+		"\"Implied Own%\"": "\"1%\"",
+		"\"DK LEV\"": "\"2%\""
+	},
+	{
+		"\"Pos\"": "\"WR\"",
 		"\"Player\"": "\"Trey Palmer\"",
 		"\"Tm\"": "\"TB\"",
 		"\"Opp\"": "\"NO\"",
@@ -2254,18 +2278,6 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"GPP Odds\"": "\"10%\"",
 		"\"Implied Own%\"": "\"0%\"",
 		"\"DK LEV\"": "\"0%\""
-	},
-	{
-		"\"Pos\"": "\"WR\"",
-		"\"Player\"": "\"Brandon Johnson\"",
-		"\"Tm\"": "\"DEN\"",
-		"\"Opp\"": "\"LAC\"",
-		"\"DK Sal $\"": "\"$3",
-		"\"Projected Own%\"": "300\"",
-		"\"Cash Odds\"": "\"3.0%\"",
-		"\"GPP Odds\"": "\"19%\"",
-		"\"Implied Own%\"": "\"1%\"",
-		"\"DK LEV\"": "\"1%\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -2281,18 +2293,6 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 	},
 	{
 		"\"Pos\"": "\"WR\"",
-		"\"Player\"": "\"Nelson Agholor\"",
-		"\"Tm\"": "\"BAL\"",
-		"\"Opp\"": "\"MIA\"",
-		"\"DK Sal $\"": "\"$3",
-		"\"Projected Own%\"": "300\"",
-		"\"Cash Odds\"": "\"3.0%\"",
-		"\"GPP Odds\"": "\"16%\"",
-		"\"Implied Own%\"": "\"1%\"",
-		"\"DK LEV\"": "\"1%\""
-	},
-	{
-		"\"Pos\"": "\"WR\"",
 		"\"Player\"": "\"Trenton Irwin\"",
 		"\"Tm\"": "\"CIN\"",
 		"\"Opp\"": "\"@KC\"",
@@ -2300,18 +2300,6 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Projected Own%\"": "300\"",
 		"\"Cash Odds\"": "\"0.5%\"",
 		"\"GPP Odds\"": "\"8%\"",
-		"\"Implied Own%\"": "\"0%\"",
-		"\"DK LEV\"": "\"0%\""
-	},
-	{
-		"\"Pos\"": "\"WR\"",
-		"\"Player\"": "\"Braxton Berrios\"",
-		"\"Tm\"": "\"MIA\"",
-		"\"Opp\"": "\"@BAL\"",
-		"\"DK Sal $\"": "\"$3",
-		"\"Projected Own%\"": "300\"",
-		"\"Cash Odds\"": "\"0.5%\"",
-		"\"GPP Odds\"": "\"6%\"",
 		"\"Implied Own%\"": "\"0%\"",
 		"\"DK LEV\"": "\"0%\""
 	},
@@ -2340,6 +2328,30 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK LEV\"": "\"0%\""
 	},
 	{
+		"\"Pos\"": "\"DEF\"",
+		"\"Player\"": "\"Tennessee Titans\"",
+		"\"Tm\"": "\"TEN\"",
+		"\"Opp\"": "\"@HOU\"",
+		"\"DK Sal $\"": "\"$3",
+		"\"Projected Own%\"": "200\"",
+		"\"Cash Odds\"": "\"0.5%\"",
+		"\"GPP Odds\"": "\"13%\"",
+		"\"Implied Own%\"": "\"1%\"",
+		"\"DK LEV\"": "\"2%\""
+	},
+	{
+		"\"Pos\"": "\"WR\"",
+		"\"Player\"": "\"Andrei Iosivas\"",
+		"\"Tm\"": "\"CIN\"",
+		"\"Opp\"": "\"@KC\"",
+		"\"DK Sal $\"": "\"$3",
+		"\"Projected Own%\"": "200\"",
+		"\"Cash Odds\"": "\"0.5%\"",
+		"\"GPP Odds\"": "\"14%\"",
+		"\"Implied Own%\"": "\"0%\"",
+		"\"DK LEV\"": "\"1%\""
+	},
+	{
 		"\"Pos\"": "\"WR\"",
 		"\"Player\"": "\"Alex Erickson\"",
 		"\"Tm\"": "\"LAC\"",
@@ -2349,7 +2361,19 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Cash Odds\"": "\"0.5%\"",
 		"\"GPP Odds\"": "\"14%\"",
 		"\"Implied Own%\"": "\"0%\"",
-		"\"DK LEV\"": "\"1%\""
+		"\"DK LEV\"": "\"0%\""
+	},
+	{
+		"\"Pos\"": "\"WR\"",
+		"\"Player\"": "\"Allen Robinson\"",
+		"\"Tm\"": "\"PIT\"",
+		"\"Opp\"": "\"@SEA\"",
+		"\"DK Sal $\"": "\"$3",
+		"\"Projected Own%\"": "200\"",
+		"\"Cash Odds\"": "\"0.5%\"",
+		"\"GPP Odds\"": "\"12%\"",
+		"\"Implied Own%\"": "\"0%\"",
+		"\"DK LEV\"": "\"0%\""
 	},
 	{
 		"\"Pos\"": "\"DEF\"",
@@ -2364,22 +2388,10 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK LEV\"": "\"2%\""
 	},
 	{
-		"\"Pos\"": "\"DEF\"",
-		"\"Player\"": "\"Tennessee Titans\"",
-		"\"Tm\"": "\"TEN\"",
-		"\"Opp\"": "\"@HOU\"",
-		"\"DK Sal $\"": "\"$3",
-		"\"Projected Own%\"": "200\"",
-		"\"Cash Odds\"": "\"3.0%\"",
-		"\"GPP Odds\"": "\"13%\"",
-		"\"Implied Own%\"": "\"1%\"",
-		"\"DK LEV\"": "\"2%\""
-	},
-	{
 		"\"Pos\"": "\"WR\"",
-		"\"Player\"": "\"Allen Robinson\"",
-		"\"Tm\"": "\"PIT\"",
-		"\"Opp\"": "\"@SEA\"",
+		"\"Player\"": "\"D.J. Montgomery\"",
+		"\"Tm\"": "\"IND\"",
+		"\"Opp\"": "\"LV\"",
 		"\"DK Sal $\"": "\"$3",
 		"\"Projected Own%\"": "200\"",
 		"\"Cash Odds\"": "\"0.5%\"",
@@ -2389,15 +2401,15 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 	},
 	{
 		"\"Pos\"": "\"WR\"",
-		"\"Player\"": "\"Andrei Iosivas\"",
-		"\"Tm\"": "\"CIN\"",
-		"\"Opp\"": "\"@KC\"",
+		"\"Player\"": "\"Tyler Scott\"",
+		"\"Tm\"": "\"CHI\"",
+		"\"Opp\"": "\"ATL\"",
 		"\"DK Sal $\"": "\"$3",
 		"\"Projected Own%\"": "200\"",
-		"\"Cash Odds\"": "\"3.0%\"",
-		"\"GPP Odds\"": "\"14%\"",
+		"\"Cash Odds\"": "\"0.5%\"",
+		"\"GPP Odds\"": "\"6%\"",
 		"\"Implied Own%\"": "\"0%\"",
-		"\"DK LEV\"": "\"1%\""
+		"\"DK LEV\"": "\"0%\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -2425,33 +2437,9 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 	},
 	{
 		"\"Pos\"": "\"WR\"",
-		"\"Player\"": "\"D.J. Montgomery\"",
-		"\"Tm\"": "\"IND\"",
-		"\"Opp\"": "\"LV\"",
-		"\"DK Sal $\"": "\"$3",
-		"\"Projected Own%\"": "200\"",
-		"\"Cash Odds\"": "\"3.0%\"",
-		"\"GPP Odds\"": "\"8%\"",
-		"\"Implied Own%\"": "\"0%\"",
-		"\"DK LEV\"": "\"0%\""
-	},
-	{
-		"\"Pos\"": "\"WR\"",
 		"\"Player\"": "\"Jake Bobo\"",
 		"\"Tm\"": "\"SEA\"",
 		"\"Opp\"": "\"PIT\"",
-		"\"DK Sal $\"": "\"$3",
-		"\"Projected Own%\"": "200\"",
-		"\"Cash Odds\"": "\"0.5%\"",
-		"\"GPP Odds\"": "\"2%\"",
-		"\"Implied Own%\"": "\"0%\"",
-		"\"DK LEV\"": "\"0%\""
-	},
-	{
-		"\"Pos\"": "\"WR\"",
-		"\"Player\"": "\"Tyler Scott\"",
-		"\"Tm\"": "\"CHI\"",
-		"\"Opp\"": "\"ATL\"",
 		"\"DK Sal $\"": "\"$3",
 		"\"Projected Own%\"": "200\"",
 		"\"Cash Odds\"": "\"0.5%\"",
@@ -2478,22 +2466,10 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Opp\"": "\"NO\"",
 		"\"DK Sal $\"": "\"$3",
 		"\"Projected Own%\"": "100\"",
-		"\"Cash Odds\"": "\"7.5%\"",
+		"\"Cash Odds\"": "\"3.0%\"",
 		"\"GPP Odds\"": "\"26%\"",
 		"\"Implied Own%\"": "\"2%\"",
 		"\"DK LEV\"": "\"4%\""
-	},
-	{
-		"\"Pos\"": "\"WR\"",
-		"\"Player\"": "\"Hunter Renfrow\"",
-		"\"Tm\"": "\"LV\"",
-		"\"Opp\"": "\"@IND\"",
-		"\"DK Sal $\"": "\"$3",
-		"\"Projected Own%\"": "100\"",
-		"\"Cash Odds\"": "\"0.5%\"",
-		"\"GPP Odds\"": "\"8%\"",
-		"\"Implied Own%\"": "\"0%\"",
-		"\"DK LEV\"": "\"0%\""
 	},
 	{
 		"\"Pos\"": "\"DEF\"",
@@ -2509,13 +2485,13 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 	},
 	{
 		"\"Pos\"": "\"WR\"",
-		"\"Player\"": "\"Lil'Jordan Humphrey\"",
-		"\"Tm\"": "\"DEN\"",
-		"\"Opp\"": "\"LAC\"",
+		"\"Player\"": "\"Hunter Renfrow\"",
+		"\"Tm\"": "\"LV\"",
+		"\"Opp\"": "\"@IND\"",
 		"\"DK Sal $\"": "\"$3",
 		"\"Projected Own%\"": "100\"",
 		"\"Cash Odds\"": "\"0.5%\"",
-		"\"GPP Odds\"": "\"4%\"",
+		"\"GPP Odds\"": "\"8%\"",
 		"\"Implied Own%\"": "\"0%\"",
 		"\"DK LEV\"": "\"0%\""
 	},
@@ -2526,8 +2502,20 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Opp\"": "\"CIN\"",
 		"\"DK Sal $\"": "\"$3",
 		"\"Projected Own%\"": "100\"",
-		"\"Cash Odds\"": "\"3.0%\"",
+		"\"Cash Odds\"": "\"0.5%\"",
 		"\"GPP Odds\"": "\"7%\"",
+		"\"Implied Own%\"": "\"0%\"",
+		"\"DK LEV\"": "\"0%\""
+	},
+	{
+		"\"Pos\"": "\"WR\"",
+		"\"Player\"": "\"Calvin Austin III\"",
+		"\"Tm\"": "\"PIT\"",
+		"\"Opp\"": "\"@SEA\"",
+		"\"DK Sal $\"": "\"$3",
+		"\"Projected Own%\"": "100\"",
+		"\"Cash Odds\"": "\"0.5%\"",
+		"\"GPP Odds\"": "\"3%\"",
 		"\"Implied Own%\"": "\"0%\"",
 		"\"DK LEV\"": "\"0%\""
 	},
@@ -2545,27 +2533,27 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 	},
 	{
 		"\"Pos\"": "\"WR\"",
-		"\"Player\"": "\"Calvin Austin III\"",
-		"\"Tm\"": "\"PIT\"",
-		"\"Opp\"": "\"@SEA\"",
+		"\"Player\"": "\"Lil'Jordan Humphrey\"",
+		"\"Tm\"": "\"DEN\"",
+		"\"Opp\"": "\"LAC\"",
 		"\"DK Sal $\"": "\"$3",
 		"\"Projected Own%\"": "100\"",
 		"\"Cash Odds\"": "\"0.5%\"",
-		"\"GPP Odds\"": "\"2%\"",
+		"\"GPP Odds\"": "\"3%\"",
 		"\"Implied Own%\"": "\"0%\"",
 		"\"DK LEV\"": "\"0%\""
 	},
 	{
-		"\"Pos\"": "\"DEF\"",
-		"\"Player\"": "\"Las Vegas Raiders\"",
-		"\"Tm\"": "\"LV\"",
-		"\"Opp\"": "\"@IND\"",
+		"\"Pos\"": "\"TE\"",
+		"\"Player\"": "\"Jonnu Smith\"",
+		"\"Tm\"": "\"ATL\"",
+		"\"Opp\"": "\"@CHI\"",
 		"\"DK Sal $\"": "\"$3",
 		"\"Projected Own%\"": "000\"",
 		"\"Cash Odds\"": "\"0.5%\"",
-		"\"GPP Odds\"": "\"17%\"",
+		"\"GPP Odds\"": "\"21%\"",
 		"\"Implied Own%\"": "\"1%\"",
-		"\"DK LEV\"": "\"3%\""
+		"\"DK LEV\"": "\"2%\""
 	},
 	{
 		"\"Pos\"": "\"TE\"",
@@ -2589,19 +2577,19 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Cash Odds\"": "\"12.5%\"",
 		"\"GPP Odds\"": "\"31%\"",
 		"\"Implied Own%\"": "\"7%\"",
-		"\"DK LEV\"": "\"12%\""
+		"\"DK LEV\"": "\"13%\""
 	},
 	{
-		"\"Pos\"": "\"TE\"",
-		"\"Player\"": "\"Jonnu Smith\"",
-		"\"Tm\"": "\"ATL\"",
-		"\"Opp\"": "\"@CHI\"",
+		"\"Pos\"": "\"DEF\"",
+		"\"Player\"": "\"Las Vegas Raiders\"",
+		"\"Tm\"": "\"LV\"",
+		"\"Opp\"": "\"@IND\"",
 		"\"DK Sal $\"": "\"$3",
 		"\"Projected Own%\"": "000\"",
 		"\"Cash Odds\"": "\"3.0%\"",
-		"\"GPP Odds\"": "\"21%\"",
+		"\"GPP Odds\"": "\"17%\"",
 		"\"Implied Own%\"": "\"1%\"",
-		"\"DK LEV\"": "\"2%\""
+		"\"DK LEV\"": "\"3%\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -2617,9 +2605,9 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 	},
 	{
 		"\"Pos\"": "\"WR\"",
-		"\"Player\"": "\"Richie James\"",
-		"\"Tm\"": "\"KC\"",
-		"\"Opp\"": "\"CIN\"",
+		"\"Player\"": "\"River Cracraft\"",
+		"\"Tm\"": "\"MIA\"",
+		"\"Opp\"": "\"@BAL\"",
 		"\"DK Sal $\"": "\"$3",
 		"\"Projected Own%\"": "000\"",
 		"\"Cash Odds\"": "\"0.5%\"",
@@ -2689,9 +2677,45 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 	},
 	{
 		"\"Pos\"": "\"WR\"",
+		"\"Player\"": "\"Equanimeous St. Brown\"",
+		"\"Tm\"": "\"CHI\"",
+		"\"Opp\"": "\"ATL\"",
+		"\"DK Sal $\"": "\"$3",
+		"\"Projected Own%\"": "000\"",
+		"\"Cash Odds\"": "\"0.5%\"",
+		"\"GPP Odds\"": "\"6%\"",
+		"\"Implied Own%\"": "\"0%\"",
+		"\"DK LEV\"": "\"0%\""
+	},
+	{
+		"\"Pos\"": "\"WR\"",
+		"\"Player\"": "\"Richie James\"",
+		"\"Tm\"": "\"KC\"",
+		"\"Opp\"": "\"CIN\"",
+		"\"DK Sal $\"": "\"$3",
+		"\"Projected Own%\"": "000\"",
+		"\"Cash Odds\"": "\"0.5%\"",
+		"\"GPP Odds\"": "\"5%\"",
+		"\"Implied Own%\"": "\"0%\"",
+		"\"DK LEV\"": "\"0%\""
+	},
+	{
+		"\"Pos\"": "\"WR\"",
 		"\"Player\"": "\"Tyquan Thornton\"",
 		"\"Tm\"": "\"NE\"",
 		"\"Opp\"": "\"@BUF\"",
+		"\"DK Sal $\"": "\"$3",
+		"\"Projected Own%\"": "000\"",
+		"\"Cash Odds\"": "\"0.5%\"",
+		"\"GPP Odds\"": "\"4%\"",
+		"\"Implied Own%\"": "\"0%\"",
+		"\"DK LEV\"": "\"0%\""
+	},
+	{
+		"\"Pos\"": "\"WR\"",
+		"\"Player\"": "\"Mecole Hardman\"",
+		"\"Tm\"": "\"KC\"",
+		"\"Opp\"": "\"CIN\"",
 		"\"DK Sal $\"": "\"$3",
 		"\"Projected Own%\"": "000\"",
 		"\"Cash Odds\"": "\"0.5%\"",
@@ -2724,10 +2748,10 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK LEV\"": "\"0%\""
 	},
 	{
-		"\"Pos\"": "\"WR\"",
-		"\"Player\"": "\"Dyami Brown\"",
-		"\"Tm\"": "\"WAS\"",
-		"\"Opp\"": "\"SF\"",
+		"\"Pos\"": "\"TE\"",
+		"\"Player\"": "\"Charlie Woerner\"",
+		"\"Tm\"": "\"SF\"",
+		"\"Opp\"": "\"@WAS\"",
 		"\"DK Sal $\"": "\"$3",
 		"\"Projected Own%\"": "000\"",
 		"\"Cash Odds\"": "\"0.5%\"",
@@ -2737,9 +2761,9 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 	},
 	{
 		"\"Pos\"": "\"WR\"",
-		"\"Player\"": "\"John Metchie\"",
-		"\"Tm\"": "\"HOU\"",
-		"\"Opp\"": "\"TEN\"",
+		"\"Player\"": "\"Dyami Brown\"",
+		"\"Tm\"": "\"WAS\"",
+		"\"Opp\"": "\"SF\"",
 		"\"DK Sal $\"": "\"$3",
 		"\"Projected Own%\"": "000\"",
 		"\"Cash Odds\"": "\"0.5%\"",
@@ -2773,9 +2797,9 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 	},
 	{
 		"\"Pos\"": "\"WR\"",
-		"\"Player\"": "\"Xavier Hutchinson\"",
-		"\"Tm\"": "\"HOU\"",
-		"\"Opp\"": "\"TEN\"",
+		"\"Player\"": "\"Julio Jones\"",
+		"\"Tm\"": "\"PHI\"",
+		"\"Opp\"": "\"ARI\"",
 		"\"DK Sal $\"": "\"$3",
 		"\"Projected Own%\"": "000\"",
 		"\"Cash Odds\"": "\"0.5%\"",
@@ -2785,21 +2809,9 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 	},
 	{
 		"\"Pos\"": "\"WR\"",
-		"\"Player\"": "\"Julio Jones\"",
-		"\"Tm\"": "\"PHI\"",
-		"\"Opp\"": "\"ARI\"",
-		"\"DK Sal $\"": "\"$3",
-		"\"Projected Own%\"": "000\"",
-		"\"Cash Odds\"": "\"0.5%\"",
-		"\"GPP Odds\"": "\"2%\"",
-		"\"Implied Own%\"": "\"0%\"",
-		"\"DK LEV\"": "\"0%\""
-	},
-	{
-		"\"Pos\"": "\"WR\"",
-		"\"Player\"": "\"Justyn Ross\"",
-		"\"Tm\"": "\"KC\"",
-		"\"Opp\"": "\"CIN\"",
+		"\"Player\"": "\"John Metchie\"",
+		"\"Tm\"": "\"HOU\"",
+		"\"Opp\"": "\"TEN\"",
 		"\"DK Sal $\"": "\"$3",
 		"\"Projected Own%\"": "000\"",
 		"\"Cash Odds\"": "\"0.5%\"",
@@ -2812,6 +2824,30 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Player\"": "\"Mason Kinsey\"",
 		"\"Tm\"": "\"TEN\"",
 		"\"Opp\"": "\"@HOU\"",
+		"\"DK Sal $\"": "\"$3",
+		"\"Projected Own%\"": "000\"",
+		"\"Cash Odds\"": "\"0.5%\"",
+		"\"GPP Odds\"": "\"2%\"",
+		"\"Implied Own%\"": "\"0%\"",
+		"\"DK LEV\"": "\"0%\""
+	},
+	{
+		"\"Pos\"": "\"WR\"",
+		"\"Player\"": "\"Xavier Hutchinson\"",
+		"\"Tm\"": "\"HOU\"",
+		"\"Opp\"": "\"TEN\"",
+		"\"DK Sal $\"": "\"$3",
+		"\"Projected Own%\"": "000\"",
+		"\"Cash Odds\"": "\"0.5%\"",
+		"\"GPP Odds\"": "\"2%\"",
+		"\"Implied Own%\"": "\"0%\"",
+		"\"DK LEV\"": "\"0%\""
+	},
+	{
+		"\"Pos\"": "\"WR\"",
+		"\"Player\"": "\"Chase Claypool\"",
+		"\"Tm\"": "\"MIA\"",
+		"\"Opp\"": "\"@BAL\"",
 		"\"DK Sal $\"": "\"$3",
 		"\"Projected Own%\"": "000\"",
 		"\"Cash Odds\"": "\"0.5%\"",
@@ -2848,6 +2884,30 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Player\"": "\"Van Jefferson\"",
 		"\"Tm\"": "\"ATL\"",
 		"\"Opp\"": "\"@CHI\"",
+		"\"DK Sal $\"": "\"$3",
+		"\"Projected Own%\"": "000\"",
+		"\"Cash Odds\"": "\"0.5%\"",
+		"\"GPP Odds\"": "\"1%\"",
+		"\"Implied Own%\"": "\"0%\"",
+		"\"DK LEV\"": "\"0%\""
+	},
+	{
+		"\"Pos\"": "\"WR\"",
+		"\"Player\"": "\"Velus Jones\"",
+		"\"Tm\"": "\"CHI\"",
+		"\"Opp\"": "\"ATL\"",
+		"\"DK Sal $\"": "\"$3",
+		"\"Projected Own%\"": "000\"",
+		"\"Cash Odds\"": "\"0.5%\"",
+		"\"GPP Odds\"": "\"1%\"",
+		"\"Implied Own%\"": "\"0%\"",
+		"\"DK LEV\"": "\"0%\""
+	},
+	{
+		"\"Pos\"": "\"WR\"",
+		"\"Player\"": "\"Justyn Ross\"",
+		"\"Tm\"": "\"KC\"",
+		"\"Opp\"": "\"CIN\"",
 		"\"DK Sal $\"": "\"$3",
 		"\"Projected Own%\"": "000\"",
 		"\"Cash Odds\"": "\"0.5%\"",
@@ -2904,6 +2964,18 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK LEV\"": "\"2%\""
 	},
 	{
+		"\"Pos\"": "\"DEF\"",
+		"\"Player\"": "\"Denver Broncos\"",
+		"\"Tm\"": "\"DEN\"",
+		"\"Opp\"": "\"LAC\"",
+		"\"DK Sal $\"": "\"$2",
+		"\"Projected Own%\"": "900\"",
+		"\"Cash Odds\"": "\"12.5%\"",
+		"\"GPP Odds\"": "\"26%\"",
+		"\"Implied Own%\"": "\"4%\"",
+		"\"DK LEV\"": "\"8%\""
+	},
+	{
 		"\"Pos\"": "\"TE\"",
 		"\"Player\"": "\"Adam Trautman\"",
 		"\"Tm\"": "\"DEN\"",
@@ -2926,18 +2998,6 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"GPP Odds\"": "\"10%\"",
 		"\"Implied Own%\"": "\"0%\"",
 		"\"DK LEV\"": "\"0%\""
-	},
-	{
-		"\"Pos\"": "\"DEF\"",
-		"\"Player\"": "\"Denver Broncos\"",
-		"\"Tm\"": "\"DEN\"",
-		"\"Opp\"": "\"LAC\"",
-		"\"DK Sal $\"": "\"$2",
-		"\"Projected Own%\"": "900\"",
-		"\"Cash Odds\"": "\"17.5%\"",
-		"\"GPP Odds\"": "\"26%\"",
-		"\"Implied Own%\"": "\"4%\"",
-		"\"DK LEV\"": "\"8%\""
 	},
 	{
 		"\"Pos\"": "\"DEF\"",
@@ -3000,6 +3060,18 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK LEV\"": "\"0%\""
 	},
 	{
+		"\"Pos\"": "\"DEF\"",
+		"\"Player\"": "\"Miami Dolphins\"",
+		"\"Tm\"": "\"MIA\"",
+		"\"Opp\"": "\"@BAL\"",
+		"\"DK Sal $\"": "\"$2",
+		"\"Projected Own%\"": "800\"",
+		"\"Cash Odds\"": "\"3.0%\"",
+		"\"GPP Odds\"": "\"15%\"",
+		"\"Implied Own%\"": "\"1%\"",
+		"\"DK LEV\"": "\"1%\""
+	},
+	{
 		"\"Pos\"": "\"TE\"",
 		"\"Player\"": "\"Lucas Krull\"",
 		"\"Tm\"": "\"DEN\"",
@@ -3012,18 +3084,6 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK LEV\"": "\"0%\""
 	},
 	{
-		"\"Pos\"": "\"DEF\"",
-		"\"Player\"": "\"Miami Dolphins\"",
-		"\"Tm\"": "\"MIA\"",
-		"\"Opp\"": "\"@BAL\"",
-		"\"DK Sal $\"": "\"$2",
-		"\"Projected Own%\"": "800\"",
-		"\"Cash Odds\"": "\"7.5%\"",
-		"\"GPP Odds\"": "\"15%\"",
-		"\"Implied Own%\"": "\"1%\"",
-		"\"DK LEV\"": "\"1%\""
-	},
-	{
 		"\"Pos\"": "\"TE\"",
 		"\"Player\"": "\"Davis Allen\"",
 		"\"Tm\"": "\"LAR\"",
@@ -3034,6 +3094,18 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"GPP Odds\"": "\"5%\"",
 		"\"Implied Own%\"": "\"0%\"",
 		"\"DK LEV\"": "\"0%\""
+	},
+	{
+		"\"Pos\"": "\"TE\"",
+		"\"Player\"": "\"Noah Fant\"",
+		"\"Tm\"": "\"SEA\"",
+		"\"Opp\"": "\"PIT\"",
+		"\"DK Sal $\"": "\"$2",
+		"\"Projected Own%\"": "700\"",
+		"\"Cash Odds\"": "\"0.5%\"",
+		"\"GPP Odds\"": "\"16%\"",
+		"\"Implied Own%\"": "\"0%\"",
+		"\"DK LEV\"": "\"1%\""
 	},
 	{
 		"\"Pos\"": "\"TE\"",
@@ -3054,22 +3126,10 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Opp\"": "\"@JAX\"",
 		"\"DK Sal $\"": "\"$2",
 		"\"Projected Own%\"": "700\"",
-		"\"Cash Odds\"": "\"3.0%\"",
+		"\"Cash Odds\"": "\"12.5%\"",
 		"\"GPP Odds\"": "\"17%\"",
 		"\"Implied Own%\"": "\"1%\"",
 		"\"DK LEV\"": "\"2%\""
-	},
-	{
-		"\"Pos\"": "\"TE\"",
-		"\"Player\"": "\"Noah Fant\"",
-		"\"Tm\"": "\"SEA\"",
-		"\"Opp\"": "\"PIT\"",
-		"\"DK Sal $\"": "\"$2",
-		"\"Projected Own%\"": "700\"",
-		"\"Cash Odds\"": "\"3.0%\"",
-		"\"GPP Odds\"": "\"16%\"",
-		"\"Implied Own%\"": "\"0%\"",
-		"\"DK LEV\"": "\"1%\""
 	},
 	{
 		"\"Pos\"": "\"TE\"",
@@ -3090,22 +3150,10 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Opp\"": "\"@JAX\"",
 		"\"DK Sal $\"": "\"$2",
 		"\"Projected Own%\"": "600\"",
-		"\"Cash Odds\"": "\"3.0%\"",
+		"\"Cash Odds\"": "\"0.5%\"",
 		"\"GPP Odds\"": "\"21%\"",
 		"\"Implied Own%\"": "\"1%\"",
 		"\"DK LEV\"": "\"2%\""
-	},
-	{
-		"\"Pos\"": "\"DEF\"",
-		"\"Player\"": "\"Cincinnati Bengals\"",
-		"\"Tm\"": "\"CIN\"",
-		"\"Opp\"": "\"@KC\"",
-		"\"DK Sal $\"": "\"$2",
-		"\"Projected Own%\"": "600\"",
-		"\"Cash Odds\"": "\"0.5%\"",
-		"\"GPP Odds\"": "\"10%\"",
-		"\"Implied Own%\"": "\"0%\"",
-		"\"DK LEV\"": "\"0%\""
 	},
 	{
 		"\"Pos\"": "\"TE\"",
@@ -3144,6 +3192,18 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK LEV\"": "\"0%\""
 	},
 	{
+		"\"Pos\"": "\"DEF\"",
+		"\"Player\"": "\"Cincinnati Bengals\"",
+		"\"Tm\"": "\"CIN\"",
+		"\"Opp\"": "\"@KC\"",
+		"\"DK Sal $\"": "\"$2",
+		"\"Projected Own%\"": "600\"",
+		"\"Cash Odds\"": "\"3.0%\"",
+		"\"GPP Odds\"": "\"9%\"",
+		"\"Implied Own%\"": "\"0%\"",
+		"\"DK LEV\"": "\"0%\""
+	},
+	{
 		"\"Pos\"": "\"TE\"",
 		"\"Player\"": "\"Stone Smartt\"",
 		"\"Tm\"": "\"LAC\"",
@@ -3151,7 +3211,7 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK Sal $\"": "\"$2",
 		"\"Projected Own%\"": "500\"",
 		"\"Cash Odds\"": "\"0.5%\"",
-		"\"GPP Odds\"": "\"17%\"",
+		"\"GPP Odds\"": "\"16%\"",
 		"\"Implied Own%\"": "\"0%\"",
 		"\"DK LEV\"": "\"1%\""
 	},
@@ -3187,9 +3247,9 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK Sal $\"": "\"$2",
 		"\"Projected Own%\"": "500\"",
 		"\"Cash Odds\"": "\"0.5%\"",
-		"\"GPP Odds\"": "\"14%\"",
+		"\"GPP Odds\"": "\"12%\"",
 		"\"Implied Own%\"": "\"0%\"",
-		"\"DK LEV\"": "\"1%\""
+		"\"DK LEV\"": "\"0%\""
 	},
 	{
 		"\"Pos\"": "\"TE\"",
@@ -3325,6 +3385,18 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 	},
 	{
 		"\"Pos\"": "\"TE\"",
+		"\"Player\"": "\"Grant Calcaterra\"",
+		"\"Tm\"": "\"PHI\"",
+		"\"Opp\"": "\"ARI\"",
+		"\"DK Sal $\"": "\"$2",
+		"\"Projected Own%\"": "500\"",
+		"\"Cash Odds\"": "\"0.5%\"",
+		"\"GPP Odds\"": "\"5%\"",
+		"\"Implied Own%\"": "\"0%\"",
+		"\"DK LEV\"": "\"0%\""
+	},
+	{
+		"\"Pos\"": "\"TE\"",
 		"\"Player\"": "\"Charlie Kolar\"",
 		"\"Tm\"": "\"BAL\"",
 		"\"Opp\"": "\"MIA\"",
@@ -3349,9 +3421,9 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 	},
 	{
 		"\"Pos\"": "\"TE\"",
-		"\"Player\"": "\"Payne Durham\"",
-		"\"Tm\"": "\"TB\"",
-		"\"Opp\"": "\"NO\"",
+		"\"Player\"": "\"Darnell Washington\"",
+		"\"Tm\"": "\"PIT\"",
+		"\"Opp\"": "\"@SEA\"",
 		"\"DK Sal $\"": "\"$2",
 		"\"Projected Own%\"": "500\"",
 		"\"Cash Odds\"": "\"0.5%\"",
@@ -3361,9 +3433,9 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 	},
 	{
 		"\"Pos\"": "\"TE\"",
-		"\"Player\"": "\"Darnell Washington\"",
-		"\"Tm\"": "\"PIT\"",
-		"\"Opp\"": "\"@SEA\"",
+		"\"Player\"": "\"Payne Durham\"",
+		"\"Tm\"": "\"TB\"",
+		"\"Opp\"": "\"NO\"",
 		"\"DK Sal $\"": "\"$2",
 		"\"Projected Own%\"": "500\"",
 		"\"Cash Odds\"": "\"0.5%\"",
@@ -3396,13 +3468,25 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"DK LEV\"": "\"0%\""
 	},
 	{
+		"\"Pos\"": "\"TE\"",
+		"\"Player\"": "\"Zach Gentry\"",
+		"\"Tm\"": "\"CIN\"",
+		"\"Opp\"": "\"@KC\"",
+		"\"DK Sal $\"": "\"$2",
+		"\"Projected Own%\"": "500\"",
+		"\"Cash Odds\"": "\"0.5%\"",
+		"\"GPP Odds\"": "\"3%\"",
+		"\"Implied Own%\"": "\"0%\"",
+		"\"DK LEV\"": "\"0%\""
+	},
+	{
 		"\"Pos\"": "\"DEF\"",
 		"\"Player\"": "\"Arizona Cardinals\"",
 		"\"Tm\"": "\"ARI\"",
 		"\"Opp\"": "\"@PHI\"",
 		"\"DK Sal $\"": "\"$2",
 		"\"Projected Own%\"": "400\"",
-		"\"Cash Odds\"": "\"3.0%\"",
+		"\"Cash Odds\"": "\"0.5%\"",
 		"\"GPP Odds\"": "\"2%\"",
 		"\"Implied Own%\"": "\"0%\"",
 		"\"DK LEV\"": "\"0%\""
@@ -3426,7 +3510,7 @@ const gppLeverageScoresAndProjOwnershipDraftkings = [
 		"\"Opp\"": "\"SF\"",
 		"\"DK Sal $\"": "\"$2",
 		"\"Projected Own%\"": "000\"",
-		"\"Cash Odds\"": "\"3.0%\"",
+		"\"Cash Odds\"": "\"0.5%\"",
 		"\"GPP Odds\"": "\"3%\"",
 		"\"Implied Own%\"": "\"0%\"",
 		"\"DK LEV\"": "\"0%\""
