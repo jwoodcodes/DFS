@@ -85,9 +85,12 @@ export default function UserSleeperLeagueSearch({
         // console.log(userID)
 
         //
+        const curYear = new Date().getFullYear();
+
+        // console.log(curYear)
 
         const userLeaguesres = await axios.get(
-          `https://api.sleeper.app/v1/user/${userID}/leagues/nfl/2023`
+          `https://api.sleeper.app/v1/user/${userID}/leagues/nfl/${curYear}`
         );
         // console.log(userLeaguesres.data);
         // let initialUserLeaguesArray = userLeaguesres.data
@@ -162,6 +165,9 @@ export default function UserSleeperLeagueSearch({
           let selectedLeagueRostersData = selectedLeagueRostersRes.data;
           // console.log(selectedLeagueRostersData);
 
+          let selectedLeagueDraftOrderForPreDraft = {};
+         
+
           async function getPicks() {
             const picksRes = await axios.get(
               `https://api.sleeper.app/v1/league/${selectedLeagueID}/traded_picks`
@@ -177,12 +183,36 @@ export default function UserSleeperLeagueSearch({
             // console.log(draftsRes.data[0].settings.rounds)
             numOfDraftRounds = draftsRes.data[0].settings.rounds;
             selectedLeaguesDraftStatus = draftsRes.data[0].status;
+            // console.log(selectedLeaguesDraftStatus)
+            if(selectedLeaguesDraftStatus === 'pre_draft') {
+            selectedLeagueDraftOrderForPreDraft = draftsRes.data[0].draft_order;
+            // console.log(selectedLeagueDraftOrderForPreDraft)
+            }
+            // console.log(selectedLeaguesDraftStatus)
+            // console.log(draftsRes.data[0])
+            
+
 
             selectedLeagueRostersData.forEach(team => {
               // console.log(team)
 
               let userId = team.owner_id;
               // console.log(userId)
+
+
+              if(selectedLeaguesDraftStatus === 'pre_draft') {
+                let draftPostion = 0
+              for (const key in selectedLeagueDraftOrderForPreDraft) {
+                if(key === userId) {
+                // console.log(key)
+                // console.log(selectedLeagueDraftOrderForPreDraft[key])
+                  draftPostion = selectedLeagueDraftOrderForPreDraft[key];
+                }
+              }
+              team.draftPosition = +draftPostion
+            }
+
+            // console.log(team.draftPosition)
 
               let teamPlayerIdsArray = team.players;
               let teamRosterNamesArray = [];
@@ -207,6 +237,14 @@ export default function UserSleeperLeagueSearch({
               let nextDraftYear = +(+curSeason + 1);
               let draftYearOfDraftAfterNextDraft = +(+curSeason + 2);
               let draftYearOfDraftAfterDraftAfterNext = +(+curSeason + 3);
+
+              if(selectedLeaguesDraftStatus === 'pre_draft') {
+                nextDraftYear = +(+curSeason);
+                draftYearOfDraftAfterNextDraft = +(+curSeason + 1);
+                draftYearOfDraftAfterDraftAfterNext = +(+curSeason + 2);
+                }
+
+
               let tradedPicksArray = [];
               let picksTradedForArray = [];
 
@@ -224,19 +262,57 @@ export default function UserSleeperLeagueSearch({
 
               let tempTeamPicksArray = [];
 
+
+
               team.nextDraftYearFirstArray = [
                 { name: `${nextDraftYear} Round 1` },
-              ];
+              ]; 
+
+              if(selectedLeaguesDraftStatus === 'pre_draft') {
+                let tempPickNumber = `1.${team.draftPosition}`
+                let pickNumberToUse = +tempPickNumber
+
+                team.nextDraftYearFirstArray = [
+                  { name: `${nextDraftYear} Round 1`, pickNumber: pickNumberToUse},
+                ]; 
+              }
+
+              // 
+
               team.nextDraftYearSecondsArray = [
                 { name: `${nextDraftYear} Round 2` },
               ];
+
+              if(selectedLeaguesDraftStatus === 'pre_draft') {
+                let tempPickNumber = `2.${team.draftPosition}`
+                let pickNumberToUse = +tempPickNumber
+
+                team.nextDraftYearSecondsArray = [
+                  { name: `${nextDraftYear} Round 2`, pickNumber: pickNumberToUse},
+                ]; 
+              }
+
+              //
+
               team.nextDraftYearThirdsArray = [
                 { name: `${nextDraftYear} Round 3` },
               ];
 
+              if(selectedLeaguesDraftStatus === 'pre_draft') {
+                let tempPickNumber = `3.${team.draftPosition}`
+                let pickNumberToUse = +tempPickNumber
+
+                team.nextDraftYearThirdsArray = [
+                  { name: `${nextDraftYear} Round 3`, pickNumber: pickNumberToUse},
+                ]; 
+              }
+
+              //
+
               team.draftAfterNextFirstArray = [
                 { name: `${draftYearOfDraftAfterNextDraft} Round 1` },
               ];
+
               team.draftAfterNextSecondsArray = [
                 { name: `${draftYearOfDraftAfterNextDraft} Round 2` },
               ];
@@ -265,14 +341,27 @@ export default function UserSleeperLeagueSearch({
                 // console.log(team.roster_id)
                 let pickYear = +picks.season;
                 let pickRound = +picks.round;
+                
+                
+              
+                
+                
                 let nextDraftYear = +(+curSeason + 1);
                 let twoYearsAwayDraftYear = +(+curSeason + 2);
                 let threeYearsAwayDraftYear = +(+curSeason + 3);
+                
+                if(selectedLeaguesDraftStatus === 'pre_draft') {
+                  nextDraftYear = +(+curSeason);
+                  twoYearsAwayDraftYear = +(+curSeason + 1);
+                  threeYearsAwayDraftYear = +(+curSeason + 2);
+                  }
+
+                  // console.log(nextDraftYear)
 
                 //
                 //
-                if (selectedLeaguesDraftStatus === 'complete') {
-                  if (+pickYear !== curSeason) {
+                // if (selectedLeaguesDraftStatus === 'complete') {
+                //   if (+pickYear !== curSeason) {
                     // adding picks team has that aren't their orginal picks
 
                     if (team.roster_id === picks.owner_id) {
@@ -287,6 +376,7 @@ export default function UserSleeperLeagueSearch({
                     // console.log(picksTradedForArray)
                     //
                     //
+                    // console.log(team.draftPosition)
 
                     if (team.roster_id === picks.roster_id) {
                       if (pickYear === nextDraftYear) {
@@ -296,10 +386,11 @@ export default function UserSleeperLeagueSearch({
                           team.nextDraftYearFirstArray = [];
                           if (picks.roster_id === picks.owner_id) {
                             team.nextDraftYearFirstArray = [
-                              { name: `${nextDraftYear} Round 1` },
+                              { name: `${nextDraftYear} Round 1`, test: 1},
                             ];
                           }
                         }
+                        
                         // if team has their own next draft seconds
                         if (picks.round === 2) {
                           team.nextDraftYearSecondsArray = [];
@@ -517,8 +608,8 @@ export default function UserSleeperLeagueSearch({
                         }
                       }
                     }
-                  } //if(+pickYear !== curSeason) {
-                } //if(selectedLeaguesDraftStatus === 'complete') {
+                  // } //if(+pickYear !== curSeason) {
+                // } //if(selectedLeaguesDraftStatus === 'complete') {
 
                 team.picksTradedForArray = picksTradedForArray;
               }); //testpicks.forEach((picks) => {
@@ -527,15 +618,17 @@ export default function UserSleeperLeagueSearch({
                 ...team.nextDraftYearFirstArray,
                 ...tempCurYearFirstPicksArray,
               ];
+              // console.log(team.nextDraftYearFirstArray)
               team.nextDraftYearSecondsArray = [
                 ...team.nextDraftYearSecondsArray,
                 ...tempCurYearSecondsPicksArray,
               ];
+              // console.log(team.nextDraftYearSecondsArray)
               team.nextDraftYearThirdsArray = [
                 ...team.nextDraftYearThirdsArray,
                 ...tempCurYearThirdsPicksArray,
               ];
-
+              // console.log(team.nextDraftYearThirdsArray)
               team.draftAfterNextFirstArray = [
                 ...team.draftAfterNextFirstArray,
                 ...tempNextYearFirstPicksArray,
