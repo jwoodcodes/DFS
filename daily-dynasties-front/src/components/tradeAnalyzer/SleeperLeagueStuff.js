@@ -98,6 +98,7 @@ export default function SleeperLeagueStuff({
           pick.RVSScore = player.PNODVScore;
           pick.marketValue = player.marketValue;
           pick.myValue = player.myValue;
+          
         }
       });
     });
