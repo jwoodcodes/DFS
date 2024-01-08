@@ -157,6 +157,9 @@ export default function UserSleeperLeagueSearch({
         let selectedLeagueID = league.league_id;
         // console.log(selectedLeagueID)
 
+        let selectedLeagueDraftOrderForPreDraft = {};
+        let ownerIDWithDraftPostionForPicksPreDraftArray = []
+
         async function getRostersOfSelectedLeague() {
           const selectedLeagueRostersRes = await axios.get(
             `https://api.sleeper.app/v1/league/${selectedLeagueID}/rosters`
@@ -165,7 +168,39 @@ export default function UserSleeperLeagueSearch({
           let selectedLeagueRostersData = selectedLeagueRostersRes.data;
           // console.log(selectedLeagueRostersData);
 
-          let selectedLeagueDraftOrderForPreDraft = {};
+          //
+
+          const draftsRes = await axios.get(
+            `https://api.sleeper.app/v1/league/${selectedLeagueID}/drafts`
+          );
+
+          selectedLeaguesDraftStatus = draftsRes.data[0].status;
+            // console.log(selectedLeaguesDraftStatus)
+            if(selectedLeaguesDraftStatus === 'pre_draft') {
+            selectedLeagueDraftOrderForPreDraft = draftsRes.data[0].draft_order;
+            // console.log(selectedLeagueDraftOrderForPreDraft)
+            }
+
+            selectedLeagueRostersData.forEach(team => {
+              // console.log(team)
+
+              let userId = team.owner_id;
+              // console.log(userId)
+              let rosterID = team.roster_id
+
+
+              
+                let draftPostion = 0
+              for (const key in selectedLeagueDraftOrderForPreDraft) {
+                if(key === userId) {
+                // console.log(key)
+                // console.log(selectedLeagueDraftOrderForPreDraft[key])
+                  draftPostion = selectedLeagueDraftOrderForPreDraft[key];
+                  ownerIDWithDraftPostionForPicksPreDraftArray.push({rosterID: rosterID, draftPositionForTheirPicks: draftPostion})
+                }
+              }
+             
+            })
          
 
           async function getPicks() {
@@ -191,13 +226,14 @@ export default function UserSleeperLeagueSearch({
             // console.log(selectedLeaguesDraftStatus)
             // console.log(draftsRes.data[0])
             
-
+            // let ownerIDWithDraftPostionForPicksPreDraftArray = []
 
             selectedLeagueRostersData.forEach(team => {
               // console.log(team)
 
               let userId = team.owner_id;
               // console.log(userId)
+              let rosterID = team.roster_id
 
 
               if(selectedLeaguesDraftStatus === 'pre_draft') {
@@ -207,12 +243,14 @@ export default function UserSleeperLeagueSearch({
                 // console.log(key)
                 // console.log(selectedLeagueDraftOrderForPreDraft[key])
                   draftPostion = selectedLeagueDraftOrderForPreDraft[key];
+                  // ownerIDWithDraftPostionForPicksPreDraftArray.push({rosterID: rosterID, draftPositionForTheirPicks: draftPostion})
                 }
               }
               team.draftPosition = +draftPostion
             }
 
             // console.log(team.draftPosition)
+            // console.log(ownerIDWithDraftPostionForPicksPreDraftArray)
 
               let teamPlayerIdsArray = team.players;
               let teamRosterNamesArray = [];
@@ -270,6 +308,28 @@ export default function UserSleeperLeagueSearch({
 
               if(selectedLeaguesDraftStatus === 'pre_draft') {
                 let tempPickNumber = `1.${team.draftPosition}`
+                if(team.draftPosition === 10) {
+                   tempPickNumber = '1.10'
+                }
+                if(team.draftPosition === 11) {
+                  tempPickNumber = '1.11'
+               }
+               if(team.draftPosition === 12) {
+                tempPickNumber = '1.12'
+                }
+                if(team.draftPosition === 13) {
+                tempPickNumber = '1.13'
+                }
+                if(team.draftPosition === 14) {
+                tempPickNumber = '1.14'
+                }
+                if(team.draftPosition === 15) {
+                tempPickNumber = '1.15'
+                }
+                if(team.draftPosition === 16) {
+                tempPickNumber = '1.16'
+                }
+
                 let pickNumberToUse = +tempPickNumber
 
                 team.nextDraftYearFirstArray = [
@@ -285,6 +345,28 @@ export default function UserSleeperLeagueSearch({
 
               if(selectedLeaguesDraftStatus === 'pre_draft') {
                 let tempPickNumber = `2.${team.draftPosition}`
+                if(team.draftPosition === 10) {
+                  tempPickNumber = '2.10'
+               }
+               if(team.draftPosition === 11) {
+                 tempPickNumber = '2.11'
+                }
+                if(team.draftPosition === 12) {
+                 tempPickNumber = '2.12'
+               }
+                if(team.draftPosition === 13) {
+                tempPickNumber = '2.13'
+                }
+              if(team.draftPosition === 14) {
+              tempPickNumber = '2.14'
+              }
+              if(team.draftPosition === 15) {
+               tempPickNumber = '2.15'
+              }
+              if(team.draftPosition === 16) {
+              tempPickNumber = '2.16'
+              }
+
                 let pickNumberToUse = +tempPickNumber
 
                 team.nextDraftYearSecondsArray = [
@@ -300,6 +382,27 @@ export default function UserSleeperLeagueSearch({
 
               if(selectedLeaguesDraftStatus === 'pre_draft') {
                 let tempPickNumber = `3.${team.draftPosition}`
+                if(team.draftPosition === 10) {
+                  tempPickNumber = '3.10'
+               }
+               if(team.draftPosition === 11) {
+                 tempPickNumber = '3.11'
+                }
+                if(team.draftPosition === 12) {
+               tempPickNumber = '3.12'
+                }
+                if(team.draftPosition === 13) {
+                tempPickNumber = '3.13'
+                }
+                if(team.draftPosition === 14) {
+                tempPickNumber = '3.14'
+                }
+                if(team.draftPosition === 15) {
+                tempPickNumber = '3.15'
+                }
+                if(team.draftPosition === 16) {
+                 tempPickNumber = '3.16'
+                }
                 let pickNumberToUse = +tempPickNumber
 
                 team.nextDraftYearThirdsArray = [
@@ -499,33 +602,121 @@ export default function UserSleeperLeagueSearch({
                             if (pickRound === 1) {
                               // console.log(picks)
                               if (picks.roster_id !== picks.owner_id) {
-                                // console.log(picks, team.roster_id)
+                                // console.log(picks)
+                                // console.log(ownerIDWithDraftPostionForPicksPreDraftArray)
+                                // console.log(picks, team.roster_id, team.draftPosition)
+
+                                if(selectedLeaguesDraftStatus === 'pre_draft') {
+                                  // console.log(picks)
+                                let picksPickNumber = 0
+                                ownerIDWithDraftPostionForPicksPreDraftArray.forEach((pickForHere) => {
+                                  // console.log(picks)
+                                  // console.log(pickForHere)
+                                  // console.log(picks, picks.roster_id, pickForHere.rosterID)
+                                  if(picks.roster_id === pickForHere.rosterID) {
+                                    // console.log(picks, pickForHere.draftPositionForTheirPicks)
+                                    picksPickNumber = pickForHere.draftPositionForTheirPicks
+                                  }
+                                })
+
+                                  tempCurYearFirstPicksArray.push({
+                                    name: `${pickYear} Round ${pickRound}`,
+                                    data: picks,
+                                    pickNumber: `1.${picksPickNumber}`
+                                  });
+                                
+                              }
+
+                              if(selectedLeaguesDraftStatus !== 'pre_draft') {
                                 tempCurYearFirstPicksArray.push({
                                   name: `${pickYear} Round ${pickRound}`,
                                   data: picks,
+                                 
                                 });
                               }
+                              }
                             }
+
+                            //
                             // next draft seconds
                             if (pickRound === 2) {
                               // console.log(picks)
                               if (picks.roster_id !== picks.owner_id) {
                                 // console.log(picks, team.roster_id)
-                                tempCurYearSecondsPicksArray.push({
+
+                                if(selectedLeaguesDraftStatus === 'pre_draft') {
+                                  // console.log(picks)
+                                let picksPickNumber = 0
+                                ownerIDWithDraftPostionForPicksPreDraftArray.forEach((pickForHere) => {
+                                  // console.log(picks)
+                                  // console.log(pickForHere)
+                                  // console.log(picks, picks.roster_id, pickForHere.rosterID)
+                                  if(picks.roster_id === pickForHere.rosterID) {
+                                    // console.log(picks, pickForHere.draftPositionForTheirPicks)
+                                    picksPickNumber = pickForHere.draftPositionForTheirPicks
+                                  }
+                                })
+
+                                  tempCurYearFirstPicksArray.push({
+                                    name: `${pickYear} Round ${pickRound}`,
+                                    data: picks,
+                                    pickNumber: `2.${picksPickNumber}`
+                                  });
+                                
+                              }
+
+                              if(selectedLeaguesDraftStatus !== 'pre_draft') {
+                                tempCurYearFirstPicksArray.push({
                                   name: `${pickYear} Round ${pickRound}`,
                                   data: picks,
+                                 
                                 });
+                              }
+
+
+                                
                               }
                             }
                             // next draft thirds
                             if (pickRound === 3) {
                               // console.log(picks)
+
+                              
+
                               if (picks.roster_id !== picks.owner_id) {
-                                // console.log(picks, team.roster_id)
-                                tempCurYearThirdsPicksArray.push({
+
+
+                                if(selectedLeaguesDraftStatus === 'pre_draft') {
+                                  // console.log(picks)
+                                let picksPickNumber = 0
+                                ownerIDWithDraftPostionForPicksPreDraftArray.forEach((pickForHere) => {
+                                  // console.log(picks)
+                                  // console.log(pickForHere)
+                                  // console.log(picks, picks.roster_id, pickForHere.rosterID)
+                                  if(picks.roster_id === pickForHere.rosterID) {
+                                    // console.log(picks, pickForHere.draftPositionForTheirPicks)
+                                    picksPickNumber = pickForHere.draftPositionForTheirPicks
+                                  }
+                                })
+
+                                  tempCurYearFirstPicksArray.push({
+                                    name: `${pickYear} Round ${pickRound}`,
+                                    data: picks,
+                                    pickNumber: `3.${picksPickNumber}`
+                                  });
+                                
+                              }
+
+                              if(selectedLeaguesDraftStatus !== 'pre_draft') {
+                                tempCurYearFirstPicksArray.push({
                                   name: `${pickYear} Round ${pickRound}`,
                                   data: picks,
+                                 
                                 });
+                              }
+
+                                // console.log(picks, team.roster_id)
+                               
                               }
                             }
                           }
@@ -618,7 +809,7 @@ export default function UserSleeperLeagueSearch({
                 ...team.nextDraftYearFirstArray,
                 ...tempCurYearFirstPicksArray,
               ];
-              // console.log(team.nextDraftYearFirstArray)
+              console.log(team.nextDraftYearFirstArray)
               team.nextDraftYearSecondsArray = [
                 ...team.nextDraftYearSecondsArray,
                 ...tempCurYearSecondsPicksArray,
