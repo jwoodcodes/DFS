@@ -59,6 +59,8 @@ export default function SleeperLeagueStuff({
   // show/hide teams Pick's
   const [isTeamsPicksShown, setIsTeamsPicksShown] = React.useState(false)
   const [isTradePartnersPicksShown, setIsTradePartnersPicksShown] = React.useState(false)
+
+  const curYear = new Date().getFullYear();
   
 
   function showOtherLeagueManagers() {
@@ -513,8 +515,14 @@ export default function SleeperLeagueStuff({
             // console.log(selectedUserName, pick, player.name)
             // console.log(selectedUserName, pick)
 
-            // if(pick.name === player.name || pick === player.name) {
-            // console.log(pick)
+            // if(pick.name === player.name || pick === player.name) 
+            
+            if(pick.pickNumber) {
+            // console.log(pick.pickNumber)
+            pick.name = `${curYear} ${pick.pickNumber}`
+            }
+      
+
             // console.log(pick.name, player.name, pick, player.name)
             return (
               <div
@@ -526,6 +534,7 @@ export default function SleeperLeagueStuff({
                 >
                   <span className={styles.pickYear}>
                     <strong>
+                      
                       <u>{pick.name}</u>
                     </strong>{' '}
                   </span>
@@ -844,6 +853,10 @@ export default function SleeperLeagueStuff({
 
             // console.log(selectedUserName, pick, player.name)
             // console.log(selectedUserName, pick)
+            if(pick.pickNumber) {
+              // console.log(pick.pickNumber)
+              pick.name = `${curYear} ${pick.pickNumber}`
+              }
 
             // if(pick.name === player.name || pick === player.name) {
             // console.log(pick)
