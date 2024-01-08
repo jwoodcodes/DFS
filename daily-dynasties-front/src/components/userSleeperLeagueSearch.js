@@ -173,7 +173,7 @@ export default function UserSleeperLeagueSearch({
           const draftsRes = await axios.get(
             `https://api.sleeper.app/v1/league/${selectedLeagueID}/drafts`
           );
-
+            // console.log(draftsRes.data[0].draft_order)
           selectedLeaguesDraftStatus = draftsRes.data[0].status;
             // console.log(selectedLeaguesDraftStatus)
             if(selectedLeaguesDraftStatus === 'pre_draft') {
@@ -189,7 +189,8 @@ export default function UserSleeperLeagueSearch({
               let rosterID = team.roster_id
 
 
-              
+              if(selectedLeagueDraftOrderForPreDraft) {
+                // console.log('worked')
                 let draftPostion = 0
               for (const key in selectedLeagueDraftOrderForPreDraft) {
                 if(key === userId) {
@@ -199,7 +200,7 @@ export default function UserSleeperLeagueSearch({
                   ownerIDWithDraftPostionForPicksPreDraftArray.push({rosterID: rosterID, draftPositionForTheirPicks: draftPostion})
                 }
               }
-             
+            }
             })
          
 
@@ -219,7 +220,7 @@ export default function UserSleeperLeagueSearch({
             numOfDraftRounds = draftsRes.data[0].settings.rounds;
             selectedLeaguesDraftStatus = draftsRes.data[0].status;
             // console.log(selectedLeaguesDraftStatus)
-            if(selectedLeaguesDraftStatus === 'pre_draft') {
+            if(selectedLeaguesDraftStatus === 'pre_draft' && selectedLeagueDraftOrderForPreDraft) {
             selectedLeagueDraftOrderForPreDraft = draftsRes.data[0].draft_order;
             // console.log(selectedLeagueDraftOrderForPreDraft)
             }
@@ -235,8 +236,10 @@ export default function UserSleeperLeagueSearch({
               // console.log(userId)
               let rosterID = team.roster_id
 
+              
 
-              if(selectedLeaguesDraftStatus === 'pre_draft') {
+              if(selectedLeaguesDraftStatus === 'pre_draft' && selectedLeagueDraftOrderForPreDraft) {
+                // console.log(selectedLeagueDraftOrderForPreDraft)
                 let draftPostion = 0
               for (const key in selectedLeagueDraftOrderForPreDraft) {
                 if(key === userId) {
@@ -306,7 +309,7 @@ export default function UserSleeperLeagueSearch({
                 { name: `${nextDraftYear} Round 1` },
               ]; 
 
-              if(selectedLeaguesDraftStatus === 'pre_draft') {
+              if(selectedLeaguesDraftStatus === 'pre_draft' && selectedLeagueDraftOrderForPreDraft) {
                 let tempPickNumber = `1.${team.draftPosition}`
                 if(team.draftPosition === 10) {
                    tempPickNumber = '1.10'
@@ -330,20 +333,40 @@ export default function UserSleeperLeagueSearch({
                 tempPickNumber = '1.16'
                 }
 
+                // console.log(team.draftPosition)
+                
                 let pickNumberToUse = +tempPickNumber
 
+                let tempNumericalPickNumber = tempPickNumber.replace('.', '')
+                // console.log(tempPickNumber, tempNumericalPickNumber)
+                
+
+                let numericalPickNumber = +tempNumericalPickNumber
+
+                if(tempPickNumber === '1.10') {
+                  // console.log('running here')
+                  
+                  // console.log(tempPickNumber)
+                  pickNumberToUse = tempPickNumber
+                  numericalPickNumber = 110
+                }
+                
+                
+                // console.log(tempPickNumber, pickNumberToUse)
+
                 team.nextDraftYearFirstArray = [
-                  { name: `${nextDraftYear} Round 1`, pickNumber: pickNumberToUse},
+                  { name: `${nextDraftYear} Round 1`, pickNumber: pickNumberToUse, numericalPickNumber: numericalPickNumber},
                 ]; 
               }
 
+              // console.log(team.nextDraftYearFirstArray)
               // 
 
               team.nextDraftYearSecondsArray = [
                 { name: `${nextDraftYear} Round 2` },
               ];
 
-              if(selectedLeaguesDraftStatus === 'pre_draft') {
+              if(selectedLeaguesDraftStatus === 'pre_draft' && selectedLeagueDraftOrderForPreDraft) {
                 let tempPickNumber = `2.${team.draftPosition}`
                 if(team.draftPosition === 10) {
                   tempPickNumber = '2.10'
@@ -367,10 +390,29 @@ export default function UserSleeperLeagueSearch({
               tempPickNumber = '2.16'
               }
 
-                let pickNumberToUse = +tempPickNumber
+              let pickNumberToUse = +tempPickNumber
+
+                let tempNumericalPickNumber = tempPickNumber.replace('.', '')
+                // console.log(tempPickNumber, tempNumericalPickNumber)
+                
+
+                let numericalPickNumber = +tempNumericalPickNumber + 1000
+
+                // console.log(tempNumericalPickNumber, numericalPickNumber)
+
+                if(tempPickNumber === '2.10') {
+                  // console.log('running here')
+                  tempPickNumber = 2.10.toFixed(2)
+                  // console.log(tempPickNumber)
+                  pickNumberToUse = tempPickNumber
+                  numericalPickNumber = 1200
+                }
+                
+                // console.log(numericalPickNumber)
+                // console.log(pickNumberToUse)
 
                 team.nextDraftYearSecondsArray = [
-                  { name: `${nextDraftYear} Round 2`, pickNumber: pickNumberToUse},
+                  { name: `${nextDraftYear} Round 2`, pickNumber: pickNumberToUse, numericalPickNumber: numericalPickNumber},
                 ]; 
               }
 
@@ -380,7 +422,7 @@ export default function UserSleeperLeagueSearch({
                 { name: `${nextDraftYear} Round 3` },
               ];
 
-              if(selectedLeaguesDraftStatus === 'pre_draft') {
+              if(selectedLeaguesDraftStatus === 'pre_draft' && selectedLeagueDraftOrderForPreDraft) {
                 let tempPickNumber = `3.${team.draftPosition}`
                 if(team.draftPosition === 10) {
                   tempPickNumber = '3.10'
@@ -405,9 +447,30 @@ export default function UserSleeperLeagueSearch({
                 }
                 let pickNumberToUse = +tempPickNumber
 
+                let tempNumericalPickNumber = tempPickNumber.replace('.', '')
+                // console.log(tempPickNumber, tempNumericalPickNumber)
+                
+
+                let numericalPickNumber = +tempNumericalPickNumber + 2000
+
+                // console.log(tempNumericalPickNumber, numericalPickNumber)
+
+                if(tempPickNumber === '3.10') {
+                  // console.log('running here')
+                  tempPickNumber = 3.10.toFixed(2)
+                  // console.log(tempPickNumber)
+                  pickNumberToUse = tempPickNumber
+                  numericalPickNumber = 2310
+                }
+                
+                // console.log(numericalPickNumber)
+                // console.log(pickNumberToUse)
+
                 team.nextDraftYearThirdsArray = [
-                  { name: `${nextDraftYear} Round 3`, pickNumber: pickNumberToUse},
+                  { name: `${nextDraftYear} Round 3`, pickNumber: pickNumberToUse, numericalPickNumber: numericalPickNumber},
                 ]; 
+
+                
               }
 
               //
@@ -606,7 +669,7 @@ export default function UserSleeperLeagueSearch({
                                 // console.log(ownerIDWithDraftPostionForPicksPreDraftArray)
                                 // console.log(picks, team.roster_id, team.draftPosition)
 
-                                if(selectedLeaguesDraftStatus === 'pre_draft') {
+                                if(selectedLeaguesDraftStatus === 'pre_draft' && selectedLeagueDraftOrderForPreDraft) {
                                   // console.log(picks)
                                 let picksPickNumber = 0
                                 ownerIDWithDraftPostionForPicksPreDraftArray.forEach((pickForHere) => {
@@ -618,16 +681,69 @@ export default function UserSleeperLeagueSearch({
                                     picksPickNumber = pickForHere.draftPositionForTheirPicks
                                   }
                                 })
+                                let num = 4000
+
+                                  if(picksPickNumber === 1) {
+                                  num = 11
+                                  }
+                                  if(picksPickNumber === 2) {
+                                  num = 12
+                                  }
+                                  if(picksPickNumber === 3) {
+                                  num = 13
+                                  }
+                                  if(picksPickNumber === 4) {
+                                  num = 14
+                                  }
+                                  if(picksPickNumber === 5) {
+                                  num = 15
+                                  }
+                                  if(picksPickNumber === 6) {
+                                  num = 16
+                                  }
+                                  if(picksPickNumber === 7) {
+                                  num = 17
+                                  }
+                                  if(picksPickNumber === 8) {
+                                  num = 18
+                                  }
+                                  if(picksPickNumber === 9) {
+                                  num = 19
+                                  }
+                                  if(picksPickNumber === 10) {
+                                  num = 110
+                                  }
+                                  if(picksPickNumber === 11) {
+                                  num = 111
+                                  }
+                                  if(picksPickNumber === 12) {
+                                  num = 112
+                                  }
+                                  if(picksPickNumber === 13) {
+                                  num = 113
+                                  }
+                                  if(picksPickNumber === 14) {
+                                  num = 114
+                                  }
+                                  if(picksPickNumber === 15) {
+                                  num = 115
+                                  }
+                                  if(picksPickNumber === 16) {
+                                  num = 116
+                                  }
+
+                                  
 
                                   tempCurYearFirstPicksArray.push({
                                     name: `${pickYear} Round ${pickRound}`,
                                     data: picks,
-                                    pickNumber: `1.${picksPickNumber}`
+                                    pickNumber: `1.${picksPickNumber}`,
+                                    numericalPickNumber: num,
                                   });
                                 
                               }
 
-                              if(selectedLeaguesDraftStatus !== 'pre_draft') {
+                              if(selectedLeaguesDraftStatus !== 'pre_draft' || selectedLeagueDraftOrderForPreDraft === null) {
                                 tempCurYearFirstPicksArray.push({
                                   name: `${pickYear} Round ${pickRound}`,
                                   data: picks,
@@ -644,7 +760,7 @@ export default function UserSleeperLeagueSearch({
                               if (picks.roster_id !== picks.owner_id) {
                                 // console.log(picks, team.roster_id)
 
-                                if(selectedLeaguesDraftStatus === 'pre_draft') {
+                                if(selectedLeaguesDraftStatus === 'pre_draft' && selectedLeagueDraftOrderForPreDraft) {
                                   // console.log(picks)
                                 let picksPickNumber = 0
                                 ownerIDWithDraftPostionForPicksPreDraftArray.forEach((pickForHere) => {
@@ -657,16 +773,71 @@ export default function UserSleeperLeagueSearch({
                                   }
                                 })
 
-                                  tempCurYearFirstPicksArray.push({
+                                let num = 4000
+
+                                // console.log(picksPickNumber)
+
+                                if(picksPickNumber === 1) {
+                                num = 1021
+                                }
+                                if(picksPickNumber === 2) {
+                                num = 1022
+                                }
+                                if(picksPickNumber === 3) {
+                                num = 1023
+                                }
+                                if(picksPickNumber === 4) {
+                                num = 1024
+                                }
+                                if(picksPickNumber === 5) {
+                                num = 1025
+                                }
+                                if(picksPickNumber === 6) {
+                                num = 1026
+                                }
+                                if(picksPickNumber === 7) {
+                                num = 1027
+                                }
+                                if(picksPickNumber === 8) {
+                                num = 1028
+                                }
+                                if(picksPickNumber === 9) {
+                                num = 1029
+                                }
+                                if(picksPickNumber === 10) {
+                                num = 1210
+                                }
+                                if(picksPickNumber === 11) {
+                                num = 1211
+                                }
+                                if(picksPickNumber === 12) {
+                                num = 1212
+                                }
+                                if(picksPickNumber === 13) {
+                                num = 1213
+                                }
+                                if(picksPickNumber === 14) {
+                                num = 1214
+                                }
+                                if(picksPickNumber === 15) {
+                                num = 1215
+                                }
+                                if(picksPickNumber === 16) {
+                                num = 1216
+                                }
+
+                                tempCurYearSecondsPicksArray.push({
                                     name: `${pickYear} Round ${pickRound}`,
                                     data: picks,
-                                    pickNumber: `2.${picksPickNumber}`
+                                    pickNumber: `2.${picksPickNumber}`,
+                                    numericalPickNumber: num,
                                   });
                                 
                               }
 
-                              if(selectedLeaguesDraftStatus !== 'pre_draft') {
-                                tempCurYearFirstPicksArray.push({
+                              if(selectedLeaguesDraftStatus !== 'pre_draft' || selectedLeagueDraftOrderForPreDraft === null) {
+                                
+                                tempCurYearSecondsPicksArray.push({
                                   name: `${pickYear} Round ${pickRound}`,
                                   data: picks,
                                  
@@ -677,6 +848,8 @@ export default function UserSleeperLeagueSearch({
                                 
                               }
                             }
+
+                          
                             // next draft thirds
                             if (pickRound === 3) {
                               // console.log(picks)
@@ -686,7 +859,7 @@ export default function UserSleeperLeagueSearch({
                               if (picks.roster_id !== picks.owner_id) {
 
 
-                                if(selectedLeaguesDraftStatus === 'pre_draft') {
+                                if(selectedLeaguesDraftStatus === 'pre_draft' && selectedLeagueDraftOrderForPreDraft) {
                                   // console.log(picks)
                                 let picksPickNumber = 0
                                 ownerIDWithDraftPostionForPicksPreDraftArray.forEach((pickForHere) => {
@@ -699,16 +872,68 @@ export default function UserSleeperLeagueSearch({
                                   }
                                 })
 
-                                  tempCurYearFirstPicksArray.push({
+                                let num = 4000
+
+                                if(picksPickNumber === 1) {
+                                num = 2031
+                                }
+                                if(picksPickNumber === 2) {
+                                num = 2032
+                                }
+                                if(picksPickNumber === 3) {
+                                num = 2033
+                                }
+                                if(picksPickNumber === 4) {
+                                num = 2034
+                                }
+                                if(picksPickNumber === 5) {
+                                num = 2035
+                                }
+                                if(picksPickNumber === 6) {
+                                num = 2036
+                                }
+                                if(picksPickNumber === 7) {
+                                num = 2037
+                                }
+                                if(picksPickNumber === 8) {
+                                num = 2038
+                                }
+                                if(picksPickNumber === 9) {
+                                num = 2039
+                                }
+                                if(picksPickNumber === 10) {
+                                num = 2310
+                                }
+                                if(picksPickNumber === 11) {
+                                num = 2311
+                                }
+                                if(picksPickNumber === 12) {
+                                num = 2312
+                                }
+                                if(picksPickNumber === 13) {
+                                num = 2313
+                                }
+                                if(picksPickNumber === 14) {
+                                num = 2314
+                                }
+                                if(picksPickNumber === 15) {
+                                num = 2315
+                                }
+                                if(picksPickNumber === 16) {
+                                num = 2316
+                                }
+
+                                tempCurYearThirdsPicksArray.push({
                                     name: `${pickYear} Round ${pickRound}`,
                                     data: picks,
-                                    pickNumber: `3.${picksPickNumber}`
+                                    pickNumber: `3.${picksPickNumber}`,
+                                    numericalPickNumber: num,
                                   });
                                 
                               }
 
-                              if(selectedLeaguesDraftStatus !== 'pre_draft') {
-                                tempCurYearFirstPicksArray.push({
+                              if(selectedLeaguesDraftStatus !== 'pre_draft' || selectedLeagueDraftOrderForPreDraft === null) {
+                                tempCurYearThirdsPicksArray.push({
                                   name: `${pickYear} Round ${pickRound}`,
                                   data: picks,
                                  
@@ -809,17 +1034,86 @@ export default function UserSleeperLeagueSearch({
                 ...team.nextDraftYearFirstArray,
                 ...tempCurYearFirstPicksArray,
               ];
-              console.log(team.nextDraftYearFirstArray)
+              // console.log(team.nextDraftYearFirstArray)
+              if(selectedLeaguesDraftStatus === 'pre_draft' && selectedLeagueDraftOrderForPreDraft) {
+              
+
+
+                let sortednextDraftYearFirstArray = () => team.nextDraftYearFirstArray.sort((pick1,pick2)=>{
+                  // console.log(pick1.numericalPickNumber)
+                  let tempPick1 = pick1.numericalPickNumber;
+                  let tempPick2 = pick2.numericalPickNumber;
+                  if(tempPick1<tempPick2){
+                      return -1;
+                  }
+                  if(tempPick1>tempPick2){
+                      return 1;
+                  }
+                  return 0;
+              })
+              sortednextDraftYearFirstArray()
+            
+              // console.log(team.nextDraftYearFirstArray)
+          }
+
+          
+
               team.nextDraftYearSecondsArray = [
                 ...team.nextDraftYearSecondsArray,
                 ...tempCurYearSecondsPicksArray,
               ];
               // console.log(team.nextDraftYearSecondsArray)
+
+              if(selectedLeaguesDraftStatus === 'pre_draft' && selectedLeagueDraftOrderForPreDraft) {
+              
+
+
+                let sortedNextDraftYearSecondsArray = () => team.nextDraftYearSecondsArray.sort((pick1,pick2)=>{
+                  // console.log(pick1.numericalPickNumber)
+                  let tempPick1 = pick1.numericalPickNumber;
+                  let tempPick2 = pick2.numericalPickNumber;
+                  if(tempPick1<tempPick2){
+                      return -1;
+                  }
+                  if(tempPick1>tempPick2){
+                      return 1;
+                  }
+                  return 0;
+              })
+              sortedNextDraftYearSecondsArray()
+            
+              // console.log(team.nextDraftYearFirstArray)
+          }
+
+
               team.nextDraftYearThirdsArray = [
                 ...team.nextDraftYearThirdsArray,
                 ...tempCurYearThirdsPicksArray,
               ];
               // console.log(team.nextDraftYearThirdsArray)
+
+
+              if(selectedLeaguesDraftStatus === 'pre_draft' && selectedLeagueDraftOrderForPreDraft) {
+              
+
+
+                let sortedNextDraftYearThirdsArray = () => team.nextDraftYearThirdsArray.sort((pick1,pick2)=>{
+                  // console.log(pick1.numericalPickNumber)
+                  let tempPick1 = pick1.numericalPickNumber;
+                  let tempPick2 = pick2.numericalPickNumber;
+                  if(tempPick1<tempPick2){
+                      return -1;
+                  }
+                  if(tempPick1>tempPick2){
+                      return 1;
+                  }
+                  return 0;
+              })
+              sortedNextDraftYearThirdsArray()
+            
+              // console.log(team.nextDraftYearFirstArray)
+          }
+
               team.draftAfterNextFirstArray = [
                 ...team.draftAfterNextFirstArray,
                 ...tempNextYearFirstPicksArray,
@@ -845,6 +1139,7 @@ export default function UserSleeperLeagueSearch({
                 ...team.twoDraftsAfterNextThirdsArray,
                 ...tempTwoYearsFromNowThirdsPicksArray,
               ];
+              //  console.log(team.nextDraftYearSecondsArray)
 
               team.allDraftPicksArray = [
                 ...team.nextDraftYearFirstArray,
