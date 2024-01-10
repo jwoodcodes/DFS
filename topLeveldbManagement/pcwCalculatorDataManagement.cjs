@@ -947,9 +947,13 @@ const testfunc = async function () {
 
         // console.log(this.name, this.myValue);
 
-        if(this.name === "Justin Herbert") {
-      
-          this.myValue = +(this.myValue * .7).toFixed(0)
+        if (this.name === 'Justin Herbert') {
+          this.myValue = +(this.myValue * 0.7).toFixed(0);
+          // console.log(this.myValue)
+        }
+
+        if (this.name === 'Hendon Hooker') {
+          this.myValue = 1750;
           // console.log(this.myValue)
         }
 
@@ -988,7 +992,6 @@ const testfunc = async function () {
         //   this.percentValueDiffBetweenMyValueAndMarket
         // );
         // this.myPercentOfQBMax,
-       
       }
 
       // non QB's
@@ -3313,8 +3316,6 @@ const testfunc = async function () {
     // );
     let temp = +playerObject.projectedNextOffseasonDynastyValue;
     let PNODVToUse = temp.toFixed(0);
-
-    
 
     let dynastyRankingsDataObject = new dynastyRankingsDataConstructor(
       playerObject.name,
