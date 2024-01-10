@@ -66,6 +66,22 @@ export default function Home() {
             provides more context for how a trade actually effects your team and
             if it helps it achieve it's specific goals.
           </p>
+          <h2 className={styles.subHeading}>Sleeper League Connects</h2>
+          <p>
+            Input your sleeper username into the weekly porjections or 3D trade
+            analyzer and select any of your leagues on Sleeper and get
+            personalized advice for any of your teams. You can sort weekly
+            projections by players on any sleeper team. I was tired of building
+            trades by flipping between sleeper, dynasty rankings, redraft
+            projections, and market value/trade calculator so I built the
+            sleeper connect in the 3D trade analyzer to give the data from all
+            of those sites in one place. You can pull up the roster, including
+            picks, of any of your teams alongside the roster of any other team
+            in the league and have my dynasty value, current market value,
+            projected next offseason dynasty value, and redraft value for every
+            player at a glace next to the trade analyzer. build out trades start
+            to finish in one place
+          </p>
         </section>
         <Footer />
       </main>
