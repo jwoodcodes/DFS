@@ -1042,6 +1042,11 @@ const testfunc = async function () {
           // console.log(this.myValue)
         }
 
+        if (this.name === 'Jordan Love') {
+          this.myValue = +(this.myValue * 1.5).toFixed(0);
+          // console.log(this.myValue)
+        }
+
         this.valueDiffBetweenMyValueAndMarketValue = +(
           this.myValue - +player.value
         ).toFixed(2);
