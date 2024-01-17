@@ -94,25 +94,25 @@ export default function SleeperLeagueStuff({
 
     
 
-    // dataArray.map(player => {
-    //   selectedTradePartnersPicksArray.map(pick => {
-    //     // console.log(pick)
-    //     if (pick.name === player.name || pick === player.name) {
-    //       // console.log(pick)
+    dataArray.map(player => {
+      selectedTradePartnersPicksArray.map(pick => {
+        // console.log(pick)
+        if (pick.name === player.name || pick === player.name) {
+          // console.log(pick)
   
-    //       // console.log(player)
-    //       // console.log(pick, player)
+          // console.log(player)
+          // console.log(pick, player)
   
-    //       pick.PRPScore = player.PRPScore;
-    //       pick.projectedNextOffseasonDynastyValue =
-    //         player.projectedNextOffseasonDynastyValue;
-    //       pick.RVSScore = player.PNODVScore;
-    //       pick.marketValue = player.marketValue;
-    //       pick.myValue = player.myValue;
+          pick.PRPScore = player.PRPScore;
+          pick.projectedNextOffseasonDynastyValue =
+            player.projectedNextOffseasonDynastyValue;
+          pick.RVSScore = player.PNODVScore;
+          pick.marketValue = player.marketValue;
+          pick.myValue = player.myValue;
           
-    //     }
-    //   });
-    // });
+        }
+      });
+    });
 
     
 
@@ -182,15 +182,19 @@ export default function SleeperLeagueStuff({
   
   React.useEffect(() => {
     // console.log('ran')
-
+    let tempArray = []
     dataArray.map(player => {
       selectedTradePartnersPicksArray.map(pick => {
-        console.log(pick)
+        // console.log(pick)
+
+        
+
         if (pick.name === player.name || pick === player.name) {
-          // console.log(pick)
+          console.log(pick)
   
           // console.log(player)
           // console.log(pick, player)
+          // console.log(pick.name, player.myValue)
   
           pick.PRPScore = player.PRPScore;
           pick.projectedNextOffseasonDynastyValue =
@@ -200,11 +204,13 @@ export default function SleeperLeagueStuff({
           pick.myValue = player.myValue;
           
         }
+        tempArray.push(pick)
       });
     });
   
+    setSelectedTradePartnersPicksArray(tempArray)
 
-  }, [selectedTradePartnersPicksArray])
+  }, [selectedTradePartnersName])
 
 
 
