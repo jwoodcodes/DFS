@@ -787,7 +787,6 @@ const qbs = {
     conferenceAdjustment: .05,
   },
 
-
   Maye: {
     name: 'Drake Maye',
     draftCapital: 2,
@@ -809,6 +808,8 @@ const qbs = {
     conferenceAdjustment: .05,
   },
 
+
+
   Nix: {
     name: 'Bo Nix',
     draftCapital: 15,
@@ -829,6 +830,9 @@ const qbs = {
     numberOfGamesWithTenPlusPassAttempts: 50,
     conferenceAdjustment: .05,
   },
+
+  
+
   Daniels: {
     name: 'Jayden Daniels',
     draftCapital: 12,
@@ -869,6 +873,8 @@ const qbs = {
     numberOfGamesWithTenPlusPassAttempts: 46,
     conferenceAdjustment: 0.065,
   },
+
+  
 
 };
 

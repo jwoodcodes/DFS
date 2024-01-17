@@ -61,6 +61,8 @@ export default function SleeperLeagueStuff({
   const [isTradePartnersPicksShown, setIsTradePartnersPicksShown] = React.useState(false)
 
   const curYear = new Date().getFullYear();
+
+  
   
 
   function showOtherLeagueManagers() {
@@ -86,24 +88,34 @@ export default function SleeperLeagueStuff({
     setSelectedTradePartnersName(`${team.userName}`)
     // console.log(team.teamData.allDraftPicksArray);
     let tradePartnersPicks = team.teamData.allDraftPicksArray
+    // console.log(tradePartnersPicks)
     setSelectedTradePartnersPicksArray(tradePartnersPicks)
-    dataArray.map(player => {
-      selectedTradePartnersPicksArray.map(pick => {
-        if (pick.name === player.name || pick === player.name) {
-          // console.log(pick)
+    // console.log(tradePartnersPicks)
+
+    
+
+    // dataArray.map(player => {
+    //   selectedTradePartnersPicksArray.map(pick => {
+    //     // console.log(pick)
+    //     if (pick.name === player.name || pick === player.name) {
+    //       // console.log(pick)
   
-          // console.log(player)
+    //       // console.log(player)
+    //       // console.log(pick, player)
   
-          pick.PRPScore = player.PRPScore;
-          pick.projectedNextOffseasonDynastyValue =
-            player.projectedNextOffseasonDynastyValue;
-          pick.RVSScore = player.PNODVScore;
-          pick.marketValue = player.marketValue;
-          pick.myValue = player.myValue;
+    //       pick.PRPScore = player.PRPScore;
+    //       pick.projectedNextOffseasonDynastyValue =
+    //         player.projectedNextOffseasonDynastyValue;
+    //       pick.RVSScore = player.PNODVScore;
+    //       pick.marketValue = player.marketValue;
+    //       pick.myValue = player.myValue;
           
-        }
-      });
-    });
+    //     }
+    //   });
+    // });
+
+    
+
     let selectedTradePartnersPlayersArray = team.teamsPlayers
     //
     //
@@ -166,6 +178,39 @@ export default function SleeperLeagueStuff({
     //
     //
   }
+
+  
+  React.useEffect(() => {
+    // console.log('ran')
+
+    dataArray.map(player => {
+      selectedTradePartnersPicksArray.map(pick => {
+        console.log(pick)
+        if (pick.name === player.name || pick === player.name) {
+          // console.log(pick)
+  
+          // console.log(player)
+          // console.log(pick, player)
+  
+          pick.PRPScore = player.PRPScore;
+          pick.projectedNextOffseasonDynastyValue =
+            player.projectedNextOffseasonDynastyValue;
+          pick.RVSScore = player.PNODVScore;
+          pick.marketValue = player.marketValue;
+          pick.myValue = player.myValue;
+          
+        }
+      });
+    });
+  
+
+  }, [selectedTradePartnersPicksArray])
+
+
+
+
+
+
 
   // console.log(selectedTradePartnersTEArray)
 
@@ -851,7 +896,7 @@ export default function SleeperLeagueStuff({
         selectedTradePartnersPicksArray.map(pick => {
             let num = Math.random();
 
-            // console.log(selectedUserName, pick, player.name)
+            // console.log(selectedUserName, pick)
             // console.log(selectedUserName, pick)
             if(pick.pickNumber) {
               // console.log(pick.pickNumber)
