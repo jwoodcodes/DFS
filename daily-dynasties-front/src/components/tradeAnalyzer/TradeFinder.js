@@ -11,6 +11,8 @@ export default function TradeFinder() {
   );
   const [selectedUserLeaguesIDsArray, setSelectedUserLeaguesIDsArray] =
     React.useState([]);
+  const [pendingTradesArray, setPendingtradesArray] = React.useState([]);
+  const [completedTradesArray, setCompletedtradesArray] = React.useState([]);
 
   const range = (start, end, step = 1) => {
     let output = [];
@@ -104,9 +106,9 @@ export default function TradeFinder() {
         );
 
         // console.log(leaguesData.data)
-        let leaguesTransactionnData = leaguesData.data;
+        let leaguesTransactionData = leaguesData.data;
 
-        leaguesTransactionnData.forEach(function (data) {
+        leaguesTransactionData.forEach(function (data) {
           // console.log(data.type)
           if (data.type === 'trade') {
             let transactionTime = data.status_updated;
@@ -131,9 +133,22 @@ export default function TradeFinder() {
               });
             }
           }
-        });
-        console.log(tempPendingTradesTransactions);
-        console.log(tempCompletedTradesTransactions);
+        }); //end leaguesTransactionData.forEach
+        //
+        // console.log(tempPendingTradesTransactions);
+        // console.log(tempCompletedTradesTransactions.length);
+
+        if (tempCompletedTradesTransactions.length > 0) {
+          completedTradesArray.push(tempCompletedTradesTransactions);
+        }
+
+        // completedTradesArray.push(tempCompletedTradesTransactions);
+
+        // setPendingtradesArray([
+        //   ...tempPendingTradesTransactions,
+        //   pendingTradesArray,
+        // ]);
+        setCompletedtradesArray([...tempCompletedTradesTransactions]);
       }
     }
 
@@ -144,6 +159,7 @@ export default function TradeFinder() {
     });
 
     //   console.log(selectedUserLeaguesIDsArray)
+    // console.log(completedTradesArray);
   }
 
   return (
@@ -194,7 +210,12 @@ export default function TradeFinder() {
           </button>
         )}
       </form>
-      {/* <div>{userSearchValue}</div> */}
+      {/* <div>
+        {completedTradesArray.map(trade => {
+          console.log(trade);
+          return <li>{trade.leagueName}</li>;
+        })}
+      </div> */}
     </div>
   );
 }
