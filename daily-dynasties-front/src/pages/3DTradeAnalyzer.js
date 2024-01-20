@@ -11,6 +11,8 @@ import UserSleeperLeagueSearch from '@/components/userSleeperLeagueSearch';
 import SleeperLeagueStuff from '@/components/tradeAnalyzer/SleeperLeagueStuff';
 import ErrorBoundary from '@/components/ErrorBoundry';
 
+import TradeFinder from '../components/tradeAnalyzer/TradeFinder'
+
 export default function ThreeDTradeAnalyzer(data) {
   // console.log(data.dynastyRankingsData[0].tradeAnalyzerDataObjectsArray
   //   )
@@ -62,6 +64,10 @@ export default function ThreeDTradeAnalyzer(data) {
           />
         </ErrorBoundary>
         </div>
+
+        {/* <div>
+          <TradeFinder/>
+        </div> */}
     </div>
   );
 }

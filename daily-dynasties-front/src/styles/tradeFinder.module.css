@@ -1,0 +1,26 @@
+.label {
+    color: #065a60;
+    margin-bottom: .25rem;
+    font-size: 1.05rem;
+}
+
+.textInput {
+    border-radius: 10px;
+    text-align: center;
+}
+
+.searchbtn {
+    background-color: #02688f;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+  font-size: 1rem;
+  letter-spacing: .09rem;
+  height: 2rem;
+  width: fit-content;
+  /* max-width: 5rem; */
+  border-radius: 20px;
+  border: white;
+ 
+  text-decoration: none;
+  cursor: pointer;
+}
