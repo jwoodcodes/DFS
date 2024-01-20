@@ -11,7 +11,7 @@ import UserSleeperLeagueSearch from '@/components/userSleeperLeagueSearch';
 import SleeperLeagueStuff from '@/components/tradeAnalyzer/SleeperLeagueStuff';
 import ErrorBoundary from '@/components/ErrorBoundry';
 
-import TradeFinder from '../components/tradeAnalyzer/TradeFinder'
+import TradeFinder from '../components/tradeAnalyzer/TradeFinder';
 
 export default function ThreeDTradeAnalyzer(data) {
   // console.log(data.dynastyRankingsData[0].tradeAnalyzerDataObjectsArray
@@ -33,11 +33,12 @@ export default function ThreeDTradeAnalyzer(data) {
 
       <h1 className={styles.pageTitle}>3D Trade Analyzer</h1>
 
-      <div className={styles.directionToSleeperSearchText}>Build trades for specific sleeper teams and leagues completely in one place with sleeper league search below the legend</div>
+      <div className={styles.directionToSleeperSearchText}>
+        Build trades for specific sleeper teams and leagues completely in one
+        place with sleeper league search below the legend
+      </div>
 
       <div className={styles.wholeMainSectionWrapper}>
-        
-
         {/* team 1 */}
         <TeamOne
           dataArray={dataArray}
@@ -56,18 +57,18 @@ export default function ThreeDTradeAnalyzer(data) {
           teamOnePlayers={teamOnePlayers}
           teamTwoPlayers={teamTwoPlayers}
         />
-      
-      <ErrorBoundary>
+
+        <ErrorBoundary>
           <UserSleeperLeagueSearch
             initialSleeperPlayerData={initialSleeperPlayerData}
             dataArray={dataArray}
           />
         </ErrorBoundary>
-        </div>
+      </div>
 
-        {/* <div>
-          <TradeFinder/>
-        </div> */}
+      {/* <div>
+        <TradeFinder />
+      </div> */}
     </div>
   );
 }
