@@ -210,12 +210,12 @@ export default function TradeFinder() {
           </button>
         )}
       </form>
-      <div>
+      {/* <div>
         {completedTradesArray.map(trade => {
           console.log(trade);
           return <li>{trade.leagueName}</li>;
         })}
-      </div>
+      </div> */}
     </div>
   );
 }
