@@ -66,9 +66,9 @@ export default function ThreeDTradeAnalyzer(data) {
         </ErrorBoundary>
       </div>
 
-      <div>
+      {/* <div>
         <TradeFinder />
-      </div>
+      </div> */}
     </div>
   );
 }
