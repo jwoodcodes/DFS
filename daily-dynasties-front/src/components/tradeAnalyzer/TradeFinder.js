@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from '@/styles/tradeFinder.module.css';
 import axios from 'axios';
+import TradeFinderDisplay from './TradeFinderDisplay';
 
 export default function TradeFinder() {
   const [selectedWeek, setSelectedWeek] = React.useState(1);
@@ -13,6 +14,7 @@ export default function TradeFinder() {
     React.useState([]);
   const [pendingTradesArray, setPendingtradesArray] = React.useState([]);
   const [completedTradesArray, setCompletedtradesArray] = React.useState([]);
+  const [completedTradesToPassToDisplay, setCompletedTradesToPassToDisplay] = React.useState([])
 
   const range = (start, end, step = 1) => {
     let output = [];
@@ -71,15 +73,24 @@ export default function TradeFinder() {
 
       let newLeagueNameArray = [];
       let tempLeagueIDsArray = [];
+      // console.log(initialUserLeaguesArray.length)
       initialUserLeaguesArray.forEach(function (league) {
         // console.log(league);
         newLeagueNameArray.push(league.name);
         tempLeagueIDsArray.push(league.league_id);
 
-        selectedUserLeaguesIDsArray.push({
-          id: league.league_id,
-          name: league.name,
-        });
+        
+
+        if(selectedUserLeaguesIDsArray.length <= initialUserLeaguesArray.length) {
+          selectedUserLeaguesIDsArray.push({
+            id: league.league_id,
+            name: league.name,
+          });
+        }
+
+        
+
+        
         // console.log(newLeagueNameArray)
         //   userLeaguesDataArray.push(league);
         // setUserLeaguesNamesArray(newLeagueNameArray)
@@ -93,10 +104,11 @@ export default function TradeFinder() {
     async function getLeaguesTransactionsData(id, leagueData) {
       // console.log(id);
       // console.log(leagueData);
+      let tempPendingTradesTransactions = [];
+      let tempCompletedTradesTransactions = [];
 
       if (id && selectedWeek) {
-        let tempPendingTradesTransactions = [];
-        let tempCompletedTradesTransactions = [];
+       
 
         let leagueName = leagueData.name;
         // console.log(leagueName);
@@ -108,16 +120,22 @@ export default function TradeFinder() {
         // console.log(leaguesData.data)
         let leaguesTransactionData = leaguesData.data;
 
+        // console.log(completedTradesArray.length, completedTradesArray);
+        // console.log(completedTradesArray.length, selectedUserLeaguesIDsArray.length)
+
+        if(completedTradesArray.length < selectedUserLeaguesIDsArray.length) {
+
         leaguesTransactionData.forEach(function (data) {
           // console.log(data.type)
           if (data.type === 'trade') {
             let transactionTime = data.status_updated;
-            let transactionDate = new Date(transactionTime);
+            let transactionDate = String(new Date(transactionTime));
             // console.log(transactionDate.toString());
+            // console.log(data.status)
             if (data.status === 'pending') {
               // console.log(leagueName, transactionDate, data);
               tempPendingTradesTransactions.push({
-                leaugeName: leagueName,
+                leagueName: leagueName,
                 dateOfTrade: transactionDate,
                 status: data.status,
                 tradeData: data,
@@ -126,7 +144,7 @@ export default function TradeFinder() {
             if (data.status === 'complete') {
               // console.log(leagueName, transactionDate, data);
               tempCompletedTradesTransactions.push({
-                leaugeName: leagueName,
+                leagueName: leagueName,
                 dateOfTrade: transactionDate,
                 status: data.status,
                 tradeData: data,
@@ -138,9 +156,7 @@ export default function TradeFinder() {
         // console.log(tempPendingTradesTransactions);
         // console.log(tempCompletedTradesTransactions.length);
 
-        if (tempCompletedTradesTransactions.length > 0) {
-          completedTradesArray.push(tempCompletedTradesTransactions);
-        }
+        
 
         // completedTradesArray.push(tempCompletedTradesTransactions);
 
@@ -148,18 +164,35 @@ export default function TradeFinder() {
         //   ...tempPendingTradesTransactions,
         //   pendingTradesArray,
         // ]);
-        setCompletedtradesArray([...tempCompletedTradesTransactions]);
+        // console.log(completedTradesArray.length)
+         
+        
+          if (tempCompletedTradesTransactions.length > 0) {
+            completedTradesArray.push(tempCompletedTradesTransactions);
+          }
+          }
+        
+
+       
+        
+     
       }
+      
+        setCompletedtradesArray([...tempCompletedTradesTransactions]);
+        
     }
 
     selectedUserLeaguesIDsArray.map(function (league) {
       // console.log(league.id);
       let id = league.id;
+     
+      
       getLeaguesTransactionsData(id, league);
     });
 
     //   console.log(selectedUserLeaguesIDsArray)
     // console.log(completedTradesArray);
+    setCompletedTradesToPassToDisplay(completedTradesArray)
   }
 
   return (
@@ -210,12 +243,7 @@ export default function TradeFinder() {
           </button>
         )}
       </form>
-      {/* <div>
-        {completedTradesArray.map(trade => {
-          console.log(trade);
-          return <li>{trade.leagueName}</li>;
-        })}
-      </div> */}
-    </div>
+       <TradeFinderDisplay completedTradesToPassToDisplay={completedTradesToPassToDisplay}/>
+      </div>
   );
 }
