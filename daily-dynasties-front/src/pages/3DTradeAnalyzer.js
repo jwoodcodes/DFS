@@ -67,7 +67,7 @@ export default function ThreeDTradeAnalyzer(data) {
       </div>
 
       {/* <div>
-        <TradeFinder />
+        <TradeFinder initialSleeperPlayerData={initialSleeperPlayerData} />
       </div> */}
     </div>
   );
