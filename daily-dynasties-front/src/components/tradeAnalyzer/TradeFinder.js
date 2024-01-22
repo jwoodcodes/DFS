@@ -3,6 +3,7 @@ import styles from '@/styles/tradeFinder.module.css';
 import axios from 'axios';
 import TradeFinderDisplay from './TradeFinderDisplay';
 
+
 export default function TradeFinder(initialSleeperPlayerData) {
   const [selectedWeek, setSelectedWeek] = React.useState(1);
   const [userSearchValue, setUserSearchValue] = React.useState('');
@@ -16,6 +17,7 @@ export default function TradeFinder(initialSleeperPlayerData) {
   const [completedTradesArray, setCompletedtradesArray] = React.useState([]);
   const [completedTradesToPassToDisplay, setCompletedTradesToPassToDisplay] =
     React.useState([]);
+    const [usernameWithRosterID, setUsernameWithRosterID] = React.useState([])
 
   const range = (start, end, step = 1) => {
     let output = [];
@@ -29,7 +31,15 @@ export default function TradeFinder(initialSleeperPlayerData) {
     return output;
   };
 
-  console.log(initialSleeperPlayerData);
+  // console.log(initialSleeperPlayerData.initialSleeperPlayerData);
+  let tempSleeperArray = initialSleeperPlayerData.initialSleeperPlayerData
+  let sleeperJustIDsAndNamesArray =
+  tempSleeperArray[0].JustSleeperKeysAndNamesObjectsArray;
+    // console.log(sleeperJustIDsAndNamesArray)
+
+    let selectedLeagueRosterNamesArray = [];
+
+ 
 
   function searchOnChange() {
     setUserSearchValue(event.target.value);
@@ -106,6 +116,11 @@ export default function TradeFinder(initialSleeperPlayerData) {
       // console.log(leagueData);
       let tempPendingTradesTransactions = [];
       let tempCompletedTradesTransactions = [];
+      let leaguesManagersOwnerIDsWithTheirRosterIDsObjectsArray = []
+      let userIDsArray = []
+      let allLeaguesUsernamesWithUserIDsObjectsArray = [];
+      let tempAllOFLeaguesUsernamesWithRosterIDsobjectsArray = []
+      let allOFLeaguesUsernamesWithRosterIDsobjectsArray = []
 
       if (id && selectedWeek) {
         let leagueName = leagueData.name;
@@ -118,14 +133,100 @@ export default function TradeFinder(initialSleeperPlayerData) {
         // console.log(leaguesData.data)
         let leaguesTransactionData = leaguesData.data;
 
+        const selectedLeagueRostersRes = await axios.get(
+          `https://api.sleeper.app/v1/league/${id}/rosters`
+        );
+        // console.log(selectedLeagueRostersRes)
+        let selectedLeagueRostersData = selectedLeagueRostersRes.data;
+        // console.log(selectedLeagueRostersData);
+
+        selectedLeagueRostersData.map((user) => {
+          // console.log(user.owner_id, user.roster_id)
+          leaguesManagersOwnerIDsWithTheirRosterIDsObjectsArray.push({ownerID: user.owner_id, rosterID: user.roster_id})
+
+          let userOwnerID = user.owner_id
+          userIDsArray.push(user.owner_id)
+        })
+
+        async function getUserInfo (id) {
+        
+          const userInfoRes = await axios.get(`https://api.sleeper.app/v1/user/${id}`)
+
+          // console.log(userInfoRes.data)
+          let username = userInfoRes.data.username
+          let userID = userInfoRes.data.user_id
+          allLeaguesUsernamesWithUserIDsObjectsArray.push(
+            {
+              username: username,
+              userID: userID
+            }
+          )
+          allLeaguesUsernamesWithUserIDsObjectsArray.map((noRosterID) => {
+            // console.log(noRosterID)
+            let userObject = {}
+
+            leaguesManagersOwnerIDsWithTheirRosterIDsObjectsArray.map((noUserName) => {
+
+              if(noUserName.ownerID === noRosterID.userID) {
+                // console.log(noRosterID.username)
+                let tempUsername = noRosterID.username;
+                let tempRosterID = noUserName.rosterID
+                
+                tempAllOFLeaguesUsernamesWithRosterIDsobjectsArray.push({
+                  username: tempUsername,
+                  rosterID: tempRosterID
+                })
+                }
+                
+            })
+          })
+          
+      }
+
+      allOFLeaguesUsernamesWithRosterIDsobjectsArray.push(tempAllOFLeaguesUsernamesWithRosterIDsobjectsArray)
+
+      
+
+      // console.log(usernameWithRosterID)
+      
+
+      userIDsArray.map((id) => {
+        getUserInfo(id)
+
+       
+      })
+        
+      
+    // console.log(allLeaguesUsernamesWithUserIDsObjectsArray)
+    
+   
+      // console.log(noUserName)
+      // console.log(allLeaguesUsernamesWithUserIDsObjectsArray)
+      
+      // console.log(allOFLeaguesUsernamesWithRosterIDsobjectsArray)
+
+
+    // leaguesManagersOwnerIDsWithTheirRosterIDsObjectsArray
+
         // console.log(completedTradesArray.length, completedTradesArray);
         // console.log(completedTradesArray.length, selectedUserLeaguesIDsArray.length)
 
+        // console.log(sleeperJustIDsAndNamesArray)
+
         if (completedTradesArray.length < selectedUserLeaguesIDsArray.length) {
+
+          
+
           leaguesTransactionData.forEach(function (data) {
             // console.log(data.type)
             if (data.type === 'trade') {
-              console.log(data);
+              // console.log(data);
+
+              // allOFLeaguesUsernamesWithRosterIDsobjectsArray.map((tempUser) => {
+              //   console.log(tempUser)
+              // })
+              
+
               let transactionTime = data.status_updated;
               let transactionDate = String(new Date(transactionTime));
               // console.log(transactionDate.toString());
@@ -139,13 +240,78 @@ export default function TradeFinder(initialSleeperPlayerData) {
                   status: data.status,
                 });
               }
+              //
+              let completedTradesPlayerInvolvedIDsArray = []
+              let playersInvolvedNames = []
+              let playerIDWithManagerTradedToIdObjectsArray = []
+
               if (data.status === 'complete') {
                 // console.log(leagueName, transactionDate, data);
+                if(data.adds) {
+                // console.log(data.adds)
+                let tempPlayerIDsInvolved = data.adds
+                // console.log(tempPlayerIDsInvolved)
+                
+                // allOFLeaguesUsernamesWithRosterIDsobjectsArray
+                // console.log(allOFLeaguesUsernamesWithRosterIDsobjectsArray)
+                // allOFLeaguesUsernamesWithRosterIDsobjectsArray.map((user) => {
+                //   console.log(user)
+                // })
+
+                
+                  
+                
+                  
+
+                  for(const [key, value] of Object.entries(tempPlayerIDsInvolved)) {
+                    // console.log(key)
+                    // console.log(key, value)
+
+                    allOFLeaguesUsernamesWithRosterIDsobjectsArray.map((tempUser) => {
+                      // console.log(tempUser)
+                      
+                     
+                      
+                    })
+
+                    completedTradesPlayerInvolvedIDsArray.push(key)
+                    playerIDWithManagerTradedToIdObjectsArray.push({playerID: key, managerTradedToID: value})
+                  }
+                }
+
+                
+
+               
+
+                
+              // console.log(allOFLeaguesUsernamesWithRosterIDsobjectsArray)
+              
+               
+
+                // console.log(playerIDWithManagerTradedToIdObjectsArray)
+
+                   for (const key in sleeperJustIDsAndNamesArray) {
+               // console.log(sleeperJustIDsAndNamesArray[key].name)
+               // console.log(selectedUsersRoster)
+               completedTradesPlayerInvolvedIDsArray.forEach(function (player) {
+                // console.log(player)
+               if (sleeperJustIDsAndNamesArray[key].id === player) {
+              //  console.log(sleeperJustIDsAndNamesArray[key].name)
+               playersInvolvedNames.push(sleeperJustIDsAndNamesArray[key].name)
+              //  selectedLeagueRosterNamesArray.push(
+              //   sleeperJustIDsAndNamesArray[key].name
+              //  );
+                // selectedUsersRosterPlayerObjects.push(initialSleeperPlayerData[key])
+                 }
+                });
+                 }
+
                 tempCompletedTradesTransactions.push({
                   leagueName: leagueName,
                   dateOfTrade: transactionDate,
                   transactionTime: transactionTime,
                   status: data.status,
+                  playersInvolvedNames: playersInvolvedNames, 
                 });
               }
             }
