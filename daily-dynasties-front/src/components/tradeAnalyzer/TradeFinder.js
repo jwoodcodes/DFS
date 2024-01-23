@@ -675,7 +675,7 @@ export default function TradeFinder(initialSleeperPlayerData) {
                     {usernameWithPlayersTheyRecievedArrayForHere.map(pair => {
                       return (
                         <div
-                          key={trade.transactionTime}
+                          key={`${trade.transactionTime}-${pair.userWhoRecievedThePlayer} - ${pair.PlayerRecievedName}`}
                         >{`${pair.userWhoRecievedThePlayer} - ${pair.PlayerRecievedName}`}</div>
                       );
                     })}
@@ -683,7 +683,7 @@ export default function TradeFinder(initialSleeperPlayerData) {
                     {picksInDealArray.map(pick => {
                       return (
                         <div
-                          key={trade.transactionTime}
+                          key={`${trade.transactionTime}-${pick.userWhoeRecievedPick} - ${pick.pickRecieved}`}
                         >{`${pick.userWhoeRecievedPick} - ${pick.pickRecieved}`}</div>
                       );
                     })}
