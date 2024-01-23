@@ -589,7 +589,7 @@ export default function TradeFinder(initialSleeperPlayerData) {
   } // end of onSearch function
 
   return (
-    <div>
+    <div className={styles.wholeTradeFinderWrapper}>
       <div className={styles.tradeFinderLabel}>Trade Finder (Beta)</div>
       <div className={styles.subLabel}>
         Pull up all recent Trades across all you sleeper leagues
