@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from '@/styles/tradeFinder.module.css';
 import axios from 'axios';
-import TradeFinderDisplay from './TradeFinderDisplay';
 
 export default function TradeFinder(initialSleeperPlayerData) {
   const [selectedWeek, setSelectedWeek] = React.useState(1);
