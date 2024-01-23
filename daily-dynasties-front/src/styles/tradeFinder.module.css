@@ -48,6 +48,12 @@
   cursor: pointer;
 }
 
+.wholeTradeWrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
 .wholeTradeFinderWrapper {
   margin-bottom: 8rem;
   padding-bottom: 8rem;
@@ -55,6 +61,12 @@
 
 .individualTradeWrapper {
   margin: 2rem 8rem;
+}
+
+@media (max-width: 900px) {
+  .individualTradeWrapper {
+    margin: 2rem 5rem;
+  }
 }
 
 .tradeContentsWrapper {

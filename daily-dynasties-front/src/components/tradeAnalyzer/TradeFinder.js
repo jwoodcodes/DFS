@@ -659,7 +659,10 @@ export default function TradeFinder(initialSleeperPlayerData) {
               let picksInDealArray = trade.draftPicksInDeal;
 
               return (
-                <div key={`${trade.transactionTime}`}>
+                <div
+                  key={`${trade.transactionTime}`}
+                  className={styles.wholeTradeWrapper}
+                >
                   <div
                     key={trade.transactionTime}
                     className={styles.individualTradeWrapper}
