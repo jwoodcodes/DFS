@@ -668,16 +668,23 @@ export default function TradeFinder(initialSleeperPlayerData) {
                     {trade.leagueName} {trade.dateOfTrade}
                   </div>
                   {/* <div>{trade.playersInvolvedNames}</div> */}
-                  <div className={styles.tradeContentsWrapper}>
+                  <div
+                    className={styles.tradeContentsWrapper}
+                    key={trade.transactionTime}
+                  >
                     {usernameWithPlayersTheyRecievedArrayForHere.map(pair => {
                       return (
-                        <div>{`${pair.userWhoRecievedThePlayer} - ${pair.PlayerRecievedName}`}</div>
+                        <div
+                          key={trade.transactionTime}
+                        >{`${pair.userWhoRecievedThePlayer} - ${pair.PlayerRecievedName}`}</div>
                       );
                     })}
 
                     {picksInDealArray.map(pick => {
                       return (
-                        <div>{`${pick.userWhoeRecievedPick} - ${pick.pickRecieved}`}</div>
+                        <div
+                          key={trade.transactionTime}
+                        >{`${pick.userWhoeRecievedPick} - ${pick.pickRecieved}`}</div>
                       );
                     })}
                   </div>
