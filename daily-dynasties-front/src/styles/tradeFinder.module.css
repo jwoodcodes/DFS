@@ -52,6 +52,7 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  
 }
 
 .wholeTradeFinderWrapper {
@@ -60,8 +61,17 @@
 }
 
 .individualTradeWrapper {
-  margin: 2rem 8rem;
+  margin: 2rem auto;
+  background: linear-gradient(to right, #1976D2, #9575CD);
+  border-radius: 20px;
+  color: #fff;
+  width: fit-content;
+  padding: .5rem 1.5rem;
+  font-size: 1.2rem;
 }
+
+/* #004643 */
+
 
 @media (max-width: 900px) {
   .individualTradeWrapper {
@@ -69,9 +79,27 @@
   }
 }
 
+@media (max-width: 375px) {
+  .individualTradeWrapper {
+    font-size: 1rem;
+  }
+}
+
 .tradeContentsWrapper {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
+  font-size: 1.25rem;
+}
+
+.teamOneWrapper {
+  margin: 0 1rem;
+}
+.teamTwoWrapper {
+  margin: 0 1rem;
+}
+
+.managerWhoRecievedTitle {
+  margin-bottom: .5rem;
 }
