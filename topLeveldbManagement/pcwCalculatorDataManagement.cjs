@@ -840,8 +840,8 @@ const testfunc = async function () {
           }
           // console.log(curMonth)
 
-          if(curMonth < 6) {
-            if (fcPickYear === +(curYear)) {
+          if (curMonth < 6) {
+            if (fcPickYear === +curYear) {
               // console.log(fcPickYear);
               // console.log(fcPickRound);
               // console.log(fcNonQBMaxValue);
@@ -859,13 +859,12 @@ const testfunc = async function () {
                 this.rvValue = 0.12;
                 this.rvPercentOfNonQBMax = 0.04;
               }
-              
             }
             if (fcPickYear === +(curYear + 1)) {
               // console.log(fcPickYear);
               // console.log(player.player.name);
               // console.log(fcPickRoundAndNumberFormattedForPP);
-  
+
               if (+fcPickRound === 1) {
                 this.rvValue = 0.92;
                 this.rvPercentOfNonQBMax = 0.25;
@@ -883,7 +882,7 @@ const testfunc = async function () {
               // console.log(fcPickYear);
               // console.log(player.player.name);
               // console.log(fcPickRoundAndNumberFormattedForPP);
-  
+
               if (+fcPickRound === 1) {
                 this.rvValue = 0.65;
                 this.rvPercentOfNonQBMax = 0.19;
@@ -899,65 +898,63 @@ const testfunc = async function () {
             }
           }
 
+          if (curMonth > 5) {
+            if (fcPickYear === +(curYear + 1)) {
+              // console.log(fcPickYear);
+              // console.log(fcPickRound);
+              // console.log(fcNonQBMaxValue);
+              // console.log(player.player.name);
+              // console.log(fcPickRoundAndNumberFormattedForPP);
+              if (+fcPickRound === 1) {
+                this.rvValue = 1.15;
+                this.rvPercentOfNonQBMax = 0.33;
+              }
+              if (+fcPickRound === 2) {
+                this.rvValue = 0.33;
+                this.rvPercentOfNonQBMax = 0.11;
+              }
+              if (+fcPickRound === 3) {
+                this.rvValue = 0.12;
+                this.rvPercentOfNonQBMax = 0.04;
+              }
+            }
+            if (fcPickYear === +(curYear + 2)) {
+              // console.log(fcPickYear);
+              // console.log(player.player.name);
+              // console.log(fcPickRoundAndNumberFormattedForPP);
 
-          if(curMonth > 5) {
-          if (fcPickYear === +(curYear + 1)) {
-            // console.log(fcPickYear);
-            // console.log(fcPickRound);
-            // console.log(fcNonQBMaxValue);
-            // console.log(player.player.name);
-            // console.log(fcPickRoundAndNumberFormattedForPP);
-            if (+fcPickRound === 1) {
-              this.rvValue = 1.15;
-              this.rvPercentOfNonQBMax = 0.33;
+              if (+fcPickRound === 1) {
+                this.rvValue = 0.92;
+                this.rvPercentOfNonQBMax = 0.25;
+              }
+              if (+fcPickRound === 2) {
+                this.rvValue = 0.22;
+                this.rvPercentOfNonQBMax = 0.08;
+              }
+              if (+fcPickRound === 3) {
+                this.rvValue = 0.08;
+                this.rvPercentOfNonQBMax = 0.0275;
+              }
             }
-            if (+fcPickRound === 2) {
-              this.rvValue = 0.33;
-              this.rvPercentOfNonQBMax = 0.11;
-            }
-            if (+fcPickRound === 3) {
-              this.rvValue = 0.12;
-              this.rvPercentOfNonQBMax = 0.04;
-            }
-            
-          }
-          if (fcPickYear === +(curYear + 2)) {
-            // console.log(fcPickYear);
-            // console.log(player.player.name);
-            // console.log(fcPickRoundAndNumberFormattedForPP);
+            if (fcPickYear === +(curYear + 3)) {
+              // console.log(fcPickYear);
+              // console.log(player.player.name);
+              // console.log(fcPickRoundAndNumberFormattedForPP);
 
-            if (+fcPickRound === 1) {
-              this.rvValue = 0.92;
-              this.rvPercentOfNonQBMax = 0.25;
-            }
-            if (+fcPickRound === 2) {
-              this.rvValue = 0.22;
-              this.rvPercentOfNonQBMax = 0.08;
-            }
-            if (+fcPickRound === 3) {
-              this.rvValue = 0.08;
-              this.rvPercentOfNonQBMax = 0.0275;
-            }
-          }
-          if (fcPickYear === +(curYear + 3)) {
-            // console.log(fcPickYear);
-            // console.log(player.player.name);
-            // console.log(fcPickRoundAndNumberFormattedForPP);
-
-            if (+fcPickRound === 1) {
-              this.rvValue = 0.65;
-              this.rvPercentOfNonQBMax = 0.19;
-            }
-            if (+fcPickRound === 2) {
-              this.rvValue = 0.17;
-              this.rvPercentOfNonQBMax = 0.06;
-            }
-            if (+fcPickRound === 3) {
-              this.rvValue = 0.05;
-              this.rvPercentOfNonQBMax = 0.02;
+              if (+fcPickRound === 1) {
+                this.rvValue = 0.65;
+                this.rvPercentOfNonQBMax = 0.19;
+              }
+              if (+fcPickRound === 2) {
+                this.rvValue = 0.17;
+                this.rvPercentOfNonQBMax = 0.06;
+              }
+              if (+fcPickRound === 3) {
+                this.rvValue = 0.05;
+                this.rvPercentOfNonQBMax = 0.02;
+              }
             }
           }
-        }
         }
       }
     }
@@ -1006,7 +1003,7 @@ const testfunc = async function () {
         let tempValue = +(fcQBMaxValue * this.myPercentOfQBMax).toFixed(2);
         this.myValue = Math.round(tempValue);
 
-        if(this.myValue < 1000) {
+        if (this.myValue < 1000) {
           // console.log(this.name)
 
           this.myPercentOfQBMax = +(
@@ -1019,10 +1016,10 @@ const testfunc = async function () {
           ).toFixed(2);
 
           let tempValue = +(fcQBMaxValue * this.myPercentOfQBMax).toFixed(2);
-        this.myValue = Math.round(tempValue);
+          this.myValue = Math.round(tempValue);
         }
 
-        if(this.myValue < 1000) {
+        if (this.myValue < 1000) {
           // console.log(this.name, this.myValue)
         }
 
@@ -1093,7 +1090,7 @@ const testfunc = async function () {
           this.rvPercentOfNonQBMax = 0.67;
         }
 
-        if(player.player.name === 'Tank Dell') {
+        if (player.player.name === 'Tank Dell') {
           // console.log(this.rvPercentOfNonQBMax)
         }
 
@@ -1115,7 +1112,7 @@ const testfunc = async function () {
         );
         this.myValue = Math.round(tempValue);
 
-        if(this.myValue < 1000) {
+        if (this.myValue < 1000) {
           // console.log(this.name, this.myValue)
 
           this.myPercentOfNonQBMax = +(
@@ -1127,11 +1124,13 @@ const testfunc = async function () {
             5
           ).toFixed(2);
 
-          let tempValue = +(fcNonQBMaxValue * this.myPercentOfNonQBMax).toFixed(2);
-        this.myValue = Math.round(tempValue);
+          let tempValue = +(fcNonQBMaxValue * this.myPercentOfNonQBMax).toFixed(
+            2
+          );
+          this.myValue = Math.round(tempValue);
         }
 
-        if(this.myValue < 1000) {
+        if (this.myValue < 1000) {
           // console.log(this.name, this.myValue)
         }
 
@@ -2634,7 +2633,7 @@ const testfunc = async function () {
     rvDynastyRankingsTEP.forEach(function (InitialrvPlayer) {
       if (InitialrvPlayer['"Player"']) {
         // console.log(InitialrvPlayer['"Player"'])
-        
+
         if (InitialrvPlayer['"Player"'].includes("'")) {
           InitialrvPlayer['"Player"'] = InitialrvPlayer['"Player"'].replace(
             "'",
@@ -2649,10 +2648,10 @@ const testfunc = async function () {
             .replace('.', '')
             .replace('.', '');
 
-            if(InitialrvPlayer['"Player"'].slice(1, -1) === "Nathaniel Dell") {
-              // console.log(InitialrvPlayer['"Player"'])
-              tempsanitizedRVPlayerName = "Tank Dell"
-            }
+          if (InitialrvPlayer['"Player"'].slice(1, -1) === 'Nathaniel Dell') {
+            // console.log(InitialrvPlayer['"Player"'])
+            tempsanitizedRVPlayerName = 'Tank Dell';
+          }
 
           if (sanitizedFCPlayerName === tempsanitizedRVPlayerName) {
             // console.log(sanitizedRVPlayerName, sanitizedFCPlayerName);
