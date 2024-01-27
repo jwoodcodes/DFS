@@ -821,7 +821,7 @@ export default function TradeFinder(initialSleeperPlayerData) {
                       
                       return (
                         
-                        <div>
+                        <div key={`${trade.transactionTime} - ${num}`}>
                           
                           {isOnPlayerOneTeam && 
                           <div
@@ -853,7 +853,7 @@ export default function TradeFinder(initialSleeperPlayerData) {
                       
                       return (
                         
-                        <div>
+                        <div key={`${trade.transactionTime} - ${num}`}>
                           {isOnPlayerOneTeam && 
                         <div
                           key={`${trade.transactionTime}-${pick.userWhoeRecievedPick} - ${num}`}
@@ -886,7 +886,7 @@ export default function TradeFinder(initialSleeperPlayerData) {
 
                     return (
   
-                      <div>
+                      <div key={`${trade.transactionTime} - ${num}`}>
                         
                          {isOnPlayerTwoTeam && 
                       <div
@@ -912,7 +912,7 @@ export default function TradeFinder(initialSleeperPlayerData) {
 
                   return (
   
-                    <div>
+                    <div key={`${trade.transactionTime} - ${num}`}>
                       {isOnPlayerTwoTeam && 
                    <div
                     key={`${trade.transactionTime}-${pick.userWhoeRecievedPick} - ${num}`}
