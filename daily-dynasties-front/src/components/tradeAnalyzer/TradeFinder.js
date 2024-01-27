@@ -818,10 +818,12 @@ export default function TradeFinder(initialSleeperPlayerData) {
                         // console.log(`manager 1 is ${pair.userWhoRecievedThePlayer}`)
                         isOnPlayerOneTeam = true
                       }
+
+                      let keyNum = Math.random()
                       
                       return (
                         
-                        <div key={`${trade.transactionTime} - ${num}`}>
+                        <div key={`${trade.transactionTime} - ${keyNum}`}>
                           
                           {isOnPlayerOneTeam && 
                           <div
@@ -884,9 +886,11 @@ export default function TradeFinder(initialSleeperPlayerData) {
                        isOnPlayerTwoTeam = true
                     }
 
+                    let keyNum = Math.random()
+
                     return (
   
-                      <div key={`${trade.transactionTime} - ${num}`}>
+                      <div key={`${trade.transactionTime} - ${keyNum}`}>
                         
                          {isOnPlayerTwoTeam && 
                       <div
