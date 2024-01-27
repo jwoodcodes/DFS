@@ -247,6 +247,11 @@ export default function TradeFinder(initialSleeperPlayerData) {
                     let managerOneName = '';
                     let managerTwoName = ''
 
+
+                    let managerOneIfOnlyPicks = ''
+                    let managerTwoIfOnlyPicks = ''
+
+
                     // console.log(data);
 
                     // allOFLeaguesUsernamesWithRosterIDsobjectsArray.map((tempUser) => {
@@ -274,14 +279,50 @@ export default function TradeFinder(initialSleeperPlayerData) {
                       // console.log(leagueName, transactionDate, data);
                       // console.log(data.draft_picks);
 
+                      let tempIfOnlyPicksManagerOneName = [];
+                          // console.log('tempManagerOneName cleared')
+                          let tempIfOnlyPicksManagerTwoName = [];
+
                       if (data.draft_picks.length > 0) {
                         // console.log(data.draft_picks);
                         data.draft_picks.map(pick => {
                           // console.log(pick.owner_id);
                           tempAllOFLeaguesUsernamesWithRosterIDsobjectsArray.map(
                             manager => {
+
+                              
+
                               if (manager.rosterID === pick.owner_id) {
+                                // console.log(data.adds)
+                                if(!data.adds) {
+                                  // console.log(data)
+
+                                  if(tempIfOnlyPicksManagerOneName.length === 1 && tempIfOnlyPicksManagerTwoName.length === 0 && tempIfOnlyPicksManagerOneName[0] !== manager.username) {
+                                    // console.log(tempManagerOneName, singleUser.username)
+                                    // console.log(`ran for manager two push`)
+                                    tempIfOnlyPicksManagerTwoName.push(manager.username)
+                                  }
+                                  // console.log(tempManagerOneName)
+                                  if(tempIfOnlyPicksManagerOneName.length === 0) {
+                                    // console.log(`ran for manager one push`)
+                                    tempIfOnlyPicksManagerOneName.push(manager.username)
+                                  } 
+
+                                  let pickName = `${pick.season} Round ${pick.round}`;
+
+                                userWhoRecivedPicksUsernameWithPick.push({
+                                  userWhoeRecievedPick: manager.username,
+                                  pickRecieved: pickName,
+                                });
+                                }
                                 // console.log(manager.username, pick);
+
+                                
+
+
+
+
+                                if(data.adds) {
 
                                 let pickName = `${pick.season} Round ${pick.round}`;
 
@@ -289,6 +330,7 @@ export default function TradeFinder(initialSleeperPlayerData) {
                                   userWhoeRecievedPick: manager.username,
                                   pickRecieved: pickName,
                                 });
+                              }
                               }
                             }
                           );
@@ -299,6 +341,7 @@ export default function TradeFinder(initialSleeperPlayerData) {
                         // );
                       }
 
+                      // console.log(tempIfOnlyPicksManagerOneName, tempIfOnlyPicksManagerTwoName)
                       // console.log(userWhoRecivedPicksUsernameWithPick);
 
                       /////////////////
@@ -413,6 +456,11 @@ export default function TradeFinder(initialSleeperPlayerData) {
                               
                               managerOneName = tempManagerOneName
                             managerTwoName = tempManagerTwoName
+
+                           
+
+                            managerOneIfOnlyPicks = tempIfOnlyPicksManagerOneName
+                           managerTwoIfOnlyPicks = tempIfOnlyPicksManagerTwoName
                             }
                             
                           );
@@ -584,6 +632,18 @@ export default function TradeFinder(initialSleeperPlayerData) {
                       let tempManOneName = managerOneName[0]
                       let tempManTwoName = managerTwoName[0]
 
+                      // if(!tempManOneName) {
+                      //   console.log('just picks', managerOneIfOnlyPicks, managerTwoIfOnlyPicks)
+                      // }
+
+                      // console.log(tempIfOnlyPicksManagerOneName, tempIfOnlyPicksManagerTwoName)
+
+                      // console.log(managerOneIfOnlyPicks, managerTwoIfOnlyPicks)
+                      
+
+                      // console.log(managerOneIfOnlyPicks, tempManOneName, tempUserNameToUseHerForPicksManagerOne)
+                    
+
                       tempCompletedTradesTransactions.push({
                         leagueName: leagueName,
                         dateOfTrade: transactionDate,
@@ -596,6 +656,8 @@ export default function TradeFinder(initialSleeperPlayerData) {
                         draftPicksInDeal: userWhoRecivedPicksUsernameWithPick,
                         managerOneName: tempManOneName,
                         managerTwoName:tempManTwoName,
+                        ifOnlyPicksManagerOne: tempIfOnlyPicksManagerOneName,
+                        ifOnlyPicksManagerTwo: tempIfOnlyPicksManagerTwoName,
                       });
                     }
                   } //if (data.type === 'trade') {
@@ -742,13 +804,17 @@ export default function TradeFinder(initialSleeperPlayerData) {
                     {/* team one */}
 
                      <div className={styles.teamOneWrapper}>
+                      {trade.managerOneName && 
                       <div className={styles.managerWhoRecievedTitle}>{`${trade.managerOneName}`}</div>
-
+                      }
+                      {trade.ifOnlyPicksManagerOne[0] &&
+                      <div className={styles.managerWhoRecievedTitle}>{`${trade.ifOnlyPicksManagerOne[0]}`}</div>
+                      }
                       {usernameWithPlayersTheyRecievedArrayForHere.map(pair => {
                       let isOnPlayerOneTeam = false;
                       
 
-                      if(trade.managerOneName === pair.userWhoRecievedThePlayer) {
+                      if(trade.managerOneName === pair.userWhoRecievedThePlayer || trade.ifOnlyPicksManagerOne === pair.userWhoRecievedThePlayer) {
                         // console.log(`manager 1 is ${pair.userWhoRecievedThePlayer}`)
                         isOnPlayerOneTeam = true
                       }
@@ -773,12 +839,17 @@ export default function TradeFinder(initialSleeperPlayerData) {
                       let num = Math.random()
 
                       let isOnPlayerOneTeam = false;
+
+                      // console.log(trade.ifOnlyPicksManagerOne, trade.ifOnlyPicksManagerTwo)
                       
 
-                      if(trade.managerOneName === pick.userWhoeRecievedPick) {
+                      if(trade.managerOneName === pick.userWhoeRecievedPick || trade.ifOnlyPicksManagerOne[0] === pick.userWhoeRecievedPick) {
                         // console.log(`manager 1 is ${pair.userWhoRecievedThePlayer}`)
                         isOnPlayerOneTeam = true
                       }
+
+                      // console.log(trade.ifOnlyPicksManagerOne, pick.userWhoeRecievedPick)
+
                       
                       return (
                         
@@ -795,13 +866,20 @@ export default function TradeFinder(initialSleeperPlayerData) {
                       </div>
                       {/* team 2 below */}
               <div className={styles.teamTwoWrapper}>
+                {trade.managerTwoName &&
                      <div className={styles.managerWhoRecievedTitle}>{`${trade.managerTwoName}`}</div>
+                }
+                {trade.ifOnlyPicksManagerTwo[0] &&
+                <div className={styles.managerWhoRecievedTitle}>{`${trade.ifOnlyPicksManagerTwo[0]}`}</div>
+                }
 
                   {usernameWithPlayersTheyRecievedArrayForHere.map(pair => {
                       let isOnPlayerTwoTeam = false;
 
+                     
 
-                  if(trade.managerTwoName === pair.userWhoRecievedThePlayer) {
+
+                  if(trade.managerTwoName === pair.userWhoRecievedThePlayer || trade.ifOnlyPicksManagerTwo === pair.userWhoRecievedThePlayer) {
                   // console.log(`manager 1 is ${pair.userWhoRecievedThePlayer}`)
                        isOnPlayerTwoTeam = true
                     }
@@ -827,7 +905,7 @@ export default function TradeFinder(initialSleeperPlayerData) {
                   let isOnPlayerTwoTeam = false;
 
 
-                  if(trade.managerTwoName === pick.userWhoeRecievedPick) {
+                  if(trade.managerTwoName === pick.userWhoeRecievedPick || trade.ifOnlyPicksManagerTwo[0] === pick.userWhoeRecievedPick) {
                   // console.log(`manager 1 is ${pair.userWhoRecievedThePlayer}`)
                        isOnPlayerTwoTeam = true
                     }
