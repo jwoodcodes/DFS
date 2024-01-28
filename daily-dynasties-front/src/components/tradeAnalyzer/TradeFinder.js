@@ -18,6 +18,7 @@ export default function TradeFinder(initialSleeperPlayerData) {
   const [usernameWithRosterID, setUsernameWithRosterID] = React.useState([]);
 
   const [isDataReady, setIsDataReady] = React.useState(false);
+  const [isNoRecentTradesMessageShown, setIsNoRecentTradesMessageShown] = React.useState(true)
 
   const range = (start, end, step = 1) => {
     let output = [];
@@ -47,6 +48,7 @@ export default function TradeFinder(initialSleeperPlayerData) {
     event.preventDefault();
 
     // console.log(selectedWeek)
+    
 
     const curYear = new Date().getFullYear();
 
@@ -663,9 +665,23 @@ export default function TradeFinder(initialSleeperPlayerData) {
                   } //if (data.type === 'trade') {
                 }); //end of leaguesTransactionData.forEach(function (data) {
                 //
-                // console.log(tempPendingTradesTransactions);
-                // console.log(tempCompletedTradesTransactions.length);
+                
+                
+                tempCompletedTradesTransactions.map((test) => {
+                  if(test.managerOneName && !test.managerTwoName) {
+                  console.log(test.draftPicksInDeal[0].userWhoeRecievedPick)
+                  test.managerTwoName = test.draftPicksInDeal[0].userWhoeRecievedPick
+                  }
+                  if(test.managerTwoName && !test.managerOneName) {
+                    console.log(test.draftPicksInDeal[0].userWhoeRecievedPick)
+                    test.managerOneName = test.draftPicksInDeal[0].userWhoeRecievedPick
+                    }
+                })
+                
 
+                
+
+                
                 // completedTradesArray.push(tempCompletedTradesTransactions);
 
                 // setPendingtradesArray([
@@ -675,10 +691,14 @@ export default function TradeFinder(initialSleeperPlayerData) {
                 // console.log(completedTradesArray.length)
 
                 if (tempCompletedTradesTransactions.length > 0) {
+                  
                   completedTradesArray.push(tempCompletedTradesTransactions);
+                  
                 }
+                
               }
               setIsDataReady(true);
+              
             } // end of if statement everything needs to run inside of
           }); //end of getUserInfo(id).then(()
         }); // end of userIDsArray.map(id => {
@@ -696,7 +716,11 @@ export default function TradeFinder(initialSleeperPlayerData) {
         //////////////////////////////////////////////////////////////////////
       } // end of if (id && selectedWeek) {
 
+      
+
       setCompletedtradesArray([...tempCompletedTradesTransactions]);
+
+      
     }
 
     selectedUserLeaguesIDsArray.map(function (league) {
@@ -707,15 +731,28 @@ export default function TradeFinder(initialSleeperPlayerData) {
     });
 
     //   console.log(selectedUserLeaguesIDsArray)
-    // console.log(completedTradesArray);
+    
+
     setCompletedTradesToPassToDisplay(completedTradesArray);
+
+    
+
+   
+
+    // if(completedTradesArray[0]) {
+    //   console.log('yes')
+    // }
+
+    // if(!completedTradesArray[0]) {
+    //   console.log('no')
+    // }
   } // end of onSearch function
 
   return (
     <div className={styles.wholeTradeFinderWrapper}>
       <div className={styles.tradeFinderLabel}>Trade Finder (Beta)</div>
       <div className={styles.subLabel}>
-        Pull up all recent Trades across all you sleeper leagues
+        Pull up all recent Trades across all your sleeper leagues
       </div>
       <form
         className={styles.formWrapper}
@@ -765,14 +802,23 @@ export default function TradeFinder(initialSleeperPlayerData) {
         )}
       </form>
 
-      {isDataReady && (
+      {isDataReady && completedTradesToPassToDisplay && (
         <div>
+          
           {completedTradesToPassToDisplay.map(tradeArray => {
             // console.log(tradeArray);
+            
             let sortedTradeArray = tradeArray.sort(
               (a, b) => a.transactionTime < b.transactionTime
             );
 
+            let isTradeArray = false
+
+            if(tradeArray) {
+              isTradeArray = true
+            }
+
+            
             return sortedTradeArray.map(trade => {
               // console.log(trade);
 
@@ -785,6 +831,7 @@ export default function TradeFinder(initialSleeperPlayerData) {
               let dateOfTrade = trade.dateOfTrade.slice(0, 21)
 
               return (
+                
                 <div
                   key={`${trade.transactionTime}`}
                   className={styles.wholeTradeWrapper}
@@ -933,11 +980,14 @@ export default function TradeFinder(initialSleeperPlayerData) {
                     
                   </div>
                 </div>
+            
               );
             });
+          
           })}
         </div>
-      )}
+      )} 
+      
     </div>
   );
 }
