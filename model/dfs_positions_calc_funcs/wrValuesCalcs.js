@@ -5,6 +5,9 @@ const wrrawdata = require('../teamandpostionsrawdata/wrrawdata');
 const qbrawdata = require('../teamandpostionsrawdata/qbrawdata');
 const allQBData = require('../dfs_positions_calc_funcs/qbValuesCalcs');
 
+//
+const WRProspectModelData = require('../DataForUndroppablesProspectModels/WRProspectModelData.js')
+
 const allWROneTotalScores = [];
 const allWRTwoTotalScores = [];
 const allWRThreeTotalScores = [];
@@ -1392,3 +1395,19 @@ allWRData.allWRProjectionsObjects = allWRProjectionsObjects;
 //////////////////////
 
 module.exports = allWRData;
+
+
+//////////////////////////////
+////////////////////////////////////
+
+WRProspectModelData.forEach((playerArray) => {
+  playerArray.forEach((player) => {
+    // let tempOne = player['MTF/REC %'].slice(0, -1)
+    let tempOne = player['1D/RR'].slice(0, -1)
+    let tempTwo = +tempOne
+    // console.log(tempTwo)
+    if(tempTwo > 11) {
+      console.log(player.Player, tempTwo)
+    }
+  })
+})
