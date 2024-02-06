@@ -1,5 +1,7 @@
 'use strict';
 
+
+
 //conference adjustment scale
 
 // SEC or Big Ten- +7.5%
