@@ -68,7 +68,7 @@ const curDate = new Date();
 const curMonth = curDate.getMonth() + 1;
 // console.log(curMonth);
 
-const futureDate = new Date('03/14/2024');
+const futureDate = new Date('03/14/2025');
 
 const time1 = curDate.getTime();
 const futureTime = futureDate.getTime();
@@ -95,7 +95,7 @@ const amountToBeAddedToPlayersAgeToKnowWhatAgeTheyWillBeNextMarch =
 ////////////////////////////////////
 /////////////////////////////
 
-// making trimmed fantasyCalc data
+// making const newData = [];trimmed fantasyCalc data
 
 const newData = [];
 const alltradeCalculaterDataArray = [];
