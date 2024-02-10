@@ -855,4 +855,4 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
     } // end of for (const [key2, value2] of Object.entries(value1)) {
 } // for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
 
-  console.log(allWrProspectsObjects)
+//   console.log(allWrProspectsObjects)

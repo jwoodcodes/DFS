@@ -237,23 +237,61 @@ const testfunc = async function () {
           // augAge > 25
           // valueDifferenceFromAugustToThisOffseason > 0
           // augPlayer.marketValue > 800 &&
+          // whoRVwasHigherOn >= 5 &&
 
           if (sanitizedAugPlayerName === sanitizedRVPlayerName) {
             if (
-              whoRVwasLowerOn >= 5 &&
+              
               +augRVDynastyPlayer['"Rank"'] < 100 &&
-              augAge > 25
+              whoRVwasLowerOn >= 5
             ) {
-              num = num + 1;
-              console.log(
-                num,
-                sanitizedRVPlayerName,
-                // +augRVDynastyPlayer['"Rank"'],
-                valueDifferenceFromAugustToThisOffseason,
-                player.player.maybeAge
-              );
+              // num = num + 1;
+              // console.log(
+              //   num,
+              //   sanitizedRVPlayerName,
+              //   // +augRVDynastyPlayer['"Rank"'],
+              //   valueDifferenceFromAugustToThisOffseason,
+              //   player.player.maybeAge
+              // );
+
+              before2023SeasonRVRedraftRankingsTEP.forEach(rvPlayer => {
+                //   console.log(rvPlayer['"Player"'].slice(1, -1));
+    
+                before2023SeasonFFPCRedraftADP.forEach(ffpcPlayer => {
+                  if(rvPlayer['"Player"'].slice(1, -1) === sanitizedAugPlayerName) {
+                  if (
+                    rvPlayer['"Player"'].slice(1, -1) === ffpcPlayer['"Player"'].slice(1, -1)
+                  ) {
+                    //   console.log(ffpcPlayer['"Player"'].slice(1, -1));
+    
+                    // ffpcPlayer['"ADP"'],
+                    //     rvPlayer['"AVGRank"'],
+                    
+                    let difference = (ffpcPlayer['"ADP"'] - rvPlayer['"AVGRank"']).toFixed(2);
+                    let IfMarketISHigherNumberIsPositiveDifference = (rvPlayer['"AVGRank"'] - ffpcPlayer['"ADP"']).toFixed(2)
+
+                    // console.log(sanitizedRVPlayerName, ffpcPlayer['"ADP"'], rvPlayer['"AVGRank"'])
+                    if( IfMarketISHigherNumberIsPositiveDifference > 3 ) {
+                      num = num + 1
+                      console.log(
+                        num,
+                        ffpcPlayer['"Player"'].slice(1, -1),
+                        valueDifferenceFromAugustToThisOffseason,
+                        difference,
+                        // player.player.maybeAge
+                      );
+                    }
+                  }
+                }
+                });
+              });
+
             }
           }
+
+
+         
+
         });
       }
     });
@@ -308,27 +346,61 @@ const testfunc = async function () {
 // 15.7% (3 total) gained in value by more than 250 points, all 3 were over over 25
 // 79% (15) went down by more than 250 value points, 73% (11/15) over 25,
 
+/////////////// adding in redraft rankings stuff
+
+// players who were in RV dynasty top 100 rankings && RV redraft rankingswas at least 3 spots higher than ADP:
+
+// 51 total
+// 49% (25) at least maintained value
+// 41% (21) gained in value by more than 250 points
+// 35% (18) lost at least 250 value points
+
+// players that were top 100 in rotoviz dynasty rankings & RV dynasty rankings were at least 5 spots higher than market (i.e Rotoviz thought they were better) && RV redraft rankings were at least 3 spots higher than market
+// 48 total
+// 64.5% (31) at least maintained value
+// 51.6% (16) gained in value by more than 250 points
+// 16.1% (5) lost at least 250 value points
+
+// players that were in top 100 in RV dynasty rankings && RV redraft rankings were at least 3 spots LOWER (i.e Rotoviz thought they were worse) than ADP 
+
+// 20 total
+// 40% (8) at least maintained value
+// 30% (6) gained in value by more than 250 points
+// 55% (11) lost at least 250 value points
+
+// players who were in RV top 100 dynasty rankings && RV dynasty rankings were 5 or more spots lower on them than the market and RV redraft rankings were at least 3 spots higher than market
+
+// 5 total
+// all 5 lost more than 300 value points
+
+
+///////////////// next things I need to do are the two sections below here  ////////////////////
+
+///////////////////////// weaving age into the two above groupings
+
+//////////////////////// just what happened to dynasty value depending on how much higher or lower they finished in final fantasy posiotnal finish than their preseason redraft ADP, (should also weave age into here as well)
+
 testfunc();
 
-before2023SeasonRVRedraftRankingsTEP.forEach(rvPlayer => {
-  //   console.log(rvPlayer['"Player"'].slice(1, -1));
-  before2023SeasonFFPCRedraftADP.forEach(ffpcPlayer => {
-    if (
-      rvPlayer['"Player"'].slice(1, -1) === ffpcPlayer['"Player"'].slice(1, -1)
-    ) {
-      //   console.log(ffpcPlayer['"Player"'].slice(1, -1));
+// before2023SeasonRVRedraftRankingsTEP.forEach(rvPlayer => {
+//   //   console.log(rvPlayer['"Player"'].slice(1, -1));
+//   before2023SeasonFFPCRedraftADP.forEach(ffpcPlayer => {
+//     if (
+//       rvPlayer['"Player"'].slice(1, -1) === ffpcPlayer['"Player"'].slice(1, -1)
+//     ) {
+//       //   console.log(ffpcPlayer['"Player"'].slice(1, -1));
 
-      let difference = (ffpcPlayer['"ADP"'] - rvPlayer['"AVGRank"']).toFixed(2);
+//       let difference = (ffpcPlayer['"ADP"'] - rvPlayer['"AVGRank"']).toFixed(2);
 
-      //   console.log(
-      //     ffpcPlayer['"Player"'].slice(1, -1),
-      //     ffpcPlayer['"ADP"'],
-      //     rvPlayer['"AVGRank"'],
-      //     difference
-      //   );
-    }
-  });
-});
+//         console.log(
+//           ffpcPlayer['"Player"'].slice(1, -1),
+//           ffpcPlayer['"ADP"'],
+//           rvPlayer['"AVGRank"'],
+//           difference
+//         );
+//     }
+//   });
+// });
 
 // before2023SeasonFFPCRedraftADP.forEach(ffpcPlayer => {
 //   console.log(ffpcPlayer['"Player"'].slice(1, -1));
