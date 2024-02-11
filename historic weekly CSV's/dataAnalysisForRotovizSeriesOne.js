@@ -7,12 +7,33 @@ const before2023SeasonRVDynastyRankings = require('./week-6-2023/rvDynastyRankin
 
 const full2023PPRFinalStandings = require('./full2023PPRFinalStandings');
 
+const qbFinal2023Standings = require('./qbFinal2023Standing');
+const rbFinal2023Standings = require('./rbFinal2023Standings');
+
 const alltradeCalculaterDataArray = [];
 const newData = [];
 
 const august2023alltradeCalculaterDataArray = [];
 const august2023NewData = [];
 
+// function sortByKey(array, key) {
+//   return array.sort(function (a, b) {
+//     var x = a[key];
+//     var y = b[key];
+//     return x < y ? -1 : x > y ? 1 : 0;
+//   });
+// }
+
+// let sortedFull2023PPRFinalStandings = sortByKey(
+//   full2023PPRFinalStandings,
+//   '"PPR Pts/G"'
+// );
+
+// let sortedFull2023PPRFinalStandings = full2023PPRFinalStandings.sort(
+//   (a, b) => b['"PPR Pts/G"'] - a['"PPR Pts/G"']
+// );
+
+// console.log(sortedFull2023PPRFinalStandings);
 /////// fetching current fantasyCalc data
 
 async function fetchRawFantasyCalcDataFromMongodb() {
@@ -175,9 +196,8 @@ const testfunc = async function () {
         let valueLostWillBeAPostiveNumberValueDiff =
           augPlayer.marketValue - player.value;
 
-        let myValueValueDifferenceromAugustToThisOffseason =  player.value - augPlayer.myValue
-
-       
+        let myValueValueDifferenceromAugustToThisOffseason =
+          player.value - augPlayer.myValue;
 
         // console.log(sanitizedAugPlayerName, myValueValueDifferenceromAugustToThisOffseason)
 
@@ -203,12 +223,9 @@ const testfunc = async function () {
 
         // for value droppers
 
-        // valueLostWillBeAPostiveNumberValueDiff > 800 &&  
-
-
+        // valueLostWillBeAPostiveNumberValueDiff > 800 &&
 
         if (
-          
           augPlayer.marketValue > 800 &&
           myValueValueDifferenceromAugustToThisOffseason > 800 &&
           valueDifferenceFromAugustToThisOffseason > 250
@@ -218,10 +235,71 @@ const testfunc = async function () {
           //   num,
           //   sanitizedAugPlayerName,
           //   valueDifferenceFromAugustToThisOffseason,
-            
           //   // player.player.maybeAge
           // );
         }
+
+        rbFinal2023Standings.forEach(finalPlayer => {
+          // console.log(finalPlayer['"Player"'].slice(1, -1));
+
+          let sanitizedFinalPlayerName = finalPlayer['"Player"'].slice(1, -1);
+
+          sanitizedFinalPlayerName = sanitizedFinalPlayerName
+            .replace("'", '')
+            .replace('.', '')
+            .replace('.', '');
+          if (sanitizedFinalPlayerName.includes('Jr')) {
+            // console.log(playerObject['"PLAYER NAME"']);
+            sanitizedFinalPlayerName ===
+              sanitizedFinalPlayerName.replace('Jr', '');
+          }
+
+          if (sanitizedFinalPlayerName === sanitizedAugPlayerName) {
+            // console.log(sanitizedFinalPlayerName);
+            before2023SeasonFFPCRedraftADP.forEach(ffpcPlayer => {
+              // console.log(ffpcPlayer['"Player"']);
+
+              let sanitizedffpcPlayerName = ffpcPlayer['"Player"'].slice(1, -1);
+
+              sanitizedffpcPlayerName = sanitizedffpcPlayerName
+                .replace("'", '')
+                .replace('.', '')
+                .replace('.', '');
+              if (sanitizedffpcPlayerName.includes('Jr')) {
+                // console.log(playerObject['"PLAYER NAME"']);
+                sanitizedffpcPlayerName = sanitizedffpcPlayerName.replace(
+                  'Jr',
+                  ''
+                );
+              }
+
+              let finalNumericalPositionalFinish = +finalPlayer['"#"'].slice(
+                1,
+                -1
+              );
+
+              let posionalFinishDiff =
+                ffpcPlayer['"Pos ADP"'] - finalNumericalPositionalFinish;
+
+              let valueWillBePositiveIfWorseposionalFinishDiff =
+                finalNumericalPositionalFinish - ffpcPlayer['"Pos ADP"'];
+
+              if (sanitizedFinalPlayerName === sanitizedffpcPlayerName) {
+                if (augAge < 23 && augPlayer.marketValue > 800) {
+                  num = num + 1;
+                  console.log(
+                    num,
+                    sanitizedFinalPlayerName,
+                    ffpcPlayer['"Pos ADP"'],
+                    finalNumericalPositionalFinish,
+                    posionalFinishDiff,
+                    valueDifferenceFromAugustToThisOffseason
+                  );
+                }
+              }
+            });
+          }
+        });
 
         before2023SeasonRVDynastyRankings.forEach(augRVDynastyPlayer => {
           // console.log(augRVDynastyPlayer['"Player"'].slice(1, -1));
@@ -250,93 +328,28 @@ const testfunc = async function () {
           // valueDifferenceFromAugustToThisOffseason > 0
           // augPlayer.marketValue > 800 &&
           // whoRVwasHigherOn >= 5 &&
+          // whoRVwasHigherOn > 2 &&
+          // +augRVDynastyPlayer['"Rank"'] < 100 &&
+          // valueDifferenceFromAugustToThisOffseason > 799
 
           if (sanitizedAugPlayerName === sanitizedRVPlayerName) {
             if (
-              
-              +augRVDynastyPlayer['"Rank"'] < 100 
+              augPlayer.marketValue > 800 &&
+              augAge < 23 &&
+              valueDifferenceFromAugustToThisOffseason > 250
             ) {
               // num = num + 1;
               // console.log(
               //   num,
               //   sanitizedRVPlayerName,
+              //   augPlayer.marketValue,
+              //   player.value,
               //   // +augRVDynastyPlayer['"Rank"'],
               //   valueDifferenceFromAugustToThisOffseason,
-              //   player.player.maybeAge
+              //   whoRVwasHigherOn
               // );
-
-              before2023SeasonRVRedraftRankingsTEP.forEach(rvPlayer => {
-                //   console.log(rvPlayer['"Player"'].slice(1, -1));
-    
-                before2023SeasonFFPCRedraftADP.forEach(ffpcPlayer => {
-                  if(rvPlayer['"Player"'].slice(1, -1) === sanitizedAugPlayerName) {
-                  if (
-                    rvPlayer['"Player"'].slice(1, -1) === ffpcPlayer['"Player"'].slice(1, -1)
-                  ) {
-                    //   console.log(ffpcPlayer['"Player"'].slice(1, -1));
-    
-                    // ffpcPlayer['"ADP"'],
-                    //     rvPlayer['"AVGRank"'],
-                    
-                    let difference = (ffpcPlayer['"ADP"'] - rvPlayer['"AVGRank"']).toFixed(2);
-                    let IfMarketISHigherNumberIsPositiveDifference = (rvPlayer['"AVGRank"'] - ffpcPlayer['"ADP"']).toFixed(2)
-
-                    // console.log(sanitizedRVPlayerName, ffpcPlayer['"ADP"'], rvPlayer['"AVGRank"'])
-
-                    full2023PPRFinalStandings.forEach((final2023Player) => {
-                      // console.log(final2023Player.Player)
-                      let sanitized2023FinalPlayerName = final2023Player.Player.slice(
-                        1,
-                        -1
-                      );
-            
-                      sanitized2023FinalPlayerName = sanitized2023FinalPlayerName
-                        .replace("'", '')
-                        .replace('.', '')
-                        .replace('.', '');
-                      if (sanitized2023FinalPlayerName.includes('Jr')) {
-                        // console.log(playerObject['"PLAYER NAME"']);
-                        sanitized2023FinalPlayerName = sanitized2023FinalPlayerName.replace('Jr', '');
-                      }
-                      
-                      // console.log(sanitized2023FinalPlayerName)
-
-                      if(sanitized2023FinalPlayerName === ffpcPlayer['"Player"'].slice(1, -1)) {
-                        num = num + 1
-
-                        
-
-
-
-                        console.log(sanitized2023FinalPlayerName, final2023Player['"PPR Pts/G"'], ffpcPlayer['"ADP"'], num)
-                      }
-                    })
-
-                    
-
-                    if( IfMarketISHigherNumberIsPositiveDifference > 3 ) {
-                      // num = num + 1
-                      // console.log(
-                      //   num,
-                      //   ffpcPlayer['"Player"'].slice(1, -1),
-                      //   valueDifferenceFromAugustToThisOffseason,
-                      //   difference,
-                      //   // player.player.maybeAge
-                      // );
-                    }
-
-                    
-                  }
-                }
-                });
-              });
-
             }
           }
-
-
-         
-
         });
       }
     });
@@ -346,6 +359,8 @@ const testfunc = async function () {
 };
 
 /// notes
+
+///////////////////////////////////////////////////// just age
 
 // players who gained at least 800 value:
 
@@ -371,6 +386,10 @@ const testfunc = async function () {
 // 43.4% (20) gained at least 800 value
 // only 8.7% (4 total) lost at least 800 value
 
+/////////////////////////////////////////// bringing in RV dynasty rankings and RV dynasty rankings vs. market
+
+// of the 11 players who were over 25 and gained more than 800 value points RV dynasty rankings were at least 6 higher on 8/11 and at least 2 higher on 9/11
+
 // players ranked in top 50 or RV dynasty rankings that RV was at least 2 spots higher on than market:
 // 19 total
 // 79% (15) went up in value regardless of age
@@ -391,7 +410,31 @@ const testfunc = async function () {
 // 15.7% (3 total) gained in value by more than 250 points, all 3 were over over 25
 // 79% (15) went down by more than 250 value points, 73% (11/15) over 25,
 
+////////////
+///////////
+
 /////////////// adding in redraft rankings stuff
+
+// how age effected value considering how they player performed vs. expectations
+
+// for this an overperfrom is finishing 5 spots better is were top 12 or 10 spots better if outside top 12 august positioal ADP
+
+// below 23
+// QB- 4 total
+// 2 overperform- 1/2 gained, 1/2 lost (howell), 1/2 gained > 250, 1/2 lost > 250, 1/2 gained greater than 800, 0/2 lost more than 800
+// 1 underperform- 1/1 gained, 0/1 lost, 1/1 gained > 250, 0/1 lost > 250, 1/1 gained > 800, 0/1 lost > 800
+
+// between 23.0 and 25.0
+// QB- 9 total
+// 3 overperform- 2/3 gained, 1/3 lost (ridder), 2/3 gained > 250, 1/3 lost > 250, 2/3 gained greater than 800, 1/3 lost more than 800 (ridder)
+// 4 underperformed- 0/4 gained, 4/4 lost, 0/4 gained > 250, 4/4 lost > 250, 0/4 gained > 800, 3/4 lost > 800
+
+// over 25.0
+// QB- 19 total
+//// 4 overperform- 4/4 gained, 0/4 lost, 4/4 gained > 250, 0/4 lost > 250, 1/4 gained greater than 800, 0/4 lost more than 800 (ridder)
+// 7 underperformed- 0/7 gained, 7/7 lost, 0/7 gained > 250, 6/7 lost > 250, 0/7 gained > 800, 5/7 lost > 800
+
+///////////////////////////////////
 
 // players who were in RV dynasty top 100 rankings && RV redraft rankingswas at least 3 spots higher than ADP:
 
@@ -406,7 +449,7 @@ const testfunc = async function () {
 // 51.6% (16) gained in value by more than 250 points
 // 16.1% (5) lost at least 250 value points
 
-// players that were in top 100 in RV dynasty rankings && RV redraft rankings were at least 3 spots LOWER (i.e Rotoviz thought they were worse) than ADP 
+// players that were in top 100 in RV dynasty rankings && RV redraft rankings were at least 3 spots LOWER (i.e Rotoviz thought they were worse) than ADP
 
 // 20 total
 // 40% (8) at least maintained value
@@ -418,12 +461,13 @@ const testfunc = async function () {
 // 5 total
 // all 5 lost more than 300 value points
 
-
 ///////////////// next things I need to do are the two sections below here  ////////////////////
 
 ///////////////////////// weaving age into the two above groupings
 
 //////////////////////// just what happened to dynasty value depending on how much higher or lower they finished in final fantasy posiotnal finish than their preseason redraft ADP, (should also weave age into here as well)
+
+// QB-
 
 testfunc();
 
