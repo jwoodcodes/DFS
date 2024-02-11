@@ -5,6 +5,8 @@ const before2023SeasonFFPCRedraftADP = require('./FFPCBefore2023RedraftADP');
 
 const before2023SeasonRVDynastyRankings = require('./week-6-2023/rvDynastyRankingsTEP');
 
+const full2023PPRFinalStandings = require('./full2023PPRFinalStandings');
+
 const alltradeCalculaterDataArray = [];
 const newData = [];
 
@@ -173,6 +175,12 @@ const testfunc = async function () {
         let valueLostWillBeAPostiveNumberValueDiff =
           augPlayer.marketValue - player.value;
 
+        let myValueValueDifferenceromAugustToThisOffseason =  player.value - augPlayer.myValue
+
+       
+
+        // console.log(sanitizedAugPlayerName, myValueValueDifferenceromAugustToThisOffseason)
+
         // console.log(
         //   sanitizedAugPlayerName,
         //   valueDifferenceFromAugustToThisOffseason
@@ -195,19 +203,23 @@ const testfunc = async function () {
 
         // for value droppers
 
-        // valueLostWillBeAPostiveNumberValueDiff > 800 &&
+        // valueLostWillBeAPostiveNumberValueDiff > 800 &&  
+
+
 
         if (
-          augAge > 23 &&
+          
           augPlayer.marketValue > 800 &&
-          valueLostWillBeAPostiveNumberValueDiff > 800
+          myValueValueDifferenceromAugustToThisOffseason > 800 &&
+          valueDifferenceFromAugustToThisOffseason > 250
         ) {
           // num = num + 1;
           // console.log(
           //   num,
           //   sanitizedAugPlayerName,
           //   valueDifferenceFromAugustToThisOffseason,
-          //   player.player.maybeAge
+            
+          //   // player.player.maybeAge
           // );
         }
 
@@ -242,8 +254,7 @@ const testfunc = async function () {
           if (sanitizedAugPlayerName === sanitizedRVPlayerName) {
             if (
               
-              +augRVDynastyPlayer['"Rank"'] < 100 &&
-              whoRVwasLowerOn >= 5
+              +augRVDynastyPlayer['"Rank"'] < 100 
             ) {
               // num = num + 1;
               // console.log(
@@ -271,16 +282,50 @@ const testfunc = async function () {
                     let IfMarketISHigherNumberIsPositiveDifference = (rvPlayer['"AVGRank"'] - ffpcPlayer['"ADP"']).toFixed(2)
 
                     // console.log(sanitizedRVPlayerName, ffpcPlayer['"ADP"'], rvPlayer['"AVGRank"'])
-                    if( IfMarketISHigherNumberIsPositiveDifference > 3 ) {
-                      num = num + 1
-                      console.log(
-                        num,
-                        ffpcPlayer['"Player"'].slice(1, -1),
-                        valueDifferenceFromAugustToThisOffseason,
-                        difference,
-                        // player.player.maybeAge
+
+                    full2023PPRFinalStandings.forEach((final2023Player) => {
+                      // console.log(final2023Player.Player)
+                      let sanitized2023FinalPlayerName = final2023Player.Player.slice(
+                        1,
+                        -1
                       );
+            
+                      sanitized2023FinalPlayerName = sanitized2023FinalPlayerName
+                        .replace("'", '')
+                        .replace('.', '')
+                        .replace('.', '');
+                      if (sanitized2023FinalPlayerName.includes('Jr')) {
+                        // console.log(playerObject['"PLAYER NAME"']);
+                        sanitized2023FinalPlayerName = sanitized2023FinalPlayerName.replace('Jr', '');
+                      }
+                      
+                      // console.log(sanitized2023FinalPlayerName)
+
+                      if(sanitized2023FinalPlayerName === ffpcPlayer['"Player"'].slice(1, -1)) {
+                        num = num + 1
+
+                        
+
+
+
+                        console.log(sanitized2023FinalPlayerName, final2023Player['"PPR Pts/G"'], ffpcPlayer['"ADP"'], num)
+                      }
+                    })
+
+                    
+
+                    if( IfMarketISHigherNumberIsPositiveDifference > 3 ) {
+                      // num = num + 1
+                      // console.log(
+                      //   num,
+                      //   ffpcPlayer['"Player"'].slice(1, -1),
+                      //   valueDifferenceFromAugustToThisOffseason,
+                      //   difference,
+                      //   // player.player.maybeAge
+                      // );
                     }
+
+                    
                   }
                 }
                 });
