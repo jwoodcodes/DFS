@@ -9,6 +9,7 @@ const full2023PPRFinalStandings = require('./full2023PPRFinalStandings');
 
 const qbFinal2023Standings = require('./qbFinal2023Standing');
 const rbFinal2023Standings = require('./rbFinal2023Standings');
+const wrFinal2023Standings = require('./wrFinal2023Standings');
 
 const alltradeCalculaterDataArray = [];
 const newData = [];
@@ -239,7 +240,7 @@ const testfunc = async function () {
           // );
         }
 
-        rbFinal2023Standings.forEach(finalPlayer => {
+        wrFinal2023Standings.forEach(finalPlayer => {
           // console.log(finalPlayer['"Player"'].slice(1, -1));
 
           let sanitizedFinalPlayerName = finalPlayer['"Player"'].slice(1, -1);
@@ -285,7 +286,7 @@ const testfunc = async function () {
                 finalNumericalPositionalFinish - ffpcPlayer['"Pos ADP"'];
 
               if (sanitizedFinalPlayerName === sanitizedffpcPlayerName) {
-                if (augAge < 23 && augPlayer.marketValue > 800) {
+                if (augAge < 23 && augPlayer.marketValue > 700) {
                   num = num + 1;
                   console.log(
                     num,
@@ -420,19 +421,28 @@ const testfunc = async function () {
 // for this an overperfrom is finishing 5 spots better is were top 12 or 10 spots better if outside top 12 august positioal ADP
 
 // below 23
-// QB- 4 total
+//// QB- 4 total
 // 2 overperform- 1/2 gained, 1/2 lost (howell), 1/2 gained > 250, 1/2 lost > 250, 1/2 gained greater than 800, 0/2 lost more than 800
 // 1 underperform- 1/1 gained, 0/1 lost, 1/1 gained > 250, 0/1 lost > 250, 1/1 gained > 800, 0/1 lost > 800
+//// RB- 11 total who started year > 800 market value
+// 3 overperform- 3/3 gained, 0/3 lost, 3/3 gained > 250, 0/3 lost > 250, 3/3 gained greater than 800 (all gained > 1,000), 0/3 lost more than 800
+// 6 underperform- 2/6 gained, 4/6 lost, 1/6 gained > 250, 4/6 lost > 250, 0/6 gained > 800, 0/6 lost > 800
 
 // between 23.0 and 25.0
 // QB- 9 total
 // 3 overperform- 2/3 gained, 1/3 lost (ridder), 2/3 gained > 250, 1/3 lost > 250, 2/3 gained greater than 800, 1/3 lost more than 800 (ridder)
 // 4 underperformed- 0/4 gained, 4/4 lost, 0/4 gained > 250, 4/4 lost > 250, 0/4 gained > 800, 3/4 lost > 800
+//// RB- 22 total who started year > 800 market value
+// 8 overperform- 5/8 gained, 2/8 lost, 5/8 gained > 250, 1/8 lost > 250, 3/8 gained greater than 800, 0/8 lost more than 800
+// 7 underperform- 0/7 gained, 7/7 lost, 0/7 gained > 250, 7/7 lost > 250, 0/7 gained > 800, 5/7 lost > 800
 
 // over 25.0
 // QB- 19 total
 //// 4 overperform- 4/4 gained, 0/4 lost, 4/4 gained > 250, 0/4 lost > 250, 1/4 gained greater than 800, 0/4 lost more than 800 (ridder)
 // 7 underperformed- 0/7 gained, 7/7 lost, 0/7 gained > 250, 6/7 lost > 250, 0/7 gained > 800, 5/7 lost > 800
+//// RB- 27 total who started year > 800 market value
+// 7 overperform- 4/7 gained, 3/7 lost, 2/7 gained > 250, 3/7 lost > 250, 0/7 gained greater than 800, 1/7 lost more than 800
+// 15 underperform- 0/15 gained, 15/15 lost, 0/15 gained > 250, 14/15 lost > 250, 0/15 gained > 800, 10/15 lost > 800
 
 ///////////////////////////////////
 
