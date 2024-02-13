@@ -10,6 +10,7 @@ const full2023PPRFinalStandings = require('./full2023PPRFinalStandings');
 const qbFinal2023Standings = require('./qbFinal2023Standing');
 const rbFinal2023Standings = require('./rbFinal2023Standings');
 const wrFinal2023Standings = require('./wrFinal2023Standings');
+const teFinal2023Standings = require('./teFinal2023Standings');
 
 const alltradeCalculaterDataArray = [];
 const newData = [];
@@ -240,7 +241,7 @@ const testfunc = async function () {
           // );
         }
 
-        wrFinal2023Standings.forEach(finalPlayer => {
+        teFinal2023Standings.forEach(finalPlayer => {
           // console.log(finalPlayer['"Player"'].slice(1, -1));
 
           let sanitizedFinalPlayerName = finalPlayer['"Player"'].slice(1, -1);
@@ -286,7 +287,7 @@ const testfunc = async function () {
                 finalNumericalPositionalFinish - ffpcPlayer['"Pos ADP"'];
 
               if (sanitizedFinalPlayerName === sanitizedffpcPlayerName) {
-                if (augAge < 23 && augPlayer.marketValue > 700) {
+                if (augAge < 23  && augPlayer.marketValue > 800) {
                   num = num + 1;
                   console.log(
                     num,
@@ -372,8 +373,11 @@ const testfunc = async function () {
 // players who lost at least 800 value:
 
 // 48 total
+// 54% (26) over 25
 // 38% (18) under 25
 // 8% (4) under 23
+
+//
 
 // 168 players entered last season OVER the age of 23 with a market value of at least 800:
 // 16.7% (28) gained at least 800 in value
@@ -418,31 +422,77 @@ const testfunc = async function () {
 
 // how age effected value considering how they player performed vs. expectations
 
-// for this an overperfrom is finishing 5 spots better is were top 12 or 10 spots better if outside top 12 august positioal ADP
+// for this an overperfrom is finishing 5 spots better if were top 12 or 10 spots better if outside top 12 august positioal ADP
 
 // below 23
+
 //// QB- 4 total
 // 2 overperform- 1/2 gained, 1/2 lost (howell), 1/2 gained > 250, 1/2 lost > 250, 1/2 gained greater than 800, 0/2 lost more than 800
 // 1 underperform- 1/1 gained, 0/1 lost, 1/1 gained > 250, 0/1 lost > 250, 1/1 gained > 800, 0/1 lost > 800
+
 //// RB- 11 total who started year > 800 market value
 // 3 overperform- 3/3 gained, 0/3 lost, 3/3 gained > 250, 0/3 lost > 250, 3/3 gained greater than 800 (all gained > 1,000), 0/3 lost more than 800
 // 6 underperform- 2/6 gained, 4/6 lost, 1/6 gained > 250, 4/6 lost > 250, 0/6 gained > 800, 0/6 lost > 800
 
+//// WR- 19 total who started year > 800 market value
+// 7 overperform- 6/7 gained, 1/7 lost, 5/7 gained > 250, 0/7 lost > 250, 4/7 gained greater than 800 , 0/7 lost more than 800
+// 8 underperform- 4/8 gained, 4/8 lost, 1/8 gained > 250, 2/8 lost > 250, 0/8 gained > 800, 2/8 lost > 800 (QJ & Skyy)
+
+//// TE - 4 total who started year > 800 market value
+// 1 overperform- 1/1 gained, 0/1 lost, 1/1 gained > 250, 0/1 lost > 250, 1/1 gained greater than 800 , 0/1 lost more than 800
+// 2 underperform- 1/2 gained, 1/2 lost, 0/2 gained > 250, 0/2 lost > 250, 0/2 gained > 800, 0/2 lost > 800
+
 // between 23.0 and 25.0
+
 // QB- 9 total
 // 3 overperform- 2/3 gained, 1/3 lost (ridder), 2/3 gained > 250, 1/3 lost > 250, 2/3 gained greater than 800, 1/3 lost more than 800 (ridder)
 // 4 underperformed- 0/4 gained, 4/4 lost, 0/4 gained > 250, 4/4 lost > 250, 0/4 gained > 800, 3/4 lost > 800
+
 //// RB- 22 total who started year > 800 market value
 // 8 overperform- 5/8 gained, 2/8 lost, 5/8 gained > 250, 1/8 lost > 250, 3/8 gained greater than 800, 0/8 lost more than 800
 // 7 underperform- 0/7 gained, 7/7 lost, 0/7 gained > 250, 7/7 lost > 250, 0/7 gained > 800, 5/7 lost > 800
+
+//// WR- 24 total who started year > 800 market value
+// 6 overperform- 6/6 gained, 0/6 lost, 6/6 gained > 250, 0/6 lost > 250, 2/6 gained greater than 800, 0/6 lost more than 800
+// 14 underperform- 1/14 gained, 13/14 lost, 1/14 gained > 250, 12/14 lost > 250, 1/14 gained > 800 (Jefferson), 4/14 lost > 800
+
+//// TE- 9 total who started year > 800 market value
+// 4 overperform- 4/4 gained, 0/4 lost, 4/4 gained > 250, 0/4 lost > 250, 2/4 gained greater than 800, 0/4 lost more than 800
+// 2 underperform- 0/2 gained, 2/2 lost, 0/2 gained > 250, 1/2 lost > 250, 0/2 gained > 800, 0/2 lost > 800
 
 // over 25.0
 // QB- 19 total
 //// 4 overperform- 4/4 gained, 0/4 lost, 4/4 gained > 250, 0/4 lost > 250, 1/4 gained greater than 800, 0/4 lost more than 800 (ridder)
 // 7 underperformed- 0/7 gained, 7/7 lost, 0/7 gained > 250, 6/7 lost > 250, 0/7 gained > 800, 5/7 lost > 800
+
 //// RB- 27 total who started year > 800 market value
 // 7 overperform- 4/7 gained, 3/7 lost, 2/7 gained > 250, 3/7 lost > 250, 0/7 gained greater than 800, 1/7 lost more than 800
 // 15 underperform- 0/15 gained, 15/15 lost, 0/15 gained > 250, 14/15 lost > 250, 0/15 gained > 800, 10/15 lost > 800
+
+//// WR- 35 total
+// 7 overperform- 4/7 gained, 3/7 lost, 4/7 gained > 250, 2/7 lost > 250, 2/7 gained greater than 800, 0/7 lost more than 800
+// 12 underperform- 1/12 gained, 11/12 lost, 1/12 gained > 250, 10/12 lost > 250, 0/12 gained > 800, 2/12 lost > 800
+
+//// TE- 15 total
+// 2 overperform- 2/2 gained, 0/2 lost, 1/2 gained > 250, 0/2 lost > 250, 1/2 gained greater than 800, 0/2 lost more than 800
+// 6 underperform- 0/6 gained, 6/6 lost, 5/6 gained > 250, 6/6 lost > 250, 0/6 gained > 800, 1/6 lost > 800
+
+// totals from above:
+
+// under 23- 38 total who started year > 800 market value
+
+// 13 (34%) overperform- 11/13(85%) gained, 2/13(15%) lost, 10/13(77%) gained > 250, 1/13(8%) lost > 250, 9/13(69%) gained greater than 800, 0/13(0%) lost more than 800
+// 17 (45%) underperform- 8/17(47%) gained, 9/17(53%) lost, 3/17(18%) gained > 250, 6/17(35%) lost > 250, 1/17(5%) gained > 800, 2/17(29%) lost > 800
+
+// between 23 and 25 - 64 total who started year > 800 market value
+
+// 21/64(32%) overperform- 17/21(84%) gained, 4/17(23%) lost, 17/21(84%) gained > 250, 2/21(10%) lost > 250, 9/21(42%) gained greater than 800, 1/21(5%) lost more than 800
+// 27/64(42%) underperform- 1/27(3%) gained, 26/27(96%) lost, 1/27(3%) gained > 250, 24/27(92%) lost > 250, 1/27(4%) gained > 800, 12/27(38%) lost > 800
+
+// over 25.0 - 96 total who started year > 800 market value
+
+// 20/96(21%) overperform- 14/20(70%) gained, 6/20(30%) lost, 11/20(55%) gained > 250, 5/20(25%) lost > 250, 4/20(20%) gained greater than 800, 1/20(5%) lost more than 800
+// 40/96(42%) underperform- 1/40(2%) gained, 39/40(98%) lost, 1/40(2%) gained > 250, 36/40(95%) lost > 250, 0/40(0%) gained > 800, 18/40(45%) lost > 800
 
 ///////////////////////////////////
 
