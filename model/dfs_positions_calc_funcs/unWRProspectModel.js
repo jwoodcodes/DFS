@@ -153,11 +153,28 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
         // 
         let tempManYPRROne = +(value1.yearOne['Man YPRR'])
         let tempManYPRRTwo = +(value1.yearTwo['Man YPRR'])
+        //
+        let tempZoneYPRROne = +(value1.yearOne['Zone YPRR'])
+        let tempZoneYPRRTwo = +(value1.yearTwo['Zone YPRR'])
+        //
+        let tempPPRPointsOne = +(value1.yearOne['PPR Points'])
+        let tempPPRPointsTwo = +(value1.yearTwo['PPR Points'])
+        // 
+        let tempRecMSOne = +(value1.yearOne['Reception MS (Games Played)'])
+        let tempRecMSTwo = +(value1.yearTwo['Reception MS (Games Played)'])
+        // 
+        let tempRecYardMSOne = +(value1.yearOne['Rec Yds MS'])
+        let tempRecYardMSTwo = +(value1.yearTwo['Rec Yds MS'])
+        //
+        let tempRecTDMSOne = +(value1.yearOne['Rec TD MS'])
+        let tempRecTDMSTwo = +(value1.yearTwo['Rec TD MS'])
         
-        
+       
         
 
-        // console.log(tempManYPRRTwo)
+        
+
+        // console.log(tempRecTDMSOne)
         
         
 
@@ -178,6 +195,11 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
             let tempYACPerRecThree = +(value1.yearThree['YAC/Rec'].slice(0, -1))
             let tempYPRRThree = +(value1.yearThree.YPRR)
             let tempManYPRRThree = +(value1.yearThree['Man YPRR'])
+            let tempZoneYPRRThree = +(value1.yearThree['Zone YPRR'])
+            let tempPPRPointsThree = +(value1.yearThree['PPR Points'])
+            let tempRecMSThree = +(value1.yearThree['Reception MS (Games Played)'])
+            let tempRecYardMSThree = +(value1.yearThree['Rec Yds MS'])
+            let tempRecTDMSThree = +(value1.yearThree['Rec TD MS'])
             
 
             //player played at least 6 games in both year two and three
@@ -208,10 +230,20 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
                 allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats.YPRR = +((tempYPRRTwo + tempYPRRThree) / 2).toFixed(2)
 
                 allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats['Man YPRR'] = +((tempManYPRRTwo + tempManYPRRThree) / 2).toFixed(2)
+
+                allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats['Zone YPRR'] = +((tempZoneYPRRTwo + tempZoneYPRRThree) / 2).toFixed(2)
+
+                allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats['PPR Points'] = +((tempPPRPointsTwo + tempPPRPointsThree) / 2).toFixed(2)
+
+                allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats['Reception MS (Games Played)'] = +((tempRecMSTwo + tempRecMSThree) / 2).toFixed(2)
+
+                allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats['Rec Yds MS'] = +((tempRecYardMSTwo + tempRecYardMSThree) / 2).toFixed(2)
+
+                allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats['Rec TD MS'] = +((tempRecTDMSTwo + tempRecTDMSThree) / 2).toFixed(2)
             }
 
-            
-                 
+        
+               
            
             /////////////////////////////////////////
 
@@ -266,9 +298,28 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
                 if(value1.yearTwo['Games Played'] < 6) {
                     allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats['Man YPRR'] = +tempManYPRRThree
                 }
+
+                if(value1.yearTwo['Games Played'] < 6) {
+                    allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats['Zone YPRR'] = +tempZoneYPRRThree
+                }
+
+                if(value1.yearTwo['Games Played'] < 6) {
+                    allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats['PPR Points'] = +tempPPRPointsThree
+                }
+
+                if(value1.yearTwo['Games Played'] < 6) {
+                    allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats['Reception MS (Games Played)'] = +tempRecMSThree
+                }
+
+                if(value1.yearTwo['Games Played'] < 6) {
+                    allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats['Rec Yds MS'] = +tempRecYardMSThree
+                }
+
+                if(value1.yearTwo['Games Played'] < 6) {
+                    allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats['Rec TD MS'] = +tempRecTDMSThree
+                }
               
-              
-                   
+             
 
                 // if player played less than 6 games in year three
 
@@ -315,9 +366,29 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
                 if(value1.yearThree['Games Played'] < 6) {
                     allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats['Man YPRR'] = +tempManYPRRTwo
                 }
+
+                if(value1.yearThree['Games Played'] < 6) {
+                    allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats['Zone YPRR'] = +tempZoneYPRRTwo
+                }
+
+                if(value1.yearThree['Games Played'] < 6) {
+                    allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats['PPR Points'] = +tempPPRPointsTwo
+                }
+
+                if(value1.yearThree['Games Played'] < 6) {
+                    allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats['Reception MS (Games Played)'] = +tempRecMSTwo
+                }
+
+                if(value1.yearThree['Games Played'] < 6) {
+                    allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats['Rec Yds MS'] = +tempRecYardMSTwo
+                }
+
+                if(value1.yearThree['Games Played'] < 6) {
+                    allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats['Rec TD MS'] = +tempRecTDMSTwo
+                }
             }
 
-            
+                
            
 
                   // setting career average stats
@@ -345,10 +416,22 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
                 allWrProspectsObjects[key1].careerAveragedStats.YPRR = +((tempYPRROne + tempYPRRTwo + tempYPRRThree) / 3).toFixed(2)
 
                 allWrProspectsObjects[key1].careerAveragedStats['Man YPRR'] = +((tempManYPRROne + tempManYPRRTwo + tempManYPRRThree) / 3).toFixed(2)
+
+                allWrProspectsObjects[key1].careerAveragedStats['Zone YPRR'] = +((tempZoneYPRROne + tempZoneYPRRTwo + tempZoneYPRRThree) / 3).toFixed(2)
+
+                
+                allWrProspectsObjects[key1].careerAveragedStats['PPR Points'] = +((tempPPRPointsOne + tempPPRPointsTwo + tempPPRPointsThree) / 3).toFixed(2)
+
+                allWrProspectsObjects[key1].careerAveragedStats['Reception MS (Games Played)'] = +((tempRecMSOne + tempRecMSTwo + tempRecMSThree) / 3).toFixed(2)
+
+                allWrProspectsObjects[key1].careerAveragedStats['Rec Yds MS'] = +((tempRecYardMSOne + tempRecYardMSTwo + tempRecYardMSThree) / 3).toFixed(2)
+
+                allWrProspectsObjects[key1].careerAveragedStats['Rec TD MS'] = +((tempRecTDMSOne + tempRecTDMSTwo + tempRecTDMSThree) / 3).toFixed(2)
             }
 
       
-
+   
+                     
 
             ////////////////////////////////////////////////////////////
 
@@ -393,10 +476,29 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
             if(value1.yearOne['Games Played'] < 6) {
                 allWrProspectsObjects[key1].careerAveragedStats['Man YPRR'] = +((tempManYPRRTwo + tempManYPRRThree) / 2).toFixed(2)
             }
-           
 
-               
-            
+            if(value1.yearOne['Games Played'] < 6) {
+                allWrProspectsObjects[key1].careerAveragedStats['Zone YPRR'] = +((tempZoneYPRRTwo + tempZoneYPRRThree) / 2).toFixed(2)
+            }
+
+            if(value1.yearOne['Games Played'] < 6) {
+                allWrProspectsObjects[key1].careerAveragedStats['PPR Points'] = +((tempPPRPointsTwo + tempPPRPointsThree) / 2).toFixed(2)
+            }
+
+            if(value1.yearOne['Games Played'] < 6) {
+                allWrProspectsObjects[key1].careerAveragedStats['Reception MS (Games Played)'] = +((tempRecMSTwo + tempRecMSThree) / 2).toFixed(2)
+            }
+
+            if(value1.yearOne['Games Played'] < 6) {
+                allWrProspectsObjects[key1].careerAveragedStats['Rec Yds MS'] = +((tempRecYardMSTwo + tempRecYardMSThree) / 2).toFixed(2)
+            }
+
+            if(value1.yearOne['Games Played'] < 6) {
+                allWrProspectsObjects[key1].careerAveragedStats['Rec TD MS'] = +((tempRecTDMSTwo + tempRecTDMSThree) / 2).toFixed(2)
+            }
+           
+    
+             
 
             ////////////////////////////////////////////////////////////////
 
@@ -444,8 +546,28 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
                 allWrProspectsObjects[key1].careerAveragedStats['Man YPRR'] = +((tempManYPRROne + tempManYPRRThree) / 2).toFixed(2)
             }
 
+            if(value1.yearTwo['Games Played'] < 6) {
+                allWrProspectsObjects[key1].careerAveragedStats['Zone YPRR'] = +((tempZoneYPRROne + tempZoneYPRRThree) / 2).toFixed(2)
+            }
+
+            if(value1.yearTwo['Games Played'] < 6) {
+                allWrProspectsObjects[key1].careerAveragedStats['PPR Points'] = +((tempPPRPointsOne + tempPPRPointsThree) / 2).toFixed(2)
+            }
+
+            if(value1.yearTwo['Games Played'] < 6) {
+                allWrProspectsObjects[key1].careerAveragedStats['Reception MS (Games Played)'] = +((tempRecMSOne + tempRecMSThree) / 2).toFixed(2)
+            }
+
+            if(value1.yearTwo['Games Played'] < 6) {
+                allWrProspectsObjects[key1].careerAveragedStats['Rec Yds MS'] = +((tempRecYardMSOne + tempRecYardMSThree) / 2).toFixed(2)
+            }
+
+            if(value1.yearTwo['Games Played'] < 6) {
+                allWrProspectsObjects[key1].careerAveragedStats['Rec TD MS'] = +((tempRecTDMSOne + tempRecTDMSThree) / 2).toFixed(2)
+            }
+
             
-            
+           
 
             /////////////////////////////////////////////////////////////////////////
 
@@ -493,8 +615,29 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
                 allWrProspectsObjects[key1].careerAveragedStats['Man YPRR'] = +((tempManYPRROne + tempManYPRRTwo) / 2).toFixed(2)
             }
 
+            if( value1.yearThree['Games Played'] < 6) {
+                allWrProspectsObjects[key1].careerAveragedStats['Zone YPRR'] = +((tempZoneYPRROne + tempZoneYPRRTwo) / 2).toFixed(2)
+            }
+
+            if( value1.yearThree['Games Played'] < 6) {
+                allWrProspectsObjects[key1].careerAveragedStats['PPR Points'] = +((tempPPRPointsOne + tempPPRPointsTwo) / 2).toFixed(2)
+            }
+
+            if( value1.yearThree['Games Played'] < 6) {
+                allWrProspectsObjects[key1].careerAveragedStats['Reception MS (Games Played)'] = +((tempRecMSOne + tempRecMSTwo) / 2).toFixed(2)
+            }
+
+            if( value1.yearThree['Games Played'] < 6) {
+                allWrProspectsObjects[key1].careerAveragedStats['Rec Yds MS'] = +((tempRecYardMSOne + tempRecYardMSTwo) / 2).toFixed(2)
+            }
+
+            if( value1.yearThree['Games Played'] < 6) {
+                allWrProspectsObjects[key1].careerAveragedStats['Rec TD MS'] = +((tempRecTDMSOne + tempRecTDMSTwo) / 2).toFixed(2)
+            }
+
           
-         
+           
+            
 
             // setting career total stats
 
@@ -510,8 +653,10 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
 
             allWrProspectsObjects[key1].careerTotalStats.RR = +(tempRROne + tempRRTwo + tempRRThree).toFixed(2)
 
+            allWrProspectsObjects[key1].careerTotalStats['PPR Points'] = +(tempPPRPointsOne + tempPPRPointsTwo + tempPPRPointsThree).toFixed(2)
 
-            
+
+             
 
             /////////////////////////////////////////////////////////////
             // if player had a fourth year
@@ -533,6 +678,11 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
             let tempYACPerRecFour = +(value1.yearFour['YAC/Rec'].slice(0, -1))
             let tempYPRRFour = +(value1.yearFour.YPRR)
             let tempManYPRRFour = +(value1.yearFour['Man YPRR'])
+            let tempZoneYPRRFour = +(value1.yearFour['Zone YPRR'])
+            let tempPPRPointsFour = +(value1.yearFour['PPR Points'])
+            let tempRecMSFour = +(value1.yearFour['Reception MS (Games Played)'])
+            let tempRecYardMSFour = +(value1.yearFour['Rec Yds MS'])
+            let tempRecTDMSFour = +(value1.yearFour['Rec TD MS'])
 
             // console.log(tempRecGradeFour)
         // setting career average stats
@@ -561,14 +711,19 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
             allWrProspectsObjects[key1].careerAveragedStats.YPRR = +((tempYPRROne + tempYPRRTwo + tempYPRRThree + tempYPRRFour) / 4).toFixed(2)
 
             allWrProspectsObjects[key1].careerAveragedStats['Man YPRR'] = +((tempManYPRROne + tempManYPRRTwo + tempManYPRRThree + tempManYPRRFour) / 4).toFixed(2)
+
+            allWrProspectsObjects[key1].careerAveragedStats['Zone YPRR'] = +((tempZoneYPRROne + tempZoneYPRRTwo + tempZoneYPRRThree + tempZoneYPRRFour) / 4).toFixed(2)
+
+            allWrProspectsObjects[key1].careerAveragedStats['PPR Points'] = +((tempPPRPointsOne + tempPPRPointsTwo + tempPPRPointsThree + tempPPRPointsFour) / 4).toFixed(2)
+
+            allWrProspectsObjects[key1].careerAveragedStats['Reception MS (Games Played)'] = +((tempRecMSOne + tempRecMSTwo + tempRecMSThree + tempRecMSFour) / 4).toFixed(2)
+
+            allWrProspectsObjects[key1].careerAveragedStats['Rec Yds MS'] = +((tempRecYardMSOne + tempRecYardMSTwo + tempRecYardMSThree + tempRecYardMSFour) / 4).toFixed(2)
+
+            allWrProspectsObjects[key1].careerAveragedStats['Rec TD MS'] = +((tempRecTDMSOne + tempRecTDMSTwo + tempRecTDMSThree + tempRecTDMSFour) / 4).toFixed(2)
         }
 
-        // tempManYPRROne
-        // tempManYPRRTwo
-        // tempManYPRRThree
-        // tempManYPRRFour
-        // 'Man YPRR'
-             
+              
 
         //////////////////////////////////////////////////////////////////
 
@@ -615,8 +770,28 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
         if(value1.yearOne['Games Played'] < 6) {
             allWrProspectsObjects[key1].careerAveragedStats['Man YPRR'] = +((tempManYPRRTwo + tempManYPRRThree + tempManYPRRFour) / 3).toFixed(2)
         }
+
+        if(value1.yearOne['Games Played'] < 6) {
+            allWrProspectsObjects[key1].careerAveragedStats['Zone YPRR'] = +((tempZoneYPRRTwo + tempZoneYPRRThree + tempZoneYPRRFour) / 3).toFixed(2)
+        }
+
+        if(value1.yearOne['Games Played'] < 6) {
+            allWrProspectsObjects[key1].careerAveragedStats['PPR Points'] = +((tempPPRPointsTwo + tempPPRPointsThree + tempPPRPointsFour) / 3).toFixed(2)
+        }
         
-          
+        if(value1.yearOne['Games Played'] < 6) {
+            allWrProspectsObjects[key1].careerAveragedStats['Reception MS (Games Played)'] = +((tempRecMSTwo + tempRecMSThree + tempRecMSFour) / 3).toFixed(2)
+        }
+
+        if(value1.yearOne['Games Played'] < 6) {
+            allWrProspectsObjects[key1].careerAveragedStats['Rec Yds MS'] = +((tempRecYardMSTwo + tempRecYardMSThree + tempRecYardMSFour) / 3).toFixed(2)
+        }
+
+        if(value1.yearOne['Games Played'] < 6) {
+            allWrProspectsObjects[key1].careerAveragedStats['Rec TD MS'] = +((tempRecTDMSTwo + tempRecTDMSThree + tempRecTDMSFour) / 3).toFixed(2)
+        }
+            
+     
 
         /////////////////////////////////////////////////////////////
 
@@ -660,7 +835,27 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
             allWrProspectsObjects[key1].careerAveragedStats['Man YPRR'] = +((tempManYPRROne + tempManYPRRThree + tempManYPRRFour) / 3).toFixed(2)
         }
 
-      
+        if(value1.yearTwo['Games Played'] < 6) {
+            allWrProspectsObjects[key1].careerAveragedStats['Zone YPRR'] = +((tempZoneYPRROne + tempZoneYPRRThree + tempZoneYPRRFour) / 3).toFixed(2)
+        }
+
+        if(value1.yearTwo['Games Played'] < 6) {
+            allWrProspectsObjects[key1].careerAveragedStats['PPR Points'] = +((tempPPRPointsOne + tempPPRPointsThree + tempPPRPointsFour) / 3).toFixed(2)
+        }
+
+        if(value1.yearTwo['Games Played'] < 6) {
+            allWrProspectsObjects[key1].careerAveragedStats['Reception MS (Games Played)'] = +((tempRecMSOne + tempRecMSThree + tempRecMSFour) / 3).toFixed(2)
+        }
+
+        if(value1.yearTwo['Games Played'] < 6) {
+            allWrProspectsObjects[key1].careerAveragedStats['Rec Yds MS'] = +((tempRecYardMSOne + tempRecYardMSThree + tempRecYardMSFour) / 3).toFixed(2)
+        }
+
+        if(value1.yearTwo['Games Played'] < 6) {
+            allWrProspectsObjects[key1].careerAveragedStats['Rec TD MS'] = +((tempRecTDMSOne + tempRecTDMSThree + tempRecTDMSFour) / 3).toFixed(2)
+        }
+
+  
          
 
         //////////////////////////////////////////////////////////////////////
@@ -705,7 +900,27 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
             allWrProspectsObjects[key1].careerAveragedStats['Man YPRR'] = +((tempManYPRROne + tempManYPRRTwo + tempManYPRRFour) / 3).toFixed(2)
         }
 
-        
+        if(value1.yearThree['Games Played'] < 6) {
+            allWrProspectsObjects[key1].careerAveragedStats['Zone YPRR'] = +((tempZoneYPRROne + tempZoneYPRRTwo + tempZoneYPRRFour) / 3).toFixed(2)
+        }
+
+        if(value1.yearThree['Games Played'] < 6) {
+            allWrProspectsObjects[key1].careerAveragedStats['PPR Points'] = +((tempPPRPointsOne + tempPPRPointsTwo + tempPPRPointsFour) / 3).toFixed(2)
+        }
+
+        if(value1.yearThree['Games Played'] < 6) {
+            allWrProspectsObjects[key1].careerAveragedStats['Reception MS (Games Played)'] = +((tempRecMSOne + tempRecMSTwo + tempRecMSFour) / 3).toFixed(2)
+        }
+
+        if(value1.yearThree['Games Played'] < 6) {
+            allWrProspectsObjects[key1].careerAveragedStats['Rec Yds MS'] = +((tempRecYardMSOne + tempRecYardMSTwo + tempRecYardMSFour) / 3).toFixed(2)
+        }
+
+        if(value1.yearThree['Games Played'] < 6) {
+            allWrProspectsObjects[key1].careerAveragedStats['Rec TD MS'] = +((tempRecTDMSOne + tempRecTDMSTwo + tempRecTDMSFour) / 3).toFixed(2)
+        }
+
+          
 
         ///////////////////////////////////////////////////////////////
 
@@ -753,7 +968,27 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
             allWrProspectsObjects[key1].careerAveragedStats['Man YPRR'] = +((tempManYPRROne + tempManYPRRTwo + tempManYPRRThree) / 3).toFixed(2)
         }
 
-       
+        if(value1.yearFour['Games Played'] < 6) {
+            allWrProspectsObjects[key1].careerAveragedStats['Zone YPRR'] = +((tempZoneYPRROne + tempZoneYPRRTwo + tempZoneYPRRThree) / 3).toFixed(2)
+        }
+
+        if(value1.yearFour['Games Played'] < 6) {
+            allWrProspectsObjects[key1].careerAveragedStats['PPR Points'] = +((tempPPRPointsOne + tempPPRPointsTwo + tempPPRPointsThree) / 3).toFixed(2)
+        }
+
+        if(value1.yearFour['Games Played'] < 6) {
+            allWrProspectsObjects[key1].careerAveragedStats['Reception MS (Games Played)'] = +((tempRecMSOne + tempRecMSTwo + tempRecMSThree) / 3).toFixed(2)
+        }
+
+        if(value1.yearFour['Games Played'] < 6) {
+            allWrProspectsObjects[key1].careerAveragedStats['Rec Yds MS'] = +((tempRecYardMSOne + tempRecYardMSTwo + tempRecYardMSThree) / 3).toFixed(2)
+        }
+
+        if(value1.yearFour['Games Played'] < 6) {
+            allWrProspectsObjects[key1].careerAveragedStats['Rec TD MS'] = +((tempRecTDMSOne + tempRecTDMSTwo + tempRecTDMSThree) / 3).toFixed(2)
+        }
+
+     
 
         // setting career total stats
 
@@ -774,12 +1009,15 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
 
         allWrProspectsObjects[key1].careerTotalStats.RR = 
         +(tempRROne + tempRRTwo + tempRRThree + tempRRFour).toFixed(2)
+
+        allWrProspectsObjects[key1].careerTotalStats['PPR Points'] = 
+        +(tempPPRPointsOne + tempPPRPointsTwo + tempPPRPointsThree + tempPPRPointsFour).toFixed(2)
     }
                  
         } 
 
        
-       
+         
 
             //
             //    players in this else only played two college seasons total
@@ -808,6 +1046,18 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
                 
                 allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats['Man YPRR'] = +tempManYPRRTwo
 
+                allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats['Zone YPRR'] = +tempZoneYPRRTwo
+
+                allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats['PPR Points'] = +tempPPRPointsTwo
+
+                allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats['Reception MS (Games Played)'] = +tempRecMSTwo
+
+                allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats['Rec Yds MS'] = +tempRecYardMSTwo
+
+                allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats['Rec TD MS'] = +tempRecTDMSTwo
+
+                  
+                
 
                 ////////////////////////////////////////////
                   // setting career average stats
@@ -837,12 +1087,23 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
 
                  allWrProspectsObjects[key1].careerAveragedStats['Man YPRR'] = +((tempManYPRROne + tempManYPRRTwo) / 2).toFixed(2)
 
+                 allWrProspectsObjects[key1].careerAveragedStats['Zone YPRR'] = +((tempZoneYPRROne + tempZoneYPRRTwo) / 2).toFixed(2)
+
+                 allWrProspectsObjects[key1].careerAveragedStats['PPR Points'] = +((tempPPRPointsOne + tempPPRPointsTwo) / 2).toFixed(2)
+
+                 allWrProspectsObjects[key1].careerAveragedStats['Reception MS (Games Played)'] = +((tempRecMSOne + tempRecMSTwo) / 2).toFixed(2)
+
+                 allWrProspectsObjects[key1].careerAveragedStats['Rec Yds MS'] = +((tempRecYardMSOne + tempRecYardMSTwo) / 2).toFixed(2)
+
+                 allWrProspectsObjects[key1].careerAveragedStats['Rec TD MS'] = +((tempRecTDMSOne + tempRecTDMSTwo) / 2).toFixed(2)
+
 
                  ///don't copy the } below this line!!
                  }    
                  
                 
-                 
+                
+             
                   
        
 
@@ -892,7 +1153,27 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
                     allWrProspectsObjects[key1].careerAveragedStats['Man YPRR'] = +tempManYPRRTwo
                  }
 
-               
+                 if(value1.yearOne['Games Played'] < 6) {
+                    allWrProspectsObjects[key1].careerAveragedStats['Zone YPRR'] = +tempZoneYPRRTwo
+                 }
+
+                 if(value1.yearOne['Games Played'] < 6) {
+                    allWrProspectsObjects[key1].careerAveragedStats['PPR Points'] = +tempPPRPointsTwo
+                 }
+
+                 if(value1.yearOne['Games Played'] < 6) {
+                    allWrProspectsObjects[key1].careerAveragedStats['Reception MS (Games Played)'] = +tempRecMSTwo
+                 }
+
+                 if(value1.yearOne['Games Played'] < 6) {
+                    allWrProspectsObjects[key1].careerAveragedStats['Rec Yds MS'] = +tempRecYardMSTwo
+                 }
+
+                 if(value1.yearOne['Games Played'] < 6) {
+                    allWrProspectsObjects[key1].careerAveragedStats['Rec TD MS'] = +tempRecTDMSTwo
+                 }
+
+                   
 
                  /////////////////////////////////////////////////////////////
 
@@ -940,7 +1221,27 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
                     allWrProspectsObjects[key1].careerAveragedStats['Man YPRR'] = +tempManYPRROne
                  }
 
-              
+                 if(value1.yearTwo['Games Played'] < 6) {
+                    allWrProspectsObjects[key1].careerAveragedStats['Zone YPRR'] = +tempZoneYPRROne
+                 }
+
+                 if(value1.yearTwo['Games Played'] < 6) {
+                    allWrProspectsObjects[key1].careerAveragedStats['PPR Points'] = +tempPPRPointsOne
+                 }
+
+                 if(value1.yearTwo['Games Played'] < 6) {
+                    allWrProspectsObjects[key1].careerAveragedStats['Reception MS (Games Played)'] = +tempRecMSOne
+                 }
+
+                 if(value1.yearTwo['Games Played'] < 6) {
+                    allWrProspectsObjects[key1].careerAveragedStats['Rec Yds MS'] = +tempRecYardMSOne
+                 }
+
+                 if(value1.yearTwo['Games Played'] < 6) {
+                    allWrProspectsObjects[key1].careerAveragedStats['Rec TD MS'] = +tempRecTDMSOne
+                 }
+
+           
         
                  //////////////////////////////////////////
                    // setting career total stats
@@ -956,6 +1257,8 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
                    allWrProspectsObjects[key1].careerTotalStats.Targets = +(tempTargetsOne + tempTargetsTwo).toFixed(2)
 
                    allWrProspectsObjects[key1].careerTotalStats.RR = +(tempRROne + tempRRTwo).toFixed(2)
+
+                   allWrProspectsObjects[key1].careerTotalStats['PPR Points'] = +(tempPPRPointsOne + tempPPRPointsTwo).toFixed(2)
             }
 
             
@@ -966,4 +1269,4 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
     } // end of for (const [key2, value2] of Object.entries(value1)) {
 } // for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
 
-//   console.log(allWrProspectsObjects)
+  console.log(allWrProspectsObjects)
