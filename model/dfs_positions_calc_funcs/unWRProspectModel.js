@@ -187,8 +187,18 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
     //
     let tdPerTeamPassAttOne = +value1.yearOne['TD Per Team Pass Att'];
     let tdPerTeamPassAttTwo = +value1.yearTwo['TD Per Team Pass Att'];
+    //
+    let weightedDomRatingOne = +value1.yearOne['Weighted Dominator Rating'];
+    let weightedDomRatingTwo = +value1.yearTwo['Weighted Dominator Rating'];
+    //
+    let dominatorRatingOne = +value1.yearOne['Dominator Rating'];
+    let dominatorRatingTwo = +value1.yearTwo['Dominator Rating'];
 
-    // console.log(tdPerTeamPassAttTwo);
+    /////////
+
+    // console.log(dominatorRatingOne);
+
+    ////////////////////////////////
 
     if (value1.yearThree) {
       // assignig temp variables and converting all things from strings to number yearThree
@@ -217,6 +227,9 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
       let tempRecYrsPerTeamPassAttThree =
         +value1.yearThree['Rec Yds Per Team Pass Att'];
       let tdPerTeamPassAttThree = +value1.yearThree['TD Per Team Pass Att'];
+      let weightedDomRatingThree =
+        +value1.yearThree['Weighted Dominator Rating'];
+      let dominatorRatingThree = +value1.yearThree['Dominator Rating'];
 
       //player played at least 6 games in both year two and three
 
@@ -306,6 +319,14 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
         allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
           'TD Per Team Pass Att'
         ] = +((tdPerTeamPassAttTwo + tdPerTeamPassAttThree) / 2).toFixed(4);
+
+        allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
+          'Weighted Dominator Rating'
+        ] = +((weightedDomRatingTwo + weightedDomRatingThree) / 2).toFixed(4);
+
+        allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
+          'Dominator Rating'
+        ] = +((dominatorRatingTwo + dominatorRatingThree) / 2).toFixed(4);
       }
 
       /////////////////////////////////////////
@@ -425,6 +446,18 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
           ] = +tdPerTeamPassAttThree;
         }
 
+        if (value1.yearTwo['Games Played'] < 6) {
+          allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
+            'Weighted Dominator Rating'
+          ] = +weightedDomRatingThree;
+        }
+
+        if (value1.yearTwo['Games Played'] < 6) {
+          allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
+            'Dominator Rating'
+          ] = +dominatorRatingThree;
+        }
+
         /////////////////////////////////////////////////////////////////////////////
 
         // if player played less than 6 games in year three
@@ -533,6 +566,18 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
             'TD Per Team Pass Att'
           ] = +tdPerTeamPassAttTwo;
         }
+
+        if (value1.yearThree['Games Played'] < 6) {
+          allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
+            'Weighted Dominator Rating'
+          ] = +weightedDomRatingTwo;
+        }
+
+        if (value1.yearThree['Games Played'] < 6) {
+          allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
+            'Dominator Rating'
+          ] = +dominatorRatingTwo;
+        }
       }
 
       // setting career average stats
@@ -640,6 +685,20 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
           'TD Per Team Pass Att'
         ] = +(
           (tdPerTeamPassAttOne + tdPerTeamPassAttTwo + tdPerTeamPassAttThree) /
+          3
+        ).toFixed(4);
+
+        allWrProspectsObjects[key1].careerAveragedStats[
+          'Weighted Dominator Rating'
+        ] = +(
+          (weightedDomRatingOne +
+            weightedDomRatingTwo +
+            weightedDomRatingThree) /
+          3
+        ).toFixed(4);
+
+        allWrProspectsObjects[key1].careerAveragedStats['Dominator Rating'] = +(
+          (dominatorRatingOne + dominatorRatingTwo + dominatorRatingThree) /
           3
         ).toFixed(4);
       }
@@ -764,6 +823,19 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
         allWrProspectsObjects[key1].careerAveragedStats[
           'TD Per Team Pass Att'
         ] = +((tdPerTeamPassAttTwo + tdPerTeamPassAttThree) / 2).toFixed(4);
+      }
+
+      if (value1.yearOne['Games Played'] < 6) {
+        allWrProspectsObjects[key1].careerAveragedStats[
+          'Weighted Dominator Rating'
+        ] = +((weightedDomRatingTwo + weightedDomRatingThree) / 2).toFixed(4);
+      }
+
+      if (value1.yearOne['Games Played'] < 6) {
+        allWrProspectsObjects[key1].careerAveragedStats['Dominator Rating'] = +(
+          (dominatorRatingTwo + dominatorRatingThree) /
+          2
+        ).toFixed(4);
       }
 
       ////////////////////////////////////////////////////////////////
@@ -895,6 +967,19 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
         ] = +((tdPerTeamPassAttOne + tdPerTeamPassAttThree) / 2).toFixed(4);
       }
 
+      if (value1.yearTwo['Games Played'] < 6) {
+        allWrProspectsObjects[key1].careerAveragedStats[
+          'Weighted Dominator Rating'
+        ] = +((weightedDomRatingOne + weightedDomRatingThree) / 2).toFixed(4);
+      }
+
+      if (value1.yearTwo['Games Played'] < 6) {
+        allWrProspectsObjects[key1].careerAveragedStats['Dominator Rating'] = +(
+          (dominatorRatingOne + dominatorRatingThree) /
+          2
+        ).toFixed(4);
+      }
+
       /////////////////////////////////////////////////////////////////////////
 
       if (value1.yearThree['Games Played'] < 6) {
@@ -1024,6 +1109,19 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
         ] = +((tdPerTeamPassAttOne + tdPerTeamPassAttTwo) / 2).toFixed(4);
       }
 
+      if (value1.yearThree['Games Played'] < 6) {
+        allWrProspectsObjects[key1].careerAveragedStats[
+          'Weighted Dominator Rating'
+        ] = +((weightedDomRatingOne + weightedDomRatingTwo) / 2).toFixed(4);
+      }
+
+      if (value1.yearThree['Games Played'] < 6) {
+        allWrProspectsObjects[key1].careerAveragedStats['Dominator Rating'] = +(
+          (dominatorRatingOne + dominatorRatingTwo) /
+          2
+        ).toFixed(4);
+      }
+
       // setting career total stats
 
       // allWrProspectsObjects[key1].careerTotalStats['MTF/REC %'] = +(tempYearOneMTFREC + tempYearTwoMTFREC + tempYearThreeMTFREC).toFixed(2)
@@ -1085,8 +1183,14 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
         let tempRecYrsPerTeamPassAttFour =
           +value1.yearFour['Rec Yds Per Team Pass Att'];
         let tdPerTeamPassAttFour = +value1.yearFour['TD Per Team Pass Att'];
+        let weightedDomRatingFour =
+          +value1.yearFour['Weighted Dominator Rating'];
+        let dominatorRatingFour = +value1.yearFour['Dominator Rating'];
 
         // console.log(tempRecGradeFour)
+
+        //
+        //
         // setting career average stats
 
         if (
@@ -1232,6 +1336,25 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
               tdPerTeamPassAttFour) /
             4
           ).toFixed(4);
+
+          allWrProspectsObjects[key1].careerAveragedStats[
+            'Weighted Dominator Rating'
+          ] = +(
+            (weightedDomRatingOne +
+              weightedDomRatingTwo +
+              weightedDomRatingThree +
+              weightedDomRatingFour) /
+            4
+          ).toFixed(4);
+
+          allWrProspectsObjects[key1].careerAveragedStats['Dominator Rating'] =
+            +(
+              (dominatorRatingOne +
+                dominatorRatingTwo +
+                dominatorRatingThree +
+                dominatorRatingFour) /
+              4
+            ).toFixed(4);
         }
 
         //////////////////////////////////////////////////////////////////
@@ -1375,6 +1498,27 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
           ).toFixed(4);
         }
 
+        if (value1.yearOne['Games Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats[
+            'Weighted Dominator Rating'
+          ] = +(
+            (weightedDomRatingTwo +
+              weightedDomRatingThree +
+              weightedDomRatingFour) /
+            3
+          ).toFixed(4);
+        }
+
+        if (value1.yearOne['Games Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats['Dominator Rating'] =
+            +(
+              (dominatorRatingTwo +
+                dominatorRatingThree +
+                dominatorRatingFour) /
+              3
+            ).toFixed(4);
+        }
+
         /////////////////////////////////////////////////////////////
 
         if (value1.yearTwo['Games Played'] < 6) {
@@ -1509,6 +1653,27 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
           ).toFixed(4);
         }
 
+        if (value1.yearTwo['GaOmes Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats[
+            'Weighted Dominator Rating'
+          ] = +(
+            (weightedDomRatingOne +
+              weightedDomRatingThree +
+              weightedDomRatingFour) /
+            3
+          ).toFixed(4);
+        }
+
+        if (value1.yearTwo['GaOmes Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats['Dominator Rating'] =
+            +(
+              (dominatorRatingOne +
+                dominatorRatingThree +
+                dominatorRatingFour) /
+              3
+            ).toFixed(4);
+        }
+
         //////////////////////////////////////////////////////////////////////
 
         if (value1.yearThree['Games Played'] < 6) {
@@ -1639,6 +1804,25 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
             (tdPerTeamPassAttOne + tdPerTeamPassAttTwo + tdPerTeamPassAttFour) /
             3
           ).toFixed(4);
+        }
+
+        if (value1.yearThree['Games Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats[
+            'Weighted Dominator Rating'
+          ] = +(
+            (weightedDomRatingOne +
+              weightedDomRatingTwo +
+              weightedDomRatingFour) /
+            3
+          ).toFixed(4);
+        }
+
+        if (value1.yearThree['Games Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats['Dominator Rating'] =
+            +(
+              (dominatorRatingOne + dominatorRatingTwo + dominatorRatingFour) /
+              3
+            ).toFixed(4);
         }
 
         ///////////////////////////////////////////////////////////////
@@ -1782,6 +1966,25 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
           ).toFixed(4);
         }
 
+        if (value1.yearFour['Games Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats[
+            'Weighted Dominator Rating'
+          ] = +(
+            (weightedDomRatingOne +
+              weightedDomRatingTwo +
+              weightedDomRatingThree) /
+            3
+          ).toFixed(4);
+        }
+
+        if (value1.yearFour['Games Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats['Dominator Rating'] =
+            +(
+              (dominatorRatingOne + dominatorRatingTwo + dominatorRatingThree) /
+              3
+            ).toFixed(4);
+        }
+
         // setting career total stats
 
         // allWrProspectsObjects[key1].careerTotalStats['MTF/REC %'] =
@@ -1887,6 +2090,14 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
         'TD Per Team Pass Att'
       ] = +tdPerTeamPassAttTwo;
 
+      allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
+        'Weighted Dominator Rating'
+      ] = +weightedDomRatingTwo;
+
+      allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
+        'Dominator Rating'
+      ] = +dominatorRatingTwo;
+
       ////////////////////////////////////////////
       // setting career average stats
 
@@ -1986,6 +2197,15 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
           'TD Per Team Pass Att'
         ] = +((tdPerTeamPassAttOne + tdPerTeamPassAttTwo) / 2).toFixed(4);
 
+        allWrProspectsObjects[key1].careerAveragedStats[
+          'Weighted Dominator Rating'
+        ] = +((weightedDomRatingOne + weightedDomRatingTwo) / 2).toFixed(4);
+
+        allWrProspectsObjects[key1].careerAveragedStats['Dominator Rating'] = +(
+          (dominatorRatingOne + dominatorRatingTwo) /
+          2
+        ).toFixed(4);
+
         ///don't copy the } below this line!!
       }
 
@@ -2081,6 +2301,17 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
         ] = +tdPerTeamPassAttTwo;
       }
 
+      if (value1.yearOne['Games Played'] < 6) {
+        allWrProspectsObjects[key1].careerAveragedStats[
+          'Weighted Dominator Rating'
+        ] = +weightedDomRatingTwo;
+      }
+
+      if (value1.yearOne['Games Played'] < 6) {
+        allWrProspectsObjects[key1].careerAveragedStats['Dominator Rating'] =
+          +dominatorRatingTwo;
+      }
+
       /////////////////////////////////////////////////////////////
 
       if (value1.yearTwo['Games Played'] < 6) {
@@ -2171,6 +2402,17 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
         allWrProspectsObjects[key1].careerAveragedStats[
           'TD Per Team Pass Att'
         ] = +tdPerTeamPassAttOne;
+      }
+
+      if (value1.yearTwo['Games Played'] < 6) {
+        allWrProspectsObjects[key1].careerAveragedStats[
+          'Weighted Dominator Rating'
+        ] = +weightedDomRatingOne;
+      }
+
+      if (value1.yearTwo['Games Played'] < 6) {
+        allWrProspectsObjects[key1].careerAveragedStats['Dominator Rating'] =
+          +dominatorRatingOne;
       }
 
       //////////////////////////////////////////
