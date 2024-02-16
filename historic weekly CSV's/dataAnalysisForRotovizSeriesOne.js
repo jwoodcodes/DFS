@@ -12,6 +12,8 @@ const rbFinal2023Standings = require('./rbFinal2023Standings');
 const wrFinal2023Standings = require('./wrFinal2023Standings');
 const teFinal2023Standings = require('./teFinal2023Standings');
 
+const jan1Feb16ADP = require('./jan1Feb16ADP');
+
 const alltradeCalculaterDataArray = [];
 const newData = [];
 
