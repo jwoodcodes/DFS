@@ -126,6 +126,17 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
     ////////////////////////////////////////////
 
     // assignig temp variables and converting all things from strings to number yearOne and yearTwo
+
+    let contestTargetPercentageOne = +value1.yearOne[
+      'Contested Target %'
+    ].slice(0, -1);
+
+    let contestTargetPercentageTwo = +value1.yearTwo[
+      'Contested Target %'
+    ].slice(0, -1);
+
+    // console.log(contestTargetPercentageOne);
+    //
     let tempYearOneMTFREC = +value1.yearOne['MTF/REC %'].slice(0, -1);
     let tempYearTwoMTFREC = +value1.yearTwo['MTF/REC %'].slice(0, -1);
     //
@@ -194,11 +205,6 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
     let dominatorRatingOne = +value1.yearOne['Dominator Rating'];
     let dominatorRatingTwo = +value1.yearTwo['Dominator Rating'];
 
-    //////////////////////////////////////////////////////////////////////////////
-    /////////////////////////////////////////////////////////////////////////////////
-    /////////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////////
-
     let adjYrdsPerTeamPassAttOne =
       +value1.yearOne['Adjusted Yds Per Team Play'];
     let adjYrdsPerTeamPassAttTwo =
@@ -253,25 +259,6 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
     //
     /////////
 
-   
-
-   
-
-    
-
-    
-
-  
-
-    
-
-    
-
-    
-
-    
-
-
     //
 
     /////////
@@ -283,6 +270,9 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
     if (value1.yearThree) {
       // assignig temp variables and converting all things from strings to number yearThree
 
+      let contestTargetPercentageThree = +value1.yearThree[
+        'Contested Target %'
+      ].slice(0, -1);
       let tempYearThreeMTFREC = +value1.yearThree['MTF/REC %'].slice(0, -1);
       let tempYearThreeMTFirstDownPerSnap = +value1.yearThree['1D/Snap'].slice(
         0,
@@ -458,49 +448,53 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
         ] = +((epaPerTeamPassAttTwo + epaPerTeamPassAttThree) / 2).toFixed(4);
 
         allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
-            'EPA Per Play'
-          ] = +((epaPerPlayTwo + epaPerPlayThree) / 2).toFixed(4);
+          'EPA Per Play'
+        ] = +((epaPerPlayTwo + epaPerPlayThree) / 2).toFixed(4);
 
-          allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
-            'Total EPA'
-          ] = +((totalEPATwo + totalEPAThree) / 2).toFixed(4);
+        allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
+          'Total EPA'
+        ] = +((totalEPATwo + totalEPAThree) / 2).toFixed(4);
 
-          allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
-            'Yards Per Rec'
-          ] = +((yardsPerRecTwo + yardsPerRecThree) / 2).toFixed(4);
+        allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
+          'Yards Per Rec'
+        ] = +((yardsPerRecTwo + yardsPerRecThree) / 2).toFixed(4);
 
-          allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats.Rec = +(
-            (receptionsTwo + receptionsThree) /
-            2
-          ).toFixed(2);
+        allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats.Rec = +(
+          (receptionsTwo + receptionsThree) /
+          2
+        ).toFixed(2);
 
-          allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
-            'Rec Yds'
-          ] = +((recYardsTwo + recYardsThree) / 2).toFixed(4);
+        allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
+          'Rec Yds'
+        ] = +((recYardsTwo + recYardsThree) / 2).toFixed(4);
 
-          allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
-            'Rec TDs'
-          ] = +((recTDsTwo + recTDsThree) / 2).toFixed(4);
+        allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
+          'Rec TDs'
+        ] = +((recTDsTwo + recTDsThree) / 2).toFixed(4);
 
-          allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
-            'Rush Att per Game'
-          ] = +((rushAttPerGameTwo + rushAttPerGameThree) / 2).toFixed(4);
+        allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
+          'Rush Att per Game'
+        ] = +((rushAttPerGameTwo + rushAttPerGameThree) / 2).toFixed(4);
 
-          allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
-            'Rec per Game'
-          ] = +((recPerGameTwo + recPerGameThree) / 2).toFixed(4);
+        allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
+          'Rec per Game'
+        ] = +((recPerGameTwo + recPerGameThree) / 2).toFixed(4);
 
-          allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
-            'Rec Yds per Game'
-          ] = +((recYardsPerGameTwo + recYardsPerGameThree) / 2).toFixed(4);
+        allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
+          'Rec Yds per Game'
+        ] = +((recYardsPerGameTwo + recYardsPerGameThree) / 2).toFixed(4);
 
-          allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
-            'Rec TDs per Game'
-          ] = +((recTDsPerGameTwo + recTDsPerGameThree) / 2).toFixed(4);
+        allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
+          'Rec TDs per Game'
+        ] = +((recTDsPerGameTwo + recTDsPerGameThree) / 2).toFixed(4);
+
+        allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
+          'Contested Target %'
+        ] = +(
+          (contestTargetPercentageTwo + contestTargetPercentageThree) /
+          2
+        ).toFixed(4);
       }
-
-      
-    
 
       /////////////////////////////////////////////
       /////////////////////////////////////////
@@ -657,69 +651,71 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
         }
 
         if (value1.yearTwo['Games Played'] < 6) {
-            allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
-                'EPA Per Play'
-            ] = +epaPerPlayThree;
-          }
+          allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
+            'EPA Per Play'
+          ] = +epaPerPlayThree;
+        }
 
-          if (value1.yearTwo['Games Played'] < 6) {
-            allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
-                'Total EPA'
-            ] = +totalEPAThree;
-          }
+        if (value1.yearTwo['Games Played'] < 6) {
+          allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
+            'Total EPA'
+          ] = +totalEPAThree;
+        }
 
-          if (value1.yearTwo['Games Played'] < 6) {
-            allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
-                'Yards Per Rec'
-            ] = +yardsPerRecThree;
-          }
+        if (value1.yearTwo['Games Played'] < 6) {
+          allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
+            'Yards Per Rec'
+          ] = +yardsPerRecThree;
+        }
 
-          if (value1.yearTwo['Games Played'] < 6) {
-            allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats.Rec =
-              +receptionsThree;
-          }
+        if (value1.yearTwo['Games Played'] < 6) {
+          allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats.Rec =
+            +receptionsThree;
+        }
 
-          if (value1.yearTwo['Games Played'] < 6) {
-            allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
-                'Rec Yds'
-            ] = +recYardsThree;
-          }
+        if (value1.yearTwo['Games Played'] < 6) {
+          allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
+            'Rec Yds'
+          ] = +recYardsThree;
+        }
 
-          if (value1.yearTwo['Games Played'] < 6) {
-            allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
-                'Rec TDs'
-            ] = +recTDsThree;
-          }
+        if (value1.yearTwo['Games Played'] < 6) {
+          allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
+            'Rec TDs'
+          ] = +recTDsThree;
+        }
 
-          if (value1.yearTwo['Games Played'] < 6) {
-            allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
-                'Rush Att per Game'
-            ] = +rushAttPerGameThree;
-          }
+        if (value1.yearTwo['Games Played'] < 6) {
+          allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
+            'Rush Att per Game'
+          ] = +rushAttPerGameThree;
+        }
 
-          if (value1.yearTwo['Games Played'] < 6) {
-            allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
-                'Rec per Game'
-            ] = +recPerGameThree;
-          }
+        if (value1.yearTwo['Games Played'] < 6) {
+          allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
+            'Rec per Game'
+          ] = +recPerGameThree;
+        }
 
-          if (value1.yearTwo['Games Played'] < 6) {
-            allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
-                'Rec Yds per Game'
-            ] = +recYardsPerGameThree;
-          }
+        if (value1.yearTwo['Games Played'] < 6) {
+          allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
+            'Rec Yds per Game'
+          ] = +recYardsPerGameThree;
+        }
 
-          if (value1.yearTwo['Games Played'] < 6) {
-            allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
-                'Rec TDs per Game'
-            ] = +recTDsPerGameThree;
-          }
+        if (value1.yearTwo['Games Played'] < 6) {
+          allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
+            'Rec TDs per Game'
+          ] = +recTDsPerGameThree;
+        }
 
-       
-     
-       
+        if (value1.yearTwo['Games Played'] < 6) {
+          allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
+            'Contested Target %'
+          ] = +contestTargetPercentageThree;
+        }
 
-    /////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////
         /////////////////////////////////////////////////////////////////////////////
 
         // if player played less than 6 games in year three
@@ -866,69 +862,70 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
         }
 
         if (value1.yearThree['Games Played'] < 6) {
-            allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
-                'EPA Per Play'
-            ] = +epaPerPlayTwo;
-          }
+          allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
+            'EPA Per Play'
+          ] = +epaPerPlayTwo;
+        }
 
-          if (value1.yearThree['Games Played'] < 6) {
-            allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
-                'Total EPA'
-            ] = +totalEPATwo;
-          }
+        if (value1.yearThree['Games Played'] < 6) {
+          allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
+            'Total EPA'
+          ] = +totalEPATwo;
+        }
 
-          if (value1.yearThree['Games Played'] < 6) {
-            allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
-                'Yards Per Rec'
-            ] = +yardsPerRecTwo;
-          }
+        if (value1.yearThree['Games Played'] < 6) {
+          allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
+            'Yards Per Rec'
+          ] = +yardsPerRecTwo;
+        }
 
-          if (value1.yearThree['Games Played'] < 6) {
-            allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats.Rec =
-              +receptionsTwo;
-          }
+        if (value1.yearThree['Games Played'] < 6) {
+          allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats.Rec =
+            +receptionsTwo;
+        }
 
-          if (value1.yearThree['Games Played'] < 6) {
-            allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
-                'Rec Yds'
-            ] = +recYardsTwo;
-          }
+        if (value1.yearThree['Games Played'] < 6) {
+          allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
+            'Rec Yds'
+          ] = +recYardsTwo;
+        }
 
-          
-          if (value1.yearThree['Games Played'] < 6) {
-            allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
-                'Rec TDs'
-            ] = +recTDsTwo;
-          }
+        if (value1.yearThree['Games Played'] < 6) {
+          allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
+            'Rec TDs'
+          ] = +recTDsTwo;
+        }
 
-          if (value1.yearThree['Games Played'] < 6) {
-            allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
-                'Rush Att per Game'
-            ] = +rushAttPerGameTwo;
-          }
+        if (value1.yearThree['Games Played'] < 6) {
+          allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
+            'Rush Att per Game'
+          ] = +rushAttPerGameTwo;
+        }
 
-          if (value1.yearThree['Games Played'] < 6) {
-            allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
-                'Rec per Game'
-            ] = +recPerGameTwo;
-          }
+        if (value1.yearThree['Games Played'] < 6) {
+          allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
+            'Rec per Game'
+          ] = +recPerGameTwo;
+        }
 
-          if (value1.yearThree['Games Played'] < 6) {
-            allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
-                'Rec Yds per Game'
-            ] = +recYardsPerGameTwo;
-          }
+        if (value1.yearThree['Games Played'] < 6) {
+          allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
+            'Rec Yds per Game'
+          ] = +recYardsPerGameTwo;
+        }
 
-          if (value1.yearThree['Games Played'] < 6) {
-            allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
-                'Rec TDs per Game'
-            ] = +recTDsPerGameTwo;
-          }
+        if (value1.yearThree['Games Played'] < 6) {
+          allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
+            'Rec TDs per Game'
+          ] = +recTDsPerGameTwo;
+        }
+
+        if (value1.yearThree['Games Played'] < 6) {
+          allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
+            'Contested Target %'
+          ] = +contestTargetPercentageTwo;
+        }
       }
-
-     
-         
-     
 
       /////////////////////////////////////////////////////////////
       ////////////////////////////////////////////////////////////
@@ -1091,94 +1088,65 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
           3
         ).toFixed(4);
 
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'EPA Per Play'
-          ] = +(
-            (epaPerPlayOne +
-                epaPerPlayTwo +
-                epaPerPlayThree) /
+        allWrProspectsObjects[key1].careerAveragedStats['EPA Per Play'] = +(
+          (epaPerPlayOne + epaPerPlayTwo + epaPerPlayThree) /
+          3
+        ).toFixed(4);
+
+        allWrProspectsObjects[key1].careerAveragedStats['Total EPA'] = +(
+          (totalEPAOne + totalEPATwo + totalEPAThree) /
+          3
+        ).toFixed(4);
+
+        allWrProspectsObjects[key1].careerAveragedStats['Yards Per Rec'] = +(
+          (yardsPerRecOne + yardsPerRecTwo + yardsPerRecThree) /
+          3
+        ).toFixed(4);
+
+        allWrProspectsObjects[key1].careerAveragedStats.Rec = +(
+          (receptionsOne + receptionsTwo + receptionsThree) /
+          3
+        ).toFixed(2);
+
+        allWrProspectsObjects[key1].careerAveragedStats['Rec Yds'] = +(
+          (yardsPerRecOne + recYardsTwo + recYardsThree) /
+          3
+        ).toFixed(4);
+
+        allWrProspectsObjects[key1].careerAveragedStats['Rec TDs'] = +(
+          (recTDsOne + recTDsTwo + recTDsThree) /
+          3
+        ).toFixed(4);
+
+        allWrProspectsObjects[key1].careerAveragedStats['Rush Att per Game'] =
+          +(
+            (rushAttPerGameOne + rushAttPerGameTwo + rushAttPerGameThree) /
             3
           ).toFixed(4);
 
-          allWrProspectsObjects[key1].careerAveragedStats[
-            'Total EPA'
-          ] = +(
-            (totalEPAOne +
-                totalEPATwo +
-                totalEPAThree) /
-            3
-          ).toFixed(4);
+        allWrProspectsObjects[key1].careerAveragedStats['Rec per Game'] = +(
+          (recPerGameOne + recPerGameTwo + recPerGameThree) /
+          3
+        ).toFixed(4);
 
-          allWrProspectsObjects[key1].careerAveragedStats[
-            'Yards Per Rec'
-          ] = +(
-            (yardsPerRecOne +
-                yardsPerRecTwo +
-                yardsPerRecThree) /
-            3
-          ).toFixed(4);
+        allWrProspectsObjects[key1].careerAveragedStats['Rec Yds per Game'] = +(
+          (recYardsPerGameOne + recYardsPerGameTwo + recYardsPerGameThree) /
+          3
+        ).toFixed(4);
 
-          allWrProspectsObjects[key1].careerAveragedStats.Rec = +(
-            (receptionsOne + receptionsTwo + receptionsThree) /
-            3
-          ).toFixed(2);
+        allWrProspectsObjects[key1].careerAveragedStats['Rec TDs per Game'] = +(
+          (recTDsPerGameOne + recTDsPerGameTwo + recTDsPerGameThree) /
+          3
+        ).toFixed(4);
 
-          allWrProspectsObjects[key1].careerAveragedStats[
-            'Rec Yds'
-          ] = +(
-            (yardsPerRecOne +
-                recYardsTwo +
-                recYardsThree) /
-            3
-          ).toFixed(4);
-
-          allWrProspectsObjects[key1].careerAveragedStats[
-            'Rec TDs'
-          ] = +(
-            (recTDsOne +
-                recTDsTwo +
-                recTDsThree) /
-            3
-          ).toFixed(4);
-
-          allWrProspectsObjects[key1].careerAveragedStats[
-            'Rush Att per Game'
-          ] = +(
-            (rushAttPerGameOne +
-                rushAttPerGameTwo +
-                rushAttPerGameThree) /
-            3
-          ).toFixed(4);
-
-          allWrProspectsObjects[key1].careerAveragedStats[
-            'Rec per Game'
-          ] = +(
-            (recPerGameOne +
-                recPerGameTwo +
-                recPerGameThree) /
-            3
-          ).toFixed(4);
-
-          allWrProspectsObjects[key1].careerAveragedStats[
-            'Rec Yds per Game'
-          ] = +(
-            (recYardsPerGameOne +
-                recYardsPerGameTwo +
-                recYardsPerGameThree) /
-            3
-          ).toFixed(4);
-
-          allWrProspectsObjects[key1].careerAveragedStats[
-            'Rec TDs per Game'
-          ] = +(
-            (recTDsPerGameOne +
-                recTDsPerGameTwo +
-                recTDsPerGameThree) /
+        allWrProspectsObjects[key1].careerAveragedStats['Contested Target %'] =
+          +(
+            (contestTargetPercentageOne +
+              contestTargetPercentageTwo +
+              contestTargetPercentageThree) /
             3
           ).toFixed(4);
       }
-
-        
 
       /////////////////////////////////////////////////////////////
       ////////////////////////////////////////////////////////////
@@ -1350,21 +1318,24 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
       }
 
       if (value1.yearOne['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'EPA Per Play'
-        ] = +((epaPerPlayTwo + epaPerPlayThree) / 2).toFixed(4);
+        allWrProspectsObjects[key1].careerAveragedStats['EPA Per Play'] = +(
+          (epaPerPlayTwo + epaPerPlayThree) /
+          2
+        ).toFixed(4);
       }
 
       if (value1.yearOne['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'Total EPA'
-        ] = +((totalEPATwo + totalEPAThree) / 2).toFixed(4);
+        allWrProspectsObjects[key1].careerAveragedStats['Total EPA'] = +(
+          (totalEPATwo + totalEPAThree) /
+          2
+        ).toFixed(4);
       }
 
       if (value1.yearOne['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'Yards Per Rec'
-        ] = +((yardsPerRecTwo + yardsPerRecThree) / 2).toFixed(4);
+        allWrProspectsObjects[key1].careerAveragedStats['Yards Per Rec'] = +(
+          (yardsPerRecTwo + yardsPerRecThree) /
+          2
+        ).toFixed(4);
       }
 
       if (value1.yearOne['Games Played'] < 6) {
@@ -1375,45 +1346,52 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
       }
 
       if (value1.yearOne['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'Rec Yds'
-        ] = +((recYardsTwo + recYardsThree) / 2).toFixed(4);
+        allWrProspectsObjects[key1].careerAveragedStats['Rec Yds'] = +(
+          (recYardsTwo + recYardsThree) /
+          2
+        ).toFixed(4);
       }
 
       if (value1.yearOne['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'Rec TDs'
-        ] = +((recTDsTwo + recTDsThree) / 2).toFixed(4);
+        allWrProspectsObjects[key1].careerAveragedStats['Rec TDs'] = +(
+          (recTDsTwo + recTDsThree) /
+          2
+        ).toFixed(4);
       }
 
       if (value1.yearOne['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'Rush Att per Game'
-        ] = +((rushAttPerGameTwo + rushAttPerGameThree) / 2).toFixed(4);
+        allWrProspectsObjects[key1].careerAveragedStats['Rush Att per Game'] =
+          +((rushAttPerGameTwo + rushAttPerGameThree) / 2).toFixed(4);
       }
 
       if (value1.yearOne['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'Rec per Game'
-        ] = +((recPerGameTwo + recPerGameThree) / 2).toFixed(4);
+        allWrProspectsObjects[key1].careerAveragedStats['Rec per Game'] = +(
+          (recPerGameTwo + recPerGameThree) /
+          2
+        ).toFixed(4);
       }
 
       if (value1.yearOne['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'Rec Yds per Game'
-        ] = +((recYardsPerGameTwo + recYardsPerGameThree) / 2).toFixed(4);
+        allWrProspectsObjects[key1].careerAveragedStats['Rec Yds per Game'] = +(
+          (recYardsPerGameTwo + recYardsPerGameThree) /
+          2
+        ).toFixed(4);
       }
 
       if (value1.yearOne['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'Rec TDs per Game'
-        ] = +((recTDsPerGameTwo + recTDsPerGameThree) / 2).toFixed(4);
+        allWrProspectsObjects[key1].careerAveragedStats['Rec TDs per Game'] = +(
+          (recTDsPerGameTwo + recTDsPerGameThree) /
+          2
+        ).toFixed(4);
       }
 
-
-    
-        
-     
+      if (value1.yearOne['Games Played'] < 6) {
+        allWrProspectsObjects[key1].careerAveragedStats['Contested Target %'] =
+          +(
+            (contestTargetPercentageTwo + contestTargetPercentageThree) /
+            2
+          ).toFixed(4);
+      }
 
       //////////////////////////////////////////////////////////////////
       ////////////////////////////////////////////////////////////////
@@ -1586,65 +1564,80 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
       }
 
       if (value1.yearTwo['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'EPA Per Play'
-        ] = +((epaPerPlayOne + epaPerPlayThree) / 2).toFixed(4);
+        allWrProspectsObjects[key1].careerAveragedStats['EPA Per Play'] = +(
+          (epaPerPlayOne + epaPerPlayThree) /
+          2
+        ).toFixed(4);
       }
 
       if (value1.yearTwo['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'Total EPA'
-        ] = +((totalEPAOne + totalEPAThree) / 2).toFixed(4);
+        allWrProspectsObjects[key1].careerAveragedStats['Total EPA'] = +(
+          (totalEPAOne + totalEPAThree) /
+          2
+        ).toFixed(4);
       }
 
       if (value1.yearTwo['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'Yards Per Rec'
-        ] = +((yardsPerRecOne + yardsPerRecThree) / 2).toFixed(4);
+        allWrProspectsObjects[key1].careerAveragedStats['Yards Per Rec'] = +(
+          (yardsPerRecOne + yardsPerRecThree) /
+          2
+        ).toFixed(4);
       }
 
       if (value1.yearTwo['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats.Rec = +((receptionsOne + receptionsThree) / 2).toFixed(4);
+        allWrProspectsObjects[key1].careerAveragedStats.Rec = +(
+          (receptionsOne + receptionsThree) /
+          2
+        ).toFixed(4);
       }
 
       if (value1.yearTwo['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'Rec Yds'
-        ] = +((recYardsOne + recYardsThree) / 2).toFixed(4);
+        allWrProspectsObjects[key1].careerAveragedStats['Rec Yds'] = +(
+          (recYardsOne + recYardsThree) /
+          2
+        ).toFixed(4);
       }
 
       if (value1.yearTwo['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'Rec TDs'
-        ] = +((recTDsOne + recTDsThree) / 2).toFixed(4);
+        allWrProspectsObjects[key1].careerAveragedStats['Rec TDs'] = +(
+          (recTDsOne + recTDsThree) /
+          2
+        ).toFixed(4);
       }
 
       if (value1.yearTwo['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'Rush Att per Game'
-        ] = +((rushAttPerGameOne + rushAttPerGameThree) / 2).toFixed(4);
+        allWrProspectsObjects[key1].careerAveragedStats['Rush Att per Game'] =
+          +((rushAttPerGameOne + rushAttPerGameThree) / 2).toFixed(4);
       }
 
       if (value1.yearTwo['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'Rec per Game'
-        ] = +((recPerGameOne + recPerGameThree) / 2).toFixed(4);
+        allWrProspectsObjects[key1].careerAveragedStats['Rec per Game'] = +(
+          (recPerGameOne + recPerGameThree) /
+          2
+        ).toFixed(4);
       }
 
       if (value1.yearTwo['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'Rec Yds per Game'
-        ] = +((recYardsPerGameOne + recYardsPerGameThree) / 2).toFixed(4);
+        allWrProspectsObjects[key1].careerAveragedStats['Rec Yds per Game'] = +(
+          (recYardsPerGameOne + recYardsPerGameThree) /
+          2
+        ).toFixed(4);
       }
 
       if (value1.yearTwo['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'Rec TDs per Game'
-        ] = +((recTDsPerGameOne + recTDsPerGameThree) / 2).toFixed(4);
+        allWrProspectsObjects[key1].careerAveragedStats['Rec TDs per Game'] = +(
+          (recTDsPerGameOne + recTDsPerGameThree) /
+          2
+        ).toFixed(4);
       }
 
-        
-       
+      if (value1.yearTwo['Games Played'] < 6) {
+        allWrProspectsObjects[key1].careerAveragedStats['Contested Target %'] =
+          +(
+            (contestTargetPercentageOne + contestTargetPercentageThree) /
+            2
+          ).toFixed(4);
+      }
 
       ///////////////////////////////////////////////////////////////
       /////////////////////////////////////////////////////////////////////////
@@ -1823,64 +1816,80 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
       }
 
       if (value1.yearThree['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'EPA Per Play'
-        ] = +((epaPerPlayOne + epaPerPlayTwo) / 2).toFixed(4);
+        allWrProspectsObjects[key1].careerAveragedStats['EPA Per Play'] = +(
+          (epaPerPlayOne + epaPerPlayTwo) /
+          2
+        ).toFixed(4);
       }
 
       if (value1.yearThree['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'Total EPA'
-        ] = +((totalEPAOne + totalEPATwo) / 2).toFixed(4);
+        allWrProspectsObjects[key1].careerAveragedStats['Total EPA'] = +(
+          (totalEPAOne + totalEPATwo) /
+          2
+        ).toFixed(4);
       }
 
       if (value1.yearThree['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'Yards Per Rec'
-        ] = +((yardsPerRecOne + yardsPerRecTwo) / 2).toFixed(4);
+        allWrProspectsObjects[key1].careerAveragedStats['Yards Per Rec'] = +(
+          (yardsPerRecOne + yardsPerRecTwo) /
+          2
+        ).toFixed(4);
       }
 
       if (value1.yearThree['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats.Rec = +((receptionsOne + receptionsTwo) / 2).toFixed(4);
+        allWrProspectsObjects[key1].careerAveragedStats.Rec = +(
+          (receptionsOne + receptionsTwo) /
+          2
+        ).toFixed(4);
       }
 
       if (value1.yearThree['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'Rec Yds'
-        ] = +((recYardsOne + recYardsTwo) / 2).toFixed(4);
+        allWrProspectsObjects[key1].careerAveragedStats['Rec Yds'] = +(
+          (recYardsOne + recYardsTwo) /
+          2
+        ).toFixed(4);
       }
 
       if (value1.yearThree['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'Rec TDs'
-        ] = +((recTDsOne + recTDsTwo) / 2).toFixed(4);
+        allWrProspectsObjects[key1].careerAveragedStats['Rec TDs'] = +(
+          (recTDsOne + recTDsTwo) /
+          2
+        ).toFixed(4);
       }
 
       if (value1.yearThree['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'Rush Att per Game'
-        ] = +((rushAttPerGameOne + rushAttPerGameTwo) / 2).toFixed(4);
+        allWrProspectsObjects[key1].careerAveragedStats['Rush Att per Game'] =
+          +((rushAttPerGameOne + rushAttPerGameTwo) / 2).toFixed(4);
       }
 
       if (value1.yearThree['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'Rec per Game'
-        ] = +((recPerGameOne + recPerGameTwo) / 2).toFixed(4);
+        allWrProspectsObjects[key1].careerAveragedStats['Rec per Game'] = +(
+          (recPerGameOne + recPerGameTwo) /
+          2
+        ).toFixed(4);
       }
 
       if (value1.yearThree['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'Rec Yds per Game'
-        ] = +((recYardsPerGameOne + recYardsPerGameTwo) / 2).toFixed(4);
+        allWrProspectsObjects[key1].careerAveragedStats['Rec Yds per Game'] = +(
+          (recYardsPerGameOne + recYardsPerGameTwo) /
+          2
+        ).toFixed(4);
       }
 
       if (value1.yearThree['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'Rec TDs per Game'
-        ] = +((recTDsPerGameOne + recTDsPerGameTwo) / 2).toFixed(4);
+        allWrProspectsObjects[key1].careerAveragedStats['Rec TDs per Game'] = +(
+          (recTDsPerGameOne + recTDsPerGameTwo) /
+          2
+        ).toFixed(4);
       }
 
-        
+      if (value1.yearThree['Games Played'] < 6) {
+        allWrProspectsObjects[key1].careerAveragedStats['Contested Target %'] =
+          +(
+            (contestTargetPercentageOne + contestTargetPercentageTwo) /
+            2
+          ).toFixed(4);
+      }
 
       // setting career total stats
 
@@ -1928,9 +1937,6 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
         recTDsThree
       ).toFixed(2);
 
-     
-      
-
       /////////////////////////////////////////////////////////////
       // if player had a fourth year
       ////////////////////////////////
@@ -1940,6 +1946,9 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
 
       if (value1.yearFour) {
         // console.log(key1)
+        let contestTargetPercentageFour = +value1.yearFour[
+          'Contested Target %'
+        ].slice(0, -1);
         let tempYearFourMTFREC = +value1.yearFour['MTF/REC %'].slice(0, -1);
         let tempYearFourMTFirstDownPerSnap = +value1.yearFour['1D/Snap'].slice(
           0,
@@ -2198,107 +2207,81 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
             4
           ).toFixed(4);
 
-          allWrProspectsObjects[key1].careerAveragedStats[
-            'EPA Per Play'
-          ] = +(
-            (epaPerPlayOne +
-                epaPerPlayTwo +
-                epaPerPlayThree +
-                epaPerPlayFour) /
+          allWrProspectsObjects[key1].careerAveragedStats['EPA Per Play'] = +(
+            (epaPerPlayOne + epaPerPlayTwo + epaPerPlayThree + epaPerPlayFour) /
             4
           ).toFixed(4);
 
-          allWrProspectsObjects[key1].careerAveragedStats[
-            'Total EPA'
-          ] = +(
-            (totalEPAOne +
-                totalEPATwo +
-                totalEPAThree +
-                totalEPAFour) /
+          allWrProspectsObjects[key1].careerAveragedStats['Total EPA'] = +(
+            (totalEPAOne + totalEPATwo + totalEPAThree + totalEPAFour) /
             4
           ).toFixed(4);
 
-          allWrProspectsObjects[key1].careerAveragedStats[
-            'Yards Per Rec'
-          ] = +(
+          allWrProspectsObjects[key1].careerAveragedStats['Yards Per Rec'] = +(
             (yardsPerRecOne +
-                yardsPerRecTwo +
-                yardsPerRecThree +
-                yardsPerRecFour) /
+              yardsPerRecTwo +
+              yardsPerRecThree +
+              yardsPerRecFour) /
             4
           ).toFixed(4);
 
           allWrProspectsObjects[key1].careerAveragedStats.Rec = +(
-            (receptionsOne +
-                receptionsTwo +
-                receptionsThree +
-                receptionsFour) /
+            (receptionsOne + receptionsTwo + receptionsThree + receptionsFour) /
             4
           ).toFixed(4);
 
-          allWrProspectsObjects[key1].careerAveragedStats[
-            'Rec Yds'
-          ] = +(
-            (recYardsOne +
-                recYardsTwo +
-                recYardsThree +
-                recYardsFour) /
+          allWrProspectsObjects[key1].careerAveragedStats['Rec Yds'] = +(
+            (recYardsOne + recYardsTwo + recYardsThree + recYardsFour) /
             4
           ).toFixed(4);
 
-          allWrProspectsObjects[key1].careerAveragedStats[
-            'Rec TDs'
-          ] = +(
-            (recTDsOne +
-                recTDsTwo +
-                recTDsThree +
-                recTDsFour) /
+          allWrProspectsObjects[key1].careerAveragedStats['Rec TDs'] = +(
+            (recTDsOne + recTDsTwo + recTDsThree + recTDsFour) /
             4
           ).toFixed(4);
 
-          allWrProspectsObjects[key1].careerAveragedStats[
-            'Rush Att per Game'
-          ] = +(
-            (rushAttPerGameOne +
+          allWrProspectsObjects[key1].careerAveragedStats['Rush Att per Game'] =
+            +(
+              (rushAttPerGameOne +
                 rushAttPerGameTwo +
                 rushAttPerGameThree +
                 rushAttPerGameFour) /
-            4
-          ).toFixed(4);
-        
+              4
+            ).toFixed(4);
 
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'Rec per Game'
-          ] = +(
-            (recPerGameOne +
-                recPerGameTwo +
-                recPerGameThree +
-                recPerGameFour) /
+          allWrProspectsObjects[key1].careerAveragedStats['Rec per Game'] = +(
+            (recPerGameOne + recPerGameTwo + recPerGameThree + recPerGameFour) /
             4
           ).toFixed(4);
 
-          allWrProspectsObjects[key1].careerAveragedStats[
-            'Rec Yds per Game'
-          ] = +(
-            (recYardsPerGameOne +
+          allWrProspectsObjects[key1].careerAveragedStats['Rec Yds per Game'] =
+            +(
+              (recYardsPerGameOne +
                 recYardsPerGameTwo +
                 recYardsPerGameThree +
                 recYardsPerGameFour) /
-            4
-          ).toFixed(4);
+              4
+            ).toFixed(4);
 
-          allWrProspectsObjects[key1].careerAveragedStats[
-            'Rec TDs per Game'
-          ] = +(
-            (recTDsPerGameOne +
+          allWrProspectsObjects[key1].careerAveragedStats['Rec TDs per Game'] =
+            +(
+              (recTDsPerGameOne +
                 recTDsPerGameTwo +
                 recTDsPerGameThree +
                 recTDsPerGameFour) /
+              4
+            ).toFixed(4);
+
+          allWrProspectsObjects[key1].careerAveragedStats[
+            'Contested Target %'
+          ] = +(
+            (contestTargetPercentageOne +
+              contestTargetPercentageTwo +
+              contestTargetPercentageThree +
+              contestTargetPercentageFour) /
             4
           ).toFixed(4);
         }
-
-        
 
         ////////////////////////////////////////////////////////////////////
         //////////////////////////////////////////////////////////////////
@@ -2508,116 +2491,90 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
         }
 
         if (value1.yearOne['Games Played'] < 6) {
-            allWrProspectsObjects[key1].careerAveragedStats[
-                'EPA Per Play'
-            ] = +(
-              (epaPerPlayTwo +
-                epaPerPlayThree +
-                epaPerPlayFour) /
-              3
-            ).toFixed(4);
-          }
+          allWrProspectsObjects[key1].careerAveragedStats['EPA Per Play'] = +(
+            (epaPerPlayTwo + epaPerPlayThree + epaPerPlayFour) /
+            3
+          ).toFixed(4);
+        }
 
-          if (value1.yearOne['Games Played'] < 6) {
-            allWrProspectsObjects[key1].careerAveragedStats[
-                'Total EPA'
-            ] = +(
-              (totalEPATwo +
-                totalEPAThree +
-                totalEPAFour) /
-              3
-            ).toFixed(4);
-          }
+        if (value1.yearOne['Games Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats['Total EPA'] = +(
+            (totalEPATwo + totalEPAThree + totalEPAFour) /
+            3
+          ).toFixed(4);
+        }
 
-          if (value1.yearOne['Games Played'] < 6) {
-            allWrProspectsObjects[key1].careerAveragedStats[
-                'Yards Per Rec'
-            ] = +(
-              (yardsPerRecTwo +
-                yardsPerRecThree +
-                yardsPerRecFour) /
-              3
-            ).toFixed(4);
-          }
+        if (value1.yearOne['Games Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats['Yards Per Rec'] = +(
+            (yardsPerRecTwo + yardsPerRecThree + yardsPerRecFour) /
+            3
+          ).toFixed(4);
+        }
 
-          if (value1.yearOne['Games Played'] < 6) {
-            allWrProspectsObjects[key1].careerAveragedStats.Rec = +(
-              (receptionsTwo +
-                receptionsThree +
-                receptionsFour) /
-              3
-            ).toFixed(4);
-          }
-          
-          if (value1.yearOne['Games Played'] < 6) {
-            allWrProspectsObjects[key1].careerAveragedStats[
-                'Rec Yds'
-            ] = +(
-              (recYardsTwo +
-                recYardsThree +
-                recYardsFour) /
-              3
-            ).toFixed(4);
-          }
+        if (value1.yearOne['Games Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats.Rec = +(
+            (receptionsTwo + receptionsThree + receptionsFour) /
+            3
+          ).toFixed(4);
+        }
 
-          if (value1.yearOne['Games Played'] < 6) {
-            allWrProspectsObjects[key1].careerAveragedStats[
-                'Rec TDs'
-            ] = +(
-              (recTDsTwo +
-                recTDsThree +
-                recTDsFour) /
+        if (value1.yearOne['Games Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats['Rec Yds'] = +(
+            (recYardsTwo + recYardsThree + recYardsFour) /
+            3
+          ).toFixed(4);
+        }
+
+        if (value1.yearOne['Games Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats['Rec TDs'] = +(
+            (recTDsTwo + recTDsThree + recTDsFour) /
+            3
+          ).toFixed(4);
+        }
+
+        if (value1.yearOne['Games Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats['Rush Att per Game'] =
+            +(
+              (rushAttPerGameTwo + rushAttPerGameThree + rushAttPerGameFour) /
               3
             ).toFixed(4);
-          }
+        }
 
-          if (value1.yearOne['Games Played'] < 6) {
-            allWrProspectsObjects[key1].careerAveragedStats[
-                'Rush Att per Game'
-            ] = +(
-              (rushAttPerGameTwo +
-                rushAttPerGameThree +
-                rushAttPerGameFour) /
-              3
-            ).toFixed(4);
-          }
+        if (value1.yearOne['Games Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats['Rec per Game'] = +(
+            (recPerGameTwo + recPerGameThree + recPerGameFour) /
+            3
+          ).toFixed(4);
+        }
 
-          if (value1.yearOne['Games Played'] < 6) {
-            allWrProspectsObjects[key1].careerAveragedStats[
-                'Rec per Game'
-            ] = +(
-              (recPerGameTwo +
-                recPerGameThree +
-                recPerGameFour) /
-              3
-            ).toFixed(4);
-          }
-
-          if (value1.yearOne['Games Played'] < 6) {
-            allWrProspectsObjects[key1].careerAveragedStats[
-                'Rec Yds per Game'
-            ] = +(
+        if (value1.yearOne['Games Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats['Rec Yds per Game'] =
+            +(
               (recYardsPerGameTwo +
                 recYardsPerGameThree +
                 recYardsPerGameFour) /
               3
             ).toFixed(4);
-          }
+        }
 
-          if (value1.yearOne['Games Played'] < 6) {
-            allWrProspectsObjects[key1].careerAveragedStats[
-                'Rec TDs per Game'
-            ] = +(
-              (recTDsPerGameTwo +
-                recTDsPerGameThree +
-                recTDsPerGameFour) /
+        if (value1.yearOne['Games Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats['Rec TDs per Game'] =
+            +(
+              (recTDsPerGameTwo + recTDsPerGameThree + recTDsPerGameFour) /
               3
             ).toFixed(4);
-          }
-          
-          
-           
-       
+        }
+
+        if (value1.yearOne['Games Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats[
+            'Contested Target %'
+          ] = +(
+            (contestTargetPercentageTwo +
+              contestTargetPercentageThree +
+              contestTargetPercentageFour) /
+            3
+          ).toFixed(4);
+        }
 
         ///////////////////////////////////////////////////////////
         /////////////////////////////////////////////////////////////
@@ -2820,114 +2777,90 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
         }
 
         if (value1.yearTwo['Games Played'] < 6) {
-            allWrProspectsObjects[key1].careerAveragedStats[
-                'EPA Per Play'
-            ] = +(
-              (epaPerPlayOne +
-                epaPerPlayThree +
-                epaPerPlayFour) /
+          allWrProspectsObjects[key1].careerAveragedStats['EPA Per Play'] = +(
+            (epaPerPlayOne + epaPerPlayThree + epaPerPlayFour) /
+            3
+          ).toFixed(4);
+        }
+
+        if (value1.yearTwo['Games Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats['Total EPA'] = +(
+            (totalEPAOne + totalEPAThree + totalEPAFour) /
+            3
+          ).toFixed(4);
+        }
+
+        if (value1.yearTwo['Games Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats['Yards Per Rec'] = +(
+            (yardsPerRecOne + yardsPerRecThree + yardsPerRecFour) /
+            3
+          ).toFixed(4);
+        }
+
+        if (value1.yearTwo['Games Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats.Rec = +(
+            (receptionsOne + receptionsThree + receptionsFour) /
+            3
+          ).toFixed(4);
+        }
+
+        if (value1.yearTwo['Games Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats['Rec Yds'] = +(
+            (recYardsOne + recYardsThree + recYardsFour) /
+            3
+          ).toFixed(4);
+        }
+
+        if (value1.yearTwo['Games Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats['Rec TDs'] = +(
+            (recTDsOne + recTDsThree + recTDsFour) /
+            3
+          ).toFixed(4);
+        }
+
+        if (value1.yearTwo['Games Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats['Rush Att per Game'] =
+            +(
+              (rushAttPerGameOne + rushAttPerGameThree + rushAttPerGameFour) /
               3
             ).toFixed(4);
-          }
+        }
 
-          if (value1.yearTwo['Games Played'] < 6) {
-            allWrProspectsObjects[key1].careerAveragedStats[
-                'Total EPA'
-            ] = +(
-              (totalEPAOne +
-                totalEPAThree +
-                totalEPAFour) /
-              3
-            ).toFixed(4);
-          }
+        if (value1.yearTwo['Games Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats['Rec per Game'] = +(
+            (recPerGameOne + recPerGameThree + recPerGameFour) /
+            3
+          ).toFixed(4);
+        }
 
-          if (value1.yearTwo['Games Played'] < 6) {
-            allWrProspectsObjects[key1].careerAveragedStats[
-                'Yards Per Rec'
-            ] = +(
-              (yardsPerRecOne +
-                yardsPerRecThree +
-                yardsPerRecFour) /
-              3
-            ).toFixed(4);
-          }
-
-          if (value1.yearTwo['Games Played'] < 6) {
-            allWrProspectsObjects[key1].careerAveragedStats.Rec = +(
-              (receptionsOne +
-                receptionsThree +
-                receptionsFour) /
-              3
-            ).toFixed(4);
-          }
-
-          if (value1.yearTwo['Games Played'] < 6) {
-            allWrProspectsObjects[key1].careerAveragedStats[
-                'Rec Yds'
-            ] = +(
-              (recYardsOne +
-                recYardsThree +
-                recYardsFour) /
-              3
-            ).toFixed(4);
-          }
-
-          if (value1.yearTwo['Games Played'] < 6) {
-            allWrProspectsObjects[key1].careerAveragedStats[
-                'Rec TDs'
-            ] = +(
-              (recTDsOne +
-                recTDsThree +
-                recTDsFour) /
-              3
-            ).toFixed(4);
-          }
-
-          if (value1.yearTwo['Games Played'] < 6) {
-            allWrProspectsObjects[key1].careerAveragedStats[
-                'Rush Att per Game'
-            ] = +(
-              (rushAttPerGameOne +
-                rushAttPerGameThree +
-                rushAttPerGameFour) /
-              3
-            ).toFixed(4);
-          }
-
-          if (value1.yearTwo['Games Played'] < 6) {
-            allWrProspectsObjects[key1].careerAveragedStats[
-                'Rec per Game'
-            ] = +(
-              (recPerGameOne +
-                recPerGameThree +
-                recPerGameFour) /
-              3
-            ).toFixed(4);
-          }
-
-          if (value1.yearTwo['Games Played'] < 6) {
-            allWrProspectsObjects[key1].careerAveragedStats[
-                'Rec Yds per Game'
-            ] = +(
+        if (value1.yearTwo['Games Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats['Rec Yds per Game'] =
+            +(
               (recYardsPerGameOne +
                 recYardsPerGameThree +
                 recYardsPerGameFour) /
               3
             ).toFixed(4);
-          }
+        }
 
-          if (value1.yearTwo['Games Played'] < 6) {
-            allWrProspectsObjects[key1].careerAveragedStats[
-                'Rec TDs per Game'
-            ] = +(
-              (recTDsPerGameOne +
-                recTDsPerGameThree +
-                recTDsPerGameFour) /
+        if (value1.yearTwo['Games Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats['Rec TDs per Game'] =
+            +(
+              (recTDsPerGameOne + recTDsPerGameThree + recTDsPerGameFour) /
               3
             ).toFixed(4);
-          }
+        }
 
-           
+        if (value1.yearTwo['Games Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats[
+            'Contested Target %'
+          ] = +(
+            (contestTargetPercentageOne +
+              contestTargetPercentageThree +
+              contestTargetPercentageFour) /
+            3
+          ).toFixed(4);
+        }
 
         ////////////////////////////////////////////////////////////////////
         //////////////////////////////////////////////////////////////////////
@@ -3115,114 +3048,88 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
         }
 
         if (value1.yearThree['Games Played'] < 6) {
-          allWrProspectsObjects[key1].careerAveragedStats[
-            'EPA Per Play'
-          ] = +(
-            (epaPerPlayOne +
-                epaPerPlayTwo +
-                epaPerPlayFour) /
+          allWrProspectsObjects[key1].careerAveragedStats['EPA Per Play'] = +(
+            (epaPerPlayOne + epaPerPlayTwo + epaPerPlayFour) /
             3
           ).toFixed(4);
         }
 
         if (value1.yearThree['Games Played'] < 6) {
-            allWrProspectsObjects[key1].careerAveragedStats[
-                'Total EPA'
-            ] = +(
-              (totalEPAOne +
-                totalEPATwo +
-                totalEPAFour) /
+          allWrProspectsObjects[key1].careerAveragedStats['Total EPA'] = +(
+            (totalEPAOne + totalEPATwo + totalEPAFour) /
+            3
+          ).toFixed(4);
+        }
+
+        if (value1.yearThree['Games Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats['Yards Per Rec'] = +(
+            (yardsPerRecOne + yardsPerRecTwo + yardsPerRecFour) /
+            3
+          ).toFixed(4);
+        }
+
+        if (value1.yearThree['Games Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats.Rec = +(
+            (receptionsOne + receptionsTwo + receptionsFour) /
+            3
+          ).toFixed(4);
+        }
+
+        if (value1.yearThree['Games Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats['Rec Yds'] = +(
+            (recYardsOne + recYardsTwo + recYardsFour) /
+            3
+          ).toFixed(4);
+        }
+
+        if (value1.yearThree['Games Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats['Rec TDs'] = +(
+            (recTDsOne + recTDsTwo + recTDsFour) /
+            3
+          ).toFixed(4);
+        }
+
+        if (value1.yearThree['Games Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats['Rush Att per Game'] =
+            +(
+              (rushAttPerGameOne + rushAttPerGameTwo + rushAttPerGameFour) /
               3
             ).toFixed(4);
-          }
+        }
 
-          if (value1.yearThree['Games Played'] < 6) {
-            allWrProspectsObjects[key1].careerAveragedStats[
-                'Yards Per Rec'
-            ] = +(
-              (yardsPerRecOne +
-                yardsPerRecTwo +
-                yardsPerRecFour) /
+        if (value1.yearThree['Games Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats['Rec per Game'] = +(
+            (recPerGameOne + recPerGameTwo + recPerGameFour) /
+            3
+          ).toFixed(4);
+        }
+
+        if (value1.yearThree['Games Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats['Rec Yds per Game'] =
+            +(
+              (recYardsPerGameOne + recYardsPerGameTwo + recYardsPerGameFour) /
               3
             ).toFixed(4);
-          }
+        }
 
-          if (value1.yearThree['Games Played'] < 6) {
-            allWrProspectsObjects[key1].careerAveragedStats.Rec = +(
-              (receptionsOne +
-                receptionsTwo +
-                receptionsFour) /
+        if (value1.yearThree['Games Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats['Rec TDs per Game'] =
+            +(
+              (recTDsPerGameOne + recTDsPerGameTwo + recTDsPerGameFour) /
               3
             ).toFixed(4);
-          }
+        }
 
-          if (value1.yearThree['Games Played'] < 6) {
-            allWrProspectsObjects[key1].careerAveragedStats[
-                'Rec Yds'
-            ] = +(
-              (recYardsOne +
-                recYardsTwo +
-                recYardsFour) /
-              3
-            ).toFixed(4);
-          }
-
-          if (value1.yearThree['Games Played'] < 6) {
-            allWrProspectsObjects[key1].careerAveragedStats[
-                'Rec TDs'
-            ] = +(
-              (recTDsOne +
-                recTDsTwo +
-                recTDsFour) /
-              3
-            ).toFixed(4);
-          }
-
-          if (value1.yearThree['Games Played'] < 6) {
-            allWrProspectsObjects[key1].careerAveragedStats[
-                'Rush Att per Game'
-            ] = +(
-              (rushAttPerGameOne +
-                rushAttPerGameTwo +
-                rushAttPerGameFour) /
-              3
-            ).toFixed(4);
-          }
-
-          if (value1.yearThree['Games Played'] < 6) {
-            allWrProspectsObjects[key1].careerAveragedStats[
-                'Rec per Game'
-            ] = +(
-              (recPerGameOne +
-                recPerGameTwo +
-                recPerGameFour) /
-              3
-            ).toFixed(4);
-          }
-
-          if (value1.yearThree['Games Played'] < 6) {
-            allWrProspectsObjects[key1].careerAveragedStats[
-                'Rec Yds per Game'
-            ] = +(
-              (recYardsPerGameOne +
-                recYardsPerGameTwo +
-                recYardsPerGameFour) /
-              3
-            ).toFixed(4);
-          }
-
-          if (value1.yearThree['Games Played'] < 6) {
-            allWrProspectsObjects[key1].careerAveragedStats[
-                'Rec TDs per Game'
-            ] = +(
-              (recTDsPerGameOne +
-                recTDsPerGameTwo +
-                recTDsPerGameFour) /
-              3
-            ).toFixed(4);
-          }
-
-        
+        if (value1.yearThree['Games Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats[
+            'Contested Target %'
+          ] = +(
+            (contestTargetPercentageOne +
+              contestTargetPercentageTwo +
+              contestTargetPercentageFour) /
+            3
+          ).toFixed(4);
+        }
 
         ////////////////////////////////////////////////////////////////
         ///////////////////////////////////////////////////////////////
@@ -3430,115 +3337,88 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
         }
 
         if (value1.yearFour['Games Played'] < 6) {
-            allWrProspectsObjects[key1].careerAveragedStats[
-                'EPA Per Play'
-            ] = +(
-              (epaPerPlayOne +
-                epaPerPlayTwo +
-                epaPerPlayThree) /
+          allWrProspectsObjects[key1].careerAveragedStats['EPA Per Play'] = +(
+            (epaPerPlayOne + epaPerPlayTwo + epaPerPlayThree) /
+            3
+          ).toFixed(4);
+        }
+
+        if (value1.yearFour['Games Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats['Total EPA'] = +(
+            (totalEPAOne + totalEPATwo + totalEPAThree) /
+            3
+          ).toFixed(4);
+        }
+
+        if (value1.yearFour['Games Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats['Yards Per Rec'] = +(
+            (yardsPerRecOne + yardsPerRecTwo + yardsPerRecThree) /
+            3
+          ).toFixed(4);
+        }
+
+        if (value1.yearFour['Games Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats.Rec = +(
+            (receptionsOne + receptionsTwo + receptionsThree) /
+            3
+          ).toFixed(4);
+        }
+
+        if (value1.yearFour['Games Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats['Rec Yds'] = +(
+            (recYardsOne + recYardsTwo + recYardsThree) /
+            3
+          ).toFixed(4);
+        }
+
+        if (value1.yearFour['Games Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats['Rec TDs'] = +(
+            (recTDsOne + recTDsTwo + recTDsThree) /
+            3
+          ).toFixed(4);
+        }
+
+        if (value1.yearFour['Games Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats['Rush Att per Game'] =
+            +(
+              (rushAttPerGameOne + rushAttPerGameTwo + rushAttPerGameThree) /
               3
             ).toFixed(4);
-          }
+        }
 
-          if (value1.yearFour['Games Played'] < 6) {
-            allWrProspectsObjects[key1].careerAveragedStats[
-                'Total EPA'
-            ] = +(
-              (totalEPAOne +
-                totalEPATwo +
-                totalEPAThree) /
+        if (value1.yearFour['Games Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats['Rec per Game'] = +(
+            (recPerGameOne + recPerGameTwo + recPerGameThree) /
+            3
+          ).toFixed(4);
+        }
+
+        if (value1.yearFour['Games Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats['Rec Yds per Game'] =
+            +(
+              (recYardsPerGameOne + recYardsPerGameTwo + recYardsPerGameThree) /
               3
             ).toFixed(4);
-          }
+        }
 
-          if (value1.yearFour['Games Played'] < 6) {
-            allWrProspectsObjects[key1].careerAveragedStats[
-                'Yards Per Rec'
-            ] = +(
-              (yardsPerRecOne +
-                yardsPerRecTwo +
-                yardsPerRecThree) /
+        if (value1.yearFour['Games Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats['Rec TDs per Game'] =
+            +(
+              (recTDsPerGameOne + recTDsPerGameTwo + recTDsPerGameThree) /
               3
             ).toFixed(4);
-          }
+        }
 
-          if (value1.yearFour['Games Played'] < 6) {
-            allWrProspectsObjects[key1].careerAveragedStats.Rec = +(
-              (receptionsOne +
-                receptionsTwo +
-                receptionsThree) /
-              3
-            ).toFixed(4);
-          }
-
-          if (value1.yearFour['Games Played'] < 6) {
-            allWrProspectsObjects[key1].careerAveragedStats[
-                'Rec Yds'
-            ] = +(
-              (recYardsOne +
-                recYardsTwo +
-                recYardsThree) /
-              3
-            ).toFixed(4);
-          }
-
-          if (value1.yearFour['Games Played'] < 6) {
-            allWrProspectsObjects[key1].careerAveragedStats[
-                'Rec TDs'
-            ] = +(
-              (recTDsOne +
-                recTDsTwo +
-                recTDsThree) /
-              3
-            ).toFixed(4);
-          }
-
-          if (value1.yearFour['Games Played'] < 6) {
-            allWrProspectsObjects[key1].careerAveragedStats[
-                'Rush Att per Game'
-            ] = +(
-              (rushAttPerGameOne +
-                rushAttPerGameTwo +
-                rushAttPerGameThree) /
-              3
-            ).toFixed(4);
-          }
-
-          if (value1.yearFour['Games Played'] < 6) {
-            allWrProspectsObjects[key1].careerAveragedStats[
-                'Rec per Game'
-            ] = +(
-              (recPerGameOne +
-                recPerGameTwo +
-                recPerGameThree) /
-              3
-            ).toFixed(4);
-          }
-
-          if (value1.yearFour['Games Played'] < 6) {
-            allWrProspectsObjects[key1].careerAveragedStats[
-                'Rec Yds per Game'
-            ] = +(
-              (recYardsPerGameOne +
-                recYardsPerGameTwo +
-                recYardsPerGameThree) /
-              3
-            ).toFixed(4);
-          }
-
-          if (value1.yearFour['Games Played'] < 6) {
-            allWrProspectsObjects[key1].careerAveragedStats[
-                'Rec TDs per Game'
-            ] = +(
-              (recTDsPerGameOne +
-                recTDsPerGameTwo +
-                recTDsPerGameThree) /
-              3
-            ).toFixed(4);
-          }
-
-           
-         
+        if (value1.yearFour['Games Played'] < 6) {
+          allWrProspectsObjects[key1].careerAveragedStats[
+            'Contested Target %'
+          ] = +(
+            (contestTargetPercentageOne +
+              contestTargetPercentageTwo +
+              contestTargetPercentageThree) /
+            3
+          ).toFixed(4);
+        }
 
         // setting career total stats
 
@@ -3576,31 +3456,27 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
         ).toFixed(2);
 
         allWrProspectsObjects[key1].careerTotalStats.Rec = +(
-            receptionsOne +
-            receptionsTwo +
-            receptionsThree +
-            receptionsFour
-          ).toFixed(2);
+          receptionsOne +
+          receptionsTwo +
+          receptionsThree +
+          receptionsFour
+        ).toFixed(2);
 
-          allWrProspectsObjects[key1].careerTotalStats['Rec Yds'] = +(
-            recYardsOne +
-            recYardsTwo +
-            recYardsThree +
-            recYardsFour
-          ).toFixed(2);
+        allWrProspectsObjects[key1].careerTotalStats['Rec Yds'] = +(
+          recYardsOne +
+          recYardsTwo +
+          recYardsThree +
+          recYardsFour
+        ).toFixed(2);
 
-          allWrProspectsObjects[key1].careerTotalStats['Rec TDs'] = +(
-            recTDsOne +
-            recTDsTwo +
-            recTDsThree +
-            recTDsFour
-          ).toFixed(2);
+        allWrProspectsObjects[key1].careerTotalStats['Rec TDs'] = +(
+          recTDsOne +
+          recTDsTwo +
+          recTDsThree +
+          recTDsFour
+        ).toFixed(2);
       }
     }
-
-    
-         
-    
 
     //
     //    players in this else only played two college seasons total
@@ -3706,15 +3582,14 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
         'Yards Per Rec'
       ] = +yardsPerRecTwo;
 
-      allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats.Rec = +receptionsTwo;
+      allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats.Rec =
+        +receptionsTwo;
 
-      allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
-        'Rec Yds'
-      ] = +recYardsTwo;
+      allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats['Rec Yds'] =
+        +recYardsTwo;
 
-      allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
-        'Rec TDs'
-      ] = +recTDsTwo;
+      allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats['Rec TDs'] =
+        +recTDsTwo;
 
       allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
         'Rush Att per Game'
@@ -3732,8 +3607,9 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
         'Rec TDs per Game'
       ] = +recTDsPerGameTwo;
 
-           
-        
+      allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
+        'Contested Target %'
+      ] = +contestTargetPercentageTwo;
 
       /////////////////////////////////////////////////////
       /////////////////////////////////////////////
@@ -3870,49 +3746,63 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
           'EPA Per Team Pass Attempt'
         ] = +((epaPerTeamPassAttOne + epaPerTeamPassAttTwo) / 2).toFixed(4);
 
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'EPA Per Play'
-          ] = +((epaPerPlayOne + epaPerPlayTwo) / 2).toFixed(4);
+        allWrProspectsObjects[key1].careerAveragedStats['EPA Per Play'] = +(
+          (epaPerPlayOne + epaPerPlayTwo) /
+          2
+        ).toFixed(4);
 
-          allWrProspectsObjects[key1].careerAveragedStats[
-            'Total EPA'
-          ] = +((totalEPAOne + totalEPATwo) / 2).toFixed(4);
+        allWrProspectsObjects[key1].careerAveragedStats['Total EPA'] = +(
+          (totalEPAOne + totalEPATwo) /
+          2
+        ).toFixed(4);
 
-          allWrProspectsObjects[key1].careerAveragedStats[
-            'Yards Per Rec'
-          ] = +((yardsPerRecOne + yardsPerRecTwo) / 2).toFixed(4);
+        allWrProspectsObjects[key1].careerAveragedStats['Yards Per Rec'] = +(
+          (yardsPerRecOne + yardsPerRecTwo) /
+          2
+        ).toFixed(4);
 
-          allWrProspectsObjects[key1].careerAveragedStats.Rec = +((receptionsOne + receptionsTwo) / 2).toFixed(4);
+        allWrProspectsObjects[key1].careerAveragedStats.Rec = +(
+          (receptionsOne + receptionsTwo) /
+          2
+        ).toFixed(4);
 
-          allWrProspectsObjects[key1].careerAveragedStats[
-            'Rec Yds'
-          ] = +((recYardsOne + recYardsTwo) / 2).toFixed(4);
+        allWrProspectsObjects[key1].careerAveragedStats['Rec Yds'] = +(
+          (recYardsOne + recYardsTwo) /
+          2
+        ).toFixed(4);
 
-          allWrProspectsObjects[key1].careerAveragedStats[
-            'Rec TDs'
-          ] = +((recTDsOne + recTDsTwo) / 2).toFixed(4);
+        allWrProspectsObjects[key1].careerAveragedStats['Rec TDs'] = +(
+          (recTDsOne + recTDsTwo) /
+          2
+        ).toFixed(4);
 
-          allWrProspectsObjects[key1].careerAveragedStats[
-            'Rush Att per Game'
-          ] = +((rushAttPerGameOne + rushAttPerGameTwo) / 2).toFixed(4);
+        allWrProspectsObjects[key1].careerAveragedStats['Rush Att per Game'] =
+          +((rushAttPerGameOne + rushAttPerGameTwo) / 2).toFixed(4);
 
-          allWrProspectsObjects[key1].careerAveragedStats[
-            'Rec per Game'
-          ] = +((recPerGameOne + recPerGameTwo) / 2).toFixed(4);
+        allWrProspectsObjects[key1].careerAveragedStats['Rec per Game'] = +(
+          (recPerGameOne + recPerGameTwo) /
+          2
+        ).toFixed(4);
 
-          allWrProspectsObjects[key1].careerAveragedStats[
-            'Rec Yds per Game'
-          ] = +((recYardsPerGameOne + recYardsPerGameTwo) / 2).toFixed(4);
+        allWrProspectsObjects[key1].careerAveragedStats['Rec Yds per Game'] = +(
+          (recYardsPerGameOne + recYardsPerGameTwo) /
+          2
+        ).toFixed(4);
 
-          allWrProspectsObjects[key1].careerAveragedStats[
-            'Rec TDs per Game'
-          ] = +((recTDsPerGameOne + recTDsPerGameTwo) / 2).toFixed(4);
+        allWrProspectsObjects[key1].careerAveragedStats['Rec TDs per Game'] = +(
+          (recTDsPerGameOne + recTDsPerGameTwo) /
+          2
+        ).toFixed(4);
+
+        allWrProspectsObjects[key1].careerAveragedStats['Contested Target %'] =
+          +(
+            (contestTargetPercentageOne + contestTargetPercentageTwo) /
+            2
+          ).toFixed(4);
 
         ///don't copy the } below this line!!
       }
 
-     
-     
       ////////////////////////////////////////////////////////
       ////////////////////////////////////////////////////////
       //////////////////////////////////////////////////////////
@@ -4043,22 +3933,18 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
       }
 
       if (value1.yearOne['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'EPA Per Play'
-        ] = +epaPerPlayTwo;
+        allWrProspectsObjects[key1].careerAveragedStats['EPA Per Play'] =
+          +epaPerPlayTwo;
       }
 
       if (value1.yearOne['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'Total EPA'
-        ] = +totalEPATwo;
+        allWrProspectsObjects[key1].careerAveragedStats['Total EPA'] =
+          +totalEPATwo;
       }
 
-      
       if (value1.yearOne['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'Yards Per Rec'
-        ] = +yardsPerRecTwo;
+        allWrProspectsObjects[key1].careerAveragedStats['Yards Per Rec'] =
+          +yardsPerRecTwo;
       }
 
       if (value1.yearOne['Games Played'] < 6) {
@@ -4066,42 +3952,38 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
       }
 
       if (value1.yearOne['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'Rec Yds'
-        ] = +recYardsTwo;
+        allWrProspectsObjects[key1].careerAveragedStats['Rec Yds'] =
+          +recYardsTwo;
       }
 
       if (value1.yearOne['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'Rec TDs'
-        ] = +recTDsTwo;
+        allWrProspectsObjects[key1].careerAveragedStats['Rec TDs'] = +recTDsTwo;
       }
 
       if (value1.yearOne['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'Rush Att per Game'
-        ] = +rushAttPerGameTwo;
+        allWrProspectsObjects[key1].careerAveragedStats['Rush Att per Game'] =
+          +rushAttPerGameTwo;
       }
 
       if (value1.yearOne['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'Rec per Game'
-        ] = +recPerGameTwo;
+        allWrProspectsObjects[key1].careerAveragedStats['Rec per Game'] =
+          +recPerGameTwo;
       }
 
       if (value1.yearOne['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'Rec Yds per Game'
-        ] = +recYardsPerGameTwo;
+        allWrProspectsObjects[key1].careerAveragedStats['Rec Yds per Game'] =
+          +recYardsPerGameTwo;
       }
 
       if (value1.yearOne['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'Rec TDs per Game'
-        ] = +recTDsPerGameTwo;
+        allWrProspectsObjects[key1].careerAveragedStats['Rec TDs per Game'] =
+          +recTDsPerGameTwo;
       }
 
-       
+      if (value1.yearOne['Games Played'] < 6) {
+        allWrProspectsObjects[key1].careerAveragedStats['Contested Target %'] =
+          +contestTargetPercentageTwo;
+      }
 
       ///////////////////////////////////////////////////////////
       ////////////////////////////////////////////////////////////
@@ -4233,21 +4115,18 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
       }
 
       if (value1.yearTwo['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'EPA Per Play'
-        ] = +epaPerPlayOne;
+        allWrProspectsObjects[key1].careerAveragedStats['EPA Per Play'] =
+          +epaPerPlayOne;
       }
 
       if (value1.yearTwo['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'Total EPA'
-        ] = +totalEPAOne;
+        allWrProspectsObjects[key1].careerAveragedStats['Total EPA'] =
+          +totalEPAOne;
       }
 
       if (value1.yearTwo['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'Yards Per Rec'
-        ] = +yardsPerRecOne;
+        allWrProspectsObjects[key1].careerAveragedStats['Yards Per Rec'] =
+          +yardsPerRecOne;
       }
 
       if (value1.yearTwo['Games Played'] < 6) {
@@ -4255,43 +4134,38 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
       }
 
       if (value1.yearTwo['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'Rec Yds'
-        ] = +recYardsOne;
+        allWrProspectsObjects[key1].careerAveragedStats['Rec Yds'] =
+          +recYardsOne;
       }
 
       if (value1.yearTwo['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'Rec TDs'
-        ] = +recTDsOne;
+        allWrProspectsObjects[key1].careerAveragedStats['Rec TDs'] = +recTDsOne;
       }
 
       if (value1.yearTwo['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'Rush Att per Game'
-        ] = +rushAttPerGameOne;
+        allWrProspectsObjects[key1].careerAveragedStats['Rush Att per Game'] =
+          +rushAttPerGameOne;
       }
 
       if (value1.yearTwo['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'Rec per Game'
-        ] = +recPerGameOne;
+        allWrProspectsObjects[key1].careerAveragedStats['Rec per Game'] =
+          +recPerGameOne;
       }
 
       if (value1.yearTwo['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'Rec Yds per Game'
-        ] = +recYardsPerGameOne;
+        allWrProspectsObjects[key1].careerAveragedStats['Rec Yds per Game'] =
+          +recYardsPerGameOne;
       }
 
-      
       if (value1.yearTwo['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats[
-            'Rec TDs per Game'
-        ] = +recTDsPerGameOne;
+        allWrProspectsObjects[key1].careerAveragedStats['Rec TDs per Game'] =
+          +recTDsPerGameOne;
       }
 
-      
+      if (value1.yearTwo['Games Played'] < 6) {
+        allWrProspectsObjects[key1].careerAveragedStats['Contested Target %'] =
+          +contestTargetPercentageOne;
+      }
 
       //////////////////////////////////////////
       // setting career total stats
@@ -4328,8 +4202,6 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
         recTDsOne + recTDsTwo
       ).toFixed(2);
     }
-
-    
 
     ///////////////////////
     //////////////////////////////
