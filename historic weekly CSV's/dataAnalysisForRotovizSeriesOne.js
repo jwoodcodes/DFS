@@ -1,18 +1,52 @@
 const { MongoClient } = require('mongodb');
 
 const before2023SeasonRVRedraftRankingsTEP = require('./before2023SeasonRVRedraftRankings');
+
+// 2021 redraft positional ADPs
+const qb2021 = require('./historic Positional redraft ADPs/qb2021');
+const rb2021PPRRedraftADP = require('./historic Positional redraft ADPs/rb2021PPRRedraftADP');
+const wr2021PPRRedraftADP = require('./historic Positional redraft ADPs/wr2021PPRRedraftADP');
+const te2021PPRRedraftADP = require('./historic Positional redraft ADPs/te2021PPRRedraftADP');
+
+// 2022 redraft positional ADPs
+const qb2022PPRRedraftADP = require('./historic Positional redraft ADPs/qb2022PPRRedraftADP');
+const rb2022PPRRedraftADP = require('./historic Positional redraft ADPs/rb2022PPRRedraftADP');
+const wr2022PPRRedraftADP = require('./historic Positional redraft ADPs/wr2022PPRRedraftADP');
+const te2022PPRRedraftADP = require('./historic Positional redraft ADPs/te2022PPRRedraftADP');
+
+// 2023 redraft positional ADPs
+const qb2023PPRRedraftADP = require('./historic Positional redraft ADPs/qb2023PPRRedraftADP');
+const rb2023PPRRedraftADP = require('./historic Positional redraft ADPs/rb2023PPRRedraftADP');
+const wr2023PPRRedraftADP = require('./historic Positional redraft ADPs/wr2023PPRRedraftADP');
+const te2023PPRRedraftADP = require('./historic Positional redraft ADPs/te2023PPRRedraftADP');
+
 const before2023SeasonFFPCRedraftADP = require('./FFPCBefore2023RedraftADP');
 
-const before2023SeasonRVDynastyRankings = require('./week-6-2023/rvDynastyRankingsTEP');
+// 2021 final positional PPR standings
+const qb2021PPRFinalStandings = require('./historic Positional season long finishes/qb2021PPRFinalStandings');
+const rb2021PPRFinalStandings = require('./historic Positional season long finishes/rb2021PPRFinalStandings');
+const wr2021PPRFinalStandings = require('./historic Positional season long finishes/wr2021PPRFinalStandings');
+const te2021PPRFinalStandings = require('./historic Positional season long finishes/te2021PPRFinalStandings');
 
-const full2023PPRFinalStandings = require('./full2023PPRFinalStandings');
+// 2022 final positional PPR standings
+const qb2022PPRFinalStandings = require('./historic Positional season long finishes/qb2022PPRFinalStandings');
+const rb2022PPRFinalStandings = require('./historic Positional season long finishes/rb2022PPRFinalStandings');
+const wr2022PPRFinalStandings = require('./historic Positional season long finishes/wr2022PPRFinalStandings');
+const te2022PPRFinalStandings = require('./historic Positional season long finishes/te2022PPRFinalStandings');
 
+// 2023 final positional PPR standings
 const qbFinal2023Standings = require('./qbFinal2023Standing');
 const rbFinal2023Standings = require('./rbFinal2023Standings');
 const wrFinal2023Standings = require('./wrFinal2023Standings');
 const teFinal2023Standings = require('./teFinal2023Standings');
 
-const jan1Feb16ADP = require('./jan1Feb16ADP');
+// offseason dynasty ADP's
+const FFPC2021OffseasonDynastyADP = require('./FFPC2021OffseasonDynastyADP');
+const FFPC2022OffseasonDynastyADP = require('./FFPC2022OffseasonDynastyADP');
+const FFPC2023OffseasonDynastyADP = require('./FFPC2023OffseasonDynastyADP');
+const jan1Feb16ADP = require('./jan1-feb16-2024ADP');
+
+const before2023SeasonRVDynastyRankings = require('./week-6-2023/rvDynastyRankingsTEP');
 
 const alltradeCalculaterDataArray = [];
 const newData = [];
@@ -20,7 +54,8 @@ const newData = [];
 const august2023alltradeCalculaterDataArray = [];
 const august2023NewData = [];
 
-// function sortByKey(array, key) {
+// const full2023PPRFinalStandings = require('./full2023PPRFinalStandings');
+
 //   return array.sort(function (a, b) {
 //     var x = a[key];
 //     var y = b[key];
@@ -289,7 +324,7 @@ const testfunc = async function () {
                 finalNumericalPositionalFinish - ffpcPlayer['"Pos ADP"'];
 
               if (sanitizedFinalPlayerName === sanitizedffpcPlayerName) {
-                if (augAge < 23  && augPlayer.marketValue > 800) {
+                if (augAge < 23 && augPlayer.marketValue > 800) {
                   num = num + 1;
                   console.log(
                     num,
@@ -395,8 +430,6 @@ const testfunc = async function () {
 
 /////////////////////////////////////////// bringing in RV dynasty rankings and RV dynasty rankings vs. market
 
-
-
 // players ranked in top 50 or RV dynasty rankings that RV was at least 2 spots higher on than market:
 // 19 total
 // 79% (15) went up in value regardless of age
@@ -483,19 +516,19 @@ const testfunc = async function () {
 
 // totals from above:
 
-// under 23- 
+// under 23-
 // 38 total who started year > 800 market value
 
 // 13 (34%) overperform- 11/13(85%) gained, 2/13(15%) lost, 10/13(77%) gained > 250, 1/13(8%) lost > 250, 9/13(69%) gained greater than 800, 0/13(0%) lost more than 800
 // 17 (45%) underperform- 8/17(47%) gained, 9/17(53%) lost, 3/17(18%) gained > 250, 6/17(35%) lost > 250, 1/17(5%) gained > 800, 2/17(29%) lost > 800
 
-// between 23 and 25 - 
+// between 23 and 25 -
 // 64 total who started year > 800 market value
 
 // 21/64(32%) overperform- 17/21(84%) gained, 4/17(23%) lost, 17/21(84%) gained > 250, 2/21(10%) lost > 250, 9/21(42%) gained greater than 800, 1/21(5%) lost more than 800
 // 27/64(42%) underperform- 1/27(3%) gained, 26/27(96%) lost, 1/27(3%) gained > 250, 24/27(92%) lost > 250, 1/27(4%) gained > 800, 12/27(38%) lost > 800
 
-// over 25.0 - 
+// over 25.0 -
 // 96 total who started year > 800 market value
 
 // 20/96(21%) overperform- 14/20(70%) gained, 6/20(30%) lost, 11/20(55%) gained > 250, 5/20(25%) lost > 250, 4/20(20%) gained greater than 800, 1/20(5%) lost more than 800
