@@ -2009,6 +2009,146 @@ test.forEach(topPlayer => {
           //      start next stat below here
           ///////////////////////////////////////////
 
+                               // year Two plus year three
+
+          // bound 1
+          //
+          // the highest mark that has zero of the hits sample below this number
+          // zero players from Hit sample in this group in initial sample
+          //
+          if (player.yearTwoPlusYearThreeAveragedStats.TPRR < .15) {
+            // num = num + 1
+            // console.log(num, player.name, player.yearTwoPlusYearThreeAveragedStats.TPRR)
+
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[playerName].ytytTargetsPerRouteRun = {
+              value: player.yearTwoPlusYearThreeAveragedStats.TPRR,
+              score: -1,
+            };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore - 1;
+          }
+
+          // bound 2
+          //
+          // only ten percent of hit sample below this number
+          // looking to have only 3 in this group in initial sample
+          //
+          if (player.yearTwoPlusYearThreeAveragedStats.TPRR > .149 &&
+          player.yearTwoPlusYearThreeAveragedStats.TPRR < .2) {
+            // num = num + 1
+            // console.log(num, player.name, player.yearTwoPlusYearThreeAveragedStats.TPRR)
+            
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[playerName].ytytTargetsPerRouteRun = {
+              value: player.yearTwoPlusYearThreeAveragedStats.TPRR,
+              score: -.5,
+            };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore - .5;
+          }
+
+          
+          //
+          // bound 3
+          //
+          // 30% of hits sample below this number
+          // looking to have only 5 in this group in initial sample
+          //
+          if (player.yearTwoPlusYearThreeAveragedStats.TPRR > .199 && player.yearTwoPlusYearThreeAveragedStats.TPRR < .22) {
+            // num = num + 1
+            // console.log(num, player.name, player.yearTwoPlusYearThreeAveragedStats.TPRR)
+
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[playerName].ytytTargetsPerRouteRun = {
+              value: player.yearTwoPlusYearThreeAveragedStats.TPRR,
+              score: .5,
+            };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore + .5;
+          }
+
+          
+          
+          
+          //
+          // bound 4
+          //
+           // 50% of hits are below this mark/ 50% of hits above it
+           //   looking to have only 3 in this group in initial sample
+           //
+           if (
+            player.yearTwoPlusYearThreeAveragedStats.TPRR > .2199 && player.yearTwoPlusYearThreeAveragedStats.TPRR < .24
+          ) {
+            // num = num + 1
+            // console.log(num, player.name, player.yearTwoPlusYearThreeAveragedStats.TPRR)
+
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[playerName].ytytTargetsPerRouteRun = {
+              value: player.yearTwoPlusYearThreeAveragedStats.TPRR,
+              score: 1,
+            };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore + 1;
+          }
+
+             //
+             // bound 5
+             //
+           // this group is above the 50% mark but below elite mark
+           //   
+           
+           if (
+            player.yearTwoPlusYearThreeAveragedStats.TPRR > .2399 && player.yearTwoPlusYearThreeAveragedStats.TPRR < .28
+          ) {
+            // num = num + 1
+            // console.log(num, player.name, player.yearTwoPlusYearThreeAveragedStats.TPRR)
+
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[playerName].ytytTargetsPerRouteRun = {
+              value: player.yearTwoPlusYearThreeAveragedStats.TPRR,
+              score: 1.5,
+            };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore + 1.5;
+          }
+
+          //
+          // bound 6
+          //
+          // only top 18% of Hits sample above this elite bound 
+          // looking for only 5 in initial sample
+
+          if (player.yearTwoPlusYearThreeAveragedStats.TPRR > .2799) {
+            // num = num + 1
+            // console.log(num, player.name, player.yearTwoPlusYearThreeAveragedStats.TPRR)
+
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[playerName].ytytTargetsPerRouteRun = {
+              value: player.yearTwoPlusYearThreeAveragedStats.TPRR,
+              score: 2,
+            };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore + 2;
+          }
+
+          
+          ////////////////////////////////////////////////////////////////////////////////
+           ////////////////////////////////////////////////////////////////////////////////
+
+
             ////////////////////////////////////////////////////////////////////////////////
            ////////////////////////////////////////////////////////////////////////////////
 
@@ -2034,6 +2174,7 @@ test.forEach(topPlayer => {
     calcAllWrProspectsObjects['TGTs/G-careerAvg'] = { zb: 3, tb: '3-3.5', lmb: '3.5-4.5', mb: `4.5-5.25`, umb: '5.25-6.75', eb: 6.75};
      calcAllWrProspectsObjects['RR-ytyt'] = { zb: 215, tb: '215-235', lmb: '235-305', mb: `305-325`, umb: '325-410', eb: 410};
     calcAllWrProspectsObjects['RR-careerAvg'] = { zb: 149, tb: '150-225', lmb: '225-270', mb: `270-305`, umb: '305-350', eb: 350};
+  calcAllWrProspectsObjects['TPRR-ytyt'] = { zb: .15, tb: '.15-.2', lmb: '.2-.22', mb: `.22-.24`, umb: '.24-.28', eb: .28};
     }
   });
 });
