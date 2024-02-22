@@ -56,23 +56,6 @@ const august2023NewData = [];
 
 // const full2023PPRFinalStandings = require('./full2023PPRFinalStandings');
 
-//   return array.sort(function (a, b) {
-//     var x = a[key];
-//     var y = b[key];
-//     return x < y ? -1 : x > y ? 1 : 0;
-//   });
-// }
-
-// let sortedFull2023PPRFinalStandings = sortByKey(
-//   full2023PPRFinalStandings,
-//   '"PPR Pts/G"'
-// );
-
-// let sortedFull2023PPRFinalStandings = full2023PPRFinalStandings.sort(
-//   (a, b) => b['"PPR Pts/G"'] - a['"PPR Pts/G"']
-// );
-
-// console.log(sortedFull2023PPRFinalStandings);
 /////// fetching current fantasyCalc data
 
 async function fetchRawFantasyCalcDataFromMongodb() {
@@ -229,6 +212,60 @@ const testfunc = async function () {
         // console.log(augPlayer.marketValue);
         // console.log(player.player.maybeAge);
 
+        let playersPreseasonDynastyADP = 0;
+
+        FFPC2021OffseasonDynastyADP.forEach(preseasonPlayer => {
+          // console.log(preseasonPlayer);
+          let sanitizedPreseasonPlayerName = preseasonPlayer['"Player"'].slice(
+            1,
+            -1
+          );
+
+          sanitizedPreseasonPlayerName = sanitizedPreseasonPlayerName
+            .replace("'", '')
+            .replace('.', '')
+            .replace('.', '');
+          if (sanitizedPreseasonPlayerName.includes('Jr')) {
+            // console.log(playerObject['"PLAYER NAME"']);
+            sanitizedPreseasonPlayerName = sanitizedPreseasonPlayerName.replace(
+              'Jr',
+              ''
+            );
+          }
+
+          // console.log(sanitizedPreseasonPlayerName);
+
+          if (sanitizedPreseasonPlayerName === sanitizedAugPlayerName) {
+            // console.log(preseasonPlayer['"ADP"']);
+            playersPreseasonDynastyADP = preseasonPlayer['"ADP"'];
+          }
+        });
+
+        let playersPostseasonDynastyADP = 0;
+
+        FFPC2022OffseasonDynastyADP.forEach(postseasonPlayer => {
+          let sanitizedPostseasonPlayerName = postseasonPlayer[
+            '"Player"'
+          ].slice(1, -1);
+
+          sanitizedPostseasonPlayerName = sanitizedPostseasonPlayerName
+            .replace("'", '')
+            .replace('.', '')
+            .replace('.', '');
+          if (sanitizedPostseasonPlayerName.includes('Jr')) {
+            // console.log(playerObject['"PLAYER NAME"']);
+            sanitizedPostseasonPlayerName =
+              sanitizedPostseasonPlayerName.replace('Jr', '');
+          }
+
+          // console.log(sanitizedPostseasonPlayerName);
+
+          if (sanitizedPostseasonPlayerName === sanitizedAugPlayerName) {
+            // console.log(preseasonPlayer['"ADP"']);
+            playersPostseasonDynastyADP = postseasonPlayer['"ADP"'];
+          }
+        });
+
         let valueDifferenceFromAugustToThisOffseason =
           player.value - augPlayer.marketValue;
 
@@ -246,39 +283,11 @@ const testfunc = async function () {
         // );
 
         // console.log(augPlayer);
+        let aug2021Age = player.player.maybeAge - 2.8;
+        let aug2022Age = player.player.maybeAge - 1.8;
+        let aug2023Age = player.player.maybeAge - 0.8;
 
-        let augAge = player.player.maybeAge - 0.8;
-        // && augAge < 25
-
-        // for value risers
-
-        // if (valueDifferenceFromAugustToThisOffseason > 800) {
-        //   console.log(
-        //     sanitizedAugPlayerName,
-        //     valueDifferenceFromAugustToThisOffseason,
-        //     player.player.maybeAge
-        //   );
-        // }
-
-        // for value droppers
-
-        // valueLostWillBeAPostiveNumberValueDiff > 800 &&
-
-        if (
-          augPlayer.marketValue > 800 &&
-          myValueValueDifferenceromAugustToThisOffseason > 800 &&
-          valueDifferenceFromAugustToThisOffseason > 250
-        ) {
-          // num = num + 1;
-          // console.log(
-          //   num,
-          //   sanitizedAugPlayerName,
-          //   valueDifferenceFromAugustToThisOffseason,
-          //   // player.player.maybeAge
-          // );
-        }
-
-        teFinal2023Standings.forEach(finalPlayer => {
+        wr2021PPRFinalStandings.forEach(finalPlayer => {
           // console.log(finalPlayer['"Player"'].slice(1, -1));
 
           let sanitizedFinalPlayerName = finalPlayer['"Player"'].slice(1, -1);
@@ -295,7 +304,7 @@ const testfunc = async function () {
 
           if (sanitizedFinalPlayerName === sanitizedAugPlayerName) {
             // console.log(sanitizedFinalPlayerName);
-            before2023SeasonFFPCRedraftADP.forEach(ffpcPlayer => {
+            wr2021PPRRedraftADP.forEach(ffpcPlayer => {
               // console.log(ffpcPlayer['"Player"']);
 
               let sanitizedffpcPlayerName = ffpcPlayer['"Player"'].slice(1, -1);
@@ -318,27 +327,58 @@ const testfunc = async function () {
               );
 
               let posionalFinishDiff =
-                ffpcPlayer['"Pos ADP"'] - finalNumericalPositionalFinish;
+                +ffpcPlayer['"WR"'].slice(1, -1) -
+                finalNumericalPositionalFinish;
+
+              let posFinishDiffIfYouNeedALoseToBeAPositiveNumber =
+                finalNumericalPositionalFinish -
+                +ffpcPlayer['"WR"'].slice(1, -1);
 
               let valueWillBePositiveIfWorseposionalFinishDiff =
-                finalNumericalPositionalFinish - ffpcPlayer['"Pos ADP"'];
+                finalNumericalPositionalFinish -
+                +ffpcPlayer['"WR"'].slice(1, -1);
+
+              let adpDiff = +(
+                playersPreseasonDynastyADP - playersPostseasonDynastyADP
+              ).toFixed(2);
 
               if (sanitizedFinalPlayerName === sanitizedffpcPlayerName) {
-                if (augAge < 23 && augPlayer.marketValue > 800) {
+                // console.log(sanitizedFinalPlayerName);
+                // console.log(ffpcPlayer);
+                if (
+                  (aug2021Age < 23 &&
+                    // uncomment below for those that overperformed
+                    //   posionalFinishDiff > 10) ||
+                    // (playersPreseasonDynastyADP < 13 && posionalFinishDiff > 4)
+                    // uncomment below for those that underperformed
+                    posFinishDiffIfYouNeedALoseToBeAPositiveNumber > 10) ||
+                  (playersPreseasonDynastyADP < 13 &&
+                    posFinishDiffIfYouNeedALoseToBeAPositiveNumber > 4)
+                ) {
                   num = num + 1;
                   console.log(
                     num,
                     sanitizedFinalPlayerName,
-                    ffpcPlayer['"Pos ADP"'],
-                    finalNumericalPositionalFinish,
+                    +ffpcPlayer['"WR"'].slice(1, -1),
+                    // finalNumericalPositionalFinish,
+
                     posionalFinishDiff,
-                    valueDifferenceFromAugustToThisOffseason
+                    '  ',
+                    playersPreseasonDynastyADP,
+                    playersPostseasonDynastyADP,
+                    '  ',
+                    adpDiff
                   );
                 }
               }
             });
           }
         });
+
+        /////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////////////////////////////////////////
 
         before2023SeasonRVDynastyRankings.forEach(augRVDynastyPlayer => {
           // console.log(augRVDynastyPlayer['"Player"'].slice(1, -1));
@@ -372,11 +412,7 @@ const testfunc = async function () {
           // valueDifferenceFromAugustToThisOffseason > 799
 
           if (sanitizedAugPlayerName === sanitizedRVPlayerName) {
-            if (
-              augPlayer.marketValue > 800 &&
-              augAge < 23 &&
-              valueDifferenceFromAugustToThisOffseason > 250
-            ) {
+            if (aug2021Age < 23) {
               // num = num + 1;
               // console.log(
               //   num,
@@ -398,6 +434,119 @@ const testfunc = async function () {
 };
 
 /// notes
+
+// new notes
+
+// for this an overperfrom is finishing 5 spots better if were top 12 or 10 spots better if outside top 12 august positioal ADP
+
+//
+//2021-2022:
+//
+
+//
+/////////////////////////////////////////////////////////////QB//////////////////////////////////////////////////////////:
+
+// entered season under 23 - 7 total
+
+// 3/7 gained in ADP
+// 2/7 rose at least a full round of ADP
+// 4/7 dropped in ADP
+// 2/7 dropped by at least a full round of ADP
+
+// overperformed: 0
+//underperformed: 3- 1/3 gained in ADP, 2/3 lost in ADP, 0/3 gained >= a full round of ADP, 1/3 lost >= a full round of ADP
+
+///////
+///////
+// entered season between 23 and 25 - 9 total
+
+// 6/9 gained in ADP
+// 0/9 rose at least a full round of ADP
+// 3/9 dropped in ADP
+// 2/9 dropped by at least a full round of ADP
+
+// overperformed: 1 - 1/1 gained in ADP, 0/1 lost in ADP, 0/1 gained >= a full round of ADP, 0/1 lost >= a full round of ADP
+//underperformed: 2- 1/2 gained in ADP, 1/2 lost in ADP, 0/2 gained >= a full round of ADP, 0/2 lost >= a full round of ADP
+
+///////
+///////
+// entered season over 25 - 12 total
+
+// 5/12 gained in ADP
+// 4/9 rose at least a full round of ADP
+// 7/9 dropped in ADP
+// 4/9 dropped by at least a full round of ADP
+
+// overperformed: 3 - 2/3 gained in ADP, 1/3 lost in ADP, 2/3 gained >= a full round of ADP, 0/3 lost >= a full round of ADP
+//underperformed: 4- 1/4 gained in ADP, 3/4 lost in ADP, 1/4 gained >= a full round of ADP, 2/4 lost >= a full round of ADP
+
+//
+////////////////////////////////////////////////////////////RB///////////////////////////////////////////////////////////////
+//
+// entered season under 23 - 14 total
+
+// 7/14 gained in ADP
+// 3/14 rose at least a full round of ADP
+// 7/14 dropped in ADP
+// 6/14 dropped by at least a full round of ADP
+
+// overperformed: 5 - 3/5 gained in ADP, 2/5 lost in ADP, 3/5 gained >= a full round of ADP, 1/5 lost >= a full round of ADP
+//underperformed: 3- 1/3 gained in ADP, 2/3 lost in ADP, 0/3 gained >= a full round of ADP, 2/3 lost >= a full round of ADP
+
+///////
+///////
+// entered season between 23 and 25 - 15 total
+
+// 5/15 gained in ADP
+// 3/15 rose at least a full round of ADP
+// 10/15 dropped in ADP
+// 8/15 dropped by at least a full round of ADP
+
+// overperformed: 6 - 3/6 gained in ADP, 3/6 lost in ADP, 3/6 gained >= a full round of ADP, 1/6 lost >= a full round of ADP
+//underperformed: 6- 0/6 gained in ADP, 6/6 lost in ADP, 0/6 gained >= a full round of ADP, 5/6 lost >= a full round of ADP
+
+///////
+///////
+// entered season over 25 - 18 total
+
+// 6/18 gained in ADP
+// 4/18 rose at least a full round of ADP
+// 12/18 dropped in ADP
+// 10/18 dropped by at least a full round of ADP
+
+// overperformed: 6 - 5/6 gained in ADP, 1/6 lost in ADP, 4/6 gained >= a full round of ADP, 1/6 lost >= a full round of ADP
+//underperformed: 6- 0/6 gained in ADP, 6/6 lost in ADP, 0/6 gained >= a full round of ADP, 5/6 lost >= a full round of ADP
+
+//
+//////////////////////////////////////////////////////WR///////////////////////////////////////////////////////////////
+//
+// entered season under 23 - 20 total
+
+// 15/20 gained in ADP
+// 10/20 rose at least a full round of ADP
+// 5/20 dropped in ADP
+// 2/20 dropped by at least a full round of ADP
+
+// overperformed: 17 - 14/17 gained in ADP, 3/17 lost in ADP, 10/17 gained >= a full round of ADP, 0/17 lost >= a full round of ADP
+//underperformed: 3- 0/3 gained in ADP, 2/3 lost in ADP, 0/3 gained >= a full round of ADP, 2/3 lost >= a full round of ADP
+
+//
+////////////////////////////////////////////////////TE///////////////////////////////////////////////////////////////
+//
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// 2022-2023:
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// 2023-2024:
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////// just age
 
