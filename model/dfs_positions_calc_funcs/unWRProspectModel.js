@@ -155,14 +155,12 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
     let tempRecGradeOne = +value1.yearOne['REC Grade'].slice(0, -1);
     let tempRecGradeTwo = +value1.yearTwo['REC Grade'].slice(0, -1);
 
-    if(tempRecGradeOne < 10) {
-    tempRecGradeOne = tempRecGradeOne * 10
-    
+    if (tempRecGradeOne < 10) {
+      tempRecGradeOne = tempRecGradeOne * 10;
     }
-    if(tempRecGradeTwo < 10) {
-      tempRecGradeTwo = tempRecGradeTwo * 10
-      
-      }
+    if (tempRecGradeTwo < 10) {
+      tempRecGradeTwo = tempRecGradeTwo * 10;
+    }
     //
     let tempTargetsOne = +value1.yearOne.Targets;
     let tempTargetsTwo = +value1.yearTwo.Targets;
@@ -291,10 +289,9 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
         '1D/RR'
       ].slice(0, -1);
       let tempRecGradeThree = +value1.yearThree['REC Grade'].slice(0, -1);
-      if(tempRecGradeThree < 10) {
-        tempRecGradeThree = tempRecGradeThree * 10
-       
-        }
+      if (tempRecGradeThree < 10) {
+        tempRecGradeThree = tempRecGradeThree * 10;
+      }
       let tempTargetsThree = +value1.yearThree.Targets;
       let tempTargetsPerGameThree = +value1.yearThree['TGTs/G'].slice(0, -1);
       let tempRRThree = +value1.yearThree.RR;
@@ -1971,10 +1968,9 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
           '1D/RR'
         ].slice(0, -1);
         let tempRecGradeFour = +value1.yearFour['REC Grade'].slice(0, -1);
-        if(tempRecGradeFour < 10) {
-          tempRecGradeFour = tempRecGradeFour * 10
-          
-          }
+        if (tempRecGradeFour < 10) {
+          tempRecGradeFour = tempRecGradeFour * 10;
+        }
         let tempTargetsFour = +value1.yearFour.Targets;
         let tempTargetsPerGameFour = +value1.yearFour['TGTs/G'].slice(0, -1);
         let tempRRFour = +value1.yearFour.RR;

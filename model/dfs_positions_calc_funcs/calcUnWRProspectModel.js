@@ -74,8 +74,10 @@ test.forEach(topPlayer => {
           // only ten percent of hit sample below this number
           // looking to have only 3 in this group in initial sample
           //
-          if (player.yearTwoPlusYearThreeAveragedStats['MTF/REC %'] > 7.74 &&
-          player.yearTwoPlusYearThreeAveragedStats['MTF/REC %'] < 10) {
+          if (
+            player.yearTwoPlusYearThreeAveragedStats['MTF/REC %'] > 7.74 &&
+            player.yearTwoPlusYearThreeAveragedStats['MTF/REC %'] < 10
+          ) {
             // num = num + 1
             // console.log(num, player.name, player.yearTwoPlusYearThreeAveragedStats['MTF/REC %'])
 
@@ -84,20 +86,22 @@ test.forEach(topPlayer => {
             //
             calcAllWrProspectsObjects[playerName].ytytMTFRecPercent = {
               value: player.yearTwoPlusYearThreeAveragedStats['MTF/REC %'],
-              score: -.5,
+              score: -0.5,
             };
             calcAllWrProspectsObjects[playerName].finalScore =
-              calcAllWrProspectsObjects[playerName].finalScore - .5;
+              calcAllWrProspectsObjects[playerName].finalScore - 0.5;
           }
 
-          
           //
           // bound 3
           //
           // 30% of hits sample below this number
           // looking to have only 5 in this group in initial sample
           //
-          if (player.yearTwoPlusYearThreeAveragedStats['MTF/REC %'] > 9.99 && player.yearTwoPlusYearThreeAveragedStats['MTF/REC %'] < 15.6) {
+          if (
+            player.yearTwoPlusYearThreeAveragedStats['MTF/REC %'] > 9.99 &&
+            player.yearTwoPlusYearThreeAveragedStats['MTF/REC %'] < 15.6
+          ) {
             // num = num + 1
             // console.log(num, player.name, player.yearTwoPlusYearThreeAveragedStats['MTF/REC %'])
 
@@ -106,20 +110,21 @@ test.forEach(topPlayer => {
             //
             calcAllWrProspectsObjects[playerName].ytytMTFRecPercent = {
               value: player.yearTwoPlusYearThreeAveragedStats['MTF/REC %'],
-              score: .5,
+              score: 0.5,
             };
             calcAllWrProspectsObjects[playerName].finalScore =
-              calcAllWrProspectsObjects[playerName].finalScore + .5;
+              calcAllWrProspectsObjects[playerName].finalScore + 0.5;
           }
 
           //
           // bound 4
           //
-           // 50% of hits are below this mark/ 50% of hits above it
-           //   looking to have only 3 in this group in initial sample
-           //
-           if (
-            player.yearTwoPlusYearThreeAveragedStats['MTF/REC %'] > 15.59 && player.yearTwoPlusYearThreeAveragedStats['MTF/REC %'] < 17.6
+          // 50% of hits are below this mark/ 50% of hits above it
+          //   looking to have only 3 in this group in initial sample
+          //
+          if (
+            player.yearTwoPlusYearThreeAveragedStats['MTF/REC %'] > 15.59 &&
+            player.yearTwoPlusYearThreeAveragedStats['MTF/REC %'] < 17.6
           ) {
             // num = num + 1
             // console.log(num, player.name, player.yearTwoPlusYearThreeAveragedStats['MTF/REC %'])
@@ -135,14 +140,15 @@ test.forEach(topPlayer => {
               calcAllWrProspectsObjects[playerName].finalScore + 1;
           }
 
-             //
-             // bound 5
-             //
-           // this group is above the 50% mark but below elite mark
-           //   
-           
-           if (
-            player.yearTwoPlusYearThreeAveragedStats['MTF/REC %'] > 17.59 && player.yearTwoPlusYearThreeAveragedStats['MTF/REC %'] < 26
+          //
+          // bound 5
+          //
+          // this group is above the 50% mark but below elite mark
+          //
+
+          if (
+            player.yearTwoPlusYearThreeAveragedStats['MTF/REC %'] > 17.59 &&
+            player.yearTwoPlusYearThreeAveragedStats['MTF/REC %'] < 26
           ) {
             // num = num + 1
             // console.log(num, player.name, player.yearTwoPlusYearThreeAveragedStats['MTF/REC %'])
@@ -161,7 +167,7 @@ test.forEach(topPlayer => {
           //
           // bound 6
           //
-          // only top 18% of Hits sample above this elite bound 
+          // only top 18% of Hits sample above this elite bound
           // looking for only 5 in initial sample
 
           if (player.yearTwoPlusYearThreeAveragedStats['MTF/REC %'] > 25.99) {
@@ -208,8 +214,10 @@ test.forEach(topPlayer => {
           // only ten percent of hit sample below this number
           // looking to have only 3 in this group in initial sample
           //
-          if (player.careerAveragedStats['MTF/REC %'] > 4.399 &&
-          player.careerAveragedStats['MTF/REC %'] < 10.5) {
+          if (
+            player.careerAveragedStats['MTF/REC %'] > 4.399 &&
+            player.careerAveragedStats['MTF/REC %'] < 10.5
+          ) {
             // num = num + 1
             // console.log(num, player.name, player.careerAveragedStats['MTF/REC %'])
 
@@ -218,20 +226,22 @@ test.forEach(topPlayer => {
             //
             calcAllWrProspectsObjects[playerName].careerAvgMTFRecPercent = {
               value: player.careerAveragedStats['MTF/REC %'],
-              score: -.5,
+              score: -0.5,
             };
             calcAllWrProspectsObjects[playerName].finalScore =
-              calcAllWrProspectsObjects[playerName].finalScore - .5;
+              calcAllWrProspectsObjects[playerName].finalScore - 0.5;
           }
 
-          
           //
           // bound 3
           //
           // 30% of hits sample below this number
           // looking to have only 5 in this group in initial sample
           //
-          if (player.careerAveragedStats['MTF/REC %'] > 10.499 && player.careerAveragedStats['MTF/REC %'] < 15.1) {
+          if (
+            player.careerAveragedStats['MTF/REC %'] > 10.499 &&
+            player.careerAveragedStats['MTF/REC %'] < 15.1
+          ) {
             // num = num + 1
             // console.log(num, player.name, player.careerAveragedStats['MTF/REC %'])
 
@@ -240,20 +250,21 @@ test.forEach(topPlayer => {
             //
             calcAllWrProspectsObjects[playerName].careerAvgMTFRecPercent = {
               value: player.careerAveragedStats['MTF/REC %'],
-              score: .5,
+              score: 0.5,
             };
             calcAllWrProspectsObjects[playerName].finalScore =
-              calcAllWrProspectsObjects[playerName].finalScore + .5;
+              calcAllWrProspectsObjects[playerName].finalScore + 0.5;
           }
 
           //
           // bound 4
           //
-           // 50% of hits are below this mark/ 50% of hits above it
-           //   looking to have only 3 in this group in initial sample
-           //
-           if (
-            player.careerAveragedStats['MTF/REC %'] > 15.099 && player.careerAveragedStats['MTF/REC %'] < 17.1
+          // 50% of hits are below this mark/ 50% of hits above it
+          //   looking to have only 3 in this group in initial sample
+          //
+          if (
+            player.careerAveragedStats['MTF/REC %'] > 15.099 &&
+            player.careerAveragedStats['MTF/REC %'] < 17.1
           ) {
             // num = num + 1
             // console.log(num, player.name, player.careerAveragedStats['MTF/REC %'])
@@ -269,14 +280,15 @@ test.forEach(topPlayer => {
               calcAllWrProspectsObjects[playerName].finalScore + 1;
           }
 
-             //
-             // bound 5
-             //
-           // this group is above the 50% mark but below elite mark
-           //   
-           
-           if (
-            player.careerAveragedStats['MTF/REC %'] > 17.099 && player.careerAveragedStats['MTF/REC %'] < 26
+          //
+          // bound 5
+          //
+          // this group is above the 50% mark but below elite mark
+          //
+
+          if (
+            player.careerAveragedStats['MTF/REC %'] > 17.099 &&
+            player.careerAveragedStats['MTF/REC %'] < 26
           ) {
             // num = num + 1
             // console.log(num, player.name, player.careerAveragedStats['MTF/REC %'])
@@ -295,7 +307,7 @@ test.forEach(topPlayer => {
           //
           // bound 6
           //
-          // only top 18% of Hits sample above this elite bound 
+          // only top 18% of Hits sample above this elite bound
           // looking for only 5 in initial sample
 
           if (player.careerAveragedStats['MTF/REC %'] > 25.99) {
@@ -312,8 +324,6 @@ test.forEach(topPlayer => {
             calcAllWrProspectsObjects[playerName].finalScore =
               calcAllWrProspectsObjects[playerName].finalScore + 2;
           }
-
-         
 
           ////////////////////////////////////////////
           ///////////////////////////////////////////
@@ -347,8 +357,10 @@ test.forEach(topPlayer => {
           // only ten percent of hit sample below this number
           // looking to have only 3 in this group in initial sample
           //
-          if (player.yearTwoPlusYearThreeAveragedStats['1D/Snap'] > 6.499 &&
-          player.yearTwoPlusYearThreeAveragedStats['1D/Snap'] < 7.75) {
+          if (
+            player.yearTwoPlusYearThreeAveragedStats['1D/Snap'] > 6.499 &&
+            player.yearTwoPlusYearThreeAveragedStats['1D/Snap'] < 7.75
+          ) {
             // num = num + 1
             // console.log(num, player.name, player.yearTwoPlusYearThreeAveragedStats['1D/Snap'])
 
@@ -357,20 +369,22 @@ test.forEach(topPlayer => {
             //
             calcAllWrProspectsObjects[playerName].ytytFirstDownPerSnap = {
               value: player.yearTwoPlusYearThreeAveragedStats['1D/Snap'],
-              score: -.5,
+              score: -0.5,
             };
             calcAllWrProspectsObjects[playerName].finalScore =
-              calcAllWrProspectsObjects[playerName].finalScore - .5;
+              calcAllWrProspectsObjects[playerName].finalScore - 0.5;
           }
 
-          
           //
           // bound 3
           //
           // 30% of hits sample below this number
           // looking to have only 5 in this group in initial sample
           //
-          if (player.yearTwoPlusYearThreeAveragedStats['1D/Snap'] > 7.749 && player.yearTwoPlusYearThreeAveragedStats['1D/Snap'] < 9) {
+          if (
+            player.yearTwoPlusYearThreeAveragedStats['1D/Snap'] > 7.749 &&
+            player.yearTwoPlusYearThreeAveragedStats['1D/Snap'] < 9
+          ) {
             // num = num + 1
             // console.log(num, player.name, player.yearTwoPlusYearThreeAveragedStats['1D/Snap'])
 
@@ -379,20 +393,21 @@ test.forEach(topPlayer => {
             //
             calcAllWrProspectsObjects[playerName].ytytFirstDownPerSnap = {
               value: player.yearTwoPlusYearThreeAveragedStats['1D/Snap'],
-              score: .5,
+              score: 0.5,
             };
             calcAllWrProspectsObjects[playerName].finalScore =
-              calcAllWrProspectsObjects[playerName].finalScore + .5;
+              calcAllWrProspectsObjects[playerName].finalScore + 0.5;
           }
 
           //
           // bound 4
           //
-           // 50% of hits are below this mark/ 50% of hits above it
-           //   looking to have only 3 in this group in initial sample
-           //
-           if (
-            player.yearTwoPlusYearThreeAveragedStats['1D/Snap'] > 8.99 && player.yearTwoPlusYearThreeAveragedStats['1D/Snap'] < 9.9
+          // 50% of hits are below this mark/ 50% of hits above it
+          //   looking to have only 3 in this group in initial sample
+          //
+          if (
+            player.yearTwoPlusYearThreeAveragedStats['1D/Snap'] > 8.99 &&
+            player.yearTwoPlusYearThreeAveragedStats['1D/Snap'] < 9.9
           ) {
             // num = num + 1
             // console.log(num, player.name, player.yearTwoPlusYearThreeAveragedStats['1D/Snap'])
@@ -408,14 +423,15 @@ test.forEach(topPlayer => {
               calcAllWrProspectsObjects[playerName].finalScore + 1;
           }
 
-             //
-             // bound 5
-             //
-           // this group is above the 50% mark but below elite mark
-           //   
-           
-           if (
-            player.yearTwoPlusYearThreeAveragedStats['1D/Snap'] > 9.899 && player.yearTwoPlusYearThreeAveragedStats['1D/Snap'] < 13.5
+          //
+          // bound 5
+          //
+          // this group is above the 50% mark but below elite mark
+          //
+
+          if (
+            player.yearTwoPlusYearThreeAveragedStats['1D/Snap'] > 9.899 &&
+            player.yearTwoPlusYearThreeAveragedStats['1D/Snap'] < 13.5
           ) {
             // num = num + 1
             // console.log(num, player.name, player.yearTwoPlusYearThreeAveragedStats['1D/Snap'])
@@ -434,7 +450,7 @@ test.forEach(topPlayer => {
           //
           // bound 6
           //
-          // only top 18% of Hits sample above this elite bound 
+          // only top 18% of Hits sample above this elite bound
           // looking for only 5 in initial sample
 
           if (player.yearTwoPlusYearThreeAveragedStats['1D/Snap'] > 13.499) {
@@ -452,9 +468,8 @@ test.forEach(topPlayer => {
               calcAllWrProspectsObjects[playerName].finalScore + 2;
           }
 
-          
           ////////////////////////////////////////////////////////////////////////////////
-           ////////////////////////////////////////////////////////////////////////////////
+          ////////////////////////////////////////////////////////////////////////////////
 
           // career avg
 
@@ -483,8 +498,10 @@ test.forEach(topPlayer => {
           // only ten percent of hit sample below this number
           // looking to have only 3 in this group in initial sample
           //
-          if (player.careerAveragedStats['1D/Snap'] > 5.499 &&
-          player.careerAveragedStats['1D/Snap'] < 7.75) {
+          if (
+            player.careerAveragedStats['1D/Snap'] > 5.499 &&
+            player.careerAveragedStats['1D/Snap'] < 7.75
+          ) {
             // num = num + 1
             // console.log(num, player.name, player.careerAveragedStats['1D/Snap'])
 
@@ -493,20 +510,22 @@ test.forEach(topPlayer => {
             //
             calcAllWrProspectsObjects[playerName].careerAvgFirstDownPerSnap = {
               value: player.careerAveragedStats['1D/Snap'],
-              score: -.5,
+              score: -0.5,
             };
             calcAllWrProspectsObjects[playerName].finalScore =
-              calcAllWrProspectsObjects[playerName].finalScore - .5;
+              calcAllWrProspectsObjects[playerName].finalScore - 0.5;
           }
 
-          
           //
           // bound 3
           //
           // 30% of hits sample below this number
           // looking to have only 5 in this group in initial sample
           //
-          if (player.careerAveragedStats['1D/Snap'] > 7.749 && player.careerAveragedStats['1D/Snap'] < 9) {
+          if (
+            player.careerAveragedStats['1D/Snap'] > 7.749 &&
+            player.careerAveragedStats['1D/Snap'] < 9
+          ) {
             // num = num + 1
             // console.log(num, player.name, player.careerAveragedStats['1D/Snap'])
 
@@ -515,21 +534,21 @@ test.forEach(topPlayer => {
             //
             calcAllWrProspectsObjects[playerName].careerAvgFirstDownPerSnap = {
               value: player.careerAveragedStats['1D/Snap'],
-              score: .5,
+              score: 0.5,
             };
             calcAllWrProspectsObjects[playerName].finalScore =
-              calcAllWrProspectsObjects[playerName].finalScore + .5;
+              calcAllWrProspectsObjects[playerName].finalScore + 0.5;
           }
-
 
           //
           // bound 4
           //
-           // 50% of hits are below this mark/ 50% of hits above it
-           //   looking to have only 3 in this group in initial sample
-           //
-           if (
-            player.careerAveragedStats['1D/Snap'] > 8.999 && player.careerAveragedStats['1D/Snap'] < 9.9
+          // 50% of hits are below this mark/ 50% of hits above it
+          //   looking to have only 3 in this group in initial sample
+          //
+          if (
+            player.careerAveragedStats['1D/Snap'] > 8.999 &&
+            player.careerAveragedStats['1D/Snap'] < 9.9
           ) {
             // num = num + 1
             // console.log(num, player.name, player.careerAveragedStats['1D/Snap'])
@@ -545,14 +564,15 @@ test.forEach(topPlayer => {
               calcAllWrProspectsObjects[playerName].finalScore + 1;
           }
 
-             //
-             // bound 5
-             //
-           // this group is above the 50% mark but below elite mark
-           //   
-           
-           if (
-            player.careerAveragedStats['1D/Snap'] > 9.899 && player.careerAveragedStats['1D/Snap'] < 12.5
+          //
+          // bound 5
+          //
+          // this group is above the 50% mark but below elite mark
+          //
+
+          if (
+            player.careerAveragedStats['1D/Snap'] > 9.899 &&
+            player.careerAveragedStats['1D/Snap'] < 12.5
           ) {
             // num = num + 1
             // console.log(num, player.name, player.careerAveragedStats['1D/Snap'])
@@ -571,7 +591,7 @@ test.forEach(topPlayer => {
           //
           // bound 6
           //
-          // only top 18% of Hits sample above this elite bound 
+          // only top 18% of Hits sample above this elite bound
           // looking for only 5 in initial sample
 
           if (player.careerAveragedStats['1D/Snap'] > 12.499) {
@@ -589,7 +609,6 @@ test.forEach(topPlayer => {
               calcAllWrProspectsObjects[playerName].finalScore + 2;
           }
 
-         
           ////////////////////////////////////////////
           ///////////////////////////////////////////
           //      start next stat below here
@@ -622,8 +641,10 @@ test.forEach(topPlayer => {
           // only ten percent of hit sample below this number
           // looking to have only 3 in this group in initial sample
           //
-          if (player.yearTwoPlusYearThreeAveragedStats['1D/RR'] > 6.999 &&
-          player.yearTwoPlusYearThreeAveragedStats['1D/RR'] < 8) {
+          if (
+            player.yearTwoPlusYearThreeAveragedStats['1D/RR'] > 6.999 &&
+            player.yearTwoPlusYearThreeAveragedStats['1D/RR'] < 8
+          ) {
             // num = num + 1
             // console.log(num, player.name, player.yearTwoPlusYearThreeAveragedStats['1D/RR'])
 
@@ -632,20 +653,22 @@ test.forEach(topPlayer => {
             //
             calcAllWrProspectsObjects[playerName].ytytFirstDownPerRouteRun = {
               value: player.yearTwoPlusYearThreeAveragedStats['1D/RR'],
-              score: -.5,
+              score: -0.5,
             };
             calcAllWrProspectsObjects[playerName].finalScore =
-              calcAllWrProspectsObjects[playerName].finalScore - .5;
+              calcAllWrProspectsObjects[playerName].finalScore - 0.5;
           }
 
-          
           //
           // bound 3
           //
           // 30% of hits sample below this number
           // looking to have only 5 in this group in initial sample
           //
-          if (player.yearTwoPlusYearThreeAveragedStats['1D/RR'] > 7.999 && player.yearTwoPlusYearThreeAveragedStats['1D/RR'] < 9.75) {
+          if (
+            player.yearTwoPlusYearThreeAveragedStats['1D/RR'] > 7.999 &&
+            player.yearTwoPlusYearThreeAveragedStats['1D/RR'] < 9.75
+          ) {
             // num = num + 1
             // console.log(num, player.name, player.yearTwoPlusYearThreeAveragedStats['1D/RR'])
 
@@ -654,21 +677,21 @@ test.forEach(topPlayer => {
             //
             calcAllWrProspectsObjects[playerName].ytytFirstDownPerRouteRun = {
               value: player.yearTwoPlusYearThreeAveragedStats['1D/RR'],
-              score: .5,
+              score: 0.5,
             };
             calcAllWrProspectsObjects[playerName].finalScore =
-              calcAllWrProspectsObjects[playerName].finalScore + .5;
+              calcAllWrProspectsObjects[playerName].finalScore + 0.5;
           }
 
-          
           //
           // bound 4
           //
-           // 50% of hits are below this mark/ 50% of hits above it
-           //   looking to have only 3 in this group in initial sample
-           //
-           if (
-            player.yearTwoPlusYearThreeAveragedStats['1D/RR'] > 9.7499 && player.yearTwoPlusYearThreeAveragedStats['1D/RR'] < 10.3
+          // 50% of hits are below this mark/ 50% of hits above it
+          //   looking to have only 3 in this group in initial sample
+          //
+          if (
+            player.yearTwoPlusYearThreeAveragedStats['1D/RR'] > 9.7499 &&
+            player.yearTwoPlusYearThreeAveragedStats['1D/RR'] < 10.3
           ) {
             // num = num + 1
             // console.log(num, player.name, player.yearTwoPlusYearThreeAveragedStats['1D/RR'])
@@ -684,14 +707,15 @@ test.forEach(topPlayer => {
               calcAllWrProspectsObjects[playerName].finalScore + 1;
           }
 
-             //
-             // bound 5
-             //
-           // this group is above the 50% mark but below elite mark
-           //   
-           
-           if (
-            player.yearTwoPlusYearThreeAveragedStats['1D/RR'] > 10.299 && player.yearTwoPlusYearThreeAveragedStats['1D/RR'] < 13.5
+          //
+          // bound 5
+          //
+          // this group is above the 50% mark but below elite mark
+          //
+
+          if (
+            player.yearTwoPlusYearThreeAveragedStats['1D/RR'] > 10.299 &&
+            player.yearTwoPlusYearThreeAveragedStats['1D/RR'] < 13.5
           ) {
             // num = num + 1
             // console.log(num, player.name, player.yearTwoPlusYearThreeAveragedStats['1D/RR'])
@@ -710,7 +734,7 @@ test.forEach(topPlayer => {
           //
           // bound 6
           //
-          // only top 18% of Hits sample above this elite bound 
+          // only top 18% of Hits sample above this elite bound
           // looking for only 5 in initial sample
 
           if (player.yearTwoPlusYearThreeAveragedStats['1D/RR'] > 13.499) {
@@ -728,12 +752,11 @@ test.forEach(topPlayer => {
               calcAllWrProspectsObjects[playerName].finalScore + 2;
           }
 
-          
           ////////////////////////////////////////////////////////////////////////////////
-           ////////////////////////////////////////////////////////////////////////////////
+          ////////////////////////////////////////////////////////////////////////////////
 
-            ////////////////////////////////////////////////////////////////////////////////
-           ////////////////////////////////////////////////////////////////////////////////
+          ////////////////////////////////////////////////////////////////////////////////
+          ////////////////////////////////////////////////////////////////////////////////
 
           // career avg
 
@@ -749,7 +772,9 @@ test.forEach(topPlayer => {
             //
             // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
             //
-            calcAllWrProspectsObjects[playerName].careerAvgFirstDownPerRouteRun = {
+            calcAllWrProspectsObjects[
+              playerName
+            ].careerAvgFirstDownPerRouteRun = {
               value: player.careerAveragedStats['1D/RR'],
               score: -1,
             };
@@ -762,53 +787,9 @@ test.forEach(topPlayer => {
           // only ten percent of hit sample below this number
           // looking to have only 3 in this group in initial sample
           //
-          if (player.careerAveragedStats['1D/RR'] > 5.7499 &&
-          player.careerAveragedStats['1D/RR'] < 8.1) {
-            // num = num + 1
-            // console.log(num, player.name, player.careerAveragedStats['1D/RR'])
-
-            //
-            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
-            //
-            calcAllWrProspectsObjects[playerName].careerAvgFirstDownPerRouteRun = {
-              value: player.careerAveragedStats['1D/RR'],
-              score: -.5,
-            };
-            calcAllWrProspectsObjects[playerName].finalScore =
-              calcAllWrProspectsObjects[playerName].finalScore - .5;
-          }
-
-          
-          //
-          // bound 3
-          //
-          // 30% of hits sample below this number
-          // looking to have only 5 in this group in initial sample
-          //
-          if (player.careerAveragedStats['1D/RR'] > 8.099 && player.careerAveragedStats['1D/RR'] < 9.75) {
-            // num = num + 1
-            // console.log(num, player.name, player.careerAveragedStats['1D/RR'])
-
-            //
-            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
-            //
-            calcAllWrProspectsObjects[playerName].careerAvgFirstDownPerRouteRun = {
-              value: player.careerAveragedStats['1D/RR'],
-              score: .5,
-            };
-            calcAllWrProspectsObjects[playerName].finalScore =
-              calcAllWrProspectsObjects[playerName].finalScore + .5;
-          }
-
-    
-          //
-          // bound 4
-          //
-           // 50% of hits are below this mark/ 50% of hits above it
-           //   looking to have only 3 in this group in initial sample
-           //
-           if (
-            player.careerAveragedStats['1D/RR'] > 9.7499 && player.careerAveragedStats['1D/RR'] < 10.35
+          if (
+            player.careerAveragedStats['1D/RR'] > 5.7499 &&
+            player.careerAveragedStats['1D/RR'] < 8.1
           ) {
             // num = num + 1
             // console.log(num, player.name, player.careerAveragedStats['1D/RR'])
@@ -816,7 +797,61 @@ test.forEach(topPlayer => {
             //
             // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
             //
-            calcAllWrProspectsObjects[playerName].careerAvgFirstDownPerRouteRun = {
+            calcAllWrProspectsObjects[
+              playerName
+            ].careerAvgFirstDownPerRouteRun = {
+              value: player.careerAveragedStats['1D/RR'],
+              score: -0.5,
+            };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore - 0.5;
+          }
+
+          //
+          // bound 3
+          //
+          // 30% of hits sample below this number
+          // looking to have only 5 in this group in initial sample
+          //
+          if (
+            player.careerAveragedStats['1D/RR'] > 8.099 &&
+            player.careerAveragedStats['1D/RR'] < 9.75
+          ) {
+            // num = num + 1
+            // console.log(num, player.name, player.careerAveragedStats['1D/RR'])
+
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[
+              playerName
+            ].careerAvgFirstDownPerRouteRun = {
+              value: player.careerAveragedStats['1D/RR'],
+              score: 0.5,
+            };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore + 0.5;
+          }
+
+          //
+          // bound 4
+          //
+          // 50% of hits are below this mark/ 50% of hits above it
+          //   looking to have only 3 in this group in initial sample
+          //
+          if (
+            player.careerAveragedStats['1D/RR'] > 9.7499 &&
+            player.careerAveragedStats['1D/RR'] < 10.35
+          ) {
+            // num = num + 1
+            // console.log(num, player.name, player.careerAveragedStats['1D/RR'])
+
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[
+              playerName
+            ].careerAvgFirstDownPerRouteRun = {
               value: player.careerAveragedStats['1D/RR'],
               score: 1,
             };
@@ -824,14 +859,15 @@ test.forEach(topPlayer => {
               calcAllWrProspectsObjects[playerName].finalScore + 1;
           }
 
-             //
-             // bound 5
-             //
-           // this group is above the 50% mark but below elite mark
-           //   
-           
-           if (
-            player.careerAveragedStats['1D/RR'] > 10.3499 && player.careerAveragedStats['1D/RR'] < 13
+          //
+          // bound 5
+          //
+          // this group is above the 50% mark but below elite mark
+          //
+
+          if (
+            player.careerAveragedStats['1D/RR'] > 10.3499 &&
+            player.careerAveragedStats['1D/RR'] < 13
           ) {
             // num = num + 1
             // console.log(num, player.name, player.careerAveragedStats['1D/RR'])
@@ -839,7 +875,9 @@ test.forEach(topPlayer => {
             //
             // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
             //
-            calcAllWrProspectsObjects[playerName].careerAvgFirstDownPerRouteRun = {
+            calcAllWrProspectsObjects[
+              playerName
+            ].careerAvgFirstDownPerRouteRun = {
               value: player.careerAveragedStats['1D/RR'],
               score: 1.5,
             };
@@ -850,7 +888,7 @@ test.forEach(topPlayer => {
           //
           // bound 6
           //
-          // only top 18% of Hits sample above this elite bound 
+          // only top 18% of Hits sample above this elite bound
           // looking for only 5 in initial sample
 
           if (player.careerAveragedStats['1D/RR'] > 12.99) {
@@ -860,7 +898,9 @@ test.forEach(topPlayer => {
             //
             // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
             //
-            calcAllWrProspectsObjects[playerName].careerAvgFirstDownPerRouteRun = {
+            calcAllWrProspectsObjects[
+              playerName
+            ].careerAvgFirstDownPerRouteRun = {
               value: player.careerAveragedStats['1D/RR'],
               score: 2,
             };
@@ -868,13 +908,12 @@ test.forEach(topPlayer => {
               calcAllWrProspectsObjects[playerName].finalScore + 2;
           }
 
-         
           ////////////////////////////////////////////
           ///////////////////////////////////////////
           //      start next stat below here
           ///////////////////////////////////////////
 
-        // year Two plus year three
+          // year Two plus year three
 
           // bound 1
           //
@@ -901,8 +940,10 @@ test.forEach(topPlayer => {
           // only ten percent of hit sample below this number
           // looking to have only 3 in this group in initial sample
           //
-          if (player.yearTwoPlusYearThreeAveragedStats['REC Grade'] > 64.99 &&
-          player.yearTwoPlusYearThreeAveragedStats['REC Grade'] < 71) {
+          if (
+            player.yearTwoPlusYearThreeAveragedStats['REC Grade'] > 64.99 &&
+            player.yearTwoPlusYearThreeAveragedStats['REC Grade'] < 71
+          ) {
             // num = num + 1
             // console.log(num, player.name, player.yearTwoPlusYearThreeAveragedStats['REC Grade'])
 
@@ -911,20 +952,22 @@ test.forEach(topPlayer => {
             //
             calcAllWrProspectsObjects[playerName].ytytRecGrade = {
               value: player.yearTwoPlusYearThreeAveragedStats['REC Grade'],
-              score: -.5,
+              score: -0.5,
             };
             calcAllWrProspectsObjects[playerName].finalScore =
-              calcAllWrProspectsObjects[playerName].finalScore - .5;
+              calcAllWrProspectsObjects[playerName].finalScore - 0.5;
           }
 
-          
           //
           // bound 3
           //
           // 30% of hits sample below this number
           // looking to have only 5 in this group in initial sample
           //
-          if (player.yearTwoPlusYearThreeAveragedStats['REC Grade'] > 70.99 && player.yearTwoPlusYearThreeAveragedStats['REC Grade'] < 74) {
+          if (
+            player.yearTwoPlusYearThreeAveragedStats['REC Grade'] > 70.99 &&
+            player.yearTwoPlusYearThreeAveragedStats['REC Grade'] < 74
+          ) {
             // num = num + 1
             // console.log(num, player.name, player.yearTwoPlusYearThreeAveragedStats['REC Grade'])
 
@@ -933,23 +976,21 @@ test.forEach(topPlayer => {
             //
             calcAllWrProspectsObjects[playerName].ytytRecGrade = {
               value: player.yearTwoPlusYearThreeAveragedStats['REC Grade'],
-              score: .5,
+              score: 0.5,
             };
             calcAllWrProspectsObjects[playerName].finalScore =
-              calcAllWrProspectsObjects[playerName].finalScore + .5;
+              calcAllWrProspectsObjects[playerName].finalScore + 0.5;
           }
 
-          
-
-          
           //
           // bound 4
           //
-           // 50% of hits are below this mark/ 50% of hits above it
-           //   looking to have only 3 in this group in initial sample
-           //
-           if (
-            player.yearTwoPlusYearThreeAveragedStats['REC Grade'] > 73.99 && player.yearTwoPlusYearThreeAveragedStats['REC Grade'] < 79
+          // 50% of hits are below this mark/ 50% of hits above it
+          //   looking to have only 3 in this group in initial sample
+          //
+          if (
+            player.yearTwoPlusYearThreeAveragedStats['REC Grade'] > 73.99 &&
+            player.yearTwoPlusYearThreeAveragedStats['REC Grade'] < 79
           ) {
             // num = num + 1
             // console.log(num, player.name, player.yearTwoPlusYearThreeAveragedStats['REC Grade'])
@@ -965,14 +1006,15 @@ test.forEach(topPlayer => {
               calcAllWrProspectsObjects[playerName].finalScore + 1;
           }
 
-             //
-             // bound 5
-             //
-           // this group is above the 50% mark but below elite mark
-           //   
-           
-           if (
-            player.yearTwoPlusYearThreeAveragedStats['REC Grade'] > 78.99 && player.yearTwoPlusYearThreeAveragedStats['REC Grade'] < 84.5
+          //
+          // bound 5
+          //
+          // this group is above the 50% mark but below elite mark
+          //
+
+          if (
+            player.yearTwoPlusYearThreeAveragedStats['REC Grade'] > 78.99 &&
+            player.yearTwoPlusYearThreeAveragedStats['REC Grade'] < 84.5
           ) {
             // num = num + 1
             // console.log(num, player.name, player.yearTwoPlusYearThreeAveragedStats['REC Grade'])
@@ -991,7 +1033,7 @@ test.forEach(topPlayer => {
           //
           // bound 6
           //
-          // only top 18% of Hits sample above this elite bound 
+          // only top 18% of Hits sample above this elite bound
           // looking for only 5 in initial sample
 
           if (player.yearTwoPlusYearThreeAveragedStats['REC Grade'] > 84.499) {
@@ -1009,15 +1051,13 @@ test.forEach(topPlayer => {
               calcAllWrProspectsObjects[playerName].finalScore + 2;
           }
 
-          
           ////////////////////////////////////////////////////////////////////////////////
-           ////////////////////////////////////////////////////////////////////////////////
+          ////////////////////////////////////////////////////////////////////////////////
 
-            ////////////////////////////////////////////////////////////////////////////////
-           ////////////////////////////////////////////////////////////////////////////////
+          ////////////////////////////////////////////////////////////////////////////////
+          ////////////////////////////////////////////////////////////////////////////////
 
-
-             // career avg
+          // career avg
 
           // bound 1
           //
@@ -1044,8 +1084,10 @@ test.forEach(topPlayer => {
           // only ten percent of hit sample below this number
           // looking to have only 3 in this group in initial sample
           //
-          if (player.careerAveragedStats['REC Grade'] > 62.499 &&
-          player.careerAveragedStats['REC Grade'] < 70) {
+          if (
+            player.careerAveragedStats['REC Grade'] > 62.499 &&
+            player.careerAveragedStats['REC Grade'] < 70
+          ) {
             // num = num + 1
             // console.log(num, player.name, player.careerAveragedStats['REC Grade'])
 
@@ -1054,20 +1096,22 @@ test.forEach(topPlayer => {
             //
             calcAllWrProspectsObjects[playerName].careerAvgRecGrade = {
               value: player.careerAveragedStats['REC Grade'],
-              score: -.5,
+              score: -0.5,
             };
             calcAllWrProspectsObjects[playerName].finalScore =
-              calcAllWrProspectsObjects[playerName].finalScore - .5;
+              calcAllWrProspectsObjects[playerName].finalScore - 0.5;
           }
 
-          
           //
           // bound 3
           //
           // 30% of hits sample below this number
           // looking to have only 5 in this group in initial sample
           //
-          if (player.careerAveragedStats['REC Grade'] > 69.99 && player.careerAveragedStats['REC Grade'] < 72) {
+          if (
+            player.careerAveragedStats['REC Grade'] > 69.99 &&
+            player.careerAveragedStats['REC Grade'] < 72
+          ) {
             // num = num + 1
             // console.log(num, player.name, player.careerAveragedStats['REC Grade'])
 
@@ -1076,23 +1120,21 @@ test.forEach(topPlayer => {
             //
             calcAllWrProspectsObjects[playerName].careerAvgRecGrade = {
               value: player.careerAveragedStats['REC Grade'],
-              score: .5,
+              score: 0.5,
             };
             calcAllWrProspectsObjects[playerName].finalScore =
-              calcAllWrProspectsObjects[playerName].finalScore + .5;
+              calcAllWrProspectsObjects[playerName].finalScore + 0.5;
           }
 
-          
-
-    
           //
           // bound 4
           //
-           // 50% of hits are below this mark/ 50% of hits above it
-           //   looking to have only 3 in this group in initial sample
-           //
-           if (
-            player.careerAveragedStats['REC Grade'] > 71.99 && player.careerAveragedStats['REC Grade'] < 74
+          // 50% of hits are below this mark/ 50% of hits above it
+          //   looking to have only 3 in this group in initial sample
+          //
+          if (
+            player.careerAveragedStats['REC Grade'] > 71.99 &&
+            player.careerAveragedStats['REC Grade'] < 74
           ) {
             // num = num + 1
             // console.log(num, player.name, player.careerAveragedStats['REC Grade'])
@@ -1108,14 +1150,15 @@ test.forEach(topPlayer => {
               calcAllWrProspectsObjects[playerName].finalScore + 1;
           }
 
-             //
-             // bound 5
-             //
-           // this group is above the 50% mark but below elite mark
-           //   
-           
-           if (
-            player.careerAveragedStats['REC Grade'] > 73.99 && player.careerAveragedStats['REC Grade'] < 80
+          //
+          // bound 5
+          //
+          // this group is above the 50% mark but below elite mark
+          //
+
+          if (
+            player.careerAveragedStats['REC Grade'] > 73.99 &&
+            player.careerAveragedStats['REC Grade'] < 80
           ) {
             // num = num + 1
             // console.log(num, player.name, player.careerAveragedStats['REC Grade'])
@@ -1134,7 +1177,7 @@ test.forEach(topPlayer => {
           //
           // bound 6
           //
-          // only top 18% of Hits sample above this elite bound 
+          // only top 18% of Hits sample above this elite bound
           // looking for only 5 in initial sample
 
           if (player.careerAveragedStats['REC Grade'] > 79.99) {
@@ -1152,14 +1195,12 @@ test.forEach(topPlayer => {
               calcAllWrProspectsObjects[playerName].finalScore + 2;
           }
 
-         
           ////////////////////////////////////////////
           ///////////////////////////////////////////
           //      start next stat below here
           ///////////////////////////////////////////
 
-        
-           // year Two plus year three
+          // year Two plus year three
 
           // bound 1
           //
@@ -1186,30 +1227,34 @@ test.forEach(topPlayer => {
           // only ten percent of hit sample below this number
           // looking to have only 3 in this group in initial sample
           //
-          if (player.yearTwoPlusYearThreeAveragedStats.Targets > 34.99 &&
-          player.yearTwoPlusYearThreeAveragedStats.Targets < 57.5) {
+          if (
+            player.yearTwoPlusYearThreeAveragedStats.Targets > 34.99 &&
+            player.yearTwoPlusYearThreeAveragedStats.Targets < 57.5
+          ) {
             // num = num + 1
             // console.log(num, player.name, player.yearTwoPlusYearThreeAveragedStats.Targets)
-            
+
             //
             // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
             //
             calcAllWrProspectsObjects[playerName].ytytTargets = {
               value: player.yearTwoPlusYearThreeAveragedStats.Targets,
-              score: -.5,
+              score: -0.5,
             };
             calcAllWrProspectsObjects[playerName].finalScore =
-              calcAllWrProspectsObjects[playerName].finalScore - .5;
+              calcAllWrProspectsObjects[playerName].finalScore - 0.5;
           }
 
-          
           //
           // bound 3
           //
           // 30% of hits sample below this number
           // looking to have only 5 in this group in initial sample
           //
-          if (player.yearTwoPlusYearThreeAveragedStats.Targets > 57.49 && player.yearTwoPlusYearThreeAveragedStats.Targets < 75) {
+          if (
+            player.yearTwoPlusYearThreeAveragedStats.Targets > 57.49 &&
+            player.yearTwoPlusYearThreeAveragedStats.Targets < 75
+          ) {
             // num = num + 1
             // console.log(num, player.name, player.yearTwoPlusYearThreeAveragedStats.Targets)
 
@@ -1218,23 +1263,21 @@ test.forEach(topPlayer => {
             //
             calcAllWrProspectsObjects[playerName].ytytTargets = {
               value: player.yearTwoPlusYearThreeAveragedStats.Targets,
-              score: .5,
+              score: 0.5,
             };
             calcAllWrProspectsObjects[playerName].finalScore =
-              calcAllWrProspectsObjects[playerName].finalScore + .5;
+              calcAllWrProspectsObjects[playerName].finalScore + 0.5;
           }
 
-          
-
-          
           //
           // bound 4
           //
-           // 50% of hits are below this mark/ 50% of hits above it
-           //   looking to have only 3 in this group in initial sample
-           //
-           if (
-            player.yearTwoPlusYearThreeAveragedStats.Targets > 74.99 && player.yearTwoPlusYearThreeAveragedStats.Targets < 80
+          // 50% of hits are below this mark/ 50% of hits above it
+          //   looking to have only 3 in this group in initial sample
+          //
+          if (
+            player.yearTwoPlusYearThreeAveragedStats.Targets > 74.99 &&
+            player.yearTwoPlusYearThreeAveragedStats.Targets < 80
           ) {
             // num = num + 1
             // console.log(num, player.name, player.yearTwoPlusYearThreeAveragedStats.Targets)
@@ -1250,14 +1293,15 @@ test.forEach(topPlayer => {
               calcAllWrProspectsObjects[playerName].finalScore + 1;
           }
 
-             //
-             // bound 5
-             //
-           // this group is above the 50% mark but below elite mark
-           //   
-           
-           if (
-            player.yearTwoPlusYearThreeAveragedStats.Targets > 79.99 && player.yearTwoPlusYearThreeAveragedStats.Targets < 109
+          //
+          // bound 5
+          //
+          // this group is above the 50% mark but below elite mark
+          //
+
+          if (
+            player.yearTwoPlusYearThreeAveragedStats.Targets > 79.99 &&
+            player.yearTwoPlusYearThreeAveragedStats.Targets < 109
           ) {
             // num = num + 1
             // console.log(num, player.name, player.yearTwoPlusYearThreeAveragedStats.Targets)
@@ -1276,7 +1320,7 @@ test.forEach(topPlayer => {
           //
           // bound 6
           //
-          // only top 18% of Hits sample above this elite bound 
+          // only top 18% of Hits sample above this elite bound
           // looking for only 5 in initial sample
 
           if (player.yearTwoPlusYearThreeAveragedStats.Targets > 108.99) {
@@ -1294,15 +1338,13 @@ test.forEach(topPlayer => {
               calcAllWrProspectsObjects[playerName].finalScore + 2;
           }
 
-          
           ////////////////////////////////////////////////////////////////////////////////
-           ////////////////////////////////////////////////////////////////////////////////
+          ////////////////////////////////////////////////////////////////////////////////
 
-            ////////////////////////////////////////////////////////////////////////////////
-           ////////////////////////////////////////////////////////////////////////////////
-         
-          
-             // career avg
+          ////////////////////////////////////////////////////////////////////////////////
+          ////////////////////////////////////////////////////////////////////////////////
+
+          // career avg
 
           // bound 1
           //
@@ -1329,8 +1371,10 @@ test.forEach(topPlayer => {
           // only ten percent of hit sample below this number
           // looking to have only 3 in this group in initial sample
           //
-          if (player.careerAveragedStats.Targets > 37.99 &&
-          player.careerAveragedStats.Targets < 50) {
+          if (
+            player.careerAveragedStats.Targets > 37.99 &&
+            player.careerAveragedStats.Targets < 50
+          ) {
             // num = num + 1
             // console.log(num, player.name, player.careerAveragedStats.Targets)
 
@@ -1339,20 +1383,22 @@ test.forEach(topPlayer => {
             //
             calcAllWrProspectsObjects[playerName].careerAvgTargets = {
               value: player.careerAveragedStats.Targets,
-              score: -.5,
+              score: -0.5,
             };
             calcAllWrProspectsObjects[playerName].finalScore =
-              calcAllWrProspectsObjects[playerName].finalScore - .5;
+              calcAllWrProspectsObjects[playerName].finalScore - 0.5;
           }
 
-          
           //
           // bound 3
           //
           // 30% of hits sample below this number
           // looking to have only 5 in this group in initial sample
           //
-          if (player.careerAveragedStats.Targets > 49.99 && player.careerAveragedStats.Targets < 65) {
+          if (
+            player.careerAveragedStats.Targets > 49.99 &&
+            player.careerAveragedStats.Targets < 65
+          ) {
             // num = num + 1
             // console.log(num, player.name, player.careerAveragedStats.Targets)
 
@@ -1361,23 +1407,21 @@ test.forEach(topPlayer => {
             //
             calcAllWrProspectsObjects[playerName].careerAvgTargets = {
               value: player.careerAveragedStats.Targets,
-              score: .5,
+              score: 0.5,
             };
             calcAllWrProspectsObjects[playerName].finalScore =
-              calcAllWrProspectsObjects[playerName].finalScore + .5;
+              calcAllWrProspectsObjects[playerName].finalScore + 0.5;
           }
 
-        
-
-    
           //
           // bound 4
           //
-           // 50% of hits are below this mark/ 50% of hits above it
-           //   looking to have only 3 in this group in initial sample
-           //
-           if (
-            player.careerAveragedStats.Targets > 64.99 && player.careerAveragedStats.Targets < 72
+          // 50% of hits are below this mark/ 50% of hits above it
+          //   looking to have only 3 in this group in initial sample
+          //
+          if (
+            player.careerAveragedStats.Targets > 64.99 &&
+            player.careerAveragedStats.Targets < 72
           ) {
             // num = num + 1
             // console.log(num, player.name, player.careerAveragedStats.Targets)
@@ -1393,14 +1437,15 @@ test.forEach(topPlayer => {
               calcAllWrProspectsObjects[playerName].finalScore + 1;
           }
 
-             //
-             // bound 5
-             //
-           // this group is above the 50% mark but below elite mark
-           //   
-           
-           if (
-            player.careerAveragedStats.Targets > 71.99 && player.careerAveragedStats.Targets < 100
+          //
+          // bound 5
+          //
+          // this group is above the 50% mark but below elite mark
+          //
+
+          if (
+            player.careerAveragedStats.Targets > 71.99 &&
+            player.careerAveragedStats.Targets < 100
           ) {
             // num = num + 1
             // console.log(num, player.name, player.careerAveragedStats.Targets)
@@ -1419,7 +1464,7 @@ test.forEach(topPlayer => {
           //
           // bound 6
           //
-          // only top 18% of Hits sample above this elite bound 
+          // only top 18% of Hits sample above this elite bound
           // looking for only 5 in initial sample
 
           if (player.careerAveragedStats.Targets > 99.99) {
@@ -1437,13 +1482,12 @@ test.forEach(topPlayer => {
               calcAllWrProspectsObjects[playerName].finalScore + 2;
           }
 
-         
           ////////////////////////////////////////////
           ///////////////////////////////////////////
           //      start next stat below here
           ///////////////////////////////////////////
-         
-              // year Two plus year three
+
+          // year Two plus year three
 
           // bound 1
           //
@@ -1470,30 +1514,34 @@ test.forEach(topPlayer => {
           // only ten percent of hit sample below this number
           // looking to have only 3 in this group in initial sample
           //
-          if (player.yearTwoPlusYearThreeAveragedStats['TGTs/G'] > 2.49 &&
-          player.yearTwoPlusYearThreeAveragedStats['TGTs/G'] < 4) {
+          if (
+            player.yearTwoPlusYearThreeAveragedStats['TGTs/G'] > 2.49 &&
+            player.yearTwoPlusYearThreeAveragedStats['TGTs/G'] < 4
+          ) {
             // num = num + 1
             // console.log(num, player.name, player.yearTwoPlusYearThreeAveragedStats['TGTs/G'])
-            
+
             //
             // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
             //
             calcAllWrProspectsObjects[playerName].ytytTargetsPerGame = {
               value: player.yearTwoPlusYearThreeAveragedStats['TGTs/G'],
-              score: -.5,
+              score: -0.5,
             };
             calcAllWrProspectsObjects[playerName].finalScore =
-              calcAllWrProspectsObjects[playerName].finalScore - .5;
+              calcAllWrProspectsObjects[playerName].finalScore - 0.5;
           }
 
-          
           //
           // bound 3
           //
           // 30% of hits sample below this number
           // looking to have only 5 in this group in initial sample
           //
-          if (player.yearTwoPlusYearThreeAveragedStats['TGTs/G'] > 3.99 && player.yearTwoPlusYearThreeAveragedStats['TGTs/G'] < 5.5) {
+          if (
+            player.yearTwoPlusYearThreeAveragedStats['TGTs/G'] > 3.99 &&
+            player.yearTwoPlusYearThreeAveragedStats['TGTs/G'] < 5.5
+          ) {
             // num = num + 1
             // console.log(num, player.name, player.yearTwoPlusYearThreeAveragedStats['TGTs/G'])
 
@@ -1502,23 +1550,21 @@ test.forEach(topPlayer => {
             //
             calcAllWrProspectsObjects[playerName].ytytTargetsPerGame = {
               value: player.yearTwoPlusYearThreeAveragedStats['TGTs/G'],
-              score: .5,
+              score: 0.5,
             };
             calcAllWrProspectsObjects[playerName].finalScore =
-              calcAllWrProspectsObjects[playerName].finalScore + .5;
+              calcAllWrProspectsObjects[playerName].finalScore + 0.5;
           }
 
-          
-          
-          
           //
           // bound 4
           //
-           // 50% of hits are below this mark/ 50% of hits above it
-           //   looking to have only 3 in this group in initial sample
-           //
-           if (
-            player.yearTwoPlusYearThreeAveragedStats['TGTs/G'] > 5.49 && player.yearTwoPlusYearThreeAveragedStats['TGTs/G'] < 6.5
+          // 50% of hits are below this mark/ 50% of hits above it
+          //   looking to have only 3 in this group in initial sample
+          //
+          if (
+            player.yearTwoPlusYearThreeAveragedStats['TGTs/G'] > 5.49 &&
+            player.yearTwoPlusYearThreeAveragedStats['TGTs/G'] < 6.5
           ) {
             // num = num + 1
             // console.log(num, player.name, player.yearTwoPlusYearThreeAveragedStats['TGTs/G'])
@@ -1534,14 +1580,15 @@ test.forEach(topPlayer => {
               calcAllWrProspectsObjects[playerName].finalScore + 1;
           }
 
-             //
-             // bound 5
-             //
-           // this group is above the 50% mark but below elite mark
-           //   
-           
-           if (
-            player.yearTwoPlusYearThreeAveragedStats['TGTs/G'] > 6.49 && player.yearTwoPlusYearThreeAveragedStats['TGTs/G'] < 8
+          //
+          // bound 5
+          //
+          // this group is above the 50% mark but below elite mark
+          //
+
+          if (
+            player.yearTwoPlusYearThreeAveragedStats['TGTs/G'] > 6.49 &&
+            player.yearTwoPlusYearThreeAveragedStats['TGTs/G'] < 8
           ) {
             // num = num + 1
             // console.log(num, player.name, player.yearTwoPlusYearThreeAveragedStats['TGTs/G'])
@@ -1560,7 +1607,7 @@ test.forEach(topPlayer => {
           //
           // bound 6
           //
-          // only top 18% of Hits sample above this elite bound 
+          // only top 18% of Hits sample above this elite bound
           // looking for only 5 in initial sample
 
           if (player.yearTwoPlusYearThreeAveragedStats['TGTs/G'] > 7.99) {
@@ -1578,16 +1625,13 @@ test.forEach(topPlayer => {
               calcAllWrProspectsObjects[playerName].finalScore + 2;
           }
 
-          
           ////////////////////////////////////////////////////////////////////////////////
-           ////////////////////////////////////////////////////////////////////////////////
+          ////////////////////////////////////////////////////////////////////////////////
 
-            ////////////////////////////////////////////////////////////////////////////////
-           ////////////////////////////////////////////////////////////////////////////////
-         
-    
-          
-             // career avg
+          ////////////////////////////////////////////////////////////////////////////////
+          ////////////////////////////////////////////////////////////////////////////////
+
+          // career avg
 
           // bound 1
           //
@@ -1614,8 +1658,10 @@ test.forEach(topPlayer => {
           // only ten percent of hit sample below this number
           // looking to have only 3 in this group in initial sample
           //
-          if (player.careerAveragedStats['TGTs/G'] > 2.99 &&
-          player.careerAveragedStats['TGTs/G'] < 3.5) {
+          if (
+            player.careerAveragedStats['TGTs/G'] > 2.99 &&
+            player.careerAveragedStats['TGTs/G'] < 3.5
+          ) {
             // num = num + 1
             // console.log(num, player.name, player.careerAveragedStats['TGTs/G'])
 
@@ -1624,20 +1670,22 @@ test.forEach(topPlayer => {
             //
             calcAllWrProspectsObjects[playerName].careerAvgTargetsPerGame = {
               value: player.careerAveragedStats['TGTs/G'],
-              score: -.5,
+              score: -0.5,
             };
             calcAllWrProspectsObjects[playerName].finalScore =
-              calcAllWrProspectsObjects[playerName].finalScore - .5;
+              calcAllWrProspectsObjects[playerName].finalScore - 0.5;
           }
 
-          
           //
           // bound 3
           //
           // 30% of hits sample below this number
           // looking to have only 5 in this group in initial sample
           //
-          if (player.careerAveragedStats['TGTs/G'] > 3.499 && player.careerAveragedStats['TGTs/G'] < 4.5) {
+          if (
+            player.careerAveragedStats['TGTs/G'] > 3.499 &&
+            player.careerAveragedStats['TGTs/G'] < 4.5
+          ) {
             // num = num + 1
             // console.log(num, player.name, player.careerAveragedStats['TGTs/G'])
 
@@ -1646,23 +1694,21 @@ test.forEach(topPlayer => {
             //
             calcAllWrProspectsObjects[playerName].careerAvgTargetsPerGame = {
               value: player.careerAveragedStats['TGTs/G'],
-              score: .5,
+              score: 0.5,
             };
             calcAllWrProspectsObjects[playerName].finalScore =
-              calcAllWrProspectsObjects[playerName].finalScore + .5;
+              calcAllWrProspectsObjects[playerName].finalScore + 0.5;
           }
 
-         
-
-    
           //
           // bound 4
           //
-           // 50% of hits are below this mark/ 50% of hits above it
-           //   looking to have only 3 in this group in initial sample
-           //
-           if (
-            player.careerAveragedStats['TGTs/G'] > 4.49 && player.careerAveragedStats['TGTs/G'] < 5.25
+          // 50% of hits are below this mark/ 50% of hits above it
+          //   looking to have only 3 in this group in initial sample
+          //
+          if (
+            player.careerAveragedStats['TGTs/G'] > 4.49 &&
+            player.careerAveragedStats['TGTs/G'] < 5.25
           ) {
             // num = num + 1
             // console.log(num, player.name, player.careerAveragedStats['TGTs/G'])
@@ -1678,14 +1724,15 @@ test.forEach(topPlayer => {
               calcAllWrProspectsObjects[playerName].finalScore + 1;
           }
 
-             //
-             // bound 5
-             //
-           // this group is above the 50% mark but below elite mark
-           //   
-           
-           if (
-            player.careerAveragedStats['TGTs/G'] > 5.249 && player.careerAveragedStats['TGTs/G'] < 6.75
+          //
+          // bound 5
+          //
+          // this group is above the 50% mark but below elite mark
+          //
+
+          if (
+            player.careerAveragedStats['TGTs/G'] > 5.249 &&
+            player.careerAveragedStats['TGTs/G'] < 6.75
           ) {
             // num = num + 1
             // console.log(num, player.name, player.careerAveragedStats['TGTs/G'])
@@ -1704,7 +1751,7 @@ test.forEach(topPlayer => {
           //
           // bound 6
           //
-          // only top 18% of Hits sample above this elite bound 
+          // only top 18% of Hits sample above this elite bound
           // looking for only 5 in initial sample
 
           if (player.careerAveragedStats['TGTs/G'] > 6.749) {
@@ -1722,14 +1769,12 @@ test.forEach(topPlayer => {
               calcAllWrProspectsObjects[playerName].finalScore + 2;
           }
 
-         
           ////////////////////////////////////////////
           ///////////////////////////////////////////
           //      start next stat below here
           ///////////////////////////////////////////
-          
 
-                     // year Two plus year three
+          // year Two plus year three
 
           // bound 1
           //
@@ -1756,30 +1801,34 @@ test.forEach(topPlayer => {
           // only ten percent of hit sample below this number
           // looking to have only 3 in this group in initial sample
           //
-          if (player.yearTwoPlusYearThreeAveragedStats.RR > 214.99 &&
-          player.yearTwoPlusYearThreeAveragedStats.RR < 235) {
+          if (
+            player.yearTwoPlusYearThreeAveragedStats.RR > 214.99 &&
+            player.yearTwoPlusYearThreeAveragedStats.RR < 235
+          ) {
             // num = num + 1
             // console.log(num, player.name, player.yearTwoPlusYearThreeAveragedStats.RR)
-            
+
             //
             // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
             //
             calcAllWrProspectsObjects[playerName].ytytRoutesRun = {
               value: player.yearTwoPlusYearThreeAveragedStats.RR,
-              score: -.5,
+              score: -0.5,
             };
             calcAllWrProspectsObjects[playerName].finalScore =
-              calcAllWrProspectsObjects[playerName].finalScore - .5;
+              calcAllWrProspectsObjects[playerName].finalScore - 0.5;
           }
 
-          
           //
           // bound 3
           //
           // 30% of hits sample below this number
           // looking to have only 5 in this group in initial sample
           //
-          if (player.yearTwoPlusYearThreeAveragedStats.RR > 234.99 && player.yearTwoPlusYearThreeAveragedStats.RR < 305) {
+          if (
+            player.yearTwoPlusYearThreeAveragedStats.RR > 234.99 &&
+            player.yearTwoPlusYearThreeAveragedStats.RR < 305
+          ) {
             // num = num + 1
             // console.log(num, player.name, player.yearTwoPlusYearThreeAveragedStats.RR)
 
@@ -1788,23 +1837,21 @@ test.forEach(topPlayer => {
             //
             calcAllWrProspectsObjects[playerName].ytytRoutesRun = {
               value: player.yearTwoPlusYearThreeAveragedStats.RR,
-              score: .5,
+              score: 0.5,
             };
             calcAllWrProspectsObjects[playerName].finalScore =
-              calcAllWrProspectsObjects[playerName].finalScore + .5;
+              calcAllWrProspectsObjects[playerName].finalScore + 0.5;
           }
 
-          
-         
-          
           //
           // bound 4
           //
-           // 50% of hits are below this mark/ 50% of hits above it
-           //   looking to have only 3 in this group in initial sample
-           //
-           if (
-            player.yearTwoPlusYearThreeAveragedStats.RR > 304.99 && player.yearTwoPlusYearThreeAveragedStats.RR < 325
+          // 50% of hits are below this mark/ 50% of hits above it
+          //   looking to have only 3 in this group in initial sample
+          //
+          if (
+            player.yearTwoPlusYearThreeAveragedStats.RR > 304.99 &&
+            player.yearTwoPlusYearThreeAveragedStats.RR < 325
           ) {
             // num = num + 1
             // console.log(num, player.name, player.yearTwoPlusYearThreeAveragedStats.RR)
@@ -1820,14 +1867,15 @@ test.forEach(topPlayer => {
               calcAllWrProspectsObjects[playerName].finalScore + 1;
           }
 
-             //
-             // bound 5
-             //
-           // this group is above the 50% mark but below elite mark
-           //   
-           
-           if (
-            player.yearTwoPlusYearThreeAveragedStats.RR > 324.99 && player.yearTwoPlusYearThreeAveragedStats.RR < 410
+          //
+          // bound 5
+          //
+          // this group is above the 50% mark but below elite mark
+          //
+
+          if (
+            player.yearTwoPlusYearThreeAveragedStats.RR > 324.99 &&
+            player.yearTwoPlusYearThreeAveragedStats.RR < 410
           ) {
             // num = num + 1
             // console.log(num, player.name, player.yearTwoPlusYearThreeAveragedStats.RR)
@@ -1846,7 +1894,7 @@ test.forEach(topPlayer => {
           //
           // bound 6
           //
-          // only top 18% of Hits sample above this elite bound 
+          // only top 18% of Hits sample above this elite bound
           // looking for only 5 in initial sample
 
           if (player.yearTwoPlusYearThreeAveragedStats.RR > 409.99) {
@@ -1864,11 +1912,10 @@ test.forEach(topPlayer => {
               calcAllWrProspectsObjects[playerName].finalScore + 2;
           }
 
-          
           ////////////////////////////////////////////////////////////////////////////////
-           ////////////////////////////////////////////////////////////////////////////////
+          ////////////////////////////////////////////////////////////////////////////////
 
-                      // career avg
+          // career avg
 
           // bound 1
           //
@@ -1895,8 +1942,10 @@ test.forEach(topPlayer => {
           // only ten percent of hit sample below this number
           // looking to have only 3 in this group in initial sample
           //
-          if (player.careerAveragedStats.RR > 148.99 &&
-          player.careerAveragedStats.RR < 225) {
+          if (
+            player.careerAveragedStats.RR > 148.99 &&
+            player.careerAveragedStats.RR < 225
+          ) {
             // num = num + 1
             // console.log(num, player.name, player.careerAveragedStats.RR)
 
@@ -1905,20 +1954,22 @@ test.forEach(topPlayer => {
             //
             calcAllWrProspectsObjects[playerName].careerAvgRoutesRun = {
               value: player.careerAveragedStats.RR,
-              score: -.5,
+              score: -0.5,
             };
             calcAllWrProspectsObjects[playerName].finalScore =
-              calcAllWrProspectsObjects[playerName].finalScore - .5;
+              calcAllWrProspectsObjects[playerName].finalScore - 0.5;
           }
 
-          
           //
           // bound 3
           //
           // 30% of hits sample below this number
           // looking to have only 5 in this group in initial sample
           //
-          if (player.careerAveragedStats.RR > 224.99 && player.careerAveragedStats.RR < 270) {
+          if (
+            player.careerAveragedStats.RR > 224.99 &&
+            player.careerAveragedStats.RR < 270
+          ) {
             // num = num + 1
             // console.log(num, player.name, player.careerAveragedStats.RR)
 
@@ -1927,23 +1978,21 @@ test.forEach(topPlayer => {
             //
             calcAllWrProspectsObjects[playerName].careerAvgRoutesRun = {
               value: player.careerAveragedStats.RR,
-              score: .5,
+              score: 0.5,
             };
             calcAllWrProspectsObjects[playerName].finalScore =
-              calcAllWrProspectsObjects[playerName].finalScore + .5;
+              calcAllWrProspectsObjects[playerName].finalScore + 0.5;
           }
 
-          
-
-    
           //
           // bound 4
           //
-           // 50% of hits are below this mark/ 50% of hits above it
-           //   looking to have only 3 in this group in initial sample
-           //
-           if (
-            player.careerAveragedStats.RR > 269.99 && player.careerAveragedStats.RR < 305
+          // 50% of hits are below this mark/ 50% of hits above it
+          //   looking to have only 3 in this group in initial sample
+          //
+          if (
+            player.careerAveragedStats.RR > 269.99 &&
+            player.careerAveragedStats.RR < 305
           ) {
             // num = num + 1
             // console.log(num, player.name, player.careerAveragedStats.RR)
@@ -1959,14 +2008,15 @@ test.forEach(topPlayer => {
               calcAllWrProspectsObjects[playerName].finalScore + 1;
           }
 
-             //
-             // bound 5
-             //
-           // this group is above the 50% mark but below elite mark
-           //   
-           
-           if (
-            player.careerAveragedStats.RR > 304.99 && player.careerAveragedStats.RR < 350
+          //
+          // bound 5
+          //
+          // this group is above the 50% mark but below elite mark
+          //
+
+          if (
+            player.careerAveragedStats.RR > 304.99 &&
+            player.careerAveragedStats.RR < 350
           ) {
             // num = num + 1
             // console.log(num, player.name, player.careerAveragedStats.RR)
@@ -1985,7 +2035,7 @@ test.forEach(topPlayer => {
           //
           // bound 6
           //
-          // only top 18% of Hits sample above this elite bound 
+          // only top 18% of Hits sample above this elite bound
           // looking for only 5 in initial sample
 
           if (player.careerAveragedStats.RR > 349.99) {
@@ -2003,20 +2053,19 @@ test.forEach(topPlayer => {
               calcAllWrProspectsObjects[playerName].finalScore + 2;
           }
 
-         
           ////////////////////////////////////////////
           ///////////////////////////////////////////
           //      start next stat below here
           ///////////////////////////////////////////
 
-                               // year Two plus year three
+          // year Two plus year three
 
           // bound 1
           //
           // the highest mark that has zero of the hits sample below this number
           // zero players from Hit sample in this group in initial sample
           //
-          if (player.yearTwoPlusYearThreeAveragedStats.TPRR < .15) {
+          if (player.yearTwoPlusYearThreeAveragedStats.TPRR < 0.15) {
             // num = num + 1
             // console.log(num, player.name, player.yearTwoPlusYearThreeAveragedStats.TPRR)
 
@@ -2036,30 +2085,34 @@ test.forEach(topPlayer => {
           // only ten percent of hit sample below this number
           // looking to have only 3 in this group in initial sample
           //
-          if (player.yearTwoPlusYearThreeAveragedStats.TPRR > .149 &&
-          player.yearTwoPlusYearThreeAveragedStats.TPRR < .2) {
+          if (
+            player.yearTwoPlusYearThreeAveragedStats.TPRR > 0.149 &&
+            player.yearTwoPlusYearThreeAveragedStats.TPRR < 0.2
+          ) {
             // num = num + 1
             // console.log(num, player.name, player.yearTwoPlusYearThreeAveragedStats.TPRR)
-            
+
             //
             // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
             //
             calcAllWrProspectsObjects[playerName].ytytTargetsPerRouteRun = {
               value: player.yearTwoPlusYearThreeAveragedStats.TPRR,
-              score: -.5,
+              score: -0.5,
             };
             calcAllWrProspectsObjects[playerName].finalScore =
-              calcAllWrProspectsObjects[playerName].finalScore - .5;
+              calcAllWrProspectsObjects[playerName].finalScore - 0.5;
           }
 
-          
           //
           // bound 3
           //
           // 30% of hits sample below this number
           // looking to have only 5 in this group in initial sample
           //
-          if (player.yearTwoPlusYearThreeAveragedStats.TPRR > .199 && player.yearTwoPlusYearThreeAveragedStats.TPRR < .22) {
+          if (
+            player.yearTwoPlusYearThreeAveragedStats.TPRR > 0.199 &&
+            player.yearTwoPlusYearThreeAveragedStats.TPRR < 0.22
+          ) {
             // num = num + 1
             // console.log(num, player.name, player.yearTwoPlusYearThreeAveragedStats.TPRR)
 
@@ -2068,23 +2121,21 @@ test.forEach(topPlayer => {
             //
             calcAllWrProspectsObjects[playerName].ytytTargetsPerRouteRun = {
               value: player.yearTwoPlusYearThreeAveragedStats.TPRR,
-              score: .5,
+              score: 0.5,
             };
             calcAllWrProspectsObjects[playerName].finalScore =
-              calcAllWrProspectsObjects[playerName].finalScore + .5;
+              calcAllWrProspectsObjects[playerName].finalScore + 0.5;
           }
 
-          
-          
-          
           //
           // bound 4
           //
-           // 50% of hits are below this mark/ 50% of hits above it
-           //   looking to have only 3 in this group in initial sample
-           //
-           if (
-            player.yearTwoPlusYearThreeAveragedStats.TPRR > .2199 && player.yearTwoPlusYearThreeAveragedStats.TPRR < .24
+          // 50% of hits are below this mark/ 50% of hits above it
+          //   looking to have only 3 in this group in initial sample
+          //
+          if (
+            player.yearTwoPlusYearThreeAveragedStats.TPRR > 0.2199 &&
+            player.yearTwoPlusYearThreeAveragedStats.TPRR < 0.24
           ) {
             // num = num + 1
             // console.log(num, player.name, player.yearTwoPlusYearThreeAveragedStats.TPRR)
@@ -2100,14 +2151,15 @@ test.forEach(topPlayer => {
               calcAllWrProspectsObjects[playerName].finalScore + 1;
           }
 
-             //
-             // bound 5
-             //
-           // this group is above the 50% mark but below elite mark
-           //   
-           
-           if (
-            player.yearTwoPlusYearThreeAveragedStats.TPRR > .2399 && player.yearTwoPlusYearThreeAveragedStats.TPRR < .28
+          //
+          // bound 5
+          //
+          // this group is above the 50% mark but below elite mark
+          //
+
+          if (
+            player.yearTwoPlusYearThreeAveragedStats.TPRR > 0.2399 &&
+            player.yearTwoPlusYearThreeAveragedStats.TPRR < 0.28
           ) {
             // num = num + 1
             // console.log(num, player.name, player.yearTwoPlusYearThreeAveragedStats.TPRR)
@@ -2126,10 +2178,10 @@ test.forEach(topPlayer => {
           //
           // bound 6
           //
-          // only top 18% of Hits sample above this elite bound 
+          // only top 18% of Hits sample above this elite bound
           // looking for only 5 in initial sample
 
-          if (player.yearTwoPlusYearThreeAveragedStats.TPRR > .2799) {
+          if (player.yearTwoPlusYearThreeAveragedStats.TPRR > 0.2799) {
             // num = num + 1
             // console.log(num, player.name, player.yearTwoPlusYearThreeAveragedStats.TPRR)
 
@@ -2144,15 +2196,931 @@ test.forEach(topPlayer => {
               calcAllWrProspectsObjects[playerName].finalScore + 2;
           }
 
-          
           ////////////////////////////////////////////////////////////////////////////////
-           ////////////////////////////////////////////////////////////////////////////////
+          ////////////////////////////////////////////////////////////////////////////////
 
+          // career avg
 
-            ////////////////////////////////////////////////////////////////////////////////
-           ////////////////////////////////////////////////////////////////////////////////
+          // bound 1
+          //
+          // the highest mark that has zero of the hits sample below this number
+          // zero players from Hit sample in this group in initial sample
+          //
+          if (player.careerAveragedStats.TPRR < 0.15) {
+            // num = num + 1;
+            // console.log(num, player.name, player.careerAveragedStats.TPRR);
 
-  
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[playerName].careerAvgTargetsPerRouteRun =
+              {
+                value: player.careerAveragedStats.TPRR,
+                score: -1,
+              };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore - 1;
+          }
+
+          // bound 2
+          //
+          // only ten percent of hit sample below this number
+          // looking to have only 3 in this group in initial sample
+          //
+          if (
+            player.careerAveragedStats.TPRR > 0.149 &&
+            player.careerAveragedStats.TPRR < 0.22
+          ) {
+            // num = num + 1;
+            // console.log(num, player.name, player.careerAveragedStats.TPRR);
+
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[playerName].careerAvgTargetsPerRouteRun =
+              {
+                value: player.careerAveragedStats.TPRR,
+                score: -0.5,
+              };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore - 0.5;
+          }
+
+          //
+          // bound 3
+          //
+          // 30% of hits sample below this number
+          // looking to have only 5 in this group in initial sample
+          //
+          if (
+            player.careerAveragedStats.TPRR > 0.2199 &&
+            player.careerAveragedStats.TPRR < 0.24
+          ) {
+            // num = num + 1;
+            // console.log(num, player.name, player.careerAveragedStats.TPRR);
+
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[playerName].careerAvgTargetsPerRouteRun =
+              {
+                value: player.careerAveragedStats.TPRR,
+                score: 0.5,
+              };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore + 0.5;
+          }
+
+          //
+          // bound 4
+          //
+          // 50% of hits are below this mark/ 50% of hits above it
+          //   looking to have only 3 in this group in initial sample
+          //
+          if (
+            player.careerAveragedStats.TPRR > 0.2399 &&
+            player.careerAveragedStats.TPRR < 0.25
+          ) {
+            // num = num + 1;
+            // console.log(num, player.name, player.careerAveragedStats.TPRR);
+
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[playerName].careerAvgTargetsPerRouteRun =
+              {
+                value: player.careerAveragedStats.TPRR,
+                score: 1,
+              };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore + 1;
+          }
+
+          //
+          // bound 5
+          //
+          // this group is above the 50% mark but below elite mark
+          //
+
+          if (
+            player.careerAveragedStats.TPRR > 304.99 &&
+            player.careerAveragedStats.TPRR < 350
+          ) {
+            // num = num + 1
+            // console.log(num, player.name, player.careerAveragedStats.TPRR)
+
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[playerName].careerAvgTargetsPerRouteRun =
+              {
+                value: player.careerAveragedStats.TPRR,
+                score: 1.5,
+              };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore + 1.5;
+          }
+
+          //
+          // bound 6
+          //
+          // only top 18% of Hits sample above this elite bound
+          // looking for only 5 in initial sample
+
+          if (player.careerAveragedStats.TPRR > 0.2699) {
+            // num = num + 1;
+            // console.log(num, player.name, player.careerAveragedStats.TPRR);
+
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[playerName].careerAvgTargetsPerRouteRun =
+              {
+                value: player.careerAveragedStats.TPRR,
+                score: 2,
+              };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore + 2;
+          }
+
+          ////////////////////////////////////////////
+          ///////////////////////////////////////////
+          //      start next stat below here
+          ///////////////////////////////////////////
+
+          // career avg
+
+          // bound 1
+          //
+          // the highest mark that has zero of the hits sample below this number
+          // zero players from Hit sample in this group in initial sample
+          //
+          if (player.careerAveragedStats.RR < 149) {
+            // num = num + 1
+            // console.log(num, player.name, player.careerAveragedStats.RR)
+
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[playerName].careerAvgRoutesRun = {
+              value: player.careerAveragedStats.RR,
+              score: -1,
+            };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore - 1;
+          }
+
+          // bound 2
+          //
+          // only ten percent of hit sample below this number
+          // looking to have only 3 in this group in initial sample
+          //
+          if (
+            player.careerAveragedStats.RR > 148.99 &&
+            player.careerAveragedStats.RR < 225
+          ) {
+            // num = num + 1
+            // console.log(num, player.name, player.careerAveragedStats.RR)
+
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[playerName].careerAvgRoutesRun = {
+              value: player.careerAveragedStats.RR,
+              score: -0.5,
+            };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore - 0.5;
+          }
+
+          //
+          // bound 3
+          //
+          // 30% of hits sample below this number
+          // looking to have only 5 in this group in initial sample
+          //
+          if (
+            player.careerAveragedStats.RR > 224.99 &&
+            player.careerAveragedStats.RR < 270
+          ) {
+            // num = num + 1
+            // console.log(num, player.name, player.careerAveragedStats.RR)
+
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[playerName].careerAvgRoutesRun = {
+              value: player.careerAveragedStats.RR,
+              score: 0.5,
+            };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore + 0.5;
+          }
+
+          //
+          // bound 4
+          //
+          // 50% of hits are below this mark/ 50% of hits above it
+          //   looking to have only 3 in this group in initial sample
+          //
+          if (
+            player.careerAveragedStats.RR > 269.99 &&
+            player.careerAveragedStats.RR < 305
+          ) {
+            // num = num + 1
+            // console.log(num, player.name, player.careerAveragedStats.RR)
+
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[playerName].careerAvgRoutesRun = {
+              value: player.careerAveragedStats.RR,
+              score: 1,
+            };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore + 1;
+          }
+
+          //
+          // bound 5
+          //
+          // this group is above the 50% mark but below elite mark
+          //
+
+          if (
+            player.careerAveragedStats.RR > 304.99 &&
+            player.careerAveragedStats.RR < 350
+          ) {
+            // num = num + 1
+            // console.log(num, player.name, player.careerAveragedStats.RR)
+
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[playerName].careerAvgRoutesRun = {
+              value: player.careerAveragedStats.RR,
+              score: 1.5,
+            };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore + 1.5;
+          }
+
+          //
+          // bound 6
+          //
+          // only top 18% of Hits sample above this elite bound
+          // looking for only 5 in initial sample
+
+          if (player.careerAveragedStats.RR > 349.99) {
+            // num = num + 1
+            // console.log(num, player.name, player.careerAveragedStats.RR)
+
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[playerName].careerAvgRoutesRun = {
+              value: player.careerAveragedStats.RR,
+              score: 2,
+            };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore + 2;
+          }
+
+          ////////////////////////////////////////////
+          ///////////////////////////////////////////
+          //      start next stat below here
+          ///////////////////////////////////////////
+
+          // year Two plus year three
+
+          // bound 1
+          //
+          // the highest mark that has zero of the hits sample below this number
+          // zero players from Hit sample in this group in initial sample
+          //
+          if (player.yearTwoPlusYearThreeAveragedStats['YAC/Rec'] < 2) {
+            // num = num + 1;
+            // console.log(
+            //   num,
+            //   player.name,
+            //   player.yearTwoPlusYearThreeAveragedStats['YAC/Rec']
+            // );
+
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[playerName].ytytYACPerRec = {
+              value: player.yearTwoPlusYearThreeAveragedStats['YAC/Rec'],
+              score: -1,
+            };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore - 1;
+          }
+
+          // bound 2
+          //
+          // only ten percent of hit sample below this number
+          // looking to have only 3 in this group in initial sample
+          //
+          if (
+            player.yearTwoPlusYearThreeAveragedStats['YAC/Rec'] > 1.99 &&
+            player.yearTwoPlusYearThreeAveragedStats['YAC/Rec'] < 2.75
+          ) {
+            // num = num + 1;
+            // console.log(
+            //   num,
+            //   player.name,
+            //   player.yearTwoPlusYearThreeAveragedStats['YAC/Rec']
+            // );
+
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[playerName].ytytYACPerRec = {
+              value: player.yearTwoPlusYearThreeAveragedStats['YAC/Rec'],
+              score: -0.5,
+            };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore - 0.5;
+          }
+
+          //
+          // bound 3
+          //
+          // 30% of hits sample below this number
+          // looking to have only 5 in this group in initial sample
+          //
+          if (
+            player.yearTwoPlusYearThreeAveragedStats['YAC/Rec'] > 2.749 &&
+            player.yearTwoPlusYearThreeAveragedStats['YAC/Rec'] < 5
+          ) {
+            // num = num + 1;
+            // console.log(
+            //   num,
+            //   player.name,
+            //   player.yearTwoPlusYearThreeAveragedStats['YAC/Rec']
+            // );
+
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[playerName].ytytYACPerRec = {
+              value: player.yearTwoPlusYearThreeAveragedStats['YAC/Rec'],
+              score: 0.5,
+            };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore + 0.5;
+          }
+
+          //
+          // bound 4
+          //
+          // 50% of hits are below this mark/ 50% of hits above it
+          //   looking to have only 3 in this group in initial sample
+          //
+          if (
+            player.yearTwoPlusYearThreeAveragedStats['YAC/Rec'] > 4.99 &&
+            player.yearTwoPlusYearThreeAveragedStats['YAC/Rec'] < 6
+          ) {
+            // num = num + 1;
+            // console.log(
+            //   num,
+            //   player.name,
+            //   player.yearTwoPlusYearThreeAveragedStats['YAC/Rec']
+            // );
+
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[playerName].ytytYACPerRec = {
+              value: player.yearTwoPlusYearThreeAveragedStats['YAC/Rec'],
+              score: 1,
+            };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore + 1;
+          }
+
+          //
+          // bound 5
+          //
+          // this group is above the 50% mark but below elite mark
+          //
+
+          if (
+            player.yearTwoPlusYearThreeAveragedStats['YAC/Rec'] > 5.99 &&
+            player.yearTwoPlusYearThreeAveragedStats['YAC/Rec'] < 8
+          ) {
+            // num = num + 1
+            // console.log(num, player.name, player.yearTwoPlusYearThreeAveragedStats['YAC/Rec'])
+
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[playerName].ytytYACPerRec = {
+              value: player.yearTwoPlusYearThreeAveragedStats['YAC/Rec'],
+              score: 1.5,
+            };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore + 1.5;
+          }
+
+          //
+          // bound 6
+          //
+          // only top 18% of Hits sample above this elite bound
+          // looking for only 5 in initial sample
+
+          if (player.yearTwoPlusYearThreeAveragedStats['YAC/Rec'] > 7.99) {
+            // num = num + 1;
+            // console.log(
+            //   num,
+            //   player.name,
+            //   player.yearTwoPlusYearThreeAveragedStats['YAC/Rec']
+            // );
+
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[playerName].ytytYACPerRec = {
+              value: player.yearTwoPlusYearThreeAveragedStats['YAC/Rec'],
+              score: 2,
+            };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore + 2;
+          }
+
+          ////////////////////////////////////////////////////////////////////////////////
+          ////////////////////////////////////////////////////////////////////////////////
+
+          // career avg
+
+          // bound 1
+          //
+          // the highest mark that has zero of the hits sample below this number
+          // zero players from Hit sample in this group in initial sample
+          //
+          if (player.careerAveragedStats['YAC/Rec'] < 2.5) {
+            // num = num + 1;
+            // console.log(
+            //   num,
+            //   player.name,
+            //   player.careerAveragedStats['YAC/Rec']
+            // );
+
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[playerName].careerAvgYACPerRec = {
+              value: player.careerAveragedStats['YAC/Rec'],
+              score: -1,
+            };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore - 1;
+          }
+
+          // bound 2
+          //
+          // only ten percent of hit sample below this number
+          // looking to have only 3 in this group in initial sample
+          //
+          if (
+            player.careerAveragedStats['YAC/Rec'] > 2.49 &&
+            player.careerAveragedStats['YAC/Rec'] < 3.5
+          ) {
+            // num = num + 1;
+            // console.log(
+            //   num,
+            //   player.name,
+            //   player.careerAveragedStats['YAC/Rec']
+            // );
+
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[playerName].careerAvgYACPerRec = {
+              value: player.careerAveragedStats['YAC/Rec'],
+              score: -0.5,
+            };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore - 0.5;
+          }
+
+          //
+          // bound 3
+          //
+          // 30% of hits sample below this number
+          // looking to have only 5 in this group in initial sample
+          //
+          if (
+            player.careerAveragedStats['YAC/Rec'] > 3.49 &&
+            player.careerAveragedStats['YAC/Rec'] < 5
+          ) {
+            // num = num + 1;
+            // console.log(
+            //   num,
+            //   player.name,
+            //   player.careerAveragedStats['YAC/Rec']
+            // );
+
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[playerName].careerAvgYACPerRec = {
+              value: player.careerAveragedStats['YAC/Rec'],
+              score: 0.5,
+            };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore + 0.5;
+          }
+
+          //
+          // bound 4
+          //
+          // 50% of hits are below this mark/ 50% of hits above it
+          //   looking to have only 3 in this group in initial sample
+          //
+          if (
+            player.careerAveragedStats['YAC/Rec'] > 4.99 &&
+            player.careerAveragedStats['YAC/Rec'] < 5.5
+          ) {
+            // num = num + 1;
+            // console.log(
+            //   num,
+            //   player.name,
+            //   player.careerAveragedStats['YAC/Rec']
+            // );
+
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[playerName].careerAvgYACPerRec = {
+              value: player.careerAveragedStats['YAC/Rec'],
+              score: 1,
+            };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore + 1;
+          }
+
+          //
+          // bound 5
+          //
+          // this group is above the 50% mark but below elite mark
+          //
+
+          if (
+            player.careerAveragedStats['YAC/Rec'] > 5.49 &&
+            player.careerAveragedStats['YAC/Rec'] < 7
+          ) {
+            // num = num + 1
+            // console.log(num, player.name, player.careerAveragedStats['YAC/Rec'])
+
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[playerName].careerAvgYACPerRec = {
+              value: player.careerAveragedStats['YAC/Rec'],
+              score: 1.5,
+            };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore + 1.5;
+          }
+
+          //
+          // bound 6
+          //
+          // only top 18% of Hits sample above this elite bound
+          // looking for only 5 in initial sample
+
+          if (player.careerAveragedStats['YAC/Rec'] > 6.99) {
+            // num = num + 1;
+            // console.log(
+            //   num,
+            //   player.name,
+            //   player.careerAveragedStats['YAC/Rec']
+            // );
+
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[playerName].careerAvgYACPerRec = {
+              value: player.careerAveragedStats['YAC/Rec'],
+              score: 2,
+            };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore + 2;
+          }
+
+          ////////////////////////////////////////////
+          ///////////////////////////////////////////
+          //      start next stat below here
+          ///////////////////////////////////////////
+
+          // year Two plus year three
+
+          // bound 1
+          //
+          // the highest mark that has zero of the hits sample below this number
+          // zero players from Hit sample in this group in initial sample
+          //
+          if (player.yearTwoPlusYearThreeAveragedStats.YPRR < 1.9) {
+            // num = num + 1;
+            // console.log(
+            //   num,
+            //   player.name,
+            //   player.yearTwoPlusYearThreeAveragedStats.YPRR
+            // );
+
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[playerName].ytytYPRR = {
+              value: player.yearTwoPlusYearThreeAveragedStats.YPRR,
+              score: -1,
+            };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore - 1;
+          }
+
+          // bound 2
+          //
+          // only ten percent of hit sample below this number
+          // looking to have only 3 in this group in initial sample
+          //
+          if (
+            player.yearTwoPlusYearThreeAveragedStats.YPRR > 1.89 &&
+            player.yearTwoPlusYearThreeAveragedStats.YPRR < 2.1
+          ) {
+            // num = num + 1;
+            // console.log(
+            //   num,
+            //   player.name,
+            //   player.yearTwoPlusYearThreeAveragedStats.YPRR
+            // );
+
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[playerName].ytytYPRR = {
+              value: player.yearTwoPlusYearThreeAveragedStats.YPRR,
+              score: -0.5,
+            };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore - 0.5;
+          }
+
+          //
+          // bound 3
+          //
+          // 30% of hits sample below this number
+          // looking to have only 5 in this group in initial sample
+          //
+          if (
+            player.yearTwoPlusYearThreeAveragedStats.YPRR > 2.09 &&
+            player.yearTwoPlusYearThreeAveragedStats.YPRR < 2.25
+          ) {
+            // num = num + 1;
+            // console.log(
+            //   num,
+            //   player.name,
+            //   player.yearTwoPlusYearThreeAveragedStats.YPRR
+            // );
+
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[playerName].ytytYPRR = {
+              value: player.yearTwoPlusYearThreeAveragedStats.YPRR,
+              score: 0.5,
+            };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore + 0.5;
+          }
+
+          //
+          // bound 4
+          //
+          // 50% of hits are below this mark/ 50% of hits above it
+          //   looking to have only 3 in this group in initial sample
+          //
+          if (
+            player.yearTwoPlusYearThreeAveragedStats.YPRR > 2.249 &&
+            player.yearTwoPlusYearThreeAveragedStats.YPRR < 2.5
+          ) {
+            // num = num + 1;
+            // console.log(
+            //   num,
+            //   player.name,
+            //   player.yearTwoPlusYearThreeAveragedStats.YPRR
+            // );
+
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[playerName].ytytYPRR = {
+              value: player.yearTwoPlusYearThreeAveragedStats.YPRR,
+              score: 1,
+            };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore + 1;
+          }
+
+          //
+          // bound 5
+          //
+          // this group is above the 50% mark but below elite mark
+          //
+
+          if (
+            player.yearTwoPlusYearThreeAveragedStats.YPRR > 2.49 &&
+            player.yearTwoPlusYearThreeAveragedStats.YPRR < 3.5
+          ) {
+            // num = num + 1
+            // console.log(num, player.name, player.yearTwoPlusYearThreeAveragedStats.YPRR)
+
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[playerName].ytytYPRR = {
+              value: player.yearTwoPlusYearThreeAveragedStats.YPRR,
+              score: 1.5,
+            };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore + 1.5;
+          }
+
+          //
+          // bound 6
+          //
+          // only top 18% of Hits sample above this elite bound
+          // looking for only 5 in initial sample
+
+          if (player.yearTwoPlusYearThreeAveragedStats.YPRR > 3.49) {
+            // num = num + 1;
+            // console.log(
+            //   num,
+            //   player.name,
+            //   player.yearTwoPlusYearThreeAveragedStats.YPRR
+            // );
+
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[playerName].ytytYPRR = {
+              value: player.yearTwoPlusYearThreeAveragedStats.YPRR,
+              score: 2,
+            };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore + 2;
+          }
+
+          ////////////////////////////////////////////////////////////////////////////////
+          ////////////////////////////////////////////////////////////////////////////////
+
+          ////////////////////////////////////////////////////////////////////////////////
+          ////////////////////////////////////////////////////////////////////////////////
+
+          // career avg
+
+          // bound 1
+          //
+          // the highest mark that has zero of the hits sample below this number
+          // zero players from Hit sample in this group in initial sample
+          //
+          if (player.careerAveragedStats.YPRR < 2) {
+            // num = num + 1;
+            // console.log(num, player.name, player.careerAveragedStats.YPRR);
+
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[playerName].careerAvgYPRR = {
+              value: player.careerAveragedStats.YPRR,
+              score: -1,
+            };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore - 1;
+          }
+
+          // bound 2
+          //
+          // only ten percent of hit sample below this number
+          // looking to have only 3 in this group in initial sample
+          //
+          if (
+            player.careerAveragedStats.YPRR > 1.99 &&
+            player.careerAveragedStats.YPRR < 2.2
+          ) {
+            // num = num + 1;
+            // console.log(num, player.name, player.careerAveragedStats.YPRR);
+
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[playerName].careerAvgYPRR = {
+              value: player.careerAveragedStats.YPRR,
+              score: -0.5,
+            };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore - 0.5;
+          }
+
+          //
+          // bound 3
+          //
+          // 30% of hits sample below this number
+          // looking to have only 5 in this group in initial sample
+          //
+          if (
+            player.careerAveragedStats.YPRR > 2.199 &&
+            player.careerAveragedStats.YPRR < 2.3
+          ) {
+            // num = num + 1;
+            // console.log(num, player.name, player.careerAveragedStats.YPRR);
+
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[playerName].careerAvgYPRR = {
+              value: player.careerAveragedStats.YPRR,
+              score: 0.5,
+            };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore + 0.5;
+          }
+
+          //
+          // bound 4
+          //
+          // 50% of hits are below this mark/ 50% of hits above it
+          //   looking to have only 3 in this group in initial sample
+          //
+          if (
+            player.careerAveragedStats.YPRR > 2.29 &&
+            player.careerAveragedStats.YPRR < 2.4
+          ) {
+            // num = num + 1;
+            // console.log(num, player.name, player.careerAveragedStats.YPRR);
+
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[playerName].careerAvgYPRR = {
+              value: player.careerAveragedStats.YPRR,
+              score: 1,
+            };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore + 1;
+          }
+
+          //
+          // bound 5
+          //
+          // this group is above the 50% mark but below elite mark
+          //
+
+          if (
+            player.careerAveragedStats.YPRR > 2.39 &&
+            player.careerAveragedStats.YPRR < 3
+          ) {
+            // num = num + 1
+            // console.log(num, player.name, player.careerAveragedStats.YPRR)
+
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[playerName].careerAvgYPRR = {
+              value: player.careerAveragedStats.YPRR,
+              score: 1.5,
+            };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore + 1.5;
+          }
+
+          //
+          // bound 6
+          //
+          // only top 18% of Hits sample above this elite bound
+          // looking for only 5 in initial sample
+
+          if (player.careerAveragedStats.YPRR > 2.99) {
+            // num = num + 1;
+            // console.log(num, player.name, player.careerAveragedStats.YPRR);
+
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[playerName].careerAvgYPRR = {
+              value: player.careerAveragedStats.YPRR,
+              score: 2,
+            };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore + 2;
+          }
+
+          ////////////////////////////////////////////
+          ///////////////////////////////////////////
+          //      start next stat below here
+          ///////////////////////////////////////////
 
           ////////////////////////////////////////////////////////////////////////////////
 
@@ -2160,28 +3128,172 @@ test.forEach(topPlayer => {
         }
       });
       /// setting upper and lower bounds for each stat to overll calcAllWrProspectsObjects
-      calcAllWrProspectsObjects['MTF/REC %-ytyt'] = { zb: 7.75, tb: '7.75-10', lmb: '10-15.6', mb: `15.6-17.6`, umb: '17.6-26', eb: 26};
-       calcAllWrProspectsObjects['MTF/REC %-careerAvg'] = { zb: 4.4, tb: '4.4-10.5', lmb: '10.5-15.1', mb: `15.1-17.1`, umb: '17.1-26', eb: 26};
-      calcAllWrProspectsObjects['1D/Snap-ytyt'] = { zb: 6.5, tb: '6.5-7.75', lmb: '7.75-9', mb: `9-9.9`, umb: '9.9-13.5', eb: 13.5};
-      calcAllWrProspectsObjects['1D/Snap-careerAvg'] = { zb: 5.5, tb: '5.5-7.75', lmb: '7.75-9', mb: `9-9.9`, umb: '9.9-12.5', eb: 12.5};
-      calcAllWrProspectsObjects['1D/RR-ytyt'] = { zb: 7, tb: '7-8', lmb: '8-9.75', mb: `9.75-10.3`, umb: '10.3-13.5', eb: 13.5};
-      calcAllWrProspectsObjects['1D/RR-careerAvg'] = { zb: 5.75, tb: '5.75-8.1', lmb: '8.1-9.75', mb: `9.75-10.35`, umb: '10.35-13', eb: 13};
-      calcAllWrProspectsObjects['REC Grade-ytyt'] = { zb: 65, tb: '65-71', lmb: '71-74', mb: `74-79`, umb: '79-84.5', eb: 84.5};
-      calcAllWrProspectsObjects['REC Grade-careerAvg'] = { zb: 62.5, tb: '62.5-70', lmb: '70-72', mb: `72-74`, umb: '74-80', eb: 80};
-      calcAllWrProspectsObjects['Targets-ytyt'] = { zb: 35, tb: '35-57.5', lmb: '57.5-75', mb: `75-80`, umb: '80-109', eb: 109};
-     calcAllWrProspectsObjects['Targets-careerAvg'] = { zb: 38, tb: '38-50', lmb: '50-65', mb: `65-72`, umb: '72-100', eb: 100};
-    calcAllWrProspectsObjects['TGTs/G-ytyt'] = { zb: 2.5, tb: '2.5-4', lmb: '4-5.5', mb: `5.5-6.5`, umb: '6.5-8', eb: 8};
-    calcAllWrProspectsObjects['TGTs/G-careerAvg'] = { zb: 3, tb: '3-3.5', lmb: '3.5-4.5', mb: `4.5-5.25`, umb: '5.25-6.75', eb: 6.75};
-     calcAllWrProspectsObjects['RR-ytyt'] = { zb: 215, tb: '215-235', lmb: '235-305', mb: `305-325`, umb: '325-410', eb: 410};
-    calcAllWrProspectsObjects['RR-careerAvg'] = { zb: 149, tb: '150-225', lmb: '225-270', mb: `270-305`, umb: '305-350', eb: 350};
-  calcAllWrProspectsObjects['TPRR-ytyt'] = { zb: .15, tb: '.15-.2', lmb: '.2-.22', mb: `.22-.24`, umb: '.24-.28', eb: .28};
+      //   calcAllWrProspectsObjects['MTF/REC %-ytyt'] = {
+      //     zb: 7.75,
+      //     tb: '7.75-10',
+      //     lmb: '10-15.6',
+      //     mb: `15.6-17.6`,
+      //     umb: '17.6-26',
+      //     eb: 26,
+      //   };
+      //   calcAllWrProspectsObjects['MTF/REC %-careerAvg'] = {
+      //     zb: 4.4,
+      //     tb: '4.4-10.5',
+      //     lmb: '10.5-15.1',
+      //     mb: `15.1-17.1`,
+      //     umb: '17.1-26',
+      //     eb: 26,
+      //   };
+      //   calcAllWrProspectsObjects['1D/Snap-ytyt'] = {
+      //     zb: 6.5,
+      //     tb: '6.5-7.75',
+      //     lmb: '7.75-9',
+      //     mb: `9-9.9`,
+      //     umb: '9.9-13.5',
+      //     eb: 13.5,
+      //   };
+      //   calcAllWrProspectsObjects['1D/Snap-careerAvg'] = {
+      //     zb: 5.5,
+      //     tb: '5.5-7.75',
+      //     lmb: '7.75-9',
+      //     mb: `9-9.9`,
+      //     umb: '9.9-12.5',
+      //     eb: 12.5,
+      //   };
+      //   calcAllWrProspectsObjects['1D/RR-ytyt'] = {
+      //     zb: 7,
+      //     tb: '7-8',
+      //     lmb: '8-9.75',
+      //     mb: `9.75-10.3`,
+      //     umb: '10.3-13.5',
+      //     eb: 13.5,
+      //   };
+      //   calcAllWrProspectsObjects['1D/RR-careerAvg'] = {
+      //     zb: 5.75,
+      //     tb: '5.75-8.1',
+      //     lmb: '8.1-9.75',
+      //     mb: `9.75-10.35`,
+      //     umb: '10.35-13',
+      //     eb: 13,
+      //   };
+      //   calcAllWrProspectsObjects['REC Grade-ytyt'] = {
+      //     zb: 65,
+      //     tb: '65-71',
+      //     lmb: '71-74',
+      //     mb: `74-79`,
+      //     umb: '79-84.5',
+      //     eb: 84.5,
+      //   };
+      //   calcAllWrProspectsObjects['REC Grade-careerAvg'] = {
+      //     zb: 62.5,
+      //     tb: '62.5-70',
+      //     lmb: '70-72',
+      //     mb: `72-74`,
+      //     umb: '74-80',
+      //     eb: 80,
+      //   };
+      //   calcAllWrProspectsObjects['Targets-ytyt'] = {
+      //     zb: 35,
+      //     tb: '35-57.5',
+      //     lmb: '57.5-75',
+      //     mb: `75-80`,
+      //     umb: '80-109',
+      //     eb: 109,
+      //   };
+      //   calcAllWrProspectsObjects['Targets-careerAvg'] = {
+      //     zb: 38,
+      //     tb: '38-50',
+      //     lmb: '50-65',
+      //     mb: `65-72`,
+      //     umb: '72-100',
+      //     eb: 100,
+      //   };
+      //   calcAllWrProspectsObjects['TGTs/G-ytyt'] = {
+      //     zb: 2.5,
+      //     tb: '2.5-4',
+      //     lmb: '4-5.5',
+      //     mb: `5.5-6.5`,
+      //     umb: '6.5-8',
+      //     eb: 8,
+      //   };
+      //   calcAllWrProspectsObjects['TGTs/G-careerAvg'] = {
+      //     zb: 3,
+      //     tb: '3-3.5',
+      //     lmb: '3.5-4.5',
+      //     mb: `4.5-5.25`,
+      //     umb: '5.25-6.75',
+      //     eb: 6.75,
+      //   };
+      //   calcAllWrProspectsObjects['RR-ytyt'] = {
+      //     zb: 215,
+      //     tb: '215-235',
+      //     lmb: '235-305',
+      //     mb: `305-325`,
+      //     umb: '325-410',
+      //     eb: 410,
+      //   };
+      //   calcAllWrProspectsObjects['RR-careerAvg'] = {
+      //     zb: 149,
+      //     tb: '150-225',
+      //     lmb: '225-270',
+      //     mb: `270-305`,
+      //     umb: '305-350',
+      //     eb: 350,
+      //   };
+      //   calcAllWrProspectsObjects['TPRR-ytyt'] = {
+      //     zb: 0.15,
+      //     tb: '.15-.2',
+      //     lmb: '.2-.22',
+      //     mb: `.22-.24`,
+      //     umb: '.24-.28',
+      //     eb: 0.28,
+      //   };
+      //   calcAllWrProspectsObjects['TPRR-careerAvg'] = {
+      //     zb: 0.15,
+      //     tb: '.15-.22',
+      //     lmb: '.22-.24',
+      //     mb: `.24-.25`,
+      //     umb: '.25-.27',
+      //     eb: 0.27,
+      //   };
+      //   calcAllWrProspectsObjects['YAC/Rec-ytyt'] = {
+      //     zb: 2,
+      //     tb: '2-2.75',
+      //     lmb: '2.75-5',
+      //     mb: `5-6`,
+      //     umb: '6-8',
+      //     eb: 8,
+      //   };
+      //   calcAllWrProspectsObjects['YAC/Rec-careerAvg'] = {
+      //     zb: 2.5,
+      //     tb: '2.5-3.5',
+      //     lmb: '3.5-5',
+      //     mb: `5-5.5`,
+      //     umb: '5.5-7',
+      //     eb: 7,
+      //   };
+      //      calcAllWrProspectsObjects['YPRR-ytyt'] = {
+      //           zb: 1.9,
+      //           tb: '1.9-2.1',
+      //           lmb: '2.1-2.25',
+      //           mb: `2.25-2.5`,
+      //           umb: '2.5-3.5',
+      //           eb: 3.5,
+      //         };
+
+      //   calcAllWrProspectsObjects['YPRR-careerAvg'] = {
+      //     zb: 2,
+      //     tb: '2-2.2',
+      //     lmb: '2.2-2.3',
+      //     mb: `2.3-2.4`,
+      //     umb: '2.4-3',
+      //     eb: 3,
+      //   };
     }
   });
 });
 
-// .TPRR
-
-
+// ['Man YPRR']
 
 // console.log(calcAllWrProspectsObjects);
 
