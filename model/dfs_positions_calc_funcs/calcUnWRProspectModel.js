@@ -126,8 +126,12 @@ test.forEach(topPlayer => {
             player.yearTwoPlusYearThreeAveragedStats['MTF/REC %'] > 15.59 &&
             player.yearTwoPlusYearThreeAveragedStats['MTF/REC %'] < 17.6
           ) {
-            // num = num + 1
-            // console.log(num, player.name, player.yearTwoPlusYearThreeAveragedStats['MTF/REC %'])
+            // num = num + 1;
+            // console.log(
+            //   num,
+            //   player.name,
+            //   player.yearTwoPlusYearThreeAveragedStats['MTF/REC %']
+            // );
 
             //
             // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
