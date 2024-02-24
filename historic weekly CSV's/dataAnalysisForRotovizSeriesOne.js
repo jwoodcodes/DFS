@@ -214,7 +214,7 @@ const testfunc = async function () {
 
         let playersPreseasonDynastyADP = 0;
 
-        FFPC2021OffseasonDynastyADP.forEach(preseasonPlayer => {
+        FFPC2022OffseasonDynastyADP.forEach(preseasonPlayer => {
           // console.log(preseasonPlayer);
           let sanitizedPreseasonPlayerName = preseasonPlayer['"Player"'].slice(
             1,
@@ -243,7 +243,7 @@ const testfunc = async function () {
 
         let playersPostseasonDynastyADP = 0;
 
-        FFPC2022OffseasonDynastyADP.forEach(postseasonPlayer => {
+        FFPC2023OffseasonDynastyADP.forEach(postseasonPlayer => {
           let sanitizedPostseasonPlayerName = postseasonPlayer[
             '"Player"'
           ].slice(1, -1);
@@ -287,7 +287,7 @@ const testfunc = async function () {
         let aug2022Age = player.player.maybeAge - 1.8;
         let aug2023Age = player.player.maybeAge - 0.8;
 
-        te2021PPRFinalStandings.forEach(finalPlayer => {
+        rb2022PPRFinalStandings.forEach(finalPlayer => {
           // console.log(finalPlayer['"Player"'].slice(1, -1));
 
           let sanitizedFinalPlayerName = finalPlayer['"Player"'].slice(1, -1);
@@ -304,7 +304,7 @@ const testfunc = async function () {
 
           if (sanitizedFinalPlayerName === sanitizedAugPlayerName) {
             // console.log(sanitizedFinalPlayerName);
-            te2021PPRRedraftADP.forEach(ffpcPlayer => {
+            rb2022PPRRedraftADP.forEach(ffpcPlayer => {
               // console.log(ffpcPlayer['"Player"']);
 
               let sanitizedffpcPlayerName = ffpcPlayer['"Player"'].slice(1, -1);
@@ -327,16 +327,16 @@ const testfunc = async function () {
               );
 
               let posionalFinishDiff =
-                +ffpcPlayer['"TE"'].slice(1, -1) -
+                +ffpcPlayer['"RB"'].slice(1, -1) -
                 finalNumericalPositionalFinish;
 
               let posFinishDiffIfYouNeedALoseToBeAPositiveNumber =
                 finalNumericalPositionalFinish -
-                +ffpcPlayer['"TE"'].slice(1, -1);
+                +ffpcPlayer['"RB"'].slice(1, -1);
 
               let valueWillBePositiveIfWorseposionalFinishDiff =
                 finalNumericalPositionalFinish -
-                +ffpcPlayer['"TE"'].slice(1, -1);
+                +ffpcPlayer['"RB"'].slice(1, -1);
 
               let adpDiff = +(
                 playersPreseasonDynastyADP - playersPostseasonDynastyADP
@@ -346,20 +346,21 @@ const testfunc = async function () {
                 // console.log(sanitizedFinalPlayerName);
                 // console.log(ffpcPlayer);
                 if (
-                  aug2021Age < 23
+                   aug2022Age < 25 && aug2022Age > 23 &&
                   // uncomment below for those that overperformed
-                  //   posionalFinishDiff > 10) ||
+                  // posionalFinishDiff > 10 ||
                   // (playersPreseasonDynastyADP < 13 && posionalFinishDiff > 4)
-                  // uncomment below for those that underperformed
-                  //   posFinishDiffIfYouNeedALoseToBeAPositiveNumber > 10) ||
-                  // (playersPreseasonDynastyADP < 13 &&
-                  //   posFinishDiffIfYouNeedALoseToBeAPositiveNumber > 4)
+                  // // uncomment below for those that underperformed
+                    posFinishDiffIfYouNeedALoseToBeAPositiveNumber > 10 ||
+                  (playersPreseasonDynastyADP < 13 &&
+                    posFinishDiffIfYouNeedALoseToBeAPositiveNumber > 4)
                 ) {
                   num = num + 1;
                   console.log(
+                    
                     num,
                     sanitizedFinalPlayerName,
-                    +ffpcPlayer['"TE"'].slice(1, -1),
+                    +ffpcPlayer['"RB"'].slice(1, -1),
                     // finalNumericalPositionalFinish,
 
                     posionalFinishDiff,
@@ -367,7 +368,8 @@ const testfunc = async function () {
                     playersPreseasonDynastyADP,
                     playersPostseasonDynastyADP,
                     '  ',
-                    adpDiff
+                    adpDiff,
+                    
                   );
                 }
               }
@@ -569,10 +571,101 @@ const testfunc = async function () {
 // overperformed: 1/4 - 1/1 gained in ADP, 0/1 lost in ADP, 1/1 gained >= a full round of ADP, 0/1 lost >= a full round of ADP
 //underperformed: 1/4- 0/1 gained in ADP, 1/1 lost in ADP, 0/1 gained >= a full round of ADP, 1/1 lost >= a full round of ADP
 
+///////
+///////
+// entered season between 23 and 25 - 10 total
+
+// 3/10 gained in ADP
+// 3/10 rose at least a full round of ADP
+// 7/10 dropped in ADP
+// 4/10 dropped by at least a full round of ADP
+
+// overperformed: 6/10 - 3/6 gained in ADP, 3/6 lost in ADP, 3/6 gained >= a full round of ADP, 1/6 lost >= a full round of ADP
+//underperformed: 3/10 - 0/3 gained in ADP, 3/3 lost in ADP, 0/3 gained >= a full round of ADP, 2/3 lost >= a full round of ADP
+
+///////
+///////
+// entered season over 25 - 18 total
+
+// 3/18 gained in ADP
+// 2/18 rose at least a full round of ADP
+// 15/18 dropped in ADP
+// 13/18 dropped by at least a full round of ADP
+
+// overperformed: 4/18 - 1/4 gained in ADP, 3/4 lost in ADP, 1/4 gained >= a full round of ADP, 1/4 lost >= a full round of ADP
+//underperformed: 5/18- 0/5 gained in ADP, 5/5 lost in ADP, 0/5 gained >= a full round of ADP, 5/5 lost >= a full round of ADP
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // 2022-2023:
+
+//
+//////////////////////////////////////////////////////// QB  //////////////////////////////////////////////////////////:
+
+// entered season under 23 - 5 total
+
+// 3/5 gained in ADP
+// 2/5 rose at least a full round of ADP
+// 2/5 dropped in ADP
+// 3/5 dropped by at least a full round of ADP
+
+// overperformed: 1/5 - 1/1 gained in ADP, 0/1 lost in ADP, 1/1 gained >= a full round of ADP, 0/1 lost >= a full round of ADP
+//underperformed: 3/5 - 1/3 gained in ADP, 2/3 lost in ADP, 1/3 gained >= a full round of ADP, 2/3 lost >= a full round of ADP
+  
+
+///////
+///////
+// entered season between 23 and 25 - 9 total
+
+// 5/9 gained in ADP
+// 5/9 rose at least a full round of ADP
+// 4/9 dropped in ADP
+// 3/9 dropped by at least a full round of ADP
+
+// overperformed: 3/9 - 2/3 gained in ADP, 1/3 lost in ADP, 2/3 gained >= a full round of ADP, 1/3 lost >= a full round of ADP
+//underperformed: 2/9 - 0/2 gained in ADP, 2/2 lost in ADP, 0/2 gained >= a full round of ADP, 1/2 lost >= a full round of ADP
+
+
+//
+///////
+///////
+// entered season over 25 - 19 total
+
+// 5/19 gained in ADP
+// 2/19 rose at least a full round of ADP
+// 14/19 dropped in ADP
+// 11/19 dropped by at least a full round of ADP
+
+// overperformed: 5/19 - 3/5 gained in ADP, 2/5 lost in ADP, 2/5 gained >= a full round of ADP, 3/5 lost >= a full round of ADP
+//underperformed: 6/19- 0/6 gained in ADP, 6/6 lost in ADP, 0/6 gained >= a full round of ADP, 3/6 lost >= a full round of ADP
+
+//
+//////////////////////////////////////////////////////////// RB ///////////////////////////////////////////////////////////////
+//
+// entered season under 23 - 12 total
+
+// 5/12 gained in ADP
+// 3/12 rose at least a full round of ADP
+// 7/12 dropped in ADP
+// 6/12 dropped by at least a full round of ADP
+
+// overperformed: 1/12 - 0/1 gained in ADP, 1/1 lost in ADP, 0/1 gained >= a full round of ADP, 0/1 lost >= a full round of ADP
+//underperformed: 8/12 - 2/8 gained in ADP, 6/8 lost in ADP, 1/8 gained >= a full round of ADP, 6/8 lost >= a full round of ADP
+
+///////
+///////
+// entered season between 23 and 25 - 25 total
+
+// 10/25 gained in ADP
+// 9/25 rose at least a full round of ADP
+// 15/25 dropped in ADP
+// 13/25 dropped by at least a full round of ADP
+
+// overperformed: 8/25 - 8/8 gained in ADP, 0/8 lost in ADP, 6/8 gained >= a full round of ADP, 0/8 lost >= a full round of ADP
+//underperformed: 9/25 - 0/9 gained in ADP, 9/9 lost in ADP, 0/9 gained >= a full round of ADP, 9/9 lost >= a full round of ADP
+
+//  ^^done
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
