@@ -604,6 +604,45 @@ const testfunc = async function () {
 // overperformed: 4/18 - 1/4 gained in ADP, 3/4 lost in ADP, 1/4 gained >= a full round of ADP, 1/4 lost >= a full round of ADP
 //underperformed: 5/18- 0/5 gained in ADP, 5/5 lost in ADP, 0/5 gained >= a full round of ADP, 5/5 lost >= a full round of ADP
 
+//
+//////////////////////////////////////////////////////// 2021-2022 totals  //////////////////////////////////////////////////////////:
+
+// entered season under 23 - 45 total
+
+// 28/45 (62%) gained in ADP
+// 17/45 (38%) rose at least a full round of ADP
+// 18/45 (40%) dropped in ADP
+// 11/45 (25%) dropped by at least a full round of ADP
+
+// overperformed: 23/45 (51%) - 18/23 (78%) gained in ADP, 5/23 (22%) lost in ADP, 14/23 (61%) gained >= a full round of ADP, 1/23 (4%) lost >= a full round of ADP
+//underperformed: 9/45 (22%) - 2/9 (22%)  gained in ADP, 7/9 (78%) lost in ADP, 0/9 gained (0%)>= a full round of ADP, 7/9 (78%) lost >= a full round of ADP
+
+///////
+///////
+// entered season between 23 and 25 - 51 total
+
+// 23/51 (46%) gained in ADP
+// 11/51 (22%) rose at least a full round of ADP
+// 26/51 (50%) dropped in ADP
+// 18/51 (36%) dropped by at least a full round of ADP
+
+// overperformed: 21/51 (46%) - 13/21 (62%) gained in ADP, 8/21 (38%) lost in ADP, 11/21 (52%) gained >= a full round of ADP, 2/21 (10%) lost >= a full round of ADP
+//underperformed: 17/51 (36%) - 1/17 (6%) gained in ADP, 16/17 (94%) lost in ADP, 0/17 (0%) gained >= a full round of ADP, 11/17 (65%) lost >= a full round of ADP
+
+///////
+///////
+// entered season over 25 - 82 total
+
+// 26/82 (32%) gained in ADP
+// 18/82 (22%) rose at least a full round of ADP
+// 56/82 (68%) dropped in ADP
+// 41/82 (50%) dropped by at least a full round of ADP
+
+// overperformed: 31/82 (38%) - 14/31 (45%) gained in ADP, 17/31 (55%) lost in ADP, 12/31 (39%) gained >= a full round of ADP, 2/31 (6%) lost >= a full round of ADP
+//underperformed: 23/82 (28%) - 1/23 (4%) gained in ADP, 22/23 (96%) lost in ADP, 1/23 (4%) gained >= a full round of ADP, 19/23 (83%) lost >= a full round of ADP
+
+// need to do over 25 season totals for 2022-2023 like above still next
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -760,6 +799,45 @@ const testfunc = async function () {
 // overperformed: 3/18 - 2/3 gained in ADP, 1/3 lost in ADP, 2/3 gained >= a full round of ADP, 0/3 lost >= a full round of ADP
 //underperformed: 3/18- 0/3 gained in ADP, 3/3 lost in ADP, 0/3 gained >= a full round of ADP, 3/3 lost >= a full round of ADP
 
+//
+//
+//////////////////////////////////////////////////////// 2022-2023 totals  //////////////////////////////////////////////////////////:
+
+//
+// entered season under 23 - 40 total
+
+// 18/40 (45%) gained in ADP
+// 14/40 (35%) rose at least a full round of ADP
+// 22/40 (55%) dropped in ADP
+// 19/40 (45%) dropped by at least a full round of ADP
+
+// overperformed: 12/40 (30%) - 8/12 (75%) gained in ADP, 4/12 (25%) lost in ADP, 7/12 (58%) gained >= a full round of ADP, 3/12 (25%) lost >= a full round of ADP
+//underperformed: 23/40 (58%)- 3/23 (13%) gained in ADP, 20/23 (87%) lost in ADP, 2/23 (9%) gained >= a full round of ADP, 16/23 (70%)lost >= a full round of ADP
+
+//
+// entered season between 23 and 25 - 52 total
+
+// 24/52 (46%) gained in ADP
+// 16/52 (31%) rose at least a full round of ADP
+// 31/52 (60%) dropped in ADP
+// 22/52 (42%) dropped by at least a full round of ADP
+
+// overperformed: 17/52 (33%) - 14/17 (82%) gained in ADP, 3/17 (18%) lost in ADP, 10/17 (59%) gained >= a full round of ADP, 2/17 (12%) lost >= a full round of ADP
+//underperformed: 17/52 (33%)- 0/17 (0%) gained in ADP, 17/17 (100%) lost in ADP, 0/17 (0%) gained >= a full round of ADP, 14/17 (82%)lost >= a full round of ADP
+
+//
+// entered season over 25 - 96 total
+
+// 23/96 (24%) gained in ADP
+// 13/96 (14%) rose at least a full round of ADP
+// 74/96 (77%) dropped in ADP
+// 59/96 (61%) dropped by at least a full round of ADP
+
+// overperformed: 22/96 (23%) - 15/22 (68%) gained in ADP, 7/22 (32%) lost in ADP, 12/22 (55%) gained >= a full round of ADP, 5/22 (23%) lost >= a full round of ADP
+//underperformed: 29/96 (30%)- 1/29 (3%) gained in ADP, 28/29 (97%) lost in ADP, 0/29 (0%) gained >= a full round of ADP, 24/29 (83%)lost >= a full round of ADP
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -915,11 +993,106 @@ const testfunc = async function () {
 // overperformed: 4/21 - 1/4 gained in ADP, 3/4 lost in ADP, 1/4 gained >= a full round of ADP, 2/4 lost >= a full round of ADP
 //underperformed: 6/21 - 0/6 gained in ADP, 6/6 lost in ADP, 0/6 gained >= a full round of ADP, 6/6 lost >= a full round of ADP
 
+//
+//
+//////////////////////////////////////////////////////// 2023-2024 totals  //////////////////////////////////////////////////////////:
+
+// start here next
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+////////////////////////////////////////////////////// all totals by year ////////////////////////////////////////////////////////
+
+//
+//////////////////////////////////////////////////////// 2021-2022 totals  //////////////////////////////////////////////////////////:
+
+// entered season under 23 - 45 total
+
+// 28/45 (62%) gained in ADP
+// 17/45 (38%) rose at least a full round of ADP
+// 18/45 (40%) dropped in ADP
+// 11/45 (25%) dropped by at least a full round of ADP
+
+// overperformed: 23/45 (51%) - 18/23 (78%) gained in ADP, 5/23 (22%) lost in ADP, 14/23 (61%) gained >= a full round of ADP, 1/23 (4%) lost >= a full round of ADP
+//underperformed: 9/45 (22%) - 2/9 (22%)  gained in ADP, 7/9 (78%) lost in ADP, 0/9 gained (0%)>= a full round of ADP, 7/9 (78%) lost >= a full round of ADP
+
+///////
+///////
+// entered season between 23 and 25 - 51 total
+
+// 23/51 (46%) gained in ADP
+// 11/51 (22%) rose at least a full round of ADP
+// 26/51 (50%) dropped in ADP
+// 18/51 (36%) dropped by at least a full round of ADP
+
+// overperformed: 21/51 (46%) - 13/21 (62%) gained in ADP, 8/21 (38%) lost in ADP, 11/21 (52%) gained >= a full round of ADP, 2/21 (10%) lost >= a full round of ADP
+//underperformed: 17/51 (36%) - 1/17 (6%) gained in ADP, 16/17 (94%) lost in ADP, 0/17 (0%) gained >= a full round of ADP, 11/17 (65%) lost >= a full round of ADP
+
+///////
+///////
+// entered season over 25 - 82 total
+
+// 26/82 (32%) gained in ADP
+// 18/82 (22%) rose at least a full round of ADP
+// 56/82 (68%) dropped in ADP
+// 41/82 (50%) dropped by at least a full round of ADP
+
+// overperformed: 31/82 (38%) - 14/31 (45%) gained in ADP, 17/31 (55%) lost in ADP, 12/31 (39%) gained >= a full round of ADP, 2/31 (6%) lost >= a full round of ADP
+//underperformed: 23/82 (28%) - 1/23 (4%) gained in ADP, 22/23 (96%) lost in ADP, 1/23 (4%) gained >= a full round of ADP, 19/23 (83%) lost >= a full round of ADP
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////2022-2023 totals /////////////////////////////////////////////////////////
+
+//
+// entered season under 23 - 40 total
+
+// 18/40 (45%) gained in ADP
+// 14/40 (35%) rose at least a full round of ADP
+// 22/40 (55%) dropped in ADP
+// 19/40 (45%) dropped by at least a full round of ADP
+
+// overperformed: 12/40 (30%) - 8/12 (75%) gained in ADP, 4/12 (25%) lost in ADP, 7/12 (58%) gained >= a full round of ADP, 3/12 (25%) lost >= a full round of ADP
+//underperformed: 23/40 (58%)- 3/23 (13%) gained in ADP, 20/23 (87%) lost in ADP, 2/23 (9%) gained >= a full round of ADP, 16/23 (70%)lost >= a full round of ADP
+
+//
+// entered season between 23 and 25 - 52 total
+
+// 24/52 (46%) gained in ADP
+// 16/52 (31%) rose at least a full round of ADP
+// 31/52 (60%) dropped in ADP
+// 22/52 (42%) dropped by at least a full round of ADP
+
+// overperformed: 17/52 (33%) - 14/17 (82%) gained in ADP, 3/17 (18%) lost in ADP, 10/17 (59%) gained >= a full round of ADP, 2/17 (12%) lost >= a full round of ADP
+//underperformed: 17/52 (33%)- 0/17 (0%) gained in ADP, 17/17 (100%) lost in ADP, 0/17 (0%) gained >= a full round of ADP, 14/17 (82%)lost >= a full round of ADP
+
+//
+// entered season over 25 - 96 total
+
+// 23/96 (24%) gained in ADP
+// 13/96 (14%) rose at least a full round of ADP
+// 74/96 (77%) dropped in ADP
+// 59/96 (61%) dropped by at least a full round of ADP
+
+// overperformed: 22/96 (23%) - 15/22 (68%) gained in ADP, 7/22 (32%) lost in ADP, 12/22 (55%) gained >= a full round of ADP, 5/22 (23%) lost >= a full round of ADP
+//underperformed: 29/96 (30%)- 1/29 (3%) gained in ADP, 28/29 (97%) lost in ADP, 0/29 (0%) gained >= a full round of ADP, 24/29 (83%)lost >= a full round of ADP
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////2023-2024 totals /////////////////////////////////////////////////////////
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// all totals for all years together
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// all totals for all years by position and age bucket
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
