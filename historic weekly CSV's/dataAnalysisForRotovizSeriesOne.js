@@ -1204,9 +1204,149 @@ const testfunc = async function () {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// all totals for all years by position and age bucket
+///////////////////////////////// all totals for all years by position and age bucket //////////////////////////////////
 
-// to do next here
+//
+//////////////////////////////////////////////////////// QB  //////////////////////////////////////////////////////////:
+
+// entered season under 23 - 16 total
+
+// 8/16 (50%) gained in ADP
+// 5/16 (31%)rose at least a full round of ADP
+// 8/16 (50%) dropped in ADP
+// 7/16 (44%) dropped by at least a full round of ADP
+
+// overperformed: 4/16 (25%) - 3/4 (75%) gained in ADP, 1/4 (25%) lost in ADP, 2/4 (50%) gained >= a full round of ADP, 2/4 (50%) lost >= a full round of ADP
+//underperformed: 7/16 (44%) - 3/7 (43%) gained in ADP, 4/7 (57%) lost in ADP, 2/16 (29%) gained >= a full round of ADP, 3/7 (43%) lost >= a full round of ADP
+
+///////
+///////
+
+// entered season between 23 and 25 - 28 total
+
+// 15/28 (54%) gained in ADP
+// 9/28 (32%) rose at least a full round of ADP
+// 13/28 (46%) dropped in ADP
+// 10/28 (36%) dropped by at least a full round of ADP
+
+// overperformed: 9/28 (32%) - 7/9 (78%) gained in ADP, 2/9 (22%) lost in ADP, 6/9 (67%) gained >= a full round of ADP, 2/9 (22%) lost >= a full round of ADP
+//underperformed: 7/28 (25%) - 1/7 (14%) gained in ADP, 6/7 (86%) lost in ADP, 0/7 (0%) gained >= a full round of ADP, 3/7 (43%) lost >= a full round of ADP
+
+///////
+///////
+
+// entered season over 25 - 51 total
+
+// 16/51 (31%) gained in ADP
+// 8/51 (16%) rose at least a full round of ADP
+// 35/51 (69%) dropped in ADP
+// 25/51 (49%) dropped by at least a full round of ADP
+
+// overperformed: 12/51 (24%) - 8/12 (67%) gained in ADP, 4/12 (33%) lost in ADP, 6/12 (50%) gained >= a full round of ADP, 3/12 (25%) lost >= a full round of ADP
+//underperformed: 19/51 (37%) - 1/19 (5%) gained in ADP, 18/19 (95%) lost in ADP, 1/19 (5%) gained >= a full round of ADP, 12/19 (63%) lost >= a full round of ADP
+
+//
+//////////////////////////////////////////////////////// RB  //////////////////////////////////////////////////////////:
+
+///////
+///////
+
+// entered season under 23 - 42 total
+
+// 19/42 (45%) gained in ADP
+// 11/42 (26%)rose at least a full round of ADP
+// 23/42 (55%) dropped in ADP
+// 19/42 (45%) dropped by at least a full round of ADP
+
+// overperformed: 11/42 (26%) - 8/11 (73%) gained in ADP, 3/11 (27%) lost in ADP, 8/11 (73%) gained >= a full round of ADP, 1/11 (9%) lost >= a full round of ADP
+//underperformed: 17/42 (40%) - 3/17 (18%) gained in ADP, 14/17 (82%) lost in ADP, 1/17 (6%) gained >= a full round of ADP, 13/17 (76%) lost >= a full round of ADP
+
+///////
+///////
+
+// entered season between 23 and 25 - 68 total
+
+// 24/68 (35%) gained in ADP
+// 21/68 (31%) rose at least a full round of ADP
+// 44/68 (65%) dropped in ADP
+// 38/68 (56%) dropped by at least a full round of ADP
+
+// overperformed: 25/68 (37%) - 20/25 (80%) gained in ADP, 5/25 (20%) lost in ADP, 18/25 (72%) gained >= a full round of ADP, 2/25 (8%) lost >= a full round of ADP
+//underperformed: 25/68 (37%) - 0/25 (0%) gained in ADP, 25/25 (100%) lost in ADP, 0/25 (0%) gained >= a full round of ADP, 22/25 (88%) lost >= a full round of ADP
+
+///////
+///////
+
+// entered season over 25 - 74 total
+
+// 18/74 (24%) gained in ADP
+// 12/74 (16%) rose at least a full round of ADP
+// 56/74 (76%) dropped in ADP
+// 47/74 (64%) dropped by at least a full round of ADP
+
+// overperformed: 23/74 (31%) - 16/23 (70%) gained in ADP, 7/23 (30%) lost in ADP, 13/23 (57%) gained >= a full round of ADP, 4/23 (17%) lost >= a full round of ADP
+// underperformed: 27/51 (53%) - 0/27 (0%) gained in ADP, 27/27 (100%) lost in ADP, 0/27 (0%) gained >= a full round of ADP, 25/27 (93%) lost >= a full round of ADP
+
+//////////////////////////////////////////////////////// WR  //////////////////////////////////////////////////////////:
+
+///////
+///////
+
+// entered season under 23 - 60 total
+
+// 30/60 (50%) gained in ADP
+// 24/60 (40%) rose at least a full round of ADP
+// 30/60 (50%) dropped in ADP
+// 20/60 (33%) dropped by at least a full round of ADP
+
+// overperformed: 32/60 (53%) - 25/32 (78%) gained in ADP, 7/32 (22%) lost in ADP, 21/32 (66%) gained >= a full round of ADP, 3/32 (9%) lost >= a full round of ADP
+//underperformed: 22/60 (36%) - 2/22 (9%) gained in ADP, 20/22 (91%) lost in ADP, 0/22 (0%) gained >= a full round of ADP, 14/22(64%) lost >= a full round of ADP
+
+///////
+///////
+
+// entered season between 23 and 25 - 59 total
+
+// 25/59 (28%) gained in ADP
+// 14/59 (24%) rose at least a full round of ADP
+// 32/59 (54%) dropped in ADP
+// 22/59 (37%) dropped by at least a full round of ADP
+
+// overperformed: 20/59 (34%) - 16/20 (80%) gained in ADP, 4/20 (20%) lost in ADP, 14/20 (70%) gained >= a full round of ADP, 1/20 (5%) lost >= a full round of ADP
+//underperformed: 24/59 (41%) - 0/24 (0%) gained in ADP, 24/24 (100%) lost in ADP, 0/24 (0%) gained >= a full round of ADP, 20/24 (83%) lost >= a full round of ADP
+
+///////
+///////
+
+// entered season over 25 - 109 total
+
+// 25/109 (23%) gained in ADP
+// 15/109 (14%) rose at least a full round of ADP
+// 84/109 (77%) dropped in ADP
+// 67/109 (61%) dropped by at least a full round of ADP
+
+// overperformed: 32/109 (29%) - 15/32 (47%) gained in ADP, 17/32 (53%) lost in ADP, 11/32 (34%) gained >= a full round of ADP, 2/32 (6%) lost >= a full round of ADP
+// underperformed: 35/109 (32%) - 1/35 (3%) gained in ADP, 34/35 (97%) lost in ADP, 0/35 (0%) gained >= a full round of ADP, 32/35 (91%) lost >= a full round of ADP
+
+//////////////////////////////////////////////////////// TE  //////////////////////////////////////////////////////////:
+
+// do TE's here next
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
