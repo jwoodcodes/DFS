@@ -17,7 +17,7 @@ WRProspectModelData.forEach(playerArray => {
   });
 });
 
-//   console.log(allWrProspectsNamesArray)
+// console.log(allWrProspectsNamesArray);
 
 // working with the data to construct individual player objects
 
@@ -27,14 +27,14 @@ allWrProspectsNamesArray.forEach(player => {
   allWrProspectsObjects[player] = {};
 });
 
-// console.log(allWrProspectsObjects)
+// console.log(allWrProspectsObjects);
 
 WRProspectModelData.forEach(playerArray => {
   playerArray.forEach(player => {
     // console.log(player.Player)
     allWrProspectsNamesArray.forEach(playerName => {
       if (playerName === player.Player) {
-        // console.log(player)
+        // console.log(player);
         for (const [key, value] of Object.entries(allWrProspectsObjects)) {
           // console.log(`${key}: ${value}`);
           // console.log(key)
@@ -76,6 +76,10 @@ WRProspectModelData.forEach(playerArray => {
               player !== allWrProspectsObjects[playerName].yearThree
             ) {
               allWrProspectsObjects[playerName].yearFour = player;
+            }
+
+            if (!allWrProspectsObjects[playerName].yearOne) {
+              console.log(player);
             }
 
             // if(player['Year Played'] === '1') {
@@ -127,138 +131,219 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
 
     // assignig temp variables and converting all things from strings to number yearOne and yearTwo
 
-    let contestTargetPercentageOne = +value1.yearOne[
-      'Contested Target %'
-    ].slice(0, -1);
+    // let contestTargetPercentageOne = +value1.yearOne[
+    //   'Contested Target %'
+    // ].slice(0, -1);
 
-    let contestTargetPercentageTwo = +value1.yearTwo[
-      'Contested Target %'
-    ].slice(0, -1);
+    // let contestTargetPercentageTwo = 0;
+    // if (+value1.yearTwo['Contested Target %']) {
+    //   contestTargetPercentageTwo = +value1.yearTwo['Contested Target %'].slice(
+    //     0,
+    //     -1
+    //   );
+    // }
+    // console.log(key1, +value1.yearOne['MTF/REC %'].slice(0, -1));
 
     // console.log(contestTargetPercentageOne);
+    let tempYearOneMTFREC = 0;
+    let tempYearOneMTFirstDownPerSnap = 0;
+    let tempYearTwoMTFirstDownPerRouteRunOne = 0;
+    let tempRecGradeOne = 0;
+    let tempTargetsOne = 0;
+    let tempTargetsPerGameOne = 0;
+    let tempRROne = 0;
+    let tempTPRROne = 0;
+    let tempYACPerRecOne = 0;
+    let tempYPRROne = 0;
+    let tempManYPRROne = 0;
+    let tempZoneYPRROne = 0;
+    let tempPPRPointsOne = 0;
+    let tempRecMSOne = 0;
+    let tempRecYardMSOne = 0;
+    let tempRecTDMSOne = 0;
+    let tempRecYrsPerTeamPassAttOne = 0;
+    let tdPerTeamPassAttOne = 0;
+    let weightedDomRatingOne = 0;
+    let dominatorRatingOne = 0;
+    let adjYrdsPerTeamPassAttOne = 0;
+    let scrimmageYrdsPerTeamPlayOne = 0;
+    let scrimmageYrdsPerTeamPassAttOne = 0;
+    let epaPerTeamPassAttOne = 0;
+    let epaPerPlayOne = 0;
+    let totalEPAOne = 0;
+    let yardsPerRecOne = 0;
+    let receptionsOne = 0;
+    let recYardsOne = 0;
+    let recTDsOne = 0;
+    let rushAttPerGameOne = 0;
+    let recPerGameOne = 0;
+    let recYardsPerGameOne = 0;
+    let recTDsPerGameOne = 0;
     //
-    let tempYearOneMTFREC = +value1.yearOne['MTF/REC %'].slice(0, -1);
-    let tempYearTwoMTFREC = +value1.yearTwo['MTF/REC %'].slice(0, -1);
+    let tempYearTwoMTFREC = 0;
+    let tempYearTwoMTFirstDownPerSnap = 0;
+    let tempYearTwoMTFirstDownPerRouteRunTwo = 0;
+    let tempRecGradeTwo = 0;
+    let tempTargetsTwo = 0;
+    let tempTargetsPerGameTwo = 0;
+    let tempRRTwo = 0;
+    let tempTPRRTwo = 0;
+    let tempYACPerRecTwo = 0;
+    let tempYPRRTwo = 0;
+    let tempManYPRRTwo = 0;
+    let tempZoneYPRRTwo = 0;
+    let tempPPRPointsTwo = 0;
+    let tempRecMSTwo = 0;
+    let tempRecYardMSTwo = 0;
+    let tempRecTDMSTwo = 0;
+    let tempRecYrsPerTeamPassAttTwo = 0;
+    let tdPerTeamPassAttTwo = 0;
+    let weightedDomRatingTwo = 0;
+    let dominatorRatingTwo = 0;
+    let adjYrdsPerTeamPassAttTwo = 0;
+    let scrimmageYrdsPerTeamPlayTwo = 0;
+    let scrimmageYrdsPerTeamPassAttTwo = 0;
+    let epaPerTeamPassAttTwo = 0;
+    let epaPerPlayTwo = 0;
+    let totalEPATwo = 0;
+    let yardsPerRecTwo = 0;
+    let receptionsTwo = 0;
+    let recYardsTwo = 0;
+    let recTDsTwo = 0;
+    let rushAttPerGameTwo = 0;
+    let recPerGameTwo = 0;
+    let recYardsPerGameTwo = 0;
+    let recTDsPerGameTwo = 0;
     //
-    let tempYearOneMTFirstDownPerSnap = +value1.yearOne['1D/Snap'].slice(0, -1);
-    let tempYearTwoMTFirstDownPerSnap = +value1.yearTwo['1D/Snap'].slice(0, -1);
-    //
-    let tempYearOneMTFirstDownPerRouteRunOne = +value1.yearOne['1D/RR'].slice(
-      0,
-      -1
-    );
-    let tempYearTwoMTFirstDownPerRouteRunTwo = +value1.yearTwo['1D/RR'].slice(
-      0,
-      -1
-    );
-    //
-    let tempRecGradeOne = +value1.yearOne['REC Grade'].slice(0, -1);
-    let tempRecGradeTwo = +value1.yearTwo['REC Grade'].slice(0, -1);
+    if (value1.yearTwo) {
+      tempYearOneMTFREC = +value1.yearOne['MTF/REC %'].slice(0, -1);
+      // console.log(value1.yearTwo['MTF/REC %']);
 
-    if (tempRecGradeOne < 10) {
-      tempRecGradeOne = tempRecGradeOne * 10;
-    }
-    if (tempRecGradeTwo < 10) {
-      tempRecGradeTwo = tempRecGradeTwo * 10;
-    }
-    //
-    let tempTargetsOne = +value1.yearOne.Targets;
-    let tempTargetsTwo = +value1.yearTwo.Targets;
-    //
-    let tempTargetsPerGameOne = +value1.yearOne['TGTs/G'].slice(0, -1);
-    let tempTargetsPerGameTwo = +value1.yearTwo['TGTs/G'].slice(0, -1);
-    //
-    let tempRROne = +value1.yearOne.RR;
-    let tempRRTwo = +value1.yearTwo.RR;
-    //
-    let tempTPRROne = +value1.yearOne.TPRR;
-    let tempTPRRTwo = +value1.yearTwo.TPRR;
-    //
-    let tempYACPerRecOne = +value1.yearOne['YAC/Rec'].slice(0, -1);
-    let tempYACPerRecTwo = +value1.yearTwo['YAC/Rec'].slice(0, -1);
-    //
-    let tempYPRROne = +value1.yearOne.YPRR;
-    let tempYPRRTwo = +value1.yearTwo.YPRR;
-    //
-    let tempManYPRROne = +value1.yearOne['Man YPRR'];
-    let tempManYPRRTwo = +value1.yearTwo['Man YPRR'];
-    //
-    let tempZoneYPRROne = +value1.yearOne['Zone YPRR'];
-    let tempZoneYPRRTwo = +value1.yearTwo['Zone YPRR'];
-    //
-    let tempPPRPointsOne = +value1.yearOne['PPR Points'];
-    let tempPPRPointsTwo = +value1.yearTwo['PPR Points'];
-    //
-    let tempRecMSOne = +value1.yearOne['Reception MS (Games Played)'];
-    let tempRecMSTwo = +value1.yearTwo['Reception MS (Games Played)'];
-    //
-    let tempRecYardMSOne = +value1.yearOne['Rec Yds MS'];
-    let tempRecYardMSTwo = +value1.yearTwo['Rec Yds MS'];
-    //
-    let tempRecTDMSOne = +value1.yearOne['Rec TD MS'];
-    let tempRecTDMSTwo = +value1.yearTwo['Rec TD MS'];
-    //
-    let tempRecYrsPerTeamPassAttOne =
-      +value1.yearOne['Rec Yds Per Team Pass Att'];
-    let tempRecYrsPerTeamPassAttTwo =
-      +value1.yearTwo['Rec Yds Per Team Pass Att'];
-    //
-    let tdPerTeamPassAttOne = +value1.yearOne['TD Per Team Pass Att'];
-    let tdPerTeamPassAttTwo = +value1.yearTwo['TD Per Team Pass Att'];
-    //
-    let weightedDomRatingOne = +value1.yearOne['Weighted Dominator Rating'];
-    let weightedDomRatingTwo = +value1.yearTwo['Weighted Dominator Rating'];
-    //
-    let dominatorRatingOne = +value1.yearOne['Dominator Rating'];
-    let dominatorRatingTwo = +value1.yearTwo['Dominator Rating'];
+      // console.log(+value1.yearTwo['MTF/REC %'].slice(0, -1));
+      tempYearTwoMTFREC = +value1.yearTwo['MTF/REC %'].slice(0, -1);
 
-    let adjYrdsPerTeamPassAttOne =
-      +value1.yearOne['Adjusted Yds Per Team Play'];
-    let adjYrdsPerTeamPassAttTwo =
-      +value1.yearTwo['Adjusted Yds Per Team Play'];
-    //
-    let scrimmageYrdsPerTeamPlayOne =
-      +value1.yearOne['Scrimmage Yds Per Team Play'];
-    let scrimmageYrdsPerTeamPlayTwo =
-      +value1.yearTwo['Scrimmage Yds Per Team Play'];
-    //
-    let scrimmageYrdsPerTeamPassAttOne =
-      +value1.yearOne['Scrimmage Yds Per Team Pass Attempt'];
-    let scrimmageYrdsPerTeamPassAttTwo =
-      +value1.yearTwo['Scrimmage Yds Per Team Pass Attempt'];
-    //
-    let epaPerTeamPassAttOne = +value1.yearOne['EPA Per Team Pass Attempt'];
-    let epaPerTeamPassAttTwo = +value1.yearTwo['EPA Per Team Pass Attempt'];
-    //
-    let epaPerPlayOne = +value1.yearOne['EPA Per Play'];
-    let epaPerPlayTwo = +value1.yearTwo['EPA Per Play'];
-    //
-    let totalEPAOne = +value1.yearOne['Total EPA'];
-    let totalEPATwo = +value1.yearTwo['Total EPA'];
-    //
-    let yardsPerRecOne = +value1.yearOne['Yards Per Rec'];
-    let yardsPerRecTwo = +value1.yearTwo['Yards Per Rec'];
-    //
-    let receptionsOne = +value1.yearOne.Rec;
-    let receptionsTwo = +value1.yearTwo.Rec;
-    //
-    let recYardsOne = +value1.yearOne['Rec Yds'];
-    let recYardsTwo = +value1.yearTwo['Rec Yds'];
-    //
-    let recTDsOne = +value1.yearOne['Rec TDs'];
-    let recTDsTwo = +value1.yearTwo['Rec TDs'];
-    //
-    let rushAttPerGameOne = +value1.yearOne['Rush Att per Game'];
-    let rushAttPerGameTwo = +value1.yearTwo['Rush Att per Game'];
-    //
-    let recPerGameOne = +value1.yearOne['Rec per Game'];
-    let recPerGameTwo = +value1.yearTwo['Rec per Game'];
-    //
-    let recYardsPerGameOne = +value1.yearOne['Rec Yds per Game'];
-    let recYardsPerGameTwo = +value1.yearTwo['Rec Yds per Game'];
-    //
-    let recTDsPerGameOne = +value1.yearOne['Rec TDs per Game'];
-    let recTDsPerGameTwo = +value1.yearTwo['Rec TDs per Game'];
+      // console.log(tempYearTwoMTFREC);
+      //
+      tempYearOneMTFirstDownPerSnap = +value1.yearOne['1D/Snap'].slice(0, -1);
+
+      tempYearTwoMTFirstDownPerSnap = +value1.yearTwo['1D/Snap'].slice(0, -1);
+
+      //
+      tempYearOneMTFirstDownPerRouteRunOne = +value1.yearOne['1D/RR'].slice(
+        0,
+        -1
+      );
+      tempYearTwoMTFirstDownPerRouteRunTwo = +value1.yearTwo['1D/RR'].slice(
+        0,
+        -1
+      );
+      //
+      tempRecGradeOne = +value1.yearOne['REC Grade'].slice(0, -1);
+      tempRecGradeTwo = +value1.yearTwo['REC Grade'].slice(0, -1);
+
+      if (tempRecGradeOne < 10) {
+        tempRecGradeOne = tempRecGradeOne * 10;
+      }
+      if (tempRecGradeTwo < 10) {
+        tempRecGradeTwo = tempRecGradeTwo * 10;
+      }
+      //
+      tempTargetsOne = +value1.yearOne.Targets;
+      tempTargetsTwo = +value1.yearTwo.Targets;
+      //
+      tempTargetsPerGameOne = +value1.yearOne['TGTs/G'].slice(0, -1);
+      tempTargetsPerGameTwo = +value1.yearTwo['TGTs/G'].slice(0, -1);
+      //
+      tempRROne = +value1.yearOne.RR;
+      tempRRTwo = +value1.yearTwo.RR;
+      //
+      tempTPRROne = +value1.yearOne.TPRR;
+      tempTPRRTwo = +value1.yearTwo.TPRR;
+      //
+      tempYACPerRecOne = +value1.yearOne['YAC/Rec'].slice(0, -1);
+      tempYACPerRecTwo = +value1.yearTwo['YAC/Rec'].slice(0, -1);
+      //
+      tempYPRROne = +value1.yearOne.YPRR;
+      tempYPRRTwo = +value1.yearTwo.YPRR;
+      //
+      tempManYPRROne = +value1.yearOne['Man YPRR'];
+      tempManYPRRTwo = +value1.yearTwo['Man YPRR'];
+      //
+      tempZoneYPRROne = +value1.yearOne['Zone YPRR'];
+      tempZoneYPRRTwo = +value1.yearTwo['Zone YPRR'];
+      //
+      tempPPRPointsOne = +value1.yearOne['PPR Points'];
+      tempPPRPointsTwo = +value1.yearTwo['PPR Points'];
+      //
+      tempRecMSOne = +value1.yearOne['Reception MS (Games Played)'];
+      tempRecMSTwo = +value1.yearTwo['Reception MS (Games Played)'];
+      //
+      tempRecYardMSOne = +value1.yearOne['Rec Yds MS'];
+      tempRecYardMSTwo = +value1.yearTwo['Rec Yds MS'];
+      //
+      tempRecTDMSOne = +value1.yearOne['Rec TD MS'];
+      tempRecTDMSTwo = +value1.yearTwo['Rec TD MS'];
+      //
+      tempRecYrsPerTeamPassAttOne =
+        +value1.yearOne['Rec Yds Per Team Pass Att'];
+      tempRecYrsPerTeamPassAttTwo =
+        +value1.yearTwo['Rec Yds Per Team Pass Att'];
+      //
+      tdPerTeamPassAttOne = +value1.yearOne['TD Per Team Pass Att'];
+      tdPerTeamPassAttTwo = +value1.yearTwo['TD Per Team Pass Att'];
+      //
+      weightedDomRatingOne = +value1.yearOne['Weighted Dominator Rating'];
+      weightedDomRatingTwo = +value1.yearTwo['Weighted Dominator Rating'];
+      //
+      dominatorRatingOne = +value1.yearOne['Dominator Rating'];
+      dominatorRatingTwo = +value1.yearTwo['Dominator Rating'];
+
+      adjYrdsPerTeamPassAttOne = +value1.yearOne['Adjusted Yds Per Team Play'];
+      adjYrdsPerTeamPassAttTwo = +value1.yearTwo['Adjusted Yds Per Team Play'];
+      //
+      scrimmageYrdsPerTeamPlayOne =
+        +value1.yearOne['Scrimmage Yds Per Team Play'];
+      scrimmageYrdsPerTeamPlayTwo =
+        +value1.yearTwo['Scrimmage Yds Per Team Play'];
+      //
+      scrimmageYrdsPerTeamPassAttOne =
+        +value1.yearOne['Scrimmage Yds Per Team Pass Attempt'];
+      scrimmageYrdsPerTeamPassAttTwo =
+        +value1.yearTwo['Scrimmage Yds Per Team Pass Attempt'];
+      //
+      epaPerTeamPassAttOne = +value1.yearOne['EPA Per Team Pass Attempt'];
+      epaPerTeamPassAttTwo = +value1.yearTwo['EPA Per Team Pass Attempt'];
+      //
+      epaPerPlayOne = +value1.yearOne['EPA Per Play'];
+      epaPerPlayTwo = +value1.yearTwo['EPA Per Play'];
+      //
+      totalEPAOne = +value1.yearOne['Total EPA'];
+      totalEPATwo = +value1.yearTwo['Total EPA'];
+      //
+      yardsPerRecOne = +value1.yearOne['Yards Per Rec'];
+      yardsPerRecTwo = +value1.yearTwo['Yards Per Rec'];
+      //
+      receptionsOne = +value1.yearOne.Rec;
+      receptionsTwo = +value1.yearTwo.Rec;
+      //
+      recYardsOne = +value1.yearOne['Rec Yds'];
+      recYardsTwo = +value1.yearTwo['Rec Yds'];
+      //
+      recTDsOne = +value1.yearOne['Rec TDs'];
+      recTDsTwo = +value1.yearTwo['Rec TDs'];
+      //
+      rushAttPerGameOne = +value1.yearOne['Rush Att per Game'];
+      rushAttPerGameTwo = +value1.yearTwo['Rush Att per Game'];
+      //
+      recPerGameOne = +value1.yearOne['Rec per Game'];
+      recPerGameTwo = +value1.yearTwo['Rec per Game'];
+      //
+      recYardsPerGameOne = +value1.yearOne['Rec Yds per Game'];
+      recYardsPerGameTwo = +value1.yearTwo['Rec Yds per Game'];
+      //
+      recTDsPerGameOne = +value1.yearOne['Rec TDs per Game'];
+      recTDsPerGameTwo = +value1.yearTwo['Rec TDs per Game'];
+    }
     //
 
     //
@@ -498,12 +583,12 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
           'Rec TDs per Game'
         ] = +((recTDsPerGameTwo + recTDsPerGameThree) / 2).toFixed(4);
 
-        allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
-          'Contested Target %'
-        ] = +(
-          (contestTargetPercentageTwo + contestTargetPercentageThree) /
-          2
-        ).toFixed(4);
+        //   allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
+        //     'Contested Target %'
+        //   ] = +(
+        //     (contestTargetPercentageTwo + contestTargetPercentageThree) /
+        //     2
+        //   ).toFixed(4);
       }
 
       /////////////////////////////////////////////
@@ -930,11 +1015,11 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
           ] = +recTDsPerGameTwo;
         }
 
-        if (value1.yearThree['Games Played'] < 6) {
-          allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
-            'Contested Target %'
-          ] = +contestTargetPercentageTwo;
-        }
+        // if (value1.yearThree['Games Played'] < 6) {
+        //   allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
+        //     'Contested Target %'
+        //   ] = +contestTargetPercentageTwo;
+        // }
       }
 
       /////////////////////////////////////////////////////////////
@@ -1149,13 +1234,13 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
           3
         ).toFixed(4);
 
-        allWrProspectsObjects[key1].careerAveragedStats['Contested Target %'] =
-          +(
-            (contestTargetPercentageOne +
-              contestTargetPercentageTwo +
-              contestTargetPercentageThree) /
-            3
-          ).toFixed(4);
+        // allWrProspectsObjects[key1].careerAveragedStats['Contested Target %'] =
+        //   +(
+        //     (contestTargetPercentageOne +
+        //       contestTargetPercentageTwo +
+        //       contestTargetPercentageThree) /
+        //     3
+        //   ).toFixed(4);
       }
 
       /////////////////////////////////////////////////////////////
@@ -1395,13 +1480,13 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
         ).toFixed(4);
       }
 
-      if (value1.yearOne['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats['Contested Target %'] =
-          +(
-            (contestTargetPercentageTwo + contestTargetPercentageThree) /
-            2
-          ).toFixed(4);
-      }
+      // if (value1.yearOne['Games Played'] < 6) {
+      //   allWrProspectsObjects[key1].careerAveragedStats['Contested Target %'] =
+      //     +(
+      //       (contestTargetPercentageTwo + contestTargetPercentageThree) /
+      //       2
+      //     ).toFixed(4);
+      // }
 
       //////////////////////////////////////////////////////////////////
       ////////////////////////////////////////////////////////////////
@@ -1641,13 +1726,13 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
         ).toFixed(4);
       }
 
-      if (value1.yearTwo['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats['Contested Target %'] =
-          +(
-            (contestTargetPercentageOne + contestTargetPercentageThree) /
-            2
-          ).toFixed(4);
-      }
+      // if (value1.yearTwo['Games Played'] < 6) {
+      //   allWrProspectsObjects[key1].careerAveragedStats['Contested Target %'] =
+      //     +(
+      //       (contestTargetPercentageOne + contestTargetPercentageThree) /
+      //       2
+      //     ).toFixed(4);
+      // }
 
       ///////////////////////////////////////////////////////////////
       /////////////////////////////////////////////////////////////////////////
@@ -1893,13 +1978,13 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
         ).toFixed(4);
       }
 
-      if (value1.yearThree['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats['Contested Target %'] =
-          +(
-            (contestTargetPercentageOne + contestTargetPercentageTwo) /
-            2
-          ).toFixed(4);
-      }
+      // if (value1.yearThree['Games Played'] < 6) {
+      //   allWrProspectsObjects[key1].careerAveragedStats['Contested Target %'] =
+      //     +(
+      //       (contestTargetPercentageOne + contestTargetPercentageTwo) /
+      //       2
+      //     ).toFixed(4);
+      // }
 
       // setting career total stats
 
@@ -2285,15 +2370,15 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
               4
             ).toFixed(4);
 
-          allWrProspectsObjects[key1].careerAveragedStats[
-            'Contested Target %'
-          ] = +(
-            (contestTargetPercentageOne +
-              contestTargetPercentageTwo +
-              contestTargetPercentageThree +
-              contestTargetPercentageFour) /
-            4
-          ).toFixed(4);
+          // allWrProspectsObjects[key1].careerAveragedStats[
+          //   'Contested Target %'
+          // ] = +(
+          //   (contestTargetPercentageOne +
+          //     contestTargetPercentageTwo +
+          //     contestTargetPercentageThree +
+          //     contestTargetPercentageFour) /
+          //   4
+          // ).toFixed(4);
         }
 
         ////////////////////////////////////////////////////////////////////
@@ -2578,16 +2663,16 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
             ).toFixed(4);
         }
 
-        if (value1.yearOne['Games Played'] < 6) {
-          allWrProspectsObjects[key1].careerAveragedStats[
-            'Contested Target %'
-          ] = +(
-            (contestTargetPercentageTwo +
-              contestTargetPercentageThree +
-              contestTargetPercentageFour) /
-            3
-          ).toFixed(4);
-        }
+        // if (value1.yearOne['Games Played'] < 6) {
+        //   allWrProspectsObjects[key1].careerAveragedStats[
+        //     'Contested Target %'
+        //   ] = +(
+        //     (contestTargetPercentageTwo +
+        //       contestTargetPercentageThree +
+        //       contestTargetPercentageFour) /
+        //     3
+        //   ).toFixed(4);
+        // }
 
         ///////////////////////////////////////////////////////////
         /////////////////////////////////////////////////////////////
@@ -2864,16 +2949,16 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
             ).toFixed(4);
         }
 
-        if (value1.yearTwo['Games Played'] < 6) {
-          allWrProspectsObjects[key1].careerAveragedStats[
-            'Contested Target %'
-          ] = +(
-            (contestTargetPercentageOne +
-              contestTargetPercentageThree +
-              contestTargetPercentageFour) /
-            3
-          ).toFixed(4);
-        }
+        // if (value1.yearTwo['Games Played'] < 6) {
+        //   allWrProspectsObjects[key1].careerAveragedStats[
+        //     'Contested Target %'
+        //   ] = +(
+        //     (contestTargetPercentageOne +
+        //       contestTargetPercentageThree +
+        //       contestTargetPercentageFour) /
+        //     3
+        //   ).toFixed(4);
+        // }
 
         ////////////////////////////////////////////////////////////////////
         //////////////////////////////////////////////////////////////////////
@@ -3133,16 +3218,16 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
             ).toFixed(4);
         }
 
-        if (value1.yearThree['Games Played'] < 6) {
-          allWrProspectsObjects[key1].careerAveragedStats[
-            'Contested Target %'
-          ] = +(
-            (contestTargetPercentageOne +
-              contestTargetPercentageTwo +
-              contestTargetPercentageFour) /
-            3
-          ).toFixed(4);
-        }
+        // if (value1.yearThree['Games Played'] < 6) {
+        //   allWrProspectsObjects[key1].careerAveragedStats[
+        //     'Contested Target %'
+        //   ] = +(
+        //     (contestTargetPercentageOne +
+        //       contestTargetPercentageTwo +
+        //       contestTargetPercentageFour) /
+        //     3
+        //   ).toFixed(4);
+        // }
 
         ////////////////////////////////////////////////////////////////
         ///////////////////////////////////////////////////////////////
@@ -3422,16 +3507,16 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
             ).toFixed(4);
         }
 
-        if (value1.yearFour['Games Played'] < 6) {
-          allWrProspectsObjects[key1].careerAveragedStats[
-            'Contested Target %'
-          ] = +(
-            (contestTargetPercentageOne +
-              contestTargetPercentageTwo +
-              contestTargetPercentageThree) /
-            3
-          ).toFixed(4);
-        }
+        // if (value1.yearFour['Games Played'] < 6) {
+        //   allWrProspectsObjects[key1].careerAveragedStats[
+        //     'Contested Target %'
+        //   ] = +(
+        //     (contestTargetPercentageOne +
+        //       contestTargetPercentageTwo +
+        //       contestTargetPercentageThree) /
+        //     3
+        //   ).toFixed(4);
+        // }
 
         // setting career total stats
 
@@ -3620,9 +3705,9 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
         'Rec TDs per Game'
       ] = +recTDsPerGameTwo;
 
-      allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
-        'Contested Target %'
-      ] = +contestTargetPercentageTwo;
+      // allWrProspectsObjects[key1].yearTwoPlusYearThreeAveragedStats[
+      //   'Contested Target %'
+      // ] = +contestTargetPercentageTwo;
 
       /////////////////////////////////////////////////////
       /////////////////////////////////////////////
@@ -3807,11 +3892,11 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
           2
         ).toFixed(4);
 
-        allWrProspectsObjects[key1].careerAveragedStats['Contested Target %'] =
-          +(
-            (contestTargetPercentageOne + contestTargetPercentageTwo) /
-            2
-          ).toFixed(4);
+        // allWrProspectsObjects[key1].careerAveragedStats['Contested Target %'] =
+        //   +(
+        //     (contestTargetPercentageOne + contestTargetPercentageTwo) /
+        //     2
+        //   ).toFixed(4);
 
         ///don't copy the } below this line!!
       }
@@ -3993,10 +4078,10 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
           +recTDsPerGameTwo;
       }
 
-      if (value1.yearOne['Games Played'] < 6) {
-        allWrProspectsObjects[key1].careerAveragedStats['Contested Target %'] =
-          +contestTargetPercentageTwo;
-      }
+      // if (value1.yearOne['Games Played'] < 6) {
+      //   allWrProspectsObjects[key1].careerAveragedStats['Contested Target %'] =
+      //     +contestTargetPercentageTwo;
+      // }
 
       ///////////////////////////////////////////////////////////
       ////////////////////////////////////////////////////////////

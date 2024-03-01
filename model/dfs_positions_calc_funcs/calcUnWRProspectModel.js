@@ -10,7 +10,7 @@ const allWrProspectsNamesArray = [];
 
 WRProspectModelData.forEach(playerArray => {
   playerArray.forEach(player => {
-    // console.log(player.Player)
+    // console.log(player.Player);
 
     let curProspectName = player.Player;
     // console.log(allWrProspectsNamesArray.includes(curProspectName))
@@ -20,7 +20,7 @@ WRProspectModelData.forEach(playerArray => {
   });
 });
 
-//   console.log(allWrProspectsNamesArray)
+// console.log(allWrProspectsNamesArray);
 
 // working with the data to construct individual player objects
 
@@ -30,24 +30,73 @@ allWrProspectsNamesArray.forEach(player => {
   calcAllWrProspectsObjects[player] = {};
 });
 
-//   console.log(calcAllWrProspectsObjects)
+// console.log(calcAllWrProspectsObjects);
 
 let allHitsNamesArray = Object.keys(calcAllWrProspectsObjects);
 
-//   console.log(allHitsNamesArray)
+// console.log(allHitsNamesArray);
 
 const test = Object.entries(allWrProspectsObjects);
 
-// console.log(test)
+// console.log(test);
 let num = 0;
 test.forEach(topPlayer => {
   topPlayer.forEach(player => {
     if (player.name) {
       allHitsNamesArray.forEach(playerName => {
         if (player.name === playerName) {
+          //   console.log(playerName, player);
           calcAllWrProspectsObjects[playerName].finalScore = 0;
-
+          //   console.log(player.yearOne.Hit);
           // year Two plus year three
+
+          // ['1D/Snap'] > 10.5 H- 46%, NH- 20%
+          // careerAveragedStats['1D/RR'] > 10.2 H- 68%, NH- 31%
+          // careerAveragedStats['REC Grade'] > 75 H- 61%, NH- 25%
+          // yearTwoPlusYearThreeAveragedStats['TGTs/G'] > 6 H- 61%, NH- 38%
+          // careerAveragedStats.RR > 300 H- 64%, NH- 42%
+          // yearTwoPlusYearThreeAveragedStats.TPRR > 0.24 H- 61%, NH- 39%
+          // yearTwoPlusYearThreeAveragedStats['YAC/Rec'] > 4.8 H- 71%, NH- 45%
+          // careerAveragedStats.YPRR > 2 H- 96%, NH- 56%
+          // careerAveragedStats.YPRR > 2.25 H- 69%, NH- 35%
+          // careerAveragedStats['Man YPRR'] > 1.75 H- 64%, NH - 31%
+          // careerAveragedStats['Man YPRR'] > 1.5 H- 69%, 39%
+          // careerAveragedStats['Zone YPRR'] > 1.75 H- 75%, NH- 40%
+          // careerAveragedStats['Zone YPRR'] > 1.75 & careerAveragedStats['Man YPRR'] > 1.5 H- 69%, NH- 32%
+          // careerAveragedStats['PPR Points'] > 150 H- 75%, 39%
+          // careerAveragedStats['PPR Points'] > 160 H- 69%, 32%
+          // careerAveragedStats['Reception MS (Games Played)'] > 0.2 H-64%, NH- 35%
+          // careerAveragedStats['Rec Yds Per Team Pass Att'] > 1.75 H- 64%, NH- 37%
+          // yearTwoPlusYearThreeAveragedStats['Rec Yds Per Team Pass Att'] > 2 H- 71%, NH- 36%
+          // careerAveragedStats['TD Per Team Pass Att'] > 0.014 H- 68%, NH- 37%
+          //yearTwoPlusYearThreeAveragedStats['TD Per Team Pass Att'] > 0.016 H- 75%, NH- 40%
+          // yearTwoPlusYearThreeAveragedStats['Weighted Dominator Rating'] > 0.26 H- 69%, 37%
+          // careerAveragedStats['Adjusted Yds Per Team Play'] > 1.65 H- 69%, NH - 33%
+          // yearTwoPlusYearThreeAveragedStats['Scrimmage Yds Per Team Pass Attempt'] > 1.9 H- 68%, NH- 37%
+          // yearTwoPlusYearThreeAveragedStats['EPA Per Team Pass Attempt'] > 0.125 H- 86%, NH- 39%
+          // careerAveragedStats['EPA Per Team Pass Attempt'] > 0.125 H- 75%, NH- 30%
+          // careerAveragedStats['EPA Per Play'] > 0.7 H- 71%, NH- 38%
+          // yearTwoPlusYearThreeAveragedStats['EPA Per Play'] > 0.75 H- 71%, NH- 27%
+          // careerAveragedStats['Rec TDs'] > 5.5 H- 75%, NH- 39%
+          // careerAveragedStats['Rec Yds per Game'] > 60 H- 82%, NH- 40%
+          // yearTwoPlusYearThreeAveragedStats['Rec TDs per Game'] > 0.55 H- 82%, NH- 39%
+          // ['Draft Round'] < 3 H- 79%, NH- 29%
+          // Height < 71 H- 14%
+          // Weight < 170 H- 7% or < 180 H- 19%
+
+          if (player.careerAveragedStats['Rec Yds MS'] > 0.2) {
+            if (player.yearOne.Hit === 'N') {
+              num = num + 1;
+              console.log(num, player.name), player.careerAveragedStats.RR;
+            }
+          }
+
+          //   if (player.yearOne['Power 5'] === 'Y') {
+          //     if (player.yearOne.Hit === 'Y') {
+          //       num = num + 1;
+          //       console.log(num, player.name), player.careerAveragedStats.RR;
+          //     }
+          //   }
 
           // bound 1
           //
@@ -55,8 +104,12 @@ test.forEach(topPlayer => {
           // zero players from Hit sample in this group in initial sample
           //
           if (player.yearTwoPlusYearThreeAveragedStats['MTF/REC %'] < 7.75) {
-            // num = num + 1
-            // console.log(num, player.name, player.yearTwoPlusYearThreeAveragedStats['MTF/REC %'])
+            // num = num + 1;
+            // console.log(
+            //   num,
+            //   player.name,
+            //   player.yearTwoPlusYearThreeAveragedStats['MTF/REC %']
+            // );
 
             //
             // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
