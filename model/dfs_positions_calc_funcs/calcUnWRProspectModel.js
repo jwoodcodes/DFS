@@ -51,38 +51,38 @@ test.forEach(topPlayer => {
           // year Two plus year three
 
           // ['1D/Snap'] > 10.5 H- 46%, NH- 20%
-          // careerAveragedStats['1D/RR'] > 10.2 H- 68%, NH- 31%
+          // careerAveragedStats['1D/RR'] > 10.2 H- 68%, NH- 31% *
           // careerAveragedStats['REC Grade'] > 75 H- 61%, NH- 25%
           // yearTwoPlusYearThreeAveragedStats['TGTs/G'] > 6 H- 61%, NH- 38%
           // careerAveragedStats.RR > 300 H- 64%, NH- 42%
           // yearTwoPlusYearThreeAveragedStats.TPRR > 0.24 H- 61%, NH- 39%
           // yearTwoPlusYearThreeAveragedStats['YAC/Rec'] > 4.8 H- 71%, NH- 45%
-          // careerAveragedStats.YPRR > 2 H- 96%, NH- 56%
-          // careerAveragedStats.YPRR > 2.25 H- 69%, NH- 35%
+          // careerAveragedStats.YPRR > 2 H- 96%, NH- 56% *
+          // careerAveragedStats.YPRR > 2.25 H- 69%, NH- 35% *
           // careerAveragedStats['Man YPRR'] > 1.75 H- 64%, NH - 31%
           // careerAveragedStats['Man YPRR'] > 1.5 H- 69%, 39%
-          // careerAveragedStats['Zone YPRR'] > 1.75 H- 75%, NH- 40%
-          // careerAveragedStats['Zone YPRR'] > 1.75 & careerAveragedStats['Man YPRR'] > 1.5 H- 69%, NH- 32%
-          // careerAveragedStats['PPR Points'] > 150 H- 75%, 39%
-          // careerAveragedStats['PPR Points'] > 160 H- 69%, 32%
+          // careerAveragedStats['Zone YPRR'] > 1.75 H- 75%, NH- 40% *
+          // careerAveragedStats['Zone YPRR'] > 1.75 & careerAveragedStats['Man YPRR'] > 1.5 H- 69%, NH- 32% *
+          // careerAveragedStats['PPR Points'] > 150 H- 75%, 39% *
+          // careerAveragedStats['PPR Points'] > 160 H- 69%, 32% *
           // careerAveragedStats['Reception MS (Games Played)'] > 0.2 H-64%, NH- 35%
           // careerAveragedStats['Rec Yds Per Team Pass Att'] > 1.75 H- 64%, NH- 37%
-          // yearTwoPlusYearThreeAveragedStats['Rec Yds Per Team Pass Att'] > 2 H- 71%, NH- 36%
+          // yearTwoPlusYearThreeAveragedStats['Rec Yds Per Team Pass Att'] > 2 H- 71%, NH- 36% *
           // careerAveragedStats['TD Per Team Pass Att'] > 0.014 H- 68%, NH- 37%
-          //yearTwoPlusYearThreeAveragedStats['TD Per Team Pass Att'] > 0.016 H- 75%, NH- 40%
+          //yearTwoPlusYearThreeAveragedStats['TD Per Team Pass Att'] > 0.016 H- 75%, NH- 40% *
           // yearTwoPlusYearThreeAveragedStats['Weighted Dominator Rating'] > 0.26 H- 69%, 37%
-          // careerAveragedStats['Adjusted Yds Per Team Play'] > 1.65 H- 69%, NH - 33%
-          // yearTwoPlusYearThreeAveragedStats['Scrimmage Yds Per Team Pass Attempt'] > 1.9 H- 68%, NH- 37%
-          // yearTwoPlusYearThreeAveragedStats['EPA Per Team Pass Attempt'] > 0.125 H- 86%, NH- 39%
-          // careerAveragedStats['EPA Per Team Pass Attempt'] > 0.125 H- 75%, NH- 30%
-          // careerAveragedStats['EPA Per Play'] > 0.7 H- 71%, NH- 38%
-          // yearTwoPlusYearThreeAveragedStats['EPA Per Play'] > 0.75 H- 71%, NH- 27%
-          // careerAveragedStats['Rec TDs'] > 5.5 H- 75%, NH- 39%
-          // careerAveragedStats['Rec Yds per Game'] > 60 H- 82%, NH- 40%
-          // yearTwoPlusYearThreeAveragedStats['Rec TDs per Game'] > 0.55 H- 82%, NH- 39%
-          // ['Draft Round'] < 3 H- 79%, NH- 29%
-          // Height < 71 H- 14%
-          // Weight < 170 H- 7% or < 180 H- 19%
+          // careerAveragedStats['Adjusted Yds Per Team Play'] > 1.65 H- 69%, NH - 33% *
+          // yearTwoPlusYearThreeAveragedStats['Scrimmage Yds Per Team Pass Attempt'] > 1.9 H- 68%, NH- 37% *
+          // yearTwoPlusYearThreeAveragedStats['EPA Per Team Pass Attempt'] > 0.125 H- 86%, NH- 39% **
+          // careerAveragedStats['EPA Per Team Pass Attempt'] > 0.125 H- 75%, NH- 30% **
+          // careerAveragedStats['EPA Per Play'] > 0.7 H- 71%, NH- 38% *
+          // yearTwoPlusYearThreeAveragedStats['EPA Per Play'] > 0.75 H- 71%, NH- 27% **
+          // careerAveragedStats['Rec TDs'] > 5.5 H- 75%, NH- 39% *
+          // careerAveragedStats['Rec Yds per Game'] > 60 H- 82%, NH- 40% **
+          // yearTwoPlusYearThreeAveragedStats['Rec TDs per Game'] > 0.55 H- 82%, NH- 39% **
+          // ['Draft Round'] < 3 H- 79%, NH- 29% **
+          // Height < 71 H- 14% *
+          // Weight < 170 H- 7% or < 180 H- 19% *
 
           if (player.careerAveragedStats['Rec Yds MS'] > 0.2) {
             if (player.yearOne.Hit === 'N') {
