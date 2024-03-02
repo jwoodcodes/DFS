@@ -1171,6 +1171,7 @@ const testfunc = async function () {
 // 50/130 (38%) dropped by at least a full round of ADP
 
 // overperformed: 52/130 (40%) - 40/52 (78%) gained in ADP, 12/52 (23%) lost in ADP, 34/52 (65%) gained >= a full round of ADP, 6/52 (12%) lost >= a full round of ADP
+// 35% that didn't overperfrom gained in ADP
 //underperformed: 51/130 (39%) - 9/51 (18%)  gained in ADP, 42/51 (82%) lost in ADP, 4/51 gained (8%)>= a full round of ADP, 35/51 (69%) lost >= a full round of ADP
 
 ///////
@@ -1183,6 +1184,7 @@ const testfunc = async function () {
 // 81/177 (46%) dropped by at least a full round of ADP
 
 // overperformed: 66/177 (37%) - 51/66 (77%) gained in ADP, 15/66 (23%) lost in ADP, 45/66 (68%) gained >= a full round of ADP, 6/66 (9%) lost >= a full round of ADP
+// 21% that didn't overperform their redraft ADP gained in ADP
 //underperformed: 61/177 (34%) - 1/61 (2%) gained in ADP, 60/61 (98%) lost in ADP, 0/61 (0%) gained >= a full round of ADP, 50/61 (82%) lost >= a full round of ADP
 
 ///////
@@ -1195,7 +1197,21 @@ const testfunc = async function () {
 // 179/291 (62%) dropped by at least a full round of ADP
 
 // overperformed: 85/291 (29%) - 51/85 (60%) gained in ADP, 34/85 (40%) lost in ADP, 34/85 (40%) gained >= a full round of ADP, 12/85 (14%) lost >= a full round of ADP
+// 9.7% that didn't overperform their redraft ADP gained in value/ 90.2% that didn't lost ADP
 //underperformed: 95/291 (33%) - 2/95 (2%) gained in ADP, 93/95 (98%) lost in ADP, 1/95 (1%) gained >= a full round of ADP, 83/95 (87%) lost >= a full round of ADP
+
+///////////////////////// All Ages together ////////////////////
+
+// - 598 total
+
+// 210/598 (35%) gained in ADP
+// 143/598 (22%) rose at least a full round of ADP
+// 388/598 (65%) dropped in ADP
+// 310/598 (52%) dropped by at least a full round of ADP
+
+// overperformed: 203/598 (34%) - 142/203 (70%) gained in ADP, 61/203 (30%) lost in ADP, 113/203 (56%) gained >= a full round of ADP, 24/203 (12%) lost >= a full round of ADP
+// total not over or under: 188/598 (31%) - 30% that didn't overperform their redraft ADP gained in value/ 70% that didn't lost ADP
+//underperformed: 207/598 (35%) - 12/207 (6%) gained in ADP, 195/207 (94%) lost in ADP, 5/207 (2%) gained >= a full round of ADP, 168/207 (81%) lost >= a full round of ADP
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1330,7 +1346,44 @@ const testfunc = async function () {
 
 //////////////////////////////////////////////////////// TE  //////////////////////////////////////////////////////////:
 
-// do TE's here next
+///////
+///////
+
+// entered season under 23 - 13 total
+
+// 8/13 (62%) gained in ADP
+// 7/13 (54%) rose at least a full round of ADP
+// 5/13 (38%) dropped in ADP
+// 4/13 (31%) dropped by at least a full round of ADP
+
+// overperformed: 3/13 (23%) - 3/3 (100%) gained in ADP, 0/3 (0%) lost in ADP, 3/3 (100%) gained >= a full round of ADP, 0/3 (0%) lost >= a full round of ADP
+//underperformed: 6/13 (46%) - 1/6 (17%) gained in ADP, 5/6 (83%) lost in ADP, 1/6 (17%) gained >= a full round of ADP, 4/6 (67%) lost >= a full round of ADP
+
+///////
+///////
+
+// entered season between 23 and 25 - 25 total
+
+// 10/25 (40%) gained in ADP
+// 9/25 (36%) rose at least a full round of ADP
+// 15/25 (60%) dropped in ADP
+// 9/25 (36%) dropped by at least a full round of ADP
+
+// overperformed: 12/25 (48%) - 8/12 (67%) gained in ADP, 4/12 (33%) lost in ADP, 7/12 (58%) gained >= a full round of ADP, 1/12 (8%) lost >= a full round of ADP
+//underperformed: 6/25 (24%) - 0/6 (0%) gained in ADP, 6/6 (100%) lost in ADP, 0/6 (0%) gained >= a full round of ADP, 5/6 (83%) lost >= a full round of ADP
+
+///////
+///////
+
+// entered season over 25 - 57 total
+
+// 11/57 (19%) gained in ADP
+// 8/57 (14%) rose at least a full round of ADP
+// 40/57 (70%) dropped in ADP
+// 40/57 (70%) dropped by at least a full round of ADP
+
+// overperformed: 11/57 (19%) - 4/11 (36%) gained in ADP, 7/11 (63%) lost in ADP, 4/11 (36%) gained >= a full round of ADP, 3/11 (27%) lost >= a full round of ADP
+// underperformed: 13/57 (23%) - 0/13 (0%) gained in ADP, 13/13 (100%) lost in ADP, 0/13 (0%) gained >= a full round of ADP, 13/13 (100%) lost >= a full round of ADP
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1343,6 +1396,10 @@ const testfunc = async function () {
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////   Notes for the article(s)  /////////////////////////////////////////////////////////////
+
+// 1)
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
