@@ -93,21 +93,102 @@ test.forEach(topPlayer => {
           // if (
           //   player.yearTwoPlusYearThreeAveragedStats['Rec TDs per Game'] > 0.55
           // ) {
-          //   if (player.yearOne.Hit === 'Y') {
-          //     num = num + 1;
-          //     console.log(num, player.name), player.careerAveragedStats.RR;
+
+          // }
+
+          // if (player.yearOne['Power 5'] === 'Y') {
+          //   if (player.yearOne.Conference === 'Big 12') {
+          //     if (player.yearOne.Hit === 'N') {
+          //       // console.log(player.yearOne.Conference);
+          //       // num = num + 1;
+          //       // console.log(num, player.name);
+          //     }
           //   }
           // }
 
-          if (player.yearOne['Power 5'] === 'Y') {
-            if (player.yearOne.Conference === 'Big 12') {
-              if (player.yearOne.Hit === 'N') {
-                // console.log(player.yearOne.Conference);
-                // num = num + 1;
-                // console.log(num, player.name);
-              }
+          player.highestContestedTargetPercent =
+            player.yearOne['Contested Target %'];
+          //
+          if (player.yearTwo) {
+            if (
+              player.yearTwo['Contested Target %'] >
+              player.highestContestedTargetPercent
+            ) {
+              player.highestContestedTargetPercent =
+                player.yearTwo['Contested Target %'];
             }
           }
+          //
+          if (player.yearThree) {
+            if (
+              player.yearThree['Contested Target %'] >
+              player.highestContestedTargetPercent
+            ) {
+              player.highestContestedTargetPercent =
+                player.yearThree['Contested Target %'];
+            }
+          }
+          //
+          if (player.yearFour) {
+            if (
+              player.yearFour['Contested Target %'] >
+              player.highestContestedTargetPercent
+            ) {
+              player.highestContestedTargetPercent =
+                player.yearFour['Contested Target %'];
+            }
+          }
+
+          player.highestContestedTargetPercent =
+            +player.highestContestedTargetPercent.slice(0, -1);
+
+          //
+
+          player.highestEPAPerGame = player.yearOne['EPA/G'];
+          player.careerAvgEPAPerGame = +player.yearOne['EPA/G'].slice(0, -1);
+
+          //
+          if (player.yearTwo) {
+            if (player.yearTwo['EPA/G'] > player.highestEPAPerGame) {
+              player.highestEPAPerGame = player.yearTwo['EPA/G'];
+              //
+              player.careerAvgEPAPerGame =
+                +(
+                  player.careerAvgEPAPerGame +
+                  +player.yearTwo['EPA/G'].slice(0, -1)
+                ) / 2;
+            }
+          }
+          //
+          if (player.yearThree) {
+            if (player.yearThree['EPA/G'] > player.highestEPAPerGame) {
+              player.highestEPAPerGame = player.yearThree['EPA/G'];
+              //
+              player.careerAvgEPAPerGame =
+                +(
+                  player.careerAvgEPAPerGame +
+                  +player.yearThree['EPA/G'].slice(0, -1)
+                ) / 2;
+            }
+          }
+          //
+          if (player.yearFour) {
+            if (player.yearFour['EPA/G'] > player.highestEPAPerGame) {
+              player.highestEPAPerGame = player.yearFour['EPA/G'];
+              //
+              player.careerAvgEPAPerGame =
+                +(
+                  player.careerAvgEPAPerGame +
+                  +player.yearFour['EPA/G'].slice(0, -1)
+                ) / 2;
+            }
+          }
+
+          player.highestEPAPerGame = +player.highestEPAPerGame.slice(0, -1);
+
+          player.careerAvgEPAPerGame = player.careerAvgEPAPerGame.toFixed(3);
+
+          // console.log(player.careerAvgEPAPerRouteRun);
 
           // if (player.yearOne.Conference === 'Pac-12') {
           //   if (player.yearOne.Hit === 'Y') {
@@ -832,7 +913,7 @@ test.forEach(topPlayer => {
               'EPA Per Team Pass Attempt'
             ] < 0.08
           ) {
-            // if (player.yearOne.Hit === 'N') {
+            // if (player.yearOne.Hit === 'Y') {
             //   num = num + 1;
             //   console.log(
             //     num,
@@ -851,8 +932,10 @@ test.forEach(topPlayer => {
                 player.yearTwoPlusYearThreeAveragedStats[
                   'EPA Per Team Pass Attempt'
                 ],
-              score: 0,
+              score: -5,
             };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore - 5;
           }
 
           // bound 2:
@@ -867,14 +950,16 @@ test.forEach(topPlayer => {
               'EPA Per Team Pass Attempt'
             ] < 0.125
           ) {
-            // if (player.yearOne.Hit === 'N') {
-            //   num = num + 1;
-            //   console.log(
-            //     num,
-            //     player.name,
-            //     player.yearTwoPlusYearThreeAveragedStats['EPA Per Team Pass Attempt']
-            //   );
-            // }
+            if (player.yearOne.Hit === 'Y') {
+              // num = num + 1;
+              // console.log(
+              //   num,
+              //   player.name,
+              //   player.yearTwoPlusYearThreeAveragedStats[
+              //     'EPA Per Team Pass Attempt'
+              //   ]
+              // );
+            }
 
             //
             // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
@@ -884,10 +969,10 @@ test.forEach(topPlayer => {
                 player.yearTwoPlusYearThreeAveragedStats[
                   'EPA Per Team Pass Attempt'
                 ],
-              score: 1,
+              score: -10,
             };
             calcAllWrProspectsObjects[playerName].finalScore =
-              calcAllWrProspectsObjects[playerName].finalScore + 1;
+              calcAllWrProspectsObjects[playerName].finalScore - 10;
           }
 
           // bound 3: the best threshold the metric has
@@ -970,7 +1055,7 @@ test.forEach(topPlayer => {
           // two players from Hit sample in this group in initial sample
           //
           if (player.yearTwoPlusYearThreeAveragedStats['EPA Per Play'] < 0.5) {
-            // if (player.yearOne.Hit === 'N') {
+            // if (player.yearOne.Hit === 'Y') {
             //   num = num + 1;
             //   console.log(
             //     num,
@@ -982,7 +1067,7 @@ test.forEach(topPlayer => {
             //
             // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
             //
-            calcAllWrProspectsObjects[playerName].ytytEPAPerTeamPassAttempt = {
+            calcAllWrProspectsObjects[playerName].ytytEPAPerPlay = {
               value: player.yearTwoPlusYearThreeAveragedStats['EPA Per Play'],
               score: 0,
             };
@@ -996,7 +1081,7 @@ test.forEach(topPlayer => {
             player.yearTwoPlusYearThreeAveragedStats['EPA Per Play'] > 0.49 &&
             player.yearTwoPlusYearThreeAveragedStats['EPA Per Play'] < 0.75
           ) {
-            // if (player.yearOne.Hit === 'N') {
+            // if (player.yearOne.Hit === 'Y') {
             //   num = num + 1;
             //   console.log(
             //     num,
@@ -1008,12 +1093,12 @@ test.forEach(topPlayer => {
             //
             // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
             //
-            calcAllWrProspectsObjects[playerName].ytytEPAPerTeamPassAttempt = {
+            calcAllWrProspectsObjects[playerName].ytytEPAPerPlay = {
               value: player.yearTwoPlusYearThreeAveragedStats['EPA Per Play'],
-              score: 1,
+              score: -3,
             };
             calcAllWrProspectsObjects[playerName].finalScore =
-              calcAllWrProspectsObjects[playerName].finalScore + 1;
+              calcAllWrProspectsObjects[playerName].finalScore - 4;
           }
 
           // bound 3: the best threshold the metric has
@@ -1033,7 +1118,7 @@ test.forEach(topPlayer => {
             //
             // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
             //
-            calcAllWrProspectsObjects[playerName].ytytEPAPerTeamPassAttempt = {
+            calcAllWrProspectsObjects[playerName].ytytEPAPerPlay = {
               value: player.yearTwoPlusYearThreeAveragedStats['EPA Per Play'],
               score: 5,
             };
@@ -1061,7 +1146,7 @@ test.forEach(topPlayer => {
           //   //
           //   // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
           //   //
-          //   calcAllWrProspectsObjects[playerName].ytytEPAPerTeamPassAttempt = {
+          //   calcAllWrProspectsObjects[playerName].ytytEPAPerPlay = {
           //     value: player.yearTwoPlusYearThreeAveragedStats['EPA Per Play'],
           //     score: 5,
           //   };
@@ -1163,7 +1248,7 @@ test.forEach(topPlayer => {
           // if the above conditions can't be met then there isn't enough signal to scoring very highly in it to include
 
           if (player.careerAveragedStats['Rec TDs'] > 10.5) {
-            // if (player.yearOne.Hit === 'N') {
+            // if (player.yearOne.Hit === 'Y') {
             //   num = num + 1;
             //   console.log(
             //     num,
@@ -1177,10 +1262,10 @@ test.forEach(topPlayer => {
             //
             calcAllWrProspectsObjects[playerName].careerAvgRecTDs = {
               value: player.careerAveragedStats['Rec TDs'],
-              score: 6,
+              score: 10,
             };
             calcAllWrProspectsObjects[playerName].finalScore =
-              calcAllWrProspectsObjects[playerName].finalScore + 6;
+              calcAllWrProspectsObjects[playerName].finalScore + 12;
           }
 
           ////////////////////////////////////////////
@@ -1299,6 +1384,104 @@ test.forEach(topPlayer => {
           //      start next stat below here
           ///////////////////////////////////////////
 
+          ////////////////////////////////////////////////////////////////////////////////
+
+          // lower bound
+          //
+          // the highest mark that has only two of the hits sample below this number
+          // two players from Hit sample in this group in initial sample
+          //
+          if (player.careerAvgEPAPerGame < 3.5) {
+            if (player.yearOne.Hit === 'N') {
+              // num = num + 1;
+              // console.log(num, player.name, player.careerAvgEPAPerGame);
+            }
+
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[playerName].careerAvgEPAPerGame = {
+              value: player.careerAvgEPAPerGame,
+              score: 0,
+            };
+          }
+
+          // bound 2:
+          //
+          // this is the catch bound to give everyone below threshold but above lower bound a 0
+          //
+          if (
+            player.careerAvgEPAPerGame > 3.49 &&
+            player.careerAvgEPAPerGame < 5
+          ) {
+            // if (player.yearOne.Hit === 'N') {
+            //   num = num + 1;
+            //   console.log(
+            //     num,
+            //     player.name,
+            //    player.careerAvgEPAPerGame
+            //   );
+            // }
+
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[playerName].careerAvgEPAPerGame = {
+              value: player.careerAvgEPAPerGame,
+              score: 1,
+            };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore + 1;
+          }
+
+          // bound 3: the best threshold the metric has
+          // should go from the threshold up to upper bound if there is an upper bound for this metric
+
+          if (player.careerAvgEPAPerGame > 4.99) {
+            // if (player.yearOne.Hit === 'Y') {
+            //   num = num + 1;
+            //   console.log(num, player.name, player.careerAvgEPAPerGame);
+            // }
+            //
+            // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+            //
+            calcAllWrProspectsObjects[playerName].careerAvgEPAPerGame = {
+              value: player.careerAvgEPAPerGame,
+              score: 4,
+            };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore + 4;
+          }
+
+          //
+          // upper bound
+          //
+          // not every metric will have an upper bound
+          // only have one if there is a point that < 5% (7 or less) of non hits are above it and > 18% (5) of hits are above it
+          // if the above conditions can't be met then there isn't enough signal to scoring very highly in it to include
+
+          // if (player.careerAvgEPAPerGame > 6.5) {
+          //   if (player.yearOne.Hit === 'N') {
+          //     num = num + 1;
+          //     console.log(num, player.name, player.careerAvgEPAPerGame);
+          //   }
+
+          //   //
+          //   // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
+          //   //
+          //   calcAllWrProspectsObjects[playerName].careerAvgEPAPerGame = {
+          //     value: player.careerAvgEPAPerGame,
+          //     score: 6,
+          //   };
+          //   calcAllWrProspectsObjects[playerName].finalScore =
+          //     calcAllWrProspectsObjects[playerName].finalScore + 6;
+          // }
+
+          ////////////////////////////////////////////
+          ///////////////////////////////////////////
+          //      start next stat below here
+          ///////////////////////////////////////////
+
           if (player.yearOne.Height < 71.1) {
             // if (player.yearOne.Hit === 'Y') {
             //   num = num + 1;
@@ -1390,7 +1573,7 @@ test.forEach(topPlayer => {
                   };
 
                   let adjustmentValue =
-                    calcAllWrProspectsObjects[playerName].finalScore * 0.3;
+                    calcAllWrProspectsObjects[playerName].finalScore * 0.35;
                   calcAllWrProspectsObjects[playerName].finalScore =
                     calcAllWrProspectsObjects[playerName].finalScore -
                     adjustmentValue;
@@ -1407,7 +1590,7 @@ test.forEach(topPlayer => {
                   };
 
                   let adjustmentValue =
-                    calcAllWrProspectsObjects[playerName].finalScore * 0.2;
+                    calcAllWrProspectsObjects[playerName].finalScore * 0.25;
                   calcAllWrProspectsObjects[playerName].finalScore =
                     calcAllWrProspectsObjects[playerName].finalScore -
                     adjustmentValue;
@@ -1422,7 +1605,7 @@ test.forEach(topPlayer => {
                 };
 
                 let adjustmentValue =
-                  calcAllWrProspectsObjects[playerName].finalScore * 0.2;
+                  calcAllWrProspectsObjects[playerName].finalScore * 0.25;
                 calcAllWrProspectsObjects[playerName].finalScore =
                   calcAllWrProspectsObjects[playerName].finalScore -
                   adjustmentValue;
@@ -1456,7 +1639,7 @@ test.forEach(topPlayer => {
               };
 
               let adjustmentValue =
-                calcAllWrProspectsObjects[playerName].finalScore * 0.05;
+                calcAllWrProspectsObjects[playerName].finalScore * 0.15;
               calcAllWrProspectsObjects[playerName].finalScore =
                 calcAllWrProspectsObjects[playerName].finalScore -
                 adjustmentValue;
@@ -1474,11 +1657,11 @@ test.forEach(topPlayer => {
                     playerName
                   ].yearOneConferenceAdjustment = {
                     value: `${player.yearOne.Conference}-non-early declare`,
-                    score: 0.05,
+                    score: 0,
                   };
 
                   let adjustmentValue =
-                    calcAllWrProspectsObjects[playerName].finalScore * 0.05;
+                    calcAllWrProspectsObjects[playerName].finalScore * 0.15;
                   calcAllWrProspectsObjects[playerName].finalScore =
                     calcAllWrProspectsObjects[playerName].finalScore -
                     adjustmentValue;
@@ -1487,30 +1670,34 @@ test.forEach(topPlayer => {
               //
               if (player.yearThree) {
                 if (player.yearThree['Year out of HS'] < 5) {
+                  // num = num + 1;
+                  // console.log(num, player.name);
                   calcAllWrProspectsObjects[
                     playerName
                   ].yearOneConferenceAdjustment = {
                     value: `${player.yearOne.Conference}-early declare`,
-                    score: 0.2,
+                    score: 0,
                   };
 
                   let adjustmentValue =
-                    calcAllWrProspectsObjects[playerName].finalScore * 0.2;
+                    calcAllWrProspectsObjects[playerName].finalScore * 0.1;
                   calcAllWrProspectsObjects[playerName].finalScore =
                     calcAllWrProspectsObjects[playerName].finalScore -
                     adjustmentValue;
                 }
               }
               if (!player.yearThree) {
+                // num = num + 1;
+                // console.log(num, player.name);
                 calcAllWrProspectsObjects[
                   playerName
                 ].yearOneConferenceAdjustment = {
                   value: `${player.yearOne.Conference}-early declare`,
-                  score: 0.2,
+                  score: 0,
                 };
 
                 let adjustmentValue =
-                  calcAllWrProspectsObjects[playerName].finalScore * 0.2;
+                  calcAllWrProspectsObjects[playerName].finalScore * 0.1;
                 calcAllWrProspectsObjects[playerName].finalScore =
                   calcAllWrProspectsObjects[playerName].finalScore -
                   adjustmentValue;
@@ -1566,7 +1753,7 @@ test.forEach(topPlayer => {
             // }
             //
             let adjustmentValue =
-              calcAllWrProspectsObjects[playerName].finalScore * 0.15;
+              calcAllWrProspectsObjects[playerName].finalScore * 0.3;
             calcAllWrProspectsObjects[playerName].finalScore = (
               calcAllWrProspectsObjects[playerName].finalScore - adjustmentValue
             ).toFixed(2);
@@ -1596,11 +1783,15 @@ test.forEach(topPlayer => {
           ) {
             // if (player.yearOne.Hit === 'N') {
             //   num = num + 1;
-            //   console.log(num, player.name);
+            //   console.log(
+            //     num,
+            //     player.name,
+            //     calcAllWrProspectsObjects[playerName].finalScore
+            //   );
             // }
             //
             let adjustmentValue =
-              calcAllWrProspectsObjects[playerName].finalScore * 0.4;
+              calcAllWrProspectsObjects[playerName].finalScore * 0.45;
             calcAllWrProspectsObjects[playerName].finalScore = (
               calcAllWrProspectsObjects[playerName].finalScore - adjustmentValue
             ).toFixed(2);
@@ -1608,7 +1799,7 @@ test.forEach(topPlayer => {
           //
           // if later than 5th round pick
           if (player.yearOne['Draft Round'] > 5) {
-            // if (player.yearOne.Hit === 'N') {
+            // if (player.yearOne.Hit === 'Y') {
             //   num = num + 1;
             //   console.log(num, player.name);
             // }
@@ -1620,7 +1811,101 @@ test.forEach(topPlayer => {
             ).toFixed(2);
           }
 
+          ////////////////////////////////////////////
+          ///////////////////////////////////////////
+          //      start next stat below here
+          ///////////////////////////////////////////
+
+          if (
+            player.highestContestedTargetPercent > 25 &&
+            player.highestContestedTargetPercent < 27.5 &&
+            player.yearOne['Draft Round'] < 4
+          ) {
+            // console.log(
+            //   player.name,
+
+            //   player.highestContestedTargetPercent,
+            //   player.yearOne['Draft Round']
+            // );
+            //
+            let adjustmentValue =
+              calcAllWrProspectsObjects[playerName].finalScore * 0.3;
+            calcAllWrProspectsObjects[playerName].finalScore = (
+              calcAllWrProspectsObjects[playerName].finalScore - adjustmentValue
+            ).toFixed(2);
+          }
+
+          if (
+            player.highestContestedTargetPercent > 27.49 &&
+            player.yearOne['Draft Round'] > 1 &&
+            player.yearOne['Draft Round'] < 3
+          ) {
+            // console.log(
+            //   player.name,
+
+            //   player.highestContestedTargetPercent,
+            //   player.yearOne['Draft Round']
+            // );
+            //
+            let adjustmentValue =
+              calcAllWrProspectsObjects[playerName].finalScore * 0.5;
+            calcAllWrProspectsObjects[playerName].finalScore = (
+              calcAllWrProspectsObjects[playerName].finalScore - adjustmentValue
+            ).toFixed(2);
+          }
+
+          if (
+            player.highestContestedTargetPercent > 27.49 &&
+            player.yearOne['Draft Round'] > 0 &&
+            player.yearOne['Draft Round'] < 2
+          ) {
+            // console.log(
+            //   player.name,
+
+            //   player.highestContestedTargetPercent,
+            //   player.yearOne['Draft Round']
+            // );
+            //
+            let adjustmentValue =
+              calcAllWrProspectsObjects[playerName].finalScore * 0.7;
+            calcAllWrProspectsObjects[playerName].finalScore = (
+              calcAllWrProspectsObjects[playerName].finalScore - adjustmentValue
+            ).toFixed(2);
+          }
+
+          calcAllWrProspectsObjects[playerName].playerName = player.name;
+
           ////////////////////////////////////////////////////////////////////////////////
+
+          if (player.yearTwoPlusYearThreeAveragedStats['EPA Per Play'] > 0.75) {
+            if (player.yearOne.Hit === 'Y') {
+              // num = num + 1;
+              // console.log(
+              //   num,
+              //   player.name,
+              //   player.yearOne['Draft Pick Overall'],
+              //   calcAllWrProspectsObjects[playerName].finalScore
+              // );
+            }
+          }
+
+          if (calcAllWrProspectsObjects[playerName].finalScore > 16) {
+            if (player.yearOne.Hit === 'Y') {
+              num = num + 1;
+              console.log(
+                num,
+                calcAllWrProspectsObjects[playerName].finalScore,
+                player.name,
+                player.yearOne.Conference
+                // calcAllWrProspectsObjects[playerName]
+                //   .yearOneConferenceAdjustment
+                // player.highestContestedTargetPercent,
+                // player.yearOne['Draft Round']
+                // calcAllWrProspectsObjects[playerName]
+              );
+              // console.log(calcAllWrProspectsObjects[playerName]);
+            }
+          }
 
           //////////////////////////////////////////////////////end
         }
@@ -1687,6 +1972,12 @@ test.forEach(topPlayer => {
       //   threshold: 62.5,
       //   ub: 'none',
       // };
+
+      // calcAllWrProspectsObjects['carrerAvgEPAPerGame'] = {
+      //   lb: 3.5,
+      //   threshold: 5,
+      //   ub: 'none',
+      // };
     }
   });
 });
@@ -1701,8 +1992,10 @@ let objectsArray = Object.entries(calcAllWrProspectsObjects);
 
 objectsArray.forEach(p => {
   p.forEach(player => {
-    if (player.finalScore > 22) {
-      console.log(p);
+    if (player.finalScore > 16) {
+      // num = num + 1;
+      // console.log(num, player.finalScore, player.playerName);
+      // console.log(player);
     }
   });
 });
