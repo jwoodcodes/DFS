@@ -974,7 +974,7 @@ test.forEach(topPlayer => {
               score: -10,
             };
             calcAllWrProspectsObjects[playerName].finalScore =
-              calcAllWrProspectsObjects[playerName].finalScore - 10;
+              calcAllWrProspectsObjects[playerName].finalScore - 5;
           }
 
           // bound 3: the best threshold the metric has
@@ -1889,23 +1889,22 @@ test.forEach(topPlayer => {
             }
           }
 
-          if (calcAllWrProspectsObjects[playerName].finalScore > 16) {
-            // if (player.yearOne.Hit === 'N') {
-            num = num + 1;
-            console.log(
-              num,
-
-              player.name,
-              calcAllWrProspectsObjects[playerName].finalScore
-              // player.yearOne.Conference,
-              // calcAllWrProspectsObjects[playerName]
-              //   .yearOneConferenceAdjustment
-              // player.highestContestedTargetPercent,
-              // player.yearOne['Draft Round']
-              // calcAllWrProspectsObjects[playerName]
-            );
-            // console.log(calcAllWrProspectsObjects[playerName]);
-            // }
+          if (calcAllWrProspectsObjects[playerName].finalScore < 16) {
+            if (player.yearOne.Hit === 'Y') {
+              num = num + 1;
+              console.log(
+                num,
+                player.name,
+                calcAllWrProspectsObjects[playerName].finalScore,
+                // player.yearOne.Conference,
+                // calcAllWrProspectsObjects[playerName]
+                //   .yearOneConferenceAdjustment
+                // player.highestContestedTargetPercent,
+                // player.yearOne['Draft Round']
+                calcAllWrProspectsObjects[playerName]
+              );
+              //   // console.log(calcAllWrProspectsObjects[playerName]);
+            }
           }
 
           //////////////////////////////////////////////////////end
