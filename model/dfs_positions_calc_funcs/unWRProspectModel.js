@@ -4309,3 +4309,9 @@ for (const [key1, value1] of Object.entries(allWrProspectsObjects)) {
 // console.log(allWrProspectsObjects);
 
 module.exports = allWrProspectsObjects;
+
+// const WRProspectModelData = [
+
+// ];
+
+// module.exports = WRProspectModelData;

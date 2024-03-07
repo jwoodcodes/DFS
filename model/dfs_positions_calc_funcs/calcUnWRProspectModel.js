@@ -94,6 +94,56 @@ test.forEach(topPlayer => {
           //   player.yearTwoPlusYearThreeAveragedStats['Rec TDs per Game'] > 0.55
           // ) {
 
+          // if (player.yearOne['PPR Points/RR'] > 0.925) {
+          //   if (player.yearOne.Hit === 'N') {
+          //     num = num + 1;
+          //     console.log(num, player.name, player.yearOne['PPR Points/RR']);
+          //   }
+          // }
+
+          // && player.yearOne['Draft Round'] < 4
+
+          // let testForHere = +player.yearOne['EPA Per Team Pass Attempt'];
+
+          // if (testForHere > 0.15) {
+          //   if (player.yearOne.Hit === 'Y') {
+          //     num = num + 1;
+          //     console.log(
+          //       num,
+          //       player.name,
+          //       testForHere,
+          //       player.yearOne['Draft Round']
+          //     );
+          //   }
+          // }
+
+          //           1 Anthony Miller 11.97
+          // 2 Calvin Austin III 10.58
+          // 3 Courtland Sutton 12.15
+          // 4 D.J. Chark 11.48
+          // 5 Danny Gray 12.18
+          // 6 Dante Pettis 14.85
+          // 7 Elijah Moore 13.23
+          // 8 James Washington 15.19
+          // 9 Jameson Williams 14.4
+          // 10 JJ Arcega-Whiteside 12.48
+          // 11 Josh Downs 11.03
+          // 12 Laviska Shenault Jr. 13.50
+          // 13 Marvin Mims Jr. 10.47
+          // 14 Michael Gallup 10.92
+          // 15 Rondale Moore 10.39
+          // 16 Simi Fehoko 10.29
+          // 17 Skyy Moore 12.29
+          // 18 Tylan Wallace 14.70
+          // 19 Tyler Johnson 11.22
+          // 20 Wan'Dale Robinson 12.76
+
+          // 1 Diontae Johnson 14.70
+          // 2 Jaylen Waddle 14.490000000000002
+          // 3 Nico Collins 13.86
+          // 4 Puka Nacua 15.95
+          // 5 Tee Higgins 10.97
+
           // }
 
           // if (player.yearOne['Power 5'] === 'Y') {
@@ -341,6 +391,32 @@ test.forEach(topPlayer => {
           //     calcAllWrProspectsObjects[playerName].finalScore =
           //       calcAllWrProspectsObjects[playerName].finalScore + 4;
           //   }
+          //
+          //  year one elite production
+
+          let yearOneFirstDownsPerRouteRun = +player.yearOne['1D/RR'].slice(
+            1,
+            -1
+          );
+
+          if (
+            yearOneFirstDownsPerRouteRun > 1.1 &&
+            player.yearOne['Draft Round'] < 4
+          ) {
+            // if (player.yearOne.Hit === 'Y') {
+            //   num = num + 1;
+            //   console.log(
+            //     num,
+            //     player.name,
+            //     yearOneFirstDownsPerRouteRun,
+            //     player.yearOne['Draft Round']
+            //   );
+            // }
+
+            //
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore + 2;
+          }
 
           ////////////////////////////////////////////
           ///////////////////////////////////////////
@@ -1889,7 +1965,7 @@ test.forEach(topPlayer => {
             }
           }
 
-          if (calcAllWrProspectsObjects[playerName].finalScore < 16) {
+          if (calcAllWrProspectsObjects[playerName].finalScore > 16) {
             if (player.yearOne.Hit === 'Y') {
               num = num + 1;
               console.log(
@@ -1899,11 +1975,11 @@ test.forEach(topPlayer => {
                 // player.yearOne.Conference,
                 // calcAllWrProspectsObjects[playerName]
                 //   .yearOneConferenceAdjustment
-                // player.highestContestedTargetPercent,
-                // player.yearOne['Draft Round']
-                calcAllWrProspectsObjects[playerName]
+                player.highestContestedTargetPercent,
+                player.yearOne['Draft Round']
+                // calcAllWrProspectsObjects[playerName]
               );
-              //   // console.log(calcAllWrProspectsObjects[playerName]);
+              // console.log(calcAllWrProspectsObjects[playerName]);
             }
           }
 
