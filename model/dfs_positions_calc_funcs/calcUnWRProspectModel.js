@@ -1047,7 +1047,7 @@ test.forEach(topPlayer => {
                 player.yearTwoPlusYearThreeAveragedStats[
                   'EPA Per Team Pass Attempt'
                 ],
-              score: -10,
+              score: -5,
             };
             calcAllWrProspectsObjects[playerName].finalScore =
               calcAllWrProspectsObjects[playerName].finalScore - 5;
@@ -1894,10 +1894,11 @@ test.forEach(topPlayer => {
 
           if (
             player.highestContestedTargetPercent > 25 &&
-            player.highestContestedTargetPercent < 27.5 &&
             player.yearOne['Draft Round'] < 4
           ) {
+            // num = num + 1;
             // console.log(
+            //   num,
             //   player.name,
 
             //   player.highestContestedTargetPercent,
@@ -1912,7 +1913,7 @@ test.forEach(topPlayer => {
           }
 
           if (
-            player.highestContestedTargetPercent > 27.49 &&
+            player.highestContestedTargetPercent > 26.9 &&
             player.yearOne['Draft Round'] > 1 &&
             player.yearOne['Draft Round'] < 3
           ) {
@@ -1931,7 +1932,7 @@ test.forEach(topPlayer => {
           }
 
           if (
-            player.highestContestedTargetPercent > 27.49 &&
+            player.highestContestedTargetPercent > 27 &&
             player.yearOne['Draft Round'] > 0 &&
             player.yearOne['Draft Round'] < 2
           ) {
@@ -1965,22 +1966,24 @@ test.forEach(topPlayer => {
             }
           }
 
-          if (calcAllWrProspectsObjects[playerName].finalScore > 16) {
-            if (player.yearOne.Hit === 'Y') {
-              num = num + 1;
-              console.log(
-                num,
-                player.name,
-                calcAllWrProspectsObjects[playerName].finalScore,
-                // player.yearOne.Conference,
-                // calcAllWrProspectsObjects[playerName]
-                //   .yearOneConferenceAdjustment
-                player.highestContestedTargetPercent,
-                player.yearOne['Draft Round']
-                // calcAllWrProspectsObjects[playerName]
-              );
-              // console.log(calcAllWrProspectsObjects[playerName]);
-            }
+          // if (calcAllWrProspectsObjects[playerName].finalScore > 0) {
+          // if (player.yearOne['Draft Round'] === 'NA') {
+          if (player.yearOne['Class'] === '2018') {
+            // if (player.yearOne.Hit === 'N') {
+            num = num + 1;
+            console.log(
+              num,
+              player.name,
+              calcAllWrProspectsObjects[playerName].finalScore
+              // player.yearOne.Conference,
+              // calcAllWrProspectsObjects[playerName]
+              //   .yearOneConferenceAdjustment
+              // player.highestContestedTargetPercent,
+              // player.yearOne['Draft Round']
+              // calcAllWrProspectsObjects[playerName]
+            );
+            // console.log(calcAllWrProspectsObjects[playerName]);
+            // }
           }
 
           //////////////////////////////////////////////////////end
