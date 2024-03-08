@@ -793,15 +793,26 @@ const testfunc = async function () {
               this.rvValue = 3;
               this.rvPercentOfNonQBMax = 0.9;
             }
-            if (+fcPickRound === 1 && +fcPickNumber > 1 && +fcPickNumber < 6) {
+            if (+fcPickRound === 1 && +fcPickNumber > 1 && +fcPickNumber < 4) {
+              // console.log(fcPickYear, fcPickRound, fcPickNumber);
+              this.rvValue = 2.5;
+              this.rvPercentOfNonQBMax = 0.75;
+            }
+            if (+fcPickRound === 1 && +fcPickNumber > 3 && +fcPickNumber < 6) {
               // console.log(fcPickYear, fcPickRound, fcPickNumber);
               this.rvValue = 2;
               this.rvPercentOfNonQBMax = 0.6;
             }
+            if (+fcPickRound === 1 && +fcPickNumber > 5 && +fcPickNumber < 9) {
+              // console.log(fcPickYear, fcPickRound, fcPickNumber);
+              this.rvValue = 1.75;
+              this.rvPercentOfNonQBMax = 0.5;
+            }
 
             if (
-              +fcPickRoundAndNumberFormattedForPP > 105 &&
-              +fcPickRoundAndNumberFormattedForPP < 111
+              (+fcPickRoundAndNumberFormattedForPP > 108 &&
+                +fcPickRoundAndNumberFormattedForPP < 111) ||
+              +fcPickRoundAndNumberFormattedForPP === 100
             ) {
               // console.log(fcPickRoundAndNumberFormattedForPP);
               this.rvValue = 1.17;
@@ -838,28 +849,29 @@ const testfunc = async function () {
               this.rvPercentOfNonQBMax = 0.03;
             }
           }
-          // console.log(curMonth)
+
+          // console.log(curMonth);
 
           if (curMonth < 6) {
-            if (fcPickYear === +curYear) {
-              // console.log(fcPickYear);
-              // console.log(fcPickRound);
-              // console.log(fcNonQBMaxValue);
-              // console.log(player.player.name);
-              // console.log(fcPickRoundAndNumberFormattedForPP);
-              if (+fcPickRound === 1) {
-                this.rvValue = 1.15;
-                this.rvPercentOfNonQBMax = 0.33;
-              }
-              if (+fcPickRound === 2) {
-                this.rvValue = 0.33;
-                this.rvPercentOfNonQBMax = 0.11;
-              }
-              if (+fcPickRound === 3) {
-                this.rvValue = 0.12;
-                this.rvPercentOfNonQBMax = 0.04;
-              }
-            }
+            // if (fcPickYear === +curYear) {
+            //   // console.log(fcPickYear);
+            //   // console.log(fcPickRound);
+            //   // console.log(fcNonQBMaxValue);
+            //   // console.log(player.player.name);
+            //   // console.log(fcPickRoundAndNumberFormattedForPP);
+            //   if (+fcPickRound === 1) {
+            //     this.rvValue = 1.15;
+            //     this.rvPercentOfNonQBMax = 0.33;
+            //   }
+            //   if (+fcPickRound === 2) {
+            //     this.rvValue = 0.33;
+            //     this.rvPercentOfNonQBMax = 0.11;
+            //   }
+            //   if (+fcPickRound === 3) {
+            //     this.rvValue = 0.12;
+            //     this.rvPercentOfNonQBMax = 0.04;
+            //   }
+            // }
             if (fcPickYear === +(curYear + 1)) {
               // console.log(fcPickYear);
               // console.log(player.player.name);
@@ -1084,7 +1096,7 @@ const testfunc = async function () {
       // non QB's
 
       if (player.player.position !== 'QB') {
-        // console.log(player.player.name);
+        // console.log(player.player.name, this.rvPercentOfNonQBMax);
 
         if (player.player.name === 'DeVon Achane') {
           this.rvPercentOfNonQBMax = 0.67;
