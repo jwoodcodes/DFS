@@ -103,46 +103,57 @@ test.forEach(topPlayer => {
 
           // && player.yearOne['Draft Round'] < 4
 
-          // let testForHere = +player.yearOne['EPA Per Team Pass Attempt'];
+          // let testForHere = +player.yearOne['Age in Best Season'];
 
-          // if (testForHere > 0.15) {
-          //   if (player.yearOne.Hit === 'Y') {
-          //     num = num + 1;
-          //     console.log(
-          //       num,
-          //       player.name,
-          //       testForHere,
-          //       player.yearOne['Draft Round']
-          //     );
-          //   }
+          // if (testForHere < 20 && player.yearOne.RR > 23) {
+          //   // if (player.yearOne.Hit === 'Y') {
+          //   num = num + 1;
+          //   console.log(
+          //     num,
+          //     player.name,
+          //     testForHere,
+          //     player.yearOne.RR,
+          //     player.yearOne['Draft Round']
+          //   );
+          //   // }
           // }
 
-          //           1 Anthony Miller 11.97
+          //  1 Deebo Samuel 8.93
+          // 2 Diontae Johnson 14.70
+          // 3 Jayden Reed 9.69
+          // 4 Michael Pittman Jr. 8.93
+          // 5 Nico Collins 13.86
+          // 6 Zay Flowers 7.35
+          //
+          //
+          //  1 Anthony Miller 11.97
           // 2 Calvin Austin III 10.58
           // 3 Courtland Sutton 12.15
           // 4 D.J. Chark 11.48
           // 5 Danny Gray 12.18
-          // 6 Dante Pettis 14.85
-          // 7 Elijah Moore 13.23
-          // 8 James Washington 15.19
-          // 9 Jameson Williams 14.4
-          // 10 JJ Arcega-Whiteside 12.48
-          // 11 Josh Downs 11.03
-          // 12 Laviska Shenault Jr. 13.50
-          // 13 Marvin Mims Jr. 10.47
-          // 14 Michael Gallup 10.92
-          // 15 Rondale Moore 10.39
-          // 16 Simi Fehoko 10.29
-          // 17 Skyy Moore 12.29
-          // 18 Tylan Wallace 14.70
-          // 19 Tyler Johnson 11.22
-          // 20 Wan'Dale Robinson 12.76
-
-          // 1 Diontae Johnson 14.70
-          // 2 Jaylen Waddle 14.490000000000002
-          // 3 Nico Collins 13.86
-          // 4 Puka Nacua 15.95
-          // 5 Tee Higgins 10.97
+          // 6 Dante Pettis 14.17
+          // 7 Dyami Brown 10.92
+          // 8 Elijah Moore 13.23
+          // 9 Henry Ruggs III 9
+          // 10 Jameson Williams 14.4
+          // 11 Jordan Lasley 7.42
+          // 12 Josh Downs 11.03
+          // 13 Keke Coutee 9.55
+          // 14 Khalil Shakir 9.24
+          // 15 KJ Hamler 8.51
+          // 16 Laviska Shenault Jr. 12.83
+          // 17 Marvin Mims Jr. 11.97
+          // 18 Michael Gallup 10.92
+          // 19 Quintez Cephus 9.90
+          // 20 Rashod Bateman 9.99
+          // 21 Romeo Doubs 7.14
+          // 22 Rondale Moore 10.39
+          // 23 Simi Fehoko 10.29
+          // 24 Skyy Moore 12.29
+          // 25 Treylon Burks 9.72
+          // 26 Tylan Wallace 14.70
+          // 27 Tyler Johnson 11.22
+          // 28 Wan'Dale Robinson 12.76
 
           // }
 
@@ -155,6 +166,8 @@ test.forEach(topPlayer => {
           //     }
           //   }
           // }
+
+          //
 
           player.highestContestedTargetPercent =
             player.yearOne['Contested Target %'];
@@ -284,7 +297,7 @@ test.forEach(topPlayer => {
           // two players from Hit sample in this group in initial sample
           //
           if (player.careerAveragedStats['1D/RR'] < 8) {
-            // if (player.yearOne.Hit === 'Y') {
+            // if (player.yearOne.Hit === 'N') {
             //   num = num + 1;
             //   console.log(
             //     num,
@@ -645,7 +658,7 @@ test.forEach(topPlayer => {
             player.careerAveragedStats['Zone YPRR'] < 1 &&
             player.careerAveragedStats['Man YPRR'] < 1
           ) {
-            // if (player.yearOne.Hit === 'N') {
+            // if (player.yearOne.Hit === 'Y') {
             //   num = num + 1;
             //   console.log(
             //     num,
@@ -788,7 +801,7 @@ test.forEach(topPlayer => {
             player.careerAveragedStats['PPR Points'] > 129.99 &&
             player.careerAveragedStats['PPR Points'] < 160
           ) {
-            // if (player.yearOne.Hit === 'N') {
+            // if (player.yearOne.Hit === 'Y') {
             //   num = num + 1;
             //   console.log(
             //     num,
@@ -991,7 +1004,7 @@ test.forEach(topPlayer => {
               'EPA Per Team Pass Attempt'
             ] < 0.08
           ) {
-            // if (player.yearOne.Hit === 'Y') {
+            // if (player.yearOne.Hit === 'N') {
             //   num = num + 1;
             //   console.log(
             //     num,
@@ -1049,8 +1062,8 @@ test.forEach(topPlayer => {
                 ],
               score: -5,
             };
-            calcAllWrProspectsObjects[playerName].finalScore =
-              calcAllWrProspectsObjects[playerName].finalScore - 5;
+            // calcAllWrProspectsObjects[playerName].finalScore =
+            //   calcAllWrProspectsObjects[playerName].finalScore - 5;
           }
 
           // bound 3: the best threshold the metric has
@@ -1061,16 +1074,16 @@ test.forEach(topPlayer => {
               'EPA Per Team Pass Attempt'
             ] > 0.1249
           ) {
-            // if (player.yearOne.Hit === 'Y') {
-            //   num = num + 1;
-            //   console.log(
-            //     num,
-            //     player.name,
-            //     player.yearTwoPlusYearThreeAveragedStats[
-            //       'EPA Per Team Pass Attempt'
-            //     ]
-            //   );
-            // }
+            if (player.yearOne.Hit === 'Y') {
+              // num = num + 1;
+              // console.log(
+              //   num,
+              //   player.name,
+              //   player.yearTwoPlusYearThreeAveragedStats[
+              //     'EPA Per Team Pass Attempt'
+              //   ]
+              // );
+            }
             //
             // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
             //
@@ -1301,7 +1314,7 @@ test.forEach(topPlayer => {
             player.careerAveragedStats['Rec TDs'] > 5.49 &&
             player.careerAveragedStats['Rec TDs'] < 10.5
           ) {
-            // if (player.yearOne.Hit === 'N') {
+            // if (player.yearOne.Hit === 'Y') {
             //   num = num + 1;
             //   console.log(
             //     num,
@@ -1471,7 +1484,7 @@ test.forEach(topPlayer => {
           // the highest mark that has only two of the hits sample below this number
           // two players from Hit sample in this group in initial sample
           //
-          if (player.careerAvgEPAPerGame < 3.5) {
+          if (player.careerAvgEPAPerGame < 3.8461) {
             if (player.yearOne.Hit === 'N') {
               // num = num + 1;
               // console.log(num, player.name, player.careerAvgEPAPerGame);
@@ -1491,10 +1504,10 @@ test.forEach(topPlayer => {
           // this is the catch bound to give everyone below threshold but above lower bound a 0
           //
           if (
-            player.careerAvgEPAPerGame > 3.49 &&
+            player.careerAvgEPAPerGame > 3.846 &&
             player.careerAvgEPAPerGame < 5
           ) {
-            // if (player.yearOne.Hit === 'Y') {
+            // if (player.yearOne.Hit === 'N') {
             //   num = num + 1;
             //   console.log(num, player.name, player.careerAvgEPAPerGame);
             // }
@@ -1552,6 +1565,57 @@ test.forEach(topPlayer => {
           //   calcAllWrProspectsObjects[playerName].finalScore =
           //     calcAllWrProspectsObjects[playerName].finalScore + 6;
           // }
+
+          ////////////////////////////////////////////
+          ///////////////////////////////////////////
+          //      start next stat below here
+          ///////////////////////////////////////////
+
+          // starting first year production bonuses
+
+          let yearOneYPRR = +player.yearOne.YPRR;
+
+          if (yearOneYPRR > 3 && player.yearOne.RR > 45) {
+            // if (player.yearOne.Hit === 'Y') {
+            //   num = num + 1;
+            //   console.log(
+            //     num,
+            //     player.name,
+            //     yearOneYPRR,
+            //     player.yearOne.RR
+            //     // player.yearOne['Draft Round']
+            //   );
+            // }
+
+            calcAllWrProspectsObjects[playerName].YearOneYPRRBonus = {
+              value: yearOneYPRR,
+              score: 1,
+            };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore + 1;
+          }
+
+          //
+
+          if (+player.yearOne['YAC/Rec'] > 9.6 && player.yearOne.RR > 100) {
+            if (player.yearOne.Hit === 'Y') {
+              // num = num + 1;
+              // console.log(
+              //   num,
+              //   player.name,
+              //   testForHere,
+              //   player.yearOne.RR
+              //   // player.yearOne['Draft Round']
+              // );
+            }
+
+            calcAllWrProspectsObjects[playerName].YearOneYacPerRecBonus = {
+              value: +player.yearOne['YAC/Rec'],
+              score: 1,
+            };
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore + 1;
+          }
 
           ////////////////////////////////////////////
           ///////////////////////////////////////////
@@ -1788,6 +1852,9 @@ test.forEach(topPlayer => {
           //      start next stat below here
           ///////////////////////////////////////////
 
+          calcAllWrProspectsObjects[playerName].preDraftCapitalScore =
+            calcAllWrProspectsObjects[playerName].finalScore;
+
           // if first round pick
 
           if (player.yearOne['Draft Round'] === 1) {
@@ -1894,7 +1961,56 @@ test.forEach(topPlayer => {
 
           if (
             player.highestContestedTargetPercent > 25 &&
-            player.yearOne['Draft Round'] < 4
+            player.highestContestedTargetPercent < 27 &&
+            player.yearOne['Draft Round'] !== 'NA'
+          ) {
+            // num = num + 1;
+            // console.log(
+            //   num,
+            //   player.name,
+
+            //   player.highestContestedTargetPercent,
+            //   player.yearOne['Draft Round']
+            // );
+            //
+            let adjustmentValue =
+              calcAllWrProspectsObjects[playerName].finalScore * 0.3;
+
+            //
+
+            calcAllWrProspectsObjects[playerName].preDraftCapitalScore = (
+              calcAllWrProspectsObjects[playerName].preDraftCapitalScore -
+              adjustmentValue
+            ).toFixed(2);
+          }
+
+          if (
+            player.highestContestedTargetPercent > 26.99 &&
+            player.yearOne['Draft Round'] !== 'NA'
+          ) {
+            // num = num + 1;
+            // console.log(
+            //   num,
+            //   player.name,
+
+            //   player.highestContestedTargetPercent,
+            //   player.yearOne['Draft Round']
+            // );
+            //
+            let adjustmentValue =
+              calcAllWrProspectsObjects[playerName].finalScore * 0.5;
+
+            //
+            calcAllWrProspectsObjects[playerName].preDraftCapitalScore = (
+              calcAllWrProspectsObjects[playerName].preDraftCapitalScore -
+              adjustmentValue
+            ).toFixed(2);
+          }
+
+          if (
+            player.highestContestedTargetPercent > 25 &&
+            player.highestContestedTargetPercent < 27 &&
+            player.yearOne['Draft Round'] === 'NA'
           ) {
             // num = num + 1;
             // console.log(
@@ -1910,10 +2026,82 @@ test.forEach(topPlayer => {
             calcAllWrProspectsObjects[playerName].finalScore = (
               calcAllWrProspectsObjects[playerName].finalScore - adjustmentValue
             ).toFixed(2);
+            //
+
+            calcAllWrProspectsObjects[playerName].preDraftCapitalScore = (
+              calcAllWrProspectsObjects[playerName].preDraftCapitalScore -
+              adjustmentValue
+            ).toFixed(2);
           }
 
           if (
-            player.highestContestedTargetPercent > 26.9 &&
+            player.highestContestedTargetPercent > 26.99 &&
+            player.yearOne['Draft Round'] === 'NA'
+          ) {
+            // num = num + 1;
+            // console.log(
+            //   num,
+            //   player.name,
+
+            //   player.highestContestedTargetPercent,
+            //   player.yearOne['Draft Round']
+            // );
+            //
+            let adjustmentValue =
+              calcAllWrProspectsObjects[playerName].finalScore * 0.5;
+            calcAllWrProspectsObjects[playerName].finalScore = (
+              calcAllWrProspectsObjects[playerName].finalScore - adjustmentValue
+            ).toFixed(2);
+            //
+            calcAllWrProspectsObjects[playerName].preDraftCapitalScore = (
+              calcAllWrProspectsObjects[playerName].preDraftCapitalScore -
+              adjustmentValue
+            ).toFixed(2);
+          }
+
+          if (
+            player.highestContestedTargetPercent > 25 &&
+            player.highestContestedTargetPercent < 27 &&
+            player.yearOne['Draft Round'] < 4
+          ) {
+            // num = num + 1;
+            // console.log(
+            //   num,
+            //   player.name,
+
+            //   player.highestContestedTargetPercent,
+            //   player.yearOne['Draft Round']
+            // );
+            //
+            let adjustmentValue =
+              calcAllWrProspectsObjects[playerName].finalScore * 0.2;
+            calcAllWrProspectsObjects[playerName].finalScore = (
+              calcAllWrProspectsObjects[playerName].finalScore - adjustmentValue
+            ).toFixed(2);
+          }
+
+          if (
+            player.highestContestedTargetPercent > 26.99 &&
+            player.highestContestedTargetPercent < 33.5 &&
+            player.yearOne['Draft Round'] > 1 &&
+            player.yearOne['Draft Round'] < 3
+          ) {
+            // console.log(
+            //   player.name,
+
+            //   player.highestContestedTargetPercent,
+            //   player.yearOne['Draft Round']
+            // );
+            //
+            let adjustmentValue =
+              calcAllWrProspectsObjects[playerName].finalScore * 0.3;
+            calcAllWrProspectsObjects[playerName].finalScore = (
+              calcAllWrProspectsObjects[playerName].finalScore - adjustmentValue
+            ).toFixed(2);
+          }
+
+          if (
+            player.highestContestedTargetPercent > 33.49 &&
             player.yearOne['Draft Round'] > 1 &&
             player.yearOne['Draft Round'] < 3
           ) {
@@ -1950,6 +2138,25 @@ test.forEach(topPlayer => {
             ).toFixed(2);
           }
 
+          if (
+            player.highestContestedTargetPercent > 34.9 &&
+            player.yearOne['Draft Round'] > 1 &&
+            player.yearOne['Draft Round'] < 4
+          ) {
+            // console.log(
+            //   player.name,
+
+            //   player.highestContestedTargetPercent,
+            //   player.yearOne['Draft Round']
+            // );
+            //
+            let adjustmentValue =
+              calcAllWrProspectsObjects[playerName].finalScore * 0.7;
+            calcAllWrProspectsObjects[playerName].finalScore = (
+              calcAllWrProspectsObjects[playerName].finalScore - adjustmentValue
+            ).toFixed(2);
+          }
+
           calcAllWrProspectsObjects[playerName].playerName = player.name;
 
           ////////////////////////////////////////////////////////////////////////////////
@@ -1966,24 +2173,34 @@ test.forEach(topPlayer => {
             }
           }
 
-          // if (calcAllWrProspectsObjects[playerName].finalScore > 0) {
-          // if (player.yearOne['Draft Round'] === 'NA') {
-          if (player.yearOne['Class'] === '2018') {
-            // if (player.yearOne.Hit === 'N') {
-            num = num + 1;
-            console.log(
-              num,
-              player.name,
-              calcAllWrProspectsObjects[playerName].finalScore
-              // player.yearOne.Conference,
-              // calcAllWrProspectsObjects[playerName]
-              //   .yearOneConferenceAdjustment
-              // player.highestContestedTargetPercent,
-              // player.yearOne['Draft Round']
-              // calcAllWrProspectsObjects[playerName]
-            );
-            // console.log(calcAllWrProspectsObjects[playerName]);
-            // }
+          let tempOne =
+            +calcAllWrProspectsObjects[playerName].preDraftCapitalScore;
+          let PreDCScore = tempOne.toFixed(2);
+          let tempTwo = +calcAllWrProspectsObjects[playerName].finalScore;
+          let PostDCScore = tempTwo.toFixed(2);
+
+          if (calcAllWrProspectsObjects[playerName].finalScore > 13.5) {
+            // if (player.yearOne['Draft Round'] === 'NA') {
+            // if (player.yearOne['Class'] === '2022') {
+            if (player.yearOne.Hit === 'N') {
+              num = num + 1;
+              console.log(
+                num,
+                player.name,
+                '  ',
+                '  ',
+                PreDCScore,
+                '  ',
+                PostDCScore
+                // player.yearOne.Conference,
+                // calcAllWrProspectsObjects[playerName]
+                //   .yearOneConferenceAdjustment
+                // player.highestContestedTargetPercent
+                // player.yearOne['Draft Round']
+                // calcAllWrProspectsObjects[playerName]
+              );
+              // console.log(calcAllWrProspectsObjects[playerName]);
+            }
           }
 
           //////////////////////////////////////////////////////end
