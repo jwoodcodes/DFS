@@ -2229,17 +2229,25 @@ test.forEach(topPlayer => {
 
           ////////////////////////////////////////////////////////////////////////////////
 
-          if (player.yearTwoPlusYearThreeAveragedStats['EPA Per Play'] > 0.75) {
-            if (player.yearOne.Hit === 'Y') {
-              // num = num + 1;
-              // console.log(
-              //   num,
-              //   player.name,
-              //   player.yearOne['Draft Pick Overall'],
-              //   calcAllWrProspectsObjects[playerName].finalScore
-              // );
-            }
-          }
+          // let objectsArray = Object.entries(calcAllWrProspectsObjects);
+
+          // // // console.log(objectsArray)
+          // let sortedArray = [];
+
+          // objectsArray.forEach(p => {
+          //   //
+          //   sortedArray = p.sort((a, b) => a.finalScore - b.finalScore);
+
+          //   // p.forEach(player => {
+          //   //   if (player.finalScore > 16) {
+          //   //     // num = num + 1;
+          //   //     console.log(num, player.finalScore, player.playerName);
+          //   //     console.log(player);
+          //   //   }
+          //   // });
+          // });
+
+          // console.log(sortedArray);
 
           let tempOne =
             +calcAllWrProspectsObjects[playerName].preDraftCapitalScore;
@@ -2247,9 +2255,12 @@ test.forEach(topPlayer => {
           let tempTwo = +calcAllWrProspectsObjects[playerName].finalScore;
           let PostDCScore = tempTwo.toFixed(2);
 
-          // if (calcAllWrProspectsObjects[playerName].finalScore > 10) {
-          // if (player.yearOne['Draft Round'] === 'NA') {
-          if (player.yearOne['Class'] === '2024') {
+          if (
+            calcAllWrProspectsObjects[playerName].finalScore < 15.5 &&
+            calcAllWrProspectsObjects[playerName].finalScore > 12
+          ) {
+            // if (player.yearOne['Draft Round'] === 'NA') {
+            // if (player.yearOne['Class'] === '2024') {
             // if (player.yearOne.Hit === 'N') {
             num = num + 1;
             console.log(
@@ -2266,8 +2277,8 @@ test.forEach(topPlayer => {
               //   player.yearOne['Draft Round'],
               // calcAllWrProspectsObjects[playerName]
             );
+            // }
           }
-          // }
 
           //////////////////////////////////////////////////////end
         }
@@ -2348,16 +2359,16 @@ test.forEach(topPlayer => {
 
 // console.log(calcAllWrProspectsObjects);
 
-let objectsArray = Object.entries(calcAllWrProspectsObjects);
+// let objectsArray = Object.entries(calcAllWrProspectsObjects);
 
-// // console.log(objectsArray)
+// // // console.log(objectsArray)
 
-objectsArray.forEach(p => {
-  p.forEach(player => {
-    if (player.finalScore > 16) {
-      // num = num + 1;
-      // console.log(num, player.finalScore, player.playerName);
-      // console.log(player);
-    }
-  });
-});
+// objectsArray.forEach(p => {
+//   p.forEach(player => {
+//     if (player.finalScore > 16) {
+//       // num = num + 1;
+//       // console.log(num, player.finalScore, player.playerName);
+//       // console.log(player);
+//     }
+//   });
+// });

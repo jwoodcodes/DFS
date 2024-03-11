@@ -1111,6 +1111,11 @@ const testfunc = async function () {
         );
         this.myValue = Math.round(tempValue);
 
+        if (this.name === 'Drake London') {
+          this.myValue = +(this.myValue * 1.5).toFixed(0);
+          // console.log(this.myValue);
+        }
+
         if (this.myValue < 1000) {
           // console.log(this.name, this.myValue)
 
