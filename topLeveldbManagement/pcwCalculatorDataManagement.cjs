@@ -1051,11 +1051,6 @@ const testfunc = async function () {
           // console.log(this.myValue)
         }
 
-        if (this.name === 'Jordan Love') {
-          this.myValue = +(this.myValue * 1.5).toFixed(0);
-          // console.log(this.myValue)
-        }
-
         this.valueDiffBetweenMyValueAndMarketValue = +(
           this.myValue - +player.value
         ).toFixed(2);
@@ -1097,14 +1092,6 @@ const testfunc = async function () {
 
       if (player.player.position !== 'QB') {
         // console.log(player.player.name, this.rvPercentOfNonQBMax);
-
-        if (player.player.name === 'DeVon Achane') {
-          this.rvPercentOfNonQBMax = 0.67;
-        }
-
-        if (player.player.name === 'Tank Dell') {
-          // console.log(this.rvPercentOfNonQBMax)
-        }
 
         this.myPercentOfNonQBMax = +(
           (+this.ppSFNonQBTEPPercentOfMax +
