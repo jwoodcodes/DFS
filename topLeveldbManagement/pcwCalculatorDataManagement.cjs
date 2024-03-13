@@ -1046,9 +1046,34 @@ const testfunc = async function () {
           // console.log(this.myValue)
         }
 
-        if (this.name === 'Hendon Hooker') {
-          this.myValue = 1750;
-          // console.log(this.myValue)
+        if (this.name === 'Caleb Williams') {
+          this.myValue = 6025;
+          // console.log(this.myValue);
+        }
+
+        if (this.name === 'Jayden Daniels') {
+          this.myValue = 4300;
+          // console.log(this.myValue);
+        }
+
+        if (this.name === 'Drake Maye') {
+          this.myValue = 4200;
+          // console.log(this.myValue);
+        }
+
+        if (this.name === 'JJ McCarthy') {
+          this.myValue = 3550;
+          // console.log(this.myValue);
+        }
+
+        if (this.name === 'Bo Nix') {
+          this.myValue = 1900;
+          // console.log(this.myValue);
+        }
+
+        if (this.name === 'Michael Penix') {
+          this.myValue = 1000;
+          // console.log(this.myValue);
         }
 
         this.valueDiffBetweenMyValueAndMarketValue = +(
@@ -1113,6 +1138,111 @@ const testfunc = async function () {
 
         if (this.name === 'Drake London') {
           this.myValue = +(this.myValue * 1.5).toFixed(0);
+          // console.log(this.myValue);
+        }
+
+        if (this.name === 'Marvin Harrison') {
+          this.myValue = 6020;
+          // console.log(this.myValue);
+        }
+
+        if (this.name === 'Malik Nabers') {
+          this.myValue = 6020;
+          // console.log(this.myValue);
+        }
+
+        if (this.name === 'Brock Bowers') {
+          this.myValue = 4100;
+          // console.log(this.myValue);
+        }
+
+        if (this.name === 'Rome Odunze') {
+          this.myValue = 3800;
+          // console.log(this.myValue);
+        }
+
+        if (this.name === 'Troy Franklin') {
+          this.myValue = 3500;
+          // console.log(this.myValue);
+        }
+
+        if (this.name === 'Ladd McConkey') {
+          this.myValue = 3250;
+          // console.log(this.myValue);
+        }
+
+        if (this.name === 'Xavier Worthy') {
+          this.myValue = 2000;
+          // console.log(this.myValue);
+        }
+
+        if (this.name === 'Brian Thomas') {
+          this.myValue = 1800;
+          // console.log(this.myValue);
+        }
+
+        if (this.name === 'Keon Coleman') {
+          this.myValue = 900;
+          // console.log(this.myValue);
+        }
+
+        if (this.name === 'Jonathon Brooks') {
+          this.myValue = 1950;
+          // console.log(this.myValue);
+        }
+
+        if (this.name === 'Trey Benson') {
+          this.myValue = 1950;
+          // console.log(this.myValue);
+        }
+
+        if (this.name === 'Blake Corum') {
+          this.myValue = 1900;
+          // console.log(this.myValue);
+        }
+
+        if (this.name === 'Bucky Irving') {
+          this.myValue = 1650;
+          // console.log(this.myValue);
+        }
+
+        if (this.name === 'MarShawn Lloyd') {
+          this.myValue = 1500;
+          // console.log(this.myValue);
+        }
+
+        if (this.name === 'JaTavion Sanders') {
+          this.myValue = 1700;
+          // console.log(this.myValue);
+        }
+
+        if (this.name === 'Adonai Mitchell') {
+          this.myValue = 1250;
+          // console.log(this.myValue);
+        }
+
+        if (this.name === 'Jacob Cowing') {
+          this.myValue = 1250;
+          // console.log(this.myValue);
+        }
+
+        if (this.name === 'Jermaine Burton') {
+          this.myValue = 1150;
+          // console.log(this.myValue);
+        }
+
+        if (this.name === 'Devontez Walker') {
+          this.myValue = 1100;
+          // console.log(this.myValue);
+        }
+
+        if (this.name === 'Ricky Pearsall') {
+          this.myValue = 900;
+          // console.log(this.myValue);
+        }
+
+        if (this.name === 'Xavier Legette') {
+          this.myValue = 500;
           // console.log(this.myValue);
         }
 
