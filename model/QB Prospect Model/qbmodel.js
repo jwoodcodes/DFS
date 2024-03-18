@@ -1,7 +1,5 @@
 'use strict';
 
-
-
 //conference adjustment scale
 
 // SEC or Big Ten- +7.5%
@@ -767,7 +765,6 @@ const qbs = {
     conferenceAdjustment: 0.065,
   },
 
-
   CWilliams: {
     name: 'Caleb Williams',
     draftCapital: 1,
@@ -786,7 +783,7 @@ const qbs = {
     ageWhenDrafted: 22,
     collegeQBR: 86.5,
     numberOfGamesWithTenPlusPassAttempts: 35,
-    conferenceAdjustment: .05,
+    conferenceAdjustment: 0.05,
   },
 
   Maye: {
@@ -807,10 +804,8 @@ const qbs = {
     ageWhenDrafted: 21,
     collegeQBR: 82.7,
     numberOfGamesWithTenPlusPassAttempts: 26,
-    conferenceAdjustment: .05,
+    conferenceAdjustment: 0.05,
   },
-
-
 
   Nix: {
     name: 'Bo Nix',
@@ -830,10 +825,8 @@ const qbs = {
     ageWhenDrafted: 24,
     collegeQBR: 87,
     numberOfGamesWithTenPlusPassAttempts: 50,
-    conferenceAdjustment: .05,
+    conferenceAdjustment: 0.05,
   },
-
-  
 
   Daniels: {
     name: 'Jayden Daniels',
@@ -853,7 +846,7 @@ const qbs = {
     ageWhenDrafted: 23,
     collegeQBR: 82.3,
     numberOfGamesWithTenPlusPassAttempts: 50,
-    conferenceAdjustment: .05,
+    conferenceAdjustment: 0.05,
   },
   Penix: {
     name: 'Michael Penix',
@@ -876,8 +869,26 @@ const qbs = {
     conferenceAdjustment: 0.065,
   },
 
-  
-
+  McCarthy: {
+    name: 'JJ McCarthy',
+    draftCapital: 8,
+    height: 75,
+    weight: 197,
+    careerYPA: 8.7,
+    bestSeasonYPA: 9.0,
+    careerComplationPercentage: 67.6,
+    bestFullSeasonCompletionPercentage: 72.3,
+    totalCareerPassAttempts: 713,
+    bestSeasonTotalPassingYards: 2991,
+    bestSeasonTotalTDs: 22,
+    bestSeasonRushingYards: 306,
+    fortyTime: 4.71,
+    careerInterceptionRate: 1.5,
+    ageWhenDrafted: 21.2,
+    collegeQBR: 88.2,
+    numberOfGamesWithTenPlusPassAttempts: 29,
+    conferenceAdjustment: 0.075,
+  },
 };
 
 const RWilson = qbs.RWilson;
@@ -921,6 +932,7 @@ const Maye = qbs.Maye;
 const Nix = qbs.Nix;
 const Daniels = qbs.Daniels;
 const Penix = qbs.Penix;
+const McCarthy = qbs.McCarthy;
 
 const allQBs = [
   RWilson,
@@ -963,7 +975,8 @@ const allQBs = [
   Maye,
   Nix,
   Daniels,
-  Penix
+  Penix,
+  McCarthy,
 ];
 const allQBNames = [];
 
