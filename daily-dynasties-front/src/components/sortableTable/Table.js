@@ -37,9 +37,8 @@ export default function Table({ data }) {
     // console.log(sortField, sortOrder);
 
     if (sortField) {
-      console.log(sortField);
-      const sorted = [...tableData].sort((a, b) => {
-       
+      // console.log(sortField);
+      let sorted = [...tableData].sort((a, b) => {
         if (a[sortField] === null) return 1;
         if (b[sortField] === null) return -1;
         if (a[sortField] === null && b[sortField] === null) return 0;
