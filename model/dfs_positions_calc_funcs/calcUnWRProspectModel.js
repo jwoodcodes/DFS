@@ -938,14 +938,14 @@ test.forEach(topPlayer => {
           if (
             player.careerAveragedStats['Adjusted Yds Per Team Play'] > 1.649
           ) {
-            // if (player.yearOne.Hit === 'Y') {
-            //   num = num + 1;
-            //   console.log(
-            //     num,
-            //     player.name,
-            //     player.careerAveragedStats['Adjusted Yds Per Team Play']
-            //   );
-            // }
+            if (player.yearOne.Hit === 'Y') {
+              // num = num + 1;
+              // console.log(
+              //   num,
+              //   player.name,
+              //   player.careerAveragedStats['Adjusted Yds Per Team Play']
+              // );
+            }
             //
             // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
             //
@@ -1601,14 +1601,14 @@ test.forEach(topPlayer => {
 
           if (yearOneYPRR > 3.5 && player.yearOne.RR > 90) {
             // if (player.yearOne.Hit === 'Y') {
-            //   num = num + 1;
-            //   console.log(
-            //     num,
-            //     player.name,
-            //     yearOneYPRR,
-            //     player.yearOne.RR
-            //     // player.yearOne['Draft Round']
-            //   );
+            // num = num + 1;
+            // console.log(
+            //   num,
+            //   player.name,
+            //   yearOneYPRR,
+            //   player.yearOne.RR
+            //   // player.yearOne['Draft Round']
+            // );
             // }
 
             calcAllWrProspectsObjects[playerName].YearOneYPRRBonus = {
@@ -2052,2185 +2052,2180 @@ test.forEach(topPlayer => {
           ////////////////////////////////////////////////////////////////
           //////////////////////////////////////////////////////////////
 
-          if (
-            +player.highestContestedTargetPercent > 24.99 &&
-            +player.highestContestedTargetPercent < 27
-          ) {
-            //
-            //
-            let postYearOneCTP = +player.yearOne['Contested Target %'].slice(
-              0,
-              -1
-            );
-
-            if (player.yearTwo) {
-              postYearOneCTP = +player.yearTwo['Contested Target %'].slice(
-                0,
-                -1
-              );
-            }
-
-            if (player.yearThree) {
-              postYearOneCTP =
-                +player.yearTwo['Contested Target %'].slice(0, -1) +
-                +player.yearThree['Contested Target %'].slice(0, -1) / 2;
-            }
-
-            // if (player.yearOne.Hit === 'N') {
-            //   num = num + 1;
-            //   console.log(
-            //     num,
-            //     player.name,
-            //     player.yearOne['Draft Round'],
-            //     calcAllWrProspectsObjects[playerName].finalScore,
-            //     // +player.highestContestedTargetPercent
-            //     postYearOneCTP
-            //   );
-            // }
-
-            // num = num + 1;
-            // console.log(num, player.name, player.highestContestedTargetPercent);
-
-            //
-            //
-
-            //
-            //     round 1
-
-            if (+player.yearOne['Draft Round'] === 2) {
-              // if (player.yearOne.Hit === 'Y') {
-              // num = num + 1;
-              // console.log(
-              //   num,
-              //   player.name,
-              //   player.highestContestedTargetPercent
-              // );
-              // }
-            }
-            //
-            if (+player.yearOne['Class'] === +curYear) {
-              // console.log(
-              //   player.name,
-              //   calcAllWrProspectsObjects[playerName]
-              //     .projectedDraftRoundPlusOneScore
-              // );
-              if (projectedDraftRoundMinusOne === 1) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                let adjustmentValue =
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundMinusOneScore * 0.15;
-                calcAllWrProspectsObjects[
-                  playerName
-                ].projectedDraftRoundMinusOneScore = (
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundMinusOneScore - adjustmentValue
-                ).toFixed(2);
-              }
-            }
-            //
-
-            //
-            //below is for final score no projected draft capital
-            if (
-              player.yearOne['Draft Round'] > 0 &&
-              player.yearOne['Draft Round'] < 2
-            ) {
-              let adjustmentValue =
-                calcAllWrProspectsObjects[playerName].finalScore * 0.15;
-              calcAllWrProspectsObjects[playerName].finalScore = (
-                calcAllWrProspectsObjects[playerName].finalScore -
-                adjustmentValue
-              ).toFixed(2);
-            }
-
-            //
-            //
-            // round 2
-            //
-            if (+player.yearOne['Draft Round'] === 2) {
-              // if (player.yearOne.Hit === 'Y') {
-              // num = num + 1;
-              // console.log(
-              //   num,
-              //   player.name,
-              //   player.highestContestedTargetPercent
-              // );
-              // }
-              //
-              if (+player.yearOne['Class'] === +curYear) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                if (projectedDraftRoundPlusOne === 2) {
-                  // console.log(
-                  //   player.name,
-                  //   calcAllWrProspectsObjects[playerName]
-                  //     .projectedDraftRoundPlusOneScore
-                  // );
-                  let adjustmentValue =
-                    calcAllWrProspectsObjects[playerName]
-                      .projectedDraftRoundPlusOneScore * 0.25;
-                  calcAllWrProspectsObjects[
-                    playerName
-                  ].projectedDraftRoundPlusOneScore = (
-                    calcAllWrProspectsObjects[playerName]
-                      .projectedDraftRoundPlusOneScore - adjustmentValue
-                  ).toFixed(2);
-                }
-              }
-              //
-              if (+player.yearOne['Class'] === +curYear) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                if (projectedDraftRoundMinusOne === 2) {
-                  // console.log(
-                  //   player.name,
-                  //   calcAllWrProspectsObjects[playerName]
-                  //     .projectedDraftRoundPlusOneScore
-                  // );
-                  let adjustmentValue =
-                    calcAllWrProspectsObjects[playerName]
-                      .projectedDraftRoundMinusOneScore * 0.25;
-                  calcAllWrProspectsObjects[
-                    playerName
-                  ].projectedDraftRoundMinusOneScore = (
-                    calcAllWrProspectsObjects[playerName]
-                      .projectedDraftRoundMinusOneScore - adjustmentValue
-                  ).toFixed(2);
-                }
-              }
-              //
-
-              //
-              //below is for final score no projected draft capital
-              if (
-                player.yearOne['Draft Round'] > 1 &&
-                player.yearOne['Draft Round'] < 3
-              ) {
-                let adjustmentValue =
-                  calcAllWrProspectsObjects[playerName].finalScore * 0.25;
-                calcAllWrProspectsObjects[playerName].finalScore = (
-                  calcAllWrProspectsObjects[playerName].finalScore -
-                  adjustmentValue
-                ).toFixed(2);
-              }
-            }
-            //
-            //
-            //               round 3
-            //
-            //
-            //
-
-            // if (+player.yearOne['Draft Round'] > 2) {
-            //   // if (player.yearOne.Hit === 'Y') {
-            //   num = num + 1;
-            //   console.log(
-            //     num,
-            //     player.name,
-            //     player.highestContestedTargetPercent
-            //   );
-            // }
-            //
-
-            // if third round pick
-            //
-            if (+player.yearOne['Class'] === +curYear) {
-              // console.log(
-              //   player.name,
-              //   calcAllWrProspectsObjects[playerName]
-              //     .projectedDraftRoundPlusOneScore
-              // );
-              if (projectedDraftRoundPlusOne === 3) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                let adjustmentValue =
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundPlusOneScore * 0.5;
-                calcAllWrProspectsObjects[
-                  playerName
-                ].projectedDraftRoundPlusOneScore = (
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundPlusOneScore - adjustmentValue
-                ).toFixed(2);
-              }
-            }
-            //
-            if (+player.yearOne['Class'] === +curYear) {
-              // console.log(
-              //   player.name,
-              //   calcAllWrProspectsObjects[playerName]
-              //     .projectedDraftRoundPlusOneScore
-              // );
-              if (projectedDraftRoundMinusOne === 3) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundMinusOneScore
-                // );
-                let adjustmentValue =
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundMinusOneScore * 0.5;
-                calcAllWrProspectsObjects[
-                  playerName
-                ].projectedDraftRoundMinusOneScore = (
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundMinusOneScore - adjustmentValue
-                ).toFixed(2);
-              }
-            }
-
-            // below is for final score no projected draft capital
-            if (
-              +player.yearOne['Draft Round'] > 2 &&
-              +player.yearOne['Draft Round'] < 4
-            ) {
-              // if (player.yearOne.Hit === 'Y') {
-              //   num = num + 1;
-              //   console.log(
-              //     num,
-              //     player.name,
-              //     calcAllWrProspectsObjects[playerName].finalScore
-              //   );
-              // }
-              //
-              let adjustmentValue =
-                calcAllWrProspectsObjects[playerName].finalScore * 0.5;
-              calcAllWrProspectsObjects[playerName].finalScore = (
-                calcAllWrProspectsObjects[playerName].finalScore -
-                adjustmentValue
-              ).toFixed(2);
-            }
-
-            // if fourth round pick
-            if (+player.yearOne['Class'] === +curYear) {
-              // console.log(
-              //   player.name,
-              //   calcAllWrProspectsObjects[playerName]
-              //     .projectedDraftRoundPlusOneScore
-              // );
-              if (projectedDraftRoundPlusOne === 4) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                let adjustmentValue =
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundPlusOneScore * 0.6;
-                calcAllWrProspectsObjects[
-                  playerName
-                ].projectedDraftRoundPlusOneScore = (
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundPlusOneScore - adjustmentValue
-                ).toFixed(2);
-              }
-            }
-            //
-            if (+player.yearOne['Class'] === +curYear) {
-              // console.log(
-              //   player.name,
-              //   calcAllWrProspectsObjects[playerName]
-              //     .projectedDraftRoundPlusOneScore
-              // );
-              if (projectedDraftRoundMinusOne === 4) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                let adjustmentValue =
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundMinusOneScore * 0.6;
-                calcAllWrProspectsObjects[
-                  playerName
-                ].projectedDraftRoundMinusOneScore = (
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundMinusOneScore - adjustmentValue
-                ).toFixed(2);
-              }
-            }
-            // below is for final score no projected draft capital
-            if (
-              +player.yearOne['Draft Round'] > 3 &&
-              +player.yearOne['Draft Round'] < 5
-            ) {
-              // if (player.yearOne.Hit === 'N') {
-              //   num = num + 1;
-              //   console.log(num, player.name);
-              // }
-              //
-              let adjustmentValue =
-                calcAllWrProspectsObjects[playerName].finalScore * 0.6;
-              calcAllWrProspectsObjects[playerName].finalScore = (
-                calcAllWrProspectsObjects[playerName].finalScore -
-                adjustmentValue
-              ).toFixed(2);
-            }
-
-            // if fifth round pick
-            if (+player.yearOne['Class'] === +curYear) {
-              // console.log(
-              //   player.name,
-              //   calcAllWrProspectsObjects[playerName]
-              //     .projectedDraftRoundPlusOneScore
-              // );
-              if (projectedDraftRoundPlusOne === 5) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                let adjustmentValue =
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundPlusOneScore * 0.7;
-                calcAllWrProspectsObjects[
-                  playerName
-                ].projectedDraftRoundPlusOneScore = (
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundPlusOneScore - adjustmentValue
-                ).toFixed(2);
-              }
-            }
-            //
-            if (+player.yearOne['Class'] === +curYear) {
-              // console.log(
-              //   player.name,
-              //   calcAllWrProspectsObjects[playerName]
-              //     .projectedDraftRoundPlusOneScore
-              // );
-              if (projectedDraftRoundMinusOne === 5) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                let adjustmentValue =
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundMinusOneScore * 0.7;
-                calcAllWrProspectsObjects[
-                  playerName
-                ].projectedDraftRoundMinusOneScore = (
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundMinusOneScore - adjustmentValue
-                ).toFixed(2);
-              }
-            }
-            // below is for final score no projected draft capital
-            if (
-              player.yearOne['Draft Round'] > 4 &&
-              player.yearOne['Draft Round'] < 6
-            ) {
-              // if (player.yearOne.Hit === 'N') {
-              //   num = num + 1;
-              //   console.log(
-              //     num,
-              //     player.name,
-              //     calcAllWrProspectsObjects[playerName].finalScore
-              //   );
-              // }
-              //
-              let adjustmentValue =
-                calcAllWrProspectsObjects[playerName].finalScore * 0.7;
-              calcAllWrProspectsObjects[playerName].finalScore = (
-                calcAllWrProspectsObjects[playerName].finalScore -
-                adjustmentValue
-              ).toFixed(2);
-            }
-            //
-            // if later than 5th round pick
-            if (+player.yearOne['Class'] === +curYear) {
-              // console.log(
-              //   player.name,
-              //   calcAllWrProspectsObjects[playerName]
-              //     .projectedDraftRoundPlusOneScore
-              // );
-              if (projectedDraftRoundPlusOne > 5) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                let adjustmentValue =
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundPlusOneScore * 0.9;
-                calcAllWrProspectsObjects[
-                  playerName
-                ].projectedDraftRoundPlusOneScore = (
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundPlusOneScore - adjustmentValue
-                ).toFixed(2);
-              }
-            }
-            //
-            if (+player.yearOne['Class'] === +curYear) {
-              // console.log(
-              //   player.name,
-              //   calcAllWrProspectsObjects[playerName]
-              //     .projectedDraftRoundPlusOneScore
-              // );
-              if (projectedDraftRoundMinusOne > 5) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                let adjustmentValue =
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundMinusOneScore * 0.9;
-                calcAllWrProspectsObjects[
-                  playerName
-                ].projectedDraftRoundMinusOneScore = (
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundMinusOneScore - adjustmentValue
-                ).toFixed(2);
-              }
-            }
-            // below is for final score no projected draft capital
-            if (player.yearOne['Draft Round'] > 5) {
-              // if (player.yearOne.Hit === 'N') {
-              //   num = num + 1;
-              //   console.log(num, player.name);
-              // }
-              //
-              let adjustmentValue =
-                calcAllWrProspectsObjects[playerName].finalScore * 0.9;
-              calcAllWrProspectsObjects[playerName].finalScore = (
-                calcAllWrProspectsObjects[playerName].finalScore -
-                adjustmentValue
-              ).toFixed(2);
-            }
-          }
-
-          ///////////////////////////////////////////////////////////
-          /////////////////////////////////////////////////////////////
-          ////////////////////////////////////////////////////////////
-          //
-          //        end draft capital adjustment for
-          //      highestContestedTargetPercent between 25% and 27%
-          //
-          ////////////////////////////////////////////////////////////////
-          //////////////////////////////////////////////////////////////
-
-          ///////////////////////////////////////////////////////////
-          /////////////////////////////////////////////////////////////
-          ////////////////////////////////////////////////////////////
-          //
-          //        start draft capital adjustment for
-          //      highestContestedTargetPercent between 27% and 33.5%
-          //
-          ////////////////////////////////////////////////////////////////
-          //////////////////////////////////////////////////////////////
-
-          if (
-            player.highestContestedTargetPercent > 26.99 &&
-            player.highestContestedTargetPercent < 33.5
-          ) {
-            //
-            //
-
-            let postYearOneCTP = +player.yearOne['Contested Target %'].slice(
-              0,
-              -1
-            );
-
-            if (player.yearTwo) {
-              postYearOneCTP = +player.yearTwo['Contested Target %'].slice(
-                0,
-                -1
-              );
-            }
-
-            if (player.yearThree) {
-              postYearOneCTP =
-                +player.yearTwo['Contested Target %'].slice(0, -1) +
-                +player.yearThree['Contested Target %'].slice(0, -1) / 2;
-            }
-
-            if (player.yearOne.Hit === 'Y') {
-              // num = num + 1;
-              // console.log(
-              //   num,
-              //   player.name,
-              //   player.yearOne['Draft Round'],
-              //   calcAllWrProspectsObjects[playerName].finalScore,
-              //   postYearOneCTP
-              // );
-            }
-
-            //
-            // if (+player.yearOne['Draft Round'] < 3) {
-            //   // if (player.yearOne.Hit === 'N') {
-            //   num = num + 1;
-            //   console.log(
-            //     num,
-            //     player.name,
-            //     player.yearOne['Draft Round'],
-            //     calcAllWrProspectsObjects[playerName].finalScore,
-            //     '  ',
-            //     player.highestContestedTargetPercent
-            //   );
-            //   // }
-            // }
-
-            // round 1
-            //
-            if (+player.yearOne['Draft Round'] === 1) {
-              // if (player.yearOne.Hit === 'N') {
-              // num = num + 1;
-              // console.log(
-              //   num,
-              //   player.name,
-              //   player.highestContestedTargetPercent
-              // );
-            }
-            //
-
-            //
-            if (+player.yearOne['Class'] === +curYear) {
-              // console.log(
-              //   player.name,
-              //   calcAllWrProspectsObjects[playerName]
-              //     .projectedDraftRoundPlusOneScore
-              // );
-              if (+projectedDraftRoundMinusOne === 1) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                let adjustmentValue =
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundMinusOneScore * 0.6;
-                if (adjustmentValue > 20) {
-                  adjustmentValue = 20;
-                }
-                calcAllWrProspectsObjects[
-                  playerName
-                ].projectedDraftRoundMinusOneScore = (
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundMinusOneScore - adjustmentValue
-                ).toFixed(2);
-              }
-            }
-            //
-
-            //
-            //below is for final score no projected draft capital
-            if (
-              +player.yearOne['Draft Round'] > 0 &&
-              +player.yearOne['Draft Round'] < 2
-            ) {
-              // console.log(
-              //   player.name,
-              //   calcAllWrProspectsObjects[playerName].finalScore,
-              //   projectedDraftRoundPlusOne
-              // );
-              let adjustmentValue =
-                calcAllWrProspectsObjects[playerName].finalScore * 0.6;
-              if (adjustmentValue > 20) {
-                adjustmentValue = 20;
-              }
-              calcAllWrProspectsObjects[playerName].finalScore = (
-                calcAllWrProspectsObjects[playerName].finalScore -
-                adjustmentValue
-              ).toFixed(2);
-            }
-
-            //
-            //
-            // round 2
-            //
-            //
-            if (+player.yearOne['Draft Round'] === 2) {
-              // if (player.yearOne.Hit === 'Y') {
-              //   num = num + 1;
-              //   console.log(
-              //     num,
-              //     player.name,
-              //     player.highestContestedTargetPercent,
-              //     calcAllWrProspectsObjects[playerName].finalScore
-              //   );
-              // }
-            }
-            //
-            if (+player.yearOne['Class'] === +curYear) {
-              // console.log(
-              //   player.name,
-              //   calcAllWrProspectsObjects[playerName]
-              //     .projectedDraftRoundPlusOneScore
-              // );
-              if (+projectedDraftRoundPlusOne === 2) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                let adjustmentValue =
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundPlusOneScore * 0.65;
-                if (adjustmentValue > 20) {
-                  adjustmentValue = 20;
-                }
-                calcAllWrProspectsObjects[
-                  playerName
-                ].projectedDraftRoundPlusOneScore = (
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundPlusOneScore - adjustmentValue
-                ).toFixed(2);
-              }
-            }
-            //
-            if (+player.yearOne['Class'] === +curYear) {
-              // console.log(
-              //   player.name,
-              //   calcAllWrProspectsObjects[playerName]
-              //     .projectedDraftRoundPlusOneScore
-              // );
-              if (+projectedDraftRoundMinusOne === 2) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                let adjustmentValue =
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundMinusOneScore * 0.65;
-                if (adjustmentValue > 20) {
-                  adjustmentValue = 20;
-                }
-                calcAllWrProspectsObjects[
-                  playerName
-                ].projectedDraftRoundMinusOneScore = (
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundMinusOneScore - adjustmentValue
-                ).toFixed(2);
-              }
-            }
-            //
-
-            //
-            //below is for final score no projected draft capital
-            if (
-              player.yearOne['Draft Round'] > 1 &&
-              player.yearOne['Draft Round'] < 3
-            ) {
-              let adjustmentValue =
-                calcAllWrProspectsObjects[playerName].finalScore * 0.65;
-              if (adjustmentValue > 20) {
-                adjustmentValue = 20;
-              }
-              calcAllWrProspectsObjects[playerName].finalScore = (
-                calcAllWrProspectsObjects[playerName].finalScore -
-                adjustmentValue
-              ).toFixed(2);
-            }
-
-            //               round 3
-            //
-            //
-            //
-
-            // if (+player.yearOne['Draft Round'] > 2) {
-            //   // if (player.yearOne.Hit === 'Y') {
-            //   num = num + 1;
-            //   console.log(
-            //     num,
-            //     player.name,
-            //     player.highestContestedTargetPercent
-            //   );
-            // }
-            //
-
-            // if third round pick
-            //
-            if (+player.yearOne['Class'] === +curYear) {
-              // console.log(
-              //   player.name,
-              //   calcAllWrProspectsObjects[playerName]
-              //     .projectedDraftRoundPlusOneScore
-              // );
-              if (projectedDraftRoundPlusOne === 3) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                let adjustmentValue =
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundPlusOneScore * 0.7;
-                calcAllWrProspectsObjects[
-                  playerName
-                ].projectedDraftRoundPlusOneScore = (
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundPlusOneScore - adjustmentValue
-                ).toFixed(2);
-              }
-            }
-            //
-            if (+player.yearOne['Class'] === +curYear) {
-              // console.log(
-              //   player.name,
-              //   calcAllWrProspectsObjects[playerName]
-              //     .projectedDraftRoundPlusOneScore
-              // );
-              if (projectedDraftRoundMinusOne === 3) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundMinusOneScore
-                // );
-                let adjustmentValue =
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundMinusOneScore * 0.7;
-                calcAllWrProspectsObjects[
-                  playerName
-                ].projectedDraftRoundMinusOneScore = (
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundMinusOneScore - adjustmentValue
-                ).toFixed(2);
-              }
-            }
-
-            // below is for final score no projected draft capital
-            if (
-              +player.yearOne['Draft Round'] > 2 &&
-              +player.yearOne['Draft Round'] < 4
-            ) {
-              // if (player.yearOne.Hit === 'N') {
-              //   num = num + 1;
-              //   console.log(
-              //     num,
-              //     player.name,
-              //     calcAllWrProspectsObjects[playerName].finalScore
-              //   );
-              // }
-              //
-              let adjustmentValue =
-                calcAllWrProspectsObjects[playerName].finalScore * 0.7;
-              calcAllWrProspectsObjects[playerName].finalScore = (
-                calcAllWrProspectsObjects[playerName].finalScore -
-                adjustmentValue
-              ).toFixed(2);
-            }
-
-            // if fourth round pick
-            if (+player.yearOne['Class'] === +curYear) {
-              // console.log(
-              //   player.name,
-              //   calcAllWrProspectsObjects[playerName]
-              //     .projectedDraftRoundPlusOneScore
-              // );
-              if (projectedDraftRoundPlusOne === 4) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                let adjustmentValue =
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundPlusOneScore * 0.8;
-                calcAllWrProspectsObjects[
-                  playerName
-                ].projectedDraftRoundPlusOneScore = (
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundPlusOneScore - adjustmentValue
-                ).toFixed(2);
-              }
-            }
-            //
-            if (+player.yearOne['Class'] === +curYear) {
-              // console.log(
-              //   player.name,
-              //   calcAllWrProspectsObjects[playerName]
-              //     .projectedDraftRoundPlusOneScore
-              // );
-              if (projectedDraftRoundMinusOne === 4) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                let adjustmentValue =
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundMinusOneScore * 0.8;
-                calcAllWrProspectsObjects[
-                  playerName
-                ].projectedDraftRoundMinusOneScore = (
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundMinusOneScore - adjustmentValue
-                ).toFixed(2);
-              }
-            }
-            // below is for final score no projected draft capital
-            if (
-              +player.yearOne['Draft Round'] > 3 &&
-              +player.yearOne['Draft Round'] < 5
-            ) {
-              // if (player.yearOne.Hit === 'Y') {
-              //   num = num + 1;
-              //   console.log(num, player.name);
-              // }
-              //
-              let adjustmentValue =
-                calcAllWrProspectsObjects[playerName].finalScore * 0.8;
-              calcAllWrProspectsObjects[playerName].finalScore = (
-                calcAllWrProspectsObjects[playerName].finalScore -
-                adjustmentValue
-              ).toFixed(2);
-            }
-
-            // if fifth round pick
-            if (+player.yearOne['Class'] === +curYear) {
-              // console.log(
-              //   player.name,
-              //   calcAllWrProspectsObjects[playerName]
-              //     .projectedDraftRoundPlusOneScore
-              // );
-              if (projectedDraftRoundPlusOne === 5) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                let adjustmentValue =
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundPlusOneScore * 0.8;
-                calcAllWrProspectsObjects[
-                  playerName
-                ].projectedDraftRoundPlusOneScore = (
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundPlusOneScore - adjustmentValue
-                ).toFixed(2);
-              }
-            }
-            //
-            if (+player.yearOne['Class'] === +curYear) {
-              // console.log(
-              //   player.name,
-              //   calcAllWrProspectsObjects[playerName]
-              //     .projectedDraftRoundPlusOneScore
-              // );
-              if (projectedDraftRoundMinusOne === 5) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                let adjustmentValue =
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundMinusOneScore * 0.8;
-                calcAllWrProspectsObjects[
-                  playerName
-                ].projectedDraftRoundMinusOneScore = (
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundMinusOneScore - adjustmentValue
-                ).toFixed(2);
-              }
-            }
-            // below is for final score no projected draft capital
-            if (
-              player.yearOne['Draft Round'] > 4 &&
-              player.yearOne['Draft Round'] < 6
-            ) {
-              // if (player.yearOne.Hit === 'Y') {
-              //   num = num + 1;
-              //   console.log(
-              //     num,
-              //     player.name,
-              //     calcAllWrProspectsObjects[playerName].finalScore
-              //   );
-              // }
-              //
-              let adjustmentValue =
-                calcAllWrProspectsObjects[playerName].finalScore * 0.8;
-              calcAllWrProspectsObjects[playerName].finalScore = (
-                calcAllWrProspectsObjects[playerName].finalScore -
-                adjustmentValue
-              ).toFixed(2);
-            }
-            //
-            // if later than 5th round pick
-            if (+player.yearOne['Class'] === +curYear) {
-              // console.log(
-              //   player.name,
-              //   calcAllWrProspectsObjects[playerName]
-              //     .projectedDraftRoundPlusOneScore
-              // );
-              if (projectedDraftRoundPlusOne > 5) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                let adjustmentValue =
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundPlusOneScore * 0.9;
-                calcAllWrProspectsObjects[
-                  playerName
-                ].projectedDraftRoundPlusOneScore = (
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundPlusOneScore - adjustmentValue
-                ).toFixed(2);
-              }
-            }
-            //
-            if (+player.yearOne['Class'] === +curYear) {
-              // console.log(
-              //   player.name,
-              //   calcAllWrProspectsObjects[playerName]
-              //     .projectedDraftRoundPlusOneScore
-              // );
-              if (projectedDraftRoundMinusOne > 5) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                let adjustmentValue =
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundMinusOneScore * 0.9;
-                calcAllWrProspectsObjects[
-                  playerName
-                ].projectedDraftRoundMinusOneScore = (
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundMinusOneScore - adjustmentValue
-                ).toFixed(2);
-              }
-            }
-            // below is for final score no projected draft capital
-            if (player.yearOne['Draft Round'] > 5) {
-              // if (player.yearOne.Hit === 'Y') {
-              //   num = num + 1;
-              //   console.log(num, player.name);
-              // }
-              //
-              let adjustmentValue =
-                calcAllWrProspectsObjects[playerName].finalScore * 0.9;
-              calcAllWrProspectsObjects[playerName].finalScore = (
-                calcAllWrProspectsObjects[playerName].finalScore -
-                adjustmentValue
-              ).toFixed(2);
-            }
-          }
-
-          /////////////////////////////////////////////////////////////
-          ////////////////////////////////////////////////////////////
-          //
-          //        end draft capital adjustment for
-          //      highestContestedTargetPercent between 27% and 33.5%
-          //
-          ////////////////////////////////////////////////////////////////
-          //////////////////////////////////////////////////////////////
-
-          ///////////////////////////////////////////////////////////
-          /////////////////////////////////////////////////////////////
-          ////////////////////////////////////////////////////////////
-          //
-          //        start draft capital adjustment for
-          //      highestContestedTargetPercent greater than 33.5%
-          //
-          ////////////////////////////////////////////////////////////////
-          //////////////////////////////////////////////////////////////
-
-          if (player.highestContestedTargetPercent > 33.5) {
-            let postYearOneCTP =
-              +player.yearTwo['Contested Target %'].slice(0, -1) +
-              +player.yearThree['Contested Target %'].slice(0, -1) / 2;
-            //
-            //
-
-            //////////////////////////////////////////////
-            //////////////////////////////////////////////
-            //             if postYearOneCTP < 29.75
-            //////////////////////////////////////////////
-            //////////////////////////////////////////////
-
-            if (postYearOneCTP < 29.75) {
-              if (player.yearOne.Hit === 'Y') {
-                // num = num + 1;
-                // console.log(
-                //   num,
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName].finalScore,
-                //   '  ',
-                //   player.yearOne['Draft Round'],
-                //   postYearOneCTP
-                // );
-              }
-
-              //
-              //
-
-              // if first round pick
-
-              if (player.yearOne['Draft Round'] === 1) {
-                // if (player.yearOne.Hit === 'N') {
-                //   num = num + 1;
-                //   console.log(num, player.name);
-                // }
-                //
-                if (+player.yearOne['Class'] === +curYear) {
-                  if (projectedDraftRoundMinusOne === 1) {
-                    // console.log(
-                    //   player.name,
-                    //   calcAllWrProspectsObjects[playerName]
-                    //     .projectedDraftRoundPlusOneScore
-                    // );
-                    let adjustmentValue =
-                      calcAllWrProspectsObjects[playerName]
-                        .projectedDraftRoundMinusOneScore * 0.25;
-                    calcAllWrProspectsObjects[
-                      playerName
-                    ].projectedDraftRoundMinusOneScore = (
-                      calcAllWrProspectsObjects[playerName]
-                        .projectedDraftRoundMinusOneScore - adjustmentValue
-                    ).toFixed(2);
-                  }
-                }
-
-                //
-                //below is for final score no projected draft capital
-                if (
-                  player.yearOne['Draft Round'] > 0 &&
-                  player.yearOne['Draft Round'] < 2
-                ) {
-                  let adjustmentValue =
-                    calcAllWrProspectsObjects[playerName].finalScore * 0.25;
-                  calcAllWrProspectsObjects[playerName].finalScore = (
-                    calcAllWrProspectsObjects[playerName].finalScore -
-                    adjustmentValue
-                  ).toFixed(2);
-                }
-              }
-
-              // if second round pick
-              //
-
-              // if (player.yearOne.Hit === 'N') {
-              //   num = num + 1;
-              //   console.log(num, player.name);
-              // }
-              //
-              if (+player.yearOne['Class'] === +curYear) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                if (projectedDraftRoundPlusOne === 2) {
-                  // console.log(
-                  //   player.name,
-                  //   calcAllWrProspectsObjects[playerName]
-                  //     .projectedDraftRoundPlusOneScore
-                  // );
-                  let adjustmentValue =
-                    calcAllWrProspectsObjects[playerName]
-                      .projectedDraftRoundPlusOneScore * 0.3;
-                  calcAllWrProspectsObjects[
-                    playerName
-                  ].projectedDraftRoundPlusOneScore = (
-                    calcAllWrProspectsObjects[playerName]
-                      .projectedDraftRoundPlusOneScore - adjustmentValue
-                  ).toFixed(2);
-                }
-              }
-              //
-              if (+player.yearOne['Class'] === +curYear) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                if (projectedDraftRoundMinusOne === 2) {
-                  // console.log(
-                  //   player.name,
-                  //   calcAllWrProspectsObjects[playerName]
-                  //     .projectedDraftRoundPlusOneScore
-                  // );
-                  let adjustmentValue =
-                    calcAllWrProspectsObjects[playerName]
-                      .projectedDraftRoundMinusOneScore * 0.3;
-                  calcAllWrProspectsObjects[
-                    playerName
-                  ].projectedDraftRoundMinusOneScore = (
-                    calcAllWrProspectsObjects[playerName]
-                      .projectedDraftRoundMinusOneScore - adjustmentValue
-                  ).toFixed(2);
-                }
-              }
-              //
-
-              //
-              //below is for final score no projected draft capital
-              if (
-                player.yearOne['Draft Round'] > 1 &&
-                player.yearOne['Draft Round'] < 3
-              ) {
-                let adjustmentValue =
-                  calcAllWrProspectsObjects[playerName].finalScore * 0.3;
-                calcAllWrProspectsObjects[playerName].finalScore = (
-                  calcAllWrProspectsObjects[playerName].finalScore -
-                  adjustmentValue
-                ).toFixed(2);
-              }
-
-              // if third round pick
-              //
-              if (+player.yearOne['Class'] === +curYear) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                if (projectedDraftRoundPlusOne === 3) {
-                  // console.log(
-                  //   player.name,
-                  //   calcAllWrProspectsObjects[playerName]
-                  //     .projectedDraftRoundPlusOneScore
-                  // );
-                  let adjustmentValue =
-                    calcAllWrProspectsObjects[playerName]
-                      .projectedDraftRoundPlusOneScore * 0.35;
-                  calcAllWrProspectsObjects[
-                    playerName
-                  ].projectedDraftRoundPlusOneScore = (
-                    calcAllWrProspectsObjects[playerName]
-                      .projectedDraftRoundPlusOneScore - adjustmentValue
-                  ).toFixed(2);
-                }
-              }
-              //
-              if (+player.yearOne['Class'] === +curYear) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                if (projectedDraftRoundMinusOne === 3) {
-                  // console.log(
-                  //   player.name,
-                  //   calcAllWrProspectsObjects[playerName]
-                  //     .projectedDraftRoundMinusOneScore
-                  // );
-                  let adjustmentValue =
-                    calcAllWrProspectsObjects[playerName]
-                      .projectedDraftRoundMinusOneScore * 0.35;
-                  calcAllWrProspectsObjects[
-                    playerName
-                  ].projectedDraftRoundMinusOneScore = (
-                    calcAllWrProspectsObjects[playerName]
-                      .projectedDraftRoundMinusOneScore - adjustmentValue
-                  ).toFixed(2);
-                }
-              }
-
-              // below is for final score no projected draft capital
-              if (
-                player.yearOne['Draft Round'] > 2 &&
-                player.yearOne['Draft Round'] < 4
-              ) {
-                // if (player.yearOne.Hit === 'Y') {
-                //   num = num + 1;
-                //   console.log(num, player.name);
-                // }
-                //
-                let adjustmentValue =
-                  calcAllWrProspectsObjects[playerName].finalScore * 0.35;
-                calcAllWrProspectsObjects[playerName].finalScore = (
-                  calcAllWrProspectsObjects[playerName].finalScore -
-                  adjustmentValue
-                ).toFixed(2);
-              }
-
-              // if fourth round pick
-              if (+player.yearOne['Class'] === +curYear) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                if (projectedDraftRoundPlusOne === 4) {
-                  // console.log(
-                  //   player.name,
-                  //   calcAllWrProspectsObjects[playerName]
-                  //     .projectedDraftRoundPlusOneScore
-                  // );
-                  let adjustmentValue =
-                    calcAllWrProspectsObjects[playerName]
-                      .projectedDraftRoundPlusOneScore * 0.4;
-                  calcAllWrProspectsObjects[
-                    playerName
-                  ].projectedDraftRoundPlusOneScore = (
-                    calcAllWrProspectsObjects[playerName]
-                      .projectedDraftRoundPlusOneScore - adjustmentValue
-                  ).toFixed(2);
-                }
-              }
-              //
-              if (+player.yearOne['Class'] === +curYear) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                if (projectedDraftRoundMinusOne === 4) {
-                  // console.log(
-                  //   player.name,
-                  //   calcAllWrProspectsObjects[playerName]
-                  //     .projectedDraftRoundPlusOneScore
-                  // );
-                  let adjustmentValue =
-                    calcAllWrProspectsObjects[playerName]
-                      .projectedDraftRoundMinusOneScore * 0.4;
-                  calcAllWrProspectsObjects[
-                    playerName
-                  ].projectedDraftRoundMinusOneScore = (
-                    calcAllWrProspectsObjects[playerName]
-                      .projectedDraftRoundMinusOneScore - adjustmentValue
-                  ).toFixed(2);
-                }
-              }
-              // below is for final score no projected draft capital
-              if (
-                player.yearOne['Draft Round'] > 3 &&
-                player.yearOne['Draft Round'] < 5
-              ) {
-                // if (player.yearOne.Hit === 'Y') {
-                //   num = num + 1;
-                //   console.log(num, player.name);
-                // }
-                //
-                let adjustmentValue =
-                  calcAllWrProspectsObjects[playerName].finalScore * 0.4;
-                calcAllWrProspectsObjects[playerName].finalScore = (
-                  calcAllWrProspectsObjects[playerName].finalScore -
-                  adjustmentValue
-                ).toFixed(2);
-              }
-
-              // if fifth round pick
-              if (+player.yearOne['Class'] === +curYear) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                if (projectedDraftRoundPlusOne === 5) {
-                  // console.log(
-                  //   player.name,
-                  //   calcAllWrProspectsObjects[playerName]
-                  //     .projectedDraftRoundPlusOneScore
-                  // );
-                  let adjustmentValue =
-                    calcAllWrProspectsObjects[playerName]
-                      .projectedDraftRoundPlusOneScore * 0.45;
-                  calcAllWrProspectsObjects[
-                    playerName
-                  ].projectedDraftRoundPlusOneScore = (
-                    calcAllWrProspectsObjects[playerName]
-                      .projectedDraftRoundPlusOneScore - adjustmentValue
-                  ).toFixed(2);
-                }
-              }
-              //
-              if (+player.yearOne['Class'] === +curYear) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                if (projectedDraftRoundMinusOne === 5) {
-                  // console.log(
-                  //   player.name,
-                  //   calcAllWrProspectsObjects[playerName]
-                  //     .projectedDraftRoundPlusOneScore
-                  // );
-                  let adjustmentValue =
-                    calcAllWrProspectsObjects[playerName]
-                      .projectedDraftRoundMinusOneScore * 0.45;
-                  calcAllWrProspectsObjects[
-                    playerName
-                  ].projectedDraftRoundMinusOneScore = (
-                    calcAllWrProspectsObjects[playerName]
-                      .projectedDraftRoundMinusOneScore - adjustmentValue
-                  ).toFixed(2);
-                }
-              }
-              // below is for final score no projected draft capital
-              if (
-                player.yearOne['Draft Round'] > 4 &&
-                player.yearOne['Draft Round'] < 6
-              ) {
-                // if (player.yearOne.Hit === 'N') {
-                //   num = num + 1;
-                //   console.log(
-                //     num,
-                //     player.name,
-                //     calcAllWrProspectsObjects[playerName].finalScore
-                //   );
-                // }
-                //
-                let adjustmentValue =
-                  calcAllWrProspectsObjects[playerName].finalScore * 0.45;
-                calcAllWrProspectsObjects[playerName].finalScore = (
-                  calcAllWrProspectsObjects[playerName].finalScore -
-                  adjustmentValue
-                ).toFixed(2);
-              }
-              //
-              // if later than 5th round pick
-              if (+player.yearOne['Class'] === +curYear) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                if (projectedDraftRoundPlusOne > 5) {
-                  // console.log(
-                  //   player.name,
-                  //   calcAllWrProspectsObjects[playerName]
-                  //     .projectedDraftRoundPlusOneScore
-                  // );
-                  let adjustmentValue =
-                    calcAllWrProspectsObjects[playerName]
-                      .projectedDraftRoundPlusOneScore * 0.8;
-                  calcAllWrProspectsObjects[
-                    playerName
-                  ].projectedDraftRoundPlusOneScore = (
-                    calcAllWrProspectsObjects[playerName]
-                      .projectedDraftRoundPlusOneScore - adjustmentValue
-                  ).toFixed(2);
-                }
-              }
-              //
-              if (+player.yearOne['Class'] === +curYear) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                if (projectedDraftRoundMinusOne > 5) {
-                  // console.log(
-                  //   player.name,
-                  //   calcAllWrProspectsObjects[playerName]
-                  //     .projectedDraftRoundPlusOneScore
-                  // );
-                  let adjustmentValue =
-                    calcAllWrProspectsObjects[playerName]
-                      .projectedDraftRoundMinusOneScore * 0.8;
-                  calcAllWrProspectsObjects[
-                    playerName
-                  ].projectedDraftRoundMinusOneScore = (
-                    calcAllWrProspectsObjects[playerName]
-                      .projectedDraftRoundMinusOneScore - adjustmentValue
-                  ).toFixed(2);
-                }
-              }
-              // below is for final score no projected draft capital
-              if (player.yearOne['Draft Round'] > 5) {
-                // if (player.yearOne.Hit === 'Y') {
-                //   num = num + 1;
-                //   console.log(num, player.name);
-                // }
-                //
-                let adjustmentValue =
-                  calcAllWrProspectsObjects[playerName].finalScore * 0.8;
-                calcAllWrProspectsObjects[playerName].finalScore = (
-                  calcAllWrProspectsObjects[playerName].finalScore -
-                  adjustmentValue
-                ).toFixed(2);
-              }
-            }
-
-            //////////////////////////////////////////////
-            //////////////////////////////////////////////
-            //             if postYearOneCTP > 29.75
-            //////////////////////////////////////////////
-            //////////////////////////////////////////////
-
-            if (postYearOneCTP > 29.749) {
-              if (player.yearOne.Hit === 'N') {
-                // num = num + 1;
-                // console.log(
-                //   num,
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName].finalScore,
-                //   '  ',
-                //   player.yearOne['Draft Round'],
-                //   postYearOneCTP
-                // );
-              }
-
-              //
-              //
-
-              // if first round pick
-
-              if (player.yearOne['Draft Round'] === 1) {
-                // if (player.yearOne.Hit === 'N') {
-                //   num = num + 1;
-                //   console.log(num, player.name);
-                // }
-                //
-                if (+player.yearOne['Class'] === +curYear) {
-                  if (projectedDraftRoundMinusOne === 1) {
-                    // console.log(
-                    //   player.name,
-                    //   calcAllWrProspectsObjects[playerName]
-                    //     .projectedDraftRoundPlusOneScore
-                    // );
-                    let adjustmentValue =
-                      calcAllWrProspectsObjects[playerName]
-                        .projectedDraftRoundMinusOneScore * 0.7;
-                    calcAllWrProspectsObjects[
-                      playerName
-                    ].projectedDraftRoundMinusOneScore = (
-                      calcAllWrProspectsObjects[playerName]
-                        .projectedDraftRoundMinusOneScore - adjustmentValue
-                    ).toFixed(2);
-                  }
-                }
-
-                //
-                //below is for final score no projected draft capital
-                if (
-                  player.yearOne['Draft Round'] > 0 &&
-                  player.yearOne['Draft Round'] < 2
-                ) {
-                  let adjustmentValue =
-                    calcAllWrProspectsObjects[playerName].finalScore * 0.7;
-                  calcAllWrProspectsObjects[playerName].finalScore = (
-                    calcAllWrProspectsObjects[playerName].finalScore -
-                    adjustmentValue
-                  ).toFixed(2);
-                }
-              }
-
-              // if second round pick
-              //
-
-              // if (player.yearOne.Hit === 'N') {
-              //   num = num + 1;
-              //   console.log(num, player.name);
-              // }
-              //
-              if (+player.yearOne['Class'] === +curYear) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                if (projectedDraftRoundPlusOne === 2) {
-                  // console.log(
-                  //   player.name,
-                  //   calcAllWrProspectsObjects[playerName]
-                  //     .projectedDraftRoundPlusOneScore
-                  // );
-                  let adjustmentValue =
-                    calcAllWrProspectsObjects[playerName]
-                      .projectedDraftRoundPlusOneScore * 0.75;
-                  calcAllWrProspectsObjects[
-                    playerName
-                  ].projectedDraftRoundPlusOneScore = (
-                    calcAllWrProspectsObjects[playerName]
-                      .projectedDraftRoundPlusOneScore - adjustmentValue
-                  ).toFixed(2);
-                }
-              }
-              //
-              if (+player.yearOne['Class'] === +curYear) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                if (projectedDraftRoundMinusOne === 2) {
-                  // console.log(
-                  //   player.name,
-                  //   calcAllWrProspectsObjects[playerName]
-                  //     .projectedDraftRoundPlusOneScore
-                  // );
-                  let adjustmentValue =
-                    calcAllWrProspectsObjects[playerName]
-                      .projectedDraftRoundMinusOneScore * 0.75;
-                  calcAllWrProspectsObjects[
-                    playerName
-                  ].projectedDraftRoundMinusOneScore = (
-                    calcAllWrProspectsObjects[playerName]
-                      .projectedDraftRoundMinusOneScore - adjustmentValue
-                  ).toFixed(2);
-                }
-              }
-              //
-
-              //
-              //below is for final score no projected draft capital
-              if (
-                player.yearOne['Draft Round'] > 1 &&
-                player.yearOne['Draft Round'] < 3
-              ) {
-                let adjustmentValue =
-                  calcAllWrProspectsObjects[playerName].finalScore * 0.75;
-                calcAllWrProspectsObjects[playerName].finalScore = (
-                  calcAllWrProspectsObjects[playerName].finalScore -
-                  adjustmentValue
-                ).toFixed(2);
-              }
-
-              // if third round pick
-              //
-              if (+player.yearOne['Class'] === +curYear) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                if (projectedDraftRoundPlusOne === 3) {
-                  // console.log(
-                  //   player.name,
-                  //   calcAllWrProspectsObjects[playerName]
-                  //     .projectedDraftRoundPlusOneScore
-                  // );
-                  let adjustmentValue =
-                    calcAllWrProspectsObjects[playerName]
-                      .projectedDraftRoundPlusOneScore * 0.8;
-                  calcAllWrProspectsObjects[
-                    playerName
-                  ].projectedDraftRoundPlusOneScore = (
-                    calcAllWrProspectsObjects[playerName]
-                      .projectedDraftRoundPlusOneScore - adjustmentValue
-                  ).toFixed(2);
-                }
-              }
-              //
-              if (+player.yearOne['Class'] === +curYear) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                if (projectedDraftRoundMinusOne === 3) {
-                  // console.log(
-                  //   player.name,
-                  //   calcAllWrProspectsObjects[playerName]
-                  //     .projectedDraftRoundMinusOneScore
-                  // );
-                  let adjustmentValue =
-                    calcAllWrProspectsObjects[playerName]
-                      .projectedDraftRoundMinusOneScore * 0.8;
-                  calcAllWrProspectsObjects[
-                    playerName
-                  ].projectedDraftRoundMinusOneScore = (
-                    calcAllWrProspectsObjects[playerName]
-                      .projectedDraftRoundMinusOneScore - adjustmentValue
-                  ).toFixed(2);
-                }
-              }
-
-              // below is for final score no projected draft capital
-              if (
-                player.yearOne['Draft Round'] > 2 &&
-                player.yearOne['Draft Round'] < 4
-              ) {
-                // if (player.yearOne.Hit === 'Y') {
-                //   num = num + 1;
-                //   console.log(num, player.name);
-                // }
-                //
-                let adjustmentValue =
-                  calcAllWrProspectsObjects[playerName].finalScore * 0.8;
-                calcAllWrProspectsObjects[playerName].finalScore = (
-                  calcAllWrProspectsObjects[playerName].finalScore -
-                  adjustmentValue
-                ).toFixed(2);
-              }
-
-              // if fourth round pick
-              if (+player.yearOne['Class'] === +curYear) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                if (projectedDraftRoundPlusOne === 4) {
-                  // console.log(
-                  //   player.name,
-                  //   calcAllWrProspectsObjects[playerName]
-                  //     .projectedDraftRoundPlusOneScore
-                  // );
-                  let adjustmentValue =
-                    calcAllWrProspectsObjects[playerName]
-                      .projectedDraftRoundPlusOneScore * 0.85;
-                  calcAllWrProspectsObjects[
-                    playerName
-                  ].projectedDraftRoundPlusOneScore = (
-                    calcAllWrProspectsObjects[playerName]
-                      .projectedDraftRoundPlusOneScore - adjustmentValue
-                  ).toFixed(2);
-                }
-              }
-              //
-              if (+player.yearOne['Class'] === +curYear) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                if (projectedDraftRoundMinusOne === 4) {
-                  // console.log(
-                  //   player.name,
-                  //   calcAllWrProspectsObjects[playerName]
-                  //     .projectedDraftRoundPlusOneScore
-                  // );
-                  let adjustmentValue =
-                    calcAllWrProspectsObjects[playerName]
-                      .projectedDraftRoundMinusOneScore * 0.85;
-                  calcAllWrProspectsObjects[
-                    playerName
-                  ].projectedDraftRoundMinusOneScore = (
-                    calcAllWrProspectsObjects[playerName]
-                      .projectedDraftRoundMinusOneScore - adjustmentValue
-                  ).toFixed(2);
-                }
-              }
-              // below is for final score no projected draft capital
-              if (
-                player.yearOne['Draft Round'] > 3 &&
-                player.yearOne['Draft Round'] < 5
-              ) {
-                // if (player.yearOne.Hit === 'Y') {
-                //   num = num + 1;
-                //   console.log(num, player.name);
-                // }
-                //
-                let adjustmentValue =
-                  calcAllWrProspectsObjects[playerName].finalScore * 0.85;
-                calcAllWrProspectsObjects[playerName].finalScore = (
-                  calcAllWrProspectsObjects[playerName].finalScore -
-                  adjustmentValue
-                ).toFixed(2);
-              }
-
-              // if fifth round pick
-              if (+player.yearOne['Class'] === +curYear) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                if (projectedDraftRoundPlusOne === 5) {
-                  // console.log(
-                  //   player.name,
-                  //   calcAllWrProspectsObjects[playerName]
-                  //     .projectedDraftRoundPlusOneScore
-                  // );
-                  let adjustmentValue =
-                    calcAllWrProspectsObjects[playerName]
-                      .projectedDraftRoundPlusOneScore * 0.9;
-                  calcAllWrProspectsObjects[
-                    playerName
-                  ].projectedDraftRoundPlusOneScore = (
-                    calcAllWrProspectsObjects[playerName]
-                      .projectedDraftRoundPlusOneScore - adjustmentValue
-                  ).toFixed(2);
-                }
-              }
-              //
-              if (+player.yearOne['Class'] === +curYear) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                if (projectedDraftRoundMinusOne === 5) {
-                  // console.log(
-                  //   player.name,
-                  //   calcAllWrProspectsObjects[playerName]
-                  //     .projectedDraftRoundPlusOneScore
-                  // );
-                  let adjustmentValue =
-                    calcAllWrProspectsObjects[playerName]
-                      .projectedDraftRoundMinusOneScore * 0.9;
-                  calcAllWrProspectsObjects[
-                    playerName
-                  ].projectedDraftRoundMinusOneScore = (
-                    calcAllWrProspectsObjects[playerName]
-                      .projectedDraftRoundMinusOneScore - adjustmentValue
-                  ).toFixed(2);
-                }
-              }
-              // below is for final score no projected draft capital
-              if (
-                player.yearOne['Draft Round'] > 4 &&
-                player.yearOne['Draft Round'] < 6
-              ) {
-                // if (player.yearOne.Hit === 'N') {
-                //   num = num + 1;
-                //   console.log(
-                //     num,
-                //     player.name,
-                //     calcAllWrProspectsObjects[playerName].finalScore
-                //   );
-                // }
-                //
-                let adjustmentValue =
-                  calcAllWrProspectsObjects[playerName].finalScore * 0.9;
-                calcAllWrProspectsObjects[playerName].finalScore = (
-                  calcAllWrProspectsObjects[playerName].finalScore -
-                  adjustmentValue
-                ).toFixed(2);
-              }
-              //
-              // if later than 5th round pick
-              if (+player.yearOne['Class'] === +curYear) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                if (projectedDraftRoundPlusOne > 5) {
-                  // console.log(
-                  //   player.name,
-                  //   calcAllWrProspectsObjects[playerName]
-                  //     .projectedDraftRoundPlusOneScore
-                  // );
-                  let adjustmentValue =
-                    calcAllWrProspectsObjects[playerName]
-                      .projectedDraftRoundPlusOneScore * 0.8;
-                  calcAllWrProspectsObjects[
-                    playerName
-                  ].projectedDraftRoundPlusOneScore = (
-                    calcAllWrProspectsObjects[playerName]
-                      .projectedDraftRoundPlusOneScore - adjustmentValue
-                  ).toFixed(2);
-                }
-              }
-              //
-              if (+player.yearOne['Class'] === +curYear) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                if (projectedDraftRoundMinusOne > 5) {
-                  // console.log(
-                  //   player.name,
-                  //   calcAllWrProspectsObjects[playerName]
-                  //     .projectedDraftRoundPlusOneScore
-                  // );
-                  let adjustmentValue =
-                    calcAllWrProspectsObjects[playerName]
-                      .projectedDraftRoundMinusOneScore * 0.9;
-                  calcAllWrProspectsObjects[
-                    playerName
-                  ].projectedDraftRoundMinusOneScore = (
-                    calcAllWrProspectsObjects[playerName]
-                      .projectedDraftRoundMinusOneScore - adjustmentValue
-                  ).toFixed(2);
-                }
-              }
-              // below is for final score no projected draft capital
-              if (player.yearOne['Draft Round'] > 5) {
-                // if (player.yearOne.Hit === 'Y') {
-                //   num = num + 1;
-                //   console.log(num, player.name);
-                // }
-                //
-                let adjustmentValue =
-                  calcAllWrProspectsObjects[playerName].finalScore * 0.9;
-                calcAllWrProspectsObjects[playerName].finalScore = (
-                  calcAllWrProspectsObjects[playerName].finalScore -
-                  adjustmentValue
-                ).toFixed(2);
-              }
-            }
-          }
-
-          ///////////////////////////////////////////////////////////
-          /////////////////////////////////////////////////////////////
-          ////////////////////////////////////////////////////////////
-          //
-          //        end draft capital adjustment for
-          //      highestContestedTargetPercent greater than 33.5%
-          //
-          ////////////////////////////////////////////////////////////////
-          //////////////////////////////////////////////////////////////
-
-          ///////////////////////////////////////////////////////////
-          /////////////////////////////////////////////////////////////
-          ////////////////////////////////////////////////////////////
-          //
-          //        start draft capital adjustment for
-          //      highestContestedTargetPercent below 25%
-          //
-          ////////////////////////////////////////////////////////////////
-          //////////////////////////////////////////////////////////////
-
-          if (player.highestContestedTargetPercent < 25.01) {
-            // if first round pick
-
-            if (player.yearOne['Draft Round'] === 1) {
-              // if (player.yearOne.Hit === 'N') {
-              //   num = num + 1;
-              //   console.log(num, player.name);
-              // }
-              //
-
-              calcAllWrProspectsObjects[playerName].finalScore =
-                calcAllWrProspectsObjects[playerName].finalScore.toFixed(2);
-            }
-
-            // if second round pick
-            //
-
+          // if (
+          //   +player.highestContestedTargetPercent > 24.99 &&
+          //   +player.highestContestedTargetPercent < 27
+          // ) {
+          //   //
+          //   //
+          //   let postYearOneCTP = +player.yearOne['Contested Target %'].slice(
+          //     0,
+          //     -1
+          //   );
+
+          //   if (player.yearTwo) {
+          //     postYearOneCTP = +player.yearTwo['Contested Target %'].slice(
+          //       0,
+          //       -1
+          //     );
+          //   }
+
+          //   if (player.yearThree) {
+          //     postYearOneCTP =
+          //       +player.yearTwo['Contested Target %'].slice(0, -1) +
+          //       +player.yearThree['Contested Target %'].slice(0, -1) / 2;
+          //   }
+
+          //   // if (player.yearOne.Hit === 'N') {
+          //   //   num = num + 1;
+          //   //   console.log(
+          //   //     num,
+          //   //     player.name,
+          //   //     player.yearOne['Draft Round'],
+          //   //     calcAllWrProspectsObjects[playerName].finalScore,
+          //   //     // +player.highestContestedTargetPercent
+          //   //     postYearOneCTP
+          //   //   );
+          //   // }
+
+          //   // num = num + 1;
+          //   // console.log(num, player.name, player.highestContestedTargetPercent);
+
+          //   //
+          //   //
+
+          //   //
+          //   //     round 1
+
+          //   if (+player.yearOne['Draft Round'] === 2) {
+          //     // if (player.yearOne.Hit === 'Y') {
+          //     // num = num + 1;
+          //     // console.log(
+          //     //   num,
+          //     //   player.name,
+          //     //   player.highestContestedTargetPercent
+          //     // );
+          //     // }
+          //   }
+          //   //
+          //   if (+player.yearOne['Class'] === +curYear) {
+          //     // console.log(
+          //     //   player.name,
+          //     //   calcAllWrProspectsObjects[playerName]
+          //     //     .projectedDraftRoundPlusOneScore
+          //     // );
+          //     if (projectedDraftRoundMinusOne === 1) {
+          //       // console.log(
+          //       //   player.name,
+          //       //   calcAllWrProspectsObjects[playerName]
+          //       //     .projectedDraftRoundPlusOneScore
+          //       // );
+          //       let adjustmentValue =
+          //         calcAllWrProspectsObjects[playerName]
+          //           .projectedDraftRoundMinusOneScore * 0.15;
+          //       calcAllWrProspectsObjects[
+          //         playerName
+          //       ].projectedDraftRoundMinusOneScore = (
+          //         calcAllWrProspectsObjects[playerName]
+          //           .projectedDraftRoundMinusOneScore - adjustmentValue
+          //       ).toFixed(2);
+          //     }
+          //   }
+          //   //
+
+          //   //
+          //   //below is for final score no projected draft capital
+          //   if (
+          //     player.yearOne['Draft Round'] > 0 &&
+          //     player.yearOne['Draft Round'] < 2
+          //   ) {
+          //     let adjustmentValue =
+          //       calcAllWrProspectsObjects[playerName].finalScore * 0.15;
+          //     calcAllWrProspectsObjects[playerName].finalScore = (
+          //       calcAllWrProspectsObjects[playerName].finalScore -
+          //       adjustmentValue
+          //     ).toFixed(2);
+          //   }
+
+          //   //
+          //   //
+          //   // round 2
+          //   //
+          //   if (+player.yearOne['Draft Round'] === 2) {
+          //     // if (player.yearOne.Hit === 'Y') {
+          //     // num = num + 1;
+          //     // console.log(
+          //     //   num,
+          //     //   player.name,
+          //     //   player.highestContestedTargetPercent
+          //     // );
+          //     // }
+          //     //
+          //     if (+player.yearOne['Class'] === +curYear) {
+          //       // console.log(
+          //       //   player.name,
+          //       //   calcAllWrProspectsObjects[playerName]
+          //       //     .projectedDraftRoundPlusOneScore
+          //       // );
+          //       if (projectedDraftRoundPlusOne === 2) {
+          //         // console.log(
+          //         //   player.name,
+          //         //   calcAllWrProspectsObjects[playerName]
+          //         //     .projectedDraftRoundPlusOneScore
+          //         // );
+          //         let adjustmentValue =
+          //           calcAllWrProspectsObjects[playerName]
+          //             .projectedDraftRoundPlusOneScore * 0.25;
+          //         calcAllWrProspectsObjects[
+          //           playerName
+          //         ].projectedDraftRoundPlusOneScore = (
+          //           calcAllWrProspectsObjects[playerName]
+          //             .projectedDraftRoundPlusOneScore - adjustmentValue
+          //         ).toFixed(2);
+          //       }
+          //     }
+          //     //
+          //     if (+player.yearOne['Class'] === +curYear) {
+          //       // console.log(
+          //       //   player.name,
+          //       //   calcAllWrProspectsObjects[playerName]
+          //       //     .projectedDraftRoundPlusOneScore
+          //       // );
+          //       if (projectedDraftRoundMinusOne === 2) {
+          //         // console.log(
+          //         //   player.name,
+          //         //   calcAllWrProspectsObjects[playerName]
+          //         //     .projectedDraftRoundPlusOneScore
+          //         // );
+          //         let adjustmentValue =
+          //           calcAllWrProspectsObjects[playerName]
+          //             .projectedDraftRoundMinusOneScore * 0.25;
+          //         calcAllWrProspectsObjects[
+          //           playerName
+          //         ].projectedDraftRoundMinusOneScore = (
+          //           calcAllWrProspectsObjects[playerName]
+          //             .projectedDraftRoundMinusOneScore - adjustmentValue
+          //         ).toFixed(2);
+          //       }
+          //     }
+          //     //
+
+          //     //
+          //     //below is for final score no projected draft capital
+          //     if (
+          //       player.yearOne['Draft Round'] > 1 &&
+          //       player.yearOne['Draft Round'] < 3
+          //     ) {
+          //       let adjustmentValue =
+          //         calcAllWrProspectsObjects[playerName].finalScore * 0.25;
+          //       calcAllWrProspectsObjects[playerName].finalScore = (
+          //         calcAllWrProspectsObjects[playerName].finalScore -
+          //         adjustmentValue
+          //       ).toFixed(2);
+          //     }
+          //   }
+          //   //
+          //   //
+          //   //               round 3
+          //   //
+          //   //
+          //   //
+
+          //   // if (+player.yearOne['Draft Round'] > 2) {
+          //   //   // if (player.yearOne.Hit === 'Y') {
+          //   //   num = num + 1;
+          //   //   console.log(
+          //   //     num,
+          //   //     player.name,
+          //   //     player.highestContestedTargetPercent
+          //   //   );
+          //   // }
+          //   //
+
+          //   // if third round pick
+          //   //
+          //   if (+player.yearOne['Class'] === +curYear) {
+          //     // console.log(
+          //     //   player.name,
+          //     //   calcAllWrProspectsObjects[playerName]
+          //     //     .projectedDraftRoundPlusOneScore
+          //     // );
+          //     if (projectedDraftRoundPlusOne === 3) {
+          //       // console.log(
+          //       //   player.name,
+          //       //   calcAllWrProspectsObjects[playerName]
+          //       //     .projectedDraftRoundPlusOneScore
+          //       // );
+          //       let adjustmentValue =
+          //         calcAllWrProspectsObjects[playerName]
+          //           .projectedDraftRoundPlusOneScore * 0.5;
+          //       calcAllWrProspectsObjects[
+          //         playerName
+          //       ].projectedDraftRoundPlusOneScore = (
+          //         calcAllWrProspectsObjects[playerName]
+          //           .projectedDraftRoundPlusOneScore - adjustmentValue
+          //       ).toFixed(2);
+          //     }
+          //   }
+          //   //
+          //   if (+player.yearOne['Class'] === +curYear) {
+          //     // console.log(
+          //     //   player.name,
+          //     //   calcAllWrProspectsObjects[playerName]
+          //     //     .projectedDraftRoundPlusOneScore
+          //     // );
+          //     if (projectedDraftRoundMinusOne === 3) {
+          //       // console.log(
+          //       //   player.name,
+          //       //   calcAllWrProspectsObjects[playerName]
+          //       //     .projectedDraftRoundMinusOneScore
+          //       // );
+          //       let adjustmentValue =
+          //         calcAllWrProspectsObjects[playerName]
+          //           .projectedDraftRoundMinusOneScore * 0.5;
+          //       calcAllWrProspectsObjects[
+          //         playerName
+          //       ].projectedDraftRoundMinusOneScore = (
+          //         calcAllWrProspectsObjects[playerName]
+          //           .projectedDraftRoundMinusOneScore - adjustmentValue
+          //       ).toFixed(2);
+          //     }
+          //   }
+
+          //   // below is for final score no projected draft capital
+          //   if (
+          //     +player.yearOne['Draft Round'] > 2 &&
+          //     +player.yearOne['Draft Round'] < 4
+          //   ) {
+          //     // if (player.yearOne.Hit === 'Y') {
+          //     //   num = num + 1;
+          //     //   console.log(
+          //     //     num,
+          //     //     player.name,
+          //     //     calcAllWrProspectsObjects[playerName].finalScore
+          //     //   );
+          //     // }
+          //     //
+          //     let adjustmentValue =
+          //       calcAllWrProspectsObjects[playerName].finalScore * 0.5;
+          //     calcAllWrProspectsObjects[playerName].finalScore = (
+          //       calcAllWrProspectsObjects[playerName].finalScore -
+          //       adjustmentValue
+          //     ).toFixed(2);
+          //   }
+
+          //   // if fourth round pick
+          //   if (+player.yearOne['Class'] === +curYear) {
+          //     // console.log(
+          //     //   player.name,
+          //     //   calcAllWrProspectsObjects[playerName]
+          //     //     .projectedDraftRoundPlusOneScore
+          //     // );
+          //     if (projectedDraftRoundPlusOne === 4) {
+          //       // console.log(
+          //       //   player.name,
+          //       //   calcAllWrProspectsObjects[playerName]
+          //       //     .projectedDraftRoundPlusOneScore
+          //       // );
+          //       let adjustmentValue =
+          //         calcAllWrProspectsObjects[playerName]
+          //           .projectedDraftRoundPlusOneScore * 0.6;
+          //       calcAllWrProspectsObjects[
+          //         playerName
+          //       ].projectedDraftRoundPlusOneScore = (
+          //         calcAllWrProspectsObjects[playerName]
+          //           .projectedDraftRoundPlusOneScore - adjustmentValue
+          //       ).toFixed(2);
+          //     }
+          //   }
+          //   //
+          //   if (+player.yearOne['Class'] === +curYear) {
+          //     // console.log(
+          //     //   player.name,
+          //     //   calcAllWrProspectsObjects[playerName]
+          //     //     .projectedDraftRoundPlusOneScore
+          //     // );
+          //     if (projectedDraftRoundMinusOne === 4) {
+          //       // console.log(
+          //       //   player.name,
+          //       //   calcAllWrProspectsObjects[playerName]
+          //       //     .projectedDraftRoundPlusOneScore
+          //       // );
+          //       let adjustmentValue =
+          //         calcAllWrProspectsObjects[playerName]
+          //           .projectedDraftRoundMinusOneScore * 0.6;
+          //       calcAllWrProspectsObjects[
+          //         playerName
+          //       ].projectedDraftRoundMinusOneScore = (
+          //         calcAllWrProspectsObjects[playerName]
+          //           .projectedDraftRoundMinusOneScore - adjustmentValue
+          //       ).toFixed(2);
+          //     }
+          //   }
+          //   // below is for final score no projected draft capital
+          //   if (
+          //     +player.yearOne['Draft Round'] > 3 &&
+          //     +player.yearOne['Draft Round'] < 5
+          //   ) {
+          //     // if (player.yearOne.Hit === 'N') {
+          //     //   num = num + 1;
+          //     //   console.log(num, player.name);
+          //     // }
+          //     //
+          //     let adjustmentValue =
+          //       calcAllWrProspectsObjects[playerName].finalScore * 0.6;
+          //     calcAllWrProspectsObjects[playerName].finalScore = (
+          //       calcAllWrProspectsObjects[playerName].finalScore -
+          //       adjustmentValue
+          //     ).toFixed(2);
+          //   }
+
+          //   // if fifth round pick
+          //   if (+player.yearOne['Class'] === +curYear) {
+          //     // console.log(
+          //     //   player.name,
+          //     //   calcAllWrProspectsObjects[playerName]
+          //     //     .projectedDraftRoundPlusOneScore
+          //     // );
+          //     if (projectedDraftRoundPlusOne === 5) {
+          //       // console.log(
+          //       //   player.name,
+          //       //   calcAllWrProspectsObjects[playerName]
+          //       //     .projectedDraftRoundPlusOneScore
+          //       // );
+          //       let adjustmentValue =
+          //         calcAllWrProspectsObjects[playerName]
+          //           .projectedDraftRoundPlusOneScore * 0.7;
+          //       calcAllWrProspectsObjects[
+          //         playerName
+          //       ].projectedDraftRoundPlusOneScore = (
+          //         calcAllWrProspectsObjects[playerName]
+          //           .projectedDraftRoundPlusOneScore - adjustmentValue
+          //       ).toFixed(2);
+          //     }
+          //   }
+          //   //
+          //   if (+player.yearOne['Class'] === +curYear) {
+          //     // console.log(
+          //     //   player.name,
+          //     //   calcAllWrProspectsObjects[playerName]
+          //     //     .projectedDraftRoundPlusOneScore
+          //     // );
+          //     if (projectedDraftRoundMinusOne === 5) {
+          //       // console.log(
+          //       //   player.name,
+          //       //   calcAllWrProspectsObjects[playerName]
+          //       //     .projectedDraftRoundPlusOneScore
+          //       // );
+          //       let adjustmentValue =
+          //         calcAllWrProspectsObjects[playerName]
+          //           .projectedDraftRoundMinusOneScore * 0.7;
+          //       calcAllWrProspectsObjects[
+          //         playerName
+          //       ].projectedDraftRoundMinusOneScore = (
+          //         calcAllWrProspectsObjects[playerName]
+          //           .projectedDraftRoundMinusOneScore - adjustmentValue
+          //       ).toFixed(2);
+          //     }
+          //   }
+          //   // below is for final score no projected draft capital
+          //   if (
+          //     player.yearOne['Draft Round'] > 4 &&
+          //     player.yearOne['Draft Round'] < 6
+          //   ) {
+          //     // if (player.yearOne.Hit === 'N') {
+          //     //   num = num + 1;
+          //     //   console.log(
+          //     //     num,
+          //     //     player.name,
+          //     //     calcAllWrProspectsObjects[playerName].finalScore
+          //     //   );
+          //     // }
+          //     //
+          //     let adjustmentValue =
+          //       calcAllWrProspectsObjects[playerName].finalScore * 0.7;
+          //     calcAllWrProspectsObjects[playerName].finalScore = (
+          //       calcAllWrProspectsObjects[playerName].finalScore -
+          //       adjustmentValue
+          //     ).toFixed(2);
+          //   }
+          //   //
+          //   // if later than 5th round pick
+          //   if (+player.yearOne['Class'] === +curYear) {
+          //     // console.log(
+          //     //   player.name,
+          //     //   calcAllWrProspectsObjects[playerName]
+          //     //     .projectedDraftRoundPlusOneScore
+          //     // );
+          //     if (projectedDraftRoundPlusOne > 5) {
+          //       // console.log(
+          //       //   player.name,
+          //       //   calcAllWrProspectsObjects[playerName]
+          //       //     .projectedDraftRoundPlusOneScore
+          //       // );
+          //       let adjustmentValue =
+          //         calcAllWrProspectsObjects[playerName]
+          //           .projectedDraftRoundPlusOneScore * 0.9;
+          //       calcAllWrProspectsObjects[
+          //         playerName
+          //       ].projectedDraftRoundPlusOneScore = (
+          //         calcAllWrProspectsObjects[playerName]
+          //           .projectedDraftRoundPlusOneScore - adjustmentValue
+          //       ).toFixed(2);
+          //     }
+          //   }
+          //   //
+          //   if (+player.yearOne['Class'] === +curYear) {
+          //     // console.log(
+          //     //   player.name,
+          //     //   calcAllWrProspectsObjects[playerName]
+          //     //     .projectedDraftRoundPlusOneScore
+          //     // );
+          //     if (projectedDraftRoundMinusOne > 5) {
+          //       // console.log(
+          //       //   player.name,
+          //       //   calcAllWrProspectsObjects[playerName]
+          //       //     .projectedDraftRoundPlusOneScore
+          //       // );
+          //       let adjustmentValue =
+          //         calcAllWrProspectsObjects[playerName]
+          //           .projectedDraftRoundMinusOneScore * 0.9;
+          //       calcAllWrProspectsObjects[
+          //         playerName
+          //       ].projectedDraftRoundMinusOneScore = (
+          //         calcAllWrProspectsObjects[playerName]
+          //           .projectedDraftRoundMinusOneScore - adjustmentValue
+          //       ).toFixed(2);
+          //     }
+          //   }
+          //   // below is for final score no projected draft capital
+          //   if (player.yearOne['Draft Round'] > 5) {
+          //     // if (player.yearOne.Hit === 'N') {
+          //     //   num = num + 1;
+          //     //   console.log(num, player.name);
+          //     // }
+          //     //
+          //     let adjustmentValue =
+          //       calcAllWrProspectsObjects[playerName].finalScore * 0.9;
+          //     calcAllWrProspectsObjects[playerName].finalScore = (
+          //       calcAllWrProspectsObjects[playerName].finalScore -
+          //       adjustmentValue
+          //     ).toFixed(2);
+          //   }
+          // }
+
+          // ///////////////////////////////////////////////////////////
+          // /////////////////////////////////////////////////////////////
+          // ////////////////////////////////////////////////////////////
+          // //
+          // //        end draft capital adjustment for
+          // //      highestContestedTargetPercent between 25% and 27%
+          // //
+          // ////////////////////////////////////////////////////////////////
+          // //////////////////////////////////////////////////////////////
+
+          // ///////////////////////////////////////////////////////////
+          // /////////////////////////////////////////////////////////////
+          // ////////////////////////////////////////////////////////////
+          // //
+          // //        start draft capital adjustment for
+          // //      highestContestedTargetPercent between 27% and 33.5%
+          // //
+          // ////////////////////////////////////////////////////////////////
+          // //////////////////////////////////////////////////////////////
+
+          // if (
+          //   player.highestContestedTargetPercent > 26.99 &&
+          //   player.highestContestedTargetPercent < 33.5
+          // ) {
+          //   //
+          //   //
+
+          //   let postYearOneCTP = +player.yearOne['Contested Target %'].slice(
+          //     0,
+          //     -1
+          //   );
+
+          //   if (player.yearTwo) {
+          //     postYearOneCTP = +player.yearTwo['Contested Target %'].slice(
+          //       0,
+          //       -1
+          //     );
+          //   }
+
+          //   if (player.yearThree) {
+          //     postYearOneCTP =
+          //       +player.yearTwo['Contested Target %'].slice(0, -1) +
+          //       +player.yearThree['Contested Target %'].slice(0, -1) / 2;
+          //   }
+
+          //   if (player.yearOne.Hit === 'Y') {
+          //     // num = num + 1;
+          //     // console.log(
+          //     //   num,
+          //     //   player.name,
+          //     //   player.yearOne['Draft Round'],
+          //     //   calcAllWrProspectsObjects[playerName].finalScore,
+          //     //   postYearOneCTP
+          //     // );
+          //   }
+
+          //   //
+          //   // if (+player.yearOne['Draft Round'] < 3) {
+          //   //   // if (player.yearOne.Hit === 'N') {
+          //   //   num = num + 1;
+          //   //   console.log(
+          //   //     num,
+          //   //     player.name,
+          //   //     player.yearOne['Draft Round'],
+          //   //     calcAllWrProspectsObjects[playerName].finalScore,
+          //   //     '  ',
+          //   //     player.highestContestedTargetPercent
+          //   //   );
+          //   //   // }
+          //   // }
+
+          //   // round 1
+          //   //
+          //   if (+player.yearOne['Draft Round'] === 1) {
+          //     // if (player.yearOne.Hit === 'N') {
+          //     // num = num + 1;
+          //     // console.log(
+          //     //   num,
+          //     //   player.name,
+          //     //   player.highestContestedTargetPercent
+          //     // );
+          //   }
+          //   //
+
+          //   //
+          //   if (+player.yearOne['Class'] === +curYear) {
+          //     // console.log(
+          //     //   player.name,
+          //     //   calcAllWrProspectsObjects[playerName]
+          //     //     .projectedDraftRoundPlusOneScore
+          //     // );
+          //     if (+projectedDraftRoundMinusOne === 1) {
+          //       // console.log(
+          //       //   player.name,
+          //       //   calcAllWrProspectsObjects[playerName]
+          //       //     .projectedDraftRoundPlusOneScore
+          //       // );
+          //       let adjustmentValue =
+          //         calcAllWrProspectsObjects[playerName]
+          //           .projectedDraftRoundMinusOneScore * 0.6;
+          //       if (adjustmentValue > 20) {
+          //         adjustmentValue = 20;
+          //       }
+          //       calcAllWrProspectsObjects[
+          //         playerName
+          //       ].projectedDraftRoundMinusOneScore = (
+          //         calcAllWrProspectsObjects[playerName]
+          //           .projectedDraftRoundMinusOneScore - adjustmentValue
+          //       ).toFixed(2);
+          //     }
+          //   }
+          //   //
+
+          //   //
+          //   //below is for final score no projected draft capital
+          //   if (
+          //     +player.yearOne['Draft Round'] > 0 &&
+          //     +player.yearOne['Draft Round'] < 2
+          //   ) {
+          //     // console.log(
+          //     //   player.name,
+          //     //   calcAllWrProspectsObjects[playerName].finalScore,
+          //     //   projectedDraftRoundPlusOne
+          //     // );
+          //     let adjustmentValue =
+          //       calcAllWrProspectsObjects[playerName].finalScore * 0.6;
+          //     if (adjustmentValue > 20) {
+          //       adjustmentValue = 20;
+          //     }
+          //     calcAllWrProspectsObjects[playerName].finalScore = (
+          //       calcAllWrProspectsObjects[playerName].finalScore -
+          //       adjustmentValue
+          //     ).toFixed(2);
+          //   }
+
+          //   //
+          //   //
+          //   // round 2
+          //   //
+          //   //
+          //   if (+player.yearOne['Draft Round'] === 2) {
+          //     // if (player.yearOne.Hit === 'Y') {
+          //     //   num = num + 1;
+          //     //   console.log(
+          //     //     num,
+          //     //     player.name,
+          //     //     player.highestContestedTargetPercent,
+          //     //     calcAllWrProspectsObjects[playerName].finalScore
+          //     //   );
+          //     // }
+          //   }
+          //   //
+          //   if (+player.yearOne['Class'] === +curYear) {
+          //     // console.log(
+          //     //   player.name,
+          //     //   calcAllWrProspectsObjects[playerName]
+          //     //     .projectedDraftRoundPlusOneScore
+          //     // );
+          //     if (+projectedDraftRoundPlusOne === 2) {
+          //       // console.log(
+          //       //   player.name,
+          //       //   calcAllWrProspectsObjects[playerName]
+          //       //     .projectedDraftRoundPlusOneScore
+          //       // );
+          //       let adjustmentValue =
+          //         calcAllWrProspectsObjects[playerName]
+          //           .projectedDraftRoundPlusOneScore * 0.65;
+          //       if (adjustmentValue > 20) {
+          //         adjustmentValue = 20;
+          //       }
+          //       calcAllWrProspectsObjects[
+          //         playerName
+          //       ].projectedDraftRoundPlusOneScore = (
+          //         calcAllWrProspectsObjects[playerName]
+          //           .projectedDraftRoundPlusOneScore - adjustmentValue
+          //       ).toFixed(2);
+          //     }
+          //   }
+          //   //
+          //   if (+player.yearOne['Class'] === +curYear) {
+          //     // console.log(
+          //     //   player.name,
+          //     //   calcAllWrProspectsObjects[playerName]
+          //     //     .projectedDraftRoundPlusOneScore
+          //     // );
+          //     if (+projectedDraftRoundMinusOne === 2) {
+          //       // console.log(
+          //       //   player.name,
+          //       //   calcAllWrProspectsObjects[playerName]
+          //       //     .projectedDraftRoundPlusOneScore
+          //       // );
+          //       let adjustmentValue =
+          //         calcAllWrProspectsObjects[playerName]
+          //           .projectedDraftRoundMinusOneScore * 0.65;
+          //       if (adjustmentValue > 20) {
+          //         adjustmentValue = 20;
+          //       }
+          //       calcAllWrProspectsObjects[
+          //         playerName
+          //       ].projectedDraftRoundMinusOneScore = (
+          //         calcAllWrProspectsObjects[playerName]
+          //           .projectedDraftRoundMinusOneScore - adjustmentValue
+          //       ).toFixed(2);
+          //     }
+          //   }
+          //   //
+
+          //   //
+          //   //below is for final score no projected draft capital
+          //   if (
+          //     player.yearOne['Draft Round'] > 1 &&
+          //     player.yearOne['Draft Round'] < 3
+          //   ) {
+          //     let adjustmentValue =
+          //       calcAllWrProspectsObjects[playerName].finalScore * 0.65;
+          //     if (adjustmentValue > 20) {
+          //       adjustmentValue = 20;
+          //     }
+          //     calcAllWrProspectsObjects[playerName].finalScore = (
+          //       calcAllWrProspectsObjects[playerName].finalScore -
+          //       adjustmentValue
+          //     ).toFixed(2);
+          //   }
+
+          //   //               round 3
+          //   //
+          //   //
+          //   //
+
+          //   // if (+player.yearOne['Draft Round'] > 2) {
+          //   //   // if (player.yearOne.Hit === 'Y') {
+          //   //   num = num + 1;
+          //   //   console.log(
+          //   //     num,
+          //   //     player.name,
+          //   //     player.highestContestedTargetPercent
+          //   //   );
+          //   // }
+          //   //
+
+          //   // if third round pick
+          //   //
+          //   if (+player.yearOne['Class'] === +curYear) {
+          //     // console.log(
+          //     //   player.name,
+          //     //   calcAllWrProspectsObjects[playerName]
+          //     //     .projectedDraftRoundPlusOneScore
+          //     // );
+          //     if (projectedDraftRoundPlusOne === 3) {
+          //       // console.log(
+          //       //   player.name,
+          //       //   calcAllWrProspectsObjects[playerName]
+          //       //     .projectedDraftRoundPlusOneScore
+          //       // );
+          //       let adjustmentValue =
+          //         calcAllWrProspectsObjects[playerName]
+          //           .projectedDraftRoundPlusOneScore * 0.7;
+          //       calcAllWrProspectsObjects[
+          //         playerName
+          //       ].projectedDraftRoundPlusOneScore = (
+          //         calcAllWrProspectsObjects[playerName]
+          //           .projectedDraftRoundPlusOneScore - adjustmentValue
+          //       ).toFixed(2);
+          //     }
+          //   }
+          //   //
+          //   if (+player.yearOne['Class'] === +curYear) {
+          //     // console.log(
+          //     //   player.name,
+          //     //   calcAllWrProspectsObjects[playerName]
+          //     //     .projectedDraftRoundPlusOneScore
+          //     // );
+          //     if (projectedDraftRoundMinusOne === 3) {
+          //       // console.log(
+          //       //   player.name,
+          //       //   calcAllWrProspectsObjects[playerName]
+          //       //     .projectedDraftRoundMinusOneScore
+          //       // );
+          //       let adjustmentValue =
+          //         calcAllWrProspectsObjects[playerName]
+          //           .projectedDraftRoundMinusOneScore * 0.7;
+          //       calcAllWrProspectsObjects[
+          //         playerName
+          //       ].projectedDraftRoundMinusOneScore = (
+          //         calcAllWrProspectsObjects[playerName]
+          //           .projectedDraftRoundMinusOneScore - adjustmentValue
+          //       ).toFixed(2);
+          //     }
+          //   }
+
+          //   // below is for final score no projected draft capital
+          //   if (
+          //     +player.yearOne['Draft Round'] > 2 &&
+          //     +player.yearOne['Draft Round'] < 4
+          //   ) {
+          //     // if (player.yearOne.Hit === 'N') {
+          //     //   num = num + 1;
+          //     //   console.log(
+          //     //     num,
+          //     //     player.name,
+          //     //     calcAllWrProspectsObjects[playerName].finalScore
+          //     //   );
+          //     // }
+          //     //
+          //     let adjustmentValue =
+          //       calcAllWrProspectsObjects[playerName].finalScore * 0.7;
+          //     calcAllWrProspectsObjects[playerName].finalScore = (
+          //       calcAllWrProspectsObjects[playerName].finalScore -
+          //       adjustmentValue
+          //     ).toFixed(2);
+          //   }
+
+          //   // if fourth round pick
+          //   if (+player.yearOne['Class'] === +curYear) {
+          //     // console.log(
+          //     //   player.name,
+          //     //   calcAllWrProspectsObjects[playerName]
+          //     //     .projectedDraftRoundPlusOneScore
+          //     // );
+          //     if (projectedDraftRoundPlusOne === 4) {
+          //       // console.log(
+          //       //   player.name,
+          //       //   calcAllWrProspectsObjects[playerName]
+          //       //     .projectedDraftRoundPlusOneScore
+          //       // );
+          //       let adjustmentValue =
+          //         calcAllWrProspectsObjects[playerName]
+          //           .projectedDraftRoundPlusOneScore * 0.8;
+          //       calcAllWrProspectsObjects[
+          //         playerName
+          //       ].projectedDraftRoundPlusOneScore = (
+          //         calcAllWrProspectsObjects[playerName]
+          //           .projectedDraftRoundPlusOneScore - adjustmentValue
+          //       ).toFixed(2);
+          //     }
+          //   }
+          //   //
+          //   if (+player.yearOne['Class'] === +curYear) {
+          //     // console.log(
+          //     //   player.name,
+          //     //   calcAllWrProspectsObjects[playerName]
+          //     //     .projectedDraftRoundPlusOneScore
+          //     // );
+          //     if (projectedDraftRoundMinusOne === 4) {
+          //       // console.log(
+          //       //   player.name,
+          //       //   calcAllWrProspectsObjects[playerName]
+          //       //     .projectedDraftRoundPlusOneScore
+          //       // );
+          //       let adjustmentValue =
+          //         calcAllWrProspectsObjects[playerName]
+          //           .projectedDraftRoundMinusOneScore * 0.8;
+          //       calcAllWrProspectsObjects[
+          //         playerName
+          //       ].projectedDraftRoundMinusOneScore = (
+          //         calcAllWrProspectsObjects[playerName]
+          //           .projectedDraftRoundMinusOneScore - adjustmentValue
+          //       ).toFixed(2);
+          //     }
+          //   }
+          //   // below is for final score no projected draft capital
+          //   if (
+          //     +player.yearOne['Draft Round'] > 3 &&
+          //     +player.yearOne['Draft Round'] < 5
+          //   ) {
+          //     // if (player.yearOne.Hit === 'Y') {
+          //     //   num = num + 1;
+          //     //   console.log(num, player.name);
+          //     // }
+          //     //
+          //     let adjustmentValue =
+          //       calcAllWrProspectsObjects[playerName].finalScore * 0.8;
+          //     calcAllWrProspectsObjects[playerName].finalScore = (
+          //       calcAllWrProspectsObjects[playerName].finalScore -
+          //       adjustmentValue
+          //     ).toFixed(2);
+          //   }
+
+          //   // if fifth round pick
+          //   if (+player.yearOne['Class'] === +curYear) {
+          //     // console.log(
+          //     //   player.name,
+          //     //   calcAllWrProspectsObjects[playerName]
+          //     //     .projectedDraftRoundPlusOneScore
+          //     // );
+          //     if (projectedDraftRoundPlusOne === 5) {
+          //       // console.log(
+          //       //   player.name,
+          //       //   calcAllWrProspectsObjects[playerName]
+          //       //     .projectedDraftRoundPlusOneScore
+          //       // );
+          //       let adjustmentValue =
+          //         calcAllWrProspectsObjects[playerName]
+          //           .projectedDraftRoundPlusOneScore * 0.8;
+          //       calcAllWrProspectsObjects[
+          //         playerName
+          //       ].projectedDraftRoundPlusOneScore = (
+          //         calcAllWrProspectsObjects[playerName]
+          //           .projectedDraftRoundPlusOneScore - adjustmentValue
+          //       ).toFixed(2);
+          //     }
+          //   }
+          //   //
+          //   if (+player.yearOne['Class'] === +curYear) {
+          //     // console.log(
+          //     //   player.name,
+          //     //   calcAllWrProspectsObjects[playerName]
+          //     //     .projectedDraftRoundPlusOneScore
+          //     // );
+          //     if (projectedDraftRoundMinusOne === 5) {
+          //       // console.log(
+          //       //   player.name,
+          //       //   calcAllWrProspectsObjects[playerName]
+          //       //     .projectedDraftRoundPlusOneScore
+          //       // );
+          //       let adjustmentValue =
+          //         calcAllWrProspectsObjects[playerName]
+          //           .projectedDraftRoundMinusOneScore * 0.8;
+          //       calcAllWrProspectsObjects[
+          //         playerName
+          //       ].projectedDraftRoundMinusOneScore = (
+          //         calcAllWrProspectsObjects[playerName]
+          //           .projectedDraftRoundMinusOneScore - adjustmentValue
+          //       ).toFixed(2);
+          //     }
+          //   }
+          //   // below is for final score no projected draft capital
+          //   if (
+          //     player.yearOne['Draft Round'] > 4 &&
+          //     player.yearOne['Draft Round'] < 6
+          //   ) {
+          //     // if (player.yearOne.Hit === 'Y') {
+          //     //   num = num + 1;
+          //     //   console.log(
+          //     //     num,
+          //     //     player.name,
+          //     //     calcAllWrProspectsObjects[playerName].finalScore
+          //     //   );
+          //     // }
+          //     //
+          //     let adjustmentValue =
+          //       calcAllWrProspectsObjects[playerName].finalScore * 0.8;
+          //     calcAllWrProspectsObjects[playerName].finalScore = (
+          //       calcAllWrProspectsObjects[playerName].finalScore -
+          //       adjustmentValue
+          //     ).toFixed(2);
+          //   }
+          //   //
+          //   // if later than 5th round pick
+          //   if (+player.yearOne['Class'] === +curYear) {
+          //     // console.log(
+          //     //   player.name,
+          //     //   calcAllWrProspectsObjects[playerName]
+          //     //     .projectedDraftRoundPlusOneScore
+          //     // );
+          //     if (projectedDraftRoundPlusOne > 5) {
+          //       // console.log(
+          //       //   player.name,
+          //       //   calcAllWrProspectsObjects[playerName]
+          //       //     .projectedDraftRoundPlusOneScore
+          //       // );
+          //       let adjustmentValue =
+          //         calcAllWrProspectsObjects[playerName]
+          //           .projectedDraftRoundPlusOneScore * 0.9;
+          //       calcAllWrProspectsObjects[
+          //         playerName
+          //       ].projectedDraftRoundPlusOneScore = (
+          //         calcAllWrProspectsObjects[playerName]
+          //           .projectedDraftRoundPlusOneScore - adjustmentValue
+          //       ).toFixed(2);
+          //     }
+          //   }
+          //   //
+          //   if (+player.yearOne['Class'] === +curYear) {
+          //     // console.log(
+          //     //   player.name,
+          //     //   calcAllWrProspectsObjects[playerName]
+          //     //     .projectedDraftRoundPlusOneScore
+          //     // );
+          //     if (projectedDraftRoundMinusOne > 5) {
+          //       // console.log(
+          //       //   player.name,
+          //       //   calcAllWrProspectsObjects[playerName]
+          //       //     .projectedDraftRoundPlusOneScore
+          //       // );
+          //       let adjustmentValue =
+          //         calcAllWrProspectsObjects[playerName]
+          //           .projectedDraftRoundMinusOneScore * 0.9;
+          //       calcAllWrProspectsObjects[
+          //         playerName
+          //       ].projectedDraftRoundMinusOneScore = (
+          //         calcAllWrProspectsObjects[playerName]
+          //           .projectedDraftRoundMinusOneScore - adjustmentValue
+          //       ).toFixed(2);
+          //     }
+          //   }
+          //   // below is for final score no projected draft capital
+          //   if (player.yearOne['Draft Round'] > 5) {
+          //     // if (player.yearOne.Hit === 'Y') {
+          //     //   num = num + 1;
+          //     //   console.log(num, player.name);
+          //     // }
+          //     //
+          //     let adjustmentValue =
+          //       calcAllWrProspectsObjects[playerName].finalScore * 0.9;
+          //     calcAllWrProspectsObjects[playerName].finalScore = (
+          //       calcAllWrProspectsObjects[playerName].finalScore -
+          //       adjustmentValue
+          //     ).toFixed(2);
+          //   }
+          // }
+
+          // /////////////////////////////////////////////////////////////
+          // ////////////////////////////////////////////////////////////
+          // //
+          // //        end draft capital adjustment for
+          // //      highestContestedTargetPercent between 27% and 33.5%
+          // //
+          // ////////////////////////////////////////////////////////////////
+          // //////////////////////////////////////////////////////////////
+
+          // ///////////////////////////////////////////////////////////
+          // /////////////////////////////////////////////////////////////
+          // ////////////////////////////////////////////////////////////
+          // //
+          // //        start draft capital adjustment for
+          // //      highestContestedTargetPercent greater than 33.5%
+          // //
+          // ////////////////////////////////////////////////////////////////
+          // //////////////////////////////////////////////////////////////
+
+          // if (player.highestContestedTargetPercent > 33.5) {
+          //   let postYearOneCTP =
+          //     +player.yearTwo['Contested Target %'].slice(0, -1) +
+          //     +player.yearThree['Contested Target %'].slice(0, -1) / 2;
+          //   //
+          //   //
+
+          //   //////////////////////////////////////////////
+          //   //////////////////////////////////////////////
+          //   //             if postYearOneCTP < 29.75
+          //   //////////////////////////////////////////////
+          //   //////////////////////////////////////////////
+
+          //   if (postYearOneCTP < 29.75) {
+          //     // if (player.yearOne.Hit === 'Y') {
+          //     //   num = num + 1;
+          //     //   console.log(
+          //     //     num,
+          //     //     player.name,
+          //     //     calcAllWrProspectsObjects[playerName].finalScore,
+          //     //     '  ',
+          //     //     player.yearOne['Draft Round'],
+          //     //     postYearOneCTP
+          //     //   );
+          //     // }
+
+          //     //
+          //     //
+
+          //     // if first round pick
+
+          //     if (player.yearOne['Draft Round'] === 1) {
+          //       // if (player.yearOne.Hit === 'N') {
+          //       //   num = num + 1;
+          //       //   console.log(num, player.name);
+          //       // }
+          //       //
+          //       if (+player.yearOne['Class'] === +curYear) {
+          //         if (projectedDraftRoundMinusOne === 1) {
+          //           // console.log(
+          //           //   player.name,
+          //           //   calcAllWrProspectsObjects[playerName]
+          //           //     .projectedDraftRoundPlusOneScore
+          //           // );
+          //           let adjustmentValue =
+          //             calcAllWrProspectsObjects[playerName]
+          //               .projectedDraftRoundMinusOneScore * 0.25;
+          //           calcAllWrProspectsObjects[
+          //             playerName
+          //           ].projectedDraftRoundMinusOneScore = (
+          //             calcAllWrProspectsObjects[playerName]
+          //               .projectedDraftRoundMinusOneScore - adjustmentValue
+          //           ).toFixed(2);
+          //         }
+          //       }
+
+          //       //
+          //       //below is for final score no projected draft capital
+          //       if (
+          //         player.yearOne['Draft Round'] > 0 &&
+          //         player.yearOne['Draft Round'] < 2
+          //       ) {
+          //         let adjustmentValue =
+          //           calcAllWrProspectsObjects[playerName].finalScore * 0.25;
+          //         calcAllWrProspectsObjects[playerName].finalScore = (
+          //           calcAllWrProspectsObjects[playerName].finalScore -
+          //           adjustmentValue
+          //         ).toFixed(2);
+          //       }
+          //     }
+
+          //     // if second round pick
+          //     //
+
+          //     // if (player.yearOne.Hit === 'N') {
+          //     //   num = num + 1;
+          //     //   console.log(num, player.name);
+          //     // }
+          //     //
+          //     if (+player.yearOne['Class'] === +curYear) {
+          //       // console.log(
+          //       //   player.name,
+          //       //   calcAllWrProspectsObjects[playerName]
+          //       //     .projectedDraftRoundPlusOneScore
+          //       // );
+          //       if (projectedDraftRoundPlusOne === 2) {
+          //         // console.log(
+          //         //   player.name,
+          //         //   calcAllWrProspectsObjects[playerName]
+          //         //     .projectedDraftRoundPlusOneScore
+          //         // );
+          //         let adjustmentValue =
+          //           calcAllWrProspectsObjects[playerName]
+          //             .projectedDraftRoundPlusOneScore * 0.3;
+          //         calcAllWrProspectsObjects[
+          //           playerName
+          //         ].projectedDraftRoundPlusOneScore = (
+          //           calcAllWrProspectsObjects[playerName]
+          //             .projectedDraftRoundPlusOneScore - adjustmentValue
+          //         ).toFixed(2);
+          //       }
+          //     }
+          //     //
+          //     if (+player.yearOne['Class'] === +curYear) {
+          //       // console.log(
+          //       //   player.name,
+          //       //   calcAllWrProspectsObjects[playerName]
+          //       //     .projectedDraftRoundPlusOneScore
+          //       // );
+          //       if (projectedDraftRoundMinusOne === 2) {
+          //         // console.log(
+          //         //   player.name,
+          //         //   calcAllWrProspectsObjects[playerName]
+          //         //     .projectedDraftRoundPlusOneScore
+          //         // );
+          //         let adjustmentValue =
+          //           calcAllWrProspectsObjects[playerName]
+          //             .projectedDraftRoundMinusOneScore * 0.3;
+          //         calcAllWrProspectsObjects[
+          //           playerName
+          //         ].projectedDraftRoundMinusOneScore = (
+          //           calcAllWrProspectsObjects[playerName]
+          //             .projectedDraftRoundMinusOneScore - adjustmentValue
+          //         ).toFixed(2);
+          //       }
+          //     }
+          //     //
+
+          //     //
+          //     //below is for final score no projected draft capital
+          //     if (
+          //       player.yearOne['Draft Round'] > 1 &&
+          //       player.yearOne['Draft Round'] < 3
+          //     ) {
+          //       let adjustmentValue =
+          //         calcAllWrProspectsObjects[playerName].finalScore * 0.3;
+          //       calcAllWrProspectsObjects[playerName].finalScore = (
+          //         calcAllWrProspectsObjects[playerName].finalScore -
+          //         adjustmentValue
+          //       ).toFixed(2);
+          //     }
+
+          //     // if third round pick
+          //     //
+          //     if (+player.yearOne['Class'] === +curYear) {
+          //       // console.log(
+          //       //   player.name,
+          //       //   calcAllWrProspectsObjects[playerName]
+          //       //     .projectedDraftRoundPlusOneScore
+          //       // );
+          //       if (projectedDraftRoundPlusOne === 3) {
+          //         // console.log(
+          //         //   player.name,
+          //         //   calcAllWrProspectsObjects[playerName]
+          //         //     .projectedDraftRoundPlusOneScore
+          //         // );
+          //         let adjustmentValue =
+          //           calcAllWrProspectsObjects[playerName]
+          //             .projectedDraftRoundPlusOneScore * 0.35;
+          //         calcAllWrProspectsObjects[
+          //           playerName
+          //         ].projectedDraftRoundPlusOneScore = (
+          //           calcAllWrProspectsObjects[playerName]
+          //             .projectedDraftRoundPlusOneScore - adjustmentValue
+          //         ).toFixed(2);
+          //       }
+          //     }
+          //     //
+          //     if (+player.yearOne['Class'] === +curYear) {
+          //       // console.log(
+          //       //   player.name,
+          //       //   calcAllWrProspectsObjects[playerName]
+          //       //     .projectedDraftRoundPlusOneScore
+          //       // );
+          //       if (projectedDraftRoundMinusOne === 3) {
+          //         // console.log(
+          //         //   player.name,
+          //         //   calcAllWrProspectsObjects[playerName]
+          //         //     .projectedDraftRoundMinusOneScore
+          //         // );
+          //         let adjustmentValue =
+          //           calcAllWrProspectsObjects[playerName]
+          //             .projectedDraftRoundMinusOneScore * 0.35;
+          //         calcAllWrProspectsObjects[
+          //           playerName
+          //         ].projectedDraftRoundMinusOneScore = (
+          //           calcAllWrProspectsObjects[playerName]
+          //             .projectedDraftRoundMinusOneScore - adjustmentValue
+          //         ).toFixed(2);
+          //       }
+          //     }
+
+          //     // below is for final score no projected draft capital
+          //     if (
+          //       player.yearOne['Draft Round'] > 2 &&
+          //       player.yearOne['Draft Round'] < 4
+          //     ) {
+          //       // if (player.yearOne.Hit === 'Y') {
+          //       //   num = num + 1;
+          //       //   console.log(num, player.name);
+          //       // }
+          //       //
+          //       let adjustmentValue =
+          //         calcAllWrProspectsObjects[playerName].finalScore * 0.35;
+          //       calcAllWrProspectsObjects[playerName].finalScore = (
+          //         calcAllWrProspectsObjects[playerName].finalScore -
+          //         adjustmentValue
+          //       ).toFixed(2);
+          //     }
+
+          //     // if fourth round pick
+          //     if (+player.yearOne['Class'] === +curYear) {
+          //       // console.log(
+          //       //   player.name,
+          //       //   calcAllWrProspectsObjects[playerName]
+          //       //     .projectedDraftRoundPlusOneScore
+          //       // );
+          //       if (projectedDraftRoundPlusOne === 4) {
+          //         // console.log(
+          //         //   player.name,
+          //         //   calcAllWrProspectsObjects[playerName]
+          //         //     .projectedDraftRoundPlusOneScore
+          //         // );
+          //         let adjustmentValue =
+          //           calcAllWrProspectsObjects[playerName]
+          //             .projectedDraftRoundPlusOneScore * 0.4;
+          //         calcAllWrProspectsObjects[
+          //           playerName
+          //         ].projectedDraftRoundPlusOneScore = (
+          //           calcAllWrProspectsObjects[playerName]
+          //             .projectedDraftRoundPlusOneScore - adjustmentValue
+          //         ).toFixed(2);
+          //       }
+          //     }
+          //     //
+          //     if (+player.yearOne['Class'] === +curYear) {
+          //       // console.log(
+          //       //   player.name,
+          //       //   calcAllWrProspectsObjects[playerName]
+          //       //     .projectedDraftRoundPlusOneScore
+          //       // );
+          //       if (projectedDraftRoundMinusOne === 4) {
+          //         // console.log(
+          //         //   player.name,
+          //         //   calcAllWrProspectsObjects[playerName]
+          //         //     .projectedDraftRoundPlusOneScore
+          //         // );
+          //         let adjustmentValue =
+          //           calcAllWrProspectsObjects[playerName]
+          //             .projectedDraftRoundMinusOneScore * 0.4;
+          //         calcAllWrProspectsObjects[
+          //           playerName
+          //         ].projectedDraftRoundMinusOneScore = (
+          //           calcAllWrProspectsObjects[playerName]
+          //             .projectedDraftRoundMinusOneScore - adjustmentValue
+          //         ).toFixed(2);
+          //       }
+          //     }
+          //     // below is for final score no projected draft capital
+          //     if (
+          //       player.yearOne['Draft Round'] > 3 &&
+          //       player.yearOne['Draft Round'] < 5
+          //     ) {
+          //       // if (player.yearOne.Hit === 'Y') {
+          //       //   num = num + 1;
+          //       //   console.log(num, player.name);
+          //       // }
+          //       //
+          //       let adjustmentValue =
+          //         calcAllWrProspectsObjects[playerName].finalScore * 0.4;
+          //       calcAllWrProspectsObjects[playerName].finalScore = (
+          //         calcAllWrProspectsObjects[playerName].finalScore -
+          //         adjustmentValue
+          //       ).toFixed(2);
+          //     }
+
+          //     // if fifth round pick
+          //     if (+player.yearOne['Class'] === +curYear) {
+          //       // console.log(
+          //       //   player.name,
+          //       //   calcAllWrProspectsObjects[playerName]
+          //       //     .projectedDraftRoundPlusOneScore
+          //       // );
+          //       if (projectedDraftRoundPlusOne === 5) {
+          //         // console.log(
+          //         //   player.name,
+          //         //   calcAllWrProspectsObjects[playerName]
+          //         //     .projectedDraftRoundPlusOneScore
+          //         // );
+          //         let adjustmentValue =
+          //           calcAllWrProspectsObjects[playerName]
+          //             .projectedDraftRoundPlusOneScore * 0.45;
+          //         calcAllWrProspectsObjects[
+          //           playerName
+          //         ].projectedDraftRoundPlusOneScore = (
+          //           calcAllWrProspectsObjects[playerName]
+          //             .projectedDraftRoundPlusOneScore - adjustmentValue
+          //         ).toFixed(2);
+          //       }
+          //     }
+          //     //
+          //     if (+player.yearOne['Class'] === +curYear) {
+          //       // console.log(
+          //       //   player.name,
+          //       //   calcAllWrProspectsObjects[playerName]
+          //       //     .projectedDraftRoundPlusOneScore
+          //       // );
+          //       if (projectedDraftRoundMinusOne === 5) {
+          //         // console.log(
+          //         //   player.name,
+          //         //   calcAllWrProspectsObjects[playerName]
+          //         //     .projectedDraftRoundPlusOneScore
+          //         // );
+          //         let adjustmentValue =
+          //           calcAllWrProspectsObjects[playerName]
+          //             .projectedDraftRoundMinusOneScore * 0.45;
+          //         calcAllWrProspectsObjects[
+          //           playerName
+          //         ].projectedDraftRoundMinusOneScore = (
+          //           calcAllWrProspectsObjects[playerName]
+          //             .projectedDraftRoundMinusOneScore - adjustmentValue
+          //         ).toFixed(2);
+          //       }
+          //     }
+          //     // below is for final score no projected draft capital
+          //     if (
+          //       player.yearOne['Draft Round'] > 4 &&
+          //       player.yearOne['Draft Round'] < 6
+          //     ) {
+          //       // if (player.yearOne.Hit === 'N') {
+          //       //   num = num + 1;
+          //       //   console.log(
+          //       //     num,
+          //       //     player.name,
+          //       //     calcAllWrProspectsObjects[playerName].finalScore
+          //       //   );
+          //       // }
+          //       //
+          //       let adjustmentValue =
+          //         calcAllWrProspectsObjects[playerName].finalScore * 0.45;
+          //       calcAllWrProspectsObjects[playerName].finalScore = (
+          //         calcAllWrProspectsObjects[playerName].finalScore -
+          //         adjustmentValue
+          //       ).toFixed(2);
+          //     }
+          //     //
+          //     // if later than 5th round pick
+          //     if (+player.yearOne['Class'] === +curYear) {
+          //       // console.log(
+          //       //   player.name,
+          //       //   calcAllWrProspectsObjects[playerName]
+          //       //     .projectedDraftRoundPlusOneScore
+          //       // );
+          //       if (projectedDraftRoundPlusOne > 5) {
+          //         // console.log(
+          //         //   player.name,
+          //         //   calcAllWrProspectsObjects[playerName]
+          //         //     .projectedDraftRoundPlusOneScore
+          //         // );
+          //         let adjustmentValue =
+          //           calcAllWrProspectsObjects[playerName]
+          //             .projectedDraftRoundPlusOneScore * 0.8;
+          //         calcAllWrProspectsObjects[
+          //           playerName
+          //         ].projectedDraftRoundPlusOneScore = (
+          //           calcAllWrProspectsObjects[playerName]
+          //             .projectedDraftRoundPlusOneScore - adjustmentValue
+          //         ).toFixed(2);
+          //       }
+          //     }
+          //     //
+          //     if (+player.yearOne['Class'] === +curYear) {
+          //       // console.log(
+          //       //   player.name,
+          //       //   calcAllWrProspectsObjects[playerName]
+          //       //     .projectedDraftRoundPlusOneScore
+          //       // );
+          //       if (projectedDraftRoundMinusOne > 5) {
+          //         // console.log(
+          //         //   player.name,
+          //         //   calcAllWrProspectsObjects[playerName]
+          //         //     .projectedDraftRoundPlusOneScore
+          //         // );
+          //         let adjustmentValue =
+          //           calcAllWrProspectsObjects[playerName]
+          //             .projectedDraftRoundMinusOneScore * 0.8;
+          //         calcAllWrProspectsObjects[
+          //           playerName
+          //         ].projectedDraftRoundMinusOneScore = (
+          //           calcAllWrProspectsObjects[playerName]
+          //             .projectedDraftRoundMinusOneScore - adjustmentValue
+          //         ).toFixed(2);
+          //       }
+          //     }
+          //     // below is for final score no projected draft capital
+          //     if (player.yearOne['Draft Round'] > 5) {
+          //       // if (player.yearOne.Hit === 'Y') {
+          //       //   num = num + 1;
+          //       //   console.log(num, player.name);
+          //       // }
+          //       //
+          //       let adjustmentValue =
+          //         calcAllWrProspectsObjects[playerName].finalScore * 0.8;
+          //       calcAllWrProspectsObjects[playerName].finalScore = (
+          //         calcAllWrProspectsObjects[playerName].finalScore -
+          //         adjustmentValue
+          //       ).toFixed(2);
+          //     }
+          //   }
+
+          //   //////////////////////////////////////////////
+          //   //////////////////////////////////////////////
+          //   //             if postYearOneCTP > 29.75
+          //   //////////////////////////////////////////////
+          //   //////////////////////////////////////////////
+
+          //   if (postYearOneCTP > 29.749) {
+          //     if (player.yearOne.Hit === 'Y') {
+          //       num = num + 1;
+          //       console.log(
+          //         num,
+          //         player.name,
+          //         calcAllWrProspectsObjects[playerName].finalScore,
+          //         '  ',
+          //         player.yearOne['Draft Round'],
+          //         postYearOneCTP
+          //       );
+          //     }
+
+          //     //
+          //     //
+
+          //     // if first round pick
+
+          //     if (player.yearOne['Draft Round'] === 1) {
+          //       // if (player.yearOne.Hit === 'N') {
+          //       //   num = num + 1;
+          //       //   console.log(num, player.name);
+          //       // }
+          //       //
+          //       if (+player.yearOne['Class'] === +curYear) {
+          //         if (projectedDraftRoundMinusOne === 1) {
+          //           // console.log(
+          //           //   player.name,
+          //           //   calcAllWrProspectsObjects[playerName]
+          //           //     .projectedDraftRoundPlusOneScore
+          //           // );
+          //           let adjustmentValue =
+          //             calcAllWrProspectsObjects[playerName]
+          //               .projectedDraftRoundMinusOneScore * 0.7;
+          //           calcAllWrProspectsObjects[
+          //             playerName
+          //           ].projectedDraftRoundMinusOneScore = (
+          //             calcAllWrProspectsObjects[playerName]
+          //               .projectedDraftRoundMinusOneScore - adjustmentValue
+          //           ).toFixed(2);
+          //         }
+          //       }
+
+          //       //
+          //       //below is for final score no projected draft capital
+          //       if (
+          //         player.yearOne['Draft Round'] > 0 &&
+          //         player.yearOne['Draft Round'] < 2
+          //       ) {
+          //         let adjustmentValue =
+          //           calcAllWrProspectsObjects[playerName].finalScore * 0.7;
+          //         calcAllWrProspectsObjects[playerName].finalScore = (
+          //           calcAllWrProspectsObjects[playerName].finalScore -
+          //           adjustmentValue
+          //         ).toFixed(2);
+          //       }
+          //     }
+
+          //     // if second round pick
+          //     //
+
+          //     // if (player.yearOne.Hit === 'N') {
+          //     //   num = num + 1;
+          //     //   console.log(num, player.name);
+          //     // }
+          //     //
+          //     if (+player.yearOne['Class'] === +curYear) {
+          //       // console.log(
+          //       //   player.name,
+          //       //   calcAllWrProspectsObjects[playerName]
+          //       //     .projectedDraftRoundPlusOneScore
+          //       // );
+          //       if (projectedDraftRoundPlusOne === 2) {
+          //         // console.log(
+          //         //   player.name,
+          //         //   calcAllWrProspectsObjects[playerName]
+          //         //     .projectedDraftRoundPlusOneScore
+          //         // );
+          //         let adjustmentValue =
+          //           calcAllWrProspectsObjects[playerName]
+          //             .projectedDraftRoundPlusOneScore * 0.75;
+          //         calcAllWrProspectsObjects[
+          //           playerName
+          //         ].projectedDraftRoundPlusOneScore = (
+          //           calcAllWrProspectsObjects[playerName]
+          //             .projectedDraftRoundPlusOneScore - adjustmentValue
+          //         ).toFixed(2);
+          //       }
+          //     }
+          //     //
+          //     if (+player.yearOne['Class'] === +curYear) {
+          //       // console.log(
+          //       //   player.name,
+          //       //   calcAllWrProspectsObjects[playerName]
+          //       //     .projectedDraftRoundPlusOneScore
+          //       // );
+          //       if (projectedDraftRoundMinusOne === 2) {
+          //         // console.log(
+          //         //   player.name,
+          //         //   calcAllWrProspectsObjects[playerName]
+          //         //     .projectedDraftRoundPlusOneScore
+          //         // );
+          //         let adjustmentValue =
+          //           calcAllWrProspectsObjects[playerName]
+          //             .projectedDraftRoundMinusOneScore * 0.75;
+          //         calcAllWrProspectsObjects[
+          //           playerName
+          //         ].projectedDraftRoundMinusOneScore = (
+          //           calcAllWrProspectsObjects[playerName]
+          //             .projectedDraftRoundMinusOneScore - adjustmentValue
+          //         ).toFixed(2);
+          //       }
+          //     }
+          //     //
+
+          //     //
+          //     //below is for final score no projected draft capital
+          //     if (
+          //       player.yearOne['Draft Round'] > 1 &&
+          //       player.yearOne['Draft Round'] < 3
+          //     ) {
+          //       let adjustmentValue =
+          //         calcAllWrProspectsObjects[playerName].finalScore * 0.75;
+          //       calcAllWrProspectsObjects[playerName].finalScore = (
+          //         calcAllWrProspectsObjects[playerName].finalScore -
+          //         adjustmentValue
+          //       ).toFixed(2);
+          //     }
+
+          //     // if third round pick
+          //     //
+          //     if (+player.yearOne['Class'] === +curYear) {
+          //       // console.log(
+          //       //   player.name,
+          //       //   calcAllWrProspectsObjects[playerName]
+          //       //     .projectedDraftRoundPlusOneScore
+          //       // );
+          //       if (projectedDraftRoundPlusOne === 3) {
+          //         // console.log(
+          //         //   player.name,
+          //         //   calcAllWrProspectsObjects[playerName]
+          //         //     .projectedDraftRoundPlusOneScore
+          //         // );
+          //         let adjustmentValue =
+          //           calcAllWrProspectsObjects[playerName]
+          //             .projectedDraftRoundPlusOneScore * 0.8;
+          //         calcAllWrProspectsObjects[
+          //           playerName
+          //         ].projectedDraftRoundPlusOneScore = (
+          //           calcAllWrProspectsObjects[playerName]
+          //             .projectedDraftRoundPlusOneScore - adjustmentValue
+          //         ).toFixed(2);
+          //       }
+          //     }
+          //     //
+          //     if (+player.yearOne['Class'] === +curYear) {
+          //       // console.log(
+          //       //   player.name,
+          //       //   calcAllWrProspectsObjects[playerName]
+          //       //     .projectedDraftRoundPlusOneScore
+          //       // );
+          //       if (projectedDraftRoundMinusOne === 3) {
+          //         // console.log(
+          //         //   player.name,
+          //         //   calcAllWrProspectsObjects[playerName]
+          //         //     .projectedDraftRoundMinusOneScore
+          //         // );
+          //         let adjustmentValue =
+          //           calcAllWrProspectsObjects[playerName]
+          //             .projectedDraftRoundMinusOneScore * 0.8;
+          //         calcAllWrProspectsObjects[
+          //           playerName
+          //         ].projectedDraftRoundMinusOneScore = (
+          //           calcAllWrProspectsObjects[playerName]
+          //             .projectedDraftRoundMinusOneScore - adjustmentValue
+          //         ).toFixed(2);
+          //       }
+          //     }
+
+          //     // below is for final score no projected draft capital
+          //     if (
+          //       player.yearOne['Draft Round'] > 2 &&
+          //       player.yearOne['Draft Round'] < 4
+          //     ) {
+          //       // if (player.yearOne.Hit === 'Y') {
+          //       //   num = num + 1;
+          //       //   console.log(num, player.name);
+          //       // }
+          //       //
+          //       let adjustmentValue =
+          //         calcAllWrProspectsObjects[playerName].finalScore * 0.8;
+          //       calcAllWrProspectsObjects[playerName].finalScore = (
+          //         calcAllWrProspectsObjects[playerName].finalScore -
+          //         adjustmentValue
+          //       ).toFixed(2);
+          //     }
+
+          //     // if fourth round pick
+          //     if (+player.yearOne['Class'] === +curYear) {
+          //       // console.log(
+          //       //   player.name,
+          //       //   calcAllWrProspectsObjects[playerName]
+          //       //     .projectedDraftRoundPlusOneScore
+          //       // );
+          //       if (projectedDraftRoundPlusOne === 4) {
+          //         // console.log(
+          //         //   player.name,
+          //         //   calcAllWrProspectsObjects[playerName]
+          //         //     .projectedDraftRoundPlusOneScore
+          //         // );
+          //         let adjustmentValue =
+          //           calcAllWrProspectsObjects[playerName]
+          //             .projectedDraftRoundPlusOneScore * 0.85;
+          //         calcAllWrProspectsObjects[
+          //           playerName
+          //         ].projectedDraftRoundPlusOneScore = (
+          //           calcAllWrProspectsObjects[playerName]
+          //             .projectedDraftRoundPlusOneScore - adjustmentValue
+          //         ).toFixed(2);
+          //       }
+          //     }
+          //     //
+          //     if (+player.yearOne['Class'] === +curYear) {
+          //       // console.log(
+          //       //   player.name,
+          //       //   calcAllWrProspectsObjects[playerName]
+          //       //     .projectedDraftRoundPlusOneScore
+          //       // );
+          //       if (projectedDraftRoundMinusOne === 4) {
+          //         // console.log(
+          //         //   player.name,
+          //         //   calcAllWrProspectsObjects[playerName]
+          //         //     .projectedDraftRoundPlusOneScore
+          //         // );
+          //         let adjustmentValue =
+          //           calcAllWrProspectsObjects[playerName]
+          //             .projectedDraftRoundMinusOneScore * 0.85;
+          //         calcAllWrProspectsObjects[
+          //           playerName
+          //         ].projectedDraftRoundMinusOneScore = (
+          //           calcAllWrProspectsObjects[playerName]
+          //             .projectedDraftRoundMinusOneScore - adjustmentValue
+          //         ).toFixed(2);
+          //       }
+          //     }
+          //     // below is for final score no projected draft capital
+          //     if (
+          //       player.yearOne['Draft Round'] > 3 &&
+          //       player.yearOne['Draft Round'] < 5
+          //     ) {
+          //       // if (player.yearOne.Hit === 'Y') {
+          //       //   num = num + 1;
+          //       //   console.log(num, player.name);
+          //       // }
+          //       //
+          //       let adjustmentValue =
+          //         calcAllWrProspectsObjects[playerName].finalScore * 0.85;
+          //       calcAllWrProspectsObjects[playerName].finalScore = (
+          //         calcAllWrProspectsObjects[playerName].finalScore -
+          //         adjustmentValue
+          //       ).toFixed(2);
+          //     }
+
+          //     // if fifth round pick
+          //     if (+player.yearOne['Class'] === +curYear) {
+          //       // console.log(
+          //       //   player.name,
+          //       //   calcAllWrProspectsObjects[playerName]
+          //       //     .projectedDraftRoundPlusOneScore
+          //       // );
+          //       if (projectedDraftRoundPlusOne === 5) {
+          //         // console.log(
+          //         //   player.name,
+          //         //   calcAllWrProspectsObjects[playerName]
+          //         //     .projectedDraftRoundPlusOneScore
+          //         // );
+          //         let adjustmentValue =
+          //           calcAllWrProspectsObjects[playerName]
+          //             .projectedDraftRoundPlusOneScore * 0.9;
+          //         calcAllWrProspectsObjects[
+          //           playerName
+          //         ].projectedDraftRoundPlusOneScore = (
+          //           calcAllWrProspectsObjects[playerName]
+          //             .projectedDraftRoundPlusOneScore - adjustmentValue
+          //         ).toFixed(2);
+          //       }
+          //     }
+          //     //
+          //     if (+player.yearOne['Class'] === +curYear) {
+          //       // console.log(
+          //       //   player.name,
+          //       //   calcAllWrProspectsObjects[playerName]
+          //       //     .projectedDraftRoundPlusOneScore
+          //       // );
+          //       if (projectedDraftRoundMinusOne === 5) {
+          //         // console.log(
+          //         //   player.name,
+          //         //   calcAllWrProspectsObjects[playerName]
+          //         //     .projectedDraftRoundPlusOneScore
+          //         // );
+          //         let adjustmentValue =
+          //           calcAllWrProspectsObjects[playerName]
+          //             .projectedDraftRoundMinusOneScore * 0.9;
+          //         calcAllWrProspectsObjects[
+          //           playerName
+          //         ].projectedDraftRoundMinusOneScore = (
+          //           calcAllWrProspectsObjects[playerName]
+          //             .projectedDraftRoundMinusOneScore - adjustmentValue
+          //         ).toFixed(2);
+          //       }
+          //     }
+          //     // below is for final score no projected draft capital
+          //     if (
+          //       player.yearOne['Draft Round'] > 4 &&
+          //       player.yearOne['Draft Round'] < 6
+          //     ) {
+          //       // if (player.yearOne.Hit === 'N') {
+          //       //   num = num + 1;
+          //       //   console.log(
+          //       //     num,
+          //       //     player.name,
+          //       //     calcAllWrProspectsObjects[playerName].finalScore
+          //       //   );
+          //       // }
+          //       //
+          //       let adjustmentValue =
+          //         calcAllWrProspectsObjects[playerName].finalScore * 0.9;
+          //       calcAllWrProspectsObjects[playerName].finalScore = (
+          //         calcAllWrProspectsObjects[playerName].finalScore -
+          //         adjustmentValue
+          //       ).toFixed(2);
+          //     }
+          //     //
+          //     // if later than 5th round pick
+          //     if (+player.yearOne['Class'] === +curYear) {
+          //       // console.log(
+          //       //   player.name,
+          //       //   calcAllWrProspectsObjects[playerName]
+          //       //     .projectedDraftRoundPlusOneScore
+          //       // );
+          //       if (projectedDraftRoundPlusOne > 5) {
+          //         // console.log(
+          //         //   player.name,
+          //         //   calcAllWrProspectsObjects[playerName]
+          //         //     .projectedDraftRoundPlusOneScore
+          //         // );
+          //         let adjustmentValue =
+          //           calcAllWrProspectsObjects[playerName]
+          //             .projectedDraftRoundPlusOneScore * 0.8;
+          //         calcAllWrProspectsObjects[
+          //           playerName
+          //         ].projectedDraftRoundPlusOneScore = (
+          //           calcAllWrProspectsObjects[playerName]
+          //             .projectedDraftRoundPlusOneScore - adjustmentValue
+          //         ).toFixed(2);
+          //       }
+          //     }
+          //     //
+          //     if (+player.yearOne['Class'] === +curYear) {
+          //       // console.log(
+          //       //   player.name,
+          //       //   calcAllWrProspectsObjects[playerName]
+          //       //     .projectedDraftRoundPlusOneScore
+          //       // );
+          //       if (projectedDraftRoundMinusOne > 5) {
+          //         // console.log(
+          //         //   player.name,
+          //         //   calcAllWrProspectsObjects[playerName]
+          //         //     .projectedDraftRoundPlusOneScore
+          //         // );
+          //         let adjustmentValue =
+          //           calcAllWrProspectsObjects[playerName]
+          //             .projectedDraftRoundMinusOneScore * 0.9;
+          //         calcAllWrProspectsObjects[
+          //           playerName
+          //         ].projectedDraftRoundMinusOneScore = (
+          //           calcAllWrProspectsObjects[playerName]
+          //             .projectedDraftRoundMinusOneScore - adjustmentValue
+          //         ).toFixed(2);
+          //       }
+          //     }
+          //     // below is for final score no projected draft capital
+          //     if (player.yearOne['Draft Round'] > 5) {
+          //       // if (player.yearOne.Hit === 'Y') {
+          //       //   num = num + 1;
+          //       //   console.log(num, player.name);
+          //       // }
+          //       //
+          //       let adjustmentValue =
+          //         calcAllWrProspectsObjects[playerName].finalScore * 0.9;
+          //       calcAllWrProspectsObjects[playerName].finalScore = (
+          //         calcAllWrProspectsObjects[playerName].finalScore -
+          //         adjustmentValue
+          //       ).toFixed(2);
+          //     }
+          //   }
+          // }
+
+          // ///////////////////////////////////////////////////////////
+          // /////////////////////////////////////////////////////////////
+          // ////////////////////////////////////////////////////////////
+          // //
+          // //        end draft capital adjustment for
+          // //      highestContestedTargetPercent greater than 33.5%
+          // //
+          // ////////////////////////////////////////////////////////////////
+          // //////////////////////////////////////////////////////////////
+
+          // ///////////////////////////////////////////////////////////
+          // /////////////////////////////////////////////////////////////
+          // ////////////////////////////////////////////////////////////
+          // //
+          // //        start draft capital adjustment for
+          // //      highestContestedTargetPercent below 25%
+          // //
+          // ////////////////////////////////////////////////////////////////
+          // //////////////////////////////////////////////////////////////
+
+          // if (player.highestContestedTargetPercent < 25.01) {
+          // if first round pick
+
+          if (player.yearOne['Draft Round'] === 1) {
             // if (player.yearOne.Hit === 'N') {
             //   num = num + 1;
             //   console.log(num, player.name);
             // }
             //
-            if (+player.yearOne['Class'] === +curYear) {
-              // console.log(
-              //   player.name,
-              //   calcAllWrProspectsObjects[playerName]
-              //     .projectedDraftRoundPlusOneScore
-              // );
-              if (projectedDraftRoundPlusOne === 2) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                let adjustmentValue =
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundPlusOneScore * 0.25;
-                calcAllWrProspectsObjects[
-                  playerName
-                ].projectedDraftRoundPlusOneScore = (
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundPlusOneScore - adjustmentValue
-                ).toFixed(2);
-              }
-            }
-            //
-            if (+player.yearOne['Class'] === +curYear) {
-              // console.log(
-              //   player.name,
-              //   calcAllWrProspectsObjects[playerName]
-              //     .projectedDraftRoundPlusOneScore
-              // );
-              if (projectedDraftRoundMinusOne === 2) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                let adjustmentValue =
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundMinusOneScore * 0.25;
-                calcAllWrProspectsObjects[
-                  playerName
-                ].projectedDraftRoundMinusOneScore = (
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundMinusOneScore - adjustmentValue
-                ).toFixed(2);
-              }
-            }
-            //
 
-            //
-            //below is for final score no projected draft capital
-            if (
-              player.yearOne['Draft Round'] > 1 &&
-              player.yearOne['Draft Round'] < 3
-            ) {
-              let adjustmentValue =
-                calcAllWrProspectsObjects[playerName].finalScore * 0.25;
-              calcAllWrProspectsObjects[playerName].finalScore = (
-                calcAllWrProspectsObjects[playerName].finalScore -
-                adjustmentValue
-              ).toFixed(2);
-            }
+            calcAllWrProspectsObjects[playerName].finalScore =
+              calcAllWrProspectsObjects[playerName].finalScore.toFixed(2);
+          }
 
-            // if third round pick
-            //
-            if (+player.yearOne['Class'] === +curYear) {
-              // console.log(
-              //   player.name,
-              //   calcAllWrProspectsObjects[playerName]
-              //     .projectedDraftRoundPlusOneScore
-              // );
-              if (projectedDraftRoundPlusOne === 3) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                let adjustmentValue =
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundPlusOneScore * 0.3;
-                calcAllWrProspectsObjects[
-                  playerName
-                ].projectedDraftRoundPlusOneScore = (
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundPlusOneScore - adjustmentValue
-                ).toFixed(2);
-              }
-            }
-            //
-            if (+player.yearOne['Class'] === +curYear) {
-              // console.log(
-              //   player.name,
-              //   calcAllWrProspectsObjects[playerName]
-              //     .projectedDraftRoundPlusOneScore
-              // );
-              if (projectedDraftRoundMinusOne === 3) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundMinusOneScore
-                // );
-                let adjustmentValue =
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundMinusOneScore * 0.3;
-                calcAllWrProspectsObjects[
-                  playerName
-                ].projectedDraftRoundMinusOneScore = (
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundMinusOneScore - adjustmentValue
-                ).toFixed(2);
-              }
-            }
+          // if second round pick
+          //
 
-            // below is for final score no projected draft capital
-            if (
-              player.yearOne['Draft Round'] > 2 &&
-              player.yearOne['Draft Round'] < 4
-            ) {
-              // if (player.yearOne.Hit === 'Y') {
-              //   num = num + 1;
-              //   console.log(num, player.name);
-              // }
-              //
+          // if (player.yearOne.Hit === 'N') {
+          //   num = num + 1;
+          //   console.log(num, player.name);
+          // }
+          //
+          if (+player.yearOne['Class'] === +curYear) {
+            // console.log(
+            //   player.name,
+            //   calcAllWrProspectsObjects[playerName]
+            //     .projectedDraftRoundPlusOneScore
+            // );
+            if (projectedDraftRoundPlusOne === 2) {
+              // console.log(
+              //   player.name,
+              //   calcAllWrProspectsObjects[playerName]
+              //     .projectedDraftRoundPlusOneScore
+              // );
               let adjustmentValue =
-                calcAllWrProspectsObjects[playerName].finalScore * 0.3;
-              calcAllWrProspectsObjects[playerName].finalScore = (
-                calcAllWrProspectsObjects[playerName].finalScore -
-                adjustmentValue
-              ).toFixed(2);
-            }
-
-            // if fourth round pick
-            if (+player.yearOne['Class'] === +curYear) {
-              // console.log(
-              //   player.name,
-              //   calcAllWrProspectsObjects[playerName]
-              //     .projectedDraftRoundPlusOneScore
-              // );
-              if (projectedDraftRoundPlusOne === 4) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                let adjustmentValue =
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundPlusOneScore * 0.3;
-                calcAllWrProspectsObjects[
-                  playerName
-                ].projectedDraftRoundPlusOneScore = (
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundPlusOneScore - adjustmentValue
-                ).toFixed(2);
-              }
-            }
-            //
-            if (+player.yearOne['Class'] === +curYear) {
-              // console.log(
-              //   player.name,
-              //   calcAllWrProspectsObjects[playerName]
-              //     .projectedDraftRoundPlusOneScore
-              // );
-              if (projectedDraftRoundMinusOne === 4) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                let adjustmentValue =
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundMinusOneScore * 0.3;
-                calcAllWrProspectsObjects[
-                  playerName
-                ].projectedDraftRoundMinusOneScore = (
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundMinusOneScore - adjustmentValue
-                ).toFixed(2);
-              }
-            }
-            // below is for final score no projected draft capital
-            if (
-              player.yearOne['Draft Round'] > 3 &&
-              player.yearOne['Draft Round'] < 5
-            ) {
-              // if (player.yearOne.Hit === 'Y') {
-              //   num = num + 1;
-              //   console.log(num, player.name);
-              // }
-              //
-              let adjustmentValue =
-                calcAllWrProspectsObjects[playerName].finalScore * 0.3;
-              calcAllWrProspectsObjects[playerName].finalScore = (
-                calcAllWrProspectsObjects[playerName].finalScore -
-                adjustmentValue
-              ).toFixed(2);
-            }
-
-            // if fifth round pick
-            if (+player.yearOne['Class'] === +curYear) {
-              // console.log(
-              //   player.name,
-              //   calcAllWrProspectsObjects[playerName]
-              //     .projectedDraftRoundPlusOneScore
-              // );
-              if (projectedDraftRoundPlusOne === 5) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                let adjustmentValue =
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundPlusOneScore * 0.45;
-                calcAllWrProspectsObjects[
-                  playerName
-                ].projectedDraftRoundPlusOneScore = (
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundPlusOneScore - adjustmentValue
-                ).toFixed(2);
-              }
-            }
-            //
-            if (+player.yearOne['Class'] === +curYear) {
-              // console.log(
-              //   player.name,
-              //   calcAllWrProspectsObjects[playerName]
-              //     .projectedDraftRoundPlusOneScore
-              // );
-              if (projectedDraftRoundMinusOne === 5) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                let adjustmentValue =
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundMinusOneScore * 0.45;
-                calcAllWrProspectsObjects[
-                  playerName
-                ].projectedDraftRoundMinusOneScore = (
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundMinusOneScore - adjustmentValue
-                ).toFixed(2);
-              }
-            }
-            // below is for final score no projected draft capital
-            if (
-              player.yearOne['Draft Round'] > 4 &&
-              player.yearOne['Draft Round'] < 6
-            ) {
-              // if (player.yearOne.Hit === 'N') {
-              //   num = num + 1;
-              //   console.log(
-              //     num,
-              //     player.name,
-              //     calcAllWrProspectsObjects[playerName].finalScore
-              //   );
-              // }
-              //
-              let adjustmentValue =
-                calcAllWrProspectsObjects[playerName].finalScore * 0.45;
-              calcAllWrProspectsObjects[playerName].finalScore = (
-                calcAllWrProspectsObjects[playerName].finalScore -
-                adjustmentValue
-              ).toFixed(2);
-            }
-            //
-            // if later than 5th round pick
-            if (+player.yearOne['Class'] === +curYear) {
-              // console.log(
-              //   player.name,
-              //   calcAllWrProspectsObjects[playerName]
-              //     .projectedDraftRoundPlusOneScore
-              // );
-              if (projectedDraftRoundPlusOne > 5) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                let adjustmentValue =
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundPlusOneScore * 0.8;
-                calcAllWrProspectsObjects[
-                  playerName
-                ].projectedDraftRoundPlusOneScore = (
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundPlusOneScore - adjustmentValue
-                ).toFixed(2);
-              }
-            }
-            //
-            if (+player.yearOne['Class'] === +curYear) {
-              // console.log(
-              //   player.name,
-              //   calcAllWrProspectsObjects[playerName]
-              //     .projectedDraftRoundPlusOneScore
-              // );
-              if (projectedDraftRoundMinusOne > 5) {
-                // console.log(
-                //   player.name,
-                //   calcAllWrProspectsObjects[playerName]
-                //     .projectedDraftRoundPlusOneScore
-                // );
-                let adjustmentValue =
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundMinusOneScore * 0.8;
-                calcAllWrProspectsObjects[
-                  playerName
-                ].projectedDraftRoundMinusOneScore = (
-                  calcAllWrProspectsObjects[playerName]
-                    .projectedDraftRoundMinusOneScore - adjustmentValue
-                ).toFixed(2);
-              }
-            }
-            // below is for final score no projected draft capital
-            if (player.yearOne['Draft Round'] > 5) {
-              // if (player.yearOne.Hit === 'Y') {
-              //   num = num + 1;
-              //   console.log(num, player.name);
-              // }
-              //
-              let adjustmentValue =
-                calcAllWrProspectsObjects[playerName].finalScore * 0.8;
-              calcAllWrProspectsObjects[playerName].finalScore = (
-                calcAllWrProspectsObjects[playerName].finalScore -
-                adjustmentValue
+                calcAllWrProspectsObjects[playerName]
+                  .projectedDraftRoundPlusOneScore * 0.25;
+              calcAllWrProspectsObjects[
+                playerName
+              ].projectedDraftRoundPlusOneScore = (
+                calcAllWrProspectsObjects[playerName]
+                  .projectedDraftRoundPlusOneScore - adjustmentValue
               ).toFixed(2);
             }
           }
+          //
+          if (+player.yearOne['Class'] === +curYear) {
+            // console.log(
+            //   player.name,
+            //   calcAllWrProspectsObjects[playerName]
+            //     .projectedDraftRoundPlusOneScore
+            // );
+            if (projectedDraftRoundMinusOne === 2) {
+              // console.log(
+              //   player.name,
+              //   calcAllWrProspectsObjects[playerName]
+              //     .projectedDraftRoundPlusOneScore
+              // );
+              let adjustmentValue =
+                calcAllWrProspectsObjects[playerName]
+                  .projectedDraftRoundMinusOneScore * 0.25;
+              calcAllWrProspectsObjects[
+                playerName
+              ].projectedDraftRoundMinusOneScore = (
+                calcAllWrProspectsObjects[playerName]
+                  .projectedDraftRoundMinusOneScore - adjustmentValue
+              ).toFixed(2);
+            }
+          }
+          //
+
+          //
+          //below is for final score no projected draft capital
+          if (
+            player.yearOne['Draft Round'] > 1 &&
+            player.yearOne['Draft Round'] < 3
+          ) {
+            let adjustmentValue =
+              calcAllWrProspectsObjects[playerName].finalScore * 0.25;
+            calcAllWrProspectsObjects[playerName].finalScore = (
+              calcAllWrProspectsObjects[playerName].finalScore - adjustmentValue
+            ).toFixed(2);
+          }
+
+          // if third round pick
+          //
+          if (+player.yearOne['Class'] === +curYear) {
+            // console.log(
+            //   player.name,
+            //   calcAllWrProspectsObjects[playerName]
+            //     .projectedDraftRoundPlusOneScore
+            // );
+            if (projectedDraftRoundPlusOne === 3) {
+              // console.log(
+              //   player.name,
+              //   calcAllWrProspectsObjects[playerName]
+              //     .projectedDraftRoundPlusOneScore
+              // );
+              let adjustmentValue =
+                calcAllWrProspectsObjects[playerName]
+                  .projectedDraftRoundPlusOneScore * 0.3;
+              calcAllWrProspectsObjects[
+                playerName
+              ].projectedDraftRoundPlusOneScore = (
+                calcAllWrProspectsObjects[playerName]
+                  .projectedDraftRoundPlusOneScore - adjustmentValue
+              ).toFixed(2);
+            }
+          }
+          //
+          if (+player.yearOne['Class'] === +curYear) {
+            // console.log(
+            //   player.name,
+            //   calcAllWrProspectsObjects[playerName]
+            //     .projectedDraftRoundPlusOneScore
+            // );
+            if (projectedDraftRoundMinusOne === 3) {
+              // console.log(
+              //   player.name,
+              //   calcAllWrProspectsObjects[playerName]
+              //     .projectedDraftRoundMinusOneScore
+              // );
+              let adjustmentValue =
+                calcAllWrProspectsObjects[playerName]
+                  .projectedDraftRoundMinusOneScore * 0.3;
+              calcAllWrProspectsObjects[
+                playerName
+              ].projectedDraftRoundMinusOneScore = (
+                calcAllWrProspectsObjects[playerName]
+                  .projectedDraftRoundMinusOneScore - adjustmentValue
+              ).toFixed(2);
+            }
+          }
+
+          // below is for final score no projected draft capital
+          if (
+            player.yearOne['Draft Round'] > 2 &&
+            player.yearOne['Draft Round'] < 4
+          ) {
+            // if (player.yearOne.Hit === 'Y') {
+            //   num = num + 1;
+            //   console.log(num, player.name);
+            // }
+            //
+            let adjustmentValue =
+              calcAllWrProspectsObjects[playerName].finalScore * 0.3;
+            calcAllWrProspectsObjects[playerName].finalScore = (
+              calcAllWrProspectsObjects[playerName].finalScore - adjustmentValue
+            ).toFixed(2);
+          }
+
+          // if fourth round pick
+          if (+player.yearOne['Class'] === +curYear) {
+            // console.log(
+            //   player.name,
+            //   calcAllWrProspectsObjects[playerName]
+            //     .projectedDraftRoundPlusOneScore
+            // );
+            if (projectedDraftRoundPlusOne === 4) {
+              // console.log(
+              //   player.name,
+              //   calcAllWrProspectsObjects[playerName]
+              //     .projectedDraftRoundPlusOneScore
+              // );
+              let adjustmentValue =
+                calcAllWrProspectsObjects[playerName]
+                  .projectedDraftRoundPlusOneScore * 0.3;
+              calcAllWrProspectsObjects[
+                playerName
+              ].projectedDraftRoundPlusOneScore = (
+                calcAllWrProspectsObjects[playerName]
+                  .projectedDraftRoundPlusOneScore - adjustmentValue
+              ).toFixed(2);
+            }
+          }
+          //
+          if (+player.yearOne['Class'] === +curYear) {
+            // console.log(
+            //   player.name,
+            //   calcAllWrProspectsObjects[playerName]
+            //     .projectedDraftRoundPlusOneScore
+            // );
+            if (projectedDraftRoundMinusOne === 4) {
+              // console.log(
+              //   player.name,
+              //   calcAllWrProspectsObjects[playerName]
+              //     .projectedDraftRoundPlusOneScore
+              // );
+              let adjustmentValue =
+                calcAllWrProspectsObjects[playerName]
+                  .projectedDraftRoundMinusOneScore * 0.3;
+              calcAllWrProspectsObjects[
+                playerName
+              ].projectedDraftRoundMinusOneScore = (
+                calcAllWrProspectsObjects[playerName]
+                  .projectedDraftRoundMinusOneScore - adjustmentValue
+              ).toFixed(2);
+            }
+          }
+          // below is for final score no projected draft capital
+          if (
+            player.yearOne['Draft Round'] > 3 &&
+            player.yearOne['Draft Round'] < 5
+          ) {
+            // if (player.yearOne.Hit === 'Y') {
+            //   num = num + 1;
+            //   console.log(num, player.name);
+            // }
+            //
+            let adjustmentValue =
+              calcAllWrProspectsObjects[playerName].finalScore * 0.3;
+            calcAllWrProspectsObjects[playerName].finalScore = (
+              calcAllWrProspectsObjects[playerName].finalScore - adjustmentValue
+            ).toFixed(2);
+          }
+
+          // if fifth round pick
+          if (+player.yearOne['Class'] === +curYear) {
+            // console.log(
+            //   player.name,
+            //   calcAllWrProspectsObjects[playerName]
+            //     .projectedDraftRoundPlusOneScore
+            // );
+            if (projectedDraftRoundPlusOne === 5) {
+              // console.log(
+              //   player.name,
+              //   calcAllWrProspectsObjects[playerName]
+              //     .projectedDraftRoundPlusOneScore
+              // );
+              let adjustmentValue =
+                calcAllWrProspectsObjects[playerName]
+                  .projectedDraftRoundPlusOneScore * 0.45;
+              calcAllWrProspectsObjects[
+                playerName
+              ].projectedDraftRoundPlusOneScore = (
+                calcAllWrProspectsObjects[playerName]
+                  .projectedDraftRoundPlusOneScore - adjustmentValue
+              ).toFixed(2);
+            }
+          }
+          //
+          if (+player.yearOne['Class'] === +curYear) {
+            // console.log(
+            //   player.name,
+            //   calcAllWrProspectsObjects[playerName]
+            //     .projectedDraftRoundPlusOneScore
+            // );
+            if (projectedDraftRoundMinusOne === 5) {
+              // console.log(
+              //   player.name,
+              //   calcAllWrProspectsObjects[playerName]
+              //     .projectedDraftRoundPlusOneScore
+              // );
+              let adjustmentValue =
+                calcAllWrProspectsObjects[playerName]
+                  .projectedDraftRoundMinusOneScore * 0.45;
+              calcAllWrProspectsObjects[
+                playerName
+              ].projectedDraftRoundMinusOneScore = (
+                calcAllWrProspectsObjects[playerName]
+                  .projectedDraftRoundMinusOneScore - adjustmentValue
+              ).toFixed(2);
+            }
+          }
+          // below is for final score no projected draft capital
+          if (
+            player.yearOne['Draft Round'] > 4 &&
+            player.yearOne['Draft Round'] < 6
+          ) {
+            // if (player.yearOne.Hit === 'N') {
+            //   num = num + 1;
+            //   console.log(
+            //     num,
+            //     player.name,
+            //     calcAllWrProspectsObjects[playerName].finalScore
+            //   );
+            // }
+            //
+            let adjustmentValue =
+              calcAllWrProspectsObjects[playerName].finalScore * 0.45;
+            calcAllWrProspectsObjects[playerName].finalScore = (
+              calcAllWrProspectsObjects[playerName].finalScore - adjustmentValue
+            ).toFixed(2);
+          }
+          //
+          // if later than 5th round pick
+          if (+player.yearOne['Class'] === +curYear) {
+            // console.log(
+            //   player.name,
+            //   calcAllWrProspectsObjects[playerName]
+            //     .projectedDraftRoundPlusOneScore
+            // );
+            if (projectedDraftRoundPlusOne > 5) {
+              // console.log(
+              //   player.name,
+              //   calcAllWrProspectsObjects[playerName]
+              //     .projectedDraftRoundPlusOneScore
+              // );
+              let adjustmentValue =
+                calcAllWrProspectsObjects[playerName]
+                  .projectedDraftRoundPlusOneScore * 0.8;
+              calcAllWrProspectsObjects[
+                playerName
+              ].projectedDraftRoundPlusOneScore = (
+                calcAllWrProspectsObjects[playerName]
+                  .projectedDraftRoundPlusOneScore - adjustmentValue
+              ).toFixed(2);
+            }
+          }
+          //
+          if (+player.yearOne['Class'] === +curYear) {
+            // console.log(
+            //   player.name,
+            //   calcAllWrProspectsObjects[playerName]
+            //     .projectedDraftRoundPlusOneScore
+            // );
+            if (projectedDraftRoundMinusOne > 5) {
+              // console.log(
+              //   player.name,
+              //   calcAllWrProspectsObjects[playerName]
+              //     .projectedDraftRoundPlusOneScore
+              // );
+              let adjustmentValue =
+                calcAllWrProspectsObjects[playerName]
+                  .projectedDraftRoundMinusOneScore * 0.8;
+              calcAllWrProspectsObjects[
+                playerName
+              ].projectedDraftRoundMinusOneScore = (
+                calcAllWrProspectsObjects[playerName]
+                  .projectedDraftRoundMinusOneScore - adjustmentValue
+              ).toFixed(2);
+            }
+          }
+          // below is for final score no projected draft capital
+          if (player.yearOne['Draft Round'] > 5) {
+            // if (player.yearOne.Hit === 'Y') {
+            //   num = num + 1;
+            //   console.log(num, player.name);
+            // }
+            //
+            let adjustmentValue =
+              calcAllWrProspectsObjects[playerName].finalScore * 0.8;
+            calcAllWrProspectsObjects[playerName].finalScore = (
+              calcAllWrProspectsObjects[playerName].finalScore - adjustmentValue
+            ).toFixed(2);
+          }
+          //  }
 
           ///////////////////////////////////////////////////////////
           /////////////////////////////////////////////////////////////
@@ -4370,285 +4365,286 @@ test.forEach(topPlayer => {
           /////////
           /////////
 
-          // if (player.highestContestedTargetPercent > 25) {
-          //   if (player.yearOne.Hit === 'NA') {
-          //     // num = num + 1;
-          //     // console.log(
-          //     //   num,
-          //     //   player.name,
-          //     //   player.highestContestedTargetPercent,
-          //     //   player.yearOne['Draft Round']
-          //     // );
-          //   }
-          // }
+          if (player.highestContestedTargetPercent > 25) {
+            if (player.yearOne.Hit === 'NA') {
+              // num = num + 1;
+              // console.log(
+              //   num,
+              //   player.name,
+              //   player.highestContestedTargetPercent,
+              //   player.yearOne['Draft Round']
+              // );
+            }
+          }
 
-          // // below block effects 1st, 2nd, and 3rd rounders
-          // //
+          // below block effects 1st, 2nd, and 3rd rounders
+          //
 
-          // if (
-          //   player.highestContestedTargetPercent > 25 &&
-          //   player.highestContestedTargetPercent < 27
-          // ) {
-          //   // num = num + 1;
-          //   // console.log(
-          //   //   num,
-          //   //   player.name,
+          if (
+            player.highestContestedTargetPercent > 25 &&
+            player.highestContestedTargetPercent < 27
+          ) {
+            // num = num + 1;
+            // console.log(
+            //   num,
+            //   player.name,
 
-          //   //   player.highestContestedTargetPercent,
-          //   //   player.yearOne['Draft Round']
-          //   // );
-          //   ///
-          //   if (+player.yearOne['Class'] === +curYear) {
-          //     if (
-          //       projectedDraftRoundPlusOne === 2 ||
-          //       projectedDraftRoundPlusOne === 3
-          //     ) {
-          //       let adjustmentValue =
-          //         calcAllWrProspectsObjects[playerName]
-          //           .projectedDraftRoundPlusOneScore * 0.2;
-          //       calcAllWrProspectsObjects[
-          //         playerName
-          //       ].projectedDraftRoundPlusOneScore = (
-          //         calcAllWrProspectsObjects[playerName]
-          //           .projectedDraftRoundPlusOneScore - adjustmentValue
-          //       ).toFixed(2);
-          //     }
-          //   }
-          //   //
-          //   if (+player.yearOne['Class'] === +curYear) {
-          //     if (
-          //       projectedDraftRoundMinusOne === 1 ||
-          //       projectedDraftRoundMinusOne === 2 ||
-          //       projectedDraftRoundMinusOne === 3
-          //     ) {
-          //       //
-          //       // console.log(
-          //       //   player.name,
-          //       //   projectedDraftRound,
-          //       //   projectedDraftRoundMinusOne,
-          //       //   projectedDraftRoundPlusOne
-          //       // );
+            //   player.highestContestedTargetPercent,
+            //   player.yearOne['Draft Round']
+            // );
+            ///
+            if (+player.yearOne['Class'] === +curYear) {
+              if (
+                projectedDraftRoundPlusOne === 2 ||
+                projectedDraftRoundPlusOne === 3
+              ) {
+                let adjustmentValue =
+                  calcAllWrProspectsObjects[playerName]
+                    .projectedDraftRoundPlusOneScore * 0.2;
+                calcAllWrProspectsObjects[
+                  playerName
+                ].projectedDraftRoundPlusOneScore = (
+                  calcAllWrProspectsObjects[playerName]
+                    .projectedDraftRoundPlusOneScore - adjustmentValue
+                ).toFixed(2);
+              }
+            }
+            //
+            if (+player.yearOne['Class'] === +curYear) {
+              if (
+                projectedDraftRoundMinusOne === 1 ||
+                projectedDraftRoundMinusOne === 2 ||
+                projectedDraftRoundMinusOne === 3
+              ) {
+                //
+                // console.log(
+                //   player.name,
+                //   projectedDraftRound,
+                //   projectedDraftRoundMinusOne,
+                //   projectedDraftRoundPlusOne
+                // );
 
-          //       //
-          //       let adjustmentValueForHere =
-          //         calcAllWrProspectsObjects[playerName]
-          //           .projectedDraftRoundMinusOneScore * 0.2;
-          //       calcAllWrProspectsObjects[
-          //         playerName
-          //       ].projectedDraftRoundMinusOneScore = +(
-          //         calcAllWrProspectsObjects[playerName]
-          //           .projectedDraftRoundMinusOneScore - adjustmentValueForHere
-          //       ).toFixed(2);
-          //     }
-          //   }
-          //   //
+                //
+                let adjustmentValueForHere =
+                  calcAllWrProspectsObjects[playerName]
+                    .projectedDraftRoundMinusOneScore * 0.2;
+                calcAllWrProspectsObjects[
+                  playerName
+                ].projectedDraftRoundMinusOneScore = +(
+                  calcAllWrProspectsObjects[playerName]
+                    .projectedDraftRoundMinusOneScore - adjustmentValueForHere
+                ).toFixed(2);
+              }
+            }
+            //
 
-          //   // below for final post draft capital score
-          //   //
-          //   if (player.yearOne['Draft Round'] < 4) {
-          //     let adjustmentValue =
-          //       calcAllWrProspectsObjects[playerName].finalScore * 0.2;
-          //     calcAllWrProspectsObjects[playerName].finalScore = (
-          //       calcAllWrProspectsObjects[playerName].finalScore -
-          //       adjustmentValue
-          //     ).toFixed(2);
-          //   }
-          // }
+            // below for final post draft capital score
+            //
+            if (player.yearOne['Draft Round'] < 4) {
+              let adjustmentValue =
+                calcAllWrProspectsObjects[playerName].finalScore * 0.2;
+              calcAllWrProspectsObjects[playerName].finalScore = (
+                calcAllWrProspectsObjects[playerName].finalScore -
+                adjustmentValue
+              ).toFixed(2);
+            }
+          }
 
-          // // below block effect 2nd rounders
-          // //
+          // below block effect 2nd rounders
+          //
 
-          // if (
-          //   player.highestContestedTargetPercent > 26.99 &&
-          //   player.highestContestedTargetPercent < 33.5
-          // ) {
-          //   // console.log(
-          //   //   player.name,
+          if (
+            player.highestContestedTargetPercent > 26.99 &&
+            player.highestContestedTargetPercent < 33.5
+          ) {
+            // console.log(
+            //   player.name,
 
-          //   //   player.highestContestedTargetPercent,
-          //   //   player.yearOne['Draft Round']
-          //   // );
-          //   //
-          //   if (+player.yearOne['Class'] === +curYear) {
-          //     if (projectedDraftRoundPlusOne === 2) {
-          //       let adjustmentValue =
-          //         calcAllWrProspectsObjects[playerName]
-          //           .projectedDraftRoundPlusOneScore * 0.3;
-          //       calcAllWrProspectsObjects[
-          //         playerName
-          //       ].projectedDraftRoundPlusOneScore = (
-          //         calcAllWrProspectsObjects[playerName]
-          //           .projectedDraftRoundPlusOneScore - adjustmentValue
-          //       ).toFixed(2);
-          //     }
-          //   }
-          //   //
-          //   if (+player.yearOne['Class'] === +curYear) {
-          //     if (projectedDraftRoundMinusOne === 2) {
-          //       //
-          //       // console.log(
-          //       //   player.name,
-          //       //   projectedDraftRound,
-          //       //   projectedDraftRoundMinusOne,
-          //       //   projectedDraftRoundPlusOne
-          //       // );
+            //   player.highestContestedTargetPercent,
+            //   player.yearOne['Draft Round']
+            // );
+            //
+            if (+player.yearOne['Class'] === +curYear) {
+              if (projectedDraftRoundPlusOne === 2) {
+                let adjustmentValue =
+                  calcAllWrProspectsObjects[playerName]
+                    .projectedDraftRoundPlusOneScore * 0.3;
+                calcAllWrProspectsObjects[
+                  playerName
+                ].projectedDraftRoundPlusOneScore = (
+                  calcAllWrProspectsObjects[playerName]
+                    .projectedDraftRoundPlusOneScore - adjustmentValue
+                ).toFixed(2);
+              }
+            }
+            //
+            if (+player.yearOne['Class'] === +curYear) {
+              if (projectedDraftRoundMinusOne === 2) {
+                //
+                // console.log(
+                //   player.name,
+                //   projectedDraftRound,
+                //   projectedDraftRoundMinusOne,
+                //   projectedDraftRoundPlusOne
+                // );
 
-          //       //
-          //       let adjustmentValueForHere =
-          //         calcAllWrProspectsObjects[playerName]
-          //           .projectedDraftRoundMinusOneScore * 0.3;
-          //       calcAllWrProspectsObjects[
-          //         playerName
-          //       ].projectedDraftRoundMinusOneScore = +(
-          //         calcAllWrProspectsObjects[playerName]
-          //           .projectedDraftRoundMinusOneScore - adjustmentValueForHere
-          //       ).toFixed(2);
-          //     }
-          //   }
-          //   //
-          //   //
-          //   // below is for final score no projected draft capital
-          //   if (
-          //     player.yearOne['Draft Round'] > 1 &&
-          //     player.yearOne['Draft Round'] < 3
-          //   ) {
-          //     let adjustmentValue =
-          //       calcAllWrProspectsObjects[playerName].finalScore * 0.3;
-          //     calcAllWrProspectsObjects[playerName].finalScore = (
-          //       calcAllWrProspectsObjects[playerName].finalScore -
-          //       adjustmentValue
-          //     ).toFixed(2);
-          //   }
-          // }
+                //
+                let adjustmentValueForHere =
+                  calcAllWrProspectsObjects[playerName]
+                    .projectedDraftRoundMinusOneScore * 0.3;
+                calcAllWrProspectsObjects[
+                  playerName
+                ].projectedDraftRoundMinusOneScore = +(
+                  calcAllWrProspectsObjects[playerName]
+                    .projectedDraftRoundMinusOneScore - adjustmentValueForHere
+                ).toFixed(2);
+              }
+            }
+            //
+            //
+            // below is for final score no projected draft capital
+            if (
+              player.yearOne['Draft Round'] > 1 &&
+              player.yearOne['Draft Round'] < 3
+            ) {
+              let adjustmentValue =
+                calcAllWrProspectsObjects[playerName].finalScore * 0.3;
+              calcAllWrProspectsObjects[playerName].finalScore = (
+                calcAllWrProspectsObjects[playerName].finalScore -
+                adjustmentValue
+              ).toFixed(2);
+            }
+          }
 
-          // // below block effects 1st round
-          // //
-          // if (player.highestContestedTargetPercent > 27) {
-          //   // console.log(
-          //   //   player.name,
+          // below block effects 1st round
+          //
+          if (player.highestContestedTargetPercent > 27) {
+            // console.log(
+            //   player.name,
 
-          //   //   player.highestContestedTargetPercent,
-          //   //   player.yearOne['Draft Round']
-          //   // );
-          //   //
-          //   if (+player.yearOne['Class'] === +curYear) {
-          //     if (projectedDraftRoundMinusOne === 1) {
-          //       //
-          //       // console.log(
-          //       //   player.name,
-          //       //   projectedDraftRound,
-          //       //   projectedDraftRoundMinusOne,
-          //       //   projectedDraftRoundPlusOne
-          //       // );
+            //   player.highestContestedTargetPercent,
+            //   player.yearOne['Draft Round']
+            // );
+            //
+            if (+player.yearOne['Class'] === +curYear) {
+              if (projectedDraftRoundMinusOne === 1) {
+                //
+                // console.log(
+                //   player.name,
+                //   projectedDraftRound,
+                //   projectedDraftRoundMinusOne,
+                //   projectedDraftRoundPlusOne
+                // );
 
-          //       //
-          //       let adjustmentValueForHere =
-          //         calcAllWrProspectsObjects[playerName]
-          //           .projectedDraftRoundMinusOneScore * 0.7;
-          //       calcAllWrProspectsObjects[
-          //         playerName
-          //       ].projectedDraftRoundMinusOneScore = +(
-          //         calcAllWrProspectsObjects[playerName]
-          //           .projectedDraftRoundMinusOneScore - adjustmentValueForHere
-          //       ).toFixed(2);
-          //     }
-          //   }
+                //
+                let adjustmentValueForHere =
+                  calcAllWrProspectsObjects[playerName]
+                    .projectedDraftRoundMinusOneScore * 0.7;
+                calcAllWrProspectsObjects[
+                  playerName
+                ].projectedDraftRoundMinusOneScore = +(
+                  calcAllWrProspectsObjects[playerName]
+                    .projectedDraftRoundMinusOneScore - adjustmentValueForHere
+                ).toFixed(2);
+              }
+            }
 
-          //   // below if for final post draft capitol score
-          //   if (
-          //     player.yearOne['Draft Round'] > 0 &&
-          //     player.yearOne['Draft Round'] < 2
-          //   ) {
-          //     //
-          //     // console.log(
-          //     //   player.name,
+            // below if for final post draft capitol score
+            if (
+              player.yearOne['Draft Round'] > 0 &&
+              player.yearOne['Draft Round'] < 2
+            ) {
+              //
+              // console.log(
+              //   player.name,
 
-          //     //   player.highestContestedTargetPercent,
-          //     //   player.yearOne['Draft Round']
-          //     // );
-          //     //
-          //     let adjustmentValue =
-          //       calcAllWrProspectsObjects[playerName].finalScore * 0.7;
-          //     calcAllWrProspectsObjects[playerName].finalScore = (
-          //       calcAllWrProspectsObjects[playerName].finalScore -
-          //       adjustmentValue
-          //     ).toFixed(2);
-          //   }
-          // }
+              //   player.highestContestedTargetPercent,
+              //   player.yearOne['Draft Round']
+              // );
+              //
+              let adjustmentValue =
+                calcAllWrProspectsObjects[playerName].finalScore * 0.7;
+              calcAllWrProspectsObjects[playerName].finalScore = (
+                calcAllWrProspectsObjects[playerName].finalScore -
+                adjustmentValue
+              ).toFixed(2);
+            }
+          }
 
-          // // below block effect 2nd and 3rd rounders
-          // //
+          // below block effect 2nd and 3rd rounders
+          //
 
-          // if (player.highestContestedTargetPercent > 33.49) {
-          //   // console.log(
-          //   //   player.name,
+          if (player.highestContestedTargetPercent > 35) {
+            // console.log(
+            //   player.name,
 
-          //   //   player.highestContestedTargetPercent,
-          //   //   player.yearOne['Draft Round']
-          //   // );
-          //   //
-          //   if (+player.yearOne['Class'] === +curYear) {
-          //     if (
-          //       projectedDraftRoundPlusOne === 2 ||
-          //       projectedDraftRoundPlusOne === 3
-          //     ) {
-          //       let adjustmentValue =
-          //         calcAllWrProspectsObjects[playerName]
-          //           .projectedDraftRoundPlusOneScore * 0.7;
-          //       calcAllWrProspectsObjects[
-          //         playerName
-          //       ].projectedDraftRoundPlusOneScore = (
-          //         calcAllWrProspectsObjects[playerName]
-          //           .projectedDraftRoundPlusOneScore - adjustmentValue
-          //       ).toFixed(2);
-          //     }
-          //   }
-          //   //
-          //   if (+player.yearOne['Class'] === +curYear) {
-          //     if (
-          //       projectedDraftRoundMinusOne === 2 ||
-          //       projectedDraftRoundMinusOne === 3
-          //     ) {
-          //       //
-          //       // console.log(
-          //       //   player.name,
-          //       //   projectedDraftRound,
-          //       //   projectedDraftRoundMinusOne,
-          //       //   projectedDraftRoundPlusOne
-          //       // );
+            //   player.highestContestedTargetPercent,
+            //   player.yearOne['Draft Round']
+            // );
+            //
+            if (+player.yearOne['Class'] === +curYear) {
+              if (
+                projectedDraftRoundPlusOne === 2 ||
+                projectedDraftRoundPlusOne === 3
+              ) {
+                let adjustmentValue =
+                  calcAllWrProspectsObjects[playerName]
+                    .projectedDraftRoundPlusOneScore * 0.7;
+                calcAllWrProspectsObjects[
+                  playerName
+                ].projectedDraftRoundPlusOneScore = (
+                  calcAllWrProspectsObjects[playerName]
+                    .projectedDraftRoundPlusOneScore - adjustmentValue
+                ).toFixed(2);
+              }
+            }
+            //
+            if (+player.yearOne['Class'] === +curYear) {
+              if (
+                projectedDraftRoundMinusOne === 2 ||
+                projectedDraftRoundMinusOne === 3
+              ) {
+                //
+                // console.log(
+                //   player.name,
+                //   projectedDraftRound,
+                //   projectedDraftRoundMinusOne,
+                //   projectedDraftRoundPlusOne
+                // );
 
-          //       //
-          //       let adjustmentValueForHere =
-          //         calcAllWrProspectsObjects[playerName]
-          //           .projectedDraftRoundMinusOneScore * 0.7;
-          //       calcAllWrProspectsObjects[
-          //         playerName
-          //       ].projectedDraftRoundMinusOneScore = +(
-          //         calcAllWrProspectsObjects[playerName]
-          //           .projectedDraftRoundMinusOneScore - adjustmentValueForHere
-          //       ).toFixed(2);
-          //     }
-          //   }
+                //
+                let adjustmentValueForHere =
+                  calcAllWrProspectsObjects[playerName]
+                    .projectedDraftRoundMinusOneScore * 0.7;
+                calcAllWrProspectsObjects[
+                  playerName
+                ].projectedDraftRoundMinusOneScore = +(
+                  calcAllWrProspectsObjects[playerName]
+                    .projectedDraftRoundMinusOneScore - adjustmentValueForHere
+                ).toFixed(2);
+              }
+            }
 
-          //   //
-          //   // below if for final post draft capitol score
-          //   if (
-          //     player.yearOne['Draft Round'] > 1 &&
-          //     player.yearOne['Draft Round'] < 4
-          //   ) {
-          //     let adjustmentValue =
-          //       calcAllWrProspectsObjects[playerName].finalScore * 0.7;
-          //     calcAllWrProspectsObjects[playerName].finalScore = (
-          //       calcAllWrProspectsObjects[playerName].finalScore -
-          //       adjustmentValue
-          //     ).toFixed(2);
+            //
+            // below if for final post draft capitol score
+            if (
+              player.yearOne['Draft Round'] > 1 &&
+              player.yearOne['Draft Round'] < 4
+            ) {
+              let adjustmentValue =
+                calcAllWrProspectsObjects[playerName].finalScore * 0.7;
+              calcAllWrProspectsObjects[playerName].finalScore = (
+                calcAllWrProspectsObjects[playerName].finalScore -
+                adjustmentValue
+              ).toFixed(2);
 
-          //     // console.log(
-          //     //   player.name,
-          //     //   calcAllWrProspectsObjects[playerName].finalScore
-          //     // );
-          //   }
-          // }
+              // console.log(
+              //   player.name,
+              //   calcAllWrProspectsObjects[playerName].finalScore,
+              //   player.highestContestedTargetPercent
+              // );
+            }
+          }
 
           calcAllWrProspectsObjects[playerName].playerName = player.name;
 
@@ -4680,33 +4676,37 @@ test.forEach(topPlayer => {
           let tempTwo = +calcAllWrProspectsObjects[playerName].finalScore;
           let PostDCScore = tempTwo.toFixed(2);
 
-          // if (calcAllWrProspectsObjects[playerName].finalScore > 23) {
+          let tempToOneHundredScore = +PostDCScore + 56.8;
+          let toOneHundredScore = tempToOneHundredScore.toFixed(2);
+
+          // if (calcAllWrProspectsObjects[playerName].toOneHundredScore > 0) {
           // if (player.yearOne['Draft Round'] === 'NA') {
-          if (player.yearOne['Class'] === '2024') {
-            // if (player.yearOne.Hit === 'Y') {
-            num = num + 1;
-            console.log(
-              num,
-              player.name,
-              '  ',
-              '  ',
-              // PreDCScore,
-              calcAllWrProspectsObjects[playerName]
-                .projectedDraftRoundMinusOneScore,
-              '  ',
-              PostDCScore,
-              '  ',
-              calcAllWrProspectsObjects[playerName]
-                .projectedDraftRoundPlusOneScore
-              // '  '
-              // player.yearOne.Conference
-              // calcAllWrProspectsObjects[playerName].yearOneConferenceAdjustment
-              // player.highestContestedTargetPercent
-              //   player.yearOne['Draft Round'],
-              // calcAllWrProspectsObjects[playerName]
-            );
+          if (player.yearOne['Class'] === '2022') {
+          // if (player.yearOne.Hit === 'Y') {
+            // num = num + 1;
+            // console.log(
+            //   num,
+            //   player.name,
+            //   '  ',
+            //   '  ',
+            //   // PreDCScore,
+            //   // calcAllWrProspectsObjects[playerName]
+            //   //   .projectedDraftRoundMinusOneScore,
+            //   '  ',
+            //   // PostDCScore,
+            //   '  ',
+            //   toOneHundredScore,
+            //   // calcAllWrProspectsObjects[playerName]
+            //   //   .projectedDraftRoundPlusOneScore
+            //   // '  ',
+            //   // player.yearOne.Conference
+            //   // calcAllWrProspectsObjects[playerName].yearOneConferenceAdjustment
+            //   // player.highestContestedTargetPercent
+            //   //   player.yearOne['Draft Round'],
+            //   // calcAllWrProspectsObjects[playerName]
+            // );
+            // }
           }
-          // }
 
           //////////////////////////////////////////////////////end
         }
