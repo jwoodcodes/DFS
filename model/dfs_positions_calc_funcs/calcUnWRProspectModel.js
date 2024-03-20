@@ -4679,32 +4679,32 @@ test.forEach(topPlayer => {
           let tempToOneHundredScore = +PostDCScore + 56.8;
           let toOneHundredScore = tempToOneHundredScore.toFixed(2);
 
-          // if (calcAllWrProspectsObjects[playerName].toOneHundredScore > 0) {
-          // if (player.yearOne['Draft Round'] === 'NA') {
-          if (player.yearOne['Class'] === '2022') {
-          // if (player.yearOne.Hit === 'Y') {
-            // num = num + 1;
-            // console.log(
-            //   num,
-            //   player.name,
-            //   '  ',
-            //   '  ',
-            //   // PreDCScore,
-            //   // calcAllWrProspectsObjects[playerName]
-            //   //   .projectedDraftRoundMinusOneScore,
-            //   '  ',
-            //   // PostDCScore,
-            //   '  ',
-            //   toOneHundredScore,
-            //   // calcAllWrProspectsObjects[playerName]
-            //   //   .projectedDraftRoundPlusOneScore
-            //   // '  ',
-            //   // player.yearOne.Conference
-            //   // calcAllWrProspectsObjects[playerName].yearOneConferenceAdjustment
-            //   // player.highestContestedTargetPercent
-            //   //   player.yearOne['Draft Round'],
-            //   // calcAllWrProspectsObjects[playerName]
-            // );
+          if (calcAllWrProspectsObjects[playerName].toOneHundredScore > 0) {
+            // if (player.yearOne['Draft Round'] === 'NA') {
+            // if (player.yearOne['Class'] === '2024') {
+            //   // if (player.yearOne.Hit === 'Y') {
+            //   num = num + 1;
+            //   console.log(
+            //     // num,
+            //     player.name,
+            //     '  ',
+            //     '  ',
+            //     // PreDCScore,
+            //     // calcAllWrProspectsObjects[playerName]
+            //     //   .projectedDraftRoundMinusOneScore,
+            //     '  ',
+            //     // PostDCScore,
+            //     '  ',
+            //     toOneHundredScore,
+            //     // calcAllWrProspectsObjects[playerName]
+            //     //   .projectedDraftRoundPlusOneScore
+            //     // '  ',
+            //     // player.yearOne.Conference
+            //     // calcAllWrProspectsObjects[playerName].yearOneConferenceAdjustment
+            //     // player.highestContestedTargetPercent
+            //     //   player.yearOne['Draft Round'],
+            //     calcAllWrProspectsObjects[playerName]
+            //   );
             // }
           }
 
@@ -4781,6 +4781,297 @@ test.forEach(topPlayer => {
       //   threshold: 5,
       //   ub: 'none',
       // };
+    }
+  });
+});
+
+let topLevelArray = Object.entries(calcAllWrProspectsObjects);
+
+topLevelArray.forEach(topPlayer => {
+  topPlayer.forEach(secondPlayer => {
+    if (typeof secondPlayer === 'object') {
+      // console.log(secondPlayer.playerName);
+      // num = num + 1;
+      // console.log(num, secondPlayer);
+      // console.log(
+      //   calcAllWrProspectsObjects[secondPlayer.playerName].playerName
+      // );
+
+      let matchArray = [];
+
+      topLevelArray.forEach(top2 => {
+        top2.forEach(matchPlayer => {
+          // console.log(secondPlayer.playerName, matchPlayer.playerName);
+          if (typeof matchPlayer === 'object') {
+            // num = num + 1;
+            // console.log(num, matchPlayer);
+            // console.log(secondPlayer.playerName, matchPlayer.playerName);
+            if (secondPlayer.playerName !== matchPlayer.playerName) {
+              let matchedPlayerObject = {
+                matchedPlayerName: matchPlayer.playerName,
+                matchScore: 0,
+              };
+
+              //
+              //
+              if (secondPlayer.careerAvgFirstDownPerRouteRun) {
+                // console.log(secondPlayer.careerAvgFirstDownPerRouteRun.score);
+                if (matchPlayer.careerAvgFirstDownPerRouteRun) {
+                  // console.log(
+                  //   secondPlayer.careerAvgFirstDownPerRouteRun.score,
+                  //   matchPlayer.careerAvgFirstDownPerRouteRun.score
+                  // );
+                  if (
+                    secondPlayer.careerAvgFirstDownPerRouteRun.score ===
+                    matchPlayer.careerAvgFirstDownPerRouteRun.score
+                  ) {
+                    // num = num + 1;
+                    // console.log(
+                    //   num,
+                    //   secondPlayer.playerName,
+                    //   matchPlayer.playerName
+                    // );
+                    matchedPlayerObject.matchScore =
+                      matchedPlayerObject.matchScore + 2;
+                  }
+                }
+              }
+              //
+              //
+              if (secondPlayer.careerAvgRecGrade) {
+                // console.log(secondPlayer. careerAvgRecGrade.score);
+                if (matchPlayer.careerAvgRecGrade) {
+                  // console.log(
+                  //   secondPlayer. careerAvgRecGrade.score,
+                  //   matchPlayer. careerAvgRecGrade.score
+                  // );
+                  if (
+                    secondPlayer.careerAvgRecGrade.score ===
+                    matchPlayer.careerAvgRecGrade.score
+                  ) {
+                    // num = num + 1;
+                    // console.log(
+                    //   num,
+                    //   secondPlayer.playerName,
+                    //   matchPlayer.playerName
+                    // );
+                    matchedPlayerObject.matchScore =
+                      matchedPlayerObject.matchScore + 2;
+                  }
+                }
+              }
+              //
+              //
+              if (secondPlayer.careerAvgYPRR) {
+                // console.log(secondPlayer. careerAvgYPRR.score);
+                if (matchPlayer.careerAvgYPRR) {
+                  if (
+                    secondPlayer.careerAvgYPRR.score ===
+                    matchPlayer.careerAvgYPRR.score
+                  ) {
+                    matchedPlayerObject.matchScore =
+                      matchedPlayerObject.matchScore + 2;
+                  }
+                }
+              }
+              //
+              //
+              if (secondPlayer.careerAvgSoneYPRRPlusManYPRR) {
+                // console.log(secondPlayer.  careerAvgSoneYPRRPlusManYPRR.score);
+                if (matchPlayer.careerAvgSoneYPRRPlusManYPRR) {
+                  if (
+                    secondPlayer.careerAvgSoneYPRRPlusManYPRR.score ===
+                    matchPlayer.careerAvgSoneYPRRPlusManYPRR.score
+                  ) {
+                    matchedPlayerObject.matchScore =
+                      matchedPlayerObject.matchScore + 2;
+                  }
+                }
+              }
+              //
+              //
+              if (secondPlayer.careerAvgPPRPoints) {
+                // console.log(secondPlayer.  careerAvgPPRPoints.score);
+                if (matchPlayer.careerAvgPPRPoints) {
+                  if (
+                    secondPlayer.careerAvgPPRPoints.score ===
+                    matchPlayer.careerAvgPPRPoints.score
+                  ) {
+                    matchedPlayerObject.matchScore =
+                      matchedPlayerObject.matchScore + 2;
+                  }
+                }
+              }
+              //
+              //
+              if (secondPlayer.careerAvgAdjYdsPerTeamPlay) {
+                // console.log(secondPlayer.  careerAvgAdjYdsPerTeamPlay.score);
+                if (matchPlayer.careerAvgAdjYdsPerTeamPlay) {
+                  if (
+                    secondPlayer.careerAvgAdjYdsPerTeamPlay.score ===
+                    matchPlayer.careerAvgAdjYdsPerTeamPlay.score
+                  ) {
+                    matchedPlayerObject.matchScore =
+                      matchedPlayerObject.matchScore + 2;
+                  }
+                }
+              }
+              //
+              //
+              if (secondPlayer.ytytEPAPerTeamPassAttempt) {
+                // console.log(secondPlayer.  ytytEPAPerTeamPassAttempt.score);
+                if (matchPlayer.ytytEPAPerTeamPassAttempt) {
+                  if (
+                    secondPlayer.ytytEPAPerTeamPassAttempt.score ===
+                    matchPlayer.ytytEPAPerTeamPassAttempt.score
+                  ) {
+                    matchedPlayerObject.matchScore =
+                      matchedPlayerObject.matchScore + 2;
+                  }
+                }
+              }
+              //
+              //
+              if (secondPlayer.ytytEPAPerPlay) {
+                // console.log(secondPlayer.  ytytEPAPerPlay.score);
+                if (matchPlayer.ytytEPAPerPlay) {
+                  if (
+                    secondPlayer.ytytEPAPerPlay.score ===
+                    matchPlayer.ytytEPAPerPlay.score
+                  ) {
+                    matchedPlayerObject.matchScore =
+                      matchedPlayerObject.matchScore + 2;
+                  }
+                }
+              }
+              //
+              //
+              if (secondPlayer.careerAvgRecTDs) {
+                // console.log(secondPlayer.  careerAvgRecTDs.score);
+                if (matchPlayer.careerAvgRecTDs) {
+                  if (
+                    secondPlayer.careerAvgRecTDs.score ===
+                    matchPlayer.careerAvgRecTDs.score
+                  ) {
+                    matchedPlayerObject.matchScore =
+                      matchedPlayerObject.matchScore + 2;
+                  }
+                }
+              }
+              //
+              //
+              if (secondPlayer.careerAvgEPAPerGame) {
+                // console.log(secondPlayer.   careerAvgEPAPerGame.score);
+                if (matchPlayer.careerAvgEPAPerGame) {
+                  if (
+                    secondPlayer.careerAvgEPAPerGame.score ===
+                    matchPlayer.careerAvgEPAPerGame.score
+                  ) {
+                    matchedPlayerObject.matchScore =
+                      matchedPlayerObject.matchScore + 2;
+                  }
+                }
+              }
+              //
+              //
+              if (secondPlayer.yearOneConferenceAdjustment) {
+                // console.log(secondPlayer.   yearOneConferenceAdjustment.score);
+                if (matchPlayer.yearOneConferenceAdjustment) {
+                  if (
+                    secondPlayer.yearOneConferenceAdjustment.score ===
+                    matchPlayer.yearOneConferenceAdjustment.score
+                  ) {
+                    matchedPlayerObject.matchScore =
+                      matchedPlayerObject.matchScore + 4;
+                  }
+                }
+              }
+              //
+              //
+              if (secondPlayer.finalScore) {
+                // console.log(secondPlayer.   finalScore.score);
+                if (matchPlayer.finalScore) {
+                  let temp = secondPlayer.finalScore * 0.1;
+                  let tempOne = +temp.toFixed(2);
+                  let tempHighBar = +secondPlayer.finalScore + +tempOne;
+                  let highBar = +tempHighBar.toFixed(2);
+                  let tempLowBar = +secondPlayer.finalScore - +tempOne;
+                  let lowBar = +tempLowBar.toFixed(2);
+
+                  // console.log(
+                  //   secondPlayer.playerName,
+                  //   secondPlayer.finalScore,
+                  //   highBar,
+                  //   lowBar
+                  // );
+
+                  let tempT = secondPlayer.finalScore * 0.3;
+                  let tempTwo = +tempT.toFixed(2);
+                  let tempLargeHighBar = +secondPlayer.finalScore + +tempTwo;
+                  let largeHighBar = +tempLargeHighBar.toFixed(2);
+                  let tempLargeLowBar = +secondPlayer.finalScore - +tempTwo;
+                  let largeLowBar = +tempLargeLowBar.toFixed(2);
+
+                  if (
+                    matchPlayer.finalScore < highBar &&
+                    matchPlayer.finalScore > lowBar
+                  ) {
+                    // console.log(
+                    //   secondPlayer.playerName,
+                    //   secondPlayer.finalScore,
+                    //   matchPlayer.playerName,
+                    //   highBar,
+                    //   lowBar
+                    // );
+
+                    matchedPlayerObject.matchScore =
+                      matchedPlayerObject.matchScore + 8;
+                  }
+
+                  if (
+                    matchPlayer.finalScore > largeHighBar ||
+                    matchPlayer.finalScore < largeLowBar
+                  ) {
+                    matchedPlayerObject.matchScore =
+                      matchedPlayerObject.matchScore - 8;
+                  }
+                }
+              }
+              //
+              //
+
+              matchArray.push(matchedPlayerObject);
+            }
+          }
+        });
+      });
+      let sortedMatchArray = matchArray.sort(
+        (a, b) => b.matchScore - a.matchScore
+      );
+      // console.log(secondPlayer.playerName, sortedMatchArray);
+
+      let finalTopMatchesArray = [];
+
+      sortedMatchArray.forEach((match, i) => {
+        if (i < 8) {
+          finalTopMatchesArray.push(match);
+        }
+      });
+
+      // console.log(secondPlayer.playerName, finalTopMatchesArray);
+      calcAllWrProspectsObjects[secondPlayer.playerName].topComps =
+        finalTopMatchesArray;
+    }
+  });
+});
+
+let testArray = Object.entries(calcAllWrProspectsObjects);
+
+testArray.forEach(topPlayer => {
+  // console.log(topPlayer);
+  topPlayer.forEach(player => {
+    if (typeof player === 'object') {
+      console.log(player.playerName, player.topComps);
     }
   });
 });
