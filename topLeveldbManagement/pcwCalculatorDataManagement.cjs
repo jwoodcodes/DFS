@@ -791,12 +791,12 @@ const testfunc = async function () {
             if (+fcPickRound === 1 && +fcPickNumber === 1) {
               // console.log(fcPickNumber);
               this.rvValue = 3;
-              this.rvPercentOfNonQBMax = 0.9;
+              this.rvPercentOfNonQBMax = 0.8;
             }
             if (+fcPickRound === 1 && +fcPickNumber > 1 && +fcPickNumber < 4) {
               // console.log(fcPickYear, fcPickRound, fcPickNumber);
               this.rvValue = 2.5;
-              this.rvPercentOfNonQBMax = 0.75;
+              this.rvPercentOfNonQBMax = 0.7;
             }
             if (+fcPickRound === 1 && +fcPickNumber > 3 && +fcPickNumber < 6) {
               // console.log(fcPickYear, fcPickRound, fcPickNumber);
@@ -1047,7 +1047,12 @@ const testfunc = async function () {
         }
 
         if (this.name === 'Caleb Williams') {
-          this.myValue = 6025;
+          this.myValue = 6493;
+          // console.log(this.myValue);
+        }
+
+        if (this.name === 'Jordan Love') {
+          this.myValue = 6200;
           // console.log(this.myValue);
         }
 
@@ -1056,13 +1061,28 @@ const testfunc = async function () {
           // console.log(this.myValue);
         }
 
+        if (this.name === 'Justin Fields') {
+          this.myValue = 2500;
+          // console.log(this.myValue);
+        }
+
+        if (this.name === 'Matthew Stafford') {
+          this.myValue = 2000;
+          // console.log(this.myValue);
+        }
+
+        if (this.name === 'Sam Howell') {
+          this.myValue = 1025;
+          // console.log(this.myValue);
+        }
+
         if (this.name === 'Drake Maye') {
-          this.myValue = 4200;
+          this.myValue = 3800;
           // console.log(this.myValue);
         }
 
         if (this.name === 'JJ McCarthy') {
-          this.myValue = 3550;
+          this.myValue = 4000;
           // console.log(this.myValue);
         }
 
@@ -1137,17 +1157,42 @@ const testfunc = async function () {
         this.myValue = Math.round(tempValue);
 
         if (this.name === 'Drake London') {
-          this.myValue = +(this.myValue * 1.5).toFixed(0);
+          this.myValue = +(this.myValue + 200).toFixed(0);
+          // console.log(this.myValue);
+        }
+
+        if (this.name === 'Kendre Miller') {
+          this.myValue = 1050;
+          // console.log(this.myValue);
+        }
+
+        if (this.name === 'DK Metcalf') {
+          this.myValue = 2800;
+          // console.log(this.myValue);
+        }
+
+        if (this.name === 'Zay Flowers') {
+          this.myValue = 3700;
+          // console.log(this.myValue);
+        }
+
+        if (this.name === 'Jordan Addison') {
+          this.myValue = 3700;
+          // console.log(this.myValue);
+        }
+
+        if (this.name === 'Curtis Samuel') {
+          this.myValue = 900;
           // console.log(this.myValue);
         }
 
         if (this.name === 'Marvin Harrison') {
-          this.myValue = 6020;
+          this.myValue = 5800;
           // console.log(this.myValue);
         }
 
         if (this.name === 'Malik Nabers') {
-          this.myValue = 6020;
+          this.myValue = 5800;
           // console.log(this.myValue);
         }
 
@@ -1172,7 +1217,7 @@ const testfunc = async function () {
         }
 
         if (this.name === 'Xavier Worthy') {
-          this.myValue = 2000;
+          this.myValue = 2250;
           // console.log(this.myValue);
         }
 
@@ -1192,7 +1237,7 @@ const testfunc = async function () {
         }
 
         if (this.name === 'Trey Benson') {
-          this.myValue = 1950;
+          this.myValue = 1750;
           // console.log(this.myValue);
         }
 
@@ -1202,12 +1247,12 @@ const testfunc = async function () {
         }
 
         if (this.name === 'Bucky Irving') {
-          this.myValue = 1650;
+          this.myValue = 1000;
           // console.log(this.myValue);
         }
 
         if (this.name === 'MarShawn Lloyd') {
-          this.myValue = 1500;
+          this.myValue = 1750;
           // console.log(this.myValue);
         }
 
@@ -1222,22 +1267,22 @@ const testfunc = async function () {
         }
 
         if (this.name === 'Jacob Cowing') {
-          this.myValue = 1250;
+          this.myValue = 1000;
           // console.log(this.myValue);
         }
 
         if (this.name === 'Jermaine Burton') {
-          this.myValue = 1150;
+          this.myValue = 1700;
           // console.log(this.myValue);
         }
 
         if (this.name === 'Devontez Walker') {
-          this.myValue = 1100;
+          this.myValue = 700;
           // console.log(this.myValue);
         }
 
         if (this.name === 'Ricky Pearsall') {
-          this.myValue = 900;
+          this.myValue = 1100;
           // console.log(this.myValue);
         }
 

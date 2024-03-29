@@ -4672,41 +4672,43 @@ test.forEach(topPlayer => {
 
           let tempOne =
             +calcAllWrProspectsObjects[playerName].preDraftCapitalScore;
-          let PreDCScore = tempOne.toFixed(2);
+          let PreDCScore = +tempOne.toFixed(2);
           let tempTwo = +calcAllWrProspectsObjects[playerName].finalScore;
-          let PostDCScore = tempTwo.toFixed(2);
+          let PostDCScore = +tempTwo.toFixed(2);
 
           let tempToOneHundredScore = +PostDCScore + 56.8;
-          let toOneHundredScore = tempToOneHundredScore.toFixed(2);
+          let toOneHundredScore = +tempToOneHundredScore.toFixed(2);
 
-          if (calcAllWrProspectsObjects[playerName].toOneHundredScore > 0) {
-            // if (player.yearOne['Draft Round'] === 'NA') {
-            // if (player.yearOne['Class'] === '2024') {
-            //   // if (player.yearOne.Hit === 'Y') {
-            //   num = num + 1;
-            //   console.log(
-            //     // num,
-            //     player.name,
-            //     '  ',
-            //     '  ',
-            //     // PreDCScore,
-            //     // calcAllWrProspectsObjects[playerName]
-            //     //   .projectedDraftRoundMinusOneScore,
-            //     '  ',
-            //     // PostDCScore,
-            //     '  ',
-            //     toOneHundredScore,
-            //     // calcAllWrProspectsObjects[playerName]
-            //     //   .projectedDraftRoundPlusOneScore
-            //     // '  ',
-            //     // player.yearOne.Conference
-            //     // calcAllWrProspectsObjects[playerName].yearOneConferenceAdjustment
-            //     // player.highestContestedTargetPercent
-            //     //   player.yearOne['Draft Round'],
-            //     calcAllWrProspectsObjects[playerName]
-            //   );
-            // }
-          }
+          // if (toOneHundredScore > 72) {
+          // if (player.yearOne['Draft Round'] === 'NA') {
+          // if (player.yearOne['Class'] === '2024') {
+          // if (player.yearOne.Hit === 'N') {
+          // if (player.name === 'Tank Dell' || player.name === 'Tejhaun Palmer') {
+          num = num + 1;
+          console.log(
+            num,
+            player.name,
+            '  ',
+            '  ',
+            // PreDCScore,
+            // calcAllWrProspectsObjects[playerName]
+            //   .projectedDraftRoundMinusOneScore,
+            '  ',
+            // PostDCScore,
+            '  ',
+            toOneHundredScore
+
+            // calcAllWrProspectsObjects[playerName]
+            //   .projectedDraftRoundPlusOneScore
+            // '  ',
+            // player.yearOne.Conference
+            // calcAllWrProspectsObjects[playerName].yearOneConferenceAdjustment
+            // player.highestContestedTargetPercent
+            //   player.yearOne['Draft Round'],
+            // calcAllWrProspectsObjects[playerName]
+          );
+          // }
+          // }
 
           //////////////////////////////////////////////////////end
         }
@@ -5071,7 +5073,7 @@ testArray.forEach(topPlayer => {
   // console.log(topPlayer);
   topPlayer.forEach(player => {
     if (typeof player === 'object') {
-      console.log(player.playerName, player.topComps);
+      // console.log(player.playerName, player.topComps);
     }
   });
 });
