@@ -3,8 +3,7 @@ import styles from '@/styles/tradeAnalyzer.module.css';
 import clsx from 'clsx';
 
 export default function TradeOverview({ teamOnePlayers, teamTwoPlayers }) {
-
-  const [isLegendShown, setIsLegendShown] = React.useState(false)
+  const [isLegendShown, setIsLegendShown] = React.useState(false);
 
   let teamOneTotalPRP = 0;
   let teamOneTotalPNODVScore = 0;
@@ -440,8 +439,10 @@ export default function TradeOverview({ teamOnePlayers, teamTwoPlayers }) {
     <div className={styles.tradeOvervireWrapper}>
       <div className={styles.tradeOverviewTitle}>Trade Overview</div>
       <div className={styles.overviewWarning}>
-        
-        *Ideally Market Value is <span className={styles.overviewBlueSpan}>BLUE</span>, Never <span className={styles.overviewDarkRedSpan}>DARK RED</span>. Your side as <span className={styles.overviewGreenSpan}>GREEN</span> as possible.*
+        *Ideally Market Value is{' '}
+        <span className={styles.overviewBlueSpan}>BLUE</span>, Never{' '}
+        <span className={styles.overviewDarkRedSpan}>DARK RED</span>. Your side
+        as <span className={styles.overviewGreenSpan}>GREEN</span> as possible.*
       </div>
       <div className={styles.overviewCardWrapper}>
         <div className={styles.teamOverviewWrapper}>
@@ -601,55 +602,63 @@ export default function TradeOverview({ teamOnePlayers, teamTwoPlayers }) {
         <div className={styles.legendWrapper}>
           <div className={styles.legendTitle}>Legend</div>
           <div className={styles.legendShowHideBtnWrapper}>
-          <button onClick={() => setIsLegendShown(!isLegendShown)} className={styles.showAndHideLegendBtn}>Show/Hide Legend</button>
+            <button
+              onClick={() => setIsLegendShown(!isLegendShown)}
+              className={styles.showAndHideLegendBtn}
+            >
+              Show/Hide Legend
+            </button>
           </div>
-          {isLegendShown &&
-          <div className={styles.prpLegendWrapper}>
-            <div className={styles.legendBlock}>
-              <span className={styles.legendSpan}>PRP Score:</span> Projected
-              Redraft Production, a score based off the player's redraft tier
-              and a measure of how much they will help your team win your league
-              this year. The PRP score in the trade overview shows how much more
-              or less your team is projected to score this year after the trade.
-            </div>
-            <div className={styles.legendBlock}>
-              <span className={styles.legendSpan}>PNODV:</span>Projected Next
-              Offseason Dynasty Value caclulated by Daily Dynasties proprietary
-              algorithm. PNODV in the trade overview is how much more or less
-              dynasty Value your team is projected to have next offseason after
-              the trade.
-            </div>
-            {/* <div className={styles.legendBlock}>
+          {isLegendShown && (
+            <div className={styles.prpLegendWrapper}>
+              <div className={styles.legendBlock}>
+                <span className={styles.legendSpan}>PRP Score:</span> Projected
+                Redraft Production, a score based off the player's redraft tier
+                and a measure of how much they will help your team win your
+                league this year. The PRP score in the trade overview shows how
+                much more or less your team is projected to score this year
+                after the trade.
+              </div>
+              <div className={styles.legendBlock}>
+                <span className={styles.legendSpan}>PNODV:</span>Projected Next
+                Offseason Dynasty Value caclulated by Daily Dynasties
+                proprietary algorithm. PNODV in the trade overview is how much
+                more or less dynasty Value your team is projected to have next
+                offseason after the trade.
+              </div>
+              {/* <div className={styles.legendBlock}>
               <span className={styles.legendSpan}>PNODV Score:</span> Projected
               Next Offseason Dynasty Value Score. Daily Dynasties proprietary
               metric, a score computed off how much the player(s) on a side are
               projected to go up or down in dynasty value by next offseason
             </div> */}
-            <div className={styles.legendBlock}>
-              <span className={styles.legendSpan}>RVS Score:</span> Roster Value
-              Score. A composite score from PRP and PNODV, is a metric for how
-              valuable a player is to a roster given their projected production
-              this year AND their likelihood to hold or gain in dynasty value.
-              Players that score highly in RVS are the best assets to have in
-              dynasty as they can help you win this year AND go up or maintain
-              in value by next offseason. Having rosters high in total RVS is key to a
-              permanant championship window.
+              <div className={styles.legendBlock}>
+                <span className={styles.legendSpan}>RVS Score:</span> Roster
+                Value Score. A composite score from PRP and PNODV, is a metric
+                for how valuable a player is to a roster given their projected
+                production this year AND their likelihood to hold or gain in
+                dynasty value. Players that score highly in RVS are the best
+                assets to have in dynasty as they can help you win this year AND
+                go up or maintain in value by next offseason. Having rosters
+                high in total RVS is key to a permanant championship window.
+              </div>
+              <div className={styles.legendBlock}>
+                <span className={styles.legendSpan}>Market Value:</span> A
+                player's current market value based off a recent agrigate of
+                FantasyCalc values. This is what should be used like a
+                traditional trade calulator to determine if a deal is even. This
+                is to be used at a glance. for up to date market values please
+                visit fantasyCalc.com
+              </div>
+              <div className={styles.legendBlock}>
+                <span className={styles.legendSpan}>My Value:</span> A player's
+                current value in Daily Dynasties dynasty rankings. Always use
+                market value to determine if the trade is "fair" but this gives
+                an insight in to how much better or worse the trade is viewed
+                using my rankings than the market.
+              </div>
             </div>
-            <div className={styles.legendBlock}>
-              <span className={styles.legendSpan}>Market Value:</span> A
-              player's current market value based off a recent agrigate of
-              FantasyCalc values. This is what should be used like a traditional
-              trade calulator to determine if a deal is even
-            </div>
-            <div className={styles.legendBlock}>
-              <span className={styles.legendSpan}>My Value:</span> A player's
-              current value in Daily Dynasties dynasty rankings. Always use
-              market value to determine if the trade is "fair" but this gives an
-              insight in to how much better or worse the trade is viewed using
-              my rankings than the market.
-            </div>
-          </div>
-}
+          )}
         </div>
       </div>
     </div>
