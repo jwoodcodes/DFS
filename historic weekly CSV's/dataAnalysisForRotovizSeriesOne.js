@@ -1,5 +1,7 @@
 const { MongoClient } = require('mongodb');
 
+const rotovizOnePostWorkedWithData = require('./rotovizOnePostWorkedWithData');
+
 const before2023SeasonRVRedraftRankingsTEP = require('./before2023SeasonRVRedraftRankings');
 
 // 2020 redraft postional ADP's
@@ -27,6 +29,13 @@ const wr2023PPRRedraftADP = require('./historic Positional redraft ADPs/wr2023PP
 const te2023PPRRedraftADP = require('./historic Positional redraft ADPs/te2023PPRRedraftADP');
 
 const before2023SeasonFFPCRedraftADP = require('./FFPCBefore2023RedraftADP');
+
+// 2020 final position PPR standing
+
+const qb2020PPRFinalStandings = require('./historic Positional season long finishes/qb2020PPRFinalStandings');
+const rb2020PPRFinalStandings = require('./historic Positional season long finishes/rb2020PPRFinalStandings');
+const wr2020PPRFinalStandings = require('./historic Positional season long finishes/wr2020PPRFinalStandings');
+const te2020PPRFinalStandings = require('./historic Positional season long finishes/te2020PPRFinalStandings');
 
 // 2021 final positional PPR standings
 const qb2021PPRFinalStandings = require('./historic Positional season long finishes/qb2021PPRFinalStandings');
@@ -221,8 +230,9 @@ const testfunc = async function () {
 
         let playersPreseasonDynastyADP = 0;
 
-        FFPC2023OffseasonDynastyADP.forEach(preseasonPlayer => {
-          // console.log(preseasonPlayer);
+        FFPC2020OffseasonDynastyADP.forEach(preseasonPlayer => {
+          // console.log(preseasonPlayer['"Player"']);
+
           let sanitizedPreseasonPlayerName = preseasonPlayer['"Player"'].slice(
             1,
             -1
@@ -255,9 +265,11 @@ const testfunc = async function () {
 
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        jan1Feb16ADP.forEach(postseasonPlayer => {
+        FFPC2021OffseasonDynastyADP.forEach(postseasonPlayer => {
           // console.log(postseasonPlayer['"Player"']);
-          let sanitizedPostseasonPlayerName = postseasonPlayer.id_name;
+          let sanitizedPostseasonPlayerName = postseasonPlayer[
+            '"Player"'
+          ].slice(1, -1);
 
           // console.log(sanitizedPostseasonPlayerName);
 
@@ -277,7 +289,7 @@ const testfunc = async function () {
 
           if (sanitizedPostseasonPlayerName === sanitizedAugPlayerName) {
             // console.log(postseasonPlayer.adp_adp);
-            playersPostseasonDynastyADP = postseasonPlayer.adp_adp;
+            playersPostseasonDynastyADP = postseasonPlayer['"ADP"'];
           }
         });
 
@@ -298,12 +310,15 @@ const testfunc = async function () {
         // );
 
         // console.log(augPlayer);
+        let aug2020Age = player.player.maybeAge - 3.9;
         let aug2021Age = player.player.maybeAge - 2.9;
+
         let aug2022Age = player.player.maybeAge - 1.9;
         let aug2023Age = player.player.maybeAge - 0.9;
 
-        teFinal2023Standings.forEach(finalPlayer => {
+        te2020PPRFinalStandings.forEach(finalPlayer => {
           // console.log(finalPlayer['"Player"'].slice(1, -1));
+          // console.log(finalPlayer);
 
           let sanitizedFinalPlayerName = finalPlayer['"Player"'].slice(1, -1);
 
@@ -316,10 +331,11 @@ const testfunc = async function () {
             sanitizedFinalPlayerName ===
               sanitizedFinalPlayerName.replace('Jr', '');
           }
+          // console.log(sanitizedFinalPlayerName);
 
           if (sanitizedFinalPlayerName === sanitizedAugPlayerName) {
             // console.log(sanitizedFinalPlayerName);
-            te2023PPRRedraftADP.forEach(ffpcPlayer => {
+            te2020PPRRedraftADP.forEach(ffpcPlayer => {
               // console.log(ffpcPlayer['"Player"']);
 
               let sanitizedffpcPlayerName = ffpcPlayer['"Player"'].slice(1, -1);
@@ -365,6 +381,7 @@ const testfunc = async function () {
               /////////////////////////////////////////////////////////////////////////////////////////////////////
               ///////////////////////////////////////////////////////////////////////////////////////////////
               // below
+              // console.log(sanitizedFinalPlayerName);
 
               if (sanitizedFinalPlayerName === sanitizedffpcPlayerName) {
                 // console.log(sanitizedFinalPlayerName);
@@ -374,12 +391,34 @@ const testfunc = async function () {
 
                 ////////////////////////////////////////////////////////////////////////////////
 
+                if (aug2020Age >= 30 && aug2020Age <= 31) {
+                  num = num + 1;
+                  console.log(
+                    num,
+                    ffpcPlayer['"Player"'].slice(1, -1),
+                    '  ',
+                    // ffpcPlayer['"ADP"'],
+                    playersPreseasonDynastyADP,
+                    playersPostseasonDynastyADP,
+                    '  ',
+                    adpDiff,
+                    '  ',
+                    // rvPlayer['"AVGRank"'],
+                    // difference,
+                    posionalFinishDiff
+                  );
+                }
+
                 before2023SeasonRVRedraftRankingsTEP.forEach(rvPlayer => {
                   //   console.log(rvPlayer['"Player"'].slice(1, -1));
                   if (sanitizedFinalPlayerName === sanitizedffpcPlayerName) {
                     before2023SeasonFFPCRedraftADP.forEach(ffpcPlayer => {
+                      // if (
+                      //   rvPlayer['"Player"'].slice(1, -1) ===
+                      //   ffpcPlayer['"Player"'].slice(1, -1)
+                      // ) {
                       if (
-                        rvPlayer['"Player"'].slice(1, -1) ===
+                        sanitizedFinalPlayerName ===
                         ffpcPlayer['"Player"'].slice(1, -1)
                       ) {
                         //   console.log(ffpcPlayer['"Player"'].slice(1, -1));
@@ -395,23 +434,23 @@ const testfunc = async function () {
 
                           // console.log(aug2023Age);
 
-                          if (aug2023Age >= 21 && aug2023Age <= 22) {
-                            num = num + 1;
-                            console.log(
-                              num,
-                              ffpcPlayer['"Player"'].slice(1, -1),
-                              '  ',
-                              // ffpcPlayer['"ADP"'],
-                              playersPreseasonDynastyADP,
-                              playersPostseasonDynastyADP,
-                              '  ',
-                              adpDiff,
-                              '  ',
-                              // rvPlayer['"AVGRank"'],
-                              // difference,
-                              posionalFinishDiff
-                            );
-                          }
+                          // if (aug2020Age >= 19 && aug2020Age <= 21) {
+                          //   num = num + 1;
+                          //   console.log(
+                          //     num,
+                          //     ffpcPlayer['"Player"'].slice(1, -1),
+                          //     '  ',
+                          //     // ffpcPlayer['"ADP"'],
+                          //     playersPreseasonDynastyADP,
+                          //     playersPostseasonDynastyADP,
+                          //     '  ',
+                          //     adpDiff,
+                          //     '  ',
+                          //     // rvPlayer['"AVGRank"'],
+                          //     // difference,
+                          //     posionalFinishDiff
+                          //   );
+                          // }
                         }
                       }
                     });

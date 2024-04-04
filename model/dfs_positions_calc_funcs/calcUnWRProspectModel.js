@@ -41,6 +41,8 @@ const test = Object.entries(allWrProspectsObjects);
 
 // console.log(test);
 let num = 0;
+let total = 0;
+
 test.forEach(topPlayer => {
   topPlayer.forEach(player => {
     if (player.name) {
@@ -4679,40 +4681,64 @@ test.forEach(topPlayer => {
           let tempToOneHundredScore = +PostDCScore + 56.8;
           let toOneHundredScore = +tempToOneHundredScore.toFixed(2);
 
+          // if (player.yearOne['YR 1-3 FP/G']) {
+          // console.log(player.yearOne['YR 1-3 FP/G']);
+          // }
+
           // if (toOneHundredScore > 72) {
           // if (player.yearOne['Draft Round'] === 'NA') {
           // if (player.yearOne['Class'] === '2024') {
           // if (player.yearOne.Hit === 'N') {
           // if (player.name === 'Tank Dell' || player.name === 'Tejhaun Palmer') {
-          num = num + 1;
-          console.log(
-            num,
-            player.name,
-            '  ',
-            '  ',
-            // PreDCScore,
-            // calcAllWrProspectsObjects[playerName]
-            //   .projectedDraftRoundMinusOneScore,
-            '  ',
-            // PostDCScore,
-            '  ',
-            toOneHundredScore
+          if (tempToOneHundredScore > 60 && tempToOneHundredScore < 70) {
+            num = num + 1;
+            // console.log(typeof +player.yearOne['YR 1-3 FP/G']);
+            if (+player.yearOne['Draft Pick Overall']) {
+              total = total + +player.yearOne['Draft Round'];
+            }
+            // if (+player.yearOne['Draft Pick Overall']) {
+            // total = total + +player.yearOne['Draft Pick Overall'];
+            // }
 
-            // calcAllWrProspectsObjects[playerName]
-            //   .projectedDraftRoundPlusOneScore
-            // '  ',
-            // player.yearOne.Conference
-            // calcAllWrProspectsObjects[playerName].yearOneConferenceAdjustment
-            // player.highestContestedTargetPercent
-            //   player.yearOne['Draft Round'],
-            // calcAllWrProspectsObjects[playerName]
-          );
-          // }
+            newTotal = +total.toFixed(2);
+            console.log(
+              num,
+              player.name,
+              '  ',
+              '  ',
+              // PreDCScore,
+              // calcAllWrProspectsObjects[playerName]
+              //   .projectedDraftRoundMinusOneScore,
+              '  ',
+              // PostDCScore,
+              '  ',
+              // toOneHundredScore,
+              +player.yearOne['Draft Round'],
+              newTotal
+              // calcAllWrProspectsObjects[playerName]
+              //   .projectedDraftRoundPlusOneScore
+              // '  ',
+              // player.yearOne.Conference
+              // calcAllWrProspectsObjects[playerName].yearOneConferenceAdjustment
+              // player.highestContestedTargetPercent
+              //   player.yearOne['Draft Round'],
+              // calcAllWrProspectsObjects[playerName]
+            );
+          }
           // }
 
           //////////////////////////////////////////////////////end
         }
       });
+
+      //                       avarage fantasy points per game first 3 seasons
+
+      // score range     total average  % over 10    % over 12    % over 14    % over 16    % over 18   avg draft round   avg. pick num
+      //    90+ (4)          15.35         75          75           75           50             25            1               16
+      //   80-90 (9)         13.01         100         78           22           0              0           1.33              24.66
+      //   70-80 (15)        11.42         67          53           40           13             0           2.33              55.26
+      //   60-70 (44)         6.15         23          19           2           0              0            2.90             87.29
+      //   below 60 (108)     3.71          5           2           1           0              0            4.61              149.71
 
       // console.log(calcAllWrProspectsObjects);
       /// setting upper and lower bounds for each stat to overll calcAllWrProspectsObjects
