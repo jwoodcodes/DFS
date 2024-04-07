@@ -4687,10 +4687,10 @@ test.forEach(topPlayer => {
 
           // if (toOneHundredScore > 72) {
           // if (player.yearOne['Draft Round'] === 'NA') {
-          // if (player.yearOne['Class'] === '2024') {
-          // if (player.yearOne.Hit === 'N') {
-          // if (player.name === 'Tank Dell' || player.name === 'Tejhaun Palmer') {
-          if (tempToOneHundredScore > 60 && tempToOneHundredScore < 70) {
+          if (player.yearOne['Class'] === '2024') {
+            // if (player.yearOne.Hit === 'N') {
+            // if (player.name === 'Tank Dell' || player.name === 'Tejhaun Palmer') {
+            // if (tempToOneHundredScore > 60 && tempToOneHundredScore < 70) {
             num = num + 1;
             // console.log(typeof +player.yearOne['YR 1-3 FP/G']);
             if (+player.yearOne['Draft Pick Overall']) {
@@ -4712,9 +4712,9 @@ test.forEach(topPlayer => {
               '  ',
               // PostDCScore,
               '  ',
-              // toOneHundredScore,
-              +player.yearOne['Draft Round'],
-              newTotal
+              toOneHundredScore
+              // +player.yearOne['Draft Round'],
+              // newTotal
               // calcAllWrProspectsObjects[playerName]
               //   .projectedDraftRoundPlusOneScore
               // '  ',

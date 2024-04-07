@@ -230,7 +230,7 @@ const testfunc = async function () {
 
         let playersPreseasonDynastyADP = 0;
 
-        FFPC2020OffseasonDynastyADP.forEach(preseasonPlayer => {
+        FFPC2022OffseasonDynastyADP.forEach(preseasonPlayer => {
           // console.log(preseasonPlayer['"Player"']);
 
           let sanitizedPreseasonPlayerName = preseasonPlayer['"Player"'].slice(
@@ -265,7 +265,7 @@ const testfunc = async function () {
 
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        FFPC2021OffseasonDynastyADP.forEach(postseasonPlayer => {
+        FFPC2023OffseasonDynastyADP.forEach(postseasonPlayer => {
           // console.log(postseasonPlayer['"Player"']);
           let sanitizedPostseasonPlayerName = postseasonPlayer[
             '"Player"'
@@ -316,7 +316,7 @@ const testfunc = async function () {
         let aug2022Age = player.player.maybeAge - 1.9;
         let aug2023Age = player.player.maybeAge - 0.9;
 
-        te2020PPRFinalStandings.forEach(finalPlayer => {
+        wr2022PPRFinalStandings.forEach(finalPlayer => {
           // console.log(finalPlayer['"Player"'].slice(1, -1));
           // console.log(finalPlayer);
 
@@ -335,7 +335,7 @@ const testfunc = async function () {
 
           if (sanitizedFinalPlayerName === sanitizedAugPlayerName) {
             // console.log(sanitizedFinalPlayerName);
-            te2020PPRRedraftADP.forEach(ffpcPlayer => {
+            wr2022PPRRedraftADP.forEach(ffpcPlayer => {
               // console.log(ffpcPlayer['"Player"']);
 
               let sanitizedffpcPlayerName = ffpcPlayer['"Player"'].slice(1, -1);
@@ -358,16 +358,16 @@ const testfunc = async function () {
               );
 
               let posionalFinishDiff =
-                +ffpcPlayer['"TE"'].slice(1, -1) -
+                +ffpcPlayer['"WR"'].slice(1, -1) -
                 finalNumericalPositionalFinish;
 
               let posFinishDiffIfYouNeedALoseToBeAPositiveNumber =
                 finalNumericalPositionalFinish -
-                +ffpcPlayer['"TE"'].slice(1, -1);
+                +ffpcPlayer['"WR"'].slice(1, -1);
 
               let valueWillBePositiveIfWorseposionalFinishDiff =
                 finalNumericalPositionalFinish -
-                +ffpcPlayer['"TE"'].slice(1, -1);
+                +ffpcPlayer['"WR"'].slice(1, -1);
 
               // console.log(playersPostseasonDynastyADP);
 
@@ -391,7 +391,7 @@ const testfunc = async function () {
 
                 ////////////////////////////////////////////////////////////////////////////////
 
-                if (aug2020Age >= 30 && aug2020Age <= 31) {
+                if (aug2022Age >= 22 && aug2022Age < 23) {
                   num = num + 1;
                   console.log(
                     num,
@@ -434,23 +434,23 @@ const testfunc = async function () {
 
                           // console.log(aug2023Age);
 
-                          // if (aug2020Age >= 19 && aug2020Age <= 21) {
-                          //   num = num + 1;
-                          //   console.log(
-                          //     num,
-                          //     ffpcPlayer['"Player"'].slice(1, -1),
-                          //     '  ',
-                          //     // ffpcPlayer['"ADP"'],
-                          //     playersPreseasonDynastyADP,
-                          //     playersPostseasonDynastyADP,
-                          //     '  ',
-                          //     adpDiff,
-                          //     '  ',
-                          //     // rvPlayer['"AVGRank"'],
-                          //     // difference,
-                          //     posionalFinishDiff
-                          //   );
-                          // }
+                          if (aug2021Age >= 22 && aug2021Age < 23) {
+                            // num = num + 1;
+                            // console.log(
+                            //   num,
+                            //   ffpcPlayer['"Player"'].slice(1, -1),
+                            //   '  ',
+                            //   // ffpcPlayer['"ADP"'],
+                            //   playersPreseasonDynastyADP,
+                            //   playersPostseasonDynastyADP,
+                            //   '  ',
+                            //   adpDiff,
+                            //   '  ',
+                            //   // rvPlayer['"AVGRank"'],
+                            //   // difference,
+                            //   posionalFinishDiff
+                            // );
+                          }
                         }
                       }
                     });
