@@ -992,15 +992,15 @@ const testfunc = async function () {
       //QB's
 
       if (player.player.position === 'QB') {
-        // console.log(player.player.name);
+        // console.log(player.player.name, this.fcQBPercentOfMax);
 
-        if (this.ppSFQBTEPPercentOfMax === Infinity) {
+        if (this.fcQBPercentOfMax === Infinity) {
           // console.log(this.name)
-          this.ppSFQBTEPPercentOfMax = 1;
+          this.fcQBPercentOfMax = 1;
         }
 
         this.myPercentOfQBMax = +(
-          (+this.ppSFQBTEPPercentOfMax +
+          (this.fcQBPercentOfMax +
             +this.rvPercentOfQBMax +
             +this.rvPercentOfQBMax +
             +this.rvPercentOfQBMax +
@@ -1019,10 +1019,10 @@ const testfunc = async function () {
           // console.log(this.name)
 
           this.myPercentOfQBMax = +(
-            (+this.ppSFQBTEPPercentOfMax +
-              +this.ppSFQBTEPPercentOfMax +
-              +this.ppSFQBTEPPercentOfMax +
-              +this.ppSFQBTEPPercentOfMax +
+            (+this.fcQBPercentOfMax +
+              +this.fcQBPercentOfMax +
+              +this.fcQBPercentOfMax +
+              +this.fcQBPercentOfMax +
               +this.rvPercentOfQBMax) /
             5
           ).toFixed(2);
@@ -1137,9 +1137,10 @@ const testfunc = async function () {
 
       if (player.player.position !== 'QB') {
         // console.log(player.player.name, this.rvPercentOfNonQBMax);
+        // console.log(player.player.name, this.fcNonQBPercentOfMax);
 
         this.myPercentOfNonQBMax = +(
-          (+this.ppSFNonQBTEPPercentOfMax +
+          (+this.fcNonQBPercentOfMax +
             +this.rvPercentOfNonQBMax +
             +this.rvPercentOfNonQBMax +
             +this.rvPercentOfNonQBMax +
@@ -1295,10 +1296,10 @@ const testfunc = async function () {
           // console.log(this.name, this.myValue)
 
           this.myPercentOfNonQBMax = +(
-            (+this.ppSFNonQBTEPPercentOfMax +
-              +this.ppSFNonQBTEPPercentOfMax +
-              +this.ppSFNonQBTEPPercentOfMax +
-              +this.ppSFNonQBTEPPercentOfMax +
+            (+this.fcNonQBPercentOfMax +
+              +this.fcNonQBPercentOfMax +
+              +this.fcNonQBPercentOfMax +
+              +this.fcNonQBPercentOfMax +
               +this.rvPercentOfNonQBMax) /
             5
           ).toFixed(2);
