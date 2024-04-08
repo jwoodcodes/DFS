@@ -50,7 +50,7 @@
 // const rb4for4PlayerStatsApp =
 // module.exports = rb4for4PlayerStatsApp;
 //
-// const rb4for4SnapsAppLastFiveWeeks = 
+// const rb4for4SnapsAppLastFiveWeeks =
 // module.exports = rb4for4SnapsAppLastFiveWeeks;
 //
 // const rbRvWeeklyStatExplorerRecievingTabLastFiveWeeks =
@@ -88,12 +88,11 @@
 // module.exports = wr4for4FantasyPointsBrowserLastFiveWeeks;
 //
 //
-// const wr4for4PlayerTargetsAppLastFiveWeeks = 
+// const wr4for4PlayerTargetsAppLastFiveWeeks =
 // module.exports = wr4for4PlayerTargetsAppLastFiveWeeks
 //
 // const wrRotovizWeeklyStatExplorerRecievingTabLastFiveWeeks =
 // module.exports = wrRotovizWeeklyStatExplorerRecievingTabLastFiveWeeks;
-
 
 //////////////////////////////////////////////////////////////
 ///////////not for weekly projections below////////////////
@@ -122,4 +121,3 @@
 // module.exports = rvRedraftRankingsTEP;
 //
 //
-
