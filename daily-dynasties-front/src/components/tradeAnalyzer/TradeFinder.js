@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from '@/styles/tradeFinder.module.css';
 import axios from 'axios';
+import MyMarketValue from './MyMarketValue';
 
 export default function TradeFinder(initialSleeperPlayerData) {
   const [selectedWeek, setSelectedWeek] = React.useState(1);
@@ -18,7 +19,8 @@ export default function TradeFinder(initialSleeperPlayerData) {
   const [usernameWithRosterID, setUsernameWithRosterID] = React.useState([]);
 
   const [isDataReady, setIsDataReady] = React.useState(false);
-  const [isNoRecentTradesMessageShown, setIsNoRecentTradesMessageShown] = React.useState(true)
+  const [isNoRecentTradesMessageShown, setIsNoRecentTradesMessageShown] =
+    React.useState(true);
 
   const range = (start, end, step = 1) => {
     let output = [];
@@ -48,7 +50,6 @@ export default function TradeFinder(initialSleeperPlayerData) {
     event.preventDefault();
 
     // console.log(selectedWeek)
-    
 
     const curYear = new Date().getFullYear();
 
@@ -195,6 +196,9 @@ export default function TradeFinder(initialSleeperPlayerData) {
         } // end of getUserInfo function, this function is passed a single user at a time where as the outside getLeaguesTransactionsData func is passed one league at a time
 
         // console.log(usernameWithRosterID)
+        // console.log(tempAllOFLeaguesUsernamesWithRosterIDsobjectsArray);
+
+        console.log(allLeaguesUsernamesWithUserIDsObjectsArray);
 
         ////////////////////////////////////////////////////////////////////////
         /////////////////////////////////////////////////////////////////
@@ -247,12 +251,10 @@ export default function TradeFinder(initialSleeperPlayerData) {
                       [];
                     let userWhoRecivedPicksUsernameWithPick = [];
                     let managerOneName = '';
-                    let managerTwoName = ''
+                    let managerTwoName = '';
 
-
-                    let managerOneIfOnlyPicks = ''
-                    let managerTwoIfOnlyPicks = ''
-
+                    let managerOneIfOnlyPicks = '';
+                    let managerTwoIfOnlyPicks = '';
 
                     // console.log(data);
 
@@ -282,8 +284,8 @@ export default function TradeFinder(initialSleeperPlayerData) {
                       // console.log(data.draft_picks);
 
                       let tempIfOnlyPicksManagerOneName = [];
-                          // console.log('tempManagerOneName cleared')
-                          let tempIfOnlyPicksManagerTwoName = [];
+                      // console.log('tempManagerOneName cleared')
+                      let tempIfOnlyPicksManagerTwoName = [];
 
                       if (data.draft_picks.length > 0) {
                         // console.log(data.draft_picks);
@@ -291,48 +293,52 @@ export default function TradeFinder(initialSleeperPlayerData) {
                           // console.log(pick.owner_id);
                           tempAllOFLeaguesUsernamesWithRosterIDsobjectsArray.map(
                             manager => {
-
-                              
-
                               if (manager.rosterID === pick.owner_id) {
                                 // console.log(data.adds)
-                                if(!data.adds) {
+                                if (!data.adds) {
                                   // console.log(data)
 
-                                  if(tempIfOnlyPicksManagerOneName.length === 1 && tempIfOnlyPicksManagerTwoName.length === 0 && tempIfOnlyPicksManagerOneName[0] !== manager.username) {
+                                  if (
+                                    tempIfOnlyPicksManagerOneName.length ===
+                                      1 &&
+                                    tempIfOnlyPicksManagerTwoName.length ===
+                                      0 &&
+                                    tempIfOnlyPicksManagerOneName[0] !==
+                                      manager.username
+                                  ) {
                                     // console.log(tempManagerOneName, singleUser.username)
                                     // console.log(`ran for manager two push`)
-                                    tempIfOnlyPicksManagerTwoName.push(manager.username)
+                                    tempIfOnlyPicksManagerTwoName.push(
+                                      manager.username
+                                    );
                                   }
                                   // console.log(tempManagerOneName)
-                                  if(tempIfOnlyPicksManagerOneName.length === 0) {
+                                  if (
+                                    tempIfOnlyPicksManagerOneName.length === 0
+                                  ) {
                                     // console.log(`ran for manager one push`)
-                                    tempIfOnlyPicksManagerOneName.push(manager.username)
-                                  } 
+                                    tempIfOnlyPicksManagerOneName.push(
+                                      manager.username
+                                    );
+                                  }
 
                                   let pickName = `${pick.season} Round ${pick.round}`;
 
-                                userWhoRecivedPicksUsernameWithPick.push({
-                                  userWhoeRecievedPick: manager.username,
-                                  pickRecieved: pickName,
-                                });
+                                  userWhoRecivedPicksUsernameWithPick.push({
+                                    userWhoeRecievedPick: manager.username,
+                                    pickRecieved: pickName,
+                                  });
                                 }
                                 // console.log(manager.username, pick);
 
-                                
+                                if (data.adds) {
+                                  let pickName = `${pick.season} Round ${pick.round}`;
 
-
-
-
-                                if(data.adds) {
-
-                                let pickName = `${pick.season} Round ${pick.round}`;
-
-                                userWhoRecivedPicksUsernameWithPick.push({
-                                  userWhoeRecievedPick: manager.username,
-                                  pickRecieved: pickName,
-                                });
-                              }
+                                  userWhoRecivedPicksUsernameWithPick.push({
+                                    userWhoeRecievedPick: manager.username,
+                                    pickRecieved: pickName,
+                                  });
+                                }
                               }
                             }
                           );
@@ -363,11 +369,10 @@ export default function TradeFinder(initialSleeperPlayerData) {
                         let tempplayerTradedToIDWithUserTradedToUsernameObjectsArray =
                           [];
 
-                          let tempManagerOneName = [];
-                          // console.log('tempManagerOneName cleared')
-                          let tempManagerTwoName = [];
+                        let tempManagerOneName = [];
+                        // console.log('tempManagerOneName cleared')
+                        let tempManagerTwoName = [];
 
-                          
                         // console.log(
                         //   'playerTradedToIDWithUserTradedToUsernameObjectsArray cleared here'
                         // );
@@ -379,9 +384,6 @@ export default function TradeFinder(initialSleeperPlayerData) {
                           /////////// this takes in each trade once and loops through each player involed in the trade once each  ///////////////
                           ///////// everything in here runs once per player in trade, will run as many times are players in deal   //////////////
                           ////////                                                                                                  /////////////
-
-                          
-                          
 
                           let playerIDWithManagerTradedToIdObjectsArray = [];
                           let tempUsersInTradeArray = [];
@@ -409,30 +411,27 @@ export default function TradeFinder(initialSleeperPlayerData) {
                           // console.log(leagueName, transactionDate, data);
                           let tempArrayToCheckIfManagerHasAleadyRan = [];
 
-
                           tempAllOFLeaguesUsernamesWithRosterIDsobjectsArray.map(
                             singleUser => {
                               // console.log(singleUser);
-                              
-
-                              
-                                
-                                
 
                               if (value === singleUser.rosterID) {
                                 // console.log(key, singleUser.username);
                                 // console.log('run inside', singleUser.username);
-                                if(tempManagerOneName.length === 1 && tempManagerTwoName.length === 0 && tempManagerOneName[0] !== singleUser.username) {
+                                if (
+                                  tempManagerOneName.length === 1 &&
+                                  tempManagerTwoName.length === 0 &&
+                                  tempManagerOneName[0] !== singleUser.username
+                                ) {
                                   // console.log(tempManagerOneName, singleUser.username)
                                   // console.log(`ran for manager two push`)
-                                  tempManagerTwoName.push(singleUser.username)
+                                  tempManagerTwoName.push(singleUser.username);
                                 }
                                 // console.log(tempManagerOneName)
-                                if(tempManagerOneName.length === 0) {
+                                if (tempManagerOneName.length === 0) {
                                   // console.log(`ran for manager one push`)
-                                  tempManagerOneName.push(singleUser.username)
-                                } 
-                                
+                                  tempManagerOneName.push(singleUser.username);
+                                }
 
                                 // if(tempArrayToCheckIfManagerHasAleadyRan.length === 0) {
                                 //   // console.log('empty')
@@ -454,25 +453,20 @@ export default function TradeFinder(initialSleeperPlayerData) {
                                 // console.log(tempUsersInTradeArray);
                               }
 
-                              
-                              
-                              managerOneName = tempManagerOneName
-                            managerTwoName = tempManagerTwoName
+                              managerOneName = tempManagerOneName;
+                              managerTwoName = tempManagerTwoName;
 
-                           
-
-                            managerOneIfOnlyPicks = tempIfOnlyPicksManagerOneName
-                           managerTwoIfOnlyPicks = tempIfOnlyPicksManagerTwoName
+                              managerOneIfOnlyPicks =
+                                tempIfOnlyPicksManagerOneName;
+                              managerTwoIfOnlyPicks =
+                                tempIfOnlyPicksManagerTwoName;
                             }
-                            
                           );
 
                           // console.log(tempManagerTwoName, tempManagerOneName)
 
                           playerTradedToIDWithUserTradedToUsernameObjectsArray =
                             tempplayerTradedToIDWithUserTradedToUsernameObjectsArray;
-
-                            
 
                           completedTradesPlayerInvolvedIDsArray.push(key);
 
@@ -554,9 +548,6 @@ export default function TradeFinder(initialSleeperPlayerData) {
                         if (
                           playerTradedToIDWithUserTradedToUsernameObjectsArray
                         ) {
-
-                         
-
                           playerTradedToIDWithUserTradedToUsernameObjectsArray.map(
                             playerWithUsername => {
                               if (
@@ -568,10 +559,8 @@ export default function TradeFinder(initialSleeperPlayerData) {
                                 //
                                 // console.log('ran');
 
-
                                 // console.log(tempArrayToCheckIfManagerHasAleadyRan)
-                               
-                                
+
                                 // console.log(
                                 //   playerWithUsername.userThatPlayerWasTradedToUsername
                                 // );
@@ -631,8 +620,8 @@ export default function TradeFinder(initialSleeperPlayerData) {
                       ////                                                                                                           ////
                       ///                                                                                                             ///
                       // console.log(managerOneName, managerTwoName)
-                      let tempManOneName = managerOneName[0]
-                      let tempManTwoName = managerTwoName[0]
+                      let tempManOneName = managerOneName[0];
+                      let tempManTwoName = managerTwoName[0];
 
                       // if(!tempManOneName) {
                       //   console.log('just picks', managerOneIfOnlyPicks, managerTwoIfOnlyPicks)
@@ -641,10 +630,8 @@ export default function TradeFinder(initialSleeperPlayerData) {
                       // console.log(tempIfOnlyPicksManagerOneName, tempIfOnlyPicksManagerTwoName)
 
                       // console.log(managerOneIfOnlyPicks, managerTwoIfOnlyPicks)
-                      
 
                       // console.log(managerOneIfOnlyPicks, tempManOneName, tempUserNameToUseHerForPicksManagerOne)
-                    
 
                       tempCompletedTradesTransactions.push({
                         leagueName: leagueName,
@@ -657,7 +644,7 @@ export default function TradeFinder(initialSleeperPlayerData) {
                           tempSingleTradeWhoGotWhoBothNames,
                         draftPicksInDeal: userWhoRecivedPicksUsernameWithPick,
                         managerOneName: tempManOneName,
-                        managerTwoName:tempManTwoName,
+                        managerTwoName: tempManTwoName,
                         ifOnlyPicksManagerOne: tempIfOnlyPicksManagerOneName,
                         ifOnlyPicksManagerTwo: tempIfOnlyPicksManagerTwoName,
                       });
@@ -665,23 +652,20 @@ export default function TradeFinder(initialSleeperPlayerData) {
                   } //if (data.type === 'trade') {
                 }); //end of leaguesTransactionData.forEach(function (data) {
                 //
-                
-                
-                tempCompletedTradesTransactions.map((test) => {
-                  if(test.managerOneName && !test.managerTwoName) {
-                  console.log(test.draftPicksInDeal[0].userWhoeRecievedPick)
-                  test.managerTwoName = test.draftPicksInDeal[0].userWhoeRecievedPick
+
+                tempCompletedTradesTransactions.map(test => {
+                  if (test.managerOneName && !test.managerTwoName) {
+                    // console.log(test.draftPicksInDeal[0].userWhoeRecievedPick);
+                    test.managerTwoName =
+                      test.draftPicksInDeal[0].userWhoeRecievedPick;
                   }
-                  if(test.managerTwoName && !test.managerOneName) {
-                    console.log(test.draftPicksInDeal[0].userWhoeRecievedPick)
-                    test.managerOneName = test.draftPicksInDeal[0].userWhoeRecievedPick
-                    }
-                })
-                
+                  if (test.managerTwoName && !test.managerOneName) {
+                    console.log(test.draftPicksInDeal[0].userWhoeRecievedPick);
+                    test.managerOneName =
+                      test.draftPicksInDeal[0].userWhoeRecievedPick;
+                  }
+                });
 
-                
-
-                
                 // completedTradesArray.push(tempCompletedTradesTransactions);
 
                 // setPendingtradesArray([
@@ -691,14 +675,10 @@ export default function TradeFinder(initialSleeperPlayerData) {
                 // console.log(completedTradesArray.length)
 
                 if (tempCompletedTradesTransactions.length > 0) {
-                  
                   completedTradesArray.push(tempCompletedTradesTransactions);
-                  
                 }
-                
               }
               setIsDataReady(true);
-              
             } // end of if statement everything needs to run inside of
           }); //end of getUserInfo(id).then(()
         }); // end of userIDsArray.map(id => {
@@ -716,11 +696,7 @@ export default function TradeFinder(initialSleeperPlayerData) {
         //////////////////////////////////////////////////////////////////////
       } // end of if (id && selectedWeek) {
 
-      
-
       setCompletedtradesArray([...tempCompletedTradesTransactions]);
-
-      
     }
 
     selectedUserLeaguesIDsArray.map(function (league) {
@@ -731,13 +707,8 @@ export default function TradeFinder(initialSleeperPlayerData) {
     });
 
     //   console.log(selectedUserLeaguesIDsArray)
-    
 
     setCompletedTradesToPassToDisplay(completedTradesArray);
-
-    
-
-   
 
     // if(completedTradesArray[0]) {
     //   console.log('yes')
@@ -804,21 +775,19 @@ export default function TradeFinder(initialSleeperPlayerData) {
 
       {isDataReady && completedTradesToPassToDisplay && (
         <div>
-          
           {completedTradesToPassToDisplay.map(tradeArray => {
             // console.log(tradeArray);
-            
+
             let sortedTradeArray = tradeArray.sort(
               (a, b) => a.transactionTime < b.transactionTime
             );
 
-            let isTradeArray = false
+            let isTradeArray = false;
 
-            if(tradeArray) {
-              isTradeArray = true
+            if (tradeArray) {
+              isTradeArray = true;
             }
 
-            
             return sortedTradeArray.map(trade => {
               // console.log(trade);
 
@@ -828,10 +797,9 @@ export default function TradeFinder(initialSleeperPlayerData) {
               let picksInDealArray = trade.draftPicksInDeal;
 
               // console.log(trade.dateOfTrade.slice(0, 21))
-              let dateOfTrade = trade.dateOfTrade.slice(0, 21)
+              let dateOfTrade = trade.dateOfTrade.slice(0, 21);
 
               return (
-                
                 <div
                   key={`${trade.transactionTime}`}
                   className={styles.wholeTradeWrapper}
@@ -840,154 +808,154 @@ export default function TradeFinder(initialSleeperPlayerData) {
                     key={`${trade.transactionTime} - ${usernameWithPlayersTheyRecievedArrayForHere}`}
                     className={styles.individualTradeWrapper}
                   >
-                    {trade.leagueName} < br /> {dateOfTrade}
+                    {trade.leagueName} <br /> {dateOfTrade}
                   </div>
                   {/* <div>{trade.playersInvolvedNames}</div> */}
                   <div
                     className={styles.tradeContentsWrapper}
                     key={`${trade.transactionTime} - ${trade.leagueName}`}
                   >
-
                     {/* team one */}
 
-                     <div className={styles.teamOneWrapper}>
-                      {trade.managerOneName && 
-                      <div className={styles.managerWhoRecievedTitle}>{`${trade.managerOneName}`}</div>
-                      }
-                      {trade.ifOnlyPicksManagerOne[0] &&
-                      <div className={styles.managerWhoRecievedTitle}>{`${trade.ifOnlyPicksManagerOne[0]}`}</div>
-                      }
-                      {usernameWithPlayersTheyRecievedArrayForHere.map(pair => {
-                      let isOnPlayerOneTeam = false;
-                      
-
-                      if(trade.managerOneName === pair.userWhoRecievedThePlayer || trade.ifOnlyPicksManagerOne === pair.userWhoRecievedThePlayer) {
-                        // console.log(`manager 1 is ${pair.userWhoRecievedThePlayer}`)
-                        isOnPlayerOneTeam = true
-                      }
-
-                      let keyNum = Math.random()
-                      
-                      return (
-                        
-                        <div key={`${trade.transactionTime} - ${keyNum}`}>
-                          
-                          {isOnPlayerOneTeam && 
-                          <div
-                        
-                           key={`${trade.transactionTime}-${pair.userWhoRecievedThePlayer} - ${pair.PlayerRecievedName}`}
-                          >{`${pair.PlayerRecievedName}`}</div>
-                          }
-                        </div>
-                        
-                      );
-                    })}
-
-                    {picksInDealArray.map(pick => {
-                      // console.log(pick)
-                      let num = Math.random()
-
-                      let isOnPlayerOneTeam = false;
-
-                      // console.log(trade.ifOnlyPicksManagerOne, trade.ifOnlyPicksManagerTwo)
-                      
-
-                      if(trade.managerOneName === pick.userWhoeRecievedPick || trade.ifOnlyPicksManagerOne[0] === pick.userWhoeRecievedPick) {
-                        // console.log(`manager 1 is ${pair.userWhoRecievedThePlayer}`)
-                        isOnPlayerOneTeam = true
-                      }
-
-                      // console.log(trade.ifOnlyPicksManagerOne, pick.userWhoeRecievedPick)
-
-                      
-                      return (
-                        
-                        <div key={`${trade.transactionTime} - ${num}`}>
-                          {isOnPlayerOneTeam && 
+                    <div className={styles.teamOneWrapper}>
+                      {trade.managerOneName && (
                         <div
-                          key={`${trade.transactionTime}-${pick.userWhoeRecievedPick} - ${num}`}
-                        >{` ${pick.pickRecieved}`}</div>
-                          }
-                        </div>
-                      );
-                    })}
-                      
-                      </div>
-                      {/* team 2 below */}
-              <div className={styles.teamTwoWrapper}>
-                {trade.managerTwoName &&
-                     <div className={styles.managerWhoRecievedTitle}>{`${trade.managerTwoName}`}</div>
-                }
-                {trade.ifOnlyPicksManagerTwo[0] &&
-                <div className={styles.managerWhoRecievedTitle}>{`${trade.ifOnlyPicksManagerTwo[0]}`}</div>
-                }
+                          className={styles.managerWhoRecievedTitle}
+                        >{`${trade.managerOneName}`}</div>
+                      )}
+                      {trade.ifOnlyPicksManagerOne[0] && (
+                        <div
+                          className={styles.managerWhoRecievedTitle}
+                        >{`${trade.ifOnlyPicksManagerOne[0]}`}</div>
+                      )}
+                      {usernameWithPlayersTheyRecievedArrayForHere.map(pair => {
+                        let isOnPlayerOneTeam = false;
 
-                  {usernameWithPlayersTheyRecievedArrayForHere.map(pair => {
-                      let isOnPlayerTwoTeam = false;
+                        if (
+                          trade.managerOneName ===
+                            pair.userWhoRecievedThePlayer ||
+                          trade.ifOnlyPicksManagerOne ===
+                            pair.userWhoRecievedThePlayer
+                        ) {
+                          // console.log(`manager 1 is ${pair.userWhoRecievedThePlayer}`)
+                          isOnPlayerOneTeam = true;
+                        }
 
-                     
+                        let keyNum = Math.random();
 
-
-                  if(trade.managerTwoName === pair.userWhoRecievedThePlayer || trade.ifOnlyPicksManagerTwo === pair.userWhoRecievedThePlayer) {
-                  // console.log(`manager 1 is ${pair.userWhoRecievedThePlayer}`)
-                       isOnPlayerTwoTeam = true
-                    }
-
-                    let keyNum = Math.random()
-
-                    return (
-  
-                      <div key={`${trade.transactionTime} - ${keyNum}`}>
-                        
-                         {isOnPlayerTwoTeam && 
-                      <div
-  
-                      key={`${trade.transactionTime}-${pair.userWhoRecievedThePlayer} - ${pair.PlayerRecievedName}`}
-                       >{`${pair.PlayerRecievedName}`}</div>
-                    }
-                   </div>
-  
-                      );
+                        return (
+                          <div key={`${trade.transactionTime} - ${keyNum}`}>
+                            {isOnPlayerOneTeam && (
+                              <div
+                                key={`${trade.transactionTime}-${pair.userWhoRecievedThePlayer} - ${pair.PlayerRecievedName}`}
+                              >{`${pair.PlayerRecievedName}`}</div>
+                            )}
+                          </div>
+                        );
                       })}
 
-                  {picksInDealArray.map(pick => {
-                  let num = Math.random()
+                      {picksInDealArray.map(pick => {
+                        // console.log(pick)
+                        let num = Math.random();
 
-                  let isOnPlayerTwoTeam = false;
+                        let isOnPlayerOneTeam = false;
 
+                        // console.log(trade.ifOnlyPicksManagerOne, trade.ifOnlyPicksManagerTwo)
 
-                  if(trade.managerTwoName === pick.userWhoeRecievedPick || trade.ifOnlyPicksManagerTwo[0] === pick.userWhoeRecievedPick) {
-                  // console.log(`manager 1 is ${pair.userWhoRecievedThePlayer}`)
-                       isOnPlayerTwoTeam = true
-                    }
+                        if (
+                          trade.managerOneName === pick.userWhoeRecievedPick ||
+                          trade.ifOnlyPicksManagerOne[0] ===
+                            pick.userWhoeRecievedPick
+                        ) {
+                          // console.log(`manager 1 is ${pair.userWhoRecievedThePlayer}`)
+                          isOnPlayerOneTeam = true;
+                        }
 
-                  return (
-  
-                    <div key={`${trade.transactionTime} - ${num}`}>
-                      {isOnPlayerTwoTeam && 
-                   <div
-                    key={`${trade.transactionTime}-${pick.userWhoeRecievedPick} - ${num}`}
-                    >{`${pick.pickRecieved}`}</div>
-                      }
+                        // console.log(trade.ifOnlyPicksManagerOne, pick.userWhoeRecievedPick)
+
+                        return (
+                          <div key={`${trade.transactionTime} - ${num}`}>
+                            {isOnPlayerOneTeam && (
+                              <div
+                                key={`${trade.transactionTime}-${pick.userWhoeRecievedPick} - ${num}`}
+                              >{` ${pick.pickRecieved}`}</div>
+                            )}
+                          </div>
+                        );
+                      })}
                     </div>
-              );
-              })}
+                    {/* team 2 below */}
+                    <div className={styles.teamTwoWrapper}>
+                      {trade.managerTwoName && (
+                        <div
+                          className={styles.managerWhoRecievedTitle}
+                        >{`${trade.managerTwoName}`}</div>
+                      )}
+                      {trade.ifOnlyPicksManagerTwo[0] && (
+                        <div
+                          className={styles.managerWhoRecievedTitle}
+                        >{`${trade.ifOnlyPicksManagerTwo[0]}`}</div>
+                      )}
 
+                      {usernameWithPlayersTheyRecievedArrayForHere.map(pair => {
+                        let isOnPlayerTwoTeam = false;
 
-                </div>
-                   
+                        if (
+                          trade.managerTwoName ===
+                            pair.userWhoRecievedThePlayer ||
+                          trade.ifOnlyPicksManagerTwo ===
+                            pair.userWhoRecievedThePlayer
+                        ) {
+                          // console.log(`manager 1 is ${pair.userWhoRecievedThePlayer}`)
+                          isOnPlayerTwoTeam = true;
+                        }
 
-                    
+                        let keyNum = Math.random();
+
+                        return (
+                          <div key={`${trade.transactionTime} - ${keyNum}`}>
+                            {isOnPlayerTwoTeam && (
+                              <div
+                                key={`${trade.transactionTime}-${pair.userWhoRecievedThePlayer} - ${pair.PlayerRecievedName}`}
+                              >{`${pair.PlayerRecievedName}`}</div>
+                            )}
+                          </div>
+                        );
+                      })}
+
+                      {picksInDealArray.map(pick => {
+                        let num = Math.random();
+
+                        let isOnPlayerTwoTeam = false;
+
+                        if (
+                          trade.managerTwoName === pick.userWhoeRecievedPick ||
+                          trade.ifOnlyPicksManagerTwo[0] ===
+                            pick.userWhoeRecievedPick
+                        ) {
+                          // console.log(`manager 1 is ${pair.userWhoRecievedThePlayer}`)
+                          isOnPlayerTwoTeam = true;
+                        }
+
+                        return (
+                          <div key={`${trade.transactionTime} - ${num}`}>
+                            {isOnPlayerTwoTeam && (
+                              <div
+                                key={`${trade.transactionTime}-${pick.userWhoeRecievedPick} - ${num}`}
+                              >{`${pick.pickRecieved}`}</div>
+                            )}
+                          </div>
+                        );
+                      })}
+                    </div>
                   </div>
                 </div>
-            
               );
             });
-          
           })}
         </div>
-      )} 
-      
+      )}
+      <MyMarketValue />
     </div>
   );
 }
