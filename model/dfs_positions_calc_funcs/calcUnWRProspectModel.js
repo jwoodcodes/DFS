@@ -93,14 +93,25 @@ test.forEach(topPlayer => {
           //     console.log(num, player.name);
           //   }
 
-          // if (
-          //   player.yearTwoPlusYearThreeAveragedStats['Rec TDs per Game'] > 0.55
-          // ) {
+          // if (player.careerAveragedStats['Reception MS (Games Played)'] > 0.2) {
+          //   if (player.yearOne['Class'] === '2024') {
+          //     num = num + 1;
+          //     console.log(
+          //       num,
+          //       player.name,
+          //       player.yearOne['Rec Yds Per Team Pass Att']
+          //     );
+          //   }
+          // }
 
           // if (player.yearOne['PPR Points/RR'] > 0.925) {
           //   if (player.yearOne.Hit === 'N') {
           //     num = num + 1;
-          //     console.log(num, player.name, player.yearOne['PPR Points/RR']);
+          //     console.log(
+          //       num,
+          //       player.name,
+          //       player.careerAveragedStats['Reception MS (Games Played)']
+          //     );
           //   }
           // }
 
@@ -4691,50 +4702,50 @@ test.forEach(topPlayer => {
           // console.log(player.yearOne['YR 1-3 FP/G']);
           // }
 
-          // if (toOneHundredScore > 72) {
-          // if (player.yearOne['Draft Round'] === 'NA') {
-          // if (player.yearOne['Class'] === '2024') {
-          // if (player.yearOne.Hit === 'N') {
-          if (
-            player.name === 'Troy Franklin' ||
-            player.name === 'Tyquan Thornton'
-          ) {
-            // if (tempToOneHundredScore > 60 && tempToOneHundredScore < 70) {
-            num = num + 1;
-            // console.log(typeof +player.yearOne['YR 1-3 FP/G']);
-            if (+player.yearOne['Draft Pick Overall']) {
-              total = total + +player.yearOne['Draft Round'];
-            }
-            // if (+player.yearOne['Draft Pick Overall']) {
-            // total = total + +player.yearOne['Draft Pick Overall'];
-            // }
+          if (toOneHundredScore > 50) {
+            // if (player.yearOne['Draft Round'] === 'NA') {
+            // if (player.yearOne['Class'] === '2024') {
+            // if (player.yearOne.Hit === 'Y') {
+            if (
+              player.name === 'Troy Franklin' ||
+              player.name === 'Tyquan Thornton'
+            ) {
+              // if (tempToOneHundredScore > 60 && tempToOneHundredScore < 70) {
+              num = num + 1;
+              // console.log(typeof +player.yearOne['YR 1-3 FP/G']);
+              if (+player.yearOne['Draft Pick Overall']) {
+                total = total + +player.yearOne['Draft Round'];
+              }
+              // if (+player.yearOne['Draft Pick Overall']) {
+              // total = total + +player.yearOne['Draft Pick Overall'];
+              // }
 
-            newTotal = +total.toFixed(2);
-            // console.log(
-            //   num,
-            //   player.name,
-            //   '  ',
-            //   '  ',
-            //   // PreDCScore,
-            //   // calcAllWrProspectsObjects[playerName]
-            //   //   .projectedDraftRoundMinusOneScore,
-            //   '  ',
-            //   // PostDCScore,
-            //   '  ',
-            //   toOneHundredScore,
-            //   // +player.yearOne['Draft Round'],
-            //   // newTotal
-            //   // calcAllWrProspectsObjects[playerName]
-            //   //   .projectedDraftRoundPlusOneScore
-            //   // '  ',
-            //   // player.yearOne.Conference
-            //   // calcAllWrProspectsObjects[playerName].yearOneConferenceAdjustment
-            //   // player.highestContestedTargetPercent
-            //   //   player.yearOne['Draft Round'],
-            //   calcAllWrProspectsObjects[playerName]
-            // );
+              newTotal = +total.toFixed(2);
+              console.log(
+                num,
+                player.name,
+                '  ',
+                '  ',
+                // PreDCScore,
+                // calcAllWrProspectsObjects[playerName]
+                //   .projectedDraftRoundMinusOneScore,
+                '  ',
+                // PostDCScore,
+                '  ',
+                toOneHundredScore,
+                // +player.yearOne['Draft Round'],
+                // newTotal
+                // calcAllWrProspectsObjects[playerName]
+                //   .projectedDraftRoundPlusOneScore
+                // '  ',
+                // player.yearOne.Conference
+                // calcAllWrProspectsObjects[playerName].yearOneConferenceAdjustment
+                // player.highestContestedTargetPercent
+                //   player.yearOne['Draft Round'],
+                calcAllWrProspectsObjects[playerName]
+              );
+            }
           }
-          // }
 
           //////////////////////////////////////////////////////end
         }

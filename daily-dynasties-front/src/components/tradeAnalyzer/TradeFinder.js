@@ -955,7 +955,7 @@ export default function TradeFinder(initialSleeperPlayerData) {
           })}
         </div>
       )}
-      <MyMarketValue />
+      {/* <MyMarketValue /> */}
     </div>
   );
 }
