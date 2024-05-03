@@ -288,7 +288,8 @@ const testfunc = async function () {
       fcNonQBPercentOfMax,
       ppSFTEPValue,
       ppSFQBTEPPercentOfMax,
-      ppSFNonQBTEPPercentOfMax
+      ppSFNonQBTEPPercentOfMax,
+      yearsExperience
     ) {
       this.name = name;
       this.fantasyCalcID = fantasyCalcID;
@@ -307,6 +308,7 @@ const testfunc = async function () {
       this.ppSFTEPValue = ppSFTEPValue;
       this.ppSFQBTEPPercentOfMax = ppSFQBTEPPercentOfMax;
       this.ppSFNonQBTEPPercentOfMax = ppSFNonQBTEPPercentOfMax;
+      this.yearsExperience = yearsExperience;
     }
 
     ppData(
@@ -805,8 +807,8 @@ const testfunc = async function () {
             }
             if (+fcPickRound === 1 && +fcPickNumber > 5 && +fcPickNumber < 9) {
               // console.log(fcPickYear, fcPickRound, fcPickNumber);
-              this.rvValue = 1.75;
-              this.rvPercentOfNonQBMax = 0.5;
+              this.rvValue = 1.55;
+              this.rvPercentOfNonQBMax = 0.45;
             }
 
             if (
@@ -993,6 +995,7 @@ const testfunc = async function () {
 
       if (player.player.position === 'QB') {
         // console.log(player.player.name, this.fcQBPercentOfMax);
+        // console.log(player.player.age);
 
         if (this.fcQBPercentOfMax === Infinity) {
           // console.log(this.name)
@@ -1051,28 +1054,8 @@ const testfunc = async function () {
           // console.log(this.myValue);
         }
 
-        if (this.name === 'Jordan Love') {
-          this.myValue = 6200;
-          // console.log(this.myValue);
-        }
-
         if (this.name === 'Jayden Daniels') {
-          this.myValue = 4300;
-          // console.log(this.myValue);
-        }
-
-        if (this.name === 'Justin Fields') {
-          this.myValue = 2500;
-          // console.log(this.myValue);
-        }
-
-        if (this.name === 'Matthew Stafford') {
-          this.myValue = 2000;
-          // console.log(this.myValue);
-        }
-
-        if (this.name === 'Sam Howell') {
-          this.myValue = 1025;
+          this.myValue = 5850;
           // console.log(this.myValue);
         }
 
@@ -1087,12 +1070,16 @@ const testfunc = async function () {
         }
 
         if (this.name === 'Bo Nix') {
-          this.myValue = 1900;
+          this.myValue = 3300;
           // console.log(this.myValue);
         }
 
         if (this.name === 'Michael Penix') {
-          this.myValue = 1000;
+          this.myValue = 1200;
+          // console.log(this.myValue);
+        }
+        if (this.name === 'Spencer Rattler') {
+          this.myValue = 1200;
           // console.log(this.myValue);
         }
 
@@ -1162,38 +1149,13 @@ const testfunc = async function () {
           // console.log(this.myValue);
         }
 
-        if (this.name === 'Kendre Miller') {
-          this.myValue = 1050;
-          // console.log(this.myValue);
-        }
-
-        if (this.name === 'DK Metcalf') {
-          this.myValue = 2800;
-          // console.log(this.myValue);
-        }
-
-        if (this.name === 'Zay Flowers') {
-          this.myValue = 3700;
-          // console.log(this.myValue);
-        }
-
-        if (this.name === 'Jordan Addison') {
-          this.myValue = 3700;
-          // console.log(this.myValue);
-        }
-
-        if (this.name === 'Curtis Samuel') {
-          this.myValue = 900;
-          // console.log(this.myValue);
-        }
-
-        if (this.name === 'Marvin Harrison') {
+        if (this.name === 'Marvin Harrison Jr') {
           this.myValue = 5800;
           // console.log(this.myValue);
         }
 
         if (this.name === 'Malik Nabers') {
-          this.myValue = 5800;
+          this.myValue = 5700;
           // console.log(this.myValue);
         }
 
@@ -1203,12 +1165,12 @@ const testfunc = async function () {
         }
 
         if (this.name === 'Rome Odunze') {
-          this.myValue = 3800;
+          this.myValue = 3400;
           // console.log(this.myValue);
         }
 
         if (this.name === 'Troy Franklin') {
-          this.myValue = 3500;
+          this.myValue = 2600;
           // console.log(this.myValue);
         }
 
@@ -1218,7 +1180,12 @@ const testfunc = async function () {
         }
 
         if (this.name === 'Xavier Worthy') {
-          this.myValue = 2250;
+          this.myValue = 3700;
+          // console.log(this.myValue);
+        }
+
+        if (this.name === 'Ben Sinnott') {
+          this.myValue = 1725;
           // console.log(this.myValue);
         }
 
@@ -1233,17 +1200,17 @@ const testfunc = async function () {
         }
 
         if (this.name === 'Jonathon Brooks') {
-          this.myValue = 1950;
+          this.myValue = 3000;
           // console.log(this.myValue);
         }
 
         if (this.name === 'Trey Benson') {
-          this.myValue = 1750;
+          this.myValue = 2900;
           // console.log(this.myValue);
         }
 
         if (this.name === 'Blake Corum') {
-          this.myValue = 1900;
+          this.myValue = 1600;
           // console.log(this.myValue);
         }
 
@@ -1258,17 +1225,17 @@ const testfunc = async function () {
         }
 
         if (this.name === 'JaTavion Sanders') {
-          this.myValue = 1700;
-          // console.log(this.myValue);
-        }
-
-        if (this.name === 'Adonai Mitchell') {
           this.myValue = 1250;
           // console.log(this.myValue);
         }
 
+        if (this.name === 'Adonai Mitchell') {
+          this.myValue = 1200;
+          // console.log(this.myValue);
+        }
+
         if (this.name === 'Jacob Cowing') {
-          this.myValue = 1000;
+          this.myValue = 1100;
           // console.log(this.myValue);
         }
 
@@ -1283,12 +1250,17 @@ const testfunc = async function () {
         }
 
         if (this.name === 'Ricky Pearsall') {
-          this.myValue = 1100;
+          this.myValue = 1500;
           // console.log(this.myValue);
         }
 
         if (this.name === 'Xavier Legette') {
-          this.myValue = 500;
+          this.myValue = 750;
+          // console.log(this.myValue);
+        }
+
+        if (this.name === 'Jalen McMillan') {
+          this.myValue = 1500;
           // console.log(this.myValue);
         }
 
@@ -2472,6 +2444,7 @@ const testfunc = async function () {
 
   oneOlderFantasyCalcData.forEach(function (oneOlderTopLevelObject) {
     // console.log(oneOlderTopLevelObject.newData);
+    // console.log(oneOlderTopLevelObject);
     oneOlderPlayerArray = oneOlderTopLevelObject.newData;
   });
 
@@ -3191,6 +3164,7 @@ const testfunc = async function () {
       ).toFixed(0);
     }
 
+    // console.log(player.player.maybeYoe);
     // let valueToUseForFantasyCalcValue = +(+player.value).toFixed(0);
     // console.log(
     //   player.player.name,
@@ -3216,7 +3190,8 @@ const testfunc = async function () {
       +fcNonQBPercentOfMax,
       +ppSFTEPValue,
       +ppSFQBTEPPercentOfMax,
-      +ppSFNonQBTEPPercentOfMax
+      +ppSFNonQBTEPPercentOfMax,
+      +player.player.maybeYoe
     );
 
     // console.log(sanitizedPPPlayerName, ppPlayerObject);
@@ -3560,7 +3535,8 @@ const testfunc = async function () {
       myPositionRank,
       valueDiffBetweenMyValueAndMarketValue,
       projectedNextOffseasonDynastyValue,
-      valueDifferenceBetweenCurrentMarketValueAndPNODV
+      valueDifferenceBetweenCurrentMarketValueAndPNODV,
+      yearsExperience
     ) {
       this.name = name;
       this.position = position;
@@ -3577,6 +3553,7 @@ const testfunc = async function () {
         projectedNextOffseasonDynastyValue;
       this.valueDifferenceBetweenCurrentMarketValueAndPNODV =
         valueDifferenceBetweenCurrentMarketValueAndPNODV;
+      this.yearsExperience = yearsExperience;
     }
   }
 
@@ -3612,6 +3589,8 @@ const testfunc = async function () {
       }
     );
 
+    // console.log(playerObject.yearsExperience);
+
     // console.log(
     //   playerObject.name,
     //   playerObject.fantasyCalcValue,
@@ -3633,7 +3612,8 @@ const testfunc = async function () {
       posRank,
       playerObject.valueDiffBetweenMyValueAndMarketValue,
       PNODVToUse,
-      playerObject.valueDifferenceBetweenCurrentMarketValueAndPNODV
+      playerObject.valueDifferenceBetweenCurrentMarketValueAndPNODV,
+      playerObject.yearsExperience
     );
 
     // console.log(sortedDynastyRankingsWithNamesValuesAndRank);

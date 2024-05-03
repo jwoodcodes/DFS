@@ -2,26 +2,17 @@
   width: 100%vw;
 }
 
-
-
 .pageTitle {
   text-align: center;
   margin-top: 4rem;
   margin-bottom: 3rem;
   font-size: 4.8rem;
   letter-spacing: 0.4rem;
-  
+
   background: linear-gradient(to right bottom, #420c47, #065a60);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
-  
-    
-    
-
 }
-
-
 
 .lastUpdated {
   text-align: center;
@@ -33,7 +24,7 @@
   display: flex;
   width: 80%;
   justify-content: space-evenly;
-  margin: 3rem auto;
+  margin: 0.5rem auto;
 }
 
 .posBtn {
@@ -64,6 +55,13 @@
 .posBtn:active {
   transform: translateY(0);
   transition: all 0.15s;
+}
+
+.rookieBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
 }
 
 .glosseryWrapper {
@@ -123,6 +121,10 @@
   .btnsWrapper {
     margin: 1.5rem auto;
     width: 90%;
+  }
+
+  .rookieBtn {
+    margin: 1rem auto;
   }
 
   .posBtn {

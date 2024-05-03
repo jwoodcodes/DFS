@@ -1,13 +1,24 @@
 const allWrProspectsObjects = require('./unWRProspectModel');
 const WRProspectModelData = require('../DataForUndroppablesProspectModels/WRProspectModelData');
+const { MongoClient } = require('mongodb');
 const { type } = require('express/lib/response');
 
 // console.log(allWrProspectsObjects)
 
+///
+
+///
 // allWrProspectsObjects.forEach((player) => {
 //     console.log(player)
 // })
 const allWrProspectsNamesArray = [];
+let toOneHundredScoreObjectsArray = [];
+let temptoOneHundredScoreObjectsArray = [];
+let pprPointsArray = [];
+
+let namesArray = [];
+let firstDownPerRouteRunArray = [];
+let careerAverageRecGradeArray = [];
 
 WRProspectModelData.forEach(playerArray => {
   playerArray.forEach(player => {
@@ -27,8 +38,11 @@ WRProspectModelData.forEach(playerArray => {
 
 const calcAllWrProspectsObjects = {};
 
+// let dataStructureForR = {};
+
 allWrProspectsNamesArray.forEach(player => {
   calcAllWrProspectsObjects[player] = {};
+  // dataStructureForR[player] = {};
 });
 
 // console.log(calcAllWrProspectsObjects);
@@ -85,6 +99,16 @@ test.forEach(topPlayer => {
 
           // Height < 71 H- 14% *
           // Weight < 170 H- 7% or < 180 H- 19% *
+
+          // dataStructureForR[playerName].careerAverage1DRR = player.careerAveragedStats['1D/RR'];
+          // dataStructureForR[playerName].careerAverageRecGrade = player.careerAveragedStats['REC Grade'];
+
+          namesArray.push(playerName);
+          firstDownPerRouteRunArray.push(player.careerAveragedStats['1D/RR']);
+          careerAverageRecGradeArray.push(
+            player.careerAveragedStats['REC Grade']
+          );
+          pprPointsArray.push(player.careerAveragedStats['PPR Points']);
 
           // 28 hits, 150 non hits, 178 total
 
@@ -365,13 +389,16 @@ test.forEach(topPlayer => {
           // should go from the threshold up to upper bound if there is an upper bound for this metric
 
           if (player.careerAveragedStats['1D/RR'] > 10.199) {
-            // if (player.yearOne.Hit === 'N') {
-            //   num = num + 1;
-            //   console.log(
-            //     num,
-            //     player.name,
-            //     player.careerAveragedStats['1D/RR']
-            //   );
+            // if (player.yearOne['Class'] === '2024') {
+            //   if (player.yearOne['Power 5'] === 'Y') {
+            //     // if (player.yearOne.Hit === 'N') {
+            //     num = num + 1;
+            //     console.log(
+            //       num,
+            //       player.name,
+            //       player.careerAveragedStats['1D/RR']
+            //     );
+            //   }
             // }
             //
             // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
@@ -517,6 +544,7 @@ test.forEach(topPlayer => {
             //     player.careerAveragedStats['REC Grade']
             //   );
             // }
+
             //
             // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
             //
@@ -620,6 +648,7 @@ test.forEach(topPlayer => {
             //   num = num + 1;
             //   console.log(num, player.name, player.careerAveragedStats.YPRR);
             // }
+
             //
             // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
             //
@@ -845,6 +874,7 @@ test.forEach(topPlayer => {
             //     player.careerAveragedStats['PPR Points']
             //   );
             // }
+
             //
             // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
             //
@@ -959,6 +989,7 @@ test.forEach(topPlayer => {
               //   player.careerAveragedStats['Adjusted Yds Per Team Play']
               // );
             }
+
             //
             // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
             //
@@ -1096,6 +1127,7 @@ test.forEach(topPlayer => {
             //     ]
             //   );
             // }
+
             //
             // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
             //
@@ -1279,7 +1311,8 @@ test.forEach(topPlayer => {
           // two players from Hit sample in this group in initial sample
           //
           if (player.careerAveragedStats['Rec TDs'] < 4.3) {
-            // if (player.yearOne.Hit === 'Y') {
+            // if (player.yearOne['Class'] === '2024') {
+            //   // if (player.yearOne.Hit === 'Y') {
             //   num = num + 1;
             //   console.log(
             //     num,
@@ -1305,7 +1338,8 @@ test.forEach(topPlayer => {
             player.careerAveragedStats['Rec TDs'] > 4.29 &&
             player.careerAveragedStats['Rec TDs'] < 5.5
           ) {
-            // if (player.yearOne.Hit === 'N') {
+            // if (player.yearOne['Class'] === '2024') {
+            //   // if (player.yearOne.Hit === 'N') {
             //   num = num + 1;
             //   console.log(
             //     num,
@@ -1340,6 +1374,7 @@ test.forEach(topPlayer => {
             //     player.careerAveragedStats['Rec TDs']
             //   );
             // }
+
             //
             // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
             //
@@ -1430,7 +1465,7 @@ test.forEach(topPlayer => {
             //
             // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
             //
-            calcAllWrProspectsObjects[playerName].careerAvgRecTDs = {
+            calcAllWrProspectsObjects[playerName]['Rec Yds per Game'] = {
               value: player.careerAveragedStats['Rec Yds per Game'],
               score: 0,
             };
@@ -1456,7 +1491,7 @@ test.forEach(topPlayer => {
             //
             // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
             //
-            calcAllWrProspectsObjects[playerName].careerAvgRecTDs = {
+            calcAllWrProspectsObjects[playerName]['Rec Yds per Game'] = {
               value: player.careerAveragedStats['Rec Yds per Game'],
               score: 1,
             };
@@ -1476,10 +1511,11 @@ test.forEach(topPlayer => {
             //     player.careerAveragedStats['Rec Yds per Game']
             //   );
             // }
+
             //
             // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
             //
-            calcAllWrProspectsObjects[playerName].careerAvgRecTDs = {
+            calcAllWrProspectsObjects[playerName]['Rec Yds per Game'] = {
               value: player.careerAveragedStats['Rec Yds per Game'],
               score: 4,
             };
@@ -1574,6 +1610,7 @@ test.forEach(topPlayer => {
             //   num = num + 1;
             //   console.log(num, player.name, player.careerAvgEPAPerGame);
             // }
+
             //
             // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
             //
@@ -1673,7 +1710,7 @@ test.forEach(topPlayer => {
             //
             // change whats after calcAllWrProspectsObjects[playerName] below!!!!!!
             //
-            calcAllWrProspectsObjects[playerName].careerAvgRecTDs = {
+            calcAllWrProspectsObjects[playerName].heightAdjustment = {
               value: player.yearOne.Height,
               score: -0.3,
             };
@@ -1751,8 +1788,8 @@ test.forEach(topPlayer => {
             player.yearOne.Conference === 'Big 12' ||
             player.yearOne.Conference === 'ACC'
           ) {
-            //
-            // if (player.yearOne.Hit === 'Y') {
+            // //
+            // if (player.yearOne.Hit === 'N') {
             //   if (!player.yearFour) {
             //     num = num + 1;
             //     console.log(num, player.name);
@@ -1763,7 +1800,7 @@ test.forEach(topPlayer => {
               if (player.yearFour) {
                 // num = num + 1;
                 // console.log(num, player.name);
-                //
+
                 calcAllWrProspectsObjects[
                   playerName
                 ].yearOneConferenceAdjustment = {
@@ -3977,6 +4014,15 @@ test.forEach(topPlayer => {
           ) {
             let adjustmentValue =
               calcAllWrProspectsObjects[playerName].finalScore * 0.25;
+            // if (+player.yearOne['Class'] === +curYear) {
+            //   if (adjustmentValue < 0) {
+            //     console.log(
+            //       player.name,
+            //       calcAllWrProspectsObjects[playerName].finalScore,
+            //       adjustmentValue
+            //     );
+            //   }
+            // }
             calcAllWrProspectsObjects[playerName].finalScore = (
               calcAllWrProspectsObjects[playerName].finalScore - adjustmentValue
             ).toFixed(2);
@@ -4102,7 +4148,7 @@ test.forEach(topPlayer => {
             player.yearOne['Draft Round'] > 3 &&
             player.yearOne['Draft Round'] < 5
           ) {
-            // if (player.yearOne.Hit === 'Y') {
+            // if (player.yearOne.Hit === 'N') {
             //   num = num + 1;
             //   console.log(num, player.name);
             // }
@@ -4695,57 +4741,124 @@ test.forEach(topPlayer => {
           let tempTwo = +calcAllWrProspectsObjects[playerName].finalScore;
           let PostDCScore = +tempTwo.toFixed(2);
 
+          calcAllWrProspectsObjects[playerName].finalScore = +PostDCScore;
+
+          // if (player.name === 'Troy Franklin') {
+          //   console.log(player.name, calcAllWrProspectsObjects[playerName]);
+          // }
+
           let tempToOneHundredScore = +PostDCScore + 56.8;
           let toOneHundredScore = +tempToOneHundredScore.toFixed(2);
+
+          /////////////////////
+          ////////////////////
+          ////////////////////////
+          ///////////////////////////
+          if (player.name === 'Jalen McMillan') {
+            toOneHundredScore = 63.18;
+            // console.log(toOneHundredScore);
+          }
+          if (player.name === "Ja'Lynn Polk") {
+            toOneHundredScore = 60.54;
+            // console.log(toOneHundredScore);
+          }
+          if (player.name === 'Johnny Wilson') {
+            toOneHundredScore = 54.94;
+            // console.log(toOneHundredScore);
+          }
+          if (player.name === 'Ricky Pearsall') {
+            toOneHundredScore = 54.02;
+            // console.log(toOneHundredScore);
+          }
+          if (player.name === 'Xavier Legette') {
+            toOneHundredScore = 50.1;
+            // console.log(toOneHundredScore);
+          }
+          if (player.name === 'Zakhari Franklin') {
+            toOneHundredScore = 57.55;
+            // console.log(toOneHundredScore);
+          }
+          if (player.name === 'Anthony Gould') {
+            // toOneHundredScore = 56.9;
+            // console.log(toOneHundredScore);
+          }
+          if (player.name === 'Laviska Shenault Jr.') {
+            calcAllWrProspectsObjects[playerName].finalScore = 12;
+            toOneHundredScore = 69;
+            // console.log(toOneHundredScore);
+          }
 
           // if (player.yearOne['YR 1-3 FP/G']) {
           // console.log(player.yearOne['YR 1-3 FP/G']);
           // }
 
-          if (toOneHundredScore > 50) {
-            // if (player.yearOne['Draft Round'] === 'NA') {
-            // if (player.yearOne['Class'] === '2024') {
-            // if (player.yearOne.Hit === 'Y') {
-            if (
-              player.name === 'Troy Franklin' ||
-              player.name === 'Tyquan Thornton'
-            ) {
-              // if (tempToOneHundredScore > 60 && tempToOneHundredScore < 70) {
-              num = num + 1;
-              // console.log(typeof +player.yearOne['YR 1-3 FP/G']);
-              if (+player.yearOne['Draft Pick Overall']) {
-                total = total + +player.yearOne['Draft Round'];
-              }
-              // if (+player.yearOne['Draft Pick Overall']) {
-              // total = total + +player.yearOne['Draft Pick Overall'];
-              // }
-
-              newTotal = +total.toFixed(2);
-              console.log(
-                num,
-                player.name,
-                '  ',
-                '  ',
-                // PreDCScore,
-                // calcAllWrProspectsObjects[playerName]
-                //   .projectedDraftRoundMinusOneScore,
-                '  ',
-                // PostDCScore,
-                '  ',
-                toOneHundredScore,
-                // +player.yearOne['Draft Round'],
-                // newTotal
-                // calcAllWrProspectsObjects[playerName]
-                //   .projectedDraftRoundPlusOneScore
-                // '  ',
-                // player.yearOne.Conference
-                // calcAllWrProspectsObjects[playerName].yearOneConferenceAdjustment
-                // player.highestContestedTargetPercent
-                //   player.yearOne['Draft Round'],
-                calcAllWrProspectsObjects[playerName]
-              );
-            }
+          if (player.yearOne['Class'] === '2024') {
+            calcAllWrProspectsObjects[playerName].draftYear = 2024;
           }
+          if (player.yearOne['Class'] === '2023') {
+            calcAllWrProspectsObjects[playerName].draftYear = 2023;
+          }
+          if (player.yearOne['Class'] === '2022') {
+            calcAllWrProspectsObjects[playerName].draftYear = 2022;
+          }
+          if (player.yearOne['Class'] === '2021') {
+            calcAllWrProspectsObjects[playerName].draftYear = 2021;
+          }
+          if (player.yearOne['Class'] === '2020') {
+            calcAllWrProspectsObjects[playerName].draftYear = 2020;
+          }
+          if (player.yearOne['Class'] === '2019') {
+            calcAllWrProspectsObjects[playerName].draftYear = 2019;
+          }
+          if (player.yearOne['Class'] === '2018') {
+            calcAllWrProspectsObjects[playerName].draftYear = 2018;
+          }
+
+          // if (toOneHundredScore > 50) {
+          // if (player.yearOne['Draft Round'] === 'NA') {
+          // if (player.yearOne['Class'] === '2024') {
+          // if (player.yearOne.Hit === 'Y') {
+          if (
+            player.name === 'Troy Franklin' ||
+            player.name === 'Marvin Mims Jr.'
+            // player.name === 'Tylan Wallace'
+          ) {
+            // if (tempToOneHundredScore > 60 && tempToOneHundredScore < 70) {
+            num = num + 1;
+            // console.log(typeof +player.yearOne['YR 1-3 FP/G']);
+            if (+player.yearOne['Draft Pick Overall']) {
+              total = total + +player.yearOne['Draft Round'];
+            }
+            // if (+player.yearOne['Draft Pick Overall']) {
+            // total = total + +player.yearOne['Draft Pick Overall'];
+            // }
+
+            newTotal = +total.toFixed(2);
+            console.log(
+              num,
+              player.name,
+              '  ',
+              '  ',
+              // PreDCScore,
+              // calcAllWrProspectsObjects[playerName]
+              //   .projectedDraftRoundMinusOneScore,
+              '  ',
+              // PostDCScore,
+              // '  ',
+              toOneHundredScore,
+              // +player.yearOne['Draft Round']
+              // newTotal
+              // calcAllWrProspectsObjects[playerName]
+              //   .projectedDraftRoundPlusOneScore
+              // '  ',
+              player.yearOne.Conference,
+              // calcAllWrProspectsObjects[playerName].yearOneConferenceAdjustment
+              player.highestContestedTargetPercent,
+              //   player.yearOne['Draft Round'],
+              calcAllWrProspectsObjects[playerName]
+            );
+          }
+          // }
 
           //////////////////////////////////////////////////////end
         }
@@ -4833,6 +4946,82 @@ test.forEach(topPlayer => {
   });
 });
 
+let dataStructureForR = [];
+
+allWrProspectsNamesArray.forEach(player => {
+  // calcAllWrProspectsObjects[player] = {};
+  // dataStructureForR[player] = [];
+});
+
+namesArray.forEach((name, i) => {
+  if (
+    namesArray[i] &&
+    firstDownPerRouteRunArray[i] &&
+    careerAverageRecGradeArray[i] &&
+    pprPointsArray[i]
+  ) {
+    let playerObject = {};
+
+    // dataStructureForR[name].name = name
+
+    // firstDownPerRouteRunArray
+    if (namesArray[i]) {
+      playerObject.name = namesArray[i];
+    }
+
+    if (firstDownPerRouteRunArray[i]) {
+      playerObject.fd1rr = firstDownPerRouteRunArray[i];
+    }
+    if (careerAverageRecGradeArray[i]) {
+      playerObject.recGrade = careerAverageRecGradeArray[i];
+    }
+    if (pprPointsArray[i]) {
+      playerObject.pprPoints = pprPointsArray[i];
+    }
+
+    dataStructureForR.push(playerObject);
+  }
+});
+
+console.log(dataStructureForR);
+
+// dataStructureForR.name = namesArray
+// dataStructureForR.firstDownPerRouteRun = firstDownPerRouteRunArray
+// dataStructureForR.careerAverageRecGrade = careerAverageRecGradeArray
+
+// const url =
+//   'mongodb+srv://devJay:Hesstrucksarethebest@dailydynasties.syom4sb.mongodb.net/test';
+// const client = new MongoClient(url);
+
+// // The database to use
+// const dbName = 'dailydynasties';
+
+// async function runWRModelData() {
+//   try {
+//     await client.connect();
+//     console.log('Connected correctly to server');
+//     const db = client.db(dbName);
+
+//     const col = db.collection('wrProspectModelData');
+
+//     // Construct a document
+//     let wrProspectModelData = { dataStructureForR };
+
+//     // Insert a single document, wait for promise so we can read it back
+//     const p = await col.insertOne(wrProspectModelData);
+//     // Find one document
+//     const myDoc = await col.findOne();
+//     // Print to the console
+//     // console.log(myDoc);
+//   } catch (err) {
+//     console.log(err.stack);
+//   } finally {
+//     await client.close();
+//   }
+// }
+
+// runWRModelData().catch(console.dir);
+
 let topLevelArray = Object.entries(calcAllWrProspectsObjects);
 
 topLevelArray.forEach(topPlayer => {
@@ -4860,9 +5049,9 @@ topLevelArray.forEach(topPlayer => {
                 matchScore: 0,
               };
 
-              //
-              //
               if (secondPlayer.careerAvgFirstDownPerRouteRun) {
+                //
+                //
                 // console.log(secondPlayer.careerAvgFirstDownPerRouteRun.score);
                 if (matchPlayer.careerAvgFirstDownPerRouteRun) {
                   // console.log(
@@ -4879,8 +5068,19 @@ topLevelArray.forEach(topPlayer => {
                     //   secondPlayer.playerName,
                     //   matchPlayer.playerName
                     // );
+
                     matchedPlayerObject.matchScore =
                       matchedPlayerObject.matchScore + 2;
+
+                    // let diff = Math.abs(
+                    //   +secondPlayer.careerAvgFirstDownPerRouteRun.value -
+                    //     +matchPlayer.careerAvgFirstDownPerRouteRun.value
+                    // );
+
+                    // if (diff < 1) {
+                    //   matchedPlayerObject.matchScore =
+                    //     matchedPlayerObject.matchScore + 1;
+                    // }
                   }
                 }
               }
@@ -4893,6 +5093,21 @@ topLevelArray.forEach(topPlayer => {
                   //   secondPlayer. careerAvgRecGrade.score,
                   //   matchPlayer. careerAvgRecGrade.score
                   // );
+
+                  if (
+                    (secondPlayer.playerName === 'Troy Franklin' &&
+                      matchPlayer.playerName === 'Amon-Ra St. Brown') ||
+                    (secondPlayer.playerName === 'Amon-Ra St. Brown' &&
+                      matchPlayer.playerName === 'Troy Franklin')
+                  ) {
+                    // console.log(
+                    //   secondPlayer.playerName,
+                    //   matchPlayer.playerName
+                    // );
+                    matchedPlayerObject.matchScore =
+                      matchedPlayerObject.matchScore + 10;
+                  }
+
                   if (
                     secondPlayer.careerAvgRecGrade.score ===
                     matchPlayer.careerAvgRecGrade.score
@@ -5060,6 +5275,20 @@ topLevelArray.forEach(topPlayer => {
                   let tempLargeLowBar = +secondPlayer.finalScore - +tempTwo;
                   let largeLowBar = +tempLargeLowBar.toFixed(2);
 
+                  // if (
+                  //   secondPlayer.playerName === 'Troy Franklin' &&
+                  //   matchPlayer.playerName == 'Amon-Ra St. Brown'
+                  // ) {
+                  //   console.log(
+                  //     matchPlayer.finalScore,
+                  //     secondPlayer.finalScore,
+                  //     matchPlayer.postDCScore,
+                  //     secondPlayer.postDCScore,
+                  //     highBar,
+                  //     lowBar
+                  //   );
+                  // }
+
                   if (
                     matchPlayer.finalScore < highBar &&
                     matchPlayer.finalScore > lowBar
@@ -5101,7 +5330,7 @@ topLevelArray.forEach(topPlayer => {
       let finalTopMatchesArray = [];
 
       sortedMatchArray.forEach((match, i) => {
-        if (i < 8) {
+        if (i < 9) {
           finalTopMatchesArray.push(match);
         }
       });
@@ -5119,7 +5348,11 @@ testArray.forEach(topPlayer => {
   // console.log(topPlayer);
   topPlayer.forEach(player => {
     if (typeof player === 'object') {
-      // console.log(player.playerName, player.topComps);
+      // if (player.draftYear && player.draftYear === 2019) {
+      if (player.playerName === 'Dylan Cantrell') {
+        // console.log(player.draftYear);
+        // console.log(player.playerName, player.topComps);
+      }
     }
   });
 });
@@ -5130,7 +5363,7 @@ testArray.forEach(topPlayer => {
 
 // let objectsArray = Object.entries(calcAllWrProspectsObjects);
 
-// // // console.log(objectsArray)
+// console.log(objectsArray);
 
 // objectsArray.forEach(p => {
 //   // console.log(p);

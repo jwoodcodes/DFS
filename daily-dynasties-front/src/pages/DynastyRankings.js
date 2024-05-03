@@ -38,6 +38,9 @@ export default function DynastyRankings(dynastyRankingsData) {
   function pick(event) {
     setPositionToShow('PICK');
   }
+  function rookie(event) {
+    setPositionToShow('ROOKIE');
+  }
 
   let dataToUse = [];
   let qbDataArray = [];
@@ -45,6 +48,7 @@ export default function DynastyRankings(dynastyRankingsData) {
   let wrDataArray = [];
   let teDataArray = [];
   let pickArray = [];
+  let rookieArray = [];
 
   dataArray.map(function (player) {
     if (player.position === 'QB') {
@@ -66,6 +70,10 @@ export default function DynastyRankings(dynastyRankingsData) {
     if (player.position === 'PICK') {
       // console.log(player);
       pickArray.push(player);
+    }
+    // console.log(player.yearsExperience);
+    if (player.yearsExperience === 0 && player.position !== 'PICK') {
+      rookieArray.push(player);
     }
   });
 
@@ -96,6 +104,11 @@ export default function DynastyRankings(dynastyRankingsData) {
       dataToUse = pickArray;
       return pickArray;
     }
+    if (positionToShow === 'ROOKIE') {
+      //   console.log(player);
+      dataToUse = rookieArray;
+      return rookieArray;
+    }
   }
   posToUse();
 
@@ -103,7 +116,7 @@ export default function DynastyRankings(dynastyRankingsData) {
     <div className={styles.wholePageWrapper}>
       <MainNav />
       <div className={styles.pageTitle}>Dynasty Rankings</div>
-      <div className={styles.lastUpdated}>Last updated: 4/21/24</div>
+      <div className={styles.lastUpdated}>Last updated: 5/2/24</div>
 
       <div className={styles.glosseryWrapper}>
         <ul className={styles.glosseryUl}>
@@ -141,6 +154,11 @@ export default function DynastyRankings(dynastyRankingsData) {
           PICK
         </button>
       </div>
+      <div className={styles.rookieBtn}>
+        <button className={styles.posBtn} onClick={rookie}>
+          ROOKIES
+        </button>
+      </div>
 
       {positionToShow === 'Overall' && <Table data={dataArray} />}
       {positionToShow === 'QB' && (
@@ -169,6 +187,12 @@ export default function DynastyRankings(dynastyRankingsData) {
       )}
       {positionToShow === 'PICK' && (
         <IndividualPositions data={pickArray} positionToShow={positionToShow} />
+      )}
+      {positionToShow === 'ROOKIE' && (
+        <IndividualPositions
+          data={rookieArray}
+          positionToShow={positionToShow}
+        />
       )}
       <Footer />
     </div>
