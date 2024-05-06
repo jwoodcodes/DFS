@@ -15,6 +15,14 @@ const allWrProspectsNamesArray = [];
 let toOneHundredScoreObjectsArray = [];
 let temptoOneHundredScoreObjectsArray = [];
 let pprPointsArray = [];
+let adjYrdsPerTeamPlayArray = [];
+let EPAPerTeamPassAttempArray = [];
+let EPAPerPlayArray = [];
+let recTDsArray = [];
+let recYrdsPerGameArray = [];
+let NFLPPRPointsYearsOneToThreeArray = [];
+let UNScoreArray = [];
+let draftPickNumArray = [];
 
 let namesArray = [];
 let firstDownPerRouteRunArray = [];
@@ -109,6 +117,41 @@ test.forEach(topPlayer => {
             player.careerAveragedStats['REC Grade']
           );
           pprPointsArray.push(player.careerAveragedStats['PPR Points']);
+          adjYrdsPerTeamPlayArray.push(
+            player.careerAveragedStats['Adjusted Yds Per Team Play']
+          );
+          EPAPerTeamPassAttempArray.push(
+            player.yearTwoPlusYearThreeAveragedStats[
+              'EPA Per Team Pass Attempt'
+            ]
+          );
+          EPAPerPlayArray.push(
+            player.yearTwoPlusYearThreeAveragedStats['EPA Per Play']
+          );
+          recTDsArray.push(player.careerAveragedStats['Rec TDs']);
+          recYrdsPerGameArray.push(
+            player.careerAveragedStats['Rec Yds per Game']
+          );
+
+          let nflPoints = 'NA';
+
+          if (player.yearOne['YR 1-3 FP/G']) {
+            nflPoints = player.yearOne['YR 1-3 FP/G'];
+          }
+
+          if (player.yearOne['YR 1-2 FP/G']) {
+            nflPoints = player.yearOne['YR 1-2 FP/G'];
+          }
+
+          if (player.yearOne['YR 1 FP/G']) {
+            nflPoints = player.yearOne['YR 1 FP/G'];
+          }
+
+          draftPickNumArray.push(player.yearOne['Draft Pick Overall']);
+
+          NFLPPRPointsYearsOneToThreeArray.push(nflPoints);
+
+          UNScoreArray.push(player.yearOne['Final Model Score']);
 
           // 28 hits, 150 non hits, 178 total
 
@@ -4953,12 +4996,22 @@ allWrProspectsNamesArray.forEach(player => {
   // dataStructureForR[player] = [];
 });
 
+// console.log(EPAPerTeamPassAttempArray);
+
 namesArray.forEach((name, i) => {
   if (
     namesArray[i] &&
     firstDownPerRouteRunArray[i] &&
     careerAverageRecGradeArray[i] &&
-    pprPointsArray[i]
+    pprPointsArray[i] &&
+    adjYrdsPerTeamPlayArray[i] &&
+    EPAPerTeamPassAttempArray[i] &&
+    EPAPerPlayArray[i] &&
+    recTDsArray[i] &&
+    recYrdsPerGameArray[i] &&
+    draftPickNumArray[i] &&
+    UNScoreArray[i] &&
+    NFLPPRPointsYearsOneToThreeArray[i] !== 'NA'
   ) {
     let playerObject = {};
 
@@ -4978,12 +5031,40 @@ namesArray.forEach((name, i) => {
     if (pprPointsArray[i]) {
       playerObject.pprPoints = pprPointsArray[i];
     }
+    if (adjYrdsPerTeamPlayArray[i]) {
+      playerObject.adjYrdsPerTeamPlay = adjYrdsPerTeamPlayArray[i];
+    }
+    if (EPAPerTeamPassAttempArray[i]) {
+      playerObject.EPAPerTeamPassAttemp = EPAPerTeamPassAttempArray[i];
+    }
+    if (EPAPerPlayArray[i]) {
+      playerObject.EPAPerPlay = EPAPerPlayArray[i];
+    }
+    if (recTDsArray[i]) {
+      playerObject.recTDs = recTDsArray[i];
+    }
+    if (recYrdsPerGameArray[i]) {
+      playerObject.recYrdsPerGame = recYrdsPerGameArray[i];
+    }
+
+    if (draftPickNumArray[i]) {
+      playerObject.draftPickNum = draftPickNumArray[i];
+    }
+
+    if (UNScoreArray[i]) {
+      playerObject.UNScore = UNScoreArray[i];
+    }
+
+    if (NFLPPRPointsYearsOneToThreeArray[i]) {
+      playerObject.NFLPPRPointsYearsOneToThree =
+        NFLPPRPointsYearsOneToThreeArray[i];
+    }
 
     dataStructureForR.push(playerObject);
   }
 });
 
-console.log(dataStructureForR);
+// console.log(dataStructureForR);
 
 // dataStructureForR.name = namesArray
 // dataStructureForR.firstDownPerRouteRun = firstDownPerRouteRunArray
