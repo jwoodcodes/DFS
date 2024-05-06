@@ -1446,15 +1446,20 @@ const testfunc = async function () {
       rvRedraftPlayerObject,
       sanitizedRVRedraftPlayerName,
       fourForFourRestOfSeasonRedraftPlayerGroup,
-      sanitizedFourForFourRedraftPlayerName
+      sanitizedFourForFourRedraftPlayerName,
+      qbWorstPosRankOfEachTier,
+      rbWorstPosRankOfEachTier
     ) {
       // console.log(rvRedraftPlayerObject);
 
       // fourForFourRestOfSeasonRedraftRankings
 
+      console.log(rbWorstPosRankOfEachTier);
+
       // console.log(curMonth)
       if (curMonth < 9) {
         if (sanitizedRVRedraftPlayerName === sanitizedFCPlayerName) {
+          // console.log(rvRedraftPlayerObject);
           // console.log(sanitizedRVRedraftPlayerName);
           // console.log(fpRedraftPlayerObject);
           // console.log(fpRedraftPlayerObject);
@@ -1482,9 +1487,15 @@ const testfunc = async function () {
           // console.log(temprvRedraftTier);
           let rvRedraftTier = +temprvRedraftTier;
           // console.log(fpRedraftTier);
+
+          //
+
           if (rvRedraftTier) {
             // console.log(rvRedraftTier);
             this.rvRedraftTier = +rvRedraftTier;
+          } else {
+            // console.log(rvRedraftPlayerObject);
+            // console.log(rvRedraftPlayerObject['"PosRank"']);
           }
         }
       }
@@ -2498,6 +2509,128 @@ const testfunc = async function () {
     }
   });
 
+  let qbWorstPosRankInTier3 = 1;
+  let qbWorstPosRankInTier4 = 1;
+  let qbWorstPosRankInTier5 = 1;
+  let qbWorstPosRankInTier6 = 1;
+  let qbWorstPosRankInTier7 = 1;
+  let qbWorstPosRankInTier8 = 1;
+
+  let rbWorstPosRankInTier1 = 1;
+  let rbWorstPosRankInTier2 = 1;
+  let rbWorstPosRankInTier3 = 1;
+  let rbWorstPosRankInTier4 = 1;
+  let rbWorstPosRankInTier5 = 1;
+
+  PlayerArray.forEach(function (player) {
+    if (player.player.name.includes("'")) {
+      player.player.name = player.player.name.replace("'", '');
+    }
+
+    let sanitizedFCPlayerName = player.player.name
+      .replace("'", '')
+      .replace('.', '')
+      .replace('.', '');
+
+    rvRedraftRankingsTEP.forEach(function (playerObject) {
+      // console.log(playerObject);
+      if (playerObject['"Player"'].includes("'")) {
+        playerObject['"Player"'] = playerObject['"Player"'].replace("'", '');
+      }
+
+      let tempsanitizedRVRedraftPlayerName = playerObject['"Player"']
+        .replace("'", '')
+        .replace('.', '')
+        .replace('.', '')
+        .slice(1, -1);
+
+      if (tempsanitizedRVRedraftPlayerName === sanitizedFCPlayerName) {
+        sanitizedRVRedraftPlayerName = tempsanitizedRVRedraftPlayerName;
+
+        //QB
+        if (playerObject['"POS"'].slice(1, -1) === 'QB') {
+          // console.log(playerObject['"PosRank"'], playerObject['"AVGTier"']);
+          let tier = +playerObject['"AVGTier"'];
+          let posRank = +playerObject['"PosRank"'];
+          // console.log(posRank, qbWorstPosRankInTier3);
+          // tier 3
+          if (tier && tier === 3 && posRank > qbWorstPosRankInTier3) {
+            qbWorstPosRankInTier3 = playerObject['"PosRank"'];
+            // console.log(playerObject);
+          }
+          // tier 4
+          if (tier && tier === 4 && posRank > qbWorstPosRankInTier4) {
+            qbWorstPosRankInTier4 = playerObject['"PosRank"'];
+            // console.log(playerObject);
+          }
+          if (tier && tier === 5 && posRank > qbWorstPosRankInTier5) {
+            qbWorstPosRankInTier5 = playerObject['"PosRank"'];
+            // console.log(playerObject);
+          }
+          if (tier && tier === 6 && posRank > qbWorstPosRankInTier6) {
+            qbWorstPosRankInTier6 = playerObject['"PosRank"'];
+            // console.log(playerObject);
+          }
+          if (tier && tier === 7 && posRank > qbWorstPosRankInTier7) {
+            qbWorstPosRankInTier7 = playerObject['"PosRank"'];
+            // console.log(playerObject);
+          }
+        }
+        //
+        // RB
+
+        if (playerObject['"POS"'].slice(1, -1) === 'RB') {
+          // console.log(playerObject['"PosRank"'], playerObject['"AVGTier"']);
+          let tier = +playerObject['"AVGTier"'];
+          let posRank = +playerObject['"PosRank"'];
+          // console.log(posRank, qbWorstPosRankInTier3);
+          // tier 1
+          if (tier && tier === 1 && posRank > rbWorstPosRankInTier1) {
+            rbWorstPosRankInTier1 = playerObject['"PosRank"'];
+            // console.log(playerObject);
+          }
+          // tier 2
+          if (tier && tier === 2 && posRank > rbWorstPosRankInTier2) {
+            rbWorstPosRankInTier2 = playerObject['"PosRank"'];
+            // console.log(playerObject);
+          }
+          // tier 3
+          if (tier && tier === 3 && posRank > rbWorstPosRankInTier3) {
+            rbWorstPosRankInTier3 = playerObject['"PosRank"'];
+            // console.log(playerObject);
+          }
+          // tier 3
+          if (tier && tier === 4 && posRank > rbWorstPosRankInTier4) {
+            rbWorstPosRankInTier4 = playerObject['"PosRank"'];
+            // console.log(playerObject);
+          }
+          // tier 5
+          if (tier && tier === 5 && posRank > rbWorstPosRankInTier5) {
+            rbWorstPosRankInTier5 = playerObject['"PosRank"'];
+            // console.log(playerObject);
+          }
+        }
+      }
+    });
+  });
+
+  let qbWorstPosRankOfEachTier = {
+    tier3: qbWorstPosRankInTier3,
+    tier4: qbWorstPosRankInTier4,
+    tier5: qbWorstPosRankInTier5,
+    tier6: qbWorstPosRankInTier6,
+    tier7: qbWorstPosRankInTier7,
+    tier8: qbWorstPosRankInTier8,
+  };
+
+  let rbWorstPosRankOfEachTier = {
+    tier1: rbWorstPosRankInTier1,
+    tier2: rbWorstPosRankInTier2,
+    tier3: rbWorstPosRankInTier3,
+    tier4: rbWorstPosRankInTier4,
+    tier5: rbWorstPosRankInTier5,
+  };
+
   PlayerArray.forEach(function (player) {
     if (player.player.name.includes("'")) {
       player.player.name = player.player.name.replace("'", '');
@@ -2902,6 +3035,8 @@ const testfunc = async function () {
       }
     });
 
+    // console.log(qbWorstPosRankInTier3);
+
     // for four for four rest of season redraft rankings in season
 
     let fourForFourRestOfSeasonRedraftPlayerGroup;
@@ -3240,7 +3375,9 @@ const testfunc = async function () {
       rvRedraftPlayerObject,
       sanitizedRVRedraftPlayerName,
       fourForFourRestOfSeasonRedraftPlayerGroup,
-      sanitizedFourForFourRedraftPlayerName
+      sanitizedFourForFourRedraftPlayerName,
+      qbWorstPosRankOfEachTier,
+      rbWorstPosRankOfEachTier
     );
 
     tradeCalculaterDataObject.puttingItAllTogetherRedraft(
