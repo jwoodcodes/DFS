@@ -1448,13 +1448,15 @@ const testfunc = async function () {
       fourForFourRestOfSeasonRedraftPlayerGroup,
       sanitizedFourForFourRedraftPlayerName,
       qbWorstPosRankOfEachTier,
-      rbWorstPosRankOfEachTier
+      rbWorstPosRankOfEachTier,
+      wrWorstPosRankOfEachTier,
+      teWorstPosRankOfEachTier
     ) {
       // console.log(rvRedraftPlayerObject);
 
       // fourForFourRestOfSeasonRedraftRankings
 
-      console.log(rbWorstPosRankOfEachTier);
+      // console.log(qbWorstPosRankOfEachTier);
 
       // console.log(curMonth)
       if (curMonth < 9) {
@@ -1496,6 +1498,427 @@ const testfunc = async function () {
           } else {
             // console.log(rvRedraftPlayerObject);
             // console.log(rvRedraftPlayerObject['"PosRank"']);
+
+            // qbWorstPosRankOfEachTier,
+            // rbWorstPosRankOfEachTier,
+            // wrWorstPosRankOfEachTier,
+            //   teWorstPosRankOfEachTier
+            if (fcPosition === 'QB') {
+              // console.log(
+              //   player.player.name,
+              //   rvRedraftPlayerObject['"PosRank"']
+
+              // );
+              // console.log(
+              //   player.player.name,
+              //   +rvRedraftPlayerObject['"PosRank"'],
+              //   +qbWorstPosRankOfEachTier.tier3
+              // );
+              // QB
+              if (
+                +rvRedraftPlayerObject['"PosRank"'] <=
+                  +qbWorstPosRankOfEachTier.tier3 &&
+                +qbWorstPosRankOfEachTier.tier3 > 1
+              ) {
+                this.rvRedraftTier = 3;
+              }
+              //
+              if (
+                +rvRedraftPlayerObject['"PosRank"'] >
+                  +qbWorstPosRankOfEachTier.tier3 &&
+                +rvRedraftPlayerObject['"PosRank"'] <=
+                  +qbWorstPosRankOfEachTier.tier4 &&
+                +qbWorstPosRankOfEachTier.tier4 > 1
+              ) {
+                if (+qbWorstPosRankOfEachTier.tier3 > 1) {
+                  this.rvRedraftTier = 4;
+                }
+                if (
+                  +qbWorstPosRankOfEachTier.tier3 === 1 &&
+                  this.rvRedraftTier !== 2
+                ) {
+                  this.rvRedraftTier = 4;
+                }
+              }
+              //
+              if (
+                +rvRedraftPlayerObject['"PosRank"'] >
+                  +qbWorstPosRankOfEachTier.tier4 &&
+                +rvRedraftPlayerObject['"PosRank"'] <=
+                  +qbWorstPosRankOfEachTier.tier5 &&
+                +qbWorstPosRankOfEachTier.tier5 > 1
+              ) {
+                if (+qbWorstPosRankOfEachTier.tier4 > 1) {
+                  this.rvRedraftTier = 5;
+                }
+                if (
+                  +qbWorstPosRankOfEachTier.tier4 === 1 &&
+                  this.rvRedraftTier !== 3
+                ) {
+                  this.rvRedraftTier = 5;
+                }
+              }
+              //
+              if (
+                +rvRedraftPlayerObject['"PosRank"'] >
+                  +qbWorstPosRankOfEachTier.tier5 &&
+                +rvRedraftPlayerObject['"PosRank"'] <=
+                  +qbWorstPosRankOfEachTier.tier6 &&
+                +qbWorstPosRankOfEachTier.tier6 > 1
+              ) {
+                if (+qbWorstPosRankOfEachTier.tier5 > 1) {
+                  this.rvRedraftTier = 6;
+                }
+                if (
+                  +qbWorstPosRankOfEachTier.tier5 === 1 &&
+                  this.rvRedraftTier !== 4
+                ) {
+                  this.rvRedraftTier = 6;
+                }
+              }
+              if (
+                +rvRedraftPlayerObject['"PosRank"'] >
+                  +qbWorstPosRankOfEachTier.tier6 &&
+                +rvRedraftPlayerObject['"PosRank"'] <=
+                  +qbWorstPosRankOfEachTier.tier7 &&
+                +qbWorstPosRankOfEachTier.tier7 > 1
+              ) {
+                if (+qbWorstPosRankOfEachTier.tier6 > 1) {
+                  this.rvRedraftTier = 7;
+                }
+                if (
+                  +qbWorstPosRankOfEachTier.tier6 === 1 &&
+                  this.rvRedraftTier !== 5
+                ) {
+                  this.rvRedraftTier = 7;
+                }
+              }
+              if (
+                +rvRedraftPlayerObject['"PosRank"'] >
+                  +qbWorstPosRankOfEachTier.tier7 &&
+                +rvRedraftPlayerObject['"PosRank"'] <=
+                  +qbWorstPosRankOfEachTier.tier8 &&
+                +qbWorstPosRankOfEachTier.tier8 > 1
+              ) {
+                if (+qbWorstPosRankOfEachTier.tier7 > 1) {
+                  this.rvRedraftTier = 8;
+                }
+                if (
+                  +qbWorstPosRankOfEachTier.tier7 === 1 &&
+                  this.rvRedraftTier !== 6
+                ) {
+                  this.rvRedraftTier = 8;
+                }
+              }
+
+              // console.log(
+              //   player.player.name,
+              //   rvRedraftPlayerObject['"PosRank"'],
+              //   this.rvRedraftTier
+              // qbWorstPosRankOfEachTier.tier3,
+              // qbWorstPosRankOfEachTier.tier4
+              // );
+            }
+
+            //RB
+            if (fcPosition === 'RB') {
+              // console.log(
+              //   player.player.name,
+              //   rvRedraftPlayerObject['"PosRank"']
+
+              // );
+              // console.log(
+              //   player.player.name,
+              //   +rvRedraftPlayerObject['"PosRank"'],
+              //   +qbWorstPosRankOfEachTier.tier3
+              // );
+              // RB
+              if (
+                +rvRedraftPlayerObject['"PosRank"'] <=
+                  +rbWorstPosRankOfEachTier.tier1 &&
+                +rbWorstPosRankOfEachTier.tier1 > 1
+              ) {
+                this.rvRedraftTier = 1;
+              }
+              //
+              if (
+                +rvRedraftPlayerObject['"PosRank"'] >
+                  +rbWorstPosRankOfEachTier.tier1 &&
+                +rvRedraftPlayerObject['"PosRank"'] <=
+                  +rbWorstPosRankOfEachTier.tier2 &&
+                +rbWorstPosRankOfEachTier.tier2 > 1
+              ) {
+                if (+rbWorstPosRankOfEachTier.tier1 > 1) {
+                  this.rvRedraftTier = 2;
+                }
+                if (
+                  +rbWorstPosRankOfEachTier.tier1 === 1 &&
+                  this.rvRedraftTier !== 1
+                ) {
+                  this.rvRedraftTier = 2;
+                }
+              }
+              //
+              if (
+                +rvRedraftPlayerObject['"PosRank"'] >
+                  +rbWorstPosRankOfEachTier.tier2 &&
+                +rvRedraftPlayerObject['"PosRank"'] <=
+                  +rbWorstPosRankOfEachTier.tier3 &&
+                +rbWorstPosRankOfEachTier.tier3 > 1
+              ) {
+                if (+rbWorstPosRankOfEachTier.tier2 > 1) {
+                  this.rvRedraftTier = 3;
+                }
+                if (
+                  +rbWorstPosRankOfEachTier.tier2 === 1 &&
+                  this.rvRedraftTier !== 1
+                ) {
+                  this.rvRedraftTier = 3;
+                }
+              }
+              //
+              if (
+                +rvRedraftPlayerObject['"PosRank"'] >
+                  +rbWorstPosRankOfEachTier.tier3 &&
+                +rvRedraftPlayerObject['"PosRank"'] <=
+                  +rbWorstPosRankOfEachTier.tier4 &&
+                +rbWorstPosRankOfEachTier.tier4 > 1
+              ) {
+                if (+rbWorstPosRankOfEachTier.tier3 > 1) {
+                  this.rvRedraftTier = 4;
+                }
+                if (
+                  +rbWorstPosRankOfEachTier.tier3 === 1 &&
+                  this.rvRedraftTier !== 2
+                ) {
+                  this.rvRedraftTier = 4;
+                }
+              }
+              //
+              if (
+                +rvRedraftPlayerObject['"PosRank"'] >
+                  +rbWorstPosRankOfEachTier.tier4 &&
+                +rvRedraftPlayerObject['"PosRank"'] <=
+                  +rbWorstPosRankOfEachTier.tier5 &&
+                +rbWorstPosRankOfEachTier.tier5 > 1
+              ) {
+                if (+rbWorstPosRankOfEachTier.tier4 > 1) {
+                  this.rvRedraftTier = 5;
+                }
+                if (
+                  +rbWorstPosRankOfEachTier.tier4 === 1 &&
+                  this.rvRedraftTier !== 3
+                ) {
+                  this.rvRedraftTier = 5;
+                }
+              }
+
+              // console.log(
+              //   player.player.name,
+              //   rvRedraftPlayerObject['"PosRank"'],
+              //   this.rvRedraftTier
+              // );
+            }
+
+            //WR
+            if (fcPosition === 'WR') {
+              // console.log(
+              //   player.player.name,
+              //   rvRedraftPlayerObject['"PosRank"']
+
+              // );
+              // console.log(
+              //   player.player.name,
+              //   +rvRedraftPlayerObject['"PosRank"'],
+              //   +qbWorstPosRankOfEachTier.tier3
+              // );
+              // WR
+              if (
+                +rvRedraftPlayerObject['"PosRank"'] <=
+                  +wrWorstPosRankOfEachTier.tier1 &&
+                +wrWorstPosRankOfEachTier.tier1 > 1
+              ) {
+                this.rvRedraftTier = 1;
+              }
+              //
+              if (
+                +rvRedraftPlayerObject['"PosRank"'] >
+                  +wrWorstPosRankOfEachTier.tier1 &&
+                +rvRedraftPlayerObject['"PosRank"'] <=
+                  +wrWorstPosRankOfEachTier.tier2 &&
+                +wrWorstPosRankOfEachTier.tier2 > 1
+              ) {
+                if (+wrWorstPosRankOfEachTier.tier1 > 1) {
+                  this.rvRedraftTier = 2;
+                }
+                if (
+                  +wrWorstPosRankOfEachTier.tier1 === 1 &&
+                  this.rvRedraftTier !== 1
+                ) {
+                  this.rvRedraftTier = 2;
+                }
+              }
+              //
+              if (
+                +rvRedraftPlayerObject['"PosRank"'] >
+                  +wrWorstPosRankOfEachTier.tier2 &&
+                +rvRedraftPlayerObject['"PosRank"'] <=
+                  +wrWorstPosRankOfEachTier.tier3 &&
+                +wrWorstPosRankOfEachTier.tier3 > 1
+              ) {
+                if (+wrWorstPosRankOfEachTier.tier2 > 1) {
+                  this.rvRedraftTier = 3;
+                }
+                if (
+                  +wrWorstPosRankOfEachTier.tier2 === 1 &&
+                  this.rvRedraftTier !== 1
+                ) {
+                  this.rvRedraftTier = 3;
+                }
+              }
+              //
+              if (
+                +rvRedraftPlayerObject['"PosRank"'] >
+                  +wrWorstPosRankOfEachTier.tier3 &&
+                +rvRedraftPlayerObject['"PosRank"'] <=
+                  +wrWorstPosRankOfEachTier.tier4 &&
+                +wrWorstPosRankOfEachTier.tier4 > 1
+              ) {
+                if (+wrWorstPosRankOfEachTier.tier3 > 1) {
+                  this.rvRedraftTier = 4;
+                }
+                if (
+                  +wrWorstPosRankOfEachTier.tier3 === 1 &&
+                  this.rvRedraftTier !== 2
+                ) {
+                  this.rvRedraftTier = 4;
+                }
+              }
+              //
+              if (
+                +rvRedraftPlayerObject['"PosRank"'] >
+                  +wrWorstPosRankOfEachTier.tier4 &&
+                +rvRedraftPlayerObject['"PosRank"'] <=
+                  +wrWorstPosRankOfEachTier.tier5 &&
+                +wrWorstPosRankOfEachTier.tier5 > 1
+              ) {
+                if (+wrWorstPosRankOfEachTier.tier4 > 1) {
+                  this.rvRedraftTier = 5;
+                }
+                if (
+                  +wrWorstPosRankOfEachTier.tier4 === 1 &&
+                  this.rvRedraftTier !== 3
+                ) {
+                  this.rvRedraftTier = 5;
+                }
+              }
+
+              // console.log(
+              //   player.player.name,
+              //   rvRedraftPlayerObject['"PosRank"'],
+              //   this.rvRedraftTier
+              // );
+            }
+
+            //TE
+            if (fcPosition === 'TE') {
+              // console.log(
+              //   player.player.name,
+              //   rvRedraftPlayerObject['"PosRank"']
+
+              // );
+              // console.log(
+              //   player.player.name,
+              //   +rvRedraftPlayerObject['"PosRank"'],
+              //   +qbWorstPosRankOfEachTier.tier3
+              // );
+              // TE
+              if (
+                +rvRedraftPlayerObject['"PosRank"'] <=
+                  +teWorstPosRankOfEachTier.tier1 &&
+                +teWorstPosRankOfEachTier.tier1 > 1
+              ) {
+                this.rvRedraftTier = 1;
+              }
+              //
+              if (
+                +rvRedraftPlayerObject['"PosRank"'] >
+                  +teWorstPosRankOfEachTier.tier1 &&
+                +rvRedraftPlayerObject['"PosRank"'] <=
+                  +teWorstPosRankOfEachTier.tier2 &&
+                +teWorstPosRankOfEachTier.tier2 > 1
+              ) {
+                if (+teWorstPosRankOfEachTier.tier1 > 1) {
+                  this.rvRedraftTier = 2;
+                }
+                if (
+                  +teWorstPosRankOfEachTier.tier1 === 1 &&
+                  this.rvRedraftTier !== 1
+                ) {
+                  this.rvRedraftTier = 2;
+                }
+              }
+              //
+              if (
+                +rvRedraftPlayerObject['"PosRank"'] >
+                  +teWorstPosRankOfEachTier.tier2 &&
+                +rvRedraftPlayerObject['"PosRank"'] <=
+                  +teWorstPosRankOfEachTier.tier3 &&
+                +teWorstPosRankOfEachTier.tier3 > 1
+              ) {
+                if (+teWorstPosRankOfEachTier.tier2 > 1) {
+                  this.rvRedraftTier = 3;
+                }
+                if (
+                  +teWorstPosRankOfEachTier.tier2 === 1 &&
+                  this.rvRedraftTier !== 1
+                ) {
+                  this.rvRedraftTier = 3;
+                }
+              }
+              //
+              if (
+                +rvRedraftPlayerObject['"PosRank"'] >
+                  +teWorstPosRankOfEachTier.tier3 &&
+                +rvRedraftPlayerObject['"PosRank"'] <=
+                  +teWorstPosRankOfEachTier.tier4 &&
+                +teWorstPosRankOfEachTier.tier4 > 1
+              ) {
+                if (+teWorstPosRankOfEachTier.tier3 > 1) {
+                  this.rvRedraftTier = 4;
+                }
+                if (
+                  +teWorstPosRankOfEachTier.tier3 === 1 &&
+                  this.rvRedraftTier !== 2
+                ) {
+                  this.rvRedraftTier = 4;
+                }
+              }
+              //
+              if (
+                +rvRedraftPlayerObject['"PosRank"'] >
+                  +teWorstPosRankOfEachTier.tier4 &&
+                +rvRedraftPlayerObject['"PosRank"'] <=
+                  +teWorstPosRankOfEachTier.tier5 &&
+                +teWorstPosRankOfEachTier.tier5 > 1
+              ) {
+                if (+teWorstPosRankOfEachTier.tier4 > 1) {
+                  this.rvRedraftTier = 5;
+                }
+                if (
+                  +teWorstPosRankOfEachTier.tier4 === 1 &&
+                  this.rvRedraftTier !== 3
+                ) {
+                  this.rvRedraftTier = 5;
+                }
+              }
+
+              // console.log(
+              //   player.player.name,
+              //   rvRedraftPlayerObject['"PosRank"'],
+              //   this.rvRedraftTier
+              // );
+            }
           }
         }
       }
@@ -2522,6 +2945,18 @@ const testfunc = async function () {
   let rbWorstPosRankInTier4 = 1;
   let rbWorstPosRankInTier5 = 1;
 
+  let wrWorstPosRankInTier1 = 1;
+  let wrWorstPosRankInTier2 = 1;
+  let wrWorstPosRankInTier3 = 1;
+  let wrWorstPosRankInTier4 = 1;
+  let wrWorstPosRankInTier5 = 1;
+
+  let teWorstPosRankInTier1 = 1;
+  let teWorstPosRankInTier2 = 1;
+  let teWorstPosRankInTier3 = 1;
+  let teWorstPosRankInTier4 = 1;
+  let teWorstPosRankInTier5 = 1;
+
   PlayerArray.forEach(function (player) {
     if (player.player.name.includes("'")) {
       player.player.name = player.player.name.replace("'", '');
@@ -2610,6 +3045,76 @@ const testfunc = async function () {
             // console.log(playerObject);
           }
         }
+
+        //
+        // WR
+
+        if (playerObject['"POS"'].slice(1, -1) === 'WR') {
+          // console.log(playerObject['"PosRank"'], playerObject['"AVGTier"']);
+          let tier = +playerObject['"AVGTier"'];
+          let posRank = +playerObject['"PosRank"'];
+          // console.log(posRank, qbWorstPosRankInTier3);
+          // tier 1
+          if (tier && tier === 1 && posRank > wrWorstPosRankInTier1) {
+            wrWorstPosRankInTier1 = playerObject['"PosRank"'];
+            // console.log(playerObject);
+          }
+          // tier 2
+          if (tier && tier === 2 && posRank > wrWorstPosRankInTier2) {
+            wrWorstPosRankInTier2 = playerObject['"PosRank"'];
+            // console.log(playerObject);
+          }
+          // tier 3
+          if (tier && tier === 3 && posRank > wrWorstPosRankInTier3) {
+            wrWorstPosRankInTier3 = playerObject['"PosRank"'];
+            // console.log(playerObject);
+          }
+          // tier 3
+          if (tier && tier === 4 && posRank > wrWorstPosRankInTier4) {
+            wrWorstPosRankInTier4 = playerObject['"PosRank"'];
+            // console.log(playerObject);
+          }
+          // tier 5
+          if (tier && tier === 5 && posRank > wrWorstPosRankInTier5) {
+            wrWorstPosRankInTier5 = playerObject['"PosRank"'];
+            // console.log(playerObject);
+          }
+        }
+
+        //
+        // TE
+
+        if (playerObject['"POS"'].slice(1, -1) === 'TE') {
+          // console.log(playerObject['"PosRank"'], playerObject['"AVGTier"']);
+          let tier = +playerObject['"AVGTier"'];
+          let posRank = +playerObject['"PosRank"'];
+          // console.log(posRank, qbWorstPosRankInTier3);
+          // tier 1
+          if (tier && tier === 1 && posRank > teWorstPosRankInTier1) {
+            teWorstPosRankInTier1 = playerObject['"PosRank"'];
+            // console.log(playerObject);
+          }
+          // tier 2
+          if (tier && tier === 2 && posRank > teWorstPosRankInTier2) {
+            teWorstPosRankInTier2 = playerObject['"PosRank"'];
+            // console.log(playerObject);
+          }
+          // tier 3
+          if (tier && tier === 3 && posRank > teWorstPosRankInTier3) {
+            teWorstPosRankInTier3 = playerObject['"PosRank"'];
+            // console.log(playerObject);
+          }
+          // tier 3
+          if (tier && tier === 4 && posRank > teWorstPosRankInTier4) {
+            teWorstPosRankInTier4 = playerObject['"PosRank"'];
+            // console.log(playerObject);
+          }
+          // tier 5
+          if (tier && tier === 5 && posRank > teWorstPosRankInTier5) {
+            teWorstPosRankInTier5 = playerObject['"PosRank"'];
+            // console.log(playerObject);
+          }
+        }
       }
     });
   });
@@ -2629,6 +3134,22 @@ const testfunc = async function () {
     tier3: rbWorstPosRankInTier3,
     tier4: rbWorstPosRankInTier4,
     tier5: rbWorstPosRankInTier5,
+  };
+
+  let wrWorstPosRankOfEachTier = {
+    tier1: wrWorstPosRankInTier1,
+    tier2: wrWorstPosRankInTier2,
+    tier3: wrWorstPosRankInTier3,
+    tier4: wrWorstPosRankInTier4,
+    tier5: wrWorstPosRankInTier5,
+  };
+
+  let teWorstPosRankOfEachTier = {
+    tier1: teWorstPosRankInTier1,
+    tier2: teWorstPosRankInTier2,
+    tier3: teWorstPosRankInTier3,
+    tier4: teWorstPosRankInTier4,
+    tier5: teWorstPosRankInTier5,
   };
 
   PlayerArray.forEach(function (player) {
@@ -3377,7 +3898,9 @@ const testfunc = async function () {
       fourForFourRestOfSeasonRedraftPlayerGroup,
       sanitizedFourForFourRedraftPlayerName,
       qbWorstPosRankOfEachTier,
-      rbWorstPosRankOfEachTier
+      rbWorstPosRankOfEachTier,
+      wrWorstPosRankOfEachTier,
+      teWorstPosRankOfEachTier
     );
 
     tradeCalculaterDataObject.puttingItAllTogetherRedraft(
