@@ -66,8 +66,12 @@ EPAPerTeamPassAttempt <- c()
 EPAPerPlay <- c()
 recTDs <- c()
 recYrdsPerGame <- c()
+draftPickNum <- c()
 NFLPPRPointsYearsOneToThree <- c()
 UNScore <- c()
+
+
+
 
 for (dataStructureForR in test2) {
     print(dataStructureForR$fd1rr)
@@ -80,12 +84,15 @@ for (dataStructureForR in test2) {
   EPAPerPlay <- c(EPAPerPlay, dataStructureForR$EPAPerPlay)
   recTDs <- c(recTDs, round(dataStructureForR$recTDs, 2))
   recYrdsPerGame <- c(recYrdsPerGame, round(dataStructureForR$recYrdsPerGame, 2))
+  draftPickNum <- c(draftPickNum, as.numeric(dataStructureForR$draftPickNum, na.rm = T))
   NFLPPRPointsYearsOneToThree <- c(NFLPPRPointsYearsOneToThree, as.numeric(dataStructureForR$NFLPPRPointsYearsOneToThree, na.rm = T))
   UNScore <- c(UNScore, as.numeric(dataStructureForR$UNScore))
 }
 
 
-wrMat <- matrix(0, nrow = 171, ncol = 10)
+wrMat <- matrix(0, nrow = 168, ncol = 11)
+
+
 
 wrMat[, 1] <- fd1RR
 wrMat[, 2] <- rec_grade
@@ -95,14 +102,15 @@ wrMat[, 5] <- EPAPerTeamPassAttempt
 wrMat[, 6] <- EPAPerPlay
 wrMat[, 7] <- recTDs
 wrMat[, 8] <- recYrdsPerGame
-wrMat[, 9] <- NFLPPRPointsYearsOneToThree
-wrMat[, 10] <- UNScore
+wrMat[, 9] <- draftPickNum
+wrMat[, 10] <- NFLPPRPointsYearsOneToThree
+wrMat[, 11] <- UNScore
 wrMat
 
 rownames(wrMat) <- names
 
 colnames(wrMat) <- c('fd1RR', 'rec_grade', 'PPR_Points', 'adjYrdsPerTeamPlay', 'EPAPerTeamPassAttempt', 'EPAPerPlay', 'recTDs', 
-                     'recYrdsPerGame', 'year_1-3_NFL', 'UNScore')
+                     'recYrdsPerGame', 'draft_pick', 'year_1-3_NFL', 'UNScore')
 wrMat
 
 
@@ -111,8 +119,19 @@ wrMat
 cor(fd1RR, adjYrdsPerTeamPlay)
 cor(UNScore, NFLPPRPointsYearsOneToThree)
 
-plot(fd1RR, adjYrdsPerTeamPlay)
-t.test(recTDs, mu=5)
+smallfd1RR <- head(fd1RR, 10)
+smalladjYrdsPerTeamPlay <- head(adjYrdsPerTeamPlay, 10)
+
+plot(fd1RR, adjYrdsPerTeamPlay, col = c("cornflowerblue", "salmon"))
+
+pValueTest = c()
+for(ab in UNScore) { 
+#  print(ab)
+  temp <- t.test(UNScore, mu=ab)
+#  print(temp)
+}
+
+t.test(fd1RR, ppr_points)
 
 # real problems
 #ppr_points, adjYrdsPerTeamPlay - 0.9355931
@@ -128,6 +147,30 @@ t.test(recTDs, mu=5)
 #adjYrdsPerTeamPlay, EPAPerPlay - 0.1903674
 #EPAPerTeamPassAttempt, EPAPerPlay - 0.4801429
 #EPAPerTeamPassAttempt, recTDs - 0.6249745
+
+EPA <- EPAPerTeamPassAttempt
+
+ggplot(
+  data = wrMat, 
+  aes(
+    x = UNScore, 
+    y = NFLPPRPointsYearsOneToThree
+  )
+) + 
+  geom_point(
+    aes(
+      color = draft_pick,
+     # size = EPA
+    )
+  ) + 
+  geom_smooth(
+    method = 'lm', se = TRUE
+  ) + 
+  labs(
+    x = "UNScore",
+    y = "PPR points years 1-3"
+  )
+
 
 
 wrProspectModelData$careerAverageRecGrade <- gsub('[', '', wrProspectModelData$careerAverageRecGrade, fixed=T)
