@@ -4895,6 +4895,48 @@ const testfunc = async function () {
   // }
 
   // runTradeAnalyzerData().catch(console.dir);
+
+  //
+  //
+
+  // below is for pushing players data to the undroppables db
+
+  // const url =
+  //   'mongodb+srv://FFCoder:Hesstrucksarethebest!@undroppables.unq112p.mongodb.net/undroppables';
+  // const client = new MongoClient(url);
+
+  // // The database to use
+  // const dbName = 'projectionsBuilder';
+
+  // async function runTradeAnalyzerData() {
+  //   try {
+  //     await client.connect();
+  //     console.log('Connected correctly to server');
+  //     const db = client.db(dbName);
+
+  //     const col = db.collection('allPlayerData');
+
+  //     let allPlayerData = tradeAnalyzerDataObjectsArray;
+
+  //     // Construct a document
+  //     let allPlayersData = {
+  //       allPlayerData,
+  //     };
+
+  //     // Insert a single document, wait for promise so we can read it back
+  //     const p = await col.insertOne(allPlayersData);
+  //     // Find one document
+  //     const myDoc = await col.findOne();
+  //     // Print to the console
+  //     // console.log(myDoc);
+  //   } catch (err) {
+  //     console.log(err.stack);
+  //   } finally {
+  //     await client.close();
+  //   }
+  // }
+
+  // runTradeAnalyzerData().catch(console.dir);
 };
 // console.log(myJSON);
 testfunc();
