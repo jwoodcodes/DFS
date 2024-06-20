@@ -177,37 +177,38 @@ const testfunc = async function () {
 
     //
 
-    //     async function pushFormattedSleeperData() {
-    //       const url =
-    //   'mongodb+srv://devJay:Hesstrucksarethebest@dailydynasties.syom4sb.mongodb.net/test';
-    // const client = new MongoClient(url);
-    // const dbName = 'dailydynasties';
-    //       try {
-    //         await client.connect();
+    async function pushFormattedSleeperData() {
+      const url =
+        'mongodb+srv://devJay:Hesstrucksarethebest@dailydynasties.syom4sb.mongodb.net/test';
+      const client = new MongoClient(url);
+      const dbName = 'dailydynasties';
+      try {
+        await client.connect();
 
-    //         const db = client.db(dbName);
+        const db = client.db(dbName);
 
-    //         // Use the collection "people"
-    //         const col = db.collection('formattedSleeperData');
-    //         console.log('connected');
-    //         // Construct a document
-    //         let formattedSleeperData = dataObject
+        // Use the collection "people"
+        const col = db.collection('formattedSleeperData');
+        console.log('connected');
+        // Construct a document
+        let formattedSleeperData = dataObject;
 
-    //         // Insert a single document, wait for promise so we can read it back
-    //         const p = await col.insertOne(formattedSleeperData);
-    //         // Find one document
-    //         const myDoc = await col.findOne();
-    //         // Print to the console
-    //         // console.log(myDoc);
-    //       } catch (err) {
-    //         console.log(err.stack);
-    //       } finally {
-    //         await client.close();
-    //       }
-    //     }
-    //     // pushFormattedSleeperData()
+        // Insert a single document, wait for promise so we can read it back
+        const p = await col.insertOne(formattedSleeperData);
+        // Find one document
+        const myDoc = await col.findOne();
+        // Print to the console
+        // console.log(myDoc);
+      } catch (err) {
+        console.log(err.stack);
+      } finally {
+        await client.close();
+      }
+    }
+    // pushFormattedSleeperData();
 
     const JustSleeperKeysAndNamesObjectsArray = [];
+    const JustSleeperNamesTeamsAndPostionsArray = [];
 
     class JustKeyAndName {
       constructor(id, name) {
@@ -216,15 +217,34 @@ const testfunc = async function () {
       }
     }
 
+    class JustNameTeamAndPosition {
+      constructor(name, team, position) {
+        this.name = name;
+        this.team = team;
+        this.position = position;
+      }
+    }
+
     for (const key in dataObject) {
       // console.log(`${key}: ${dataObject[key].player_id}`)
-      // console.log(`${key}: ${dataObject[key].full_name}`)
+      // if (dataObject[key].position === 'QB' && dataObject[key].team !== null) {
+      //   console.log(`${dataObject[key].full_name}: ${dataObject[key].team}`);
+      // }
 
       let justSleeperKeysAndNamesObject = new JustKeyAndName(
         key,
         dataObject[key].full_name
       );
       JustSleeperKeysAndNamesObjectsArray.push(justSleeperKeysAndNamesObject);
+
+      let justSleeperNamesTeamsAndPositionsObject = new JustNameTeamAndPosition(
+        dataObject[key].full_name,
+        dataObject[key].team,
+        dataObject[key].position
+      );
+      JustSleeperNamesTeamsAndPostionsArray.push(
+        justSleeperNamesTeamsAndPositionsObject
+      );
 
       selectedUsersRoster.forEach(function (player) {
         if (key === player) {
@@ -268,6 +288,38 @@ const testfunc = async function () {
       }
     }
     // pushJustSleeperKeysAndNames();
+
+    async function pushJustSleeperNamesTeamsAndPositions() {
+      const url =
+        'mongodb+srv://devJay:Hesstrucksarethebest@dailydynasties.syom4sb.mongodb.net/test';
+      const client = new MongoClient(url);
+      const dbName = 'dailydynasties';
+      try {
+        await client.connect();
+
+        const db = client.db(dbName);
+
+        // Use the collection "justSleeperKeysAndNames"
+        const col = db.collection('sleeperNamesTeamsAndPositions');
+        console.log('connected');
+        // Construct a document
+        let sleeperNamesTeamsAndPositions = {
+          JustSleeperNamesTeamsAndPostionsArray,
+        };
+
+        // Insert a single document, wait for promise so we can read it back
+        const p = await col.insertOne(sleeperNamesTeamsAndPositions);
+        // Find one document
+        const myDoc = await col.findOne();
+        // Print to the console
+        // console.log(myDoc);
+      } catch (err) {
+        console.log(err.stack);
+      } finally {
+        await client.close();
+      }
+    }
+    // pushJustSleeperNamesTeamsAndPositions();
   };
   testUserFetch();
 };
