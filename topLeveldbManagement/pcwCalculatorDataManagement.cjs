@@ -222,7 +222,7 @@ const testfunc = async function () {
   //////////////////////////////////////////////////////
   ////////////////////////////////////////////////
 
-  //when pushing new data to db's Always do below first!
+  // when pushing new data to db's Always do below first!
 
   // const url =
   //   'mongodb+srv://devJay:Hesstrucksarethebest@dailydynasties.syom4sb.mongodb.net/test';
@@ -1049,6 +1049,11 @@ const testfunc = async function () {
           // console.log(this.myValue)
         }
 
+        if (this.name === 'Jayden Daniels') {
+          this.myValue = +(this.myValue + 500).toFixed(0);
+          // console.log(this.myValue);
+        }
+
         this.valueDiffBetweenMyValueAndMarketValue = +(
           this.myValue - +player.value
         ).toFixed(2);
@@ -1112,6 +1117,10 @@ const testfunc = async function () {
 
         if (this.name === 'Drake London') {
           this.myValue = +(this.myValue + 200).toFixed(0);
+          // console.log(this.myValue);
+        }
+        if (this.name === 'Marvin Harrison Jr') {
+          this.myValue = 6200;
           // console.log(this.myValue);
         }
 
