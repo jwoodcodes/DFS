@@ -1123,6 +1123,22 @@ const testfunc = async function () {
           this.myValue = 6200;
           // console.log(this.myValue);
         }
+        if (this.name === 'Troy Franklin') {
+          this.myValue = 2100;
+          // console.log(this.myValue);
+        }
+        if (this.name === 'Brian Thomas') {
+          this.myValue = 2000;
+          // console.log(this.myValue);
+        }
+        if (this.name === 'Keon Coleman') {
+          this.myValue = 1800;
+          // console.log(this.myValue);
+        }
+        if (this.name === 'Jalen McMillan') {
+          this.myValue = 1500;
+          // console.log(this.myValue);
+        }
 
         if (this.myValue < 1000) {
           // console.log(this.name, this.myValue)
