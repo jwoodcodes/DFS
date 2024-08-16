@@ -259,6 +259,7 @@ const testfunc = async function () {
   // }
 
   // runOnePreviousFantasyCalcData().catch(console.dir);
+  //
 
   const test2 = await alltradeCalculaterDataArray;
   // console.log(test);
