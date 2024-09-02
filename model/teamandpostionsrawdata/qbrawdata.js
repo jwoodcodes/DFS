@@ -12,7 +12,7 @@ const allFlexGLSP = require('../datafilesmadefrom4for4CSVs/allFlexGLSP');
 const QBWeeklyStatExplorerLastFiveWeeksCategoryPassing = require('../datafilesmadefrom4for4CSVs/QBWeeklyStatExplorerLastFiveWeeksCategoryPassing');
 const gameInfo = require('./gameinfo');
 const allTeams = require('../teamandpositionvariables/allTeamLevelVariables');
-const allQBData = require('../dfs_positions_calc_funcs/qbValuesCalcs');
+
 const qbRushingLastFiveGamesFromWeeklyStatExplorer = require('../datafilesmadefrom4for4CSVs/qbRushingLastFiveGamesFromWeeklyStatExplorer');
 const fantasyPointsBrowser4for4ForQBLastFiveWeeks = require('../datafilesmadefrom4for4CSVs/fantasyPointsBrowser4for4ForQbLastFiveWeeks');
 
@@ -1273,62 +1273,69 @@ const qbrawdata = {
 
 const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
   qbDownloadableSpreadSheetYahoo.forEach(function (playerobj, i) {
-    
+    // console.log(gameInfoPassedInTeam.QBOneThisWeekName, playerobj.Player);
+    if (gameInfoPassedInTeam.QBOneThisWeekName === playerobj.Player) {
+      // console.log(playerobj);
+      // console.log(gameInfoPassedInTeam);
+      let teamName = playerobj.Team;
+      let teamvtt = playerobj['Team O/U'];
 
-    let teamName = playerobj.Team;
-    let teamvtt = playerobj['Team O/U'];
+      let playerName = playerobj.Player;
+      let projpts = playerobj.FFPts;
 
-    let playerName = playerobj.Player;
-    let projpts = playerobj.FFPts;
+      let playerObject = playerobj;
 
-    let playerObject = playerobj;
+      // console.log(playerObject)
 
-    if (
-      teamName === passedInTeam.teamABV ||
-      teamName === passedInTeam.altTeamABV
-    ) {
-      // console.log(playerObject);
-      // console.log(passedInTeam.name);
-      // console.log(playerObject);
-      // passedInTeam.teamName = teamName;
+      if (
+        teamName === passedInTeam.teamABV ||
+        teamName === passedInTeam.altTeamABV
+      ) {
+        // console.log(passedInTeam);
+        // console.log(playerObject);
+        // console.log(passedInTeam.name);
+        // console.log(playerObject);
+        // passedInTeam.teamName = teamName;
 
-      passedInTeam.teamVTT = playerObject['Team O/U'];
-      passedInTeam.name = playerObject.Player;
-      passedInTeam.teamProjectedPointsThisWeek =
-        gameInfoPassedInTeam.teamProjectedPointsThisWeek;
-      if (gameInfoPassedInTeam.quarterOfNegetiveGameScriptPossible) {
-        passedInTeam.quarterOfNegetiveGameScriptPossible = true;
+        passedInTeam.teamVTT = playerObject['Team O/U'];
+        passedInTeam.name = playerObject.Player;
+        // console.log(passedInTeam);
+        passedInTeam.teamProjectedPointsThisWeek =
+          gameInfoPassedInTeam.teamProjectedPointsThisWeek;
+        if (gameInfoPassedInTeam.quarterOfNegetiveGameScriptPossible) {
+          passedInTeam.quarterOfNegetiveGameScriptPossible = true;
+        }
+        if (gameInfoPassedInTeam.quarterOfPositiveGameScriptPossible) {
+          passedInTeam.quarterOfPositiveGameScriptPossible = true;
+        }
+        if (gameInfoPassedInTeam.halfOfNegetiveGameScriptPossible) {
+          passedInTeam.halfOfNegetiveGameScriptPossible = true;
+        }
+        if (gameInfoPassedInTeam.halfOfPositiveGameScriptPossible) {
+          passedInTeam.halfOfPositiveGameScriptPossible = true;
+        }
+        if (gameInfoPassedInTeam.threeQuartersOfNegetiveGameScriptPossible) {
+          passedInTeam.threeQuartersOfNegetiveGameScriptPossible = true;
+        }
+        if (gameInfoPassedInTeam.threeQuartersOfPositiveGameScriptPossible) {
+          passedInTeam.threeQuartersOfPositiveGameScriptPossible = true;
+        }
+        passedInTeam.fourForFourFullPPRProjectedPoints = projpts;
+        passedInTeam.fourForFourHalfPPRProjectedPoints = projpts;
+        passedInTeam.prjpassattempts = playerObject['Pass Att'];
+        passedInTeam.projectedPassingTDs = playerobj['Pass TD'];
+        // console.log(projpts);
+        let yahooSalary = +playerobj['Y! ($)'];
+        passedInTeam.yahooSalary = yahooSalary;
+        let rawPercentOfCap = yahooSalary / 200;
+        let percentOfCap = (rawPercentOfCap * 100).toFixed(1);
+        passedInTeam.percentOfSalaryCapYahoo = percentOfCap;
       }
-      if (gameInfoPassedInTeam.quarterOfPositiveGameScriptPossible) {
-        passedInTeam.quarterOfPositiveGameScriptPossible = true;
-      }
-      if (gameInfoPassedInTeam.halfOfNegetiveGameScriptPossible) {
-        passedInTeam.halfOfNegetiveGameScriptPossible = true;
-      }
-      if (gameInfoPassedInTeam.halfOfPositiveGameScriptPossible) {
-        passedInTeam.halfOfPositiveGameScriptPossible = true;
-      }
-      if (gameInfoPassedInTeam.threeQuartersOfNegetiveGameScriptPossible) {
-        passedInTeam.threeQuartersOfNegetiveGameScriptPossible = true;
-      }
-      if (gameInfoPassedInTeam.threeQuartersOfPositiveGameScriptPossible) {
-        passedInTeam.threeQuartersOfPositiveGameScriptPossible = true;
-      }
-      passedInTeam.fourForFourFullPPRProjectedPoints = projpts;
-      passedInTeam.fourForFourHalfPPRProjectedPoints = projpts;
-      passedInTeam.prjpassattempts = playerObject['Pass Att'];
-      passedInTeam.projectedPassingTDs = playerobj['Pass TD'];
-      // console.log(projpts);
-      let yahooSalary = +playerobj['Y! ($)'];
-      passedInTeam.yahooSalary = yahooSalary;
-      let rawPercentOfCap = yahooSalary / 200;
-      let percentOfCap = (rawPercentOfCap * 100).toFixed(1);
-      passedInTeam.percentOfSalaryCapYahoo = percentOfCap;
+
+      // console.log(teamName);
     }
-
-    // console.log(teamName);
   });
-
+  // console.log(passedInTeam);
   passedInTeam.teamPlaysPerSixtyMinAllSituations =
     gameInfoPassedInTeam.teamPlaysPerSixtyMinAllSituations;
   passedInTeam.teamPlaysPerSixtyMinNeutralSituations =
@@ -1343,64 +1350,64 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
     gameInfoPassedInTeam.negativeScriptRunPercentage;
 
   passedInTeam.slate = '';
-  allNFLTeamPace.forEach(function (teamObj) {
-    let tempHomeTeamName = '';
-    let tempAwayTeamName = '';
-    if (teamObj['"Home"'].length === 5) {
-      tempHomeTeamName = teamObj['"Home"'].slice(1, 4);
-    } else {
-      tempHomeTeamName = teamObj['"Home"'].slice(1, 3);
-    }
+  // allNFLTeamPace.forEach(function (teamObj) {
+  //   let tempHomeTeamName = '';
+  //   let tempAwayTeamName = '';
+  //   if (teamObj['"Home"'].length === 5) {
+  //     tempHomeTeamName = teamObj['"Home"'].slice(1, 4);
+  //   } else {
+  //     tempHomeTeamName = teamObj['"Home"'].slice(1, 3);
+  //   }
 
-    if (teamObj['"Away"'].length === 5) {
-      tempAwayTeamName = teamObj['"Away"'].slice(1, 4);
-    } else {
-      tempAwayTeamName = teamObj['"Away"'].slice(1, 3);
-    }
-    if (
-      tempHomeTeamName === passedInTeam.teamABV ||
-      tempHomeTeamName === passedInTeam.altTeamABV
-    ) {
-      passedInTeam.opponentABV = tempAwayTeamName;
-      let gameTime = teamObj['"Time"'].slice(5, 9);
-      let gameDay = teamObj['"Time"'].slice(1, 4);
-      let gameTimeABV = +gameTime.slice(0, 1);
-      // console.log(`${passedInTeam.teamName}: ${teamObj['"Time"']}`);
-      // console.log(`${gameTimeABV}: ${passedInTeam.teamName}`);
-      // console.log(teamObj);
-      if (gameTimeABV > 5) {
-        // console.log('match');
-        // console.log(passedInTeam.teamName);
-        passedInTeam.slate = 'night';
-      }
-      if (gameTimeABV < 5) {
-        passedInTeam.slate = 'main';
-      }
-    }
+  //   if (teamObj['"Away"'].length === 5) {
+  //     tempAwayTeamName = teamObj['"Away"'].slice(1, 4);
+  //   } else {
+  //     tempAwayTeamName = teamObj['"Away"'].slice(1, 3);
+  //   }
+  //   if (
+  //     tempHomeTeamName === passedInTeam.teamABV ||
+  //     tempHomeTeamName === passedInTeam.altTeamABV
+  //   ) {
+  //     passedInTeam.opponentABV = tempAwayTeamName;
+  //     let gameTime = teamObj['"Time"'].slice(5, 9);
+  //     let gameDay = teamObj['"Time"'].slice(1, 4);
+  //     let gameTimeABV = +gameTime.slice(0, 1);
+  //     // console.log(`${passedInTeam.teamName}: ${teamObj['"Time"']}`);
+  //     // console.log(`${gameTimeABV}: ${passedInTeam.teamName}`);
+  //     // console.log(teamObj);
+  //     if (gameTimeABV > 5) {
+  //       // console.log('match');
+  //       // console.log(passedInTeam.teamName);
+  //       passedInTeam.slate = 'night';
+  //     }
+  //     if (gameTimeABV < 5) {
+  //       passedInTeam.slate = 'main';
+  //     }
+  //   }
 
-    if (
-      tempAwayTeamName === passedInTeam.teamABV ||
-      tempAwayTeamName === passedInTeam.altTeamABV
-    ) {
-      passedInTeam.opponentABV = tempHomeTeamName;
-      // passedInTeam.homeOrAway = 'Away';
+  //   if (
+  //     tempAwayTeamName === passedInTeam.teamABV ||
+  //     tempAwayTeamName === passedInTeam.altTeamABV
+  //   ) {
+  //     passedInTeam.opponentABV = tempHomeTeamName;
+  //     // passedInTeam.homeOrAway = 'Away';
 
-      let gameTime = teamObj['"Time"'].slice(5, 9);
-      let gameDay = teamObj['"Time"'].slice(1, 4);
-      let gameTimeABV = +gameTime.slice(0, 1);
-      // console.log(`${passedInTeam.teamName}: ${teamObj['"Time"']}`);
-      // console.log(`${gameTimeABV}: ${passedInTeam.teamName}`);
+  //     let gameTime = teamObj['"Time"'].slice(5, 9);
+  //     let gameDay = teamObj['"Time"'].slice(1, 4);
+  //     let gameTimeABV = +gameTime.slice(0, 1);
+  //     // console.log(`${passedInTeam.teamName}: ${teamObj['"Time"']}`);
+  //     // console.log(`${gameTimeABV}: ${passedInTeam.teamName}`);
 
-      if (gameTimeABV > 5) {
-        // console.log('match');
-        // console.log(passedInTeam.teamName);
-        passedInTeam.slate = 'night';
-      }
-      if (gameTimeABV < 5) {
-        passedInTeam.slate = 'main';
-      }
-    }
-  });
+  //     if (gameTimeABV > 5) {
+  //       // console.log('match');
+  //       // console.log(passedInTeam.teamName);
+  //       passedInTeam.slate = 'night';
+  //     }
+  //     if (gameTimeABV < 5) {
+  //       passedInTeam.slate = 'main';
+  //     }
+  //   }
+  // });
 
   let percentageOfRecentWeeksPlayed = 0;
 
@@ -1515,15 +1522,15 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
   });
 
   allQBGLSP.forEach(function (qb, i) {
-    if(qb['"Player"']) {
-    let qbName = qb['"Player"'].slice(1, -1);
-    if (qbName === passedInTeam.name) {
-      // console.log(`${passedInTeam.name}: ${qb['"25th"']}`);
-      passedInTeam.twentyFifthPercentProjectedPoints = qb['"25th"'];
-      passedInTeam.fiftyithPercentProjectedPoints = qb['"50th"'];
-      passedInTeam.seventyFifthPercentProjectedPoints = qb['"75th"'];
+    if (qb['"Player"']) {
+      let qbName = qb['"Player"'].slice(1, -1);
+      if (qbName === passedInTeam.name) {
+        // console.log(`${passedInTeam.name}: ${qb['"25th"']}`);
+        passedInTeam.twentyFifthPercentProjectedPoints = qb['"25th"'];
+        passedInTeam.fiftyithPercentProjectedPoints = qb['"50th"'];
+        passedInTeam.seventyFifthPercentProjectedPoints = qb['"75th"'];
+      }
     }
-  }
   });
   // let tempPassCatchersProjPoints = [];
   // allHalfPPRProjectedPointsWithoutTeamDef.forEach(function (player, i) {
@@ -1538,6 +1545,7 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
   // });
 
   allTeams.forEach(function (team) {
+    // console.log(team);
     if (
       passedInTeam.teamABV === team.teamABV ||
       passedInTeam.altTeamABV === team.teamABV
@@ -1618,19 +1626,21 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
   allQBGLSP.forEach(function (qb) {
     // console.log(qb['"Player"'].slice(1, -1));
     // console.log(passedInTeam.name);
-    if(qb['"Player"']) {
-    if (passedInTeam.name === qb['"Player"'].slice(1, -1)) {
-      passedInTeam.glspavg = +qb['"AVG"'];
-      passedInTeam.glspLessThanFive = +(qb['"<5"'] * 100).toFixed(0);
-      passedInTeam.glspFiveToTen = +(qb['"5 to 10"'] * 100).toFixed(0);
-      passedInTeam.glspTenToFifteen = +(qb['"10 to 15"'] * 100).toFixed(0);
-      passedInTeam.glspFifteenToTwenty = +(qb['"15 to 20"'] * 100).toFixed(0);
-      passedInTeam.glspTwentyToTwentyFive = +(qb['"20 to 25"'] * 100).toFixed(
-        0
-      );
-      passedInTeam.glspGreaterThanTwentyFive = +(qb['">25"'] * 100).toFixed(0);
+    if (qb['"Player"']) {
+      if (passedInTeam.name === qb['"Player"'].slice(1, -1)) {
+        passedInTeam.glspavg = +qb['"AVG"'];
+        passedInTeam.glspLessThanFive = +(qb['"<5"'] * 100).toFixed(0);
+        passedInTeam.glspFiveToTen = +(qb['"5 to 10"'] * 100).toFixed(0);
+        passedInTeam.glspTenToFifteen = +(qb['"10 to 15"'] * 100).toFixed(0);
+        passedInTeam.glspFifteenToTwenty = +(qb['"15 to 20"'] * 100).toFixed(0);
+        passedInTeam.glspTwentyToTwentyFive = +(qb['"20 to 25"'] * 100).toFixed(
+          0
+        );
+        passedInTeam.glspGreaterThanTwentyFive = +(qb['">25"'] * 100).toFixed(
+          0
+        );
+      }
     }
-  }
   });
 
   // let sortedtempPassCatchersProjPoints = tempPassCatchersProjPoints.sort(
@@ -1652,12 +1662,12 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
 
   passedInTeam.teamProjectedPoints =
     gameInfoPassedInTeam.teamProjectedPointsThisWeek;
-    if(gameInfoPassedInTeam.opponentThisWeek) {
-  passedInTeam.oppTeamProjectedPoints =
-    gameInfoPassedInTeam.opponentThisWeek.teamProjectedPointsThisWeek;
-    
-  passedInTeam.oppQBName = gameInfoPassedInTeam.opponentThisWeek.qbName;
-    }
+  if (gameInfoPassedInTeam.opponentThisWeek) {
+    passedInTeam.oppTeamProjectedPoints =
+      gameInfoPassedInTeam.opponentThisWeek.teamProjectedPointsThisWeek;
+
+    passedInTeam.oppQBName = gameInfoPassedInTeam.opponentThisWeek.qbName;
+  }
   passedInTeam.percentageOfFantasyPointsFromPassingLastFiveWeeks = +(
     passedInTeam.totalFantasyPointsFromPassingLastFiveWeeks /
     passedInTeam.totalFantasyPointsScoredLastFiveWeeks
@@ -1701,7 +1711,7 @@ populateTeamObjects(qbrawdata.steelers, gameInfo.steelers);
 populateTeamObjects(qbrawdata.texans, gameInfo.texans);
 populateTeamObjects(qbrawdata.titans, gameInfo.titans);
 populateTeamObjects(qbrawdata.vikings, gameInfo.vikings);
-
+//
 // console.log(qbrawdata.chargers);
 // console.log(qbrawdata.vikings);
 // console.log(qbrawdata.chiefs);

@@ -110,26 +110,29 @@ const allTeamABV = [
 const testAllTeams = [];
 
 allEveryTeamEvenOnesOnByeThisWeek.forEach(function (team, i) {
-  if (team.slate !== undefined && team.slate && team.slate !== '') {
-    // console.log(team.opponentABV);
-    allTeamABV.forEach(function (ABV) {
-      // console.log(`${team.teamName}: ${ABV.teamName}`);
-      if (team.opponentABV === ABV.teamABV) {
-        // console.log(ABV);
-        if (team.homeOrAway === 'Home') {
-          testAllTeams.push(team);
+  // console.log(team);
+  if (team) {
+    if (team.slate !== undefined && team.slate && team.slate !== '') {
+      // console.log(team.opponentABV);
+      allTeamABV.forEach(function (ABV) {
+        // console.log(`${team.teamName}: ${ABV.teamName}`);
+        if (team.opponentABV === ABV.teamABV) {
+          // console.log(ABV);
+          if (team.homeOrAway === 'Home') {
+            testAllTeams.push(team);
+          }
+          if (ABV.homeOrAway === 'Home') {
+            testAllTeams.push(ABV);
+          }
+          if (team.homeOrAway === 'Away') {
+            testAllTeams.push(team);
+          }
+          if (ABV.homeOrAway === 'Away') {
+            testAllTeams.push(ABV);
+          }
         }
-        if (ABV.homeOrAway === 'Home') {
-          testAllTeams.push(ABV);
-        }
-        if (team.homeOrAway === 'Away') {
-          testAllTeams.push(team);
-        }
-        if (ABV.homeOrAway === 'Away') {
-          testAllTeams.push(ABV);
-        }
-      }
-    });
+      });
+    }
   }
 });
 

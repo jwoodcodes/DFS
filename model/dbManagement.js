@@ -133,10 +133,11 @@ async function runQBProspectModel() {
 }
 
 ///
-
+// console.log(allQBData);
 // console.log(allQBData.allQBProjectionsObjects);
 // console.log(allRBData.allRBProjectionsObjects);
 let qbProjectionArray = allQBData.allQBProjectionsObjects;
+// console.log(qbProjectionArray);
 let tempRbProjectionArray = allRBData.allRBProjectionsObjects;
 let rbProjectionArray = [...tempRbProjectionArray];
 let tempWrProjectionArray = allWRData.allWRProjectionsObjects;
@@ -152,7 +153,7 @@ let allProjectionsArray = [
   teProjectionsArray,
 ];
 
-// console.log(qbProjectionArray)
+// console.log(qbProjectionArray);
 
 // console.log(allProjectionsArray);
 
