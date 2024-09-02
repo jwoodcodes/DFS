@@ -4178,6 +4178,8 @@ const testfunc = async function () {
 
   //     // Use the collection "dynastyRankingsData"
   //     const col = db.collection('dynastyRankingsData');
+  //     // const col = db.collection('August-31-2024-snapshot');
+
   //     // const col = db.collection('dynastyRankingsData');
 
   //     // Construct a document
@@ -4752,6 +4754,7 @@ const testfunc = async function () {
   //     const db = client.db(dbName);
 
   //     const col = db.collection('tradeAnalyzerData');
+  //     // const col = db.collection('August-31-2024-redraft-snapshot');
 
   //     // Construct a document
   //     let tradeAnalyzerData = {

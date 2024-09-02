@@ -24,8 +24,6 @@
   }
 }
 
-
-
 .directionToSleeperSearchText {
   font-size: 1.2rem;
   background: linear-gradient(to right bottom, #420c47, #065a60);
@@ -45,7 +43,6 @@
   .directionToSleeperSearchText {
     font-size: 1rem;
     padding: 0 10px;
-    
   }
 }
 @media (max-width: 400px) {
@@ -60,8 +57,7 @@
   margin-top: 1rem;
   margin-bottom: 1rem;
   padding-bottom: 1rem;
- 
-  
+
   /* border-top: 1px solid black; */
   /* justify-content: center;
   align-items: center; */
@@ -96,7 +92,7 @@
 @media (min-width: 1800px) {
   .teamOneWrapper {
     max-width: 22%;
-    min-width: 21%
+    min-width: 21%;
   }
 }
 @media (max-width: 1050px) {
@@ -126,7 +122,7 @@
 @media (min-width: 1800px) {
   .teamTwoWrapper {
     max-width: 22%;
-    min-width: 21%
+    min-width: 21%;
   }
 }
 
@@ -623,14 +619,13 @@
 
 .wholeSleeperPlayersSectionWrapper {
   display: flex;
-  
+
   width: 100%;
   padding-bottom: 5rem;
 }
 
 @media (max-width: 1799px) {
   .wholeSleeperPlayersSectionWrapper {
-   
     width: 50%;
     margin-left: auto;
     margin-right: auto;
@@ -639,8 +634,6 @@
 
 @media (min-width: 1050px) {
   .wholeSleeperPlayersSectionWrapper {
-   
-    
     margin-left: auto;
     margin-right: auto;
   }
@@ -648,7 +641,6 @@
 
 @media (max-width: 1600px) {
   .wholeSleeperPlayersSectionWrapper {
-   
     width: 60%;
     margin-left: auto;
     margin-right: auto;
@@ -657,7 +649,6 @@
 
 @media (max-width: 1300px) {
   .wholeSleeperPlayersSectionWrapper {
-   
     width: 75%;
     margin-left: auto;
     margin-right: auto;
@@ -666,7 +657,6 @@
 
 @media (max-width: 700px) {
   .wholeSleeperPlayersSectionWrapper {
-   
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -676,15 +666,11 @@
 .playersOnSelectedLeagueWrapper {
   width: 100%;
   /* margin-left: 1rem; */
-
 }
 
 @media (max-width: 400px) {
   .playersOnSelectedLeagueWrapper {
-   
     width: 70%;
-    
-    
   }
 }
 
@@ -709,7 +695,7 @@
   width: 100%;
   text-align: center;
   font-size: 1.2rem;
-  margin-top: 1.5rem
+  margin-top: 1.5rem;
 }
 
 .tradePartnerUserName {
@@ -803,7 +789,6 @@
   width: 10rem;
   height: 2.75rem;
   margin: 0.25rem;
-  
 }
 
 .hidebtn {
@@ -821,15 +806,13 @@
 
 @media (max-width: 400px) {
   .searchbtn {
-   
-    width: 8rem
+    width: 8rem;
   }
 }
 
 @media (max-width: 400px) {
   .hidebtn {
-   
-    width: 8rem
+    width: 8rem;
   }
 }
 
@@ -854,9 +837,9 @@
 }
 
 .showOtherManagersBtnWrapper {
- width: 100%;
- display: flex;
- justify-content: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .showOtherManagersBtn {
@@ -870,7 +853,6 @@
   width: 50%;
   height: 2.75rem;
   margin: 0.25rem;
- 
 }
 
 .chooseTradePartnerText {
@@ -883,5 +865,4 @@
 .otherManagersBtnsWrapper {
   display: flex;
   justify-content: center;
-  
 }

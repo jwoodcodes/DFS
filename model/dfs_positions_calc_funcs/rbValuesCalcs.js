@@ -407,7 +407,7 @@ class RbObject {
       } else {
         this.appProjectedFullPPRPoints = this.fourForFourFullPPRProjectedPoints;
       }
-      console.log(this.playerName, this.appProjectedFullPPRPoints)
+      // console.log(this.playerName, this.appProjectedFullPPRPoints)
     }
 
     //weeks 5-18

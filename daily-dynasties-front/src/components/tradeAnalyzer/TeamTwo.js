@@ -104,10 +104,10 @@ export default function TeamTwo({
               player.PRPScore = 0;
             }
             teamTotalPRP = +teamTotalPRP + +player.PRPScore;
-            tempPNODVScore = +player.PNODVScore
-            
+            tempPNODVScore = +player.PNODVScore;
+
             teamTotalPNODVScore = +teamTotalPNODVScore + +tempPNODVScore;
-            
+
             if (!player.RVSScore) {
               player.RVSScore = +player.PRPScore + +player.PNODVScore;
             }
@@ -117,7 +117,7 @@ export default function TeamTwo({
             teamTotalMyValue = +teamTotalMyValue + +player.myValue;
             teamTotalPNODV =
               +teamTotalPNODV + +player.projectedNextOffseasonDynastyValue;
-              
+
             return (
               <div className={styles.individualPlayerRow} key={player.name}>
                 <div className={styles.namecolumn}>

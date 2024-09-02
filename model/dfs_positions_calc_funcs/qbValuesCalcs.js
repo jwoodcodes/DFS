@@ -77,7 +77,8 @@ class QbObject {
     this.hadByeInLastFiveWeeksIsTrue = hadByeInLastFiveWeeksIsTrue;
 
     this.appProjectedPoints = appProjectedPoints;
-    this.appQBSixPointForPassingTDProjectedPoints = appQBSixPointForPassingTDProjectedPoints
+    this.appQBSixPointForPassingTDProjectedPoints =
+      appQBSixPointForPassingTDProjectedPoints;
     this.projectedPassAttempts = projectedPassAttempts;
     this.percentOfGamesPlayedLastFiveWeeks = percentOfGamesPlayedLastFiveWeeks;
     this.fantasyPointsFromRushingPerGameLastFiveWeeks =
@@ -589,8 +590,10 @@ const allQBCalcFunctions = {
 //&& allQBs[i].teamVTT > allQBs[i + 1].teamVTT
 
 ////////calling all functions and calculating all total scores////////////
+// console.log(allQBs);
 
 allQBs.map(function (team, i) {
+  // console.log(team);
   let totalScore = 0;
 
   let curVTTValue = allQBCalcFunctions.calcQBvtt(team);
@@ -726,8 +729,6 @@ if (gameInfo.week.currentWeek < 4) {
       valueFromGLSP = +allQBs[i].seventyFifthPercentProjectedPoints;
     }
 
-    
-
     if (valueFromGLSP && valueFromGLSP > 0) {
       let tempTotalValue =
         +team.fourForFourHalfPPRProjectedPoints +
@@ -745,9 +746,11 @@ if (gameInfo.week.currentWeek < 4) {
       QBProjectedPoints = tempValue;
     }
     team.appQBProjectedPoints = +QBProjectedPoints;
-    
-    let valueToAddForSixPointsForPassingTD = +(team.projectedPassingTDs * 2)
-    team.appQBSixPointForPassingTDProjectedPoints = +(+QBProjectedPoints + +valueToAddForSixPointsForPassingTD).toFixed(1)
+
+    let valueToAddForSixPointsForPassingTD = +(team.projectedPassingTDs * 2);
+    team.appQBSixPointForPassingTDProjectedPoints = +(
+      +QBProjectedPoints + +valueToAddForSixPointsForPassingTD
+    ).toFixed(1);
     allQBFinalProjectedPointsValues.push(QBProjectedPoints);
     allQBFinalProjectedPointsValuesPlusNames.push(
       `${QBProjectedPoints}: ${allQBs[i].name}`
@@ -763,7 +766,7 @@ if (gameInfo.week.currentWeek > 3) {
   allQBs.map(function (team, i) {
     let QBProjectedPoints = 0;
     let valueFromGLSP = 0;
-    
+
     if (allQBGLSPScores[i] === 25) {
       valueFromGLSP = +allQBs[i].twentyFifthPercentProjectedPoints;
     }
@@ -773,44 +776,52 @@ if (gameInfo.week.currentWeek > 3) {
     if (allQBGLSPScores[i] === 75) {
       valueFromGLSP = +allQBs[i].seventyFifthPercentProjectedPoints;
     }
-    
-    let lowMax = +((+team.twentyFifthPercentProjectedPoints + +team.fiftyithPercentProjectedPoints) / 2).toFixed(1)
-    let highMax = +((+team.seventyFifthPercentProjectedPoints + +team.fiftyithPercentProjectedPoints) / 2).toFixed(1)
-    
-    if(valueFromGLSP < lowMax) {
-      valueFromGLSP = lowMax
+
+    let lowMax = +(
+      (+team.twentyFifthPercentProjectedPoints +
+        +team.fiftyithPercentProjectedPoints) /
+      2
+    ).toFixed(1);
+    let highMax = +(
+      (+team.seventyFifthPercentProjectedPoints +
+        +team.fiftyithPercentProjectedPoints) /
+      2
+    ).toFixed(1);
+
+    if (valueFromGLSP < lowMax) {
+      valueFromGLSP = lowMax;
     }
-    if(valueFromGLSP > highMax) {
-      valueFromGLSP = highMax
+    if (valueFromGLSP > highMax) {
+      valueFromGLSP = highMax;
     }
     // console.log(team, +team.fourForFourHalfPPRProjectedPoints)
-    let tempValue = 0
+    let tempValue = 0;
     if (valueFromGLSP && valueFromGLSP > 0) {
-      let initialTempValue = +team.fourForFourHalfPPRProjectedPoints
-      
-      let secondTempValue = initialTempValue.toFixed(2)
+      let initialTempValue = +team.fourForFourHalfPPRProjectedPoints;
+
+      let secondTempValue = initialTempValue.toFixed(2);
       let tempTotalValue =
         +secondTempValue +
         +secondTempValue +
         +secondTempValue +
         valueFromGLSP +
-        valueFromGLSP
+        valueFromGLSP;
 
       tempValue = +(tempTotalValue / 5).toFixed(1);
     } else {
-      let initialTempValue = +team.fourForFourHalfPPRProjectedPoints
-      
-      let secondTempValue = initialTempValue.toFixed(1)
-      tempValue = +secondTempValue
+      let initialTempValue = +team.fourForFourHalfPPRProjectedPoints;
+
+      let secondTempValue = initialTempValue.toFixed(1);
+      tempValue = +secondTempValue;
     }
-  
-    
 
     QBProjectedPoints = tempValue;
     team.appQBProjectedPoints = +QBProjectedPoints;
     // console.log(team.name, team.appQBProjectedPoints)
-    let valueToAddForSixPointsForPassingTD = +(team.projectedPassingTDs * 2)
-    team.appQBSixPointForPassingTDProjectedPoints = +(+QBProjectedPoints + +valueToAddForSixPointsForPassingTD).toFixed(1)
+    let valueToAddForSixPointsForPassingTD = +(team.projectedPassingTDs * 2);
+    team.appQBSixPointForPassingTDProjectedPoints = +(
+      +QBProjectedPoints + +valueToAddForSixPointsForPassingTD
+    ).toFixed(1);
     allQBFinalProjectedPointsValues.push(QBProjectedPoints);
     allQBFinalProjectedPointsValuesPlusNames.push(
       `${QBProjectedPoints}: ${allQBs[i].name}`
@@ -1318,14 +1329,13 @@ allQBObjectsArray.forEach(function (player) {
       this.appHalfProjectedPoints = appHalfProjectedPoints;
       this.appFullProjectedPoints = appFullProjectedPoints;
       this.appTEPProjectedPoints = appTEPProjectedPoints;
-      this.appQBSixPointForPassingTDProjectedPoints = appQBSixPointForPassingTDProjectedPoints
-      this.staticFourPointPerProjection = staticFourPointPerProjection
+      this.appQBSixPointForPassingTDProjectedPoints =
+        appQBSixPointForPassingTDProjectedPoints;
+      this.staticFourPointPerProjection = staticFourPointPerProjection;
     }
   }
 
   let projectionToUse = +player.appProjectedPoints.toFixed(1);
-
- 
 
   let qbProjectionsObject = new ProjectionsObject(
     gameInfo.week.currentWeek,
@@ -1345,5 +1355,7 @@ allQBObjectsArray.forEach(function (player) {
 
 allQBData.allQBProjectionsObjects = allQBProjectionsObjects;
 // console.log(allQBProjectionsObjects);
+// console.log(allQBData.allQBProjectionsObjects);
+// console.log(allQBData);
 
 module.exports = allQBData;

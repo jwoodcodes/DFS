@@ -114,32 +114,42 @@ const testAllTeams = [];
 
 allEveryTeamEvenOnesOnByeThisWeek.forEach(function (team, i) {
   // console.log(team);
-  if (team.slate && team.slate !== '') {
+  // if (team.slate && team.slate !== '') {
+  // console.log(team.opponentABV);
+  allTeamABV.forEach(function (ABV) {
     // console.log(team.opponentABV);
-    allTeamABV.forEach(function (ABV) {
-      // console.log(team.opponentABV);
-      // console.log(team.opponentABV);
-      // console.log(`${team.name}: ${team.opponentABV}: ${ABV}`);
-      if (team.opponentABV === ABV.teamABV) {
-        if (team.homeOrAway === 'Home') {
-          // console.log(team);
-          testAllTeams.push(team);
-        }
-        if (ABV.homeOrAway === 'Home') {
-          testAllTeams.push(ABV);
-        }
-        if (team.homeOrAway === 'Away') {
-          testAllTeams.push(team);
-        }
-        if (ABV.homeOrAway === 'Away') {
-          testAllTeams.push(ABV);
-        }
+    // console.log(team.opponentABV);
+    // console.log(`${team.name}: ${team.opponentABV}: ${ABV}`);
+    // console.log(team.opponentABV, ABV.teamABV);
+
+    if (team.opponentABV === ABV.teamABV) {
+      if (team.homeOrAway === 'Home') {
+        // console.log(team);
+        testAllTeams.push(team);
       }
-    });
+      if (ABV.homeOrAway === 'Home') {
+        testAllTeams.push(ABV);
+      }
+      if (team.homeOrAway === 'Away') {
+        testAllTeams.push(team);
+      }
+      if (ABV.homeOrAway === 'Away') {
+        testAllTeams.push(ABV);
+      }
+    }
+    if (team.opponentABV !== ABV.teamABV) {
+      // console.log(team.teamABV);
+    }
+  });
+  if (testAllTeams.includes(team)) {
+    // console.log(team);
+  } else {
+    // console.log(team);
+    testAllTeams.push(team);
   }
 });
 
-// console.log(testAllTeams);
+// console.log(testAllTeams.teamABV);
 
 function onlyUnqiues(value, index, self) {
   return self.indexOf(value) === index;
@@ -148,7 +158,10 @@ function onlyUnqiues(value, index, self) {
 let allUniqueTeams = testAllTeams.filter(onlyUnqiues);
 
 // console.log(allUniqueTeams);
+allUniqueTeams.forEach(function (team, i) {
+  // console.log(team.teamABV);
+});
 
 const allQBs = allUniqueTeams;
-// console.log(allQBs)
+// console.log(allQBs);
 module.exports = allQBs;
