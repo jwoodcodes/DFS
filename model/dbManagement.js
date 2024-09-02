@@ -146,6 +146,18 @@ let teProjectionsArray = [...allTEProjectionsObjects];
 
 // console.log(wrProjectionArray);
 
+function compare(a, b) {
+  if (a.appFullProjectedPoints < b.appFullProjectedPoints) {
+    return 1;
+  }
+  if (a.appFullProjectedPoints > b.appFullProjectedPoints) {
+    return -1;
+  }
+  return 0;
+}
+
+qbProjectionArray.sort(compare);
+
 let allProjectionsArray = [
   qbProjectionArray,
   rbProjectionArray,
@@ -153,7 +165,42 @@ let allProjectionsArray = [
   teProjectionsArray,
 ];
 
-// console.log(qbProjectionArray);
+console.log(qbProjectionArray);
+
+qbCSVArray = qbProjectionArray.map(obj => {
+  return {
+    name: obj.name,
+    team: obj.team,
+    appFullProjectedPoints: obj.appFullProjectedPoints,
+  };
+});
+
+// console.log(qbCSVArray);
+
+//
+// code in here below is for creating a csv file of the  projections
+// arrays
+//
+const fs = require('fs');
+const { parse } = require('json2csv');
+
+function arrayToCSV(array) {
+  const fields = Object.keys(array[0]);
+  const opts = { fields };
+
+  try {
+    const csv = parse(array, opts);
+    fs.writeFileSync('week1-24-qbProjectionArray.csv', csv);
+    console.log('CSV file successfully created');
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+arrayToCSV(qbCSVArray);
+
+//
+//
 
 // console.log(allProjectionsArray);
 
