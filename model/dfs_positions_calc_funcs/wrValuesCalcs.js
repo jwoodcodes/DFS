@@ -6,7 +6,7 @@ const qbrawdata = require('../teamandpostionsrawdata/qbrawdata');
 const allQBData = require('../dfs_positions_calc_funcs/qbValuesCalcs');
 
 //
-const WRProspectModelData = require('../DataForUndroppablesProspectModels/WRProspectModelData.js')
+const WRProspectModelData = require('../DataForUndroppablesProspectModels/WRProspectModelData.js');
 
 const allWROneTotalScores = [];
 const allWRTwoTotalScores = [];
@@ -190,6 +190,8 @@ class WrObject {
 
   calcAppProjectedPoints() {
     // for weeks 1 & 2
+    let ranNum = +(Math.random() * 1.5 - 0.75).toFixed(1);
+    // console.log(ranNum);
 
     if (gameInfo.week.currentWeek < 3) {
       // if(this.teamABV === 'LAR') {
@@ -207,6 +209,8 @@ class WrObject {
         ).toFixed(1);
       } else {
         tempHalfProjection = this.fourForFourHalfPPRProjectedPoints.toFixed(0);
+        tempHalfProjection = +(+tempHalfProjection + +ranNum).toFixed(1);
+        // console.log(tempHalfProjection);
       }
       let tempPPRProjection = 0;
       if (this.PPRGLSPAvg) {
@@ -219,6 +223,7 @@ class WrObject {
         ).toFixed(1);
       } else {
         tempPPRProjection = this.fourForFourFullPPRProjectedPoints.toFixed(0);
+        tempPPRProjection = +(+tempPPRProjection + +ranNum).toFixed(1);
       }
 
       this.appHalfProjectedPoints = tempHalfProjection;
@@ -228,43 +233,42 @@ class WrObject {
     // for weeks 3 & 4
 
     if (gameInfo.week.currentWeek > 2 && gameInfo.week.currentWeek < 5) {
+      let tempHalfProjection = 0;
+      let tempPPRProjection = 0;
 
-      let tempHalfProjection = 0
-      let tempPPRProjection = 0
+      if (this.halfGLSPAvg) {
+        tempHalfProjection = +(
+          (this.fourForFourHalfPPRProjectedPoints +
+            this.fourForFourHalfPPRProjectedPoints +
+            this.halfGLSPAvg) /
+          3
+        ).toFixed(1);
+      } else {
+        tempHalfProjection = this.fourForFourHalfPPRProjectedPoints.toFixed(1);
+        tempHalfProjection = +(+tempHalfProjection + +ranNum).toFixed(1);
+      }
 
-      if(this.halfGLSPAvg) {
+      if (this.PPRGLSPAvg) {
+        tempPPRProjection = +(
+          (this.fourForFourFullPPRProjectedPoints +
+            this.fourForFourFullPPRProjectedPoints +
+            this.PPRGLSPAvg) /
+          3
+        ).toFixed(1);
+      } else {
+        tempPPRProjection = this.fourForFourFullPPRProjectedPoints.toFixed(1);
+        tempPPRProjection = +(+tempPPRProjection + +ranNum).toFixed(1);
+      }
 
-      tempHalfProjection = +(
-        (this.fourForFourHalfPPRProjectedPoints +
-          this.fourForFourHalfPPRProjectedPoints +
-          this.halfGLSPAvg) /
-        3
-      ).toFixed(1);
-        } else {
-          tempHalfProjection = this.fourForFourHalfPPRProjectedPoints.toFixed(1)
-        }
+      if (tempHalfProjection === 0) {
+        tempHalfProjection = this.fourForFourHalfPPRProjectedPoints.toFixed(1);
+        tempHalfProjection = +(+tempHalfProjection + +ranNum).toFixed(1);
+      }
+      if (tempPPRProjection === 0) {
+        tempPPRProjection = this.fourForFourFullPPRProjectedPoints.toFixed(1);
+        tempPPRProjection = +(+tempPPRProjection + +ranNum).toFixed(1);
+      }
 
-
-        if(this.PPRGLSPAvg) {
-      tempPPRProjection = +(
-        (this.fourForFourFullPPRProjectedPoints +
-          this.fourForFourFullPPRProjectedPoints +
-          this.PPRGLSPAvg) /
-        3
-      ).toFixed(1);
-    } else {
-      tempPPRProjection = this.fourForFourFullPPRProjectedPoints.toFixed(1)
-    }
-
-    if(tempHalfProjection === 0) {
-      tempHalfProjection = this.fourForFourHalfPPRProjectedPoints.toFixed(1)
-    }
-    if(tempPPRProjection === 0) {
-      tempPPRProjection = this.fourForFourFullPPRProjectedPoints.toFixed(1)
-    }
-
-
-    
       this.appHalfProjectedPoints = tempHalfProjection;
       this.appFullProjectedPoints = tempPPRProjection;
     }
@@ -272,21 +276,33 @@ class WrObject {
     // for weeks 4-18
 
     if (gameInfo.week.currentWeek > 5) {
-      let playersBottomLineHalfProj = +((+this.halfTwentyFifthPercentProjectedPoints + +this.halfFiftyithPercentProjectedPoints) / 2).toFixed(1)
-      let playersTopLineHalfProj = +((+this.halfSeventyFifthPercentProjectedPoints + +this.halfFiftyithPercentProjectedPoints) / 2).toFixed(1)
-        
-      let playersBottomLineFullProj = +((+this.PPRTwentyFifthPercentProjectedPoints + +this.PPRFiftyithPercentProjectedPoints) / 2).toFixed(1)
-      let playersTopLineFullProj = +((+this.PPRSeventyFifthPercentProjectedPoints + +this.PPRFiftyithPercentProjectedPoints) / 2).toFixed(1)
+      let playersBottomLineHalfProj = +(
+        (+this.halfTwentyFifthPercentProjectedPoints +
+          +this.halfFiftyithPercentProjectedPoints) /
+        2
+      ).toFixed(1);
+      let playersTopLineHalfProj = +(
+        (+this.halfSeventyFifthPercentProjectedPoints +
+          +this.halfFiftyithPercentProjectedPoints) /
+        2
+      ).toFixed(1);
 
-        
+      let playersBottomLineFullProj = +(
+        (+this.PPRTwentyFifthPercentProjectedPoints +
+          +this.PPRFiftyithPercentProjectedPoints) /
+        2
+      ).toFixed(1);
+      let playersTopLineFullProj = +(
+        (+this.PPRSeventyFifthPercentProjectedPoints +
+          +this.PPRFiftyithPercentProjectedPoints) /
+        2
+      ).toFixed(1);
+
       if (
         this.roleScorePercentageThisWeek &&
         this.roleScorePercentageThisWeek > 0.49 &&
         this.roleScorePercentageThisWeek < 1.51
       ) {
-
-        
-
         if (
           this.qbProjectedPointsThisWeekPercentage &&
           this.qbProjectedPointsThisWeekPercentage > 0
@@ -323,9 +339,7 @@ class WrObject {
             1
           );
 
-          if (
-            tempHalfProjection > playersTopLineHalfProj
-          ) {
+          if (tempHalfProjection > playersTopLineHalfProj) {
             tempHalfProjection = playersTopLineHalfProj;
           }
 
@@ -343,10 +357,12 @@ class WrObject {
 
           if (tempHalfProjection === 0 || !tempHalfProjection) {
             tempHalfProjection = this.fourForFourHalfPPRProjectedPoints;
+            tempHalfProjection = +(+tempHalfProjection + +ranNum).toFixed(1);
           }
 
           if (tempPPRProjection === 0 || !tempPPRProjection) {
             tempPPRProjection = this.fourForFourFullPPRProjectedPoints;
+            tempPPRProjection = +(+tempPPRProjection + +ranNum).toFixed(1);
           }
 
           this.appHalfProjectedPoints = tempHalfProjection;
@@ -383,9 +399,7 @@ class WrObject {
             1
           );
 
-          if (
-            tempHalfProjection > playersTopLineHalfProj
-          ) {
+          if (tempHalfProjection > playersTopLineHalfProj) {
             tempHalfProjection = playersTopLineHalfProj;
           }
 
@@ -403,10 +417,12 @@ class WrObject {
 
           if (tempHalfProjection === 0 || !tempHalfProjection) {
             tempHalfProjection = this.fourForFourHalfPPRProjectedPoints;
+            tempHalfProjection = +(+tempHalfProjection + +ranNum).toFixed(1);
           }
 
           if (tempPPRProjection === 0 || !tempPPRProjection) {
             tempPPRProjection = this.fourForFourFullPPRProjectedPoints;
+            tempPPRProjection = +(+tempPPRProjection + +ranNum).toFixed(1);
           }
 
           this.appHalfProjectedPoints = tempHalfProjection;
@@ -430,8 +446,6 @@ class WrObject {
         if (teamAdjustmentForHere > 1.5) {
           teamAdjustmentForHere = 1.5;
         }
-
-        
 
         let tempHalfProjection = +(
           this.fourForFourHalfPPRProjectedPoints * teamAdjustmentForHere
@@ -459,10 +473,12 @@ class WrObject {
 
         if (tempHalfProjection === 0 || !tempHalfProjection) {
           tempHalfProjection = this.fourForFourHalfPPRProjectedPoints;
+          tempHalfProjection = +(+tempHalfProjection + +ranNum).toFixed(1);
         }
 
         if (tempPPRProjection === 0 || !tempPPRProjection) {
           tempPPRProjection = this.fourForFourFullPPRProjectedPoints;
+          tempPPRProjection = +(+tempPPRProjection + +ranNum).toFixed(1);
         }
 
         this.appHalfProjectedPoints = +tempHalfProjection.toFixed(1);
@@ -478,51 +494,61 @@ class WrObject {
         //   this.appFullProjectedPoints
         // );
       }
-     
 
-      let oldStyleHalfAdjustor = 0
-      let oldStylePPRAdjustor = 0
+      let oldStyleHalfAdjustor = 0;
+      let oldStylePPRAdjustor = 0;
 
-      if(this.halfGLSPAvg) {
+      if (this.halfGLSPAvg) {
+        oldStyleHalfAdjustor = +(
+          (this.fourForFourHalfPPRProjectedPoints +
+            this.fourForFourHalfPPRProjectedPoints +
+            this.halfGLSPAvg) /
+          3
+        ).toFixed(1);
+      } else {
+        oldStyleHalfAdjustor =
+          this.fourForFourHalfPPRProjectedPoints.toFixed(1);
+      }
 
-      oldStyleHalfAdjustor = +(
-        (this.fourForFourHalfPPRProjectedPoints +
-          this.fourForFourHalfPPRProjectedPoints +
-          this.halfGLSPAvg) /
+      if (this.PPRGLSPAvg) {
+        oldStylePPRAdjustor = +(
+          (this.fourForFourFullPPRProjectedPoints +
+            this.fourForFourFullPPRProjectedPoints +
+            this.PPRGLSPAvg) /
+          3
+        ).toFixed(1);
+      } else {
+        oldStylePPRAdjustor = this.fourForFourFullPPRProjectedPoints.toFixed(1);
+        oldStylePPRAdjustor = +(+oldStylePPRAdjustor + +ranNum).toFixed(1);
+      }
+
+      if (oldStyleHalfAdjustor === 0) {
+        oldStyleHalfAdjustor =
+          this.fourForFourHalfPPRProjectedPoints.toFixed(1);
+        oldStyleHalfAdjustor = +(+oldStyleHalfAdjustor + +ranNum).toFixed(1);
+      }
+      if (oldStylePPRAdjustor === 0) {
+        oldStylePPRAdjustor = this.fourForFourFullPPRProjectedPoints.toFixed(1);
+        oldStylePPRAdjustor = +(+oldStylePPRAdjustor + +ranNum).toFixed(1);
+      }
+
+      let finalHalfTemp = +(
+        (+this.appHalfProjectedPoints +
+          +oldStyleHalfAdjustor +
+          +oldStyleHalfAdjustor) /
         3
       ).toFixed(1);
-        } else {
-          oldStyleHalfAdjustor = this.fourForFourHalfPPRProjectedPoints.toFixed(1)
-        }
-
-
-        if(this.PPRGLSPAvg) {
-      oldStylePPRAdjustor = +(
-        (this.fourForFourFullPPRProjectedPoints +
-          this.fourForFourFullPPRProjectedPoints +
-          this.PPRGLSPAvg) /
+      let finalFullTemp = +(
+        (+this.appFullProjectedPoints +
+          +oldStylePPRAdjustor +
+          +oldStylePPRAdjustor) /
         3
       ).toFixed(1);
-    } else {
-      oldStylePPRAdjustor = this.fourForFourFullPPRProjectedPoints.toFixed(1)
-    }
-
-    if(oldStyleHalfAdjustor === 0) {
-      oldStyleHalfAdjustor = this.fourForFourHalfPPRProjectedPoints.toFixed(1)
-    }
-    if(oldStylePPRAdjustor === 0) {
-      oldStylePPRAdjustor = this.fourForFourFullPPRProjectedPoints.toFixed(1)
-    }
-
-
-    
-      let finalHalfTemp = +((+this.appHalfProjectedPoints + +oldStyleHalfAdjustor + +oldStyleHalfAdjustor) / 3).toFixed(1)
-      let finalFullTemp = +((+this.appFullProjectedPoints + +oldStylePPRAdjustor + +oldStylePPRAdjustor) / 3).toFixed(1)
 
       // console.log(this.playerName, finalFullTemp)
 
       this.appHalfProjectedPoints = +finalHalfTemp;
-        this.appFullProjectedPoints = +finalFullTemp;
+      this.appFullProjectedPoints = +finalFullTemp;
     }
 
     /////////////////////////////////////////////////////////////////////////////////////
@@ -1396,8 +1422,5 @@ allWRData.allWRProjectionsObjects = allWRProjectionsObjects;
 
 module.exports = allWRData;
 
-
 //////////////////////////////
 ////////////////////////////////////
-
-

@@ -717,6 +717,8 @@ const allQBManagedAndCashProjectedPointsValuesPlusNames = [];
 if (gameInfo.week.currentWeek < 4) {
   let tempValue = 0;
   allQBs.map(function (team, i) {
+    let ranNum = (Math.random() * 1.5 - 0.75).toFixed(1);
+    // console.log(ranNum);
     let QBProjectedPoints = 0;
     let valueFromGLSP = 0;
     if (allQBGLSPScores[i] === 25) {
@@ -740,6 +742,13 @@ if (gameInfo.week.currentWeek < 4) {
     } else {
       firstTempvalue = +team.fourForFourHalfPPRProjectedPoints;
       tempValue = firstTempvalue.toFixed(2);
+      // console.log(tempValue);
+      tempValue = +(+tempValue + +ranNum).toFixed(2);
+      // console.log(tempValue, team);
+      if (team.name === 'Jayden Daniels') {
+        // console.log(team);
+        tempValue = +tempValue + 1;
+      }
     }
 
     if (tempValue) {
@@ -766,7 +775,7 @@ if (gameInfo.week.currentWeek > 3) {
   allQBs.map(function (team, i) {
     let QBProjectedPoints = 0;
     let valueFromGLSP = 0;
-
+    let ranNum = (Math.random() * 1.5 - 0.75).toFixed(1);
     if (allQBGLSPScores[i] === 25) {
       valueFromGLSP = +allQBs[i].twentyFifthPercentProjectedPoints;
     }
@@ -813,6 +822,7 @@ if (gameInfo.week.currentWeek > 3) {
 
       let secondTempValue = initialTempValue.toFixed(1);
       tempValue = +secondTempValue;
+      tempValue = +(+tempValue + +ranNum).toFixed(2);
     }
 
     QBProjectedPoints = tempValue;

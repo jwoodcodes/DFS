@@ -51,6 +51,7 @@ class TeObject {
 
   //* add methods here
   calcProjectedPoints() {
+    let ranNum = (Math.random() * 1.5 - 0.75).toFixed(1);
     // console.log(this.name, this.teamABV, this.fullGLSPAvg);
     if (this.name) {
       let amountToAdd =
@@ -72,7 +73,8 @@ class TeObject {
           final = +(tempTwo / 4).toFixed(1);
         } else {
           let tempTwo = +tempOne;
-          final = +(tempTwo / 3).toFixed(1);
+          final = +(+tempTwo / 3).toFixed(1);
+          final = +(+final + +ranNum).toFixed(1);
         }
         this.appHalfProjectedPoints = +final;
 
@@ -88,7 +90,8 @@ class TeObject {
           pprFinal = +(pprTempTwo / 4).toFixed(1);
         } else {
           let pprTempTwo = +pprTempOne;
-          pprFinal = +(pprTempTwo / 3).toFixed(1);
+          pprFinal = +(+pprTempTwo / 3).toFixed(1);
+          pprFinal = +(+pprFinal + +ranNum).toFixed(1);
         }
         this.appFullProjectedPoints = +pprFinal;
         //
@@ -101,7 +104,8 @@ class TeObject {
           tepFinal = +(tepTempTwo / 4).toFixed(1);
         } else {
           let tepTempTwo = +tepTempOne;
-          tepFinal = +(tepTempTwo / 3).toFixed(1);
+          tepFinal = +(+tepTempTwo / 3).toFixed(1);
+          tepFinal = +(+tepFinal + +ranNum).toFixed(1);
         }
         this.appTEPProjectedPoints = +tepFinal;
       }
@@ -116,14 +120,15 @@ class TeObject {
         //
 
         let tempOne = +(this.fourForFourHalfPPRProjectedPoints * 2).toFixed(1);
-        let final = 0
+        let final = 0;
         if (this.halfGLSPAvg) {
           let tempGLSP = +this.halfGLSPAvg * 2;
           let tempTwo = +tempOne + +tempGLSP;
-        final = +(tempTwo / 4).toFixed(1);
+          final = +(tempTwo / 4).toFixed(1);
         } else {
           let tempTwo = +tempOne;
-        final = +(tempTwo / 2).toFixed(1);
+          final = +(+tempTwo / 2).toFixed(1);
+          final = +(+final + +ranNum).toFixed(1);
         }
         this.appHalfProjectedPoints = +final;
 
@@ -133,14 +138,15 @@ class TeObject {
         let pprTempOne = +(this.fourForFourFullPPRProjectedPoints * 2).toFixed(
           1
         );
-        let pprFinal = 0
+        let pprFinal = 0;
         if (this.fullGLSPAvg) {
           let tempFullGLSP = +this.fullGLSPAvg * 2;
           let pprTempTwo = +pprTempOne + +tempFullGLSP;
           pprFinal = +(pprTempTwo / 4).toFixed(1);
         } else {
           let pprTempTwo = +pprTempOne;
-          pprFinal = +(pprTempTwo / 2).toFixed(1);
+          pprFinal = +(+pprTempTwo / 2).toFixed(1);
+          pprFinal = +(+pprFinal + +ranNum).toFixed(1);
         }
         this.appFullProjectedPoints = +pprFinal;
         //
@@ -153,7 +159,7 @@ class TeObject {
           +this.fourForFourFullPPRProjectedPoints + +amountToAdd;
 
         let tepTempOne = +(this.fourForFourTEPProjectedPoints * 2).toFixed(1);
-        let tepFinal = 0
+        let tepFinal = 0;
         if (this.TEPGLSPAvg) {
           let tempTEPGLSP = +this.TEPGLSPAvg * 2;
 
@@ -161,7 +167,8 @@ class TeObject {
           tepFinal = +(tepTempTwo / 4).toFixed(1);
         } else {
           let tepTempTwo = +tepTempOne;
-          tepFinal = +(tepTempTwo / 2).toFixed(1);
+          tepFinal = +(+tepTempTwo / 2).toFixed(1);
+          tepFinal = +(+tepFinal + +ranNum).toFixed(1);
         }
         this.appTEPProjectedPoints = +tepFinal;
       }
@@ -327,7 +334,6 @@ class TeObject {
     }
     // console.log(this.name, this.appFullProjectedPoints)
   }
-  
 }
 
 //TE1's

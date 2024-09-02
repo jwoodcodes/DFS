@@ -165,7 +165,7 @@ let allProjectionsArray = [
   teProjectionsArray,
 ];
 
-console.log(qbProjectionArray);
+// console.log(qbProjectionArray);
 
 qbCSVArray = qbProjectionArray.map(obj => {
   return {
@@ -181,23 +181,23 @@ qbCSVArray = qbProjectionArray.map(obj => {
 // code in here below is for creating a csv file of the  projections
 // arrays
 //
-const fs = require('fs');
-const { parse } = require('json2csv');
+// const fs = require('fs');
+// const { parse } = require('json2csv');
 
-function arrayToCSV(array) {
-  const fields = Object.keys(array[0]);
-  const opts = { fields };
+// function arrayToCSV(array) {
+//   const fields = Object.keys(array[0]);
+//   const opts = { fields };
 
-  try {
-    const csv = parse(array, opts);
-    fs.writeFileSync('week1-24-qbProjectionArray.csv', csv);
-    console.log('CSV file successfully created');
-  } catch (err) {
-    console.error(err);
-  }
-}
+//   try {
+//     const csv = parse(array, opts);
+//     fs.writeFileSync('week1-24-qbProjectionArray.csv', csv);
+//     console.log('CSV file successfully created');
+//   } catch (err) {
+//     console.error(err);
+//   }
+// }
 
-arrayToCSV(qbCSVArray);
+// arrayToCSV(qbCSVArray);
 
 //
 //
