@@ -146,7 +146,17 @@ let teProjectionsArray = [...allTEProjectionsObjects];
 
 // console.log(wrProjectionArray);
 
-function compare(a, b) {
+function halfCompare(a, b) {
+  if (a.appHalfProjectedPoints < b.appHalfProjectedPoints) {
+    return 1;
+  }
+  if (a.appHalfProjectedPoints > b.appHalfProjectedPoints) {
+    return -1;
+  }
+  return 0;
+}
+
+function pprCompare(a, b) {
   if (a.appFullProjectedPoints < b.appFullProjectedPoints) {
     return 1;
   }
@@ -156,7 +166,13 @@ function compare(a, b) {
   return 0;
 }
 
-qbProjectionArray.sort(compare);
+qbProjectionArray.sort(halfCompare);
+rbProjectionArray.sort(halfCompare);
+// let pprSortedRBProjectionArray = rbProjectionArray.sort(pprCompare);
+wrProjectionArray.sort(halfCompare);
+// let pprSortedWRProjectionArray = wrProjectionArray.sort(pprCompare);
+teProjectionsArray.sort(halfCompare);
+// let pprSortedTEProjectionArray = teProjectionsArray.sort(pprCompare);
 
 let allProjectionsArray = [
   qbProjectionArray,
@@ -165,40 +181,127 @@ let allProjectionsArray = [
   teProjectionsArray,
 ];
 
-// console.log(qbProjectionArray);
+let tempFlexArray = [
+  ...rbProjectionArray,
+  ...wrProjectionArray,
+  ...teProjectionsArray,
+];
+let tempSuperFlexArray = [
+  ...qbProjectionArray,
+  ...rbProjectionArray,
+  ...wrProjectionArray,
+  ...teProjectionsArray,
+];
+let flexArray = tempFlexArray.sort(halfCompare);
+// let pprSortedFlexArray = flexArray.sort(pprCompare);
+let superFlexArray = tempSuperFlexArray.sort(halfCompare);
+// let pprSuperFlexArray = allProjectionsArray.sort(pprCompare);
 
-qbCSVArray = qbProjectionArray.map(obj => {
-  return {
-    name: obj.name,
-    team: obj.team,
-    appFullProjectedPoints: obj.appFullProjectedPoints,
-  };
-});
+// console.log(qbProjectionArray);
+// console.log(rbProjectionArray);
+// console.log(wrProjectionArray);
+// console.log(flexArray);
+// console.log(superFlexArray);
+
+// qbCSVArray = qbProjectionArray.map(obj => {
+//   return {
+//     name: obj.name,
+//     team: obj.team,
+//     appFullProjectedPoints: obj.appFullProjectedPoints,
+//   };
+// });
+
+// rbCSVArray = rbProjectionArray.map(obj => {
+//   return {
+//     name: obj.name,
+//     team: obj.team,
+//     appHalfProjectedPoints: obj.appHalfProjectedPoints,
+//   };
+// });
+// rbPPRCSVArray = pprSortedRBProjectionArray.map(obj => {
+//   return {
+//     name: obj.name,
+//     team: obj.team,
+//     appFullProjectedPoints: obj.appFullProjectedPoints,
+//   };
+// });
+// wrCSVArray = wrProjectionArray.map(obj => {
+//   return {
+//     name: obj.name,
+//     team: obj.team,
+//     appHalfProjectedPoints: obj.appHalfProjectedPoints,
+//   };
+// });
+// wrPPRCSVArray = pprSortedWRProjectionArray.map(obj => {
+//   return {
+//     name: obj.name,
+//     team: obj.team,
+//     appFullProjectedPoints: obj.appFullProjectedPoints,
+//   };
+// });
+// teCSVArray = teProjectionsArray.map(obj => {
+//   return {
+//     name: obj.name,
+//     team: obj.team,
+//     appHalfProjectedPoints: obj.appHalfProjectedPoints,
+//   };
+// });
+// tePPRCSVArray = pprSortedTEProjectionArray.map(obj => {
+//   return {
+//     name: obj.name,
+//     team: obj.team,
+//     appFullProjectedPoints: obj.appFullProjectedPoints,
+//   };
+// });
+//
+// flexCSVArray = flexArray.map(obj => {
+//   return {
+//     name: obj.name,
+//     team: obj.team,
+//     appHalfProjectedPoints: obj.appHalfProjectedPoints,
+//   };
+// });
+//
+// superFlexCSVArray = superFlexArray.map(obj => {
+//   return {
+//     name: obj.name,
+//     team: obj.team,
+//     appHalfProjectedPoints: obj.appHalfProjectedPoints,
+//   };
+// });
 
 // console.log(qbCSVArray);
+// console.log(rbCSVArray);
 
 //
 // code in here below is for creating a csv file of the  projections
 // arrays
 //
-// const fs = require('fs');
-// const { parse } = require('json2csv');
+const fs = require('fs');
+const { parse } = require('json2csv');
 
-// function arrayToCSV(array) {
-//   const fields = Object.keys(array[0]);
-//   const opts = { fields };
+function arrayToCSV(array) {
+  const fields = Object.keys(array[0]);
+  const opts = { fields };
 
-//   try {
-//     const csv = parse(array, opts);
-//     fs.writeFileSync('week1-24-qbProjectionArray.csv', csv);
-//     console.log('CSV file successfully created');
-//   } catch (err) {
-//     console.error(err);
-//   }
-// }
+  try {
+    const csv = parse(array, opts);
+    fs.writeFileSync('week1-24-superFlexHalfProjectionArray.csv', csv);
+    console.log('CSV file successfully created');
+  } catch (err) {
+    console.error(err);
+  }
+}
 
 // arrayToCSV(qbCSVArray);
-
+// arrayToCSV(rbCSVArray);
+// arrayToCSV(rbPPRCSVArray);
+// arrayToCSV(wrCSVArray);
+// arrayToCSV(wrPPRCSVArray);
+// arrayToCSV(teCSVArray);
+// arrayToCSV(tePPRCSVArray);
+// arrayToCSV(flexCSVArray);
+// arrayToCSV(superFlexCSVArray);
 //
 //
 
