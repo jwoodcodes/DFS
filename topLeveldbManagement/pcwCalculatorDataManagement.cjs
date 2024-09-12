@@ -1046,7 +1046,7 @@ const testfunc = async function () {
         // console.log(this.name, this.myValue);
 
         if (this.name === 'Justin Herbert') {
-          this.myValue = +(this.myValue * 0.7).toFixed(0);
+          this.myValue = +(this.myValue * 0.8).toFixed(0);
           // console.log(this.myValue)
         }
 
@@ -1116,28 +1116,18 @@ const testfunc = async function () {
         );
         this.myValue = Math.round(tempValue);
 
-        if (this.name === 'Drake London') {
-          this.myValue = +(this.myValue + 200).toFixed(0);
-          // console.log(this.myValue);
-        }
-        if (this.name === 'Marvin Harrison Jr') {
-          this.myValue = 6200;
-          // console.log(this.myValue);
-        }
         if (this.name === 'Troy Franklin') {
-          this.myValue = 2100;
+          this.myValue = this.myValue + 300;
           // console.log(this.myValue);
         }
-        if (this.name === 'Brian Thomas') {
-          this.myValue = 2000;
+
+        if (this.name === 'Marvin Harrison Jr') {
+          this.myValue = 5800;
           // console.log(this.myValue);
         }
-        if (this.name === 'Keon Coleman') {
-          this.myValue = 1800;
-          // console.log(this.myValue);
-        }
+
         if (this.name === 'Jalen McMillan') {
-          this.myValue = 1500;
+          this.myValue = this.myValue + 500;
           // console.log(this.myValue);
         }
 
@@ -1803,6 +1793,8 @@ const testfunc = async function () {
       if (curMonth > 8) {
         //setting this.rvRedraftPositionRank
         // console.log(sanitizedFourForFourRedraftPlayerName)
+        
+        
         if (sanitizedFourForFourRedraftPlayerName === sanitizedFCPlayerName) {
           // console.log(sanitizedFourForFourRedraftPlayerName)
           let initialTempPosRank = fourForFourRestOfSeasonRedraftPlayerGroup[
@@ -1812,6 +1804,7 @@ const testfunc = async function () {
           this.rvRedraftPositionRank = tempPosRank;
           // console.log(sanitizedFCPlayerName, this.rvRedraftPositionRank)
 
+          
           //
           // setting this.rvRedraftTier
           if (fcPosition === 'QB') {

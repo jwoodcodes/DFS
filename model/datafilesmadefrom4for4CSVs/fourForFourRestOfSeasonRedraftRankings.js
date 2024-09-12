@@ -1,396 +1,471 @@
 const fourForFourRestOfSeasonRedraftRankings = [
 	{
 		"\"Rank\"": "\"1\"",
-		"\"QB\"": "\"Josh Allen (BUF)\"",
-		"\"RB\"": "\"Christian McCaffrey (SF)\"",
-		"\"WR\"": "\"CeeDee Lamb (DAL)\"",
+		"\"QB\"": "\"Jalen Hurts (PHI)\"",
+		"\"RB\"": "\"Breece Hall (NYJ)\"",
+		"\"WR\"": "\"Tyreek Hill (MIA)\"",
 		"\"TE\"": "\"Sam LaPorta (DET)\"",
-		"\"K\"": "\"Justin Tucker (BAL)\"",
-		"\"DEF\"": "\"Browns\""
+		"\"K\"": "\"Brandon Aubrey (DAL)\"",
+		"\"DEF\"": "\"Cowboys\""
 	},
 	{
 		"\"Rank\"": "\"2\"",
-		"\"QB\"": "\"Jalen Hurts (PHI)\"",
-		"\"RB\"": "\"Kyren Williams (LAR)\"",
-		"\"WR\"": "\"Tyreek Hill (MIA)\"",
-		"\"TE\"": "\"Travis Kelce (KC)\"",
-		"\"K\"": "\"Brandon Aubrey (DAL)\"",
-		"\"DEF\"": "\"49ers\""
+		"\"QB\"": "\"Josh Allen (BUF)\"",
+		"\"RB\"": "\"Bijan Robinson (ATL)\"",
+		"\"WR\"": "\"CeeDee Lamb (DAL)\"",
+		"\"TE\"": "\"Trey McBride (ARI)\"",
+		"\"K\"": "\"Justin Tucker (BAL)\"",
+		"\"DEF\"": "\"Ravens\""
 	},
 	{
 		"\"Rank\"": "\"3\"",
-		"\"QB\"": "\"Dak Prescott (DAL)\"",
-		"\"RB\"": "\"Alvin Kamara (NO)\"",
-		"\"WR\"": "\"Deebo Samuel (SF)\"",
-		"\"TE\"": "\"T.J. Hockenson (MIN)\"",
-		"\"K\"": "\"Brandon McManus (JAX)\"",
-		"\"DEF\"": "\"Jets\""
+		"\"QB\"": "\"Patrick Mahomes (KC)\"",
+		"\"RB\"": "\"Christian McCaffrey (SF)"
+	},
+	{
+		"\"Rank\"": "\"",
+		"\"QB\"": "\"Justin Jefferson (MIN)\"",
+		"\"RB\"": "\"Travis Kelce (KC)\"",
+		"\"WR\"": "\"Harrison Butker (KC)\"",
+		"\"TE\"": "\"49ers\""
 	},
 	{
 		"\"Rank\"": "\"4\"",
 		"\"QB\"": "\"Lamar Jackson (BAL)\"",
-		"\"RB\"": "\"Rachaad White (TB)\"",
-		"\"WR\"": "\"A.J. Brown (PHI)\"",
-		"\"TE\"": "\"Trey McBride (ARI)\"",
-		"\"K\"": "\"Matt Gay (IND)\"",
-		"\"DEF\"": "\"Ravens\""
+		"\"RB\"": "\"Saquon Barkley (PHI)\"",
+		"\"WR\"": "\"Amon-Ra St. Brown (DET)\"",
+		"\"TE\"": "\"George Kittle (SF)\"",
+		"\"K\"": "\"Jason Sanders (MIA)\"",
+		"\"DEF\"": "\"Browns\""
 	},
 	{
 		"\"Rank\"": "\"5\"",
-		"\"QB\"": "\"Brock Purdy (SF)\"",
-		"\"RB\"": "\"James Cook (BUF)\"",
-		"\"WR\"": "\"Amon-Ra St. Brown (DET)\"",
-		"\"TE\"": "\"George Kittle (SF)\"",
-		"\"K\"": "\"Harrison Butker (KC)\"",
-		"\"DEF\"": "\"Cowboys\""
+		"\"QB\"": "\"C.J. Stroud (HOU)\"",
+		"\"RB\"": "\"De'Von Achane (MIA)"
+	},
+	{
+		"\"Rank\"": "\"",
+		"\"QB\"": "\"A.J. Brown (PHI)\"",
+		"\"RB\"": "\"Mark Andrews (BAL)\"",
+		"\"WR\"": "\"Jake Elliott (PHI)\"",
+		"\"TE\"": "\"Jets\""
 	},
 	{
 		"\"Rank\"": "\"6\"",
-		"\"QB\"": "\"Patrick Mahomes (KC)\"",
-		"\"RB\"": "\"Jahmyr Gibbs (DET)\"",
-		"\"WR\"": "\"Justin Jefferson (MIN)\"",
-		"\"TE\"": "\"David Njoku (CLE)\"",
-		"\"K\"": "\"Jason Myers (SEA)\"",
-		"\"DEF\"": "\"Bills\""
-	},
-	{
-		"\"Rank\"": "\"7\"",
-		"\"QB\"": "\"Justin Fields (CHI)\"",
-		"\"RB\"": "\"Raheem Mostert (MIA)\"",
-		"\"WR\"": "\"Mike Evans (TB)\"",
-		"\"TE\"": "\"Jake Ferguson (DAL)\"",
-		"\"K\"": "\"Jake Elliott (PHI)\"",
-		"\"DEF\"": "\"Eagles\""
-	},
-	{
-		"\"Rank\"": "\"8\"",
-		"\"QB\"": "\"C.J. Stroud (HOU)\"",
-		"\"RB\"": "\"Derrick Henry (TEN)\"",
+		"\"QB\"": "\"Anthony Richardson (IND)\"",
+		"\"RB\"": "\"Jonathan Taylor (IND)\"",
 		"\"WR\"": "\"Cooper Kupp (LAR)\"",
-		"\"TE\"": "\"Isaiah Likely (BAL)\"",
-		"\"K\"": "\"Tyler Bass (BUF)\"",
-		"\"DEF\"": "\"Jaguars\""
-	},
-	{
-		"\"Rank\"": "\"9\"",
-		"\"QB\"": "\"Tua Tagovailoa (MIA)\"",
-		"\"RB\"": "\"Isiah Pacheco (KC)\"",
-		"\"WR\"": "\"D.J. Moore (CHI)\"",
-		"\"TE\"": "\"Cole Kmet (CHI)\"",
-		"\"K\"": "\"Dustin Hopkins (CLE)\"",
-		"\"DEF\"": "\"Colts\""
-	},
-	{
-		"\"Rank\"": "\"10\"",
-		"\"QB\"": "\"Jared Goff (DET)\"",
-		"\"RB\"": "\"Tony Pollard (DAL)\"",
-		"\"WR\"": "\"Stefon Diggs (BUF)\"",
-		"\"TE\"": "\"Evan Engram (JAX)\"",
-		"\"K\"": "\"Wil Lutz (DEN)\"",
-		"\"DEF\"": "\"Bears\""
-	},
-	{
-		"\"Rank\"": "\"11\"",
-		"\"QB\"": "\"Jordan Love (GB)\"",
-		"\"RB\"": "\"Bijan Robinson (ATL)\"",
-		"\"WR\"": "\"Brandon Aiyuk (SF)\"",
-		"\"TE\"": "\"Dalton Kincaid (BUF)\"",
-		"\"K\"": "\"Jason Sanders (MIA)\"",
-		"\"DEF\"": "\"Broncos\""
-	},
-	{
-		"\"Rank\"": "\"12\"",
-		"\"QB\"": "\"Kyler Murray (ARI)\"",
-		"\"RB\"": "\"Travis Etienne (JAX)\"",
-		"\"WR\"": "\"Puka Nacua (LAR)\"",
-		"\"TE\"": "\"Dallas Goedert (PHI)\"",
-		"\"K\"": "\"Blake Grupe (NO)\"",
-		"\"DEF\"": "\"Vikings\""
-	},
-	{
-		"\"Rank\"": "\"13\"",
-		"\"QB\"": "\"Matthew Stafford (LAR)\"",
-		"\"RB\"": "\"Joe Mixon (CIN)\"",
-		"\"WR\"": "\"Davante Adams (LV)\"",
-		"\"TE\"": "\"Dalton Schultz (HOU)\"",
-		"\"K\"": "\"Jake Moody (SF)\"",
-		"\"DEF\"": "\"Chiefs\""
-	},
-	{
-		"\"Rank\"": "\"14\"",
-		"\"QB\"": "\"Russell Wilson (DEN)\"",
-		"\"RB\"": "\"Kenneth Walker (SEA)\"",
-		"\"WR\"": "\"DK Metcalf (SEA)\"",
-		"\"TE\"": "\"Taysom Hill (NO)\"",
-		"\"K\"": "\"Greg Joseph (MIN)\"",
-		"\"DEF\"": "\"Packers\""
-	},
-	{
-		"\"Rank\"": "\"15\"",
-		"\"QB\"": "\"Baker Mayfield (TB)\"",
-		"\"RB\"": "\"Saquon Barkley (NYG)\"",
-		"\"WR\"": "\"Jaylen Waddle (MIA)\"",
-		"\"TE\"": "\"Darren Waller (NYG)\"",
-		"\"K\"": "\"Younghoe Koo (ATL)\"",
-		"\"DEF\"": "\"Dolphins\""
-	},
-	{
-		"\"Rank\"": "\"16\"",
-		"\"QB\"": "\"Geno Smith (SEA)\"",
-		"\"RB\"": "\"David Montgomery (DET)\"",
-		"\"WR\"": "\"Rashee Rice (KC)\"",
-		"\"TE\"": "\"Hunter Henry (NE)\"",
-		"\"K\"": "\"Cairo Santos (CHI)\"",
-		"\"DEF\"": "\"Texans\""
-	},
-	{
-		"\"Rank\"": "\"17\"",
-		"\"QB\"": "\"Jake Browning (CIN)\"",
-		"\"RB\"": "\"De'Von Achane (MIA)\"",
-		"\"WR\"": "\"DeVonta Smith (PHI)\"",
 		"\"TE\"": "\"Kyle Pitts (ATL)\"",
-		"\"K\"": "\"Evan McPherson (CIN)\"",
-		"\"DEF\"": "\"Seahawks\""
-	},
-	{
-		"\"Rank\"": "\"18\"",
-		"\"QB\"": "\"Trevor Lawrence (JAX)\"",
-		"\"RB\"": "\"D'Andre Swift (PHI)\"",
-		"\"WR\"": "\"Tee Higgins (CIN)\"",
-		"\"TE\"": "\"Pat Freiermuth (PIT)\"",
-		"\"K\"": "\"Chris Boswell (PIT)\"",
-		"\"DEF\"": "\"Steelers\""
-	},
-	{
-		"\"Rank\"": "\"19\"",
-		"\"QB\"": "\"Joe Flacco (CLE)\"",
-		"\"RB\"": "\"Chuba Hubbard (CAR)\"",
-		"\"WR\"": "\"Courtland Sutton (DEN)\"",
-		"\"TE\"": "\"Cade Otton (TB)\"",
-		"\"K\"": "\"Greg Zuerlein (NYJ)\"",
+		"\"K\"": "\"Ka'imi Fairbairn (HOU)\"",
 		"\"DEF\"": "\"Saints\""
 	},
 	{
+		"\"Rank\"": "\"7\"",
+		"\"QB\"": "\"Kyler Murray (ARI)"
+	},
+	{
+		"\"Rank\"": "\"",
+		"\"QB\"": "\"Kyren Williams (LAR)\"",
+		"\"RB\"": "\"Ja'Marr Chase (CIN)\"",
+		"\"WR\"": "\"Dalton Kincaid (BUF)\"",
+		"\"TE\"": "\"Jake Moody (SF)\"",
+		"\"K\"": "\"Steelers\""
+	},
+	{
+		"\"Rank\"": "\"8\"",
+		"\"QB\"": "\"Jayden Daniels (WAS)\"",
+		"\"RB\"": "\"Isiah Pacheco (KC)\"",
+		"\"WR\"": "\"Mike Evans (TB)\"",
+		"\"TE\"": "\"Brock Bowers (LV)"
+	},
+	{
+		"\"Rank\"": "\"",
+		"\"QB\"": "\"Tyler Bass (BUF)\"",
+		"\"RB\"": "\"Bills\""
+	},
+	{
+		"\"Rank\"": "\"9\"",
+		"\"QB\"": "\"Dak Prescott (DAL)\"",
+		"\"RB\"": "\"Jahmyr Gibbs (DET)\"",
+		"\"WR\"": "\"Garrett Wilson (NYJ)\"",
+		"\"TE\"": "\"Evan Engram (JAX)\"",
+		"\"K\"": "\"Evan McPherson (CIN)\"",
+		"\"DEF\"": "\"Dolphins\""
+	},
+	{
+		"\"Rank\"": "\"10\"",
+		"\"QB\"": "\"Joe Burrow (CIN)"
+	},
+	{
+		"\"Rank\"": "\"",
+		"\"QB\"": "\"Derrick Henry (BAL)\"",
+		"\"RB\"": "\"Nico Collins (HOU)\"",
+		"\"WR\"": "\"Isaiah Likely (BAL)\"",
+		"\"TE\"": "\"Jason Myers (SEA)\"",
+		"\"K\"": "\"Texans\""
+	},
+	{
+		"\"Rank\"": "\"11\"",
+		"\"QB\"": "\"Brock Purdy (SF)\"",
+		"\"RB\"": "\"Kenneth Walker (SEA)"
+	},
+	{
+		"\"Rank\"": "\"",
+		"\"QB\"": "\"Deebo Samuel (SF)\"",
+		"\"RB\"": "\"Dallas Goedert (PHI)\"",
+		"\"WR\"": "\"Cairo Santos (CHI)\"",
+		"\"TE\"": "\"Eagles\""
+	},
+	{
+		"\"Rank\"": "\"12\"",
+		"\"QB\"": "\"Tua Tagovailoa (MIA)\"",
+		"\"RB\"": "\"Joe Mixon (HOU)\"",
+		"\"WR\"": "\"Brandon Aiyuk (SF)\"",
+		"\"TE\"": "\"Taysom Hill (NO)\"",
+		"\"K\"": "\"Younghoe Koo (ATL)\"",
+		"\"DEF\"": "\"Chiefs\""
+	},
+	{
+		"\"Rank\"": "\"13\"",
+		"\"QB\"": "\"Jared Goff (DET)\"",
+		"\"RB\"": "\"Josh Jacobs (GB)"
+	},
+	{
+		"\"Rank\"": "\"",
+		"\"QB\"": "\"Marvin Harrison Jr. (ARI)\"",
+		"\"RB\"": "\"Jake Ferguson (DAL)"
+	},
+	{
+		"\"Rank\"": "\"",
+		"\"QB\"": "\"Cameron Dicker (LAC)\"",
+		"\"RB\"": "\"Broncos\""
+	},
+	{
+		"\"Rank\"": "\"14\"",
+		"\"QB\"": "\"Trevor Lawrence (JAX)\"",
+		"\"RB\"": "\"James Conner (ARI)\"",
+		"\"WR\"": "\"Jaylen Waddle (MIA)\"",
+		"\"TE\"": "\"Pat Freiermuth (PIT)\"",
+		"\"K\"": "\"Blake Grupe (NO)\"",
+		"\"DEF\"": "\"Bears\""
+	},
+	{
+		"\"Rank\"": "\"15\"",
+		"\"QB\"": "\"Jordan Love (GB)"
+	},
+	{
+		"\"Rank\"": "\"",
+		"\"QB\"": "\"Rachaad White (TB)\"",
+		"\"RB\"": "\"Rashee Rice (KC)\"",
+		"\"WR\"": "\"Colby Parkinson (LAR)\"",
+		"\"TE\"": "\"Chase McLaughlin (TB)\"",
+		"\"K\"": "\"Vikings\""
+	},
+	{
+		"\"Rank\"": "\"16\"",
+		"\"QB\"": "\"Caleb Williams (CHI)\"",
+		"\"RB\"": "\"Alvin Kamara (NO)\"",
+		"\"WR\"": "\"DeVonta Smith (PHI)\"",
+		"\"TE\"": "\"Hunter Henry (NE)\"",
+		"\"K\"": "\"Chris Boswell (PIT)\"",
+		"\"DEF\"": "\"Colts\""
+	},
+	{
+		"\"Rank\"": "\"17\"",
+		"\"QB\"": "\"Matthew Stafford (LAR)\"",
+		"\"RB\"": "\"James Cook (BUF)\"",
+		"\"WR\"": "\"Davante Adams (LV)\"",
+		"\"TE\"": "\"Dalton Schultz (HOU)"
+	},
+	{
+		"\"Rank\"": "\"",
+		"\"QB\"": "\"Jake Bates (DET)\"",
+		"\"RB\"": "\"Raiders\""
+	},
+	{
+		"\"Rank\"": "\"18\"",
+		"\"QB\"": "\"Baker Mayfield (TB)\"",
+		"\"RB\"": "\"David Montgomery (DET)\"",
+		"\"WR\"": "\"Chris Olave (NO)\"",
+		"\"TE\"": "\"Tucker Kraft (GB)\"",
+		"\"K\"": "\"Matt Prater (ARI)\"",
+		"\"DEF\"": "\"Jaguars\""
+	},
+	{
+		"\"Rank\"": "\"19\"",
+		"\"QB\"": "\"Justin Herbert (LAC)\"",
+		"\"RB\"": "\"Travis Etienne (JAX)\"",
+		"\"WR\"": "\"D.J. Moore (CHI)\"",
+		"\"TE\"": "\"Jonnu Smith (MIA)\"",
+		"\"K\"": "\"Brayden Narveson (GB)\"",
+		"\"DEF\"": "\"Lions\""
+	},
+	{
 		"\"Rank\"": "\"20\"",
-		"\"QB\"": "\"Nick Mullens (MIN)\"",
-		"\"RB\"": "\"Austin Ekeler (LAC)\"",
-		"\"WR\"": "\"DeAndre Hopkins (TEN)\"",
-		"\"TE\"": "\"Gerald Everett (LAC)\"",
+		"\"QB\"": "\"Aaron Rodgers (NYJ)\"",
+		"\"RB\"": "\"Rhamondre Stevenson (NE)\"",
+		"\"WR\"": "\"DK Metcalf (SEA)\"",
+		"\"TE\"": "\"Tyler Conklin (NYJ)\"",
 		"\"K\"": "\"Daniel Carlson (LV)\"",
-		"\"DEF\"": "\"Raiders\""
+		"\"DEF\"": "\"Packers\""
 	},
 	{
 		"\"Rank\"": "\"21\"",
-		"\"QB\"": "\"Gardner Minshew (IND)\"",
-		"\"RB\"": "\"Breece Hall (NYJ)\"",
-		"\"WR\"": "\"Diontae Johnson (PIT)\"",
-		"\"TE\"": "\"Tucker Kraft (GB)\"",
-		"\"K\"": "\"Nick Folk (TEN)\"",
-		"\"DEF\"": "\"Bengals\""
+		"\"QB\"": "\"Geno Smith (SEA)\"",
+		"\"RB\"": "\"Aaron Jones (MIN)\"",
+		"\"WR\"": "\"Drake London (ATL)\"",
+		"\"TE\"": "\"Noah Fant (SEA)"
+	},
+	{
+		"\"Rank\"": "\"",
+		"\"QB\"": "\"Greg Zuerlein (NYJ)\"",
+		"\"RB\"": "\"Patriots\""
 	},
 	{
 		"\"Rank\"": "\"22\"",
-		"\"QB\"": "\"Sam Howell (WAS)\"",
-		"\"RB\"": "\"Javonte Williams (DEN)\"",
-		"\"WR\"": "\"Garrett Wilson (NYJ)\"",
-		"\"TE\"": "\"Logan Thomas (WAS)\"",
-		"\"K\"": "\"Mike Badgley (DET)\"",
-		"\"DEF\"": "\"Commanders\""
+		"\"QB\"": "\"Kirk Cousins (ATL)\"",
+		"\"RB\"": "\"Brian Robinson (WAS)"
+	},
+	{
+		"\"Rank\"": "\"",
+		"\"QB\"": "\"Stefon Diggs (HOU)\"",
+		"\"RB\"": "\"T.J. Hockenson (MIN)"
+	},
+	{
+		"\"Rank\"": "\"",
+		"\"QB\"": "\"Joshua Karty (LAR)\"",
+		"\"RB\"": "\"Chargers\""
 	},
 	{
 		"\"Rank\"": "\"23\"",
 		"\"QB\"": "\"Derek Carr (NO)\"",
-		"\"RB\"": "\"James Conner (ARI)\"",
-		"\"WR\"": "\"Amari Cooper (CLE)\"",
-		"\"TE\"": "\"Michael Mayer (LV)\"",
-		"\"K\"": "\"Cameron Dicker (LAC)\"",
-		"\"DEF\"": "\"Falcons\""
+		"\"RB\"": "\"Najee Harris (PIT)\"",
+		"\"WR\"": "\"Michael Pittman Jr. (IND)\"",
+		"\"TE\"": "\"Cade Otton (TB)\"",
+		"\"K\"": "\"Wil Lutz (DEN)\"",
+		"\"DEF\"": "\"Bengals\""
 	},
 	{
 		"\"Rank\"": "\"24\"",
-		"\"QB\"": "\"Tommy DeVito (NYG)\"",
-		"\"RB\"": "\"Ezekiel Elliott (NE)\"",
-		"\"WR\"": "\"Michael Pittman Jr. (IND)\"",
-		"\"TE\"": "\"Tyler Conklin (NYJ)\"",
-		"\"K\"": "\"Ka'imi Fairbairn (HOU)\"",
-		"\"DEF\"": "\"Titans\""
+		"\"QB\"": "\"Sam Darnold (MIN)\"",
+		"\"RB\"": "\"J.K. Dobbins (LAC)\"",
+		"\"WR\"": "\"Malik Nabers (NYG)\"",
+		"\"TE\"": "\"Zach Ertz (WAS)\"",
+		"\"K\"": "\"Cam Little (JAX)\"",
+		"\"DEF\"": "\"Buccaneers\""
 	},
 	{
 		"\"Rank\"": "\"25\"",
-		"\"QB\"": "\"Desmond Ridder (ATL)\"",
-		"\"RB\"": "\"Devin Singletary (HOU)\"",
-		"\"WR\"": "\"Keenan Allen (LAC)\"",
-		"\"TE\"": "\"Chigoziem Okonkwo (TEN)\"",
-		"\"K\"": "\"Chase McLaughlin (TB)\"",
-		"\"DEF\"": "\"Rams\""
+		"\"QB\"": "\"Deshaun Watson (CLE)\"",
+		"\"RB\"": "\"Tony Pollard (TEN)\"",
+		"\"WR\"": "\"George Pickens (PIT)\"",
+		"\"TE\"": "\"Mike Gesicki (CIN)\"",
+		"\"K\"": "\"Matt Gay (IND)"
+	},
+	{
+		"\"Rank\"": "\"",
+		"\"QB\"": "\"Seahawks\""
 	},
 	{
 		"\"Rank\"": "\"26\"",
-		"\"QB\"": "\"Aidan O'Connell (LV)\"",
-		"\"RB\"": "\"Ty Chandler (MIN)\"",
-		"\"WR\"": "\"Ja'Marr Chase (CIN)\"",
-		"\"TE\"": "\"Tanner Hudson (CIN)\"",
-		"\"K\"": "\"Matt Prater (ARI)\"",
-		"\"DEF\"": "\"Giants\""
+		"\"QB\"": "\"Will Levis (TEN)\"",
+		"\"RB\"": "\"Raheem Mostert (MIA)"
+	},
+	{
+		"\"Rank\"": "\"",
+		"\"QB\"": "\"Chris Godwin (TB)\"",
+		"\"RB\"": "\"Juwan Johnson (NO)\"",
+		"\"WR\"": "\"Dustin Hopkins (CLE)\"",
+		"\"TE\"": "\"Giants\""
 	},
 	{
 		"\"Rank\"": "\"27\"",
 		"\"QB\"": "\"Bryce Young (CAR)\"",
-		"\"RB\"": "\"Aaron Jones (GB)\"",
-		"\"WR\"": "\"Terry McLaurin (WAS)\"",
-		"\"TE\"": "\"Tyler Higbee (LAR)\"",
-		"\"K\"": "\"Eddy Pineiro (CAR)\"",
-		"\"DEF\"": "\"Buccaneers\""
+		"\"RB\"": "\"Zamir White (LV)\"",
+		"\"WR\"": "\"Tank Dell (HOU)\"",
+		"\"TE\"": "\"Greg Dulcich (DEN)\"",
+		"\"K\"": "\"Nick Folk (TEN)\"",
+		"\"DEF\"": "\"Falcons\""
 	},
 	{
 		"\"Rank\"": "\"28\"",
-		"\"QB\"": "\"Bailey Zappe (NE)\"",
-		"\"RB\"": "\"Gus Edwards (BAL)\"",
-		"\"WR\"": "\"Jordan Addison (MIN)\"",
-		"\"TE\"": "\"Juwan Johnson (NO)\"",
-		"\"K\"": "\"Lucas Havrisik (LAR)\"",
-		"\"DEF\"": "\"Lions\""
+		"\"QB\"": "\"Justin Fields (PIT)\"",
+		"\"RB\"": "\"D'Andre Swift (CHI)\"",
+		"\"WR\"": "\"Amari Cooper (CLE)\"",
+		"\"TE\"": "\"David Njoku (CLE)"
+	},
+	{
+		"\"Rank\"": "\"",
+		"\"QB\"": "\"Graham Gano (NYG)\"",
+		"\"RB\"": "\"Cardinals\""
 	},
 	{
 		"\"Rank\"": "\"29\"",
-		"\"QB\"": "\"Easton Stick (LAC)\"",
-		"\"RB\"": "\"Josh Jacobs (LV)\"",
-		"\"WR\"": "\"Calvin Ridley (JAX)\"",
-		"\"TE\"": "\"Jonnu Smith (ATL)\"",
-		"\"K\"": "\"Anders Carlson (GB)\"",
-		"\"DEF\"": "\"Cardinals\""
+		"\"QB\"": "\"Bo Nix (DEN)\"",
+		"\"RB\"": "\"Zack Moss (CIN)\"",
+		"\"WR\"": "\"Jayden Reed (GB)\"",
+		"\"TE\"": "\"Gerald Everett (CHI)\"",
+		"\"K\"": "\"Will Reichard (MIN)\"",
+		"\"DEF\"": "\"Rams\""
 	},
 	{
 		"\"Rank\"": "\"30\"",
-		"\"QB\"": "\"Ryan Tannehill (TEN)\"",
-		"\"RB\"": "\"Jonathan Taylor (IND)\"",
-		"\"WR\"": "\"Chris Godwin (TB)\"",
-		"\"TE\"": "\"Noah Fant (SEA)\"",
-		"\"K\"": "\"Joey Slye (WAS)\"",
-		"\"DEF\"": "\"Panthers\""
+		"\"QB\"": "\"Daniel Jones (NYG)\"",
+		"\"RB\"": "\"Jerome Ford (CLE)\"",
+		"\"WR\"": "\"Brian Thomas Jr. (JAX)\"",
+		"\"TE\"": "\"Chigoziem Okonkwo (TEN)\"",
+		"\"K\"": "\"Joey Slye (NE)\"",
+		"\"DEF\"": "\"Titans\""
 	},
 	{
 		"\"Rank\"": "\"31\"",
-		"\"QB\"": "\"Will Levis (TEN)\"",
-		"\"RB\"": "\"Jerome Ford (CLE)\"",
-		"\"WR\"": "\"Tyler Lockett (SEA)\"",
-		"\"TE\"": "\"Dawson Knox (BUF)\"",
-		"\"K\"": "\"Randy Bullock (NYG)\"",
-		"\"DEF\"": "\"Patriots\""
+		"\"QB\"": "\"Gardner Minshew (LV)\"",
+		"\"RB\"": "\"Devin Singletary (NYG)\"",
+		"\"WR\"": "\"Zay Flowers (BAL)\"",
+		"\"TE\"": "\"Theo Johnson (NYG)\"",
+		"\"K\"": "\"Eddy Pineiro (CAR)\"",
+		"\"DEF\"": "\"Commanders\""
 	},
 	{
 		"\"Rank\"": "\"32\"",
-		"\"QB\"": "\"Kenny Pickett (PIT)\"",
-		"\"RB\"": "\"Jaylen Warren (PIT)\"",
-		"\"WR\"": "\"Zay Flowers (BAL)\"",
-		"\"TE\"": "\"Luke Musgrave (GB)\"",
-		"\"K\"": "\"Chad Ryland (NE)\"",
-		"\"DEF\"": "\"Chargers\""
+		"\"QB\"": "\"Russell Wilson (PIT)"
+	},
+	{
+		"\"Rank\"": "\"",
+		"\"QB\"": "\"Javonte Williams (DEN)\"",
+		"\"RB\"": "\"Terry McLaurin (WAS)\"",
+		"\"WR\"": "\"Ja'Tavion Sanders (CAR)\"",
+		"\"TE\"": "\"\"",
+		"\"K\"": "\"Panthers\""
 	},
 	{
 		"\"Rank\"": "\"33\"",
-		"\"QB\"": "\"Zach Wilson (NYJ)\"",
-		"\"RB\"": "\"Najee Harris (PIT)\"",
-		"\"WR\"": "\"Chris Olave (NO)\"",
-		"\"TE\"": "\"Kylen Granson (IND)\"",
+		"\"QB\"": "\"Drake Maye (NE)\"",
+		"\"RB\"": "\"Ezekiel Elliott (DAL)\"",
+		"\"WR\"": "\"Xavier Worthy (KC)\"",
+		"\"TE\"": "\"Cole Kmet (CHI)\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
 	},
 	{
 		"\"Rank\"": "\"34\"",
-		"\"QB\"": "\"C.J. Beathard (JAX)\"",
-		"\"RB\"": "\"Brian Robinson (WAS)\"",
-		"\"WR\"": "\"Drake London (ATL)\"",
-		"\"TE\"": "\"Donald Parham (LAC)\"",
-		"\"K\"": "\"\"",
-		"\"DEF\"": "\"\""
+		"\"QB\"": "\"Jacoby Brissett (NE)\"",
+		"\"RB\"": "\"Tyjae Spears (TEN)\"",
+		"\"WR\"": "\"Jameson Williams (DET)"
+	},
+	{
+		"\"Rank\"": "\"",
+		"\"QB\"": "\"Ben Sinnott (WAS)\"",
+		"\"RB\"": "\"\"",
+		"\"WR\"": "\"\""
 	},
 	{
 		"\"Rank\"": "\"35\"",
-		"\"QB\"": "\"Mason Rudolph (PIT)\"",
-		"\"RB\"": "\"Zamir White (LV)\"",
-		"\"WR\"": "\"Nico Collins (HOU)\"",
-		"\"TE\"": "\"Adam Trautman (DEN)\"",
-		"\"K\"": "\"\"",
-		"\"DEF\"": "\"\""
+		"\"QB\"": "\"Malik Willis (GB)\"",
+		"\"RB\"": "\"Jaylen Warren (PIT)\"",
+		"\"WR\"": "\"Keenan Allen (CHI)"
+	},
+	{
+		"\"Rank\"": "\"",
+		"\"QB\"": "\"Jordan Akins (CLE)\"",
+		"\"RB\"": "\"\"",
+		"\"WR\"": "\"\""
 	},
 	{
 		"\"Rank\"": "\"36\"",
-		"\"QB\"": "\"Drew Lock (SEA)\"",
-		"\"RB\"": "\"Tyjae Spears (TEN)\"",
-		"\"WR\"": "\"Noah Brown (HOU)\"",
-		"\"TE\"": "\"Brevin Jordan (HOU)\"",
+		"\"QB\"": "\"Aidan O'Connell (LV)\"",
+		"\"RB\"": "\"Austin Ekeler (WAS)\"",
+		"\"WR\"": "\"Christian Kirk (JAX)\"",
+		"\"TE\"": "\"Hayden Hurst (LAC)\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
 	},
 	{
 		"\"Rank\"": "\"37\"",
-		"\"QB\"": "\"Case Keenum (HOU)\"",
-		"\"RB\"": "\"D'Onta Foreman (CHI)\"",
-		"\"WR\"": "\"Brandin Cooks (DAL)\"",
-		"\"TE\"": "\"Daniel Bellinger (NYG)\"",
+		"\"QB\"": "\"Drew Lock (NYG)\"",
+		"\"RB\"": "\"Chuba Hubbard (CAR)\"",
+		"\"WR\"": "\"Calvin Ridley (TEN)\"",
+		"\"TE\"": "\"Luke Musgrave (GB)\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
 	},
 	{
 		"\"Rank\"": "\"38\"",
-		"\"QB\"": "\"Jacoby Brissett (WAS)\"",
-		"\"RB\"": "\"Roschon Johnson (CHI)\"",
-		"\"WR\"": "\"Joshua Palmer (LAC)\"",
-		"\"TE\"": "\"Davis Allen (LAR)\"",
-		"\"K\"": "\"\"",
-		"\"DEF\"": "\"\""
+		"\"QB\"": "\"Jameis Winston (CLE)\"",
+		"\"RB\"": "\"Gus Edwards (LAC)\"",
+		"\"WR\"": "\"Puka Nacua (LAR)"
+	},
+	{
+		"\"Rank\"": "\"",
+		"\"QB\"": "\"Kylen Granson (IND)\"",
+		"\"RB\"": "\"\"",
+		"\"WR\"": "\"\""
 	},
 	{
 		"\"Rank\"": "\"39\"",
-		"\"QB\"": "\"Joshua Dobbs (MIN)\"",
-		"\"RB\"": "\"Zach Charbonnet (SEA)\"",
-		"\"WR\"": "\"Josh Downs (IND)\"",
-		"\"TE\"": "\"Jimmy Graham (NO)\"",
-		"\"K\"": "\"\"",
-		"\"DEF\"": "\"\""
+		"\"QB\"": "\"\"",
+		"\"RB\"": "\"Nick Chubb (CLE)"
+	},
+	{
+		"\"Rank\"": "\"",
+		"\"QB\"": "\"Tee Higgins (CIN)"
+	},
+	{
+		"\"Rank\"": "\"",
+		"\"QB\"": "\"Michael Mayer (LV)\"",
+		"\"RB\"": "\"\"",
+		"\"WR\"": "\"\""
 	},
 	{
 		"\"Rank\"": "\"40\"",
-		"\"QB\"": "\"Davis Mills (HOU)\"",
-		"\"RB\"": "\"Antonio Gibson (WAS)\"",
-		"\"WR\"": "\"Jakobi Meyers (LV)\"",
-		"\"TE\"": "\"Elijah Higgins (ARI)\"",
-		"\"K\"": "\"\"",
-		"\"DEF\"": "\"\""
+		"\"QB\"": "\"\"",
+		"\"RB\"": "\"Jonathon Brooks (CAR)"
+	},
+	{
+		"\"Rank\"": "\"",
+		"\"QB\"": "\"Diontae Johnson (CAR)\"",
+		"\"RB\"": "\"Noah Gray (KC)\"",
+		"\"WR\"": "\"\"",
+		"\"TE\"": "\"\""
 	},
 	{
 		"\"Rank\"": "\"41\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Rhamondre Stevenson (NE)\"",
-		"\"WR\"": "\"Jaxon Smith-Njigba (SEA)\"",
-		"\"TE\"": "\"\"",
-		"\"K\"": "\"\"",
-		"\"DEF\"": "\"\""
+		"\"RB\"": "\"Jordan Mason (SF)\"",
+		"\"WR\"": "\"Ladd McConkey (LAC)\"",
+		"\"TE\"": "\"Tanner Hudson (CIN)"
+	},
+	{
+		"\"Rank\"": "\"",
+		"\"QB\"": "\"\"",
+		"\"RB\"": "\"\""
 	},
 	{
 		"\"Rank\"": "\"42\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Alexander Mattison (MIN)\"",
-		"\"WR\"": "\"Odell Beckham (BAL)\"",
-		"\"TE\"": "\"\"",
+		"\"RB\"": "\"Blake Corum (LAR)\"",
+		"\"WR\"": "\"Christian Watson (GB)\"",
+		"\"TE\"": "\"Dawson Knox (BUF)\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
 	},
 	{
 		"\"Rank\"": "\"43\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Zack Moss (IND)\"",
-		"\"WR\"": "\"Curtis Samuel (WAS)\"",
-		"\"TE\"": "\"\"",
-		"\"K\"": "\"\"",
-		"\"DEF\"": "\"\""
+		"\"RB\"": "\"Chase Brown (CIN)\"",
+		"\"WR\"": "\"Rashid Shaheed (NO)"
+	},
+	{
+		"\"Rank\"": "\"",
+		"\"QB\"": "\"\"",
+		"\"RB\"": "\"\"",
+		"\"WR\"": "\"\""
 	},
 	{
 		"\"Rank\"": "\"44\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Kareem Hunt (CLE)\"",
-		"\"WR\"": "\"Jayden Reed (GB)\"",
+		"\"RB\"": "\"Rico Dowdle (DAL)\"",
+		"\"WR\"": "\"Jaxon Smith-Njigba (SEA)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -398,8 +473,8 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	{
 		"\"Rank\"": "\"45\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Tyler Allgeier (ATL)\"",
-		"\"WR\"": "\"Romeo Doubs (GB)\"",
+		"\"RB\"": "\"Trey Benson (ARI)\"",
+		"\"WR\"": "\"DeAndre Hopkins (TEN)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -407,26 +482,32 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	{
 		"\"Rank\"": "\"46\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Chase Brown (CIN)\"",
-		"\"WR\"": "\"Christian Watson (GB)\"",
-		"\"TE\"": "\"\"",
-		"\"K\"": "\"\"",
-		"\"DEF\"": "\"\""
+		"\"RB\"": "\"Tyler Allgeier (ATL)\"",
+		"\"WR\"": "\"Joshua Palmer (LAC)"
+	},
+	{
+		"\"Rank\"": "\"",
+		"\"QB\"": "\"\"",
+		"\"RB\"": "\"\"",
+		"\"WR\"": "\"\""
 	},
 	{
 		"\"Rank\"": "\"47\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Rico Dowdle (DAL)\"",
-		"\"WR\"": "\"Tyler Boyd (CIN)\"",
-		"\"TE\"": "\"\"",
-		"\"K\"": "\"\"",
-		"\"DEF\"": "\"\""
+		"\"RB\"": "\"Zach Charbonnet (SEA)\"",
+		"\"WR\"": "\"Hollywood Brown (KC)"
+	},
+	{
+		"\"Rank\"": "\"",
+		"\"QB\"": "\"\"",
+		"\"RB\"": "\"\"",
+		"\"WR\"": "\"\""
 	},
 	{
 		"\"Rank\"": "\"48\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Trey Sermon (IND)\"",
-		"\"WR\"": "\"Demario Douglas (NE)\"",
+		"\"RB\"": "\"Ty Chandler (MIN)\"",
+		"\"WR\"": "\"Keon Coleman (BUF)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -434,8 +515,8 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	{
 		"\"Rank\"": "\"49\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"D'Ernest Johnson (JAX)\"",
-		"\"WR\"": "\"Adam Thielen (CAR)\"",
+		"\"RB\"": "\"Jaleel McLaughlin (DEN)\"",
+		"\"WR\"": "\"Khalil Shakir (BUF)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -443,8 +524,8 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	{
 		"\"Rank\"": "\"50\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Dameon Pierce (HOU)\"",
-		"\"WR\"": "\"Rashid Shaheed (NO)\"",
+		"\"RB\"": "\"Alexander Mattison (LV)\"",
+		"\"WR\"": "\"Brandin Cooks (DAL)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -452,17 +533,20 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	{
 		"\"Rank\"": "\"51\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Tyler Goodson (IND)\"",
-		"\"WR\"": "\"George Pickens (PIT)\"",
-		"\"TE\"": "\"\"",
-		"\"K\"": "\"\"",
-		"\"DEF\"": "\"\""
+		"\"RB\"": "\"Bucky Irving (TB)\"",
+		"\"WR\"": "\"Tyler Lockett (SEA)"
+	},
+	{
+		"\"Rank\"": "\"",
+		"\"QB\"": "\"\"",
+		"\"RB\"": "\"\"",
+		"\"WR\"": "\"\""
 	},
 	{
 		"\"Rank\"": "\"52\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"A.J. Dillon (GB)\"",
-		"\"WR\"": "\"Michael Wilson (ARI)\"",
+		"\"RB\"": "\"Tank Bigsby (JAX)\"",
+		"\"WR\"": "\"Courtland Sutton (DEN)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -470,17 +554,20 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	{
 		"\"Rank\"": "\"53\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Clyde Edwards-Helaire (KC)\"",
-		"\"WR\"": "\"Jerry Jeudy (DEN)\"",
-		"\"TE\"": "\"\"",
-		"\"K\"": "\"\"",
-		"\"DEF\"": "\"\""
+		"\"RB\"": "\"Jeff Wilson (MIA)\"",
+		"\"WR\"": "\"Rome Odunze (CHI)"
+	},
+	{
+		"\"Rank\"": "\"",
+		"\"QB\"": "\"\"",
+		"\"RB\"": "\"\"",
+		"\"WR\"": "\"\""
 	},
 	{
 		"\"Rank\"": "\"54\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Jerick McKinnon (KC)\"",
-		"\"WR\"": "\"Dontayvion Wicks (GB)\"",
+		"\"RB\"": "\"Justice Hill (BAL)\"",
+		"\"WR\"": "\"Romeo Doubs (GB)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -488,8 +575,8 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	{
 		"\"Rank\"": "\"55\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Kenneth Gainwell (PHI)\"",
-		"\"WR\"": "\"Gabe Davis (BUF)\"",
+		"\"RB\"": "\"Ray Davis (BUF)\"",
+		"\"WR\"": "\"Jakobi Meyers (LV)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -497,8 +584,8 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	{
 		"\"Rank\"": "\"56\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Samaje Perine (DEN)\"",
-		"\"WR\"": "\"Elijah Moore (CLE)\"",
+		"\"RB\"": "\"Tyrone Tracy (NYG)\"",
+		"\"WR\"": "\"Demarcus Robinson (LAR)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -506,17 +593,20 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	{
 		"\"Rank\"": "\"57\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Miles Sanders (CAR)\"",
-		"\"WR\"": "\"Jameson Williams (DET)\"",
-		"\"TE\"": "\"\"",
-		"\"K\"": "\"\"",
-		"\"DEF\"": "\"\""
+		"\"RB\"": "\"Jamaal Williams (NO)"
+	},
+	{
+		"\"Rank\"": "\"",
+		"\"QB\"": "\"Gabe Davis (JAX)\"",
+		"\"RB\"": "\"\"",
+		"\"WR\"": "\"\"",
+		"\"TE\"": "\"\""
 	},
 	{
 		"\"Rank\"": "\"58\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Royce Freeman (LAR)\"",
-		"\"WR\"": "\"Zay Jones (JAX)\"",
+		"\"RB\"": "\"Jaylen Wright (MIA)\"",
+		"\"WR\"": "\"Curtis Samuel (BUF)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -524,26 +614,32 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	{
 		"\"Rank\"": "\"59\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Justice Hill (BAL)\"",
-		"\"WR\"": "\"Jonathan Mingo (CAR)\"",
-		"\"TE\"": "\"\"",
-		"\"K\"": "\"\"",
-		"\"DEF\"": "\"\""
+		"\"RB\"": "\"Khalil Herbert (CHI)\"",
+		"\"WR\"": "\"Jerry Jeudy (CLE)"
+	},
+	{
+		"\"Rank\"": "\"",
+		"\"QB\"": "\"\"",
+		"\"RB\"": "\"\"",
+		"\"WR\"": "\"\""
 	},
 	{
 		"\"Rank\"": "\"60\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Jaleel McLaughlin (DEN)\"",
-		"\"WR\"": "\"Jahan Dotson (WAS)\"",
-		"\"TE\"": "\"\"",
-		"\"K\"": "\"\"",
-		"\"DEF\"": "\"\""
+		"\"RB\"": "\"Antonio Gibson (NE)"
+	},
+	{
+		"\"Rank\"": "\"",
+		"\"QB\"": "\"Alec Pierce (IND)\"",
+		"\"RB\"": "\"\"",
+		"\"WR\"": "\"\"",
+		"\"TE\"": "\"\""
 	},
 	{
 		"\"Rank\"": "\"61\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Latavius Murray (BUF)\"",
-		"\"WR\"": "\"Wan'Dale Robinson (NYG)\"",
+		"\"RB\"": "\"Braelon Allen (NYJ)\"",
+		"\"WR\"": "\"Michael Wilson (ARI)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -551,8 +647,8 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	{
 		"\"Rank\"": "\"62\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Elijah Mitchell (SF)\"",
-		"\"WR\"": "\"Jalin Hyatt (NYG)\"",
+		"\"RB\"": "\"Carson Steele (KC)\"",
+		"\"WR\"": "\"Jalen McMillan (TB)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -560,8 +656,8 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	{
 		"\"Rank\"": "\"63\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Jeff Wilson (MIA)\"",
-		"\"WR\"": "\"Quentin Johnston (LAC)\"",
+		"\"RB\"": "\"Trey Sermon (IND)\"",
+		"\"WR\"": "\"Allen Lazard (NYJ)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -569,8 +665,8 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	{
 		"\"Rank\"": "\"64\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Khalil Herbert (CHI)\"",
-		"\"WR\"": "\"Tutu Atwell (LAR)\"",
+		"\"RB\"": "\"Kenneth Gainwell (PHI)\"",
+		"\"WR\"": "\"Tyler Johnson (LAR)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -578,8 +674,8 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	{
 		"\"Rank\"": "\"65\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Jamaal Williams (NO)\"",
-		"\"WR\"": "\"Alec Pierce (IND)\"",
+		"\"RB\"": "\"Dameon Pierce (HOU)\"",
+		"\"WR\"": "\"Adonai Mitchell (IND)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -587,8 +683,8 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	{
 		"\"Rank\"": "\"66\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Dalvin Cook (NYJ)\"",
-		"\"WR\"": "\"Khalil Shakir (BUF)\"",
+		"\"RB\"": "\"Emanuel Wilson (GB)\"",
+		"\"WR\"": "\"Greg Dortch (ARI)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -596,8 +692,8 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	{
 		"\"Rank\"": "\"67\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Isaiah Spiller (LAC)\"",
-		"\"WR\"": "\"D.J. Montgomery (IND)\"",
+		"\"RB\"": "\"Miles Sanders (CAR)\"",
+		"\"WR\"": "\"Adam Thielen (CAR)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -605,17 +701,20 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	{
 		"\"Rank\"": "\"68\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Michael Carter (ARI)\"",
-		"\"WR\"": "\"Rondale Moore (ARI)\"",
-		"\"TE\"": "\"\"",
-		"\"K\"": "\"\"",
-		"\"DEF\"": "\"\""
+		"\"RB\"": "\"Audric Estime (DEN)"
+	},
+	{
+		"\"Rank\"": "\"",
+		"\"QB\"": "\"Wan'Dale Robinson (NYG)\"",
+		"\"RB\"": "\"\"",
+		"\"WR\"": "\"\"",
+		"\"TE\"": "\"\""
 	},
 	{
 		"\"Rank\"": "\"69\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Chris Rodriguez (WAS)\"",
-		"\"WR\"": "\"Parker Washington (JAX)\"",
+		"\"RB\"": "\"Jordan Mims (NO)\"",
+		"\"WR\"": "\"Demario Douglas (NE)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -623,8 +722,8 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	{
 		"\"Rank\"": "\"70\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Emari Demercado (ARI)\"",
-		"\"WR\"": "\"Rashod Bateman (BAL)\"",
+		"\"RB\"": "\"Pierre Strong Jr. (CLE)\"",
+		"\"WR\"": "\"Darnell Mooney (ATL)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -632,17 +731,20 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	{
 		"\"Rank\"": "\"71\"",
 		"\"QB\"": "\"\"",
+		"\"RB\"": "\"Roschon Johnson (CHI)\"",
+		"\"WR\"": "\"Jordan Addison (MIN)"
+	},
+	{
+		"\"Rank\"": "\"",
+		"\"QB\"": "\"\"",
 		"\"RB\"": "\"\"",
-		"\"WR\"": "\"Darnell Mooney (CHI)\"",
-		"\"TE\"": "\"\"",
-		"\"K\"": "\"\"",
-		"\"DEF\"": "\"\""
+		"\"WR\"": "\"\""
 	},
 	{
 		"\"Rank\"": "\"72\"",
 		"\"QB\"": "\"\"",
 		"\"RB\"": "\"\"",
-		"\"WR\"": "\"Josh Reynolds (DET)\"",
+		"\"WR\"": "\"Rashod Bateman (BAL)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -651,7 +753,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 		"\"Rank\"": "\"73\"",
 		"\"QB\"": "\"\"",
 		"\"RB\"": "\"\"",
-		"\"WR\"": "\"Robert Woods (HOU)\"",
+		"\"WR\"": "\"Andrei Iosivas (CIN)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -660,16 +762,19 @@ const fourForFourRestOfSeasonRedraftRankings = [
 		"\"Rank\"": "\"74\"",
 		"\"QB\"": "\"\"",
 		"\"RB\"": "\"\"",
-		"\"WR\"": "\"Marquise Brown (ARI)\"",
-		"\"TE\"": "\"\"",
-		"\"K\"": "\"\"",
-		"\"DEF\"": "\"\""
+		"\"WR\"": "\"Mike Williams (NYJ)"
+	},
+	{
+		"\"Rank\"": "\"",
+		"\"QB\"": "\"\"",
+		"\"RB\"": "\"\"",
+		"\"WR\"": "\"\""
 	},
 	{
 		"\"Rank\"": "\"75\"",
 		"\"QB\"": "\"\"",
 		"\"RB\"": "\"\"",
-		"\"WR\"": "\"Darius Slayton (NYG)\"",
+		"\"WR\"": "\"Dontayvion Wicks (GB)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -678,7 +783,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 		"\"Rank\"": "\"76\"",
 		"\"QB\"": "\"\"",
 		"\"RB\"": "\"\"",
-		"\"WR\"": "\"Michael Gallup (DAL)\"",
+		"\"WR\"": "\"Ja'Lynn Polk (NE)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -687,16 +792,19 @@ const fourForFourRestOfSeasonRedraftRankings = [
 		"\"Rank\"": "\"77\"",
 		"\"QB\"": "\"\"",
 		"\"RB\"": "\"\"",
-		"\"WR\"": "\"K.J. Osborn (MIN)\"",
-		"\"TE\"": "\"\"",
-		"\"K\"": "\"\"",
-		"\"DEF\"": "\"\""
+		"\"WR\"": "\"Josh Downs (IND)"
+	},
+	{
+		"\"Rank\"": "\"",
+		"\"QB\"": "\"\"",
+		"\"RB\"": "\"\"",
+		"\"WR\"": "\"\""
 	},
 	{
 		"\"Rank\"": "\"78\"",
 		"\"QB\"": "\"\"",
 		"\"RB\"": "\"\"",
-		"\"WR\"": "\"Justin Watson (KC)\"",
+		"\"WR\"": "\"Xavier Legette (CAR)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -705,7 +813,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 		"\"Rank\"": "\"79\"",
 		"\"QB\"": "\"\"",
 		"\"RB\"": "\"\"",
-		"\"WR\"": "\"D.J. Chark (CAR)\"",
+		"\"WR\"": "\"Mack Hollins (BUF)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -714,7 +822,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 		"\"Rank\"": "\"80\"",
 		"\"QB\"": "\"\"",
 		"\"RB\"": "\"\"",
-		"\"WR\"": "\"JuJu Smith-Schuster (NE)\"",
+		"\"WR\"": "\"Tyler Boyd (TEN)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -723,7 +831,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 		"\"Rank\"": "\"81\"",
 		"\"QB\"": "\"\"",
 		"\"RB\"": "\"\"",
-		"\"WR\"": "\"Marvin Mims (DEN)\"",
+		"\"WR\"": "\"Jalen Tolbert (DAL)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -732,16 +840,19 @@ const fourForFourRestOfSeasonRedraftRankings = [
 		"\"Rank\"": "\"82\"",
 		"\"QB\"": "\"\"",
 		"\"RB\"": "\"\"",
-		"\"WR\"": "\"Treylon Burks (TEN)\"",
-		"\"TE\"": "\"\"",
-		"\"K\"": "\"\"",
-		"\"DEF\"": "\"\""
+		"\"WR\"": "\"Josh Reynolds (DEN)"
+	},
+	{
+		"\"Rank\"": "\"",
+		"\"QB\"": "\"\"",
+		"\"RB\"": "\"\"",
+		"\"WR\"": "\"\""
 	},
 	{
 		"\"Rank\"": "\"83\"",
 		"\"QB\"": "\"\"",
 		"\"RB\"": "\"\"",
-		"\"WR\"": "\"Demarcus Robinson (LAR)\"",
+		"\"WR\"": "\"Quentin Johnston (LAC)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -750,7 +861,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 		"\"Rank\"": "\"84\"",
 		"\"QB\"": "\"\"",
 		"\"RB\"": "\"\"",
-		"\"WR\"": "\"DeVante Parker (NE)\"",
+		"\"WR\"": "\"Luke McCaffrey (WAS)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -759,7 +870,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 		"\"Rank\"": "\"85\"",
 		"\"QB\"": "\"\"",
 		"\"RB\"": "\"\"",
-		"\"WR\"": "\"Greg Dortch (ARI)\"",
+		"\"WR\"": "\"Jahan Dotson (PHI)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -768,7 +879,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 		"\"Rank\"": "\"86\"",
 		"\"QB\"": "\"\"",
 		"\"RB\"": "\"\"",
-		"\"WR\"": "\"Tre Tucker (LV)\"",
+		"\"WR\"": "\"Elijah Moore (CLE)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -777,19 +888,151 @@ const fourForFourRestOfSeasonRedraftRankings = [
 		"\"Rank\"": "\"87\"",
 		"\"QB\"": "\"\"",
 		"\"RB\"": "\"\"",
-		"\"WR\"": "\"Kadarius Toney (KC)\"",
-		"\"TE\"": "\"\"",
-		"\"K\"": "\"\"",
-		"\"DEF\"": "\"\""
+		"\"WR\"": "\"Ricky Pearsall (SF)"
+	},
+	{
+		"\"Rank\"": "\"",
+		"\"QB\"": "\"\"",
+		"\"RB\"": "\"\"",
+		"\"WR\"": "\"\""
 	},
 	{
 		"\"Rank\"": "\"88\"",
 		"\"QB\"": "\"\"",
 		"\"RB\"": "\"\"",
-		"\"WR\"": "\"A.T. Perry (NO)\"",
+		"\"WR\"": "\"A.T. Perry (NO)"
+	},
+	{
+		"\"Rank\"": "\"",
+		"\"QB\"": "\"\"",
+		"\"RB\"": "\"\"",
+		"\"WR\"": "\"\""
+	},
+	{
+		"\"Rank\"": "\"89\"",
+		"\"QB\"": "\"\"",
+		"\"RB\"": "\"\"",
+		"\"WR\"": "\"Malik Washington (MIA)"
+	},
+	{
+		"\"Rank\"": "\"",
+		"\"QB\"": "\"\"",
+		"\"RB\"": "\"\"",
+		"\"WR\"": "\"\""
+	},
+	{
+		"\"Rank\"": "\"90\"",
+		"\"QB\"": "\"\"",
+		"\"RB\"": "\"\"",
+		"\"WR\"": "\"Jalin Hyatt (NYG)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
+	},
+	{
+		"\"Rank\"": "\"91\"",
+		"\"QB\"": "\"\"",
+		"\"RB\"": "\"\"",
+		"\"WR\"": "\"Ray-Ray McCloud (ATL)\"",
+		"\"TE\"": "\"\"",
+		"\"K\"": "\"\"",
+		"\"DEF\"": "\"\""
+	},
+	{
+		"\"Rank\"": "\"92\"",
+		"\"QB\"": "\"\"",
+		"\"RB\"": "\"\"",
+		"\"WR\"": "\"Darius Slayton (NYG)"
+	},
+	{
+		"\"Rank\"": "\"",
+		"\"QB\"": "\"\"",
+		"\"RB\"": "\"\"",
+		"\"WR\"": "\"\""
+	},
+	{
+		"\"Rank\"": "\"93\"",
+		"\"QB\"": "\"\"",
+		"\"RB\"": "\"\"",
+		"\"WR\"": "\"Jonathan Mingo (CAR)\"",
+		"\"TE\"": "\"\"",
+		"\"K\"": "\"\"",
+		"\"DEF\"": "\"\""
+	},
+	{
+		"\"Rank\"": "\"94\"",
+		"\"QB\"": "\"\"",
+		"\"RB\"": "\"\"",
+		"\"WR\"": "\"Jalen Nailor (MIN)"
+	},
+	{
+		"\"Rank\"": "\"",
+		"\"QB\"": "\"\"",
+		"\"RB\"": "\"\"",
+		"\"WR\"": "\"\""
+	},
+	{
+		"\"Rank\"": "\"95\"",
+		"\"QB\"": "\"\"",
+		"\"RB\"": "\"\"",
+		"\"WR\"": "\"Jauan Jennings (SF)"
+	},
+	{
+		"\"Rank\"": "\"",
+		"\"QB\"": "\"\"",
+		"\"RB\"": "\"\"",
+		"\"WR\"": "\"\""
+	},
+	{
+		"\"Rank\"": "\"96\"",
+		"\"QB\"": "\"\"",
+		"\"RB\"": "\"\"",
+		"\"WR\"": "\"Tre Tucker (LV)\"",
+		"\"TE\"": "\"\"",
+		"\"K\"": "\"\"",
+		"\"DEF\"": "\"\""
+	},
+	{
+		"\"Rank\"": "\"97\"",
+		"\"QB\"": "\"\"",
+		"\"RB\"": "\"\"",
+		"\"WR\"": "\"Devaughn Vele (DEN)"
+	},
+	{
+		"\"Rank\"": "\"",
+		"\"QB\"": "\"\"",
+		"\"RB\"": "\"\"",
+		"\"WR\"": "\"\""
+	},
+	{
+		"\"Rank\"": "\"98\"",
+		"\"QB\"": "\"\"",
+		"\"RB\"": "\"\"",
+		"\"WR\"": "\"K.J. Osborn (NE)\"",
+		"\"TE\"": "\"\"",
+		"\"K\"": "\"\"",
+		"\"DEF\"": "\"\""
+	},
+	{
+		"\"Rank\"": "\"99\"",
+		"\"QB\"": "\"\"",
+		"\"RB\"": "\"\"",
+		"\"WR\"": "\"Ashton Dulin (IND)\"",
+		"\"TE\"": "\"\"",
+		"\"K\"": "\"\"",
+		"\"DEF\"": "\"\""
+	},
+	{
+		"\"Rank\"": "\"100\"",
+		"\"QB\"": "\"\"",
+		"\"RB\"": "\"\"",
+		"\"WR\"": "\"Kendrick Bourne (NE)"
+	},
+	{
+		"\"Rank\"": "\"",
+		"\"QB\"": "\"\"",
+		"\"RB\"": "\"\"",
+		"\"WR\"": "\"\""
 	}
 ]
 
