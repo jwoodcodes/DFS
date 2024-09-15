@@ -262,13 +262,13 @@ let superFlexArray = tempSuperFlexArray.sort(halfCompare);
 //   };
 // });
 //
-// superFlexCSVArray = superFlexArray.map(obj => {
-//   return {
-//     name: obj.name,
-//     team: obj.team,
-//     appHalfProjectedPoints: obj.appHalfProjectedPoints,
-//   };
-// });
+superFlexCSVArray = superFlexArray.map(obj => {
+  return {
+    name: obj.name,
+    team: obj.team,
+    appHalfProjectedPoints: obj.appHalfProjectedPoints,
+  };
+});
 
 // console.log(qbCSVArray);
 // console.log(rbCSVArray);
@@ -286,7 +286,7 @@ function arrayToCSV(array) {
 
   try {
     const csv = parse(array, opts);
-    fs.writeFileSync('week1-24-superFlexHalfProjectionArray.csv', csv);
+    fs.writeFileSync('week2-24-superFlexHalfProjectionArray.csv', csv);
     console.log('CSV file successfully created');
   } catch (err) {
     console.error(err);
@@ -301,7 +301,7 @@ function arrayToCSV(array) {
 // arrayToCSV(teCSVArray);
 // arrayToCSV(tePPRCSVArray);
 // arrayToCSV(flexCSVArray);
-// arrayToCSV(superFlexCSVArray);
+arrayToCSV(superFlexCSVArray);
 //
 //
 
