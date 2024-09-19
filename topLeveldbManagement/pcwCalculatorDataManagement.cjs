@@ -1793,8 +1793,7 @@ const testfunc = async function () {
       if (curMonth > 8) {
         //setting this.rvRedraftPositionRank
         // console.log(sanitizedFourForFourRedraftPlayerName)
-        
-        
+
         if (sanitizedFourForFourRedraftPlayerName === sanitizedFCPlayerName) {
           // console.log(sanitizedFourForFourRedraftPlayerName)
           let initialTempPosRank = fourForFourRestOfSeasonRedraftPlayerGroup[
@@ -1804,7 +1803,6 @@ const testfunc = async function () {
           this.rvRedraftPositionRank = tempPosRank;
           // console.log(sanitizedFCPlayerName, this.rvRedraftPositionRank)
 
-          
           //
           // setting this.rvRedraftTier
           if (fcPosition === 'QB') {

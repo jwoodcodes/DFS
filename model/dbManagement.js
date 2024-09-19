@@ -301,7 +301,7 @@ function arrayToCSV(array) {
 // arrayToCSV(teCSVArray);
 // arrayToCSV(tePPRCSVArray);
 // arrayToCSV(flexCSVArray);
-arrayToCSV(superFlexCSVArray);
+// arrayToCSV(superFlexCSVArray);
 //
 //
 
@@ -344,4 +344,4 @@ async function runAllProjections() {
 
 //
 
-// runAllProjections().catch(console.dir);
+runAllProjections().catch(console.dir);
