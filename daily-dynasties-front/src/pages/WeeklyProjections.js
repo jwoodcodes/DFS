@@ -170,7 +170,7 @@ export default function WeeklyProjections(data) {
   });
   let newArray = [...qbArray, ...rbArray, ...wrArray, ...teArray];
   let flexArray = [...rbArray, ...wrArray, ...teArray];
-  // console.log(newArray[0]);
+  console.log(newArray[0]);
   const curWeek = newArray[0].currentWeek;
 
   function overall(event) {
