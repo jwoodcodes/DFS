@@ -344,4 +344,4 @@ async function runAllProjections() {
 
 //
 
-runAllProjections().catch(console.dir);
+// runAllProjections().catch(console.dir);

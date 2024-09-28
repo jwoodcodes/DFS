@@ -1077,11 +1077,137 @@ const populateTeamObjects = function (passedInTeam) {
     team => {
       // console.log(team['"posteam"'])
       // console.log(passedInTeam.teamABV)
+
+      if(passedInTeam.teamABV === "LAR" && team['"posteam"'].slice(1, -1) === "LA") {
+        // console.log(team)
+        passedInTeam.teamPointsPerGameLastFiveWeeks = 19.0;
+      }
+
       if (team['"posteam"'].slice(1, -1) === passedInTeam.teamABV) {
         // console.log(team)
         let tempOne = +team['"ppg"'];
         // console.log(tempOne)
         passedInTeam.teamPointsPerGameLastFiveWeeks = tempOne;
+        if(passedInTeam.teamABV === "ARI") {
+          // console.log(team)
+          passedInTeam.teamPointsPerGameLastFiveWeeks = 27.3;
+        }
+        if(passedInTeam.teamABV === "ATL") {
+          // console.log(team)
+          passedInTeam.teamPointsPerGameLastFiveWeeks = 16.3;
+        }
+        if(passedInTeam.teamABV === "BAL") {
+          // console.log(team)
+          passedInTeam.teamPointsPerGameLastFiveWeeks = 23.7;
+        }
+        if(passedInTeam.teamABV === "BUF") {
+          // console.log(team)
+          passedInTeam.teamPointsPerGameLastFiveWeeks = 37.3;
+        }
+        if(passedInTeam.teamABV === "CAR") {
+          // console.log(team)
+          passedInTeam.teamPointsPerGameLastFiveWeeks = 16.3;
+        }
+        if(passedInTeam.teamABV === "CHI") {
+          // console.log(team)
+          passedInTeam.teamPointsPerGameLastFiveWeeks = 17.7;
+        }
+        if(passedInTeam.teamABV === "CIN") {
+          // console.log(team)
+          passedInTeam.teamPointsPerGameLastFiveWeeks = 22.7;
+        }
+        if(passedInTeam.teamABV === "CLE") {
+          // console.log(team)
+          passedInTeam.teamPointsPerGameLastFiveWeeks = 16.7;
+        }
+        if(passedInTeam.teamABV === "DAL") {
+          // console.log(team)
+          passedInTeam.teamPointsPerGameLastFiveWeeks = 24.3;
+        }
+        if(passedInTeam.teamABV === "DEN") {
+          // console.log(team)
+          passedInTeam.teamPointsPerGameLastFiveWeeks = 17.3;
+        }
+        if(passedInTeam.teamABV === "DET") {
+          // console.log(team)
+          passedInTeam.teamPointsPerGameLastFiveWeeks = 20.7;
+        }
+        if(passedInTeam.teamABV === "GB") {
+          // console.log(team)
+          passedInTeam.teamPointsPerGameLastFiveWeeks = 25.0;
+        }
+        if(passedInTeam.teamABV === "HOU") {
+          // console.log(team)
+          passedInTeam.teamPointsPerGameLastFiveWeeks = 18.3;
+        }
+        if(passedInTeam.teamABV === "IND") {
+          // console.log(team)
+          passedInTeam.teamPointsPerGameLastFiveWeeks = 19.3;
+        }
+        if(passedInTeam.teamABV === "JAX") {
+          // console.log(team)
+          passedInTeam.teamPointsPerGameLastFiveWeeks = 13.3;
+        }
+        if(passedInTeam.teamABV === "LV") {
+          // console.log(team)
+          passedInTeam.teamPointsPerGameLastFiveWeeks = 19.3;
+        }
+        if(passedInTeam.teamABV === "LAC") {
+          // console.log(team)
+          passedInTeam.teamPointsPerGameLastFiveWeeks = 19.3;
+        }
+        if(passedInTeam.teamABV === "MIA") {
+          // console.log(team)
+          passedInTeam.teamPointsPerGameLastFiveWeeks = 11;
+        }
+        if(passedInTeam.teamABV === "MIN") {
+          // console.log(team)
+          passedInTeam.teamPointsPerGameLastFiveWeeks = 28.3;
+        }
+        if(passedInTeam.teamABV === "NE") {
+          // console.log(team)
+          passedInTeam.teamPointsPerGameLastFiveWeeks = 13;
+        }
+        if(passedInTeam.teamABV === "NO") {
+          // console.log(team)
+          passedInTeam.teamPointsPerGameLastFiveWeeks = 34.3;
+        }
+        if(passedInTeam.teamABV === "NYG") {
+          // console.log(team)
+          passedInTeam.teamPointsPerGameLastFiveWeeks = 15.0;
+        }
+        if(passedInTeam.teamABV === "NYJ") {
+          // console.log(team)
+          passedInTeam.teamPointsPerGameLastFiveWeeks = 22.3;
+        }
+        if(passedInTeam.teamABV === "PHI") {
+          // console.log(team)
+          passedInTeam.teamPointsPerGameLastFiveWeeks = 23.3;
+        }
+        if(passedInTeam.teamABV === "PIT") {
+          // console.log(team)
+          passedInTeam.teamPointsPerGameLastFiveWeeks = 17.0;
+        }
+        if(passedInTeam.teamABV === "SF") {
+          // console.log(team)
+          passedInTeam.teamPointsPerGameLastFiveWeeks = 24.3;
+        }
+        if(passedInTeam.teamABV === "SEA") {
+          // console.log(team)
+          passedInTeam.teamPointsPerGameLastFiveWeeks = 24.3;
+        }
+        if(passedInTeam.teamABV === "TB") {
+          // console.log(team)
+          passedInTeam.teamPointsPerGameLastFiveWeeks = 21.3;
+        }
+        if(passedInTeam.teamABV === "TEN") {
+          // console.log(team)
+          passedInTeam.teamPointsPerGameLastFiveWeeks = 16;
+        }
+        if(passedInTeam.teamABV === "WAS") {
+          // console.log(team)
+          passedInTeam.teamPointsPerGameLastFiveWeeks = 26.3;
+        }
       }
     }
   );
