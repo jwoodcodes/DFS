@@ -3601,4 +3601,5 @@ const rvDynastyRankingsTEP = [
 	},
 	
 ]
+
 module.exports = rvDynastyRankingsTEP;

@@ -128,7 +128,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	{
 		"\"Rank\"": "\"15\"",
 		"\"QB\"": "\"Geno Smith (SEA)\"",
-		"\"RB\"": "\"Josh Jacobs (GB)\"",
+		"\"RB\"": "\"Jordan Mason (SF)\"",
 		"\"WR\"": "\"Mike Evans (TB)\"",
 		"\"TE\"": "\"Cole Kmet (CHI)\"",
 		"\"K\"": "\"Cairo Santos (CHI)\"",
@@ -137,7 +137,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	{
 		"\"Rank\"": "\"16\"",
 		"\"QB\"": "\"Justin Fields (PIT)\"",
-		"\"RB\"": "\"Jordan Mason (SF)\"",
+		"\"RB\"": "\"Josh Jacobs (GB)\"",
 		"\"WR\"": "\"Chris Olave (NO)\"",
 		"\"TE\"": "\"Mike Gesicki (CIN)\"",
 		"\"K\"": "\"Cameron Dicker (LAC)\"",
@@ -173,7 +173,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	{
 		"\"Rank\"": "\"20\"",
 		"\"QB\"": "\"Kirk Cousins (ATL)\"",
-		"\"RB\"": "\"Christian McCaffrey (SF)\"",
+		"\"RB\"": "\"Kenneth Walker (SEA)\"",
 		"\"WR\"": "\"Drake London (ATL)\"",
 		"\"TE\"": "\"Taysom Hill (NO)\"",
 		"\"K\"": "\"Matt Gay (IND)\"",
@@ -182,7 +182,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	{
 		"\"Rank\"": "\"21\"",
 		"\"QB\"": "\"Caleb Williams (CHI)\"",
-		"\"RB\"": "\"Kenneth Walker (SEA)\"",
+		"\"RB\"": "\"Christian McCaffrey (SF)\"",
 		"\"WR\"": "\"D.J. Moore (CHI)\"",
 		"\"TE\"": "\"Zach Ertz (WAS)\"",
 		"\"K\"": "\"Austin Seibert (WAS)\"",
@@ -273,7 +273,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 		"\"Rank\"": "\"31\"",
 		"\"QB\"": "\"Andy Dalton (CAR)\"",
 		"\"RB\"": "\"Chuba Hubbard (CAR)\"",
-		"\"WR\"": "\"Tank Dell (HOU)\"",
+		"\"WR\"": "\"Brian Thomas Jr. (JAX)\"",
 		"\"TE\"": "\"Juwan Johnson (NO)\"",
 		"\"K\"": "\"Eddy Pineiro (CAR)\"",
 		"\"DEF\"": "\"Titans\""
@@ -282,7 +282,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 		"\"Rank\"": "\"32\"",
 		"\"QB\"": "\"Tua Tagovailoa (MIA)\"",
 		"\"RB\"": "\"Carson Steele (KC)\"",
-		"\"WR\"": "\"Brian Thomas Jr. (JAX)\"",
+		"\"WR\"": "\"Jaxon Smith-Njigba (SEA)\"",
 		"\"TE\"": "\"Hayden Hurst (LAC)\"",
 		"\"K\"": "\"Graham Gano (NYG)\"",
 		"\"DEF\"": "\"Commanders\""
@@ -291,7 +291,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 		"\"Rank\"": "\"33\"",
 		"\"QB\"": "\"Jacoby Brissett (NE)\"",
 		"\"RB\"": "\"Braelon Allen (NYJ)\"",
-		"\"WR\"": "\"Jaxon Smith-Njigba (SEA)\"",
+		"\"WR\"": "\"Tank Dell (HOU)\"",
 		"\"TE\"": "\"Foster Moreau (NO)\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""

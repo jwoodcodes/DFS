@@ -1568,7 +1568,11 @@ const populateTeamObjects = function (passedInTeam) {
         rbTwo = +passedInTeam.RBTwoThisWeek4for4HalfProjPoints.toFixed(2);
         wrOne = +passedInTeam.WROneThisWeek4for4HalfProjPoints.toFixed(2);
         wrTwo = +passedInTeam.WRTwoThisWeek4for4HalfProjPoints.toFixed(2);
+        if(passedInTeam.WRThreeThisWeek4for4HalfProjPoints) {
         wrThree = +passedInTeam.WRThreeThisWeek4for4HalfProjPoints.toFixed(2);
+        } else {
+          wrThree = 0
+        }
         te = +passedInTeam.TEOneThisWeek4for4HalfProjPoints.toFixed(2);
 
         passedInTeam.tempInitialTeamLikelihoodOfOffensiveSuccess = +(
