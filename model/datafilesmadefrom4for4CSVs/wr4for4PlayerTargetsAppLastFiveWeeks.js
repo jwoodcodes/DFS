@@ -1,4 +1,4 @@
-const wr4for4FantasyPointsBrowserLastFiveWeeks = [
+const wr4for4PlayerTargetsAppLastFiveWeeks  = [
 	{
 		"Player": "\"Malik Nabers\"",
 		"Pos": "WR",
@@ -2121,4 +2121,4 @@ const wr4for4FantasyPointsBrowserLastFiveWeeks = [
 	
 ]
 
-module.exports = wr4for4FantasyPointsBrowserLastFiveWeeks;
+module.exports = wr4for4PlayerTargetsAppLastFiveWeeks

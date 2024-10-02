@@ -273,9 +273,9 @@ class WrObject {
       this.appFullProjectedPoints = tempPPRProjection;
     }
 
-    // for weeks 4-18
+    // for weeks 5-18
 
-    if (gameInfo.week.currentWeek > 5) {
+    if (gameInfo.week.currentWeek > 4) {
       let playersBottomLineHalfProj = +(
         (+this.halfTwentyFifthPercentProjectedPoints +
           +this.halfFiftyithPercentProjectedPoints) /
@@ -623,11 +623,15 @@ allWRs.forEach(function (team, i) {
     team.WROne.projectedReceptions4For4 / team.QBProjectedPassAttemptsThisWeek
   ).toFixed(3);
 
+  // console.log(team.WROne.halfPPRPointsPerGameLastFiveWeeks)
+
   percentProjectedfantasyPointsThisWeekIsHigherOrLowerThanFantasyPointsScoredLastFiveWeeks =
     +(
-      team.WROne.fourForFourHalfPPRProjectedPoints /
-      team.WROne.halfPPRPointsPerGameLastFiveWeeks
+      +team.WROne.fourForFourHalfPPRProjectedPoints /
+      +team.WROne.halfPPRPointsPerGameLastFiveWeeks
     ).toFixed(2);
+
+    // console.log(percentProjectedfantasyPointsThisWeekIsHigherOrLowerThanFantasyPointsScoredLastFiveWeeks)
 
   roleScorePercentageThisWeek = +(
     (percentProjectedfantasyPointsThisWeekIsHigherOrLowerThanFantasyPointsScoredLastFiveWeeks +

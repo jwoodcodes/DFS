@@ -1,4 +1,4 @@
-const wr4for4FantasyPointsBrowserLastFiveWeeks = [
+const wr4for4FantasyPointsBrowserLastFiveWeeks  = [
 	{
 		"Player": "\"Malik Nabers\"",
 		"Pos": "WR",
