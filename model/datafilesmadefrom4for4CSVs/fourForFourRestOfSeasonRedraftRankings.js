@@ -157,34 +157,34 @@ const fourForFourRestOfSeasonRedraftRankings = [
 		"\"QB\"": "\"Caleb Williams (CHI)\"",
 		"\"RB\"": "\"Josh Jacobs (GB)\"",
 		"\"WR\"": "\"Tyreek Hill (MIA)\"",
-		"\"TE\"": "\"Mark Andrews (BAL)\"",
+		"\"TE\"": "\"Cade Otton (TB)\"",
 		"\"K\"": "\"Austin Seibert (WAS)\"",
 		"\"DEF\"": "\"Cardinals\""
 	},
 	{
 		"\"Rank\"": "\"19\"",
-		"\"QB\"": "\"Derek Carr (NO)\"",
+		"\"QB\"": "\"Aaron Rodgers (NYJ)\"",
 		"\"RB\"": "\"Travis Etienne (JAX)\"",
 		"\"WR\"": "\"Garrett Wilson (NYJ)\"",
-		"\"TE\"": "\"Hunter Henry (NE)\"",
+		"\"TE\"": "\"Mark Andrews (BAL)\"",
 		"\"K\"": "\"Will Reichard (MIN)\"",
 		"\"DEF\"": "\"Falcons\""
 	},
 	{
 		"\"Rank\"": "\"20\"",
-		"\"QB\"": "\"Aaron Rodgers (NYJ)\"",
+		"\"QB\"": "\"Trevor Lawrence (JAX)\"",
 		"\"RB\"": "\"J.K. Dobbins (LAC)\"",
 		"\"WR\"": "\"Brandon Aiyuk (SF)\"",
-		"\"TE\"": "\"Zach Ertz (WAS)\"",
+		"\"TE\"": "\"Hunter Henry (NE)\"",
 		"\"K\"": "\"Cameron Dicker (LAC)\"",
 		"\"DEF\"": "\"Lions\""
 	},
 	{
 		"\"Rank\"": "\"21\"",
-		"\"QB\"": "\"Trevor Lawrence (JAX)\"",
+		"\"QB\"": "\"Derek Carr (NO)\"",
 		"\"RB\"": "\"Tony Pollard (TEN)\"",
 		"\"WR\"": "\"Davante Adams (LV)\"",
-		"\"TE\"": "\"Mike Gesicki (CIN)\"",
+		"\"TE\"": "\"Zach Ertz (WAS)\"",
 		"\"K\"": "\"Jake Bates (DET)\"",
 		"\"DEF\"": "\"Eagles\""
 	},
@@ -193,7 +193,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 		"\"QB\"": "\"Kirk Cousins (ATL)\"",
 		"\"RB\"": "\"Rhamondre Stevenson (NE)\"",
 		"\"WR\"": "\"Stefon Diggs (HOU)\"",
-		"\"TE\"": "\"Tyler Conklin (NYJ)\"",
+		"\"TE\"": "\"Mike Gesicki (CIN)\"",
 		"\"K\"": "\"Daniel Carlson (LV)\"",
 		"\"DEF\"": "\"Patriots\""
 	},
@@ -202,7 +202,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 		"\"QB\"": "\"Matthew Stafford (LAR)\"",
 		"\"RB\"": "\"Christian McCaffrey (SF)\"",
 		"\"WR\"": "\"Jameson Williams (DET)\"",
-		"\"TE\"": "\"Colby Parkinson (LAR)\"",
+		"\"TE\"": "\"Tyler Conklin (NYJ)\"",
 		"\"K\"": "\"Wil Lutz (DEN)\"",
 		"\"DEF\"": "\"Buccaneers\""
 	},
@@ -211,7 +211,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 		"\"QB\"": "\"Justin Herbert (LAC)\"",
 		"\"RB\"": "\"D'Andre Swift (CHI)\"",
 		"\"WR\"": "\"Brian Thomas Jr. (JAX)\"",
-		"\"TE\"": "\"Noah Fant (SEA)\"",
+		"\"TE\"": "\"Colby Parkinson (LAR)\"",
 		"\"K\"": "\"Joshua Karty (LAR)\"",
 		"\"DEF\"": "\"Giants\""
 	},
@@ -220,7 +220,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 		"\"QB\"": "\"Daniel Jones (NYG)\"",
 		"\"RB\"": "\"Zack Moss (CIN)\"",
 		"\"WR\"": "\"George Pickens (PIT)\"",
-		"\"TE\"": "\"Dalton Schultz (HOU)\"",
+		"\"TE\"": "\"Noah Fant (SEA)\"",
 		"\"K\"": "\"Greg Zuerlein (NYJ)\"",
 		"\"DEF\"": "\"Bengals\""
 	},
@@ -229,7 +229,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 		"\"QB\"": "\"Deshaun Watson (CLE)\"",
 		"\"RB\"": "\"Devin Singletary (NYG)\"",
 		"\"WR\"": "\"Terry McLaurin (WAS)\"",
-		"\"TE\"": "\"Cade Otton (TB)\"",
+		"\"TE\"": "\"Dalton Schultz (HOU)\"",
 		"\"K\"": "\"Dustin Hopkins (CLE)\"",
 		"\"DEF\"": "\"Commanders\""
 	},
@@ -345,7 +345,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 		"\"Rank\"": "\"39\"",
 		"\"QB\"": "\"Malik Willis (GB)\"",
 		"\"RB\"": "\"Tyler Allgeier (ATL)\"",
-		"\"WR\"": "\"Calvin Ridley (TEN)\"",
+		"\"WR\"": "\"Jaylen Waddle (MIA)\"",
 		"\"TE\"": "\"Ben Sinnott (WAS)\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -354,7 +354,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 		"\"Rank\"": "\"40\"",
 		"\"QB\"": "\"Mason Rudolph (TEN)\"",
 		"\"RB\"": "\"Austin Ekeler (WAS)\"",
-		"\"WR\"": "\"Jaylen Waddle (MIA)\"",
+		"\"WR\"": "\"Christian Kirk (JAX)\"",
 		"\"TE\"": "\"Dawson Knox (BUF)\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -363,7 +363,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 		"\"Rank\"": "\"41\"",
 		"\"QB\"": "\"Jameis Winston (CLE)\"",
 		"\"RB\"": "\"Tyjae Spears (TEN)\"",
-		"\"WR\"": "\"Christian Kirk (JAX)\"",
+		"\"WR\"": "\"Calvin Ridley (TEN)\"",
 		"\"TE\"": "\"Austin Hooper (NE)\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -417,7 +417,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 		"\"Rank\"": "\"47\"",
 		"\"QB\"": "\"\"",
 		"\"RB\"": "\"Isiah Pacheco (KC)\"",
-		"\"WR\"": "\"DeAndre Hopkins (TEN)\"",
+		"\"WR\"": "\"Darnell Mooney (ATL)\"",
 		"\"TE\"": "\"Will Dissly (LAC)\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -426,7 +426,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 		"\"Rank\"": "\"48\"",
 		"\"QB\"": "\"\"",
 		"\"RB\"": "\"Alexander Mattison (LV)\"",
-		"\"WR\"": "\"Jauan Jennings (SF)\"",
+		"\"WR\"": "\"DeAndre Hopkins (TEN)\"",
 		"\"TE\"": "\"Ja'Tavion Sanders (CAR)\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -435,7 +435,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 		"\"Rank\"": "\"49\"",
 		"\"QB\"": "\"\"",
 		"\"RB\"": "\"Carson Steele (KC)\"",
-		"\"WR\"": "\"Dontayvion Wicks (GB)\"",
+		"\"WR\"": "\"Jauan Jennings (SF)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -444,7 +444,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 		"\"Rank\"": "\"50\"",
 		"\"QB\"": "\"\"",
 		"\"RB\"": "\"Jaleel McLaughlin (DEN)\"",
-		"\"WR\"": "\"Darnell Mooney (ATL)\"",
+		"\"WR\"": "\"Dontayvion Wicks (GB)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -453,7 +453,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 		"\"Rank\"": "\"51\"",
 		"\"QB\"": "\"\"",
 		"\"RB\"": "\"Ray Davis (BUF)\"",
-		"\"WR\"": "\"Romeo Doubs (GB)\"",
+		"\"WR\"": "\"Wan'Dale Robinson (NYG)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -462,7 +462,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 		"\"Rank\"": "\"52\"",
 		"\"QB\"": "\"\"",
 		"\"RB\"": "\"Roschon Johnson (CHI)\"",
-		"\"WR\"": "\"Wan'Dale Robinson (NYG)\"",
+		"\"WR\"": "\"Courtland Sutton (DEN)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -471,7 +471,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 		"\"Rank\"": "\"53\"",
 		"\"QB\"": "\"\"",
 		"\"RB\"": "\"Antonio Gibson (NE)\"",
-		"\"WR\"": "\"Courtland Sutton (DEN)\"",
+		"\"WR\"": "\"Jakobi Meyers (LV)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -480,7 +480,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 		"\"Rank\"": "\"54\"",
 		"\"QB\"": "\"\"",
 		"\"RB\"": "\"Tank Bigsby (JAX)\"",
-		"\"WR\"": "\"Jakobi Meyers (LV)\"",
+		"\"WR\"": "\"Romeo Doubs (GB)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -498,7 +498,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 		"\"Rank\"": "\"56\"",
 		"\"QB\"": "\"\"",
 		"\"RB\"": "\"Gus Edwards (LAC)\"",
-		"\"WR\"": "\"Keon Coleman (BUF)\"",
+		"\"WR\"": "\"Josh Downs (IND)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -507,7 +507,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 		"\"Rank\"": "\"57\"",
 		"\"QB\"": "\"\"",
 		"\"RB\"": "\"Cam Akers (HOU)\"",
-		"\"WR\"": "\"Josh Downs (IND)\"",
+		"\"WR\"": "\"Jerry Jeudy (CLE)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -516,7 +516,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 		"\"Rank\"": "\"58\"",
 		"\"QB\"": "\"\"",
 		"\"RB\"": "\"Justice Hill (BAL)\"",
-		"\"WR\"": "\"Jerry Jeudy (CLE)\"",
+		"\"WR\"": "\"Quentin Johnston (LAC)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -525,7 +525,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 		"\"Rank\"": "\"59\"",
 		"\"QB\"": "\"\"",
 		"\"RB\"": "\"Jaylen Wright (MIA)\"",
-		"\"WR\"": "\"Quentin Johnston (LAC)\"",
+		"\"WR\"": "\"Christian Watson (GB)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -534,7 +534,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 		"\"Rank\"": "\"60\"",
 		"\"QB\"": "\"\"",
 		"\"RB\"": "\"Trey Benson (ARI)\"",
-		"\"WR\"": "\"Mike Williams (NYJ)\"",
+		"\"WR\"": "\"Tre Tucker (LV)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -543,7 +543,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 		"\"Rank\"": "\"61\"",
 		"\"QB\"": "\"\"",
 		"\"RB\"": "\"Ezekiel Elliott (DAL)\"",
-		"\"WR\"": "\"Christian Watson (GB)\"",
+		"\"WR\"": "\"Mike Williams (NYJ)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -560,6 +560,15 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	{
 		"\"Rank\"": "\"63\"",
 		"\"QB\"": "\"\"",
+		"\"RB\"": "\"Trey Sermon (IND)\"",
+		"\"WR\"": "\"Keon Coleman (BUF)\"",
+		"\"TE\"": "\"\"",
+		"\"K\"": "\"\"",
+		"\"DEF\"": "\"\""
+	},
+	{
+		"\"Rank\"": "\"64\"",
+		"\"QB\"": "\"\"",
 		"\"RB\"": "\"Tyrone Tracy (NYG)\"",
 		"\"WR\"": "\"Allen Lazard (NYJ)\"",
 		"\"TE\"": "\"\"",
@@ -567,7 +576,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 		"\"DEF\"": "\"\""
 	},
 	{
-		"\"Rank\"": "\"64\"",
+		"\"Rank\"": "\"65\"",
 		"\"QB\"": "\"\"",
 		"\"RB\"": "\"D'Onta Foreman (CLE)\"",
 		"\"WR\"": "\"Demarcus Robinson (LAR)\"",
@@ -576,18 +585,9 @@ const fourForFourRestOfSeasonRedraftRankings = [
 		"\"DEF\"": "\"\""
 	},
 	{
-		"\"Rank\"": "\"65\"",
-		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Emanuel Wilson (GB)\"",
-		"\"WR\"": "\"Brandin Cooks (DAL)\"",
-		"\"TE\"": "\"\"",
-		"\"K\"": "\"\"",
-		"\"DEF\"": "\"\""
-	},
-	{
 		"\"Rank\"": "\"66\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Clyde Edwards-Helaire (KC)\"",
+		"\"RB\"": "\"Emanuel Wilson (GB)\"",
 		"\"WR\"": "\"Joshua Palmer (LAC)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
@@ -596,7 +596,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	{
 		"\"Rank\"": "\"67\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Trey Sermon (IND)\"",
+		"\"RB\"": "\"Clyde Edwards-Helaire (KC)\"",
 		"\"WR\"": "\"Andrei Iosivas (CIN)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
@@ -605,7 +605,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	{
 		"\"Rank\"": "\"68\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Cordarrelle Patterson (PIT)\"",
+		"\"RB\"": "\"Jeremy McNichols (WAS)\"",
 		"\"WR\"": "\"Jordan Whittington (LAR)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
@@ -614,7 +614,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	{
 		"\"Rank\"": "\"69\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Jamaal Williams (NO)\"",
+		"\"RB\"": "\"Cordarrelle Patterson (PIT)\"",
 		"\"WR\"": "\"Jalen Tolbert (DAL)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
@@ -623,7 +623,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	{
 		"\"Rank\"": "\"70\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"MarShawn Lloyd (GB)\"",
+		"\"RB\"": "\"Jamaal Williams (NO)\"",
 		"\"WR\"": "\"Michael Wilson (ARI)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
@@ -632,8 +632,8 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	{
 		"\"Rank\"": "\"71\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Kenneth Gainwell (PHI)\"",
-		"\"WR\"": "\"Alec Pierce (IND)\"",
+		"\"RB\"": "\"MarShawn Lloyd (GB)\"",
+		"\"WR\"": "\"Brandin Cooks (DAL)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -641,8 +641,8 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	{
 		"\"Rank\"": "\"72\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Khalil Herbert (CHI)\"",
-		"\"WR\"": "\"Tre Tucker (LV)\"",
+		"\"RB\"": "\"Kenneth Gainwell (PHI)\"",
+		"\"WR\"": "\"Alec Pierce (IND)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
 		"\"DEF\"": "\"\""
@@ -650,7 +650,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	{
 		"\"Rank\"": "\"73\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Audric Estime (DEN)\"",
+		"\"RB\"": "\"Khalil Herbert (CHI)\"",
 		"\"WR\"": "\"Gabe Davis (JAX)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
@@ -659,7 +659,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	{
 		"\"Rank\"": "\"74\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Ronnie Rivers (LAR)\"",
+		"\"RB\"": "\"Audric Estime (DEN)\"",
 		"\"WR\"": "\"Demario Douglas (NE)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
@@ -668,7 +668,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	{
 		"\"Rank\"": "\"75\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Jeremy McNichols (WAS)\"",
+		"\"RB\"": "\"Ronnie Rivers (LAR)\"",
 		"\"WR\"": "\"Greg Dortch (ARI)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
@@ -677,7 +677,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	{
 		"\"Rank\"": "\"76\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Isaac Guerendo (SF)\"",
+		"\"RB\"": "\"Kendre Miller (NO)\"",
 		"\"WR\"": "\"Jalen McMillan (TB)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
@@ -686,7 +686,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	{
 		"\"Rank\"": "\"77\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Miles Sanders (CAR)\"",
+		"\"RB\"": "\"Isaac Guerendo (SF)\"",
 		"\"WR\"": "\"Adonai Mitchell (IND)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
@@ -695,7 +695,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	{
 		"\"Rank\"": "\"78\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Dameon Pierce (HOU)\"",
+		"\"RB\"": "\"Miles Sanders (CAR)\"",
 		"\"WR\"": "\"Tutu Atwell (LAR)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
@@ -704,7 +704,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	{
 		"\"Rank\"": "\"79\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Emari Demercado (ARI)\"",
+		"\"RB\"": "\"Dameon Pierce (HOU)\"",
 		"\"WR\"": "\"Jalen Nailor (MIN)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
@@ -713,7 +713,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	{
 		"\"Rank\"": "\"80\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Dare Ogunbowale (HOU)\"",
+		"\"RB\"": "\"Emari Demercado (ARI)\"",
 		"\"WR\"": "\"Rashod Bateman (BAL)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
@@ -722,7 +722,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	{
 		"\"Rank\"": "\"81\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Ty Johnson (BUF)\"",
+		"\"RB\"": "\"Dare Ogunbowale (HOU)\"",
 		"\"WR\"": "\"Ja'Lynn Polk (NE)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
@@ -731,7 +731,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	{
 		"\"Rank\"": "\"82\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Kimani Vidal (LAC)\"",
+		"\"RB\"": "\"Ty Johnson (BUF)\"",
 		"\"WR\"": "\"Elijah Moore (CLE)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
@@ -740,7 +740,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	{
 		"\"Rank\"": "\"83\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Jeff Wilson (MIA)\"",
+		"\"RB\"": "\"Kimani Vidal (LAC)\"",
 		"\"WR\"": "\"Ray-Ray McCloud (ATL)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
@@ -749,7 +749,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	{
 		"\"Rank\"": "\"84\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"Tyler Badie (DEN)\"",
+		"\"RB\"": "\"Jeff Wilson (MIA)\"",
 		"\"WR\"": "\"Noah Brown (WAS)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
@@ -758,7 +758,7 @@ const fourForFourRestOfSeasonRedraftRankings = [
 	{
 		"\"Rank\"": "\"85\"",
 		"\"QB\"": "\"\"",
-		"\"RB\"": "\"\"",
+		"\"RB\"": "\"Tyler Badie (DEN)\"",
 		"\"WR\"": "\"Curtis Samuel (BUF)\"",
 		"\"TE\"": "\"\"",
 		"\"K\"": "\"\"",
