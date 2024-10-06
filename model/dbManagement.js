@@ -174,6 +174,8 @@ wrProjectionArray.sort(halfCompare);
 teProjectionsArray.sort(halfCompare);
 // let pprSortedTEProjectionArray = teProjectionsArray.sort(pprCompare);
 
+// console.log(wrProjectionArray)
+
 let allProjectionsArray = [
   qbProjectionArray,
   rbProjectionArray,
@@ -286,7 +288,7 @@ function arrayToCSV(array) {
 
   try {
     const csv = parse(array, opts);
-    fs.writeFileSync('week2-24-superFlexHalfProjectionArray.csv', csv);
+    fs.writeFileSync('week5-24-superFlexHalfProjectionArray.csv', csv);
     console.log('CSV file successfully created');
   } catch (err) {
     console.error(err);

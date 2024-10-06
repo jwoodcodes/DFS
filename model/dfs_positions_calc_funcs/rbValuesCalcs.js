@@ -1355,11 +1355,11 @@ allRBs.forEach(function (team) {
           giTeam.opponentThisWeek.teamProjectedPointsThisWeek;
       }
     });
-    // console.log(team)
+    // console.log(teamName)
     let rbObject = new RbObject(
       team.teamRbThreeThisWeekName,
       'RB',
-      teamName,
+      // teamName,
       team.teamABV
     );
 
