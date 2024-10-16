@@ -10,3918 +10,3657 @@ const fpMarketRedraftRankings = [
 	},
 	{
 		"\"RK\"": "\"2\"",
-		"\"PLAYER NAME\"": "\"Derrick Henry\"",
-		"TEAM": "BAL",
-		"\"POS\"": "\"RB2\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+16\""
-	},
-	{
-		"\"RK\"": "\"3\"",
 		"\"PLAYER NAME\"": "\"Justin Jefferson\"",
 		"TEAM": "MIN",
 		"\"POS\"": "\"WR1\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
 		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+5\""
+		"\"ECR VS. ADP\"": "\"+6\""
+	},
+	{
+		"\"RK\"": "\"3\"",
+		"\"PLAYER NAME\"": "\"Derrick Henry\"",
+		"TEAM": "BAL",
+		"\"POS\"": "\"RB2\"",
+		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+15\""
 	},
 	{
 		"\"RK\"": "\"4\"",
 		"\"PLAYER NAME\"": "\"Ja'Marr Chase\"",
 		"TEAM": "CIN",
 		"\"POS\"": "\"WR2\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
 		"\"ECR VS. ADP\"": "\"+3\""
 	},
 	{
 		"\"RK\"": "\"5\"",
-		"\"PLAYER NAME\"": "\"Kyren Williams\"",
-		"TEAM": "LAR",
+		"\"PLAYER NAME\"": "\"Bijan Robinson\"",
+		"TEAM": "ATL",
 		"\"POS\"": "\"RB3\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+10\""
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-1\""
 	},
 	{
 		"\"RK\"": "\"6\"",
-		"\"PLAYER NAME\"": "\"Bijan Robinson\"",
-		"TEAM": "ATL",
+		"\"PLAYER NAME\"": "\"Breece Hall\"",
+		"TEAM": "NYJ",
 		"\"POS\"": "\"RB4\"",
 		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-2\""
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-1\""
 	},
 	{
 		"\"RK\"": "\"7\"",
-		"\"PLAYER NAME\"": "\"Breece Hall\"",
-		"TEAM": "NYJ",
-		"\"POS\"": "\"RB5\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-2\""
+		"\"PLAYER NAME\"": "\"CeeDee Lamb\"",
+		"TEAM": "DAL",
+		"\"POS\"": "\"WR3\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-5\""
 	},
 	{
 		"\"RK\"": "\"8\"",
 		"\"PLAYER NAME\"": "\"Amon-Ra St. Brown\"",
 		"TEAM": "DET",
-		"\"POS\"": "\"WR3\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
+		"\"POS\"": "\"WR4\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
 		"\"ECR VS. ADP\"": "\"-2\""
 	},
 	{
 		"\"RK\"": "\"9\"",
-		"\"PLAYER NAME\"": "\"CeeDee Lamb\"",
-		"TEAM": "DAL",
-		"\"POS\"": "\"WR4\"",
+		"\"PLAYER NAME\"": "\"Kyren Williams\"",
+		"TEAM": "LAR",
+		"\"POS\"": "\"RB5\"",
 		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-7\""
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+6\""
 	},
 	{
 		"\"RK\"": "\"10\"",
-		"\"PLAYER NAME\"": "\"Jahmyr Gibbs\"",
-		"TEAM": "DET",
-		"\"POS\"": "\"RB6\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+3\""
-	},
-	{
-		"\"RK\"": "\"11\"",
 		"\"PLAYER NAME\"": "\"Malik Nabers\"",
 		"TEAM": "NYG",
 		"\"POS\"": "\"WR5\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+38\""
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+39\""
 	},
 	{
-		"\"RK\"": "\"12\"",
+		"\"RK\"": "\"11\"",
 		"\"PLAYER NAME\"": "\"A.J. Brown\"",
 		"TEAM": "PHI",
 		"\"POS\"": "\"WR6\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-2\""
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-1\""
+	},
+	{
+		"\"RK\"": "\"12\"",
+		"\"PLAYER NAME\"": "\"Jahmyr Gibbs\"",
+		"TEAM": "DET",
+		"\"POS\"": "\"RB6\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+1\""
 	},
 	{
 		"\"RK\"": "\"13\"",
 		"\"PLAYER NAME\"": "\"Alvin Kamara\"",
 		"TEAM": "NO",
 		"\"POS\"": "\"RB7\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
 		"\"ECR VS. ADP\"": "\"+27\""
 	},
 	{
 		"\"RK\"": "\"14\"",
-		"\"PLAYER NAME\"": "\"James Cook\"",
-		"TEAM": "BUF",
+		"\"PLAYER NAME\"": "\"Kenneth Walker III\"",
+		"TEAM": "SEA",
 		"\"POS\"": "\"RB8\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+15\""
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+28\""
 	},
 	{
 		"\"RK\"": "\"15\"",
-		"\"PLAYER NAME\"": "\"Kenneth Walker III\"",
-		"TEAM": "SEA",
+		"\"PLAYER NAME\"": "\"Joe Mixon\"",
+		"TEAM": "HOU",
 		"\"POS\"": "\"RB9\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+27\""
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+24\""
 	},
 	{
 		"\"RK\"": "\"16\"",
-		"\"PLAYER NAME\"": "\"De'Von Achane\"",
+		"\"PLAYER NAME\"": "\"Tyreek Hill\"",
 		"TEAM": "MIA",
-		"\"POS\"": "\"RB10\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"POS\"": "\"WR7\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
 		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+9\""
+		"\"ECR VS. ADP\"": "\"-13\""
 	},
 	{
 		"\"RK\"": "\"17\"",
-		"\"PLAYER NAME\"": "\"Marvin Harrison Jr.\"",
-		"TEAM": "ARI",
-		"\"POS\"": "\"WR7\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"PLAYER NAME\"": "\"James Cook\"",
+		"TEAM": "BUF",
+		"\"POS\"": "\"RB10\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
 		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-1\""
+		"\"ECR VS. ADP\"": "\"+12\""
 	},
 	{
 		"\"RK\"": "\"18\"",
-		"\"PLAYER NAME\"": "\"James Conner\"",
-		"TEAM": "ARI",
-		"\"POS\"": "\"RB11\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"PLAYER NAME\"": "\"Drake London\"",
+		"TEAM": "ATL",
+		"\"POS\"": "\"WR8\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
 		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+34\""
+		"\"ECR VS. ADP\"": "\"+5\""
 	},
 	{
 		"\"RK\"": "\"19\"",
-		"\"PLAYER NAME\"": "\"Mike Evans\"",
-		"TEAM": "TB",
-		"\"POS\"": "\"WR8\"",
+		"\"PLAYER NAME\"": "\"De'Von Achane\"",
+		"TEAM": "MIA",
+		"\"POS\"": "\"RB11\"",
 		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+11\""
-	},
-	{
-		"\"RK\"": "\"20\"",
-		"\"PLAYER NAME\"": "\"Josh Jacobs\"",
-		"TEAM": "GB",
-		"\"POS\"": "\"RB12\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
 		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
 		"\"ECR VS. ADP\"": "\"+6\""
 	},
 	{
-		"\"RK\"": "\"21\"",
-		"\"PLAYER NAME\"": "\"Tyreek Hill\"",
-		"TEAM": "MIA",
+		"\"RK\"": "\"20\"",
+		"\"PLAYER NAME\"": "\"Chris Godwin\"",
+		"TEAM": "TB",
 		"\"POS\"": "\"WR9\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+57\""
+	},
+	{
+		"\"RK\"": "\"21\"",
+		"\"PLAYER NAME\"": "\"Jayden Reed\"",
+		"TEAM": "GB",
+		"\"POS\"": "\"WR10\"",
 		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
 		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-18\""
+		"\"ECR VS. ADP\"": "\"+62\""
 	},
 	{
 		"\"RK\"": "\"22\"",
-		"\"PLAYER NAME\"": "\"Chris Godwin\"",
-		"TEAM": "TB",
-		"\"POS\"": "\"WR10\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+55\""
+		"\"PLAYER NAME\"": "\"Josh Jacobs\"",
+		"TEAM": "GB",
+		"\"POS\"": "\"RB12\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+4\""
 	},
 	{
 		"\"RK\"": "\"23\"",
-		"\"PLAYER NAME\"": "\"Travis Kelce\"",
-		"TEAM": "KC",
-		"\"POS\"": "\"TE1\"",
+		"\"PLAYER NAME\"": "\"Jonathan Taylor\"",
+		"TEAM": "IND",
+		"\"POS\"": "\"RB13\"",
 		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
 		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-1\""
+		"\"ECR VS. ADP\"": "\"-12\""
 	},
 	{
 		"\"RK\"": "\"24\"",
 		"\"PLAYER NAME\"": "\"Nico Collins\"",
 		"TEAM": "HOU",
 		"\"POS\"": "\"WR11\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
 		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
 		"\"ECR VS. ADP\"": "\"+3\""
 	},
 	{
 		"\"RK\"": "\"25\"",
-		"\"PLAYER NAME\"": "\"Drake London\"",
-		"TEAM": "ATL",
-		"\"POS\"": "\"WR12\"",
+		"\"PLAYER NAME\"": "\"Trey McBride\"",
+		"TEAM": "ARI",
+		"\"POS\"": "\"TE1\"",
 		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
 		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-2\""
+		"\"ECR VS. ADP\"": "\"+23\""
 	},
 	{
 		"\"RK\"": "\"26\"",
-		"\"PLAYER NAME\"": "\"Garrett Wilson\"",
-		"TEAM": "NYJ",
-		"\"POS\"": "\"WR13\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-14\""
+		"\"PLAYER NAME\"": "\"Stefon Diggs\"",
+		"TEAM": "HOU",
+		"\"POS\"": "\"WR12\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+18\""
 	},
 	{
 		"\"RK\"": "\"27\"",
-		"\"PLAYER NAME\"": "\"Trey McBride\"",
-		"TEAM": "ARI",
-		"\"POS\"": "\"TE2\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+21\""
-	},
-	{
-		"\"RK\"": "\"28\"",
-		"\"PLAYER NAME\"": "\"Jayden Reed\"",
-		"TEAM": "GB",
-		"\"POS\"": "\"WR14\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+55\""
-	},
-	{
-		"\"RK\"": "\"29\"",
-		"\"PLAYER NAME\"": "\"Joe Mixon\"",
-		"TEAM": "HOU",
-		"\"POS\"": "\"RB13\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+10\""
-	},
-	{
-		"\"RK\"": "\"30\"",
-		"\"PLAYER NAME\"": "\"Chris Olave\"",
-		"TEAM": "NO",
-		"\"POS\"": "\"WR15\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-6\""
-	},
-	{
-		"\"RK\"": "\"31\"",
-		"\"PLAYER NAME\"": "\"Brock Bowers\"",
-		"TEAM": "LV",
-		"\"POS\"": "\"TE3\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+64\""
-	},
-	{
-		"\"RK\"": "\"32\"",
 		"\"PLAYER NAME\"": "\"DK Metcalf\"",
 		"TEAM": "SEA",
-		"\"POS\"": "\"WR16\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+9\""
-	},
-	{
-		"\"RK\"": "\"33\"",
-		"\"PLAYER NAME\"": "\"Jordan Mason\"",
-		"TEAM": "SF",
-		"\"POS\"": "\"RB14\"",
+		"\"POS\"": "\"WR13\"",
 		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+166\""
-	},
-	{
-		"\"RK\"": "\"34\"",
-		"\"PLAYER NAME\"": "\"Lamar Jackson\"",
-		"TEAM": "BAL",
-		"\"POS\"": "\"QB1\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+4\""
-	},
-	{
-		"\"RK\"": "\"35\"",
-		"\"PLAYER NAME\"": "\"Stefon Diggs\"",
-		"TEAM": "HOU",
-		"\"POS\"": "\"WR17\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+9\""
-	},
-	{
-		"\"RK\"": "\"36\"",
-		"\"PLAYER NAME\"": "\"Christian McCaffrey\"",
-		"TEAM": "SF",
-		"\"POS\"": "\"RB15\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-35\""
-	},
-	{
-		"\"RK\"": "\"37\"",
-		"\"PLAYER NAME\"": "\"DeVonta Smith\"",
-		"TEAM": "PHI",
-		"\"POS\"": "\"WR18\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+9\""
-	},
-	{
-		"\"RK\"": "\"38\"",
-		"\"PLAYER NAME\"": "\"David Montgomery\"",
-		"TEAM": "DET",
-		"\"POS\"": "\"RB16\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+22\""
-	},
-	{
-		"\"RK\"": "\"39\"",
-		"\"PLAYER NAME\"": "\"George Kittle\"",
-		"TEAM": "SF",
-		"\"POS\"": "\"TE4\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
 		"\"ECR VS. ADP\"": "\"+14\""
 	},
 	{
-		"\"RK\"": "\"40\"",
-		"\"PLAYER NAME\"": "\"Brian Robinson Jr.\"",
-		"TEAM": "WAS",
-		"\"POS\"": "\"RB17\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+48\""
-	},
-	{
-		"\"RK\"": "\"41\"",
-		"\"PLAYER NAME\"": "\"Aaron Jones\"",
-		"TEAM": "MIN",
-		"\"POS\"": "\"RB18\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+15\""
-	},
-	{
-		"\"RK\"": "\"42\"",
-		"\"PLAYER NAME\"": "\"Rhamondre Stevenson\"",
-		"TEAM": "NE",
-		"\"POS\"": "\"RB19\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+25\""
-	},
-	{
-		"\"RK\"": "\"43\"",
+		"\"RK\"": "\"28\"",
 		"\"PLAYER NAME\"": "\"Tony Pollard\"",
 		"TEAM": "TEN",
-		"\"POS\"": "\"RB20\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+38\""
-	},
-	{
-		"\"RK\"": "\"44\"",
-		"\"PLAYER NAME\"": "\"Diontae Johnson\"",
-		"TEAM": "CAR",
-		"\"POS\"": "\"WR19\"",
+		"\"POS\"": "\"RB14\"",
 		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
 		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+40\""
+		"\"ECR VS. ADP\"": "\"+53\""
 	},
 	{
-		"\"RK\"": "\"45\"",
-		"\"PLAYER NAME\"": "\"Deebo Samuel Sr.\"",
-		"TEAM": "SF",
-		"\"POS\"": "\"WR20\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-11\""
-	},
-	{
-		"\"RK\"": "\"46\"",
-		"\"PLAYER NAME\"": "\"DJ Moore\"",
-		"TEAM": "CHI",
-		"\"POS\"": "\"WR21\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-1\""
-	},
-	{
-		"\"RK\"": "\"47\"",
-		"\"PLAYER NAME\"": "\"Terry McLaurin\"",
-		"TEAM": "WAS",
-		"\"POS\"": "\"WR22\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+26\""
-	},
-	{
-		"\"RK\"": "\"48\"",
-		"\"PLAYER NAME\"": "\"Brandon Aiyuk\"",
-		"TEAM": "SF",
-		"\"POS\"": "\"WR23\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-13\""
-	},
-	{
-		"\"RK\"": "\"49\"",
-		"\"PLAYER NAME\"": "\"J.K. Dobbins\"",
-		"TEAM": "LAC",
-		"\"POS\"": "\"RB21\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+81\""
-	},
-	{
-		"\"RK\"": "\"50\"",
-		"\"PLAYER NAME\"": "\"Brian Thomas Jr.\"",
-		"TEAM": "JAC",
-		"\"POS\"": "\"WR24\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+68\""
-	},
-	{
-		"\"RK\"": "\"51\"",
-		"\"PLAYER NAME\"": "\"Chuba Hubbard\"",
-		"TEAM": "CAR",
-		"\"POS\"": "\"RB22\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+78\""
-	},
-	{
-		"\"RK\"": "\"52\"",
-		"\"PLAYER NAME\"": "\"Josh Allen\"",
-		"TEAM": "BUF",
-		"\"POS\"": "\"QB2\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-31\""
-	},
-	{
-		"\"RK\"": "\"53\"",
-		"\"PLAYER NAME\"": "\"D'Andre Swift\"",
-		"TEAM": "CHI",
-		"\"POS\"": "\"RB23\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+5\""
-	},
-	{
-		"\"RK\"": "\"54\"",
-		"\"PLAYER NAME\"": "\"Jake Ferguson\"",
-		"TEAM": "DAL",
-		"\"POS\"": "\"TE5\"",
-		"\"SOS SEASON\"": "\"0 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+26\""
-	},
-	{
-		"\"RK\"": "\"55\"",
-		"\"PLAYER NAME\"": "\"Sam LaPorta\"",
-		"TEAM": "DET",
-		"\"POS\"": "\"TE6\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-22\""
-	},
-	{
-		"\"RK\"": "\"56\"",
-		"\"PLAYER NAME\"": "\"Zay Flowers\"",
-		"TEAM": "BAL",
-		"\"POS\"": "\"WR25\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+6\""
-	},
-	{
-		"\"RK\"": "\"57\"",
-		"\"PLAYER NAME\"": "\"Davante Adams\"",
+		"\"RK\"": "\"29\"",
+		"\"PLAYER NAME\"": "\"Brock Bowers\"",
 		"TEAM": "LV",
-		"\"POS\"": "\"WR26\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-37\""
-	},
-	{
-		"\"RK\"": "\"58\"",
-		"\"PLAYER NAME\"": "\"Jayden Daniels\"",
-		"TEAM": "WAS",
-		"\"POS\"": "\"QB3\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+41\""
-	},
-	{
-		"\"RK\"": "\"59\"",
-		"\"PLAYER NAME\"": "\"Jalen Hurts\"",
-		"TEAM": "PHI",
-		"\"POS\"": "\"QB4\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-28\""
-	},
-	{
-		"\"RK\"": "\"60\"",
-		"\"PLAYER NAME\"": "\"Travis Etienne Jr.\"",
-		"TEAM": "JAC",
-		"\"POS\"": "\"RB24\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-43\""
-	},
-	{
-		"\"RK\"": "\"61\"",
-		"\"PLAYER NAME\"": "\"Najee Harris\"",
-		"TEAM": "PIT",
-		"\"POS\"": "\"RB25\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+10\""
-	},
-	{
-		"\"RK\"": "\"62\"",
-		"\"PLAYER NAME\"": "\"George Pickens\"",
-		"TEAM": "PIT",
-		"\"POS\"": "\"WR27\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-5\""
-	},
-	{
-		"\"RK\"": "\"63\"",
-		"\"PLAYER NAME\"": "\"Rico Dowdle\"",
-		"TEAM": "DAL",
-		"\"POS\"": "\"RB26\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+86\""
-	},
-	{
-		"\"RK\"": "\"64\"",
-		"\"PLAYER NAME\"": "\"Jameson Williams\"",
-		"TEAM": "DET",
-		"\"POS\"": "\"WR28\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+55\""
-	},
-	{
-		"\"RK\"": "\"65\"",
-		"\"PLAYER NAME\"": "\"Tee Higgins\"",
-		"TEAM": "CIN",
-		"\"POS\"": "\"WR29\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-4\""
-	},
-	{
-		"\"RK\"": "\"66\"",
-		"\"PLAYER NAME\"": "\"Chase Brown\"",
-		"TEAM": "CIN",
-		"\"POS\"": "\"RB27\"",
+		"\"POS\"": "\"TE2\"",
 		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+42\""
-	},
-	{
-		"\"RK\"": "\"67\"",
-		"\"PLAYER NAME\"": "\"Cooper Kupp\"",
-		"TEAM": "LAR",
-		"\"POS\"": "\"WR30\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-30\""
-	},
-	{
-		"\"RK\"": "\"68\"",
-		"\"PLAYER NAME\"": "\"Javonte Williams\"",
-		"TEAM": "DEN",
-		"\"POS\"": "\"RB28\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
 		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+11\""
+		"\"ECR VS. ADP\"": "\"+66\""
 	},
 	{
-		"\"RK\"": "\"69\"",
-		"\"PLAYER NAME\"": "\"Devin Singletary\"",
-		"TEAM": "NYG",
-		"\"POS\"": "\"RB29\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+21\""
-	},
-	{
-		"\"RK\"": "\"70\"",
-		"\"PLAYER NAME\"": "\"Zack Moss\"",
-		"TEAM": "CIN",
-		"\"POS\"": "\"RB30\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+21\""
-	},
-	{
-		"\"RK\"": "\"71\"",
-		"\"PLAYER NAME\"": "\"Tank Bigsby\"",
-		"TEAM": "JAC",
-		"\"POS\"": "\"RB31\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+176\""
-	},
-	{
-		"\"RK\"": "\"72\"",
-		"\"PLAYER NAME\"": "\"Kyler Murray\"",
-		"TEAM": "ARI",
-		"\"POS\"": "\"QB5\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-2\""
-	},
-	{
-		"\"RK\"": "\"73\"",
-		"\"PLAYER NAME\"": "\"Bucky Irving\"",
+		"\"RK\"": "\"30\"",
+		"\"PLAYER NAME\"": "\"Mike Evans\"",
 		"TEAM": "TB",
-		"\"POS\"": "\"RB32\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+108\""
-	},
-	{
-		"\"RK\"": "\"74\"",
-		"\"PLAYER NAME\"": "\"Rachaad White\"",
-		"TEAM": "TB",
-		"\"POS\"": "\"RB33\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-42\""
-	},
-	{
-		"\"RK\"": "\"75\"",
-		"\"PLAYER NAME\"": "\"Joe Burrow\"",
-		"TEAM": "CIN",
-		"\"POS\"": "\"QB6\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-16\""
-	},
-	{
-		"\"RK\"": "\"76\"",
-		"\"PLAYER NAME\"": "\"Rashid Shaheed\"",
-		"TEAM": "NO",
-		"\"POS\"": "\"WR31\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+104\""
-	},
-	{
-		"\"RK\"": "\"77\"",
-		"\"PLAYER NAME\"": "\"C.J. Stroud\"",
-		"TEAM": "HOU",
-		"\"POS\"": "\"QB7\"",
+		"\"POS\"": "\"WR14\"",
 		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
 		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-27\""
-	},
-	{
-		"\"RK\"": "\"78\"",
-		"\"PLAYER NAME\"": "\"Kareem Hunt\"",
-		"TEAM": "KC",
-		"\"POS\"": "\"RB34\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+467\""
-	},
-	{
-		"\"RK\"": "\"79\"",
-		"\"PLAYER NAME\"": "\"Tucker Kraft\"",
-		"TEAM": "GB",
-		"\"POS\"": "\"TE7\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+222\""
-	},
-	{
-		"\"RK\"": "\"80\"",
-		"\"PLAYER NAME\"": "\"Jonathon Brooks\"",
-		"TEAM": "CAR",
-		"\"POS\"": "\"RB35\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+17\""
-	},
-	{
-		"\"RK\"": "\"81\"",
-		"\"PLAYER NAME\"": "\"Amari Cooper\"",
-		"TEAM": "CLE",
-		"\"POS\"": "\"WR32\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-27\""
-	},
-	{
-		"\"RK\"": "\"82\"",
-		"\"PLAYER NAME\"": "\"Dalton Kincaid\"",
-		"TEAM": "BUF",
-		"\"POS\"": "\"TE8\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-31\""
-	},
-	{
-		"\"RK\"": "\"83\"",
-		"\"PLAYER NAME\"": "\"Jaylen Waddle\"",
-		"TEAM": "MIA",
-		"\"POS\"": "\"WR33\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-40\""
-	},
-	{
-		"\"RK\"": "\"84\"",
-		"\"PLAYER NAME\"": "\"Puka Nacua\"",
-		"TEAM": "LAR",
-		"\"POS\"": "\"WR34\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-70\""
-	},
-	{
-		"\"RK\"": "\"85\"",
-		"\"PLAYER NAME\"": "\"Jordan Love\"",
-		"TEAM": "GB",
-		"\"POS\"": "\"QB8\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-13\""
-	},
-	{
-		"\"RK\"": "\"86\"",
-		"\"PLAYER NAME\"": "\"Austin Ekeler\"",
-		"TEAM": "WAS",
-		"\"POS\"": "\"RB36\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
 		"\"ECR VS. ADP\"": "\"0\""
 	},
 	{
-		"\"RK\"": "\"87\"",
-		"\"PLAYER NAME\"": "\"Jaxon Smith-Njigba\"",
-		"TEAM": "SEA",
-		"\"POS\"": "\"WR35\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+6\""
-	},
-	{
-		"\"RK\"": "\"88\"",
-		"\"PLAYER NAME\"": "\"Tank Dell\"",
-		"TEAM": "HOU",
-		"\"POS\"": "\"WR36\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-24\""
-	},
-	{
-		"\"RK\"": "\"89\"",
-		"\"PLAYER NAME\"": "\"Michael Pittman Jr.\"",
-		"TEAM": "IND",
-		"\"POS\"": "\"WR37\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-53\""
-	},
-	{
-		"\"RK\"": "\"90\"",
-		"\"PLAYER NAME\"": "\"Jerome Ford\"",
-		"TEAM": "CLE",
-		"\"POS\"": "\"RB37\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+21\""
-	},
-	{
-		"\"RK\"": "\"91\"",
-		"\"PLAYER NAME\"": "\"Xavier Worthy\"",
-		"TEAM": "KC",
-		"\"POS\"": "\"WR38\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-6\""
-	},
-	{
-		"\"RK\"": "\"92\"",
-		"\"PLAYER NAME\"": "\"Zach Charbonnet\"",
-		"TEAM": "SEA",
-		"\"POS\"": "\"RB38\"",
+		"\"RK\"": "\"31\"",
+		"\"PLAYER NAME\"": "\"Lamar Jackson\"",
+		"TEAM": "BAL",
+		"\"POS\"": "\"QB1\"",
 		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
 		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+52\""
+		"\"ECR VS. ADP\"": "\"+7\""
 	},
 	{
-		"\"RK\"": "\"93\"",
-		"\"PLAYER NAME\"": "\"Dallas Goedert\"",
-		"TEAM": "PHI",
-		"\"POS\"": "\"TE9\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+12\""
-	},
-	{
-		"\"RK\"": "\"94\"",
-		"\"PLAYER NAME\"": "\"Darnell Mooney\"",
-		"TEAM": "ATL",
-		"\"POS\"": "\"WR39\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+80\""
-	},
-	{
-		"\"RK\"": "\"95\"",
-		"\"PLAYER NAME\"": "\"Brock Purdy\"",
+		"\"RK\"": "\"32\"",
+		"\"PLAYER NAME\"": "\"Christian McCaffrey\"",
 		"TEAM": "SF",
-		"\"POS\"": "\"QB9\"",
+		"\"POS\"": "\"RB15\"",
 		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-8\""
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-31\""
 	},
 	{
-		"\"RK\"": "\"96\"",
-		"\"PLAYER NAME\"": "\"Dak Prescott\"",
-		"TEAM": "DAL",
-		"\"POS\"": "\"QB10\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-27\""
-	},
-	{
-		"\"RK\"": "\"97\"",
-		"\"PLAYER NAME\"": "\"Braelon Allen\"",
-		"TEAM": "NYJ",
-		"\"POS\"": "\"RB39\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+104\""
-	},
-	{
-		"\"RK\"": "\"98\"",
-		"\"PLAYER NAME\"": "\"Christian Kirk\"",
-		"TEAM": "JAC",
-		"\"POS\"": "\"WR40\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-22\""
-	},
-	{
-		"\"RK\"": "\"99\"",
-		"\"PLAYER NAME\"": "\"Khalil Shakir\"",
-		"TEAM": "BUF",
-		"\"POS\"": "\"WR41\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+29\""
-	},
-	{
-		"\"RK\"": "\"100\"",
-		"\"PLAYER NAME\"": "\"Ladd McConkey\"",
-		"TEAM": "LAC",
-		"\"POS\"": "\"WR42\"",
+		"\"RK\"": "\"33\"",
+		"\"PLAYER NAME\"": "\"Deebo Samuel Sr.\"",
+		"TEAM": "SF",
+		"\"POS\"": "\"WR15\"",
 		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
 		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
 		"\"ECR VS. ADP\"": "\"+1\""
 	},
 	{
-		"\"RK\"": "\"101\"",
-		"\"PLAYER NAME\"": "\"Anthony Richardson\"",
-		"TEAM": "IND",
-		"\"POS\"": "\"QB11\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-46\""
+		"\"RK\"": "\"34\"",
+		"\"PLAYER NAME\"": "\"George Kittle\"",
+		"TEAM": "SF",
+		"\"POS\"": "\"TE3\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+19\""
 	},
 	{
-		"\"RK\"": "\"102\"",
-		"\"PLAYER NAME\"": "\"Nick Chubb\"",
-		"TEAM": "CLE",
-		"\"POS\"": "\"RB40\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-6\""
+		"\"RK\"": "\"35\"",
+		"\"PLAYER NAME\"": "\"Marvin Harrison Jr.\"",
+		"TEAM": "ARI",
+		"\"POS\"": "\"WR16\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-19\""
 	},
 	{
-		"\"RK\"": "\"103\"",
-		"\"PLAYER NAME\"": "\"Tyjae Spears\"",
-		"TEAM": "TEN",
-		"\"POS\"": "\"RB41\"",
+		"\"RK\"": "\"36\"",
+		"\"PLAYER NAME\"": "\"Garrett Wilson\"",
+		"TEAM": "NYJ",
+		"\"POS\"": "\"WR17\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-24\""
+	},
+	{
+		"\"RK\"": "\"37\"",
+		"\"PLAYER NAME\"": "\"Travis Kelce\"",
+		"TEAM": "KC",
+		"\"POS\"": "\"TE4\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-15\""
+	},
+	{
+		"\"RK\"": "\"38\"",
+		"\"PLAYER NAME\"": "\"Terry McLaurin\"",
+		"TEAM": "WAS",
+		"\"POS\"": "\"WR18\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+35\""
+	},
+	{
+		"\"RK\"": "\"39\"",
+		"\"PLAYER NAME\"": "\"DeVonta Smith\"",
+		"TEAM": "PHI",
+		"\"POS\"": "\"WR19\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+7\""
+	},
+	{
+		"\"RK\"": "\"40\"",
+		"\"PLAYER NAME\"": "\"David Montgomery\"",
+		"TEAM": "DET",
+		"\"POS\"": "\"RB16\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+20\""
+	},
+	{
+		"\"RK\"": "\"41\"",
+		"\"PLAYER NAME\"": "\"Diontae Johnson\"",
+		"TEAM": "CAR",
+		"\"POS\"": "\"WR20\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+43\""
+	},
+	{
+		"\"RK\"": "\"42\"",
+		"\"PLAYER NAME\"": "\"Brian Robinson Jr.\"",
+		"TEAM": "WAS",
+		"\"POS\"": "\"RB17\"",
+		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+46\""
+	},
+	{
+		"\"RK\"": "\"43\"",
+		"\"PLAYER NAME\"": "\"James Conner\"",
+		"TEAM": "ARI",
+		"\"POS\"": "\"RB18\"",
 		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
 		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+9\""
+	},
+	{
+		"\"RK\"": "\"44\"",
+		"\"PLAYER NAME\"": "\"Aaron Jones\"",
+		"TEAM": "MIN",
+		"\"POS\"": "\"RB19\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+12\""
+	},
+	{
+		"\"RK\"": "\"45\"",
+		"\"PLAYER NAME\"": "\"Brian Thomas Jr.\"",
+		"TEAM": "JAC",
+		"\"POS\"": "\"WR21\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+73\""
+	},
+	{
+		"\"RK\"": "\"46\"",
+		"\"PLAYER NAME\"": "\"J.K. Dobbins\"",
+		"TEAM": "LAC",
+		"\"POS\"": "\"RB20\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+84\""
+	},
+	{
+		"\"RK\"": "\"47\"",
+		"\"PLAYER NAME\"": "\"Jordan Mason\"",
+		"TEAM": "SF",
+		"\"POS\"": "\"RB21\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+152\""
+	},
+	{
+		"\"RK\"": "\"48\"",
+		"\"PLAYER NAME\"": "\"Josh Allen\"",
+		"TEAM": "BUF",
+		"\"POS\"": "\"QB2\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-27\""
+	},
+	{
+		"\"RK\"": "\"49\"",
+		"\"PLAYER NAME\"": "\"Jalen Hurts\"",
+		"TEAM": "PHI",
+		"\"POS\"": "\"QB3\"",
+		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-18\""
+	},
+	{
+		"\"RK\"": "\"50\"",
+		"\"PLAYER NAME\"": "\"Jayden Daniels\"",
+		"TEAM": "WAS",
+		"\"POS\"": "\"QB4\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+49\""
+	},
+	{
+		"\"RK\"": "\"51\"",
+		"\"PLAYER NAME\"": "\"Tee Higgins\"",
+		"TEAM": "CIN",
+		"\"POS\"": "\"WR22\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+10\""
+	},
+	{
+		"\"RK\"": "\"52\"",
+		"\"PLAYER NAME\"": "\"Brandon Aiyuk\"",
+		"TEAM": "SF",
+		"\"POS\"": "\"WR23\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-17\""
+	},
+	{
+		"\"RK\"": "\"53\"",
+		"\"PLAYER NAME\"": "\"Chuba Hubbard\"",
+		"TEAM": "CAR",
+		"\"POS\"": "\"RB22\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+76\""
+	},
+	{
+		"\"RK\"": "\"54\"",
+		"\"PLAYER NAME\"": "\"DJ Moore\"",
+		"TEAM": "CHI",
+		"\"POS\"": "\"WR24\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
 		"\"ECR VS. ADP\"": "\"-9\""
 	},
 	{
-		"\"RK\"": "\"104\"",
-		"\"PLAYER NAME\"": "\"Ty Chandler\"",
-		"TEAM": "MIN",
-		"\"POS\"": "\"RB42\"",
+		"\"RK\"": "\"55\"",
+		"\"PLAYER NAME\"": "\"Cooper Kupp\"",
+		"TEAM": "LAR",
+		"\"POS\"": "\"WR25\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-18\""
+	},
+	{
+		"\"RK\"": "\"56\"",
+		"\"PLAYER NAME\"": "\"Rhamondre Stevenson\"",
+		"TEAM": "NE",
+		"\"POS\"": "\"RB23\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+11\""
+	},
+	{
+		"\"RK\"": "\"57\"",
+		"\"PLAYER NAME\"": "\"Jake Ferguson\"",
+		"TEAM": "DAL",
+		"\"POS\"": "\"TE5\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+23\""
+	},
+	{
+		"\"RK\"": "\"58\"",
+		"\"PLAYER NAME\"": "\"Zay Flowers\"",
+		"TEAM": "BAL",
+		"\"POS\"": "\"WR26\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+4\""
+	},
+	{
+		"\"RK\"": "\"59\"",
+		"\"PLAYER NAME\"": "\"D'Andre Swift\"",
+		"TEAM": "CHI",
+		"\"POS\"": "\"RB24\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-1\""
+	},
+	{
+		"\"RK\"": "\"60\"",
+		"\"PLAYER NAME\"": "\"Davante Adams\"",
+		"TEAM": "NYJ",
+		"\"POS\"": "\"WR27\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-40\""
+	},
+	{
+		"\"RK\"": "\"61\"",
+		"\"PLAYER NAME\"": "\"Chase Brown\"",
+		"TEAM": "CIN",
+		"\"POS\"": "\"RB25\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+47\""
+	},
+	{
+		"\"RK\"": "\"62\"",
+		"\"PLAYER NAME\"": "\"Evan Engram\"",
+		"TEAM": "JAC",
+		"\"POS\"": "\"TE6\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+3\""
+	},
+	{
+		"\"RK\"": "\"63\"",
+		"\"PLAYER NAME\"": "\"Joe Burrow\"",
+		"TEAM": "CIN",
+		"\"POS\"": "\"QB5\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-4\""
+	},
+	{
+		"\"RK\"": "\"64\"",
+		"\"PLAYER NAME\"": "\"Kareem Hunt\"",
+		"TEAM": "KC",
+		"\"POS\"": "\"RB26\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+481\""
+	},
+	{
+		"\"RK\"": "\"65\"",
+		"\"PLAYER NAME\"": "\"Jordan Love\"",
+		"TEAM": "GB",
+		"\"POS\"": "\"QB6\"",
+		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+7\""
+	},
+	{
+		"\"RK\"": "\"66\"",
+		"\"PLAYER NAME\"": "\"Najee Harris\"",
+		"TEAM": "PIT",
+		"\"POS\"": "\"RB27\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+5\""
+	},
+	{
+		"\"RK\"": "\"67\"",
+		"\"PLAYER NAME\"": "\"Jameson Williams\"",
+		"TEAM": "DET",
+		"\"POS\"": "\"WR28\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+52\""
+	},
+	{
+		"\"RK\"": "\"68\"",
+		"\"PLAYER NAME\"": "\"Jaylen Waddle\"",
+		"TEAM": "MIA",
+		"\"POS\"": "\"WR29\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-25\""
+	},
+	{
+		"\"RK\"": "\"69\"",
+		"\"PLAYER NAME\"": "\"C.J. Stroud\"",
+		"TEAM": "HOU",
+		"\"POS\"": "\"QB7\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-19\""
+	},
+	{
+		"\"RK\"": "\"70\"",
+		"\"PLAYER NAME\"": "\"Chris Olave\"",
+		"TEAM": "NO",
+		"\"POS\"": "\"WR30\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-46\""
+	},
+	{
+		"\"RK\"": "\"71\"",
+		"\"PLAYER NAME\"": "\"George Pickens\"",
+		"TEAM": "PIT",
+		"\"POS\"": "\"WR31\"",
 		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
 		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+51\""
+		"\"ECR VS. ADP\"": "\"-14\""
+	},
+	{
+		"\"RK\"": "\"72\"",
+		"\"PLAYER NAME\"": "\"Bucky Irving\"",
+		"TEAM": "TB",
+		"\"POS\"": "\"RB28\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+109\""
+	},
+	{
+		"\"RK\"": "\"73\"",
+		"\"PLAYER NAME\"": "\"Kyler Murray\"",
+		"TEAM": "ARI",
+		"\"POS\"": "\"QB8\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-3\""
+	},
+	{
+		"\"RK\"": "\"74\"",
+		"\"PLAYER NAME\"": "\"Sam LaPorta\"",
+		"TEAM": "DET",
+		"\"POS\"": "\"TE7\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-41\""
+	},
+	{
+		"\"RK\"": "\"75\"",
+		"\"PLAYER NAME\"": "\"Austin Ekeler\"",
+		"TEAM": "WAS",
+		"\"POS\"": "\"RB29\"",
+		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+11\""
+	},
+	{
+		"\"RK\"": "\"76\"",
+		"\"PLAYER NAME\"": "\"Rico Dowdle\"",
+		"TEAM": "DAL",
+		"\"POS\"": "\"RB30\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+73\""
+	},
+	{
+		"\"RK\"": "\"77\"",
+		"\"PLAYER NAME\"": "\"Puka Nacua\"",
+		"TEAM": "LAR",
+		"\"POS\"": "\"WR32\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-63\""
+	},
+	{
+		"\"RK\"": "\"78\"",
+		"\"PLAYER NAME\"": "\"Amari Cooper\"",
+		"TEAM": "BUF",
+		"\"POS\"": "\"WR33\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-24\""
+	},
+	{
+		"\"RK\"": "\"79\"",
+		"\"PLAYER NAME\"": "\"Brock Purdy\"",
+		"TEAM": "SF",
+		"\"POS\"": "\"QB9\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+8\""
+	},
+	{
+		"\"RK\"": "\"80\"",
+		"\"PLAYER NAME\"": "\"Tank Dell\"",
+		"TEAM": "HOU",
+		"\"POS\"": "\"WR34\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-16\""
+	},
+	{
+		"\"RK\"": "\"81\"",
+		"\"PLAYER NAME\"": "\"Travis Etienne Jr.\"",
+		"TEAM": "JAC",
+		"\"POS\"": "\"RB31\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-64\""
+	},
+	{
+		"\"RK\"": "\"82\"",
+		"\"PLAYER NAME\"": "\"Tyrone Tracy Jr.\"",
+		"TEAM": "NYG",
+		"\"POS\"": "\"RB32\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+129\""
+	},
+	{
+		"\"RK\"": "\"83\"",
+		"\"PLAYER NAME\"": "\"Nick Chubb\"",
+		"TEAM": "CLE",
+		"\"POS\"": "\"RB33\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+13\""
+	},
+	{
+		"\"RK\"": "\"84\"",
+		"\"PLAYER NAME\"": "\"Tank Bigsby\"",
+		"TEAM": "JAC",
+		"\"POS\"": "\"RB34\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+163\""
+	},
+	{
+		"\"RK\"": "\"85\"",
+		"\"PLAYER NAME\"": "\"Rachaad White\"",
+		"TEAM": "TB",
+		"\"POS\"": "\"RB35\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-53\""
+	},
+	{
+		"\"RK\"": "\"86\"",
+		"\"PLAYER NAME\"": "\"Darnell Mooney\"",
+		"TEAM": "ATL",
+		"\"POS\"": "\"WR35\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+88\""
+	},
+	{
+		"\"RK\"": "\"87\"",
+		"\"PLAYER NAME\"": "\"Josh Downs\"",
+		"TEAM": "IND",
+		"\"POS\"": "\"WR36\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+115\""
+	},
+	{
+		"\"RK\"": "\"88\"",
+		"\"PLAYER NAME\"": "\"T.J. Hockenson\"",
+		"TEAM": "MIN",
+		"\"POS\"": "\"TE8\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+33\""
+	},
+	{
+		"\"RK\"": "\"89\"",
+		"\"PLAYER NAME\"": "\"Rashid Shaheed\"",
+		"TEAM": "NO",
+		"\"POS\"": "\"WR37\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+91\""
+	},
+	{
+		"\"RK\"": "\"90\"",
+		"\"PLAYER NAME\"": "\"Jaxon Smith-Njigba\"",
+		"TEAM": "SEA",
+		"\"POS\"": "\"WR38\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+3\""
+	},
+	{
+		"\"RK\"": "\"91\"",
+		"\"PLAYER NAME\"": "\"Jonathon Brooks\"",
+		"TEAM": "CAR",
+		"\"POS\"": "\"RB36\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+6\""
+	},
+	{
+		"\"RK\"": "\"92\"",
+		"\"PLAYER NAME\"": "\"Xavier Worthy\"",
+		"TEAM": "KC",
+		"\"POS\"": "\"WR39\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-7\""
+	},
+	{
+		"\"RK\"": "\"93\"",
+		"\"PLAYER NAME\"": "\"Dalton Kincaid\"",
+		"TEAM": "BUF",
+		"\"POS\"": "\"TE9\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-42\""
+	},
+	{
+		"\"RK\"": "\"94\"",
+		"\"PLAYER NAME\"": "\"Anthony Richardson\"",
+		"TEAM": "IND",
+		"\"POS\"": "\"QB10\"",
+		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-39\""
+	},
+	{
+		"\"RK\"": "\"95\"",
+		"\"PLAYER NAME\"": "\"Ty Chandler\"",
+		"TEAM": "MIN",
+		"\"POS\"": "\"RB37\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+60\""
+	},
+	{
+		"\"RK\"": "\"96\"",
+		"\"PLAYER NAME\"": "\"Zack Moss\"",
+		"TEAM": "CIN",
+		"\"POS\"": "\"RB38\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-5\""
+	},
+	{
+		"\"RK\"": "\"97\"",
+		"\"PLAYER NAME\"": "\"Dak Prescott\"",
+		"TEAM": "DAL",
+		"\"POS\"": "\"QB11\"",
+		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-28\""
+	},
+	{
+		"\"RK\"": "\"98\"",
+		"\"PLAYER NAME\"": "\"Javonte Williams\"",
+		"TEAM": "DEN",
+		"\"POS\"": "\"RB39\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-19\""
+	},
+	{
+		"\"RK\"": "\"99\"",
+		"\"PLAYER NAME\"": "\"David Njoku\"",
+		"TEAM": "CLE",
+		"\"POS\"": "\"TE10\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-17\""
+	},
+	{
+		"\"RK\"": "\"100\"",
+		"\"PLAYER NAME\"": "\"Michael Pittman Jr.\"",
+		"TEAM": "IND",
+		"\"POS\"": "\"WR40\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-64\""
+	},
+	{
+		"\"RK\"": "\"101\"",
+		"\"PLAYER NAME\"": "\"Khalil Shakir\"",
+		"TEAM": "BUF",
+		"\"POS\"": "\"WR41\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+27\""
+	},
+	{
+		"\"RK\"": "\"102\"",
+		"\"PLAYER NAME\"": "\"Ladd McConkey\"",
+		"TEAM": "LAC",
+		"\"POS\"": "\"WR42\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-1\""
+	},
+	{
+		"\"RK\"": "\"103\"",
+		"\"PLAYER NAME\"": "\"Baker Mayfield\"",
+		"TEAM": "TB",
+		"\"POS\"": "\"QB12\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+57\""
+	},
+	{
+		"\"RK\"": "\"104\"",
+		"\"PLAYER NAME\"": "\"Christian Watson\"",
+		"TEAM": "GB",
+		"\"POS\"": "\"WR43\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-6\""
 	},
 	{
 		"\"RK\"": "\"105\"",
-		"\"PLAYER NAME\"": "\"Calvin Ridley\"",
-		"TEAM": "TEN",
-		"\"POS\"": "\"WR43\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-31\""
+		"\"PLAYER NAME\"": "\"Tucker Kraft\"",
+		"TEAM": "GB",
+		"\"POS\"": "\"TE11\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+196\""
 	},
 	{
 		"\"RK\"": "\"106\"",
-		"\"PLAYER NAME\"": "\"Wan'Dale Robinson\"",
-		"TEAM": "NYG",
-		"\"POS\"": "\"WR44\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+144\""
+		"\"PLAYER NAME\"": "\"Zach Charbonnet\"",
+		"TEAM": "SEA",
+		"\"POS\"": "\"RB40\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+38\""
 	},
 	{
 		"\"RK\"": "\"107\"",
-		"\"PLAYER NAME\"": "\"Patrick Mahomes II\"",
-		"TEAM": "KC",
-		"\"POS\"": "\"QB12\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-79\""
+		"\"PLAYER NAME\"": "\"Christian Kirk\"",
+		"TEAM": "JAC",
+		"\"POS\"": "\"WR44\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-31\""
 	},
 	{
 		"\"RK\"": "\"108\"",
 		"\"PLAYER NAME\"": "\"Jordan Addison\"",
 		"TEAM": "MIN",
 		"\"POS\"": "\"WR45\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
 		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
 		"\"ECR VS. ADP\"": "\"-1\""
 	},
 	{
 		"\"RK\"": "\"109\"",
-		"\"PLAYER NAME\"": "\"Geno Smith\"",
-		"TEAM": "SEA",
-		"\"POS\"": "\"QB13\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+74\""
+		"\"PLAYER NAME\"": "\"Braelon Allen\"",
+		"TEAM": "NYJ",
+		"\"POS\"": "\"RB41\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+92\""
 	},
 	{
 		"\"RK\"": "\"110\"",
-		"\"PLAYER NAME\"": "\"Kyle Pitts\"",
-		"TEAM": "ATL",
-		"\"POS\"": "\"TE10\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-47\""
-	},
-	{
-		"\"RK\"": "\"111\"",
-		"\"PLAYER NAME\"": "\"Jonathan Taylor\"",
-		"TEAM": "IND",
-		"\"POS\"": "\"RB43\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-100\""
-	},
-	{
-		"\"RK\"": "\"112\"",
-		"\"PLAYER NAME\"": "\"Rome Odunze\"",
-		"TEAM": "CHI",
-		"\"POS\"": "\"WR46\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"PLAYER NAME\"": "\"Devin Singletary\"",
+		"TEAM": "NYG",
+		"\"POS\"": "\"RB42\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
 		"\"ECR VS. ADP\"": "\"-20\""
 	},
 	{
+		"\"RK\"": "\"111\"",
+		"\"PLAYER NAME\"": "\"Tyler Allgeier\"",
+		"TEAM": "ATL",
+		"\"POS\"": "\"RB43\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+41\""
+	},
+	{
+		"\"RK\"": "\"112\"",
+		"\"PLAYER NAME\"": "\"Patrick Mahomes II\"",
+		"TEAM": "KC",
+		"\"POS\"": "\"QB13\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-84\""
+	},
+	{
 		"\"RK\"": "\"113\"",
+		"\"PLAYER NAME\"": "\"JuJu Smith-Schuster\"",
+		"TEAM": "KC",
+		"\"POS\"": "\"WR46\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+181\""
+	},
+	{
+		"\"RK\"": "\"114\"",
+		"\"PLAYER NAME\"": "\"Jaylen Warren\"",
+		"TEAM": "PIT",
+		"\"POS\"": "\"RB44\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-25\""
+	},
+	{
+		"\"RK\"": "\"115\"",
+		"\"PLAYER NAME\"": "\"Cole Kmet\"",
+		"TEAM": "CHI",
+		"\"POS\"": "\"TE12\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+22\""
+	},
+	{
+		"\"RK\"": "\"116\"",
+		"\"PLAYER NAME\"": "\"Caleb Williams\"",
+		"TEAM": "CHI",
+		"\"POS\"": "\"QB14\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-12\""
+	},
+	{
+		"\"RK\"": "\"117\"",
+		"\"PLAYER NAME\"": "\"Geno Smith\"",
+		"TEAM": "SEA",
+		"\"POS\"": "\"QB15\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+66\""
+	},
+	{
+		"\"RK\"": "\"118\"",
 		"\"PLAYER NAME\"": "\"Jakobi Meyers\"",
 		"TEAM": "LV",
 		"\"POS\"": "\"WR47\"",
 		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
 		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+28\""
-	},
-	{
-		"\"RK\"": "\"114\"",
-		"\"PLAYER NAME\"": "\"Alexander Mattison\"",
-		"TEAM": "LV",
-		"\"POS\"": "\"RB44\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+127\""
-	},
-	{
-		"\"RK\"": "\"115\"",
-		"\"PLAYER NAME\"": "\"Josh Downs\"",
-		"TEAM": "IND",
-		"\"POS\"": "\"WR48\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+87\""
-	},
-	{
-		"\"RK\"": "\"116\"",
-		"\"PLAYER NAME\"": "\"Jaylen Warren\"",
-		"TEAM": "PIT",
-		"\"POS\"": "\"RB45\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-27\""
-	},
-	{
-		"\"RK\"": "\"117\"",
-		"\"PLAYER NAME\"": "\"Pat Freiermuth\"",
-		"TEAM": "PIT",
-		"\"POS\"": "\"TE11\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+16\""
-	},
-	{
-		"\"RK\"": "\"118\"",
-		"\"PLAYER NAME\"": "\"Roschon Johnson\"",
-		"TEAM": "CHI",
-		"\"POS\"": "\"RB46\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+135\""
+		"\"ECR VS. ADP\"": "\"+23\""
 	},
 	{
 		"\"RK\"": "\"119\"",
-		"\"PLAYER NAME\"": "\"Justin Fields\"",
-		"TEAM": "PIT",
-		"\"POS\"": "\"QB14\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+94\""
+		"\"PLAYER NAME\"": "\"Wan'Dale Robinson\"",
+		"TEAM": "NYG",
+		"\"POS\"": "\"WR48\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+131\""
 	},
 	{
 		"\"RK\"": "\"120\"",
-		"\"PLAYER NAME\"": "\"Tyler Allgeier\"",
-		"TEAM": "ATL",
-		"\"POS\"": "\"RB47\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+32\""
-	},
-	{
-		"\"RK\"": "\"121\"",
-		"\"PLAYER NAME\"": "\"Jared Goff\"",
-		"TEAM": "DET",
-		"\"POS\"": "\"QB15\"",
+		"\"PLAYER NAME\"": "\"Alexander Mattison\"",
+		"TEAM": "LV",
+		"\"POS\"": "\"RB45\"",
 		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-4\""
-	},
-	{
-		"\"RK\"": "\"122\"",
-		"\"PLAYER NAME\"": "\"T.J. Hockenson\"",
-		"TEAM": "MIN",
-		"\"POS\"": "\"TE12\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
 		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-1\""
-	},
-	{
-		"\"RK\"": "\"123\"",
-		"\"PLAYER NAME\"": "\"Baker Mayfield\"",
-		"TEAM": "TB",
-		"\"POS\"": "\"QB16\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+37\""
-	},
-	{
-		"\"RK\"": "\"124\"",
-		"\"PLAYER NAME\"": "\"Evan Engram\"",
-		"TEAM": "JAC",
-		"\"POS\"": "\"TE13\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-59\""
-	},
-	{
-		"\"RK\"": "\"125\"",
-		"\"PLAYER NAME\"": "\"Keenan Allen\"",
-		"TEAM": "CHI",
-		"\"POS\"": "\"WR49\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-47\""
-	},
-	{
-		"\"RK\"": "\"126\"",
-		"\"PLAYER NAME\"": "\"Courtland Sutton\"",
-		"TEAM": "DEN",
-		"\"POS\"": "\"WR50\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-16\""
-	},
-	{
-		"\"RK\"": "\"127\"",
-		"\"PLAYER NAME\"": "\"Justice Hill\"",
-		"TEAM": "BAL",
-		"\"POS\"": "\"RB48\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
 		"\"ECR VS. ADP\"": "\"+121\""
 	},
 	{
-		"\"RK\"": "\"128\"",
-		"\"PLAYER NAME\"": "\"Dontayvion Wicks\"",
-		"TEAM": "GB",
+		"\"RK\"": "\"121\"",
+		"\"PLAYER NAME\"": "\"Kyle Pitts\"",
+		"TEAM": "ATL",
+		"\"POS\"": "\"TE13\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-58\""
+	},
+	{
+		"\"RK\"": "\"122\"",
+		"\"PLAYER NAME\"": "\"Courtland Sutton\"",
+		"TEAM": "DEN",
+		"\"POS\"": "\"WR49\"",
+		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-12\""
+	},
+	{
+		"\"RK\"": "\"123\"",
+		"\"PLAYER NAME\"": "\"Rome Odunze\"",
+		"TEAM": "CHI",
+		"\"POS\"": "\"WR50\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-31\""
+	},
+	{
+		"\"RK\"": "\"124\"",
+		"\"PLAYER NAME\"": "\"DeAndre Hopkins\"",
+		"TEAM": "TEN",
 		"\"POS\"": "\"WR51\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-22\""
+	},
+	{
+		"\"RK\"": "\"125\"",
+		"\"PLAYER NAME\"": "\"Romeo Doubs\"",
+		"TEAM": "GB",
+		"\"POS\"": "\"WR52\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+13\""
+	},
+	{
+		"\"RK\"": "\"126\"",
+		"\"PLAYER NAME\"": "\"Keenan Allen\"",
+		"TEAM": "CHI",
+		"\"POS\"": "\"WR53\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-48\""
+	},
+	{
+		"\"RK\"": "\"127\"",
+		"\"PLAYER NAME\"": "\"Calvin Ridley\"",
+		"TEAM": "TEN",
+		"\"POS\"": "\"WR54\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-53\""
+	},
+	{
+		"\"RK\"": "\"128\"",
+		"\"PLAYER NAME\"": "\"Ray Davis\"",
+		"TEAM": "BUF",
+		"\"POS\"": "\"RB46\"",
 		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
 		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+45\""
+		"\"ECR VS. ADP\"": "\"+79\""
 	},
 	{
 		"\"RK\"": "\"129\"",
-		"\"PLAYER NAME\"": "\"DeAndre Hopkins\"",
+		"\"PLAYER NAME\"": "\"Tyjae Spears\"",
 		"TEAM": "TEN",
-		"\"POS\"": "\"WR52\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-27\""
+		"\"POS\"": "\"RB47\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-35\""
 	},
 	{
 		"\"RK\"": "\"130\"",
 		"\"PLAYER NAME\"": "\"Sam Darnold\"",
 		"TEAM": "MIN",
-		"\"POS\"": "\"QB17\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"POS\"": "\"QB16\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
 		"\"ECR VS. ADP\"": "\"+93\""
 	},
 	{
 		"\"RK\"": "\"131\"",
-		"\"PLAYER NAME\"": "\"David Njoku\"",
-		"TEAM": "CLE",
+		"\"PLAYER NAME\"": "\"Pat Freiermuth\"",
+		"TEAM": "PIT",
 		"\"POS\"": "\"TE14\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-49\""
-	},
-	{
-		"\"RK\"": "\"132\"",
-		"\"PLAYER NAME\"": "\"Keon Coleman\"",
-		"TEAM": "BUF",
-		"\"POS\"": "\"WR53\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-32\""
-	},
-	{
-		"\"RK\"": "\"133\"",
-		"\"PLAYER NAME\"": "\"Tyler Lockett\"",
-		"TEAM": "SEA",
-		"\"POS\"": "\"WR54\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
 		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
 		"\"ECR VS. ADP\"": "\"+2\""
 	},
 	{
-		"\"RK\"": "\"134\"",
-		"\"PLAYER NAME\"": "\"Jerry Jeudy\"",
+		"\"RK\"": "\"132\"",
+		"\"PLAYER NAME\"": "\"Jerome Ford\"",
 		"TEAM": "CLE",
-		"\"POS\"": "\"WR55\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"POS\"": "\"RB48\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
 		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+8\""
+		"\"ECR VS. ADP\"": "\"-21\""
+	},
+	{
+		"\"RK\"": "\"133\"",
+		"\"PLAYER NAME\"": "\"Jared Goff\"",
+		"TEAM": "DET",
+		"\"POS\"": "\"QB17\"",
+		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-16\""
+	},
+	{
+		"\"RK\"": "\"134\"",
+		"\"PLAYER NAME\"": "\"Justice Hill\"",
+		"TEAM": "BAL",
+		"\"POS\"": "\"RB49\"",
+		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+114\""
 	},
 	{
 		"\"RK\"": "\"135\"",
-		"\"PLAYER NAME\"": "\"Caleb Williams\"",
-		"TEAM": "CHI",
-		"\"POS\"": "\"QB18\"",
+		"\"PLAYER NAME\"": "\"Isaiah Likely\"",
+		"TEAM": "BAL",
+		"\"POS\"": "\"TE15\"",
 		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
 		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-31\""
+		"\"ECR VS. ADP\"": "\"+36\""
 	},
 	{
 		"\"RK\"": "\"136\"",
-		"\"PLAYER NAME\"": "\"Jaleel McLaughlin\"",
-		"TEAM": "DEN",
-		"\"POS\"": "\"RB49\"",
+		"\"PLAYER NAME\"": "\"Kirk Cousins\"",
+		"TEAM": "ATL",
+		"\"POS\"": "\"QB18\"",
 		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+21\""
+		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+3\""
 	},
 	{
 		"\"RK\"": "\"137\"",
-		"\"PLAYER NAME\"": "\"Samaje Perine\"",
-		"TEAM": "KC",
+		"\"PLAYER NAME\"": "\"Roschon Johnson\"",
+		"TEAM": "CHI",
 		"\"POS\"": "\"RB50\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
 		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+133\""
+		"\"ECR VS. ADP\"": "\"+116\""
 	},
 	{
 		"\"RK\"": "\"138\"",
-		"\"PLAYER NAME\"": "\"Jalen Tolbert\"",
-		"TEAM": "DAL",
-		"\"POS\"": "\"WR56\"",
+		"\"PLAYER NAME\"": "\"Blake Corum\"",
+		"TEAM": "LAR",
+		"\"POS\"": "\"RB51\"",
 		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+128\""
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-15\""
 	},
 	{
 		"\"RK\"": "\"139\"",
+		"\"PLAYER NAME\"": "\"Dallas Goedert\"",
+		"TEAM": "PHI",
+		"\"POS\"": "\"TE16\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-34\""
+	},
+	{
+		"\"RK\"": "\"140\"",
+		"\"PLAYER NAME\"": "\"DeMario Douglas\"",
+		"TEAM": "NE",
+		"\"POS\"": "\"WR55\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+49\""
+	},
+	{
+		"\"RK\"": "\"141\"",
+		"\"PLAYER NAME\"": "\"Jerry Jeudy\"",
+		"TEAM": "CLE",
+		"\"POS\"": "\"WR56\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+1\""
+	},
+	{
+		"\"RK\"": "\"142\"",
 		"\"PLAYER NAME\"": "\"Xavier Legette\"",
 		"TEAM": "CAR",
 		"\"POS\"": "\"WR57\"",
 		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
 		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+30\""
-	},
-	{
-		"\"RK\"": "\"140\"",
-		"\"PLAYER NAME\"": "\"Christian Watson\"",
-		"TEAM": "GB",
-		"\"POS\"": "\"WR58\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-42\""
-	},
-	{
-		"\"RK\"": "\"141\"",
-		"\"PLAYER NAME\"": "\"Cole Kmet\"",
-		"TEAM": "CHI",
-		"\"POS\"": "\"TE15\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-4\""
-	},
-	{
-		"\"RK\"": "\"142\"",
-		"\"PLAYER NAME\"": "\"Tyrone Tracy Jr.\"",
-		"TEAM": "NYG",
-		"\"POS\"": "\"RB51\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+69\""
+		"\"ECR VS. ADP\"": "\"+27\""
 	},
 	{
 		"\"RK\"": "\"143\"",
-		"\"PLAYER NAME\"": "\"Antonio Gibson\"",
-		"TEAM": "NE",
+		"\"PLAYER NAME\"": "\"Jaleel McLaughlin\"",
+		"TEAM": "DEN",
 		"\"POS\"": "\"RB52\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+25\""
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+14\""
 	},
 	{
 		"\"RK\"": "\"144\"",
-		"\"PLAYER NAME\"": "\"Zamir White\"",
-		"TEAM": "LV",
-		"\"POS\"": "\"RB53\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-78\""
-	},
-	{
-		"\"RK\"": "\"145\"",
-		"\"PLAYER NAME\"": "\"Raheem Mostert\"",
-		"TEAM": "MIA",
-		"\"POS\"": "\"RB54\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-70\""
-	},
-	{
-		"\"RK\"": "\"146\"",
-		"\"PLAYER NAME\"": "\"Blake Corum\"",
-		"TEAM": "LAR",
-		"\"POS\"": "\"RB55\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-23\""
-	},
-	{
-		"\"RK\"": "\"147\"",
 		"\"PLAYER NAME\"": "\"Jaylen Wright\"",
 		"TEAM": "MIA",
-		"\"POS\"": "\"RB56\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+17\""
-	},
-	{
-		"\"RK\"": "\"148\"",
-		"\"PLAYER NAME\"": "\"Quentin Johnston\"",
-		"TEAM": "LAC",
-		"\"POS\"": "\"WR59\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+82\""
-	},
-	{
-		"\"RK\"": "\"149\"",
-		"\"PLAYER NAME\"": "\"Kirk Cousins\"",
-		"TEAM": "ATL",
-		"\"POS\"": "\"QB19\"",
+		"\"POS\"": "\"RB53\"",
 		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-10\""
-	},
-	{
-		"\"RK\"": "\"150\"",
-		"\"PLAYER NAME\"": "\"Trevor Lawrence\"",
-		"TEAM": "JAC",
-		"\"POS\"": "\"QB20\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-24\""
-	},
-	{
-		"\"RK\"": "\"151\"",
-		"\"PLAYER NAME\"": "\"Michael Wilson\"",
-		"TEAM": "ARI",
-		"\"POS\"": "\"WR60\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+64\""
-	},
-	{
-		"\"RK\"": "\"152\"",
-		"\"PLAYER NAME\"": "\"Romeo Doubs\"",
-		"TEAM": "GB",
-		"\"POS\"": "\"WR61\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-14\""
-	},
-	{
-		"\"RK\"": "\"153\"",
-		"\"PLAYER NAME\"": "\"Ray Davis\"",
-		"TEAM": "BUF",
-		"\"POS\"": "\"RB57\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+54\""
-	},
-	{
-		"\"RK\"": "\"154\"",
-		"\"PLAYER NAME\"": "\"Isiah Pacheco\"",
-		"TEAM": "KC",
-		"\"POS\"": "\"RB58\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-135\""
-	},
-	{
-		"\"RK\"": "\"155\"",
-		"\"PLAYER NAME\"": "\"Isaiah Likely\"",
-		"TEAM": "BAL",
-		"\"POS\"": "\"TE16\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+16\""
-	},
-	{
-		"\"RK\"": "\"156\"",
-		"\"PLAYER NAME\"": "\"Daniel Jones\"",
-		"TEAM": "NYG",
-		"\"POS\"": "\"QB21\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+98\""
-	},
-	{
-		"\"RK\"": "\"157\"",
-		"\"PLAYER NAME\"": "\"Pittsburgh Steelers\"",
-		"TEAM": "PIT",
-		"\"POS\"": "\"DST1\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-4\""
-	},
-	{
-		"\"RK\"": "\"158\"",
-		"\"PLAYER NAME\"": "\"New York Jets\"",
-		"TEAM": "NYJ",
-		"\"POS\"": "\"DST2\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-33\""
-	},
-	{
-		"\"RK\"": "\"159\"",
-		"\"PLAYER NAME\"": "\"Aaron Rodgers\"",
-		"TEAM": "NYJ",
-		"\"POS\"": "\"QB22\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-25\""
-	},
-	{
-		"\"RK\"": "\"160\"",
-		"\"PLAYER NAME\"": "\"Jauan Jennings\"",
-		"TEAM": "SF",
-		"\"POS\"": "\"WR62\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+148\""
-	},
-	{
-		"\"RK\"": "\"161\"",
-		"\"PLAYER NAME\"": "\"Allen Lazard\"",
-		"TEAM": "NYJ",
-		"\"POS\"": "\"WR63\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+165\""
-	},
-	{
-		"\"RK\"": "\"162\"",
-		"\"PLAYER NAME\"": "\"Mike Williams\"",
-		"TEAM": "NYJ",
-		"\"POS\"": "\"WR64\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-15\""
-	},
-	{
-		"\"RK\"": "\"163\"",
-		"\"PLAYER NAME\"": "\"Matthew Stafford\"",
-		"TEAM": "LAR",
-		"\"POS\"": "\"QB23\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-15\""
-	},
-	{
-		"\"RK\"": "\"164\"",
-		"\"PLAYER NAME\"": "\"New Orleans Saints\"",
-		"TEAM": "NO",
-		"\"POS\"": "\"DST3\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
 		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
 		"\"ECR VS. ADP\"": "\"+20\""
 	},
 	{
-		"\"RK\"": "\"165\"",
-		"\"PLAYER NAME\"": "\"Cam Akers\"",
-		"TEAM": "HOU",
-		"\"POS\"": "\"RB59\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+132\""
-	},
-	{
-		"\"RK\"": "\"166\"",
-		"\"PLAYER NAME\"": "\"Kansas City Chiefs\"",
-		"TEAM": "KC",
-		"\"POS\"": "\"DST4\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-12\""
-	},
-	{
-		"\"RK\"": "\"167\"",
-		"\"PLAYER NAME\"": "\"Zach Ertz\"",
-		"TEAM": "WAS",
-		"\"POS\"": "\"TE17\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+26\""
-	},
-	{
-		"\"RK\"": "\"168\"",
-		"\"PLAYER NAME\"": "\"Clyde Edwards-Helaire\"",
-		"TEAM": "KC",
-		"\"POS\"": "\"RB60\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+52\""
-	},
-	{
-		"\"RK\"": "\"169\"",
-		"\"PLAYER NAME\"": "\"Trey Sermon\"",
-		"TEAM": "IND",
-		"\"POS\"": "\"RB61\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+117\""
-	},
-	{
-		"\"RK\"": "\"170\"",
-		"\"PLAYER NAME\"": "\"Brandon Aubrey\"",
-		"TEAM": "DAL",
-		"\"POS\"": "\"K1\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-57\""
-	},
-	{
-		"\"RK\"": "\"171\"",
-		"\"PLAYER NAME\"": "\"Gus Edwards\"",
-		"TEAM": "LAC",
-		"\"POS\"": "\"RB62\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-57\""
-	},
-	{
-		"\"RK\"": "\"172\"",
-		"\"PLAYER NAME\"": "\"Mark Andrews\"",
-		"TEAM": "BAL",
-		"\"POS\"": "\"TE18\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-125\""
-	},
-	{
-		"\"RK\"": "\"173\"",
-		"\"PLAYER NAME\"": "\"San Francisco 49ers\"",
-		"TEAM": "SF",
-		"\"POS\"": "\"DST5\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-57\""
-	},
-	{
-		"\"RK\"": "\"174\"",
-		"\"PLAYER NAME\"": "\"Chicago Bears\"",
-		"TEAM": "CHI",
-		"\"POS\"": "\"DST6\"",
-		"\"SOS SEASON\"": "\"0 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+5\""
-	},
-	{
-		"\"RK\"": "\"175\"",
-		"\"PLAYER NAME\"": "\"Harrison Butker\"",
-		"TEAM": "KC",
-		"\"POS\"": "\"K2\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-66\""
-	},
-	{
-		"\"RK\"": "\"176\"",
-		"\"PLAYER NAME\"": "\"Ezekiel Elliott\"",
-		"TEAM": "DAL",
-		"\"POS\"": "\"RB63\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-64\""
-	},
-	{
-		"\"RK\"": "\"177\"",
-		"\"PLAYER NAME\"": "\"Andrei Iosivas\"",
-		"TEAM": "CIN",
-		"\"POS\"": "\"WR65\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+146\""
-	},
-	{
-		"\"RK\"": "\"178\"",
-		"\"PLAYER NAME\"": "\"Justin Tucker\"",
-		"TEAM": "BAL",
-		"\"POS\"": "\"K3\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-75\""
-	},
-	{
-		"\"RK\"": "\"179\"",
-		"\"PLAYER NAME\"": "\"Alec Pierce\"",
-		"TEAM": "IND",
-		"\"POS\"": "\"WR66\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+287\""
-	},
-	{
-		"\"RK\"": "\"180\"",
-		"\"PLAYER NAME\"": "\"JuJu Smith-Schuster\"",
-		"TEAM": "KC",
-		"\"POS\"": "\"WR67\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+114\""
-	},
-	{
-		"\"RK\"": "\"181\"",
-		"\"PLAYER NAME\"": "\"Carson Steele\"",
-		"TEAM": "KC",
-		"\"POS\"": "\"RB64\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+58\""
-	},
-	{
-		"\"RK\"": "\"182\"",
-		"\"PLAYER NAME\"": "\"Emanuel Wilson\"",
-		"TEAM": "GB",
-		"\"POS\"": "\"RB65\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+331\""
-	},
-	{
-		"\"RK\"": "\"183\"",
-		"\"PLAYER NAME\"": "\"Buffalo Bills\"",
-		"TEAM": "BUF",
-		"\"POS\"": "\"DST7\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-24\""
-	},
-	{
-		"\"RK\"": "\"184\"",
-		"\"PLAYER NAME\"": "\"Younghoe Koo\"",
-		"TEAM": "ATL",
-		"\"POS\"": "\"K4\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-48\""
-	},
-	{
-		"\"RK\"": "\"185\"",
-		"\"PLAYER NAME\"": "\"Justin Herbert\"",
-		"TEAM": "LAC",
-		"\"POS\"": "\"QB24\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-58\""
-	},
-	{
-		"\"RK\"": "\"186\"",
-		"\"PLAYER NAME\"": "\"Ja'Lynn Polk\"",
-		"TEAM": "NE",
-		"\"POS\"": "\"WR68\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"0 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-9\""
-	},
-	{
-		"\"RK\"": "\"187\"",
-		"\"PLAYER NAME\"": "\"Evan McPherson\"",
-		"TEAM": "CIN",
-		"\"POS\"": "\"K5\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-41\""
-	},
-	{
-		"\"RK\"": "\"188\"",
-		"\"PLAYER NAME\"": "\"Cleveland Browns\"",
-		"TEAM": "CLE",
-		"\"POS\"": "\"DST8\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-56\""
-	},
-	{
-		"\"RK\"": "\"189\"",
-		"\"PLAYER NAME\"": "\"Trey Benson\"",
-		"TEAM": "ARI",
-		"\"POS\"": "\"RB66\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-58\""
-	},
-	{
-		"\"RK\"": "\"190\"",
-		"\"PLAYER NAME\"": "\"Jake Elliott\"",
-		"TEAM": "PHI",
-		"\"POS\"": "\"K6\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-47\""
-	},
-	{
-		"\"RK\"": "\"191\"",
-		"\"PLAYER NAME\"": "\"Philadelphia Eagles\"",
-		"TEAM": "PHI",
-		"\"POS\"": "\"DST9\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"0 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-21\""
-	},
-	{
-		"\"RK\"": "\"192\"",
-		"\"PLAYER NAME\"": "\"Tua Tagovailoa\"",
-		"TEAM": "MIA",
-		"\"POS\"": "\"QB25\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-77\""
-	},
-	{
-		"\"RK\"": "\"193\"",
-		"\"PLAYER NAME\"": "\"Ka'imi Fairbairn\"",
-		"TEAM": "HOU",
-		"\"POS\"": "\"K7\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-48\""
-	},
-	{
-		"\"RK\"": "\"194\"",
-		"\"PLAYER NAME\"": "\"Jordan Whittington\"",
-		"TEAM": "LAR",
-		"\"POS\"": "\"WR69\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+88\""
-	},
-	{
-		"\"RK\"": "\"195\"",
-		"\"PLAYER NAME\"": "\"D'Onta Foreman\"",
-		"TEAM": "CLE",
-		"\"POS\"": "\"RB67\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+130\""
-	},
-	{
-		"\"RK\"": "\"196\"",
-		"\"PLAYER NAME\"": "\"Houston Texans\"",
-		"TEAM": "HOU",
-		"\"POS\"": "\"DST10\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-20\""
-	},
-	{
-		"\"RK\"": "\"197\"",
-		"\"PLAYER NAME\"": "\"Bo Nix\"",
-		"TEAM": "DEN",
-		"\"POS\"": "\"QB26\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-19\""
-	},
-	{
-		"\"RK\"": "\"198\"",
-		"\"PLAYER NAME\"": "\"DeMario Douglas\"",
-		"TEAM": "NE",
-		"\"POS\"": "\"WR70\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"0 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-9\""
-	},
-	{
-		"\"RK\"": "\"199\"",
-		"\"PLAYER NAME\"": "\"Jamaal Williams\"",
-		"TEAM": "NO",
-		"\"POS\"": "\"RB68\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+60\""
-	},
-	{
-		"\"RK\"": "\"200\"",
-		"\"PLAYER NAME\"": "\"Derek Carr\"",
-		"TEAM": "NO",
-		"\"POS\"": "\"QB27\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-8\""
-	},
-	{
-		"\"RK\"": "\"201\"",
-		"\"PLAYER NAME\"": "\"Demarcus Robinson\"",
-		"TEAM": "LAR",
-		"\"POS\"": "\"WR71\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+67\""
-	},
-	{
-		"\"RK\"": "\"202\"",
-		"\"PLAYER NAME\"": "\"Joshua Palmer\"",
-		"TEAM": "LAC",
-		"\"POS\"": "\"WR72\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-52\""
-	},
-	{
-		"\"RK\"": "\"203\"",
-		"\"PLAYER NAME\"": "\"Dalton Schultz\"",
-		"TEAM": "HOU",
-		"\"POS\"": "\"TE19\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-83\""
-	},
-	{
-		"\"RK\"": "\"204\"",
-		"\"PLAYER NAME\"": "\"Detroit Lions\"",
-		"TEAM": "DET",
-		"\"POS\"": "\"DST11\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-13\""
-	},
-	{
-		"\"RK\"": "\"205\"",
-		"\"PLAYER NAME\"": "\"Brandin Cooks\"",
-		"TEAM": "DAL",
-		"\"POS\"": "\"WR73\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-42\""
-	},
-	{
-		"\"RK\"": "\"206\"",
-		"\"PLAYER NAME\"": "\"Cade Otton\"",
-		"TEAM": "TB",
-		"\"POS\"": "\"TE20\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+19\""
-	},
-	{
-		"\"RK\"": "\"207\"",
-		"\"PLAYER NAME\"": "\"Tre Tucker\"",
-		"TEAM": "LV",
-		"\"POS\"": "\"WR74\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+113\""
-	},
-	{
-		"\"RK\"": "\"208\"",
-		"\"PLAYER NAME\"": "\"Baltimore Ravens\"",
-		"TEAM": "BAL",
-		"\"POS\"": "\"DST12\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-84\""
-	},
-	{
-		"\"RK\"": "\"209\"",
-		"\"PLAYER NAME\"": "\"Drake Maye\"",
-		"TEAM": "NE",
-		"\"POS\"": "\"QB28\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+31\""
-	},
-	{
-		"\"RK\"": "\"210\"",
-		"\"PLAYER NAME\"": "\"Gabe Davis\"",
-		"TEAM": "JAC",
-		"\"POS\"": "\"WR75\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-48\""
-	},
-	{
-		"\"RK\"": "\"211\"",
-		"\"PLAYER NAME\"": "\"Rashod Bateman\"",
-		"TEAM": "BAL",
-		"\"POS\"": "\"WR76\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+32\""
-	},
-	{
-		"\"RK\"": "\"212\"",
-		"\"PLAYER NAME\"": "\"Greg Dortch\"",
-		"TEAM": "ARI",
-		"\"POS\"": "\"WR77\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+55\""
-	},
-	{
-		"\"RK\"": "\"213\"",
-		"\"PLAYER NAME\"": "\"Tyler Conklin\"",
-		"TEAM": "NYJ",
-		"\"POS\"": "\"TE21\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-41\""
-	},
-	{
-		"\"RK\"": "\"214\"",
-		"\"PLAYER NAME\"": "\"Khalil Herbert\"",
-		"TEAM": "CHI",
-		"\"POS\"": "\"RB69\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-32\""
-	},
-	{
-		"\"RK\"": "\"215\"",
-		"\"PLAYER NAME\"": "\"Seattle Seahawks\"",
+		"\"RK\"": "\"145\"",
+		"\"PLAYER NAME\"": "\"Tyler Lockett\"",
 		"TEAM": "SEA",
-		"\"POS\"": "\"DST13\"",
-		"\"SOS SEASON\"": "\"0 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-25\""
-	},
-	{
-		"\"RK\"": "\"216\"",
-		"\"PLAYER NAME\"": "\"Luke McCaffrey\"",
-		"TEAM": "WAS",
-		"\"POS\"": "\"WR78\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+28\""
-	},
-	{
-		"\"RK\"": "\"217\"",
-		"\"PLAYER NAME\"": "\"MarShawn Lloyd\"",
-		"TEAM": "GB",
-		"\"POS\"": "\"RB70\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-19\""
-	},
-	{
-		"\"RK\"": "\"218\"",
-		"\"PLAYER NAME\"": "\"Miles Sanders\"",
-		"TEAM": "CAR",
-		"\"POS\"": "\"RB71\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+86\""
-	},
-	{
-		"\"RK\"": "\"219\"",
-		"\"PLAYER NAME\"": "\"Jalen McMillan\"",
-		"TEAM": "TB",
-		"\"POS\"": "\"WR79\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+87\""
-	},
-	{
-		"\"RK\"": "\"220\"",
-		"\"PLAYER NAME\"": "\"Kenneth Gainwell\"",
-		"TEAM": "PHI",
-		"\"POS\"": "\"RB72\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-2\""
-	},
-	{
-		"\"RK\"": "\"221\"",
-		"\"PLAYER NAME\"": "\"Tyler Bass\"",
-		"TEAM": "BUF",
-		"\"POS\"": "\"K8\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-46\""
-	},
-	{
-		"\"RK\"": "\"222\"",
-		"\"PLAYER NAME\"": "\"Jason Myers\"",
-		"TEAM": "SEA",
-		"\"POS\"": "\"K9\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-36\""
-	},
-	{
-		"\"RK\"": "\"223\"",
-		"\"PLAYER NAME\"": "\"Will Levis\"",
-		"TEAM": "TEN",
-		"\"POS\"": "\"QB29\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-38\""
-	},
-	{
-		"\"RK\"": "\"224\"",
-		"\"PLAYER NAME\"": "\"Ty Johnson\"",
-		"TEAM": "BUF",
-		"\"POS\"": "\"RB73\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+267\""
-	},
-	{
-		"\"RK\"": "\"225\"",
-		"\"PLAYER NAME\"": "\"Dallas Cowboys\"",
-		"TEAM": "DAL",
-		"\"POS\"": "\"DST14\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-103\""
-	},
-	{
-		"\"RK\"": "\"226\"",
-		"\"PLAYER NAME\"": "\"Audric Estime\"",
-		"TEAM": "DEN",
-		"\"POS\"": "\"RB74\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+35\""
-	},
-	{
-		"\"RK\"": "\"227\"",
-		"\"PLAYER NAME\"": "\"Hunter Henry\"",
-		"TEAM": "NE",
-		"\"POS\"": "\"TE22\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-27\""
-	},
-	{
-		"\"RK\"": "\"228\"",
-		"\"PLAYER NAME\"": "\"Denver Broncos\"",
-		"TEAM": "DEN",
-		"\"POS\"": "\"DST15\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-4\""
-	},
-	{
-		"\"RK\"": "\"229\"",
-		"\"PLAYER NAME\"": "\"Ray-Ray McCloud III\"",
-		"TEAM": "ATL",
-		"\"POS\"": "\"WR80\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+321\""
-	},
-	{
-		"\"RK\"": "\"230\"",
-		"\"PLAYER NAME\"": "\"Colby Parkinson\"",
-		"TEAM": "LAR",
-		"\"POS\"": "\"TE23\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"0 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+32\""
-	},
-	{
-		"\"RK\"": "\"231\"",
-		"\"PLAYER NAME\"": "\"Cordarrelle Patterson\"",
-		"TEAM": "PIT",
-		"\"POS\"": "\"RB75\"",
+		"\"POS\"": "\"WR58\"",
 		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
 		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+181\""
-	},
-	{
-		"\"RK\"": "\"232\"",
-		"\"PLAYER NAME\"": "\"Taysom Hill\"",
-		"TEAM": "NO",
-		"\"POS\"": "\"TE24\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-36\""
-	},
-	{
-		"\"RK\"": "\"233\"",
-		"\"PLAYER NAME\"": "\"Green Bay Packers\"",
-		"TEAM": "GB",
-		"\"POS\"": "\"DST16\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-19\""
-	},
-	{
-		"\"RK\"": "\"234\"",
-		"\"PLAYER NAME\"": "\"Los Angeles Chargers\"",
-		"TEAM": "LAC",
-		"\"POS\"": "\"DST17\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-39\""
-	},
-	{
-		"\"RK\"": "\"235\"",
-		"\"PLAYER NAME\"": "\"Adonai Mitchell\"",
-		"TEAM": "IND",
-		"\"POS\"": "\"WR81\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-69\""
-	},
-	{
-		"\"RK\"": "\"236\"",
-		"\"PLAYER NAME\"": "\"Tutu Atwell\"",
-		"TEAM": "LAR",
-		"\"POS\"": "\"WR82\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+268\""
-	},
-	{
-		"\"RK\"": "\"237\"",
-		"\"PLAYER NAME\"": "\"Deshaun Watson\"",
-		"TEAM": "CLE",
-		"\"POS\"": "\"QB30\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-79\""
-	},
-	{
-		"\"RK\"": "\"238\"",
-		"\"PLAYER NAME\"": "\"Matt Prater\"",
-		"TEAM": "ARI",
-		"\"POS\"": "\"K10\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+121\""
-	},
-	{
-		"\"RK\"": "\"239\"",
-		"\"PLAYER NAME\"": "\"Andy Dalton\"",
-		"TEAM": "CAR",
-		"\"POS\"": "\"QB31\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+217\""
-	},
-	{
-		"\"RK\"": "\"240\"",
-		"\"PLAYER NAME\"": "\"Minnesota Vikings\"",
-		"TEAM": "MIN",
-		"\"POS\"": "\"DST18\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-19\""
-	},
-	{
-		"\"RK\"": "\"241\"",
-		"\"PLAYER NAME\"": "\"Curtis Samuel\"",
-		"TEAM": "BUF",
-		"\"POS\"": "\"WR83\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-101\""
-	},
-	{
-		"\"RK\"": "\"242\"",
-		"\"PLAYER NAME\"": "\"Kimani Vidal\"",
-		"TEAM": "LAC",
-		"\"POS\"": "\"RB76\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-15\""
-	},
-	{
-		"\"RK\"": "\"243\"",
-		"\"PLAYER NAME\"": "\"Darius Slayton\"",
-		"TEAM": "NYG",
-		"\"POS\"": "\"WR84\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+26\""
-	},
-	{
-		"\"RK\"": "\"244\"",
-		"\"PLAYER NAME\"": "\"Isaac Guerendo\"",
-		"TEAM": "SF",
-		"\"POS\"": "\"RB77\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+89\""
-	},
-	{
-		"\"RK\"": "\"245\"",
-		"\"PLAYER NAME\"": "\"Kendre Miller\"",
-		"TEAM": "NO",
-		"\"POS\"": "\"RB78\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+47\""
-	},
-	{
-		"\"RK\"": "\"246\"",
-		"\"PLAYER NAME\"": "\"Mike Gesicki\"",
-		"TEAM": "CIN",
-		"\"POS\"": "\"TE25\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-24\""
-	},
-	{
-		"\"RK\"": "\"247\"",
-		"\"PLAYER NAME\"": "\"Dameon Pierce\"",
-		"TEAM": "HOU",
-		"\"POS\"": "\"RB79\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-15\""
-	},
-	{
-		"\"RK\"": "\"248\"",
-		"\"PLAYER NAME\"": "\"Cairo Santos\"",
-		"TEAM": "CHI",
-		"\"POS\"": "\"K11\"",
-		"\"SOS SEASON\"": "\"0 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-43\""
-	},
-	{
-		"\"RK\"": "\"249\"",
-		"\"PLAYER NAME\"": "\"Tyler Goodson\"",
-		"TEAM": "IND",
-		"\"POS\"": "\"RB80\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+430\""
-	},
-	{
-		"\"RK\"": "\"250\"",
-		"\"PLAYER NAME\"": "\"Chris Boswell\"",
-		"TEAM": "PIT",
-		"\"POS\"": "\"K12\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+25\""
-	},
-	{
-		"\"RK\"": "\"251\"",
-		"\"PLAYER NAME\"": "\"Jonathan Mingo\"",
-		"TEAM": "CAR",
-		"\"POS\"": "\"WR85\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+48\""
-	},
-	{
-		"\"RK\"": "\"252\"",
-		"\"PLAYER NAME\"": "\"Indianapolis Colts\"",
-		"TEAM": "IND",
-		"\"POS\"": "\"DST19\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-40\""
-	},
-	{
-		"\"RK\"": "\"253\"",
-		"\"PLAYER NAME\"": "\"Jeff Wilson Jr.\"",
-		"TEAM": "MIA",
-		"\"POS\"": "\"RB81\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+140\""
-	},
-	{
-		"\"RK\"": "\"254\"",
-		"\"PLAYER NAME\"": "\"Jalen Nailor\"",
-		"TEAM": "MIN",
-		"\"POS\"": "\"WR86\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+241\""
-	},
-	{
-		"\"RK\"": "\"255\"",
-		"\"PLAYER NAME\"": "\"Ricky Pearsall\"",
-		"TEAM": "SF",
-		"\"POS\"": "\"WR87\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+21\""
-	},
-	{
-		"\"RK\"": "\"256\"",
-		"\"PLAYER NAME\"": "\"Adam Thielen\"",
-		"TEAM": "CAR",
-		"\"POS\"": "\"WR88\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-100\""
-	},
-	{
-		"\"RK\"": "\"257\"",
-		"\"PLAYER NAME\"": "\"Ronnie Rivers\"",
-		"TEAM": "LAR",
-		"\"POS\"": "\"RB82\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+347\""
-	},
-	{
-		"\"RK\"": "\"258\"",
-		"\"PLAYER NAME\"": "\"Jason Sanders\"",
-		"TEAM": "MIA",
-		"\"POS\"": "\"K13\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-70\""
-	},
-	{
-		"\"RK\"": "\"259\"",
-		"\"PLAYER NAME\"": "\"Emari Demercado\"",
-		"TEAM": "ARI",
-		"\"POS\"": "\"RB83\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+307\""
-	},
-	{
-		"\"RK\"": "\"260\"",
-		"\"PLAYER NAME\"": "\"Cincinnati Bengals\"",
-		"TEAM": "CIN",
-		"\"POS\"": "\"DST20\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-66\""
-	},
-	{
-		"\"RK\"": "\"261\"",
-		"\"PLAYER NAME\"": "\"Elijah Moore\"",
-		"TEAM": "CLE",
-		"\"POS\"": "\"WR89\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+63\""
-	},
-	{
-		"\"RK\"": "\"262\"",
-		"\"PLAYER NAME\"": "\"Josh Reynolds\"",
-		"TEAM": "DEN",
-		"\"POS\"": "\"WR90\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+90\""
-	},
-	{
-		"\"RK\"": "\"263\"",
-		"\"PLAYER NAME\"": "\"Tyler Boyd\"",
-		"TEAM": "TEN",
-		"\"POS\"": "\"WR91\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-5\""
-	},
-	{
-		"\"RK\"": "\"264\"",
-		"\"PLAYER NAME\"": "\"Russell Wilson\"",
-		"TEAM": "PIT",
-		"\"POS\"": "\"QB32\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-48\""
-	},
-	{
-		"\"RK\"": "\"265\"",
-		"\"PLAYER NAME\"": "\"Noah Fant\"",
-		"TEAM": "SEA",
-		"\"POS\"": "\"TE26\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
 		"\"ECR VS. ADP\"": "\"-10\""
 	},
 	{
-		"\"RK\"": "\"266\"",
-		"\"PLAYER NAME\"": "\"Dare Ogunbowale\"",
-		"TEAM": "HOU",
-		"\"POS\"": "\"RB84\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+283\""
-	},
-	{
-		"\"RK\"": "\"267\"",
-		"\"PLAYER NAME\"": "\"Blake Grupe\"",
-		"TEAM": "NO",
-		"\"POS\"": "\"K14\"",
+		"\"RK\"": "\"146\"",
+		"\"PLAYER NAME\"": "\"Isiah Pacheco\"",
+		"TEAM": "KC",
+		"\"POS\"": "\"RB54\"",
 		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-25\""
-	},
-	{
-		"\"RK\"": "\"268\"",
-		"\"PLAYER NAME\"": "\"Pierre Strong Jr.\"",
-		"TEAM": "CLE",
-		"\"POS\"": "\"RB85\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
 		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+412\""
+		"\"ECR VS. ADP\"": "\"-127\""
 	},
 	{
-		"\"RK\"": "\"269\"",
-		"\"PLAYER NAME\"": "\"Aidan O'Connell\"",
-		"TEAM": "LV",
-		"\"POS\"": "\"QB33\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+52\""
-	},
-	{
-		"\"RK\"": "\"270\"",
-		"\"PLAYER NAME\"": "\"Jake Moody\"",
+		"\"RK\"": "\"147\"",
+		"\"PLAYER NAME\"": "\"Jauan Jennings\"",
 		"TEAM": "SF",
-		"\"POS\"": "\"K15\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-119\""
-	},
-	{
-		"\"RK\"": "\"271\"",
-		"\"PLAYER NAME\"": "\"Wil Lutz\"",
-		"TEAM": "DEN",
-		"\"POS\"": "\"K16\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+18\""
-	},
-	{
-		"\"RK\"": "\"272\"",
-		"\"PLAYER NAME\"": "\"New England Patriots\"",
-		"TEAM": "NE",
-		"\"POS\"": "\"DST21\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-34\""
-	},
-	{
-		"\"RK\"": "\"273\"",
-		"\"PLAYER NAME\"": "\"Austin Seibert\"",
-		"TEAM": "WAS",
-		"\"POS\"": "\"K17\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+356\""
-	},
-	{
-		"\"RK\"": "\"274\"",
-		"\"PLAYER NAME\"": "\"Matt Gay\"",
-		"TEAM": "IND",
-		"\"POS\"": "\"K18\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-70\""
-	},
-	{
-		"\"RK\"": "\"275\"",
-		"\"PLAYER NAME\"": "\"Eric Gray\"",
-		"TEAM": "NYG",
-		"\"POS\"": "\"RB86\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+6\""
-	},
-	{
-		"\"RK\"": "\"276\"",
-		"\"PLAYER NAME\"": "\"Jeremy McNichols\"",
-		"TEAM": "WAS",
-		"\"POS\"": "\"RB87\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+593\""
-	},
-	{
-		"\"RK\"": "\"277\"",
-		"\"PLAYER NAME\"": "\"Greg Zuerlein\"",
-		"TEAM": "NYJ",
-		"\"POS\"": "\"K19\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-80\""
-	},
-	{
-		"\"RK\"": "\"278\"",
-		"\"PLAYER NAME\"": "\"Noah Brown\"",
-		"TEAM": "WAS",
-		"\"POS\"": "\"WR92\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+297\""
-	},
-	{
-		"\"RK\"": "\"279\"",
-		"\"PLAYER NAME\"": "\"Jameis Winston\"",
-		"TEAM": "CLE",
-		"\"POS\"": "\"QB34\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+204\""
-	},
-	{
-		"\"RK\"": "\"280\"",
-		"\"PLAYER NAME\"": "\"Rashee Rice\"",
-		"TEAM": "KC",
-		"\"POS\"": "\"WR93\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-212\""
-	},
-	{
-		"\"RK\"": "\"281\"",
-		"\"PLAYER NAME\"": "\"Juwan Johnson\"",
-		"TEAM": "NO",
-		"\"POS\"": "\"TE27\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-16\""
-	},
-	{
-		"\"RK\"": "\"282\"",
-		"\"PLAYER NAME\"": "\"Gardner Minshew II\"",
-		"TEAM": "LV",
-		"\"POS\"": "\"QB35\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+16\""
-	},
-	{
-		"\"RK\"": "\"283\"",
-		"\"PLAYER NAME\"": "\"Dyami Brown\"",
-		"TEAM": "WAS",
-		"\"POS\"": "\"WR94\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+32\""
-	},
-	{
-		"\"RK\"": "\"284\"",
-		"\"PLAYER NAME\"": "\"D'Ernest Johnson\"",
-		"TEAM": "JAC",
-		"\"POS\"": "\"RB88\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+459\""
-	},
-	{
-		"\"RK\"": "\"285\"",
-		"\"PLAYER NAME\"": "\"Calvin Austin III\"",
-		"TEAM": "PIT",
-		"\"POS\"": "\"WR95\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+179\""
-	},
-	{
-		"\"RK\"": "\"286\"",
-		"\"PLAYER NAME\"": "\"K.J. Osborn\"",
-		"TEAM": "NE",
-		"\"POS\"": "\"WR96\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"0 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+52\""
-	},
-	{
-		"\"RK\"": "\"287\"",
-		"\"PLAYER NAME\"": "\"Mack Hollins\"",
-		"TEAM": "BUF",
-		"\"POS\"": "\"WR97\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+192\""
-	},
-	{
-		"\"RK\"": "\"288\"",
-		"\"PLAYER NAME\"": "\"Daniel Carlson\"",
-		"TEAM": "LV",
-		"\"POS\"": "\"K20\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-85\""
-	},
-	{
-		"\"RK\"": "\"289\"",
-		"\"PLAYER NAME\"": "\"Atlanta Falcons\"",
-		"TEAM": "ATL",
-		"\"POS\"": "\"DST22\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-81\""
-	},
-	{
-		"\"RK\"": "\"290\"",
-		"\"PLAYER NAME\"": "\"Cameron Dicker\"",
-		"TEAM": "LAC",
-		"\"POS\"": "\"K21\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-129\""
-	},
-	{
-		"\"RK\"": "\"291\"",
-		"\"PLAYER NAME\"": "\"Jacksonville Jaguars\"",
-		"TEAM": "JAC",
-		"\"POS\"": "\"DST23\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-45\""
-	},
-	{
-		"\"RK\"": "\"292\"",
-		"\"PLAYER NAME\"": "\"Jonnu Smith\"",
-		"TEAM": "MIA",
-		"\"POS\"": "\"TE28\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"0 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-75\""
-	},
-	{
-		"\"RK\"": "\"293\"",
-		"\"PLAYER NAME\"": "\"Dylan Laube\"",
-		"TEAM": "LV",
-		"\"POS\"": "\"RB89\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-9\""
-	},
-	{
-		"\"RK\"": "\"294\"",
-		"\"PLAYER NAME\"": "\"Joe Flacco\"",
-		"TEAM": "IND",
-		"\"POS\"": "\"QB36\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+45\""
-	},
-	{
-		"\"RK\"": "\"295\"",
-		"\"PLAYER NAME\"": "\"Chase McLaughlin\"",
-		"TEAM": "TB",
-		"\"POS\"": "\"K22\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+78\""
-	},
-	{
-		"\"RK\"": "\"296\"",
-		"\"PLAYER NAME\"": "\"Jacoby Brissett\"",
-		"TEAM": "NE",
-		"\"POS\"": "\"QB37\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+177\""
-	},
-	{
-		"\"RK\"": "\"297\"",
-		"\"PLAYER NAME\"": "\"Dalvin Cook\"",
-		"TEAM": "DAL",
-		"\"POS\"": "\"RB90\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-69\""
-	},
-	{
-		"\"RK\"": "\"298\"",
-		"\"PLAYER NAME\"": "\"Keaton Mitchell\"",
-		"TEAM": "BAL",
-		"\"POS\"": "\"RB91\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-38\""
-	},
-	{
-		"\"RK\"": "\"299\"",
-		"\"PLAYER NAME\"": "\"Justin Watson\"",
-		"TEAM": "KC",
-		"\"POS\"": "\"WR98\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+1\""
-	},
-	{
-		"\"RK\"": "\"300\"",
-		"\"PLAYER NAME\"": "\"Jahan Dotson\"",
-		"TEAM": "PHI",
-		"\"POS\"": "\"WR99\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-74\""
-	},
-	{
-		"\"RK\"": "\"301\"",
-		"\"PLAYER NAME\"": "\"Nelson Agholor\"",
-		"TEAM": "BAL",
-		"\"POS\"": "\"WR100\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+170\""
-	},
-	{
-		"\"RK\"": "\"302\"",
-		"\"PLAYER NAME\"": "\"Erick All Jr.\"",
-		"TEAM": "CIN",
-		"\"POS\"": "\"TE29\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+558\""
-	},
-	{
-		"\"RK\"": "\"303\"",
-		"\"PLAYER NAME\"": "\"Odell Beckham Jr.\"",
-		"TEAM": "MIA",
-		"\"POS\"": "\"WR101\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-16\""
-	},
-	{
-		"\"RK\"": "\"304\"",
-		"\"PLAYER NAME\"": "\"New York Giants\"",
-		"TEAM": "NYG",
-		"\"POS\"": "\"DST24\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"0 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-85\""
-	},
-	{
-		"\"RK\"": "\"305\"",
-		"\"PLAYER NAME\"": "\"Blake Watson\"",
-		"TEAM": "DEN",
-		"\"POS\"": "\"RB92\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+234\""
-	},
-	{
-		"\"RK\"": "\"306\"",
-		"\"PLAYER NAME\"": "\"Las Vegas Raiders\"",
-		"TEAM": "LV",
-		"\"POS\"": "\"DST25\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-97\""
-	},
-	{
-		"\"RK\"": "\"307\"",
-		"\"PLAYER NAME\"": "\"Will Shipley\"",
-		"TEAM": "PHI",
-		"\"POS\"": "\"RB93\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-44\""
-	},
-	{
-		"\"RK\"": "\"308\"",
-		"\"PLAYER NAME\"": "\"Jake Bates\"",
-		"TEAM": "DET",
-		"\"POS\"": "\"K23\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-77\""
-	},
-	{
-		"\"RK\"": "\"309\"",
-		"\"PLAYER NAME\"": "\"Miami Dolphins\"",
-		"TEAM": "MIA",
-		"\"POS\"": "\"DST26\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-142\""
-	},
-	{
-		"\"RK\"": "\"310\"",
-		"\"PLAYER NAME\"": "\"Tampa Bay Buccaneers\"",
-		"TEAM": "TB",
-		"\"POS\"": "\"DST27\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-123\""
-	},
-	{
-		"\"RK\"": "\"311\"",
-		"\"PLAYER NAME\"": "\"Theo Johnson\"",
-		"TEAM": "NYG",
-		"\"POS\"": "\"TE30\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+37\""
-	},
-	{
-		"\"RK\"": "\"312\"",
-		"\"PLAYER NAME\"": "\"Greg Dulcich\"",
-		"TEAM": "DEN",
-		"\"POS\"": "\"TE31\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-48\""
-	},
-	{
-		"\"RK\"": "\"313\"",
-		"\"PLAYER NAME\"": "\"Cody Schrader\"",
-		"TEAM": "LAR",
-		"\"POS\"": "\"RB94\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+249\""
-	},
-	{
-		"\"RK\"": "\"314\"",
-		"\"PLAYER NAME\"": "\"Chig Okonkwo\"",
-		"TEAM": "TEN",
-		"\"POS\"": "\"TE32\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-108\""
-	},
-	{
-		"\"RK\"": "\"315\"",
-		"\"PLAYER NAME\"": "\"Kendall Milton\"",
-		"TEAM": "CIN",
-		"\"POS\"": "\"RB95\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-\""
-	},
-	{
-		"\"RK\"": "\"316\"",
-		"\"PLAYER NAME\"": "\"Bo Melton\"",
-		"TEAM": "GB",
-		"\"POS\"": "\"WR102\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+88\""
-	},
-	{
-		"\"RK\"": "\"317\"",
-		"\"PLAYER NAME\"": "\"Sione Vaki\"",
-		"TEAM": "DET",
-		"\"POS\"": "\"RB96\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+146\""
-	},
-	{
-		"\"RK\"": "\"318\"",
-		"\"PLAYER NAME\"": "\"Will Reichard\"",
-		"TEAM": "MIN",
-		"\"POS\"": "\"K24\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-81\""
-	},
-	{
-		"\"RK\"": "\"319\"",
-		"\"PLAYER NAME\"": "\"DeeJay Dallas\"",
-		"TEAM": "ARI",
-		"\"POS\"": "\"RB97\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+128\""
-	},
-	{
-		"\"RK\"": "\"320\"",
-		"\"PLAYER NAME\"": "\"Hayden Hurst\"",
-		"TEAM": "LAC",
-		"\"POS\"": "\"TE33\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-8\""
-	},
-	{
-		"\"RK\"": "\"321\"",
-		"\"PLAYER NAME\"": "\"Tyler Huntley\"",
-		"TEAM": "MIA",
-		"\"POS\"": "\"QB38\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+424\""
-	},
-	{
-		"\"RK\"": "\"322\"",
-		"\"PLAYER NAME\"": "\"Michael Penix Jr.\"",
-		"TEAM": "ATL",
-		"\"POS\"": "\"QB39\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-42\""
-	},
-	{
-		"\"RK\"": "\"323\"",
-		"\"PLAYER NAME\"": "\"Jermaine Burton\"",
-		"TEAM": "CIN",
-		"\"POS\"": "\"WR103\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-90\""
-	},
-	{
-		"\"RK\"": "\"324\"",
-		"\"PLAYER NAME\"": "\"Deuce Vaughn\"",
-		"TEAM": "DAL",
-		"\"POS\"": "\"RB98\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-2\""
-	},
-	{
-		"\"RK\"": "\"325\"",
-		"\"PLAYER NAME\"": "\"Craig Reynolds\"",
-		"TEAM": "DET",
-		"\"POS\"": "\"RB99\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+168\""
-	},
-	{
-		"\"RK\"": "\"326\"",
-		"\"PLAYER NAME\"": "\"Noah Gray\"",
-		"TEAM": "KC",
-		"\"POS\"": "\"TE34\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-35\""
-	},
-	{
-		"\"RK\"": "\"327\"",
-		"\"PLAYER NAME\"": "\"Isaiah Davis\"",
-		"TEAM": "NYJ",
-		"\"POS\"": "\"RB100\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+515\""
-	},
-	{
-		"\"RK\"": "\"328\"",
-		"\"PLAYER NAME\"": "\"Washington Commanders\"",
-		"TEAM": "WAS",
-		"\"POS\"": "\"DST28\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-92\""
-	},
-	{
-		"\"RK\"": "\"329\"",
-		"\"PLAYER NAME\"": "\"Arizona Cardinals\"",
-		"TEAM": "ARI",
-		"\"POS\"": "\"DST29\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-55\""
-	},
-	{
-		"\"RK\"": "\"330\"",
-		"\"PLAYER NAME\"": "\"Brenton Strange\"",
-		"TEAM": "JAC",
-		"\"POS\"": "\"TE35\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+243\""
-	},
-	{
-		"\"RK\"": "\"331\"",
-		"\"PLAYER NAME\"": "\"Malik Willis\"",
-		"TEAM": "GB",
-		"\"POS\"": "\"QB40\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+153\""
-	},
-	{
-		"\"RK\"": "\"332\"",
-		"\"PLAYER NAME\"": "\"Troy Franklin\"",
-		"TEAM": "DEN",
-		"\"POS\"": "\"WR104\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-81\""
-	},
-	{
-		"\"RK\"": "\"333\"",
-		"\"PLAYER NAME\"": "\"Kalif Raymond\"",
-		"TEAM": "DET",
-		"\"POS\"": "\"WR105\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+110\""
-	},
-	{
-		"\"RK\"": "\"334\"",
-		"\"PLAYER NAME\"": "\"Chris Rodriguez Jr.\"",
-		"TEAM": "WAS",
-		"\"POS\"": "\"RB101\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+275\""
-	},
-	{
-		"\"RK\"": "\"335\"",
-		"\"PLAYER NAME\"": "\"Dustin Hopkins\"",
-		"TEAM": "CLE",
-		"\"POS\"": "\"K25\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-63\""
-	},
-	{
-		"\"RK\"": "\"336\"",
-		"\"PLAYER NAME\"": "\"Tennessee Titans\"",
-		"TEAM": "TEN",
-		"\"POS\"": "\"DST30\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-84\""
-	},
-	{
-		"\"RK\"": "\"337\"",
-		"\"PLAYER NAME\"": "\"Johnny Mundt\"",
-		"TEAM": "MIN",
-		"\"POS\"": "\"TE36\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+116\""
-	},
-	{
-		"\"RK\"": "\"338\"",
-		"\"PLAYER NAME\"": "\"Gerald Everett\"",
-		"TEAM": "CHI",
-		"\"POS\"": "\"TE37\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+75\""
-	},
-	{
-		"\"RK\"": "\"339\"",
-		"\"PLAYER NAME\"": "\"Joshua Karty\"",
-		"TEAM": "LAR",
-		"\"POS\"": "\"K26\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-36\""
-	},
-	{
-		"\"RK\"": "\"340\"",
-		"\"PLAYER NAME\"": "\"Bryce Young\"",
-		"TEAM": "CAR",
-		"\"POS\"": "\"QB41\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-130\""
-	},
-	{
-		"\"RK\"": "\"341\"",
-		"\"PLAYER NAME\"": "\"Dawson Knox\"",
-		"TEAM": "BUF",
-		"\"POS\"": "\"TE38\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-112\""
-	},
-	{
-		"\"RK\"": "\"342\"",
-		"\"PLAYER NAME\"": "\"Ameer Abdullah\"",
-		"TEAM": "LV",
-		"\"POS\"": "\"RB102\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+172\""
-	},
-	{
-		"\"RK\"": "\"343\"",
-		"\"PLAYER NAME\"": "\"Roman Wilson\"",
-		"TEAM": "PIT",
-		"\"POS\"": "\"WR106\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-108\""
-	},
-	{
-		"\"RK\"": "\"344\"",
-		"\"PLAYER NAME\"": "\"Marvin Mims Jr.\"",
-		"TEAM": "DEN",
-		"\"POS\"": "\"WR107\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-99\""
-	},
-	{
-		"\"RK\"": "\"345\"",
-		"\"PLAYER NAME\"": "\"Olamide Zaccheaus\"",
-		"TEAM": "WAS",
-		"\"POS\"": "\"WR108\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+320\""
-	},
-	{
-		"\"RK\"": "\"346\"",
-		"\"PLAYER NAME\"": "\"Malik Washington\"",
-		"TEAM": "MIA",
-		"\"POS\"": "\"WR109\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-51\""
-	},
-	{
-		"\"RK\"": "\"347\"",
-		"\"PLAYER NAME\"": "\"Ben Sinnott\"",
-		"TEAM": "WAS",
-		"\"POS\"": "\"TE39\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-113\""
-	},
-	{
-		"\"RK\"": "\"348\"",
-		"\"PLAYER NAME\"": "\"Spencer Rattler\"",
-		"TEAM": "NO",
-		"\"POS\"": "\"QB42\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+13\""
-	},
-	{
-		"\"RK\"": "\"349\"",
-		"\"PLAYER NAME\"": "\"Ja'Tavion Sanders\"",
-		"TEAM": "CAR",
-		"\"POS\"": "\"TE40\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-93\""
-	},
-	{
-		"\"RK\"": "\"350\"",
-		"\"PLAYER NAME\"": "\"Tyler Badie\"",
-		"TEAM": "DEN",
-		"\"POS\"": "\"RB103\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+441\""
-	},
-	{
-		"\"RK\"": "\"351\"",
-		"\"PLAYER NAME\"": "\"Eddy Pineiro\"",
-		"TEAM": "CAR",
-		"\"POS\"": "\"K27\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+82\""
-	},
-	{
-		"\"RK\"": "\"352\"",
-		"\"PLAYER NAME\"": "\"Cedric Tillman\"",
-		"TEAM": "CLE",
-		"\"POS\"": "\"WR110\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+254\""
-	},
-	{
-		"\"RK\"": "\"353\"",
-		"\"PLAYER NAME\"": "\"Emani Bailey\"",
-		"TEAM": "KC",
-		"\"POS\"": "\"RB104\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+443\""
-	},
-	{
-		"\"RK\"": "\"354\"",
-		"\"PLAYER NAME\"": "\"Luke Musgrave\"",
-		"TEAM": "GB",
-		"\"POS\"": "\"TE41\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-189\""
-	},
-	{
-		"\"RK\"": "\"355\"",
-		"\"PLAYER NAME\"": "\"Michael Mayer\"",
-		"TEAM": "LV",
-		"\"POS\"": "\"TE42\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-84\""
-	},
-	{
-		"\"RK\"": "\"356\"",
-		"\"PLAYER NAME\"": "\"JaMycal Hasty\"",
-		"TEAM": "NE",
-		"\"POS\"": "\"RB105\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+405\""
-	},
-	{
-		"\"RK\"": "\"357\"",
-		"\"PLAYER NAME\"": "\"Van Jefferson\"",
-		"TEAM": "PIT",
-		"\"POS\"": "\"WR111\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+77\""
-	},
-	{
-		"\"RK\"": "\"358\"",
-		"\"PLAYER NAME\"": "\"Tyler Higbee\"",
-		"TEAM": "LAR",
-		"\"POS\"": "\"TE43\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"0 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-29\""
-	},
-	{
-		"\"RK\"": "\"359\"",
-		"\"PLAYER NAME\"": "\"Michael Carter\"",
-		"TEAM": "ARI",
-		"\"POS\"": "\"RB106\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+238\""
-	},
-	{
-		"\"RK\"": "\"360\"",
-		"\"PLAYER NAME\"": "\"Jalin Hyatt\"",
-		"TEAM": "NYG",
-		"\"POS\"": "\"WR112\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-49\""
-	},
-	{
-		"\"RK\"": "\"361\"",
-		"\"PLAYER NAME\"": "\"Kyle Juszczyk\"",
-		"TEAM": "SF",
-		"\"POS\"": "\"RB107\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-68\""
-	},
-	{
-		"\"RK\"": "\"362\"",
-		"\"PLAYER NAME\"": "\"Foster Moreau\"",
-		"TEAM": "NO",
-		"\"POS\"": "\"TE44\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+297\""
-	},
-	{
-		"\"RK\"": "\"363\"",
-		"\"PLAYER NAME\"": "\"Brayden Narveson\"",
-		"TEAM": "GB",
-		"\"POS\"": "\"K28\"",
+		"\"POS\"": "\"WR59\"",
 		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
 		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
 		"\"ECR VS. ADP\"": "\"+161\""
 	},
 	{
-		"\"RK\"": "\"364\"",
-		"\"PLAYER NAME\"": "\"Hassan Haskins\"",
-		"TEAM": "LAC",
-		"\"POS\"": "\"RB108\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+431\""
+		"\"RK\"": "\"148\"",
+		"\"PLAYER NAME\"": "\"Aaron Rodgers\"",
+		"TEAM": "NYJ",
+		"\"POS\"": "\"QB19\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-14\""
 	},
 	{
-		"\"RK\"": "\"365\"",
-		"\"PLAYER NAME\"": "\"Evan Hull\"",
-		"TEAM": "IND",
-		"\"POS\"": "\"RB109\"",
+		"\"RK\"": "\"149\"",
+		"\"PLAYER NAME\"": "\"Pittsburgh Steelers\"",
+		"TEAM": "PIT",
+		"\"POS\"": "\"DST1\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+4\""
+	},
+	{
+		"\"RK\"": "\"150\"",
+		"\"PLAYER NAME\"": "\"New York Jets\"",
+		"TEAM": "NYJ",
+		"\"POS\"": "\"DST2\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-25\""
+	},
+	{
+		"\"RK\"": "\"151\"",
+		"\"PLAYER NAME\"": "\"Jalen Tolbert\"",
+		"TEAM": "DAL",
+		"\"POS\"": "\"WR60\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+115\""
+	},
+	{
+		"\"RK\"": "\"152\"",
+		"\"PLAYER NAME\"": "\"Trevor Lawrence\"",
+		"TEAM": "JAC",
+		"\"POS\"": "\"QB20\"",
 		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
 		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+550\""
+		"\"ECR VS. ADP\"": "\"-26\""
 	},
 	{
-		"\"RK\"": "\"366\"",
-		"\"PLAYER NAME\"": "\"DJ Chark Jr.\"",
-		"TEAM": "LAC",
-		"\"POS\"": "\"WR113\"",
+		"\"RK\"": "\"153\"",
+		"\"PLAYER NAME\"": "\"Michael Wilson\"",
+		"TEAM": "ARI",
+		"\"POS\"": "\"WR61\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+62\""
+	},
+	{
+		"\"RK\"": "\"154\"",
+		"\"PLAYER NAME\"": "\"Antonio Gibson\"",
+		"TEAM": "NE",
+		"\"POS\"": "\"RB55\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+14\""
+	},
+	{
+		"\"RK\"": "\"155\"",
+		"\"PLAYER NAME\"": "\"Trey Benson\"",
+		"TEAM": "ARI",
+		"\"POS\"": "\"RB56\"",
+		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-24\""
+	},
+	{
+		"\"RK\"": "\"156\"",
+		"\"PLAYER NAME\"": "\"Keon Coleman\"",
+		"TEAM": "BUF",
+		"\"POS\"": "\"WR62\"",
 		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
 		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+9\""
+		"\"ECR VS. ADP\"": "\"-56\""
 	},
 	{
-		"\"RK\"": "\"367\"",
-		"\"PLAYER NAME\"": "\"Hunter Luepke\"",
-		"TEAM": "DAL",
-		"\"POS\"": "\"RB110\"",
+		"\"RK\"": "\"157\"",
+		"\"PLAYER NAME\"": "\"New Orleans Saints\"",
+		"TEAM": "NO",
+		"\"POS\"": "\"DST3\"",
+		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+27\""
+	},
+	{
+		"\"RK\"": "\"158\"",
+		"\"PLAYER NAME\"": "\"Raheem Mostert\"",
+		"TEAM": "MIA",
+		"\"POS\"": "\"RB57\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-83\""
+	},
+	{
+		"\"RK\"": "\"159\"",
+		"\"PLAYER NAME\"": "\"Mark Andrews\"",
+		"TEAM": "BAL",
+		"\"POS\"": "\"TE17\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-112\""
+	},
+	{
+		"\"RK\"": "\"160\"",
+		"\"PLAYER NAME\"": "\"Matthew Stafford\"",
+		"TEAM": "LAR",
+		"\"POS\"": "\"QB21\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-12\""
+	},
+	{
+		"\"RK\"": "\"161\"",
+		"\"PLAYER NAME\"": "\"Dontayvion Wicks\"",
+		"TEAM": "GB",
+		"\"POS\"": "\"WR63\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+12\""
+	},
+	{
+		"\"RK\"": "\"162\"",
+		"\"PLAYER NAME\"": "\"Zach Ertz\"",
+		"TEAM": "WAS",
+		"\"POS\"": "\"TE18\"",
 		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
 		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+200\""
+		"\"ECR VS. ADP\"": "\"+31\""
 	},
 	{
-		"\"RK\"": "\"368\"",
-		"\"PLAYER NAME\"": "\"Rasheen Ali\"",
-		"TEAM": "BAL",
-		"\"POS\"": "\"RB111\"",
+		"\"RK\"": "\"163\"",
+		"\"PLAYER NAME\"": "\"Isaac Guerendo\"",
+		"TEAM": "SF",
+		"\"POS\"": "\"RB58\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+170\""
+	},
+	{
+		"\"RK\"": "\"164\"",
+		"\"PLAYER NAME\"": "\"Jordan Whittington\"",
+		"TEAM": "LAR",
+		"\"POS\"": "\"WR64\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+118\""
+	},
+	{
+		"\"RK\"": "\"165\"",
+		"\"PLAYER NAME\"": "\"Kimani Vidal\"",
+		"TEAM": "LAC",
+		"\"POS\"": "\"RB59\"",
 		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+62\""
+	},
+	{
+		"\"RK\"": "\"166\"",
+		"\"PLAYER NAME\"": "\"Allen Lazard\"",
+		"TEAM": "NYJ",
+		"\"POS\"": "\"WR65\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+160\""
+	},
+	{
+		"\"RK\"": "\"167\"",
+		"\"PLAYER NAME\"": "\"Brandon Aubrey\"",
+		"TEAM": "DAL",
+		"\"POS\"": "\"K1\"",
+		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-54\""
+	},
+	{
+		"\"RK\"": "\"168\"",
+		"\"PLAYER NAME\"": "\"Tua Tagovailoa\"",
+		"TEAM": "MIA",
+		"\"POS\"": "\"QB22\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-53\""
+	},
+	{
+		"\"RK\"": "\"169\"",
+		"\"PLAYER NAME\"": "\"Daniel Jones\"",
+		"TEAM": "NYG",
+		"\"POS\"": "\"QB23\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+85\""
+	},
+	{
+		"\"RK\"": "\"170\"",
+		"\"PLAYER NAME\"": "\"Tre Tucker\"",
+		"TEAM": "LV",
+		"\"POS\"": "\"WR66\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+150\""
+	},
+	{
+		"\"RK\"": "\"171\"",
+		"\"PLAYER NAME\"": "\"Justin Herbert\"",
+		"TEAM": "LAC",
+		"\"POS\"": "\"QB24\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-44\""
+	},
+	{
+		"\"RK\"": "\"172\"",
+		"\"PLAYER NAME\"": "\"Dalton Schultz\"",
+		"TEAM": "HOU",
+		"\"POS\"": "\"TE19\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-52\""
+	},
+	{
+		"\"RK\"": "\"173\"",
+		"\"PLAYER NAME\"": "\"Drake Maye\"",
+		"TEAM": "NE",
+		"\"POS\"": "\"QB25\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+67\""
+	},
+	{
+		"\"RK\"": "\"174\"",
+		"\"PLAYER NAME\"": "\"Harrison Butker\"",
+		"TEAM": "KC",
+		"\"POS\"": "\"K2\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-65\""
+	},
+	{
+		"\"RK\"": "\"175\"",
+		"\"PLAYER NAME\"": "\"Justin Tucker\"",
+		"TEAM": "BAL",
+		"\"POS\"": "\"K3\"",
+		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-72\""
+	},
+	{
+		"\"RK\"": "\"176\"",
+		"\"PLAYER NAME\"": "\"San Francisco 49ers\"",
+		"TEAM": "SF",
+		"\"POS\"": "\"DST4\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-60\""
+	},
+	{
+		"\"RK\"": "\"177\"",
+		"\"PLAYER NAME\"": "\"Kansas City Chiefs\"",
+		"TEAM": "KC",
+		"\"POS\"": "\"DST5\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-23\""
+	},
+	{
+		"\"RK\"": "\"178\"",
+		"\"PLAYER NAME\"": "\"Chicago Bears\"",
+		"TEAM": "CHI",
+		"\"POS\"": "\"DST6\"",
+		"\"SOS SEASON\"": "\"0 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+1\""
+	},
+	{
+		"\"RK\"": "\"179\"",
+		"\"PLAYER NAME\"": "\"Andrei Iosivas\"",
+		"TEAM": "CIN",
+		"\"POS\"": "\"WR67\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+144\""
+	},
+	{
+		"\"RK\"": "\"180\"",
+		"\"PLAYER NAME\"": "\"Bo Nix\"",
+		"TEAM": "DEN",
+		"\"POS\"": "\"QB26\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-2\""
+	},
+	{
+		"\"RK\"": "\"181\"",
+		"\"PLAYER NAME\"": "\"Younghoe Koo\"",
+		"TEAM": "ATL",
+		"\"POS\"": "\"K4\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-45\""
+	},
+	{
+		"\"RK\"": "\"182\"",
+		"\"PLAYER NAME\"": "\"Trey Sermon\"",
+		"TEAM": "IND",
+		"\"POS\"": "\"RB60\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+104\""
+	},
+	{
+		"\"RK\"": "\"183\"",
+		"\"PLAYER NAME\"": "\"Alec Pierce\"",
+		"TEAM": "IND",
+		"\"POS\"": "\"WR68\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+283\""
+	},
+	{
+		"\"RK\"": "\"184\"",
+		"\"PLAYER NAME\"": "\"Cleveland Browns\"",
+		"TEAM": "CLE",
+		"\"POS\"": "\"DST7\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-52\""
+	},
+	{
+		"\"RK\"": "\"185\"",
+		"\"PLAYER NAME\"": "\"Hunter Henry\"",
+		"TEAM": "NE",
+		"\"POS\"": "\"TE20\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+15\""
+	},
+	{
+		"\"RK\"": "\"186\"",
+		"\"PLAYER NAME\"": "\"Seattle Seahawks\"",
+		"TEAM": "SEA",
+		"\"POS\"": "\"DST8\"",
+		"\"SOS SEASON\"": "\"0 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+4\""
+	},
+	{
+		"\"RK\"": "\"187\"",
+		"\"PLAYER NAME\"": "\"Samaje Perine\"",
+		"TEAM": "KC",
+		"\"POS\"": "\"RB61\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+83\""
+	},
+	{
+		"\"RK\"": "\"188\"",
+		"\"PLAYER NAME\"": "\"Emanuel Wilson\"",
+		"TEAM": "GB",
+		"\"POS\"": "\"RB62\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+325\""
+	},
+	{
+		"\"RK\"": "\"189\"",
+		"\"PLAYER NAME\"": "\"Zamir White\"",
+		"TEAM": "LV",
+		"\"POS\"": "\"RB63\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-123\""
+	},
+	{
+		"\"RK\"": "\"190\"",
+		"\"PLAYER NAME\"": "\"Quentin Johnston\"",
+		"TEAM": "LAC",
+		"\"POS\"": "\"WR69\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+40\""
+	},
+	{
+		"\"RK\"": "\"191\"",
+		"\"PLAYER NAME\"": "\"Joshua Palmer\"",
+		"TEAM": "LAC",
+		"\"POS\"": "\"WR70\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-41\""
+	},
+	{
+		"\"RK\"": "\"192\"",
+		"\"PLAYER NAME\"": "\"Taysom Hill\"",
+		"TEAM": "NO",
+		"\"POS\"": "\"TE21\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+4\""
+	},
+	{
+		"\"RK\"": "\"193\"",
+		"\"PLAYER NAME\"": "\"Ty Johnson\"",
+		"TEAM": "BUF",
+		"\"POS\"": "\"RB64\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+298\""
+	},
+	{
+		"\"RK\"": "\"194\"",
+		"\"PLAYER NAME\"": "\"Cade Otton\"",
+		"TEAM": "TB",
+		"\"POS\"": "\"TE22\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+31\""
+	},
+	{
+		"\"RK\"": "\"195\"",
+		"\"PLAYER NAME\"": "\"Evan McPherson\"",
+		"TEAM": "CIN",
+		"\"POS\"": "\"K5\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-49\""
+	},
+	{
+		"\"RK\"": "\"196\"",
+		"\"PLAYER NAME\"": "\"Audric Estime\"",
+		"TEAM": "DEN",
+		"\"POS\"": "\"RB65\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+65\""
+	},
+	{
+		"\"RK\"": "\"197\"",
+		"\"PLAYER NAME\"": "\"Gabe Davis\"",
+		"TEAM": "JAC",
+		"\"POS\"": "\"WR71\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-35\""
+	},
+	{
+		"\"RK\"": "\"198\"",
+		"\"PLAYER NAME\"": "\"Los Angeles Chargers\"",
+		"TEAM": "LAC",
+		"\"POS\"": "\"DST9\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-3\""
+	},
+	{
+		"\"RK\"": "\"199\"",
+		"\"PLAYER NAME\"": "\"Buffalo Bills\"",
+		"TEAM": "BUF",
+		"\"POS\"": "\"DST10\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-40\""
+	},
+	{
+		"\"RK\"": "\"200\"",
+		"\"PLAYER NAME\"": "\"Rashod Bateman\"",
+		"TEAM": "BAL",
+		"\"POS\"": "\"WR72\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+43\""
+	},
+	{
+		"\"RK\"": "\"201\"",
+		"\"PLAYER NAME\"": "\"Philadelphia Eagles\"",
+		"TEAM": "PHI",
+		"\"POS\"": "\"DST11\"",
+		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"0 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-31\""
+	},
+	{
+		"\"RK\"": "\"202\"",
+		"\"PLAYER NAME\"": "\"Clyde Edwards-Helaire\"",
+		"TEAM": "KC",
+		"\"POS\"": "\"RB66\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+18\""
+	},
+	{
+		"\"RK\"": "\"203\"",
+		"\"PLAYER NAME\"": "\"D'Onta Foreman\"",
+		"TEAM": "CLE",
+		"\"POS\"": "\"RB67\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+122\""
+	},
+	{
+		"\"RK\"": "\"204\"",
+		"\"PLAYER NAME\"": "\"Mike Williams\"",
+		"TEAM": "NYJ",
+		"\"POS\"": "\"WR73\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-57\""
+	},
+	{
+		"\"RK\"": "\"205\"",
+		"\"PLAYER NAME\"": "\"Colby Parkinson\"",
+		"TEAM": "LAR",
+		"\"POS\"": "\"TE23\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+57\""
+	},
+	{
+		"\"RK\"": "\"206\"",
+		"\"PLAYER NAME\"": "\"Derek Carr\"",
+		"TEAM": "NO",
+		"\"POS\"": "\"QB27\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-14\""
+	},
+	{
+		"\"RK\"": "\"207\"",
+		"\"PLAYER NAME\"": "\"Ezekiel Elliott\"",
+		"TEAM": "DAL",
+		"\"POS\"": "\"RB68\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-95\""
+	},
+	{
+		"\"RK\"": "\"208\"",
+		"\"PLAYER NAME\"": "\"Ray-Ray McCloud III\"",
+		"TEAM": "ATL",
+		"\"POS\"": "\"WR74\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+342\""
+	},
+	{
+		"\"RK\"": "\"209\"",
+		"\"PLAYER NAME\"": "\"Kendre Miller\"",
+		"TEAM": "NO",
+		"\"POS\"": "\"RB69\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+83\""
+	},
+	{
+		"\"RK\"": "\"210\"",
+		"\"PLAYER NAME\"": "\"Ka'imi Fairbairn\"",
+		"TEAM": "HOU",
+		"\"POS\"": "\"K6\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-65\""
+	},
+	{
+		"\"RK\"": "\"211\"",
+		"\"PLAYER NAME\"": "\"Jason Sanders\"",
+		"TEAM": "MIA",
+		"\"POS\"": "\"K7\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-23\""
+	},
+	{
+		"\"RK\"": "\"212\"",
+		"\"PLAYER NAME\"": "\"Tyler Goodson\"",
+		"TEAM": "IND",
+		"\"POS\"": "\"RB70\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+467\""
+	},
+	{
+		"\"RK\"": "\"213\"",
+		"\"PLAYER NAME\"": "\"Baltimore Ravens\"",
+		"TEAM": "BAL",
+		"\"POS\"": "\"DST12\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-89\""
+	},
+	{
+		"\"RK\"": "\"214\"",
+		"\"PLAYER NAME\"": "\"Jake Elliott\"",
+		"TEAM": "PHI",
+		"\"POS\"": "\"K8\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-71\""
+	},
+	{
+		"\"RK\"": "\"215\"",
+		"\"PLAYER NAME\"": "\"Greg Dortch\"",
+		"TEAM": "ARI",
+		"\"POS\"": "\"WR75\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+52\""
+	},
+	{
+		"\"RK\"": "\"216\"",
+		"\"PLAYER NAME\"": "\"Detroit Lions\"",
+		"TEAM": "DET",
+		"\"POS\"": "\"DST13\"",
+		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-25\""
+	},
+	{
+		"\"RK\"": "\"217\"",
+		"\"PLAYER NAME\"": "\"Houston Texans\"",
+		"TEAM": "HOU",
+		"\"POS\"": "\"DST14\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-41\""
+	},
+	{
+		"\"RK\"": "\"218\"",
+		"\"PLAYER NAME\"": "\"Jamaal Williams\"",
+		"TEAM": "NO",
+		"\"POS\"": "\"RB71\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+41\""
+	},
+	{
+		"\"RK\"": "\"219\"",
+		"\"PLAYER NAME\"": "\"Denver Broncos\"",
+		"TEAM": "DEN",
+		"\"POS\"": "\"DST15\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+5\""
+	},
+	{
+		"\"RK\"": "\"220\"",
+		"\"PLAYER NAME\"": "\"Carson Steele\"",
+		"TEAM": "KC",
+		"\"POS\"": "\"RB72\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+19\""
+	},
+	{
+		"\"RK\"": "\"221\"",
+		"\"PLAYER NAME\"": "\"MarShawn Lloyd\"",
+		"TEAM": "GB",
+		"\"POS\"": "\"RB73\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-23\""
+	},
+	{
+		"\"RK\"": "\"222\"",
+		"\"PLAYER NAME\"": "\"Luke McCaffrey\"",
+		"TEAM": "WAS",
+		"\"POS\"": "\"WR76\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+22\""
+	},
+	{
+		"\"RK\"": "\"223\"",
+		"\"PLAYER NAME\"": "\"Ja'Lynn Polk\"",
+		"TEAM": "NE",
+		"\"POS\"": "\"WR77\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-46\""
+	},
+	{
+		"\"RK\"": "\"224\"",
+		"\"PLAYER NAME\"": "\"Darius Slayton\"",
+		"TEAM": "NYG",
+		"\"POS\"": "\"WR78\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+45\""
+	},
+	{
+		"\"RK\"": "\"225\"",
+		"\"PLAYER NAME\"": "\"Tyler Conklin\"",
+		"TEAM": "NYJ",
+		"\"POS\"": "\"TE24\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-53\""
+	},
+	{
+		"\"RK\"": "\"226\"",
+		"\"PLAYER NAME\"": "\"Adonai Mitchell\"",
+		"TEAM": "IND",
+		"\"POS\"": "\"WR79\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-60\""
+	},
+	{
+		"\"RK\"": "\"227\"",
+		"\"PLAYER NAME\"": "\"Justin Fields\"",
+		"TEAM": "PIT",
+		"\"POS\"": "\"QB28\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-14\""
+	},
+	{
+		"\"RK\"": "\"228\"",
+		"\"PLAYER NAME\"": "\"Dameon Pierce\"",
+		"TEAM": "HOU",
+		"\"POS\"": "\"RB74\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+4\""
+	},
+	{
+		"\"RK\"": "\"229\"",
+		"\"PLAYER NAME\"": "\"Dallas Cowboys\"",
+		"TEAM": "DAL",
+		"\"POS\"": "\"DST16\"",
+		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-107\""
+	},
+	{
+		"\"RK\"": "\"230\"",
+		"\"PLAYER NAME\"": "\"Matt Gay\"",
+		"TEAM": "IND",
+		"\"POS\"": "\"K9\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-26\""
+	},
+	{
+		"\"RK\"": "\"231\"",
+		"\"PLAYER NAME\"": "\"Cameron Dicker\"",
+		"TEAM": "LAC",
+		"\"POS\"": "\"K10\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-70\""
+	},
+	{
+		"\"RK\"": "\"232\"",
+		"\"PLAYER NAME\"": "\"Cordarrelle Patterson\"",
+		"TEAM": "PIT",
+		"\"POS\"": "\"RB75\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+180\""
+	},
+	{
+		"\"RK\"": "\"233\"",
+		"\"PLAYER NAME\"": "\"Indianapolis Colts\"",
+		"TEAM": "IND",
+		"\"POS\"": "\"DST17\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-21\""
+	},
+	{
+		"\"RK\"": "\"234\"",
+		"\"PLAYER NAME\"": "\"Demarcus Robinson\"",
+		"TEAM": "LAR",
+		"\"POS\"": "\"WR80\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+34\""
+	},
+	{
+		"\"RK\"": "\"235\"",
+		"\"PLAYER NAME\"": "\"Pierre Strong Jr.\"",
+		"TEAM": "CLE",
+		"\"POS\"": "\"RB76\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+445\""
+	},
+	{
+		"\"RK\"": "\"236\"",
+		"\"PLAYER NAME\"": "\"Andy Dalton\"",
+		"TEAM": "CAR",
+		"\"POS\"": "\"QB29\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+220\""
+	},
+	{
+		"\"RK\"": "\"237\"",
+		"\"PLAYER NAME\"": "\"Matt Prater\"",
+		"TEAM": "ARI",
+		"\"POS\"": "\"K11\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+122\""
+	},
+	{
+		"\"RK\"": "\"238\"",
+		"\"PLAYER NAME\"": "\"Dare Ogunbowale\"",
+		"TEAM": "HOU",
+		"\"POS\"": "\"RB77\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+311\""
+	},
+	{
+		"\"RK\"": "\"239\"",
+		"\"PLAYER NAME\"": "\"Cincinnati Bengals\"",
+		"TEAM": "CIN",
+		"\"POS\"": "\"DST18\"",
+		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-45\""
+	},
+	{
+		"\"RK\"": "\"240\"",
+		"\"PLAYER NAME\"": "\"Noah Brown\"",
+		"TEAM": "WAS",
+		"\"POS\"": "\"WR81\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+335\""
+	},
+	{
+		"\"RK\"": "\"241\"",
+		"\"PLAYER NAME\"": "\"Minnesota Vikings\"",
+		"TEAM": "MIN",
+		"\"POS\"": "\"DST19\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-20\""
+	},
+	{
+		"\"RK\"": "\"242\"",
+		"\"PLAYER NAME\"": "\"Jalen McMillan\"",
+		"TEAM": "TB",
+		"\"POS\"": "\"WR82\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+64\""
+	},
+	{
+		"\"RK\"": "\"243\"",
+		"\"PLAYER NAME\"": "\"Miles Sanders\"",
+		"TEAM": "CAR",
+		"\"POS\"": "\"RB78\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+61\""
+	},
+	{
+		"\"RK\"": "\"244\"",
+		"\"PLAYER NAME\"": "\"Jason Myers\"",
+		"TEAM": "SEA",
+		"\"POS\"": "\"K12\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-58\""
+	},
+	{
+		"\"RK\"": "\"245\"",
+		"\"PLAYER NAME\"": "\"Cam Akers\"",
+		"TEAM": "HOU",
+		"\"POS\"": "\"RB79\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+52\""
+	},
+	{
+		"\"RK\"": "\"246\"",
+		"\"PLAYER NAME\"": "\"Green Bay Packers\"",
+		"TEAM": "GB",
+		"\"POS\"": "\"DST20\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-32\""
+	},
+	{
+		"\"RK\"": "\"247\"",
+		"\"PLAYER NAME\"": "\"Curtis Samuel\"",
+		"TEAM": "BUF",
+		"\"POS\"": "\"WR83\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-107\""
+	},
+	{
+		"\"RK\"": "\"248\"",
+		"\"PLAYER NAME\"": "\"Noah Fant\"",
+		"TEAM": "SEA",
+		"\"POS\"": "\"TE25\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+7\""
+	},
+	{
+		"\"RK\"": "\"249\"",
+		"\"PLAYER NAME\"": "\"Brandin Cooks\"",
+		"TEAM": "DAL",
+		"\"POS\"": "\"WR84\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-86\""
+	},
+	{
+		"\"RK\"": "\"250\"",
+		"\"PLAYER NAME\"": "\"Troy Franklin\"",
+		"TEAM": "DEN",
+		"\"POS\"": "\"WR85\"",
+		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+1\""
+	},
+	{
+		"\"RK\"": "\"251\"",
+		"\"PLAYER NAME\"": "\"Erick All Jr.\"",
+		"TEAM": "CIN",
+		"\"POS\"": "\"TE26\"",
+		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+609\""
+	},
+	{
+		"\"RK\"": "\"252\"",
+		"\"PLAYER NAME\"": "\"Jake Moody\"",
+		"TEAM": "SF",
+		"\"POS\"": "\"K13\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-101\""
+	},
+	{
+		"\"RK\"": "\"253\"",
+		"\"PLAYER NAME\"": "\"Daniel Carlson\"",
+		"TEAM": "LV",
+		"\"POS\"": "\"K14\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-50\""
+	},
+	{
+		"\"RK\"": "\"254\"",
+		"\"PLAYER NAME\"": "\"Will Levis\"",
+		"TEAM": "TEN",
+		"\"POS\"": "\"QB30\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-69\""
+	},
+	{
+		"\"RK\"": "\"255\"",
+		"\"PLAYER NAME\"": "\"Kenneth Gainwell\"",
+		"TEAM": "PHI",
+		"\"POS\"": "\"RB80\"",
+		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-37\""
+	},
+	{
+		"\"RK\"": "\"256\"",
+		"\"PLAYER NAME\"": "\"Elijah Moore\"",
+		"TEAM": "CLE",
+		"\"POS\"": "\"WR86\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+68\""
+	},
+	{
+		"\"RK\"": "\"257\"",
+		"\"PLAYER NAME\"": "\"Juwan Johnson\"",
+		"TEAM": "NO",
+		"\"POS\"": "\"TE27\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+8\""
+	},
+	{
+		"\"RK\"": "\"258\"",
+		"\"PLAYER NAME\"": "\"Mike Gesicki\"",
+		"TEAM": "CIN",
+		"\"POS\"": "\"TE28\"",
+		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-36\""
+	},
+	{
+		"\"RK\"": "\"259\"",
+		"\"PLAYER NAME\"": "\"Jonnu Smith\"",
+		"TEAM": "MIA",
+		"\"POS\"": "\"TE29\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-42\""
+	},
+	{
+		"\"RK\"": "\"260\"",
+		"\"PLAYER NAME\"": "\"Adam Thielen\"",
+		"TEAM": "CAR",
+		"\"POS\"": "\"WR87\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-104\""
+	},
+	{
+		"\"RK\"": "\"261\"",
+		"\"PLAYER NAME\"": "\"Tyler Bass\"",
+		"TEAM": "BUF",
+		"\"POS\"": "\"K15\"",
+		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-86\""
+	},
+	{
+		"\"RK\"": "\"262\"",
+		"\"PLAYER NAME\"": "\"New England Patriots\"",
+		"TEAM": "NE",
+		"\"POS\"": "\"DST21\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-24\""
+	},
+	{
+		"\"RK\"": "\"263\"",
+		"\"PLAYER NAME\"": "\"Jameis Winston\"",
+		"TEAM": "CLE",
+		"\"POS\"": "\"QB31\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+220\""
+	},
+	{
+		"\"RK\"": "\"264\"",
+		"\"PLAYER NAME\"": "\"Jalen Nailor\"",
+		"TEAM": "MIN",
+		"\"POS\"": "\"WR88\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+231\""
+	},
+	{
+		"\"RK\"": "\"265\"",
+		"\"PLAYER NAME\"": "\"Tutu Atwell\"",
+		"TEAM": "LAR",
+		"\"POS\"": "\"WR89\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+239\""
+	},
+	{
+		"\"RK\"": "\"266\"",
+		"\"PLAYER NAME\"": "\"Deshaun Watson\"",
+		"TEAM": "CLE",
+		"\"POS\"": "\"QB32\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-108\""
+	},
+	{
+		"\"RK\"": "\"267\"",
+		"\"PLAYER NAME\"": "\"Bo Melton\"",
+		"TEAM": "GB",
+		"\"POS\"": "\"WR90\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+137\""
+	},
+	{
+		"\"RK\"": "\"268\"",
+		"\"PLAYER NAME\"": "\"Gus Edwards\"",
+		"TEAM": "LAC",
+		"\"POS\"": "\"RB81\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-154\""
+	},
+	{
+		"\"RK\"": "\"269\"",
+		"\"PLAYER NAME\"": "\"Las Vegas Raiders\"",
+		"TEAM": "LV",
+		"\"POS\"": "\"DST22\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-60\""
+	},
+	{
+		"\"RK\"": "\"270\"",
+		"\"PLAYER NAME\"": "\"Austin Seibert\"",
+		"TEAM": "WAS",
+		"\"POS\"": "\"K16\"",
+		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+359\""
+	},
+	{
+		"\"RK\"": "\"271\"",
+		"\"PLAYER NAME\"": "\"Blake Grupe\"",
+		"TEAM": "NO",
+		"\"POS\"": "\"K17\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-29\""
+	},
+	{
+		"\"RK\"": "\"272\"",
+		"\"PLAYER NAME\"": "\"Chris Boswell\"",
+		"TEAM": "PIT",
+		"\"POS\"": "\"K18\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+3\""
+	},
+	{
+		"\"RK\"": "\"273\"",
+		"\"PLAYER NAME\"": "\"Cairo Santos\"",
+		"TEAM": "CHI",
+		"\"POS\"": "\"K19\"",
+		"\"SOS SEASON\"": "\"0 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-68\""
+	},
+	{
+		"\"RK\"": "\"274\"",
+		"\"PLAYER NAME\"": "\"Aidan O'Connell\"",
+		"TEAM": "LV",
+		"\"POS\"": "\"QB33\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+47\""
+	},
+	{
+		"\"RK\"": "\"275\"",
+		"\"PLAYER NAME\"": "\"Tampa Bay Buccaneers\"",
+		"TEAM": "TB",
+		"\"POS\"": "\"DST23\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-88\""
+	},
+	{
+		"\"RK\"": "\"276\"",
+		"\"PLAYER NAME\"": "\"Mack Hollins\"",
+		"TEAM": "BUF",
+		"\"POS\"": "\"WR91\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+203\""
+	},
+	{
+		"\"RK\"": "\"277\"",
+		"\"PLAYER NAME\"": "\"Tyler Boyd\"",
+		"TEAM": "TEN",
+		"\"POS\"": "\"WR92\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-19\""
+	},
+	{
+		"\"RK\"": "\"278\"",
+		"\"PLAYER NAME\"": "\"Chase McLaughlin\"",
+		"TEAM": "TB",
+		"\"POS\"": "\"K20\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+95\""
+	},
+	{
+		"\"RK\"": "\"279\"",
+		"\"PLAYER NAME\"": "\"Jeremy McNichols\"",
+		"TEAM": "WAS",
+		"\"POS\"": "\"RB82\"",
+		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+590\""
+	},
+	{
+		"\"RK\"": "\"280\"",
+		"\"PLAYER NAME\"": "\"New York Giants\"",
+		"TEAM": "NYG",
+		"\"POS\"": "\"DST24\"",
+		"\"SOS SEASON\"": "\"0 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"0 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-61\""
+	},
+	{
+		"\"RK\"": "\"281\"",
+		"\"PLAYER NAME\"": "\"Ronnie Rivers\"",
+		"TEAM": "LAR",
+		"\"POS\"": "\"RB83\"",
+		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+323\""
+	},
+	{
+		"\"RK\"": "\"282\"",
+		"\"PLAYER NAME\"": "\"Ricky Pearsall\"",
+		"TEAM": "SF",
+		"\"POS\"": "\"WR93\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-6\""
+	},
+	{
+		"\"RK\"": "\"283\"",
+		"\"PLAYER NAME\"": "\"D'Ernest Johnson\"",
+		"TEAM": "JAC",
+		"\"POS\"": "\"RB84\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+460\""
+	},
+	{
+		"\"RK\"": "\"284\"",
+		"\"PLAYER NAME\"": "\"Khalil Herbert\"",
+		"TEAM": "CHI",
+		"\"POS\"": "\"RB85\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-102\""
+	},
+	{
+		"\"RK\"": "\"285\"",
+		"\"PLAYER NAME\"": "\"Russell Wilson\"",
+		"TEAM": "PIT",
+		"\"POS\"": "\"QB34\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-69\""
+	},
+	{
+		"\"RK\"": "\"286\"",
+		"\"PLAYER NAME\"": "\"Noah Gray\"",
+		"TEAM": "KC",
+		"\"POS\"": "\"TE30\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+5\""
+	},
+	{
+		"\"RK\"": "\"287\"",
+		"\"PLAYER NAME\"": "\"Will Reichard\"",
+		"TEAM": "MIN",
+		"\"POS\"": "\"K21\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-50\""
+	},
+	{
+		"\"RK\"": "\"288\"",
+		"\"PLAYER NAME\"": "\"Joe Flacco\"",
+		"TEAM": "IND",
+		"\"POS\"": "\"QB35\"",
+		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+51\""
+	},
+	{
+		"\"RK\"": "\"289\"",
+		"\"PLAYER NAME\"": "\"Theo Johnson\"",
+		"TEAM": "NYG",
+		"\"POS\"": "\"TE31\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+59\""
+	},
+	{
+		"\"RK\"": "\"290\"",
+		"\"PLAYER NAME\"": "\"Calvin Austin III\"",
+		"TEAM": "PIT",
+		"\"POS\"": "\"WR94\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+174\""
+	},
+	{
+		"\"RK\"": "\"291\"",
+		"\"PLAYER NAME\"": "\"Dalvin Cook\"",
+		"TEAM": "DAL",
+		"\"POS\"": "\"RB86\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-63\""
+	},
+	{
+		"\"RK\"": "\"292\"",
+		"\"PLAYER NAME\"": "\"Wil Lutz\"",
+		"TEAM": "DEN",
+		"\"POS\"": "\"K22\"",
+		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-3\""
+	},
+	{
+		"\"RK\"": "\"293\"",
+		"\"PLAYER NAME\"": "\"K.J. Osborn\"",
+		"TEAM": "NE",
+		"\"POS\"": "\"WR95\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+45\""
+	},
+	{
+		"\"RK\"": "\"294\"",
+		"\"PLAYER NAME\"": "\"Atlanta Falcons\"",
+		"TEAM": "ATL",
+		"\"POS\"": "\"DST25\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-86\""
+	},
+	{
+		"\"RK\"": "\"295\"",
+		"\"PLAYER NAME\"": "\"Greg Zuerlein\"",
+		"TEAM": "NYJ",
+		"\"POS\"": "\"K23\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-98\""
+	},
+	{
+		"\"RK\"": "\"296\"",
+		"\"PLAYER NAME\"": "\"Emari Demercado\"",
+		"TEAM": "ARI",
+		"\"POS\"": "\"RB87\"",
+		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+270\""
+	},
+	{
+		"\"RK\"": "\"297\"",
+		"\"PLAYER NAME\"": "\"Justin Watson\"",
+		"TEAM": "KC",
+		"\"POS\"": "\"WR96\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+3\""
+	},
+	{
+		"\"RK\"": "\"298\"",
+		"\"PLAYER NAME\"": "\"Blake Watson\"",
+		"TEAM": "DEN",
+		"\"POS\"": "\"RB88\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+241\""
+	},
+	{
+		"\"RK\"": "\"299\"",
+		"\"PLAYER NAME\"": "\"Jake Bates\"",
+		"TEAM": "DET",
+		"\"POS\"": "\"K24\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-68\""
+	},
+	{
+		"\"RK\"": "\"300\"",
+		"\"PLAYER NAME\"": "\"Chig Okonkwo\"",
+		"TEAM": "TEN",
+		"\"POS\"": "\"TE32\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-94\""
+	},
+	{
+		"\"RK\"": "\"301\"",
+		"\"PLAYER NAME\"": "\"Johnny Mundt\"",
+		"TEAM": "MIN",
+		"\"POS\"": "\"TE33\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+152\""
+	},
+	{
+		"\"RK\"": "\"302\"",
+		"\"PLAYER NAME\"": "\"Cody Schrader\"",
+		"TEAM": "LAR",
+		"\"POS\"": "\"RB89\"",
+		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+260\""
+	},
+	{
+		"\"RK\"": "\"303\"",
+		"\"PLAYER NAME\"": "\"Bub Means\"",
+		"TEAM": "NO",
+		"\"POS\"": "\"WR97\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+288\""
+	},
+	{
+		"\"RK\"": "\"304\"",
+		"\"PLAYER NAME\"": "\"Cedric Tillman\"",
+		"TEAM": "CLE",
+		"\"POS\"": "\"WR98\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+302\""
+	},
+	{
+		"\"RK\"": "\"305\"",
+		"\"PLAYER NAME\"": "\"Dylan Laube\"",
+		"TEAM": "LV",
+		"\"POS\"": "\"RB90\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-21\""
+	},
+	{
+		"\"RK\"": "\"306\"",
+		"\"PLAYER NAME\"": "\"Sterling Shepard\"",
+		"TEAM": "TB",
+		"\"POS\"": "\"WR99\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+332\""
+	},
+	{
+		"\"RK\"": "\"307\"",
+		"\"PLAYER NAME\"": "\"Devaughn Vele\"",
+		"TEAM": "DEN",
+		"\"POS\"": "\"WR100\"",
+		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+313\""
+	},
+	{
+		"\"RK\"": "\"308\"",
+		"\"PLAYER NAME\"": "\"Jonathan Mingo\"",
+		"TEAM": "CAR",
+		"\"POS\"": "\"WR101\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-9\""
+	},
+	{
+		"\"RK\"": "\"309\"",
+		"\"PLAYER NAME\"": "\"Ja'Tavion Sanders\"",
+		"TEAM": "CAR",
+		"\"POS\"": "\"TE34\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-53\""
+	},
+	{
+		"\"RK\"": "\"310\"",
+		"\"PLAYER NAME\"": "\"Josh Reynolds\"",
+		"TEAM": "DEN",
+		"\"POS\"": "\"WR102\"",
+		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+42\""
+	},
+	{
+		"\"RK\"": "\"311\"",
+		"\"PLAYER NAME\"": "\"Jeff Wilson Jr.\"",
+		"TEAM": "MIA",
+		"\"POS\"": "\"RB91\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+82\""
+	},
+	{
+		"\"RK\"": "\"312\"",
+		"\"PLAYER NAME\"": "\"Tennessee Titans\"",
+		"TEAM": "TEN",
+		"\"POS\"": "\"DST26\"",
+		"\"SOS SEASON\"": "\"0 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-60\""
+	},
+	{
+		"\"RK\"": "\"313\"",
+		"\"PLAYER NAME\"": "\"Will Shipley\"",
+		"TEAM": "PHI",
+		"\"POS\"": "\"RB92\"",
+		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-50\""
+	},
+	{
+		"\"RK\"": "\"314\"",
+		"\"PLAYER NAME\"": "\"Tim Patrick\"",
+		"TEAM": "DET",
+		"\"POS\"": "\"WR103\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+141\""
+	},
+	{
+		"\"RK\"": "\"315\"",
+		"\"PLAYER NAME\"": "\"Kendall Milton\"",
+		"TEAM": "CIN",
+		"\"POS\"": "\"RB93\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-\""
+	},
+	{
+		"\"RK\"": "\"316\"",
+		"\"PLAYER NAME\"": "\"Spencer Rattler\"",
+		"TEAM": "NO",
+		"\"POS\"": "\"QB36\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+45\""
+	},
+	{
+		"\"RK\"": "\"317\"",
+		"\"PLAYER NAME\"": "\"Will Dissly\"",
+		"TEAM": "LAC",
+		"\"POS\"": "\"TE35\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+337\""
+	},
+	{
+		"\"RK\"": "\"318\"",
+		"\"PLAYER NAME\"": "\"Keaton Mitchell\"",
+		"TEAM": "BAL",
+		"\"POS\"": "\"RB94\"",
+		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-58\""
+	},
+	{
+		"\"RK\"": "\"319\"",
+		"\"PLAYER NAME\"": "\"Washington Commanders\"",
+		"TEAM": "WAS",
+		"\"POS\"": "\"DST27\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-83\""
+	},
+	{
+		"\"RK\"": "\"320\"",
+		"\"PLAYER NAME\"": "\"Tyler Huntley\"",
+		"TEAM": "MIA",
+		"\"POS\"": "\"QB37\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+425\""
+	},
+	{
+		"\"RK\"": "\"321\"",
+		"\"PLAYER NAME\"": "\"Jermaine Burton\"",
+		"TEAM": "CIN",
+		"\"POS\"": "\"WR104\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-88\""
+	},
+	{
+		"\"RK\"": "\"322\"",
+		"\"PLAYER NAME\"": "\"Nelson Agholor\"",
+		"TEAM": "BAL",
+		"\"POS\"": "\"WR105\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+149\""
+	},
+	{
+		"\"RK\"": "\"323\"",
+		"\"PLAYER NAME\"": "\"Mason Rudolph\"",
+		"TEAM": "TEN",
+		"\"POS\"": "\"QB38\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+327\""
+	},
+	{
+		"\"RK\"": "\"324\"",
+		"\"PLAYER NAME\"": "\"Dawson Knox\"",
+		"TEAM": "BUF",
+		"\"POS\"": "\"TE36\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-95\""
+	},
+	{
+		"\"RK\"": "\"325\"",
+		"\"PLAYER NAME\"": "\"Nick Folk\"",
+		"TEAM": "TEN",
+		"\"POS\"": "\"K25\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+52\""
+	},
+	{
+		"\"RK\"": "\"326\"",
+		"\"PLAYER NAME\"": "\"DeeJay Dallas\"",
+		"TEAM": "ARI",
+		"\"POS\"": "\"RB95\"",
+		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+121\""
+	},
+	{
+		"\"RK\"": "\"327\"",
+		"\"PLAYER NAME\"": "\"Odell Beckham Jr.\"",
+		"TEAM": "MIA",
+		"\"POS\"": "\"WR106\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-40\""
+	},
+	{
+		"\"RK\"": "\"328\"",
+		"\"PLAYER NAME\"": "\"Eric Gray\"",
+		"TEAM": "NYG",
+		"\"POS\"": "\"RB96\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-47\""
+	},
+	{
+		"\"RK\"": "\"329\"",
+		"\"PLAYER NAME\"": "\"Tyler Higbee\"",
+		"TEAM": "LAR",
+		"\"POS\"": "\"TE37\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"0\""
+	},
+	{
+		"\"RK\"": "\"330\"",
+		"\"PLAYER NAME\"": "\"Greg Dulcich\"",
+		"TEAM": "DEN",
+		"\"POS\"": "\"TE38\"",
+		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-66\""
+	},
+	{
+		"\"RK\"": "\"331\"",
+		"\"PLAYER NAME\"": "\"Jacksonville Jaguars\"",
+		"TEAM": "JAC",
+		"\"POS\"": "\"DST28\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-85\""
+	},
+	{
+		"\"RK\"": "\"332\"",
+		"\"PLAYER NAME\"": "\"Jalen Coker\"",
+		"TEAM": "CAR",
+		"\"POS\"": "\"WR107\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-\""
+	},
+	{
+		"\"RK\"": "\"333\"",
+		"\"PLAYER NAME\"": "\"Deuce Vaughn\"",
+		"TEAM": "DAL",
+		"\"POS\"": "\"RB97\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-11\""
+	},
+	{
+		"\"RK\"": "\"334\"",
+		"\"PLAYER NAME\"": "\"Emani Bailey\"",
+		"TEAM": "KC",
+		"\"POS\"": "\"RB98\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+462\""
+	},
+	{
+		"\"RK\"": "\"335\"",
+		"\"PLAYER NAME\"": "\"Hayden Hurst\"",
+		"TEAM": "LAC",
+		"\"POS\"": "\"TE39\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-23\""
+	},
+	{
+		"\"RK\"": "\"336\"",
+		"\"PLAYER NAME\"": "\"Craig Reynolds\"",
+		"TEAM": "DET",
+		"\"POS\"": "\"RB99\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+157\""
+	},
+	{
+		"\"RK\"": "\"337\"",
+		"\"PLAYER NAME\"": "\"KaVontae Turpin\"",
+		"TEAM": "DAL",
+		"\"POS\"": "\"WR108\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-30\""
+	},
+	{
+		"\"RK\"": "\"338\"",
+		"\"PLAYER NAME\"": "\"Kalif Raymond\"",
+		"TEAM": "DET",
+		"\"POS\"": "\"WR109\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+105\""
+	},
+	{
+		"\"RK\"": "\"339\"",
+		"\"PLAYER NAME\"": "\"Eddy Pineiro\"",
+		"TEAM": "CAR",
+		"\"POS\"": "\"K26\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+94\""
+	},
+	{
+		"\"RK\"": "\"340\"",
+		"\"PLAYER NAME\"": "\"Dyami Brown\"",
+		"TEAM": "WAS",
+		"\"POS\"": "\"WR110\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-25\""
+	},
+	{
+		"\"RK\"": "\"341\"",
+		"\"PLAYER NAME\"": "\"Joshua Karty\"",
+		"TEAM": "LAR",
+		"\"POS\"": "\"K27\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-38\""
+	},
+	{
+		"\"RK\"": "\"342\"",
+		"\"PLAYER NAME\"": "\"Malik Heath\"",
+		"TEAM": "GB",
+		"\"POS\"": "\"WR111\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+118\""
+	},
+	{
+		"\"RK\"": "\"343\"",
+		"\"PLAYER NAME\"": "\"Arizona Cardinals\"",
+		"TEAM": "ARI",
+		"\"POS\"": "\"DST29\"",
+		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-69\""
+	},
+	{
+		"\"RK\"": "\"344\"",
+		"\"PLAYER NAME\"": "\"Xavier Hutchinson\"",
+		"TEAM": "HOU",
+		"\"POS\"": "\"WR112\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+199\""
+	},
+	{
+		"\"RK\"": "\"345\"",
+		"\"PLAYER NAME\"": "\"Foster Moreau\"",
+		"TEAM": "NO",
+		"\"POS\"": "\"TE40\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+314\""
+	},
+	{
+		"\"RK\"": "\"346\"",
+		"\"PLAYER NAME\"": "\"Sione Vaki\"",
+		"TEAM": "DET",
+		"\"POS\"": "\"RB100\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+117\""
+	},
+	{
+		"\"RK\"": "\"347\"",
+		"\"PLAYER NAME\"": "\"Roman Wilson\"",
+		"TEAM": "PIT",
+		"\"POS\"": "\"WR113\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-112\""
+	},
+	{
+		"\"RK\"": "\"348\"",
+		"\"PLAYER NAME\"": "\"Mo Alie-Cox\"",
+		"TEAM": "IND",
+		"\"POS\"": "\"TE41\"",
+		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
 		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
 		"\"ECR VS. ADP\"": "\"+23\""
 	},
 	{
-		"\"RK\"": "\"369\"",
+		"\"RK\"": "\"349\"",
+		"\"PLAYER NAME\"": "\"Isaiah Davis\"",
+		"TEAM": "NYJ",
+		"\"POS\"": "\"RB101\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+493\""
+	},
+	{
+		"\"RK\"": "\"350\"",
+		"\"PLAYER NAME\"": "\"Leonard Fournette\"",
+		"TEAM": "FA",
+		"\"POS\"": "\"RB102\"",
+		"\"SOS SEASON\"": "\"-\"",
+		"\"SOS PLAYOFFS\"": "\"-\"",
+		"\"ECR VS. ADP\"": "\"+124\""
+	},
+	{
+		"\"RK\"": "\"351\"",
 		"\"PLAYER NAME\"": "\"Cam Little\"",
 		"TEAM": "JAC",
-		"\"POS\"": "\"K29\"",
+		"\"POS\"": "\"K28\"",
 		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
 		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-120\""
+		"\"ECR VS. ADP\"": "\"-102\""
 	},
 	{
-		"\"RK\"": "\"370\"",
-		"\"PLAYER NAME\"": "\"Tim Patrick\"",
-		"TEAM": "DET",
-		"\"POS\"": "\"WR114\"",
+		"\"RK\"": "\"352\"",
+		"\"PLAYER NAME\"": "\"Brayden Narveson\"",
+		"TEAM": "GB",
+		"\"POS\"": "\"K29\"",
 		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+85\""
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+172\""
 	},
 	{
-		"\"RK\"": "\"371\"",
-		"\"PLAYER NAME\"": "\"KaVontae Turpin\"",
-		"TEAM": "DAL",
-		"\"POS\"": "\"WR115\"",
+		"\"RK\"": "\"353\"",
+		"\"PLAYER NAME\"": "\"Marvin Mims Jr.\"",
+		"TEAM": "DEN",
+		"\"POS\"": "\"WR114\"",
 		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-64\""
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-108\""
 	},
 	{
-		"\"RK\"": "\"372\"",
-		"\"PLAYER NAME\"": "\"Treylon Burks\"",
-		"TEAM": "TEN",
-		"\"POS\"": "\"WR116\"",
+		"\"RK\"": "\"354\"",
+		"\"PLAYER NAME\"": "\"Nyheim Hines\"",
+		"TEAM": "CLE",
+		"\"POS\"": "\"RB103\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+358\""
+	},
+	{
+		"\"RK\"": "\"355\"",
+		"\"PLAYER NAME\"": "\"Luke Musgrave\"",
+		"TEAM": "GB",
+		"\"POS\"": "\"TE42\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-190\""
+	},
+	{
+		"\"RK\"": "\"356\"",
+		"\"PLAYER NAME\"": "\"Dustin Hopkins\"",
+		"TEAM": "CLE",
+		"\"POS\"": "\"K30\"",
+		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-84\""
+	},
+	{
+		"\"RK\"": "\"357\"",
+		"\"PLAYER NAME\"": "\"Jacoby Brissett\"",
+		"TEAM": "NE",
+		"\"POS\"": "\"QB39\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+116\""
+	},
+	{
+		"\"RK\"": "\"358\"",
+		"\"PLAYER NAME\"": "\"Brenton Strange\"",
+		"TEAM": "JAC",
+		"\"POS\"": "\"TE43\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+215\""
+	},
+	{
+		"\"RK\"": "\"359\"",
+		"\"PLAYER NAME\"": "\"Chris Rodriguez Jr.\"",
+		"TEAM": "WAS",
+		"\"POS\"": "\"RB104\"",
 		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+114\""
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+250\""
 	},
 	{
-		"\"RK\"": "\"373\"",
+		"\"RK\"": "\"360\"",
+		"\"PLAYER NAME\"": "\"Miami Dolphins\"",
+		"TEAM": "MIA",
+		"\"POS\"": "\"DST30\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-193\""
+	},
+	{
+		"\"RK\"": "\"361\"",
+		"\"PLAYER NAME\"": "\"Hassan Haskins\"",
+		"TEAM": "LAC",
+		"\"POS\"": "\"RB105\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+434\""
+	},
+	{
+		"\"RK\"": "\"362\"",
+		"\"PLAYER NAME\"": "\"Gerald Everett\"",
+		"TEAM": "CHI",
+		"\"POS\"": "\"TE44\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+51\""
+	},
+	{
+		"\"RK\"": "\"363\"",
 		"\"PLAYER NAME\"": "\"Kylen Granson\"",
 		"TEAM": "IND",
 		"\"POS\"": "\"TE45\"",
 		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
 		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+184\""
+		"\"ECR VS. ADP\"": "\"+194\""
+	},
+	{
+		"\"RK\"": "\"364\"",
+		"\"PLAYER NAME\"": "\"Los Angeles Rams\"",
+		"TEAM": "LAR",
+		"\"POS\"": "\"DST31\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-107\""
+	},
+	{
+		"\"RK\"": "\"365\"",
+		"\"PLAYER NAME\"": "\"Jaret Patterson\"",
+		"TEAM": "LAC",
+		"\"POS\"": "\"RB106\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+422\""
+	},
+	{
+		"\"RK\"": "\"366\"",
+		"\"PLAYER NAME\"": "\"Michael Mayer\"",
+		"TEAM": "LV",
+		"\"POS\"": "\"TE46\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-95\""
+	},
+	{
+		"\"RK\"": "\"367\"",
+		"\"PLAYER NAME\"": "\"Jawhar Jordan\"",
+		"TEAM": "FA",
+		"\"POS\"": "\"RB107\"",
+		"\"SOS SEASON\"": "\"-\"",
+		"\"SOS PLAYOFFS\"": "\"-\"",
+		"\"ECR VS. ADP\"": "\"+495\""
+	},
+	{
+		"\"RK\"": "\"368\"",
+		"\"PLAYER NAME\"": "\"Ben Sinnott\"",
+		"TEAM": "WAS",
+		"\"POS\"": "\"TE47\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-134\""
+	},
+	{
+		"\"RK\"": "\"369\"",
+		"\"PLAYER NAME\"": "\"Patrick Taylor Jr.\"",
+		"TEAM": "SF",
+		"\"POS\"": "\"RB108\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-5\""
+	},
+	{
+		"\"RK\"": "\"370\"",
+		"\"PLAYER NAME\"": "\"Gardner Minshew II\"",
+		"TEAM": "LV",
+		"\"POS\"": "\"QB40\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-72\""
+	},
+	{
+		"\"RK\"": "\"371\"",
+		"\"PLAYER NAME\"": "\"Michael Penix Jr.\"",
+		"TEAM": "ATL",
+		"\"POS\"": "\"QB41\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-91\""
+	},
+	{
+		"\"RK\"": "\"372\"",
+		"\"PLAYER NAME\"": "\"Malik Washington\"",
+		"TEAM": "MIA",
+		"\"POS\"": "\"WR115\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-77\""
+	},
+	{
+		"\"RK\"": "\"373\"",
+		"\"PLAYER NAME\"": "\"Malik Willis\"",
+		"TEAM": "GB",
+		"\"POS\"": "\"QB42\"",
+		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+111\""
 	},
 	{
 		"\"RK\"": "\"374\"",
-		"\"PLAYER NAME\"": "\"Xavier Hutchinson\"",
-		"TEAM": "HOU",
-		"\"POS\"": "\"WR117\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+169\""
+		"\"PLAYER NAME\"": "\"Evan Hull\"",
+		"TEAM": "IND",
+		"\"POS\"": "\"RB109\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+541\""
 	},
 	{
 		"\"RK\"": "\"375\"",
-		"\"PLAYER NAME\"": "\"Tyler Johnson\"",
-		"TEAM": "LAR",
-		"\"POS\"": "\"WR118\"",
+		"\"PLAYER NAME\"": "\"Ameer Abdullah\"",
+		"TEAM": "LV",
+		"\"POS\"": "\"RB110\"",
 		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-\""
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+139\""
 	},
 	{
 		"\"RK\"": "\"376\"",
-		"\"PLAYER NAME\"": "\"Britain Covey\"",
-		"TEAM": "PHI",
-		"\"POS\"": "\"WR119\"",
+		"\"PLAYER NAME\"": "\"Lucas Krull\"",
+		"TEAM": "DEN",
+		"\"POS\"": "\"TE48\"",
 		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
 		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+60\""
+		"\"ECR VS. ADP\"": "\"+222\""
 	},
 	{
 		"\"RK\"": "\"377\"",
-		"\"PLAYER NAME\"": "\"Nick Folk\"",
-		"TEAM": "TEN",
-		"\"POS\"": "\"K30\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"0\""
+		"\"PLAYER NAME\"": "\"Zay Jones\"",
+		"TEAM": "ARI",
+		"\"POS\"": "\"WR116\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-41\""
 	},
 	{
 		"\"RK\"": "\"378\"",
-		"\"PLAYER NAME\"": "\"Will Dissly\"",
-		"TEAM": "LAC",
-		"\"POS\"": "\"TE46\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+276\""
+		"\"PLAYER NAME\"": "\"JaMycal Hasty\"",
+		"TEAM": "NE",
+		"\"POS\"": "\"RB111\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+383\""
 	},
 	{
 		"\"RK\"": "\"379\"",
-		"\"PLAYER NAME\"": "\"Jordan Mims\"",
-		"TEAM": "NO",
+		"\"PLAYER NAME\"": "\"Rasheen Ali\"",
+		"TEAM": "BAL",
 		"\"POS\"": "\"RB112\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+467\""
+		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+12\""
 	},
 	{
 		"\"RK\"": "\"380\"",
-		"\"PLAYER NAME\"": "\"Malik Heath\"",
-		"TEAM": "GB",
-		"\"POS\"": "\"WR120\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+80\""
+		"\"PLAYER NAME\"": "\"Lil'Jordan Humphrey\"",
+		"TEAM": "DEN",
+		"\"POS\"": "\"WR117\"",
+		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+208\""
 	},
 	{
 		"\"RK\"": "\"381\"",
-		"\"PLAYER NAME\"": "\"Zay Jones\"",
+		"\"PLAYER NAME\"": "\"Michael Carter\"",
 		"TEAM": "ARI",
-		"\"POS\"": "\"WR121\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-45\""
+		"\"POS\"": "\"RB113\"",
+		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+216\""
 	},
 	{
 		"\"RK\"": "\"382\"",
-		"\"PLAYER NAME\"": "\"Johnny Wilson\"",
-		"TEAM": "PHI",
-		"\"POS\"": "\"WR122\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
+		"\"PLAYER NAME\"": "\"Jordan Mims\"",
+		"TEAM": "NO",
+		"\"POS\"": "\"RB114\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
 		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-15\""
+		"\"ECR VS. ADP\"": "\"+464\""
 	},
 	{
 		"\"RK\"": "\"383\"",
-		"\"PLAYER NAME\"": "\"Kendrick Bourne\"",
-		"TEAM": "NE",
-		"\"POS\"": "\"WR123\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"0 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-34\""
+		"\"PLAYER NAME\"": "\"Jase McClellan\"",
+		"TEAM": "ATL",
+		"\"POS\"": "\"RB115\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+240\""
 	},
 	{
 		"\"RK\"": "\"384\"",
-		"\"PLAYER NAME\"": "\"C.J. Ham\"",
-		"TEAM": "MIN",
-		"\"POS\"": "\"RB113\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+55\""
-	},
-	{
-		"\"RK\"": "\"385\"",
-		"\"PLAYER NAME\"": "\"Nyheim Hines\"",
-		"TEAM": "CLE",
-		"\"POS\"": "\"RB114\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+327\""
-	},
-	{
-		"\"RK\"": "\"386\"",
-		"\"PLAYER NAME\"": "\"Mason Rudolph\"",
-		"TEAM": "TEN",
-		"\"POS\"": "\"QB43\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+264\""
-	},
-	{
-		"\"RK\"": "\"387\"",
-		"\"PLAYER NAME\"": "\"Leonard Fournette\"",
-		"TEAM": "FA",
-		"\"POS\"": "\"RB115\"",
-		"\"SOS SEASON\"": "\"-\"",
-		"\"SOS PLAYOFFS\"": "\"-\"",
-		"\"ECR VS. ADP\"": "\"+87\""
-	},
-	{
-		"\"RK\"": "\"388\"",
-		"\"PLAYER NAME\"": "\"Alec Ingold\"",
-		"TEAM": "MIA",
+		"\"PLAYER NAME\"": "\"Kevin Harris\"",
+		"TEAM": "NE",
 		"\"POS\"": "\"RB116\"",
 		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
 		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+120\""
+		"\"ECR VS. ADP\"": "\"+148\""
 	},
 	{
-		"\"RK\"": "\"389\"",
-		"\"PLAYER NAME\"": "\"Jawhar Jordan\"",
+		"\"RK\"": "\"385\"",
+		"\"PLAYER NAME\"": "\"Jimmy Garoppolo\"",
+		"TEAM": "LAR",
+		"\"POS\"": "\"QB43\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-42\""
+	},
+	{
+		"\"RK\"": "\"386\"",
+		"\"PLAYER NAME\"": "\"Latavius Murray\"",
 		"TEAM": "FA",
 		"\"POS\"": "\"RB117\"",
 		"\"SOS SEASON\"": "\"-\"",
 		"\"SOS PLAYOFFS\"": "\"-\"",
-		"\"ECR VS. ADP\"": "\"+473\""
+		"\"ECR VS. ADP\"": "\"-\""
+	},
+	{
+		"\"RK\"": "\"387\"",
+		"\"PLAYER NAME\"": "\"Jalin Hyatt\"",
+		"TEAM": "NYG",
+		"\"POS\"": "\"WR118\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-76\""
+	},
+	{
+		"\"RK\"": "\"388\"",
+		"\"PLAYER NAME\"": "\"Van Jefferson\"",
+		"TEAM": "PIT",
+		"\"POS\"": "\"WR119\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+46\""
+	},
+	{
+		"\"RK\"": "\"389\"",
+		"\"PLAYER NAME\"": "\"Jahan Dotson\"",
+		"TEAM": "PHI",
+		"\"POS\"": "\"WR120\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-163\""
 	},
 	{
 		"\"RK\"": "\"390\"",
-		"\"PLAYER NAME\"": "\"Darnell Washington\"",
-		"TEAM": "PIT",
-		"\"POS\"": "\"TE47\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-63\""
+		"\"PLAYER NAME\"": "\"Jacob Cowing\"",
+		"TEAM": "SF",
+		"\"POS\"": "\"WR121\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+285\""
 	},
 	{
 		"\"RK\"": "\"391\"",
-		"\"PLAYER NAME\"": "\"Patrick Ricard\"",
-		"TEAM": "BAL",
-		"\"POS\"": "\"RB118\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+38\""
+		"\"PLAYER NAME\"": "\"Treylon Burks\"",
+		"TEAM": "TEN",
+		"\"POS\"": "\"WR122\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+95\""
 	},
 	{
 		"\"RK\"": "\"392\"",
-		"\"PLAYER NAME\"": "\"Jaret Patterson\"",
-		"TEAM": "LAC",
-		"\"POS\"": "\"RB119\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+395\""
+		"\"PLAYER NAME\"": "\"Ke'Shawn Vaughn\"",
+		"TEAM": "SF",
+		"\"POS\"": "\"RB118\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+372\""
 	},
 	{
 		"\"RK\"": "\"393\"",
-		"\"PLAYER NAME\"": "\"Lil'Jordan Humphrey\"",
-		"TEAM": "DEN",
-		"\"POS\"": "\"WR124\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+195\""
+		"\"PLAYER NAME\"": "\"Darrell Henderson Jr.\"",
+		"TEAM": "FA",
+		"\"POS\"": "\"RB119\"",
+		"\"SOS SEASON\"": "\"-\"",
+		"\"SOS PLAYOFFS\"": "\"-\"",
+		"\"ECR VS. ADP\"": "\"-\""
 	},
 	{
 		"\"RK\"": "\"394\"",
-		"\"PLAYER NAME\"": "\"Carolina Panthers\"",
-		"TEAM": "CAR",
-		"\"POS\"": "\"DST31\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+15\""
+		"\"PLAYER NAME\"": "\"Tyler Scott\"",
+		"TEAM": "CHI",
+		"\"POS\"": "\"WR123\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-39\""
 	},
 	{
 		"\"RK\"": "\"395\"",
-		"\"PLAYER NAME\"": "\"Travis Homer\"",
-		"TEAM": "CHI",
-		"\"POS\"": "\"RB120\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+103\""
+		"\"PLAYER NAME\"": "\"Javon Baker\"",
+		"TEAM": "NE",
+		"\"POS\"": "\"WR124\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-105\""
 	},
 	{
 		"\"RK\"": "\"396\"",
-		"\"PLAYER NAME\"": "\"Patrick Taylor Jr.\"",
-		"TEAM": "SF",
-		"\"POS\"": "\"RB121\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-32\""
-	},
-	{
-		"\"RK\"": "\"397\"",
-		"\"PLAYER NAME\"": "\"Tyquan Thornton\"",
-		"TEAM": "NE",
-		"\"POS\"": "\"WR125\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"0 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+405\""
-	},
-	{
-		"\"RK\"": "\"398\"",
-		"\"PLAYER NAME\"": "\"Javon Baker\"",
-		"TEAM": "NE",
-		"\"POS\"": "\"WR126\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"0 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-108\""
-	},
-	{
-		"\"RK\"": "\"399\"",
-		"\"PLAYER NAME\"": "\"A.T. Perry\"",
-		"TEAM": "DEN",
-		"\"POS\"": "\"WR127\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-64\""
-	},
-	{
-		"\"RK\"": "\"400\"",
 		"\"PLAYER NAME\"": "\"Drew Lock\"",
 		"TEAM": "NYG",
 		"\"POS\"": "\"QB44\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+182\""
-	},
-	{
-		"\"RK\"": "\"401\"",
-		"\"PLAYER NAME\"": "\"Myles Gaskin\"",
-		"TEAM": "MIN",
-		"\"POS\"": "\"RB122\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
 		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+321\""
+		"\"ECR VS. ADP\"": "\"+186\""
 	},
 	{
-		"\"RK\"": "\"402\"",
-		"\"PLAYER NAME\"": "\"Jimmy Garoppolo\"",
-		"TEAM": "LAR",
-		"\"POS\"": "\"QB45\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-59\""
-	},
-	{
-		"\"RK\"": "\"403\"",
-		"\"PLAYER NAME\"": "\"Kenny McIntosh\"",
-		"TEAM": "SEA",
-		"\"POS\"": "\"RB123\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+109\""
-	},
-	{
-		"\"RK\"": "\"404\"",
-		"\"PLAYER NAME\"": "\"Royce Freeman\"",
+		"\"RK\"": "\"397\"",
+		"\"PLAYER NAME\"": "\"Daijun Edwards\"",
 		"TEAM": "FA",
-		"\"POS\"": "\"RB124\"",
+		"\"POS\"": "\"RB120\"",
 		"\"SOS SEASON\"": "\"-\"",
 		"\"SOS PLAYOFFS\"": "\"-\"",
-		"\"ECR VS. ADP\"": "\"+244\""
+		"\"ECR VS. ADP\"": "\"-\""
 	},
 	{
-		"\"RK\"": "\"405\"",
-		"\"PLAYER NAME\"": "\"Jase McClellan\"",
-		"TEAM": "ATL",
-		"\"POS\"": "\"RB125\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+218\""
-	},
-	{
-		"\"RK\"": "\"406\"",
-		"\"PLAYER NAME\"": "\"Carlos Washington Jr.\"",
-		"TEAM": "ATL",
-		"\"POS\"": "\"RB126\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+439\""
-	},
-	{
-		"\"RK\"": "\"407\"",
-		"\"PLAYER NAME\"": "\"Nick Mullens\"",
-		"TEAM": "MIN",
-		"\"POS\"": "\"QB46\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+302\""
-	},
-	{
-		"\"RK\"": "\"408\"",
-		"\"PLAYER NAME\"": "\"Kevin Harris\"",
-		"TEAM": "NE",
-		"\"POS\"": "\"RB127\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+124\""
-	},
-	{
-		"\"RK\"": "\"409\"",
-		"\"PLAYER NAME\"": "\"Sean Tucker\"",
-		"TEAM": "TB",
-		"\"POS\"": "\"RB128\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+210\""
-	},
-	{
-		"\"RK\"": "\"410\"",
-		"\"PLAYER NAME\"": "\"Frank Gore Jr.\"",
-		"TEAM": "BUF",
-		"\"POS\"": "\"RB129\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+111\""
-	},
-	{
-		"\"RK\"": "\"411\"",
-		"\"PLAYER NAME\"": "\"Jacob Cowing\"",
-		"TEAM": "SF",
-		"\"POS\"": "\"WR128\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+264\""
-	},
-	{
-		"\"RK\"": "\"412\"",
-		"\"PLAYER NAME\"": "\"Malachi Corley\"",
-		"TEAM": "NYJ",
-		"\"POS\"": "\"WR129\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-133\""
-	},
-	{
-		"\"RK\"": "\"413\"",
-		"\"PLAYER NAME\"": "\"Marquise Brown\"",
-		"TEAM": "KC",
-		"\"POS\"": "\"WR130\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-307\""
-	},
-	{
-		"\"RK\"": "\"414\"",
-		"\"PLAYER NAME\"": "\"Tyler Scott\"",
-		"TEAM": "CHI",
-		"\"POS\"": "\"WR131\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-59\""
-	},
-	{
-		"\"RK\"": "\"415\"",
-		"\"PLAYER NAME\"": "\"Jarrett Stidham\"",
-		"TEAM": "DEN",
-		"\"POS\"": "\"QB47\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+104\""
-	},
-	{
-		"\"RK\"": "\"416\"",
-		"\"PLAYER NAME\"": "\"John Metchie III\"",
-		"TEAM": "HOU",
-		"\"POS\"": "\"WR132\"",
-		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-38\""
-	},
-	{
-		"\"RK\"": "\"417\"",
-		"\"PLAYER NAME\"": "\"Austin Hooper\"",
-		"TEAM": "NE",
-		"\"POS\"": "\"TE48\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-12\""
-	},
-	{
-		"\"RK\"": "\"418\"",
-		"\"PLAYER NAME\"": "\"Parker Washington\"",
-		"TEAM": "JAC",
-		"\"POS\"": "\"WR133\"",
+		"\"RK\"": "\"398\"",
+		"\"PLAYER NAME\"": "\"Bryce Young\"",
+		"TEAM": "CAR",
+		"\"POS\"": "\"QB45\"",
 		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+146\""
+		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-188\""
 	},
 	{
-		"\"RK\"": "\"419\"",
-		"\"PLAYER NAME\"": "\"Ke'Shawn Vaughn\"",
-		"TEAM": "SF",
-		"\"POS\"": "\"RB130\"",
+		"\"RK\"": "\"399\"",
+		"\"PLAYER NAME\"": "\"Raheem Blackshear\"",
+		"TEAM": "CAR",
+		"\"POS\"": "\"RB121\"",
 		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+345\""
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+12\""
 	},
 	{
-		"\"RK\"": "\"420\"",
+		"\"RK\"": "\"400\"",
 		"\"PLAYER NAME\"": "\"Cade Stover\"",
 		"TEAM": "HOU",
 		"\"POS\"": "\"TE49\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-66\""
+	},
+	{
+		"\"RK\"": "\"401\"",
+		"\"PLAYER NAME\"": "\"Parker Washington\"",
+		"TEAM": "JAC",
+		"\"POS\"": "\"WR125\"",
+		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+163\""
+	},
+	{
+		"\"RK\"": "\"402\"",
+		"\"PLAYER NAME\"": "\"Frank Gore Jr.\"",
+		"TEAM": "BUF",
+		"\"POS\"": "\"RB122\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+119\""
+	},
+	{
+		"\"RK\"": "\"403\"",
+		"\"PLAYER NAME\"": "\"Kyle Juszczyk\"",
+		"TEAM": "SF",
+		"\"POS\"": "\"RB123\"",
 		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
 		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-86\""
+		"\"ECR VS. ADP\"": "\"-110\""
 	},
 	{
-		"\"RK\"": "\"421\"",
-		"\"PLAYER NAME\"": "\"Latavius Murray\"",
-		"TEAM": "FA",
-		"\"POS\"": "\"RB131\"",
-		"\"SOS SEASON\"": "\"-\"",
-		"\"SOS PLAYOFFS\"": "\"-\"",
-		"\"ECR VS. ADP\"": "\"-\""
-	},
-	{
-		"\"RK\"": "\"422\"",
-		"\"PLAYER NAME\"": "\"Michael Burton\"",
-		"TEAM": "DEN",
-		"\"POS\"": "\"RB132\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+279\""
-	},
-	{
-		"\"RK\"": "\"423\"",
-		"\"PLAYER NAME\"": "\"Devaughn Vele\"",
-		"TEAM": "DEN",
-		"\"POS\"": "\"WR134\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+197\""
-	},
-	{
-		"\"RK\"": "\"424\"",
-		"\"PLAYER NAME\"": "\"Xavier Gipson\"",
-		"TEAM": "NYJ",
-		"\"POS\"": "\"WR135\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+190\""
-	},
-	{
-		"\"RK\"": "\"425\"",
-		"\"PLAYER NAME\"": "\"Mason Tipton\"",
-		"TEAM": "NO",
-		"\"POS\"": "\"WR136\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-\""
-	},
-	{
-		"\"RK\"": "\"426\"",
-		"\"PLAYER NAME\"": "\"Darrell Henderson Jr.\"",
-		"TEAM": "FA",
-		"\"POS\"": "\"RB133\"",
-		"\"SOS SEASON\"": "\"-\"",
-		"\"SOS PLAYOFFS\"": "\"-\"",
-		"\"ECR VS. ADP\"": "\"-\""
-	},
-	{
-		"\"RK\"": "\"427\"",
-		"\"PLAYER NAME\"": "\"Raheem Blackshear\"",
-		"TEAM": "CAR",
-		"\"POS\"": "\"RB134\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-16\""
-	},
-	{
-		"\"RK\"": "\"428\"",
-		"\"PLAYER NAME\"": "\"Julius Chestnut\"",
-		"TEAM": "TEN",
-		"\"POS\"": "\"RB135\"",
-		"\"SOS SEASON\"": "\"5 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+389\""
-	},
-	{
-		"\"RK\"": "\"429\"",
-		"\"PLAYER NAME\"": "\"Mo Alie-Cox\"",
-		"TEAM": "IND",
+		"\"RK\"": "\"404\"",
+		"\"PLAYER NAME\"": "\"Darnell Washington\"",
+		"TEAM": "PIT",
 		"\"POS\"": "\"TE50\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-58\""
-	},
-	{
-		"\"RK\"": "\"430\"",
-		"\"PLAYER NAME\"": "\"DJ Turner\"",
-		"TEAM": "LV",
-		"\"POS\"": "\"WR137\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"4 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+340\""
-	},
-	{
-		"\"RK\"": "\"431\"",
-		"\"PLAYER NAME\"": "\"Devontez Walker\"",
-		"TEAM": "BAL",
-		"\"POS\"": "\"WR138\"",
 		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
 		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-153\""
+		"\"ECR VS. ADP\"": "\"-77\""
 	},
 	{
-		"\"RK\"": "\"432\"",
-		"\"PLAYER NAME\"": "\"Tommy Tremble\"",
-		"TEAM": "CAR",
-		"\"POS\"": "\"TE51\"",
-		"\"SOS SEASON\"": "\"1 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"1 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+240\""
-	},
-	{
-		"\"RK\"": "\"433\"",
-		"\"PLAYER NAME\"": "\"Daijun Edwards\"",
-		"TEAM": "FA",
-		"\"POS\"": "\"RB136\"",
-		"\"SOS SEASON\"": "\"-\"",
-		"\"SOS PLAYOFFS\"": "\"-\"",
-		"\"ECR VS. ADP\"": "\"-\""
-	},
-	{
-		"\"RK\"": "\"434\"",
-		"\"PLAYER NAME\"": "\"Mecole Hardman Jr.\"",
-		"TEAM": "KC",
-		"\"POS\"": "\"WR139\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-103\""
-	},
-	{
-		"\"RK\"": "\"435\"",
-		"\"PLAYER NAME\"": "\"Brenden Rice\"",
+		"\"RK\"": "\"405\"",
+		"\"PLAYER NAME\"": "\"DJ Chark Jr.\"",
 		"TEAM": "LAC",
-		"\"POS\"": "\"WR140\"",
-		"\"SOS SEASON\"": "\"2 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"-158\""
+		"\"POS\"": "\"WR126\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-30\""
 	},
 	{
-		"\"RK\"": "\"436\"",
+		"\"RK\"": "\"406\"",
+		"\"PLAYER NAME\"": "\"Kendrick Bourne\"",
+		"TEAM": "NE",
+		"\"POS\"": "\"WR127\"",
+		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"5 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"-57\""
+	},
+	{
+		"\"RK\"": "\"407\"",
 		"\"PLAYER NAME\"": "\"Skylar Thompson\"",
 		"TEAM": "MIA",
-		"\"POS\"": "\"QB48\"",
-		"\"SOS SEASON\"": "\"3 out of 5 stars\"",
-		"\"SOS PLAYOFFS\"": "\"3 out of 5 stars\"",
-		"\"ECR VS. ADP\"": "\"+6\""
+		"\"POS\"": "\"QB46\"",
+		"\"SOS SEASON\"": "\"4 out of 5 stars\"",
+		"\"SOS PLAYOFFS\"": "\"2 out of 5 stars\"",
+		"\"ECR VS. ADP\"": "\"+35\""
 	}
 ]
 
