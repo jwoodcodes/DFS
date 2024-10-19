@@ -14,12 +14,6 @@ const rotovizNegativeScriptOffensivePaceAndRunPassReportLastFiveWeeks = require(
 const rotovizPositiveScriptOffensivePaceAndRunPassReportLastFiveWeeks = require('../datafilesmadefrom4for4CSVs/rotovizPositiveOffensivePaceAndRunPassReport');
 const teamDefStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer = require('../datafilesmadefrom4for4CSVs/teamDefStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer');
 
-
-
-
-
-
-
 const teamOffStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer = require('../datafilesmadefrom4for4CSVs/teamOffStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer');
 
 const team4for4TeamStatExplorerTeamPointsScoredPerWeekLastFiveWeeks = require('../datafilesmadefrom4for4CSVs/team4For4TeamStatExplorerTeamPointsScoredPerWeekLastFiveWeeks');
@@ -1080,19 +1074,18 @@ const populateTeamObjects = function (passedInTeam) {
     passedInTeam.hadByeInTheLastFiveweeks = false;
   }
 
+  // console.log(passedInTeam.teamName);
+
   team4for4TeamStatExplorerTeamPointsScoredPerWeekLastFiveWeeks.forEach(
     team => {
       // console.log(team['"posteam"'])
       // console.log(passedInTeam.teamABV)
-
-      
 
       if (team['"Team"'].slice(1, -1) === passedInTeam.teamABV) {
         // console.log(team)
         let tempOne = +team['"Points/Game"'];
         // console.log(team, tempOne)
         passedInTeam.teamPointsPerGameLastFiveWeeks = tempOne;
-       
       }
     }
   );
@@ -1453,10 +1446,10 @@ const populateTeamObjects = function (passedInTeam) {
         rbTwo = +passedInTeam.RBTwoThisWeek4for4HalfProjPoints.toFixed(2);
         wrOne = +passedInTeam.WROneThisWeek4for4HalfProjPoints.toFixed(2);
         wrTwo = +passedInTeam.WRTwoThisWeek4for4HalfProjPoints.toFixed(2);
-        if(passedInTeam.WRThreeThisWeek4for4HalfProjPoints) {
-        wrThree = +passedInTeam.WRThreeThisWeek4for4HalfProjPoints.toFixed(2);
+        if (passedInTeam.WRThreeThisWeek4for4HalfProjPoints) {
+          wrThree = +passedInTeam.WRThreeThisWeek4for4HalfProjPoints.toFixed(2);
         } else {
-          wrThree = 0
+          wrThree = 0;
         }
         te = +passedInTeam.TEOneThisWeek4for4HalfProjPoints.toFixed(2);
 
@@ -1590,7 +1583,178 @@ const populateTeamObjects = function (passedInTeam) {
       }
     );
 
+    //
+    ////
+    /////
+    ////
+    //
 
+    // teamDefStatsSortedForPointsAllowedRank
+
+    //  console.log(teamDefStatsSortedForPointsAllowedRank)
+
+    let teamDefStatsSortedForPointsAllowedRank =
+      teamDefStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer.sort(function (
+        a,
+        b
+      ) {
+        // console.log(a['"Rush EPA/Play"'])
+        if (+a['"Points/Game"'] < +b['"Points/Game"']) {
+          return -1;
+        }
+        if (+a['"Points/Game"'] > +b['"Points/Game"']) {
+          return 1;
+        }
+        return 0;
+      });
+
+    for (let i = 0; i < teamDefStatsSortedForPointsAllowedRank.length; i++) {
+      const team = teamDefStatsSortedForPointsAllowedRank[i];
+      // console.log(team)
+
+      const teamAbbreviation = team['"Team"'].slice(1, -1); // Assuming the team name is in the "Team" property
+
+      if (
+        passedInTeam.teamABV === teamAbbreviation ||
+        passedInTeam.altTeamABV === teamAbbreviation
+      ) {
+        // console.log(team)
+
+        passedInTeam.defPointsPerGameAllowedRank = i + 1;
+      }
+    }
+
+    // console.log(passedInTeam.teamABV, passedInTeam.defPointsPerGameAllowedRank);
+
+    //
+    ////
+    /////
+    ////
+    ///
+
+    //
+    // teamDefStatsSortedForEPAPerPlayRank
+
+    // console.log(teamDefStatsSortedForEPAPerPlayRank)
+
+    let teamDefStatsSortedForEPAPerPlayRank =
+      teamDefStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer.sort(function (
+        a,
+        b
+      ) {
+        // console.log(a['"Rush EPA/Play"'])
+        if (+a['"EPA/Play"'] < +b['"EPA/Play"']) {
+          return -1;
+        }
+        if (+a['"EPA/Play"'] > +b['"EPA/Play"']) {
+          return 1;
+        }
+        return 0;
+      });
+
+    for (let i = 0; i < teamDefStatsSortedForPointsAllowedRank.length; i++) {
+      const team = teamDefStatsSortedForPointsAllowedRank[i];
+      // console.log(team)
+
+      const teamAbbreviation = team['"Team"'].slice(1, -1); // Assuming the team name is in the "Team" property
+
+      if (
+        passedInTeam.teamABV === teamAbbreviation ||
+        passedInTeam.altTeamABV === teamAbbreviation
+      ) {
+        // console.log(team)
+
+        passedInTeam.defEPAPerPlayRank = i + 1;
+      }
+    }
+
+    // console.log(passedInTeam.teamABV, passedInTeam.defEPAPerPlayRank);
+
+    //
+    ////
+    //////
+    ////
+    //
+
+    //
+    // teamDefStatsSortedForRushEPAPerPlayRank
+
+    // console.log(teamDefStatsSortedForRushEPAPerPlayRank)
+
+    let newTeamDefStatsSortedForRushEPAPerPlayRank =
+      teamDefStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer.sort(function (
+        a,
+        b
+      ) {
+        // console.log(a['"Rush EPA/Play"'])
+        if (+a['"Rush EPA/Play"'] < +b['"Rush EPA/Play"']) {
+          return -1;
+        }
+        if (+a['"Rush EPA/Play"'] > +b['"Rush EPA/Play"']) {
+          return 1;
+        }
+        return 0;
+      });
+
+    for (
+      let i = 0;
+      i < newTeamDefStatsSortedForRushEPAPerPlayRank.length;
+      i++
+    ) {
+      const team = newTeamDefStatsSortedForRushEPAPerPlayRank[i];
+      // console.log(team)
+
+      const teamAbbreviation = team['"Team"'].slice(1, -1); // Assuming the team name is in the "Team" property
+
+      if (
+        passedInTeam.teamABV === teamAbbreviation ||
+        passedInTeam.altTeamABV === teamAbbreviation
+      ) {
+        // console.log(team)
+
+        passedInTeam.defEPAAgainstTheRun = i + 1;
+      }
+    }
+
+    // console.log(passedInTeam.teamABV, passedInTeam.defEPAAgainstTheRun);
+
+    //
+    // teamDefStatsSortedForPlaySuccessRateRank
+
+    // console.log(teamDefStatsSortedForPlaySuccessRateRank)
+
+    let teamDefStatsSortedForSuccessRateRank =
+      teamDefStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer.sort(function (
+        a,
+        b
+      ) {
+        // console.log(a['"Rush EPA/Play"'])
+        if (+a['"Play Success %"'] < +b['"Play Success %"']) {
+          return -1;
+        }
+        if (+a['"Play Success %"'] > +b['"Play Success %"']) {
+          return 1;
+        }
+        return 0;
+      });
+
+    for (let i = 0; i < teamDefStatsSortedForSuccessRateRank.length; i++) {
+      const team = teamDefStatsSortedForSuccessRateRank[i];
+      // console.log(team)
+
+      const teamAbbreviation = team['"Team"'].slice(1, -1); // Assuming the team name is in the "Team" property
+
+      if (
+        passedInTeam.teamABV === teamAbbreviation ||
+        passedInTeam.altTeamABV === teamAbbreviation
+      ) {
+        // console.log(team)
+
+        passedInTeam.defPlaySuccessRatePercentageAgainstRank = i + 1;
+      }
+    }
+
+    // console.log(passedInTeam.teamABV, passedInTeam.defPlaySuccessRatePercentageAgainstRank);
 
     //
     ////
@@ -1598,673 +1762,562 @@ const populateTeamObjects = function (passedInTeam) {
     ////
     //
 
-// teamDefStatsSortedForPointsAllowedRank
+    //
+    // teamDefStatsSortedForExplosivePassRateRank
 
-  //  console.log(teamDefStatsSortedForPointsAllowedRank)
+    let teamDefStatsSortedForExplosivePassRateRank =
+      teamDefStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer.sort(function (
+        a,
+        b
+      ) {
+        // console.log(a['"Rush EPA/Play"'])
+        if (+a['"Explosive Pass %"'] < +b['"Explosive Pass %"']) {
+          return -1;
+        }
+        if (+a['"Explosive Pass %"'] > +b['"Explosive Pass %"']) {
+          return 1;
+        }
+        return 0;
+      });
 
-let teamDefStatsSortedForPointsAllowedRank = teamDefStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer.sort(function(a, b) {
-  // console.log(a['"Rush EPA/Play"'])
-  if (+a['"Points/Game"'] < +b['"Points/Game"']) {
-      return -1;
-  }
-  if (+a['"Points/Game"'] > +b['"Points/Game"']) {
-      return 1;
-  }
-  return 0;
-})
-
-for (let i = 0; i < teamDefStatsSortedForPointsAllowedRank.length; i++) {
-  const team = teamDefStatsSortedForPointsAllowedRank[i];
-  // console.log(team)
-  
-  const teamAbbreviation = team['"Team"'].slice(1, -1); // Assuming the team name is in the "Team" property
-
-  if(passedInTeam.teamABV === teamAbbreviation ||
-     passedInTeam.altTeamABV === teamAbbreviation) {
+    for (
+      let i = 0;
+      i < teamDefStatsSortedForExplosivePassRateRank.length;
+      i++
+    ) {
+      const team = teamDefStatsSortedForExplosivePassRateRank[i];
       // console.log(team)
 
-      passedInTeam.defPointsPerGameAllowedRank = i + 1;
-     }
+      const teamAbbreviation = team['"Team"'].slice(1, -1); // Assuming the team name is in the "Team" property
 
-}
+      if (
+        passedInTeam.teamABV === teamAbbreviation ||
+        passedInTeam.altTeamABV === teamAbbreviation
+      ) {
+        // console.log(team)
 
-// console.log(passedInTeam.teamABV, passedInTeam.defPointsPerGameAllowedRank);
+        passedInTeam.defExplosivePassPercentageAgainstRank = i + 1;
+      }
+    }
 
+    // console.log(passedInTeam.teamABV, passedInTeam.defExplosivePassPercentageAgainstRank);
 
+    //
+    ////
+    //////
+    ////
+    //
 
+    //
+    // teamDefStatsSortedForExplosiveRushRateRank
 
+    let teamDefStatsSortedForExplosiveRushRateRank =
+      teamDefStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer.sort(function (
+        a,
+        b
+      ) {
+        // console.log(a['"Rush EPA/Play"'])
+        if (+a['"Explosive Rush %"'] < +b['"Explosive Rush %"']) {
+          return -1;
+        }
+        if (+a['"Explosive Rush %"'] > +b['"Explosive Rush %"']) {
+          return 1;
+        }
+        return 0;
+      });
 
-//
-////
-/////
-////
-///
-
-//
-// teamDefStatsSortedForEPAPerPlayRank
-
-// console.log(teamDefStatsSortedForEPAPerPlayRank)
-
-let teamDefStatsSortedForEPAPerPlayRank = teamDefStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer.sort(function(a, b) {
-  // console.log(a['"Rush EPA/Play"'])
-  if (+a['"EPA/Play"'] < +b['"EPA/Play"']) {
-      return -1;
-  }
-  if (+a['"EPA/Play"'] > +b['"EPA/Play"']) {
-      return 1;
-  }
-  return 0;
-})
-
-for (let i = 0; i < teamDefStatsSortedForPointsAllowedRank.length; i++) {
-  const team = teamDefStatsSortedForPointsAllowedRank[i];
-  // console.log(team)
-  
-  const teamAbbreviation = team['"Team"'].slice(1, -1); // Assuming the team name is in the "Team" property
-
-  if(passedInTeam.teamABV === teamAbbreviation ||
-     passedInTeam.altTeamABV === teamAbbreviation) {
+    for (
+      let i = 0;
+      i < teamDefStatsSortedForExplosiveRushRateRank.length;
+      i++
+    ) {
+      const team = teamDefStatsSortedForExplosiveRushRateRank[i];
       // console.log(team)
 
-      passedInTeam.defEPAPerPlayRank = i + 1;
-     }
+      const teamAbbreviation = team['"Team"'].slice(1, -1); // Assuming the team name is in the "Team" property
 
-}
+      if (
+        passedInTeam.teamABV === teamAbbreviation ||
+        passedInTeam.altTeamABV === teamAbbreviation
+      ) {
+        // console.log(team)
 
-// console.log(passedInTeam.teamABV, passedInTeam.defEPAPerPlayRank);
+        passedInTeam.defExplosiveRushPercentageAgainstRank = i + 1;
+      }
+    }
 
+    // console.log(passedInTeam.teamABV, passedInTeam.defExplosiveRushPercentageAgainstRank);
 
-//
-////
-//////
-////
-//
+    let teamDefScoreForGameEvironmentAndGameScript = 0;
 
-//
-// teamDefStatsSortedForRushEPAPerPlayRank
+    const calcteamDefScoreForGameEvironmentAndGameScript = function (statRank) {
+      if (statRank < 6) {
+        teamDefScoreForGameEvironmentAndGameScript += 20;
+      }
+      if (statRank > 5 && statRank < 11) {
+        teamDefScoreForGameEvironmentAndGameScript += 15;
+      }
+      if (statRank > 10 && statRank < 16) {
+        teamDefScoreForGameEvironmentAndGameScript += 10;
+      }
+      if (statRank > 15 && statRank < 20) {
+        teamDefScoreForGameEvironmentAndGameScript += 5;
+      }
+    };
 
-// console.log(teamDefStatsSortedForRushEPAPerPlayRank)
+    // console.log(passedInTeam.defPointsPerGameAllowedRank)
 
-let newTeamDefStatsSortedForRushEPAPerPlayRank = teamDefStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer.sort(function(a, b) {
-  // console.log(a['"Rush EPA/Play"'])
-  if (+a['"Rush EPA/Play"'] < +b['"Rush EPA/Play"']) {
-      return -1;
-  }
-  if (+a['"Rush EPA/Play"'] > +b['"Rush EPA/Play"']) {
-      return 1;
-  }
-  return 0;
-})
+    calcteamDefScoreForGameEvironmentAndGameScript(
+      passedInTeam.defEPAPerPlayRank
+    );
+    calcteamDefScoreForGameEvironmentAndGameScript(
+      passedInTeam.defPointsPerGameAllowedRank
+    );
+    calcteamDefScoreForGameEvironmentAndGameScript(
+      passedInTeam.defPlaySuccessRatePercentageAgainstRank
+    );
+    calcteamDefScoreForGameEvironmentAndGameScript(
+      passedInTeam.defExplosivePassPercentageAgainstRank
+    );
+    // console.log(
+    //   `${passedInTeam.teamABV} ${teamDefScoreForGameEvironmentAndGameScript}`
+    // );
+    passedInTeam.teamDefScoreForGameEvironmentAndGameScript =
+      +teamDefScoreForGameEvironmentAndGameScript;
 
-for (let i = 0; i < newTeamDefStatsSortedForRushEPAPerPlayRank.length; i++) {
-  const team = newTeamDefStatsSortedForRushEPAPerPlayRank[i];
-  // console.log(team)
-  
-  const teamAbbreviation = team['"Team"'].slice(1, -1); // Assuming the team name is in the "Team" property
+    let adjustmentFactorForOpposingDef = 0;
+    let tempopposingTeamDef = 0;
 
-  if(passedInTeam.teamABV === teamAbbreviation ||
-     passedInTeam.altTeamABV === teamAbbreviation) {
-      // console.log(team)
+    if (passedInTeam.teamDefScoreForGameEvironmentAndGameScript > 69) {
+      passedInTeam.teamDefScoreToUseForOpposingTeamDef = -50;
+    }
+    if (
+      passedInTeam.teamDefScoreForGameEvironmentAndGameScript > 59 &&
+      passedInTeam.teamDefScoreForGameEvironmentAndGameScript < 70
+    ) {
+      passedInTeam.teamDefScoreToUseForOpposingTeamDef = -25;
+    }
+    if (
+      passedInTeam.teamDefScoreForGameEvironmentAndGameScript > 49 &&
+      passedInTeam.teamDefScoreForGameEvironmentAndGameScript < 60
+    ) {
+      passedInTeam.teamDefScoreToUseForOpposingTeamDef = -10;
+    }
+    if (
+      passedInTeam.teamDefScoreForGameEvironmentAndGameScript > 29 &&
+      passedInTeam.teamDefScoreForGameEvironmentAndGameScript < 50
+    ) {
+      passedInTeam.teamDefScoreToUseForOpposingTeamDef = 0;
+    }
 
-      passedInTeam.defEPAAgainstTheRun = i + 1;
-     }
+    if (
+      passedInTeam.teamDefScoreForGameEvironmentAndGameScript > 19 &&
+      passedInTeam.teamDefScoreForGameEvironmentAndGameScript < 30
+    ) {
+      passedInTeam.teamDefScoreToUseForOpposingTeamDef = 10;
+    }
+    if (
+      passedInTeam.teamDefScoreForGameEvironmentAndGameScript > 9 &&
+      passedInTeam.teamDefScoreForGameEvironmentAndGameScript < 20
+    ) {
+      passedInTeam.teamDefScoreToUseForOpposingTeamDef = 25;
+    }
+    if (
+      passedInTeam.teamDefScoreForGameEvironmentAndGameScript >= 0 &&
+      passedInTeam.teamDefScoreForGameEvironmentAndGameScript < 10
+    ) {
+      // console.log(team.teamABV);
+      passedInTeam.teamDefScoreToUseForOpposingTeamDef = 50;
+    }
 
-}
+    //
+    ////
+    /////
+    ///////
+    //////// for offense below
+    //////
+    ////
+    ///
+    //
 
-// console.log(passedInTeam.teamABV, passedInTeam.defEPAAgainstTheRun);
-
-//
-// teamDefStatsSortedForPlaySuccessRateRank
-
-// console.log(teamDefStatsSortedForPlaySuccessRateRank)
-
-let teamDefStatsSortedForSuccessRateRank = teamDefStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer.sort(function(a, b) {
-  // console.log(a['"Rush EPA/Play"'])
-  if (+a['"Play Success %"'] < +b['"Play Success %"']) {
-      return -1;
-  }
-  if (+a['"Play Success %"'] > +b['"Play Success %"']) {
-      return 1;
-  }
-  return 0;
-})
-
-for (let i = 0; i < teamDefStatsSortedForSuccessRateRank.length; i++) {
-  const team = teamDefStatsSortedForSuccessRateRank[i];
-  // console.log(team)
-  
-  const teamAbbreviation = team['"Team"'].slice(1, -1); // Assuming the team name is in the "Team" property
-
-  if(passedInTeam.teamABV === teamAbbreviation ||
-     passedInTeam.altTeamABV === teamAbbreviation) {
-      // console.log(team)
-
-      passedInTeam.defPlaySuccessRatePercentageAgainstRank = i + 1;
-     }
-
-}
-
-// console.log(passedInTeam.teamABV, passedInTeam.defPlaySuccessRatePercentageAgainstRank);
-
-// 
-////
-/////
-////
-//
-
-//
-// teamDefStatsSortedForExplosivePassRateRank
-
-
-
-let teamDefStatsSortedForExplosivePassRateRank = teamDefStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer.sort(function(a, b) {
-  // console.log(a['"Rush EPA/Play"'])
-  if (+a['"Explosive Pass %"'] < +b['"Explosive Pass %"']) {
-      return -1;
-  }
-  if (+a['"Explosive Pass %"'] > +b['"Explosive Pass %"']) {
-      return 1;
-  }
-  return 0;
-})
-
-for (let i = 0; i < teamDefStatsSortedForExplosivePassRateRank.length; i++) {
-  const team = teamDefStatsSortedForExplosivePassRateRank[i];
-  // console.log(team)
-  
-  const teamAbbreviation = team['"Team"'].slice(1, -1); // Assuming the team name is in the "Team" property
-
-  if(passedInTeam.teamABV === teamAbbreviation ||
-     passedInTeam.altTeamABV === teamAbbreviation) {
-      // console.log(team)
-
-      passedInTeam.defExplosivePassPercentageAgainstRank = i + 1;
-     }
-
-}
-
-// console.log(passedInTeam.teamABV, passedInTeam.defExplosivePassPercentageAgainstRank);
-
-// 
-////
-//////
-////
-//
-
-//
-// teamDefStatsSortedForExplosiveRushRateRank
-
-
-let teamDefStatsSortedForExplosiveRushRateRank = teamDefStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer.sort(function(a, b) {
-  // console.log(a['"Rush EPA/Play"'])
-  if (+a['"Explosive Rush %"'] < +b['"Explosive Rush %"']) {
-      return -1;
-  }
-  if (+a['"Explosive Rush %"'] > +b['"Explosive Rush %"']) {
-      return 1;
-  }
-  return 0;
-})
-
-for (let i = 0; i < teamDefStatsSortedForExplosiveRushRateRank.length; i++) {
-  const team = teamDefStatsSortedForExplosiveRushRateRank[i];
-  // console.log(team)
-  
-  const teamAbbreviation = team['"Team"'].slice(1, -1); // Assuming the team name is in the "Team" property
-
-  if(passedInTeam.teamABV === teamAbbreviation ||
-     passedInTeam.altTeamABV === teamAbbreviation) {
-      // console.log(team)
-
-      passedInTeam.defExplosiveRushPercentageAgainstRank = i + 1;
-     }
-
-}
-
-// console.log(passedInTeam.teamABV, passedInTeam.defExplosiveRushPercentageAgainstRank);
-
-
-
-let teamDefScoreForGameEvironmentAndGameScript = 0;
-
-  
-        const calcteamDefScoreForGameEvironmentAndGameScript = function (
-          statRank
-        ) {
-          if (statRank < 6) {
-            teamDefScoreForGameEvironmentAndGameScript += 20;
-          }
-          if (statRank > 5 && statRank < 11) {
-            teamDefScoreForGameEvironmentAndGameScript += 15;
-          }
-          if (statRank > 10 && statRank < 16) {
-            teamDefScoreForGameEvironmentAndGameScript += 10;
-          }
-          if (statRank > 15 && statRank < 20) {
-            teamDefScoreForGameEvironmentAndGameScript += 5;
-          }
-        };
-
-        // console.log(passedInTeam.defPointsPerGameAllowedRank)
-
-        calcteamDefScoreForGameEvironmentAndGameScript(
-          passedInTeam.defEPAPerPlayRank
-        );
-        calcteamDefScoreForGameEvironmentAndGameScript(
-          passedInTeam.defPointsPerGameAllowedRank
-        );
-        calcteamDefScoreForGameEvironmentAndGameScript(
-          passedInTeam.defPlaySuccessRatePercentageAgainstRank
-        );
-        calcteamDefScoreForGameEvironmentAndGameScript(
-          passedInTeam.defExplosivePassPercentageAgainstRank
-        );
-        // console.log(
-        //   `${passedInTeam.teamABV} ${teamDefScoreForGameEvironmentAndGameScript}`
-        // );
-        passedInTeam.teamDefScoreForGameEvironmentAndGameScript =
-          +teamDefScoreForGameEvironmentAndGameScript;
-
-        let adjustmentFactorForOpposingDef = 0;
-        let tempopposingTeamDef = 0;
-
-        if (passedInTeam.teamDefScoreForGameEvironmentAndGameScript > 69) {
-          passedInTeam.teamDefScoreToUseForOpposingTeamDef = -50;
-        }
-        if (
-          passedInTeam.teamDefScoreForGameEvironmentAndGameScript > 59 &&
-          passedInTeam.teamDefScoreForGameEvironmentAndGameScript < 70
-        ) {
-          passedInTeam.teamDefScoreToUseForOpposingTeamDef = -25;
-        }
-        if (
-          passedInTeam.teamDefScoreForGameEvironmentAndGameScript > 49 &&
-          passedInTeam.teamDefScoreForGameEvironmentAndGameScript < 60
-        ) {
-          passedInTeam.teamDefScoreToUseForOpposingTeamDef = -10;
-        }
-        if (
-          passedInTeam.teamDefScoreForGameEvironmentAndGameScript > 29 &&
-          passedInTeam.teamDefScoreForGameEvironmentAndGameScript < 50
-        ) {
-          passedInTeam.teamDefScoreToUseForOpposingTeamDef = 0;
-        }
-
-        if (
-          passedInTeam.teamDefScoreForGameEvironmentAndGameScript > 19 &&
-          passedInTeam.teamDefScoreForGameEvironmentAndGameScript < 30
-        ) {
-          passedInTeam.teamDefScoreToUseForOpposingTeamDef = 10;
-        }
-        if (
-          passedInTeam.teamDefScoreForGameEvironmentAndGameScript > 9 &&
-          passedInTeam.teamDefScoreForGameEvironmentAndGameScript < 20
-        ) {
-          passedInTeam.teamDefScoreToUseForOpposingTeamDef = 25;
-        }
-        if (
-          passedInTeam.teamDefScoreForGameEvironmentAndGameScript >= 0 &&
-          passedInTeam.teamDefScoreForGameEvironmentAndGameScript < 10
-        ) {
-          // console.log(team.teamABV);
-          passedInTeam.teamDefScoreToUseForOpposingTeamDef = 50;
-        }
-    
-
-        //
-        ////
-        /////
-        ///////
-        //////// for offense below
-        //////
-        ////
-        ///
-        //
-
-        //
+    //
     ////
     /////
     ////
     //
 
-// teamOffStatsSortedForPointsAllowedRank
-
-  //  console.log(teamOffStatsSortedForPointsAllowedRank)
-
-let teamOffStatsSortedForPointsAllowedRank = teamOffStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer.sort(function(a, b) {
-  // console.log(a['"Rush EPA/Play"'])
-  if (+a['"Points/Game"'] < +b['"Points/Game"']) {
-      return -1;
-  }
-  if (+a['"Points/Game"'] > +b['"Points/Game"']) {
-      return 1;
-  }
-  return 0;
-})
-
-for (let i = 0; i < teamOffStatsSortedForPointsAllowedRank.length; i++) {
-  const team = teamOffStatsSortedForPointsAllowedRank[i];
-  // console.log(team)
-  
-  const teamAbbreviation = team['"Team"'].slice(1, -1); // Assuming the team name is in the "Team" property
-
-  if(passedInTeam.teamABV === teamAbbreviation ||
-     passedInTeam.altTeamABV === teamAbbreviation) {
-      // console.log(team)
-
-      passedInTeam.offPointsPerGame = 32 - i;
-     }
-
-}
-
-// console.log(passedInTeam.teamABV, passedInTeam.offPointsPerGame);
-
-
-
-
-
-//
-////
-/////
-////
-///
-
-//
-// teamOffStatsSortedForEPAPerPlayRank
-
-// console.log(teamOffStatsSortedForEPAPerPlayRank)
-
-let teamOffStatsSortedForEPAPerPlayRank = teamOffStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer.sort(function(a, b) {
-  // console.log(a['"Rush EPA/Play"'])
-  if (+a['"EPA/Play"'] < +b['"EPA/Play"']) {
-      return -1;
-  }
-  if (+a['"EPA/Play"'] > +b['"EPA/Play"']) {
-      return 1;
-  }
-  return 0;
-})
-
-for (let i = 0; i < teamOffStatsSortedForPointsAllowedRank.length; i++) {
-  const team = teamOffStatsSortedForPointsAllowedRank[i];
-  // console.log(team)
-  
-  const teamAbbreviation = team['"Team"'].slice(1, -1); // Assuming the team name is in the "Team" property
-
-  if(passedInTeam.teamABV === teamAbbreviation ||
-     passedInTeam.altTeamABV === teamAbbreviation) {
-      // console.log(team)
-
-      passedInTeam.offTotalEPAPerPlay = 32 - i;
-     }
-
-}
-
-// console.log(passedInTeam.teamABV, passedInTeam.offTotalEPAPerPlay);
-
-
-//
-////
-//////
-////
-//
-
-//
-// teamOffStatsSortedForRushEPAPerPlayRank
-
-// console.log(teamOffStatsSortedForRushEPAPerPlayRank)
-
-let newTeamOffStatsSortedForRushEPAPerPlayRank = teamOffStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer.sort(function(a, b) {
-  // console.log(a['"Rush EPA/Play"'])
-  if (+a['"Rush EPA/Play"'] < +b['"Rush EPA/Play"']) {
-      return -1;
-  }
-  if (+a['"Rush EPA/Play"'] > +b['"Rush EPA/Play"']) {
-      return 1;
-  }
-  return 0;
-})
-
-for (let i = 0; i < newTeamOffStatsSortedForRushEPAPerPlayRank.length; i++) {
-  const team = newTeamOffStatsSortedForRushEPAPerPlayRank[i];
-  // console.log(team)
-  
-  const teamAbbreviation = team['"Team"'].slice(1, -1); // Assuming the team name is in the "Team" property
-
-  if(passedInTeam.teamABV === teamAbbreviation ||
-     passedInTeam.altTeamABV === teamAbbreviation) {
-      // console.log(team)
-
-      passedInTeam.offRunPlayEPA = 32 - i;
-     }
-
-}
-
-// console.log(passedInTeam.teamABV, passedInTeam.offRunPlayEPA);
-
-////
-//////
-////
-//
-
-//
-// teamOffStatsSortedForRushEPAPerPlayRank
-
-// console.log(teamOffStatsSortedForRushEPAPerPlayRank)
-
-let newTeamOffStatsSortedForPassEPAPerPlayRank = teamOffStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer.sort(function(a, b) {
-  // console.log(a['"Pass EPA/Play"'])
-  if (+a['"Pass EPA/Play"'] < +b['"Pass EPA/Play"']) {
-      return -1;
-  }
-  if (+a['"Pass EPA/Play"'] > +b['"Pass EPA/Play"']) {
-      return 1;
-  }
-  return 0;
-})
-
-for (let i = 0; i < newTeamOffStatsSortedForPassEPAPerPlayRank.length; i++) {
-  const team = newTeamOffStatsSortedForPassEPAPerPlayRank[i];
-  // console.log(team)
-  
-  const teamAbbreviation = team['"Team"'].slice(1, -1); // Assuming the team name is in the "Team" property
-
-  if(passedInTeam.teamABV === teamAbbreviation ||
-     passedInTeam.altTeamABV === teamAbbreviation) {
-      // console.log(team)
-
-      passedInTeam.offPassPlayEPA = 32 - i;
-     }
-
-}
-
-// console.log(passedInTeam.teamABV, passedInTeam.offPassPlayEPA);
-
-//
-// teamOffStatsSortedForPlaySuccessRateRank
-
-// console.log(teamOffStatsSortedForPlaySuccessRateRank)
-
-let teamOffStatsSortedForSuccessRateRank = teamOffStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer.sort(function(a, b) {
-  // console.log(a['"Rush EPA/Play"'])
-  if (+a['"Play Success %"'] < +b['"Play Success %"']) {
-      return -1;
-  }
-  if (+a['"Play Success %"'] > +b['"Play Success %"']) {
-      return 1;
-  }
-  return 0;
-})
-
-for (let i = 0; i < teamOffStatsSortedForSuccessRateRank.length; i++) {
-  const team = teamOffStatsSortedForSuccessRateRank[i];
-  // console.log(team)
-  
-  const teamAbbreviation = team['"Team"'].slice(1, -1); // Assuming the team name is in the "Team" property
-
-  if(passedInTeam.teamABV === teamAbbreviation ||
-     passedInTeam.altTeamABV === teamAbbreviation) {
-      // console.log(team)
-
-      passedInTeam.offPlaySuccessPercentageRank = 32 -i;
-     }
-
-}
-
-// console.log(passedInTeam.teamABV, passedInTeam.offPlaySuccessPercentageRank);
-
-// 
-////
-/////
-////
-//
-
-//
-// teamOffStatsSortedForExplosivePassRateRank
-
-
-
-let teamOffStatsSortedForExplosivePassRateRank = teamOffStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer.sort(function(a, b) {
-  // console.log(a['"Rush EPA/Play"'])
-  if (+a['"Explosive Pass %"'] < +b['"Explosive Pass %"']) {
-      return -1;
-  }
-  if (+a['"Explosive Pass %"'] > +b['"Explosive Pass %"']) {
-      return 1;
-  }
-  return 0;
-})
-
-for (let i = 0; i < teamOffStatsSortedForExplosivePassRateRank.length; i++) {
-  const team = teamOffStatsSortedForExplosivePassRateRank[i];
-  // console.log(team)
-  
-  const teamAbbreviation = team['"Team"'].slice(1, -1); // Assuming the team name is in the "Team" property
-
-  if(passedInTeam.teamABV === teamAbbreviation ||
-     passedInTeam.altTeamABV === teamAbbreviation) {
-      // console.log(team)
-
-      passedInTeam.offExplosivePassRateRank = 32 - i;
-     }
-
-}
-
-// console.log(passedInTeam.teamABV, passedInTeam.offExplosivePassRateRank);
-
-// 
-////
-//////
-////
-//
-
-//
-// teamOffStatsSortedForExplosiveRushRateRank
-
-
-let teamOffStatsSortedForExplosiveRushRateRank = teamOffStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer.sort(function(a, b) {
-  // console.log(a['"Rush EPA/Play"'])
-  if (+a['"Explosive Rush %"'] < +b['"Explosive Rush %"']) {
-      return -1;
-  }
-  if (+a['"Explosive Rush %"'] > +b['"Explosive Rush %"']) {
-      return 1;
-  }
-  return 0;
-})
-
-for (let i = 0; i < teamOffStatsSortedForExplosiveRushRateRank.length; i++) {
-  const team = teamOffStatsSortedForExplosiveRushRateRank[i];
-  // console.log(team)
-  
-  const teamAbbreviation = team['"Team"'].slice(1, -1); // Assuming the team name is in the "Team" property
-
-  if(passedInTeam.teamABV === teamAbbreviation ||
-     passedInTeam.altTeamABV === teamAbbreviation) {
-      // console.log(team)
-
-      passedInTeam.offExplosiveRushRateRank = 32 - i;
-     }
-
-}
-
-// console.log(passedInTeam.teamABV, passedInTeam.offExplosiveRushRateRank);
-
-//
-//
-
-        let teamOffScoreForGameEvironmentAndGameScript = 0;
-
-        const calcteamOffScoreForGameEvironmentAndGameScript = function (
-          statRank
-        ) {
-          if (statRank < 6) {
-            teamOffScoreForGameEvironmentAndGameScript += 20;
-          }
-          if (statRank > 5 && statRank < 11) {
-            teamOffScoreForGameEvironmentAndGameScript += 15;
-          }
-          if (statRank > 10 && statRank < 16) {
-            teamOffScoreForGameEvironmentAndGameScript += 10;
-          }
-          if (statRank > 15 && statRank < 20) {
-            teamOffScoreForGameEvironmentAndGameScript += 5;
-          }
-        };
-
-        calcteamOffScoreForGameEvironmentAndGameScript(
-          passedInTeam.offTotalEPAPerPlay
-        );
-        calcteamOffScoreForGameEvironmentAndGameScript(
-          passedInTeam.offPointsPerGame
-        );
-        calcteamOffScoreForGameEvironmentAndGameScript(
-          passedInTeam.offPlaySuccessPercentageRank
-        );
-        calcteamOffScoreForGameEvironmentAndGameScript(
-          passedInTeam.offExplosivePassRateRank
-        );
-
-        if (passedInTeam.QBOneThisWeek4for4HalfProjPoints > 19.9) {
-          teamOffScoreForGameEvironmentAndGameScript += 35;
+    // teamOffStatsSortedForPointsAllowedRank
+
+    //  console.log(teamOffStatsSortedForPointsAllowedRank)
+
+    let teamOffStatsSortedForPointsAllowedRank =
+      teamOffStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer.sort(function (
+        a,
+        b
+      ) {
+        // console.log(a['"Rush EPA/Play"'])
+        if (+a['"Points/Game"'] < +b['"Points/Game"']) {
+          return -1;
         }
-        if (
-          passedInTeam.QBOneThisWeek4for4HalfProjPoints > 17.5 &&
-          passedInTeam.QBOneThisWeek4for4HalfProjPoints < 20
-        ) {
-          teamOffScoreForGameEvironmentAndGameScript += 25;
+        if (+a['"Points/Game"'] > +b['"Points/Game"']) {
+          return 1;
         }
-        if (
-          passedInTeam.QBOneThisWeek4for4HalfProjPoints > 15.9 &&
-          passedInTeam.QBOneThisWeek4for4HalfProjPoints < 17.5
-        ) {
-          teamOffScoreForGameEvironmentAndGameScript += 15;
+        return 0;
+      });
+
+    for (let i = 0; i < teamOffStatsSortedForPointsAllowedRank.length; i++) {
+      const team = teamOffStatsSortedForPointsAllowedRank[i];
+      // console.log(team)
+
+      const teamAbbreviation = team['"Team"'].slice(1, -1); // Assuming the team name is in the "Team" property
+
+      if (
+        passedInTeam.teamABV === teamAbbreviation ||
+        passedInTeam.altTeamABV === teamAbbreviation
+      ) {
+        // console.log(team)
+
+        passedInTeam.offPointsPerGame = 32 - i;
+      }
+    }
+
+    // console.log(passedInTeam.teamABV, passedInTeam.offPointsPerGame);
+
+    //
+    ////
+    /////
+    ////
+    ///
+
+    //
+    // teamOffStatsSortedForEPAPerPlayRank
+
+    // console.log(teamOffStatsSortedForEPAPerPlayRank)
+
+    let teamOffStatsSortedForEPAPerPlayRank =
+      teamOffStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer.sort(function (
+        a,
+        b
+      ) {
+        // console.log(a['"Rush EPA/Play"'])
+        if (+a['"EPA/Play"'] < +b['"EPA/Play"']) {
+          return -1;
         }
-        if (
-          passedInTeam.QBOneThisWeek4for4HalfProjPoints > 14.9 &&
-          passedInTeam.QBOneThisWeek4for4HalfProjPoints < 16
-        ) {
-          teamOffScoreForGameEvironmentAndGameScript += 5;
+        if (+a['"EPA/Play"'] > +b['"EPA/Play"']) {
+          return 1;
         }
+        return 0;
+      });
 
-        if (passedInTeam.tempInitialTeamLikelihoodOfOffensiveSuccess) {
-          // console.log(passedInTeam.tempInitialTeamLikelihoodOfOffensiveSuccess);
-          if (passedInTeam.tempInitialTeamLikelihoodOfOffensiveSuccess > 84.9) {
-            teamOffScoreForGameEvironmentAndGameScript += 30;
-          }
-          passedInTeam.InitialTeamLikelihoodOfOffensiveSuccess =
-            teamOffScoreForGameEvironmentAndGameScript;
-          // console.log(
-          //   `${passedInTeam.teamABV} ${teamOffScoreForGameEvironmentAndGameScript}`
-          // );
+    for (let i = 0; i < teamOffStatsSortedForPointsAllowedRank.length; i++) {
+      const team = teamOffStatsSortedForPointsAllowedRank[i];
+      // console.log(team)
+
+      const teamAbbreviation = team['"Team"'].slice(1, -1); // Assuming the team name is in the "Team" property
+
+      if (
+        passedInTeam.teamABV === teamAbbreviation ||
+        passedInTeam.altTeamABV === teamAbbreviation
+      ) {
+        // console.log(team)
+
+        passedInTeam.offTotalEPAPerPlay = 32 - i;
+      }
+    }
+
+    // console.log(passedInTeam.teamABV, passedInTeam.offTotalEPAPerPlay);
+
+    //
+    ////
+    //////
+    ////
+    //
+
+    //
+    // teamOffStatsSortedForRushEPAPerPlayRank
+
+    // console.log(teamOffStatsSortedForRushEPAPerPlayRank)
+
+    let newTeamOffStatsSortedForRushEPAPerPlayRank =
+      teamOffStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer.sort(function (
+        a,
+        b
+      ) {
+        // console.log(a['"Rush EPA/Play"'])
+        if (+a['"Rush EPA/Play"'] < +b['"Rush EPA/Play"']) {
+          return -1;
         }
+        if (+a['"Rush EPA/Play"'] > +b['"Rush EPA/Play"']) {
+          return 1;
+        }
+        return 0;
+      });
 
-     
-        
+    for (
+      let i = 0;
+      i < newTeamOffStatsSortedForRushEPAPerPlayRank.length;
+      i++
+    ) {
+      const team = newTeamOffStatsSortedForRushEPAPerPlayRank[i];
+      // console.log(team)
 
-       
+      const teamAbbreviation = team['"Team"'].slice(1, -1); // Assuming the team name is in the "Team" property
 
-  
+      if (
+        passedInTeam.teamABV === teamAbbreviation ||
+        passedInTeam.altTeamABV === teamAbbreviation
+      ) {
+        // console.log(team)
+
+        passedInTeam.offRunPlayEPA = 32 - i;
+      }
+    }
+
+    // console.log(passedInTeam.teamABV, passedInTeam.offRunPlayEPA);
+
+    ////
+    //////
+    ////
+    //
+
+    //
+    // teamOffStatsSortedForRushEPAPerPlayRank
+
+    // console.log(teamOffStatsSortedForRushEPAPerPlayRank)
+
+    let newTeamOffStatsSortedForPassEPAPerPlayRank =
+      teamOffStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer.sort(function (
+        a,
+        b
+      ) {
+        // console.log(a['"Pass EPA/Play"'])
+        if (+a['"Pass EPA/Play"'] < +b['"Pass EPA/Play"']) {
+          return -1;
+        }
+        if (+a['"Pass EPA/Play"'] > +b['"Pass EPA/Play"']) {
+          return 1;
+        }
+        return 0;
+      });
+
+    for (
+      let i = 0;
+      i < newTeamOffStatsSortedForPassEPAPerPlayRank.length;
+      i++
+    ) {
+      const team = newTeamOffStatsSortedForPassEPAPerPlayRank[i];
+      // console.log(team)
+
+      const teamAbbreviation = team['"Team"'].slice(1, -1); // Assuming the team name is in the "Team" property
+
+      if (
+        passedInTeam.teamABV === teamAbbreviation ||
+        passedInTeam.altTeamABV === teamAbbreviation
+      ) {
+        // console.log(team)
+
+        passedInTeam.offPassPlayEPA = 32 - i;
+      }
+    }
+
+    // console.log(passedInTeam.teamABV, passedInTeam.offPassPlayEPA);
+
+    //
+    // teamOffStatsSortedForPlaySuccessRateRank
+
+    // console.log(teamOffStatsSortedForPlaySuccessRateRank)
+
+    let teamOffStatsSortedForSuccessRateRank =
+      teamOffStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer.sort(function (
+        a,
+        b
+      ) {
+        // console.log(a['"Rush EPA/Play"'])
+        if (+a['"Play Success %"'] < +b['"Play Success %"']) {
+          return -1;
+        }
+        if (+a['"Play Success %"'] > +b['"Play Success %"']) {
+          return 1;
+        }
+        return 0;
+      });
+
+    for (let i = 0; i < teamOffStatsSortedForSuccessRateRank.length; i++) {
+      const team = teamOffStatsSortedForSuccessRateRank[i];
+      // console.log(team)
+
+      const teamAbbreviation = team['"Team"'].slice(1, -1); // Assuming the team name is in the "Team" property
+
+      if (
+        passedInTeam.teamABV === teamAbbreviation ||
+        passedInTeam.altTeamABV === teamAbbreviation
+      ) {
+        // console.log(team)
+
+        passedInTeam.offPlaySuccessPercentageRank = 32 - i;
+      }
+    }
+
+    // console.log(passedInTeam.teamABV, passedInTeam.offPlaySuccessPercentageRank);
+
+    //
+    ////
+    /////
+    ////
+    //
+
+    //
+    // teamOffStatsSortedForExplosivePassRateRank
+
+    let teamOffStatsSortedForExplosivePassRateRank =
+      teamOffStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer.sort(function (
+        a,
+        b
+      ) {
+        // console.log(a['"Rush EPA/Play"'])
+        if (+a['"Explosive Pass %"'] < +b['"Explosive Pass %"']) {
+          return -1;
+        }
+        if (+a['"Explosive Pass %"'] > +b['"Explosive Pass %"']) {
+          return 1;
+        }
+        return 0;
+      });
+
+    for (
+      let i = 0;
+      i < teamOffStatsSortedForExplosivePassRateRank.length;
+      i++
+    ) {
+      const team = teamOffStatsSortedForExplosivePassRateRank[i];
+      // console.log(team)
+
+      const teamAbbreviation = team['"Team"'].slice(1, -1); // Assuming the team name is in the "Team" property
+
+      if (
+        passedInTeam.teamABV === teamAbbreviation ||
+        passedInTeam.altTeamABV === teamAbbreviation
+      ) {
+        // console.log(team)
+
+        passedInTeam.offExplosivePassRateRank = 32 - i;
+      }
+    }
+
+    // console.log(passedInTeam.teamABV, passedInTeam.offExplosivePassRateRank);
+
+    //
+    ////
+    //////
+    ////
+    //
+
+    //
+    // teamOffStatsSortedForExplosiveRushRateRank
+
+    let teamOffStatsSortedForExplosiveRushRateRank =
+      teamOffStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer.sort(function (
+        a,
+        b
+      ) {
+        // console.log(a['"Rush EPA/Play"'])
+        if (+a['"Explosive Rush %"'] < +b['"Explosive Rush %"']) {
+          return -1;
+        }
+        if (+a['"Explosive Rush %"'] > +b['"Explosive Rush %"']) {
+          return 1;
+        }
+        return 0;
+      });
+
+    for (
+      let i = 0;
+      i < teamOffStatsSortedForExplosiveRushRateRank.length;
+      i++
+    ) {
+      const team = teamOffStatsSortedForExplosiveRushRateRank[i];
+      // console.log(team)
+
+      const teamAbbreviation = team['"Team"'].slice(1, -1); // Assuming the team name is in the "Team" property
+
+      if (
+        passedInTeam.teamABV === teamAbbreviation ||
+        passedInTeam.altTeamABV === teamAbbreviation
+      ) {
+        // console.log(team)
+
+        passedInTeam.offExplosiveRushRateRank = 32 - i;
+      }
+    }
+
+    // console.log(passedInTeam.teamABV, passedInTeam.offExplosiveRushRateRank);
+
+    //
+    //
+
+    let teamOffScoreForGameEvironmentAndGameScript = 0;
+
+    const calcteamOffScoreForGameEvironmentAndGameScript = function (statRank) {
+      if (statRank < 6) {
+        teamOffScoreForGameEvironmentAndGameScript += 20;
+      }
+      if (statRank > 5 && statRank < 11) {
+        teamOffScoreForGameEvironmentAndGameScript += 15;
+      }
+      if (statRank > 10 && statRank < 16) {
+        teamOffScoreForGameEvironmentAndGameScript += 10;
+      }
+      if (statRank > 15 && statRank < 20) {
+        teamOffScoreForGameEvironmentAndGameScript += 5;
+      }
+    };
+
+    calcteamOffScoreForGameEvironmentAndGameScript(
+      passedInTeam.offTotalEPAPerPlay
+    );
+    calcteamOffScoreForGameEvironmentAndGameScript(
+      passedInTeam.offPointsPerGame
+    );
+    calcteamOffScoreForGameEvironmentAndGameScript(
+      passedInTeam.offPlaySuccessPercentageRank
+    );
+    calcteamOffScoreForGameEvironmentAndGameScript(
+      passedInTeam.offExplosivePassRateRank
+    );
+
+    if (passedInTeam.QBOneThisWeek4for4HalfProjPoints > 19.9) {
+      teamOffScoreForGameEvironmentAndGameScript += 35;
+    }
+    if (
+      passedInTeam.QBOneThisWeek4for4HalfProjPoints > 17.5 &&
+      passedInTeam.QBOneThisWeek4for4HalfProjPoints < 20
+    ) {
+      teamOffScoreForGameEvironmentAndGameScript += 25;
+    }
+    if (
+      passedInTeam.QBOneThisWeek4for4HalfProjPoints > 15.9 &&
+      passedInTeam.QBOneThisWeek4for4HalfProjPoints < 17.5
+    ) {
+      teamOffScoreForGameEvironmentAndGameScript += 15;
+    }
+    if (
+      passedInTeam.QBOneThisWeek4for4HalfProjPoints > 14.9 &&
+      passedInTeam.QBOneThisWeek4for4HalfProjPoints < 16
+    ) {
+      teamOffScoreForGameEvironmentAndGameScript += 5;
+    }
+
+    if (passedInTeam.tempInitialTeamLikelihoodOfOffensiveSuccess) {
+      // console.log(passedInTeam.tempInitialTeamLikelihoodOfOffensiveSuccess);
+      if (passedInTeam.tempInitialTeamLikelihoodOfOffensiveSuccess > 84.9) {
+        teamOffScoreForGameEvironmentAndGameScript += 30;
+      }
+      passedInTeam.InitialTeamLikelihoodOfOffensiveSuccess =
+        teamOffScoreForGameEvironmentAndGameScript;
+      // console.log(
+      //   `${passedInTeam.teamABV} ${teamOffScoreForGameEvironmentAndGameScript}`
+      // );
+    }
 
     // teamOffStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer.forEach(function (
     //   team
@@ -2274,7 +2327,6 @@ for (let i = 0; i < teamOffStatsSortedForExplosiveRushRateRank.length; i++) {
     //     passedInTeam.altTeamABV === team['"posteam"'].slice(1, -1)
     //   ) {
     //     //
-        
 
     //     passedInTeam.offTotalEPAPerPlay = +team['"total_epa_pp"'];
     //     passedInTeam.offPassPlayEPA = +team['"pass_epa_pp"'];
@@ -2288,12 +2340,10 @@ for (let i = 0; i < teamOffStatsSortedForExplosiveRushRateRank.length; i++) {
     //     //   `${passedInTeam.teamABV} ${team['"exp_run_rate"']}`
     //     // );
 
-        
     //   }
     // });
   };
   setTeamPassRunRatioForAllGameScripts(passedInTeam);
-  
 };
 
 populateTeamObjects(gameInfo.SF49ers);
@@ -2538,6 +2588,8 @@ const assignOpponentObjectToPassedInTeam = function (team) {
     // console.log(
     //   `team is:${team.teamFirstPassedInForMatchupThisWeekIs} ${team.teamABV} team.InitialTeamLikelihoodOfOffensiveSuccess-${team.InitialTeamLikelihoodOfOffensiveSuccess} team.teamDefScoreToUseForOpposingTeamDef- ${team.teamDefScoreToUseForOpposingTeamDef} team.opposingTeamDef-${team.opposingTeamDef}, team.opponent is ${team.opponentThisWeek.teamABV} team.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess-${team.opponentThisWeek.InitialTeamLikelihoodOfOffensiveSuccess} team.opponentThisWeek.teamDefScoreToUseForOpposingTeamDef- ${team.opponentThisWeek.teamDefScoreToUseForOpposingTeamDef} team.opponentThisWeek.OpposingTeamDef- ${team.opponentThisWeek.opposingTeamDef}`
     // );
+
+    // console.log(team.teamName, team.InitialTeamLikelihoodOfOffensiveSuccess);
 
     //all cases where one or both teams are over 200
     //
@@ -3006,11 +3058,12 @@ const assignOpponentObjectToPassedInTeam = function (team) {
       gameInfo.cardinals.opponentThisWeek.qbName = team.QBOneThisWeekName;
     }
 
-    if (!team.teamProjectedPointsThisWeek) {
-      calcOffExplosiveVsDefAgainstExplosive(team, gameInfo.cardinals);
-      calcProjectedTeamPoints(team, gameInfo.cardinals);
-    }
+    // if (!team.teamProjectedPointsThisWeek) {
+    calcOffExplosiveVsDefAgainstExplosive(team, gameInfo.cardinals);
+    calcProjectedTeamPoints(team, gameInfo.cardinals);
+    // }
   }
+  // console.log(gameInfo.cardinals);
   // calcOffExplosiveVsDefAgainstExplosive();
   // calcProjectedTeamPoints();
 
