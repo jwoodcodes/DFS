@@ -1285,7 +1285,7 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
 
       let playerObject = playerobj;
 
-      // console.log(playerObject)
+      // console.log(playerObject);
 
       if (
         teamName === passedInTeam.teamABV ||
@@ -1323,7 +1323,14 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
         passedInTeam.fourForFourFullPPRProjectedPoints = projpts;
         passedInTeam.fourForFourHalfPPRProjectedPoints = projpts;
         passedInTeam.prjpassattempts = playerObject['Pass Att'];
-        passedInTeam.projectedPassingTDs = playerobj['Pass TD'];
+        passedInTeam.prjcompletions = playerObject.Comp;
+        passedInTeam.prjPassYards = playerObject['Pass Yds'];
+        passedInTeam.prjpassingTDs = playerobj['Pass TD'];
+        passedInTeam.prjINTs = playerobj['Pass TD'];
+        passedInTeam.prjRushAttempts = playerobj['Rush Att'];
+        passedInTeam.prjRushTDs = playerobj['Rush Yds'];
+        passedInTeam.prjRushTDs = playerobj['Rush TD'];
+
         // console.log(projpts);
         let yahooSalary = +playerobj['Y! ($)'];
         passedInTeam.yahooSalary = yahooSalary;
@@ -1659,6 +1666,11 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
     passedInTeam.secondHighestProjectedPassCatcher4for4ProjectedPoints =
       gameInfoPassedInTeam.WRTwoThisWeek4for4HalfProjPoints;
   }
+
+  // console.log(
+  //   gameInfoPassedInTeam.teamName,
+  //   gameInfoPassedInTeam.teamProjectedPointsThisWeek
+  // );
 
   passedInTeam.teamProjectedPoints =
     gameInfoPassedInTeam.teamProjectedPointsThisWeek;

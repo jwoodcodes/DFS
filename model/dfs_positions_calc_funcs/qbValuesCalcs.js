@@ -50,6 +50,8 @@ class QbObject {
     seventyFifthPercentProjectedPoints,
     fourForFourFullPPRProjectedPoints,
 
+    appProjPassAttempts,
+
     yahooSalary,
     fanduelSalary,
     draftkingsSalary,
@@ -92,6 +94,8 @@ class QbObject {
     this.twentyFifthPercentProjectedPoints;
     this.seventyFifthPercentProjectedPoints;
     this.fourForFourFullPPRProjectedPoints = fourForFourFullPPRProjectedPoints;
+
+    this.appProjPassAttempts = appProjPassAttempts;
 
     this.yahooSalary = yahooSalary;
     this.fanduelSalary = fanduelSalary;
@@ -1056,7 +1060,33 @@ allQBs.forEach(function (team, i) {
   let teamABV = team.teamABV;
   let homeOrAway = team.homeOrAway;
 
-  // console.log(team)
+  let percentDiffBetweenAppAndFourProj = +(
+    +team.appQBProjectedPoints / +team.fourForFourFullPPRProjectedPoints
+  ).toFixed(2);
+
+  // console.log(
+  //   team.name,
+  //   team.appQBProjectedPoints,
+  //   team.fourForFourFullPPRProjectedPoints,
+  //   percentDiffBetweenAppAndFourProj
+  // );
+
+  // console.log(team);
+
+  let tempAppProjPassAttempts = +(
+    +team.prjpassattempts * +percentDiffBetweenAppAndFourProj
+  ).toFixed(1);
+
+  let tempAppProjCompletions = +(
+    +team.prj * +percentDiffBetweenAppAndFourProj
+  ).toFixed(1);
+  // console.log(
+  //   team.name,
+
+  //   percentDiffBetweenAppAndFourProj,
+  //   team.prjpassattempts,
+  //   appProjPassAttempts
+  // );
 
   let teamName = '';
   allTeams.forEach(function (giTeam) {
@@ -1074,6 +1104,8 @@ allQBs.forEach(function (team, i) {
         giTeam.bonusForHighExplosivePassVsBadExplosivePassDef;
     }
   });
+
+  // console.log(team.appQBProjectedPoints);
 
   let qbObject = new QbObject(
     playerName,
@@ -1099,6 +1131,9 @@ allQBs.forEach(function (team, i) {
     team.twentyFifthPercentProjectedPoints,
     team.seventyFifthPercentProjectedPoints,
     team.fourForFourFullPPRProjectedPoints,
+
+    tempAppProjPassAttempts,
+
     team.yahooSalary,
     team.fanduelSalary,
     team.draftkingsSalary,
@@ -1362,6 +1397,8 @@ allQBObjectsArray.forEach(function (player) {
 
   allQBProjectionsObjects.push(qbProjectionsObject);
 });
+
+console.log(allTeamQBObjects);
 
 allQBData.allQBProjectionsObjects = allQBProjectionsObjects;
 // console.log(allQBProjectionsObjects);
