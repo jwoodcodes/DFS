@@ -51,6 +51,7 @@ class QbObject {
     fourForFourFullPPRProjectedPoints,
 
     appProjPassAttempts,
+    appProjCompletions,
 
     yahooSalary,
     fanduelSalary,
@@ -96,6 +97,7 @@ class QbObject {
     this.fourForFourFullPPRProjectedPoints = fourForFourFullPPRProjectedPoints;
 
     this.appProjPassAttempts = appProjPassAttempts;
+    this.appProjCompletions = appProjCompletions;
 
     this.yahooSalary = yahooSalary;
     this.fanduelSalary = fanduelSalary;
@@ -1078,14 +1080,14 @@ allQBs.forEach(function (team, i) {
   ).toFixed(1);
 
   let tempAppProjCompletions = +(
-    +team.prj * +percentDiffBetweenAppAndFourProj
+    +team.prjcompletions * +percentDiffBetweenAppAndFourProj
   ).toFixed(1);
   // console.log(
   //   team.name,
 
   //   percentDiffBetweenAppAndFourProj,
-  //   team.prjpassattempts,
-  //   appProjPassAttempts
+  //   team.prjcompletions,
+  //   tempAppProjCompletions
   // );
 
   let teamName = '';
@@ -1133,6 +1135,7 @@ allQBs.forEach(function (team, i) {
     team.fourForFourFullPPRProjectedPoints,
 
     tempAppProjPassAttempts,
+    tempAppProjCompletions,
 
     team.yahooSalary,
     team.fanduelSalary,
@@ -1398,7 +1401,7 @@ allQBObjectsArray.forEach(function (player) {
   allQBProjectionsObjects.push(qbProjectionsObject);
 });
 
-console.log(allTeamQBObjects);
+// console.log(allTeamQBObjects);
 
 allQBData.allQBProjectionsObjects = allQBProjectionsObjects;
 // console.log(allQBProjectionsObjects);
