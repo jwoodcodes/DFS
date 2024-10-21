@@ -52,6 +52,12 @@ class QbObject {
 
     appProjPassAttempts,
     appProjCompletions,
+    appProjPassingYards,
+    appProjPassTDs,
+    appProjINTs,
+    appProjQBRushAttempts,
+    appProjQBRushYards,
+    appProjQBRushTDs,
 
     yahooSalary,
     fanduelSalary,
@@ -98,6 +104,12 @@ class QbObject {
 
     this.appProjPassAttempts = appProjPassAttempts;
     this.appProjCompletions = appProjCompletions;
+    this.appProjPassingYards = appProjPassingYards;
+    this.appProjPassTDs = appProjPassTDs;
+    this.appProjINTs = appProjINTs;
+    this.appProjQBRushAttempts = appProjQBRushAttempts;
+    this.appProjQBRushYards = appProjQBRushYards;
+    this.appProjQBRushTDs = appProjQBRushTDs
 
     this.yahooSalary = yahooSalary;
     this.fanduelSalary = fanduelSalary;
@@ -1082,12 +1094,55 @@ allQBs.forEach(function (team, i) {
   let tempAppProjCompletions = +(
     +team.prjcompletions * +percentDiffBetweenAppAndFourProj
   ).toFixed(1);
+
+  let tempAppProjPassingYards = +(
+    +team.prjPassYards * +percentDiffBetweenAppAndFourProj
+  ).toFixed(1);
+
+  let tempAppProjPassTDs = +(
+    +team.prjpassingTDs * +percentDiffBetweenAppAndFourProj
+  ).toFixed(1);
+
+  let ran = +(Math.random() * .2 - .1).toFixed(1);
+
+  // console.log(ran);
+
+  let tempAppProjINTs = +(+team.prjINTs + +ran).toFixed(1);
+
+  let tempAppQBRushAttempts = +(
+    +team.prjRushAttempts * +percentDiffBetweenAppAndFourProj
+  ).toFixed(1);
+
+  let tempAppQBRushYards = +(
+    +team.prjRushYards * +percentDiffBetweenAppAndFourProj
+  ).toFixed(1);
+
+  if(+team.prjRushYards - +tempAppQBRushYards < 1)  {
+    if(percentDiffBetweenAppAndFourProj > 1) {
+      tempAppQBRushYards = +(tempAppQBRushYards + 1).toFixed(1)
+    }
+    if(percentDiffBetweenAppAndFourProj <= 1) {
+      tempAppQBRushYards = +(tempAppQBRushYards - 1).toFixed(1)
+    }
+    
+  }
+
+  let tempAppQBRushTDs = +(
+    +team.prjRushTDs * +percentDiffBetweenAppAndFourProj
+  ).toFixed(1);
+
+  tempAppQBRushTDs = +(+tempAppQBRushTDs + +ran).toFixed(1);
+
+  if(tempAppQBRushTDs < .05) {
+    tempAppQBRushTDs = 0.1
+  }
+  
   // console.log(
   //   team.name,
 
   //   percentDiffBetweenAppAndFourProj,
-  //   team.prjcompletions,
-  //   tempAppProjCompletions
+  //   team.prjRushTDs,
+  //   tempAppQBRushTDs
   // );
 
   let teamName = '';
@@ -1136,6 +1191,12 @@ allQBs.forEach(function (team, i) {
 
     tempAppProjPassAttempts,
     tempAppProjCompletions,
+    tempAppProjPassingYards,
+    tempAppProjPassTDs,
+    tempAppProjINTs,
+    tempAppQBRushAttempts,
+    tempAppQBRushYards,
+    tempAppQBRushTDs,
 
     team.yahooSalary,
     team.fanduelSalary,
@@ -1364,6 +1425,14 @@ allQBObjectsArray.forEach(function (player) {
       name,
       position,
       team,
+      appProjPassAttempts,
+    appProjCompletions,
+    appProjPassingYards,
+    appProjPassTDs,
+    appProjINTs,
+    appProjQBRushAttempts,
+    appProjQBRushYards,
+    appProjQBRushTDs,
       appHalfProjectedPoints,
       appFullProjectedPoints,
       appTEPProjectedPoints,
@@ -1374,6 +1443,14 @@ allQBObjectsArray.forEach(function (player) {
       this.name = name;
       this.position = position;
       this.team = team;
+      this.appProjPassAttempts = appProjPassAttempts;
+    this.appProjCompletions = appProjCompletions;
+    this.appProjPassingYards = appProjPassingYards;
+    this.appProjPassTDs = appProjPassTDs;
+    this.appProjINTs = appProjINTs;
+    this.appProjQBRushAttempts = appProjQBRushAttempts;
+    this.appProjQBRushYards = appProjQBRushYards;
+    this.appProjQBRushTDs = appProjQBRushTDs
       this.appHalfProjectedPoints = appHalfProjectedPoints;
       this.appFullProjectedPoints = appFullProjectedPoints;
       this.appTEPProjectedPoints = appTEPProjectedPoints;
@@ -1390,6 +1467,15 @@ allQBObjectsArray.forEach(function (player) {
     player.playerName,
     player.position,
     player.teamABV,
+
+    player.appProjPassAttempts,
+    player.appProjCompletions,
+    player.appProjPassingYards,
+    player.appProjPassTDs,
+    player.appProjINTs,
+    player.appProjQBRushAttempts,
+    player.appProjQBRushYards,
+    player.appProjQBRushTDs,
 
     projectionToUse,
     projectionToUse,

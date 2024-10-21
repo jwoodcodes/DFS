@@ -1326,9 +1326,9 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
         passedInTeam.prjcompletions = playerObject.Comp;
         passedInTeam.prjPassYards = playerObject['Pass Yds'];
         passedInTeam.prjpassingTDs = playerobj['Pass TD'];
-        passedInTeam.prjINTs = playerobj['Pass TD'];
+        passedInTeam.prjINTs = playerobj.INT;
         passedInTeam.prjRushAttempts = playerobj['Rush Att'];
-        passedInTeam.prjRushTDs = playerobj['Rush Yds'];
+        passedInTeam.prjRushYards = playerobj['Rush Yds'];
         passedInTeam.prjRushTDs = playerobj['Rush TD'];
 
         // console.log(projpts);
