@@ -3599,7 +3599,7 @@ const rvDynastyRankingsTEP = [
 		"\"AVGTier\"": "11",
 		"\"Siegele10.17\"": "300"
 	},
-
+	
 ]
 
 module.exports = rvDynastyRankingsTEP;
