@@ -5469,7 +5469,16 @@ const populateTeamObjects = function (
           // console.log(team);
           passedInTeam.RBOne.fourForFourFullPPRProjectedPoints = +team.FFPts;
           passedInTeam.RBOne.projectedCarriesThisWeek = +team['Rush Att'];
+          passedInTeam.RBOne.projectedRushYardsThisWeek = +team['Rush Yds'];
+          passedInTeam.RBOne.projectedRushTDsThisWeek = +team['Rush TD'];
           passedInTeam.RBOne.projectedReceptionsThisWeek = +team.Rec;
+          passedInTeam.RBOne.projectedRecYardsThisWeek = +team['Rec Yds'];
+          passedInTeam.RBOne.projectedRecTDsThisWeek = +team['Rec TD'];
+          passedInTeam.RBOne.projectedRushfirstDownsThisWeek = +team.Ru1D;
+          passedInTeam.RBOne.projectedRecfirstDownsThisWeek = +team.Rec1D;
+
+
+
         }
         // if (passedInTeam.RBTwo.name === 'AJ Dillon') {
         //   console.log(
@@ -5486,7 +5495,13 @@ const populateTeamObjects = function (
           // console.log(team);
           passedInTeam.RBTwo.fourForFourFullPPRProjectedPoints = +team.FFPts;
           passedInTeam.RBTwo.projectedCarriesThisWeek = +team['Rush Att'];
+          passedInTeam.RBTwo.projectedRushYardsThisWeek = +team['Rush Yds'];
+          passedInTeam.RBTwo.projectedRushTDsThisWeek = +team['Rush TD'];
           passedInTeam.RBTwo.projectedReceptionsThisWeek = +team.Rec;
+          passedInTeam.RBTwo.projectedRecYardsThisWeek = +team['Rec Yds'];
+          passedInTeam.RBTwo.projectedRecTDsThisWeek = +team['Rec TD'];
+          passedInTeam.RBTwo.projectedRushfirstDownsThisWeek = +team.Ru1D;
+          passedInTeam.RBTwo.projectedRecfirstDownsThisWeek = +team.Rec1D;
         }
 
         if(gameInfoPassedInTeam.RBThreeThisWeekName) {
@@ -5497,7 +5512,17 @@ const populateTeamObjects = function (
  
            passedInTeam.teamRbThreeThisWeekName = gameInfoPassedInTeam.RBThreeThisWeekName;
            passedInTeam.teamRbThreeThisWeekFourForFourFullPPRProjectedPoints = +team.FFPts
+           if(passedInTeam.RBThree) {
+           passedInTeam.RBThree.projectedCarriesThisWeek = +team['Rush Att'];
+           passedInTeam.RBThree.projectedRushYardsThisWeek = +team['Rush Yds'];
+           passedInTeam.RBThree.projectedRushTDsThisWeek = +team['Rush TD'];
+           passedInTeam.RBThree.projectedReceptionsThisWeek = +team.Rec;
+           passedInTeam.RBThree.projectedRecYardsThisWeek = +team['Rec Yds'];
+           passedInTeam.RBThree.projectedRecTDsThisWeek = +team['Rec TD'];
+           passedInTeam.RBThree.projectedRushfirstDownsThisWeek = +team.Ru1D;
+           passedInTeam.RBThree.projectedRecfirstDownsThisWeek = +team.Rec1D;
              }
+            }
          }
       }
     });

@@ -58,6 +58,8 @@ class QbObject {
     appProjQBRushAttempts,
     appProjQBRushYards,
     appProjQBRushTDs,
+    astroQBProjection,
+    astroSixPtTDQBProjection,
 
     yahooSalary,
     fanduelSalary,
@@ -109,7 +111,9 @@ class QbObject {
     this.appProjINTs = appProjINTs;
     this.appProjQBRushAttempts = appProjQBRushAttempts;
     this.appProjQBRushYards = appProjQBRushYards;
-    this.appProjQBRushTDs = appProjQBRushTDs
+    this.appProjQBRushTDs = appProjQBRushTDs;
+    this.astroQBProjection = astroQBProjection;
+    this.astroSixPtTDQBProjection = astroSixPtTDQBProjection;
 
     this.yahooSalary = yahooSalary;
     this.fanduelSalary = fanduelSalary;
@@ -1087,6 +1091,16 @@ allQBs.forEach(function (team, i) {
 
   // console.log(team);
 
+  let tempAdj = +(+team.prjPassYards * .05).toFixed(1);
+  let adj = +team.prjPassYards - +tempAdj
+
+  let tempPassAdj = +(+team.prjpassingTDs * .05).toFixed(1);
+  let passAdj = +team.prjpassingTDs - +tempPassAdj
+
+  let tempRushAdj = +(+team.prjRushYards * .05).toFixed(1);
+  let rushAdj = +team.prjRushYards - +tempRushAdj
+  
+
   let tempAppProjPassAttempts = +(
     +team.prjpassattempts * +percentDiffBetweenAppAndFourProj
   ).toFixed(1);
@@ -1096,11 +1110,11 @@ allQBs.forEach(function (team, i) {
   ).toFixed(1);
 
   let tempAppProjPassingYards = +(
-    +team.prjPassYards * +percentDiffBetweenAppAndFourProj
+    adj * +percentDiffBetweenAppAndFourProj 
   ).toFixed(1);
 
   let tempAppProjPassTDs = +(
-    +team.prjpassingTDs * +percentDiffBetweenAppAndFourProj
+    passAdj * +percentDiffBetweenAppAndFourProj
   ).toFixed(1);
 
   let ran = +(Math.random() * .2 - .1).toFixed(1);
@@ -1114,7 +1128,7 @@ allQBs.forEach(function (team, i) {
   ).toFixed(1);
 
   let tempAppQBRushYards = +(
-    +team.prjRushYards * +percentDiffBetweenAppAndFourProj
+    +rushAdj * +percentDiffBetweenAppAndFourProj
   ).toFixed(1);
 
   if(+team.prjRushYards - +tempAppQBRushYards < 1)  {
@@ -1136,13 +1150,30 @@ allQBs.forEach(function (team, i) {
   if(tempAppQBRushTDs < .05) {
     tempAppQBRushTDs = 0.1
   }
+
+  let tempAstroQBProjection = +(
+    (+tempAppProjPassingYards * .04) + 
+    (+tempAppProjPassTDs * 4) +
+    (+tempAppQBRushYards * .1) +
+    (+tempAppQBRushTDs * 6) - 
+    (+tempAppProjINTs * 2)
+  ).toFixed(1);
+
+  let tempAstroSixPtTDQBProjection = +(
+    (+tempAppProjPassingYards * .04) + 
+    (+tempAppProjPassTDs * 6) +
+    (+tempAppQBRushYards * .1) +
+    (+tempAppQBRushTDs * 6) - 
+    (+tempAppProjINTs * 2)
+  ).toFixed(1);
+  
   
   // console.log(
   //   team.name,
 
   //   percentDiffBetweenAppAndFourProj,
-  //   team.prjRushTDs,
-  //   tempAppQBRushTDs
+  //   team.appQBProjectedPoints,
+  //   tempAstroQBProjection
   // );
 
   let teamName = '';
@@ -1197,6 +1228,8 @@ allQBs.forEach(function (team, i) {
     tempAppQBRushAttempts,
     tempAppQBRushYards,
     tempAppQBRushTDs,
+    tempAstroQBProjection,
+    tempAstroSixPtTDQBProjection,
 
     team.yahooSalary,
     team.fanduelSalary,
@@ -1433,6 +1466,8 @@ allQBObjectsArray.forEach(function (player) {
     appProjQBRushAttempts,
     appProjQBRushYards,
     appProjQBRushTDs,
+    astroQBProjection,
+    astroSixPtTDQBProjection,
       appHalfProjectedPoints,
       appFullProjectedPoints,
       appTEPProjectedPoints,
@@ -1450,7 +1485,9 @@ allQBObjectsArray.forEach(function (player) {
     this.appProjINTs = appProjINTs;
     this.appProjQBRushAttempts = appProjQBRushAttempts;
     this.appProjQBRushYards = appProjQBRushYards;
-    this.appProjQBRushTDs = appProjQBRushTDs
+    this.appProjQBRushTDs = appProjQBRushTDs;
+    this.astroQBProjection = astroQBProjection;
+    this.astroSixPtTDQBProjection = astroSixPtTDQBProjection
       this.appHalfProjectedPoints = appHalfProjectedPoints;
       this.appFullProjectedPoints = appFullProjectedPoints;
       this.appTEPProjectedPoints = appTEPProjectedPoints;
@@ -1476,6 +1513,8 @@ allQBObjectsArray.forEach(function (player) {
     player.appProjQBRushAttempts,
     player.appProjQBRushYards,
     player.appProjQBRushTDs,
+    player.astroQBProjection,
+    player.astroSixPtTDQBProjection,
 
     projectionToUse,
     projectionToUse,
