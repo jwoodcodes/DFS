@@ -269,7 +269,7 @@ class RbObject {
   //
   // - calculate projeted ownership: use 4for4 projections per dollar and QB projected ownership to assin a baseline projected ownership and then adjust that using the two numbers from the step above for each player on each site.
 
-  calcAppProjectedPoints() {
+  calcAppProjectedPoints(carries, rushYards) {
     //team projected points 12, 15-18, 20-24, 25-30, 30+
     //percentOfTeamHVTsLastFiveWeeks, below 30, 30-50, 50-60, 60-70, 70+
     //if teamProjectedForAHalfOfNegetiveGameScriptIsTrue = true then targetSharePercentageLastFiveWeeks
@@ -294,6 +294,8 @@ class RbObject {
     //- QB pass attempts per game last five weeks -- ready
     // -QB projeted pass attempts this week -- ready
     //  -home or away, fav or dog usig my  app projected team points this week (remember to use the average of app and vtt here) -- ready
+
+    
 
     let adjusterPercentage = 0;
 
@@ -589,6 +591,9 @@ class RbObject {
         (+this.appProjectedFullPPRPoints + +oldWayFullProj) /
         2
       ).toFixed(1);
+
+      // console.log(this)
+      // console.log(rushYards)
     }
 
     /////////////////////////////////////////////////////////////////////
@@ -1167,7 +1172,7 @@ const allRBObjectsArray = [];
 const allRBsMap = new Map();
 
 allRBs.forEach(function (team, i) {
-  // console.log(team);
+  // console.log(team.RBOne);
 
   let teamName = '';
   if (team) {
@@ -1244,7 +1249,9 @@ allRBs.forEach(function (team, i) {
       team.RBOne.fantasyPointsPerGameLastFiveWeeks
     );
 
-    rbObject.calcAppProjectedPoints();
+    // console.log(team.RBOne.projectedRushYardsThisWeek)
+
+    rbObject.calcAppProjectedPoints(team.RBOne.projectedCarriesThisWeek, team.RBOne.projectedRushYardsThisWeek);
     rbObject.calcAppProjectedpointsPerDollarOnAllSites();
     rbObject.calcFourForFourProjectedpointsPerDollarOnAllSites();
     rbObject.calcFourForFourProjectedPointsPerPercentOfSiteSalaryCap();
@@ -1325,7 +1332,7 @@ allRBs.forEach(function (team, i) {
     team.RBTwo.fantasyPointsPerGameLastFiveWeeks
   );
 
-  rbObject.calcAppProjectedPoints();
+  rbObject.calcAppProjectedPoints(team.RBTwo.projectedCarriesThisWeek, team.RBTwo.projectedRushYardsThisWeek);
   rbObject.calcAppProjectedpointsPerDollarOnAllSites();
   rbObject.calcFourForFourProjectedpointsPerDollarOnAllSites();
   rbObject.calcFourForFourProjectedPointsPerPercentOfSiteSalaryCap();
