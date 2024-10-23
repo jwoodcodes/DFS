@@ -1176,14 +1176,21 @@ allRBs.forEach(function (team, i) {
 
   let teamName = '';
   if (team) {
+
+    
+
     allTeams.forEach(function (giTeam) {
       //  console.log(giTeam)
       //  console.log(giTeam.teamProjectedPointsThisWeek)
-
+      // if(giTeam.teamName === "DEN") {
+      //   console.log(team.teamABV, giTeam.teamABV)
+      // }
+      
       if (
         team.teamABV === giTeam.teamABV ||
         team.teamABV === giTeam.altTeamABV
       ) {
+        // console.log(giTeam.teamABV)
         // console.log(giTeam.teamName)
         // console.log(giTeam);
         teamName = giTeam.teamName;
@@ -1194,10 +1201,22 @@ allRBs.forEach(function (team, i) {
         opponentABV = giTeam.opponentThisWeek.teamABV;
         opponentTeamProjectedPoints =
           giTeam.opponentThisWeek.teamProjectedPointsThisWeek;
+          if(teamProjectedPoints === undefined) {
+            teamProjectedPoints = vtt
+          }
       }
     });
 
+    
+    // console.log(team.teamABV, teamProjectedPoints, vtt)
+
+    // if(team.teamABV === "DEN") {
+    //   console.log(team)
+    // }
+    
     tempTeamScoring = +((teamProjectedPoints + vtt) / 2).toFixed(2);
+    
+    
 
     teamProjectedPointsThisWeekPercentage = +(
       tempTeamScoring / team.RBOne.teamRealLifePointsScoredPerGameLastFiveWeeks
@@ -1266,6 +1285,9 @@ allRBs.forEach(function (team, i) {
 
 allRBs.forEach(function (team, i) {
   let teamName = '';
+
+  
+
   allTeams.forEach(function (giTeam) {
     if (team.teamABV === giTeam.teamABV || team.teamABV === giTeam.altTeamABV) {
       // console.log(giTeam);

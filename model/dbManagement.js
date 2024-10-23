@@ -288,7 +288,7 @@ function arrayToCSV(array) {
 
   try {
     const csv = parse(array, opts);
-    fs.writeFileSync('week7-24-superFlexHalfProjectionArray.csv', csv);
+    fs.writeFileSync('week8-24-superFlexHalfProjectionArray.csv', csv);
     console.log('CSV file successfully created');
   } catch (err) {
     console.error(err);

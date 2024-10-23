@@ -109,6 +109,8 @@ const allTeamABV = [
 
 const testAllTeams = [];
 
+// console.log(gameInfo.broncos)
+
 allEveryTeamEvenOnesOnByeThisWeek.forEach(function (team, i) {
   // console.log(team);
   if (team) {
@@ -147,5 +149,9 @@ let allUniqueTeams = testAllTeams.filter(onlyUnqiues);
 // console.log(allUniqueTeams);
 
 const allTeams = allUniqueTeams;
+
+// allTeams.forEach((team) => {
+//   console.log(team.teamProjectedPointsThisWeek, team.vtt)
+// })
 
 module.exports = allTeams;
