@@ -1106,6 +1106,9 @@ const populateTeamObjects = function (passedInTeam) {
           // );
           // console.log(object);
           passedInTeam.vtt = qbDownloadableSpreadSheetYahoo[i]['Team O/U'];
+          // console.log(
+          //   `${passedInTeam.teamABV}: ${passedInTeam.vtt}`
+          // );
         }
       }
       if (object.PID === passedInTeam.teamABV) {
@@ -1146,6 +1149,29 @@ const populateTeamObjects = function (passedInTeam) {
 
   //////////////////////////
   const setDraftKingsSalaryPercentOfCapAndProjectedOwnership = function (team) {
+
+    wholeDownloadableSpreadSheetYahoo.forEach(function (yahooTeam, i) {
+      // console.log(yahooTeam.Team);
+      if(passedInTeam.teamABV === yahooTeam.Team){
+        // console.log(passedInTeam.teamABV, yahooTeam.Team);
+        // console.log(yahooTeam)
+
+        
+          
+          if (yahooTeam.Opp.includes('@')) {
+            // console.log(yahooTeam.Opp.slice(2, -1));
+            // console.log(yahooTeam.Opp.slice(1))
+            let tempOppABV = yahooTeam.Opp.slice(1);
+            passedInTeam.opponentABV = tempOppABV;
+          } else {
+            // console.log(yahooTeam.Opp);
+            let tempOppABV = yahooTeam.Opp;
+            passedInTeam.opponentABV = tempOppABV;
+          }
+        // console.log(yahooTeam.Team, passedInTeam.opponentABV)
+      }
+    })
+
     gppLeverageScoresAndProjOwnershipDraftkings.forEach(function (teamObj) {
       let tempTeamName = '';
       // console.log(teamObj['"Tm"'].length);
@@ -1155,17 +1181,7 @@ const populateTeamObjects = function (passedInTeam) {
         tempTeamName = teamObj['"Tm"'].slice(1, 3);
       }
       // console.log(teamObj['"Tm"'], passedInTeam.teamABV);
-      if (teamObj['"Tm"'].slice(1, -1) === passedInTeam.teamABV) {
-        // console.log(teamObj)
-        if (teamObj['"Opp"'].includes('@')) {
-          // console.log(teamObj['"Opp"'].slice(2, -1));
-          let tempOppABV = teamObj['"Opp"'].slice(2, -1);
-          passedInTeam.opponentABV = tempOppABV;
-        } else {
-          let tempOppABV = teamObj['"Opp"'].slice(1, -1);
-          passedInTeam.opponentABV = tempOppABV;
-        }
-      }
+     
 
       if (
         tempTeamName === passedInTeam.teamABV &&
