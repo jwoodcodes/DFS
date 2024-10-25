@@ -778,6 +778,8 @@ if (gameInfo.week.currentWeek < 4) {
     }
     team.appQBProjectedPoints = +QBProjectedPoints;
 
+    // console.log(team.projectedPassingTDs)
+
     let valueToAddForSixPointsForPassingTD = +(team.projectedPassingTDs * 2);
     team.appQBSixPointForPassingTDProjectedPoints = +(
       +QBProjectedPoints + +valueToAddForSixPointsForPassingTD
@@ -849,11 +851,14 @@ if (gameInfo.week.currentWeek > 3) {
 
     QBProjectedPoints = tempValue;
     team.appQBProjectedPoints = +QBProjectedPoints;
+    // console.log(team)
     // console.log(team.name, team.appQBProjectedPoints)
-    let valueToAddForSixPointsForPassingTD = +(team.projectedPassingTDs * 2);
+    // console.log(team.name, team.prjpassingTDs)
+    let valueToAddForSixPointsForPassingTD = +(team.prjpassingTDs * 2);
     team.appQBSixPointForPassingTDProjectedPoints = +(
       +QBProjectedPoints + +valueToAddForSixPointsForPassingTD
     ).toFixed(1);
+    // console.log(team.name, team.appQBProjectedPoints, team.appQBSixPointForPassingTDProjectedPoints)
     allQBFinalProjectedPointsValues.push(QBProjectedPoints);
     allQBFinalProjectedPointsValuesPlusNames.push(
       `${QBProjectedPoints}: ${allQBs[i].name}`
