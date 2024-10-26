@@ -145,6 +145,7 @@ let wrProjectionArray = [...tempWrProjectionArray];
 let teProjectionsArray = [...allTEProjectionsObjects];
 
 // console.log(wrProjectionArray);
+// console.log(rbProjectionArray);
 
 function halfCompare(a, b) {
   if (a.appHalfProjectedPoints < b.appHalfProjectedPoints) {

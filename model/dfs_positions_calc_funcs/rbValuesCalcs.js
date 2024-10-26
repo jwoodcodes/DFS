@@ -269,7 +269,7 @@ class RbObject {
   //
   // - calculate projeted ownership: use 4for4 projections per dollar and QB projected ownership to assin a baseline projected ownership and then adjust that using the two numbers from the step above for each player on each site.
 
-  calcAppProjectedPoints(carries, rushYards) {
+  calcAppProjectedPoints(carries, rushYards, rushTDs, receptions, recYards, recTDs, rushFirstDowns, recFirstDowns) {
     //team projected points 12, 15-18, 20-24, 25-30, 30+
     //percentOfTeamHVTsLastFiveWeeks, below 30, 30-50, 50-60, 60-70, 70+
     //if teamProjectedForAHalfOfNegetiveGameScriptIsTrue = true then targetSharePercentageLastFiveWeeks
@@ -593,7 +593,56 @@ class RbObject {
       ).toFixed(1);
 
       // console.log(this)
-      // console.log(rushYards)
+      // console.log(recFirstDowns)
+
+      // setting baselines
+
+      this.appProjectedCarriesThisWeek = carries
+      this.appProjectedrushYardsThisWeek = rushYards
+      this.appProjectedrushTDsThisWeek = rushTDs
+      this.appProjectedreceptionsThisWeek = receptions
+      this.appProjectedrecYardsThisWeek = recYards
+      this.appProjectedrecTDsThisWeek = recTDs
+      this.appProjectedrushFirstDownsThisWeek = rushFirstDowns
+      this.appProjectedrecFirstDownsThisWeek = recFirstDowns
+
+      // console.log(this.playerName, this.fourForFourHalfPPRProjectedPoints, this.appProjectedHalfPPRPoints)
+
+      let halfPercentDifference = +(this.appProjectedHalfPPRPoints / this.fourForFourHalfPPRProjectedPoints).toFixed(2)
+      let fullPercentDifference = +(this.appProjectedFullPPRPoints / this.fourForFourFullPPRProjectedPoints).toFixed(2)
+      let differenceToUse = +((halfPercentDifference + fullPercentDifference) / 2).toFixed(2)
+      let carriesDifferenceToUse = differenceToUse
+
+      if(differenceToUse < .92) {
+        differenceToUse = .92
+      }
+      
+
+      // console.log(this.playerName, halfPercentDifference)
+      // console.log(this.playerName, fullPercentDifference)
+      // console.log(this.playerName, halfPercentDifference, fullPercentDifference, differenceToUse)
+
+      this.appProjectedCarriesThisWeek = +(+this.appProjectedCarriesThisWeek * +differenceToUse).toFixed(1)
+      this.appProjectedrushYardsThisWeek = +(+this.appProjectedrushYardsThisWeek * +differenceToUse).toFixed(1)
+      this.appProjectedrushTDsThisWeek = +((+this.appProjectedrushTDsThisWeek * +differenceToUse) + .085).toFixed(1)
+      this.appProjectedreceptionsThisWeek = +(+this.appProjectedreceptionsThisWeek * +differenceToUse).toFixed(1)
+      this.appProjectedrecYardsThisWeek = +(+this.appProjectedrecYardsThisWeek * +differenceToUse).toFixed(1)
+      this.appProjectedrecTDsThisWeek = +((+this.appProjectedrecTDsThisWeek * +differenceToUse) + .06).toFixed(1)
+      this.appProjectedrushFirstDownsThisWeek = +(+this.appProjectedrushFirstDownsThisWeek * +differenceToUse).toFixed(1)
+      this.appProjectedrecFirstDownsThisWeek = +(+this.appProjectedrecFirstDownsThisWeek * +differenceToUse).toFixed(1)
+      this.appProjectedRBTotalFirstDownsThisWeek = +(this.appProjectedrushFirstDownsThisWeek + this.appProjectedrecFirstDownsThisWeek).toFixed(1)
+
+      this.astroHalfRBProjection = +((+this.appProjectedrushYardsThisWeek * .1) + +(+this.appProjectedrushTDsThisWeek * 6) + +(+this.appProjectedrecYardsThisWeek * .1) + +(+this.appProjectedrecTDsThisWeek * 6) + (+this.appProjectedreceptionsThisWeek * .5)).toFixed(1)
+
+      this.astroFullRBProjection = +((+this.appProjectedrushYardsThisWeek * .1) + +(+this.appProjectedrushTDsThisWeek * 6) + +(+this.appProjectedrecYardsThisWeek * .1) + +(+this.appProjectedrecTDsThisWeek * 6) + (+this.appProjectedreceptionsThisWeek * 1)).toFixed(1)
+
+      if(this.astroHalfRBProjection && this.astroFullRBProjection) {
+        this.appProjectedHalfPPRPoints = +((+this.appProjectedHalfPPRPoints + +this.astroHalfRBProjection) / 2).toFixed(1)
+      this.appProjectedFullPPRPoints = +((+this.appProjectedFullPPRPoints + +this.astroFullRBProjection) / 2).toFixed(1)
+      }
+      
+
+      // console.log(this.playerName, this.fourForFourHalfPPRProjectedPoints, this.appProjectedHalfPPRPoints, this.astroHalfRBProjection)
     }
 
     /////////////////////////////////////////////////////////////////////
@@ -1268,9 +1317,10 @@ allRBs.forEach(function (team, i) {
       team.RBOne.fantasyPointsPerGameLastFiveWeeks
     );
 
-    // console.log(team.RBOne.projectedRushYardsThisWeek)
+    // console.log(team.RBOne.projectedRecfirstDownsThisWeek)
 
-    rbObject.calcAppProjectedPoints(team.RBOne.projectedCarriesThisWeek, team.RBOne.projectedRushYardsThisWeek);
+
+    rbObject.calcAppProjectedPoints(team.RBOne.projectedCarriesThisWeek, team.RBOne.projectedRushYardsThisWeek, team.RBOne.projectedRushTDsThisWeek, team.RBOne.projectedReceptionsThisWeek, team.RBOne.projectedRecYardsThisWeek, team.RBOne.projectedRecTDsThisWeek, team.RBOne.projectedRushfirstDownsThisWeek, team.RBOne.projectedRecfirstDownsThisWeek);
     rbObject.calcAppProjectedpointsPerDollarOnAllSites();
     rbObject.calcFourForFourProjectedpointsPerDollarOnAllSites();
     rbObject.calcFourForFourProjectedPointsPerPercentOfSiteSalaryCap();
@@ -1280,6 +1330,7 @@ allRBs.forEach(function (team, i) {
     allRBsMap.set(`${teamName}RBOneThisWeek`, rbObject);
 
     allRBObjectsArray.push(rbObject);
+    // console.log(rbObject);
   }
 });
 
@@ -1354,7 +1405,7 @@ allRBs.forEach(function (team, i) {
     team.RBTwo.fantasyPointsPerGameLastFiveWeeks
   );
 
-  rbObject.calcAppProjectedPoints(team.RBTwo.projectedCarriesThisWeek, team.RBTwo.projectedRushYardsThisWeek);
+  rbObject.calcAppProjectedPoints(team.RBTwo.projectedCarriesThisWeek, team.RBTwo.projectedRushYardsThisWeek, team.RBTwo.projectedRushTDsThisWeek, team.RBTwo.projectedReceptionsThisWeek, team.RBTwo.projectedRecYardsThisWeek, team.RBTwo.projectedRecTDsThisWeek, team.RBTwo.projectedRushfirstDownsThisWeek, team.RBTwo.projectedRecfirstDownsThisWeek);
   rbObject.calcAppProjectedpointsPerDollarOnAllSites();
   rbObject.calcFourForFourProjectedpointsPerDollarOnAllSites();
   rbObject.calcFourForFourProjectedPointsPerPercentOfSiteSalaryCap();
@@ -1762,11 +1813,36 @@ const allRBProjectionsObjects = [];
 
 allRBObjectsArray.forEach(function (player) {
   // console.log(player);
+
+  
+  
+  
+
+  
+ 
+  
+
+
+
+
   class ProjectionsObject {
     constructor(
       name,
       position,
       team,
+
+      appProjectedCarriesThisWeek,
+      appProjectedrushYardsThisWeek,
+      appProjectedrushTDsThisWeek,
+      appProjectedreceptionsThisWeek,
+      appProjectedrecYardsThisWeek,
+      appProjectedrecTDsThisWeek,
+      appProjectedrushFirstDownsThisWeek,
+      appProjectedrecFirstDownsThisWeek,
+      appProjectedRBTotalFirstDownsThisWeek,
+      astroHalfRBProjection,
+      astroFullRBProjection,
+
       appHalfProjectedPoints,
       appFullProjectedPoints,
       appTEPProjectedPoints
@@ -1774,8 +1850,21 @@ allRBObjectsArray.forEach(function (player) {
       this.name = name;
       this.position = position;
       this.team = team;
-      this.appHalfProjectedPoints = appHalfProjectedPoints;
 
+      this.appProjectedCarriesThisWeek = appProjectedCarriesThisWeek;
+      this.appProjectedrushYardsThisWeek = appProjectedrushYardsThisWeek;
+      this.appProjectedrushTDsThisWeek = appProjectedrushTDsThisWeek;
+      this.appProjectedreceptionsThisWeek = appProjectedreceptionsThisWeek;
+      this.appProjectedrecYardsThisWeek = appProjectedrecYardsThisWeek;
+      this.appProjectedrecTDsThisWeek = appProjectedrecTDsThisWeek;
+      this.appProjectedrushFirstDownsThisWeek = appProjectedrushFirstDownsThisWeek;
+      this.appProjectedrecFirstDownsThisWeek = appProjectedrecFirstDownsThisWeek;
+      this.appProjectedRBTotalFirstDownsThisWeek = appProjectedRBTotalFirstDownsThisWeek;
+      this.astroHalfRBProjection = astroHalfRBProjection;
+      this.astroFullRBProjection = astroFullRBProjection;
+
+
+      this.appHalfProjectedPoints = appHalfProjectedPoints;
       this.appFullProjectedPoints = appFullProjectedPoints;
       this.appTEPProjectedPoints = appTEPProjectedPoints;
     }
@@ -1785,6 +1874,20 @@ allRBObjectsArray.forEach(function (player) {
     player.playerName,
     player.position,
     player.teamABV,
+
+    player.appProjectedCarriesThisWeek,
+    player.appProjectedrushYardsThisWeek,
+    player.appProjectedrushTDsThisWeek,
+    player.appProjectedreceptionsThisWeek,
+    player.appProjectedrecYardsThisWeek,
+    player.appProjectedrecTDsThisWeek,
+    player.appProjectedrushFirstDownsThisWeek,
+    player.appProjectedrecFirstDownsThisWeek,
+    player.appProjectedRBTotalFirstDownsThisWeek,
+    player.astroHalfRBProjection,
+    player.astroFullRBProjection,
+
+
     player.appProjectedHalfPPRPoints,
     player.appProjectedFullPPRPoints,
     player.appProjectedFullPPRPoints
