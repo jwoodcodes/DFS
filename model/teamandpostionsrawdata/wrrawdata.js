@@ -3288,7 +3288,6 @@ const populateTeamObjects = function (
             passedInTeam.WROne.projRec1D = +team.Rec1D;
             passedInTeam.WROne.projRush1D = +team.Ru1D;
 
-            // console.log(passedInTeam.WROne.name, team.Ru1D);
             // console.log(passedInTeam.WROne.name, passedInTeam.WROne.projRush1D);
           }
           if (passedInTeam.WRTwo.name === SanitizedPlayerName) {
