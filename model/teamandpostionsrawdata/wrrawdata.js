@@ -14,13 +14,10 @@ const gameInfo = require('./gameinfo');
 const allTeams = require('../teamandpositionvariables/allTeamLevelVariables');
 const allQBData = require('../dfs_positions_calc_funcs/qbValuesCalcs');
 
-
-
 const wr4for4FantasyPointsBrowserLastFiveWeeks = require('../datafilesmadefrom4for4CSVs/wr4for4FantasyPointsBrowserLastFiveWeeks');
 
-
-const wr4for4PlayerTargetsAppLastFiveWeeks = require('../datafilesmadefrom4for4CSVs/wr4for4PlayerTargetsAppLastFiveWeeks')
-const wrRotovizWeeklyStatExplorerRecievingTabLastFiveWeeks = require('../datafilesmadefrom4for4CSVs/wrRotovizWeeklyStatExplorerRecievingTabLastFiveWeeks')
+const wr4for4PlayerTargetsAppLastFiveWeeks = require('../datafilesmadefrom4for4CSVs/wr4for4PlayerTargetsAppLastFiveWeeks');
+const wrRotovizWeeklyStatExplorerRecievingTabLastFiveWeeks = require('../datafilesmadefrom4for4CSVs/wrRotovizWeeklyStatExplorerRecievingTabLastFiveWeeks');
 
 //WR target share the last x number of games can be found on the rotoviz monday review and the last 6 weeks should be used for a WR's target share number
 //WR projected targets should be QB prjpassattempts * target share(in decimal form!)
@@ -3014,17 +3011,17 @@ const populateTeamObjects = function (
 ) {
   // console.log(qbDataPassedInTeam);
   passedInTeam.teamVTT = +gameInfoPassedInTeam.vtt;
-  if(qbDataPassedInTeam) {
-  passedInTeam.appQBProjectedPoints = qbDataPassedInTeam.appProjectedPoints;
-  
-  passedInTeam.appTeamProjectedPoints =
-    gameInfoPassedInTeam.teamProjectedPointsThisWeek;
-  passedInTeam.byeWeek = gameInfoPassedInTeam.byeWeek2022;
-  passedInTeam.QBpercentageOffFantasyPointsFromPassingLastFiveWeeks =
-    qbDataPassedInTeam.percentageOfFantasyPointsFromPassingLastFiveWeeks;
-  
-  passedInTeam.QBProjectedPassAttemptsThisWeek =
-    qbDataPassedInTeam.projectedPassAttempts;
+  if (qbDataPassedInTeam) {
+    passedInTeam.appQBProjectedPoints = qbDataPassedInTeam.appProjectedPoints;
+
+    passedInTeam.appTeamProjectedPoints =
+      gameInfoPassedInTeam.teamProjectedPointsThisWeek;
+    passedInTeam.byeWeek = gameInfoPassedInTeam.byeWeek2022;
+    passedInTeam.QBpercentageOffFantasyPointsFromPassingLastFiveWeeks =
+      qbDataPassedInTeam.percentageOfFantasyPointsFromPassingLastFiveWeeks;
+
+    passedInTeam.QBProjectedPassAttemptsThisWeek =
+      qbDataPassedInTeam.projectedPassAttempts;
   }
   if (
     gameInfoPassedInTeam.teamProjectedForAHalfOfNegetiveGameScriptIsTrue ===
@@ -3034,44 +3031,44 @@ const populateTeamObjects = function (
   } else {
     passedInTeam.teamProjectedForAHalfOfNegetiveGameScriptIsTrue = 'false';
   }
-  if(gameInfoPassedInTeam.byeWeek2022 !== gameInfo.week.currentWeek) {
+  if (gameInfoPassedInTeam.byeWeek2022 !== gameInfo.week.currentWeek) {
     // console.log(gameInfoPassedInTeam, gameInfo.week.currentWeek)
-if(gameInfoPassedInTeam.WROneThisWeekName) {
-  tempWROneName = gameInfoPassedInTeam.WROneThisWeekName.replace(
-    '.',
-    ''
-  ).replace('.', '');
+    if (gameInfoPassedInTeam.WROneThisWeekName) {
+      tempWROneName = gameInfoPassedInTeam.WROneThisWeekName.replace(
+        '.',
+        ''
+      ).replace('.', '');
 
-  if (tempWROneName.includes("'")) {
-    tempWROneName = tempWROneName.replace("'", '');
+      if (tempWROneName.includes("'")) {
+        tempWROneName = tempWROneName.replace("'", '');
+      }
+
+      passedInTeam.WROne.name = tempWROneName;
+
+      tempWRTwoName = gameInfoPassedInTeam.WRTwoThisWeekName.replace(
+        '.',
+        ''
+      ).replace('.', '');
+    }
+
+    if (tempWRTwoName.includes("'")) {
+      tempWRTwoName = tempWRTwoName.replace("'", '');
+    }
+
+    passedInTeam.WRTwo.name = tempWRTwoName;
+    if (gameInfoPassedInTeam.WRThreeThisWeekName) {
+      tempWRThreeName = gameInfoPassedInTeam.WRThreeThisWeekName.replace(
+        '.',
+        ''
+      ).replace('.', '');
+
+      if (tempWRThreeName.includes("'")) {
+        tempWRThreeName = tempWRThreeName.replace("'", '');
+      }
+
+      passedInTeam.WRThree.name = tempWRThreeName;
+    }
   }
-
-  passedInTeam.WROne.name = tempWROneName;
-
-  tempWRTwoName = gameInfoPassedInTeam.WRTwoThisWeekName.replace(
-    '.',
-    ''
-  ).replace('.', '');
-  }
-  
-  if (tempWRTwoName.includes("'")) {
-    tempWRTwoName = tempWRTwoName.replace("'", '');
-  }
-
-  passedInTeam.WRTwo.name = tempWRTwoName;
-if(gameInfoPassedInTeam.WRThreeThisWeekName) {
-  tempWRThreeName = gameInfoPassedInTeam.WRThreeThisWeekName.replace(
-    '.',
-    ''
-  ).replace('.', '');
-  
-  if (tempWRThreeName.includes("'")) {
-    tempWRThreeName = tempWRThreeName.replace("'", '');
-  }
-
-  passedInTeam.WRThree.name = tempWRThreeName;
-}
-}
 
   qbDownloadableSpreadSheetYahoo.forEach(function (playerobj, i) {
     passedInTeam.slate = '';
@@ -3136,8 +3133,8 @@ if(gameInfoPassedInTeam.WRThreeThisWeekName) {
         }
       }
 
-      if(gameInfoPassedInTeam.opponentThisWeek) {
-      passedInTeam.opponentVTT = gameInfoPassedInTeam.opponentThisWeek.vtt;
+      if (gameInfoPassedInTeam.opponentThisWeek) {
+        passedInTeam.opponentVTT = gameInfoPassedInTeam.opponentThisWeek.vtt;
       }
       allFlexGLSP.forEach(function (team, i) {
         // tempWROneName = gameInfoPassedInTeam.WROneThisWeekName.replace(
@@ -3164,82 +3161,81 @@ if(gameInfoPassedInTeam.WRThreeThisWeekName) {
         //   tempWRThreeName = tempWRThreeName.replace("'", '');
         // }
         // passedInTeam.WRThree.name = tempWRThreeName;
-        
-        if(team['"POS"']) {
-        if (team['"POS"'].slice(1, -1) === 'WR') {
-          SanitizedPlayerName = team['"Player"']
-            .slice(1, -1)
-            .replace('.', '')
-            .replace('.', '')
-            .replace("'", '');
 
-          if (passedInTeam.WROne.name === SanitizedPlayerName) {
-            passedInTeam.WROne.halfTwentyFifthPercentProjectedPoints =
-              +team['"Half - 25th"'];
-            passedInTeam.WROne.halfFiftyithPercentProjectedPoints =
-              +team['"Half - 50th"'];
-            passedInTeam.WROne.halfSeventyFifthPercentProjectedPoints =
-              +team['"Half - 75th"'];
-            passedInTeam.WROne.PPRTwentyFifthPercentProjectedPoints =
-              +team['"PPR - 25th"'];
-            passedInTeam.WROne.PPRFiftyithPercentProjectedPoints =
-              +team['"PPR - 50th"'];
-            passedInTeam.WROne.PPRSeventyFifthPercentProjectedPoints =
-              +team['"PPR - 75th"'];
-            passedInTeam.WROne.glspHalfAvg = +team['"Half - AVG"'];
-            passedInTeam.WROne.glspPPRAvg = +team['"PPR - AVG"'];
-          }
+        if (team['"POS"']) {
+          if (team['"POS"'].slice(1, -1) === 'WR') {
+            SanitizedPlayerName = team['"Player"']
+              .slice(1, -1)
+              .replace('.', '')
+              .replace('.', '')
+              .replace("'", '');
 
-          if (passedInTeam.WRTwo.name === SanitizedPlayerName) {
-            passedInTeam.WRTwo.halfTwentyFifthPercentProjectedPoints =
-              +team['"Half - 25th"'];
-            passedInTeam.WRTwo.halfFiftyithPercentProjectedPoints =
-              +team['"Half - 50th"'];
-            passedInTeam.WRTwo.halfSeventyFifthPercentProjectedPoints =
-              +team['"Half - 75th"'];
-            passedInTeam.WRTwo.PPRTwentyFifthPercentProjectedPoints =
-              +team['"PPR - 25th"'];
-            passedInTeam.WRTwo.PPRFiftyithPercentProjectedPoints =
-              +team['"PPR - 50th"'];
-            passedInTeam.WRTwo.PPRSeventyFifthPercentProjectedPoints =
-              +team['"PPR - 75th"'];
-            passedInTeam.WRTwo.glspHalfAvg = +team['"Half - AVG"'];
-            passedInTeam.WRTwo.glspPPRAvg = +team['"PPR - AVG"'];
-          }
+            if (passedInTeam.WROne.name === SanitizedPlayerName) {
+              passedInTeam.WROne.halfTwentyFifthPercentProjectedPoints =
+                +team['"Half - 25th"'];
+              passedInTeam.WROne.halfFiftyithPercentProjectedPoints =
+                +team['"Half - 50th"'];
+              passedInTeam.WROne.halfSeventyFifthPercentProjectedPoints =
+                +team['"Half - 75th"'];
+              passedInTeam.WROne.PPRTwentyFifthPercentProjectedPoints =
+                +team['"PPR - 25th"'];
+              passedInTeam.WROne.PPRFiftyithPercentProjectedPoints =
+                +team['"PPR - 50th"'];
+              passedInTeam.WROne.PPRSeventyFifthPercentProjectedPoints =
+                +team['"PPR - 75th"'];
+              passedInTeam.WROne.glspHalfAvg = +team['"Half - AVG"'];
+              passedInTeam.WROne.glspPPRAvg = +team['"PPR - AVG"'];
+            }
 
-          if (passedInTeam.WRThree.name === SanitizedPlayerName) {
-            passedInTeam.WRThree.halfTwentyFifthPercentProjectedPoints =
-              +team['"Half - 25th"'];
-            passedInTeam.WRThree.halfFiftyithPercentProjectedPoints =
-              +team['"Half - 50th"'];
-            passedInTeam.WRThree.halfSeventyFifthPercentProjectedPoints =
-              +team['"Half - 75th"'];
-            passedInTeam.WRThree.PPRTwentyFifthPercentProjectedPoints =
-              +team['"PPR - 25th"'];
-            passedInTeam.WRThree.PPRFiftyithPercentProjectedPoints =
-              +team['"PPR - 50th"'];
-            passedInTeam.WRThree.PPRSeventyFifthPercentProjectedPoints =
-              +team['"PPR - 75th"'];
-            passedInTeam.WRThree.glspHalfAvg = +team['"Half - AVG"'];
-            passedInTeam.WRThree.glspPPRAvg = +team['"PPR - AVG"'];
+            if (passedInTeam.WRTwo.name === SanitizedPlayerName) {
+              passedInTeam.WRTwo.halfTwentyFifthPercentProjectedPoints =
+                +team['"Half - 25th"'];
+              passedInTeam.WRTwo.halfFiftyithPercentProjectedPoints =
+                +team['"Half - 50th"'];
+              passedInTeam.WRTwo.halfSeventyFifthPercentProjectedPoints =
+                +team['"Half - 75th"'];
+              passedInTeam.WRTwo.PPRTwentyFifthPercentProjectedPoints =
+                +team['"PPR - 25th"'];
+              passedInTeam.WRTwo.PPRFiftyithPercentProjectedPoints =
+                +team['"PPR - 50th"'];
+              passedInTeam.WRTwo.PPRSeventyFifthPercentProjectedPoints =
+                +team['"PPR - 75th"'];
+              passedInTeam.WRTwo.glspHalfAvg = +team['"Half - AVG"'];
+              passedInTeam.WRTwo.glspPPRAvg = +team['"PPR - AVG"'];
+            }
+
+            if (passedInTeam.WRThree.name === SanitizedPlayerName) {
+              passedInTeam.WRThree.halfTwentyFifthPercentProjectedPoints =
+                +team['"Half - 25th"'];
+              passedInTeam.WRThree.halfFiftyithPercentProjectedPoints =
+                +team['"Half - 50th"'];
+              passedInTeam.WRThree.halfSeventyFifthPercentProjectedPoints =
+                +team['"Half - 75th"'];
+              passedInTeam.WRThree.PPRTwentyFifthPercentProjectedPoints =
+                +team['"PPR - 25th"'];
+              passedInTeam.WRThree.PPRFiftyithPercentProjectedPoints =
+                +team['"PPR - 50th"'];
+              passedInTeam.WRThree.PPRSeventyFifthPercentProjectedPoints =
+                +team['"PPR - 75th"'];
+              passedInTeam.WRThree.glspHalfAvg = +team['"Half - AVG"'];
+              passedInTeam.WRThree.glspPPRAvg = +team['"PPR - AVG"'];
+            }
           }
         }
-      }
       });
 
-     
+      wrRotovizWeeklyStatExplorerRecievingTabLastFiveWeeks.forEach(function (
+        team
+      ) {
+        SanitizedPlayerName = team['"Player"']
+          .slice(1, -1)
+          .replace('.', '')
+          .replace('.', '')
+          .replace("'", '');
 
-      wrRotovizWeeklyStatExplorerRecievingTabLastFiveWeeks.forEach(
-        function (team) {
-          SanitizedPlayerName = team['"Player"']
-            .slice(1, -1)
-            .replace('.', '')
-            .replace('.', '')
-            .replace("'", '');
-
-          if (passedInTeam.WROne.name === SanitizedPlayerName) {
-            // console.log(SanitizedPlayerName);
-            if(team['"Tgt Shr"']) {
+        if (passedInTeam.WROne.name === SanitizedPlayerName) {
+          // console.log(SanitizedPlayerName);
+          if (team['"Tgt Shr"']) {
             temp = +team['"Tgt Shr"'].slice(1, -2);
             passedInTeam.WROne.targetShareLastFiveWeeks = +temp.toFixed(3);
 
@@ -3271,8 +3267,7 @@ if(gameInfoPassedInTeam.WRThreeThisWeekName) {
               +tempReceptions.toFixed(3);
           }
         }
-        }
-      );
+      });
 
       allHalfPPRProjectedPointsWithoutTeamDef.forEach(function (team) {
         if (team.Pos === 'WR') {
@@ -3283,15 +3278,44 @@ if(gameInfoPassedInTeam.WRThreeThisWeekName) {
           if (passedInTeam.WROne.name === SanitizedPlayerName) {
             passedInTeam.WROne.projectedReceptions4For4 = +team.Rec;
             passedInTeam.WROne.fourForFourHalfPPRProjectedPoints = +team.FFPts;
+
+            passedInTeam.WROne.projReceptions = +team.Rec;
+            passedInTeam.WROne.projRecYards = +team['Rec Yds'];
+            passedInTeam.WROne.projRecTDs = +team['Rec TD'];
+            passedInTeam.WROne.projRushAttempts = +team['Rush Att'];
+            passedInTeam.WROne.projRushYards = +team['Rush Yds'];
+            passedInTeam.WROne.projRushTD = +team['Rush TD'];
+            passedInTeam.WROne.projRec1D = +team.Rec1D;
+            passedInTeam.WROne.projRush1D = +team.Ru1D;
+
+            // console.log(passedInTeam.WROne.name, passedInTeam.WROne.projRush1D);
           }
           if (passedInTeam.WRTwo.name === SanitizedPlayerName) {
             passedInTeam.WRTwo.projectedReceptions4For4 = +team.Rec;
             passedInTeam.WRTwo.fourForFourHalfPPRProjectedPoints = +team.FFPts;
+
+            passedInTeam.WRTwo.projReceptions = +team.Rec;
+            passedInTeam.WRTwo.projRecYards = +team['Rec Yds'];
+            passedInTeam.WRTwo.projRecTDs = +team['Rec TD'];
+            passedInTeam.WRTwo.projRushAttempts = +team['Rush Att'];
+            passedInTeam.WRTwo.projRushYards = +team['Rush Yds'];
+            passedInTeam.WRTwo.projRushTD = +team['Rush TD'];
+            passedInTeam.WRTwo.projRec1D = +team.Rec1D;
+            passedInTeam.WRTwo.projRush1D = +team.Ru1D;
           }
           if (passedInTeam.WRThree.name === SanitizedPlayerName) {
             passedInTeam.WRThree.projectedReceptions4For4 = +team.Rec;
             passedInTeam.WRThree.fourForFourHalfPPRProjectedPoints =
               +team.FFPts;
+
+            passedInTeam.WRThree.projReceptions = +team.Rec;
+            passedInTeam.WRThree.projRecYards = +team['Rec Yds'];
+            passedInTeam.WRThree.projRecTDs = +team['Rec TD'];
+            passedInTeam.WRThree.projRushAttempts = +team['Rush Att'];
+            passedInTeam.WRThree.projRushYards = +team['Rush Yds'];
+            passedInTeam.WRThree.projRushTD = +team['Rush TD'];
+            passedInTeam.WRThree.projRec1D = +team.Rec1D;
+            passedInTeam.WRThree.projRush1D = +team.Ru1D;
           }
         }
       });
@@ -3888,8 +3912,7 @@ if(gameInfoPassedInTeam.WRThreeThisWeekName) {
 
           passedInTeam.firstPassedInWRPercentOfHighBarNumberLastWeek = +(
             (passedInTeam.firstPassedInWRLastWeekInFantasyPointsScoredPointsScored /
-              highBarNumber) 
-              *
+              highBarNumber) *
             100
           ).toFixed(2);
 
@@ -3908,8 +3931,6 @@ if(gameInfoPassedInTeam.WRThreeThisWeekName) {
               highBarNumber) *
             100
           ).toFixed(2);
-
-          
 
           ///////////////////////////////////////////////////assinging number of games played in last five weeks
 
@@ -4040,23 +4061,19 @@ if(gameInfoPassedInTeam.WRThreeThisWeekName) {
       ///wr expected PPR fantasy points per week last five weeks to help to determine what wr's roles were each week last five weeks
       /////////////////////
 
-
       //
       // replace wr4for4PlayerStatExplorerExpectedPPRPointsLastFiveWeeks
       // below with wr4for4PlayerTargetsAppLastFiveWeeks
       // first thing on 10/16/23
       //
-      wr4for4PlayerTargetsAppLastFiveWeeks.forEach(function(wr) {
+      wr4for4PlayerTargetsAppLastFiveWeeks.forEach(function (wr) {
         // console.log(wr.W1)
         // console.log(wr.Team)
-        
-      })
+      });
 
       //
 
-      wr4for4PlayerTargetsAppLastFiveWeeks.forEach(function (
-        wr
-      ) {
+      wr4for4PlayerTargetsAppLastFiveWeeks.forEach(function (wr) {
         if (
           passedInTeam.teamABV === wr.Team ||
           passedInTeam.altTeamABV === wr.Team
@@ -4192,8 +4209,7 @@ if(gameInfoPassedInTeam.WRThreeThisWeekName) {
             weekLastWeek = wr.W17;
           }
 
-          SanitizedPlayerName = wr.Player
-            .slice(1, -1)
+          SanitizedPlayerName = wr.Player.slice(1, -1)
             .replace('.', '')
             .replace('.', '')
             .replace("'", '');
@@ -4205,7 +4221,7 @@ if(gameInfoPassedInTeam.WRThreeThisWeekName) {
             tempFiveWeeksAgo = +weekFiveWeeksAgo;
             passedInTeam.firstPassedInWRFiveWeeksAgoExpectedPPRPoints =
               tempFiveWeeksAgo;
-              // console.log(passedInTeam.firstPassedInWRFiveWeeksAgoExpectedPPRPoints)
+            // console.log(passedInTeam.firstPassedInWRFiveWeeksAgoExpectedPPRPoints)
             if (weekFiveWeeksAgo === '-') {
               passedInTeam.firstPassedInWRFiveWeeksAgoExpectedPPRPoints = 0;
             }
@@ -4347,7 +4363,7 @@ if(gameInfoPassedInTeam.WRThreeThisWeekName) {
               100
             ).toFixed(2);
 
-            // console.log(passedInTeam.firstPassedInWRExpectedPPRPointsPercentOfHighBarNumberFiveWeeksAgo)
+          // console.log(passedInTeam.firstPassedInWRExpectedPPRPointsPercentOfHighBarNumberFiveWeeksAgo)
 
           passedInTeam.secondPassedInWRExpectedPPRPointsPercentOfHighBarNumberFiveWeeksAgo =
             +(
@@ -4522,7 +4538,7 @@ if(gameInfoPassedInTeam.WRThreeThisWeekName) {
         passedInTeam.FiveWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray =
           FiveWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray;
 
-          // console.log(FiveWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray)
+        // console.log(FiveWeeksAgoWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray)
 
         //four weeks ago
 
@@ -6029,29 +6045,29 @@ if(gameInfoPassedInTeam.WRThreeThisWeekName) {
     passedInTeam.WRThree.numberOfGamesPlayedLastFiveWeeks;
 
   ///
-if(qbDataPassedInTeam) {
-  passedInTeam.WROne.qbFantasyPointsScoredPerGameLastFiveWeeks =
-    qbDataPassedInTeam.fantasyPointsFromRushingPerGameLastFiveWeeks +
-    qbDataPassedInTeam.fantasyPointsFromPassingPerGameLastFiveWeeks;
+  if (qbDataPassedInTeam) {
+    passedInTeam.WROne.qbFantasyPointsScoredPerGameLastFiveWeeks =
+      qbDataPassedInTeam.fantasyPointsFromRushingPerGameLastFiveWeeks +
+      qbDataPassedInTeam.fantasyPointsFromPassingPerGameLastFiveWeeks;
 
-  passedInTeam.WRTwo.qbFantasyPointsScoredPerGameLastFiveWeeks =
-    qbDataPassedInTeam.fantasyPointsFromRushingPerGameLastFiveWeeks +
-    qbDataPassedInTeam.fantasyPointsFromPassingPerGameLastFiveWeeks;
+    passedInTeam.WRTwo.qbFantasyPointsScoredPerGameLastFiveWeeks =
+      qbDataPassedInTeam.fantasyPointsFromRushingPerGameLastFiveWeeks +
+      qbDataPassedInTeam.fantasyPointsFromPassingPerGameLastFiveWeeks;
 
-  passedInTeam.WRThree.qbFantasyPointsScoredPerGameLastFiveWeeks =
-    qbDataPassedInTeam.fantasyPointsFromRushingPerGameLastFiveWeeks +
-    qbDataPassedInTeam.fantasyPointsFromPassingPerGameLastFiveWeeks;
+    passedInTeam.WRThree.qbFantasyPointsScoredPerGameLastFiveWeeks =
+      qbDataPassedInTeam.fantasyPointsFromRushingPerGameLastFiveWeeks +
+      qbDataPassedInTeam.fantasyPointsFromPassingPerGameLastFiveWeeks;
 
-  //
-  passedInTeam.WROne.teamRealLifePointsScoredPerGameLastFiveWeeks =
-    +gameInfoPassedInTeam.teamPointsPerGameLastFiveWeeks;
+    //
+    passedInTeam.WROne.teamRealLifePointsScoredPerGameLastFiveWeeks =
+      +gameInfoPassedInTeam.teamPointsPerGameLastFiveWeeks;
 
-  passedInTeam.WRTwo.teamRealLifePointsScoredPerGameLastFiveWeeks =
-    +gameInfoPassedInTeam.teamPointsPerGameLastFiveWeeks;
+    passedInTeam.WRTwo.teamRealLifePointsScoredPerGameLastFiveWeeks =
+      +gameInfoPassedInTeam.teamPointsPerGameLastFiveWeeks;
 
-  passedInTeam.WRThree.teamRealLifePointsScoredPerGameLastFiveWeeks =
-    +gameInfoPassedInTeam.teamPointsPerGameLastFiveWeeks;
-}
+    passedInTeam.WRThree.teamRealLifePointsScoredPerGameLastFiveWeeks =
+      +gameInfoPassedInTeam.teamPointsPerGameLastFiveWeeks;
+  }
 };
 
 populateTeamObjects(

@@ -188,7 +188,16 @@ class WrObject {
   //
   // - calculate projeted ownership: use 4for4 projections per dollar and QB projected ownership to assin a baseline projected ownership and then adjust that using the two numbers from the step above for each player on each site.
 
-  calcAppProjectedPoints() {
+  calcAppProjectedPoints(
+    recs,
+    recYards,
+    recTDs,
+    rushAttempts,
+    rushYards,
+    rushTDs,
+    rec1Ds,
+    rush1Ds
+  ) {
     // for weeks 1 & 2
     let ranNum = +(Math.random() * 1.5 - 0.75).toFixed(1);
     // console.log(ranNum);
@@ -545,10 +554,26 @@ class WrObject {
         3
       ).toFixed(1);
 
-      // console.log(this.playerName, finalFullTemp)
+      //this.fourForFourHalfPPRProjectedPoints
+      //this.fourForFourFullPPRProjectedPoints
+
+      // console.log(
+      //   this.playerName,
+      //   this.fourForFourFullPPRProjectedPoints,
+      //   finalFullTemp
+      // );
 
       this.appHalfProjectedPoints = +finalHalfTemp;
       this.appFullProjectedPoints = +finalFullTemp;
+
+      // console.log(this.playerName, recs);
+      // console.log(this.playerName, recYards);
+      // console.log(this.playerName, recTDs);
+      // console.log(this.playerName, rushAttempts);
+      // console.log(this.playerName, rushYards);
+      // console.log(this.playerName, rushTDs);
+      // console.log(this.playerName, rec1Ds);
+      // console.log(this.playerName, rush1Ds);
     }
 
     /////////////////////////////////////////////////////////////////////////////////////
@@ -631,7 +656,7 @@ allWRs.forEach(function (team, i) {
       +team.WROne.halfPPRPointsPerGameLastFiveWeeks
     ).toFixed(2);
 
-    // console.log(percentProjectedfantasyPointsThisWeekIsHigherOrLowerThanFantasyPointsScoredLastFiveWeeks)
+  // console.log(percentProjectedfantasyPointsThisWeekIsHigherOrLowerThanFantasyPointsScoredLastFiveWeeks)
 
   roleScorePercentageThisWeek = +(
     (percentProjectedfantasyPointsThisWeekIsHigherOrLowerThanFantasyPointsScoredLastFiveWeeks +
@@ -704,7 +729,18 @@ allWRs.forEach(function (team, i) {
     team.WROne.fourForFourFullPPRProjectedPoints
   );
 
-  wrObject.calcAppProjectedPoints();
+  // console.log(team.WROne.name, team.WROne.projRush1D);
+
+  wrObject.calcAppProjectedPoints(
+    team.WROne.projReceptions,
+    team.WROne.projRecYards,
+    team.WROne.projRecTDs,
+    team.WROne.projRushAttempts,
+    team.WROne.projRushYards,
+    team.WROne.projRushTD,
+    team.WROne.projRec1D,
+    team.WROne.projRush1D
+  );
 
   allWRsMap.set(`${teamName}WROneThisWeek`, wrObject);
 
@@ -817,7 +853,16 @@ allWRs.forEach(function (team, i) {
     team.WRTwo.fourForFourFullPPRProjectedPoints
   );
 
-  wrObject.calcAppProjectedPoints();
+  wrObject.calcAppProjectedPoints(
+    team.WRTwo.projReceptions,
+    team.WRTwo.projRecYards,
+    team.WRTwo.projRecTDs,
+    team.WRTwo.projRushAttempts,
+    team.WRTwo.projRushYards,
+    team.WRTwo.projRushTD,
+    team.WRTwo.projRec1D,
+    team.WRTwo.projRush1D
+  );
 
   allWRsMap.set(`${teamName}WROneThisWeek`, wrObject);
 
@@ -930,7 +975,16 @@ allWRs.forEach(function (team, i) {
     team.WRThree.fourForFourFullPPRProjectedPoints
   );
 
-  wrObject.calcAppProjectedPoints();
+  wrObject.calcAppProjectedPoints(
+    team.WRThree.projReceptions,
+    team.WRThree.projRecYards,
+    team.WRThree.projRecTDs,
+    team.WRThree.projRushAttempts,
+    team.WRThree.projRushYards,
+    team.WRThree.projRushTD,
+    team.WRThree.projRec1D,
+    team.WRThree.projRush1D
+  );
 
   allWRsMap.set(`${teamName}WROneThisWeek`, wrObject);
 
