@@ -2790,6 +2790,20 @@ const populateTeamObjects = function (
         let tempProjPoints = +player.FFPts;
         let tempProjPointsTwo = +tempProjPoints.toFixed(2);
         passedInTeam.TE1.fourForFourFullPPRProjectedPoints = +tempProjPointsTwo;
+
+        // console.log(player)
+
+        
+          passedInTeam.TE1.projectedCarriesThisWeek = +player['Rush Att'];
+          passedInTeam.TE1.projectedRushYardsThisWeek = +player['Rush Yds'];
+          passedInTeam.TE1.projectedRushTDsThisWeek = +player['Rush TD'];
+          passedInTeam.TE1.projectedReceptionsThisWeek = +player.Rec;
+          passedInTeam.TE1.projectedRecYardsThisWeek = +player['Rec Yds'];
+          passedInTeam.TE1.projectedRecTDsThisWeek = +player['Rec TD'];
+          passedInTeam.TE1.projectedRushfirstDownsThisWeek = +player.Ru1D;
+          passedInTeam.TE1.projectedRecfirstDownsThisWeek = +player.Rec1D;
+
+          // console.log(player.Player, passedInTeam.TE1.projectedRecfirstDownsThisWeek)
       }
       if (player.Player === passedInTeam.TE2.name) {
         let temp = +player.Rec;
@@ -2799,6 +2813,15 @@ const populateTeamObjects = function (
         let tempProjPoints = +player.FFPts;
         let tempProjPointsTwo = +tempProjPoints.toFixed(2);
         passedInTeam.TE2.fourForFourFullPPRProjectedPoints = +tempProjPointsTwo;
+
+        passedInTeam.TE2.projectedCarriesThisWeek = +player['Rush Att'];
+        passedInTeam.TE2.projectedRushYardsThisWeek = +player['Rush Yds'];
+        passedInTeam.TE2.projectedRushTDsThisWeek = +player['Rush TD'];
+        passedInTeam.TE2.projectedReceptionsThisWeek = +player.Rec;
+        passedInTeam.TE2.projectedRecYardsThisWeek = +player['Rec Yds'];
+        passedInTeam.TE2.projectedRecTDsThisWeek = +player['Rec TD'];
+        passedInTeam.TE2.projectedRushfirstDownsThisWeek = +player.Ru1D;
+        passedInTeam.TE2.projectedRecfirstDownsThisWeek = +player.Rec1D;
       }
     }
   });
