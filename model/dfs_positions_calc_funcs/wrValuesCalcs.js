@@ -566,7 +566,7 @@ class WrObject {
       this.appHalfProjectedPoints = +finalHalfTemp;
       this.appFullProjectedPoints = +finalFullTemp;
 
-      // console.log(this.playerName, recs);
+          // console.log(this.playerName, recs);
       // console.log(this.playerName, recYards);
       // console.log(this.playerName, recTDs);
       // console.log(this.playerName, rushAttempts);
@@ -574,6 +574,56 @@ class WrObject {
       // console.log(this.playerName, rushTDs);
       // console.log(this.playerName, rec1Ds);
       // console.log(this.playerName, rush1Ds);
+
+      this.appProjectedCarriesThisWeek = +rushAttempts
+      this.appProjectedrushYardsThisWeek = +rushYards
+      this.appProjectedrushTDsThisWeek = +rushTDs
+      this.appProjectedreceptionsThisWeek = +recs
+      this.appProjectedrecYardsThisWeek = +recYards
+      this.appProjectedrecTDsThisWeek = +recTDs
+      this.appProjectedrushFirstDownsThisWeek = +rush1Ds
+      this.appProjectedrecFirstDownsThisWeek = +rec1Ds
+
+      let halfPercentDifference = +(+this.appHalfProjectedPoints / +this.fourForFourHalfPPRProjectedPoints).toFixed(2)
+      let fullPercentDifference = +(+this.appFullProjectedPoints / +this.fourForFourFullPPRProjectedPoints).toFixed(2)
+      let differenceToUse = +((+halfPercentDifference + +fullPercentDifference) / 2).toFixed(2)
+
+      // console.log(this.playerName, differenceToUse);
+
+      let carriesDifferenceToUse = differenceToUse
+
+      if(differenceToUse < .92) {
+        differenceToUse = .92
+      }
+      
+      
+
+      // console.log(this.playerName, this.appHalfProjectedPoints)
+      // console.log(this.playerName, fullPercentDifference)
+      // console.log(this.playerName, halfPercentDifference, fullPercentDifference, differenceToUse)
+
+      this.appProjectedCarriesThisWeek = +(+this.appProjectedCarriesThisWeek * +differenceToUse).toFixed(1)
+      this.appProjectedrushYardsThisWeek = +(+this.appProjectedrushYardsThisWeek * +differenceToUse).toFixed(1)
+      this.appProjectedrushTDsThisWeek = +((+this.appProjectedrushTDsThisWeek * +differenceToUse) ).toFixed(1)
+      this.appProjectedreceptionsThisWeek = +(+this.appProjectedreceptionsThisWeek * +differenceToUse).toFixed(1)
+      this.appProjectedrecYardsThisWeek = +(+this.appProjectedrecYardsThisWeek * +differenceToUse).toFixed(1)
+      this.appProjectedrecTDsThisWeek = +((+this.appProjectedrecTDsThisWeek * +differenceToUse) + .06).toFixed(1)
+      this.appProjectedrushFirstDownsThisWeek = +(+this.appProjectedrushFirstDownsThisWeek * +differenceToUse).toFixed(1)
+      this.appProjectedrecFirstDownsThisWeek = +(+this.appProjectedrecFirstDownsThisWeek * +differenceToUse).toFixed(1)
+      this.appProjectedRBTotalFirstDownsThisWeek = +(this.appProjectedrushFirstDownsThisWeek + this.appProjectedrecFirstDownsThisWeek).toFixed(1)
+
+      this.astroHalfWRProjection = +((+this.appProjectedrushYardsThisWeek * .1) + +(+this.appProjectedrushTDsThisWeek * 6) + +(+this.appProjectedrecYardsThisWeek * .1) + +(+this.appProjectedrecTDsThisWeek * 6) + (+this.appProjectedreceptionsThisWeek * .5)).toFixed(1)
+
+      this.astroFullWRProjection = +((+this.appProjectedrushYardsThisWeek * .1) + +(+this.appProjectedrushTDsThisWeek * 6) + +(+this.appProjectedrecYardsThisWeek * .1) + +(+this.appProjectedrecTDsThisWeek * 6) + (+this.appProjectedreceptionsThisWeek * 1)).toFixed(1)
+
+      if(this.astroHalfWRProjection && this.astroFullWRProjection) {
+        this.appHalfProjectedPoints = +((+this.appHalfProjectedPoints + +this.astroHalfWRProjection) / 2).toFixed(1)
+      this.appFullProjectedPoints = +((+this.appFullProjectedPoints + +this.astroFullWRProjection) / 2).toFixed(1)
+      }
+
+      //  console.log(this.playerName, this.appHalfProjectedPoints, this.fourForFourHalfPPRProjectedPoints)
+      //  console.log(this.playerName, this.appFullProjectedPoints, this.fourForFourFullPPRProjectedPoints)
+  
     }
 
     /////////////////////////////////////////////////////////////////////////////////////
@@ -1424,36 +1474,86 @@ const allWRData = {
 
 const allWRProjectionsObjects = [];
 
+class ProjectionsObject {
+  constructor(
+    name,
+    position,
+    team,
+
+    appProjectedCarriesThisWeek,
+    appProjectedrushYardsThisWeek,
+    appProjectedrushTDsThisWeek,
+    appProjectedreceptionsThisWeek,
+    appProjectedrecYardsThisWeek,
+    appProjectedrecTDsThisWeek,
+    appProjectedrushFirstDownsThisWeek,
+    appProjectedrecFirstDownsThisWeek,
+    appProjectedRBTotalFirstDownsThisWeek,
+    astroHalfWRProjection,
+    astroFullWRProjection,
+
+    appHalfProjectedPoints,
+    appFullProjectedPoints,
+    appTEPProjectedPoints
+  ) {
+    this.name = name;
+    this.position = position;
+    this.team = team;
+    
+
+    this.appProjectedCarriesThisWeek = +appProjectedCarriesThisWeek;
+    this.appProjectedrushYardsThisWeek = +appProjectedrushYardsThisWeek;
+    this.appProjectedrushTDsThisWeek = +appProjectedrushTDsThisWeek;
+    this.appProjectedreceptionsThisWeek = +appProjectedreceptionsThisWeek;
+    this.appProjectedrecYardsThisWeek = +appProjectedrecYardsThisWeek;
+    this.appProjectedrecTDsThisWeek = +appProjectedrecTDsThisWeek;
+    this.appProjectedrushFirstDownsThisWeek = +appProjectedrushFirstDownsThisWeek;
+    this.appProjectedrecFirstDownsThisWeek = +appProjectedrecFirstDownsThisWeek;
+    this.appProjectedRBTotalFirstDownsThisWeek = +appProjectedRBTotalFirstDownsThisWeek;
+
+    this.astroHalfWRProjection = +astroHalfWRProjection;
+
+    this.astroFullWRProjection = +astroFullWRProjection;
+
+    this.appHalfProjectedPoints = +appHalfProjectedPoints;
+    this.appFullProjectedPoints = +appFullProjectedPoints;
+    this.appTEPProjectedPoints = +appTEPProjectedPoints;
+    
+  }
+}
+
 allWRObjectsArray.forEach(function (player) {
   // console.log(player.appHalfProjectedPoints);
-  class ProjectionsObject {
-    constructor(
-      name,
-      position,
-      team,
-      appHalfProjectedPoints,
-      appFullProjectedPoints,
-      appTEPProjectedPoints
-    ) {
-      this.name = name;
-      this.position = position;
-      this.team = team;
-      this.appHalfProjectedPoints = appHalfProjectedPoints;
-      this.appFullProjectedPoints = appFullProjectedPoints;
-      this.appTEPProjectedPoints = appTEPProjectedPoints;
-    }
-  }
 
-  // console.log(player);
+  // console.log(player.appFullProjectedPoints)
+  
+
+  // console.log(player.appFullProjectedPoints);
 
   let wrProjectionsObject = new ProjectionsObject(
     player.playerName,
     player.position,
     player.teamABV,
-    player.appHalfProjectedPoints,
-    player.appFullProjectedPoints,
-    player.appFullProjectedPoints
+
+    +player.appProjectedCarriesThisWeek,
+      +player.appProjectedrushYardsThisWeek,
+      +player.appProjectedrushTDsThisWeek,
+      +player.appProjectedreceptionsThisWeek,
+      +player.appProjectedrecYardsThisWeek,
+      +player.appProjectedrecTDsThisWeek,
+      +player.appProjectedrushFirstDownsThisWeek,
+      +player.appProjectedrecFirstDownsThisWeek,
+      +player.appProjectedRBTotalFirstDownsThisWeek,
+
+      +player.astroHalfWRProjection,
+    +player.astroFullWRProjection,
+
+    +player.appHalfProjectedPoints,
+    +player.appFullProjectedPoints,
+    +player.appFullProjectedPoints,
   );
+
+  // console.log(wrProjectionsObject)
 
   allWRProjectionsObjects.push(wrProjectionsObject);
 });

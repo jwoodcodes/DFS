@@ -50,7 +50,7 @@ class TeObject {
   }
 
   //* add methods here
-  calcProjectedPoints() {
+  calcProjectedPoints(carriesm, rushYards, rushTDs, recs, recYards, recTDs, rush1Ds, rec1Ds) {
     let ranNum = (Math.random() * 1.5 - 0.75).toFixed(1);
     // console.log(this.name, this.teamABV, this.fullGLSPAvg);
     if (this.name) {
@@ -333,6 +333,15 @@ class TeObject {
       }
     }
     // console.log(this.name, this.appFullProjectedPoints)
+
+    // console.log(this.name, carries)
+    // console.log(this.name, rushYards)
+    // console.log(this.name, rushTDs)
+    // console.log(this.name, recs)
+    // console.log(this.name, recYards)
+    // console.log(this.name, recTDs)
+    // console.log(this.name, rush1Ds)
+    // console.log(this.name, rec1Ds)
   }
 }
 
@@ -359,7 +368,13 @@ allTEs.forEach(function (team) {
     team.TE1.fourForFourFullPPRProjectedPoints
   );
 
-  teObject.calcProjectedPoints();
+  
+  //   projectedRecfirstDownsThisWeek: 0.4
+
+
+  // console.log(team.TE1.name, team.TE1.projectedRecfirstDownsThisWeek)
+
+  teObject.calcProjectedPoints(team.TE1.projectedCarriesThisWeek, team.TE1.projectedRushYardsThisWeek, team.TE1.projectedRushTDsThisWeek, team.TE1.projectedReceptionsThisWeek, team.TE1.projectedRecYardsThisWeek, team.TE1.projectedRecTDsThisWeek, team.TE1.projectedRushfirstDownsThisWeek, team.TE1.projectedRecfirstDownsThisWeek);
 
   allTEObjectsArray.push(teObject);
 });
@@ -386,7 +401,7 @@ allTEs.forEach(function (team) {
     team.TE2.fourForFourFullPPRProjectedPoints
   );
 
-  teObject.calcProjectedPoints();
+  teObject.calcProjectedPoints(team.TE2.projectedCarriesThisWeek, team.TE2.projectedRushYardsThisWeek, team.TE2.projectedRushTDsThisWeek, team.TE2.projectedReceptionsThisWeek, team.TE2.projectedRecYardsThisWeek, team.TE2.projectedRecTDsThisWeek, team.TE2.projectedRushfirstDownsThisWeek, team.TE2.projectedRecfirstDownsThisWeek);
 
   allTEObjectsArray.push(teObject);
 });

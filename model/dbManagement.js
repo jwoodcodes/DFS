@@ -250,13 +250,24 @@ rbCSVArray = rbProjectionArray.map(obj => {
 //     appFullProjectedPoints: obj.appFullProjectedPoints,
 //   };
 // });
-// wrCSVArray = wrProjectionArray.map(obj => {
-//   return {
-//     name: obj.name,
-//     team: obj.team,
-//     appHalfProjectedPoints: obj.appHalfProjectedPoints,
-//   };
-// });
+wrCSVArray = wrProjectionArray.map(obj => {
+  return {
+    name: obj.name,
+    team: obj.team,
+    appHalfProjectedPoints: obj.appHalfProjectedPoints,
+    appProjectedCarriesThisWeek: obj.appProjectedCarriesThisWeek,
+    appProjectedrushYardsThisWeek: obj.appProjectedrushYardsThisWeek,
+    appProjectedrushTDsThisWeek: obj.appProjectedrushTDsThisWeek,
+    appProjectedreceptionsThisWeek: obj.appProjectedreceptionsThisWeek,
+    appProjectedrecYardsThisWeek: obj.appProjectedrecYardsThisWeek,
+    appProjectedrecTDsThisWeek: obj.appProjectedrecTDsThisWeek,
+    appProjectedrushFirstDownsThisWeek: obj.appProjectedrushFirstDownsThisWeek,
+    appProjectedrecFirstDownsThisWeek: obj.appProjectedrecFirstDownsThisWeek,
+    appProjectedRBTotalFirstDownsThisWeek: obj.appProjectedRBTotalFirstDownsThisWeek,
+    astroHalfWRProjection: obj.astroHalfWRProjection,
+    astroFullWRProjection: obj.astroFullWRProjection,
+  };
+});
 // wrPPRCSVArray = pprSortedWRProjectionArray.map(obj => {
 //   return {
 //     name: obj.name,
@@ -311,7 +322,7 @@ function arrayToCSV(array) {
 
   try {
     const csv = parse(array, opts);
-    fs.writeFileSync('week8-24-RBHalfProjectionArray.csv', csv);
+    fs.writeFileSync('week8-24-WRHalfProjectionArray.csv', csv);
     console.log('CSV file successfully created');
   } catch (err) {
     console.error(err);
