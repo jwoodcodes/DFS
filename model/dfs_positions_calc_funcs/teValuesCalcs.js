@@ -50,7 +50,7 @@ class TeObject {
   }
 
   //* add methods here
-  calcProjectedPoints(carriesm, rushYards, rushTDs, recs, recYards, recTDs, rush1Ds, rec1Ds) {
+  calcProjectedPoints(carries, rushYards, rushTDs, recs, recYards, recTDs, rush1Ds, rec1Ds) {
     let ranNum = (Math.random() * 1.5 - 0.75).toFixed(1);
     // console.log(this.name, this.teamABV, this.fullGLSPAvg);
     if (this.name) {
