@@ -146,6 +146,7 @@ let teProjectionsArray = [...allTEProjectionsObjects];
 
 // console.log(wrProjectionArray);
 // console.log(rbProjectionArray);
+// console.log(teProjectionsArray);
 
 function halfCompare(a, b) {
   if (a.appHalfProjectedPoints < b.appHalfProjectedPoints) {
@@ -212,15 +213,15 @@ qbCSVArray = qbProjectionArray.map(obj => {
     team: obj.team,
     appFullProjectedPoints: obj.appFullProjectedPoints,
     appProjPassAttempts: obj.appProjPassAttempts,
-    appProjCompletions: obj.appProjCompletions, 
+    appProjCompletions: obj.appProjCompletions,
     appProjPassingYards: obj.appProjPassingYards,
-    appProjPassTDs: obj.appProjPassTDs, 
+    appProjPassTDs: obj.appProjPassTDs,
     appProjINTs: obj.appProjINTs,
     appProjQBRushAttempts: obj.appProjQBRushAttempts,
     appProjQBRushYards: obj.appProjQBRushYards,
     appProjQBRushTDs: obj.appProjQBRushTDs,
     astroQBProjection: obj.astroQBProjection,
-    astroSixPtTDQBProjection: obj.astroSixPtTDQBProjection
+    astroSixPtTDQBProjection: obj.astroSixPtTDQBProjection,
   };
 });
 
@@ -237,10 +238,10 @@ rbCSVArray = rbProjectionArray.map(obj => {
     appProjectedrecTDsThisWeek: obj.appProjectedrecTDsThisWeek,
     appProjectedrushFirstDownsThisWeek: obj.appProjectedrushFirstDownsThisWeek,
     appProjectedrecFirstDownsThisWeek: obj.appProjectedrecFirstDownsThisWeek,
-    appProjectedRBTotalFirstDownsThisWeek: obj.appProjectedRBTotalFirstDownsThisWeek,
+    appProjectedRBTotalFirstDownsThisWeek:
+      obj.appProjectedRBTotalFirstDownsThisWeek,
     astroHalfRBProjection: obj.astroHalfRBProjection,
     astroFullRBProjection: obj.astroFullRBProjection,
-
   };
 });
 // rbPPRCSVArray = pprSortedRBProjectionArray.map(obj => {
@@ -263,7 +264,8 @@ wrCSVArray = wrProjectionArray.map(obj => {
     appProjectedrecTDsThisWeek: obj.appProjectedrecTDsThisWeek,
     appProjectedrushFirstDownsThisWeek: obj.appProjectedrushFirstDownsThisWeek,
     appProjectedrecFirstDownsThisWeek: obj.appProjectedrecFirstDownsThisWeek,
-    appProjectedRBTotalFirstDownsThisWeek: obj.appProjectedRBTotalFirstDownsThisWeek,
+    appProjectedRBTotalFirstDownsThisWeek:
+      obj.appProjectedRBTotalFirstDownsThisWeek,
     astroHalfWRProjection: obj.astroHalfWRProjection,
     astroFullWRProjection: obj.astroFullWRProjection,
   };
@@ -275,13 +277,25 @@ wrCSVArray = wrProjectionArray.map(obj => {
 //     appFullProjectedPoints: obj.appFullProjectedPoints,
 //   };
 // });
-// teCSVArray = teProjectionsArray.map(obj => {
-//   return {
-//     name: obj.name,
-//     team: obj.team,
-//     appHalfProjectedPoints: obj.appHalfProjectedPoints,
-//   };
-// });
+teCSVArray = teProjectionsArray.map(obj => {
+  return {
+    name: obj.name,
+    team: obj.team,
+    appHalfProjectedPoints: obj.appHalfProjectedPoints,
+    appProjectedCarriesThisWeek: obj.appProjectedCarriesThisWeek,
+    appProjectedrushYardsThisWeek: obj.appProjectedrushYardsThisWeek,
+    appProjectedrushTDsThisWeek: obj.appProjectedrushTDsThisWeek,
+    appProjectedreceptionsThisWeek: obj.appProjectedreceptionsThisWeek,
+    appProjectedrecYardsThisWeek: obj.appProjectedrecYardsThisWeek,
+    appProjectedrecTDsThisWeek: obj.appProjectedrecTDsThisWeek,
+    appProjectedrushFirstDownsThisWeek: obj.appProjectedrushFirstDownsThisWeek,
+    appProjectedrecFirstDownsThisWeek: obj.appProjectedrecFirstDownsThisWeek,
+    appProjectedRBTotalFirstDownsThisWeek:
+      obj.appProjectedRBTotalFirstDownsThisWeek,
+    astroHalfWRProjection: obj.astroHalfWRProjection,
+    astroFullWRProjection: obj.astroFullWRProjection,
+  };
+});
 // tePPRCSVArray = pprSortedTEProjectionArray.map(obj => {
 //   return {
 //     name: obj.name,
@@ -322,7 +336,7 @@ function arrayToCSV(array) {
 
   try {
     const csv = parse(array, opts);
-    fs.writeFileSync('week9-24-superFlexHalfProjectionArray.csv', csv);
+    fs.writeFileSync('week9-24-earlySuperflexHalfProjectionArray.csv', csv);
     console.log('CSV file successfully created');
   } catch (err) {
     console.error(err);

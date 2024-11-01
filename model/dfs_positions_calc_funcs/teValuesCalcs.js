@@ -50,7 +50,16 @@ class TeObject {
   }
 
   //* add methods here
-  calcProjectedPoints(carries, rushYards, rushTDs, recs, recYards, recTDs, rush1Ds, rec1Ds) {
+  calcProjectedPoints(
+    carries,
+    rushYards,
+    rushTDs,
+    recs,
+    recYards,
+    recTDs,
+    rush1Ds,
+    rec1Ds
+  ) {
     let ranNum = (Math.random() * 1.5 - 0.75).toFixed(1);
     // console.log(this.name, this.teamABV, this.fullGLSPAvg);
     if (this.name) {
@@ -342,6 +351,108 @@ class TeObject {
     // console.log(this.name, recTDs)
     // console.log(this.name, rush1Ds)
     // console.log(this.name, rec1Ds)
+
+    this.appProjectedCarriesThisWeek = +carries;
+    this.appProjectedrushYardsThisWeek = +rushYards;
+    this.appProjectedrushTDsThisWeek = +rushTDs;
+    this.appProjectedreceptionsThisWeek = +recs;
+    this.appProjectedrecYardsThisWeek = +recYards;
+    this.appProjectedrecTDsThisWeek = +recTDs;
+    this.appProjectedrushFirstDownsThisWeek = +rush1Ds;
+    this.appProjectedrecFirstDownsThisWeek = +rec1Ds;
+
+    let halfPercentDifference = +(
+      +this.appHalfProjectedPoints / +this.fourForFourHalfPPRProjectedPoints
+    ).toFixed(2);
+    let fullPercentDifference = +(
+      +this.appFullProjectedPoints / +this.fourForFourFullPPRProjectedPoints
+    ).toFixed(2);
+    let differenceToUse = +(
+      (+halfPercentDifference + +fullPercentDifference) /
+      2
+    ).toFixed(2);
+
+    // console.log(this.playerName, differenceToUse);
+
+    let carriesDifferenceToUse = differenceToUse;
+
+    if (differenceToUse < 0.92) {
+      differenceToUse = 0.92;
+    }
+
+    // console.log(this.playerName, this.appHalfProjectedPoints)
+    // console.log(this.playerName, fullPercentDifference)
+    // console.log(this.playerName, halfPercentDifference, fullPercentDifference, differenceToUse)
+
+    this.appProjectedCarriesThisWeek = +(
+      +this.appProjectedCarriesThisWeek * +differenceToUse
+    ).toFixed(1);
+    this.appProjectedrushYardsThisWeek = +(
+      +this.appProjectedrushYardsThisWeek * +differenceToUse
+    ).toFixed(1);
+    this.appProjectedrushTDsThisWeek = +(
+      +this.appProjectedrushTDsThisWeek * +differenceToUse
+    ).toFixed(1);
+    this.appProjectedreceptionsThisWeek = +(
+      +this.appProjectedreceptionsThisWeek * +differenceToUse
+    ).toFixed(1);
+    this.appProjectedrecYardsThisWeek = +(
+      +this.appProjectedrecYardsThisWeek * +differenceToUse
+    ).toFixed(1);
+    this.appProjectedrecTDsThisWeek = +(
+      +this.appProjectedrecTDsThisWeek * +differenceToUse +
+      0.06
+    ).toFixed(1);
+    this.appProjectedrushFirstDownsThisWeek = +(
+      +this.appProjectedrushFirstDownsThisWeek * +differenceToUse
+    ).toFixed(1);
+    this.appProjectedrecFirstDownsThisWeek = +(
+      +this.appProjectedrecFirstDownsThisWeek * +differenceToUse
+    ).toFixed(1);
+    this.appProjectedRBTotalFirstDownsThisWeek = +(
+      this.appProjectedrushFirstDownsThisWeek +
+      this.appProjectedrecFirstDownsThisWeek
+    ).toFixed(1);
+
+    this.astroHalfWRProjection = +(
+      +this.appProjectedrushYardsThisWeek * 0.1 +
+      +(+this.appProjectedrushTDsThisWeek * 6) +
+      +(+this.appProjectedrecYardsThisWeek * 0.1) +
+      +(+this.appProjectedrecTDsThisWeek * 6) +
+      +this.appProjectedreceptionsThisWeek * 0.5
+    ).toFixed(1);
+
+    this.astroFullWRProjection = +(
+      +this.appProjectedrushYardsThisWeek * 0.1 +
+      +(+this.appProjectedrushTDsThisWeek * 6) +
+      +(+this.appProjectedrecYardsThisWeek * 0.1) +
+      +(+this.appProjectedrecTDsThisWeek * 6) +
+      +this.appProjectedreceptionsThisWeek * 1
+    ).toFixed(1);
+
+    if (this.astroHalfWRProjection && this.astroFullWRProjection) {
+      this.appHalfProjectedPoints = +(
+        (+this.appHalfProjectedPoints + +this.astroHalfWRProjection) /
+        2
+      ).toFixed(1);
+      this.appFullProjectedPoints = +(
+        (+this.appFullProjectedPoints + +this.astroFullWRProjection) /
+        2
+      ).toFixed(1);
+    }
+
+    // console.log(this);
+
+    // console.log(
+    //   this.name,
+    //   this.appHalfProjectedPoints,
+    //   this.fourForFourHalfPPRProjectedPoints
+    // );
+    // console.log(
+    //   this.name,
+    //   this.appFullProjectedPoints,
+    //   this.fourForFourFullPPRProjectedPoints
+    // );
   }
 }
 
@@ -368,13 +479,20 @@ allTEs.forEach(function (team) {
     team.TE1.fourForFourFullPPRProjectedPoints
   );
 
-  
   //   projectedRecfirstDownsThisWeek: 0.4
-
 
   // console.log(team.TE1.name, team.TE1.projectedRecfirstDownsThisWeek)
 
-  teObject.calcProjectedPoints(team.TE1.projectedCarriesThisWeek, team.TE1.projectedRushYardsThisWeek, team.TE1.projectedRushTDsThisWeek, team.TE1.projectedReceptionsThisWeek, team.TE1.projectedRecYardsThisWeek, team.TE1.projectedRecTDsThisWeek, team.TE1.projectedRushfirstDownsThisWeek, team.TE1.projectedRecfirstDownsThisWeek);
+  teObject.calcProjectedPoints(
+    team.TE1.projectedCarriesThisWeek,
+    team.TE1.projectedRushYardsThisWeek,
+    team.TE1.projectedRushTDsThisWeek,
+    team.TE1.projectedReceptionsThisWeek,
+    team.TE1.projectedRecYardsThisWeek,
+    team.TE1.projectedRecTDsThisWeek,
+    team.TE1.projectedRushfirstDownsThisWeek,
+    team.TE1.projectedRecfirstDownsThisWeek
+  );
 
   allTEObjectsArray.push(teObject);
 });
@@ -401,7 +519,16 @@ allTEs.forEach(function (team) {
     team.TE2.fourForFourFullPPRProjectedPoints
   );
 
-  teObject.calcProjectedPoints(team.TE2.projectedCarriesThisWeek, team.TE2.projectedRushYardsThisWeek, team.TE2.projectedRushTDsThisWeek, team.TE2.projectedReceptionsThisWeek, team.TE2.projectedRecYardsThisWeek, team.TE2.projectedRecTDsThisWeek, team.TE2.projectedRushfirstDownsThisWeek, team.TE2.projectedRecfirstDownsThisWeek);
+  teObject.calcProjectedPoints(
+    team.TE2.projectedCarriesThisWeek,
+    team.TE2.projectedRushYardsThisWeek,
+    team.TE2.projectedRushTDsThisWeek,
+    team.TE2.projectedReceptionsThisWeek,
+    team.TE2.projectedRecYardsThisWeek,
+    team.TE2.projectedRecTDsThisWeek,
+    team.TE2.projectedRushfirstDownsThisWeek,
+    team.TE2.projectedRecfirstDownsThisWeek
+  );
 
   allTEObjectsArray.push(teObject);
 });
@@ -419,6 +546,19 @@ allTEObjectsArray.forEach(function (player) {
       name,
       position,
       team,
+
+      appProjectedCarriesThisWeek,
+      appProjectedrushYardsThisWeek,
+      appProjectedrushTDsThisWeek,
+      appProjectedreceptionsThisWeek,
+      appProjectedrecYardsThisWeek,
+      appProjectedrecTDsThisWeek,
+      appProjectedrushFirstDownsThisWeek,
+      appProjectedrecFirstDownsThisWeek,
+      appProjectedRBTotalFirstDownsThisWeek,
+      astroHalfWRProjection,
+      astroFullWRProjection,
+
       appHalfProjectedPoints,
       appFullProjectedPoints,
       appTEPProjectedPoints
@@ -426,6 +566,24 @@ allTEObjectsArray.forEach(function (player) {
       this.name = name;
       this.position = position;
       this.team = team;
+
+      this.appProjectedCarriesThisWeek = +appProjectedCarriesThisWeek;
+      this.appProjectedrushYardsThisWeek = +appProjectedrushYardsThisWeek;
+      this.appProjectedrushTDsThisWeek = +appProjectedrushTDsThisWeek;
+      this.appProjectedreceptionsThisWeek = +appProjectedreceptionsThisWeek;
+      this.appProjectedrecYardsThisWeek = +appProjectedrecYardsThisWeek;
+      this.appProjectedrecTDsThisWeek = +appProjectedrecTDsThisWeek;
+      this.appProjectedrushFirstDownsThisWeek =
+        +appProjectedrushFirstDownsThisWeek;
+      this.appProjectedrecFirstDownsThisWeek =
+        +appProjectedrecFirstDownsThisWeek;
+      this.appProjectedRBTotalFirstDownsThisWeek =
+        +appProjectedRBTotalFirstDownsThisWeek;
+
+      this.astroHalfWRProjection = +astroHalfWRProjection;
+
+      this.astroFullWRProjection = +astroFullWRProjection;
+
       this.appHalfProjectedPoints = appHalfProjectedPoints;
       this.appFullProjectedPoints = appFullProjectedPoints;
       this.appTEPProjectedPoints = appTEPProjectedPoints;
@@ -439,6 +597,20 @@ allTEObjectsArray.forEach(function (player) {
       player.name,
       player.position,
       player.teamABV,
+
+      +player.appProjectedCarriesThisWeek,
+      +player.appProjectedrushYardsThisWeek,
+      +player.appProjectedrushTDsThisWeek,
+      +player.appProjectedreceptionsThisWeek,
+      +player.appProjectedrecYardsThisWeek,
+      +player.appProjectedrecTDsThisWeek,
+      +player.appProjectedrushFirstDownsThisWeek,
+      +player.appProjectedrecFirstDownsThisWeek,
+      +player.appProjectedRBTotalFirstDownsThisWeek,
+
+      +player.astroHalfWRProjection,
+      +player.astroFullWRProjection,
+
       player.appHalfProjectedPoints,
       player.appFullProjectedPoints,
       player.appTEPProjectedPoints
