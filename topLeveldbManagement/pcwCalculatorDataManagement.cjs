@@ -95,6 +95,138 @@ const amountToBeAddedToPlayersAgeToKnowWhatAgeTheyWillBeNextMarch =
 ////////////////////////////////////
 /////////////////////////////
 
+///////fetching props data from API and pushing weeklyPropData data to db
+
+// const PropsDataFetch = async function () {
+//   const res = await axios.get(
+//     'https://api.dailyfantasyapi.io/v1/lines/upcoming', {
+//       headers: {
+//         'x-api-key': '52226ad0-6d4a-49fe-8299-4d4c10480166'
+//       },
+//       params: {
+//         sportsbook: 'Underdog',
+//         league: 'NFL'
+//       }
+//     }
+//   );
+//   //   console.log(res.data);
+
+//   const url =
+//     'mongodb+srv://devJay:Hesstrucksarethebest@dailydynasties.syom4sb.mongodb.net/fantasycalcData';
+//   const client = new MongoClient(url);
+
+//   // The database to use
+//   const dbName = 'dailydynasties';
+
+//   async function pushPropsData() {
+//     try {
+//       await client.connect();
+//       console.log('Connected correctly to server');
+//       const db = client.db(dbName);
+
+//       // Use the collection "weeklyPropData"
+//       const col = db.collection('weeklyPropData');
+//       console.log(res.data);
+//       let data = res.data;
+//       // Construct a document
+//       let allPropsData = {
+//         data,
+//       };
+
+//       // Insert a single document, wait for promise so we can read it back
+//       const p = await col.insertOne(allPropsData);
+//       // Find one document
+//       const myDoc = await col.findOne();
+//       // Print to the console
+//       // console.log(myDoc);
+//     } catch (err) {
+//       console.log(err.stack);
+//     } finally {
+//       await client.close();
+//     }
+//   }
+
+//   //uncomment the three commented out lines below and nodemon file to hit https://www.dailyfantasyapi.io/ API(not more than once a day!)
+
+//   // pushPropsData().catch(console.dir);
+//   // return res.data;
+// };
+
+// // PropsDataFetch();
+
+
+
+
+//
+/// fetching prizepicks props 
+
+
+// const prizepicksPropsDataFetch = async function () {
+//   const res = await axios.get(
+//     'https://api.dailyfantasyapi.io/v1/lines/upcoming', {
+//       headers: {
+//         'x-api-key': '52226ad0-6d4a-49fe-8299-4d4c10480166'
+//       },
+//       params: {
+//         sportsbook: 'PrizePicks',
+//         league: 'NFL'
+//       }
+//     }
+//   );
+//   //   console.log(res.data);
+
+//   const url =
+//     'mongodb+srv://devJay:Hesstrucksarethebest@dailydynasties.syom4sb.mongodb.net/fantasycalcData';
+//   const client = new MongoClient(url);
+
+//   // The database to use
+//   const dbName = 'dailydynasties';
+
+//   async function pushPrizepicksPropsData() {
+//     try {
+//       await client.connect();
+//       console.log('Connected correctly to server');
+//       const db = client.db(dbName);
+
+//       // Use the collection "weeklyPropData"
+//       const col = db.collection('prizepicksWeeklyPropsData');
+//       console.log(res.data);
+//       let data = res.data;
+//       // Construct a document
+//       let allPropsData = {
+//         data,
+//       };
+
+//       // Insert a single document, wait for promise so we can read it back
+//       const p = await col.insertOne(allPropsData);
+//       // Find one document
+//       const myDoc = await col.findOne();
+//       // Print to the console
+//       // console.log(myDoc);
+//     } catch (err) {
+//       console.log(err.stack);
+//     } finally {
+//       await client.close();
+//     }
+//   }
+
+//   //uncomment the three commented out lines below and nodemon file to hit https://www.dailyfantasyapi.io/ API(not more than once a day!)
+
+//   pushPrizepicksPropsData().catch(console.dir);
+//   return res.data;
+// };
+
+// prizepicksPropsDataFetch();
+
+
+
+//////////////////////////////
+//////////////////////////////////
+//////////////////////////////////////
+/////////////////////////////////
+//////////////////////////////
+
+
 // making const newData = [];trimmed fantasyCalc data
 
 const newData = [];

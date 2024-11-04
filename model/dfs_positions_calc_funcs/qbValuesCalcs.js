@@ -1,4 +1,7 @@
 // const gameInfo = require('../gameinfo');
+const axios = require('axios');
+const { MongoClient } = require('mongodb');
+
 const allTeams = require('../teamandpositionvariables/allTeamLevelVariables');
 const allQBs = require('../teamandpositionvariables/allQBVariables');
 const qbrawdata = require('../teamandpostionsrawdata/qbrawdata');
@@ -6,6 +9,8 @@ const qbrawdata = require('../teamandpostionsrawdata/qbrawdata');
 const gameInfo = require('../teamandpostionsrawdata/gameinfo');
 const { match } = require('assert');
 const { jaguars } = require('../teamandpostionsrawdata/gameinfo');
+
+
 
 const allQBTotalScores = [];
 const allQBGLSPScores = [];
@@ -19,7 +24,112 @@ const allQBSecondHighlyProjectedPassCatchers = [];
 const allQBNames = [];
 
 const allTeamQBObjects = {};
+
+const propData = []
+const prizepicksPropData = []
+
+
 // console.log(gameInfo);
+
+async function fetchPropsDataFromMongodb() {
+  const url =
+    'mongodb+srv://devJay:Hesstrucksarethebest@dailydynasties.syom4sb.mongodb.net/fantasycalcData';
+  const client = new MongoClient(url);
+
+  // The database to use
+  const dbName = 'dailydynasties';
+  try {
+    await client.connect();
+    // console.log('Connected correctly to server');
+    const db = client.db(dbName);
+
+    // Use the collection "fantasycalcData"
+    const col = db.collection('weeklyPropData');
+
+    // Construct a document
+
+    // Insert a single document, wait for promise so we can read it back
+    // const p = await col.insertOne(weeklyPropData);
+    // Find one document
+    const myDoc = await col.findOne();
+
+    return myDoc;
+    // Print to the console
+    // console.log(myDoc);
+
+    ////////////////////////////////////
+  } catch (err) {
+    console.log(err.stack);
+  } finally {
+    await client.close();
+  }
+}
+
+
+
+
+async function main() {
+  const testDoc = await fetchPropsDataFromMongodb();
+
+  propData.push(testDoc.data);
+  // console.log(testDoc);
+}
+
+// prizepicks prop data fetch from db
+
+async function fetchPropsDataFromMongodb() {
+  const url =
+    'mongodb+srv://devJay:Hesstrucksarethebest@dailydynasties.syom4sb.mongodb.net/fantasycalcData';
+  const client = new MongoClient(url);
+
+  // The database to use
+  const dbName = 'dailydynasties';
+  try {
+    await client.connect();
+    // console.log('Connected correctly to server');
+    const db = client.db(dbName);
+
+    // Use the collection "fantasycalcData"
+    const col = db.collection('prizepicksWeeklyPropsData');
+
+    // Construct a document
+
+    // Insert a single document, wait for promise so we can read it back
+    // const p = await col.insertOne(prizepicksWeeklyPropsData);
+    // Find one document
+    const myDoc = await col.findOne();
+
+    return myDoc;
+    // Print to the console
+    // console.log(myDoc);
+
+    ////////////////////////////////////
+  } catch (err) {
+    console.log(err.stack);
+  } finally {
+    await client.close();
+  }
+}
+
+
+
+
+async function prizepicksmain() {
+  const testDoc = await fetchPropsDataFromMongodb();
+
+  prizepicksPropData.push(testDoc.data);
+  // console.log(testDoc);
+}
+
+
+
+// Call the wrapper function
+// main().catch(console.error).then(() => {
+//   // console.log(propData);
+//   // module.exports = propData
+//   // console.log(propData)
+// });
+
 
 //////////all functions///////
 
@@ -60,6 +170,8 @@ class QbObject {
     appProjQBRushTDs,
     astroQBProjection,
     astroSixPtTDQBProjection,
+
+    UDFantasyPointsProp,
 
     yahooSalary,
     fanduelSalary,
@@ -114,6 +226,8 @@ class QbObject {
     this.appProjQBRushTDs = appProjQBRushTDs;
     this.astroQBProjection = astroQBProjection;
     this.astroSixPtTDQBProjection = astroSixPtTDQBProjection;
+
+    this.UDFantasyPointsProp = UDFantasyPointsProp;
 
     this.yahooSalary = yahooSalary;
     this.fanduelSalary = fanduelSalary;
@@ -1174,12 +1288,134 @@ allQBs.forEach(function (team, i) {
   
   
   // console.log(
-  //   team.name,
-
-  //   percentDiffBetweenAppAndFourProj,
-  //   team.appQBProjectedPoints,
-  //   tempAstroQBProjection
+  //   team.name, "-",
+  //   `PassAttempts - ${tempAppProjPassAttempts}, four - ${team.prjpassattempts}`,  
   // );
+
+  team.UDFantasyPointsProp = 0
+  team.isUDWantToBetFantasyScoreOver = false;
+  team.isUDWantToBetFantasyScoreUnder = false;
+
+  team.UDPassCompletionsProp = 0
+  team.isUDWantToBetCompletionsOver = false;
+  team.isUDWantToBetCompletionsUnder = false;
+  
+
+  main().catch(console.error).then(() => {
+    // console.log(propData);
+    // module.exports = propData
+    propData.forEach(function (topPlayer) {
+      // console.log(player)
+      topPlayer.forEach(function (player) {
+        // console.log(player.players[0].name)
+
+        if(player.players[0].name === playerName) {
+          // console.log(player.players[0].name, player.market, player.line)
+          if(player.market === 'fantasy score') {
+            // console.log(player.players[0].name, player.market, player.line, tempAstroQBProjection, +team.fourForFourFullPPRProjectedPoints, team.glspavg)
+            team.UDFantasyPointsProp = +player.line
+            let tempAstroDiff = +tempAstroQBProjection - +player.line
+            let tempFourDiff = +team.fourForFourFullPPRProjectedPoints - +player.line
+            let tempGLSPDiff = +team.glspavg - +player.line
+              //  console.log(tempGLSPDiff)
+               if(tempAstroDiff > 1.5 && tempFourDiff > 1.5 && tempGLSPDiff > 1.5 || tempAstroDiff > 2.5 && tempFourDiff > 1 && tempGLSPDiff > 1) {
+                 
+                 team.isUDWantToBetFantasyScoreOver = true
+               }
+               if(tempAstroDiff < -1.5 && tempFourDiff < -1.5 && tempGLSPDiff < -1.5 || tempAstroDiff < -2.5 && tempFourDiff < -1 && tempGLSPDiff < -1) {
+                 team.isUDWantToBetFantasyScoreUnder = true
+               }
+          }
+
+          if(player.market === 'pass completions') {
+            // console.log(player.players[0].name, player.market, player.line, tempAppProjCompletions, +team.prjcompletions )
+            team.UDPassCompletionsProp = +player.line
+            let tempAstroDiff = +tempAppProjCompletions - +player.line
+            let tempFourDiff = +team.prjcompletions - +player.line
+            
+              //  console.log(tempGLSPDiff)
+               if(tempAstroDiff > 1.5 && tempFourDiff > 1.5  || tempAstroDiff > 2.5 && tempFourDiff > 1 ) {
+                 
+                 team.isUDWantToBetCompletionsOver = true
+               }
+               if(tempAstroDiff < -1.5 && tempFourDiff < -1.5  || tempAstroDiff < -2.5 && tempFourDiff < -1 ) {
+                 team.isUDWantToBetCompletionsUnder = true
+               }
+          }
+        }
+      })
+    });
+    
+  });
+
+  
+  console.log(team.UDFantasyPointsProp)
+  
+
+  // prizepicks
+
+  team.PPFantasyPointsProp = 0
+  team.isPPWantToBetFantasyScoreOver = false;
+  team.isPPWantToBetFantasyScoreUnder = false;
+
+  team.PPPassCompletionsProp = 0
+  team.isPPWantToBetCompletionsOver = false;
+  team.isPPWantToBetCompletionsUnder = false;
+
+  prizepicksmain().catch(console.error).then(() => {
+    // console.log(prizepicksPropData);
+    // module.exports = prizepicksPropData
+    prizepicksPropData.forEach(function (topPlayer) {
+      // console.log(player)
+      topPlayer.forEach(function (player) {
+        // console.log(player.players[0].name)
+
+        if(player.players[0].name === playerName) {
+          // console.log(player.players[0].name, player.market, player.line)
+          if(player.market === 'fantasy score') {
+            // console.log(player.players[0].name, player.market, player.line, tempAstroQBProjection, +team.fourForFourFullPPRProjectedPoints, team.glspavg)
+            team.PPFantasyPointsProp = +player.line
+            let tempAstroDiff = +tempAstroQBProjection - +player.line
+            let tempFourDiff = +team.fourForFourFullPPRProjectedPoints - +player.line
+            let tempGLSPDiff = +team.glspavg - +player.line
+              //  console.log(tempGLSPDiff)
+               if(tempAstroDiff > 1.5 && tempFourDiff > 1.5 && tempGLSPDiff > 1.5 || tempAstroDiff > 2.5 && tempFourDiff > 1 && tempGLSPDiff > 1) {
+                 
+                 team.isPPWantToBetFantasyScoreOver = true
+               }
+               if(tempAstroDiff < -1.5 && tempFourDiff < -1.5 && tempGLSPDiff < -1.5 || tempAstroDiff < -2.5 && tempFourDiff < -1 && tempGLSPDiff < -1) {
+                 team.isPPWantToBetFantasyScoreUnder = true
+               }
+          }
+
+          if(player.market === 'pass completions') {
+            // console.log(player.players[0].name, player.market, player.line, tempAppProjCompletions, +team.prjcompletions )
+            team.PPPassCompletionsProp = +player.line
+            let tempAstroDiff = +tempAppProjCompletions - +player.line
+            let tempFourDiff = +team.prjcompletions - +player.line
+            
+              //  console.log(tempGLSPDiff)
+               if(tempAstroDiff > 1.5 && tempFourDiff > 1.5  || tempAstroDiff > 2.5 && tempFourDiff > 1 ) {
+                 
+                 team.isPPWantToBetCompletionsOver = true
+               }
+               if(tempAstroDiff < -1.5 && tempFourDiff < -1.5  || tempAstroDiff < -2.5 && tempFourDiff < -1 ) {
+                 team.isPPWantToBetCompletionsUnder = true
+               }
+          }
+        }
+      })
+    });
+
+
+  });
+
+  // console.log(team)
+
+  // console.log(prizepicksPropData)
+
+  
+  
 
   let teamName = '';
   allTeams.forEach(function (giTeam) {
@@ -1235,6 +1471,8 @@ allQBs.forEach(function (team, i) {
     tempAppQBRushTDs,
     tempAstroQBProjection,
     tempAstroSixPtTDQBProjection,
+
+    team.UDFantasyPointsProp,
 
     team.yahooSalary,
     team.fanduelSalary,
@@ -1473,6 +1711,10 @@ allQBObjectsArray.forEach(function (player) {
     appProjQBRushTDs,
     astroQBProjection,
     astroSixPtTDQBProjection,
+
+    UDFantasyPointsProp,
+
+
       appHalfProjectedPoints,
       appFullProjectedPoints,
       appTEPProjectedPoints,
@@ -1493,6 +1735,9 @@ allQBObjectsArray.forEach(function (player) {
     this.appProjQBRushTDs = appProjQBRushTDs;
     this.astroQBProjection = astroQBProjection;
     this.astroSixPtTDQBProjection = astroSixPtTDQBProjection
+
+    this.UDFantasyPointsProp = UDFantasyPointsProp
+
       this.appHalfProjectedPoints = appHalfProjectedPoints;
       this.appFullProjectedPoints = appFullProjectedPoints;
       this.appTEPProjectedPoints = appTEPProjectedPoints;
@@ -1520,6 +1765,8 @@ allQBObjectsArray.forEach(function (player) {
     player.appProjQBRushTDs,
     player.astroQBProjection,
     player.astroSixPtTDQBProjection,
+
+    player.UDFantasyPointsProp,
 
     projectionToUse,
     projectionToUse,
