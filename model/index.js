@@ -35,7 +35,8 @@
 // // Pass the browser instance to the scraper controller
 // scraperController(browserInstance);
 
-const allQBData = require('./dfs_positions_calc_funcs/qbValuesCalcs');
+// const allQBData = require('./dfs_positions_calc_funcs/qbValuesCalcs');
+const getQBData = require('./dfs_positions_calc_funcs/qbValuesCalcs');
 const qbrawdata = require('./teamandpostionsrawdata/qbrawdata');
 // import allQBData from './dfs_positions_calc_funcs/qbValuesCalcs';
 
@@ -62,6 +63,9 @@ const { getSystemErrorName } = require('util');
 const { CommandStartedEvent, ConnectionClosedEvent } = require('mongodb');
 const { all } = require('express/lib/application');
 const { data } = require('autoprefixer');
+
+
+const allQBData = getQBData();
 
 // console.log(allQBData);
 // console.log(allRBData);
