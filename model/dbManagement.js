@@ -1,4 +1,5 @@
-const allQBData = require('./dfs_positions_calc_funcs/qbValuesCalcs');
+const allQBData = require('./dfs_positions_calc_funcs/qbValuesCalcs').allQBData;
+const propsQBData = require('./dfs_positions_calc_funcs/qbValuesCalcs').allQBProjectionsObjects;
 const allRBData = require('./dfs_positions_calc_funcs/rbValuesCalcs');
 const allWRData = require('./dfs_positions_calc_funcs/wrValuesCalcs');
 const allTEProjectionsObjects = require('./dfs_positions_calc_funcs/teValuesCalcs');
@@ -131,6 +132,21 @@ async function runQBProspectModel() {
     await client.close();
   }
 }
+
+async function someFunction() {
+  const propsqbData = await propsQBData();
+  
+  // console.log(propsqbData);
+
+  propsqbData.forEach((player) => {
+    // console.log(player.name);
+    if(player.name === 'Baker Mayfield' || player.name === 'Patrick Mahomes') {
+      // console.log(player)
+    }
+  });
+}
+
+someFunction()
 
 ///
 // console.log(allQBData);

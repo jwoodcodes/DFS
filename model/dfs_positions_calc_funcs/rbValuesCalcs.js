@@ -2,7 +2,7 @@ const allTeams = require('../teamandpositionvariables/allTeamLevelVariables');
 const allRBs = require('../teamandpositionvariables/allRBVariables');
 const rbrawdata = require('../teamandpostionsrawdata/rbrawdata');
 const gameInfo = require('../teamandpostionsrawdata/gameinfo');
-const allQBData = require('./qbValuesCalcs');
+const allQBData = require('./qbValuesCalcs').allQBData;
 const { ThemeProvider } = require('styled-components');
 
 const rbOnenumOfMatchingRoleWeeks = [];

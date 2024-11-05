@@ -2,9 +2,15 @@
 const axios = require('axios');
 const { MongoClient } = require('mongodb');
 
+
+
+
+
 const allTeams = require('../teamandpositionvariables/allTeamLevelVariables');
 const allQBs = require('../teamandpositionvariables/allQBVariables');
 const qbrawdata = require('../teamandpostionsrawdata/qbrawdata');
+
+const fetchTheData = require('./propsDataFetcher');
 
 const gameInfo = require('../teamandpostionsrawdata/gameinfo');
 const { match } = require('assert');
@@ -25,110 +31,20 @@ const allQBNames = [];
 
 const allTeamQBObjects = {};
 
-const propData = []
-const prizepicksPropData = []
+
 
 
 // console.log(gameInfo);
 
-async function fetchPropsDataFromMongodb() {
-  const url =
-    'mongodb+srv://devJay:Hesstrucksarethebest@dailydynasties.syom4sb.mongodb.net/fantasycalcData';
-  const client = new MongoClient(url);
-
-  // The database to use
-  const dbName = 'dailydynasties';
-  try {
-    await client.connect();
-    // console.log('Connected correctly to server');
-    const db = client.db(dbName);
-
-    // Use the collection "fantasycalcData"
-    const col = db.collection('weeklyPropData');
-
-    // Construct a document
-
-    // Insert a single document, wait for promise so we can read it back
-    // const p = await col.insertOne(weeklyPropData);
-    // Find one document
-    const myDoc = await col.findOne();
-
-    return myDoc;
-    // Print to the console
-    // console.log(myDoc);
-
-    ////////////////////////////////////
-  } catch (err) {
-    console.log(err.stack);
-  } finally {
-    await client.close();
-  }
-}
 
 
 
 
-async function main() {
-  const testDoc = await fetchPropsDataFromMongodb();
-
-  propData.push(testDoc.data);
-  // console.log(testDoc);
-}
-
-// prizepicks prop data fetch from db
-
-async function fetchPropsDataFromMongodb() {
-  const url =
-    'mongodb+srv://devJay:Hesstrucksarethebest@dailydynasties.syom4sb.mongodb.net/fantasycalcData';
-  const client = new MongoClient(url);
-
-  // The database to use
-  const dbName = 'dailydynasties';
-  try {
-    await client.connect();
-    // console.log('Connected correctly to server');
-    const db = client.db(dbName);
-
-    // Use the collection "fantasycalcData"
-    const col = db.collection('prizepicksWeeklyPropsData');
-
-    // Construct a document
-
-    // Insert a single document, wait for promise so we can read it back
-    // const p = await col.insertOne(prizepicksWeeklyPropsData);
-    // Find one document
-    const myDoc = await col.findOne();
-
-    return myDoc;
-    // Print to the console
-    // console.log(myDoc);
-
-    ////////////////////////////////////
-  } catch (err) {
-    console.log(err.stack);
-  } finally {
-    await client.close();
-  }
-}
 
 
 
 
-async function prizepicksmain() {
-  const testDoc = await fetchPropsDataFromMongodb();
 
-  prizepicksPropData.push(testDoc.data);
-  // console.log(testDoc);
-}
-
-
-
-// Call the wrapper function
-// main().catch(console.error).then(() => {
-//   // console.log(propData);
-//   // module.exports = propData
-//   // console.log(propData)
-// });
 
 
 //////////all functions///////
@@ -159,6 +75,16 @@ class QbObject {
     twentyFifthPercentProjectedPoints,
     seventyFifthPercentProjectedPoints,
     fourForFourFullPPRProjectedPoints,
+
+    prjpassattempts, 
+        prjcompletions, 
+        prjPassYards, 
+        prjpassingTDs, 
+        projectedPassingTDs, 
+        prjINTs, 
+        prjRushAttempts, 
+        prjRushYards, 
+        prjRushTDs, 
 
     appProjPassAttempts,
     appProjCompletions,
@@ -215,6 +141,16 @@ class QbObject {
     this.twentyFifthPercentProjectedPoints;
     this.seventyFifthPercentProjectedPoints;
     this.fourForFourFullPPRProjectedPoints = fourForFourFullPPRProjectedPoints;
+
+    this.prjpassattempts = prjpassattempts;
+        this.prjcompletions = prjcompletions;
+        this.prjPassYards = prjPassYards; 
+        this.prjpassingTDs = prjpassingTDs;
+        this.projectedPassingTDs = projectedPassingTDs;
+        this.prjINTs = prjINTs;
+        this.prjRushAttempts = prjRushAttempts;
+        this.prjRushYards = prjRushYards;
+        this.prjRushTDs = prjRushTDs;
 
     this.appProjPassAttempts = appProjPassAttempts;
     this.appProjCompletions = appProjCompletions;
@@ -1210,6 +1146,8 @@ allQBs.forEach(function (team, i) {
 
   // console.log(team);
 
+  
+
   let tempAdj = +(+team.prjPassYards * .05).toFixed(1);
   let adj = +team.prjPassYards - +tempAdj
 
@@ -1292,130 +1230,7 @@ allQBs.forEach(function (team, i) {
   //   `PassAttempts - ${tempAppProjPassAttempts}, four - ${team.prjpassattempts}`,  
   // );
 
-  team.UDFantasyPointsProp = 0
-  team.isUDWantToBetFantasyScoreOver = false;
-  team.isUDWantToBetFantasyScoreUnder = false;
-
-  team.UDPassCompletionsProp = 0
-  team.isUDWantToBetCompletionsOver = false;
-  team.isUDWantToBetCompletionsUnder = false;
-  
-
-  main().catch(console.error).then(() => {
-    // console.log(propData);
-    // module.exports = propData
-    propData.forEach(function (topPlayer) {
-      // console.log(player)
-      topPlayer.forEach(function (player) {
-        // console.log(player.players[0].name)
-
-        if(player.players[0].name === playerName) {
-          // console.log(player.players[0].name, player.market, player.line)
-          if(player.market === 'fantasy score') {
-            // console.log(player.players[0].name, player.market, player.line, tempAstroQBProjection, +team.fourForFourFullPPRProjectedPoints, team.glspavg)
-            team.UDFantasyPointsProp = +player.line
-            let tempAstroDiff = +tempAstroQBProjection - +player.line
-            let tempFourDiff = +team.fourForFourFullPPRProjectedPoints - +player.line
-            let tempGLSPDiff = +team.glspavg - +player.line
-              //  console.log(tempGLSPDiff)
-               if(tempAstroDiff > 1.5 && tempFourDiff > 1.5 && tempGLSPDiff > 1.5 || tempAstroDiff > 2.5 && tempFourDiff > 1 && tempGLSPDiff > 1) {
-                 
-                 team.isUDWantToBetFantasyScoreOver = true
-               }
-               if(tempAstroDiff < -1.5 && tempFourDiff < -1.5 && tempGLSPDiff < -1.5 || tempAstroDiff < -2.5 && tempFourDiff < -1 && tempGLSPDiff < -1) {
-                 team.isUDWantToBetFantasyScoreUnder = true
-               }
-          }
-
-          if(player.market === 'pass completions') {
-            // console.log(player.players[0].name, player.market, player.line, tempAppProjCompletions, +team.prjcompletions )
-            team.UDPassCompletionsProp = +player.line
-            let tempAstroDiff = +tempAppProjCompletions - +player.line
-            let tempFourDiff = +team.prjcompletions - +player.line
-            
-              //  console.log(tempGLSPDiff)
-               if(tempAstroDiff > 1.5 && tempFourDiff > 1.5  || tempAstroDiff > 2.5 && tempFourDiff > 1 ) {
-                 
-                 team.isUDWantToBetCompletionsOver = true
-               }
-               if(tempAstroDiff < -1.5 && tempFourDiff < -1.5  || tempAstroDiff < -2.5 && tempFourDiff < -1 ) {
-                 team.isUDWantToBetCompletionsUnder = true
-               }
-          }
-        }
-      })
-    });
-    
-  });
-
-  
-  console.log(team.UDFantasyPointsProp)
-  
-
-  // prizepicks
-
-  team.PPFantasyPointsProp = 0
-  team.isPPWantToBetFantasyScoreOver = false;
-  team.isPPWantToBetFantasyScoreUnder = false;
-
-  team.PPPassCompletionsProp = 0
-  team.isPPWantToBetCompletionsOver = false;
-  team.isPPWantToBetCompletionsUnder = false;
-
-  prizepicksmain().catch(console.error).then(() => {
-    // console.log(prizepicksPropData);
-    // module.exports = prizepicksPropData
-    prizepicksPropData.forEach(function (topPlayer) {
-      // console.log(player)
-      topPlayer.forEach(function (player) {
-        // console.log(player.players[0].name)
-
-        if(player.players[0].name === playerName) {
-          // console.log(player.players[0].name, player.market, player.line)
-          if(player.market === 'fantasy score') {
-            // console.log(player.players[0].name, player.market, player.line, tempAstroQBProjection, +team.fourForFourFullPPRProjectedPoints, team.glspavg)
-            team.PPFantasyPointsProp = +player.line
-            let tempAstroDiff = +tempAstroQBProjection - +player.line
-            let tempFourDiff = +team.fourForFourFullPPRProjectedPoints - +player.line
-            let tempGLSPDiff = +team.glspavg - +player.line
-              //  console.log(tempGLSPDiff)
-               if(tempAstroDiff > 1.5 && tempFourDiff > 1.5 && tempGLSPDiff > 1.5 || tempAstroDiff > 2.5 && tempFourDiff > 1 && tempGLSPDiff > 1) {
-                 
-                 team.isPPWantToBetFantasyScoreOver = true
-               }
-               if(tempAstroDiff < -1.5 && tempFourDiff < -1.5 && tempGLSPDiff < -1.5 || tempAstroDiff < -2.5 && tempFourDiff < -1 && tempGLSPDiff < -1) {
-                 team.isPPWantToBetFantasyScoreUnder = true
-               }
-          }
-
-          if(player.market === 'pass completions') {
-            // console.log(player.players[0].name, player.market, player.line, tempAppProjCompletions, +team.prjcompletions )
-            team.PPPassCompletionsProp = +player.line
-            let tempAstroDiff = +tempAppProjCompletions - +player.line
-            let tempFourDiff = +team.prjcompletions - +player.line
-            
-              //  console.log(tempGLSPDiff)
-               if(tempAstroDiff > 1.5 && tempFourDiff > 1.5  || tempAstroDiff > 2.5 && tempFourDiff > 1 ) {
-                 
-                 team.isPPWantToBetCompletionsOver = true
-               }
-               if(tempAstroDiff < -1.5 && tempFourDiff < -1.5  || tempAstroDiff < -2.5 && tempFourDiff < -1 ) {
-                 team.isPPWantToBetCompletionsUnder = true
-               }
-          }
-        }
-      })
-    });
-
-
-  });
-
-  // console.log(team)
-
-  // console.log(prizepicksPropData)
-
-  
-  
+ 
 
   let teamName = '';
   allTeams.forEach(function (giTeam) {
@@ -1460,6 +1275,16 @@ allQBs.forEach(function (team, i) {
     team.twentyFifthPercentProjectedPoints,
     team.seventyFifthPercentProjectedPoints,
     team.fourForFourFullPPRProjectedPoints,
+
+    team.prjpassattempts, 
+    team.prjcompletions, 
+    team.prjPassYards, 
+    team.prjpassingTDs, 
+    team.projectedPassingTDs, 
+    team.prjINTs, 
+    team.prjRushAttempts, 
+    team.prjRushYards, 
+    team.prjRushTDs, 
 
     tempAppProjPassAttempts,
     tempAppProjCompletions,
@@ -1691,92 +1516,180 @@ const allQBData = {
 
 // console.log(allQBData);
 
+//
+///
+/////    PROJECTIONS    ////
+
 const allQBProjectionsObjects = [];
 
-allQBObjectsArray.forEach(function (player) {
-  // console.log(player);
-  class ProjectionsObject {
-    constructor(
-      currentWeek,
-      name,
-      position,
-      team,
-      appProjPassAttempts,
-    appProjCompletions,
-    appProjPassingYards,
-    appProjPassTDs,
-    appProjINTs,
-    appProjQBRushAttempts,
-    appProjQBRushYards,
-    appProjQBRushTDs,
-    astroQBProjection,
-    astroSixPtTDQBProjection,
+async function propsData() {
+  const propsData = await fetchTheData();
+  // Now you can work with propsData here
+  // console.log(propsData);
+  propsData.forEach((player) => {
+    // console.log(player.name)
+    // console.log(player.udPassCompletionsProp);
+    allQBObjectsArray.forEach((qb) => {
+      // console.log(qb.playerName)
+      if (qb.playerName === player.name) {
+      
+        // console.log(qb)
+        // console.log(player.udPassCompletionsProp)
+        // console.log(player)
 
-    UDFantasyPointsProp,
+        qb.udPassCompletionsProp = player.udPassCompletionsProp;
+        qb.ppPassCompletionsProp = player.ppPassCompletionsProp;
+        qb.udPassAttemptsProp = player.udPassAttemptsProp;
+        qb.ppPassAttemptsProp = player.ppPassAttemptsProp;
+        qb.udPassYardsProp = player.udPassYardsProp;
+        qb.ppPassYardsProp = player.ppPassYardsProp;
+        qb.udPassTDsProp = player.udPassTDsProp;
+        qb.ppPassTDsProp = player.ppPassTDsProp;
+        qb.udRushYardsProp = player.udRushYardssProp;
+        qb.ppRushYardsProp = player.ppRushYardssProp
+        qb.udPassPlusRushYardsProp = player.udPassPlusRushYardsProp;
+        qb.ppPassPlusRushYardsProp = player.ppPassPlusRushYardsProp
+        qb.udFantasyScoreProp = player.udFantasyScoreProp;
+        qb.ppFantasyScoreProp = player.ppFantasyScoreProp
 
+        // console.log(qb.playerName, qb.appProjCompletions, player.ppPassCompletionsProp)
+      }
+    })
+  })
 
-      appHalfProjectedPoints,
-      appFullProjectedPoints,
-      appTEPProjectedPoints,
-      appQBSixPointForPassingTDProjectedPoints,
-      staticFourPointPerProjection
-    ) {
-      this.currentWeek = currentWeek;
-      this.name = name;
-      this.position = position;
-      this.team = team;
-      this.appProjPassAttempts = appProjPassAttempts;
-    this.appProjCompletions = appProjCompletions;
-    this.appProjPassingYards = appProjPassingYards;
-    this.appProjPassTDs = appProjPassTDs;
-    this.appProjINTs = appProjINTs;
-    this.appProjQBRushAttempts = appProjQBRushAttempts;
-    this.appProjQBRushYards = appProjQBRushYards;
-    this.appProjQBRushTDs = appProjQBRushTDs;
-    this.astroQBProjection = astroQBProjection;
-    this.astroSixPtTDQBProjection = astroSixPtTDQBProjection
-
-    this.UDFantasyPointsProp = UDFantasyPointsProp
-
-      this.appHalfProjectedPoints = appHalfProjectedPoints;
-      this.appFullProjectedPoints = appFullProjectedPoints;
-      this.appTEPProjectedPoints = appTEPProjectedPoints;
-      this.appQBSixPointForPassingTDProjectedPoints =
-        appQBSixPointForPassingTDProjectedPoints;
-      this.staticFourPointPerProjection = staticFourPointPerProjection;
+  allQBObjectsArray.forEach(function (player) {
+    // console.log(player);
+    class ProjectionsObject {
+      constructor(
+        currentWeek,
+        name,
+        position,
+        team,
+        appProjPassAttempts,
+      appProjCompletions,
+      appProjPassingYards,
+      appProjPassTDs,
+      appProjINTs,
+      appProjQBRushAttempts,
+      appProjQBRushYards,
+      appProjQBRushTDs,
+      astroQBProjection,
+      astroSixPtTDQBProjection,
+  
+      udPassCompletionsProp,
+      ppPassCompletionsProp,
+      udPassAttemptsProp,
+      ppPassAttemptsProp,
+      udPassYardsProp,
+      ppPassYardsProp,
+      udPassTDsProp,
+      ppPassTDsProp,
+      udRushYardsProp,
+      ppRushYardsProp,
+      udPassPlusRushYardsProp,
+      ppPassPlusRushYardsProp,
+      udFantasyScoreProp,
+      ppFantasyScoreProp,
+  
+  
+        appHalfProjectedPoints,
+        appFullProjectedPoints,
+        appTEPProjectedPoints,
+        appQBSixPointForPassingTDProjectedPoints,
+        staticFourPointPerProjection
+      ) {
+        this.currentWeek = currentWeek;
+        this.name = name;
+        this.position = position;
+        this.team = team;
+        this.appProjPassAttempts = appProjPassAttempts;
+      this.appProjCompletions = appProjCompletions;
+      this.appProjPassingYards = appProjPassingYards;
+      this.appProjPassTDs = appProjPassTDs;
+      this.appProjINTs = appProjINTs;
+      this.appProjQBRushAttempts = appProjQBRushAttempts;
+      this.appProjQBRushYards = appProjQBRushYards;
+      this.appProjQBRushTDs = appProjQBRushTDs;
+      this.astroQBProjection = astroQBProjection;
+      this.astroSixPtTDQBProjection = astroSixPtTDQBProjection
+  
+      this.udPassCompletionsProp = udPassCompletionsProp
+      this.ppPassCompletionsProp = ppPassCompletionsProp
+      this.udPassAttemptsProp = udPassAttemptsProp
+      this.ppPassAttemptsProp = ppPassAttemptsProp
+      this.udPassYardsProp = udPassYardsProp
+      this.ppPassYardsProp = ppPassYardsProp
+      this.udPassTDsProp = udPassTDsProp
+      this.ppPassTDsProp = ppPassTDsProp
+      this.udRushYardsProp = udRushYardsProp
+      this.ppRushYardsProp = ppRushYardsProp
+      this.udPassPlusRushYardsProp = udPassPlusRushYardsProp
+      this.ppPassPlusRushYardsProp = ppPassPlusRushYardsProp
+      this.udFantasyScoreProp = udFantasyScoreProp
+      this.ppFantasyScoreProp = ppFantasyScoreProp
+  
+        this.appHalfProjectedPoints = appHalfProjectedPoints;
+        this.appFullProjectedPoints = appFullProjectedPoints;
+        this.appTEPProjectedPoints = appTEPProjectedPoints;
+        this.appQBSixPointForPassingTDProjectedPoints =
+          appQBSixPointForPassingTDProjectedPoints;
+        this.staticFourPointPerProjection = staticFourPointPerProjection;
+      }
     }
-  }
+  
+    let projectionToUse = +player.appProjectedPoints.toFixed(1);
+  
+    let qbProjectionsObject = new ProjectionsObject(
+      gameInfo.week.currentWeek,
+      player.playerName,
+      player.position,
+      player.teamABV,
+  
+      player.appProjPassAttempts,
+      player.appProjCompletions,
+      player.appProjPassingYards,
+      player.appProjPassTDs,
+      player.appProjINTs,
+      player.appProjQBRushAttempts,
+      player.appProjQBRushYards,
+      player.appProjQBRushTDs,
+      player.astroQBProjection,
+      player.astroSixPtTDQBProjection,
+  
+      player.udPassCompletionsProp,
+      player.ppPassCompletionsProp,
+      player.udPassAttemptsProp,
+      player.ppPassAttemptsProp,
+      player.udPassYardsProp,
+      player.ppPassYardsProp,
+      player.udPassTDsProp,
+      player.ppPassTDsProp,
+      player.udRushYardsProp,
+      player.ppRushYardsProp,
+      player.udPassPlusRushYardsProp,
+      player.ppPassPlusRushYardsProp,
+      player.udFantasyScoreProp,
+      player.ppFantasyScoreProp,
+  
+      projectionToUse,
+      projectionToUse,
+      projectionToUse,
+      player.appQBSixPointForPassingTDProjectedPoints,
+      projectionToUse
+    );
+  
+    allQBProjectionsObjects.push(qbProjectionsObject);
+  });
+  return allQBProjectionsObjects
+}
 
-  let projectionToUse = +player.appProjectedPoints.toFixed(1);
+propsData()
 
-  let qbProjectionsObject = new ProjectionsObject(
-    gameInfo.week.currentWeek,
-    player.playerName,
-    player.position,
-    player.teamABV,
 
-    player.appProjPassAttempts,
-    player.appProjCompletions,
-    player.appProjPassingYards,
-    player.appProjPassTDs,
-    player.appProjINTs,
-    player.appProjQBRushAttempts,
-    player.appProjQBRushYards,
-    player.appProjQBRushTDs,
-    player.astroQBProjection,
-    player.astroSixPtTDQBProjection,
 
-    player.UDFantasyPointsProp,
 
-    projectionToUse,
-    projectionToUse,
-    projectionToUse,
-    player.appQBSixPointForPassingTDProjectedPoints,
-    projectionToUse
-  );
 
-  allQBProjectionsObjects.push(qbProjectionsObject);
-});
+
 
 // console.log(allTeamQBObjects);
 
@@ -1785,4 +1698,5 @@ allQBData.allQBProjectionsObjects = allQBProjectionsObjects;
 // console.log(allQBData.allQBProjectionsObjects);
 // console.log(allQBData);
 
-module.exports = allQBData;
+module.exports.allQBProjectionsObjects = propsData
+module.exports.allQBData = allQBData;

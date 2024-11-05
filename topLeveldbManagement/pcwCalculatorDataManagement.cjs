@@ -95,7 +95,10 @@ const amountToBeAddedToPlayersAgeToKnowWhatAgeTheyWillBeNextMarch =
 ////////////////////////////////////
 /////////////////////////////
 
-///////fetching props data from API and pushing weeklyPropData data to db
+
+
+
+/////fetching underdog props data from API and pushing weeklyPropData data to db
 
 // const PropsDataFetch = async function () {
 //   const res = await axios.get(
@@ -109,56 +112,55 @@ const amountToBeAddedToPlayersAgeToKnowWhatAgeTheyWillBeNextMarch =
 //       }
 //     }
 //   );
-//   //   console.log(res.data);
+//     console.log(res.data);
 
-//   const url =
-//     'mongodb+srv://devJay:Hesstrucksarethebest@dailydynasties.syom4sb.mongodb.net/fantasycalcData';
-//   const client = new MongoClient(url);
+  // const url =
+  //   'mongodb+srv://devJay:Hesstrucksarethebest@dailydynasties.syom4sb.mongodb.net/fantasycalcData';
+  // const client = new MongoClient(url);
 
-//   // The database to use
-//   const dbName = 'dailydynasties';
+  // // The database to use
+  // const dbName = 'dailydynasties';
 
-//   async function pushPropsData() {
-//     try {
-//       await client.connect();
-//       console.log('Connected correctly to server');
-//       const db = client.db(dbName);
+  // async function pushPropsData() {
+  //   try {
+  //     await client.connect();
+  //     console.log('Connected correctly to server');
+  //     const db = client.db(dbName);
 
-//       // Use the collection "weeklyPropData"
-//       const col = db.collection('weeklyPropData');
-//       console.log(res.data);
-//       let data = res.data;
-//       // Construct a document
-//       let allPropsData = {
-//         data,
-//       };
+  //     // Use the collection "weeklyPropData"
+  //     const col = db.collection('weeklyPropData');
+  //     console.log(res.data);
+  //     let data = res.data;
+  //     // Construct a document
+  //     let allPropsData = {
+  //       data,
+  //     };
 
-//       // Insert a single document, wait for promise so we can read it back
-//       const p = await col.insertOne(allPropsData);
-//       // Find one document
-//       const myDoc = await col.findOne();
-//       // Print to the console
-//       // console.log(myDoc);
-//     } catch (err) {
-//       console.log(err.stack);
-//     } finally {
-//       await client.close();
-//     }
-//   }
+  //     // Insert a single document, wait for promise so we can read it back
+  //     const p = await col.insertOne(allPropsData);
+  //     // Find one document
+  //     const myDoc = await col.findOne();
+  //     // Print to the console
+  //     // console.log(myDoc);
+  //   } catch (err) {
+  //     console.log(err.stack);
+  //   } finally {
+  //     await client.close();
+  //   }
+  // }
 
-//   //uncomment the three commented out lines below and nodemon file to hit https://www.dailyfantasyapi.io/ API(not more than once a day!)
+  //uncomment the three commented out lines below and nodemon file to hit https://www.dailyfantasyapi.io/ API(not more than once a day!)
 
-//   // pushPropsData().catch(console.dir);
-//   // return res.data;
+  // pushPropsData().catch(console.dir);
+  // return res.data;
 // };
 
-// // PropsDataFetch();
-
+// PropsDataFetch();
 
 
 
 //
-/// fetching prizepicks props 
+/// fetching prizepicks props from API and sending to db
 
 
 // const prizepicksPropsDataFetch = async function () {
