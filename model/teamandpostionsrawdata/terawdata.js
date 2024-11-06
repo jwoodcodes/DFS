@@ -12,7 +12,8 @@ const allFlexGLSP = require('../datafilesmadefrom4for4CSVs/allFlexGLSP');
 const QBWeeklyStatExplorerLastFiveWeeksCategoryPassing = require('../datafilesmadefrom4for4CSVs/QBWeeklyStatExplorerLastFiveWeeksCategoryPassing');
 const gameInfo = require('./gameinfo');
 const allTeams = require('../teamandpositionvariables/allTeamLevelVariables');
-const allQBData = require('../dfs_positions_calc_funcs/qbValuesCalcs').allQBData;
+const allQBData = require('../dfs_positions_calc_funcs/qbValuesCalcs');
+// const allQBData = require('../dfs_positions_calc_funcs/qbValuesCalcs').allQBData;
 
 const te4for4FantasyPointsBrowserLastFiveWeeks = require('../datafilesmadefrom4for4CSVs/te4for4FantasyPointsBrowserLastFiveWeeks');
 
