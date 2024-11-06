@@ -1522,168 +1522,448 @@ const allQBData = {
 
 const allQBProjectionsObjects = [];
 
-async function propsData() {
-  const propsData = await fetchTheData();
-  // Now you can work with propsData here
-  // console.log(propsData);
-  propsData.forEach((player) => {
-    // console.log(player.name)
-    // console.log(player.udPassCompletionsProp);
-    allQBObjectsArray.forEach((qb) => {
-      // console.log(qb.playerName)
-      if (qb.playerName === player.name) {
+// async function propsData() {
+//   const propsData = await fetchTheData();
+//   // Now you can work with propsData here
+//   // console.log(propsData);
+//   propsData.forEach((player) => {
+//     // console.log(player.name)
+//     // console.log(player.udPassCompletionsProp);
+//     allQBObjectsArray.forEach((qb) => {
+//       // console.log(qb.playerName)
+//       if (qb.playerName === player.name) {
       
-        // console.log(qb)
-        // console.log(player.udPassCompletionsProp)
-        // console.log(player)
+//         // console.log(qb)
+//         // console.log(player.udPassCompletionsProp)
+//         // console.log(player)
 
-        qb.udPassCompletionsProp = player.udPassCompletionsProp;
-        qb.ppPassCompletionsProp = player.ppPassCompletionsProp;
-        qb.udPassAttemptsProp = player.udPassAttemptsProp;
-        qb.ppPassAttemptsProp = player.ppPassAttemptsProp;
-        qb.udPassYardsProp = player.udPassYardsProp;
-        qb.ppPassYardsProp = player.ppPassYardsProp;
-        qb.udPassTDsProp = player.udPassTDsProp;
-        qb.ppPassTDsProp = player.ppPassTDsProp;
-        qb.udRushYardsProp = player.udRushYardssProp;
-        qb.ppRushYardsProp = player.ppRushYardssProp
-        qb.udPassPlusRushYardsProp = player.udPassPlusRushYardsProp;
-        qb.ppPassPlusRushYardsProp = player.ppPassPlusRushYardsProp
-        qb.udFantasyScoreProp = player.udFantasyScoreProp;
-        qb.ppFantasyScoreProp = player.ppFantasyScoreProp
+//         if(qb.playerName) {
 
-        // console.log(qb.playerName, qb.appProjCompletions, player.ppPassCompletionsProp)
-      }
-    })
-  })
+//         qb.udPassAttemptsProp = { prop: player.udPassAttemptsProp, isOverRecomended: false };
+//         qb.ppPassAttemptsProp = { prop: player.ppPassAttemptsProp, isOverRecomended: false };
+//         qb.udPassCompletionsProp = { prop: player.udPassCompletionsProp, isOverRecomended: false };
+//         qb.ppPassCompletionsProp = { prop: player.ppPassCompletionsProp, isOverRecomended: false };
+//         qb.udPassYardsProp = { prop: player.udPassYardsProp, isOverRecomended: false };
+//         qb.ppPassYardsProp = { prop: player.ppPassYardsProp, isOverRecomended: false };
+//         qb.udPassTDsProp = { prop: player.udPassTDsProp, isOverRecomended: false };
+//         qb.ppPassTDsProp = { prop: player.ppPassTDsProp, isOverRecomended: false };
+//         qb.udRushYardsProp = { prop: player.udRushYardssProp, isOverRecomended: false };
+//         qb.ppRushYardsProp = { prop: player.ppRushYardssProp, isOverRecomended: false };
+//         qb.udPassPlusRushYardsProp = { prop: player.udPassPlusRushYardsProp, isOverRecomended: false };
+//         qb.ppPassPlusRushYardsProp = { prop: player.ppPassPlusRushYardsProp, isOverRecomended: false };
+//         qb.udFantasyScoreProp = { prop: player.udFantasyScoreProp, isOverRecomended: false };
+//         qb.ppFantasyScoreProp = { prop: player.ppFantasyScoreProp, isOverRecomended: false };
+//         // qb.ppPassCompletionsProp = player.ppPassCompletionsProp;  
+//         // qb.udPassYardsProp = player.udPassYardsProp;
+//         // qb.ppPassYardsProp = player.ppPassYardsProp;
+//         // qb.udPassTDsProp = player.udPassTDsProp;
+//         // qb.ppPassTDsProp = player.ppPassTDsProp;
+//         // qb.udRushYardsProp = player.udRushYardssProp;
+//         // qb.ppRushYardsProp = player.ppRushYardssProp
+//         // qb.udPassPlusRushYardsProp = player.udPassPlusRushYardsProp;
+//         // qb.ppPassPlusRushYardsProp = player.ppPassPlusRushYardsProp
+//         // qb.udFantasyScoreProp = player.udFantasyScoreProp;
+//         // qb.ppFantasyScoreProp = player.ppFantasyScoreProp
 
-  allQBObjectsArray.forEach(function (player) {
-    // console.log(player);
-    class ProjectionsObject {
-      constructor(
-        currentWeek,
-        name,
-        position,
-        team,
-        appProjPassAttempts,
-      appProjCompletions,
-      appProjPassingYards,
-      appProjPassTDs,
-      appProjINTs,
-      appProjQBRushAttempts,
-      appProjQBRushYards,
-      appProjQBRushTDs,
-      astroQBProjection,
-      astroSixPtTDQBProjection,
+//         // console.log(qb.playerName, qb.appProjCompletions, player.udPassCompletionsProp, player.ppPassCompletionsProp)
+
+//         //
+//         //             passattempts
+//         //
+
+//            //normal
+
+//         if(qb.prjpassattempts - qb.udPassAttemptsProp.prop > 3 && qb.appProjPassAttempts - qb.udPassAttemptsProp.prop > 3) {      
+//           qb.udPassAttemptsProp.isOverRecomended = true
+//         }
+//         if(qb.prjpassattempts - qb.ppPassAttemptsProp.prop > 3 && qb.appProjPassAttempts - qb.ppPassAttemptsProp.prop > 3) {      
+//           qb.ppPassAttemptsProp.isOverRecomended = true
+//         }
+
+//            // high confidence
+
+//            if(qb.prjpassattempts - qb.udPassAttemptsProp.prop > 6 && qb.appProjPassAttempts - qb.udPassAttemptsProp.prop > 6) {      
+//             qb.udPassAttemptsProp.highOverConfidence = true
+//           }
+//           if(qb.prjpassattempts - qb.ppPassAttemptsProp.prop > 6 && qb.appProjPassAttempts - qb.ppPassAttemptsProp.prop > 6) {      
+//             qb.ppPassAttemptsProp.highOverConfidence = true
+//           }
+
+//       //
+//         //            PassCompletions
+//         //
+
+
+//             //normal
+
+//         if(qb.prjcompletions - qb.udPassCompletionsProp.prop > 2.5 && qb.appProjCompletions - qb.udPassCompletionsProp.prop > 2.5) {      
+//           qb.udPassCompletionsProp.isOverRecomended = true
+//         }
+//         if(qb.prjcompletions - qb.ppPassCompletionsProp.prop > 2.5 && qb.appProjCompletions - qb.ppPassCompletionsProp.prop > 2.5) {      
+//           qb.ppPassCompletionsProp.isOverRecomended = true
+//           // console.log(qb.playerName, qb.ppPassCompletionsProp.prop, qb.prjcompletions, qb.appProjCompletions )
+//         }
+        
+//         // console.log(qb.playerName, qb.ppPassCompletionsProp.prop, qb.prjcompletions, qb.appProjCompletions )
+
+//             // high confidence
+
+//         if(qb.prjcompletions - qb.udPassCompletionsProp.prop > 5 && qb.appProjCompletions - qb.udPassCompletionsProp.prop > 5) {      
+//               qb.udPassCompletionsProp.highOverConfidence = true
+//             }
+//         if(qb.prjcompletions - qb.ppPassCompletionsProp.prop > 5 && qb.appProjCompletions - qb.ppPassCompletionsProp.prop > 5) {      
+//               qb.ppPassCompletionsProp.highOverConfidence = true
+//             }
+
+//         //
+//         //              Pass Yards
+//         //
+
+
+//             // normal
+
+//         if(qb.prjPassYards - qb.udPassYardsProp.prop > 15 && qb.appProjPassingYards - qb.udPassYardsProp.prop > 15) {      
+//           qb.udPassYardsProp.isOverRecomended = true
+//           // console.log(qb.playerName, qb.udPassYardsProp.prop, qb.prjPassYards, qb.appProjPassingYards )
+//         }
+//         if(qb.prjPassYards - qb.ppPassYardsProp.prop > 15 && qb.appProjPassingYards - qb.ppPassYardsProp.prop > 15) {      
+//           qb.ppPassYardsProp.isOverRecomended = true
+//           // console.log(qb.playerName, qb.ppPassYardsProp.prop, qb.prjPassYards, qb.appProjPassingYards )
+//         }
+
+//             // high confidence
+
+//         if(qb.prjPassYards - qb.udPassYardsProp.prop > 30 && qb.appProjPassingYards - qb.udPassYardsProp.prop > 30) {      
+//               qb.udPassYardsProp.highOverConfidence = true
+//               // console.log(qb.playerName, qb.udPassYardsProp.prop, qb.prjPassYards, qb.appProjPassingYards )
+//             }
+//         if(qb.prjPassYards - qb.ppPassYardsProp.prop > 30 && qb.appProjPassingYards - qb.ppPassYardsProp.prop > 30) {      
+//               qb.ppPassYardsProp.highOverConfidence = true
+//               // console.log(qb.playerName, qb.ppPassYardsProp.prop, qb.prjPassYards, qb.appProjPassingYards )
+//             }
+
+//       //    
+//       //                  Pass TDs
+//       //
+      
+
+//                     // normal
+
+//       // console.log(qb.playerName, qb.udPassTDsProp.prop, qb.prjpassingTDs, qb.appProjPassTDs )
+//         if(qb.prjpassingTDs - qb.udPassTDsProp.prop > .2 && qb.appProjPassTDs - qb.udPassTDsProp.prop > .2) {      
+//           qb.udPassTDsProp.isOverRecomended = true
+//           // console.log(qb.playerName, qb.udPassTDsProp.prop, qb.prjpassingTDs, qb.appProjPassTDs )
+//         }
+//         // console.log(qb.playerName, qb.ppPassTDsProp.prop, qb.prjpassingTDs, qb.appProjPassTDs )
+//         if(qb.prjpassingTDs - qb.ppPassTDsProp.prop > .2 && qb.appProjPassTDs - qb.ppPassTDsProp.prop > .2) {      
+//           qb.ppPassTDsProp.isOverRecomended = true
+//           // console.log(qb.playerName, qb.ppPassTDsProp.prop, qb.prjpassingTDs, qb.appProjPassTDs )
+//         }
+
+//             // high confidence
+
+//         if(qb.prjpassingTDs - qb.udPassTDsProp.prop > .4 && qb.appProjPassTDs - qb.udPassTDsProp.prop > .4) {      
+//               qb.udPassTDsProp.highOverConfidence = true
+//               // console.log(qb.playerName, qb.udPassTDsProp.prop, qb.prjpassingTDs, qb.appProjPassTDs )
+//             }
+//         if(qb.prjpassingTDs - qb.ppPassTDsProp.prop > .4 && qb.appProjPassTDs - qb.ppPassTDsProp.prop > .4) {      
+//               qb.ppPassTDsProp.highOverConfidence = true
+//               // console.log(qb.playerName, qb.ppPassTDsProp.prop, qb.prjpassingTDs, qb.appProjPassTDs )
+//             }
+
+
+            
+//       //    
+//       //                  Rush Yards
+//       //
+      
+
+//                     // normal
+
+//       // console.log(qb.playerName, qb.udRushYardsProp.prop, qb.prjRushYards, qb.appProjQBRushYards )
+//         if(qb.prjRushYards - qb.udRushYardsProp.prop > 3 && qb.appProjQBRushYards - qb.udRushYardsProp.prop > 3) {      
+//           qb.udRushYardsProp.isOverRecomended = true
+//           console.log(qb.playerName, qb.udRushYardsProp.prop, qb.prjRushYards, qb.appProjQBRushYards )
+//         }
+//         // console.log(qb.playerName, qb.ppRushYardsProp.prop, qb.prjRushYards, qb.appProjQBRushYards )
+//         if(qb.prjRushYards - qb.ppRushYardsProp.prop > 3 && qb.appProjQBRushYards - qb.ppRushYardsProp.prop > 3) {      
+//           qb.ppRushYardsProp.isOverRecomended = true
+//           // console.log(qb.playerName, qb.ppRushYardsProp.prop, qb.prjRushYards, qb.appProjQBRushYards )
+//         }
+
+//             // high confidence
+
+//         if(qb.prjRushYards - qb.udRushYardsProp.prop > 6 && qb.appProjQBRushYards - qb.udRushYardsProp.prop > 6) {      
+//               qb.udRushYardsProp.highOverConfidence = true
+//               // console.log(qb.playerName, qb.udRushYardsProp.prop, qb.prjRushYards, qb.appProjQBRushYards )
+//             }
+//         if(qb.prjRushYards - qb.ppRushYardsProp.prop > 6 && qb.appProjQBRushYards - qb.ppRushYardsProp.prop > 6) {      
+//               qb.ppRushYardsProp.highOverConfidence = true
+//               // console.log(qb.playerName, qb.ppRushYardsProp.prop, qb.prjRushYards, qb.appProjQBRushYards )
+//             }
+        
+      
+
+//         // console.log(qb)  
+//         //  console.log(qb.playerName, qb.udPassYardsProp.prop, qb.prjPassYards, qb.appProjPassingYards )
+//       }
+//     }
+//     })
+//   })
+
+//   allQBObjectsArray.forEach(function (player) {
+//     // console.log(player);
+//     class ProjectionsObject {
+//       constructor(
+//         currentWeek,
+//         name,
+//         position,
+//         team,
+//         appProjPassAttempts,
+//       appProjCompletions,
+//       appProjPassingYards,
+//       appProjPassTDs,
+//       appProjINTs,
+//       appProjQBRushAttempts,
+//       appProjQBRushYards,
+//       appProjQBRushTDs,
+//       astroQBProjection,
+//       astroSixPtTDQBProjection,
   
-      udPassCompletionsProp,
-      ppPassCompletionsProp,
-      udPassAttemptsProp,
-      ppPassAttemptsProp,
-      udPassYardsProp,
-      ppPassYardsProp,
-      udPassTDsProp,
-      ppPassTDsProp,
-      udRushYardsProp,
-      ppRushYardsProp,
-      udPassPlusRushYardsProp,
-      ppPassPlusRushYardsProp,
-      udFantasyScoreProp,
-      ppFantasyScoreProp,
+//       udPassAttemptsProp,
+//       ppPassAttemptsProp,
+//       udPassCompletionsProp,
+//       ppPassCompletionsProp,
+//       udPassYardsProp,
+//       ppPassYardsProp,
+//       udPassTDsProp,
+//       ppPassTDsProp,
+//       udRushYardsProp,
+//       ppRushYardsProp,
+//       udPassPlusRushYardsProp,
+//       ppPassPlusRushYardsProp,
+//       udFantasyScoreProp,
+//       ppFantasyScoreProp,
   
   
-        appHalfProjectedPoints,
-        appFullProjectedPoints,
-        appTEPProjectedPoints,
-        appQBSixPointForPassingTDProjectedPoints,
-        staticFourPointPerProjection
-      ) {
-        this.currentWeek = currentWeek;
-        this.name = name;
-        this.position = position;
-        this.team = team;
-        this.appProjPassAttempts = appProjPassAttempts;
-      this.appProjCompletions = appProjCompletions;
-      this.appProjPassingYards = appProjPassingYards;
-      this.appProjPassTDs = appProjPassTDs;
-      this.appProjINTs = appProjINTs;
-      this.appProjQBRushAttempts = appProjQBRushAttempts;
-      this.appProjQBRushYards = appProjQBRushYards;
-      this.appProjQBRushTDs = appProjQBRushTDs;
-      this.astroQBProjection = astroQBProjection;
-      this.astroSixPtTDQBProjection = astroSixPtTDQBProjection
+//         appHalfProjectedPoints,
+//         appFullProjectedPoints,
+//         appTEPProjectedPoints,
+//         appQBSixPointForPassingTDProjectedPoints,
+//         staticFourPointPerProjection
+//       ) {
+//         this.currentWeek = currentWeek;
+//         this.name = name;
+//         this.position = position;
+//         this.team = team;
+//         this.appProjPassAttempts = appProjPassAttempts;
+//       this.appProjCompletions = appProjCompletions;
+//       this.appProjPassingYards = appProjPassingYards;
+//       this.appProjPassTDs = appProjPassTDs;
+//       this.appProjINTs = appProjINTs;
+//       this.appProjQBRushAttempts = appProjQBRushAttempts;
+//       this.appProjQBRushYards = appProjQBRushYards;
+//       this.appProjQBRushTDs = appProjQBRushTDs;
+//       this.astroQBProjection = astroQBProjection;
+//       this.astroSixPtTDQBProjection = astroSixPtTDQBProjection
   
-      this.udPassCompletionsProp = udPassCompletionsProp
-      this.ppPassCompletionsProp = ppPassCompletionsProp
-      this.udPassAttemptsProp = udPassAttemptsProp
-      this.ppPassAttemptsProp = ppPassAttemptsProp
-      this.udPassYardsProp = udPassYardsProp
-      this.ppPassYardsProp = ppPassYardsProp
-      this.udPassTDsProp = udPassTDsProp
-      this.ppPassTDsProp = ppPassTDsProp
-      this.udRushYardsProp = udRushYardsProp
-      this.ppRushYardsProp = ppRushYardsProp
-      this.udPassPlusRushYardsProp = udPassPlusRushYardsProp
-      this.ppPassPlusRushYardsProp = ppPassPlusRushYardsProp
-      this.udFantasyScoreProp = udFantasyScoreProp
-      this.ppFantasyScoreProp = ppFantasyScoreProp
+//       this.udPassAttemptsProp = udPassAttemptsProp
+//       this.ppPassAttemptsProp = ppPassAttemptsProp
+//       this.udPassCompletionsProp = udPassCompletionsProp
+//       this.ppPassCompletionsProp = ppPassCompletionsProp     
+//       this.udPassYardsProp = udPassYardsProp
+//       this.ppPassYardsProp = ppPassYardsProp
+//       this.udPassTDsProp = udPassTDsProp
+//       this.ppPassTDsProp = ppPassTDsProp
+//       this.udRushYardsProp = udRushYardsProp
+//       this.ppRushYardsProp = ppRushYardsProp
+//       this.udPassPlusRushYardsProp = udPassPlusRushYardsProp
+//       this.ppPassPlusRushYardsProp = ppPassPlusRushYardsProp
+//       this.udFantasyScoreProp = udFantasyScoreProp
+//       this.ppFantasyScoreProp = ppFantasyScoreProp
   
-        this.appHalfProjectedPoints = appHalfProjectedPoints;
-        this.appFullProjectedPoints = appFullProjectedPoints;
-        this.appTEPProjectedPoints = appTEPProjectedPoints;
-        this.appQBSixPointForPassingTDProjectedPoints =
-          appQBSixPointForPassingTDProjectedPoints;
-        this.staticFourPointPerProjection = staticFourPointPerProjection;
-      }
+//         this.appHalfProjectedPoints = appHalfProjectedPoints;
+//         this.appFullProjectedPoints = appFullProjectedPoints;
+//         this.appTEPProjectedPoints = appTEPProjectedPoints;
+//         this.appQBSixPointForPassingTDProjectedPoints =
+//           appQBSixPointForPassingTDProjectedPoints;
+//         this.staticFourPointPerProjection = staticFourPointPerProjection;
+//       }
+//     }
+  
+//     let projectionToUse = +player.appProjectedPoints.toFixed(1);
+  
+//     let qbProjectionsObject = new ProjectionsObject(
+//       gameInfo.week.currentWeek,
+//       player.playerName,
+//       player.position,
+//       player.teamABV,
+  
+//       player.appProjPassAttempts,
+//       player.appProjCompletions,
+//       player.appProjPassingYards,
+//       player.appProjPassTDs,
+//       player.appProjINTs,
+//       player.appProjQBRushAttempts,
+//       player.appProjQBRushYards,
+//       player.appProjQBRushTDs,
+//       player.astroQBProjection,
+//       player.astroSixPtTDQBProjection,
+  
+//       player.udPassAttemptsProp,
+//       player.ppPassAttemptsProp,
+//       player.udPassCompletionsProp,
+//       player.ppPassCompletionsProp,    
+//       player.udPassYardsProp,
+//       player.ppPassYardsProp,
+//       player.udPassTDsProp,
+//       player.ppPassTDsProp,
+//       player.udRushYardsProp,
+//       player.ppRushYardsProp,
+//       player.udPassPlusRushYardsProp,
+//       player.ppPassPlusRushYardsProp,
+//       player.udFantasyScoreProp,
+//       player.ppFantasyScoreProp,
+  
+//       projectionToUse,
+//       projectionToUse,
+//       projectionToUse,
+//       player.appQBSixPointForPassingTDProjectedPoints,
+//       projectionToUse
+//     );
+  
+//     allQBProjectionsObjects.push(qbProjectionsObject);
+//   });
+//   return allQBProjectionsObjects
+// }
+
+// propsData()
+
+allQBObjectsArray.forEach(function (player) {
+  // console.log(player);
+  class ProjectionsObject {
+    constructor(
+      currentWeek,
+      name,
+      position,
+      team,
+      appProjPassAttempts,
+    appProjCompletions,
+    appProjPassingYards,
+    appProjPassTDs,
+    appProjINTs,
+    appProjQBRushAttempts,
+    appProjQBRushYards,
+    appProjQBRushTDs,
+    astroQBProjection,
+    astroSixPtTDQBProjection,
+
+    udPassAttemptsProp,
+    ppPassAttemptsProp,
+    udPassCompletionsProp,
+    ppPassCompletionsProp,
+    udPassYardsProp,
+    ppPassYardsProp,
+    udPassTDsProp,
+    ppPassTDsProp,
+    udRushYardsProp,
+    ppRushYardsProp,
+    udPassPlusRushYardsProp,
+    ppPassPlusRushYardsProp,
+    udFantasyScoreProp,
+    ppFantasyScoreProp,
+
+
+      appHalfProjectedPoints,
+      appFullProjectedPoints,
+      appTEPProjectedPoints,
+      appQBSixPointForPassingTDProjectedPoints,
+      staticFourPointPerProjection
+    ) {
+      this.currentWeek = currentWeek;
+      this.name = name;
+      this.position = position;
+      this.team = team;
+      this.appProjPassAttempts = appProjPassAttempts;
+    this.appProjCompletions = appProjCompletions;
+    this.appProjPassingYards = appProjPassingYards;
+    this.appProjPassTDs = appProjPassTDs;
+    this.appProjINTs = appProjINTs;
+    this.appProjQBRushAttempts = appProjQBRushAttempts;
+    this.appProjQBRushYards = appProjQBRushYards;
+    this.appProjQBRushTDs = appProjQBRushTDs;
+    this.astroQBProjection = astroQBProjection;
+    this.astroSixPtTDQBProjection = astroSixPtTDQBProjection
+
+    this.udPassAttemptsProp = udPassAttemptsProp
+    this.ppPassAttemptsProp = ppPassAttemptsProp
+    this.udPassCompletionsProp = udPassCompletionsProp
+    this.ppPassCompletionsProp = ppPassCompletionsProp     
+    this.udPassYardsProp = udPassYardsProp
+    this.ppPassYardsProp = ppPassYardsProp
+    this.udPassTDsProp = udPassTDsProp
+    this.ppPassTDsProp = ppPassTDsProp
+    this.udRushYardsProp = udRushYardsProp
+    this.ppRushYardsProp = ppRushYardsProp
+    this.udPassPlusRushYardsProp = udPassPlusRushYardsProp
+    this.ppPassPlusRushYardsProp = ppPassPlusRushYardsProp
+    this.udFantasyScoreProp = udFantasyScoreProp
+    this.ppFantasyScoreProp = ppFantasyScoreProp
+
+      this.appHalfProjectedPoints = appHalfProjectedPoints;
+      this.appFullProjectedPoints = appFullProjectedPoints;
+      this.appTEPProjectedPoints = appTEPProjectedPoints;
+      this.appQBSixPointForPassingTDProjectedPoints =
+        appQBSixPointForPassingTDProjectedPoints;
+      this.staticFourPointPerProjection = staticFourPointPerProjection;
     }
-  
-    let projectionToUse = +player.appProjectedPoints.toFixed(1);
-  
-    let qbProjectionsObject = new ProjectionsObject(
-      gameInfo.week.currentWeek,
-      player.playerName,
-      player.position,
-      player.teamABV,
-  
-      player.appProjPassAttempts,
-      player.appProjCompletions,
-      player.appProjPassingYards,
-      player.appProjPassTDs,
-      player.appProjINTs,
-      player.appProjQBRushAttempts,
-      player.appProjQBRushYards,
-      player.appProjQBRushTDs,
-      player.astroQBProjection,
-      player.astroSixPtTDQBProjection,
-  
-      player.udPassCompletionsProp,
-      player.ppPassCompletionsProp,
-      player.udPassAttemptsProp,
-      player.ppPassAttemptsProp,
-      player.udPassYardsProp,
-      player.ppPassYardsProp,
-      player.udPassTDsProp,
-      player.ppPassTDsProp,
-      player.udRushYardsProp,
-      player.ppRushYardsProp,
-      player.udPassPlusRushYardsProp,
-      player.ppPassPlusRushYardsProp,
-      player.udFantasyScoreProp,
-      player.ppFantasyScoreProp,
-  
-      projectionToUse,
-      projectionToUse,
-      projectionToUse,
-      player.appQBSixPointForPassingTDProjectedPoints,
-      projectionToUse
-    );
-  
-    allQBProjectionsObjects.push(qbProjectionsObject);
-  });
-  return allQBProjectionsObjects
-}
+  }
 
-propsData()
+  let projectionToUse = +player.appProjectedPoints.toFixed(1);
+
+  let qbProjectionsObject = new ProjectionsObject(
+    gameInfo.week.currentWeek,
+    player.playerName,
+    player.position,
+    player.teamABV,
+
+    player.appProjPassAttempts,
+    player.appProjCompletions,
+    player.appProjPassingYards,
+    player.appProjPassTDs,
+    player.appProjINTs,
+    player.appProjQBRushAttempts,
+    player.appProjQBRushYards,
+    player.appProjQBRushTDs,
+    player.astroQBProjection,
+    player.astroSixPtTDQBProjection,
+
+    player.udPassAttemptsProp,
+    player.ppPassAttemptsProp,
+    player.udPassCompletionsProp,
+    player.ppPassCompletionsProp,    
+    player.udPassYardsProp,
+    player.ppPassYardsProp,
+    player.udPassTDsProp,
+    player.ppPassTDsProp,
+    player.udRushYardsProp,
+    player.ppRushYardsProp,
+    player.udPassPlusRushYardsProp,
+    player.ppPassPlusRushYardsProp,
+    player.udFantasyScoreProp,
+    player.ppFantasyScoreProp,
+
+    projectionToUse,
+    projectionToUse,
+    projectionToUse,
+    player.appQBSixPointForPassingTDProjectedPoints,
+    projectionToUse
+  );
+
+  allQBProjectionsObjects.push(qbProjectionsObject);
+});
+
+
 
 
 
@@ -1698,5 +1978,7 @@ allQBData.allQBProjectionsObjects = allQBProjectionsObjects;
 // console.log(allQBData.allQBProjectionsObjects);
 // console.log(allQBData);
 
-module.exports.allQBProjectionsObjects = propsData
-module.exports.allQBData = allQBData;
+// module.exports.allQBProjectionsObjects = propsData
+// module.exports.allQBData = allQBData;
+
+module.exports = allQBData;
