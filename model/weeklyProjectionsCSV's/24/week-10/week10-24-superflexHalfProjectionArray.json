@@ -1,0 +1,1217 @@
+[
+	{
+		"\"name\"": "\"Lamar Jackson\"",
+		"\"team\"": "\"BAL\"",
+		"\"appHalfProjectedPoints\"": "23.4"
+	},
+	{
+		"\"name\"": "\"Jalen Hurts\"",
+		"\"team\"": "\"PHI\"",
+		"\"appHalfProjectedPoints\"": "20.8"
+	},
+	{
+		"\"name\"": "\"Kyren Williams\"",
+		"\"team\"": "\"LAR\"",
+		"\"appHalfProjectedPoints\"": "20.2"
+	},
+	{
+		"\"name\"": "\"Baker Mayfield\"",
+		"\"team\"": "\"TB\"",
+		"\"appHalfProjectedPoints\"": "20"
+	},
+	{
+		"\"name\"": "\"Josh Allen\"",
+		"\"team\"": "\"BUF\"",
+		"\"appHalfProjectedPoints\"": "19.9"
+	},
+	{
+		"\"name\"": "\"Joe Burrow\"",
+		"\"team\"": "\"CIN\"",
+		"\"appHalfProjectedPoints\"": "19.5"
+	},
+	{
+		"\"name\"": "\"Saquon Barkley\"",
+		"\"team\"": "\"PHI\"",
+		"\"appHalfProjectedPoints\"": "19.5"
+	},
+	{
+		"\"name\"": "\"JaMarr Chase\"",
+		"\"team\"": "\"CIN\"",
+		"\"appHalfProjectedPoints\"": "19.4"
+	},
+	{
+		"\"name\"": "\"Jayden Daniels\"",
+		"\"team\"": "\"WAS\"",
+		"\"appHalfProjectedPoints\"": "19.2"
+	},
+	{
+		"\"name\"": "\"Brock Purdy\"",
+		"\"team\"": "\"SF\"",
+		"\"appHalfProjectedPoints\"": "18.6"
+	},
+	{
+		"\"name\"": "\"Bijan Robinson\"",
+		"\"team\"": "\"ATL\"",
+		"\"appHalfProjectedPoints\"": "18.3"
+	},
+	{
+		"\"name\"": "\"Derrick Henry\"",
+		"\"team\"": "\"BAL\"",
+		"\"appHalfProjectedPoints\"": "18"
+	},
+	{
+		"\"name\"": "\"Kirk Cousins\"",
+		"\"team\"": "\"ATL\"",
+		"\"appHalfProjectedPoints\"": "17.9"
+	},
+	{
+		"\"name\"": "\"Sam Darnold\"",
+		"\"team\"": "\"MIN\"",
+		"\"appHalfProjectedPoints\"": "17.8"
+	},
+	{
+		"\"name\"": "\"Kyler Murray\"",
+		"\"team\"": "\"ARI\"",
+		"\"appHalfProjectedPoints\"": "17.5"
+	},
+	{
+		"\"name\"": "\"Jonathan Taylor\"",
+		"\"team\"": "\"IND\"",
+		"\"appHalfProjectedPoints\"": "17.5"
+	},
+	{
+		"\"name\"": "\"D'Andre Swift\"",
+		"\"team\"": "\"CHI\"",
+		"\"appHalfProjectedPoints\"": "17.4"
+	},
+	{
+		"\"name\"": "\"Justin Jefferson\"",
+		"\"team\"": "\"MIN\"",
+		"\"appHalfProjectedPoints\"": "17.4"
+	},
+	{
+		"\"name\"": "\"Russell Wilson\"",
+		"\"team\"": "\"PIT\"",
+		"\"appHalfProjectedPoints\"": "17.2"
+	},
+	{
+		"\"name\"": "\"Joe Mixon\"",
+		"\"team\"": "\"HOU\"",
+		"\"appHalfProjectedPoints\"": "17.2"
+	},
+	{
+		"\"name\"": "\"Christian McCaffrey\"",
+		"\"team\"": "\"SF\"",
+		"\"appHalfProjectedPoints\"": "17.1"
+	},
+	{
+		"\"name\"": "\"Alvin Kamara\"",
+		"\"team\"": "\"NO\"",
+		"\"appHalfProjectedPoints\"": "16.8"
+	},
+	{
+		"\"name\"": "\"De'Von Achane\"",
+		"\"team\"": "\"MIA\"",
+		"\"appHalfProjectedPoints\"": "16.8"
+	},
+	{
+		"\"name\"": "\"Patrick Mahomes\"",
+		"\"team\"": "\"KC\"",
+		"\"appHalfProjectedPoints\"": "16.6"
+	},
+	{
+		"\"name\"": "\"Tyrone Tracy\"",
+		"\"team\"": "\"NYG\"",
+		"\"appHalfProjectedPoints\"": "16.6"
+	},
+	{
+		"\"name\"": "\"Bo Nix\"",
+		"\"team\"": "\"DEN\"",
+		"\"appHalfProjectedPoints\"": "16.5"
+	},
+	{
+		"\"name\"": "\"Aaron Rodgers\"",
+		"\"team\"": "\"NYJ\"",
+		"\"appHalfProjectedPoints\"": "16.5"
+	},
+	{
+		"\"name\"": "\"Justin Herbert\"",
+		"\"team\"": "\"LAC\"",
+		"\"appHalfProjectedPoints\"": "16.2"
+	},
+	{
+		"\"name\"": "\"Malik Nabers\"",
+		"\"team\"": "\"NYG\"",
+		"\"appHalfProjectedPoints\"": "16.1"
+	},
+	{
+		"\"name\"": "\"Garrett Wilson\"",
+		"\"team\"": "\"NYJ\"",
+		"\"appHalfProjectedPoints\"": "16.1"
+	},
+	{
+		"\"name\"": "\"C.J. Stroud\"",
+		"\"team\"": "\"HOU\"",
+		"\"appHalfProjectedPoints\"": "15.8"
+	},
+	{
+		"\"name\"": "\"Matthew Stafford\"",
+		"\"team\"": "\"LAR\"",
+		"\"appHalfProjectedPoints\"": "15.8"
+	},
+	{
+		"\"name\"": "\"Breece Hall\"",
+		"\"team\"": "\"NYJ\"",
+		"\"appHalfProjectedPoints\"": "15.6"
+	},
+	{
+		"\"name\"": "\"Tua Tagovailoa\"",
+		"\"team\"": "\"MIA\"",
+		"\"appHalfProjectedPoints\"": "15.3"
+	},
+	{
+		"\"name\"": "\"Jared Goff\"",
+		"\"team\"": "\"DET\"",
+		"\"appHalfProjectedPoints\"": "15.2"
+	},
+	{
+		"\"name\"": "\"Joe Flacco\"",
+		"\"team\"": "\"IND\"",
+		"\"appHalfProjectedPoints\"": "14.9"
+	},
+	{
+		"\"name\"": "\"Aaron Jones\"",
+		"\"team\"": "\"MIN\"",
+		"\"appHalfProjectedPoints\"": "14.9"
+	},
+	{
+		"\"name\"": "\"JK Dobbins\"",
+		"\"team\"": "\"LAC\"",
+		"\"appHalfProjectedPoints\"": "14.9"
+	},
+	{
+		"\"name\"": "\"George Kittle\"",
+		"\"team\"": "\"SF\"",
+		"\"appHalfProjectedPoints\"": "14.7"
+	},
+	{
+		"\"name\"": "\"Caleb Williams\"",
+		"\"team\"": "\"CHI\"",
+		"\"appHalfProjectedPoints\"": "14.4"
+	},
+	{
+		"\"name\"": "\"Daniel Jones\"",
+		"\"team\"": "\"NYG\"",
+		"\"appHalfProjectedPoints\"": "14.3"
+	},
+	{
+		"\"name\"": "\"Drake Maye\"",
+		"\"team\"": "\"NE\"",
+		"\"appHalfProjectedPoints\"": "14.3"
+	},
+	{
+		"\"name\"": "\"Jahmyr Gibbs\"",
+		"\"team\"": "\"DET\"",
+		"\"appHalfProjectedPoints\"": "14.3"
+	},
+	{
+		"\"name\"": "\"James Conner\"",
+		"\"team\"": "\"ARI\"",
+		"\"appHalfProjectedPoints\"": "14.2"
+	},
+	{
+		"\"name\"": "\"Derek Carr\"",
+		"\"team\"": "\"NO\"",
+		"\"appHalfProjectedPoints\"": "14.1"
+	},
+	{
+		"\"name\"": "\"James Cook\"",
+		"\"team\"": "\"BUF\"",
+		"\"appHalfProjectedPoints\"": "14.1"
+	},
+	{
+		"\"name\"": "\"Cooper Kupp\"",
+		"\"team\"": "\"LAR\"",
+		"\"appHalfProjectedPoints\"": "13.7"
+	},
+	{
+		"\"name\"": "\"Amon-Ra St Brown\"",
+		"\"team\"": "\"DET\"",
+		"\"appHalfProjectedPoints\"": "13.6"
+	},
+	{
+		"\"name\"": "\"Chase Brown\"",
+		"\"team\"": "\"CIN\"",
+		"\"appHalfProjectedPoints\"": "13.5"
+	},
+	{
+		"\"name\"": "\"CeeDee Lamb\"",
+		"\"team\"": "\"DAL\"",
+		"\"appHalfProjectedPoints\"": "13.4"
+	},
+	{
+		"\"name\"": "\"Will Levis\"",
+		"\"team\"": "\"TEN\"",
+		"\"appHalfProjectedPoints\"": "13.3"
+	},
+	{
+		"\"name\"": "\"Kareem Hunt\"",
+		"\"team\"": "\"KC\"",
+		"\"appHalfProjectedPoints\"": "13.3"
+	},
+	{
+		"\"name\"": "\"Chuba Hubbard\"",
+		"\"team\"": "\"CAR\"",
+		"\"appHalfProjectedPoints\"": "13.2"
+	},
+	{
+		"\"name\"": "\"Drake London\"",
+		"\"team\"": "\"ATL\"",
+		"\"appHalfProjectedPoints\"": "13.2"
+	},
+	{
+		"\"name\"": "\"Zay Flowers\"",
+		"\"team\"": "\"BAL\"",
+		"\"appHalfProjectedPoints\"": "13.2"
+	},
+	{
+		"\"name\"": "\"Cooper Rush\"",
+		"\"team\"": "\"DAL\"",
+		"\"appHalfProjectedPoints\"": "13.1"
+	},
+	{
+		"\"name\"": "\"Najee Harris\"",
+		"\"team\"": "\"PIT\"",
+		"\"appHalfProjectedPoints\"": "13.1"
+	},
+	{
+		"\"name\"": "\"AJ Brown\"",
+		"\"team\"": "\"PHI\"",
+		"\"appHalfProjectedPoints\"": "12.9"
+	},
+	{
+		"\"name\"": "\"David Montgomery\"",
+		"\"team\"": "\"DET\"",
+		"\"appHalfProjectedPoints\"": "12.8"
+	},
+	{
+		"\"name\"": "\"Davante Adams\"",
+		"\"team\"": "\"NYJ\"",
+		"\"appHalfProjectedPoints\"": "12.6"
+	},
+	{
+		"\"name\"": "\"Tony Pollard\"",
+		"\"team\"": "\"TEN\"",
+		"\"appHalfProjectedPoints\"": "12.5"
+	},
+	{
+		"\"name\"": "\"Darnell Mooney\"",
+		"\"team\"": "\"ATL\"",
+		"\"appHalfProjectedPoints\"": "12.4"
+	},
+	{
+		"\"name\"": "\"Rhamondre Stevenson\"",
+		"\"team\"": "\"NE\"",
+		"\"appHalfProjectedPoints\"": "12.3"
+	},
+	{
+		"\"name\"": "\"Nico Collins\"",
+		"\"team\"": "\"HOU\"",
+		"\"appHalfProjectedPoints\"": "12.3"
+	},
+	{
+		"\"name\"": "\"Bryce Young\"",
+		"\"team\"": "\"CAR\"",
+		"\"appHalfProjectedPoints\"": "12.2"
+	},
+	{
+		"\"name\"": "\"Brian Thomas Jr\"",
+		"\"team\"": "\"JAC\"",
+		"\"appHalfProjectedPoints\"": "11.9"
+	},
+	{
+		"\"name\"": "\"Deebo Samuel\"",
+		"\"team\"": "\"SF\"",
+		"\"appHalfProjectedPoints\"": "11.9"
+	},
+	{
+		"\"name\"": "\"DeVonta Smith\"",
+		"\"team\"": "\"PHI\"",
+		"\"appHalfProjectedPoints\"": "11.8"
+	},
+	{
+		"\"name\"": "\"Terry McLaurin\"",
+		"\"team\"": "\"WAS\"",
+		"\"appHalfProjectedPoints\"": "11.6"
+	},
+	{
+		"\"name\"": "\"Austin Ekeler\"",
+		"\"team\"": "\"WAS\"",
+		"\"appHalfProjectedPoints\"": "11.5"
+	},
+	{
+		"\"name\"": "\"Puka Nacua\"",
+		"\"team\"": "\"LAR\"",
+		"\"appHalfProjectedPoints\"": "11.3"
+	},
+	{
+		"\"name\"": "\"Tank Dell\"",
+		"\"team\"": "\"HOU\"",
+		"\"appHalfProjectedPoints\"": "11.2"
+	},
+	{
+		"\"name\"": "\"Josh Downs\"",
+		"\"team\"": "\"IND\"",
+		"\"appHalfProjectedPoints\"": "11.2"
+	},
+	{
+		"\"name\"": "\"Khalil Shakir\"",
+		"\"team\"": "\"BUF\"",
+		"\"appHalfProjectedPoints\"": "11.1"
+	},
+	{
+		"\"name\"": "\"Mac Jones\"",
+		"\"team\"": "\"JAC\"",
+		"\"appHalfProjectedPoints\"": "10.9"
+	},
+	{
+		"\"name\"": "\"George Pickens\"",
+		"\"team\"": "\"PIT\"",
+		"\"appHalfProjectedPoints\"": "10.9"
+	},
+	{
+		"\"name\"": "\"Mark Andrews\"",
+		"\"team\"": "\"BAL\"",
+		"\"appHalfProjectedPoints\"": "10.9"
+	},
+	{
+		"\"name\"": "\"Bucky Irving\"",
+		"\"team\"": "\"TB\"",
+		"\"appHalfProjectedPoints\"": "10.7"
+	},
+	{
+		"\"name\"": "\"Javonte Williams\"",
+		"\"team\"": "\"DEN\"",
+		"\"appHalfProjectedPoints\"": "10.6"
+	},
+	{
+		"\"name\"": "\"T.J. Hockenson\"",
+		"\"team\"": "\"MIN\"",
+		"\"appHalfProjectedPoints\"": "10.6"
+	},
+	{
+		"\"name\"": "\"Travis Kelce\"",
+		"\"team\"": "\"KC\"",
+		"\"appHalfProjectedPoints\"": "10.4"
+	},
+	{
+		"\"name\"": "\"Cade Otton\"",
+		"\"team\"": "\"TB\"",
+		"\"appHalfProjectedPoints\"": "10.4"
+	},
+	{
+		"\"name\"": "\"Ladd McConkey\"",
+		"\"team\"": "\"LAC\"",
+		"\"appHalfProjectedPoints\"": "10.3"
+	},
+	{
+		"\"name\"": "\"DJ Moore\"",
+		"\"team\"": "\"CHI\"",
+		"\"appHalfProjectedPoints\"": "10.2"
+	},
+	{
+		"\"name\"": "\"Jauan Jennings\"",
+		"\"team\"": "\"SF\"",
+		"\"appHalfProjectedPoints\"": "10.1"
+	},
+	{
+		"\"name\"": "\"Courtland Sutton\"",
+		"\"team\"": "\"DEN\"",
+		"\"appHalfProjectedPoints\"": "9.9"
+	},
+	{
+		"\"name\"": "\"Mike Gesicki\"",
+		"\"team\"": "\"CIN\"",
+		"\"appHalfProjectedPoints\"": "9.9"
+	},
+	{
+		"\"name\"": "\"Rico Dowdle\"",
+		"\"team\"": "\"DAL\"",
+		"\"appHalfProjectedPoints\"": "9.8"
+	},
+	{
+		"\"name\"": "\"Jameson Williams\"",
+		"\"team\"": "\"DET\"",
+		"\"appHalfProjectedPoints\"": "9.8"
+	},
+	{
+		"\"name\"": "\"Dallas Goedert\"",
+		"\"team\"": "\"PHI\"",
+		"\"appHalfProjectedPoints\"": "9.8"
+	},
+	{
+		"\"name\"": "\"Cole Kmet\"",
+		"\"team\"": "\"CHI\"",
+		"\"appHalfProjectedPoints\"": "9.6"
+	},
+	{
+		"\"name\"": "\"Dalton Kincaid\"",
+		"\"team\"": "\"BUF\"",
+		"\"appHalfProjectedPoints\"": "9.5"
+	},
+	{
+		"\"name\"": "\"Travis Etienne\"",
+		"\"team\"": "\"JAC\"",
+		"\"appHalfProjectedPoints\"": "9.4"
+	},
+	{
+		"\"name\"": "\"Jordan Addison\"",
+		"\"team\"": "\"MIN\"",
+		"\"appHalfProjectedPoints\"": "9.3"
+	},
+	{
+		"\"name\"": "\"Kyle Pitts\"",
+		"\"team\"": "\"ATL\"",
+		"\"appHalfProjectedPoints\"": "9.1"
+	},
+	{
+		"\"name\"": "\"Jonnu Smith\"",
+		"\"team\"": "\"MIA\"",
+		"\"appHalfProjectedPoints\"": "9.1"
+	},
+	{
+		"\"name\"": "\"Tyler Allgeier\"",
+		"\"team\"": "\"ATL\"",
+		"\"appHalfProjectedPoints\"": "9"
+	},
+	{
+		"\"name\"": "\"WanDale Robinson\"",
+		"\"team\"": "\"NYG\"",
+		"\"appHalfProjectedPoints\"": "9"
+	},
+	{
+		"\"name\"": "\"Raheem Mostert\"",
+		"\"team\"": "\"MIA\"",
+		"\"appHalfProjectedPoints\"": "8.9"
+	},
+	{
+		"\"name\"": "\"Tyreek Hill\"",
+		"\"team\"": "\"MIA\"",
+		"\"appHalfProjectedPoints\"": "8.9"
+	},
+	{
+		"\"name\"": "\"Rachaad White\"",
+		"\"team\"": "\"TB\"",
+		"\"appHalfProjectedPoints\"": "8.8"
+	},
+	{
+		"\"name\"": "\"DeAndre Hopkins\"",
+		"\"team\"": "\"KC\"",
+		"\"appHalfProjectedPoints\"": "8.8"
+	},
+	{
+		"\"name\"": "\"Marvin Harrison Jr\"",
+		"\"team\"": "\"ARI\"",
+		"\"appHalfProjectedPoints\"": "8.8"
+	},
+	{
+		"\"name\"": "\"Jaylen Waddle\"",
+		"\"team\"": "\"MIA\"",
+		"\"appHalfProjectedPoints\"": "8.7"
+	},
+	{
+		"\"name\"": "\"Diontae Johnson\"",
+		"\"team\"": "\"BAL\"",
+		"\"appHalfProjectedPoints\"": "8.5"
+	},
+	{
+		"\"name\"": "\"Calvin Ridley\"",
+		"\"team\"": "\"TEN\"",
+		"\"appHalfProjectedPoints\"": "8.4"
+	},
+	{
+		"\"name\"": "\"Xavier Legette\"",
+		"\"team\"": "\"CAR\"",
+		"\"appHalfProjectedPoints\"": "8.3"
+	},
+	{
+		"\"name\"": "\"Rome Odunze\"",
+		"\"team\"": "\"CHI\"",
+		"\"appHalfProjectedPoints\"": "8.3"
+	},
+	{
+		"\"name\"": "\"Trey McBride\"",
+		"\"team\"": "\"ARI\"",
+		"\"appHalfProjectedPoints\"": "8.3"
+	},
+	{
+		"\"name\"": "\"Amari Cooper\"",
+		"\"team\"": "\"BUF\"",
+		"\"appHalfProjectedPoints\"": "8.2"
+	},
+	{
+		"\"name\"": "\"Evan Engram\"",
+		"\"team\"": "\"JAC\"",
+		"\"appHalfProjectedPoints\"": "8.2"
+	},
+	{
+		"\"name\"": "\"Keenan Allen\"",
+		"\"team\"": "\"CHI\"",
+		"\"appHalfProjectedPoints\"": "7.8"
+	},
+	{
+		"\"name\"": "\"Zach Ertz\"",
+		"\"team\"": "\"WAS\"",
+		"\"appHalfProjectedPoints\"": "7.8"
+	},
+	{
+		"\"name\"": "\"Pat Freiermuth\"",
+		"\"team\"": "\"PIT\"",
+		"\"appHalfProjectedPoints\"": "7.8"
+	},
+	{
+		"\"name\"": "\"Tank Bigsby\"",
+		"\"team\"": "\"JAC\"",
+		"\"appHalfProjectedPoints\"": "7.7"
+	},
+	{
+		"\"name\"": "\"Taysom Hill\"",
+		"\"team\"": "\"NO\"",
+		"\"appHalfProjectedPoints\"": "7.7"
+	},
+	{
+		"\"name\"": "\"Jordan Mason\"",
+		"\"team\"": "\"SF\"",
+		"\"appHalfProjectedPoints\"": "7.5"
+	},
+	{
+		"\"name\"": "\"Hunter Henry\"",
+		"\"team\"": "\"NE\"",
+		"\"appHalfProjectedPoints\"": "7.5"
+	},
+	{
+		"\"name\"": "\"Devin Singletary\"",
+		"\"team\"": "\"NYG\"",
+		"\"appHalfProjectedPoints\"": "7.4"
+	},
+	{
+		"\"name\"": "\"Rashod Bateman\"",
+		"\"team\"": "\"BAL\"",
+		"\"appHalfProjectedPoints\"": "7.4"
+	},
+	{
+		"\"name\"": "\"Xavier Worthy\"",
+		"\"team\"": "\"KC\"",
+		"\"appHalfProjectedPoints\"": "7.3"
+	},
+	{
+		"\"name\"": "\"Quentin Johnston\"",
+		"\"team\"": "\"LAC\"",
+		"\"appHalfProjectedPoints\"": "7.3"
+	},
+	{
+		"\"name\"": "\"Theo Johnson\"",
+		"\"team\"": "\"NYG\"",
+		"\"appHalfProjectedPoints\"": "7.3"
+	},
+	{
+		"\"name\"": "\"Jaylen Warren\"",
+		"\"team\"": "\"PIT\"",
+		"\"appHalfProjectedPoints\"": "7.2"
+	},
+	{
+		"\"name\"": "\"Jalen Coker\"",
+		"\"team\"": "\"CAR\"",
+		"\"appHalfProjectedPoints\"": "7.2"
+	},
+	{
+		"\"name\"": "\"Noah Brown\"",
+		"\"team\"": "\"WAS\"",
+		"\"appHalfProjectedPoints\"": "7.2"
+	},
+	{
+		"\"name\"": "\"Jalen Tolbert\"",
+		"\"team\"": "\"DAL\"",
+		"\"appHalfProjectedPoints\"": "7.2"
+	},
+	{
+		"\"name\"": "\"Roschon Johnson\"",
+		"\"team\"": "\"CHI\"",
+		"\"appHalfProjectedPoints\"": "7.1"
+	},
+	{
+		"\"name\"": "\"Alec Pierce\"",
+		"\"team\"": "\"IND\"",
+		"\"appHalfProjectedPoints\"": "7.1"
+	},
+	{
+		"\"name\"": "\"Demarcus Robinson\"",
+		"\"team\"": "\"LAR\"",
+		"\"appHalfProjectedPoints\"": "7"
+	},
+	{
+		"\"name\"": "\"Joshua Palmer\"",
+		"\"team\"": "\"LAC\"",
+		"\"appHalfProjectedPoints\"": "7"
+	},
+	{
+		"\"name\"": "\"Jake Ferguson\"",
+		"\"team\"": "\"DAL\"",
+		"\"appHalfProjectedPoints\"": "6.9"
+	},
+	{
+		"\"name\"": "\"Ray Davis\"",
+		"\"team\"": "\"BUF\"",
+		"\"appHalfProjectedPoints\"": "6.8"
+	},
+	{
+		"\"name\"": "\"Nick Westbrook-Ikhine\"",
+		"\"team\"": "\"TEN\"",
+		"\"appHalfProjectedPoints\"": "6.8"
+	},
+	{
+		"\"name\"": "\"Michael Wilson\"",
+		"\"team\"": "\"ARI\"",
+		"\"appHalfProjectedPoints\"": "6.8"
+	},
+	{
+		"\"name\"": "\"Ray-Ray McCloud\"",
+		"\"team\"": "\"ATL\"",
+		"\"appHalfProjectedPoints\"": "6.5"
+	},
+	{
+		"\"name\"": "\"Cam Akers\"",
+		"\"team\"": "\"MIN\"",
+		"\"appHalfProjectedPoints\"": "6.4"
+	},
+	{
+		"\"name\"": "\"Tyjae Spears\"",
+		"\"team\"": "\"TEN\"",
+		"\"appHalfProjectedPoints\"": "6.4"
+	},
+	{
+		"\"name\"": "\"Sam LaPorta\"",
+		"\"team\"": "\"DET\"",
+		"\"appHalfProjectedPoints\"": "6.4"
+	},
+	{
+		"\"name\"": "\"Demario Douglas\"",
+		"\"team\"": "\"NE\"",
+		"\"appHalfProjectedPoints\"": "6.2"
+	},
+	{
+		"\"name\"": "\"Trey Palmer\"",
+		"\"team\"": "\"TB\"",
+		"\"appHalfProjectedPoints\"": "6"
+	},
+	{
+		"\"name\"": "\"Jalen Nailor\"",
+		"\"team\"": "\"MIN\"",
+		"\"appHalfProjectedPoints\"": "6"
+	},
+	{
+		"\"name\"": "\"Khalil Herbert\"",
+		"\"team\"": "\"CIN\"",
+		"\"appHalfProjectedPoints\"": "5.9"
+	},
+	{
+		"\"name\"": "\"Calvin Austin III\"",
+		"\"team\"": "\"PIT\"",
+		"\"appHalfProjectedPoints\"": "5.9"
+	},
+	{
+		"\"name\"": "\"Tyler Conklin\"",
+		"\"team\"": "\"NYJ\"",
+		"\"appHalfProjectedPoints\"": "5.9"
+	},
+	{
+		"\"name\"": "\"Samaje Perine\"",
+		"\"team\"": "\"KC\"",
+		"\"appHalfProjectedPoints\"": "5.8"
+	},
+	{
+		"\"name\"": "\"Sterling Shepard\"",
+		"\"team\"": "\"TB\"",
+		"\"appHalfProjectedPoints\"": "5.8"
+	},
+	{
+		"\"name\"": "\"Juwan Johnson\"",
+		"\"team\"": "\"NO\"",
+		"\"appHalfProjectedPoints\"": "5.8"
+	},
+	{
+		"\"name\"": "\"Parker Washington\"",
+		"\"team\"": "\"JAC\"",
+		"\"appHalfProjectedPoints\"": "5.7"
+	},
+	{
+		"\"name\"": "\"Andrei Iosivas\"",
+		"\"team\"": "\"CIN\"",
+		"\"appHalfProjectedPoints\"": "5.6"
+	},
+	{
+		"\"name\"": "\"Dalton Schultz\"",
+		"\"team\"": "\"HOU\"",
+		"\"appHalfProjectedPoints\"": "5.6"
+	},
+	{
+		"\"name\"": "\"Jonathon Brooks\"",
+		"\"team\"": "\"CAR\"",
+		"\"appHalfProjectedPoints\"": "5.5"
+	},
+	{
+		"\"name\"": "\"Braelon Allen\"",
+		"\"team\"": "\"NYJ\"",
+		"\"appHalfProjectedPoints\"": "5.3"
+	},
+	{
+		"\"name\"": "\"Kalif Raymond\"",
+		"\"team\"": "\"DET\"",
+		"\"appHalfProjectedPoints\"": "5.3"
+	},
+	{
+		"\"name\"": "\"Ja'Tavion Sanders\"",
+		"\"team\"": "\"CAR\"",
+		"\"appHalfProjectedPoints\"": "5.3"
+	},
+	{
+		"\"name\"": "\"Will Dissly\"",
+		"\"team\"": "\"LAC\"",
+		"\"appHalfProjectedPoints\"": "5.3"
+	},
+	{
+		"\"name\"": "\"KaVontae Turpin\"",
+		"\"team\"": "\"DAL\"",
+		"\"appHalfProjectedPoints\"": "5.2"
+	},
+	{
+		"\"name\"": "\"Justice Hill\"",
+		"\"team\"": "\"BAL\"",
+		"\"appHalfProjectedPoints\"": "5.1"
+	},
+	{
+		"\"name\"": "\"Emari Demercado\"",
+		"\"team\"": "\"ARI\"",
+		"\"appHalfProjectedPoints\"": "5"
+	},
+	{
+		"\"name\"": "\"Mason Tipton\"",
+		"\"team\"": "\"NO\"",
+		"\"appHalfProjectedPoints\"": "5"
+	},
+	{
+		"\"name\"": "\"Kayshon Boutte\"",
+		"\"team\"": "\"NE\"",
+		"\"appHalfProjectedPoints\"": "4.9"
+	},
+	{
+		"\"name\"": "\"Devaughn Vele\"",
+		"\"team\"": "\"DEN\"",
+		"\"appHalfProjectedPoints\"": "4.9"
+	},
+	{
+		"\"name\"": "\"Ricky Pearsall\"",
+		"\"team\"": "\"SF\"",
+		"\"appHalfProjectedPoints\"": "4.9"
+	},
+	{
+		"\"name\"": "\"Chris Rodriguez\"",
+		"\"team\"": "\"WAS\"",
+		"\"appHalfProjectedPoints\"": "4.8"
+	},
+	{
+		"\"name\"": "\"Robert Woods\"",
+		"\"team\"": "\"HOU\"",
+		"\"appHalfProjectedPoints\"": "4.8"
+	},
+	{
+		"\"name\"": "\"Trey Sermon\"",
+		"\"team\"": "\"IND\"",
+		"\"appHalfProjectedPoints\"": "4.7"
+	},
+	{
+		"\"name\"": "\"Jaleel McLaughlin\"",
+		"\"team\"": "\"DEN\"",
+		"\"appHalfProjectedPoints\"": "4.6"
+	},
+	{
+		"\"name\"": "\"Miles Sanders\"",
+		"\"team\"": "",
+		"\"appHalfProjectedPoints\"": "4.5"
+	},
+	{
+		"\"name\"": "\"Sean Tucker\"",
+		"\"team\"": "",
+		"\"appHalfProjectedPoints\"": "4.5"
+	},
+	{
+		"\"name\"": "\"Austin Trammell\"",
+		"\"team\"": "\"JAC\"",
+		"\"appHalfProjectedPoints\"": "4.5"
+	},
+	{
+		"\"name\"": "\"Mack Hollins\"",
+		"\"team\"": "\"BUF\"",
+		"\"appHalfProjectedPoints\"": "4.4"
+	},
+	{
+		"\"name\"": "\"Colby Parkinson\"",
+		"\"team\"": "\"LAR\"",
+		"\"appHalfProjectedPoints\"": "4.4"
+	},
+	{
+		"\"name\"": "\"Chigoziem Okonkwo\"",
+		"\"team\"": "\"TEN\"",
+		"\"appHalfProjectedPoints\"": "4.4"
+	},
+	{
+		"\"name\"": "\"Jordan Mims\"",
+		"\"team\"": "\"NO\"",
+		"\"appHalfProjectedPoints\"": "4.3"
+	},
+	{
+		"\"name\"": "\"Kimani Vidal\"",
+		"\"team\"": "\"LAC\"",
+		"\"appHalfProjectedPoints\"": "4.3"
+	},
+	{
+		"\"name\"": "\"Ezekiel Elliott\"",
+		"\"team\"": "\"DAL\"",
+		"\"appHalfProjectedPoints\"": "4.3"
+	},
+	{
+		"\"name\"": "\"Adonai Mitchell\"",
+		"\"team\"": "\"IND\"",
+		"\"appHalfProjectedPoints\"": "4.3"
+	},
+	{
+		"\"name\"": "\"Noah Gray\"",
+		"\"team\"": "\"KC\"",
+		"\"appHalfProjectedPoints\"": "4.3"
+	},
+	{
+		"\"name\"": "\"Blake Corum\"",
+		"\"team\"": "\"LAR\"",
+		"\"appHalfProjectedPoints\"": "4.2"
+	},
+	{
+		"\"name\"": "\"Jeremy McNichols\"",
+		"\"team\"": "",
+		"\"appHalfProjectedPoints\"": "4.2"
+	},
+	{
+		"\"name\"": "\"David Moore\"",
+		"\"team\"": "\"CAR\"",
+		"\"appHalfProjectedPoints\"": "4.2"
+	},
+	{
+		"\"name\"": "\"Trenton Irwin\"",
+		"\"team\"": "\"CIN\"",
+		"\"appHalfProjectedPoints\"": "4.2"
+	},
+	{
+		"\"name\"": "\"Mo Alie-Cox\"",
+		"\"team\"": "\"IND\"",
+		"\"appHalfProjectedPoints\"": "4.1"
+	},
+	{
+		"\"name\"": "\"Kendrick Bourne\"",
+		"\"team\"": "\"NE\"",
+		"\"appHalfProjectedPoints\"": "4"
+	},
+	{
+		"\"name\"": "\"Justin Watson\"",
+		"\"team\"": "\"KC\"",
+		"\"appHalfProjectedPoints\"": "4"
+	},
+	{
+		"\"name\"": "\"Troy Franklin\"",
+		"\"team\"": "\"DEN\"",
+		"\"appHalfProjectedPoints\"": "4"
+	},
+	{
+		"\"name\"": "\"Tyler Boyd\"",
+		"\"team\"": "\"TEN\"",
+		"\"appHalfProjectedPoints\"": "4"
+	},
+	{
+		"\"name\"": "\"Olamide Zaccheaus\"",
+		"\"team\"": "\"WAS\"",
+		"\"appHalfProjectedPoints\"": "4"
+	},
+	{
+		"\"name\"": "\"Van Jefferson\"",
+		"\"team\"": "\"PIT\"",
+		"\"appHalfProjectedPoints\"": "4"
+	},
+	{
+		"\"name\"": "\"Greg Dortch\"",
+		"\"team\"": "\"ARI\"",
+		"\"appHalfProjectedPoints\"": "3.8"
+	},
+	{
+		"\"name\"": "\"Brenton Strange\"",
+		"\"team\"": "\"JAC\"",
+		"\"appHalfProjectedPoints\"": "3.8"
+	},
+	{
+		"\"name\"": "\"Jermaine Jackson\"",
+		"\"team\"": "\"NO\"",
+		"\"appHalfProjectedPoints\"": "3.5"
+	},
+	{
+		"\"name\"": "\"Hayden Hurst\"",
+		"\"team\"": "\"LAC\"",
+		"\"appHalfProjectedPoints\"": "3.5"
+	},
+	{
+		"\"name\"": "\"Darnell Washington\"",
+		"\"team\"": "\"PIT\"",
+		"\"appHalfProjectedPoints\"": "3.5"
+	},
+	{
+		"\"name\"": "\"Tommy Tremble\"",
+		"\"team\"": "\"CAR\"",
+		"\"appHalfProjectedPoints\"": "3.4"
+	},
+	{
+		"\"name\"": "\"Ryan Miller\"",
+		"\"team\"": "\"TB\"",
+		"\"appHalfProjectedPoints\"": "3.3"
+	},
+	{
+		"\"name\"": "\"Charlie Kolar\"",
+		"\"team\"": "\"BAL\"",
+		"\"appHalfProjectedPoints\"": "3.3"
+	},
+	{
+		"\"name\"": "\"Austin Hooper\"",
+		"\"team\"": "\"NE\"",
+		"\"appHalfProjectedPoints\"": "3.2"
+	},
+	{
+		"\"name\"": "\"Josh Whyle\"",
+		"\"team\"": "\"TEN\"",
+		"\"appHalfProjectedPoints\"": "3.2"
+	},
+	{
+		"\"name\"": "\"Antonio Gibson\"",
+		"\"team\"": "\"NE\"",
+		"\"appHalfProjectedPoints\"": "3.1"
+	},
+	{
+		"\"name\"": "\"Dare Ogunbowale\"",
+		"\"team\"": "\"HOU\"",
+		"\"appHalfProjectedPoints\"": "3.1"
+	},
+	{
+		"\"name\"": "\"Dawson Knox\"",
+		"\"team\"": "\"BUF\"",
+		"\"appHalfProjectedPoints\"": "3.1"
+	},
+	{
+		"\"name\"": "\"Tanner Hudson\"",
+		"\"team\"": "\"CIN\"",
+		"\"appHalfProjectedPoints\"": "3.1"
+	},
+	{
+		"\"name\"": "\"Marquez Valdes-Scantling\"",
+		"\"team\"": "\"NO\"",
+		"\"appHalfProjectedPoints\"": "3"
+	},
+	{
+		"\"name\"": "\"Jalin Hyatt\"",
+		"\"team\"": "\"NYG\"",
+		"\"appHalfProjectedPoints\"": "3"
+	},
+	{
+		"\"name\"": "\"Xavier Gipson\"",
+		"\"team\"": "\"NYJ\"",
+		"\"appHalfProjectedPoints\"": "3"
+	},
+	{
+		"\"name\"": "\"Audric Estime\"",
+		"\"team\"": "",
+		"\"appHalfProjectedPoints\"": "2.8"
+	},
+	{
+		"\"name\"": "\"Trey Benson\"",
+		"\"team\"": "",
+		"\"appHalfProjectedPoints\"": "2.8"
+	},
+	{
+		"\"name\"": "\"Lucas Krull\"",
+		"\"team\"": "\"DEN\"",
+		"\"appHalfProjectedPoints\"": "2.7"
+	},
+	{
+		"\"name\"": "\"Josh Oliver\"",
+		"\"team\"": "\"MIN\"",
+		"\"appHalfProjectedPoints\"": "2.7"
+	},
+	{
+		"\"name\"": "\"Adam Trautman\"",
+		"\"team\"": "\"DEN\"",
+		"\"appHalfProjectedPoints\"": "2.6"
+	},
+	{
+		"\"name\"": "\"Jahan Dotson\"",
+		"\"team\"": "\"PHI\"",
+		"\"appHalfProjectedPoints\"": "2.4"
+	},
+	{
+		"\"name\"": "\"Gerald Everett\"",
+		"\"team\"": "\"CHI\"",
+		"\"appHalfProjectedPoints\"": "2.4"
+	},
+	{
+		"\"name\"": "\"Brock Wright\"",
+		"\"team\"": "\"DET\"",
+		"\"appHalfProjectedPoints\"": "2.4"
+	},
+	{
+		"\"name\"": "\"Kenneth Gainwell\"",
+		"\"team\"": "\"PHI\"",
+		"\"appHalfProjectedPoints\"": "2.3"
+	},
+	{
+		"\"name\"": "\"Odell Beckham\"",
+		"\"team\"": "\"MIA\"",
+		"\"appHalfProjectedPoints\"": "2.3"
+	},
+	{
+		"\"name\"": "\"Elijah Higgins\"",
+		"\"team\"": "\"ARI\"",
+		"\"appHalfProjectedPoints\"": "2.3"
+	},
+	{
+		"\"name\"": "\"Ty Johnson\"",
+		"\"team\"": "",
+		"\"appHalfProjectedPoints\"": "2.2"
+	},
+	{
+		"\"name\"": "\"D'Ernest Johnson\"",
+		"\"team\"": "",
+		"\"appHalfProjectedPoints\"": "2.1"
+	},
+	{
+		"\"name\"": "\"Andrew Ogletree\"",
+		"\"team\"": "\"IND\"",
+		"\"appHalfProjectedPoints\"": "2.1"
+	},
+	{
+		"\"name\"": "\"Luke Schoonmaker\"",
+		"\"team\"": "\"DAL\"",
+		"\"appHalfProjectedPoints\"": "2.1"
+	},
+	{
+		"\"name\"": "\"Eric Saubert\"",
+		"\"team\"": "\"SF\"",
+		"\"appHalfProjectedPoints\"": "2"
+	},
+	{
+		"\"name\"": "\"Cade Stover\"",
+		"\"team\"": "\"HOU\"",
+		"\"appHalfProjectedPoints\"": "1.9"
+	},
+	{
+		"\"name\"": "\"Jeremy Ruckert\"",
+		"\"team\"": "\"NYJ\"",
+		"\"appHalfProjectedPoints\"": "1.9"
+	},
+	{
+		"\"name\"": "\"Keaton Mitchell\"",
+		"\"team\"": "",
+		"\"appHalfProjectedPoints\"": "1.6"
+	},
+	{
+		"\"name\"": "\"Daniel Bellinger\"",
+		"\"team\"": "\"NYG\"",
+		"\"appHalfProjectedPoints\"": "1.6"
+	},
+	{
+		"\"name\"": "\"Hunter Long\"",
+		"\"team\"": "\"LAR\"",
+		"\"appHalfProjectedPoints\"": "1.6"
+	},
+	{
+		"\"name\"": "\"Ben Sinnott\"",
+		"\"team\"": "\"WAS\"",
+		"\"appHalfProjectedPoints\"": "1.6"
+	},
+	{
+		"\"name\"": "\"Durham Smythe\"",
+		"\"team\"": "\"MIA\"",
+		"\"appHalfProjectedPoints\"": "1.5"
+	},
+	{
+		"\"name\"": "\"Dalvin Cook\"",
+		"\"team\"": "",
+		"\"appHalfProjectedPoints\"": "1.4"
+	},
+	{
+		"\"name\"": "\"JaMycal Hasty\"",
+		"\"team\"": "",
+		"\"appHalfProjectedPoints\"": "1.2"
+	},
+	{
+		"\"name\"": "\"Charlie Woerner\"",
+		"\"team\"": "\"ATL\"",
+		"\"appHalfProjectedPoints\"": "1.2"
+	},
+	{
+		"\"name\"": "\"CJ Ham\"",
+		"\"team\"": "",
+		"\"appHalfProjectedPoints\"": "1.1"
+	},
+	{
+		"\"name\"": "\"Carson Steele\"",
+		"\"team\"": "",
+		"\"appHalfProjectedPoints\"": "0.9"
+	},
+	{
+		"\"name\"": "\"Tyler Goodson\"",
+		"\"team\"": "",
+		"\"appHalfProjectedPoints\"": "0.8"
+	},
+	{
+		"\"name\"": "\"Alec Ingold\"",
+		"\"team\"": "",
+		"\"appHalfProjectedPoints\"": "0.8"
+	},
+	{
+		"\"name\"": "\"Hassan Haskins\"",
+		"\"team\"": "",
+		"\"appHalfProjectedPoints\"": "0.8"
+	},
+	{
+		"\"name\"": "\"Isaac Guerendo\"",
+		"\"team\"": "",
+		"\"appHalfProjectedPoints\"": "0.8"
+	},
+	{
+		"\"name\"": "\"\"",
+		"\"team\"": "\"LV\"",
+		"\"appHalfProjectedPoints\"": "0.6"
+	},
+	{
+		"\"name\"": "\"Trayveon Williams\"",
+		"\"team\"": "",
+		"\"appHalfProjectedPoints\"": "0.6"
+	},
+	{
+		"\"name\"": "\"\"",
+		"\"team\"": "\"SEA\"",
+		"\"appHalfProjectedPoints\"": "-0.1"
+	},
+	{
+		"\"name\"": "\"\"",
+		"\"team\"": "\"GB\"",
+		"\"appHalfProjectedPoints\"": "-0.2"
+	},
+	{
+		"\"name\"": "\"\"",
+		"\"team\"": "\"CLE\"",
+		"\"appHalfProjectedPoints\"": "-0.3"
+	}
+]
