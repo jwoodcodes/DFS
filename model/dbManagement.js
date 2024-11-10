@@ -142,7 +142,7 @@ async function someFunction() {
   propsqbData.forEach((player) => {
     // console.log(player.name);
     if(player.name === 'Baker Mayfield' || player.name === 'Jayden Daniels') {
-      console.log(player)
+      // console.log(player)
     }
   });
 }
@@ -187,6 +187,10 @@ function pprCompare(a, b) {
   return 0;
 }
 
+qbProjectionArray = qbProjectionArray.filter((obj1, i, arr) => 
+  arr.findIndex(obj2 => obj2.name === obj1.name) === i
+);
+
 qbProjectionArray.sort(halfCompare);
 rbProjectionArray.sort(halfCompare);
 // let pprSortedRBProjectionArray = rbProjectionArray.sort(pprCompare);
@@ -196,6 +200,7 @@ teProjectionsArray.sort(halfCompare);
 // let pprSortedTEProjectionArray = teProjectionsArray.sort(pprCompare);
 
 // console.log(wrProjectionArray)
+// console.log(qbProjectionArray)
 
 let allProjectionsArray = [
   qbProjectionArray,
@@ -227,6 +232,7 @@ let superFlexArray = tempSuperFlexArray.sort(halfCompare);
 // console.log(superFlexArray);
 
 qbCSVArray = qbProjectionArray.map(obj => {
+  // console.log(obj.name)
   return {
     name: obj.name,
     team: obj.team,
