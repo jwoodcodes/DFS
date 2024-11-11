@@ -4,6 +4,9 @@ const rbrawdata = require('../teamandpostionsrawdata/rbrawdata');
 const gameInfo = require('../teamandpostionsrawdata/gameinfo');
 // const allQBData = require('./qbValuesCalcs');
 const allQBData = require('./qbValuesCalcs').allQBData;
+
+const fetchTheRBData = require('./propsDataFetcher').rbPropsDataFromFetcher;
+
 const { ThemeProvider } = require('styled-components');
 
 const rbOnenumOfMatchingRoleWeeks = [];
@@ -595,6 +598,15 @@ class RbObject {
 
       // console.log(this)
       // console.log(recFirstDowns)
+
+      this.prjCarries = carries
+      this.prjRushYards = rushYards
+      this.prjRushTDs = rushTDs
+      this.prjReceptions = receptions
+      this.prjRecYards = recYards
+      this.prjRecTDs = recTDs
+      this.prjRushFirstDowns = rushFirstDowns
+      this.prjRecFirstDowns = recFirstDowns
 
       // setting baselines
 
@@ -1221,6 +1233,66 @@ const allTeamRBObjects = {
 const allRBObjectsArray = [];
 const allRBsMap = new Map();
 
+async function propsData() {
+  const propsData = await fetchTheRBData();
+  // console.log(propsData)
+  // console.log(allRBObjectsArray)
+  propsData.forEach(function (player) {
+
+
+    
+
+    allRBObjectsArray.forEach(function (rb) {
+      // console.log(rb)
+      // console.log(rb.playerName)
+
+
+      //
+      //              RBOne
+      //
+
+      // console.log(player.RBOne)
+
+      if (rb.roleThisWeek === 1) {
+          // console.log(rb)
+          if(player.RBOne.name === rb.playerName) {
+            // console.log(player.RBOne)
+            // console.log(rb)
+
+            rb.udCarriesProp = { prop: player.RBOne.udCarriesProp, isOverRecomended: false, isUnderRecomended: false };
+            rb.ppCarriesProp = { prop: player.RBOne.ppCarriesProp, isOverRecomended: false, isUnderRecomended: false };
+            rb.udRushYardsProp = { prop: player.RBOne.udRushYardsProp, isOverRecomended: false, isUnderRecomended: false };
+            rb.ppRushYardsProp = { prop: player.RBOne.ppRushYardsProp, isOverRecomended: false, isUnderRecomended: false };
+            rb.udRushTDsProp = { prop: player.RBOne.udRushTDsProp, isOverRecomended: false, isUnderRecomended: false };
+            rb.ppRushTDsProp = { prop: player.RBOne.ppRushTDsProp, isOverRecomended: false, isUnderRecomended: false };
+            rb.udReceptionsProp = { prop: player.RBOne.udReceptionsProp, isOverRecomended: false, isUnderRecomended: false };
+            rb.ppReceptionsProp = { prop: player.RBOne.ppReceptionsProp, isOverRecomended: false, isUnderRecomended: false };
+            rb.udReceivingYardsProp = { prop: player.RBOne.udRecYardsProp, isOverRecomended: false, isUnderRecomended: false };
+            rb.ppReceivingYardsProp = { prop: player.RBOne.ppRecYardsProp, isOverRecomended: false, isUnderRecomended: false };
+            rb.udRushPlusRecYardsProp = { prop: player.RBOne.udRushPlusRecYardsProp, isOverRecomended: false, isUnderRecomended: false };
+            rb.ppRushPlusRecYardsProp = { prop: player.RBOne.ppRushPlusRecYardsProp, isOverRecomended: false, isUnderRecomended: false };
+            rb.udFantasyScoreProp = { prop: player.RBOne.udFantasyScoreProp, isOverRecomended: false, isUnderRecomended: false };
+        rb.ppFantasyScoreProp = { prop: player.RBOne.ppFantasyScoreProp, isOverRecomended: false, isUnderRecomended: false };
+
+            // console.log(rb.ppRushPlusRecYardsProp)
+
+
+          } // end if(player.RBOne.name === rb.playerName) {
+        } // end if (rb.roleThisWeek === 1) { 
+
+
+        //
+        //                       RBTwo
+        //
+
+    }); //  end allRBObjectsArray.forEach(function (rb) {
+  }) // end propsData.forEach(function (player) {
+
+  
+} // end async function propsData() {
+
+propsData()
+
 allRBs.forEach(function (team, i) {
   // console.log(team.RBOne);
 
@@ -1338,7 +1410,7 @@ allRBs.forEach(function (team, i) {
 allRBs.forEach(function (team, i) {
   let teamName = '';
 
-  
+  // console.log(team.RBOne)
 
   allTeams.forEach(function (giTeam) {
     if (team.teamABV === giTeam.teamABV || team.teamABV === giTeam.altTeamABV) {
