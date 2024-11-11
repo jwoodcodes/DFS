@@ -10,7 +10,7 @@ const allTeams = require('../teamandpositionvariables/allTeamLevelVariables');
 const allQBs = require('../teamandpositionvariables/allQBVariables');
 const qbrawdata = require('../teamandpostionsrawdata/qbrawdata');
 
-const fetchTheData = require('./propsDataFetcher');
+const fetchTheData = require('./propsDataFetcher').qbPropsDataFromFetcher;
 
 const gameInfo = require('../teamandpostionsrawdata/gameinfo');
 const { match } = require('assert');

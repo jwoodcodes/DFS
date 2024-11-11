@@ -1,6 +1,7 @@
 const axios = require('axios');
 const { MongoClient } = require('mongodb');
 const allQBs = require('../teamandpositionvariables/allQBVariables');
+const allRBs = require('../teamandpositionvariables/allRBVariables');
 
 
 
@@ -13,7 +14,7 @@ async function fetchRawFantasyCalcDataFromMongodb() {
   const dbName = 'dailydynasties';
   try {
     await client.connect();
-    console.log('Connected correctly to server');
+    // console.log('Connected correctly to server');
     const db = client.db(dbName);
 
     // Use the collection "fantasycalcData"
@@ -47,7 +48,7 @@ async function fetchPrizePicksDataFromMongodb() {
   const dbName = 'dailydynasties';
   try {
     await client.connect();
-    console.log('Connected correctly to server');
+    // console.log('Connected correctly to server');
     const db = client.db(dbName);
 
     // Use the collection "fantasycalcData"
@@ -131,8 +132,13 @@ async function fetchTheData() {
           
         }
       });
+
+
+    
       
     }); 
+
+        
     }) // end await fetchRawFantasyCalcDataFromMongodb().then((res) => {
 
 
@@ -190,6 +196,9 @@ async function fetchTheData() {
             
           }
           })
+
+             
+    
     
     }); // end fetchPrizePicksDataFromMongodb().then((res) => {
 
@@ -200,7 +209,237 @@ return allQBs;
 
 fetchTheData()
 
-module.exports = fetchTheData;
+async function fetchTheRBData() {
+
+ 
+   // 
+  ///             underdog
+  //
+
+  await fetchRawFantasyCalcDataFromMongodb().then((res) => {
+
+    
+    
+    let TopData = res.data;
+    // console.log(TopData);
+    
+    //
+
+    TopData.forEach((player) => {
+      // console.log(player)
+      // console.log(player.players[0].name)
+
+    
+     
+
+      //                           RBOne
+
+      allRBs.forEach((rb) => {
+        // console.log(rb.RBOne)
+        if(player.players[0].name === rb.RBOne.name) {
+          // console.log(rb.RBOne.name, player.market, player.line)
+    
+          if(player.market === 'rush attempts') {
+            // console.log(rb.rbOne.name, player.market, player.line)
+            rb.RBOne.udCarriesProp  = player.line
+          }
+          
+          if(player.market === 'rush yards') {
+            // console.log(rb.rbOne.name, player.market, player.line)
+            rb.RBOne.udRushYardsProp  = player.line
+          }
+          if(player.market === 'rush tds') {
+            // console.log(rb.RBOne.name, player.market, player.line)
+            rb.RBOne.udRushTDsProp  = player.line
+          }
+
+          if(player.market === 'receptions') {
+            // console.log(rb.RBOne.name, player.market, player.line)
+            rb.RBOne.udReceptionsProp  = player.line
+          }
+          if(player.market === 'receiving yards') {
+            // console.log(rb.RBOne.name, player.market, player.line)
+            rb.RBOne.udRecYardsProp  = player.line
+          }
+          if(player.market === 'rush+rec yds') {
+            // console.log(rb.RBOne.name, player.market, player.line)
+            rb.RBOne.udRushPlusRecYardsProp  = player.line
+          }
+
+          if(player.market === 'fantasy score') {
+            // console.log(rb.RBOne.name, player.market, player.line)
+            rb.RBOne.udFantasyScoreProp  = player.line
+          }
+
+          
+        }
+
+
+      //
+      //                    RBTwo
+
+      if(player.players[0].name === rb.RBTwo.name) {
+        // console.log(rb.RBOne.name, player.market, player.line)
+  
+        if(player.market === 'rush attempts') {
+          // console.log(rb.RBTwo.name, player.market, player.line)
+          rb.RBTwo.udCarriesProp  = player.line
+        }
+        
+        if(player.market === 'rush yards') {
+          // console.log(rb.RBTwo.name, player.market, player.line)
+          rb.RBTwo.udRushYardsProp  = player.line
+        }
+        if(player.market === 'rush tds') {
+          // console.log(rb.RBTwo.name, player.market, player.line)
+          rb.RBTwo.udRushTDsProp  = player.line
+        }
+
+        if(player.market === 'receptions') {
+          // console.log(rb.RBTwo.name, player.market, player.line)
+          rb.RBTwo.udReceptionsProp  = player.line
+        }
+        if(player.market === 'receiving yards') {
+          // console.log(rb.RBTwo.name, player.market, player.line)
+          rb.RBTwo.udRecYardsProp  = player.line
+        }
+        if(player.market === 'rush+rec yds') {
+          // console.log(rb.RBTwo.name, player.market, player.line)
+          rb.RBTwo.udRushPlusRecYardsProp  = player.line
+        }
+
+        if(player.market === 'fantasy score') {
+          // console.log(rb.RBTwo.name, player.market, player.line)
+          rb.RBTwo.udFantasyScoreProp  = player.line
+        }
+
+        
+      }
+      
+
+      });
+      
+    }); 
+
+        
+    }) // end await fetchRawFantasyCalcDataFromMongodb().then((res) => {
+
+
+    //
+    ///
+    ////        prize picks
+    ///
+    //
+
+    await fetchPrizePicksDataFromMongodb().then((res) => {
+      let TopData = res.data;
+      // console.log(TopData);
+      
+      TopData.forEach((player) => {
+        // console.log(player)
+        // console.log(player.players[0].name)
+  
+
+      
+
+      //                           RBOne
+
+      allRBs.forEach((rb) => {
+        // console.log(rb.RBTwo)
+        if(player.players[0].name === rb.RBOne.name) {
+          // console.log(rb.RBOne.name, player.market, player.line)
+
+          
+          if(player.market === 'rush attempts') {
+            // console.log(rb.RBOne.name, player.market, player.line)
+            rb.RBOne.ppCarriesProp  = player.line
+          }
+    
+          if(player.market === 'rush yards') {
+            // console.log(rb.RBOne.name, player.market, player.line)
+            rb.RBOne.ppRushYardsProp  = player.line
+          }
+          if(player.market === 'rush tds') {
+            // console.log(rb.RBOne.name, player.market, player.line)
+            rb.RBOne.ppRushTDsProp  = player.line
+          }
+          if(player.market === 'receptions') {
+            // console.log(rb.RBOne.name, player.market, player.line)
+            rb.RBOne.ppReceptionsProp  = player.line
+          }
+          if(player.market === 'receiving yards') {
+            // console.log(rb.RBOne.name, player.market, player.line)
+            rb.RBOne.ppRecYardsProp  = player.line
+          }
+          if(player.market === 'rush+rec yds') {
+            // console.log(rb.RBOne.name, player.market, player.line)
+            rb.RBOne.ppRushPlusRecYardsProp  = player.line
+          }
+          
+          if(player.market === 'fantasy score') {
+            // console.log(rb.RBOne.name, player.market, player.line)
+            rb.RBOne.ppFantasyScoreProp  = player.line
+          }
+
+
+          // console.log(rb.RBOne)
+        }
+
+          //
+      //                        RBTwo
+      //
+
+      if(player.players[0].name === rb.RBTwo.name) {
+        // console.log(rb.RBTwo.name, player.market, player.line)
+
+        
+        if(player.market === 'rush attempts') {
+          // console.log(rb.RBTwo.name, player.market, player.line)
+          rb.RBTwo.ppCarriesProp  = player.line
+        }
+  
+        if(player.market === 'rush yards') {
+          // console.log(rb.RBTwo.name, player.market, player.line)
+          rb.RBTwo.ppRushYardsProp  = player.line
+        }
+        if(player.market === 'rush tds') {
+          // console.log(rb.RBTwo.name, player.market, player.line)
+          rb.RBTwo.ppRushTDsProp  = player.line
+        }
+        if(player.market === 'receptions') {
+          // console.log(rb.RBTwo.name, player.market, player.line)
+          rb.RBTwo.ppReceptionsProp  = player.line
+        }
+        if(player.market === 'receiving yards') {
+          // console.log(rb.RBTwo.name, player.market, player.line)
+          rb.RBTwo.ppRecYardsProp  = player.line
+        }
+        if(player.market === 'rush+rec yds') {
+          // console.log(rb.RBTwo.name, player.market, player.line)
+          rb.RBTwo.ppRushPlusRecYardsProp  = player.line
+        }
+        
+        if(player.market === 'fantasy score') {
+          // console.log(rb.RBTwo.name, player.market, player.line)
+          rb.RBTwo.ppFantasyScoreProp  = player.line
+        }
+
+
+        // console.log(rb.RBTwo)
+      }
+      });
+    
+    }); // end fetchPrizePicksDataFromMongodb().then((res) => {
+
+ 
+})
+return allRBs;
+}
+
+fetchTheRBData()
+
+module.exports.qbPropsDataFromFetcher = fetchTheData;
+module.exports.rbPropsDataFromFetcher = fetchTheRBData;
 
 
 
