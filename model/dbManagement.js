@@ -1,7 +1,9 @@
 // const allQBData = require('./dfs_positions_calc_funcs/qbValuesCalcs');
 const allQBData = require('./dfs_positions_calc_funcs/qbValuesCalcs').allQBData;
 const propsQBData = require('./dfs_positions_calc_funcs/qbValuesCalcs').allQBProjectionsObjects;
-const allRBData = require('./dfs_positions_calc_funcs/rbValuesCalcs');
+// const allRBData = require('./dfs_positions_calc_funcs/rbValuesCalcs');
+const allRBData = require('./dfs_positions_calc_funcs/rbValuesCalcs').allRBData;
+const propsRBData = require('./dfs_positions_calc_funcs/rbValuesCalcs').allRBProjectionsObjects;
 const allWRData = require('./dfs_positions_calc_funcs/wrValuesCalcs');
 const allTEProjectionsObjects = require('./dfs_positions_calc_funcs/teValuesCalcs');
 const allQBModelDataData = require('./QB Prospect Model/qbmodel');
@@ -135,16 +137,25 @@ async function runQBProspectModel() {
 }
 
 async function someFunction() {
-  const propsqbData = await propsQBData();
+  try {
+    const propsqbData = await propsQBData();
+    const propsrbData = await propsRBData();
   
-  // console.log(propsqbData);
+    propsqbData.forEach((player) => {
+      if(player.name === 'Baker Mayfield' || player.name === 'Jayden Daniels') {
+        // console.log('QB:', player);
+      }
+    });
 
-  propsqbData.forEach((player) => {
-    // console.log(player.name);
-    if(player.name === 'Baker Mayfield' || player.name === 'Jayden Daniels') {
-      // console.log(player)
-    }
-  });
+    propsrbData.forEach((player) => {
+      // console.log(player);
+      if(player.name === 'Kyren Williams' || player.name === 'Joe Mixon') {
+        // console.log('RB:', player);
+      }
+    });
+  } catch (error) {
+    console.error('Error in someFunction:', error);
+  }
 }
 
 someFunction().then(() => {
@@ -158,6 +169,7 @@ someFunction().then(() => {
 let qbProjectionArray = allQBData.allQBProjectionsObjects;
 // console.log(qbProjectionArray);
 let tempRbProjectionArray = allRBData.allRBProjectionsObjects;
+// let tempRbProjectionArray = propsrbData;
 let rbProjectionArray = [...tempRbProjectionArray];
 let tempWrProjectionArray = allWRData.allWRProjectionsObjects;
 let wrProjectionArray = [...tempWrProjectionArray];
