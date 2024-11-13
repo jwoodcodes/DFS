@@ -8183,7 +8183,7 @@ const allFlexGLSP = [
 		"\"Stand - 50th\"": "0.2",
 		"\"Stand - 75th\"": "0.5"
 	},
-
+	
 ]
 
 module.exports = allFlexGLSP;

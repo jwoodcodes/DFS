@@ -5,6 +5,7 @@ const allRBs = require('../teamandpositionvariables/allRBVariables');
 
 
 
+
 async function fetchRawFantasyCalcDataFromMongodb() {
   const url =
     'mongodb+srv://devJay:Hesstrucksarethebest@dailydynasties.syom4sb.mongodb.net/fantasycalcData';

@@ -1231,7 +1231,7 @@ allQBs.forEach(function (team, i) {
   //   `PassAttempts - ${tempAppProjPassAttempts}, four - ${team.prjpassattempts}`,  
   // );
 
- 
+  bye
 
   let teamName = '';
   allTeams.forEach(function (giTeam) {
@@ -1252,11 +1252,13 @@ allQBs.forEach(function (team, i) {
 
   // console.log(team.appQBProjectedPoints);
 
+  
   let qbObject = new QbObject(
     playerName,
     position,
     teamName,
     teamABV,
+    
     byeWeek,
     homeOrAway,
     team.slate,
@@ -1313,6 +1315,7 @@ allQBs.forEach(function (team, i) {
     bonusForHighExplosivePassVsBadExplosivePassDef,
     team.percentageOfFantasyPointsFromPassingLastFiveWeeks
   );
+
 
   allQBsMap.set(`${teamName}QB`, qbObject);
   allQBObjects.playerName = qbObject;
