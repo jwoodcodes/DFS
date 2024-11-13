@@ -5,6 +5,8 @@ const wrrawdata = require('../teamandpostionsrawdata/wrrawdata');
 const qbrawdata = require('../teamandpostionsrawdata/qbrawdata');
 const allQBData = require('../dfs_positions_calc_funcs/qbValuesCalcs');
 
+const propsWRData = require('../dfs_positions_calc_funcs/wrPropsDataFetcher.js');
+
 //
 const WRProspectModelData = require('../DataForUndroppablesProspectModels/WRProspectModelData.js');
 
@@ -1521,6 +1523,70 @@ class ProjectionsObject {
     
   }
 }
+
+// async function propsData() {
+
+
+//   const propsData = await propsWRData();
+  
+//   propsData.forEach(function (player) {
+
+//   // console.log(player.WROne)
+
+//   allWRObjectsArray.forEach(function (wr) {
+//     // console.log(wr.appHalfProjectedPoints);
+  
+//     // console.log(wr.appFullProjectedPoints)
+    
+  
+//     // console.log(wr.appFullProjectedPoints);
+
+//     if (wr.roleThisWeek === 1) {
+//       // console.log(wr.playerName);
+//       // console.log(player.WROne.name);
+//       // console.log(wr);
+//       // console.log(player.WROne);
+//       if(wr.playerName === player.WROne.name){
+//         // console.log(wr);
+//         // console.log(player.WROne);
+//       }
+//     }
+  
+//     let wrProjectionsObject = new ProjectionsObject(
+//       wr.playerName,
+//       wr.position,
+//       wr.teamABV,
+  
+//       +wr.appProjectedCarriesThisWeek,
+//         +wr.appProjectedrushYardsThisWeek,
+//         +wr.appProjectedrushTDsThisWeek,
+//         +wr.appProjectedreceptionsThisWeek,
+//         +wr.appProjectedrecYardsThisWeek,
+//         +wr.appProjectedrecTDsThisWeek,
+//         +wr.appProjectedrushFirstDownsThisWeek,
+//         +wr.appProjectedrecFirstDownsThisWeek,
+//         +wr.appProjectedRBTotalFirstDownsThisWeek,
+  
+//         +wr.astroHalfWRProjection,
+//       +wr.astroFullWRProjection,
+  
+//       +wr.appHalfProjectedPoints,
+//       +wr.appFullProjectedPoints,
+//       +wr.appFullProjectedPoints,
+//     );
+  
+//     // console.log(wrProjectionsObject)
+  
+//     allWRProjectionsObjects.push(wrProjectionsObject);
+//   });
+  
+//   allWRData.allWRProjectionsObjects = allWRProjectionsObjects;
+
+// })
+//   return allWRProjectionsObjects;
+// }
+
+// propsData();
 
 allWRObjectsArray.forEach(function (player) {
   // console.log(player.appHalfProjectedPoints);

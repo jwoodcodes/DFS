@@ -5233,18 +5233,21 @@ const populateTeamObjects = function (
     allNFLTeamPace.forEach(function (teamObj) {
       let tempHomeTeamName = '';
       let tempAwayTeamName = '';
+      if(teamObj['"Home"']) {
       if (teamObj['"Home"'].length === 5) {
         tempHomeTeamName = teamObj['"Home"'].slice(1, 4);
       } else {
         tempHomeTeamName = teamObj['"Home"'].slice(1, 3);
       }
+    }
 
+    if(teamObj['"Away"']) {
       if (teamObj['"Away"'].length === 5) {
         tempAwayTeamName = teamObj['"Away"'].slice(1, 4);
       } else {
         tempAwayTeamName = teamObj['"Away"'].slice(1, 3);
       }
-
+    }
       if (
         tempHomeTeamName === passedInTeam.teamABV ||
         tempHomeTeamName === passedInTeam.altTeamABV
