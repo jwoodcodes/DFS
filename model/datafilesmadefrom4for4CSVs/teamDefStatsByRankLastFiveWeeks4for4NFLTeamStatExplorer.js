@@ -673,4 +673,5 @@ const teamDefStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer = [
 	},
 	
 ]
+
 module.exports = teamDefStatsByRankLastFiveWeeks4for4NFLTeamStatExplorer;

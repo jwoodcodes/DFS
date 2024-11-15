@@ -6025,15 +6025,17 @@ allGameInfo.forEach(function (team) {
 
 allGameInfo.forEach(function (team) {
   // console.log(team.slate)
-  // if (team.teamProjectedPointsThisWeek) {
-  //   console.log(
-  //     team.teamName,
-  //     team.teamProjectedPointsThisWeek,
-  //     team.opponentABV,
-  //     team.opponentThisWeek.teamProjectedPointsThisWeek,
-  //     team.diffBetweenMyGameTotalAndVtt
-  //   );
-  // }
+  if (team.teamProjectedPointsThisWeek) {
+    // console.log(
+    //   team.teamName,
+    //   team.teamProjectedPointsThisWeek,
+    //   team.opponentABV,
+    //   team.opponentThisWeek.teamProjectedPointsThisWeek,
+    //   team.diffBetweenMyGameTotalAndVtt
+    // );
+  } else {
+    // console.log(team)
+  }
 });
 
 // console.log(

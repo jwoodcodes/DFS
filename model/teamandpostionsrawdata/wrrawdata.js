@@ -3075,6 +3075,7 @@ const populateTeamObjects = function (
   qbDownloadableSpreadSheetYahoo.forEach(function (playerobj, i) {
     passedInTeam.slate = '';
     allNFLTeamPace.forEach(function (teamObj) {
+      // console.log(teamObj, teamObj['"Away"'])
       let tempHomeTeamName = '';
       let tempAwayTeamName = '';
       if (teamObj['"Home"'].length === 5) {
@@ -4674,6 +4675,7 @@ const populateTeamObjects = function (
         passedInTeam.LastWeekWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray =
           lastWeekWrTotalScoresForEachOfTheLastFiveWeeksByWeekArray;
       });
+    
     });
 
     // // let sortedallHalfFlexValuesWithNames = allHalfFlexValuesWithNames.sort(

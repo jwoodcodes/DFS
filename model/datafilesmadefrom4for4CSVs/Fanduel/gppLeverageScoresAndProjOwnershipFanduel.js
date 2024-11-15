@@ -6,10 +6,10 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Opp\"": "\"SEA\"",
 		"\"FD Sal $\"": "\"9800\"",
 		"\"Projected Own%\"": "\"17.0%\"",
-		"\"Cash Odds\"": "\"64%\"",
-		"\"GPP Odds\"": "\"28%\"",
+		"\"Cash Odds\"": "\"60%\"",
+		"\"GPP Odds\"": "\"31%\"",
 		"\"Implied Own%\"": "\"25%\"",
-		"\"FD LEV\"": "\"1.46\""
+		"\"FD LEV\"": "\"1.47\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -17,11 +17,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"CIN\"",
 		"\"Opp\"": "\"@LAC\"",
 		"\"FD Sal $\"": "\"9600\"",
-		"\"Projected Own%\"": "\"14.5%\"",
+		"\"Projected Own%\"": "\"16.5%\"",
 		"\"Cash Odds\"": "\"56%\"",
 		"\"GPP Odds\"": "\"24%\"",
-		"\"Implied Own%\"": "\"26%\"",
-		"\"FD LEV\"": "\"1.82\""
+		"\"Implied Own%\"": "\"23%\"",
+		"\"FD LEV\"": "\"1.40\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -29,11 +29,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"BAL\"",
 		"\"Opp\"": "\"@PIT\"",
 		"\"FD Sal $\"": "\"9400\"",
-		"\"Projected Own%\"": "\"7.5%\"",
-		"\"Cash Odds\"": "\"53%\"",
-		"\"GPP Odds\"": "\"20%\"",
-		"\"Implied Own%\"": "\"17%\"",
-		"\"FD LEV\"": "\"2.30\""
+		"\"Projected Own%\"": "\"2.5%\"",
+		"\"Cash Odds\"": "\"51%\"",
+		"\"GPP Odds\"": "\"17%\"",
+		"\"Implied Own%\"": "\"14%\"",
+		"\"FD LEV\"": "\"5.41\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -41,11 +41,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"LAR\"",
 		"\"Opp\"": "\"@NE\"",
 		"\"FD Sal $\"": "\"9200\"",
-		"\"Projected Own%\"": "\"14.0%\"",
+		"\"Projected Own%\"": "\"9.5%\"",
 		"\"Cash Odds\"": "\"55%\"",
-		"\"GPP Odds\"": "\"21%\"",
-		"\"Implied Own%\"": "\"19%\"",
-		"\"FD LEV\"": "\"1.33\""
+		"\"GPP Odds\"": "\"22%\"",
+		"\"Implied Own%\"": "\"18%\"",
+		"\"FD LEV\"": "\"1.90\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -53,11 +53,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"DET\"",
 		"\"Opp\"": "\"JAX\"",
 		"\"FD Sal $\"": "\"9200\"",
-		"\"Projected Own%\"": "\"4.5%\"",
-		"\"Cash Odds\"": "\"48%\"",
-		"\"GPP Odds\"": "\"16%\"",
+		"\"Projected Own%\"": "\"2.5%\"",
+		"\"Cash Odds\"": "\"47%\"",
+		"\"GPP Odds\"": "\"18%\"",
 		"\"Implied Own%\"": "\"17%\"",
-		"\"FD LEV\"": "\"3.80\""
+		"\"FD LEV\"": "\"6.92\""
 	},
 	{
 		"\"Pos\"": "\"QB\"",
@@ -65,11 +65,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"BAL\"",
 		"\"Opp\"": "\"@PIT\"",
 		"\"FD Sal $\"": "\"9000\"",
-		"\"Projected Own%\"": "\"3.0%\"",
-		"\"Cash Odds\"": "\"45%\"",
+		"\"Projected Own%\"": "\"8.5%\"",
+		"\"Cash Odds\"": "\"48%\"",
 		"\"GPP Odds\"": "\"19%\"",
-		"\"Implied Own%\"": "\"7%\"",
-		"\"FD LEV\"": "\"2.34\""
+		"\"Implied Own%\"": "\"8%\"",
+		"\"FD LEV\"": "\"0.89\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -77,11 +77,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"MIN\"",
 		"\"Opp\"": "\"@TEN\"",
 		"\"FD Sal $\"": "\"9000\"",
-		"\"Projected Own%\"": "\"4.0%\"",
-		"\"Cash Odds\"": "\"41%\"",
-		"\"GPP Odds\"": "\"11%\"",
-		"\"Implied Own%\"": "\"12%\"",
-		"\"FD LEV\"": "\"3.00\""
+		"\"Projected Own%\"": "\"4.5%\"",
+		"\"Cash Odds\"": "\"42%\"",
+		"\"GPP Odds\"": "\"15%\"",
+		"\"Implied Own%\"": "\"15%\"",
+		"\"FD LEV\"": "\"3.22\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -89,11 +89,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"ATL\"",
 		"\"Opp\"": "\"@DEN\"",
 		"\"FD Sal $\"": "\"8900\"",
-		"\"Projected Own%\"": "\"5.0%\"",
-		"\"Cash Odds\"": "\"48%\"",
-		"\"GPP Odds\"": "\"14%\"",
-		"\"Implied Own%\"": "\"13%\"",
-		"\"FD LEV\"": "\"2.53\""
+		"\"Projected Own%\"": "\"10.0%\"",
+		"\"Cash Odds\"": "\"54%\"",
+		"\"GPP Odds\"": "\"13%\"",
+		"\"Implied Own%\"": "\"11%\"",
+		"\"FD LEV\"": "\"1.10\""
 	},
 	{
 		"\"Pos\"": "\"QB\"",
@@ -101,11 +101,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"BUF\"",
 		"\"Opp\"": "\"KC\"",
 		"\"FD Sal $\"": "\"8800\"",
-		"\"Projected Own%\"": "\"2.5%\"",
-		"\"Cash Odds\"": "\"46%\"",
-		"\"GPP Odds\"": "\"16%\"",
-		"\"Implied Own%\"": "\"6%\"",
-		"\"FD LEV\"": "\"2.45\""
+		"\"Projected Own%\"": "\"6.0%\"",
+		"\"Cash Odds\"": "\"47%\"",
+		"\"GPP Odds\"": "\"17%\"",
+		"\"Implied Own%\"": "\"7%\"",
+		"\"FD LEV\"": "\"1.11\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -113,11 +113,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"LAR\"",
 		"\"Opp\"": "\"@NE\"",
 		"\"FD Sal $\"": "\"8800\"",
-		"\"Projected Own%\"": "\"3.0%\"",
+		"\"Projected Own%\"": "\"0.5%\"",
 		"\"Cash Odds\"": "\"42%\"",
-		"\"GPP Odds\"": "\"11%\"",
-		"\"Implied Own%\"": "\"13%\"",
-		"\"FD LEV\"": "\"4.19\""
+		"\"GPP Odds\"": "\"13%\"",
+		"\"Implied Own%\"": "\"12%\"",
+		"\"FD LEV\"": "\"24.63\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -125,11 +125,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"MIA\"",
 		"\"Opp\"": "\"LV\"",
 		"\"FD Sal $\"": "\"8700\"",
-		"\"Projected Own%\"": "\"19.0%\"",
+		"\"Projected Own%\"": "\"17.0%\"",
 		"\"Cash Odds\"": "\"60%\"",
 		"\"GPP Odds\"": "\"22%\"",
-		"\"Implied Own%\"": "\"20%\"",
-		"\"FD LEV\"": "\"1.03\""
+		"\"Implied Own%\"": "\"18%\"",
+		"\"FD LEV\"": "\"1.04\""
 	},
 	{
 		"\"Pos\"": "\"QB\"",
@@ -138,10 +138,10 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Opp\"": "\"@LAC\"",
 		"\"FD Sal $\"": "\"8500\"",
 		"\"Projected Own%\"": "\"2.5%\"",
-		"\"Cash Odds\"": "\"43%\"",
-		"\"GPP Odds\"": "\"17%\"",
-		"\"Implied Own%\"": "\"6%\"",
-		"\"FD LEV\"": "\"2.48\""
+		"\"Cash Odds\"": "\"42%\"",
+		"\"GPP Odds\"": "\"13%\"",
+		"\"Implied Own%\"": "\"5%\"",
+		"\"FD LEV\"": "\"2.14\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -149,11 +149,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"NYJ\"",
 		"\"Opp\"": "\"IND\"",
 		"\"FD Sal $\"": "\"8500\"",
-		"\"Projected Own%\"": "\"12.5%\"",
+		"\"Projected Own%\"": "\"11.5%\"",
 		"\"Cash Odds\"": "\"55%\"",
-		"\"GPP Odds\"": "\"16%\"",
-		"\"Implied Own%\"": "\"14%\"",
-		"\"FD LEV\"": "\"1.12\""
+		"\"GPP Odds\"": "\"15%\"",
+		"\"Implied Own%\"": "\"12%\"",
+		"\"FD LEV\"": "\"1.06\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -161,11 +161,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"MIA\"",
 		"\"Opp\"": "\"LV\"",
 		"\"FD Sal $\"": "\"8500\"",
-		"\"Projected Own%\"": "\"1.5%\"",
-		"\"Cash Odds\"": "\"37%\"",
-		"\"GPP Odds\"": "\"8%\"",
-		"\"Implied Own%\"": "\"8%\"",
-		"\"FD LEV\"": "\"5.61\""
+		"\"Projected Own%\"": "\"3.5%\"",
+		"\"Cash Odds\"": "\"38%\"",
+		"\"GPP Odds\"": "\"10%\"",
+		"\"Implied Own%\"": "\"9%\"",
+		"\"FD LEV\"": "\"2.68\""
 	},
 	{
 		"\"Pos\"": "\"QB\"",
@@ -173,11 +173,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"SF\"",
 		"\"Opp\"": "\"SEA\"",
 		"\"FD Sal $\"": "\"8400\"",
-		"\"Projected Own%\"": "\"8.0%\"",
-		"\"Cash Odds\"": "\"51%\"",
-		"\"GPP Odds\"": "\"22%\"",
-		"\"Implied Own%\"": "\"8%\"",
-		"\"FD LEV\"": "\"1.04\""
+		"\"Projected Own%\"": "\"9.5%\"",
+		"\"Cash Odds\"": "\"49%\"",
+		"\"GPP Odds\"": "\"18%\"",
+		"\"Implied Own%\"": "\"7%\"",
+		"\"FD LEV\"": "\"0.77\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -185,11 +185,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"IND\"",
 		"\"Opp\"": "\"@NYJ\"",
 		"\"FD Sal $\"": "\"8400\"",
-		"\"Projected Own%\"": "\"15.5%\"",
-		"\"Cash Odds\"": "\"57%\"",
-		"\"GPP Odds\"": "\"17%\"",
-		"\"Implied Own%\"": "\"15%\"",
-		"\"FD LEV\"": "\"0.98\""
+		"\"Projected Own%\"": "\"9.0%\"",
+		"\"Cash Odds\"": "\"49%\"",
+		"\"GPP Odds\"": "\"15%\"",
+		"\"Implied Own%\"": "\"12%\"",
+		"\"FD LEV\"": "\"1.32\""
 	},
 	{
 		"\"Pos\"": "\"QB\"",
@@ -197,11 +197,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"DET\"",
 		"\"Opp\"": "\"JAX\"",
 		"\"FD Sal $\"": "\"8300\"",
-		"\"Projected Own%\"": "\"2.5%\"",
-		"\"Cash Odds\"": "\"41%\"",
-		"\"GPP Odds\"": "\"12%\"",
+		"\"Projected Own%\"": "\"2.0%\"",
+		"\"Cash Odds\"": "\"40%\"",
+		"\"GPP Odds\"": "\"13%\"",
 		"\"Implied Own%\"": "\"5%\"",
-		"\"FD LEV\"": "\"1.85\""
+		"\"FD LEV\"": "\"2.62\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -209,11 +209,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"DET\"",
 		"\"Opp\"": "\"JAX\"",
 		"\"FD Sal $\"": "\"8300\"",
-		"\"Projected Own%\"": "\"14.5%\"",
-		"\"Cash Odds\"": "\"55%\"",
-		"\"GPP Odds\"": "\"14%\"",
-		"\"Implied Own%\"": "\"13%\"",
-		"\"FD LEV\"": "\"0.88\""
+		"\"Projected Own%\"": "\"14.0%\"",
+		"\"Cash Odds\"": "\"56%\"",
+		"\"GPP Odds\"": "\"17%\"",
+		"\"Implied Own%\"": "\"14%\"",
+		"\"FD LEV\"": "\"0.97\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -221,11 +221,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"LAR\"",
 		"\"Opp\"": "\"@NE\"",
 		"\"FD Sal $\"": "\"8300\"",
-		"\"Projected Own%\"": "\"5.0%\"",
-		"\"Cash Odds\"": "\"38%\"",
-		"\"GPP Odds\"": "\"8%\"",
-		"\"Implied Own%\"": "\"9%\"",
-		"\"FD LEV\"": "\"1.70\""
+		"\"Projected Own%\"": "\"3.0%\"",
+		"\"Cash Odds\"": "\"40%\"",
+		"\"GPP Odds\"": "\"11%\"",
+		"\"Implied Own%\"": "\"11%\"",
+		"\"FD LEV\"": "\"3.52\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -233,11 +233,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"NO\"",
 		"\"Opp\"": "\"CLE\"",
 		"\"FD Sal $\"": "\"8200\"",
-		"\"Projected Own%\"": "\"20.0%\"",
-		"\"Cash Odds\"": "\"64%\"",
-		"\"GPP Odds\"": "\"24%\"",
+		"\"Projected Own%\"": "\"25.0%\"",
+		"\"Cash Odds\"": "\"65%\"",
+		"\"GPP Odds\"": "\"26%\"",
 		"\"Implied Own%\"": "\"21%\"",
-		"\"FD LEV\"": "\"1.07\""
+		"\"FD LEV\"": "\"0.83\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -245,11 +245,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"SF\"",
 		"\"Opp\"": "\"SEA\"",
 		"\"FD Sal $\"": "\"8200\"",
-		"\"Projected Own%\"": "\"4.0%\"",
-		"\"Cash Odds\"": "\"39%\"",
-		"\"GPP Odds\"": "\"10%\"",
-		"\"Implied Own%\"": "\"11%\"",
-		"\"FD LEV\"": "\"2.84\""
+		"\"Projected Own%\"": "\"3.5%\"",
+		"\"Cash Odds\"": "\"38%\"",
+		"\"GPP Odds\"": "\"11%\"",
+		"\"Implied Own%\"": "\"10%\"",
+		"\"FD LEV\"": "\"2.97\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -257,11 +257,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"DET\"",
 		"\"Opp\"": "\"JAX\"",
 		"\"FD Sal $\"": "\"8100\"",
-		"\"Projected Own%\"": "\"3.5%\"",
-		"\"Cash Odds\"": "\"43%\"",
-		"\"GPP Odds\"": "\"8%\"",
-		"\"Implied Own%\"": "\"7%\"",
-		"\"FD LEV\"": "\"1.97\""
+		"\"Projected Own%\"": "\"4.0%\"",
+		"\"Cash Odds\"": "\"44%\"",
+		"\"GPP Odds\"": "\"10%\"",
+		"\"Implied Own%\"": "\"8%\"",
+		"\"FD LEV\"": "\"1.98\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -269,11 +269,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"NYJ\"",
 		"\"Opp\"": "\"IND\"",
 		"\"FD Sal $\"": "\"8100\"",
-		"\"Projected Own%\"": "\"3.0%\"",
-		"\"Cash Odds\"": "\"40%\"",
-		"\"GPP Odds\"": "\"8%\"",
-		"\"Implied Own%\"": "\"9%\"",
-		"\"FD LEV\"": "\"2.86\""
+		"\"Projected Own%\"": "\"2.5%\"",
+		"\"Cash Odds\"": "\"38%\"",
+		"\"GPP Odds\"": "\"7%\"",
+		"\"Implied Own%\"": "\"6%\"",
+		"\"FD LEV\"": "\"2.58\""
 	},
 	{
 		"\"Pos\"": "\"QB\"",
@@ -281,11 +281,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"MIA\"",
 		"\"Opp\"": "\"LV\"",
 		"\"FD Sal $\"": "\"8000\"",
-		"\"Projected Own%\"": "\"2.5%\"",
-		"\"Cash Odds\"": "\"37%\"",
-		"\"GPP Odds\"": "\"8%\"",
-		"\"Implied Own%\"": "\"3%\"",
-		"\"FD LEV\"": "\"1.14\""
+		"\"Projected Own%\"": "\"2.0%\"",
+		"\"Cash Odds\"": "\"39%\"",
+		"\"GPP Odds\"": "\"10%\"",
+		"\"Implied Own%\"": "\"4%\"",
+		"\"FD LEV\"": "\"1.94\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -293,11 +293,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"KC\"",
 		"\"Opp\"": "\"@BUF\"",
 		"\"FD Sal $\"": "\"8000\"",
-		"\"Projected Own%\"": "\"4.5%\"",
-		"\"Cash Odds\"": "\"43%\"",
-		"\"GPP Odds\"": "\"8%\"",
-		"\"Implied Own%\"": "\"7%\"",
-		"\"FD LEV\"": "\"1.49\""
+		"\"Projected Own%\"": "\"2.5%\"",
+		"\"Cash Odds\"": "\"44%\"",
+		"\"GPP Odds\"": "\"9%\"",
+		"\"Implied Own%\"": "\"8%\"",
+		"\"FD LEV\"": "\"3.05\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -305,11 +305,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"SEA\"",
 		"\"Opp\"": "\"@SF\"",
 		"\"FD Sal $\"": "\"8000\"",
-		"\"Projected Own%\"": "\"3.0%\"",
-		"\"Cash Odds\"": "\"35%\"",
+		"\"Projected Own%\"": "\"0.5%\"",
+		"\"Cash Odds\"": "\"36%\"",
 		"\"GPP Odds\"": "\"6%\"",
 		"\"Implied Own%\"": "\"6%\"",
-		"\"FD LEV\"": "\"2.03\""
+		"\"FD LEV\"": "\"12.03\""
 	},
 	{
 		"\"Pos\"": "\"TE\"",
@@ -317,11 +317,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"SF\"",
 		"\"Opp\"": "\"SEA\"",
 		"\"FD Sal $\"": "\"8000\"",
-		"\"Projected Own%\"": "\"3.0%\"",
+		"\"Projected Own%\"": "\"1.0%\"",
 		"\"Cash Odds\"": "\"38%\"",
-		"\"GPP Odds\"": "\"15%\"",
-		"\"Implied Own%\"": "\"9%\"",
-		"\"FD LEV\"": "\"2.93\""
+		"\"GPP Odds\"": "\"17%\"",
+		"\"Implied Own%\"": "\"10%\"",
+		"\"FD LEV\"": "\"10.34\""
 	},
 	{
 		"\"Pos\"": "\"QB\"",
@@ -329,11 +329,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"KC\"",
 		"\"Opp\"": "\"@BUF\"",
 		"\"FD Sal $\"": "\"7900\"",
-		"\"Projected Own%\"": "\"3.0%\"",
-		"\"Cash Odds\"": "\"40%\"",
-		"\"GPP Odds\"": "\"12%\"",
-		"\"Implied Own%\"": "\"5%\"",
-		"\"FD LEV\"": "\"1.51\""
+		"\"Projected Own%\"": "\"3.5%\"",
+		"\"Cash Odds\"": "\"41%\"",
+		"\"GPP Odds\"": "\"14%\"",
+		"\"Implied Own%\"": "\"6%\"",
+		"\"FD LEV\"": "\"1.64\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -341,11 +341,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"BUF\"",
 		"\"Opp\"": "\"KC\"",
 		"\"FD Sal $\"": "\"7900\"",
-		"\"Projected Own%\"": "\"14.5%\"",
-		"\"Cash Odds\"": "\"51%\"",
-		"\"GPP Odds\"": "\"13%\"",
-		"\"Implied Own%\"": "\"12%\"",
-		"\"FD LEV\"": "\"0.80\""
+		"\"Projected Own%\"": "\"3.0%\"",
+		"\"Cash Odds\"": "\"43%\"",
+		"\"GPP Odds\"": "\"7%\"",
+		"\"Implied Own%\"": "\"6%\"",
+		"\"FD LEV\"": "\"1.88\""
 	},
 	{
 		"\"Pos\"": "\"QB\"",
@@ -353,11 +353,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"PIT\"",
 		"\"Opp\"": "\"BAL\"",
 		"\"FD Sal $\"": "\"7800\"",
-		"\"Projected Own%\"": "\"4.5%\"",
+		"\"Projected Own%\"": "\"2.5%\"",
 		"\"Cash Odds\"": "\"41%\"",
 		"\"GPP Odds\"": "\"14%\"",
 		"\"Implied Own%\"": "\"5%\"",
-		"\"FD LEV\"": "\"1.14\""
+		"\"FD LEV\"": "\"2.20\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -367,9 +367,9 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"FD Sal $\"": "\"7800\"",
 		"\"Projected Own%\"": "\"9.0%\"",
 		"\"Cash Odds\"": "\"49%\"",
-		"\"GPP Odds\"": "\"13%\"",
-		"\"Implied Own%\"": "\"11%\"",
-		"\"FD LEV\"": "\"1.24\""
+		"\"GPP Odds\"": "\"11%\"",
+		"\"Implied Own%\"": "\"9%\"",
+		"\"FD LEV\"": "\"0.96\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -377,11 +377,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"ATL\"",
 		"\"Opp\"": "\"@DEN\"",
 		"\"FD Sal $\"": "\"7800\"",
-		"\"Projected Own%\"": "\"4.5%\"",
-		"\"Cash Odds\"": "\"37%\"",
-		"\"GPP Odds\"": "\"7%\"",
-		"\"Implied Own%\"": "\"7%\"",
-		"\"FD LEV\"": "\"1.60\""
+		"\"Projected Own%\"": "\"5.0%\"",
+		"\"Cash Odds\"": "\"39%\"",
+		"\"GPP Odds\"": "\"8%\"",
+		"\"Implied Own%\"": "\"8%\"",
+		"\"FD LEV\"": "\"1.63\""
 	},
 	{
 		"\"Pos\"": "\"QB\"",
@@ -389,11 +389,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"GB\"",
 		"\"Opp\"": "\"@CHI\"",
 		"\"FD Sal $\"": "\"7700\"",
-		"\"Projected Own%\"": "\"4.0%\"",
-		"\"Cash Odds\"": "\"39%\"",
+		"\"Projected Own%\"": "\"3.5%\"",
+		"\"Cash Odds\"": "\"40%\"",
 		"\"GPP Odds\"": "\"12%\"",
-		"\"Implied Own%\"": "\"4%\"",
-		"\"FD LEV\"": "\"1.08\""
+		"\"Implied Own%\"": "\"5%\"",
+		"\"FD LEV\"": "\"1.32\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -401,11 +401,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"GB\"",
 		"\"Opp\"": "\"@CHI\"",
 		"\"FD Sal $\"": "\"7700\"",
-		"\"Projected Own%\"": "\"5.5%\"",
+		"\"Projected Own%\"": "\"1.0%\"",
 		"\"Cash Odds\"": "\"39%\"",
-		"\"GPP Odds\"": "\"7%\"",
+		"\"GPP Odds\"": "\"8%\"",
 		"\"Implied Own%\"": "\"8%\"",
-		"\"FD LEV\"": "\"1.46\""
+		"\"FD LEV\"": "\"8.08\""
 	},
 	{
 		"\"Pos\"": "\"QB\"",
@@ -415,9 +415,9 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"FD Sal $\"": "\"7600\"",
 		"\"Projected Own%\"": "\"3.5%\"",
 		"\"Cash Odds\"": "\"39%\"",
-		"\"GPP Odds\"": "\"11%\"",
+		"\"GPP Odds\"": "\"10%\"",
 		"\"Implied Own%\"": "\"4%\"",
-		"\"FD LEV\"": "\"1.20\""
+		"\"FD LEV\"": "\"1.11\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -425,11 +425,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"MIN\"",
 		"\"Opp\"": "\"@TEN\"",
 		"\"FD Sal $\"": "\"7600\"",
-		"\"Projected Own%\"": "\"5.0%\"",
-		"\"Cash Odds\"": "\"41%\"",
-		"\"GPP Odds\"": "\"7%\"",
-		"\"Implied Own%\"": "\"6%\"",
-		"\"FD LEV\"": "\"1.21\""
+		"\"Projected Own%\"": "\"9.5%\"",
+		"\"Cash Odds\"": "\"46%\"",
+		"\"GPP Odds\"": "\"11%\"",
+		"\"Implied Own%\"": "\"9%\"",
+		"\"FD LEV\"": "\"0.91\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -437,11 +437,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"BAL\"",
 		"\"Opp\"": "\"@PIT\"",
 		"\"FD Sal $\"": "\"7600\"",
-		"\"Projected Own%\"": "\"2.5%\"",
-		"\"Cash Odds\"": "\"32%\"",
+		"\"Projected Own%\"": "\"3.5%\"",
+		"\"Cash Odds\"": "\"34%\"",
 		"\"GPP Odds\"": "\"5%\"",
 		"\"Implied Own%\"": "\"5%\"",
-		"\"FD LEV\"": "\"2.06\""
+		"\"FD LEV\"": "\"1.41\""
 	},
 	{
 		"\"Pos\"": "\"QB\"",
@@ -449,11 +449,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"MIN\"",
 		"\"Opp\"": "\"@TEN\"",
 		"\"FD Sal $\"": "\"7500\"",
-		"\"Projected Own%\"": "\"2.0%\"",
-		"\"Cash Odds\"": "\"37%\"",
+		"\"Projected Own%\"": "\"3.0%\"",
+		"\"Cash Odds\"": "\"38%\"",
 		"\"GPP Odds\"": "\"9%\"",
-		"\"Implied Own%\"": "\"3%\"",
-		"\"FD LEV\"": "\"1.62\""
+		"\"Implied Own%\"": "\"4%\"",
+		"\"FD LEV\"": "\"1.24\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -464,8 +464,8 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Projected Own%\"": "\"12.0%\"",
 		"\"Cash Odds\"": "\"46%\"",
 		"\"GPP Odds\"": "\"13%\"",
-		"\"Implied Own%\"": "\"15%\"",
-		"\"FD LEV\"": "\"1.22\""
+		"\"Implied Own%\"": "\"13%\"",
+		"\"FD LEV\"": "\"1.08\""
 	},
 	{
 		"\"Pos\"": "\"QB\"",
@@ -473,11 +473,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"DEN\"",
 		"\"Opp\"": "\"ATL\"",
 		"\"FD Sal $\"": "\"7400\"",
-		"\"Projected Own%\"": "\"10.5%\"",
-		"\"Cash Odds\"": "\"48%\"",
-		"\"GPP Odds\"": "\"18%\"",
-		"\"Implied Own%\"": "\"7%\"",
-		"\"FD LEV\"": "\"0.64\""
+		"\"Projected Own%\"": "\"12.0%\"",
+		"\"Cash Odds\"": "\"47%\"",
+		"\"GPP Odds\"": "\"15%\"",
+		"\"Implied Own%\"": "\"6%\"",
+		"\"FD LEV\"": "\"0.51\""
 	},
 	{
 		"\"Pos\"": "\"QB\"",
@@ -485,11 +485,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"LAR\"",
 		"\"Opp\"": "\"@NE\"",
 		"\"FD Sal $\"": "\"7400\"",
-		"\"Projected Own%\"": "\"4.0%\"",
-		"\"Cash Odds\"": "\"38%\"",
-		"\"GPP Odds\"": "\"11%\"",
+		"\"Projected Own%\"": "\"2.0%\"",
+		"\"Cash Odds\"": "\"37%\"",
+		"\"GPP Odds\"": "\"9%\"",
 		"\"Implied Own%\"": "\"4%\"",
-		"\"FD LEV\"": "\"0.99\""
+		"\"FD LEV\"": "\"1.76\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -497,11 +497,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"GB\"",
 		"\"Opp\"": "\"@CHI\"",
 		"\"FD Sal $\"": "\"7400\"",
-		"\"Projected Own%\"": "\"11.5%\"",
-		"\"Cash Odds\"": "\"49%\"",
-		"\"GPP Odds\"": "\"11%\"",
-		"\"Implied Own%\"": "\"9%\"",
-		"\"FD LEV\"": "\"0.81\""
+		"\"Projected Own%\"": "\"10.0%\"",
+		"\"Cash Odds\"": "\"50%\"",
+		"\"GPP Odds\"": "\"12%\"",
+		"\"Implied Own%\"": "\"10%\"",
+		"\"FD LEV\"": "\"0.96\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -509,11 +509,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"NYJ\"",
 		"\"Opp\"": "\"IND\"",
 		"\"FD Sal $\"": "\"7400\"",
-		"\"Projected Own%\"": "\"6.5%\"",
+		"\"Projected Own%\"": "\"13.0%\"",
 		"\"Cash Odds\"": "\"40%\"",
-		"\"GPP Odds\"": "\"7%\"",
-		"\"Implied Own%\"": "\"8%\"",
-		"\"FD LEV\"": "\"1.26\""
+		"\"GPP Odds\"": "\"9%\"",
+		"\"Implied Own%\"": "\"9%\"",
+		"\"FD LEV\"": "\"0.66\""
 	},
 	{
 		"\"Pos\"": "\"TE\"",
@@ -521,11 +521,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"KC\"",
 		"\"Opp\"": "\"@BUF\"",
 		"\"FD Sal $\"": "\"7400\"",
-		"\"Projected Own%\"": "\"6.5%\"",
-		"\"Cash Odds\"": "\"43%\"",
-		"\"GPP Odds\"": "\"19%\"",
-		"\"Implied Own%\"": "\"11%\"",
-		"\"FD LEV\"": "\"1.68\""
+		"\"Projected Own%\"": "\"9.0%\"",
+		"\"Cash Odds\"": "\"42%\"",
+		"\"GPP Odds\"": "\"17%\"",
+		"\"Implied Own%\"": "\"10%\"",
+		"\"FD LEV\"": "\"1.15\""
 	},
 	{
 		"\"Pos\"": "\"QB\"",
@@ -533,11 +533,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"LAC\"",
 		"\"Opp\"": "\"CIN\"",
 		"\"FD Sal $\"": "\"7300\"",
-		"\"Projected Own%\"": "\"7.0%\"",
+		"\"Projected Own%\"": "\"9.5%\"",
 		"\"Cash Odds\"": "\"43%\"",
 		"\"GPP Odds\"": "\"13%\"",
 		"\"Implied Own%\"": "\"5%\"",
-		"\"FD LEV\"": "\"0.71\""
+		"\"FD LEV\"": "\"0.56\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -545,11 +545,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"SEA\"",
 		"\"Opp\"": "\"@SF\"",
 		"\"FD Sal $\"": "\"7300\"",
-		"\"Projected Own%\"": "\"2.0%\"",
-		"\"Cash Odds\"": "\"31%\"",
+		"\"Projected Own%\"": "\"2.5%\"",
+		"\"Cash Odds\"": "\"32%\"",
 		"\"GPP Odds\"": "\"4%\"",
-		"\"Implied Own%\"": "\"5%\"",
-		"\"FD LEV\"": "\"2.38\""
+		"\"Implied Own%\"": "\"4%\"",
+		"\"FD LEV\"": "\"1.65\""
 	},
 	{
 		"\"Pos\"": "\"QB\"",
@@ -558,10 +558,10 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Opp\"": "\"@NO\"",
 		"\"FD Sal $\"": "\"7200\"",
 		"\"Projected Own%\"": "\"6.5%\"",
-		"\"Cash Odds\"": "\"40%\"",
-		"\"GPP Odds\"": "\"11%\"",
-		"\"Implied Own%\"": "\"4%\"",
-		"\"FD LEV\"": "\"0.63\""
+		"\"Cash Odds\"": "\"42%\"",
+		"\"GPP Odds\"": "\"13%\"",
+		"\"Implied Own%\"": "\"5%\"",
+		"\"FD LEV\"": "\"0.80\""
 	},
 	{
 		"\"Pos\"": "\"QB\"",
@@ -569,11 +569,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"NO\"",
 		"\"Opp\"": "\"CLE\"",
 		"\"FD Sal $\"": "\"7200\"",
-		"\"Projected Own%\"": "\"4.0%\"",
-		"\"Cash Odds\"": "\"35%\"",
-		"\"GPP Odds\"": "\"9%\"",
+		"\"Projected Own%\"": "\"1.0%\"",
+		"\"Cash Odds\"": "\"34%\"",
+		"\"GPP Odds\"": "\"7%\"",
 		"\"Implied Own%\"": "\"3%\"",
-		"\"FD LEV\"": "\"0.84\""
+		"\"FD LEV\"": "\"2.88\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -581,11 +581,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"LAC\"",
 		"\"Opp\"": "\"CIN\"",
 		"\"FD Sal $\"": "\"7200\"",
-		"\"Projected Own%\"": "\"11.0%\"",
-		"\"Cash Odds\"": "\"47%\"",
+		"\"Projected Own%\"": "\"8.5%\"",
+		"\"Cash Odds\"": "\"48%\"",
 		"\"GPP Odds\"": "\"9%\"",
-		"\"Implied Own%\"": "\"8%\"",
-		"\"FD LEV\"": "\"0.72\""
+		"\"Implied Own%\"": "\"7%\"",
+		"\"FD LEV\"": "\"0.86\""
 	},
 	{
 		"\"Pos\"": "\"TE\"",
@@ -593,11 +593,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"LV\"",
 		"\"Opp\"": "\"@MIA\"",
 		"\"FD Sal $\"": "\"7200\"",
-		"\"Projected Own%\"": "\"10.0%\"",
-		"\"Cash Odds\"": "\"46%\"",
-		"\"GPP Odds\"": "\"23%\"",
-		"\"Implied Own%\"": "\"13%\"",
-		"\"FD LEV\"": "\"1.32\""
+		"\"Projected Own%\"": "\"5.0%\"",
+		"\"Cash Odds\"": "\"41%\"",
+		"\"GPP Odds\"": "\"11%\"",
+		"\"Implied Own%\"": "\"7%\"",
+		"\"FD LEV\"": "\"1.42\""
 	},
 	{
 		"\"Pos\"": "\"QB\"",
@@ -605,11 +605,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"NYJ\"",
 		"\"Opp\"": "\"IND\"",
 		"\"FD Sal $\"": "\"7100\"",
-		"\"Projected Own%\"": "\"2.0%\"",
+		"\"Projected Own%\"": "\"4.0%\"",
 		"\"Cash Odds\"": "\"37%\"",
-		"\"GPP Odds\"": "\"10%\"",
+		"\"GPP Odds\"": "\"9%\"",
 		"\"Implied Own%\"": "\"4%\"",
-		"\"FD LEV\"": "\"1.89\""
+		"\"FD LEV\"": "\"0.95\""
 	},
 	{
 		"\"Pos\"": "\"QB\"",
@@ -617,11 +617,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"ATL\"",
 		"\"Opp\"": "\"@DEN\"",
 		"\"FD Sal $\"": "\"7100\"",
-		"\"Projected Own%\"": "\"1.5%\"",
+		"\"Projected Own%\"": "\"1.0%\"",
 		"\"Cash Odds\"": "\"30%\"",
-		"\"GPP Odds\"": "\"6%\"",
+		"\"GPP Odds\"": "\"5%\"",
 		"\"Implied Own%\"": "\"2%\"",
-		"\"FD LEV\"": "\"1.50\""
+		"\"FD LEV\"": "\"1.82\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -629,11 +629,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"CHI\"",
 		"\"Opp\"": "\"GB\"",
 		"\"FD Sal $\"": "\"7100\"",
-		"\"Projected Own%\"": "\"10.0%\"",
-		"\"Cash Odds\"": "\"46%\"",
-		"\"GPP Odds\"": "\"9%\"",
-		"\"Implied Own%\"": "\"8%\"",
-		"\"FD LEV\"": "\"0.81\""
+		"\"Projected Own%\"": "\"11.5%\"",
+		"\"Cash Odds\"": "\"45%\"",
+		"\"GPP Odds\"": "\"7%\"",
+		"\"Implied Own%\"": "\"6%\"",
+		"\"FD LEV\"": "\"0.51\""
 	},
 	{
 		"\"Pos\"": "\"QB\"",
@@ -641,11 +641,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"CHI\"",
 		"\"Opp\"": "\"GB\"",
 		"\"FD Sal $\"": "\"7000\"",
-		"\"Projected Own%\"": "\"4.0%\"",
-		"\"Cash Odds\"": "\"33%\"",
+		"\"Projected Own%\"": "\"1.0%\"",
+		"\"Cash Odds\"": "\"32%\"",
 		"\"GPP Odds\"": "\"6%\"",
 		"\"Implied Own%\"": "\"2%\"",
-		"\"FD LEV\"": "\"0.59\""
+		"\"FD LEV\"": "\"2.34\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -653,11 +653,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"PIT\"",
 		"\"Opp\"": "\"BAL\"",
 		"\"FD Sal $\"": "\"7000\"",
-		"\"Projected Own%\"": "\"7.0%\"",
-		"\"Cash Odds\"": "\"42%\"",
-		"\"GPP Odds\"": "\"7%\"",
-		"\"Implied Own%\"": "\"6%\"",
-		"\"FD LEV\"": "\"0.91\""
+		"\"Projected Own%\"": "\"3.0%\"",
+		"\"Cash Odds\"": "\"41%\"",
+		"\"GPP Odds\"": "\"5%\"",
+		"\"Implied Own%\"": "\"4%\"",
+		"\"FD LEV\"": "\"1.42\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -665,23 +665,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"ATL\"",
 		"\"Opp\"": "\"@DEN\"",
 		"\"FD Sal $\"": "\"7000\"",
-		"\"Projected Own%\"": "\"5.0%\"",
-		"\"Cash Odds\"": "\"34%\"",
-		"\"GPP Odds\"": "\"4%\"",
-		"\"Implied Own%\"": "\"4%\"",
-		"\"FD LEV\"": "\"0.84\""
-	},
-	{
-		"\"Pos\"": "\"QB\"",
-		"\"Player\"": "\"Joe Flacco\"",
-		"\"Tm\"": "\"IND\"",
-		"\"Opp\"": "\"@NYJ\"",
-		"\"FD Sal $\"": "\"6900\"",
-		"\"Projected Own%\"": "\"0.5%\"",
-		"\"Cash Odds\"": "\"26%\"",
-		"\"GPP Odds\"": "\"4%\"",
-		"\"Implied Own%\"": "\"1%\"",
-		"\"FD LEV\"": "\"2.89\""
+		"\"Projected Own%\"": "\"2.5%\"",
+		"\"Cash Odds\"": "\"36%\"",
+		"\"GPP Odds\"": "\"6%\"",
+		"\"Implied Own%\"": "\"6%\"",
+		"\"FD LEV\"": "\"2.23\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -690,10 +678,10 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Opp\"": "\"MIN\"",
 		"\"FD Sal $\"": "\"6900\"",
 		"\"Projected Own%\"": "\"3.5%\"",
-		"\"Cash Odds\"": "\"38%\"",
-		"\"GPP Odds\"": "\"4%\"",
-		"\"Implied Own%\"": "\"4%\"",
-		"\"FD LEV\"": "\"1.04\""
+		"\"Cash Odds\"": "\"39%\"",
+		"\"GPP Odds\"": "\"6%\"",
+		"\"Implied Own%\"": "\"5%\"",
+		"\"FD LEV\"": "\"1.38\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -701,11 +689,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"IND\"",
 		"\"Opp\"": "\"@NYJ\"",
 		"\"FD Sal $\"": "\"6900\"",
-		"\"Projected Own%\"": "\"8.5%\"",
-		"\"Cash Odds\"": "\"39%\"",
-		"\"GPP Odds\"": "\"6%\"",
-		"\"Implied Own%\"": "\"7%\"",
-		"\"FD LEV\"": "\"0.79\""
+		"\"Projected Own%\"": "\"1.0%\"",
+		"\"Cash Odds\"": "\"27%\"",
+		"\"GPP Odds\"": "\"4%\"",
+		"\"Implied Own%\"": "\"4%\"",
+		"\"FD LEV\"": "\"3.51\""
 	},
 	{
 		"\"Pos\"": "\"QB\"",
@@ -714,10 +702,10 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Opp\"": "\"@DET\"",
 		"\"FD Sal $\"": "\"6800\"",
 		"\"Projected Own%\"": "\"1.0%\"",
-		"\"Cash Odds\"": "\"27%\"",
-		"\"GPP Odds\"": "\"4%\"",
-		"\"Implied Own%\"": "\"1%\"",
-		"\"FD LEV\"": "\"1.49\""
+		"\"Cash Odds\"": "\"30%\"",
+		"\"GPP Odds\"": "\"6%\"",
+		"\"Implied Own%\"": "\"3%\"",
+		"\"FD LEV\"": "\"2.54\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -725,11 +713,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"CIN\"",
 		"\"Opp\"": "\"@LAC\"",
 		"\"FD Sal $\"": "\"6800\"",
-		"\"Projected Own%\"": "\"16.5%\"",
+		"\"Projected Own%\"": "\"23.5%\"",
 		"\"Cash Odds\"": "\"57%\"",
-		"\"GPP Odds\"": "\"16%\"",
-		"\"Implied Own%\"": "\"14%\"",
-		"\"FD LEV\"": "\"0.86\""
+		"\"GPP Odds\"": "\"15%\"",
+		"\"Implied Own%\"": "\"12%\"",
+		"\"FD LEV\"": "\"0.51\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -737,11 +725,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"DEN\"",
 		"\"Opp\"": "\"ATL\"",
 		"\"FD Sal $\"": "\"6800\"",
-		"\"Projected Own%\"": "\"11.0%\"",
+		"\"Projected Own%\"": "\"9.0%\"",
 		"\"Cash Odds\"": "\"40%\"",
-		"\"GPP Odds\"": "\"8%\"",
-		"\"Implied Own%\"": "\"9%\"",
-		"\"FD LEV\"": "\"0.79\""
+		"\"GPP Odds\"": "\"6%\"",
+		"\"Implied Own%\"": "\"6%\"",
+		"\"FD LEV\"": "\"0.65\""
 	},
 	{
 		"\"Pos\"": "\"QB\"",
@@ -749,11 +737,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"NE\"",
 		"\"Opp\"": "\"LAR\"",
 		"\"FD Sal $\"": "\"6700\"",
-		"\"Projected Own%\"": "\"10.0%\"",
+		"\"Projected Own%\"": "\"12.5%\"",
 		"\"Cash Odds\"": "\"44%\"",
-		"\"GPP Odds\"": "\"11%\"",
-		"\"Implied Own%\"": "\"4%\"",
-		"\"FD LEV\"": "\"0.41\""
+		"\"GPP Odds\"": "\"12%\"",
+		"\"Implied Own%\"": "\"5%\"",
+		"\"FD LEV\"": "\"0.38\""
 	},
 	{
 		"\"Pos\"": "\"QB\"",
@@ -761,11 +749,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"TEN\"",
 		"\"Opp\"": "\"MIN\"",
 		"\"FD Sal $\"": "\"6700\"",
-		"\"Projected Own%\"": "\"5.5%\"",
+		"\"Projected Own%\"": "\"0.5%\"",
 		"\"Cash Odds\"": "\"35%\"",
-		"\"GPP Odds\"": "\"7%\"",
+		"\"GPP Odds\"": "\"8%\"",
 		"\"Implied Own%\"": "\"3%\"",
-		"\"FD LEV\"": "\"0.47\""
+		"\"FD LEV\"": "\"6.65\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -773,11 +761,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"JAX\"",
 		"\"Opp\"": "\"@DET\"",
 		"\"FD Sal $\"": "\"6700\"",
-		"\"Projected Own%\"": "\"7.0%\"",
-		"\"Cash Odds\"": "\"41%\"",
-		"\"GPP Odds\"": "\"7%\"",
-		"\"Implied Own%\"": "\"6%\"",
-		"\"FD LEV\"": "\"0.82\""
+		"\"Projected Own%\"": "\"0.5%\"",
+		"\"Cash Odds\"": "\"39%\"",
+		"\"GPP Odds\"": "\"4%\"",
+		"\"Implied Own%\"": "\"3%\"",
+		"\"FD LEV\"": "\"6.13\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -786,10 +774,10 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Opp\"": "\"@BUF\"",
 		"\"FD Sal $\"": "\"6700\"",
 		"\"Projected Own%\"": "\"5.5%\"",
-		"\"Cash Odds\"": "\"35%\"",
-		"\"GPP Odds\"": "\"5%\"",
+		"\"Cash Odds\"": "\"39%\"",
+		"\"GPP Odds\"": "\"6%\"",
 		"\"Implied Own%\"": "\"6%\"",
-		"\"FD LEV\"": "\"1.03\""
+		"\"FD LEV\"": "\"1.12\""
 	},
 	{
 		"\"Pos\"": "\"QB\"",
@@ -797,11 +785,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"LV\"",
 		"\"Opp\"": "\"@MIA\"",
 		"\"FD Sal $\"": "\"6600\"",
-		"\"Projected Own%\"": "\"5.5%\"",
-		"\"Cash Odds\"": "\"32%\"",
-		"\"GPP Odds\"": "\"6%\"",
+		"\"Projected Own%\"": "\"1.0%\"",
+		"\"Cash Odds\"": "\"31%\"",
+		"\"GPP Odds\"": "\"5%\"",
 		"\"Implied Own%\"": "\"2%\"",
-		"\"FD LEV\"": "\"0.42\""
+		"\"FD LEV\"": "\"2.04\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -809,11 +797,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"MIA\"",
 		"\"Opp\"": "\"LV\"",
 		"\"FD Sal $\"": "\"6600\"",
-		"\"Projected Own%\"": "\"1.5%\"",
-		"\"Cash Odds\"": "\"28%\"",
-		"\"GPP Odds\"": "\"2%\"",
-		"\"Implied Own%\"": "\"2%\"",
-		"\"FD LEV\"": "\"1.15\""
+		"\"Projected Own%\"": "\"0.5%\"",
+		"\"Cash Odds\"": "\"15%\"",
+		"\"GPP Odds\"": "\"0%\"",
+		"\"Implied Own%\"": "\"0%\"",
+		"\"FD LEV\"": "\"0.64\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -821,11 +809,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"JAX\"",
 		"\"Opp\"": "\"@DET\"",
 		"\"FD Sal $\"": "\"6600\"",
-		"\"Projected Own%\"": "\"4.0%\"",
+		"\"Projected Own%\"": "\"1.5%\"",
 		"\"Cash Odds\"": "\"32%\"",
 		"\"GPP Odds\"": "\"5%\"",
 		"\"Implied Own%\"": "\"5%\"",
-		"\"FD LEV\"": "\"1.30\""
+		"\"FD LEV\"": "\"3.11\""
 	},
 	{
 		"\"Pos\"": "\"TE\"",
@@ -833,11 +821,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"CLE\"",
 		"\"Opp\"": "\"@NO\"",
 		"\"FD Sal $\"": "\"6600\"",
-		"\"Projected Own%\"": "\"8.5%\"",
-		"\"Cash Odds\"": "\"45%\"",
-		"\"GPP Odds\"": "\"16%\"",
-		"\"Implied Own%\"": "\"9%\"",
-		"\"FD LEV\"": "\"1.11\""
+		"\"Projected Own%\"": "\"6.0%\"",
+		"\"Cash Odds\"": "\"46%\"",
+		"\"GPP Odds\"": "\"18%\"",
+		"\"Implied Own%\"": "\"11%\"",
+		"\"FD LEV\"": "\"1.90\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -845,11 +833,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"NE\"",
 		"\"Opp\"": "\"LAR\"",
 		"\"FD Sal $\"": "\"6500\"",
-		"\"Projected Own%\"": "\"13.0%\"",
+		"\"Projected Own%\"": "\"16.5%\"",
 		"\"Cash Odds\"": "\"50%\"",
-		"\"GPP Odds\"": "\"8%\"",
-		"\"Implied Own%\"": "\"7%\"",
-		"\"FD LEV\"": "\"0.54\""
+		"\"GPP Odds\"": "\"9%\"",
+		"\"Implied Own%\"": "\"8%\"",
+		"\"FD LEV\"": "\"0.46\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -857,11 +845,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"CLE\"",
 		"\"Opp\"": "\"@NO\"",
 		"\"FD Sal $\"": "\"6500\"",
-		"\"Projected Own%\"": "\"9.5%\"",
+		"\"Projected Own%\"": "\"11.5%\"",
 		"\"Cash Odds\"": "\"42%\"",
-		"\"GPP Odds\"": "\"7%\"",
-		"\"Implied Own%\"": "\"8%\"",
-		"\"FD LEV\"": "\"0.85\""
+		"\"GPP Odds\"": "\"6%\"",
+		"\"Implied Own%\"": "\"5%\"",
+		"\"FD LEV\"": "\"0.46\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -869,11 +857,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"BUF\"",
 		"\"Opp\"": "\"KC\"",
 		"\"FD Sal $\"": "\"6500\"",
-		"\"Projected Own%\"": "\"11.0%\"",
-		"\"Cash Odds\"": "\"40%\"",
-		"\"GPP Odds\"": "\"7%\"",
-		"\"Implied Own%\"": "\"8%\"",
-		"\"FD LEV\"": "\"0.71\""
+		"\"Projected Own%\"": "\"23.0%\"",
+		"\"Cash Odds\"": "\"35%\"",
+		"\"GPP Odds\"": "\"5%\"",
+		"\"Implied Own%\"": "\"4%\"",
+		"\"FD LEV\"": "\"0.19\""
 	},
 	{
 		"\"Pos\"": "\"TE\"",
@@ -881,11 +869,23 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"MIN\"",
 		"\"Opp\"": "\"@TEN\"",
 		"\"FD Sal $\"": "\"6500\"",
-		"\"Projected Own%\"": "\"3.0%\"",
-		"\"Cash Odds\"": "\"35%\"",
-		"\"GPP Odds\"": "\"8%\"",
+		"\"Projected Own%\"": "\"1.0%\"",
+		"\"Cash Odds\"": "\"37%\"",
+		"\"GPP Odds\"": "\"10%\"",
+		"\"Implied Own%\"": "\"6%\"",
+		"\"FD LEV\"": "\"6.46\""
+	},
+	{
+		"\"Pos\"": "\"QB\"",
+		"\"Player\"": "\"Anthony Richardson\"",
+		"\"Tm\"": "\"IND\"",
+		"\"Opp\"": "\"@NYJ\"",
+		"\"FD Sal $\"": "\"6400\"",
+		"\"Projected Own%\"": "\"9.5%\"",
+		"\"Cash Odds\"": "\"43%\"",
+		"\"GPP Odds\"": "\"12%\"",
 		"\"Implied Own%\"": "\"5%\"",
-		"\"FD LEV\"": "\"1.51\""
+		"\"FD LEV\"": "\"0.50\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -893,11 +893,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"TEN\"",
 		"\"Opp\"": "\"MIN\"",
 		"\"FD Sal $\"": "\"6400\"",
-		"\"Projected Own%\"": "\"12.5%\"",
-		"\"Cash Odds\"": "\"46%\"",
-		"\"GPP Odds\"": "\"10%\"",
-		"\"Implied Own%\"": "\"11%\"",
-		"\"FD LEV\"": "\"0.88\""
+		"\"Projected Own%\"": "\"15.5%\"",
+		"\"Cash Odds\"": "\"44%\"",
+		"\"GPP Odds\"": "\"9%\"",
+		"\"Implied Own%\"": "\"8%\"",
+		"\"FD LEV\"": "\"0.53\""
 	},
 	{
 		"\"Pos\"": "\"TE\"",
@@ -905,11 +905,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"NO\"",
 		"\"Opp\"": "\"CLE\"",
 		"\"FD Sal $\"": "\"6400\"",
-		"\"Projected Own%\"": "\"4.0%\"",
-		"\"Cash Odds\"": "\"37%\"",
+		"\"Projected Own%\"": "\"1.0%\"",
+		"\"Cash Odds\"": "\"35%\"",
 		"\"GPP Odds\"": "\"11%\"",
-		"\"Implied Own%\"": "\"6%\"",
-		"\"FD LEV\"": "\"1.56\""
+		"\"Implied Own%\"": "\"7%\"",
+		"\"FD LEV\"": "\"6.61\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -917,11 +917,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"LAC\"",
 		"\"Opp\"": "\"CIN\"",
 		"\"FD Sal $\"": "\"6300\"",
-		"\"Projected Own%\"": "\"11.5%\"",
-		"\"Cash Odds\"": "\"41%\"",
-		"\"GPP Odds\"": "\"7%\"",
-		"\"Implied Own%\"": "\"7%\"",
-		"\"FD LEV\"": "\"0.63\""
+		"\"Projected Own%\"": "\"19.5%\"",
+		"\"Cash Odds\"": "\"39%\"",
+		"\"GPP Odds\"": "\"6%\"",
+		"\"Implied Own%\"": "\"6%\"",
+		"\"FD LEV\"": "\"0.29\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -929,11 +929,23 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"DET\"",
 		"\"Opp\"": "\"JAX\"",
 		"\"FD Sal $\"": "\"6300\"",
-		"\"Projected Own%\"": "\"9.5%\"",
-		"\"Cash Odds\"": "\"38%\"",
+		"\"Projected Own%\"": "\"3.5%\"",
+		"\"Cash Odds\"": "\"37%\"",
 		"\"GPP Odds\"": "\"6%\"",
 		"\"Implied Own%\"": "\"6%\"",
-		"\"FD LEV\"": "\"0.65\""
+		"\"FD LEV\"": "\"1.70\""
+	},
+	{
+		"\"Pos\"": "\"WR\"",
+		"\"Player\"": "\"Amari Cooper\"",
+		"\"Tm\"": "\"BUF\"",
+		"\"Opp\"": "\"KC\"",
+		"\"FD Sal $\"": "\"6300\"",
+		"\"Projected Own%\"": "\"0.5%\"",
+		"\"Cash Odds\"": "\"27%\"",
+		"\"GPP Odds\"": "\"3%\"",
+		"\"Implied Own%\"": "\"3%\"",
+		"\"FD LEV\"": "\"5.75\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -941,11 +953,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"CLE\"",
 		"\"Opp\"": "\"@NO\"",
 		"\"FD Sal $\"": "\"6200\"",
-		"\"Projected Own%\"": "\"15.5%\"",
+		"\"Projected Own%\"": "\"16.0%\"",
 		"\"Cash Odds\"": "\"53%\"",
-		"\"GPP Odds\"": "\"12%\"",
-		"\"Implied Own%\"": "\"11%\"",
-		"\"FD LEV\"": "\"0.71\""
+		"\"GPP Odds\"": "\"11%\"",
+		"\"Implied Own%\"": "\"9%\"",
+		"\"FD LEV\"": "\"0.55\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -953,11 +965,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"SF\"",
 		"\"Opp\"": "\"SEA\"",
 		"\"FD Sal $\"": "\"6200\"",
-		"\"Projected Own%\"": "\"11.0%\"",
-		"\"Cash Odds\"": "\"41%\"",
-		"\"GPP Odds\"": "\"6%\"",
+		"\"Projected Own%\"": "\"14.5%\"",
+		"\"Cash Odds\"": "\"40%\"",
+		"\"GPP Odds\"": "\"7%\"",
 		"\"Implied Own%\"": "\"6%\"",
-		"\"FD LEV\"": "\"0.57\""
+		"\"FD LEV\"": "\"0.44\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -965,11 +977,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"LV\"",
 		"\"Opp\"": "\"@MIA\"",
 		"\"FD Sal $\"": "\"6200\"",
-		"\"Projected Own%\"": "\"10.0%\"",
-		"\"Cash Odds\"": "\"41%\"",
-		"\"GPP Odds\"": "\"8%\"",
-		"\"Implied Own%\"": "\"8%\"",
-		"\"FD LEV\"": "\"0.85\""
+		"\"Projected Own%\"": "\"17.5%\"",
+		"\"Cash Odds\"": "\"40%\"",
+		"\"GPP Odds\"": "\"6%\"",
+		"\"Implied Own%\"": "\"6%\"",
+		"\"FD LEV\"": "\"0.34\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -977,11 +989,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"MIA\"",
 		"\"Opp\"": "\"LV\"",
 		"\"FD Sal $\"": "\"6200\"",
-		"\"Projected Own%\"": "\"6.0%\"",
-		"\"Cash Odds\"": "\"29%\"",
-		"\"GPP Odds\"": "\"3%\"",
+		"\"Projected Own%\"": "\"4.0%\"",
+		"\"Cash Odds\"": "\"30%\"",
+		"\"GPP Odds\"": "\"4%\"",
 		"\"Implied Own%\"": "\"3%\"",
-		"\"FD LEV\"": "\"0.47\""
+		"\"FD LEV\"": "\"0.87\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -990,10 +1002,10 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Opp\"": "\"GB\"",
 		"\"FD Sal $\"": "\"6100\"",
 		"\"Projected Own%\"": "\"7.0%\"",
-		"\"Cash Odds\"": "\"34%\"",
-		"\"GPP Odds\"": "\"5%\"",
-		"\"Implied Own%\"": "\"5%\"",
-		"\"FD LEV\"": "\"0.74\""
+		"\"Cash Odds\"": "\"33%\"",
+		"\"GPP Odds\"": "\"4%\"",
+		"\"Implied Own%\"": "\"4%\"",
+		"\"FD LEV\"": "\"0.59\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -1001,11 +1013,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"SEA\"",
 		"\"Opp\"": "\"@SF\"",
 		"\"FD Sal $\"": "\"6100\"",
-		"\"Projected Own%\"": "\"1.0%\"",
-		"\"Cash Odds\"": "\"21%\"",
-		"\"GPP Odds\"": "\"1%\"",
-		"\"Implied Own%\"": "\"1%\"",
-		"\"FD LEV\"": "\"1.01\""
+		"\"Projected Own%\"": "\"2.5%\"",
+		"\"Cash Odds\"": "\"25%\"",
+		"\"GPP Odds\"": "\"2%\"",
+		"\"Implied Own%\"": "\"2%\"",
+		"\"FD LEV\"": "\"0.75\""
 	},
 	{
 		"\"Pos\"": "\"TE\"",
@@ -1013,11 +1025,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"BAL\"",
 		"\"Opp\"": "\"@PIT\"",
 		"\"FD Sal $\"": "\"6100\"",
-		"\"Projected Own%\"": "\"3.5%\"",
-		"\"Cash Odds\"": "\"35%\"",
-		"\"GPP Odds\"": "\"6%\"",
-		"\"Implied Own%\"": "\"4%\"",
-		"\"FD LEV\"": "\"1.04\""
+		"\"Projected Own%\"": "\"5.0%\"",
+		"\"Cash Odds\"": "\"38%\"",
+		"\"GPP Odds\"": "\"10%\"",
+		"\"Implied Own%\"": "\"6%\"",
+		"\"FD LEV\"": "\"1.28\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -1025,11 +1037,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"LAC\"",
 		"\"Opp\"": "\"CIN\"",
 		"\"FD Sal $\"": "\"6000\"",
-		"\"Projected Own%\"": "\"8.5%\"",
+		"\"Projected Own%\"": "\"6.0%\"",
 		"\"Cash Odds\"": "\"32%\"",
 		"\"GPP Odds\"": "\"4%\"",
-		"\"Implied Own%\"": "\"5%\"",
-		"\"FD LEV\"": "\"0.55\""
+		"\"Implied Own%\"": "\"3%\"",
+		"\"FD LEV\"": "\"0.57\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -1037,11 +1049,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"KC\"",
 		"\"Opp\"": "\"@BUF\"",
 		"\"FD Sal $\"": "\"6000\"",
-		"\"Projected Own%\"": "\"1.0%\"",
-		"\"Cash Odds\"": "\"21%\"",
-		"\"GPP Odds\"": "\"1%\"",
-		"\"Implied Own%\"": "\"1%\"",
-		"\"FD LEV\"": "\"1.18\""
+		"\"Projected Own%\"": "\"0.5%\"",
+		"\"Cash Odds\"": "\"23%\"",
+		"\"GPP Odds\"": "\"2%\"",
+		"\"Implied Own%\"": "\"2%\"",
+		"\"FD LEV\"": "\"3.36\""
 	},
 	{
 		"\"Pos\"": "\"TE\"",
@@ -1049,11 +1061,23 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"GB\"",
 		"\"Opp\"": "\"@CHI\"",
 		"\"FD Sal $\"": "\"6000\"",
-		"\"Projected Own%\"": "\"5.0%\"",
-		"\"Cash Odds\"": "\"36%\"",
+		"\"Projected Own%\"": "\"0.5%\"",
+		"\"Cash Odds\"": "\"37%\"",
 		"\"GPP Odds\"": "\"10%\"",
 		"\"Implied Own%\"": "\"6%\"",
-		"\"FD LEV\"": "\"1.14\""
+		"\"FD LEV\"": "\"12.53\""
+	},
+	{
+		"\"Pos\"": "\"RB\"",
+		"\"Player\"": "\"Roschon Johnson\"",
+		"\"Tm\"": "\"CHI\"",
+		"\"Opp\"": "\"GB\"",
+		"\"FD Sal $\"": "\"5900\"",
+		"\"Projected Own%\"": "\"0.5%\"",
+		"\"Cash Odds\"": "\"8%\"",
+		"\"GPP Odds\"": "\"0%\"",
+		"\"Implied Own%\"": "\"0%\"",
+		"\"FD LEV\"": "\"0.10\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -1061,11 +1085,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"NO\"",
 		"\"Opp\"": "\"CLE\"",
 		"\"FD Sal $\"": "\"5900\"",
-		"\"Projected Own%\"": "\"4.5%\"",
+		"\"Projected Own%\"": "\"0.5%\"",
 		"\"Cash Odds\"": "\"27%\"",
 		"\"GPP Odds\"": "\"3%\"",
 		"\"Implied Own%\"": "\"3%\"",
-		"\"FD LEV\"": "\"0.71\""
+		"\"FD LEV\"": "\"5.78\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -1073,11 +1097,23 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"LAR\"",
 		"\"Opp\"": "\"@NE\"",
 		"\"FD Sal $\"": "\"5900\"",
-		"\"Projected Own%\"": "\"1.0%\"",
-		"\"Cash Odds\"": "\"19%\"",
-		"\"GPP Odds\"": "\"1%\"",
-		"\"Implied Own%\"": "\"1%\"",
-		"\"FD LEV\"": "\"0.69\""
+		"\"Projected Own%\"": "\"0.5%\"",
+		"\"Cash Odds\"": "\"23%\"",
+		"\"GPP Odds\"": "\"2%\"",
+		"\"Implied Own%\"": "\"2%\"",
+		"\"FD LEV\"": "\"3.37\""
+	},
+	{
+		"\"Pos\"": "\"WR\"",
+		"\"Player\"": "\"Michael Pittman Jr.\"",
+		"\"Tm\"": "\"IND\"",
+		"\"Opp\"": "\"@NYJ\"",
+		"\"FD Sal $\"": "\"5900\"",
+		"\"Projected Own%\"": "\"0.5%\"",
+		"\"Cash Odds\"": "\"9%\"",
+		"\"GPP Odds\"": "\"0%\"",
+		"\"Implied Own%\"": "\"0%\"",
+		"\"FD LEV\"": "\"0.27\""
 	},
 	{
 		"\"Pos\"": "\"TE\"",
@@ -1085,11 +1121,23 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"JAX\"",
 		"\"Opp\"": "\"@DET\"",
 		"\"FD Sal $\"": "\"5900\"",
-		"\"Projected Own%\"": "\"2.0%\"",
-		"\"Cash Odds\"": "\"30%\"",
-		"\"GPP Odds\"": "\"3%\"",
-		"\"Implied Own%\"": "\"2%\"",
-		"\"FD LEV\"": "\"0.83\""
+		"\"Projected Own%\"": "\"12.5%\"",
+		"\"Cash Odds\"": "\"32%\"",
+		"\"GPP Odds\"": "\"5%\"",
+		"\"Implied Own%\"": "\"3%\"",
+		"\"FD LEV\"": "\"0.23\""
+	},
+	{
+		"\"Pos\"": "\"RB\"",
+		"\"Player\"": "\"Tyler Allgeier\"",
+		"\"Tm\"": "\"ATL\"",
+		"\"Opp\"": "\"@DEN\"",
+		"\"FD Sal $\"": "\"5800\"",
+		"\"Projected Own%\"": "\"0.5%\"",
+		"\"Cash Odds\"": "\"13%\"",
+		"\"GPP Odds\"": "\"0%\"",
+		"\"Implied Own%\"": "\"0%\"",
+		"\"FD LEV\"": "\"0.43\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -1097,11 +1145,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"GB\"",
 		"\"Opp\"": "\"@CHI\"",
 		"\"FD Sal $\"": "\"5800\"",
-		"\"Projected Own%\"": "\"8.0%\"",
+		"\"Projected Own%\"": "\"8.5%\"",
 		"\"Cash Odds\"": "\"35%\"",
-		"\"GPP Odds\"": "\"6%\"",
-		"\"Implied Own%\"": "\"6%\"",
-		"\"FD LEV\"": "\"0.75\""
+		"\"GPP Odds\"": "\"5%\"",
+		"\"Implied Own%\"": "\"5%\"",
+		"\"FD LEV\"": "\"0.56\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -1109,11 +1157,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"CLE\"",
 		"\"Opp\"": "\"@NO\"",
 		"\"FD Sal $\"": "\"5800\"",
-		"\"Projected Own%\"": "\"3.5%\"",
+		"\"Projected Own%\"": "\"9.0%\"",
 		"\"Cash Odds\"": "\"28%\"",
-		"\"GPP Odds\"": "\"4%\"",
-		"\"Implied Own%\"": "\"4%\"",
-		"\"FD LEV\"": "\"1.14\""
+		"\"GPP Odds\"": "\"3%\"",
+		"\"Implied Own%\"": "\"3%\"",
+		"\"FD LEV\"": "\"0.33\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -1121,11 +1169,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"MIN\"",
 		"\"Opp\"": "\"@TEN\"",
 		"\"FD Sal $\"": "\"5800\"",
-		"\"Projected Own%\"": "\"1.0%\"",
-		"\"Cash Odds\"": "\"23%\"",
+		"\"Projected Own%\"": "\"0.5%\"",
+		"\"Cash Odds\"": "\"20%\"",
 		"\"GPP Odds\"": "\"1%\"",
-		"\"Implied Own%\"": "\"2%\"",
-		"\"FD LEV\"": "\"1.54\""
+		"\"Implied Own%\"": "\"1%\"",
+		"\"FD LEV\"": "\"1.40\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -1133,11 +1181,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"CHI\"",
 		"\"Opp\"": "\"GB\"",
 		"\"FD Sal $\"": "\"5800\"",
-		"\"Projected Own%\"": "\"4.5%\"",
-		"\"Cash Odds\"": "\"24%\"",
-		"\"GPP Odds\"": "\"1%\"",
-		"\"Implied Own%\"": "\"2%\"",
-		"\"FD LEV\"": "\"0.35\""
+		"\"Projected Own%\"": "\"3.5%\"",
+		"\"Cash Odds\"": "\"27%\"",
+		"\"GPP Odds\"": "\"3%\"",
+		"\"Implied Own%\"": "\"3%\"",
+		"\"FD LEV\"": "\"0.73\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -1146,10 +1194,10 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Opp\"": "\"SEA\"",
 		"\"FD Sal $\"": "\"5800\"",
 		"\"Projected Own%\"": "\"1.0%\"",
-		"\"Cash Odds\"": "\"18%\"",
-		"\"GPP Odds\"": "\"0%\"",
-		"\"Implied Own%\"": "\"1%\"",
-		"\"FD LEV\"": "\"0.54\""
+		"\"Cash Odds\"": "\"28%\"",
+		"\"GPP Odds\"": "\"3%\"",
+		"\"Implied Own%\"": "\"3%\"",
+		"\"FD LEV\"": "\"3.35\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -1157,11 +1205,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"LV\"",
 		"\"Opp\"": "\"@MIA\"",
 		"\"FD Sal $\"": "\"5700\"",
-		"\"Projected Own%\"": "\"11.5%\"",
-		"\"Cash Odds\"": "\"44%\"",
-		"\"GPP Odds\"": "\"4%\"",
-		"\"Implied Own%\"": "\"3%\"",
-		"\"FD LEV\"": "\"0.29\""
+		"\"Projected Own%\"": "\"9.0%\"",
+		"\"Cash Odds\"": "\"45%\"",
+		"\"GPP Odds\"": "\"6%\"",
+		"\"Implied Own%\"": "\"5%\"",
+		"\"FD LEV\"": "\"0.52\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -1169,59 +1217,23 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"GB\"",
 		"\"Opp\"": "\"@CHI\"",
 		"\"FD Sal $\"": "\"5700\"",
-		"\"Projected Own%\"": "\"3.0%\"",
-		"\"Cash Odds\"": "\"20%\"",
-		"\"GPP Odds\"": "\"1%\"",
-		"\"Implied Own%\"": "\"1%\"",
-		"\"FD LEV\"": "\"0.21\""
+		"\"Projected Own%\"": "\"0.5%\"",
+		"\"Cash Odds\"": "\"25%\"",
+		"\"GPP Odds\"": "\"2%\"",
+		"\"Implied Own%\"": "\"2%\"",
+		"\"FD LEV\"": "\"3.82\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
-		"\"Player\"": "\"Mike Williams\"",
-		"\"Tm\"": "\"PIT\"",
-		"\"Opp\"": "\"BAL\"",
+		"\"Player\"": "\"Gabe Davis\"",
+		"\"Tm\"": "\"JAX\"",
+		"\"Opp\"": "\"@DET\"",
 		"\"FD Sal $\"": "\"5700\"",
 		"\"Projected Own%\"": "\"0.5%\"",
-		"\"Cash Odds\"": "\"19%\"",
-		"\"GPP Odds\"": "\"1%\"",
-		"\"Implied Own%\"": "\"1%\"",
-		"\"FD LEV\"": "\"1.30\""
-	},
-	{
-		"\"Pos\"": "\"TE\"",
-		"\"Player\"": "\"Sam LaPorta\"",
-		"\"Tm\"": "\"DET\"",
-		"\"Opp\"": "\"JAX\"",
-		"\"FD Sal $\"": "\"5700\"",
-		"\"Projected Own%\"": "\"8.0%\"",
-		"\"Cash Odds\"": "\"41%\"",
-		"\"GPP Odds\"": "\"9%\"",
-		"\"Implied Own%\"": "\"5%\"",
-		"\"FD LEV\"": "\"0.66\""
-	},
-	{
-		"\"Pos\"": "\"RB\"",
-		"\"Player\"": "\"Cam Akers\"",
-		"\"Tm\"": "\"MIN\"",
-		"\"Opp\"": "\"@TEN\"",
-		"\"FD Sal $\"": "\"5600\"",
-		"\"Projected Own%\"": "\"0.5%\"",
-		"\"Cash Odds\"": "\"8%\"",
+		"\"Cash Odds\"": "\"11%\"",
 		"\"GPP Odds\"": "\"0%\"",
 		"\"Implied Own%\"": "\"0%\"",
-		"\"FD LEV\"": "\"0.05\""
-	},
-	{
-		"\"Pos\"": "\"WR\"",
-		"\"Player\"": "\"Mack Hollins\"",
-		"\"Tm\"": "\"BUF\"",
-		"\"Opp\"": "\"KC\"",
-		"\"FD Sal $\"": "\"5600\"",
-		"\"Projected Own%\"": "\"8.0%\"",
-		"\"Cash Odds\"": "\"33%\"",
-		"\"GPP Odds\"": "\"4%\"",
-		"\"Implied Own%\"": "\"4%\"",
-		"\"FD LEV\"": "\"0.54\""
+		"\"FD LEV\"": "\"0.35\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -1229,11 +1241,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"LAC\"",
 		"\"Opp\"": "\"CIN\"",
 		"\"FD Sal $\"": "\"5600\"",
-		"\"Projected Own%\"": "\"5.5%\"",
-		"\"Cash Odds\"": "\"28%\"",
-		"\"GPP Odds\"": "\"3%\"",
-		"\"Implied Own%\"": "\"4%\"",
-		"\"FD LEV\"": "\"0.65\""
+		"\"Projected Own%\"": "\"0.5%\"",
+		"\"Cash Odds\"": "\"23%\"",
+		"\"GPP Odds\"": "\"1%\"",
+		"\"Implied Own%\"": "\"1%\"",
+		"\"FD LEV\"": "\"2.56\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -1241,11 +1253,23 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"CHI\"",
 		"\"Opp\"": "\"GB\"",
 		"\"FD Sal $\"": "\"5600\"",
-		"\"Projected Own%\"": "\"3.5%\"",
-		"\"Cash Odds\"": "\"23%\"",
-		"\"GPP Odds\"": "\"1%\"",
-		"\"Implied Own%\"": "\"1%\"",
-		"\"FD LEV\"": "\"0.29\""
+		"\"Projected Own%\"": "\"1.5%\"",
+		"\"Cash Odds\"": "\"25%\"",
+		"\"GPP Odds\"": "\"2%\"",
+		"\"Implied Own%\"": "\"2%\"",
+		"\"FD LEV\"": "\"1.13\""
+	},
+	{
+		"\"Pos\"": "\"WR\"",
+		"\"Player\"": "\"Mack Hollins\"",
+		"\"Tm\"": "\"BUF\"",
+		"\"Opp\"": "\"KC\"",
+		"\"FD Sal $\"": "\"5600\"",
+		"\"Projected Own%\"": "\"0.5%\"",
+		"\"Cash Odds\"": "\"15%\"",
+		"\"GPP Odds\"": "\"0%\"",
+		"\"Implied Own%\"": "\"0%\"",
+		"\"FD LEV\"": "\"0.85\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -1257,7 +1281,7 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Cash Odds\"": "\"11%\"",
 		"\"GPP Odds\"": "\"0%\"",
 		"\"Implied Own%\"": "\"0%\"",
-		"\"FD LEV\"": "\"0.34\""
+		"\"FD LEV\"": "\"0.36\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -1265,11 +1289,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"PIT\"",
 		"\"Opp\"": "\"BAL\"",
 		"\"FD Sal $\"": "\"5500\"",
-		"\"Projected Own%\"": "\"3.0%\"",
-		"\"Cash Odds\"": "\"30%\"",
-		"\"GPP Odds\"": "\"3%\"",
-		"\"Implied Own%\"": "\"3%\"",
-		"\"FD LEV\"": "\"0.87\""
+		"\"Projected Own%\"": "\"1.5%\"",
+		"\"Cash Odds\"": "\"26%\"",
+		"\"GPP Odds\"": "\"1%\"",
+		"\"Implied Own%\"": "\"1%\"",
+		"\"FD LEV\"": "\"0.61\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -1278,10 +1302,10 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Opp\"": "\"ATL\"",
 		"\"FD Sal $\"": "\"5500\"",
 		"\"Projected Own%\"": "\"0.5%\"",
-		"\"Cash Odds\"": "\"13%\"",
+		"\"Cash Odds\"": "\"9%\"",
 		"\"GPP Odds\"": "\"0%\"",
 		"\"Implied Own%\"": "\"0%\"",
-		"\"FD LEV\"": "\"0.44\""
+		"\"FD LEV\"": "\"0.06\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -1289,11 +1313,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"CIN\"",
 		"\"Opp\"": "\"@LAC\"",
 		"\"FD Sal $\"": "\"5500\"",
-		"\"Projected Own%\"": "\"1.5%\"",
-		"\"Cash Odds\"": "\"17%\"",
+		"\"Projected Own%\"": "\"0.5%\"",
+		"\"Cash Odds\"": "\"18%\"",
 		"\"GPP Odds\"": "\"0%\"",
 		"\"Implied Own%\"": "\"0%\"",
-		"\"FD LEV\"": "\"0.24\""
+		"\"FD LEV\"": "\"0.78\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -1301,11 +1325,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"CLE\"",
 		"\"Opp\"": "\"@NO\"",
 		"\"FD Sal $\"": "\"5500\"",
-		"\"Projected Own%\"": "\"1.5%\"",
-		"\"Cash Odds\"": "\"21%\"",
-		"\"GPP Odds\"": "\"1%\"",
+		"\"Projected Own%\"": "\"5.0%\"",
+		"\"Cash Odds\"": "\"22%\"",
+		"\"GPP Odds\"": "\"2%\"",
 		"\"Implied Own%\"": "\"1%\"",
-		"\"FD LEV\"": "\"0.81\""
+		"\"FD LEV\"": "\"0.30\""
 	},
 	{
 		"\"Pos\"": "\"TE\"",
@@ -1313,11 +1337,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"ATL\"",
 		"\"Opp\"": "\"@DEN\"",
 		"\"FD Sal $\"": "\"5500\"",
-		"\"Projected Own%\"": "\"5.0%\"",
-		"\"Cash Odds\"": "\"38%\"",
+		"\"Projected Own%\"": "\"4.5%\"",
+		"\"Cash Odds\"": "\"39%\"",
 		"\"GPP Odds\"": "\"8%\"",
-		"\"Implied Own%\"": "\"4%\"",
-		"\"FD LEV\"": "\"0.89\""
+		"\"Implied Own%\"": "\"5%\"",
+		"\"FD LEV\"": "\"1.09\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -1325,11 +1349,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"DEN\"",
 		"\"Opp\"": "\"ATL\"",
 		"\"FD Sal $\"": "\"5400\"",
-		"\"Projected Own%\"": "\"11.5%\"",
-		"\"Cash Odds\"": "\"45%\"",
-		"\"GPP Odds\"": "\"6%\"",
-		"\"Implied Own%\"": "\"6%\"",
-		"\"FD LEV\"": "\"0.49\""
+		"\"Projected Own%\"": "\"5.5%\"",
+		"\"Cash Odds\"": "\"44%\"",
+		"\"GPP Odds\"": "\"4%\"",
+		"\"Implied Own%\"": "\"3%\"",
+		"\"FD LEV\"": "\"0.63\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -1338,10 +1362,10 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Opp\"": "\"IND\"",
 		"\"FD Sal $\"": "\"5400\"",
 		"\"Projected Own%\"": "\"0.5%\"",
-		"\"Cash Odds\"": "\"18%\"",
+		"\"Cash Odds\"": "\"17%\"",
 		"\"GPP Odds\"": "\"0%\"",
 		"\"Implied Own%\"": "\"0%\"",
-		"\"FD LEV\"": "\"0.84\""
+		"\"FD LEV\"": "\"0.53\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -1349,11 +1373,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"IND\"",
 		"\"Opp\"": "\"@NYJ\"",
 		"\"FD Sal $\"": "\"5400\"",
-		"\"Projected Own%\"": "\"6.5%\"",
-		"\"Cash Odds\"": "\"27%\"",
-		"\"GPP Odds\"": "\"3%\"",
-		"\"Implied Own%\"": "\"3%\"",
-		"\"FD LEV\"": "\"0.49\""
+		"\"Projected Own%\"": "\"0.5%\"",
+		"\"Cash Odds\"": "\"26%\"",
+		"\"GPP Odds\"": "\"2%\"",
+		"\"Implied Own%\"": "\"2%\"",
+		"\"FD LEV\"": "\"3.38\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -1361,11 +1385,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"BAL\"",
 		"\"Opp\"": "\"@PIT\"",
 		"\"FD Sal $\"": "\"5400\"",
-		"\"Projected Own%\"": "\"5.0%\"",
-		"\"Cash Odds\"": "\"26%\"",
-		"\"GPP Odds\"": "\"1%\"",
-		"\"Implied Own%\"": "\"2%\"",
-		"\"FD LEV\"": "\"0.31\""
+		"\"Projected Own%\"": "\"3.0%\"",
+		"\"Cash Odds\"": "\"25%\"",
+		"\"GPP Odds\"": "\"2%\"",
+		"\"Implied Own%\"": "\"1%\"",
+		"\"FD LEV\"": "\"0.49\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -1373,11 +1397,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"TEN\"",
 		"\"Opp\"": "\"MIN\"",
 		"\"FD Sal $\"": "\"5400\"",
-		"\"Projected Own%\"": "\"3.0%\"",
-		"\"Cash Odds\"": "\"21%\"",
-		"\"GPP Odds\"": "\"1%\"",
-		"\"Implied Own%\"": "\"1%\"",
-		"\"FD LEV\"": "\"0.25\""
+		"\"Projected Own%\"": "\"0.5%\"",
+		"\"Cash Odds\"": "\"19%\"",
+		"\"GPP Odds\"": "\"0%\"",
+		"\"Implied Own%\"": "\"0%\"",
+		"\"FD LEV\"": "\"0.84\""
 	},
 	{
 		"\"Pos\"": "\"TE\"",
@@ -1385,11 +1409,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"CIN\"",
 		"\"Opp\"": "\"@LAC\"",
 		"\"FD Sal $\"": "\"5400\"",
-		"\"Projected Own%\"": "\"5.0%\"",
-		"\"Cash Odds\"": "\"38%\"",
+		"\"Projected Own%\"": "\"15.0%\"",
+		"\"Cash Odds\"": "\"36%\"",
 		"\"GPP Odds\"": "\"6%\"",
 		"\"Implied Own%\"": "\"4%\"",
-		"\"FD LEV\"": "\"0.71\""
+		"\"FD LEV\"": "\"0.27\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -1397,11 +1421,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"TEN\"",
 		"\"Opp\"": "\"MIN\"",
 		"\"FD Sal $\"": "\"5300\"",
-		"\"Projected Own%\"": "\"1.5%\"",
+		"\"Projected Own%\"": "\"0.5%\"",
 		"\"Cash Odds\"": "\"22%\"",
 		"\"GPP Odds\"": "\"1%\"",
-		"\"Implied Own%\"": "\"1%\"",
-		"\"FD LEV\"": "\"0.35\""
+		"\"Implied Own%\"": "\"0%\"",
+		"\"FD LEV\"": "\"1.00\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -1410,22 +1434,22 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Opp\"": "\"KC\"",
 		"\"FD Sal $\"": "\"5300\"",
 		"\"Projected Own%\"": "\"0.5%\"",
-		"\"Cash Odds\"": "\"22%\"",
-		"\"GPP Odds\"": "\"1%\"",
-		"\"Implied Own%\"": "\"1%\"",
-		"\"FD LEV\"": "\"1.58\""
-	},
-	{
-		"\"Pos\"": "\"WR\"",
-		"\"Player\"": "\"Adonai Mitchell\"",
-		"\"Tm\"": "\"IND\"",
-		"\"Opp\"": "\"@NYJ\"",
-		"\"FD Sal $\"": "\"5300\"",
-		"\"Projected Own%\"": "\"3.0%\"",
-		"\"Cash Odds\"": "\"19%\"",
+		"\"Cash Odds\"": "\"14%\"",
 		"\"GPP Odds\"": "\"0%\"",
 		"\"Implied Own%\"": "\"0%\"",
-		"\"FD LEV\"": "\"0.16\""
+		"\"FD LEV\"": "\"0.33\""
+	},
+	{
+		"\"Pos\"": "\"RB\"",
+		"\"Player\"": "\"Justice Hill\"",
+		"\"Tm\"": "\"BAL\"",
+		"\"Opp\"": "\"@PIT\"",
+		"\"FD Sal $\"": "\"5300\"",
+		"\"Projected Own%\"": "\"0.5%\"",
+		"\"Cash Odds\"": "\"2%\"",
+		"\"GPP Odds\"": "\"0%\"",
+		"\"Implied Own%\"": "\"0%\"",
+		"\"FD LEV\"": "\"0.00\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -1433,11 +1457,35 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"NE\"",
 		"\"Opp\"": "\"LAR\"",
 		"\"FD Sal $\"": "\"5300\"",
-		"\"Projected Own%\"": "\"3.0%\"",
-		"\"Cash Odds\"": "\"20%\"",
+		"\"Projected Own%\"": "\"4.5%\"",
+		"\"Cash Odds\"": "\"23%\"",
+		"\"GPP Odds\"": "\"1%\"",
+		"\"Implied Own%\"": "\"1%\"",
+		"\"FD LEV\"": "\"0.24\""
+	},
+	{
+		"\"Pos\"": "\"WR\"",
+		"\"Player\"": "\"Parker Washington\"",
+		"\"Tm\"": "\"JAX\"",
+		"\"Opp\"": "\"@DET\"",
+		"\"FD Sal $\"": "\"5300\"",
+		"\"Projected Own%\"": "\"0.5%\"",
+		"\"Cash Odds\"": "\"4%\"",
 		"\"GPP Odds\"": "\"0%\"",
 		"\"Implied Own%\"": "\"0%\"",
-		"\"FD LEV\"": "\"0.14\""
+		"\"FD LEV\"": "\"0.03\""
+	},
+	{
+		"\"Pos\"": "\"WR\"",
+		"\"Player\"": "\"Adonai Mitchell\"",
+		"\"Tm\"": "\"IND\"",
+		"\"Opp\"": "\"@NYJ\"",
+		"\"FD Sal $\"": "\"5300\"",
+		"\"Projected Own%\"": "\"4.0%\"",
+		"\"Cash Odds\"": "\"1%\"",
+		"\"GPP Odds\"": "\"0%\"",
+		"\"Implied Own%\"": "\"0%\"",
+		"\"FD LEV\"": "\"0.00\""
 	},
 	{
 		"\"Pos\"": "\"TE\"",
@@ -1445,11 +1493,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"NE\"",
 		"\"Opp\"": "\"LAR\"",
 		"\"FD Sal $\"": "\"5300\"",
-		"\"Projected Own%\"": "\"5.0%\"",
-		"\"Cash Odds\"": "\"37%\"",
-		"\"GPP Odds\"": "\"7%\"",
-		"\"Implied Own%\"": "\"4%\"",
-		"\"FD LEV\"": "\"0.81\""
+		"\"Projected Own%\"": "\"8.5%\"",
+		"\"Cash Odds\"": "\"38%\"",
+		"\"GPP Odds\"": "\"8%\"",
+		"\"Implied Own%\"": "\"5%\"",
+		"\"FD LEV\"": "\"0.57\""
 	},
 	{
 		"\"Pos\"": "\"TE\"",
@@ -1457,11 +1505,23 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"PIT\"",
 		"\"Opp\"": "\"BAL\"",
 		"\"FD Sal $\"": "\"5300\"",
-		"\"Projected Own%\"": "\"6.0%\"",
-		"\"Cash Odds\"": "\"35%\"",
-		"\"GPP Odds\"": "\"5%\"",
-		"\"Implied Own%\"": "\"3%\"",
-		"\"FD LEV\"": "\"0.46\""
+		"\"Projected Own%\"": "\"1.0%\"",
+		"\"Cash Odds\"": "\"36%\"",
+		"\"GPP Odds\"": "\"6%\"",
+		"\"Implied Own%\"": "\"4%\"",
+		"\"FD LEV\"": "\"3.59\""
+	},
+	{
+		"\"Pos\"": "\"RB\"",
+		"\"Player\"": "\"Jerome Ford\"",
+		"\"Tm\"": "\"CLE\"",
+		"\"Opp\"": "\"@NO\"",
+		"\"FD Sal $\"": "\"5200\"",
+		"\"Projected Own%\"": "\"0.5%\"",
+		"\"Cash Odds\"": "\"11%\"",
+		"\"GPP Odds\"": "\"0%\"",
+		"\"Implied Own%\"": "\"0%\"",
+		"\"FD LEV\"": "\"0.10\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -1469,11 +1529,23 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"DEN\"",
 		"\"Opp\"": "\"ATL\"",
 		"\"FD Sal $\"": "\"5200\"",
-		"\"Projected Own%\"": "\"4.0%\"",
-		"\"Cash Odds\"": "\"23%\"",
+		"\"Projected Own%\"": "\"2.5%\"",
+		"\"Cash Odds\"": "\"21%\"",
 		"\"GPP Odds\"": "\"1%\"",
 		"\"Implied Own%\"": "\"1%\"",
-		"\"FD LEV\"": "\"0.35\""
+		"\"FD LEV\"": "\"0.23\""
+	},
+	{
+		"\"Pos\"": "\"WR\"",
+		"\"Player\"": "\"Calvin Austin III\"",
+		"\"Tm\"": "\"PIT\"",
+		"\"Opp\"": "\"BAL\"",
+		"\"FD Sal $\"": "\"5200\"",
+		"\"Projected Own%\"": "\"0.5%\"",
+		"\"Cash Odds\"": "\"9%\"",
+		"\"GPP Odds\"": "\"0%\"",
+		"\"Implied Own%\"": "\"0%\"",
+		"\"FD LEV\"": "\"0.22\""
 	},
 	{
 		"\"Pos\"": "\"TE\"",
@@ -1481,11 +1553,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"CHI\"",
 		"\"Opp\"": "\"GB\"",
 		"\"FD Sal $\"": "\"5200\"",
-		"\"Projected Own%\"": "\"1.5%\"",
-		"\"Cash Odds\"": "\"28%\"",
-		"\"GPP Odds\"": "\"4%\"",
-		"\"Implied Own%\"": "\"2%\"",
-		"\"FD LEV\"": "\"1.40\""
+		"\"Projected Own%\"": "\"0.5%\"",
+		"\"Cash Odds\"": "\"25%\"",
+		"\"GPP Odds\"": "\"2%\"",
+		"\"Implied Own%\"": "\"1%\"",
+		"\"FD LEV\"": "\"1.95\""
 	},
 	{
 		"\"Pos\"": "\"TE\"",
@@ -1493,11 +1565,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"NO\"",
 		"\"Opp\"": "\"CLE\"",
 		"\"FD Sal $\"": "\"5200\"",
-		"\"Projected Own%\"": "\"0.5%\"",
-		"\"Cash Odds\"": "\"18%\"",
+		"\"Projected Own%\"": "\"1.0%\"",
+		"\"Cash Odds\"": "\"19%\"",
 		"\"GPP Odds\"": "\"1%\"",
 		"\"Implied Own%\"": "\"1%\"",
-		"\"FD LEV\"": "\"1.03\""
+		"\"FD LEV\"": "\"0.71\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -1509,19 +1581,7 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Cash Odds\"": "\"21%\"",
 		"\"GPP Odds\"": "\"1%\"",
 		"\"Implied Own%\"": "\"1%\"",
-		"\"FD LEV\"": "\"1.24\""
-	},
-	{
-		"\"Pos\"": "\"RB\"",
-		"\"Player\"": "\"Zamir White\"",
-		"\"Tm\"": "\"LV\"",
-		"\"Opp\"": "\"@MIA\"",
-		"\"FD Sal $\"": "\"5100\"",
-		"\"Projected Own%\"": "\"0.5%\"",
-		"\"Cash Odds\"": "\"18%\"",
-		"\"GPP Odds\"": "\"1%\"",
-		"\"Implied Own%\"": "\"1%\"",
-		"\"FD LEV\"": "\"1.31\""
+		"\"FD LEV\"": "\"1.38\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -1533,19 +1593,7 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Cash Odds\"": "\"15%\"",
 		"\"GPP Odds\"": "\"0%\"",
 		"\"Implied Own%\"": "\"0%\"",
-		"\"FD LEV\"": "\"0.15\""
-	},
-	{
-		"\"Pos\"": "\"WR\"",
-		"\"Player\"": "\"DJ Turner\"",
-		"\"Tm\"": "\"LV\"",
-		"\"Opp\"": "\"@MIA\"",
-		"\"FD Sal $\"": "\"5100\"",
-		"\"Projected Own%\"": "\"1.0%\"",
-		"\"Cash Odds\"": "\"14%\"",
-		"\"GPP Odds\"": "\"0%\"",
-		"\"Implied Own%\"": "\"0%\"",
-		"\"FD LEV\"": "\"0.39\""
+		"\"FD LEV\"": "\"0.16\""
 	},
 	{
 		"\"Pos\"": "\"TE\"",
@@ -1553,11 +1601,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"BUF\"",
 		"\"Opp\"": "\"KC\"",
 		"\"FD Sal $\"": "\"5100\"",
-		"\"Projected Own%\"": "\"7.0%\"",
-		"\"Cash Odds\"": "\"39%\"",
-		"\"GPP Odds\"": "\"8%\"",
+		"\"Projected Own%\"": "\"4.5%\"",
+		"\"Cash Odds\"": "\"38%\"",
+		"\"GPP Odds\"": "\"7%\"",
 		"\"Implied Own%\"": "\"4%\"",
-		"\"FD LEV\"": "\"0.64\""
+		"\"FD LEV\"": "\"1.00\""
 	},
 	{
 		"\"Pos\"": "\"TE\"",
@@ -1565,11 +1613,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"MIA\"",
 		"\"Opp\"": "\"LV\"",
 		"\"FD Sal $\"": "\"5100\"",
-		"\"Projected Own%\"": "\"7.5%\"",
-		"\"Cash Odds\"": "\"41%\"",
-		"\"GPP Odds\"": "\"10%\"",
-		"\"Implied Own%\"": "\"6%\"",
-		"\"FD LEV\"": "\"0.74\""
+		"\"Projected Own%\"": "\"9.0%\"",
+		"\"Cash Odds\"": "\"40%\"",
+		"\"GPP Odds\"": "\"8%\"",
+		"\"Implied Own%\"": "\"5%\"",
+		"\"FD LEV\"": "\"0.53\""
 	},
 	{
 		"\"Pos\"": "\"DEF\"",
@@ -1577,11 +1625,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"DET\"",
 		"\"Opp\"": "\"JAX\"",
 		"\"FD Sal $\"": "\"5100\"",
-		"\"Projected Own%\"": "\"3.5%\"",
-		"\"Cash Odds\"": "\"43%\"",
-		"\"GPP Odds\"": "\"11%\"",
-		"\"Implied Own%\"": "\"7%\"",
-		"\"FD LEV\"": "\"1.94\""
+		"\"Projected Own%\"": "\"2.0%\"",
+		"\"Cash Odds\"": "\"44%\"",
+		"\"GPP Odds\"": "\"15%\"",
+		"\"Implied Own%\"": "\"6%\"",
+		"\"FD LEV\"": "\"3.23\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
@@ -1589,11 +1637,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"LAC\"",
 		"\"Opp\"": "\"CIN\"",
 		"\"FD Sal $\"": "\"5000\"",
-		"\"Projected Own%\"": "\"1.0%\"",
-		"\"Cash Odds\"": "\"23%\"",
+		"\"Projected Own%\"": "\"0.5%\"",
+		"\"Cash Odds\"": "\"25%\"",
 		"\"GPP Odds\"": "\"1%\"",
 		"\"Implied Own%\"": "\"1%\"",
-		"\"FD LEV\"": "\"0.51\""
+		"\"FD LEV\"": "\"2.04\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -1601,11 +1649,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"GB\"",
 		"\"Opp\"": "\"@CHI\"",
 		"\"FD Sal $\"": "\"5000\"",
-		"\"Projected Own%\"": "\"2.5%\"",
-		"\"Cash Odds\"": "\"15%\"",
-		"\"GPP Odds\"": "\"0%\"",
-		"\"Implied Own%\"": "\"0%\"",
-		"\"FD LEV\"": "\"0.11\""
+		"\"Projected Own%\"": "\"0.5%\"",
+		"\"Cash Odds\"": "\"20%\"",
+		"\"GPP Odds\"": "\"1%\"",
+		"\"Implied Own%\"": "\"1%\"",
+		"\"FD LEV\"": "\"1.28\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -1613,11 +1661,23 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"NO\"",
 		"\"Opp\"": "\"CLE\"",
 		"\"FD Sal $\"": "\"5000\"",
-		"\"Projected Own%\"": "\"1.5%\"",
-		"\"Cash Odds\"": "\"17%\"",
+		"\"Projected Own%\"": "\"0.5%\"",
+		"\"Cash Odds\"": "\"18%\"",
+		"\"GPP Odds\"": "\"1%\"",
+		"\"Implied Own%\"": "\"1%\"",
+		"\"FD LEV\"": "\"1.41\""
+	},
+	{
+		"\"Pos\"": "\"WR\"",
+		"\"Player\"": "\"Troy Franklin\"",
+		"\"Tm\"": "\"DEN\"",
+		"\"Opp\"": "\"ATL\"",
+		"\"FD Sal $\"": "\"5000\"",
+		"\"Projected Own%\"": "\"0.5%\"",
+		"\"Cash Odds\"": "\"8%\"",
 		"\"GPP Odds\"": "\"0%\"",
 		"\"Implied Own%\"": "\"0%\"",
-		"\"FD LEV\"": "\"0.33\""
+		"\"FD LEV\"": "\"0.10\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -1625,8 +1685,8 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"BUF\"",
 		"\"Opp\"": "\"KC\"",
 		"\"FD Sal $\"": "\"5000\"",
-		"\"Projected Own%\"": "\"4.0%\"",
-		"\"Cash Odds\"": "\"14%\"",
+		"\"Projected Own%\"": "\"2.0%\"",
+		"\"Cash Odds\"": "\"9%\"",
 		"\"GPP Odds\"": "\"0%\"",
 		"\"Implied Own%\"": "\"0%\"",
 		"\"FD LEV\"": "\"0.06\""
@@ -1637,11 +1697,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"LAC\"",
 		"\"Opp\"": "\"CIN\"",
 		"\"FD Sal $\"": "\"5000\"",
-		"\"Projected Own%\"": "\"5.5%\"",
-		"\"Cash Odds\"": "\"34%\"",
-		"\"GPP Odds\"": "\"5%\"",
-		"\"Implied Own%\"": "\"3%\"",
-		"\"FD LEV\"": "\"0.54\""
+		"\"Projected Own%\"": "\"15.5%\"",
+		"\"Cash Odds\"": "\"39%\"",
+		"\"GPP Odds\"": "\"7%\"",
+		"\"Implied Own%\"": "\"4%\"",
+		"\"FD LEV\"": "\"0.28\""
 	},
 	{
 		"\"Pos\"": "\"TE\"",
@@ -1650,10 +1710,10 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Opp\"": "\"IND\"",
 		"\"FD Sal $\"": "\"5000\"",
 		"\"Projected Own%\"": "\"0.5%\"",
-		"\"Cash Odds\"": "\"16%\"",
-		"\"GPP Odds\"": "\"0%\"",
-		"\"Implied Own%\"": "\"0%\"",
-		"\"FD LEV\"": "\"0.30\""
+		"\"Cash Odds\"": "\"22%\"",
+		"\"GPP Odds\"": "\"1%\"",
+		"\"Implied Own%\"": "\"1%\"",
+		"\"FD LEV\"": "\"1.86\""
 	},
 	{
 		"\"Pos\"": "\"DEF\"",
@@ -1661,23 +1721,23 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"MIN\"",
 		"\"Opp\"": "\"@TEN\"",
 		"\"FD Sal $\"": "\"5000\"",
-		"\"Projected Own%\"": "\"5.0%\"",
-		"\"Cash Odds\"": "\"40%\"",
-		"\"GPP Odds\"": "\"9%\"",
-		"\"Implied Own%\"": "\"5%\"",
-		"\"FD LEV\"": "\"1.06\""
+		"\"Projected Own%\"": "\"3.0%\"",
+		"\"Cash Odds\"": "\"42%\"",
+		"\"GPP Odds\"": "\"13%\"",
+		"\"Implied Own%\"": "\"6%\"",
+		"\"FD LEV\"": "\"1.84\""
 	},
 	{
 		"\"Pos\"": "\"RB\"",
-		"\"Player\"": "\"Khalil Herbert\"",
-		"\"Tm\"": "\"CIN\"",
-		"\"Opp\"": "\"@LAC\"",
+		"\"Player\"": "\"Jaylen Wright\"",
+		"\"Tm\"": "\"MIA\"",
+		"\"Opp\"": "\"LV\"",
 		"\"FD Sal $\"": "\"4900\"",
 		"\"Projected Own%\"": "\"0.5%\"",
-		"\"Cash Odds\"": "\"11%\"",
+		"\"Cash Odds\"": "\"23%\"",
 		"\"GPP Odds\"": "\"0%\"",
 		"\"Implied Own%\"": "\"0%\"",
-		"\"FD LEV\"": "\"0.08\""
+		"\"FD LEV\"": "\"0.80\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -1685,11 +1745,23 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"NE\"",
 		"\"Opp\"": "\"LAR\"",
 		"\"FD Sal $\"": "\"4900\"",
-		"\"Projected Own%\"": "\"5.5%\"",
-		"\"Cash Odds\"": "\"24%\"",
+		"\"Projected Own%\"": "\"4.5%\"",
+		"\"Cash Odds\"": "\"21%\"",
 		"\"GPP Odds\"": "\"1%\"",
 		"\"Implied Own%\"": "\"1%\"",
-		"\"FD LEV\"": "\"0.24\""
+		"\"FD LEV\"": "\"0.11\""
+	},
+	{
+		"\"Pos\"": "\"TE\"",
+		"\"Player\"": "\"Austin Hooper\"",
+		"\"Tm\"": "\"NE\"",
+		"\"Opp\"": "\"LAR\"",
+		"\"FD Sal $\"": "\"4900\"",
+		"\"Projected Own%\"": "\"0.5%\"",
+		"\"Cash Odds\"": "\"19%\"",
+		"\"GPP Odds\"": "\"1%\"",
+		"\"Implied Own%\"": "\"1%\"",
+		"\"FD LEV\"": "\"1.72\""
 	},
 	{
 		"\"Pos\"": "\"DEF\"",
@@ -1697,35 +1769,23 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"SF\"",
 		"\"Opp\"": "\"SEA\"",
 		"\"FD Sal $\"": "\"4900\"",
-		"\"Projected Own%\"": "\"3.0%\"",
-		"\"Cash Odds\"": "\"36%\"",
-		"\"GPP Odds\"": "\"8%\"",
-		"\"Implied Own%\"": "\"5%\"",
-		"\"FD LEV\"": "\"1.64\""
-	},
-	{
-		"\"Pos\"": "\"WR\"",
-		"\"Player\"": "\"Justin Watson\"",
-		"\"Tm\"": "\"KC\"",
-		"\"Opp\"": "\"@BUF\"",
-		"\"FD Sal $\"": "\"4800\"",
 		"\"Projected Own%\"": "\"1.0%\"",
-		"\"Cash Odds\"": "\"12%\"",
-		"\"GPP Odds\"": "\"0%\"",
-		"\"Implied Own%\"": "\"0%\"",
-		"\"FD LEV\"": "\"0.30\""
+		"\"Cash Odds\"": "\"34%\"",
+		"\"GPP Odds\"": "\"5%\"",
+		"\"Implied Own%\"": "\"2%\"",
+		"\"FD LEV\"": "\"2.41\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
-		"\"Player\"": "\"Ja'Lynn Polk\"",
-		"\"Tm\"": "\"NE\"",
-		"\"Opp\"": "\"LAR\"",
+		"\"Player\"": "\"Jake Bobo\"",
+		"\"Tm\"": "\"SEA\"",
+		"\"Opp\"": "\"@SF\"",
 		"\"FD Sal $\"": "\"4800\"",
 		"\"Projected Own%\"": "\"0.5%\"",
-		"\"Cash Odds\"": "\"8%\"",
+		"\"Cash Odds\"": "\"0%\"",
 		"\"GPP Odds\"": "\"0%\"",
 		"\"Implied Own%\"": "\"0%\"",
-		"\"FD LEV\"": "\"0.19\""
+		"\"FD LEV\"": "\"0.00\""
 	},
 	{
 		"\"Pos\"": "\"TE\"",
@@ -1733,23 +1793,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"SEA\"",
 		"\"Opp\"": "\"@SF\"",
 		"\"FD Sal $\"": "\"4800\"",
-		"\"Projected Own%\"": "\"4.0%\"",
-		"\"Cash Odds\"": "\"32%\"",
-		"\"GPP Odds\"": "\"3%\"",
-		"\"Implied Own%\"": "\"2%\"",
-		"\"FD LEV\"": "\"0.44\""
-	},
-	{
-		"\"Pos\"": "\"TE\"",
-		"\"Player\"": "\"Foster Moreau\"",
-		"\"Tm\"": "\"NO\"",
-		"\"Opp\"": "\"CLE\"",
-		"\"FD Sal $\"": "\"4800\"",
-		"\"Projected Own%\"": "\"0.5%\"",
-		"\"Cash Odds\"": "\"18%\"",
-		"\"GPP Odds\"": "\"1%\"",
-		"\"Implied Own%\"": "\"0%\"",
-		"\"FD LEV\"": "\"0.94\""
+		"\"Projected Own%\"": "\"3.5%\"",
+		"\"Cash Odds\"": "\"28%\"",
+		"\"GPP Odds\"": "\"2%\"",
+		"\"Implied Own%\"": "\"1%\"",
+		"\"FD LEV\"": "\"0.28\""
 	},
 	{
 		"\"Pos\"": "\"TE\"",
@@ -1757,11 +1805,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"TEN\"",
 		"\"Opp\"": "\"MIN\"",
 		"\"FD Sal $\"": "\"4800\"",
-		"\"Projected Own%\"": "\"1.0%\"",
-		"\"Cash Odds\"": "\"18%\"",
-		"\"GPP Odds\"": "\"1%\"",
+		"\"Projected Own%\"": "\"0.5%\"",
+		"\"Cash Odds\"": "\"12%\"",
+		"\"GPP Odds\"": "\"0%\"",
 		"\"Implied Own%\"": "\"0%\"",
-		"\"FD LEV\"": "\"0.44\""
+		"\"FD LEV\"": "\"0.12\""
 	},
 	{
 		"\"Pos\"": "\"DEF\"",
@@ -1769,11 +1817,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"BAL\"",
 		"\"Opp\"": "\"@PIT\"",
 		"\"FD Sal $\"": "\"4800\"",
-		"\"Projected Own%\"": "\"1.0%\"",
+		"\"Projected Own%\"": "\"0.5%\"",
 		"\"Cash Odds\"": "\"32%\"",
 		"\"GPP Odds\"": "\"6%\"",
-		"\"Implied Own%\"": "\"4%\"",
-		"\"FD LEV\"": "\"3.66\""
+		"\"Implied Own%\"": "\"3%\"",
+		"\"FD LEV\"": "\"5.23\""
 	},
 	{
 		"\"Pos\"": "\"DEF\"",
@@ -1781,23 +1829,23 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"LAR\"",
 		"\"Opp\"": "\"@NE\"",
 		"\"FD Sal $\"": "\"4700\"",
-		"\"Projected Own%\"": "\"4.0%\"",
+		"\"Projected Own%\"": "\"3.5%\"",
 		"\"Cash Odds\"": "\"42%\"",
 		"\"GPP Odds\"": "\"9%\"",
-		"\"Implied Own%\"": "\"6%\"",
-		"\"FD LEV\"": "\"1.40\""
+		"\"Implied Own%\"": "\"4%\"",
+		"\"FD LEV\"": "\"1.11\""
 	},
 	{
-		"\"Pos\"": "\"WR\"",
-		"\"Player\"": "\"Tyler Boyd\"",
-		"\"Tm\"": "\"TEN\"",
-		"\"Opp\"": "\"MIN\"",
+		"\"Pos\"": "\"TE\"",
+		"\"Player\"": "\"Brock Wright\"",
+		"\"Tm\"": "\"DET\"",
+		"\"Opp\"": "\"JAX\"",
 		"\"FD Sal $\"": "\"4600\"",
 		"\"Projected Own%\"": "\"0.5%\"",
-		"\"Cash Odds\"": "\"8%\"",
+		"\"Cash Odds\"": "\"3%\"",
 		"\"GPP Odds\"": "\"0%\"",
 		"\"Implied Own%\"": "\"0%\"",
-		"\"FD LEV\"": "\"0.06\""
+		"\"FD LEV\"": "\"0.00\""
 	},
 	{
 		"\"Pos\"": "\"DEF\"",
@@ -1805,11 +1853,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"GB\"",
 		"\"Opp\"": "\"@CHI\"",
 		"\"FD Sal $\"": "\"4600\"",
-		"\"Projected Own%\"": "\"7.0%\"",
+		"\"Projected Own%\"": "\"6.5%\"",
 		"\"Cash Odds\"": "\"47%\"",
-		"\"GPP Odds\"": "\"15%\"",
-		"\"Implied Own%\"": "\"9%\"",
-		"\"FD LEV\"": "\"1.28\""
+		"\"GPP Odds\"": "\"13%\"",
+		"\"Implied Own%\"": "\"6%\"",
+		"\"FD LEV\"": "\"0.87\""
 	},
 	{
 		"\"Pos\"": "\"WR\"",
@@ -1817,11 +1865,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"DEN\"",
 		"\"Opp\"": "\"ATL\"",
 		"\"FD Sal $\"": "\"4500\"",
-		"\"Projected Own%\"": "\"2.5%\"",
+		"\"Projected Own%\"": "\"0.5%\"",
 		"\"Cash Odds\"": "\"13%\"",
 		"\"GPP Odds\"": "\"0%\"",
 		"\"Implied Own%\"": "\"0%\"",
-		"\"FD LEV\"": "\"0.06\""
+		"\"FD LEV\"": "\"0.28\""
 	},
 	{
 		"\"Pos\"": "\"DEF\"",
@@ -1829,11 +1877,23 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"DEN\"",
 		"\"Opp\"": "\"ATL\"",
 		"\"FD Sal $\"": "\"4500\"",
-		"\"Projected Own%\"": "\"2.5%\"",
+		"\"Projected Own%\"": "\"0.5%\"",
 		"\"Cash Odds\"": "\"37%\"",
-		"\"GPP Odds\"": "\"7%\"",
-		"\"Implied Own%\"": "\"4%\"",
-		"\"FD LEV\"": "\"1.65\""
+		"\"GPP Odds\"": "\"8%\"",
+		"\"Implied Own%\"": "\"3%\"",
+		"\"FD LEV\"": "\"6.97\""
+	},
+	{
+		"\"Pos\"": "\"TE\"",
+		"\"Player\"": "\"Tanner Hudson\"",
+		"\"Tm\"": "\"CIN\"",
+		"\"Opp\"": "\"@LAC\"",
+		"\"FD Sal $\"": "\"4400\"",
+		"\"Projected Own%\"": "\"0.5%\"",
+		"\"Cash Odds\"": "\"14%\"",
+		"\"GPP Odds\"": "\"0%\"",
+		"\"Implied Own%\"": "\"0%\"",
+		"\"FD LEV\"": "\"0.45\""
 	},
 	{
 		"\"Pos\"": "\"DEF\"",
@@ -1841,23 +1901,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"BUF\"",
 		"\"Opp\"": "\"KC\"",
 		"\"FD Sal $\"": "\"4400\"",
-		"\"Projected Own%\"": "\"1.5%\"",
-		"\"Cash Odds\"": "\"36%\"",
-		"\"GPP Odds\"": "\"5%\"",
-		"\"Implied Own%\"": "\"3%\"",
-		"\"FD LEV\"": "\"1.91\""
-	},
-	{
-		"\"Pos\"": "\"WR\"",
-		"\"Player\"": "\"Ashton Dulin\"",
-		"\"Tm\"": "\"IND\"",
-		"\"Opp\"": "\"@NYJ\"",
-		"\"FD Sal $\"": "\"4300\"",
 		"\"Projected Own%\"": "\"0.5%\"",
-		"\"Cash Odds\"": "\"3%\"",
-		"\"GPP Odds\"": "\"0%\"",
-		"\"Implied Own%\"": "\"0%\"",
-		"\"FD LEV\"": "\"0.01\""
+		"\"Cash Odds\"": "\"38%\"",
+		"\"GPP Odds\"": "\"8%\"",
+		"\"Implied Own%\"": "\"3%\"",
+		"\"FD LEV\"": "\"6.77\""
 	},
 	{
 		"\"Pos\"": "\"DEF\"",
@@ -1865,23 +1913,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"MIA\"",
 		"\"Opp\"": "\"LV\"",
 		"\"FD Sal $\"": "\"4300\"",
-		"\"Projected Own%\"": "\"7.0%\"",
+		"\"Projected Own%\"": "\"6.0%\"",
 		"\"Cash Odds\"": "\"47%\"",
-		"\"GPP Odds\"": "\"12%\"",
-		"\"Implied Own%\"": "\"7%\"",
-		"\"FD LEV\"": "\"1.03\""
-	},
-	{
-		"\"Pos\"": "\"WR\"",
-		"\"Player\"": "\"Austin Trammell\"",
-		"\"Tm\"": "\"JAX\"",
-		"\"Opp\"": "\"@DET\"",
-		"\"FD Sal $\"": "\"4200\"",
-		"\"Projected Own%\"": "\"0.5%\"",
-		"\"Cash Odds\"": "\"12%\"",
-		"\"GPP Odds\"": "\"0%\"",
-		"\"Implied Own%\"": "\"0%\"",
-		"\"FD LEV\"": "\"0.51\""
+		"\"GPP Odds\"": "\"13%\"",
+		"\"Implied Own%\"": "\"6%\"",
+		"\"FD LEV\"": "\"0.93\""
 	},
 	{
 		"\"Pos\"": "\"TE\"",
@@ -1889,11 +1925,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"LAR\"",
 		"\"Opp\"": "\"@NE\"",
 		"\"FD Sal $\"": "\"4200\"",
-		"\"Projected Own%\"": "\"3.0%\"",
-		"\"Cash Odds\"": "\"27%\"",
-		"\"GPP Odds\"": "\"2%\"",
+		"\"Projected Own%\"": "\"3.5%\"",
+		"\"Cash Odds\"": "\"25%\"",
+		"\"GPP Odds\"": "\"1%\"",
 		"\"Implied Own%\"": "\"1%\"",
-		"\"FD LEV\"": "\"0.43\""
+		"\"FD LEV\"": "\"0.22\""
 	},
 	{
 		"\"Pos\"": "\"DEF\"",
@@ -1901,11 +1937,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"NYJ\"",
 		"\"Opp\"": "\"IND\"",
 		"\"FD Sal $\"": "\"4200\"",
-		"\"Projected Own%\"": "\"4.0%\"",
-		"\"Cash Odds\"": "\"39%\"",
-		"\"GPP Odds\"": "\"6%\"",
+		"\"Projected Own%\"": "\"5.0%\"",
+		"\"Cash Odds\"": "\"40%\"",
+		"\"GPP Odds\"": "\"9%\"",
 		"\"Implied Own%\"": "\"4%\"",
-		"\"FD LEV\"": "\"0.91\""
+		"\"FD LEV\"": "\"0.80\""
 	},
 	{
 		"\"Pos\"": "\"DEF\"",
@@ -1913,11 +1949,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"CLE\"",
 		"\"Opp\"": "\"@NO\"",
 		"\"FD Sal $\"": "\"4100\"",
-		"\"Projected Own%\"": "\"4.0%\"",
-		"\"Cash Odds\"": "\"38%\"",
-		"\"GPP Odds\"": "\"4%\"",
-		"\"Implied Own%\"": "\"3%\"",
-		"\"FD LEV\"": "\"0.66\""
+		"\"Projected Own%\"": "\"1.0%\"",
+		"\"Cash Odds\"": "\"41%\"",
+		"\"GPP Odds\"": "\"9%\"",
+		"\"Implied Own%\"": "\"4%\"",
+		"\"FD LEV\"": "\"3.96\""
 	},
 	{
 		"\"Pos\"": "\"DEF\"",
@@ -1925,11 +1961,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"LAC\"",
 		"\"Opp\"": "\"CIN\"",
 		"\"FD Sal $\"": "\"4000\"",
-		"\"Projected Own%\"": "\"5.5%\"",
-		"\"Cash Odds\"": "\"44%\"",
+		"\"Projected Own%\"": "\"1.5%\"",
+		"\"Cash Odds\"": "\"43%\"",
 		"\"GPP Odds\"": "\"8%\"",
-		"\"Implied Own%\"": "\"5%\"",
-		"\"FD LEV\"": "\"0.89\""
+		"\"Implied Own%\"": "\"4%\"",
+		"\"FD LEV\"": "\"2.37\""
 	},
 	{
 		"\"Pos\"": "\"DEF\"",
@@ -1937,11 +1973,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"PIT\"",
 		"\"Opp\"": "\"BAL\"",
 		"\"FD Sal $\"": "\"4000\"",
-		"\"Projected Own%\"": "\"4.5%\"",
-		"\"Cash Odds\"": "\"37%\"",
-		"\"GPP Odds\"": "\"4%\"",
-		"\"Implied Own%\"": "\"2%\"",
-		"\"FD LEV\"": "\"0.55\""
+		"\"Projected Own%\"": "\"0.5%\"",
+		"\"Cash Odds\"": "\"39%\"",
+		"\"GPP Odds\"": "\"6%\"",
+		"\"Implied Own%\"": "\"3%\"",
+		"\"FD LEV\"": "\"5.51\""
 	},
 	{
 		"\"Pos\"": "\"DEF\"",
@@ -1949,11 +1985,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"KC\"",
 		"\"Opp\"": "\"@BUF\"",
 		"\"FD Sal $\"": "\"3900\"",
-		"\"Projected Own%\"": "\"4.0%\"",
-		"\"Cash Odds\"": "\"40%\"",
-		"\"GPP Odds\"": "\"6%\"",
-		"\"Implied Own%\"": "\"3%\"",
-		"\"FD LEV\"": "\"0.82\""
+		"\"Projected Own%\"": "\"0.5%\"",
+		"\"Cash Odds\"": "\"38%\"",
+		"\"GPP Odds\"": "\"3%\"",
+		"\"Implied Own%\"": "\"2%\"",
+		"\"FD LEV\"": "\"3.03\""
 	},
 	{
 		"\"Pos\"": "\"DEF\"",
@@ -1961,11 +1997,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"NO\"",
 		"\"Opp\"": "\"CLE\"",
 		"\"FD Sal $\"": "\"3900\"",
-		"\"Projected Own%\"": "\"6.0%\"",
+		"\"Projected Own%\"": "\"9.0%\"",
 		"\"Cash Odds\"": "\"47%\"",
-		"\"GPP Odds\"": "\"8%\"",
+		"\"GPP Odds\"": "\"12%\"",
 		"\"Implied Own%\"": "\"5%\"",
-		"\"FD LEV\"": "\"0.79\""
+		"\"FD LEV\"": "\"0.56\""
 	},
 	{
 		"\"Pos\"": "\"DEF\"",
@@ -1973,11 +2009,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"ATL\"",
 		"\"Opp\"": "\"@DEN\"",
 		"\"FD Sal $\"": "\"3800\"",
-		"\"Projected Own%\"": "\"3.0%\"",
+		"\"Projected Own%\"": "\"1.5%\"",
 		"\"Cash Odds\"": "\"41%\"",
-		"\"GPP Odds\"": "\"6%\"",
+		"\"GPP Odds\"": "\"7%\"",
 		"\"Implied Own%\"": "\"3%\"",
-		"\"FD LEV\"": "\"1.12\""
+		"\"FD LEV\"": "\"2.11\""
 	},
 	{
 		"\"Pos\"": "\"DEF\"",
@@ -1985,11 +2021,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"CHI\"",
 		"\"Opp\"": "\"GB\"",
 		"\"FD Sal $\"": "\"3700\"",
-		"\"Projected Own%\"": "\"4.5%\"",
-		"\"Cash Odds\"": "\"42%\"",
-		"\"GPP Odds\"": "\"5%\"",
+		"\"Projected Own%\"": "\"3.5%\"",
+		"\"Cash Odds\"": "\"43%\"",
+		"\"GPP Odds\"": "\"7%\"",
 		"\"Implied Own%\"": "\"3%\"",
-		"\"FD LEV\"": "\"0.70\""
+		"\"FD LEV\"": "\"0.86\""
 	},
 	{
 		"\"Pos\"": "\"DEF\"",
@@ -1997,11 +2033,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"CIN\"",
 		"\"Opp\"": "\"@LAC\"",
 		"\"FD Sal $\"": "\"3600\"",
-		"\"Projected Own%\"": "\"2.5%\"",
-		"\"Cash Odds\"": "\"38%\"",
-		"\"GPP Odds\"": "\"3%\"",
+		"\"Projected Own%\"": "\"1.5%\"",
+		"\"Cash Odds\"": "\"40%\"",
+		"\"GPP Odds\"": "\"5%\"",
 		"\"Implied Own%\"": "\"2%\"",
-		"\"FD LEV\"": "\"0.70\""
+		"\"FD LEV\"": "\"1.44\""
 	},
 	{
 		"\"Pos\"": "\"DEF\"",
@@ -2009,11 +2045,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"TEN\"",
 		"\"Opp\"": "\"MIN\"",
 		"\"FD Sal $\"": "\"3500\"",
-		"\"Projected Own%\"": "\"4.0%\"",
+		"\"Projected Own%\"": "\"7.0%\"",
 		"\"Cash Odds\"": "\"43%\"",
 		"\"GPP Odds\"": "\"5%\"",
-		"\"Implied Own%\"": "\"3%\"",
-		"\"FD LEV\"": "\"0.81\""
+		"\"Implied Own%\"": "\"2%\"",
+		"\"FD LEV\"": "\"0.29\""
 	},
 	{
 		"\"Pos\"": "\"DEF\"",
@@ -2021,11 +2057,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"NE\"",
 		"\"Opp\"": "\"LAR\"",
 		"\"FD Sal $\"": "\"3400\"",
-		"\"Projected Own%\"": "\"4.0%\"",
-		"\"Cash Odds\"": "\"45%\"",
-		"\"GPP Odds\"": "\"9%\"",
-		"\"Implied Own%\"": "\"5%\"",
-		"\"FD LEV\"": "\"1.30\""
+		"\"Projected Own%\"": "\"5.5%\"",
+		"\"Cash Odds\"": "\"44%\"",
+		"\"GPP Odds\"": "\"6%\"",
+		"\"Implied Own%\"": "\"3%\"",
+		"\"FD LEV\"": "\"0.51\""
 	},
 	{
 		"\"Pos\"": "\"DEF\"",
@@ -2033,11 +2069,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"IND\"",
 		"\"Opp\"": "\"@NYJ\"",
 		"\"FD Sal $\"": "\"3300\"",
-		"\"Projected Own%\"": "\"5.5%\"",
+		"\"Projected Own%\"": "\"11.5%\"",
 		"\"Cash Odds\"": "\"46%\"",
-		"\"GPP Odds\"": "\"7%\"",
+		"\"GPP Odds\"": "\"10%\"",
 		"\"Implied Own%\"": "\"4%\"",
-		"\"FD LEV\"": "\"0.73\""
+		"\"FD LEV\"": "\"0.39\""
 	},
 	{
 		"\"Pos\"": "\"DEF\"",
@@ -2045,11 +2081,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"SEA\"",
 		"\"Opp\"": "\"@SF\"",
 		"\"FD Sal $\"": "\"3200\"",
-		"\"Projected Own%\"": "\"4.0%\"",
-		"\"Cash Odds\"": "\"44%\"",
-		"\"GPP Odds\"": "\"4%\"",
+		"\"Projected Own%\"": "\"3.0%\"",
+		"\"Cash Odds\"": "\"45%\"",
+		"\"GPP Odds\"": "\"6%\"",
 		"\"Implied Own%\"": "\"2%\"",
-		"\"FD LEV\"": "\"0.53\""
+		"\"FD LEV\"": "\"0.82\""
 	},
 	{
 		"\"Pos\"": "\"DEF\"",
@@ -2057,11 +2093,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"JAX\"",
 		"\"Opp\"": "\"@DET\"",
 		"\"FD Sal $\"": "\"3100\"",
-		"\"Projected Own%\"": "\"4.5%\"",
-		"\"Cash Odds\"": "\"42%\"",
-		"\"GPP Odds\"": "\"3%\"",
-		"\"Implied Own%\"": "\"2%\"",
-		"\"FD LEV\"": "\"0.42\""
+		"\"Projected Own%\"": "\"0.5%\"",
+		"\"Cash Odds\"": "\"41%\"",
+		"\"GPP Odds\"": "\"2%\"",
+		"\"Implied Own%\"": "\"1%\"",
+		"\"FD LEV\"": "\"1.86\""
 	},
 	{
 		"\"Pos\"": "\"DEF\"",
@@ -2069,11 +2105,11 @@ const gppLeverageScoresAndProjOwnershipFanduel = [
 		"\"Tm\"": "\"LV\"",
 		"\"Opp\"": "\"@MIA\"",
 		"\"FD Sal $\"": "\"3000\"",
-		"\"Projected Own%\"": "\"5.0%\"",
+		"\"Projected Own%\"": "\"8.5%\"",
 		"\"Cash Odds\"": "\"48%\"",
 		"\"GPP Odds\"": "\"6%\"",
-		"\"Implied Own%\"": "\"4%\"",
-		"\"FD LEV\"": "\"0.73\""
+		"\"Implied Own%\"": "\"3%\"",
+		"\"FD LEV\"": "\"0.31\""
 	}
 ]
 
