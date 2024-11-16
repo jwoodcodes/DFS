@@ -1276,6 +1276,8 @@ async function propsData() {
 
             // console.log(rb.ppRushPlusRecYardsProp)
 
+         
+
              //
         //
         //                                            Carries
@@ -2496,6 +2498,18 @@ async function propsData() {
             astroFullRBProjection,
 
             udCarriesProp,
+            ppCarriesProp,
+            udRushYardsProp,
+            udRushTDsProp,
+            ppRushTDsProp,
+            udReceptionsProp,
+            ppReceptionsProp,
+            udReceivingYardsProp,
+            ppReceivingYardsProp,
+            udRushPlusRecYardsProp,
+            ppRushPlusRecYardsProp,
+            udFantasyScoreProp,
+            ppFantasyScoreProp,
       
             appHalfProjectedPoints,
             appFullProjectedPoints,
@@ -2518,7 +2532,18 @@ async function propsData() {
             this.astroFullRBProjection = astroFullRBProjection;
 
             this.udCarriesProp = udCarriesProp;
-      
+            this.ppCarriesProp = ppCarriesProp;
+            this.udRushYardsProp = udRushYardsProp;
+            this.udRushTDsProp = udRushTDsProp;   
+            this.ppRushTDsProp = ppRushTDsProp;
+            this.udReceptionsProp = udReceptionsProp;
+            this.ppReceptionsProp = ppReceptionsProp;
+            this.udReceivingYardsProp = udReceivingYardsProp;
+            this.ppReceivingYardsProp = ppReceivingYardsProp;
+            this.udRushPlusRecYardsProp = udRushPlusRecYardsProp;
+            this.ppRushPlusRecYardsProp = ppRushPlusRecYardsProp;
+            this.udFantasyScoreProp = udFantasyScoreProp;
+            this.ppFantasyScoreProp = ppFantasyScoreProp;
       
             this.appHalfProjectedPoints = appHalfProjectedPoints;
             this.appFullProjectedPoints = appFullProjectedPoints;
@@ -2547,6 +2572,18 @@ async function propsData() {
           rb.astroFullRBProjection,
       
           rb.udCarriesProp,
+          rb.ppCarriesProp,
+          rb.udRushYardsProp,
+          rb.udRushTDsProp, 
+          rb.ppRushTDsProp,
+          rb.udReceptionsProp,
+          rb.ppReceptionsProp,
+          rb.udReceivingYardsProp,
+          rb.ppReceivingYardsProp,
+          rb.udRushPlusRecYardsProp,
+          rb.ppRushPlusRecYardsProp,
+          rb.udFantasyScoreProp,
+          rb.ppFantasyScoreProp,
       
           rb.appProjectedHalfPPRPoints,
           rb.appProjectedFullPPRPoints,

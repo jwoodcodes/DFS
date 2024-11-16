@@ -207,6 +207,8 @@ rbProjectionArray = rbProjectionArray.filter((obj1, i, arr) =>
   arr.findIndex(obj2 => obj2.name === obj1.name) === i
 );
 
+// console.log(rbProjectionArray);
+
 qbProjectionArray.sort(halfCompare);
 rbProjectionArray.sort(halfCompare);
 // let pprSortedRBProjectionArray = rbProjectionArray.sort(pprCompare);
