@@ -15,7 +15,7 @@ const qbDownloadableSpreadSheetYahoo = [
 		"Pass Yds": "233.6",
 		"Pass TD": "1.3",
 		"INT": "0.8",
-		"Rush Att": "9.2",
+		"Rush Att": "9.3",
 		"Rush Yds": "44.2",
 		"Rush TD": "0.6",
 		"Rec": "0.0",
@@ -144,20 +144,20 @@ const qbDownloadableSpreadSheetYahoo = [
 		"Opp": "KC",
 		"aFPA": "14.4",
 		"aFPA Rk": "10",
-		"FFPts": "18.5",
+		"FFPts": "18.4",
 		"Comp": "20.4",
 		"Pass Att": "31.8",
 		"Pass Yds": "234.3",
-		"Pass TD": "1.5",
+		"Pass TD": "1.6",
 		"INT": "0.9",
 		"Rush Att": "6.7",
-		"Rush Yds": "29.4",
-		"Rush TD": "0.4",
+		"Rush Yds": "27.0",
+		"Rush TD": "0.3",
 		"Rec": "0.0",
 		"Rec Yds": "0.0",
 		"Rec TD": "0.0",
 		"Pa1D": "11.3",
-		"Ru1D": "1.9",
+		"Ru1D": "1.8",
 		"Rec1D": "0.0",
 		"Fum": "0.2",
 		"XP": "0.0",
@@ -168,12 +168,12 @@ const qbDownloadableSpreadSheetYahoo = [
 		"Y! ($)": "34.0",
 		"Y! (Val)": "2.3",
 		"Y! (Pt/$)": "0.57",
-		"Y! (Flr)": "7.7",
-		"Y! (Flr Val)": "-9.29",
+		"Y! (Flr)": "7.8",
+		"Y! (Flr Val)": "-9.18",
 		"Y! (Floor/$)": "0.23",
 		"Y! (Ceil)": "31.1",
-		"Y! (Ceil Val)": "14.13",
-		"Y! (Ceil/$)": "0.92",
+		"Y! (Ceil Val)": "14.09",
+		"Y! (Ceil/$)": "0.91",
 		"Y! (Wk $ Chg)": "--",
 		"O/U": "46",
 		"Line": "-2",
@@ -310,9 +310,9 @@ const qbDownloadableSpreadSheetYahoo = [
 		"Y! (Ceil Val)": "15.49",
 		"Y! (Ceil/$)": "1.03",
 		"Y! (Wk $ Chg)": "--",
-		"O/U": "44",
+		"O/U": "45",
 		"Line": "-2",
-		"Team O/U": "23"
+		"Team O/U": "23.5"
 	},
 	{
 		"Season": "2024",
@@ -626,8 +626,8 @@ const qbDownloadableSpreadSheetYahoo = [
 		"Y! (Ceil/$)": "1.13",
 		"Y! (Wk $ Chg)": "--",
 		"O/U": "44",
-		"Line": "-7",
-		"Team O/U": "25.5"
+		"Line": "-7.5",
+		"Team O/U": "25.75"
 	},
 	{
 		"Season": "2024",
@@ -715,9 +715,9 @@ const qbDownloadableSpreadSheetYahoo = [
 		"Y! (Ceil Val)": "16.91",
 		"Y! (Ceil/$)": "1.20",
 		"Y! (Wk $ Chg)": "--",
-		"O/U": "44",
+		"O/U": "43",
 		"Line": "4.5",
-		"Team O/U": "19.75"
+		"Team O/U": "19.25"
 	},
 	{
 		"Season": "2024",
@@ -850,9 +850,9 @@ const qbDownloadableSpreadSheetYahoo = [
 		"Y! (Ceil Val)": "15.38",
 		"Y! (Ceil/$)": "1.14",
 		"Y! (Wk $ Chg)": "--",
-		"O/U": "44",
+		"O/U": "43",
 		"Line": "-4.5",
-		"Team O/U": "24.25"
+		"Team O/U": "23.75"
 	},
 	{
 		"Season": "2024",
@@ -1030,9 +1030,9 @@ const qbDownloadableSpreadSheetYahoo = [
 		"Y! (Ceil Val)": "12.87",
 		"Y! (Ceil/$)": "1.00",
 		"Y! (Wk $ Chg)": "--",
-		"O/U": "44",
+		"O/U": "45",
 		"Line": "2",
-		"Team O/U": "21"
+		"Team O/U": "21.5"
 	},
 	{
 		"Season": "2024",
@@ -1166,8 +1166,8 @@ const qbDownloadableSpreadSheetYahoo = [
 		"Y! (Ceil/$)": "1.29",
 		"Y! (Wk $ Chg)": "--",
 		"O/U": "44",
-		"Line": "7",
-		"Team O/U": "18.5"
+		"Line": "7.5",
+		"Team O/U": "18.25"
 	},
 	{
 		"Season": "2024",
