@@ -203,6 +203,10 @@ qbProjectionArray = qbProjectionArray.filter((obj1, i, arr) =>
   arr.findIndex(obj2 => obj2.name === obj1.name) === i
 );
 
+rbProjectionArray = rbProjectionArray.filter((obj1, i, arr) => 
+  arr.findIndex(obj2 => obj2.name === obj1.name) === i
+);
+
 qbProjectionArray.sort(halfCompare);
 rbProjectionArray.sort(halfCompare);
 // let pprSortedRBProjectionArray = rbProjectionArray.sort(pprCompare);
@@ -373,7 +377,7 @@ function arrayToCSV(array) {
 
   try {
     const csv = parse(array, opts);
-    fs.writeFileSync('week10-24-superflexHalfProjectionArray.csv', csv);
+    fs.writeFileSync('week11-24-superflexHalfProjectionArray.csv', csv);
     console.log('CSV file successfully created');
   } catch (err) {
     console.error(err);

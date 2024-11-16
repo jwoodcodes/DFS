@@ -1129,6 +1129,7 @@ const allQBObjectsArray = [];
 const allQBsMap = new Map();
 
 allQBs.forEach(function (team, i) {
+  if(team.homeOrAway) {
   let playerName = team.name;
   let position = 'QB';
   let teamABV = team.teamABV;
@@ -1231,11 +1232,13 @@ allQBs.forEach(function (team, i) {
   //   `PassAttempts - ${tempAppProjPassAttempts}, four - ${team.prjpassattempts}`,  
   // );
 
-  bye
+  
 
   let teamName = '';
   allTeams.forEach(function (giTeam) {
     if (team.teamABV === giTeam.teamABV || team.teamABV === giTeam.altTeamABV) {
+      // console.log(giTeam.byeWeek2022)
+      if(giTeam) {
       teamName = giTeam.teamName;
       teamPointsPerGameLastFiveWeeks = giTeam.teamPointsPerGameLastFiveWeeks;
       byeWeek = giTeam.byeWeek2022;
@@ -1247,10 +1250,11 @@ allQBs.forEach(function (team, i) {
         giTeam.opponentThisWeek.teamProjectedPointsThisWeek;
       bonusForHighExplosivePassVsBadExplosivePassDef =
         giTeam.bonusForHighExplosivePassVsBadExplosivePassDef;
+      }
     }
   });
 
-  // console.log(team.appQBProjectedPoints);
+  // console.log(team.name, team.teamPointsPerGameLastFiveWeeks);
 
   
   let qbObject = new QbObject(
@@ -1320,6 +1324,7 @@ allQBs.forEach(function (team, i) {
   allQBsMap.set(`${teamName}QB`, qbObject);
   allQBObjects.playerName = qbObject;
   allQBObjectsArray.push(qbObject);
+}
 });
 
 // console.log(allQBsMap);

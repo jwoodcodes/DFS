@@ -112,7 +112,7 @@ const testAllTeams = [];
 // console.log(gameInfo.broncos)
 
 allEveryTeamEvenOnesOnByeThisWeek.forEach(function (team, i) {
-  // console.log(team);
+  // console.log(team.byeWeek2022);
   if (team) {
     if (team.slate !== undefined && team.slate && team.slate !== '') {
       // console.log(team.opponentABV);
@@ -151,7 +151,7 @@ let allUniqueTeams = testAllTeams.filter(onlyUnqiues);
 const allTeams = allUniqueTeams;
 
 // allTeams.forEach((team) => {
-//   console.log(team.teamProjectedPointsThisWeek, team.vtt)
+//   console.log(team.teamName, team.byeWeek2022)
 // })
 
 module.exports = allTeams;
