@@ -2261,7 +2261,7 @@ propsData()
 
 
 // console.log(allTeamQBObjects);
-
+// console.log(allQBProjectionsObjects)
 allQBData.allQBProjectionsObjects = allQBProjectionsObjects;
 // console.log(allQBProjectionsObjects);
 // console.log(allQBData.allQBProjectionsObjects);
