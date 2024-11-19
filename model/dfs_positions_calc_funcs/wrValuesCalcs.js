@@ -1524,107 +1524,299 @@ class ProjectionsObject {
   }
 }
 
-// async function propsData() {
+async function propsData() {
 
 
-//   const propsData = await propsWRData();
+  const propsData = await propsWRData();
   
-//   propsData.forEach(function (player) {
+  propsData.forEach(function (player) {
 
-//   // console.log(player.WROne)
+  // console.log(player.WROne)
 
-//   allWRObjectsArray.forEach(function (wr) {
-//     // console.log(wr.appHalfProjectedPoints);
+  allWRObjectsArray.forEach(function (wr) {
+    // console.log(wr.appHalfProjectedPoints);
   
-//     // console.log(wr.appFullProjectedPoints)
+    // console.log(wr.appFullProjectedPoints)
     
   
-//     // console.log(wr.appFullProjectedPoints);
+    // console.log(wr.appFullProjectedPoints);
 
-//     if (wr.roleThisWeek === 1) {
-//       // console.log(wr.playerName);
-//       // console.log(player.WROne.name);
-//       // console.log(wr);
-//       // console.log(player.WROne);
-//       if(wr.playerName === player.WROne.name){
-//         // console.log(wr);
-//         // console.log(player.WROne);
-//       }
-//     }
+    if (wr.roleThisWeek === 1) {
+      // console.log(wr.playerName);
+      // console.log(player.WROne.name);
+      // console.log(wr);
+      // console.log(player.WROne);
+      if(wr.playerName === player.WROne.name){
+        // console.log(wr);
+        // console.log(player.WROne);
+        // console.log(player.WROne);
+
+        wr.prjReceptions = player.WROne.projReceptions;
+        wr.prjReceivingYards = player.WROne.projRecYards;
+        wr.prjReceivingTDs = player.WROne.projRecTDs;
+        wr.astroHalfWRProjection = player.WROne.astroHalfWRProjection;
+        wr.astroFullWRProjection = player.WROne.astroFullWRProjection;
+        
+      
+       
+        wr.udReceptionsProp = { prop: player.WROne.udReceptionsProp, isOverRecomended: false, isUnderRecomended: false };
+        wr.ppReceptionsProp = { prop: player.WROne.ppReceptionsProp, isOverRecomended: false, isUnderRecomended: false };
+        wr.udReceivingYardsProp = { prop: player.WROne.udRecYardsProp, isOverRecomended: false, isUnderRecomended: false };
+        wr.ppReceivingYardsProp = { prop: player.WROne.ppRecYardsProp, isOverRecomended: false, isUnderRecomended: false };
+   
+        wr.udFantasyScoreProp = { prop: player.WROne.udFantasyScoreProp, isOverRecomended: false, isUnderRecomended: false };
+    wr.ppFantasyScoreProp = { prop: player.WROne.ppFantasyScoreProp, isOverRecomended: false, isUnderRecomended: false };
+
+        // console.log(wr)
+    
+        //                                        
+        //                                       
+        //
+
+               //
+        //                                        Receptions
+        //
+
+           
+
+           //                                             under
+           //
+
+           //normal
+
+            //  console.log(wr.playerName, wr.udReceptionsProp.prop, wr.appProjectedreceptionsThisWeek, wr.prjReceptions )
+            //  console.log(wr.playerName, wr.ppReceptionsProp.prop, wr.appProjectedreceptionsThisWeek, wr.prjReceptions )
+            if(wr.udReceptionsProp.prop - wr.prjReceptions  > .2 && wr.udReceptionsProp.prop - wr.appProjectedreceptionsThisWeek  > .2) {      
+              wr.udReceptionsProp.isUnderRecomended = true
+              // console.log(wr.playerName, wr.udReceptionsProp.prop, wr.appProjectedreceptionsThisWeek, wr.prjReceptions )
+            }
+            if(wr.ppReceptionsProp.prop - wr.prjReceptions > .2 && wr.ppReceptionsProp.prop - wr.appProjectedreceptionsThisWeek > .2) {      
+              wr.ppReceptionsProp.isUnderRecomended = true
+              // console.log(wr.playerName, wr.ppReceptionsProp.prop, wr.appProjectedreceptionsThisWeek, wr.prjReceptions )
+            }
+    
+              //                                            test
+    
+              if(wr.udReceptionsProp.prop - wr.appProjectedreceptionsThisWeek  > .4) {      
+                wr.udReceptionsProp.TESTisUnderRecomended = true
+                // console.log(wr.playerName, wr.udReceptionsProp.prop, wr.appProjectedreceptionsThisWeek, wr.prjReceptions )
+              }
+              if(wr.ppReceptionsProp.prop - wr.appProjectedreceptionsThisWeek > .4) {      
+                wr.ppReceptionsProp.TESTisUnderRecomended = true
+                // console.log(wr.playerName, wr.ppReceptionsProp.prop, wr.appProjectedreceptionsThisWeek, wr.prjReceptions )
+              }
+    
+               // high confidence
+    
+               if(wr.udReceptionsProp.prop - wr.prjReceptions  > .4 && wr.udReceptionsProp.prop - wr.appProjectedreceptionsThisWeek > .4) {      
+                wr.udReceptionsProp.highUnderConfidence = true
+                //  console.log(wr.playerName, wr.udReceptionsProp.prop, wr.appProjectedreceptionsThisWeek, wr.prjReceptions )
+              }
+              if(wr.ppReceptionsProp.prop - wr.prjReceptions  > .4 && wr.ppReceptionsProp.prop - wr.appProjectedreceptionsThisWeek > .4) {      
+                wr.ppReceptionsProp.highUnderConfidence = true
+                // console.log(wr.playerName, wr.ppReceptionsProp.prop, wr.appProjectedreceptionsThisWeek, wr.prjReceptions )
+              }
+    
+    
+    
+               //                                              over
+               //
+    
+               //normal
+    
+              //  console.log(wr.playerName, wr.udReceptionsProp.prop, wr.appProjectedreceptionsThisWeek, wr.prjReceptions )
+            if(wr.prjReceptions - wr.udReceptionsProp.prop > .4 && wr.appProjectedreceptionsThisWeek - wr.udReceptionsProp.prop > .4) {      
+              wr.udReceptionsProp.isOverRecomended = true
+              // console.log(wr.playerName, wr.udReceptionsProp.prop, wr.appProjectedreceptionsThisWeek, wr.prjReceptions )
+            }
+            if(wr.prjReceptions - wr.ppReceptionsProp.prop > .4 && wr.appProjectedreceptionsThisWeek - wr.ppReceptionsProp.prop > .4) {      
+              wr.ppReceptionsProp.isOverRecomended = true
+              // console.log(wr.playerName, wr.ppReceptionsProp.prop, wr.appProjectedreceptionsThisWeek, wr.prjReceptions )
+            }
+    
+            //                                                    Test
+    
+            if(wr.appProjectedreceptionsThisWeek - wr.udReceptionsProp.prop > .5) {      
+              wr.udReceptionsProp.isOverRecomended = true
+              // console.log(wr.playerName, wr.udReceptionsProp.prop, wr.appProjectedreceptionsThisWeek, wr.prjReceptions )
+            }
+            if(wr.appProjectedreceptionsThisWeek - wr.ppReceptionsProp.prop > .5) {      
+              wr.ppReceptionsProp.isOverRecomended = true
+              // console.log(wr.playerName, wr.ppReceptionsProp.prop, wr.appProjectedreceptionsThisWeek, wr.prjReceptions )
+            }
+    
+               // high confidence
+    
+               if(wr.prjReceptions - wr.udReceptionsProp.prop > .7 && wr.appProjectedreceptionsThisWeek - wr.udReceptionsProp.prop > .7) {      
+                wr.udReceptionsProp.highOverConfidence = true
+                //  console.log(wr.playerName, wr.udReceptionsProp.prop, wr.appProjectedreceptionsThisWeek, wr.prjReceptions )
+              }
+              if(wr.prjReceptions - wr.ppReceptionsProp.prop > .7 && wr.appProjectedreceptionsThisWeek - wr.ppReceptionsProp.prop > .7) {      
+                wr.ppReceptionsProp.highOverConfidence = true
+                // console.log(wr.playerName, wr.ppReceptionsProp.prop, wr.appProjectedreceptionsThisWeek, wr.prjReceptions )
+              }
+
+               //                              Rec Yards
+        //
+
+           
+
+           //                                             under
+           //
+
+           //normal
+
+            //  console.log(wr.playerName, wr.udReceivingYardsProp.prop, wr.appProjectedrecYardsThisWeek, wr.prjReceivingYards )
+            //  console.log(wr.playerName, wr.ppReceivingYardsProp.prop, wr.appProjectedrecYardsThisWeek, wr.prjReceivingYards )
+            if(wr.udReceivingYardsProp.prop - wr.prjReceivingYards  > .5 && wr.udReceivingYardsProp.prop - wr.appProjectedrecYardsThisWeek  > .5) {      
+              wr.udReceivingYardsProp.isUnderRecomended = true
+              // console.log(wr.playerName, wr.udReceivingYardsProp.prop, wr.appProjectedrecYardsThisWeek, wr.prjReceivingYards )
+            }
+            if(wr.ppReceivingYardsProp.prop - wr.prjReceivingYards > .5 && wr.ppReceivingYardsProp.prop - wr.appProjectedrecYardsThisWeek > .5) {      
+              wr.ppReceivingYardsProp.isUnderRecomended = true
+              // console.log(wr.playerName, wr.ppReceivingYardsProp.prop, wr.appProjectedrecYardsThisWeek, wr.prjReceivingYards )
+            }
+    
+              //                                            test
+    
+              if(wr.udReceivingYardsProp.prop - wr.appProjectedrecYardsThisWeek  > .7) {      
+                wr.udReceivingYardsProp.TESTisUnderRecomended = true
+                // console.log(wr.playerName, wr.udReceivingYardsProp.prop, wr.appProjectedrecYardsThisWeek, wr.prjReceivingYards )
+              }
+              if(wr.ppReceivingYardsProp.prop - wr.appProjectedrecYardsThisWeek > .7) {      
+                wr.ppReceivingYardsProp.TESTisUnderRecomended = true
+                // console.log(wr.playerName, wr.ppReceivingYardsProp.prop, wr.appProjectedrecYardsThisWeek, wr.prjReceivingYards )
+              }
+    
+               // high confidence
+    
+               if(wr.udReceivingYardsProp.prop - wr.prjReceivingYards  > 1 && wr.udReceivingYardsProp.prop - wr.appProjectedrecYardsThisWeek > 1) {      
+                wr.udReceivingYardsProp.highUnderConfidence = true
+                //  console.log(wr.playerName, wr.udReceivingYardsProp.prop, wr.appProjectedrecYardsThisWeek, wr.prjReceivingYards )
+              }
+              if(wr.ppReceivingYardsProp.prop - wr.prjReceivingYards  > 1 && wr.ppReceivingYardsProp.prop - wr.appProjectedrecYardsThisWeek > 1) {      
+                wr.ppReceivingYardsProp.highUnderConfidence = true
+                // console.log(wr.playerName, wr.ppReceivingYardsProp.prop, wr.appProjectedrecYardsThisWeek, wr.prjReceivingYards )
+              }
+    
+    
+    
+               //                                              over
+               //
+    
+               //normal
+    
+              //  console.log(wr.playerName, wr.udReceivingYardsProp.prop, wr.appProjectedrecYardsThisWeek, wr.prjReceivingYards )
+            if(wr.prjReceivingYards - wr.udReceivingYardsProp.prop > 10 && wr.appProjectedrecYardsThisWeek - wr.udReceivingYardsProp.prop > 10) {      
+              wr.udReceivingYardsProp.isOverRecomended = true
+              // console.log(wr.playerName, wr.udReceivingYardsProp.prop, wr.appProjectedrecYardsThisWeek, wr.prjReceivingYards )
+            }
+            if(wr.prjReceivingYards - wr.ppReceivingYardsProp.prop > 10 && wr.appProjectedrecYardsThisWeek - wr.ppReceivingYardsProp.prop > 10) {      
+              wr.ppReceivingYardsProp.isOverRecomended = true
+              // console.log(wr.playerName, wr.ppReceivingYardsProp.prop, wr.appProjectedrecYardsThisWeek, wr.prjReceivingYards )
+            }
+    
+            //                                                    Test
+    
+            if(wr.appProjectedrecYardsThisWeek - wr.udReceivingYardsProp.prop > 12) {      
+              wr.udReceivingYardsProp.isOverRecomended = true
+              // console.log(wr.playerName, wr.udReceivingYardsProp.prop, wr.appProjectedrecYardsThisWeek, wr.prjReceivingYards )
+            }
+            if(wr.appProjectedrecYardsThisWeek - wr.ppReceivingYardsProp.prop > 12) {      
+              wr.ppReceivingYardsProp.isOverRecomended = true
+              // console.log(wr.playerName, wr.ppReceivingYardsProp.prop, wr.appProjectedrecYardsThisWeek, wr.prjReceivingYards )
+            }
+    
+               // high confidence
+    
+               if(wr.prjReceivingYards - wr.udReceivingYardsProp.prop > 15 && wr.appProjectedrecYardsThisWeek - wr.udReceivingYardsProp.prop > 15) {      
+                wr.udReceivingYardsProp.highOverConfidence = true
+                //  console.log(wr.playerName, wr.udReceivingYardsProp.prop, wr.appProjectedrecYardsThisWeek, wr.prjReceivingYards )
+              }
+              if(wr.prjReceivingYards - wr.ppReceivingYardsProp.prop > 15 && wr.appProjectedrecYardsThisWeek - wr.ppReceptionsProp.prop > 15) {      
+                wr.ppReceivingYardsProp.highOverConfidence = true
+                // console.log(wr.playerName, wr.ppReceivingYardsProp.prop, wr.appProjectedrecYardsThisWeek, wr.prjReceivingYards )
+              }
+
+        // console.log(wr);
+        // console.log(wr.playerName, wr.ppFantasyScoreProp);
+
+      } // end of if(wr.playerName === player.WROne.name){
+    } // end of if (wr.roleThisWeek === 1) {
   
-//     let wrProjectionsObject = new ProjectionsObject(
-//       wr.playerName,
-//       wr.position,
-//       wr.teamABV,
+    let wrProjectionsObject = new ProjectionsObject(
+      wr.playerName,
+      wr.position,
+      wr.teamABV,
   
-//       +wr.appProjectedCarriesThisWeek,
-//         +wr.appProjectedrushYardsThisWeek,
-//         +wr.appProjectedrushTDsThisWeek,
-//         +wr.appProjectedreceptionsThisWeek,
-//         +wr.appProjectedrecYardsThisWeek,
-//         +wr.appProjectedrecTDsThisWeek,
-//         +wr.appProjectedrushFirstDownsThisWeek,
-//         +wr.appProjectedrecFirstDownsThisWeek,
-//         +wr.appProjectedRBTotalFirstDownsThisWeek,
+      +wr.appProjectedCarriesThisWeek,
+        +wr.appProjectedrushYardsThisWeek,
+        +wr.appProjectedrushTDsThisWeek,
+        +wr.appProjectedreceptionsThisWeek,
+        +wr.appProjectedrecYardsThisWeek,
+        +wr.appProjectedrecTDsThisWeek,
+        +wr.appProjectedrushFirstDownsThisWeek,
+        +wr.appProjectedrecFirstDownsThisWeek,
+        +wr.appProjectedRBTotalFirstDownsThisWeek,
   
-//         +wr.astroHalfWRProjection,
-//       +wr.astroFullWRProjection,
+        +wr.astroHalfWRProjection,
+      +wr.astroFullWRProjection,
   
-//       +wr.appHalfProjectedPoints,
-//       +wr.appFullProjectedPoints,
-//       +wr.appFullProjectedPoints,
-//     );
+      +wr.appHalfProjectedPoints,
+      +wr.appFullProjectedPoints,
+      +wr.appFullProjectedPoints,
+    );
   
-//     // console.log(wrProjectionsObject)
+    // console.log(wrProjectionsObject)
   
-//     allWRProjectionsObjects.push(wrProjectionsObject);
-//   });
+    allWRProjectionsObjects.push(wrProjectionsObject);
+  });
   
-//   allWRData.allWRProjectionsObjects = allWRProjectionsObjects;
+  allWRData.allWRProjectionsObjects = allWRProjectionsObjects;
 
-// })
-//   return allWRProjectionsObjects;
-// }
+})
+  return allWRProjectionsObjects;
+}
 
-// propsData();
+propsData();
 
-allWRObjectsArray.forEach(function (player) {
-  // console.log(player.appHalfProjectedPoints);
+// allWRObjectsArray.forEach(function (player) {
+//   // console.log(player.appHalfProjectedPoints);
 
-  // console.log(player.appFullProjectedPoints)
+//   // console.log(player.appFullProjectedPoints)
   
 
-  // console.log(player.appFullProjectedPoints);
+//   // console.log(player.appFullProjectedPoints);
 
-  let wrProjectionsObject = new ProjectionsObject(
-    player.playerName,
-    player.position,
-    player.teamABV,
+//   let wrProjectionsObject = new ProjectionsObject(
+//     player.playerName,
+//     player.position,
+//     player.teamABV,
 
-    +player.appProjectedCarriesThisWeek,
-      +player.appProjectedrushYardsThisWeek,
-      +player.appProjectedrushTDsThisWeek,
-      +player.appProjectedreceptionsThisWeek,
-      +player.appProjectedrecYardsThisWeek,
-      +player.appProjectedrecTDsThisWeek,
-      +player.appProjectedrushFirstDownsThisWeek,
-      +player.appProjectedrecFirstDownsThisWeek,
-      +player.appProjectedRBTotalFirstDownsThisWeek,
+//     +player.appProjectedCarriesThisWeek,
+//       +player.appProjectedrushYardsThisWeek,
+//       +player.appProjectedrushTDsThisWeek,
+//       +player.appProjectedreceptionsThisWeek,
+//       +player.appProjectedrecYardsThisWeek,
+//       +player.appProjectedrecTDsThisWeek,
+//       +player.appProjectedrushFirstDownsThisWeek,
+//       +player.appProjectedrecFirstDownsThisWeek,
+//       +player.appProjectedRBTotalFirstDownsThisWeek,
 
-      +player.astroHalfWRProjection,
-    +player.astroFullWRProjection,
+//       +player.astroHalfWRProjection,
+//     +player.astroFullWRProjection,
 
-    +player.appHalfProjectedPoints,
-    +player.appFullProjectedPoints,
-    +player.appFullProjectedPoints,
-  );
+//     +player.appHalfProjectedPoints,
+//     +player.appFullProjectedPoints,
+//     +player.appFullProjectedPoints,
+//   );
 
-  // console.log(wrProjectionsObject)
+//   // console.log(wrProjectionsObject)
 
-  allWRProjectionsObjects.push(wrProjectionsObject);
-});
+//   allWRProjectionsObjects.push(wrProjectionsObject);
+// });
 
-allWRData.allWRProjectionsObjects = allWRProjectionsObjects;
+// allWRData.allWRProjectionsObjects = allWRProjectionsObjects;
 
 // console.log(allWRProjectionsObjects);
 
@@ -1644,7 +1836,8 @@ allWRData.allWRProjectionsObjects = allWRProjectionsObjects;
 
 //////////////////////
 
-module.exports = allWRData;
+module.exports.allWRData = allWRData;
+module.exports.allWRProjectionsObjects = propsData;
 
 //////////////////////////////
 ////////////////////////////////////

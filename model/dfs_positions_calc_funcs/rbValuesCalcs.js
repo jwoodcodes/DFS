@@ -1775,11 +1775,11 @@ async function propsData() {
 
             //  console.log(rb.playerName, rb.udFantasyScoreProp.prop, rb.astroHalfRBProjection, rb.fourForFourHalfPPRProjectedPoints )
             //  console.log(rb.playerName, rb.ppFantasyScoreProp.prop, rb.astroHalfRBProjection, rb.fourForFourHalfPPRProjectedPoints )
-        if(rb.udFantasyScoreProp.prop - rb.fourForFourHalfPPRProjectedPoints  > .5 && rb.udFantasyScoreProp.prop - rb.astroHalfRBProjection  > .5 && rb.udFantasyScoreProp.prop - rb.halfGLSPAVG  > .5) {      
+        if(rb.udFantasyScoreProp.prop - rb.fourForFourHalfPPRProjectedPoints  > .75 && rb.udFantasyScoreProp.prop - rb.astroHalfRBProjection  > .75 && rb.udFantasyScoreProp.prop - rb.halfGLSPAVG  > .75) {      
           rb.udFantasyScoreProp.isUnderRecomended = true
-          console.log(rb.playerName, rb.udFantasyScoreProp.prop, rb.astroHalfRBProjection, rb.fourForFourHalfPPRProjectedPoints )
+          // console.log(rb.playerName, rb.udFantasyScoreProp.prop, rb.astroHalfRBProjection, rb.fourForFourHalfPPRProjectedPoints )
         }
-        if(rb.ppFantasyScoreProp.prop - rb.fourForFourHalfPPRProjectedPoints > .5 && rb.ppFantasyScoreProp.prop - rb.astroHalfRBProjection > .5 && rb.ppFantasyScoreProp.prop - rb.halfGLSPAVG  > .5) {      
+        if(rb.ppFantasyScoreProp.prop - rb.fourForFourHalfPPRProjectedPoints > .75 && rb.ppFantasyScoreProp.prop - rb.astroHalfRBProjection > .75 && rb.ppFantasyScoreProp.prop - rb.halfGLSPAVG  > .75) {      
           rb.ppFantasyScoreProp.isUnderRecomended = true
           // console.log(rb.playerName, rb.ppFantasyScoreProp.prop, rb.astroHalfRBProjection, rb.fourForFourHalfPPRProjectedPoints )
         }
@@ -1797,11 +1797,11 @@ async function propsData() {
 
            // high confidence
 
-           if(rb.udFantasyScoreProp.prop - rb.fourForFourHalfPPRProjectedPoints  > 1 && rb.udFantasyScoreProp.prop - rb.astroHalfRBProjection > 1 && rb.udFantasyScoreProp.prop - rb.halfGLSPAVG  > 1) {      
+           if(rb.udFantasyScoreProp.prop - rb.fourForFourHalfPPRProjectedPoints  > 1.5 && rb.udFantasyScoreProp.prop - rb.astroHalfRBProjection > 1.5 && rb.udFantasyScoreProp.prop - rb.halfGLSPAVG  > 1.5) {      
             rb.udFantasyScoreProp.highUnderConfidence = true
             //  console.log(rb.playerName, rb.udFantasyScoreProp.prop, rb.astroHalfRBProjection, rb.fourForFourHalfPPRProjectedPoints )
           }
-          if(rb.ppFantasyScoreProp.prop - rb.fourForFourHalfPPRProjectedPoints  > 1 && rb.ppFantasyScoreProp.prop - rb.astroHalfRBProjection > 1 && rb.ppFantasyScoreProp.prop - rb.halfGLSPAVG  > 1) {      
+          if(rb.ppFantasyScoreProp.prop - rb.fourForFourHalfPPRProjectedPoints  > 1.5 && rb.ppFantasyScoreProp.prop - rb.astroHalfRBProjection > 1.5 && rb.ppFantasyScoreProp.prop - rb.halfGLSPAVG  > 1.5) {      
             rb.ppFantasyScoreProp.highUnderConfidence = true
             // console.log(rb.playerName, rb.ppFantasyScoreProp.prop, rb.astroHalfRBProjection, rb.fourForFourHalfPPRProjectedPoints )
           }
@@ -1826,11 +1826,11 @@ async function propsData() {
         //                                                    Test
 
         if(rb.astroHalfRBProjection - rb.udFantasyScoreProp.prop > 3) {      
-          rb.udFantasyScoreProp.isOverRecomended = true
+          rb.udFantasyScoreProp.isTESTOverRecomended = true
           // console.log(rb.playerName, rb.udFantasyScoreProp.prop, rb.astroHalfRBProjection, rb.fourForFourHalfPPRProjectedPoints )
         }
         if(rb.astroHalfRBProjection - rb.ppFantasyScoreProp.prop > 3) {      
-          rb.ppFantasyScoreProp.isOverRecomended = true
+          rb.ppFantasyScoreProp.isTESTOverRecomended = true
           // console.log(rb.playerName, rb.ppFantasyScoreProp.prop, rb.astroHalfRBProjection, rb.fourForFourHalfPPRProjectedPoints )
         }
 
@@ -1946,33 +1946,33 @@ async function propsData() {
            //normal
 
           //  console.log(rb.playerName, rb.udCarriesProp.prop, rb.appProjectedCarriesThisWeek, rb.prjCarries )
-        if(rb.prjCarries - rb.udCarriesProp.prop > 1.5 && rb.appProjectedCarriesThisWeek - rb.udCarriesProp.prop > 1.5) {      
+        if(rb.prjCarries - rb.udCarriesProp.prop > 2.5 && rb.appProjectedCarriesThisWeek - rb.udCarriesProp.prop > 2.5) {      
           rb.udCarriesProp.isOverRecomended = true
           // console.log(rb.playerName, rb.udCarriesProp.prop, rb.appProjectedCarriesThisWeek, rb.prjCarries )
         }
-        if(rb.prjCarries - rb.ppCarriesProp.prop > 1.5 && rb.appProjectedCarriesThisWeek - rb.ppCarriesProp.prop > 1.5) {      
+        if(rb.prjCarries - rb.ppCarriesProp.prop > 2.5 && rb.appProjectedCarriesThisWeek - rb.ppCarriesProp.prop > 2.5) {      
           rb.ppCarriesProp.isOverRecomended = true
           // console.log(rb.playerName, rb.ppCarriesProp.prop, rb.appProjectedCarriesThisWeek, rb.prjCarries )
         }
 
         //                                                    Test
 
-        if(rb.appProjectedCarriesThisWeek - rb.udCarriesProp.prop > 2) {      
+        if(rb.appProjectedCarriesThisWeek - rb.udCarriesProp.prop > 3) {      
           rb.udCarriesProp.isOverRecomended = true
           // console.log(rb.playerName, rb.udCarriesProp.prop, rb.appProjectedCarriesThisWeek, rb.prjCarries )
         }
-        if(rb.appProjectedCarriesThisWeek - rb.ppCarriesProp.prop > 2) {      
+        if(rb.appProjectedCarriesThisWeek - rb.ppCarriesProp.prop > 3) {      
           rb.ppCarriesProp.isOverRecomended = true
           // console.log(rb.playerName, rb.ppCarriesProp.prop, rb.appProjectedCarriesThisWeek, rb.prjCarries )
         }
 
            // high confidence
 
-           if(rb.prjCarries - rb.udCarriesProp.prop > 2.5 && rb.appProjectedCarriesThisWeek - rb.udCarriesProp.prop > 2.5) {      
+           if(rb.prjCarries - rb.udCarriesProp.prop > 4 && rb.appProjectedCarriesThisWeek - rb.udCarriesProp.prop > 4) {      
             rb.udCarriesProp.highOverConfidence = true
             //  console.log(rb.playerName, rb.udCarriesProp.prop, rb.appProjectedCarriesThisWeek, rb.prjCarries )
           }
-          if(rb.prjCarries - rb.ppCarriesProp.prop > 2.5 && rb.appProjectedCarriesThisWeek - rb.ppCarriesProp.prop > 2.5) {      
+          if(rb.prjCarries - rb.ppCarriesProp.prop > 4 && rb.appProjectedCarriesThisWeek - rb.ppCarriesProp.prop > 4) {      
             rb.ppCarriesProp.highOverConfidence = true
             // console.log(rb.playerName, rb.ppCarriesProp.prop, rb.appProjectedCarriesThisWeek, rb.prjCarries )
           }
@@ -2029,33 +2029,33 @@ async function propsData() {
            //normal
 
           //  console.log(rb.playerName, rb.udRushYardsProp.prop, rb.appProjectedrushYardsThisWeek, rb.prjRushYards )
-        if(rb.prjRushYards - rb.udRushYardsProp.prop > 6.5 && rb.appProjectedrushYardsThisWeek - rb.udRushYardsProp.prop > 6.5) {      
+        if(rb.prjRushYards - rb.udRushYardsProp.prop > 15 && rb.appProjectedrushYardsThisWeek - rb.udRushYardsProp.prop > 15) {      
           rb.udRushYardsProp.isOverRecomended = true
           // console.log(rb.playerName, rb.udRushYardsProp.prop, rb.appProjectedrushYardsThisWeek, rb.prjRushYards )
         }
-        if(rb.prjRushYards - rb.ppRushYardsProp.prop > 6.5 && rb.appProjectedrushYardsThisWeek - rb.ppRushYardsProp.prop > 6.5) {      
+        if(rb.prjRushYards - rb.ppRushYardsProp.prop > 15 && rb.appProjectedrushYardsThisWeek - rb.ppRushYardsProp.prop > 15) {      
           rb.ppRushYardsProp.isOverRecomended = true
           // console.log(rb.playerName, rb.ppRushYardsProp.prop, rb.appProjectedrushYardsThisWeek, rb.prjRushYards )
         }
 
         //                                                    Test
 
-        if(rb.appProjectedrushYardsThisWeek - rb.udRushYardsProp.prop > 8) {      
+        if(rb.appProjectedrushYardsThisWeek - rb.udRushYardsProp.prop > 15) {      
           rb.udRushYardsProp.isOverRecomended = true
           // console.log(rb.playerName, rb.udRushYardsProp.prop, rb.appProjectedrushYardsThisWeek, rb.prjRushYards )
         }
-        if(rb.appProjectedrushYardsThisWeek - rb.ppRushYardsProp.prop > 8) {      
+        if(rb.appProjectedrushYardsThisWeek - rb.ppRushYardsProp.prop > 15) {      
           rb.ppRushYardsProp.isOverRecomended = true
           // console.log(rb.playerName, rb.ppRushYardsProp.prop, rb.appProjectedrushYardsThisWeek, rb.prjRushYards )
         }
 
            // high confidence
 
-           if(rb.prjRushYards - rb.udRushYardsProp.prop > 9 && rb.appProjectedrushYardsThisWeek - rb.udRushYardsProp.prop > 9) {      
+           if(rb.prjRushYards - rb.udRushYardsProp.prop > 20 && rb.appProjectedrushYardsThisWeek - rb.udRushYardsProp.prop > 20) {      
             rb.udRushYardsProp.highOverConfidence = true
             //  console.log(rb.playerName, rb.udRushYardsProp.prop, rb.appProjectedrushYardsThisWeek, rb.prjRushYards )
           }
-          if(rb.prjRushYards - rb.ppRushYardsProp.prop > 9 && rb.appProjectedrushYardsThisWeek - rb.ppRushYardsProp.prop > 9) {      
+          if(rb.prjRushYards - rb.ppRushYardsProp.prop > 20 && rb.appProjectedrushYardsThisWeek - rb.ppRushYardsProp.prop > 20) {      
             rb.ppRushYardsProp.highOverConfidence = true
             // console.log(rb.playerName, rb.ppRushYardsProp.prop, rb.appProjectedrushYardsThisWeek, rb.prjRushYards )
           }
@@ -2194,33 +2194,33 @@ async function propsData() {
            //normal
 
           //  console.log(rb.playerName, rb.udReceptionsProp.prop, rb.appProjectedreceptionsThisWeek, rb.prjReceptions )
-        if(rb.prjReceptions - rb.udReceptionsProp.prop > .2 && rb.appProjectedreceptionsThisWeek - rb.udReceptionsProp.prop > .2) {      
+        if(rb.prjReceptions - rb.udReceptionsProp.prop > .75 && rb.appProjectedreceptionsThisWeek - rb.udReceptionsProp.prop > .75) {      
           rb.udReceptionsProp.isOverRecomended = true
           // console.log(rb.playerName, rb.udReceptionsProp.prop, rb.appProjectedreceptionsThisWeek, rb.prjReceptions )
         }
-        if(rb.prjReceptions - rb.ppReceptionsProp.prop > .2 && rb.appProjectedreceptionsThisWeek - rb.ppReceptionsProp.prop > .2) {      
+        if(rb.prjReceptions - rb.ppReceptionsProp.prop > .75 && rb.appProjectedreceptionsThisWeek - rb.ppReceptionsProp.prop > .75) {      
           rb.ppReceptionsProp.isOverRecomended = true
           // console.log(rb.playerName, rb.ppReceptionsProp.prop, rb.appProjectedreceptionsThisWeek, rb.prjReceptions )
         }
 
         //                                                    Test
 
-        if(rb.appProjectedreceptionsThisWeek - rb.udReceptionsProp.prop > .5) {      
+        if(rb.appProjectedreceptionsThisWeek - rb.udReceptionsProp.prop > 1.5) {      
           rb.udReceptionsProp.isOverRecomended = true
           // console.log(rb.playerName, rb.udReceptionsProp.prop, rb.appProjectedreceptionsThisWeek, rb.prjReceptions )
         }
-        if(rb.appProjectedreceptionsThisWeek - rb.ppReceptionsProp.prop > .5) {      
+        if(rb.appProjectedreceptionsThisWeek - rb.ppReceptionsProp.prop > 1.5) {      
           rb.ppReceptionsProp.isOverRecomended = true
           // console.log(rb.playerName, rb.ppReceptionsProp.prop, rb.appProjectedreceptionsThisWeek, rb.prjReceptions )
         }
 
            // high confidence
 
-           if(rb.prjReceptions - rb.udReceptionsProp.prop > .6 && rb.appProjectedreceptionsThisWeek - rb.udReceptionsProp.prop > .6) {      
+           if(rb.prjReceptions - rb.udReceptionsProp.prop > 1.25 && rb.appProjectedreceptionsThisWeek - rb.udReceptionsProp.prop > 1.25) {      
             rb.udReceptionsProp.highOverConfidence = true
             //  console.log(rb.playerName, rb.udReceptionsProp.prop, rb.appProjectedreceptionsThisWeek, rb.prjReceptions )
           }
-          if(rb.prjReceptions - rb.ppReceptionsProp.prop > .6 && rb.appProjectedreceptionsThisWeek - rb.ppReceptionsProp.prop > .6) {      
+          if(rb.prjReceptions - rb.ppReceptionsProp.prop > 1.25 && rb.appProjectedreceptionsThisWeek - rb.ppReceptionsProp.prop > 1.25) {      
             rb.ppReceptionsProp.highOverConfidence = true
             // console.log(rb.playerName, rb.ppReceptionsProp.prop, rb.appProjectedreceptionsThisWeek, rb.prjReceptions )
           }
@@ -2277,33 +2277,33 @@ async function propsData() {
            //normal
 
           //  console.log(rb.playerName, rb.udReceivingYardsProp.prop, rb.appProjectedrecYardsThisWeek, rb.prjRecYards )
-        if(rb.prjRecYards - rb.udReceivingYardsProp.prop > .2 && rb.appProjectedrecYardsThisWeek - rb.udReceivingYardsProp.prop > .2) {      
+        if(rb.prjRecYards - rb.udReceivingYardsProp.prop > 7.5 && rb.appProjectedrecYardsThisWeek - rb.udReceivingYardsProp.prop > 7.5) {      
           rb.udReceivingYardsProp.isOverRecomended = true
           // console.log(rb.playerName, rb.udReceivingYardsProp.prop, rb.appProjectedrecYardsThisWeek, rb.prjRecYards )
         }
-        if(rb.prjRecYards - rb.ppReceivingYardsProp.prop > .2 && rb.appProjectedrecYardsThisWeek - rb.ppReceivingYardsProp.prop > .2) {      
+        if(rb.prjRecYards - rb.ppReceivingYardsProp.prop > 7.5 && rb.appProjectedrecYardsThisWeek - rb.ppReceivingYardsProp.prop > 7.5) {      
           rb.ppReceivingYardsProp.isOverRecomended = true
           // console.log(rb.playerName, rb.ppReceivingYardsProp.prop, rb.appProjectedrecYardsThisWeek, rb.prjRecYards )
         }
 
         //                                                    Test
 
-        if(rb.appProjectedrecYardsThisWeek - rb.udReceivingYardsProp.prop > .5) {      
+        if(rb.appProjectedrecYardsThisWeek - rb.udReceivingYardsProp.prop > 10) {      
           rb.udReceivingYardsProp.isOverRecomended = true
           // console.log(rb.playerName, rb.udReceivingYardsProp.prop, rb.appProjectedrecYardsThisWeek, rb.prjRecYards )
         }
-        if(rb.appProjectedrecYardsThisWeek - rb.ppReceivingYardsProp.prop > .5) {      
+        if(rb.appProjectedrecYardsThisWeek - rb.ppReceivingYardsProp.prop > 10) {      
           rb.ppReceivingYardsProp.isOverRecomended = true
           // console.log(rb.playerName, rb.ppReceivingYardsProp.prop, rb.appProjectedrecYardsThisWeek, rb.prjRecYards )
         }
 
            // high confidence
 
-           if(rb.prjRecYards - rb.udReceivingYardsProp.prop > .6 && rb.appProjectedrecYardsThisWeek - rb.udReceivingYardsProp.prop > .6) {      
+           if(rb.prjRecYards - rb.udReceivingYardsProp.prop > 10 && rb.appProjectedrecYardsThisWeek - rb.udReceivingYardsProp.prop > 10) {      
             rb.udReceivingYardsProp.highOverConfidence = true
             //  console.log(rb.playerName, rb.udReceivingYardsProp.prop, rb.appProjectedrecYardsThisWeek, rb.prjRecYards )
           }
-          if(rb.prjRecYards - rb.ppReceivingYardsProp.prop > .6 && rb.appProjectedrecYardsThisWeek - rb.ppReceivingYardsProp.prop > .6) {      
+          if(rb.prjRecYards - rb.ppReceivingYardsProp.prop > 10 && rb.appProjectedrecYardsThisWeek - rb.ppReceivingYardsProp.prop > 10) {      
             rb.ppReceivingYardsProp.highOverConfidence = true
             // console.log(rb.playerName, rb.ppReceivingYardsProp.prop, rb.appProjectedrecYardsThisWeek, rb.prjRecYards )
           }
@@ -2347,23 +2347,23 @@ async function propsData() {
                    // normal
 
     //  console.log(rb.playerName, rb.udRushPlusRecYardsProp.prop, (+rb.prjRushYards + +rb.prjRecYards), (rb.appProjectedrushYardsThisWeek + rb.appProjectedrecYardsThisWeek) )
-       if((+rb.prjRushYards + +rb.prjRecYards) - rb.udRushPlusRecYardsProp.prop > 8 && (rb.appProjectedrushYardsThisWeek + rb.appProjectedrecYardsThisWeek) - rb.udRushPlusRecYardsProp.prop > 8) {      
+       if((+rb.prjRushYards + +rb.prjRecYards) - rb.udRushPlusRecYardsProp.prop > 10 && (rb.appProjectedrushYardsThisWeek + rb.appProjectedrecYardsThisWeek) - rb.udRushPlusRecYardsProp.prop > 10) {      
         rb.udRushPlusRecYardsProp.isOverRecomended = true
         // console.log(rb.playerName, rb.udRushPlusRecYardsProp.prop, (rb.appProjectedrushYardsThisWeek + rb.appProjectedrecYardsThisWeek), (+rb.prjRushYards + +rb.prjRecYards) )
        }
        // console.log(rb.playerName, rb.ppRushPlusRecYardsProp.prop, rb.prjRushYards, rb.appProjectedrushYardsThisWeek )
-       if((+rb.prjRushYards + +rb.prjRecYards) - rb.ppRushPlusRecYardsProp.prop > 8 && (rb.appProjectedrushYardsThisWeek + rb.appProjectedrecYardsThisWeek) - rb.ppRushPlusRecYardsProp.prop > 8) {      
+       if((+rb.prjRushYards + +rb.prjRecYards) - rb.ppRushPlusRecYardsProp.prop > 10 && (rb.appProjectedrushYardsThisWeek + rb.appProjectedrecYardsThisWeek) - rb.ppRushPlusRecYardsProp.prop > 10) {      
         rb.ppRushPlusRecYardsProp.isOverRecomended = true
           // console.log(rb.playerName, rb.ppRushPlusRecYardsProp.prop, (rb.appProjectedrushYardsThisWeek + rb.appProjectedrecYardsThisWeek), (+rb.prjRushYards + +rb.prjRecYards) )
        }
 
            // high confidence
 
-       if((+rb.prjRushYards + +rb.prjRecYards) - rb.udRushPlusRecYardsProp.prop > 12 && (rb.appProjectedrushYardsThisWeek + rb.appProjectedrecYardsThisWeek) - rb.udRushPlusRecYardsProp.prop > 12) {      
+       if((+rb.prjRushYards + +rb.prjRecYards) - rb.udRushPlusRecYardsProp.prop > 13 && (rb.appProjectedrushYardsThisWeek + rb.appProjectedrecYardsThisWeek) - rb.udRushPlusRecYardsProp.prop > 13) {      
         rb.udRushPlusRecYardsProp.highOverConfidence = true
           //  console.log(rb.playerName, rb.udRushPlusRecYardsProp.prop, (rb.appProjectedrushYardsThisWeek + rb.appProjectedrecYardsThisWeek), (+rb.prjRushYards + +rb.prjRecYards) )
            }
-       if((+rb.prjRushYards + +rb.prjRecYards) - rb.ppRushPlusRecYardsProp.prop > 12 && (rb.appProjectedrushYardsThisWeek + rb.appProjectedrecYardsThisWeek) - rb.ppRushPlusRecYardsProp.prop > 12) {      
+       if((+rb.prjRushYards + +rb.prjRecYards) - rb.ppRushPlusRecYardsProp.prop > 13 && (rb.appProjectedrushYardsThisWeek + rb.appProjectedrecYardsThisWeek) - rb.ppRushPlusRecYardsProp.prop > 13) {      
         rb.ppRushPlusRecYardsProp.highOverConfidence = true
             //  console.log(rb.playerName, rb.ppRushPlusRecYardsProp.prop, (rb.appProjectedrushYardsThisWeek + rb.appProjectedrecYardsThisWeek), (+rb.prjRushYards + +rb.prjRecYards) )
            }
@@ -2624,6 +2624,7 @@ async function propsData() {
         //   player.RBTwo.appProjectedFullPPRPoints
         // );
       
+        // console.log(rbProjectionsObject)
         allRBProjectionsObjects.push(rbProjectionsObject);
         // allRBProjectionsObjects.push(rbTwoProjectionsObject);
 
