@@ -4,7 +4,7 @@ const propsQBData = require('./dfs_positions_calc_funcs/qbValuesCalcs').allQBPro
 // const allRBData = require('./dfs_positions_calc_funcs/rbValuesCalcs');
 const allRBData = require('./dfs_positions_calc_funcs/rbValuesCalcs').allRBData;
 const propsRBData = require('./dfs_positions_calc_funcs/rbValuesCalcs').allRBProjectionsObjects;
-const allWRData = require('./dfs_positions_calc_funcs/wrValuesCalcs');
+const allWRData = require('./dfs_positions_calc_funcs/wrValuesCalcs').allWRData;
 const allTEProjectionsObjects = require('./dfs_positions_calc_funcs/teValuesCalcs');
 const allQBModelDataData = require('./QB Prospect Model/qbmodel');
 
@@ -136,6 +136,8 @@ async function runQBProspectModel() {
   }
 }
 
+const rbData = []
+
 async function someFunction() {
   try {
     const propsqbData = await propsQBData();
@@ -148,19 +150,47 @@ async function someFunction() {
     });
 
     propsrbData.forEach((player) => {
-      // console.log(player);
+      // rbData.push(player)
       if(player.name === 'Kyren Williams' || player.name === 'Joe Mixon') {
         // console.log('RB:', player);
       }
     });
+    
+    return propsrbData;
   } catch (error) {
     console.error('Error in someFunction:', error);
   }
 }
 
-someFunction().then(() => {
-  console.log('done');
+async function processData() {
+  
+  let data = await someFunction();
+  
+  // console.log(data)
+    // Create a map to store the most recent object for each player
+    const playerMap = new Map();
+    
+    data.forEach((player) => {
+      // Group all objects for the same player
+      const playerObjects = data.filter(p => p.name === player.name);
+      // Get only the most recent object
+      const mostRecentObject = playerObjects[playerObjects.length - 1];
+      
+      // Store in map (this will automatically override any previous entry for this player)
+      playerMap.set(player.name, mostRecentObject);
+      
+      if(player.name === 'Kyren Williams' || player.name === 'Joe Mixon') {
+        // console.log('RB:', mostRecentObject);
+      }
+    });
+  
+    // Convert map values back to array - this will have only the most recent object for each player
+    data = Array.from(playerMap.values());
+  
+    // Now 'data' contains only the most recent object for each player
+    // ... rest of your code using the filtered data ...
 
+    // console.log(data)
 
 ///
 // console.log(allQBData);
@@ -168,9 +198,13 @@ someFunction().then(() => {
 // console.log(allRBData.allRBProjectionsObjects);
 let qbProjectionArray = allQBData.allQBProjectionsObjects;
 // console.log(qbProjectionArray);
-let tempRbProjectionArray = allRBData.allRBProjectionsObjects;
+// let tempRbProjectionArray = allRBData.allRBProjectionsObjects;
+// console.log(rbData)
 // let tempRbProjectionArray = propsrbData;
-let rbProjectionArray = [...tempRbProjectionArray];
+let tempRbProjectionArray = data;
+// console.log(tempRbProjectionArray)
+// let rbProjectionArray = [...tempRbProjectionArray];
+let rbProjectionArray = tempRbProjectionArray;
 let tempWrProjectionArray = allWRData.allWRProjectionsObjects;
 let wrProjectionArray = [...tempWrProjectionArray];
 let teProjectionsArray = [...allTEProjectionsObjects];
@@ -379,7 +413,7 @@ function arrayToCSV(array) {
 
   try {
     const csv = parse(array, opts);
-    fs.writeFileSync('week11-24-superflexHalfProjectionArray.csv', csv);
+    fs.writeFileSync('week11-24-rbHalfProjectionArray.csv', csv);
     console.log('CSV file successfully created');
   } catch (err) {
     console.error(err);
@@ -427,6 +461,7 @@ async function runAllProjections() {
   }
 }
 
+
 /////////////////////////////////////////////////////////////////////////
 
 // runQB().catch(console.dir);
@@ -439,4 +474,5 @@ async function runAllProjections() {
 
 // runAllProjections().catch(console.dir);
 
-});
+}processData();
+
