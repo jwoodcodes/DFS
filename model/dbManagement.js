@@ -5,7 +5,9 @@ const propsQBData = require('./dfs_positions_calc_funcs/qbValuesCalcs').allQBPro
 const allRBData = require('./dfs_positions_calc_funcs/rbValuesCalcs').allRBData;
 const propsRBData = require('./dfs_positions_calc_funcs/rbValuesCalcs').allRBProjectionsObjects;
 const allWRData = require('./dfs_positions_calc_funcs/wrValuesCalcs').allWRData;
-const allTEProjectionsObjects = require('./dfs_positions_calc_funcs/teValuesCalcs');
+const propsWRData = require('./dfs_positions_calc_funcs/wrValuesCalcs').allWRProjectionsObjects;
+
+const { allTEData, allTEProjectionsObjects } = require('./dfs_positions_calc_funcs/teValuesCalcs');
 const allQBModelDataData = require('./QB Prospect Model/qbmodel');
 
 const wholeTeamObjects = require('./dfs_positions_calc_funcs/createWholeTeamObjects');
@@ -162,9 +164,55 @@ async function someFunction() {
   }
 }
 
+// propsWRData
+async function wrFunction() {
+  try {
+    const propsWrData = await propsWRData();
+   
+  
+    propsWrData.forEach((player) => {
+      // console.log(player)
+      if(player.name === 'Drake London' || player.name === 'Mike Evans') {
+        // console.log('QB:', player);
+      }
+    });
+
+    
+    
+    return propsWrData;
+  } catch (error) {
+    console.error('Error in wrFunction:', error);
+  }
+}
+
+//
+
+async function teFunction() {
+  try {
+    const teProjData = await allTEProjectionsObjects();
+    // console.log(teProjData)
+    if (teProjData && teProjData.length > 0) {
+      teProjData.forEach((player) => {
+        if(player.name === 'Travis Kelce' || player.name === 'Brock Bowers') {
+          // console.log('TE:', player);
+        }
+      });
+    }
+    
+    return teProjData;
+  } catch (error) {
+    console.error('Error in teFunction:', error);
+    return []; // Return empty array if there's an error
+  }
+}
+
+// propsTEData
+
 async function processData() {
   
   let data = await someFunction();
+  let wrData = await wrFunction();
+  let teData = await teFunction();
   
   // console.log(data)
     // Create a map to store the most recent object for each player
@@ -187,11 +235,49 @@ async function processData() {
     // Convert map values back to array - this will have only the most recent object for each player
     data = Array.from(playerMap.values());
   
-    // Now 'data' contains only the most recent object for each player
-    // ... rest of your code using the filtered data ...
+    //
+    const wrplayerMap = new Map();
+    
+    wrData.forEach((player) => {
+      // Group all objects for the same player
+      const playerObjects = wrData.filter(p => p.name === player.name);
+      // Get only the most recent object
+      const mostRecentObject = playerObjects[playerObjects.length - 1];
+      
+      // Store in map (this will automatically override any previous entry for this player)
+      wrplayerMap.set(player.name, mostRecentObject);
+      
+      if(player.name === 'Drake London' || player.name === 'Mike Evans') {
+        // console.log('RB:', mostRecentObject);
+      }
+    });
+  
+    // Convert map values back to array - this will have only the most recent object for each player
+    wrdata = Array.from(wrplayerMap.values());
+    
 
-    // console.log(data)
+    // console.log(wrdata)
 
+    const teplayerMap = new Map();
+    
+    teData.forEach((player) => {
+      // Group all objects for the same player
+      const playerObjects = teData.filter(p => p.name === player.name);
+      // Get only the most recent object
+      const mostRecentObject = playerObjects[playerObjects.length - 1];
+      
+      // Store in map (this will automatically override any previous entry for this player)
+      teplayerMap.set(player.name, mostRecentObject);
+      
+      if(player.name === 'Travis Kelce' || player.name === 'Brock Bowers') {
+        // console.log('RB:', mostRecentObject);
+      }
+    });
+  
+    // Convert map values back to array - this will have only the most recent object for each player
+    teData = Array.from(teplayerMap.values());
+
+    // console.log(teData)
 ///
 // console.log(allQBData);
 // console.log(allQBData.allQBProjectionsObjects);
@@ -205,9 +291,11 @@ let tempRbProjectionArray = data;
 // console.log(tempRbProjectionArray)
 // let rbProjectionArray = [...tempRbProjectionArray];
 let rbProjectionArray = tempRbProjectionArray;
-let tempWrProjectionArray = allWRData.allWRProjectionsObjects;
-let wrProjectionArray = [...tempWrProjectionArray];
-let teProjectionsArray = [...allTEProjectionsObjects];
+// let tempWrProjectionArray = allWRData.allWRProjectionsObjects;
+let wrProjectionArray = wrdata;
+// let wrProjectionArray = [...tempWrProjectionArray];
+// let teProjectionsArray = [...allTEProjectionsObjects];
+let teProjectionsArray = teData;
 
 // console.log(wrProjectionArray);
 // console.log(rbProjectionArray);
@@ -241,7 +329,17 @@ rbProjectionArray = rbProjectionArray.filter((obj1, i, arr) =>
   arr.findIndex(obj2 => obj2.name === obj1.name) === i
 );
 
+wrProjectionArray = wrProjectionArray.filter((obj1, i, arr) => 
+  arr.findIndex(obj2 => obj2.name === obj1.name) === i
+);
+
+teProjectionsArray = teProjectionsArray.filter((obj1, i, arr) => 
+  arr.findIndex(obj2 => obj2.name === obj1.name) === i
+);
+
 // console.log(rbProjectionArray);
+// console.log(wrProjectionArray);
+// console.log(teProjectionsArray);
 
 qbProjectionArray.sort(halfCompare);
 rbProjectionArray.sort(halfCompare);
@@ -413,7 +511,7 @@ function arrayToCSV(array) {
 
   try {
     const csv = parse(array, opts);
-    fs.writeFileSync('week11-24-rbHalfProjectionArray.csv', csv);
+    fs.writeFileSync('week12-24-earlySuperflexHalfProjectionArray.csv', csv);
     console.log('CSV file successfully created');
   } catch (err) {
     console.error(err);

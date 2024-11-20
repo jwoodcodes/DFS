@@ -10,6 +10,8 @@ const allTEProjectedReceptions = [];
 
 const allTEObjectsArray = [];
 
+const propsTEData = require('./tePropsDataFetcher')
+
 class TeObject {
   constructor(
     name,
@@ -537,10 +539,605 @@ allTEs.forEach(function (team) {
 
 /////////////////////////////////////////////////////////////////
 
-const allTEProjectionsObjects = [];
+// const allTEProjectionsObjects = [];
 
-allTEObjectsArray.forEach(function (player) {
-  // console.log(player.appHalfProjectedPoints);
+async function propsData() {
+ const allTEProjectionsObjects = [];
+  const propsData = await propsTEData();
+  
+  propsData.forEach(function (player) {
+    // console.log(player)
+  
+
+  allTEObjectsArray.forEach(function (te) {
+      // console.log(te);
+      // console.log(player.TE1)
+
+
+
+      //
+      //
+      //                                            TE One
+      //
+      //
+
+      if(te.name === player.TE1.name) {
+        // console.log(te.name, player.market, player.line);
+        // console.log(te)
+        // console.log(player.TE1)
+
+        te.prjReceptions = player.TE1.projectedReceptionsThisWeek;
+        te.prjReceivingYards = player.TE1.projectedRecYardsThisWeek;
+        te.prjReceivingTDs = player.TE1.projectedRecTDsThisWeek;
+        // wr.astroHalfWRProjection = player.WROne.astroHalfWRProjection;
+        // wr.astroFullWRProjection = player.WROne.astroFullWRProjection;
+        
+      
+       
+        te.udReceptionsProp = { prop: player.TE1.udReceptionsProp, isOverRecomended: false, isUnderRecomended: false };
+        te.ppReceptionsProp = { prop: player.TE1.ppReceptionsProp, isOverRecomended: false, isUnderRecomended: false };
+        te.udReceivingYardsProp = { prop: player.TE1.udRecYardsProp, isOverRecomended: false, isUnderRecomended: false };
+        te.ppReceivingYardsProp = { prop: player.TE1.ppRecYardsProp, isOverRecomended: false, isUnderRecomended: false };
+   
+        te.udFantasyScoreProp = { prop: player.TE1.udFantasyScoreProp, isOverRecomended: false, isUnderRecomended: false };
+        te.ppFantasyScoreProp = { prop: player.TE1.ppFantasyScoreProp, isOverRecomended: false, isUnderRecomended: false };
+
+        // console.log(te.name, te.ppFantasyScoreProp)
+        // console.log(te)
+
+        //                                       
+        //
+
+               //
+        //                                        Receptions
+        //
+
+           
+
+           //                                             under
+           //
+
+           //normal
+
+            //  console.log(te.name, te.udReceptionsProp.prop, te.appProjectedreceptionsThisWeek, te.prjReceptions )
+            //  console.log(te.name, te.ppReceptionsProp.prop, te.appProjectedreceptionsThisWeek, te.prjReceptions )
+            if(te.udReceptionsProp.prop - te.prjReceptions  > .2 && te.udReceptionsProp.prop - te.appProjectedreceptionsThisWeek  > .2) {      
+              te.udReceptionsProp.isUnderRecomended = true
+              // console.log(te.name, te.udReceptionsProp.prop, te.appProjectedreceptionsThisWeek, te.prjReceptions )
+            }
+            if(te.ppReceptionsProp.prop - te.prjReceptions > .2 && te.ppReceptionsProp.prop - te.appProjectedreceptionsThisWeek > .2) {      
+              te.ppReceptionsProp.isUnderRecomended = true
+              // console.log(te.name, te.ppReceptionsProp.prop, te.appProjectedreceptionsThisWeek, te.prjReceptions )
+            }
+    
+              //                                            test
+    
+              if(te.udReceptionsProp.prop - te.appProjectedreceptionsThisWeek  > .4) {      
+                te.udReceptionsProp.TESTisUnderRecomended = true
+                // console.log(te.name, te.udReceptionsProp.prop, te.appProjectedreceptionsThisWeek, te.prjReceptions )
+              }
+              if(te.ppReceptionsProp.prop - te.appProjectedreceptionsThisWeek > .4) {      
+                te.ppReceptionsProp.TESTisUnderRecomended = true
+                // console.log(te.name, te.ppReceptionsProp.prop, te.appProjectedreceptionsThisWeek, te.prjReceptions )
+              }
+    
+               // high confidence
+    
+               if(te.udReceptionsProp.prop - te.prjReceptions  > .4 && te.udReceptionsProp.prop - te.appProjectedreceptionsThisWeek > .4) {      
+                te.udReceptionsProp.highUnderConfidence = true
+                //  console.log(te.name, te.udReceptionsProp.prop, te.appProjectedreceptionsThisWeek, te.prjReceptions )
+              }
+              if(te.ppReceptionsProp.prop - te.prjReceptions  > .4 && te.ppReceptionsProp.prop - te.appProjectedreceptionsThisWeek > .4) {      
+                te.ppReceptionsProp.highUnderConfidence = true
+                // console.log(te.name, te.ppReceptionsProp.prop, te.appProjectedreceptionsThisWeek, te.prjReceptions )
+              }
+    
+    
+    
+               //                                              over
+               //
+    
+               //normal
+    
+              //  console.log(te.name, te.udReceptionsProp.prop, te.appProjectedreceptionsThisWeek, te.prjReceptions )
+            if(te.prjReceptions - te.udReceptionsProp.prop > .5 && te.appProjectedreceptionsThisWeek - te.udReceptionsProp.prop > .5) {      
+              te.udReceptionsProp.isOverRecomended = true
+              // console.log(te.name, te.udReceptionsProp.prop, te.appProjectedreceptionsThisWeek, te.prjReceptions )
+            }
+            if(te.prjReceptions - te.ppReceptionsProp.prop > .5 && te.appProjectedreceptionsThisWeek - te.ppReceptionsProp.prop > .5) {      
+              te.ppReceptionsProp.isOverRecomended = true
+              // console.log(te.name, te.ppReceptionsProp.prop, te.appProjectedreceptionsThisWeek, te.prjReceptions )
+            }
+    
+            //                                                    Test
+    
+            if(te.appProjectedreceptionsThisWeek - te.udReceptionsProp.prop > .8) {      
+              te.udReceptionsProp.isTESTOverRecomended = true
+              // console.log(te.name, te.udReceptionsProp.prop, te.appProjectedreceptionsThisWeek, te.prjReceptions )
+            }
+            if(te.appProjectedreceptionsThisWeek - te.ppReceptionsProp.prop > .8) {      
+              te.ppReceptionsProp.isTESTOverRecomended = true
+              // console.log(te.name, te.ppReceptionsProp.prop, te.appProjectedreceptionsThisWeek, te.prjReceptions )
+            }
+    
+               // high confidence
+    
+               if(te.prjReceptions - te.udReceptionsProp.prop > .8 && te.appProjectedreceptionsThisWeek - te.udReceptionsProp.prop > .8) {      
+                te.udReceptionsProp.highOverConfidence = true
+                //  console.log(te.name, te.udReceptionsProp.prop, te.appProjectedreceptionsThisWeek, te.prjReceptions )
+              }
+              if(te.prjReceptions - te.ppReceptionsProp.prop > .8 && te.appProjectedreceptionsThisWeek - te.ppReceptionsProp.prop > .8) {      
+                te.ppReceptionsProp.highOverConfidence = true
+                // console.log(te.name, te.ppReceptionsProp.prop, te.appProjectedreceptionsThisWeek, te.prjReceptions )
+              }
+
+
+              //
+               //                                       Rec Yards
+        //
+
+           
+
+           //                                             under
+           //
+
+           //normal
+
+            //  console.log(te.name, te.udReceivingYardsProp.prop, te.appProjectedrecYardsThisWeek, te.prjReceivingYards )
+            //  console.log(te.name, te.ppReceivingYardsProp.prop, te.appProjectedrecYardsThisWeek, te.prjReceivingYards )
+            if(te.udReceivingYardsProp.prop - te.prjReceivingYards  > .5 && te.udReceivingYardsProp.prop - te.appProjectedrecYardsThisWeek  > .5) {      
+              te.udReceivingYardsProp.isUnderRecomended = true
+              // console.log(te.name, te.udReceivingYardsProp.prop, te.appProjectedrecYardsThisWeek, te.prjReceivingYards )
+            }
+            if(te.ppReceivingYardsProp.prop - te.prjReceivingYards > .5 && te.ppReceivingYardsProp.prop - te.appProjectedrecYardsThisWeek > .5) {      
+              te.ppReceivingYardsProp.isUnderRecomended = true
+              // console.log(te.name, te.ppReceivingYardsProp.prop, te.appProjectedrecYardsThisWeek, te.prjReceivingYards )
+            }
+    
+              //                                            test
+    
+              if(te.udReceivingYardsProp.prop - te.appProjectedrecYardsThisWeek  > .8) {      
+                te.udReceivingYardsProp.TESTisUnderRecomended = true
+                // console.log(te.name, te.udReceivingYardsProp.prop, te.appProjectedrecYardsThisWeek, te.prjReceivingYards )
+              }
+              if(te.ppReceivingYardsProp.prop - te.appProjectedrecYardsThisWeek > .8) {      
+                te.ppReceivingYardsProp.TESTisUnderRecomended = true
+                // console.log(te.name, te.ppReceivingYardsProp.prop, te.appProjectedrecYardsThisWeek, te.prjReceivingYards )
+              }
+    
+               // high confidence
+    
+               if(te.udReceivingYardsProp.prop - te.prjReceivingYards  > 1 && te.udReceivingYardsProp.prop - te.appProjectedrecYardsThisWeek > 1) {      
+                te.udReceivingYardsProp.highUnderConfidence = true
+                //  console.log(te.name, te.udReceivingYardsProp.prop, te.appProjectedrecYardsThisWeek, te.prjReceivingYards )
+              }
+              if(te.ppReceivingYardsProp.prop - te.prjReceivingYards  > 1 && te.ppReceivingYardsProp.prop - te.appProjectedrecYardsThisWeek > 1) {      
+                te.ppReceivingYardsProp.highUnderConfidence = true
+                // console.log(te.name, te.ppReceivingYardsProp.prop, te.appProjectedrecYardsThisWeek, te.prjReceivingYards )
+              }
+    
+    
+    
+               //                                              over
+               //
+    
+               //normal
+    
+              //  console.log(te.name, te.udReceivingYardsProp.prop, te.appProjectedrecYardsThisWeek, te.prjReceivingYards )
+            if(te.prjReceivingYards - te.udReceivingYardsProp.prop > 10 && te.appProjectedrecYardsThisWeek - te.udReceivingYardsProp.prop > 10) {      
+              te.udReceivingYardsProp.isOverRecomended = true
+              // console.log(te.name, te.udReceivingYardsProp.prop, te.appProjectedrecYardsThisWeek, te.prjReceivingYards )
+            }
+            if(te.prjReceivingYards - te.ppReceivingYardsProp.prop > 10 && te.appProjectedrecYardsThisWeek - te.ppReceivingYardsProp.prop > 10) {      
+              te.ppReceivingYardsProp.isOverRecomended = true
+              // console.log(te.name, te.ppReceivingYardsProp.prop, te.appProjectedrecYardsThisWeek, te.prjReceivingYards )
+            }
+    
+            //                                                    Test
+    
+            if(te.appProjectedrecYardsThisWeek - te.udReceivingYardsProp.prop > 12) {      
+              te.udReceivingYardsProp.isTEStOverRecomended = true
+              // console.log(te.name, te.udReceivingYardsProp.prop, te.appProjectedrecYardsThisWeek, te.prjReceivingYards )
+            }
+            if(te.appProjectedrecYardsThisWeek - te.ppReceivingYardsProp.prop > 12) {      
+              te.ppReceivingYardsProp.isTEStOverRecomended = true
+              // console.log(te.name, te.ppReceivingYardsProp.prop, te.appProjectedrecYardsThisWeek, te.prjReceivingYards )
+            }
+    
+               // high confidence
+    
+               if(te.prjReceivingYards - te.udReceivingYardsProp.prop > 15 && te.appProjectedrecYardsThisWeek - te.udReceivingYardsProp.prop > 15) {      
+                te.udReceivingYardsProp.highOverConfidence = true
+                //  console.log(te.name, te.udReceivingYardsProp.prop, te.appProjectedrecYardsThisWeek, te.prjReceivingYards )
+              }
+              if(te.prjReceivingYards - te.ppReceivingYardsProp.prop > 15 && te.appProjectedrecYardsThisWeek - te.ppReceptionsProp.prop > 15) {      
+                te.ppReceivingYardsProp.highOverConfidence = true
+                // console.log(te.name, te.ppReceivingYardsProp.prop, te.appProjectedrecYardsThisWeek, te.prjReceivingYards )
+              }
+
+
+              //
+              
+              //
+               //                                       Fantasy Score
+        //
+
+           
+
+           //                                             under
+           //
+
+           //normal
+
+            //  console.log(te.name, te.udFantasyScoreProp.prop, te.astroHalfWRProjection, te.fourForFourHalfPPRProjectedPoints )
+            //  console.log(te.name, te.ppFantasyScoreProp.prop, te.astroHalfWRProjection, te.fourForFourHalfPPRProjectedPoints )
+            if(te.udFantasyScoreProp.prop - te.fourForFourHalfPPRProjectedPoints  > 1.5 && te.udFantasyScoreProp.prop - te.astroHalfWRProjection  > 1.5) {      
+              te.udFantasyScoreProp.isUnderRecomended = true
+              // console.log(te.name, te.udFantasyScoreProp.prop, te.astroHalfWRProjection, te.fourForFourHalfPPRProjectedPoints )
+            }
+            if(te.ppFantasyScoreProp.prop - te.fourForFourHalfPPRProjectedPoints > 1.5 && te.ppFantasyScoreProp.prop - te.astroHalfWRProjection > 1.5) {      
+              te.ppFantasyScoreProp.isUnderRecomended = true
+              // console.log(te.name, te.ppFantasyScoreProp.prop, te.astroHalfWRProjection, te.fourForFourHalfPPRProjectedPoints )
+            }
+    
+              //                                            test
+    
+              if(te.udFantasyScoreProp.prop - te.astroHalfWRProjection  > 2) {      
+                te.udFantasyScoreProp.TESTisUnderRecomended = true
+                // console.log(te.name, te.udFantasyScoreProp.prop, te.astroHalfWRProjection, te.fourForFourHalfPPRProjectedPoints )
+              }
+              if(te.ppFantasyScoreProp.prop - te.astroHalfWRProjection > 2) {      
+                te.ppFantasyScoreProp.TESTisUnderRecomended = true
+                // console.log(te.name, te.ppFantasyScoreProp.prop, te.astroHalfWRProjection, te.fourForFourHalfPPRProjectedPoints )
+              }
+    
+               // high confidence
+    
+               if(te.udFantasyScoreProp.prop - te.fourForFourHalfPPRProjectedPoints  > 2.5 && te.udFantasyScoreProp.prop - te.astroHalfWRProjection > 2.5) {      
+                te.udFantasyScoreProp.highUnderConfidence = true
+                //  console.log(te.name, te.udFantasyScoreProp.prop, te.astroHalfWRProjection, te.fourForFourHalfPPRProjectedPoints )
+              }
+              if(te.ppFantasyScoreProp.prop - te.fourForFourHalfPPRProjectedPoints  > 2.5 && te.ppFantasyScoreProp.prop - te.astroHalfWRProjection > 2.5) {      
+                te.ppFantasyScoreProp.highUnderConfidence = true
+                // console.log(te.name, te.ppFantasyScoreProp.prop, te.astroHalfWRProjection, te.fourForFourHalfPPRProjectedPoints )
+              }
+    
+    
+    
+               //                                              over
+               //
+    
+               //normal
+    
+              //  console.log(te.name, te.udFantasyScoreProp.prop, te.astroHalfWRProjection, te.fourForFourHalfPPRProjectedPoints )
+            if(te.fourForFourHalfPPRProjectedPoints - te.udFantasyScoreProp.prop > 1.25 && te.astroHalfWRProjection - te.udFantasyScoreProp.prop > 1.25) {      
+              te.udFantasyScoreProp.isOverRecomended = true
+              // console.log(te.name, te.udFantasyScoreProp.prop, te.astroHalfWRProjection, te.fourForFourHalfPPRProjectedPoints )
+            }
+            if(te.fourForFourHalfPPRProjectedPoints - te.ppFantasyScoreProp.prop > 1.25 && te.astroHalfWRProjection - te.ppFantasyScoreProp.prop > 1.25) {      
+              te.ppFantasyScoreProp.isOverRecomended = true
+              // console.log(te.name, te.ppFantasyScoreProp.prop, te.astroHalfWRProjection, te.fourForFourHalfPPRProjectedPoints )
+            }
+    
+            //                                                    Test
+    
+            if(te.astroHalfWRProjection - te.udFantasyScoreProp.prop > 2.5) {      
+              te.udFantasyScoreProp.isTESTOverRecomended = true
+              // console.log(te.name, te.udFantasyScoreProp.prop, te.astroHalfWRProjection, te.fourForFourHalfPPRProjectedPoints )
+            }
+            if(te.astroHalfWRProjection - te.ppFantasyScoreProp.prop > 2.5) {      
+              te.ppFantasyScoreProp.isTESTOverRecomended = true
+              // console.log(te.name, te.ppFantasyScoreProp.prop, te.astroHalfWRProjection, te.fourForFourHalfPPRProjectedPoints )
+            }
+    
+               // high confidence
+    
+               if(te.fourForFourHalfPPRProjectedPoints - te.udFantasyScoreProp.prop > 2.5 && te.astroHalfWRProjection - te.udFantasyScoreProp.prop > 2.5) {      
+                te.udFantasyScoreProp.highOverConfidence = true
+                //  console.log(te.name, te.udFantasyScoreProp.prop, te.astroHalfWRProjection, te.fourForFourHalfPPRProjectedPoints )
+              }
+              if(te.fourForFourHalfPPRProjectedPoints - te.ppFantasyScoreProp.prop > 2.5&& te.astroHalfWRProjection - te.ppReceptionsProp.prop > 2.5) {      
+                te.ppFantasyScoreProp.highOverConfidence = true
+                // console.log(te.name, te.ppFantasyScoreProp.prop, te.astroHalfWRProjection, te.fourForFourHalfPPRProjectedPoints )
+              }
+
+        // console.log(te)
+      }
+
+
+      //
+      //
+      //
+      //                                            TE Two          
+      //
+      //
+
+      if(te.name === player.TE2.name) {
+        // console.log(te.name, player.market, player.line);
+        // console.log(te)
+        // console.log(player.TE2)
+
+        te.prjReceptions = player.TE2.projectedReceptionsThisWeek;
+        te.prjReceivingYards = player.TE2.projectedRecYardsThisWeek;
+        te.prjReceivingTDs = player.TE2.projectedRecTDsThisWeek;
+        // wr.astroHalfWRProjection = player.WROne.astroHalfWRProjection;
+        // wr.astroFullWRProjection = player.WROne.astroFullWRProjection;
+        
+      
+       
+        te.udReceptionsProp = { prop: player.TE2.udReceptionsProp, isOverRecomended: false, isUnderRecomended: false };
+        te.ppReceptionsProp = { prop: player.TE2.ppReceptionsProp, isOverRecomended: false, isUnderRecomended: false };
+        te.udReceivingYardsProp = { prop: player.TE2.udRecYardsProp, isOverRecomended: false, isUnderRecomended: false };
+        te.ppReceivingYardsProp = { prop: player.TE2.ppRecYardsProp, isOverRecomended: false, isUnderRecomended: false };
+   
+        te.udFantasyScoreProp = { prop: player.TE2.udFantasyScoreProp, isOverRecomended: false, isUnderRecomended: false };
+        te.ppFantasyScoreProp = { prop: player.TE2.ppFantasyScoreProp, isOverRecomended: false, isUnderRecomended: false };
+
+        // console.log(te.name, te.ppFantasyScoreProp)
+        // console.log(te)
+
+        //                                       
+        //
+
+               //
+        //                                        Receptions
+        //
+
+           
+
+           //                                             under
+           //
+
+           //normal
+
+            //  console.log(te.name, te.udReceptionsProp.prop, te.appProjectedreceptionsThisWeek, te.prjReceptions )
+            //  console.log(te.name, te.ppReceptionsProp.prop, te.appProjectedreceptionsThisWeek, te.prjReceptions )
+            if(te.udReceptionsProp.prop - te.prjReceptions  > .2 && te.udReceptionsProp.prop - te.appProjectedreceptionsThisWeek  > .2) {      
+              te.udReceptionsProp.isUnderRecomended = true
+              // console.log(te.name, te.udReceptionsProp.prop, te.appProjectedreceptionsThisWeek, te.prjReceptions )
+            }
+            if(te.ppReceptionsProp.prop - te.prjReceptions > .2 && te.ppReceptionsProp.prop - te.appProjectedreceptionsThisWeek > .2) {      
+              te.ppReceptionsProp.isUnderRecomended = true
+              // console.log(te.name, te.ppReceptionsProp.prop, te.appProjectedreceptionsThisWeek, te.prjReceptions )
+            }
+    
+              //                                            test
+    
+              if(te.udReceptionsProp.prop - te.appProjectedreceptionsThisWeek  > .4) {      
+                te.udReceptionsProp.TESTisUnderRecomended = true
+                // console.log(te.name, te.udReceptionsProp.prop, te.appProjectedreceptionsThisWeek, te.prjReceptions )
+              }
+              if(te.ppReceptionsProp.prop - te.appProjectedreceptionsThisWeek > .4) {      
+                te.ppReceptionsProp.TESTisUnderRecomended = true
+                // console.log(te.name, te.ppReceptionsProp.prop, te.appProjectedreceptionsThisWeek, te.prjReceptions )
+              }
+    
+               // high confidence
+    
+               if(te.udReceptionsProp.prop - te.prjReceptions  > .4 && te.udReceptionsProp.prop - te.appProjectedreceptionsThisWeek > .4) {      
+                te.udReceptionsProp.highUnderConfidence = true
+                //  console.log(te.name, te.udReceptionsProp.prop, te.appProjectedreceptionsThisWeek, te.prjReceptions )
+              }
+              if(te.ppReceptionsProp.prop - te.prjReceptions  > .4 && te.ppReceptionsProp.prop - te.appProjectedreceptionsThisWeek > .4) {      
+                te.ppReceptionsProp.highUnderConfidence = true
+                // console.log(te.name, te.ppReceptionsProp.prop, te.appProjectedreceptionsThisWeek, te.prjReceptions )
+              }
+    
+    
+    
+               //                                              over
+               //
+    
+               //normal
+    
+              //  console.log(te.name, te.udReceptionsProp.prop, te.appProjectedreceptionsThisWeek, te.prjReceptions )
+            if(te.prjReceptions - te.udReceptionsProp.prop > .5 && te.appProjectedreceptionsThisWeek - te.udReceptionsProp.prop > .5) {      
+              te.udReceptionsProp.isOverRecomended = true
+              // console.log(te.name, te.udReceptionsProp.prop, te.appProjectedreceptionsThisWeek, te.prjReceptions )
+            }
+            if(te.prjReceptions - te.ppReceptionsProp.prop > .5 && te.appProjectedreceptionsThisWeek - te.ppReceptionsProp.prop > .5) {      
+              te.ppReceptionsProp.isOverRecomended = true
+              // console.log(te.name, te.ppReceptionsProp.prop, te.appProjectedreceptionsThisWeek, te.prjReceptions )
+            }
+    
+            //                                                    Test
+    
+            if(te.appProjectedreceptionsThisWeek - te.udReceptionsProp.prop > .8) {      
+              te.udReceptionsProp.isTESTOverRecomended = true
+              // console.log(te.name, te.udReceptionsProp.prop, te.appProjectedreceptionsThisWeek, te.prjReceptions )
+            }
+            if(te.appProjectedreceptionsThisWeek - te.ppReceptionsProp.prop > .8) {      
+              te.ppReceptionsProp.isTESTOverRecomended = true
+              // console.log(te.name, te.ppReceptionsProp.prop, te.appProjectedreceptionsThisWeek, te.prjReceptions )
+            }
+    
+               // high confidence
+    
+               if(te.prjReceptions - te.udReceptionsProp.prop > .8 && te.appProjectedreceptionsThisWeek - te.udReceptionsProp.prop > .8) {      
+                te.udReceptionsProp.highOverConfidence = true
+                //  console.log(te.name, te.udReceptionsProp.prop, te.appProjectedreceptionsThisWeek, te.prjReceptions )
+              }
+              if(te.prjReceptions - te.ppReceptionsProp.prop > .8 && te.appProjectedreceptionsThisWeek - te.ppReceptionsProp.prop > .8) {      
+                te.ppReceptionsProp.highOverConfidence = true
+                // console.log(te.name, te.ppReceptionsProp.prop, te.appProjectedreceptionsThisWeek, te.prjReceptions )
+              }
+
+
+              //
+               //                                       Rec Yards
+        //
+
+           
+
+           //                                             under
+           //
+
+           //normal
+
+            //  console.log(te.name, te.udReceivingYardsProp.prop, te.appProjectedrecYardsThisWeek, te.prjReceivingYards )
+            //  console.log(te.name, te.ppReceivingYardsProp.prop, te.appProjectedrecYardsThisWeek, te.prjReceivingYards )
+            if(te.udReceivingYardsProp.prop - te.prjReceivingYards  > .5 && te.udReceivingYardsProp.prop - te.appProjectedrecYardsThisWeek  > .5) {      
+              te.udReceivingYardsProp.isUnderRecomended = true
+              // console.log(te.name, te.udReceivingYardsProp.prop, te.appProjectedrecYardsThisWeek, te.prjReceivingYards )
+            }
+            if(te.ppReceivingYardsProp.prop - te.prjReceivingYards > .5 && te.ppReceivingYardsProp.prop - te.appProjectedrecYardsThisWeek > .5) {      
+              te.ppReceivingYardsProp.isUnderRecomended = true
+              // console.log(te.name, te.ppReceivingYardsProp.prop, te.appProjectedrecYardsThisWeek, te.prjReceivingYards )
+            }
+    
+              //                                            test
+    
+              if(te.udReceivingYardsProp.prop - te.appProjectedrecYardsThisWeek  > .8) {      
+                te.udReceivingYardsProp.TESTisUnderRecomended = true
+                // console.log(te.name, te.udReceivingYardsProp.prop, te.appProjectedrecYardsThisWeek, te.prjReceivingYards )
+              }
+              if(te.ppReceivingYardsProp.prop - te.appProjectedrecYardsThisWeek > .8) {      
+                te.ppReceivingYardsProp.TESTisUnderRecomended = true
+                // console.log(te.name, te.ppReceivingYardsProp.prop, te.appProjectedrecYardsThisWeek, te.prjReceivingYards )
+              }
+    
+               // high confidence
+    
+               if(te.udReceivingYardsProp.prop - te.prjReceivingYards  > 1 && te.udReceivingYardsProp.prop - te.appProjectedrecYardsThisWeek > 1) {      
+                te.udReceivingYardsProp.highUnderConfidence = true
+                //  console.log(te.name, te.udReceivingYardsProp.prop, te.appProjectedrecYardsThisWeek, te.prjReceivingYards )
+              }
+              if(te.ppReceivingYardsProp.prop - te.prjReceivingYards  > 1 && te.ppReceivingYardsProp.prop - te.appProjectedrecYardsThisWeek > 1) {      
+                te.ppReceivingYardsProp.highUnderConfidence = true
+                // console.log(te.name, te.ppReceivingYardsProp.prop, te.appProjectedrecYardsThisWeek, te.prjReceivingYards )
+              }
+    
+    
+    
+               //                                              over
+               //
+    
+               //normal
+    
+              //  console.log(te.name, te.udReceivingYardsProp.prop, te.appProjectedrecYardsThisWeek, te.prjReceivingYards )
+            if(te.prjReceivingYards - te.udReceivingYardsProp.prop > 10 && te.appProjectedrecYardsThisWeek - te.udReceivingYardsProp.prop > 10) {      
+              te.udReceivingYardsProp.isOverRecomended = true
+              // console.log(te.name, te.udReceivingYardsProp.prop, te.appProjectedrecYardsThisWeek, te.prjReceivingYards )
+            }
+            if(te.prjReceivingYards - te.ppReceivingYardsProp.prop > 10 && te.appProjectedrecYardsThisWeek - te.ppReceivingYardsProp.prop > 10) {      
+              te.ppReceivingYardsProp.isOverRecomended = true
+              // console.log(te.name, te.ppReceivingYardsProp.prop, te.appProjectedrecYardsThisWeek, te.prjReceivingYards )
+            }
+    
+            //                                                    Test
+    
+            if(te.appProjectedrecYardsThisWeek - te.udReceivingYardsProp.prop > 12) {      
+              te.udReceivingYardsProp.isTEStOverRecomended = true
+              // console.log(te.name, te.udReceivingYardsProp.prop, te.appProjectedrecYardsThisWeek, te.prjReceivingYards )
+            }
+            if(te.appProjectedrecYardsThisWeek - te.ppReceivingYardsProp.prop > 12) {      
+              te.ppReceivingYardsProp.isTEStOverRecomended = true
+              // console.log(te.name, te.ppReceivingYardsProp.prop, te.appProjectedrecYardsThisWeek, te.prjReceivingYards )
+            }
+    
+               // high confidence
+    
+               if(te.prjReceivingYards - te.udReceivingYardsProp.prop > 15 && te.appProjectedrecYardsThisWeek - te.udReceivingYardsProp.prop > 15) {      
+                te.udReceivingYardsProp.highOverConfidence = true
+                //  console.log(te.name, te.udReceivingYardsProp.prop, te.appProjectedrecYardsThisWeek, te.prjReceivingYards )
+              }
+              if(te.prjReceivingYards - te.ppReceivingYardsProp.prop > 15 && te.appProjectedrecYardsThisWeek - te.ppReceptionsProp.prop > 15) {      
+                te.ppReceivingYardsProp.highOverConfidence = true
+                // console.log(te.name, te.ppReceivingYardsProp.prop, te.appProjectedrecYardsThisWeek, te.prjReceivingYards )
+              }
+
+
+              //
+              
+              //
+               //                                       Fantasy Score
+        //
+
+           
+
+           //                                             under
+           //
+
+           //normal
+
+            //  console.log(te.name, te.udFantasyScoreProp.prop, te.astroHalfWRProjection, te.fourForFourHalfPPRProjectedPoints )
+            //  console.log(te.name, te.ppFantasyScoreProp.prop, te.astroHalfWRProjection, te.fourForFourHalfPPRProjectedPoints )
+            if(te.udFantasyScoreProp.prop - te.fourForFourHalfPPRProjectedPoints  > 1.5 && te.udFantasyScoreProp.prop - te.astroHalfWRProjection  > 1.5) {      
+              te.udFantasyScoreProp.isUnderRecomended = true
+              // console.log(te.name, te.udFantasyScoreProp.prop, te.astroHalfWRProjection, te.fourForFourHalfPPRProjectedPoints )
+            }
+            if(te.ppFantasyScoreProp.prop - te.fourForFourHalfPPRProjectedPoints > 1.5 && te.ppFantasyScoreProp.prop - te.astroHalfWRProjection > 1.5) {      
+              te.ppFantasyScoreProp.isUnderRecomended = true
+              // console.log(te.name, te.ppFantasyScoreProp.prop, te.astroHalfWRProjection, te.fourForFourHalfPPRProjectedPoints )
+            }
+    
+              //                                            test
+    
+              if(te.udFantasyScoreProp.prop - te.astroHalfWRProjection  > 2) {      
+                te.udFantasyScoreProp.TESTisUnderRecomended = true
+                // console.log(te.name, te.udFantasyScoreProp.prop, te.astroHalfWRProjection, te.fourForFourHalfPPRProjectedPoints )
+              }
+              if(te.ppFantasyScoreProp.prop - te.astroHalfWRProjection > 2) {      
+                te.ppFantasyScoreProp.TESTisUnderRecomended = true
+                // console.log(te.name, te.ppFantasyScoreProp.prop, te.astroHalfWRProjection, te.fourForFourHalfPPRProjectedPoints )
+              }
+    
+               // high confidence
+    
+               if(te.udFantasyScoreProp.prop - te.fourForFourHalfPPRProjectedPoints  > 2.5 && te.udFantasyScoreProp.prop - te.astroHalfWRProjection > 2.5) {      
+                te.udFantasyScoreProp.highUnderConfidence = true
+                //  console.log(te.name, te.udFantasyScoreProp.prop, te.astroHalfWRProjection, te.fourForFourHalfPPRProjectedPoints )
+              }
+              if(te.ppFantasyScoreProp.prop - te.fourForFourHalfPPRProjectedPoints  > 2.5 && te.ppFantasyScoreProp.prop - te.astroHalfWRProjection > 2.5) {      
+                te.ppFantasyScoreProp.highUnderConfidence = true
+                // console.log(te.name, te.ppFantasyScoreProp.prop, te.astroHalfWRProjection, te.fourForFourHalfPPRProjectedPoints )
+              }
+    
+    
+    
+               //                                              over
+               //
+    
+               //normal
+    
+              //  console.log(te.name, te.udFantasyScoreProp.prop, te.astroHalfWRProjection, te.fourForFourHalfPPRProjectedPoints )
+            if(te.fourForFourHalfPPRProjectedPoints - te.udFantasyScoreProp.prop > 1.25 && te.astroHalfWRProjection - te.udFantasyScoreProp.prop > 1.25) {      
+              te.udFantasyScoreProp.isOverRecomended = true
+              // console.log(te.name, te.udFantasyScoreProp.prop, te.astroHalfWRProjection, te.fourForFourHalfPPRProjectedPoints )
+            }
+            if(te.fourForFourHalfPPRProjectedPoints - te.ppFantasyScoreProp.prop > 1.25 && te.astroHalfWRProjection - te.ppFantasyScoreProp.prop > 1.25) {      
+              te.ppFantasyScoreProp.isOverRecomended = true
+              // console.log(te.name, te.ppFantasyScoreProp.prop, te.astroHalfWRProjection, te.fourForFourHalfPPRProjectedPoints )
+            }
+    
+            //                                                    Test
+    
+            if(te.astroHalfWRProjection - te.udFantasyScoreProp.prop > 2.5) {      
+              te.udFantasyScoreProp.isTESTOverRecomended = true
+              // console.log(te.name, te.udFantasyScoreProp.prop, te.astroHalfWRProjection, te.fourForFourHalfPPRProjectedPoints )
+            }
+            if(te.astroHalfWRProjection - te.ppFantasyScoreProp.prop > 2.5) {      
+              te.ppFantasyScoreProp.isTESTOverRecomended = true
+              // console.log(te.name, te.ppFantasyScoreProp.prop, te.astroHalfWRProjection, te.fourForFourHalfPPRProjectedPoints )
+            }
+    
+               // high confidence
+    
+               if(te.fourForFourHalfPPRProjectedPoints - te.udFantasyScoreProp.prop > 2.5 && te.astroHalfWRProjection - te.udFantasyScoreProp.prop > 2.5) {      
+                te.udFantasyScoreProp.highOverConfidence = true
+                //  console.log(te.name, te.udFantasyScoreProp.prop, te.astroHalfWRProjection, te.fourForFourHalfPPRProjectedPoints )
+              }
+              if(te.fourForFourHalfPPRProjectedPoints - te.ppFantasyScoreProp.prop > 2.5&& te.astroHalfWRProjection - te.ppReceptionsProp.prop > 2.5) {      
+                te.ppFantasyScoreProp.highOverConfidence = true
+                // console.log(te.name, te.ppFantasyScoreProp.prop, te.astroHalfWRProjection, te.fourForFourHalfPPRProjectedPoints )
+              }
+
+        // console.log(te)
+      }
+
+ 
+
+  
   class ProjectionsObject {
     constructor(
       name,
@@ -558,6 +1155,14 @@ allTEObjectsArray.forEach(function (player) {
       appProjectedRBTotalFirstDownsThisWeek,
       astroHalfWRProjection,
       astroFullWRProjection,
+
+      udReceptionsProp,
+      ppReceptionsProp,
+      udReceivingYardsProp,
+      ppReceivingYardsProp,
+ 
+      udFantasyScoreProp,
+      ppFantasyScoreProp,
 
       appHalfProjectedPoints,
       appFullProjectedPoints,
@@ -584,42 +1189,76 @@ allTEObjectsArray.forEach(function (player) {
 
       this.astroFullWRProjection = +astroFullWRProjection;
 
+      this.udReceptionsProp = udReceptionsProp;
+      this.ppReceptionsProp =   ppReceptionsProp;
+      this.udReceivingYardsProp = udReceivingYardsProp;
+      this.ppReceivingYardsProp = ppReceivingYardsProp;
+ 
+      this.udFantasyScoreProp = udFantasyScoreProp;
+      this.ppFantasyScoreProp = ppFantasyScoreProp;
+
+      
+
       this.appHalfProjectedPoints = appHalfProjectedPoints;
       this.appFullProjectedPoints = appFullProjectedPoints;
       this.appTEPProjectedPoints = appTEPProjectedPoints;
     }
   }
 
-  // console.log(player);
+  // console.log(te);
 
-  if (player.name) {
+  
     let teProjectionsObject = new ProjectionsObject(
-      player.name,
-      player.position,
-      player.teamABV,
+      te.name,
+      te.position,
+      te.teamABV,
 
-      +player.appProjectedCarriesThisWeek,
-      +player.appProjectedrushYardsThisWeek,
-      +player.appProjectedrushTDsThisWeek,
-      +player.appProjectedreceptionsThisWeek,
-      +player.appProjectedrecYardsThisWeek,
-      +player.appProjectedrecTDsThisWeek,
-      +player.appProjectedrushFirstDownsThisWeek,
-      +player.appProjectedrecFirstDownsThisWeek,
-      +player.appProjectedRBTotalFirstDownsThisWeek,
+      +te.appProjectedCarriesThisWeek,
+      +te.appProjectedrushYardsThisWeek,
+      +te.appProjectedrushTDsThisWeek,
+      +te.appProjectedreceptionsThisWeek,
+      +te.appProjectedrecYardsThisWeek,
+      +te.appProjectedrecTDsThisWeek,
+      +te.appProjectedrushFirstDownsThisWeek,
+      +te.appProjectedrecFirstDownsThisWeek,
+      +te.appProjectedRBTotalFirstDownsThisWeek,
 
-      +player.astroHalfWRProjection,
-      +player.astroFullWRProjection,
+      +te.astroHalfWRProjection,
+      +te.astroFullWRProjection,
 
-      player.appHalfProjectedPoints,
-      player.appFullProjectedPoints,
-      player.appTEPProjectedPoints
+      te.udReceptionsProp,
+      te.ppReceptionsProp,
+      te.udReceivingYardsProp,
+      te.ppReceivingYardsProp,
+ 
+      te.udFantasyScoreProp,
+      te.ppFantasyScoreProp,
+
+      te.appHalfProjectedPoints,
+      te.appFullProjectedPoints,
+      te.appTEPProjectedPoints
     );
-
+    // console.log(teProjectionsObject)
     allTEProjectionsObjects.push(teProjectionsObject);
-  }
+  
+  // console.log(allTEProjectionsObjects)
 });
 
-// console.log(allTEProjectionsObjects);
+})
 
-module.exports = allTEProjectionsObjects;
+return allTEProjectionsObjects;
+}
+
+// Don't just call propsData() without handling the Promise
+// propsData();
+
+// Export the async function and the data separately
+module.exports = {
+  allTEData: [], // Initial empty array that will be populated
+  allTEProjectionsObjects: propsData // Export the async function
+};
+
+// Execute the function and update allTEData when data is ready
+propsData().then(data => {
+  module.exports.allTEData = data;
+});
