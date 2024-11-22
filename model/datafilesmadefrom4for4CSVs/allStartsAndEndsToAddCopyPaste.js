@@ -9,6 +9,11 @@
 // const gppLeverageScoresAndProjOwnershipFanduel =
 // module.exports = gppLeverageScoresAndProjOwnershipFanduel;
 //
+// const wholeDownloadableSpreadSheetThursdayThroughMondayFanduel =
+// module.exports = wholeDownloadableSpreadSheetThursdayThroughMondayFanduel;
+//
+// const qbDownloadableSpreadSheetThursdayThroughMondayFanduel =
+// module.exports = qbDownloadableSpreadSheetThursdayThroughMondayFanduel;
 //
 // const wholeDownloadableSpreadSheetYahoo =
 // module.exports = wholeDownloadableSpreadSheetYahoo;
