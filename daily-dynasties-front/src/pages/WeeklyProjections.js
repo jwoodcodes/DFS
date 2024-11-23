@@ -79,13 +79,13 @@ export default function WeeklyProjections(data) {
       // console.log(data2.name)
       selectedLeagueRosterNamesArray.map(function (player) {
         // console.log(rb.name)
-        if (player) {
+        if (player && rb.name) {
           player = player.replace("'", '').replace('.', '').replace('.', '');
           if (player.includes('Jr')) {
             // console.log(playerObject['"PLAYER NAME"']);
             player = player.replace('Jr', '');
           }
-
+          // console.log(rb.name)
           rb.name = rb.name.replace("'", '').replace('.', '').replace('.', '');
           if (rb.name.includes('Jr')) {
             // console.log(playerObject['"PLAYER NAME"']);
@@ -112,7 +112,7 @@ export default function WeeklyProjections(data) {
     if (selectedLeagueRosterNamesArray) {
       // console.log(data2.name)
       selectedLeagueRosterNamesArray.map(function (player) {
-        if (player) {
+        if (player && wr.name) {
           player = player.replace("'", '').replace('.', '').replace('.', '');
           if (player.includes('Jr')) {
             // console.log(playerObject['"PLAYER NAME"']);
@@ -144,7 +144,7 @@ export default function WeeklyProjections(data) {
       // console.log(data2.name)
       selectedLeagueRosterNamesArray.map(function (player) {
         // console.log(te.name)
-        if (player) {
+        if (player && te.name) {
           player = player.replace("'", '').replace('.', '').replace('.', '');
           if (player.includes('Jr')) {
             // console.log(playerObject['"PLAYER NAME"']);

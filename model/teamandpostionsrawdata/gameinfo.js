@@ -1,6 +1,8 @@
 const wholeDownloadableSpreadSheetYahoo = require('../datafilesmadefrom4for4CSVs/Yahoo/wholeDownloadableSpreadSheetYahoo');
 const qbDownloadableSpreadSheetYahoo = require('../datafilesmadefrom4for4CSVs/Yahoo/qbDownloadableSpreadSheetYahoo');
 
+const wholeDownloadableSpreadSheetThursdayThroughMondayFanduel = require('../datafilesmadefrom4for4CSVs/Fanduel/wholeDownloadableSpreadSheetThursdayThroughMondayFanduel');
+
 const gppLeverageScoresAndProjOwnershipDraftkings = require('../datafilesmadefrom4for4CSVs/draftkings/gppLeverageScoresAndProjOwnershipDraftkings');
 const gppLeverageScoresAndProjOwnershipFanduel = require('../datafilesmadefrom4for4CSVs/Fanduel/gppLeverageScoresAndProjOwnershipFanduel');
 const allNFLTeamPace = require('../datafilesmadefrom4for4CSVs/allNFLTeamPace');
@@ -1327,14 +1329,18 @@ const populateTeamObjects = function (passedInTeam) {
   });
   passedInTeam.RBTwoThisWeek4for4HalfProjPoints = 0;
   const setPlayerNamesAtPositionsToTheirTeams = function (PITeam) {
-    wholeDownloadableSpreadSheetYahoo.forEach(function (team, i) {
+    wholeDownloadableSpreadSheetThursdayThroughMondayFanduel.forEach(function (team) {
       //setting QB's
       ////////////
+      // console.log(team.Team);
+      
       if (PITeam.teamABV === team.Team) {
+        
         if (team.Pos === 'QB') {
+          
           if (!passedInTeam.QBOneThisWeekName) {
             passedInTeam.QBOneThisWeekName = team.Player;
-            passedInTeam.QBOneThisWeek4for4HalfProjPoints = team['Y! (Proj)'];
+            passedInTeam.QBOneThisWeek4for4HalfProjPoints = team['FD (Proj)'];
           }
           if (
             passedInTeam.QBOneThisWeekName &&
@@ -1342,7 +1348,7 @@ const populateTeamObjects = function (passedInTeam) {
             !passedInTeam.QBTwoThisWeekName
           ) {
             passedInTeam.QBTwoThisWeekName = team.Player;
-            passedInTeam.QBTwoThisWeek4for4HalfProjPoints = +team['Y! (Proj)'];
+            passedInTeam.QBTwoThisWeek4for4HalfProjPoints = +team['FD (Proj)'];
           }
         }
       }
@@ -1361,16 +1367,16 @@ const populateTeamObjects = function (passedInTeam) {
 
           if (!passedInTeam.RBOneThisWeekName) {
             passedInTeam.RBOneThisWeekName = rbName;
-            passedInTeam.RBOneThisWeek4for4HalfProjPoints = +team['Y! (Proj)'];
+            passedInTeam.RBOneThisWeek4for4HalfProjPoints = +team['FD (Proj)'];
           }
           if (
             passedInTeam.RBOneThisWeekName &&
             passedInTeam.RBOneThisWeekName !== rbName &&
-            team['Y! (Proj)'] > passedInTeam.RBTwoThisWeek4for4HalfProjPoints
+            team['FD (Proj)'] > passedInTeam.RBTwoThisWeek4for4HalfProjPoints
           ) {
             // console.log(team.Player);
             passedInTeam.RBTwoThisWeekName = rbName;
-            passedInTeam.RBTwoThisWeek4for4HalfProjPoints = +team['Y! (Proj)'];
+            passedInTeam.RBTwoThisWeek4for4HalfProjPoints = +team['FD (Proj)'];
           }
           if (!passedInTeam.RBTwoThisWeekName) {
             passedInTeam.RBTwoThisWeekName = 'no second RB';
@@ -1385,7 +1391,7 @@ const populateTeamObjects = function (passedInTeam) {
           ) {
             passedInTeam.RBThreeThisWeekName = rbName;
             passedInTeam.RBThreeThisWeek4for4HalfProjPoints =
-              +team['Y! (Proj)'];
+              +team['FD (Proj)'];
           }
 
           // console.log(team.Team, passedInTeam.RBOneThisWeekName, passedInTeam.RBTwoThisWeekName, passedInTeam.RBThreeThisWeekName)
@@ -1400,7 +1406,7 @@ const populateTeamObjects = function (passedInTeam) {
         if (team.Pos === 'WR') {
           if (!passedInTeam.WROneThisWeekName) {
             passedInTeam.WROneThisWeekName = team.Player;
-            passedInTeam.WROneThisWeek4for4HalfProjPoints = +team['Y! (Proj)'];
+            passedInTeam.WROneThisWeek4for4HalfProjPoints = +team['FD (Proj)'];
           }
           if (
             passedInTeam.WROneThisWeekName &&
@@ -1408,7 +1414,7 @@ const populateTeamObjects = function (passedInTeam) {
             !passedInTeam.WRTwoThisWeekName
           ) {
             passedInTeam.WRTwoThisWeekName = team.Player;
-            passedInTeam.WRTwoThisWeek4for4HalfProjPoints = +team['Y! (Proj)'];
+            passedInTeam.WRTwoThisWeek4for4HalfProjPoints = +team['FD (Proj)'];
           }
           if (
             passedInTeam.WROneThisWeekName &&
@@ -1419,7 +1425,7 @@ const populateTeamObjects = function (passedInTeam) {
           ) {
             passedInTeam.WRThreeThisWeekName = team.Player;
             passedInTeam.WRThreeThisWeek4for4HalfProjPoints =
-              +team['Y! (Proj)'];
+              +team['FD (Proj)'];
             // console.log(passedInTeam.WRThreeThisWeekName)
           }
           if (
@@ -1434,7 +1440,7 @@ const populateTeamObjects = function (passedInTeam) {
             // console.log(team.Player)
             // passedInTeam.WRFourThisWeekName = team.Player;
             // passedInTeam.WRFourThisWeek4for4HalfProjPoints =
-            //   +team['Y! (Proj)'];
+            //   +team['FD (Proj)'];
           }
         }
       }
@@ -1444,7 +1450,7 @@ const populateTeamObjects = function (passedInTeam) {
         if (team.Pos === 'TE') {
           if (!passedInTeam.TEOneThisWeekName) {
             passedInTeam.TEOneThisWeekName = team.Player;
-            passedInTeam.TEOneThisWeek4for4HalfProjPoints = +team['Y! (Proj)'];
+            passedInTeam.TEOneThisWeek4for4HalfProjPoints = +team['FD (Proj)'];
           }
           if (
             passedInTeam.TEOneThisWeekName &&
@@ -1452,7 +1458,7 @@ const populateTeamObjects = function (passedInTeam) {
             !passedInTeam.TETwoThisWeekName
           ) {
             passedInTeam.TETwoThisWeekName = team.Player;
-            passedInTeam.TETwoThisWeek4for4HalfProjPoints = +team['Y! (Proj)'];
+            passedInTeam.TETwoThisWeek4for4HalfProjPoints = +team['FD (Proj)'];
           }
         }
       }
@@ -6057,6 +6063,7 @@ allGameInfo.forEach(function (team) {
 // console.log(gameInfo.dolphins)
 // console.log(gameInfo.panthers)
 // console.log(gameInfo.cowboys)
+// console.log(gameInfo.chargers)
 // console.log(gameInfo);
 
 module.exports = gameInfo;
