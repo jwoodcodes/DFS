@@ -2,6 +2,7 @@ const wholeDownloadableSpreadSheetYahoo = require('../datafilesmadefrom4for4CSVs
 const qbDownloadableSpreadSheetYahoo = require('../datafilesmadefrom4for4CSVs/Yahoo/qbDownloadableSpreadSheetYahoo');
 
 const wholeDownloadableSpreadSheetThursdayThroughMondayFanduel = require('../datafilesmadefrom4for4CSVs/Fanduel/wholeDownloadableSpreadSheetThursdayThroughMondayFanduel');
+const qbDownloadableSpreadSheetThursdayThroughMondayFanduel = require('../datafilesmadefrom4for4CSVs/Fanduel/qbDownloadableSpreadSheetThursdayThroughMondayFanduel');
 
 const gppLeverageScoresAndProjOwnershipDraftkings = require('../datafilesmadefrom4for4CSVs/draftkings/gppLeverageScoresAndProjOwnershipDraftkings');
 const gppLeverageScoresAndProjOwnershipFanduel = require('../datafilesmadefrom4for4CSVs/Fanduel/gppLeverageScoresAndProjOwnershipFanduel');

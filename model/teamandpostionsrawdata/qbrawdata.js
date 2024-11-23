@@ -1,6 +1,8 @@
 const wholeDownloadableSpreadSheetYahoo = require('../datafilesmadefrom4for4CSVs/Yahoo/wholeDownloadableSpreadSheetYahoo');
 const qbDownloadableSpreadSheetYahoo = require('../datafilesmadefrom4for4CSVs/Yahoo/qbDownloadableSpreadSheetYahoo');
 
+const qbDownloadableSpreadSheetThursdayThroughMondayFanduel = require('../datafilesmadefrom4for4CSVs/Fanduel/qbDownloadableSpreadSheetThursdayThroughMondayFanduel');
+
 const gppLeverageScoresAndProjOwnershipDraftkings = require('../datafilesmadefrom4for4CSVs/draftkings/gppLeverageScoresAndProjOwnershipDraftkings');
 const gppLeverageScoresAndProjOwnershipFanduel = require('../datafilesmadefrom4for4CSVs/Fanduel/gppLeverageScoresAndProjOwnershipFanduel');
 const allHalfPPRProjectedPointsWithoutTeamDef = require('../datafilesmadefrom4for4CSVs/allHalfPPRProjectedPointsWithoutTeamDef');
@@ -1272,7 +1274,7 @@ const qbrawdata = {
 };
 
 const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
-  qbDownloadableSpreadSheetYahoo.forEach(function (playerobj, i) {
+  qbDownloadableSpreadSheetThursdayThroughMondayFanduel.forEach(function (playerobj, i) {
     // console.log(gameInfoPassedInTeam.QBOneThisWeekName, playerobj.Player);
     if (gameInfoPassedInTeam.QBOneThisWeekName === playerobj.Player) {
       // console.log(playerobj);
@@ -1333,16 +1335,24 @@ const populateTeamObjects = function (passedInTeam, gameInfoPassedInTeam) {
         passedInTeam.prjRushTDs = playerobj['Rush TD'];
 
         // console.log(projpts);
-        let yahooSalary = +playerobj['Y! ($)'];
-        passedInTeam.yahooSalary = yahooSalary;
-        let rawPercentOfCap = yahooSalary / 200;
-        let percentOfCap = (rawPercentOfCap * 100).toFixed(1);
-        passedInTeam.percentOfSalaryCapYahoo = percentOfCap;
+        
       }
 
       // console.log(teamName);
     }
   });
+
+
+  qbDownloadableSpreadSheetYahoo.forEach(function (playerobj, i) {
+    if (gameInfoPassedInTeam.QBOneThisWeekName === playerobj.Player) {
+      let yahooSalary = +playerobj['Y! ($)'];
+      passedInTeam.yahooSalary = yahooSalary;
+      let rawPercentOfCap = yahooSalary / 200;
+      let percentOfCap = (rawPercentOfCap * 100).toFixed(1);
+      passedInTeam.percentOfSalaryCapYahoo = percentOfCap;
+
+    }
+  })
   // console.log(passedInTeam);
   passedInTeam.teamPlaysPerSixtyMinAllSituations =
     gameInfoPassedInTeam.teamPlaysPerSixtyMinAllSituations;
