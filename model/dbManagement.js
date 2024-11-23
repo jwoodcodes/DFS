@@ -146,7 +146,7 @@ async function someFunction() {
     const propsrbData = await propsRBData();
   
     propsqbData.forEach((player) => {
-      if(player.name === 'Baker Mayfield' || player.name === 'Jayden Daniels') {
+      if(player.name === 'Lamar Jackson' || player.name === 'Justin Herbert') {
         // console.log('QB:', player);
       }
     });

@@ -1096,38 +1096,50 @@ const populateTeamObjects = function (passedInTeam) {
   const setteamABVandVTT = function (team) {
     let settingTeamName = '';
     // console.log(passedInteam);
-    wholeDownloadableSpreadSheetYahoo.forEach(function (object, i) {
-      if (i < qbDownloadableSpreadSheetYahoo.length) {
-        settingTeamName = qbDownloadableSpreadSheetYahoo[i].Team;
+
+    qbDownloadableSpreadSheetThursdayThroughMondayFanduel.forEach(function (
+      object, i
+    ) {
+      if (i < qbDownloadableSpreadSheetThursdayThroughMondayFanduel.length) {
+        settingTeamName = qbDownloadableSpreadSheetThursdayThroughMondayFanduel[i].Team;
         // console.log(settingTeamName, passedInTeam.teamABV);
         if (
           passedInTeam.teamABV === settingTeamName ||
           passedInTeam.altTeamABV === settingTeamName
         ) {
           // console.log(
-          //   `${passedInTeam.teamABV}: ${qbDownloadableSpreadSheetYahoo[i]['Team O/U']}`
+          //   `${passedInTeam.teamABV}: ${qbDownloadableSpreadSheetThursdayThroughMondayFanduel[i]['Team O/U']}`
           // );
           // console.log(object);
-          passedInTeam.vtt = qbDownloadableSpreadSheetYahoo[i]['Team O/U'];
+          passedInTeam.vtt = qbDownloadableSpreadSheetThursdayThroughMondayFanduel[i]['Team O/U'];
           // console.log(
           //   `${passedInTeam.teamABV}: ${passedInTeam.vtt}`
           // );
         }
       }
-      if (object.PID === passedInTeam.teamABV) {
+      })
+    
+    
+
+    wholeDownloadableSpreadSheetYahoo.forEach(function (object, i) {
+      if (i < qbDownloadableSpreadSheetYahoo.length) {
+       
+        if (object.PID === passedInTeam.teamABV) {
         // console.log(+object['Y! ($)']);
-        let yahooSalary = +object['Y! ($)'];
-        passedInTeam.teamDefYahooSalary = yahooSalary;
-        let rawPercentOfCap = yahooSalary / 200;
-        let percentOfCap = (rawPercentOfCap * 100).toFixed(1);
-        passedInTeam.percentOfSalaryCapYahoo = percentOfCap;
-        let projpoints = +object['Y! (Proj)'];
+          let yahooSalary = +object['Y! ($)'];
+          passedInTeam.teamDefYahooSalary = yahooSalary;
+          let rawPercentOfCap = yahooSalary / 200;
+          let percentOfCap = (rawPercentOfCap * 100).toFixed(1);
+          passedInTeam.percentOfSalaryCapYahoo = percentOfCap;
+          let projpoints = +object['Y! (Proj)'];
 
         // console.log(`${passedInTeam.teamABV}: ${projpoints}`);
-        passedInTeam.def4for4projectedpoints = projpoints;
+          passedInTeam.def4for4projectedpoints = projpoints;
+        }
+    
       }
     });
-  };
+  }
   setteamABVandVTT(passedInTeam);
   ////////////////////////////////////////
   const setTeamDefYahooSalaryPercentOfYahooCap4For4ProjectedDefPoints =

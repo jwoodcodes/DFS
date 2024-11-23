@@ -1,6 +1,8 @@
 const wholeDownloadableSpreadSheetYahoo = require('../datafilesmadefrom4for4CSVs/Yahoo/wholeDownloadableSpreadSheetYahoo');
 const qbDownloadableSpreadSheetYahoo = require('../datafilesmadefrom4for4CSVs/Yahoo/qbDownloadableSpreadSheetYahoo');
 
+const qbDownloadableSpreadSheetThursdayThroughMondayFanduel = require('../datafilesmadefrom4for4CSVs/Fanduel/qbDownloadableSpreadSheetThursdayThroughMondayFanduel');
+
 const gppLeverageScoresAndProjOwnershipDraftkings = require('../datafilesmadefrom4for4CSVs/draftkings/gppLeverageScoresAndProjOwnershipDraftkings');
 const gppLeverageScoresAndProjOwnershipFanduel = require('../datafilesmadefrom4for4CSVs/Fanduel/gppLeverageScoresAndProjOwnershipFanduel');
 const allHalfPPRProjectedPointsWithoutTeamDef = require('../datafilesmadefrom4for4CSVs/allHalfPPRProjectedPointsWithoutTeamDef');
@@ -3072,7 +3074,7 @@ const populateTeamObjects = function (
     }
   }
 
-  qbDownloadableSpreadSheetYahoo.forEach(function (playerobj, i) {
+  qbDownloadableSpreadSheetThursdayThroughMondayFanduel.forEach(function (playerobj, i) {
     passedInTeam.slate = '';
     allNFLTeamPace.forEach(function (teamObj) {
       // console.log(teamObj, teamObj['"Away"'])

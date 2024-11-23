@@ -57,7 +57,7 @@ class QbObject {
     teamName,
     teamABV,
     byeWeek,
-    homeOrAway,
+    // homeOrAway,
     slate,
     vtt,
     teamProjectedPoints,
@@ -119,7 +119,7 @@ class QbObject {
     this.teamName = teamName;
     this.teamABV = teamABV;
     this.byeWeek = byeWeek;
-    this.homeOrAway = homeOrAway;
+    // this.homeOrAway = homeOrAway;
     this.slate = slate;
     this.vtt = vtt;
     this.teamProjectedPoints = teamProjectedPoints;
@@ -272,7 +272,8 @@ const allQBCalcFunctions = {
 
   calcQBHomeOrAwayFavoriteOrUnderdogs(team, i) {
     let QBHOAFOU = 0;
-
+    // console.log(team.name)
+    
     if ((i - 1) % 2 && team.teamVTT > allQBs[i + 1].teamVTT) {
       QBHOAFOU = 10;
     } else if (i % 2 && team.teamVTT < allQBs[i - 1].teamVTT) {
@@ -666,7 +667,7 @@ const allQBCalcFunctions = {
 // console.log(allQBs);
 
 allQBs.map(function (team, i) {
-  // console.log(team);
+  // console.log(team.name);
   let totalScore = 0;
 
   let curVTTValue = allQBCalcFunctions.calcQBvtt(team);
@@ -878,7 +879,7 @@ if (gameInfo.week.currentWeek > 3) {
     if (valueFromGLSP > highMax) {
       valueFromGLSP = highMax;
     }
-    // console.log(team, +team.fourForFourHalfPPRProjectedPoints)
+    // console.log(team.name, +team.fourForFourHalfPPRProjectedPoints)
     let tempValue = 0;
     if (valueFromGLSP && valueFromGLSP > 0) {
       let initialTempValue = +team.fourForFourHalfPPRProjectedPoints;
@@ -1129,11 +1130,17 @@ const allQBObjectsArray = [];
 const allQBsMap = new Map();
 
 allQBs.forEach(function (team, i) {
-  if(team.homeOrAway) {
+  
+  if(team) {
   let playerName = team.name;
   let position = 'QB';
   let teamABV = team.teamABV;
-  let homeOrAway = team.homeOrAway;
+  if(team.homeOrAway) {
+    let homeOrAway = team.homeOrAway;
+  }
+  
+  // console.log(teamABV)
+ 
 
   let percentDiffBetweenAppAndFourProj = +(
     +team.appQBProjectedPoints / +team.fourForFourFullPPRProjectedPoints
@@ -1264,7 +1271,7 @@ allQBs.forEach(function (team, i) {
     teamABV,
     
     byeWeek,
-    homeOrAway,
+    // homeOrAway,
     team.slate,
     +team.teamVTT,
     +team.teamProjectedPoints,
@@ -2001,7 +2008,10 @@ async function propsData() {
   })
 
   allQBObjectsArray.forEach(function (player) {
-    // console.log(player);
+    // if(player.teamName === 'Ravens') {
+    //   console.log(player);
+    // }
+    
     class ProjectionsObject {
       constructor(
         currentWeek,

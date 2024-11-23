@@ -1,5 +1,6 @@
 const wholeDownloadableSpreadSheetYahoo = require('../datafilesmadefrom4for4CSVs/Yahoo/wholeDownloadableSpreadSheetYahoo');
 const qbDownloadableSpreadSheetYahoo = require('../datafilesmadefrom4for4CSVs/Yahoo/qbDownloadableSpreadSheetYahoo');
+const qbDownloadableSpreadSheetThursdayThroughMondayFanduel = require('../datafilesmadefrom4for4CSVs/Fanduel/qbDownloadableSpreadSheetThursdayThroughMondayFanduel');
 const gppLeverageScoresAndProjOwnershipDraftkings = require('../datafilesmadefrom4for4CSVs/draftkings/gppLeverageScoresAndProjOwnershipDraftkings');
 const gppLeverageScoresAndProjOwnershipFanduel = require('../datafilesmadefrom4for4CSVs/Fanduel/gppLeverageScoresAndProjOwnershipFanduel');
 const allHalfPPRProjectedPointsWithoutTeamDef = require('../datafilesmadefrom4for4CSVs/allHalfPPRProjectedPointsWithoutTeamDef');
@@ -5227,7 +5228,7 @@ const populateTeamObjects = function (
   passedInTeam.opponentVTT = gameInfoPassedInTeam.opponentvtt;
   passedInTeam.byeWeek = gameInfoPassedInTeam.byeWeek2022;
 
-  qbDownloadableSpreadSheetYahoo.forEach(function (playerobj, i) {
+  qbDownloadableSpreadSheetThursdayThroughMondayFanduel.forEach(function (playerobj, i) {
     // console.log(gameInfoPassedInTeam);
     passedInTeam.slate = '';
     allNFLTeamPace.forEach(function (teamObj) {
