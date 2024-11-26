@@ -146,9 +146,336 @@ async function someFunction() {
     const propsrbData = await propsRBData();
   
     propsqbData.forEach((player) => {
-      if(player.name === 'Lamar Jackson' || player.name === 'Justin Herbert') {
-        // console.log('QB:', player);
+      
+      if(player.name === 'Baker Mayfield' || player.name === 'Drake Maye') {
+        // console.log(player)
       }
+        let tempSuggestedPropsArray = [];
+        player.recsObject = {}
+        player.propsRecs = ''
+        // console.log( player);
+        if(player.name) {
+        //Pass Attempts
+        if(player.udPassAttemptsProp.isUnderRecomended) {
+          // console.log(player.name)
+          
+          // let recObject = {site: 'ud', prop: 'Pass Attempts', propValue: player.udPassAttemptsProp.prop, rec: 'under'}
+          
+          // tempSuggestedPropsArray.push(recObject)
+          // player.recsObject = {...player.recsObject, udPAU: {site: 'ud', prop: 'Pass Attempts', propValue: player.udPassAttemptsProp.prop, rec: 'under'}}
+
+          player.propsRecs = `${player.propsRecs} -- Under UD Pass Attempts of ${player.udPassAttemptsProp.prop}`
+        }
+        if(player.udPassAttemptsProp.isOverRecomended) {
+          // console.log(player.name)
+          
+          // let recObject = {site: 'ud', prop: 'Pass Attempts', propValue: player.udPassAttemptsProp.prop, rec: 'over'}
+          // tempSuggestedPropsArray.push(recObject)
+
+          // player.recsObject = {...player.recsObject, udPAO: {site: 'ud', prop: 'Pass Attempts', propValue: player.udPassAttemptsProp.prop, rec: 'over'}}
+
+          player.propsRecs = `${player.propsRecs} -- Over UD Pass Attempts of ${player.udPassAttemptsProp.prop}`
+        }
+        if(player.ppPassAttemptsProp.isUnderRecomended) {
+          // console.log(player.name)
+          
+          // let recObject = {site: 'pp', prop: 'Pass Attempts', propValue: player.ppPassAttemptsProp.prop, rec: 'under'}
+          // tempSuggestedPropsArray.push(recObject)
+
+          // player.recsObject = {...player.recsObject, ppPAU: {site: 'pp', prop: 'Pass Attempts', propValue: player.ppPassAttemptsProp.prop, rec: 'under'}}
+
+          player.propsRecs = `${player.propsRecs} -- Under PP Pass Attempts of ${player.ppPassAttemptsProp.prop}`
+        }
+        if(player.ppPassAttemptsProp.isOverRecomended) {
+          // console.log(player.name)
+          
+          // let recObject = {site: 'pp', prop: 'Pass Attempts', propValue: player.ppPassAttemptsProp.prop, rec: 'over'}
+          // tempSuggestedPropsArray.push(recObject)
+
+          // player.recsObject = {...player.recsObject, ppPAO: {site: 'pp', prop: 'Pass Attempts', propValue: player.ppPassAttemptsProp.prop, rec: 'over'}}
+
+          player.propsRecs = `${player.propsRecs} -- Over PP Pass Attempts of ${player.ppPassAttemptsProp.prop}`
+        }
+        //Completions
+        if(player.udPassCompletionsProp.isUnderRecomended) {
+          // console.log(player.name)
+          
+          // let recObject = {site: 'ud', prop: 'Completions', propValue: player.udPassCompletionsProp.prop, rec: 'under'}
+
+          // tempSuggestedPropsArray.push(recObject)
+
+          // player.recsObject = {...player.recsObject, udPCU: {site: 'ud', prop: 'Completions', propValue: player.udPassCompletionsProp.prop, rec: 'under'}}
+
+          player.propsRecs = `${player.propsRecs} -- Under UD Completions of ${player.udPassCompletionsProp.prop}`
+        }
+        if(player.udPassCompletionsProp.isOverRecomended) {
+          // console.log(player.name)
+          
+          // let recObject = {site: 'ud', prop: 'Completions', propValue: player.udPassCompletionsProp.prop, rec: 'over'}
+
+          // tempSuggestedPropsArray.push(recObject)
+
+          // player.recsObject = {...player.recsObject, udPCO: {site: 'ud', prop: 'Completions', propValue: player.udPassCompletionsProp.prop, rec: 'over'}}
+
+          player.propsRecs = `${player.propsRecs} -- Over UD Completions of ${player.udPassCompletionsProp.prop}`
+         
+        }
+        if(player.ppPassCompletionsProp.isUnderRecomended) {
+          // console.log(player.name)
+          
+
+          // let recObject = {site: 'pp', prop: 'Completions', propValue: player.ppPassCompletionsProp.prop, rec: 'under'}
+
+          // tempSuggestedPropsArray.push(recObject)
+
+          // player.recsObject = {...player.recsObject, ppPCU: {site: 'pp', prop: 'Completions', propValue: player.ppPassCompletionsProp.prop, rec: 'under'}}
+
+          player.propsRecs = `${player.propsRecs} -- Under PP Completions of ${player.ppPassCompletionsProp.prop}`
+        }
+        if(player.ppPassCompletionsProp.isOverRecomended) {
+          // console.log(player.name)
+         
+
+          // let recObject = {site: 'pp', prop: 'Completions', propValue: player.ppPassCompletionsProp.prop, rec: 'over'}
+
+          // tempSuggestedPropsArray.push(recObject)
+
+          // player.recsObject = {...player.recsObject, ppPCO: {site: 'pp', prop: 'Completions', propValue: player.ppPassCompletionsProp.prop, rec: 'over'}}
+
+          player.propsRecs = `${player.propsRecs} -- Over PP Completions of ${player.ppPassCompletionsProp.prop}`
+        }
+        // Pass Yards
+        if(player.udPassYardsProp.isUnderRecomended) {
+          // console.log(player.name)
+         
+
+          // let recObject = {site: 'ud', prop: 'Pass Yards', propValue: player.udPassYardsProp.prop, rec: 'under'}
+          // tempSuggestedPropsArray.push(recObject)
+
+          // player.recsObject = {...player.recsObject, udPYU: {site: 'ud', prop: 'Pass Yards', propValue: player.udPassYardsProp.prop, rec: 'under'}}
+
+          player.propsRecs = `${player.propsRecs} -- Under UD Pass Yards of ${player.udPassYardsProp.prop}`
+        }
+        if(player.udPassYardsProp.isOverRecomended) {
+          // console.log(player.name)
+          
+
+          // let recObject = {site: 'ud', prop: 'Pass Yards', propValue: player.udPassYardsProp.prop, rec: 'over'}
+          // tempSuggestedPropsArray.push(recObject)
+
+          // player.recsObject = {...player.recsObject, udPYO: {site: 'ud', prop: 'Pass Yards', propValue: player.udPassYardsProp.prop, rec: 'over'}}
+
+          player.propsRecs = `${player.propsRecs} -- Over UD Pass Yards of ${player.udPassYardsProp.prop}`
+        }
+        if(player.ppPassYardsProp.isUnderRecomended) {
+          // console.log(player.name)
+          
+
+          // let recObject = {site: 'pp', prop: 'Pass Yards', propValue: player.ppPassYardsProp.prop, rec: 'under'}
+          // tempSuggestedPropsArray.push(recObject)
+
+          // player.recsObject = {...player.recsObject, ppPYU: {site: 'pp', prop: 'Pass Yards', propValue: player.ppPassYardsProp.prop, rec: 'under'}}
+
+          player.propsRecs = `${player.propsRecs} -- Under PP Pass Yards of ${player.ppPassYardsProp.prop}`
+        }
+        if(player.ppPassYardsProp.isOverRecomended) {
+          // console.log(player.name)
+          
+
+          // let recObject = {site: 'pp', prop: 'Pass Yards', propValue: player.ppPassYardsProp.prop, rec: 'over'}
+          // tempSuggestedPropsArray.push(recObject)
+
+          // player.recsObject = {...player.recsObject, ppPYO: {site: 'pp', prop: 'Pass Yards', propValue: player.ppPassYardsProp.prop, rec: 'over'}}
+
+          player.propsRecs = `${player.propsRecs} -- Over PP Pass Yards of ${player.ppPassYardsProp.prop}`
+        }
+        // Pass TDs
+        if(player.udPassTDsProp.isUnderRecomended) {
+          // console.log(player.name)
+          
+
+          // let recObject = {site: 'ud', prop: 'Pass TDs', propValue: player.udPassTDsProp.prop, rec: 'under'}
+          // tempSuggestedPropsArray.push(recObject)
+
+          // player.recsObject = {...player.recsObject, udPTU: {site: 'ud', prop: 'Pass TDs', propValue: player.udPassTDsProp.prop, rec: 'under'}}
+
+          player.propsRecs = `${player.propsRecs} -- Under UD Pass TDs of ${player.udPassTDsProp.prop}`
+
+        }
+        if(player.udPassTDsProp.isOverRecomended) {
+          // console.log(player.name)
+          
+
+          // let recObject = {site: 'ud', prop: 'Pass TDs', propValue: player.udPassTDsProp.prop, rec: 'over'}
+          // tempSuggestedPropsArray.push(recObject)
+
+          // player.recsObject = {...player.recsObject, udPTO: {site: 'ud', prop: 'Pass TDs', propValue: player.udPassTDsProp.prop, rec: 'over'}}
+
+          player.propsRecs = `${player.propsRecs} -- Over UD Pass TDs of ${player.udPassTDsProp.prop}`
+        }
+        if(player.ppPassTDsProp.isUnderRecomended) {
+          // console.log(player.name)
+          
+
+          // let recObject = {site: 'pp', prop: 'Pass TDs', propValue: player.ppPassTDsProp.prop, rec: 'under'}
+          // tempSuggestedPropsArray.push(recObject)
+
+          // player.recsObject = {...player.recsObject, ppPTU: {site: 'pp', prop: 'Pass TDs', propValue: player.ppPassTDsProp.prop, rec: 'under'}}
+
+          player.propsRecs = `${player.propsRecs} -- Under PP Pass TDs of ${player.ppPassTDsProp.prop}`
+        }
+        if(player.ppPassTDsProp.isOverRecomended) {
+          // console.log(player.name)
+          
+
+          // let recObject = {site: 'pp', prop: 'Pass TDs', propValue: player.ppPassTDsProp.prop, rec: 'over'}
+          // tempSuggestedPropsArray.push(recObject)
+
+          // player.recsObject = {...player.recsObject, ppPTO: {site: 'pp', prop: 'Pass TDs', propValue: player.ppPassTDsProp.prop, rec: 'over'}}
+
+          player.propsRecs = `${player.propsRecs} -- Over PP Pass TDs of ${player.ppPassTDsProp.prop}`
+        }
+        // Rush Yards
+        if(player.udRushYardsProp.isUnderRecomended) {
+          // console.log(player.name)
+          // let recObject = {site: 'ud', prop: 'Rush Yards', propValue: player.udRushYardsProp.prop, rec: 'under'}
+          // tempSuggestedPropsArray.push(recObject)
+
+          // player.recsObject = {...player.recsObject, udRYU: {site: 'ud', prop: 'Rush Yards', propValue: player.udRushYardsProp.prop, rec: 'under'}}
+
+          player.propsRecs = `${player.propsRecs} -- Under UD Rush Yards of ${player.udRushYardsProp.prop}`
+        }
+        if(player.udRushYardsProp.isOverRecomended) {
+          // console.log(player.name)
+          
+
+          // let recObject = {site: 'ud', prop: 'Rush Yards', propValue: player.udRushYardsProp.prop, rec: 'over'}
+          // tempSuggestedPropsArray.push(recObject)
+
+          // player.recsObject = {...player.recsObject, udRYO: {site: 'ud', prop: 'Rush Yards', propValue: player.udRushYardsProp.prop, rec: 'over'}}
+
+          player.propsRecs = `${player.propsRecs} -- Over UD Rush Yards of ${player.udRushYardsProp.prop}`
+        }
+        if(player.ppRushYardsProp.isUnderRecomended) {
+          // console.log(player.name)
+          
+
+          // let recObject = {site: 'pp', prop: 'Rush Yards', propValue: player.ppRushYardsProp.prop, rec: 'under'}
+          // tempSuggestedPropsArray.push(recObject)
+
+          // player.recsObject = {...player.recsObject, ppRYU: {site: 'pp', prop: 'Rush Yards', propValue: player.ppRushYardsProp.prop, rec: 'under'}}
+
+          player.propsRecs = `${player.propsRecs} -- Under PP Rush Yards of ${player.ppRushYardsProp.prop}`
+        }
+        if(player.ppRushYardsProp.isOverRecomended) {
+          // console.log(player.name)
+          
+
+          // let recObject = {site: 'pp', prop: 'Rush Yards', propValue: player.ppRushYardsProp.prop, rec: 'over'}
+          // tempSuggestedPropsArray.push(recObject)
+
+          // player.recsObject = {...player.recsObject, ppRYO: {site: 'pp', prop: 'Rush Yards', propValue: player.ppRushYardsProp.prop, rec: 'over'}}
+
+          player.propsRecs = `${player.propsRecs} -- Over PP Rush Yards of: ${player.ppRushYardsProp.prop}`
+        }
+        // Pass Plus Rush Yards
+        if(player.udPassPlusRushYardsProp.isUnderRecomended) {
+          // console.log(player.name)
+        
+
+          // let recObject = {site: 'ud', prop: 'Pass Plus Rush Yards', propValue: player.udPassPlusRushYardsProp.prop, rec: 'under'}
+          // tempSuggestedPropsArray.push(recObject)
+
+          // player.recsObject = {...player.recsObject, udPYPRYU: {site: 'ud', prop: 'Pass Plus Rush Yards', propValue: player.udPassPlusRushYardsProp.prop, rec: 'under'}}
+
+          player.propsRecs = `${player.propsRecs} -- Under UD Pass Plus Rush Yards of ${player.udPassPlusRushYardsProp.prop}`
+        }
+        if(player.udPassPlusRushYardsProp.isOverRecomended) {
+          // console.log(player.name)
+         
+
+          // let recObject = {site: 'ud', prop: 'Pass Plus Rush Yards', propValue: player.udPassPlusRushYardsProp.prop, rec: 'over'}
+          // tempSuggestedPropsArray.push(recObject)
+
+          // player.recsObject = {...player.recsObject, udPYPRYO: {site: 'ud', prop: 'Pass Plus Rush Yards', propValue: player.udPassPlusRushYardsProp.prop, rec: 'over'}}
+
+          player.propsRecs = `${player.propsRecs} -- Over UD Pass Plus Rush Yards of ${player.udPassPlusRushYardsProp.prop}`
+        }
+        if(player.ppPassPlusRushYardsProp.isUnderRecomended) {
+          // console.log(player.name)
+          
+
+          // let recObject = {site: 'pp', prop: 'Pass Plus Rush Yards', propValue: player.ppPassPlusRushYardsProp.prop, rec: 'under'}
+          // tempSuggestedPropsArray.push(recObject)
+
+          // player.recsObject = {...player.recsObject, ppPYPRYU: {site: 'pp', prop: 'Pass Plus Rush Yards', propValue: player.ppPassPlusRushYardsProp.prop, rec: 'under'}}
+
+          player.propsRecs = `${player.propsRecs} -- Under PP Pass Plus Rush Yards of ${player.ppPassPlusRushYardsProp.prop}`
+        }
+        if(player.ppPassPlusRushYardsProp.isOverRecomended) {
+          // console.log(player.name)
+           
+
+          // let recObject = {site: 'pp', prop: 'Pass Plus Rush Yards', propValue: player.ppPassPlusRushYardsProp.prop, rec: 'over'}
+          // tempSuggestedPropsArray.push(recObject)
+
+          // player.recsObject = {...player.recsObject, udPYPRYO: {site: 'pp', prop: 'Pass Plus Rush Yards', propValue: player.ppPassPlusRushYardsProp.prop, rec: 'over'}}
+
+          player.propsRecs = `${player.propsRecs} -- Over PP Pass Plus Rush Yards of ${player.ppPassPlusRushYardsProp.prop}`
+        }
+        // Fantasy Score
+        if(player.udFantasyScoreProp.isUnderRecomended) {
+          // console.log(player.name)
+          
+
+          // let recObject = {site: 'ud', prop: 'Fantasy Score', propValue: player.udFantasyScoreProp.prop, rec: 'under'}
+          // tempSuggestedPropsArray.push(recObject)
+
+          // player.recsObject = {...player.recsObject, udFSU: {site: 'ud', prop: 'Fantasy Score', propValue: player.udFantasyScoreProp.prop, rec: 'under'}}
+
+          player.propsRecs = `${player.propsRecs} -- Under UD Fantasy Score of ${player.udFantasyScoreProp.prop}`
+        }
+        if(player.udFantasyScoreProp.isOverRecomended) {
+          // console.log(player.name)
+
+
+          
+
+          // let recObject = {site: 'ud', prop: 'Fantasy Score', propValue: player.udFantasyScoreProp.prop, rec: 'over'}
+          // tempSuggestedPropsArray.push(recObject)
+
+          // player.recsObject = {...player.recsObject, udFSO: {site: 'ud', prop: 'Fantasy Score', propValue: player.udFantasyScoreProp.prop, rec: 'over'}}
+
+          player.propsRecs = `${player.propsRecs} -- Over UD Fantasy Score of ${player.udFantasyScoreProp.prop}`
+        }
+        if(player.ppFantasyScoreProp.isUnderRecomended) {
+          // console.log(player.name)
+          
+          // let recObject = {site: 'pp', prop: 'Fantasy Score', propValue: player.ppFantasyScoreProp.prop, rec: 'under'}
+          // tempSuggestedPropsArray.push(recObject)
+
+          // player.recsObject = {...player.recsObject, ppFSU: {site: 'pp', prop: 'Fantasy Score', propValue: player.ppFantasyScoreProp.prop, rec: 'under'}}
+
+          player.propsRecs = `${player.propsRecs} -- Under PP Fantasy Score of ${player.ppFantasyScoreProp.prop}`
+        }
+        if(player.ppFantasyScoreProp.isOverRecomended) {
+          // console.log(player.name)
+         
+
+          // let recObject = {site: 'pp', prop: 'Fantasy Score', propValue: player.ppFantasyScoreProp.prop, rec: 'over'}
+          // tempSuggestedPropsArray.push(recObject)
+
+          // player.recsObject = {...player.recsObject, ppFSO: {site: 'pp', prop: 'Fantasy Score', propValue: player.ppFantasyScoreProp.prop, rec: 'over'}}
+
+          player.propsRecs = `${player.propsRecs} -- Over PP Fantasy Score of ${player.ppFantasyScoreProp.prop}`
+        }
+      }
+
+      //
+        // player.recProps = tempSuggestedPropsArray
+        // console.log(player)
+      
+      
     });
 
     propsrbData.forEach((player) => {
@@ -382,7 +709,7 @@ let superFlexArray = tempSuperFlexArray.sort(halfCompare);
 // console.log(superFlexArray);
 
 qbCSVArray = qbProjectionArray.map(obj => {
-  // console.log(obj.name)
+  // console.log(obj)
   return {
     name: obj.name,
     team: obj.team,
@@ -397,6 +724,7 @@ qbCSVArray = qbProjectionArray.map(obj => {
     appProjQBRushTDs: obj.appProjQBRushTDs,
     astroQBProjection: obj.astroQBProjection,
     astroSixPtTDQBProjection: obj.astroSixPtTDQBProjection,
+    recProps: obj.propsRecs
   };
 });
 
@@ -511,7 +839,7 @@ function arrayToCSV(array) {
 
   try {
     const csv = parse(array, opts);
-    fs.writeFileSync('week12-24-superFlexHalfProjectionArray.csv', csv);
+    fs.writeFileSync('week12-24-testQBHalfProjectionArray.csv', csv);
     console.log('CSV file successfully created');
   } catch (err) {
     console.error(err);
