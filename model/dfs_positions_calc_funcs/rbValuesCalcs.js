@@ -2509,6 +2509,7 @@ async function propsData() {
             udCarriesProp,
             ppCarriesProp,
             udRushYardsProp,
+            ppRushYardsProp,
             udRushTDsProp,
             ppRushTDsProp,
             udReceptionsProp,
@@ -2543,6 +2544,7 @@ async function propsData() {
             this.udCarriesProp = udCarriesProp;
             this.ppCarriesProp = ppCarriesProp;
             this.udRushYardsProp = udRushYardsProp;
+            this.ppRushYardsProp = ppRushYardsProp;
             this.udRushTDsProp = udRushTDsProp;   
             this.ppRushTDsProp = ppRushTDsProp;
             this.udReceptionsProp = udReceptionsProp;
@@ -2583,6 +2585,7 @@ async function propsData() {
           rb.udCarriesProp,
           rb.ppCarriesProp,
           rb.udRushYardsProp,
+          rb.ppRushYardsProp,
           rb.udRushTDsProp, 
           rb.ppRushTDsProp,
           rb.udReceptionsProp,

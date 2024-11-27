@@ -138,352 +138,511 @@ async function runQBProspectModel() {
   }
 }
 
+
+async function qbFunction() {
+  const propsqbData = await propsQBData();
+  
+
+  propsqbData.forEach((player) => {
+      try {
+    // if(player.name === 'Baker Mayfield' || player.name === 'Drake Maye') {
+    //   // console.log(player)
+    // }
+      // let tempSuggestedPropsArray = [];
+      // player.recsObject = {}
+      player.propsRecs = ''
+      // console.log( player);
+      if(player.name) {
+
+        // pass attempts
+        // completions
+        // pass yards
+        // pass TDs
+        // INTs
+        // rush attempts
+        // rush yards
+        // rush TDs
+        // targets
+        // receptions
+        // receiving yards
+        // receiving TDs
+        // half fantasy points
+        // full fantasy points
+        // recommended props
+
+       
+
+        // console.log(player)
+
+      //Pass Attempts
+      if(player.udPassAttemptsProp.isUnderRecomended) {
+        // console.log(player.name)
+        
+        
+        player.propsRecs = `${player.propsRecs} -- Under UD Pass Attempts of ${player.udPassAttemptsProp.prop}`
+      }
+      if(player.udPassAttemptsProp.isOverRecomended) {
+        // console.log(player.name)
+        
+
+        player.propsRecs = `${player.propsRecs} -- Over UD Pass Attempts of ${player.udPassAttemptsProp.prop}`
+      }
+      if(player.ppPassAttemptsProp.isUnderRecomended) {
+        // console.log(player.name)
+        
+
+        player.propsRecs = `${player.propsRecs} -- Under PP Pass Attempts of ${player.ppPassAttemptsProp.prop}`
+      }
+      if(player.ppPassAttemptsProp.isOverRecomended) {
+        // console.log(player.name)
+
+
+        player.propsRecs = `${player.propsRecs} -- Over PP Pass Attempts of ${player.ppPassAttemptsProp.prop}`
+      }
+      //Completions
+      if(player.udPassCompletionsProp.isUnderRecomended) {
+        // console.log(player.name)
+
+        player.propsRecs = `${player.propsRecs} -- Under UD Completions of ${player.udPassCompletionsProp.prop}`
+      }
+      if(player.udPassCompletionsProp.isOverRecomended) {
+        // console.log(player.name)
+
+        player.propsRecs = `${player.propsRecs} -- Over UD Completions of ${player.udPassCompletionsProp.prop}`
+       
+      }
+      if(player.ppPassCompletionsProp.isUnderRecomended) {
+        // console.log(player.name)
+
+        player.propsRecs = `${player.propsRecs} -- Under PP Completions of ${player.ppPassCompletionsProp.prop}`
+      }
+      if(player.ppPassCompletionsProp.isOverRecomended) {
+        // console.log(player.name)
+
+        player.propsRecs = `${player.propsRecs} -- Over PP Completions of ${player.ppPassCompletionsProp.prop}`
+      }
+      // Pass Yards
+      if(player.udPassYardsProp.isUnderRecomended) {
+        // console.log(player.name)
+
+        player.propsRecs = `${player.propsRecs} -- Under UD Pass Yards of ${player.udPassYardsProp.prop}`
+      }
+      if(player.udPassYardsProp.isOverRecomended) {
+        // console.log(player.name)
+
+
+        player.propsRecs = `${player.propsRecs} -- Over UD Pass Yards of ${player.udPassYardsProp.prop}`
+      }
+      if(player.ppPassYardsProp.isUnderRecomended) {
+        // console.log(player.name)
+        
+
+        player.propsRecs = `${player.propsRecs} -- Under PP Pass Yards of ${player.ppPassYardsProp.prop}`
+      }
+      if(player.ppPassYardsProp.isOverRecomended) {
+        // console.log(player.name)
+  
+
+        player.propsRecs = `${player.propsRecs} -- Over PP Pass Yards of ${player.ppPassYardsProp.prop}`
+      }
+      // Pass TDs
+      if(player.udPassTDsProp.isUnderRecomended) {
+        // console.log(player.name)
+
+
+        player.propsRecs = `${player.propsRecs} -- Under UD Pass TDs of ${player.udPassTDsProp.prop}`
+
+      }
+      if(player.udPassTDsProp.isOverRecomended) {
+        // console.log(player.name)
+
+
+        player.propsRecs = `${player.propsRecs} -- Over UD Pass TDs of ${player.udPassTDsProp.prop}`
+      }
+      if(player.ppPassTDsProp.isUnderRecomended) {
+        // console.log(player.name)
+
+
+        player.propsRecs = `${player.propsRecs} -- Under PP Pass TDs of ${player.ppPassTDsProp.prop}`
+      }
+      if(player.ppPassTDsProp.isOverRecomended) {
+        // console.log(player.name)
+
+        player.propsRecs = `${player.propsRecs} -- Over PP Pass TDs of ${player.ppPassTDsProp.prop}`
+      }
+      // Rush Yards
+      if(player.udRushYardsProp.isUnderRecomended) {
+        // console.log(player.name)
+
+        player.propsRecs = `${player.propsRecs} -- Under UD Rush Yards of ${player.udRushYardsProp.prop}`
+      }
+      if(player.udRushYardsProp.isOverRecomended) {
+        // console.log(player.name)
+
+
+        player.propsRecs = `${player.propsRecs} -- Over UD Rush Yards of ${player.udRushYardsProp.prop}`
+      }
+      if(player.ppRushYardsProp.isUnderRecomended) {
+        // console.log(player.name)
+        
+
+
+        player.propsRecs = `${player.propsRecs} -- Under PP Rush Yards of ${player.ppRushYardsProp.prop}`
+      }
+      if(player.ppRushYardsProp.isOverRecomended) {
+        // console.log(player.name)
+        
+
+
+        player.propsRecs = `${player.propsRecs} -- Over PP Rush Yards of: ${player.ppRushYardsProp.prop}`
+      }
+      // Pass Plus Rush Yards
+      if(player.udPassPlusRushYardsProp.isUnderRecomended) {
+        // console.log(player.name)
+
+
+        player.propsRecs = `${player.propsRecs} -- Under UD Pass Plus Rush Yards of ${player.udPassPlusRushYardsProp.prop}`
+      }
+      if(player.udPassPlusRushYardsProp.isOverRecomended) {
+        // console.log(player.name)
+ 
+
+        player.propsRecs = `${player.propsRecs} -- Over UD Pass Plus Rush Yards of ${player.udPassPlusRushYardsProp.prop}`
+      }
+      if(player.ppPassPlusRushYardsProp.isUnderRecomended) {
+        // console.log(player.name)
+
+
+        player.propsRecs = `${player.propsRecs} -- Under PP Pass Plus Rush Yards of ${player.ppPassPlusRushYardsProp.prop}`
+      }
+      if(player.ppPassPlusRushYardsProp.isOverRecomended) {
+        // console.log(player.name)
+
+
+        player.propsRecs = `${player.propsRecs} -- Over PP Pass Plus Rush Yards of ${player.ppPassPlusRushYardsProp.prop}`
+      }
+      // Fantasy Score
+      if(player.udFantasyScoreProp.isUnderRecomended) {
+        // console.log(player.name)
+
+
+        player.propsRecs = `${player.propsRecs} -- Under UD Fantasy Score of ${player.udFantasyScoreProp.prop}`
+      }
+      if(player.udFantasyScoreProp.isOverRecomended) {
+        // console.log(player.name)
+
+
+        player.propsRecs = `${player.propsRecs} -- Over UD Fantasy Score of ${player.udFantasyScoreProp.prop}`
+      }
+      if(player.ppFantasyScoreProp.isUnderRecomended) {
+        // console.log(player.name)
+
+
+        player.propsRecs = `${player.propsRecs} -- Under PP Fantasy Score of ${player.ppFantasyScoreProp.prop}`
+      }
+      if(player.ppFantasyScoreProp.isOverRecomended) {
+        // console.log(player.name)
+
+
+        player.propsRecs = `${player.propsRecs} -- Over PP Fantasy Score of ${player.ppFantasyScoreProp.prop}`
+      }
+    }
+
+    // console.log(player)
+
+    player.pos = "QB"
+    
+
+    player.passAttempts = player.appProjPassAttempts ? player.appProjPassAttempts : 0
+    player.completions = player.appProjCompletions ? player.appProjCompletions : 0
+    player.passingYards = player.appProjPassingYards ? player.appProjPassingYards : 0
+    player.passTDs = player.appProjPassTDs ? player.appProjPassTDs : 0
+    player.INTs = player.appProjINTs ? player.appProjINTs : 0
+    player.carries = player.appProjQBRushAttempts
+    player.rushYards = player.appProjQBRushYards
+    player.rushTDs = player.appProjQBRushTDs
+    player.receptions = 0
+    player.receivingYards = 0
+    player.receivingTDs = 0
+    player.halfFantasyPoints = player.astroQBProjection
+    player.fullFantasyPoints = player.astroQBProjection
+
+    //
+      
+      // console.log(player)
+
+  //     name: obj.name,
+  // pos: obj.pos,
+  // team: obj.team,
+  // PassAttempts: obj.passAttempts,
+  // Completions: obj.completions,
+  // PassingYards: obj.passingYards,
+  // PassTDs: obj.passTDs,
+  // INTs: obj.INTs,
+  // carries: obj.rushAttempts,
+  // rushYards: obj.rushYards,
+  // rushTDs: obj.rushTDs,
+  // receptions: obj.receptions,
+  // receivingYards: obj.receivingYards,
+  // receivingTDs: obj.receivingTDs,
+  // halfFantasyPoints: obj.halfFantasyPoints,
+  // fullFantasyPoints: obj.fullFantasyPoints,
+  // recProps: obj.propsRecs
+  // console.log(propsqbData)
+  
+} catch (error) {
+  console.error('Error in qbFunction:', error);
+  return []; // Return empty array if there's an error
+}
+
+  });
+  return propsqbData;
+  }
+
+
+
 const rbData = []
 
 async function someFunction() {
   try {
-    const propsqbData = await propsQBData();
+    
     const propsrbData = await propsRBData();
   
-    propsqbData.forEach((player) => {
-      
-      if(player.name === 'Baker Mayfield' || player.name === 'Drake Maye') {
-        // console.log(player)
-      }
-        let tempSuggestedPropsArray = [];
-        player.recsObject = {}
-        player.propsRecs = ''
-        // console.log( player);
-        if(player.name) {
-        //Pass Attempts
-        if(player.udPassAttemptsProp.isUnderRecomended) {
-          // console.log(player.name)
-          
-          // let recObject = {site: 'ud', prop: 'Pass Attempts', propValue: player.udPassAttemptsProp.prop, rec: 'under'}
-          
-          // tempSuggestedPropsArray.push(recObject)
-          // player.recsObject = {...player.recsObject, udPAU: {site: 'ud', prop: 'Pass Attempts', propValue: player.udPassAttemptsProp.prop, rec: 'under'}}
-
-          player.propsRecs = `${player.propsRecs} -- Under UD Pass Attempts of ${player.udPassAttemptsProp.prop}`
-        }
-        if(player.udPassAttemptsProp.isOverRecomended) {
-          // console.log(player.name)
-          
-          // let recObject = {site: 'ud', prop: 'Pass Attempts', propValue: player.udPassAttemptsProp.prop, rec: 'over'}
-          // tempSuggestedPropsArray.push(recObject)
-
-          // player.recsObject = {...player.recsObject, udPAO: {site: 'ud', prop: 'Pass Attempts', propValue: player.udPassAttemptsProp.prop, rec: 'over'}}
-
-          player.propsRecs = `${player.propsRecs} -- Over UD Pass Attempts of ${player.udPassAttemptsProp.prop}`
-        }
-        if(player.ppPassAttemptsProp.isUnderRecomended) {
-          // console.log(player.name)
-          
-          // let recObject = {site: 'pp', prop: 'Pass Attempts', propValue: player.ppPassAttemptsProp.prop, rec: 'under'}
-          // tempSuggestedPropsArray.push(recObject)
-
-          // player.recsObject = {...player.recsObject, ppPAU: {site: 'pp', prop: 'Pass Attempts', propValue: player.ppPassAttemptsProp.prop, rec: 'under'}}
-
-          player.propsRecs = `${player.propsRecs} -- Under PP Pass Attempts of ${player.ppPassAttemptsProp.prop}`
-        }
-        if(player.ppPassAttemptsProp.isOverRecomended) {
-          // console.log(player.name)
-          
-          // let recObject = {site: 'pp', prop: 'Pass Attempts', propValue: player.ppPassAttemptsProp.prop, rec: 'over'}
-          // tempSuggestedPropsArray.push(recObject)
-
-          // player.recsObject = {...player.recsObject, ppPAO: {site: 'pp', prop: 'Pass Attempts', propValue: player.ppPassAttemptsProp.prop, rec: 'over'}}
-
-          player.propsRecs = `${player.propsRecs} -- Over PP Pass Attempts of ${player.ppPassAttemptsProp.prop}`
-        }
-        //Completions
-        if(player.udPassCompletionsProp.isUnderRecomended) {
-          // console.log(player.name)
-          
-          // let recObject = {site: 'ud', prop: 'Completions', propValue: player.udPassCompletionsProp.prop, rec: 'under'}
-
-          // tempSuggestedPropsArray.push(recObject)
-
-          // player.recsObject = {...player.recsObject, udPCU: {site: 'ud', prop: 'Completions', propValue: player.udPassCompletionsProp.prop, rec: 'under'}}
-
-          player.propsRecs = `${player.propsRecs} -- Under UD Completions of ${player.udPassCompletionsProp.prop}`
-        }
-        if(player.udPassCompletionsProp.isOverRecomended) {
-          // console.log(player.name)
-          
-          // let recObject = {site: 'ud', prop: 'Completions', propValue: player.udPassCompletionsProp.prop, rec: 'over'}
-
-          // tempSuggestedPropsArray.push(recObject)
-
-          // player.recsObject = {...player.recsObject, udPCO: {site: 'ud', prop: 'Completions', propValue: player.udPassCompletionsProp.prop, rec: 'over'}}
-
-          player.propsRecs = `${player.propsRecs} -- Over UD Completions of ${player.udPassCompletionsProp.prop}`
-         
-        }
-        if(player.ppPassCompletionsProp.isUnderRecomended) {
-          // console.log(player.name)
-          
-
-          // let recObject = {site: 'pp', prop: 'Completions', propValue: player.ppPassCompletionsProp.prop, rec: 'under'}
-
-          // tempSuggestedPropsArray.push(recObject)
-
-          // player.recsObject = {...player.recsObject, ppPCU: {site: 'pp', prop: 'Completions', propValue: player.ppPassCompletionsProp.prop, rec: 'under'}}
-
-          player.propsRecs = `${player.propsRecs} -- Under PP Completions of ${player.ppPassCompletionsProp.prop}`
-        }
-        if(player.ppPassCompletionsProp.isOverRecomended) {
-          // console.log(player.name)
-         
-
-          // let recObject = {site: 'pp', prop: 'Completions', propValue: player.ppPassCompletionsProp.prop, rec: 'over'}
-
-          // tempSuggestedPropsArray.push(recObject)
-
-          // player.recsObject = {...player.recsObject, ppPCO: {site: 'pp', prop: 'Completions', propValue: player.ppPassCompletionsProp.prop, rec: 'over'}}
-
-          player.propsRecs = `${player.propsRecs} -- Over PP Completions of ${player.ppPassCompletionsProp.prop}`
-        }
-        // Pass Yards
-        if(player.udPassYardsProp.isUnderRecomended) {
-          // console.log(player.name)
-         
-
-          // let recObject = {site: 'ud', prop: 'Pass Yards', propValue: player.udPassYardsProp.prop, rec: 'under'}
-          // tempSuggestedPropsArray.push(recObject)
-
-          // player.recsObject = {...player.recsObject, udPYU: {site: 'ud', prop: 'Pass Yards', propValue: player.udPassYardsProp.prop, rec: 'under'}}
-
-          player.propsRecs = `${player.propsRecs} -- Under UD Pass Yards of ${player.udPassYardsProp.prop}`
-        }
-        if(player.udPassYardsProp.isOverRecomended) {
-          // console.log(player.name)
-          
-
-          // let recObject = {site: 'ud', prop: 'Pass Yards', propValue: player.udPassYardsProp.prop, rec: 'over'}
-          // tempSuggestedPropsArray.push(recObject)
-
-          // player.recsObject = {...player.recsObject, udPYO: {site: 'ud', prop: 'Pass Yards', propValue: player.udPassYardsProp.prop, rec: 'over'}}
-
-          player.propsRecs = `${player.propsRecs} -- Over UD Pass Yards of ${player.udPassYardsProp.prop}`
-        }
-        if(player.ppPassYardsProp.isUnderRecomended) {
-          // console.log(player.name)
-          
-
-          // let recObject = {site: 'pp', prop: 'Pass Yards', propValue: player.ppPassYardsProp.prop, rec: 'under'}
-          // tempSuggestedPropsArray.push(recObject)
-
-          // player.recsObject = {...player.recsObject, ppPYU: {site: 'pp', prop: 'Pass Yards', propValue: player.ppPassYardsProp.prop, rec: 'under'}}
-
-          player.propsRecs = `${player.propsRecs} -- Under PP Pass Yards of ${player.ppPassYardsProp.prop}`
-        }
-        if(player.ppPassYardsProp.isOverRecomended) {
-          // console.log(player.name)
-          
-
-          // let recObject = {site: 'pp', prop: 'Pass Yards', propValue: player.ppPassYardsProp.prop, rec: 'over'}
-          // tempSuggestedPropsArray.push(recObject)
-
-          // player.recsObject = {...player.recsObject, ppPYO: {site: 'pp', prop: 'Pass Yards', propValue: player.ppPassYardsProp.prop, rec: 'over'}}
-
-          player.propsRecs = `${player.propsRecs} -- Over PP Pass Yards of ${player.ppPassYardsProp.prop}`
-        }
-        // Pass TDs
-        if(player.udPassTDsProp.isUnderRecomended) {
-          // console.log(player.name)
-          
-
-          // let recObject = {site: 'ud', prop: 'Pass TDs', propValue: player.udPassTDsProp.prop, rec: 'under'}
-          // tempSuggestedPropsArray.push(recObject)
-
-          // player.recsObject = {...player.recsObject, udPTU: {site: 'ud', prop: 'Pass TDs', propValue: player.udPassTDsProp.prop, rec: 'under'}}
-
-          player.propsRecs = `${player.propsRecs} -- Under UD Pass TDs of ${player.udPassTDsProp.prop}`
-
-        }
-        if(player.udPassTDsProp.isOverRecomended) {
-          // console.log(player.name)
-          
-
-          // let recObject = {site: 'ud', prop: 'Pass TDs', propValue: player.udPassTDsProp.prop, rec: 'over'}
-          // tempSuggestedPropsArray.push(recObject)
-
-          // player.recsObject = {...player.recsObject, udPTO: {site: 'ud', prop: 'Pass TDs', propValue: player.udPassTDsProp.prop, rec: 'over'}}
-
-          player.propsRecs = `${player.propsRecs} -- Over UD Pass TDs of ${player.udPassTDsProp.prop}`
-        }
-        if(player.ppPassTDsProp.isUnderRecomended) {
-          // console.log(player.name)
-          
-
-          // let recObject = {site: 'pp', prop: 'Pass TDs', propValue: player.ppPassTDsProp.prop, rec: 'under'}
-          // tempSuggestedPropsArray.push(recObject)
-
-          // player.recsObject = {...player.recsObject, ppPTU: {site: 'pp', prop: 'Pass TDs', propValue: player.ppPassTDsProp.prop, rec: 'under'}}
-
-          player.propsRecs = `${player.propsRecs} -- Under PP Pass TDs of ${player.ppPassTDsProp.prop}`
-        }
-        if(player.ppPassTDsProp.isOverRecomended) {
-          // console.log(player.name)
-          
-
-          // let recObject = {site: 'pp', prop: 'Pass TDs', propValue: player.ppPassTDsProp.prop, rec: 'over'}
-          // tempSuggestedPropsArray.push(recObject)
-
-          // player.recsObject = {...player.recsObject, ppPTO: {site: 'pp', prop: 'Pass TDs', propValue: player.ppPassTDsProp.prop, rec: 'over'}}
-
-          player.propsRecs = `${player.propsRecs} -- Over PP Pass TDs of ${player.ppPassTDsProp.prop}`
-        }
-        // Rush Yards
-        if(player.udRushYardsProp.isUnderRecomended) {
-          // console.log(player.name)
-          // let recObject = {site: 'ud', prop: 'Rush Yards', propValue: player.udRushYardsProp.prop, rec: 'under'}
-          // tempSuggestedPropsArray.push(recObject)
-
-          // player.recsObject = {...player.recsObject, udRYU: {site: 'ud', prop: 'Rush Yards', propValue: player.udRushYardsProp.prop, rec: 'under'}}
-
-          player.propsRecs = `${player.propsRecs} -- Under UD Rush Yards of ${player.udRushYardsProp.prop}`
-        }
-        if(player.udRushYardsProp.isOverRecomended) {
-          // console.log(player.name)
-          
-
-          // let recObject = {site: 'ud', prop: 'Rush Yards', propValue: player.udRushYardsProp.prop, rec: 'over'}
-          // tempSuggestedPropsArray.push(recObject)
-
-          // player.recsObject = {...player.recsObject, udRYO: {site: 'ud', prop: 'Rush Yards', propValue: player.udRushYardsProp.prop, rec: 'over'}}
-
-          player.propsRecs = `${player.propsRecs} -- Over UD Rush Yards of ${player.udRushYardsProp.prop}`
-        }
-        if(player.ppRushYardsProp.isUnderRecomended) {
-          // console.log(player.name)
-          
-
-          // let recObject = {site: 'pp', prop: 'Rush Yards', propValue: player.ppRushYardsProp.prop, rec: 'under'}
-          // tempSuggestedPropsArray.push(recObject)
-
-          // player.recsObject = {...player.recsObject, ppRYU: {site: 'pp', prop: 'Rush Yards', propValue: player.ppRushYardsProp.prop, rec: 'under'}}
-
-          player.propsRecs = `${player.propsRecs} -- Under PP Rush Yards of ${player.ppRushYardsProp.prop}`
-        }
-        if(player.ppRushYardsProp.isOverRecomended) {
-          // console.log(player.name)
-          
-
-          // let recObject = {site: 'pp', prop: 'Rush Yards', propValue: player.ppRushYardsProp.prop, rec: 'over'}
-          // tempSuggestedPropsArray.push(recObject)
-
-          // player.recsObject = {...player.recsObject, ppRYO: {site: 'pp', prop: 'Rush Yards', propValue: player.ppRushYardsProp.prop, rec: 'over'}}
-
-          player.propsRecs = `${player.propsRecs} -- Over PP Rush Yards of: ${player.ppRushYardsProp.prop}`
-        }
-        // Pass Plus Rush Yards
-        if(player.udPassPlusRushYardsProp.isUnderRecomended) {
-          // console.log(player.name)
-        
-
-          // let recObject = {site: 'ud', prop: 'Pass Plus Rush Yards', propValue: player.udPassPlusRushYardsProp.prop, rec: 'under'}
-          // tempSuggestedPropsArray.push(recObject)
-
-          // player.recsObject = {...player.recsObject, udPYPRYU: {site: 'ud', prop: 'Pass Plus Rush Yards', propValue: player.udPassPlusRushYardsProp.prop, rec: 'under'}}
-
-          player.propsRecs = `${player.propsRecs} -- Under UD Pass Plus Rush Yards of ${player.udPassPlusRushYardsProp.prop}`
-        }
-        if(player.udPassPlusRushYardsProp.isOverRecomended) {
-          // console.log(player.name)
-         
-
-          // let recObject = {site: 'ud', prop: 'Pass Plus Rush Yards', propValue: player.udPassPlusRushYardsProp.prop, rec: 'over'}
-          // tempSuggestedPropsArray.push(recObject)
-
-          // player.recsObject = {...player.recsObject, udPYPRYO: {site: 'ud', prop: 'Pass Plus Rush Yards', propValue: player.udPassPlusRushYardsProp.prop, rec: 'over'}}
-
-          player.propsRecs = `${player.propsRecs} -- Over UD Pass Plus Rush Yards of ${player.udPassPlusRushYardsProp.prop}`
-        }
-        if(player.ppPassPlusRushYardsProp.isUnderRecomended) {
-          // console.log(player.name)
-          
-
-          // let recObject = {site: 'pp', prop: 'Pass Plus Rush Yards', propValue: player.ppPassPlusRushYardsProp.prop, rec: 'under'}
-          // tempSuggestedPropsArray.push(recObject)
-
-          // player.recsObject = {...player.recsObject, ppPYPRYU: {site: 'pp', prop: 'Pass Plus Rush Yards', propValue: player.ppPassPlusRushYardsProp.prop, rec: 'under'}}
-
-          player.propsRecs = `${player.propsRecs} -- Under PP Pass Plus Rush Yards of ${player.ppPassPlusRushYardsProp.prop}`
-        }
-        if(player.ppPassPlusRushYardsProp.isOverRecomended) {
-          // console.log(player.name)
-           
-
-          // let recObject = {site: 'pp', prop: 'Pass Plus Rush Yards', propValue: player.ppPassPlusRushYardsProp.prop, rec: 'over'}
-          // tempSuggestedPropsArray.push(recObject)
-
-          // player.recsObject = {...player.recsObject, udPYPRYO: {site: 'pp', prop: 'Pass Plus Rush Yards', propValue: player.ppPassPlusRushYardsProp.prop, rec: 'over'}}
-
-          player.propsRecs = `${player.propsRecs} -- Over PP Pass Plus Rush Yards of ${player.ppPassPlusRushYardsProp.prop}`
-        }
-        // Fantasy Score
-        if(player.udFantasyScoreProp.isUnderRecomended) {
-          // console.log(player.name)
-          
-
-          // let recObject = {site: 'ud', prop: 'Fantasy Score', propValue: player.udFantasyScoreProp.prop, rec: 'under'}
-          // tempSuggestedPropsArray.push(recObject)
-
-          // player.recsObject = {...player.recsObject, udFSU: {site: 'ud', prop: 'Fantasy Score', propValue: player.udFantasyScoreProp.prop, rec: 'under'}}
-
-          player.propsRecs = `${player.propsRecs} -- Under UD Fantasy Score of ${player.udFantasyScoreProp.prop}`
-        }
-        if(player.udFantasyScoreProp.isOverRecomended) {
-          // console.log(player.name)
-
-
-          
-
-          // let recObject = {site: 'ud', prop: 'Fantasy Score', propValue: player.udFantasyScoreProp.prop, rec: 'over'}
-          // tempSuggestedPropsArray.push(recObject)
-
-          // player.recsObject = {...player.recsObject, udFSO: {site: 'ud', prop: 'Fantasy Score', propValue: player.udFantasyScoreProp.prop, rec: 'over'}}
-
-          player.propsRecs = `${player.propsRecs} -- Over UD Fantasy Score of ${player.udFantasyScoreProp.prop}`
-        }
-        if(player.ppFantasyScoreProp.isUnderRecomended) {
-          // console.log(player.name)
-          
-          // let recObject = {site: 'pp', prop: 'Fantasy Score', propValue: player.ppFantasyScoreProp.prop, rec: 'under'}
-          // tempSuggestedPropsArray.push(recObject)
-
-          // player.recsObject = {...player.recsObject, ppFSU: {site: 'pp', prop: 'Fantasy Score', propValue: player.ppFantasyScoreProp.prop, rec: 'under'}}
-
-          player.propsRecs = `${player.propsRecs} -- Under PP Fantasy Score of ${player.ppFantasyScoreProp.prop}`
-        }
-        if(player.ppFantasyScoreProp.isOverRecomended) {
-          // console.log(player.name)
-         
-
-          // let recObject = {site: 'pp', prop: 'Fantasy Score', propValue: player.ppFantasyScoreProp.prop, rec: 'over'}
-          // tempSuggestedPropsArray.push(recObject)
-
-          // player.recsObject = {...player.recsObject, ppFSO: {site: 'pp', prop: 'Fantasy Score', propValue: player.ppFantasyScoreProp.prop, rec: 'over'}}
-
-          player.propsRecs = `${player.propsRecs} -- Over PP Fantasy Score of ${player.ppFantasyScoreProp.prop}`
-        }
-      }
-
-      //
-        // player.recProps = tempSuggestedPropsArray
-        // console.log(player)
-      
-      
-    });
+    
 
     propsrbData.forEach((player) => {
       // rbData.push(player)
       if(player.name === 'Kyren Williams' || player.name === 'Joe Mixon') {
         // console.log('RB:', player);
       }
-    });
+
+
+      //
+
+      player.propsRecs = ''
+        // console.log( player);
+        if(player.name) {
+
+          // pass attempts
+          // completions
+          // pass yards
+          // pass TDs
+          // INTs
+          // carris
+          // rush yards
+          // rush TDs
+          
+          // receptions
+          // receiving yards
+          // receiving TDs
+          // half fantasy points
+          // full fantasy points
+          // recommended props
+
+          player.pos = "RB"
+          player.PassAttempts = 0
+          player.Completions = 0
+          player.PassYards = 0
+          player.PassTDs = 0
+          player.INTs = 0
+          
+
+          // console.log(player)
+
+          //carries
+
+          if(player.udCarriesProp?.isUnderRecomended) {
+            // console.log(player.name)
+
+            player.propsRecs = `${player.propsRecs} -- Under UD Carries of ${player.udCarriesProp.prop}`
+          }
+          if(player.udCarriesProp?.isOverRecomended) {
+            // console.log(player.name)
+
+
+            player.propsRecs = `${player.propsRecs} -- Over UD Carries of ${player.udCarriesProp.prop}`
+          }
+          if(player.ppCarriesProp?.isUnderRecomended) {
+            // console.log(player.name)
+            
+
+
+            player.propsRecs = `${player.propsRecs} -- Under PP Carries of ${player.ppCarriesProp.prop}`
+          }
+          if(player.ppCarriesProp?.isOverRecomended) {
+            // console.log(player.name)
+            
+
+
+            player.propsRecs = `${player.propsRecs} -- Over PP Carries of: ${player.ppCarriesProp.prop}`
+          }
+          
+          
+
+        // Rush Yards
+        //
+        if(player.udRushYardsProp?.isUnderRecomended) {
+          // console.log(player.name)
+
+          player.propsRecs = `${player.propsRecs} -- Under UD Rush Yards of ${player.udRushYardsProp.prop}`
+        }
+        if(player.udRushYardsProp?.isOverRecomended) {
+          // console.log(player.name)
+
+
+          player.propsRecs = `${player.propsRecs} -- Over UD Rush Yards of ${player.udRushYardsProp.prop}`
+        }
+        if(player.ppRushYardsProp?.isUnderRecomended) {
+          // console.log(player.name)
+          
+
+
+          player.propsRecs = `${player.propsRecs} -- Under PP Rush Yards of ${player.ppRushYardsProp.prop}`
+        }
+        if(player.ppRushYardsProp?.isOverRecomended) {
+          // console.log(player.name)
+          
+
+
+          player.propsRecs = `${player.propsRecs} -- Over PP Rush Yards of: ${player.ppRushYardsProp.prop}`
+        }
+
+        //rush TDs
+        //
+        if(player.udRushTDsProp?.isUnderRecomended) {
+          // console.log(player.name) 
+
+
+          player.propsRecs = `${player.propsRecs} -- Under UD Rush TDs of ${player.udRushTDsProp.prop}`
+        }
+        if(player.udRushTDsProp?.isOverRecomended) {
+          // console.log(player.name)
+
+
+          player.propsRecs = `${player.propsRecs} -- Over UD Rush TDs of ${player.udRushTDsProp.prop}`
+        }
+        if(player.ppRushTDsProp?.isUnderRecomended) {
+          // console.log(player.name)
+
+
+          player.propsRecs = `${player.propsRecs} -- Under PP Rush TDs of ${player.ppRushTDsProp.prop}`
+        }
+        if(player.ppRushTDsProp?.isOverRecomended) {
+          // console.log(player.name)
+
+
+          player.propsRecs = `${player.propsRecs} -- Over PP Rush TDs of ${player.ppRushTDsProp.prop}`
+        }
+        
+        // receptions
+        //
+        if(player.udReceptionsProp?.isUnderRecomended) {
+          // console.log(player.name) 
+          player.propsRecs = `${player.propsRecs} -- Under UD Receptions of ${player.udReceptionsProp.prop}`
+        }
+        if(player.udReceptionsProp?.isOverRecomended) {
+          // console.log(player.name)
+          player.propsRecs = `${player.propsRecs} -- Over UD Receptions of ${player.udReceptionsProp.prop}`
+        }
+        if(player.ppReceptionsProp?.isUnderRecomended) {
+          // console.log(player.name)
+          player.propsRecs = `${player.propsRecs} -- Under PP Receptions of ${player.ppReceptionsProp.prop}`
+        }
+        if(player.ppReceptionsProp?.isOverRecomended) {
+          // console.log(player.name)
+          player.propsRecs = `${player.propsRecs} -- Over PP Receptions of ${player.ppReceptionsProp.prop}`
+        }
+
+        // receiving yards
+        //
+        if(player.udReceivingYardsProp?.isUnderRecomended) {
+          // console.log(player.name) 
+          player.propsRecs = `${player.propsRecs} -- Under UD Receiving Yards of ${player.udReceivingYardsProp.prop}`
+        }
+        if(player.udReceivingYardsProp?.isOverRecomended) {
+          // console.log(player.name)
+          player.propsRecs = `${player.propsRecs} -- Over UD Receiving Yards of ${player.udReceivingYardsProp.prop}`
+        }
+        if(player.ppReceivingYardsProp?.isUnderRecomended) {
+          // console.log(player.name)
+          player.propsRecs = `${player.propsRecs} -- Under PP Receiving Yards of ${player.ppReceivingYardsProp.prop}`
+        }
+        if(player.ppReceivingYardsProp?.isOverRecomended) {
+          // console.log(player.name)
+          player.propsRecs = `${player.propsRecs} -- Over PP Receiving Yards of ${player.ppReceivingYardsProp.prop}`
+        }
+
+        // receiving TDs
+        //
+        if(player.udReceivingTDsProp?.isUnderRecomended) {
+          // console.log(player.name) 
+          player.propsRecs = `${player.propsRecs} -- Under UD Receiving TDs of ${player.udReceivingTDsProp.prop}`
+        }
+        if(player.udReceivingTDsProp?.isOverRecomended) {
+          // console.log(player.name)
+          player.propsRecs = `${player.propsRecs} -- Over UD Receiving TDs of ${player.udReceivingTDsProp.prop}`
+        }
+        if(player.ppReceivingTDsProp?.isUnderRecomended) {
+          // console.log(player.name)
+          player.propsRecs = `${player.propsRecs} -- Under PP Receiving TDs of ${player.ppReceivingTDsProp.prop}`
+        }
+        if(player.ppReceivingTDsProp?.isOverRecomended) {
+          // console.log(player.name)
+          player.propsRecs = `${player.propsRecs} -- Over PP Receiving TDs of ${player.ppReceivingTDsProp.prop}`
+        }
+        
+        
+        // Fantasy Score
+        if(player.udFantasyScoreProp?.isUnderRecomended) {
+          // console.log(player.name)
+
+
+          player.propsRecs = `${player.propsRecs} -- Under UD Fantasy Score of ${player.udFantasyScoreProp.prop}`
+        }
+        if(player.udFantasyScoreProp?.isOverRecomended) {
+          // console.log(player.name)
+
+
+          player.propsRecs = `${player.propsRecs} -- Over UD Fantasy Score of ${player.udFantasyScoreProp.prop}`
+        }
+        if(player.ppFantasyScoreProp?.isUnderRecomended) {
+          // console.log(player.name)
+
+
+          player.propsRecs = `${player.propsRecs} -- Under PP Fantasy Score of ${player.ppFantasyScoreProp.prop}`
+        }
+        if(player.ppFantasyScoreProp?.isOverRecomended) {
+          // console.log(player.name)
+ 
+
+          player.propsRecs = `${player.propsRecs} -- Over PP Fantasy Score of ${player.ppFantasyScoreProp.prop}`
+        }
+      }
+
+      //
+
+      // console.log(player)
+
+      player.passAttempts =  0
+      player.completions =  0
+      player.passingYards =  0
+      player.passTDs =  0
+      player.INTs =  0
+      player.carries = player.appProjectedCarriesThisWeek ? player.appProjectedCarriesThisWeek : 0
+      player.rushYards = player.appProjectedrushYardsThisWeek ? player.appProjectedrushYardsThisWeek : 0
+      player.rushTDs = player.appProjectedrushTDsThisWeek ? player.appProjectedrushTDsThisWeek : 0
+      player.receptions = player.appProjectedreceptionsThisWeek ? player.appProjectedreceptionsThisWeek : 0
+      player.receivingYards = player.appProjectedrecYardsThisWeek ? player.appProjectedrecYardsThisWeek : 0
+      player.receivingTDs = player.appProjectedrecTDsThisWeek ? player.appProjectedrecTDsThisWeek : 0
+      player.halfFantasyPoints = player.astroHalfRBProjection ? player.astroHalfRBProjection : 0
+      player.fullFantasyPoints = player.astroFullRBProjection ? player.astroFullRBProjection : 0
+        
+        // console.log(player)
+
+
+
+      /// end RB's
+    }); // end propsrbData.forEach((player) => {
     
     return propsrbData;
   } catch (error) {
@@ -502,7 +661,251 @@ async function wrFunction() {
       if(player.name === 'Drake London' || player.name === 'Mike Evans') {
         // console.log('QB:', player);
       }
-    });
+
+      //
+      //
+
+      player.propsRecs = ''
+      // console.log( player);
+      if(player.name) {
+
+        // pass attempts
+        // completions
+        // pass yards
+        // pass TDs
+        // INTs
+        // carris
+        // rush yards
+        // rush TDs
+        
+        // receptions
+        // receiving yards
+        // receiving TDs
+        // half fantasy points
+        // full fantasy points
+        // recommended props
+
+        player.pos = "wr"
+        player.PassAttempts = 0
+        player.Completions = 0
+        player.PassYards = 0
+        player.PassTDs = 0
+        player.INTs = 0
+        
+
+        // console.log(player)
+
+        //carries
+
+        if(player.udCarriesProp?.isUnderRecomended) {
+          // console.log(player.name)
+
+          player.propsRecs = `${player.propsRecs} -- Under UD Carries of ${player.udCarriesProp.prop}`
+        }
+        if(player.udCarriesProp?.isOverRecomended) {
+          // console.log(player.name)
+
+
+          player.propsRecs = `${player.propsRecs} -- Over UD Carries of ${player.udCarriesProp.prop}`
+        }
+        if(player.ppCarriesProp?.isUnderRecomended) {
+          // console.log(player.name)
+          
+
+
+          player.propsRecs = `${player.propsRecs} -- Under PP Carries of ${player.ppCarriesProp.prop}`
+        }
+        if(player.ppCarriesProp?.isOverRecomended) {
+          // console.log(player.name)
+          
+
+
+          player.propsRecs = `${player.propsRecs} -- Over PP Carries of: ${player.ppCarriesProp.prop}`
+        }
+        
+        
+
+      // Rush Yards
+      //
+      if(player.udRushYardsProp?.isUnderRecomended) {
+        // console.log(player.name)
+
+        player.propsRecs = `${player.propsRecs} -- Under UD Rush Yards of ${player.udRushYardsProp.prop}`
+      }
+      if(player.udRushYardsProp?.isOverRecomended) {
+        // console.log(player.name)
+
+
+        player.propsRecs = `${player.propsRecs} -- Over UD Rush Yards of ${player.udRushYardsProp.prop}`
+      }
+      if(player.ppRushYardsProp?.isUnderRecomended) {
+        // console.log(player.name)
+        
+
+
+        player.propsRecs = `${player.propsRecs} -- Under PP Rush Yards of ${player.ppRushYardsProp.prop}`
+      }
+      if(player.ppRushYardsProp?.isOverRecomended) {
+        // console.log(player.name)
+        
+
+
+        player.propsRecs = `${player.propsRecs} -- Over PP Rush Yards of: ${player.ppRushYardsProp.prop}`
+      }
+
+      //rush TDs
+      //
+      if(player.udRushTDsProp?.isUnderRecomended) {
+        // console.log(player.name) 
+
+
+        player.propsRecs = `${player.propsRecs} -- Under UD Rush TDs of ${player.udRushTDsProp.prop}`
+      }
+      if(player.udRushTDsProp?.isOverRecomended) {
+        // console.log(player.name)
+
+
+        player.propsRecs = `${player.propsRecs} -- Over UD Rush TDs of ${player.udRushTDsProp.prop}`
+      }
+      if(player.ppRushTDsProp?.isUnderRecomended) {
+        // console.log(player.name)
+
+
+        player.propsRecs = `${player.propsRecs} -- Under PP Rush TDs of ${player.ppRushTDsProp.prop}`
+      }
+      if(player.ppRushTDsProp?.isOverRecomended) {
+        // console.log(player.name)
+
+
+        player.propsRecs = `${player.propsRecs} -- Over PP Rush TDs of ${player.ppRushTDsProp.prop}`
+      }
+      
+      // receptions
+      //
+      if(player.udReceptionsProp?.isUnderRecomended) {
+        // console.log(player.name) 
+        player.propsRecs = `${player.propsRecs} -- Under UD Receptions of ${player.udReceptionsProp.prop}`
+      }
+      if(player.udReceptionsProp?.isOverRecomended) {
+        // console.log(player.name)
+        player.propsRecs = `${player.propsRecs} -- Over UD Receptions of ${player.udReceptionsProp.prop}`
+      }
+      if(player.ppReceptionsProp?.isUnderRecomended) {
+        // console.log(player.name)
+        player.propsRecs = `${player.propsRecs} -- Under PP Receptions of ${player.ppReceptionsProp.prop}`
+      }
+      if(player.ppReceptionsProp?.isOverRecomended) {
+        // console.log(player.name)
+        player.propsRecs = `${player.propsRecs} -- Over PP Receptions of ${player.ppReceptionsProp.prop}`
+      }
+
+      // receiving yards
+      //
+      if(player.udReceivingYardsProp?.isUnderRecomended) {
+        // console.log(player.name) 
+        player.propsRecs = `${player.propsRecs} -- Under UD Receiving Yards of ${player.udReceivingYardsProp.prop}`
+      }
+      if(player.udReceivingYardsProp?.isOverRecomended) {
+        // console.log(player.name)
+        player.propsRecs = `${player.propsRecs} -- Over UD Receiving Yards of ${player.udReceivingYardsProp.prop}`
+      }
+      if(player.ppReceivingYardsProp?.isUnderRecomended) {
+        // console.log(player.name)
+        player.propsRecs = `${player.propsRecs} -- Under PP Receiving Yards of ${player.ppReceivingYardsProp.prop}`
+      }
+      if(player.ppReceivingYardsProp?.isOverRecomended) {
+        // console.log(player.name)
+        player.propsRecs = `${player.propsRecs} -- Over PP Receiving Yards of ${player.ppReceivingYardsProp.prop}`
+      }
+
+      // receiving TDs
+      //
+      if(player.udReceivingTDsProp?.isUnderRecomended) {
+        // console.log(player.name) 
+        player.propsRecs = `${player.propsRecs} -- Under UD Receiving TDs of ${player.udReceivingTDsProp.prop}`
+      }
+      if(player.udReceivingTDsProp?.isOverRecomended) {
+        // console.log(player.name)
+        player.propsRecs = `${player.propsRecs} -- Over UD Receiving TDs of ${player.udReceivingTDsProp.prop}`
+      }
+      if(player.ppReceivingTDsProp?.isUnderRecomended) {
+        // console.log(player.name)
+        player.propsRecs = `${player.propsRecs} -- Under PP Receiving TDs of ${player.ppReceivingTDsProp.prop}`
+      }
+      if(player.ppReceivingTDsProp?.isOverRecomended) {
+        // console.log(player.name)
+        player.propsRecs = `${player.propsRecs} -- Over PP Receiving TDs of ${player.ppReceivingTDsProp.prop}`
+      }
+
+      //rush plus recieving yards
+      //
+      if(player.udRushPlusReceivingYardsProp?.isUnderRecomended) {
+        // console.log(player.name) 
+        player.propsRecs = `${player.propsRecs} -- Under UD Rush Plus Receiving Yards of ${player.udRushPlusReceivingYardsProp.prop}`
+      }
+      if(player.udRushPlusReceivingYardsProp?.isOverRecomended) {
+        // console.log(player.name)
+        player.propsRecs = `${player.propsRecs} -- Over UD Rush Plus Receiving Yards of ${player.udRushPlusReceivingYardsProp.prop}`
+      }
+      if(player.ppRushPlusReceivingYardsProp?.isUnderRecomended) {
+        // console.log(player.name)
+        player.propsRecs = `${player.propsRecs} -- Under PP Rush Plus Receiving Yards of ${player.ppRushPlusReceivingYardsProp.prop}`
+      }
+      if(player.ppRushPlusReceivingYardsProp?.isOverRecomended) {
+        // console.log(player.name)
+        player.propsRecs = `${player.propsRecs} -- Over PP Rush Plus Receiving Yards of ${player.ppRushPlusReceivingYardsProp.prop}`
+      }
+      
+      
+      // Fantasy Score
+      if(player.udFantasyScoreProp?.isUnderRecomended) {
+        // console.log(player.name)
+
+
+        player.propsRecs = `${player.propsRecs} -- Under UD Fantasy Score of ${player.udFantasyScoreProp.prop}`
+      }
+      if(player.udFantasyScoreProp?.isOverRecomended) {
+        // console.log(player.name)
+
+
+        player.propsRecs = `${player.propsRecs} -- Over UD Fantasy Score of ${player.udFantasyScoreProp.prop}`
+      }
+      if(player.ppFantasyScoreProp?.isUnderRecomended) {
+        // console.log(player.name)
+
+
+        player.propsRecs = `${player.propsRecs} -- Under PP Fantasy Score of ${player.ppFantasyScoreProp.prop}`
+      }
+      if(player.ppFantasyScoreProp?.isOverRecomended) {
+        // console.log(player.name)
+
+
+        player.propsRecs = `${player.propsRecs} -- Over PP Fantasy Score of ${player.ppFantasyScoreProp.prop}`
+      }
+    }
+
+    //
+      
+      // console.log(player)
+
+      player.passAttempts =  0
+      player.completions =  0
+      player.passingYards =  0
+      player.passTDs =  0
+      player.INTs =  0
+      player.carries = player.appProjectedCarriesThisWeek ? player.appProjectedCarriesThisWeek : 0
+      player.rushYards = player.appProjectedrushYardsThisWeek ? player.appProjectedrushYardsThisWeek : 0
+      player.rushTDs = player.appProjectedrushTDsThisWeek ? player.appProjectedrushTDsThisWeek : 0
+      player.receptions = player.appProjectedreceptionsThisWeek ? player.appProjectedreceptionsThisWeek : 0
+      player.receivingYards = player.appProjectedrecYardsThisWeek ? player.appProjectedrecYardsThisWeek : 0
+      player.receivingTDs = player.appProjectedrecTDsThisWeek ? player.appProjectedrecTDsThisWeek : 0
+      player.halfFantasyPoints = player.astroHalfWRProjection ? player.astroHalfWRProjection : 0
+      player.fullFantasyPoints = player.astroFullWRProjection ? player.astroFullWRProjection : 0
+
+
+      // console.log(player)
+      // end WRs
+    }); // 
 
     
     
@@ -523,6 +926,158 @@ async function teFunction() {
         if(player.name === 'Travis Kelce' || player.name === 'Brock Bowers') {
           // console.log('TE:', player);
         }
+
+        //
+        //
+
+        player.propsRecs = ''
+        // console.log( player);
+        if(player.name) {
+  
+          // pass attempts
+          // completions
+          // pass yards
+          // pass TDs
+          // INTs
+          // carris
+          // rush yards
+          // rush TDs
+          
+          // receptions
+          // receiving yards
+          // receiving TDs
+          // half fantasy points
+          // full fantasy points
+          // recommended props
+  
+          player.pos = "te"
+          player.carries = 0
+          player.rushYards = 0
+          player.rushTDs = 0
+          player.PassAttempts = 0
+          player.Completions = 0
+          player.PassYards = 0
+          player.PassTDs = 0
+          player.INTs = 0
+
+          
+  
+          // console.log(player)
+  
+          
+        
+        // receptions
+        //
+        if(player.udReceptionsProp?.isUnderRecomended) {
+          // console.log(player.name) 
+          player.propsRecs = `${player.propsRecs} -- Under UD Receptions of ${player.udReceptionsProp.prop}`
+        }
+        if(player.udReceptionsProp?.isOverRecomended) {
+          // console.log(player.name)
+          player.propsRecs = `${player.propsRecs} -- Over UD Receptions of ${player.udReceptionsProp.prop}`
+        }
+        if(player.ppReceptionsProp?.isUnderRecomended) {
+          // console.log(player.name)
+          player.propsRecs = `${player.propsRecs} -- Under PP Receptions of ${player.ppReceptionsProp.prop}`
+        }
+        if(player.ppReceptionsProp?.isOverRecomended) {
+          // console.log(player.name)
+          player.propsRecs = `${player.propsRecs} -- Over PP Receptions of ${player.ppReceptionsProp.prop}`
+        }
+  
+        // receiving yards
+        //
+        if(player.udReceivingYardsProp?.isUnderRecomended) {
+          // console.log(player.name) 
+          player.propsRecs = `${player.propsRecs} -- Under UD Receiving Yards of ${player.udReceivingYardsProp.prop}`
+        }
+        if(player.udReceivingYardsProp?.isOverRecomended) {
+          // console.log(player.name)
+          player.propsRecs = `${player.propsRecs} -- Over UD Receiving Yards of ${player.udReceivingYardsProp.prop}`
+        }
+        if(player.ppReceivingYardsProp?.isUnderRecomended) {
+          // console.log(player.name)
+          player.propsRecs = `${player.propsRecs} -- Under PP Receiving Yards of ${player.ppReceivingYardsProp.prop}`
+        }
+        if(player.ppReceivingYardsProp?.isOverRecomended) {
+          // console.log(player.name)
+          player.propsRecs = `${player.propsRecs} -- Over PP Receiving Yards of ${player.ppReceivingYardsProp.prop}`
+        }
+  
+        // receiving TDs
+        //
+        if(player.udReceivingTDsProp?.isUnderRecomended) {
+          // console.log(player.name) 
+          player.propsRecs = `${player.propsRecs} -- Under UD Receiving TDs of ${player.udReceivingTDsProp.prop}`
+        }
+        if(player.udReceivingTDsProp?.isOverRecomended) {
+          // console.log(player.name)
+          player.propsRecs = `${player.propsRecs} -- Over UD Receiving TDs of ${player.udReceivingTDsProp.prop}`
+        }
+        if(player.ppReceivingTDsProp?.isUnderRecomended) {
+          // console.log(player.name)
+          player.propsRecs = `${player.propsRecs} -- Under PP Receiving TDs of ${player.ppReceivingTDsProp.prop}`
+        }
+        if(player.ppReceivingTDsProp?.isOverRecomended) {
+          // console.log(player.name)
+          player.propsRecs = `${player.propsRecs} -- Over PP Receiving TDs of ${player.ppReceivingTDsProp.prop}`
+        }
+  
+    
+        
+        
+        // Fantasy Score
+        if(player.udFantasyScoreProp?.isUnderRecomended) {
+          // console.log(player.name)
+  
+  
+          player.propsRecs = `${player.propsRecs} -- Under UD Fantasy Score of ${player.udFantasyScoreProp.prop}`
+        }
+        if(player.udFantasyScoreProp?.isOverRecomended) {
+          // console.log(player.name)
+  
+  
+          player.propsRecs = `${player.propsRecs} -- Over UD Fantasy Score of ${player.udFantasyScoreProp.prop}`
+        }
+        if(player.ppFantasyScoreProp?.isUnderRecomended) {
+          // console.log(player.name)
+  
+  
+          player.propsRecs = `${player.propsRecs} -- Under PP Fantasy Score of ${player.ppFantasyScoreProp.prop}`
+        }
+        if(player.ppFantasyScoreProp?.isOverRecomended) {
+          // console.log(player.name)
+  
+  
+          player.propsRecs = `${player.propsRecs} -- Over PP Fantasy Score of ${player.ppFantasyScoreProp.prop}`
+        }
+      }
+  
+      //
+        
+          // console.log(player)
+
+      player.passAttempts =  0
+      player.completions =  0
+      player.passingYards =  0
+      player.passTDs =  0
+      player.INTs =  0
+      player.carries = player.appProjectedCarriesThisWeek ? player.appProjectedCarriesThisWeek : 0
+      player.rushYards = player.appProjectedrushYardsThisWeek ? player.appProjectedrushYardsThisWeek : 0
+      player.rushTDs = player.appProjectedrushTDsThisWeek ? player.appProjectedrushTDsThisWeek : 0
+      player.receptions = player.appProjectedreceptionsThisWeek ? player.appProjectedreceptionsThisWeek : 0
+      player.receivingYards = player.appProjectedrecYardsThisWeek ? player.appProjectedrecYardsThisWeek : 0
+      player.receivingTDs = player.appProjectedrecTDsThisWeek ? player.appProjectedrecTDsThisWeek : 0
+      player.halfFantasyPoints = player.astroHalfWRProjection ? player.astroHalfWRProjection : 0
+      player.fullFantasyPoints = player.astroFullWRProjection ? player.astroFullWRProjection : 0
+
+
+      // console.log(player.receptions)
+      // console.log(player)
+
+        //
+
+        // end TE's
       });
     }
     
@@ -537,10 +1092,30 @@ async function teFunction() {
 
 async function processData() {
   
+  let qbData = await qbFunction()
   let data = await someFunction();
   let wrData = await wrFunction();
   let teData = await teFunction();
   
+// console.log(qbData)
+  const qbplayerMap = new Map();
+    
+  qbData.forEach((player) => {
+    // Group all objects for the same player
+    const playerObjects = qbData.filter(p => p.name === player.name);
+    // Get only the most recent object
+    const mostRecentObject = playerObjects[playerObjects.length - 1];
+    
+    // Store in map (this will automatically override any previous entry for this player)
+    qbplayerMap.set(player.name, mostRecentObject);
+    
+    
+  });
+
+  // Convert map values back to array - this will have only the most recent object for each player
+  qbData = Array.from(qbplayerMap.values());
+
+  //
   // console.log(data)
     // Create a map to store the most recent object for each player
     const playerMap = new Map();
@@ -609,7 +1184,7 @@ async function processData() {
 // console.log(allQBData);
 // console.log(allQBData.allQBProjectionsObjects);
 // console.log(allRBData.allRBProjectionsObjects);
-let qbProjectionArray = allQBData.allQBProjectionsObjects;
+let qbProjectionArray = qbData;
 // console.log(qbProjectionArray);
 // let tempRbProjectionArray = allRBData.allRBProjectionsObjects;
 // console.log(rbData)
@@ -624,9 +1199,13 @@ let wrProjectionArray = wrdata;
 // let teProjectionsArray = [...allTEProjectionsObjects];
 let teProjectionsArray = teData;
 
+let allAstroProjectionsArray = [...qbProjectionArray, ...rbProjectionArray, ...wrProjectionArray, ...teProjectionsArray];
+
+// console.log(qbProjectionArray)
 // console.log(wrProjectionArray);
 // console.log(rbProjectionArray);
 // console.log(teProjectionsArray);
+
 
 function halfCompare(a, b) {
   if (a.appHalfProjectedPoints < b.appHalfProjectedPoints) {
@@ -712,21 +1291,44 @@ qbCSVArray = qbProjectionArray.map(obj => {
   // console.log(obj)
   return {
     name: obj.name,
+    pos: obj.pos,
     team: obj.team,
     appFullProjectedPoints: obj.appFullProjectedPoints,
-    appProjPassAttempts: obj.appProjPassAttempts,
-    appProjCompletions: obj.appProjCompletions,
-    appProjPassingYards: obj.appProjPassingYards,
-    appProjPassTDs: obj.appProjPassTDs,
-    appProjINTs: obj.appProjINTs,
-    appProjQBRushAttempts: obj.appProjQBRushAttempts,
-    appProjQBRushYards: obj.appProjQBRushYards,
-    appProjQBRushTDs: obj.appProjQBRushTDs,
-    astroQBProjection: obj.astroQBProjection,
-    astroSixPtTDQBProjection: obj.astroSixPtTDQBProjection,
+    PassAttempts: obj.appProjPassAttempts,
+    Completions: obj.appProjCompletions,
+    PassingYards: obj.appProjPassingYards,
+    PassTDs: obj.appProjPassTDs,
+    INTs: obj.appProjINTs,
+    carries: obj.appProjQBRushAttempts,
+    rushYards: obj.appProjQBRushYards,
+    rushTDs: obj.appProjQBRushTDs,
+    targets: 0,
+    receptions: 0,
+    receivingYards: 0,
+    receivingTDs: 0,
+    halfFantasyPoints: obj.astroQBProjection,
+    fullFantasyPoints: obj.astroQBProjection,
+    // astroSixPtTDQBProjection: obj.astroSixPtTDQBProjection,
     recProps: obj.propsRecs
   };
 });
+
+// ````     pass attempts
+          // completions
+          // pass yards
+          // pass TDs
+          // INTs
+          // carries
+          // rush yards
+          // rush TDs
+          // targets
+          // receptions
+          // receiving yards
+          // receiving TDs
+          // half fantasy points
+          // full fantasy points
+          // recommended props
+
 
 rbCSVArray = rbProjectionArray.map(obj => {
   return {
@@ -823,6 +1425,48 @@ superFlexCSVArray = superFlexArray.map(obj => {
   };
 });
 
+//
+astroCSVArray = allAstroProjectionsArray.map(obj => {
+  // console.log(obj)
+  return {
+    name: obj.name,
+    pos: obj.pos,
+    team: obj.team,
+    PassAttempts: +obj.passAttempts,
+    Completions: +obj.completions,
+    PassingYards: +obj.passingYards,
+    PassTDs: +obj.passTDs,
+    INTs: +obj.INTs,
+    carries: +obj.carries,
+    rushYards: +obj.rushYards,
+    rushTDs: +obj.rushTDs,
+    receptions: +obj.receptions,
+    receivingYards: +obj.receivingYards,
+    receivingTDs: +obj.receivingTDs,
+    halfFantasyPoints: +obj.halfFantasyPoints,
+    fullFantasyPoints: +obj.fullFantasyPoints,
+    recProps: obj.propsRecs
+  };
+});
+
+
+
+// ````     pass attempts
+          // completions
+          // pass yards
+          // pass TDs
+          // INTs
+          // carries
+          // rush yards
+          // rush TDs
+          // targets
+          // receptions
+          // receiving yards
+          // receiving TDs
+          // half fantasy points
+          // full fantasy points
+          // recommended props
+
 // console.log(qbCSVArray);
 // console.log(rbCSVArray);
 
@@ -839,7 +1483,7 @@ function arrayToCSV(array) {
 
   try {
     const csv = parse(array, opts);
-    fs.writeFileSync('week12-24-testQBHalfProjectionArray.csv', csv);
+    fs.writeFileSync('week13-24-earlyAstroHalfProjectionArray.csv', csv);
     console.log('CSV file successfully created');
   } catch (err) {
     console.error(err);
@@ -855,6 +1499,7 @@ function arrayToCSV(array) {
 // arrayToCSV(tePPRCSVArray);
 // arrayToCSV(flexCSVArray);
 // arrayToCSV(superFlexCSVArray);
+arrayToCSV(astroCSVArray);
 //
 //
 
