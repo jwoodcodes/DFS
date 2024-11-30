@@ -1427,7 +1427,9 @@ superFlexCSVArray = superFlexArray.map(obj => {
 
 //
 astroCSVArray = allAstroProjectionsArray.map(obj => {
-  // console.log(obj)
+  if(obj.propsRecs) {
+  // console.log(obj.name, obj.propsRecs)
+  }
   return {
     name: obj.name,
     pos: obj.pos,
@@ -1483,7 +1485,7 @@ function arrayToCSV(array) {
 
   try {
     const csv = parse(array, opts);
-    fs.writeFileSync('week13-24-earlyAstroHalfProjectionArray.csv', csv);
+    fs.writeFileSync('week13-24-astroHalfProjectionArray.csv', csv);
     console.log('CSV file successfully created');
   } catch (err) {
     console.error(err);
@@ -1499,7 +1501,7 @@ function arrayToCSV(array) {
 // arrayToCSV(tePPRCSVArray);
 // arrayToCSV(flexCSVArray);
 // arrayToCSV(superFlexCSVArray);
-arrayToCSV(astroCSVArray);
+// arrayToCSV(astroCSVArray);
 //
 //
 
