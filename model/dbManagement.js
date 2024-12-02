@@ -685,7 +685,7 @@ async function wrFunction() {
         // full fantasy points
         // recommended props
 
-        player.pos = "wr"
+        player.pos = "WR"
         player.PassAttempts = 0
         player.Completions = 0
         player.PassYards = 0
@@ -950,7 +950,7 @@ async function teFunction() {
           // full fantasy points
           // recommended props
   
-          player.pos = "te"
+          player.pos = "TE"
           player.carries = 0
           player.rushYards = 0
           player.rushTDs = 0
@@ -1507,6 +1507,36 @@ function arrayToCSV(array) {
 
 // console.log(allProjectionsArray);
 
+
+async function runAstroProjections() {
+  try {
+    await client.connect();
+
+    const db = client.db(dbName);
+
+    // Use the collection "people"
+    const col = db.collection('astroProjections');
+    console.log('runAstroProjections connected');
+    // Construct a document
+    let allProjections = {
+      astroCSVArray: astroCSVArray,
+    };
+
+    // Insert a single document, wait for promise so we can read it back
+    const p = await col.insertOne(allProjections);
+    // Find one document
+    const myDoc = await col.findOne();
+    // Print to the console
+    // console.log(myDoc);
+  } catch (err) {
+    console.log(err.stack);
+  } finally {
+    await client.close();
+  }
+}
+
+//
+
 async function runAllProjections() {
   try {
     await client.connect();
@@ -1515,7 +1545,7 @@ async function runAllProjections() {
 
     // Use the collection "people"
     const col = db.collection('allProjections');
-    console.log('connected');
+    console.log('runAllProjections connected');
     // Construct a document
     let allProjections = {
       allProjectionsArray: allProjectionsArray,
@@ -1544,6 +1574,9 @@ async function runAllProjections() {
 // runWholeTeamObjects().catch(console.dir);
 
 //
+// runAstroProjections().catch(console.dir);
+
+// 
 
 // runAllProjections().catch(console.dir);
 
