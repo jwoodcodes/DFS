@@ -1610,11 +1610,11 @@ async function propsData() {
 
             //  console.log(wr.playerName, wr.udReceptionsProp.prop, wr.appProjectedreceptionsThisWeek, wr.prjReceptions )
             //  console.log(wr.playerName, wr.ppReceptionsProp.prop, wr.appProjectedreceptionsThisWeek, wr.prjReceptions )
-            if(wr.udReceptionsProp.prop - wr.prjReceptions  > .2 && wr.udReceptionsProp.prop - wr.appProjectedreceptionsThisWeek  > .2) {      
+            if(wr.udReceptionsProp.prop - wr.prjReceptions  > .75 && wr.udReceptionsProp.prop - wr.appProjectedreceptionsThisWeek  > .75) {      
               wr.udReceptionsProp.isUnderRecomended = true
               // console.log(wr.playerName, wr.udReceptionsProp.prop, wr.appProjectedreceptionsThisWeek, wr.prjReceptions )
             }
-            if(wr.ppReceptionsProp.prop - wr.prjReceptions > .2 && wr.ppReceptionsProp.prop - wr.appProjectedreceptionsThisWeek > .2) {      
+            if(wr.ppReceptionsProp.prop - wr.prjReceptions > .75 && wr.ppReceptionsProp.prop - wr.appProjectedreceptionsThisWeek > .75) {      
               wr.ppReceptionsProp.isUnderRecomended = true
               // console.log(wr.playerName, wr.ppReceptionsProp.prop, wr.appProjectedreceptionsThisWeek, wr.prjReceptions )
             }
@@ -1649,11 +1649,11 @@ async function propsData() {
                //normal
     
               //  console.log(wr.playerName, wr.udReceptionsProp.prop, wr.appProjectedreceptionsThisWeek, wr.prjReceptions )
-            if(wr.prjReceptions - wr.udReceptionsProp.prop > .4 && wr.appProjectedreceptionsThisWeek - wr.udReceptionsProp.prop > .4) {      
+            if(wr.prjReceptions - wr.udReceptionsProp.prop > .75 && wr.appProjectedreceptionsThisWeek - wr.udReceptionsProp.prop > .75) {      
               wr.udReceptionsProp.isOverRecomended = true
               // console.log(wr.playerName, wr.udReceptionsProp.prop, wr.appProjectedreceptionsThisWeek, wr.prjReceptions )
             }
-            if(wr.prjReceptions - wr.ppReceptionsProp.prop > .4 && wr.appProjectedreceptionsThisWeek - wr.ppReceptionsProp.prop > .4) {      
+            if(wr.prjReceptions - wr.ppReceptionsProp.prop > .75 && wr.appProjectedreceptionsThisWeek - wr.ppReceptionsProp.prop > .75) {      
               wr.ppReceptionsProp.isOverRecomended = true
               // console.log(wr.playerName, wr.ppReceptionsProp.prop, wr.appProjectedreceptionsThisWeek, wr.prjReceptions )
             }
@@ -1694,33 +1694,33 @@ async function propsData() {
 
             //  console.log(wr.playerName, wr.udReceivingYardsProp.prop, wr.appProjectedrecYardsThisWeek, wr.prjReceivingYards )
             //  console.log(wr.playerName, wr.ppReceivingYardsProp.prop, wr.appProjectedrecYardsThisWeek, wr.prjReceivingYards )
-            if(wr.udReceivingYardsProp.prop - wr.prjReceivingYards  > .5 && wr.udReceivingYardsProp.prop - wr.appProjectedrecYardsThisWeek  > .5) {      
+            if(wr.udReceivingYardsProp.prop - wr.prjReceivingYards  > 3 && wr.udReceivingYardsProp.prop - wr.appProjectedrecYardsThisWeek  > 3) {      
               wr.udReceivingYardsProp.isUnderRecomended = true
               // console.log(wr.playerName, wr.udReceivingYardsProp.prop, wr.appProjectedrecYardsThisWeek, wr.prjReceivingYards )
             }
-            if(wr.ppReceivingYardsProp.prop - wr.prjReceivingYards > .5 && wr.ppReceivingYardsProp.prop - wr.appProjectedrecYardsThisWeek > .5) {      
+            if(wr.ppReceivingYardsProp.prop - wr.prjReceivingYards > 3 && wr.ppReceivingYardsProp.prop - wr.appProjectedrecYardsThisWeek > 3) {      
               wr.ppReceivingYardsProp.isUnderRecomended = true
               // console.log(wr.playerName, wr.ppReceivingYardsProp.prop, wr.appProjectedrecYardsThisWeek, wr.prjReceivingYards )
             }
     
               //                                            test
     
-              if(wr.udReceivingYardsProp.prop - wr.appProjectedrecYardsThisWeek  > .7) {      
+              if(wr.udReceivingYardsProp.prop - wr.appProjectedrecYardsThisWeek  > 4) {      
                 wr.udReceivingYardsProp.TESTisUnderRecomended = true
                 // console.log(wr.playerName, wr.udReceivingYardsProp.prop, wr.appProjectedrecYardsThisWeek, wr.prjReceivingYards )
               }
-              if(wr.ppReceivingYardsProp.prop - wr.appProjectedrecYardsThisWeek > .7) {      
+              if(wr.ppReceivingYardsProp.prop - wr.appProjectedrecYardsThisWeek > 4) {      
                 wr.ppReceivingYardsProp.TESTisUnderRecomended = true
                 // console.log(wr.playerName, wr.ppReceivingYardsProp.prop, wr.appProjectedrecYardsThisWeek, wr.prjReceivingYards )
               }
     
                // high confidence
     
-               if(wr.udReceivingYardsProp.prop - wr.prjReceivingYards  > 1 && wr.udReceivingYardsProp.prop - wr.appProjectedrecYardsThisWeek > 1) {      
+               if(wr.udReceivingYardsProp.prop - wr.prjReceivingYards  > 6 && wr.udReceivingYardsProp.prop - wr.appProjectedrecYardsThisWeek > 6) {      
                 wr.udReceivingYardsProp.highUnderConfidence = true
                 //  console.log(wr.playerName, wr.udReceivingYardsProp.prop, wr.appProjectedrecYardsThisWeek, wr.prjReceivingYards )
               }
-              if(wr.ppReceivingYardsProp.prop - wr.prjReceivingYards  > 1 && wr.ppReceivingYardsProp.prop - wr.appProjectedrecYardsThisWeek > 1) {      
+              if(wr.ppReceivingYardsProp.prop - wr.prjReceivingYards  > 6 && wr.ppReceivingYardsProp.prop - wr.appProjectedrecYardsThisWeek > 6) {      
                 wr.ppReceivingYardsProp.highUnderConfidence = true
                 // console.log(wr.playerName, wr.ppReceivingYardsProp.prop, wr.appProjectedrecYardsThisWeek, wr.prjReceivingYards )
               }
@@ -1911,11 +1911,11 @@ async function propsData() {
 
             //  console.log(wr.playerName, wr.udReceptionsProp.prop, wr.appProjectedreceptionsThisWeek, wr.prjReceptions )
             //  console.log(wr.playerName, wr.ppReceptionsProp.prop, wr.appProjectedreceptionsThisWeek, wr.prjReceptions )
-            if(wr.udReceptionsProp.prop - wr.prjReceptions  > .2 && wr.udReceptionsProp.prop - wr.appProjectedreceptionsThisWeek  > .2) {      
+            if(wr.udReceptionsProp.prop - wr.prjReceptions  > .75 && wr.udReceptionsProp.prop - wr.appProjectedreceptionsThisWeek  > .75) {      
               wr.udReceptionsProp.isUnderRecomended = true
               // console.log(wr.playerName, wr.udReceptionsProp.prop, wr.appProjectedreceptionsThisWeek, wr.prjReceptions )
             }
-            if(wr.ppReceptionsProp.prop - wr.prjReceptions > .2 && wr.ppReceptionsProp.prop - wr.appProjectedreceptionsThisWeek > .2) {      
+            if(wr.ppReceptionsProp.prop - wr.prjReceptions > .75 && wr.ppReceptionsProp.prop - wr.appProjectedreceptionsThisWeek > .75) {      
               wr.ppReceptionsProp.isUnderRecomended = true
               // console.log(wr.playerName, wr.ppReceptionsProp.prop, wr.appProjectedreceptionsThisWeek, wr.prjReceptions )
             }
@@ -1950,11 +1950,11 @@ async function propsData() {
                //normal
     
               //  console.log(wr.playerName, wr.udReceptionsProp.prop, wr.appProjectedreceptionsThisWeek, wr.prjReceptions )
-            if(wr.prjReceptions - wr.udReceptionsProp.prop > .4 && wr.appProjectedreceptionsThisWeek - wr.udReceptionsProp.prop > .4) {      
+            if(wr.prjReceptions - wr.udReceptionsProp.prop > .75 && wr.appProjectedreceptionsThisWeek - wr.udReceptionsProp.prop > .75) {      
               wr.udReceptionsProp.isOverRecomended = true
               // console.log(wr.playerName, wr.udReceptionsProp.prop, wr.appProjectedreceptionsThisWeek, wr.prjReceptions )
             }
-            if(wr.prjReceptions - wr.ppReceptionsProp.prop > .4 && wr.appProjectedreceptionsThisWeek - wr.ppReceptionsProp.prop > .4) {      
+            if(wr.prjReceptions - wr.ppReceptionsProp.prop > .75 && wr.appProjectedreceptionsThisWeek - wr.ppReceptionsProp.prop > .75) {      
               wr.ppReceptionsProp.isOverRecomended = true
               // console.log(wr.playerName, wr.ppReceptionsProp.prop, wr.appProjectedreceptionsThisWeek, wr.prjReceptions )
             }
@@ -1995,33 +1995,33 @@ async function propsData() {
 
             //  console.log(wr.playerName, wr.udReceivingYardsProp.prop, wr.appProjectedrecYardsThisWeek, wr.prjReceivingYards )
             //  console.log(wr.playerName, wr.ppReceivingYardsProp.prop, wr.appProjectedrecYardsThisWeek, wr.prjReceivingYards )
-            if(wr.udReceivingYardsProp.prop - wr.prjReceivingYards  > .5 && wr.udReceivingYardsProp.prop - wr.appProjectedrecYardsThisWeek  > .5) {      
+            if(wr.udReceivingYardsProp.prop - wr.prjReceivingYards  > 3 && wr.udReceivingYardsProp.prop - wr.appProjectedrecYardsThisWeek  > 3) {      
               wr.udReceivingYardsProp.isUnderRecomended = true
               // console.log(wr.playerName, wr.udReceivingYardsProp.prop, wr.appProjectedrecYardsThisWeek, wr.prjReceivingYards )
             }
-            if(wr.ppReceivingYardsProp.prop - wr.prjReceivingYards > .5 && wr.ppReceivingYardsProp.prop - wr.appProjectedrecYardsThisWeek > .5) {      
+            if(wr.ppReceivingYardsProp.prop - wr.prjReceivingYards > 3 && wr.ppReceivingYardsProp.prop - wr.appProjectedrecYardsThisWeek > 3) {      
               wr.ppReceivingYardsProp.isUnderRecomended = true
               // console.log(wr.playerName, wr.ppReceivingYardsProp.prop, wr.appProjectedrecYardsThisWeek, wr.prjReceivingYards )
             }
     
               //                                            test
     
-              if(wr.udReceivingYardsProp.prop - wr.appProjectedrecYardsThisWeek  > .7) {      
+              if(wr.udReceivingYardsProp.prop - wr.appProjectedrecYardsThisWeek  > 4) {      
                 wr.udReceivingYardsProp.TESTisUnderRecomended = true
                 // console.log(wr.playerName, wr.udReceivingYardsProp.prop, wr.appProjectedrecYardsThisWeek, wr.prjReceivingYards )
               }
-              if(wr.ppReceivingYardsProp.prop - wr.appProjectedrecYardsThisWeek > .7) {      
+              if(wr.ppReceivingYardsProp.prop - wr.appProjectedrecYardsThisWeek > 4) {      
                 wr.ppReceivingYardsProp.TESTisUnderRecomended = true
                 // console.log(wr.playerName, wr.ppReceivingYardsProp.prop, wr.appProjectedrecYardsThisWeek, wr.prjReceivingYards )
               }
     
                // high confidence
     
-               if(wr.udReceivingYardsProp.prop - wr.prjReceivingYards  > 1 && wr.udReceivingYardsProp.prop - wr.appProjectedrecYardsThisWeek > 1) {      
+               if(wr.udReceivingYardsProp.prop - wr.prjReceivingYards  > 6 && wr.udReceivingYardsProp.prop - wr.appProjectedrecYardsThisWeek > 6) {      
                 wr.udReceivingYardsProp.highUnderConfidence = true
                 //  console.log(wr.playerName, wr.udReceivingYardsProp.prop, wr.appProjectedrecYardsThisWeek, wr.prjReceivingYards )
               }
-              if(wr.ppReceivingYardsProp.prop - wr.prjReceivingYards  > 1 && wr.ppReceivingYardsProp.prop - wr.appProjectedrecYardsThisWeek > 1) {      
+              if(wr.ppReceivingYardsProp.prop - wr.prjReceivingYards  > 6 && wr.ppReceivingYardsProp.prop - wr.appProjectedrecYardsThisWeek > 6) {      
                 wr.ppReceivingYardsProp.highUnderConfidence = true
                 // console.log(wr.playerName, wr.ppReceivingYardsProp.prop, wr.appProjectedrecYardsThisWeek, wr.prjReceivingYards )
               }
@@ -2209,11 +2209,11 @@ async function propsData() {
 
             //  console.log(wr.playerName, wr.udReceptionsProp.prop, wr.appProjectedreceptionsThisWeek, wr.prjReceptions )
             //  console.log(wr.playerName, wr.ppReceptionsProp.prop, wr.appProjectedreceptionsThisWeek, wr.prjReceptions )
-            if(wr.udReceptionsProp.prop - wr.prjReceptions  > .2 && wr.udReceptionsProp.prop - wr.appProjectedreceptionsThisWeek  > .2) {      
+            if(wr.udReceptionsProp.prop - wr.prjReceptions  > .75 && wr.udReceptionsProp.prop - wr.appProjectedreceptionsThisWeek  > .75) {      
               wr.udReceptionsProp.isUnderRecomended = true
               // console.log(wr.playerName, wr.udReceptionsProp.prop, wr.appProjectedreceptionsThisWeek, wr.prjReceptions )
             }
-            if(wr.ppReceptionsProp.prop - wr.prjReceptions > .2 && wr.ppReceptionsProp.prop - wr.appProjectedreceptionsThisWeek > .2) {      
+            if(wr.ppReceptionsProp.prop - wr.prjReceptions > .75 && wr.ppReceptionsProp.prop - wr.appProjectedreceptionsThisWeek > .75) {      
               wr.ppReceptionsProp.isUnderRecomended = true
               // console.log(wr.playerName, wr.ppReceptionsProp.prop, wr.appProjectedreceptionsThisWeek, wr.prjReceptions )
             }
@@ -2248,11 +2248,11 @@ async function propsData() {
                //normal
     
               //  console.log(wr.playerName, wr.udReceptionsProp.prop, wr.appProjectedreceptionsThisWeek, wr.prjReceptions )
-            if(wr.prjReceptions - wr.udReceptionsProp.prop > .4 && wr.appProjectedreceptionsThisWeek - wr.udReceptionsProp.prop > .4) {      
+            if(wr.prjReceptions - wr.udReceptionsProp.prop > .75 && wr.appProjectedreceptionsThisWeek - wr.udReceptionsProp.prop > .75) {      
               wr.udReceptionsProp.isOverRecomended = true
               // console.log(wr.playerName, wr.udReceptionsProp.prop, wr.appProjectedreceptionsThisWeek, wr.prjReceptions )
             }
-            if(wr.prjReceptions - wr.ppReceptionsProp.prop > .4 && wr.appProjectedreceptionsThisWeek - wr.ppReceptionsProp.prop > .4) {      
+            if(wr.prjReceptions - wr.ppReceptionsProp.prop > .75 && wr.appProjectedreceptionsThisWeek - wr.ppReceptionsProp.prop > .75) {      
               wr.ppReceptionsProp.isOverRecomended = true
               // console.log(wr.playerName, wr.ppReceptionsProp.prop, wr.appProjectedreceptionsThisWeek, wr.prjReceptions )
             }
@@ -2293,33 +2293,33 @@ async function propsData() {
 
             //  console.log(wr.playerName, wr.udReceivingYardsProp.prop, wr.appProjectedrecYardsThisWeek, wr.prjReceivingYards )
             //  console.log(wr.playerName, wr.ppReceivingYardsProp.prop, wr.appProjectedrecYardsThisWeek, wr.prjReceivingYards )
-            if(wr.udReceivingYardsProp.prop - wr.prjReceivingYards  > .5 && wr.udReceivingYardsProp.prop - wr.appProjectedrecYardsThisWeek  > .5) {      
+            if(wr.udReceivingYardsProp.prop - wr.prjReceivingYards  > 3 && wr.udReceivingYardsProp.prop - wr.appProjectedrecYardsThisWeek  > 3) {      
               wr.udReceivingYardsProp.isUnderRecomended = true
               // console.log(wr.playerName, wr.udReceivingYardsProp.prop, wr.appProjectedrecYardsThisWeek, wr.prjReceivingYards )
             }
-            if(wr.ppReceivingYardsProp.prop - wr.prjReceivingYards > .5 && wr.ppReceivingYardsProp.prop - wr.appProjectedrecYardsThisWeek > .5) {      
+            if(wr.ppReceivingYardsProp.prop - wr.prjReceivingYards > 3 && wr.ppReceivingYardsProp.prop - wr.appProjectedrecYardsThisWeek > 3) {      
               wr.ppReceivingYardsProp.isUnderRecomended = true
               // console.log(wr.playerName, wr.ppReceivingYardsProp.prop, wr.appProjectedrecYardsThisWeek, wr.prjReceivingYards )
             }
     
               //                                            test
     
-              if(wr.udReceivingYardsProp.prop - wr.appProjectedrecYardsThisWeek  > .7) {      
+              if(wr.udReceivingYardsProp.prop - wr.appProjectedrecYardsThisWeek  > 4) {      
                 wr.udReceivingYardsProp.TESTisUnderRecomended = true
                 // console.log(wr.playerName, wr.udReceivingYardsProp.prop, wr.appProjectedrecYardsThisWeek, wr.prjReceivingYards )
               }
-              if(wr.ppReceivingYardsProp.prop - wr.appProjectedrecYardsThisWeek > .7) {      
+              if(wr.ppReceivingYardsProp.prop - wr.appProjectedrecYardsThisWeek > 4) {      
                 wr.ppReceivingYardsProp.TESTisUnderRecomended = true
                 // console.log(wr.playerName, wr.ppReceivingYardsProp.prop, wr.appProjectedrecYardsThisWeek, wr.prjReceivingYards )
               }
     
                // high confidence
     
-               if(wr.udReceivingYardsProp.prop - wr.prjReceivingYards  > 1 && wr.udReceivingYardsProp.prop - wr.appProjectedrecYardsThisWeek > 1) {      
+               if(wr.udReceivingYardsProp.prop - wr.prjReceivingYards  > 6 && wr.udReceivingYardsProp.prop - wr.appProjectedrecYardsThisWeek > 6) {      
                 wr.udReceivingYardsProp.highUnderConfidence = true
                 //  console.log(wr.playerName, wr.udReceivingYardsProp.prop, wr.appProjectedrecYardsThisWeek, wr.prjReceivingYards )
               }
-              if(wr.ppReceivingYardsProp.prop - wr.prjReceivingYards  > 1 && wr.ppReceivingYardsProp.prop - wr.appProjectedrecYardsThisWeek > 1) {      
+              if(wr.ppReceivingYardsProp.prop - wr.prjReceivingYards  > 6 && wr.ppReceivingYardsProp.prop - wr.appProjectedrecYardsThisWeek > 6) {      
                 wr.ppReceivingYardsProp.highUnderConfidence = true
                 // console.log(wr.playerName, wr.ppReceivingYardsProp.prop, wr.appProjectedrecYardsThisWeek, wr.prjReceivingYards )
               }
@@ -2379,33 +2379,33 @@ async function propsData() {
 
             //  console.log(wr.playerName, wr.udFantasyScoreProp.prop, wr.astroHalfWRProjection, wr.fourForFourHalfPPRProjectedPoints )
             //  console.log(wr.playerName, wr.ppFantasyScoreProp.prop, wr.astroHalfWRProjection, wr.fourForFourHalfPPRProjectedPoints )
-            if(wr.udFantasyScoreProp.prop - wr.fourForFourHalfPPRProjectedPoints  > .5 && wr.udFantasyScoreProp.prop - wr.astroHalfWRProjection  > .5) {      
+            if(wr.udFantasyScoreProp.prop - wr.fourForFourHalfPPRProjectedPoints  > 1 && wr.udFantasyScoreProp.prop - wr.astroHalfWRProjection  > 1) {      
               wr.udFantasyScoreProp.isUnderRecomended = true
               // console.log(wr.playerName, wr.udFantasyScoreProp.prop, wr.astroHalfWRProjection, wr.fourForFourHalfPPRProjectedPoints )
             }
-            if(wr.ppFantasyScoreProp.prop - wr.fourForFourHalfPPRProjectedPoints > .5 && wr.ppFantasyScoreProp.prop - wr.astroHalfWRProjection > .5) {      
+            if(wr.ppFantasyScoreProp.prop - wr.fourForFourHalfPPRProjectedPoints > 1 && wr.ppFantasyScoreProp.prop - wr.astroHalfWRProjection > 1) {      
               wr.ppFantasyScoreProp.isUnderRecomended = true
               // console.log(wr.playerName, wr.ppFantasyScoreProp.prop, wr.astroHalfWRProjection, wr.fourForFourHalfPPRProjectedPoints )
             }
     
               //                                            test
     
-              if(wr.udFantasyScoreProp.prop - wr.astroHalfWRProjection  > 1) {      
+              if(wr.udFantasyScoreProp.prop - wr.astroHalfWRProjection  > 2) {      
                 wr.udFantasyScoreProp.TESTisUnderRecomended = true
                 // console.log(wr.playerName, wr.udFantasyScoreProp.prop, wr.astroHalfWRProjection, wr.fourForFourHalfPPRProjectedPoints )
               }
-              if(wr.ppFantasyScoreProp.prop - wr.astroHalfWRProjection > 1) {      
+              if(wr.ppFantasyScoreProp.prop - wr.astroHalfWRProjection > 2) {      
                 wr.ppFantasyScoreProp.TESTisUnderRecomended = true
                 // console.log(wr.playerName, wr.ppFantasyScoreProp.prop, wr.astroHalfWRProjection, wr.fourForFourHalfPPRProjectedPoints )
               }
     
                // high confidence
     
-               if(wr.udFantasyScoreProp.prop - wr.fourForFourHalfPPRProjectedPoints  > 1 && wr.udFantasyScoreProp.prop - wr.astroHalfWRProjection > 1) {      
+               if(wr.udFantasyScoreProp.prop - wr.fourForFourHalfPPRProjectedPoints  > 2 && wr.udFantasyScoreProp.prop - wr.astroHalfWRProjection > 1) {      
                 wr.udFantasyScoreProp.highUnderConfidence = true
                 //  console.log(wr.playerName, wr.udFantasyScoreProp.prop, wr.astroHalfWRProjection, wr.fourForFourHalfPPRProjectedPoints )
               }
-              if(wr.ppFantasyScoreProp.prop - wr.fourForFourHalfPPRProjectedPoints  > 1 && wr.ppFantasyScoreProp.prop - wr.astroHalfWRProjection > 1) {      
+              if(wr.ppFantasyScoreProp.prop - wr.fourForFourHalfPPRProjectedPoints  > 2 && wr.ppFantasyScoreProp.prop - wr.astroHalfWRProjection > 1) {      
                 wr.ppFantasyScoreProp.highUnderConfidence = true
                 // console.log(wr.playerName, wr.ppFantasyScoreProp.prop, wr.astroHalfWRProjection, wr.fourForFourHalfPPRProjectedPoints )
               }

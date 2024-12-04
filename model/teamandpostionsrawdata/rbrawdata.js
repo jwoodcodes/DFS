@@ -3464,11 +3464,13 @@ const populateTeamObjects = function (
           passedInTeam.firstPassedInRBName.replace("'", '');
         // console.log(altrbName);
       }
+      if(passedInTeam.secondPassedInRBName) {
       if (passedInTeam.secondPassedInRBName.includes("'")) {
         passedInTeam.secondPassedInRBAltName =
           passedInTeam.secondPassedInRBName.replace("'", '');
         // console.log(altrbName);
       }
+    }
       if (
         passedInTeam.thirdPassedInRBName &&
         passedInTeam.thirdPassedInRBName.includes("'")
@@ -3886,11 +3888,13 @@ const populateTeamObjects = function (
           passedInTeam.firstPassedInRBName.replace("'", '');
         // console.log(altrbName);
       }
+      if(passedInTeam.secondPassedInRBName) {
       if (passedInTeam.secondPassedInRBName.includes("'")) {
         passedInTeam.secondPassedInRBAltName =
           passedInTeam.secondPassedInRBName.replace("'", '');
         // console.log(altrbName);
       }
+    }
       if (
         passedInTeam.thirdPassedInRBName &&
         passedInTeam.thirdPassedInRBName.includes("'")
