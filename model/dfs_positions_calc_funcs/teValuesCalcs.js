@@ -685,11 +685,11 @@ async function propsData() {
 
             //  console.log(te.name, te.udReceivingYardsProp.prop, te.appProjectedrecYardsThisWeek, te.prjReceivingYards )
             //  console.log(te.name, te.ppReceivingYardsProp.prop, te.appProjectedrecYardsThisWeek, te.prjReceivingYards )
-            if(te.udReceivingYardsProp.prop - te.prjReceivingYards  > .5 && te.udReceivingYardsProp.prop - te.appProjectedrecYardsThisWeek  > .5) {      
+            if(te.udReceivingYardsProp.prop - te.prjReceivingYards  > 3 && te.udReceivingYardsProp.prop - te.appProjectedrecYardsThisWeek  > 3) {      
               te.udReceivingYardsProp.isUnderRecomended = true
               // console.log(te.name, te.udReceivingYardsProp.prop, te.appProjectedrecYardsThisWeek, te.prjReceivingYards )
             }
-            if(te.ppReceivingYardsProp.prop - te.prjReceivingYards > .5 && te.ppReceivingYardsProp.prop - te.appProjectedrecYardsThisWeek > .5) {      
+            if(te.ppReceivingYardsProp.prop - te.prjReceivingYards > 3 && te.ppReceivingYardsProp.prop - te.appProjectedrecYardsThisWeek > 3) {      
               te.ppReceivingYardsProp.isUnderRecomended = true
               // console.log(te.name, te.ppReceivingYardsProp.prop, te.appProjectedrecYardsThisWeek, te.prjReceivingYards )
             }
@@ -724,11 +724,11 @@ async function propsData() {
                //normal
     
               //  console.log(te.name, te.udReceivingYardsProp.prop, te.appProjectedrecYardsThisWeek, te.prjReceivingYards )
-            if(te.prjReceivingYards - te.udReceivingYardsProp.prop > 10 && te.appProjectedrecYardsThisWeek - te.udReceivingYardsProp.prop > 10) {      
+            if(te.prjReceivingYards - te.udReceivingYardsProp.prop > 15 && te.appProjectedrecYardsThisWeek - te.udReceivingYardsProp.prop > 15) {      
               te.udReceivingYardsProp.isOverRecomended = true
               // console.log(te.name, te.udReceivingYardsProp.prop, te.appProjectedrecYardsThisWeek, te.prjReceivingYards )
             }
-            if(te.prjReceivingYards - te.ppReceivingYardsProp.prop > 10 && te.appProjectedrecYardsThisWeek - te.ppReceivingYardsProp.prop > 10) {      
+            if(te.prjReceivingYards - te.ppReceivingYardsProp.prop > 15 && te.appProjectedrecYardsThisWeek - te.ppReceivingYardsProp.prop > 15) {      
               te.ppReceivingYardsProp.isOverRecomended = true
               // console.log(te.name, te.ppReceivingYardsProp.prop, te.appProjectedrecYardsThisWeek, te.prjReceivingYards )
             }
@@ -892,11 +892,11 @@ async function propsData() {
 
             //  console.log(te.name, te.udReceptionsProp.prop, te.appProjectedreceptionsThisWeek, te.prjReceptions )
             //  console.log(te.name, te.ppReceptionsProp.prop, te.appProjectedreceptionsThisWeek, te.prjReceptions )
-            if(te.udReceptionsProp.prop - te.prjReceptions  > .2 && te.udReceptionsProp.prop - te.appProjectedreceptionsThisWeek  > .2) {      
+            if(te.udReceptionsProp.prop - te.prjReceptions  > 1 && te.udReceptionsProp.prop - te.appProjectedreceptionsThisWeek  > 1) {      
               te.udReceptionsProp.isUnderRecomended = true
               // console.log(te.name, te.udReceptionsProp.prop, te.appProjectedreceptionsThisWeek, te.prjReceptions )
             }
-            if(te.ppReceptionsProp.prop - te.prjReceptions > .2 && te.ppReceptionsProp.prop - te.appProjectedreceptionsThisWeek > .2) {      
+            if(te.ppReceptionsProp.prop - te.prjReceptions > 1 && te.ppReceptionsProp.prop - te.appProjectedreceptionsThisWeek > 1) {      
               te.ppReceptionsProp.isUnderRecomended = true
               // console.log(te.name, te.ppReceptionsProp.prop, te.appProjectedreceptionsThisWeek, te.prjReceptions )
             }
@@ -976,11 +976,11 @@ async function propsData() {
 
             //  console.log(te.name, te.udReceivingYardsProp.prop, te.appProjectedrecYardsThisWeek, te.prjReceivingYards )
             //  console.log(te.name, te.ppReceivingYardsProp.prop, te.appProjectedrecYardsThisWeek, te.prjReceivingYards )
-            if(te.udReceivingYardsProp.prop - te.prjReceivingYards  > .5 && te.udReceivingYardsProp.prop - te.appProjectedrecYardsThisWeek  > .5) {      
+            if(te.udReceivingYardsProp.prop - te.prjReceivingYards  > 1 && te.udReceivingYardsProp.prop - te.appProjectedrecYardsThisWeek  > 1) {      
               te.udReceivingYardsProp.isUnderRecomended = true
               // console.log(te.name, te.udReceivingYardsProp.prop, te.appProjectedrecYardsThisWeek, te.prjReceivingYards )
             }
-            if(te.ppReceivingYardsProp.prop - te.prjReceivingYards > .5 && te.ppReceivingYardsProp.prop - te.appProjectedrecYardsThisWeek > .5) {      
+            if(te.ppReceivingYardsProp.prop - te.prjReceivingYards > 1 && te.ppReceivingYardsProp.prop - te.appProjectedrecYardsThisWeek > 1) {      
               te.ppReceivingYardsProp.isUnderRecomended = true
               // console.log(te.name, te.ppReceivingYardsProp.prop, te.appProjectedrecYardsThisWeek, te.prjReceivingYards )
             }
@@ -1015,11 +1015,11 @@ async function propsData() {
                //normal
     
               //  console.log(te.name, te.udReceivingYardsProp.prop, te.appProjectedrecYardsThisWeek, te.prjReceivingYards )
-            if(te.prjReceivingYards - te.udReceivingYardsProp.prop > 10 && te.appProjectedrecYardsThisWeek - te.udReceivingYardsProp.prop > 10) {      
+            if(te.prjReceivingYards - te.udReceivingYardsProp.prop > 15 && te.appProjectedrecYardsThisWeek - te.udReceivingYardsProp.prop > 15) {      
               te.udReceivingYardsProp.isOverRecomended = true
               // console.log(te.name, te.udReceivingYardsProp.prop, te.appProjectedrecYardsThisWeek, te.prjReceivingYards )
             }
-            if(te.prjReceivingYards - te.ppReceivingYardsProp.prop > 10 && te.appProjectedrecYardsThisWeek - te.ppReceivingYardsProp.prop > 10) {      
+            if(te.prjReceivingYards - te.ppReceivingYardsProp.prop > 15 && te.appProjectedrecYardsThisWeek - te.ppReceivingYardsProp.prop > 15) {      
               te.ppReceivingYardsProp.isOverRecomended = true
               // console.log(te.name, te.ppReceivingYardsProp.prop, te.appProjectedrecYardsThisWeek, te.prjReceivingYards )
             }
