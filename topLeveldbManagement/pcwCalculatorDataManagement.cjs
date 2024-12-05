@@ -95,24 +95,22 @@ const amountToBeAddedToPlayersAgeToKnowWhatAgeTheyWillBeNextMarch =
 ////////////////////////////////////
 /////////////////////////////
 
-
-
-
 /////fetching underdog props data from API and pushing weeklyPropData data to db
 
 // const PropsDataFetch = async function () {
 //   const res = await axios.get(
-//     'https://api.dailyfantasyapi.io/v1/lines/upcoming', {
+//     'https://api.dailyfantasyapi.io/v1/lines/upcoming',
+//     {
 //       headers: {
-//         'x-api-key': '52226ad0-6d4a-49fe-8299-4d4c10480166'
+//         'x-api-key': '52226ad0-6d4a-49fe-8299-4d4c10480166',
 //       },
 //       params: {
 //         sportsbook: 'Underdog',
-//         league: 'NFL'
-//       }
+//         league: 'NFL',
+//       },
 //     }
 //   );
-//     console.log(res.data);
+//   console.log(res.data);
 
 //   const url =
 //     'mongodb+srv://devJay:Hesstrucksarethebest@dailydynasties.syom4sb.mongodb.net/fantasycalcData';
@@ -149,29 +147,26 @@ const amountToBeAddedToPlayersAgeToKnowWhatAgeTheyWillBeNextMarch =
 //     }
 //   }
 
-
 //   pushPropsData().catch(console.dir);
 //   return res.data;
 // };
 
 // PropsDataFetch();
 
-
-
 //
 /// fetching prizepicks props from API and sending to db
 
-
 // const prizepicksPropsDataFetch = async function () {
 //   const res = await axios.get(
-//     'https://api.dailyfantasyapi.io/v1/lines/upcoming', {
+//     'https://api.dailyfantasyapi.io/v1/lines/upcoming',
+//     {
 //       headers: {
-//         'x-api-key': '52226ad0-6d4a-49fe-8299-4d4c10480166'
+//         'x-api-key': '52226ad0-6d4a-49fe-8299-4d4c10480166',
 //       },
 //       params: {
 //         sportsbook: 'PrizePicks',
-//         league: 'NFL'
-//       }
+//         league: 'NFL',
+//       },
 //     }
 //   );
 //   //   console.log(res.data);
@@ -219,14 +214,11 @@ const amountToBeAddedToPlayersAgeToKnowWhatAgeTheyWillBeNextMarch =
 
 // prizepicksPropsDataFetch();
 
-
-
 //////////////////////////////
 //////////////////////////////////
 //////////////////////////////////////
 /////////////////////////////////
 //////////////////////////////
-
 
 // making const newData = [];trimmed fantasyCalc data
 
@@ -392,7 +384,6 @@ const testfunc = async function () {
   // }
 
   // runOnePreviousFantasyCalcData().catch(console.dir);
-  
 
   const test2 = await alltradeCalculaterDataArray;
   // console.log(test);
@@ -4949,4 +4940,4 @@ testfunc();
 /////////////////////////////////
 //create a couple new constructor functions down here that will take in alltradeCalculaterDataArray as an input and loop over it and make player object arrays for specific purposes that only contain the info I am going to render for a page. one for dynasty rankings (done), one for redraft/rest of season rankings, and one for 3d trade view. then send these to the db in their own collections so you only have to call getstaticprops for the smaller objects that contain only the data that will be rendered on that page
 /////////////////////////////////////// */
-//********************************************************************!!!!!!!!!!!!!!!!!!!!!!!
+// ********************************************************************!!!!!!!!!!!!!!!!!!!!!!!
