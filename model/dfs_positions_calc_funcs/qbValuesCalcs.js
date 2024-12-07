@@ -1620,6 +1620,7 @@ async function propsData() {
         if(qb.prjpassattempts - qb.ppPassAttemptsProp.prop > 3 && qb.appProjPassAttempts - qb.ppPassAttemptsProp.prop > 3) {      
           qb.ppPassAttemptsProp.isOverRecomended = true
           // console.log(qb.playerName, qb.ppPassAttemptsProp.prop, qb.appProjPassAttempts, qb.prjpassattempts )
+          // console.log(+qb.prjpassattempts / +qb.ppPassAttemptsProp.prop)
         }
 
            // high confidence
@@ -1674,11 +1675,11 @@ async function propsData() {
 
 
             // console.log(qb.playerName, qb.udPassCompletionsProp.prop, qb.appProjCompletions, qb.prjcompletions )
-        if(qb.prjcompletions - qb.udPassCompletionsProp.prop > 1.5 && qb.appProjCompletions - qb.udPassCompletionsProp.prop > 1.5) {      
+        if(qb.prjcompletions - qb.udPassCompletionsProp.prop > 2 && qb.appProjCompletions - qb.udPassCompletionsProp.prop > 2) {      
           qb.udPassCompletionsProp.isOverRecomended = true
           //  console.log(qb.playerName, qb.udPassCompletionsProp.prop, qb.appProjCompletions, qb.prjcompletions )
         }
-        if(qb.prjcompletions - qb.ppPassCompletionsProp.prop > 1.5 && qb.appProjCompletions - qb.ppPassCompletionsProp.prop > 1.5) {      
+        if(qb.prjcompletions - qb.ppPassCompletionsProp.prop > 2 && qb.appProjCompletions - qb.ppPassCompletionsProp.prop > 2) {      
           qb.ppPassCompletionsProp.isOverRecomended = true
           // console.log(qb.playerName, qb.ppPassCompletionsProp.prop, qb.prjcompletions, qb.appProjCompletions )
         }
@@ -1734,11 +1735,11 @@ async function propsData() {
 
             // normal
 
-        if(qb.prjPassYards - qb.udPassYardsProp.prop > 15 && qb.appProjPassingYards - qb.udPassYardsProp.prop > 15) {      
+        if(qb.prjPassYards - qb.udPassYardsProp.prop > 20 && qb.appProjPassingYards - qb.udPassYardsProp.prop > 20) {      
           qb.udPassYardsProp.isOverRecomended = true
           // console.log(qb.playerName, qb.udPassYardsProp.prop, qb.prjPassYards, qb.appProjPassingYards )
         }
-        if(qb.prjPassYards - qb.ppPassYardsProp.prop > 15 && qb.appProjPassingYards - qb.ppPassYardsProp.prop > 15) {      
+        if(qb.prjPassYards - qb.ppPassYardsProp.prop > 20 && qb.appProjPassingYards - qb.ppPassYardsProp.prop > 20) {      
           qb.ppPassYardsProp.isOverRecomended = true
           // console.log(qb.playerName, qb.ppPassYardsProp.prop, qb.prjPassYards, qb.appProjPassingYards )
         }
@@ -1764,22 +1765,22 @@ async function propsData() {
            //normal
 
             // console.log(qb.playerName, qb.udPassTDsProp.prop, qb.appProjPassTDs, qb.prjpassingTDs )
-            if(qb.udPassTDsProp.prop - qb.prjpassingTDs  > .2 && qb.udPassTDsProp.prop - qb.appProjPassTDs  > .2) {      
+            if(qb.udPassTDsProp.prop - qb.prjpassingTDs  > .5 && qb.udPassTDsProp.prop - qb.appProjPassTDs  > .5) {      
               qb.udPassTDsProp.isUnderRecomended = true
               //  console.log(qb.playerName, qb.udPassTDsProp.prop, qb.appProjPassTDs, qb.prjpassingTDs )
             }
-            if(qb.ppPassTDsProp.prop - qb.prjpassingTDs > .2 && qb.ppPassTDsProp.prop - qb.appProjPassTDs > .2) {      
+            if(qb.ppPassTDsProp.prop - qb.prjpassingTDs > .5 && qb.ppPassTDsProp.prop - qb.appProjPassTDs > .5) {      
               qb.ppPassTDsProp.isUnderRecomended = true
               // console.log(qb.playerName, qb.ppPassTDsProp.prop, qb.appProjPassAttempts, qb.prjpassingTDs )
             }
     
                // high confidence
     
-               if(qb.udPassTDsProp.prop - qb.prjpassingTDs  > .4 && qb.udPassTDsProp.prop - qb.appProjPassTDs > .4) {      
+               if(qb.udPassTDsProp.prop - qb.prjpassingTDs  > .7 && qb.udPassTDsProp.prop - qb.appProjPassTDs > .7) {      
                 qb.udPassTDsProp.highUnderConfidence = true
                 //  console.log(qb.playerName, qb.udPassTDsProp.prop, qb.appProjPassTDs, qb.prjpassingTDs )
               }
-              if(qb.ppPassTDsProp.prop - qb.prjpassingTDs  > .4 && qb.ppPassTDsProp.prop - qb.appProjPassTDs > .4) {      
+              if(qb.ppPassTDsProp.prop - qb.prjpassingTDs  > .7 && qb.ppPassTDsProp.prop - qb.appProjPassTDs > .7) {      
                 qb.ppPassTDsProp.highUnderConfidence = true
                 // console.log(qb.playerName, qb.ppPassTDsProp.prop, qb.appProjPassTDs, qb.prjpassingTDs )
               }
@@ -1792,23 +1793,23 @@ async function propsData() {
                     // normal
 
       // console.log(qb.playerName, qb.udPassTDsProp.prop, qb.prjpassingTDs, qb.appProjPassTDs )
-        if(qb.prjpassingTDs - qb.udPassTDsProp.prop > .2 && qb.appProjPassTDs - qb.udPassTDsProp.prop > .2) {      
+        if(qb.prjpassingTDs - qb.udPassTDsProp.prop > .5 && qb.appProjPassTDs - qb.udPassTDsProp.prop > .5) {      
           qb.udPassTDsProp.isOverRecomended = true
           // console.log(qb.playerName, qb.udPassTDsProp.prop, qb.prjpassingTDs, qb.appProjPassTDs )
         }
         // console.log(qb.playerName, qb.ppPassTDsProp.prop, qb.prjpassingTDs, qb.appProjPassTDs )
-        if(qb.prjpassingTDs - qb.ppPassTDsProp.prop > .2 && qb.appProjPassTDs - qb.ppPassTDsProp.prop > .2) {      
+        if(qb.prjpassingTDs - qb.ppPassTDsProp.prop > .5 && qb.appProjPassTDs - qb.ppPassTDsProp.prop > .5) {      
           qb.ppPassTDsProp.isOverRecomended = true
           // console.log(qb.playerName, qb.ppPassTDsProp.prop, qb.prjpassingTDs, qb.appProjPassTDs )
         }
 
             // high confidence
 
-        if(qb.prjpassingTDs - qb.udPassTDsProp.prop > .4 && qb.appProjPassTDs - qb.udPassTDsProp.prop > .4) {      
+        if(qb.prjpassingTDs - qb.udPassTDsProp.prop > .7 && qb.appProjPassTDs - qb.udPassTDsProp.prop > .7) {      
               qb.udPassTDsProp.highOverConfidence = true
               // console.log(qb.playerName, qb.udPassTDsProp.prop, qb.prjpassingTDs, qb.appProjPassTDs )
             }
-        if(qb.prjpassingTDs - qb.ppPassTDsProp.prop > .4 && qb.appProjPassTDs - qb.ppPassTDsProp.prop > .4) {      
+        if(qb.prjpassingTDs - qb.ppPassTDsProp.prop > .7 && qb.appProjPassTDs - qb.ppPassTDsProp.prop > .7) {      
               qb.ppPassTDsProp.highOverConfidence = true
               // console.log(qb.playerName, qb.ppPassTDsProp.prop, qb.prjpassingTDs, qb.appProjPassTDs )
             }
@@ -1854,12 +1855,12 @@ async function propsData() {
                     // normal
 
       // console.log(qb.playerName, qb.udRushYardsProp.prop, qb.prjRushYards, qb.appProjQBRushYards )
-        if(qb.prjRushYards - qb.udRushYardsProp.prop > 7 && qb.appProjQBRushYards - qb.udRushYardsProp.prop > 7) {      
+        if(qb.prjRushYards - qb.udRushYardsProp.prop > 8 && qb.appProjQBRushYards - qb.udRushYardsProp.prop > 8) {      
           qb.udRushYardsProp.isOverRecomended = true
           // console.log(qb.playerName, qb.udRushYardsProp.prop, qb.prjRushYards, qb.appProjQBRushYards )
         }
         // console.log(qb.playerName, qb.ppRushYardsProp.prop, qb.prjRushYards, qb.appProjQBRushYards )
-        if(qb.prjRushYards - qb.ppRushYardsProp.prop > 7 && qb.appProjQBRushYards - qb.ppRushYardsProp.prop > 7) {      
+        if(qb.prjRushYards - qb.ppRushYardsProp.prop > 8 && qb.appProjQBRushYards - qb.ppRushYardsProp.prop > 8) {      
           qb.ppRushYardsProp.isOverRecomended = true
           // console.log(qb.playerName, qb.ppRushYardsProp.prop, qb.prjRushYards, qb.appProjQBRushYards )
         }
@@ -1887,11 +1888,11 @@ async function propsData() {
       //normal
 
       //  console.log(qb.playerName, qb.udPassPlusRushYardsProp.prop, qb.appProjQBRushYards, qb.prjRushYards )
-       if(qb.udPassPlusRushYardsProp.prop - (+qb.prjRushYards + +qb.prjPassYards)  > 7 && qb.udPassPlusRushYardsProp.prop - (qb.appProjQBRushYards + qb.appProjPassingYards)  > 7) {      
+       if(qb.udPassPlusRushYardsProp.prop - (+qb.prjRushYards + +qb.prjPassYards)  > 10 && qb.udPassPlusRushYardsProp.prop - (qb.appProjQBRushYards + qb.appProjPassingYards)  > 10) {      
         qb.udPassPlusRushYardsProp.isUnderRecomended = true
         //  console.log(qb.playerName, qb.udPassPlusRushYardsProp.prop, (qb.appProjQBRushYards + qb.appProjPassingYards), (+qb.prjRushYards + +qb.prjPassYards) )
       }
-      if(qb.ppPassPlusRushYardsProp.prop - (+qb.prjRushYards + +qb.prjPassYards) > 7 && qb.ppPassPlusRushYardsProp.prop - (qb.appProjQBRushYards + qb.appProjPassingYards) > 7) {      
+      if(qb.ppPassPlusRushYardsProp.prop - (+qb.prjRushYards + +qb.prjPassYards) > 10 && qb.ppPassPlusRushYardsProp.prop - (qb.appProjQBRushYards + qb.appProjPassingYards) > 10) {      
         qb.ppPassPlusRushYardsProp.isUnderRecomended = true
         // console.log(qb.playerName, qb.ppPassPlusRushYardsProp.prop, (qb.appProjQBRushYards + qb.appProjPassingYards), (+qb.prjRushYards + +qb.prjPassYards) )
       }
@@ -1916,12 +1917,12 @@ async function propsData() {
                    // normal
 
     //  console.log(qb.playerName, qb.udPassPlusRushYardsProp.prop, (+qb.prjRushYards + +qb.prjPassYards), (qb.appProjQBRushYards + qb.appProjPassingYards) )
-       if((+qb.prjRushYards + +qb.prjPassYards) - qb.udPassPlusRushYardsProp.prop > 7 && (qb.appProjQBRushYards + qb.appProjPassingYards) - qb.udPassPlusRushYardsProp.prop > 7) {      
+       if((+qb.prjRushYards + +qb.prjPassYards) - qb.udPassPlusRushYardsProp.prop > 10 && (qb.appProjQBRushYards + qb.appProjPassingYards) - qb.udPassPlusRushYardsProp.prop > 10) {      
          qb.udPassPlusRushYardsProp.isOverRecomended = true
         // console.log(qb.playerName, qb.udPassPlusRushYardsProp.prop, (qb.appProjQBRushYards + qb.appProjPassingYards), (+qb.prjRushYards + +qb.prjPassYards) )
        }
        // console.log(qb.playerName, qb.ppPassPlusRushYardsProp.prop, qb.prjRushYards, qb.appProjQBRushYards )
-       if((+qb.prjRushYards + +qb.prjPassYards) - qb.ppPassPlusRushYardsProp.prop > 7 && (qb.appProjQBRushYards + qb.appProjPassingYards) - qb.ppPassPlusRushYardsProp.prop > 7) {      
+       if((+qb.prjRushYards + +qb.prjPassYards) - qb.ppPassPlusRushYardsProp.prop > 10 && (qb.appProjQBRushYards + qb.appProjPassingYards) - qb.ppPassPlusRushYardsProp.prop > 10) {      
          qb.ppPassPlusRushYardsProp.isOverRecomended = true
           // console.log(qb.playerName, qb.ppPassPlusRushYardsProp.prop, (qb.appProjQBRushYards + qb.appProjPassingYards), (+qb.prjRushYards + +qb.prjPassYards) )
        }
@@ -1949,11 +1950,11 @@ async function propsData() {
       //normal
 
       //  console.log(qb.playerName, qb.udFantasyScoreProp.prop, qb.astroQBProjection, qb.fourForFourFullPPRProjectedPoints, qb.glspavg )
-       if(qb.udFantasyScoreProp.prop - qb.fourForFourFullPPRProjectedPoints  > 1.75 && qb.udFantasyScoreProp.prop - qb.astroQBProjection  > 1.5 && qb.udFantasyScoreProp.prop - qb.glspavg > 1.75) {      
+       if(qb.udFantasyScoreProp.prop - qb.fourForFourFullPPRProjectedPoints  > 2 && qb.udFantasyScoreProp.prop - qb.astroQBProjection  > 2 && qb.udFantasyScoreProp.prop - qb.glspavg > 2) {      
         qb.udFantasyScoreProp.isUnderRecomended = true
         //  console.log(qb.playerName, qb.udFantasyScoreProp.prop, qb.astroQBProjection, qb.fourForFourFullPPRProjectedPoints, qb.glspavg )
       }
-      if(qb.ppFantasyScoreProp.prop - qb.fourForFourFullPPRProjectedPoints > 1.75 && qb.ppFantasyScoreProp.prop - qb.astroQBProjection > 1.5 && qb.ppFantasyScoreProp.prop - qb.glspavg > 1.75) {      
+      if(qb.ppFantasyScoreProp.prop - qb.fourForFourFullPPRProjectedPoints > 2 && qb.ppFantasyScoreProp.prop - qb.astroQBProjection > 2 && qb.ppFantasyScoreProp.prop - qb.glspavg > 2) {      
         qb.ppFantasyScoreProp.isUnderRecomended = true
         // console.log(qb.playerName, qb.ppFantasyScoreProp.prop, qb.appProjPassAttempts, qb.fourForFourFullPPRProjectedPoints, qb.glspavg )
       }
@@ -1978,7 +1979,7 @@ async function propsData() {
                    // normal
 
     //  console.log(qb.playerName, qb.udFantasyScoreProp.prop, qb.fourForFourFullPPRProjectedPoints, qb.astroQBProjection, qb.glspavg )
-       if(qb.astroQBProjection - qb.udFantasyScoreProp.prop > 2 && qb.glspavg - qb.udFantasyScoreProp.prop> 1.5) {      
+       if(qb.astroQBProjection - qb.udFantasyScoreProp.prop > 2 && qb.glspavg - qb.udFantasyScoreProp.prop> 2) {      
          qb.udFantasyScoreProp.isOverRecomended = true
         //  console.log(qb.playerName, qb.udFantasyScoreProp.prop,qb.astroQBProjection, qb.glspavg )
        }
