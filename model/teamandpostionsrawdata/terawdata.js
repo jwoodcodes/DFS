@@ -2853,30 +2853,30 @@ const populateTeamObjects = function (
   //fanduel
 
   gppLeverageScoresAndProjOwnershipFanduel.forEach(function (player) {
-    if (player['"Pos"'].slice(1, -1) === 'TE') {
-      // console.log(player);
-      if (player['"Player"'].slice(1, -1) === passedInTeam.TE1.name) {
-        let tempSal = player['"FD Sal $"'].slice(1, -1);
-        let tempSalTwo = +tempSal;
-        passedInTeam.TE1.fanduelSalary = tempSalTwo;
-        //
-        // console.log(player['"Projected Own%"']);
-        let tempProjOwn = player['"Projected Own%"'].slice(1, -2);
-        let tempProjOwnTwo = +tempProjOwn;
-        passedInTeam.TE1.fanduelProjectedOwnership = tempProjOwnTwo;
-      }
-      if (player['"Player"'].slice(1, -1) === passedInTeam.TE2.name) {
-        // console.log(player);
+    // if (player['"Pos"'].slice(1, -1) === 'TE') {
+    //   // console.log(player);
+    //   if (player['"Player"'].slice(1, -1) === passedInTeam.TE1.name) {
+    //     let tempSal = player['"FD Sal $"'].slice(1, -1);
+    //     let tempSalTwo = +tempSal;
+    //     passedInTeam.TE1.fanduelSalary = tempSalTwo;
+    //     //
+    //     // console.log(player['"Projected Own%"']);
+    //     let tempProjOwn = player['"Projected Own%"'].slice(1, -2);
+    //     let tempProjOwnTwo = +tempProjOwn;
+    //     passedInTeam.TE1.fanduelProjectedOwnership = tempProjOwnTwo;
+    //   }
+    //   if (player['"Player"'].slice(1, -1) === passedInTeam.TE2.name) {
+    //     // console.log(player);
 
-        let tempSal = player['"FD Sal $"'].slice(1, -1);
-        let tempSalTwo = +tempSal;
-        passedInTeam.TE2.fanduelSalary = tempSalTwo;
-        //
-        let tempProjOwn = player['"Projected Own%"'].slice(1, -2);
-        let tempProjOwnTwo = +tempProjOwn;
-        passedInTeam.TE2.fanduelProjectedOwnership = tempProjOwnTwo;
-      }
-    }
+    //     let tempSal = player['"FD Sal $"'].slice(1, -1);
+    //     let tempSalTwo = +tempSal;
+    //     passedInTeam.TE2.fanduelSalary = tempSalTwo;
+    //     //
+    //     let tempProjOwn = player['"Projected Own%"'].slice(1, -2);
+    //     let tempProjOwnTwo = +tempProjOwn;
+    //     passedInTeam.TE2.fanduelProjectedOwnership = tempProjOwnTwo;
+    //   }
+    // }
   });
 
   //draftkings

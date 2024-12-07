@@ -5619,33 +5619,33 @@ const populateTeamObjects = function (
     });
 
     gppLeverageScoresAndProjOwnershipFanduel.forEach(function (team) {
-      if (team['"Pos"'] === '"RB"') {
-        if (
-          passedInTeam.RBOne.name === team['"Player"'].slice(1, -1) ||
-          passedInTeam.RBOne.name ===
-            team['"Player"'].slice(1, -1).replace('.', '').replace('.', '') ||
-          passedInTeam.RBOne.altName === team['"Player"'].slice(1, -1)
-        ) {
-          passedInTeam.RBOne.fanduelSalary = +team['"FD Sal $"'].slice(1, -1);
-          tempPercentOfCap = +team['"FD Sal $"'].slice(1, -1) / 60000;
-          passedInTeam.RBOne.percentOfSalaryCapFanduel = +(
-            tempPercentOfCap * 100
-          ).toFixed();
-        }
+      // if (team['"Pos"'] === '"RB"') {
+      //   if (
+      //     passedInTeam.RBOne.name === team['"Player"'].slice(1, -1) ||
+      //     passedInTeam.RBOne.name ===
+      //       team['"Player"'].slice(1, -1).replace('.', '').replace('.', '') ||
+      //     passedInTeam.RBOne.altName === team['"Player"'].slice(1, -1)
+      //   ) {
+      //     passedInTeam.RBOne.fanduelSalary = +team['"FD Sal $"'].slice(1, -1);
+      //     tempPercentOfCap = +team['"FD Sal $"'].slice(1, -1) / 60000;
+      //     passedInTeam.RBOne.percentOfSalaryCapFanduel = +(
+      //       tempPercentOfCap * 100
+      //     ).toFixed();
+      //   }
 
-        if (
-          passedInTeam.RBTwo.name === team['"Player"'].slice(1, -1) ||
-          passedInTeam.RBTwo.name ===
-            team['"Player"'].slice(1, -1).replace('.', '').replace('.', '') ||
-          passedInTeam.RBTwo.altName === team['"Player"'].slice(1, -1)
-        ) {
-          passedInTeam.RBTwo.fanduelSalary = +team['"FD Sal $"'].slice(1, -1);
-          tempPercentOfCap = +team['"FD Sal $"'].slice(1, -1) / 60000;
-          passedInTeam.RBTwo.percentOfSalaryCapFanduel = +(
-            tempPercentOfCap * 100
-          ).toFixed();
-        }
-      }
+      //   if (
+      //     passedInTeam.RBTwo.name === team['"Player"'].slice(1, -1) ||
+      //     passedInTeam.RBTwo.name ===
+      //       team['"Player"'].slice(1, -1).replace('.', '').replace('.', '') ||
+      //     passedInTeam.RBTwo.altName === team['"Player"'].slice(1, -1)
+      //   ) {
+      //     passedInTeam.RBTwo.fanduelSalary = +team['"FD Sal $"'].slice(1, -1);
+      //     tempPercentOfCap = +team['"FD Sal $"'].slice(1, -1) / 60000;
+      //     passedInTeam.RBTwo.percentOfSalaryCapFanduel = +(
+      //       tempPercentOfCap * 100
+      //     ).toFixed();
+      //   }
+      // }
     });
 
     gppLeverageScoresAndProjOwnershipDraftkings.forEach(function (team) {

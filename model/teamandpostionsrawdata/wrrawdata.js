@@ -3373,40 +3373,40 @@ const populateTeamObjects = function (
       });
 
       gppLeverageScoresAndProjOwnershipFanduel.forEach(function (team) {
-        if (team['"Pos"'] === '"WR"') {
-          SanitizedPlayerName = team['"Player"']
-            .slice(1, -1)
-            .replace('.', '')
-            .replace('.', '')
-            .replace("'", '');
+        // if (team['"Pos"'] === '"WR"') {
+        //   SanitizedPlayerName = team['"Player"']
+        //     .slice(1, -1)
+        //     .replace('.', '')
+        //     .replace('.', '')
+        //     .replace("'", '');
 
-          if (passedInTeam.WROne.name === SanitizedPlayerName) {
-            passedInTeam.WROne.fanduelSalary = +team['"FD Sal $"'].slice(1, -1);
-            tempPercentOfCap = +team['"FD Sal $"'].slice(1, -1) / 60000;
-            passedInTeam.WROne.percentOfSalaryCapFanduel = +(
-              tempPercentOfCap * 100
-            ).toFixed();
-          }
+        //   if (passedInTeam.WROne.name === SanitizedPlayerName) {
+        //     passedInTeam.WROne.fanduelSalary = +team['"FD Sal $"'].slice(1, -1);
+        //     tempPercentOfCap = +team['"FD Sal $"'].slice(1, -1) / 60000;
+        //     passedInTeam.WROne.percentOfSalaryCapFanduel = +(
+        //       tempPercentOfCap * 100
+        //     ).toFixed();
+        //   }
 
-          if (passedInTeam.WRTwo.name === SanitizedPlayerName) {
-            passedInTeam.WRTwo.fanduelSalary = +team['"FD Sal $"'].slice(1, -1);
-            tempPercentOfCap = +team['"FD Sal $"'].slice(1, -1) / 60000;
-            passedInTeam.WRTwo.percentOfSalaryCapFanduel = +(
-              tempPercentOfCap * 100
-            ).toFixed();
+        //   if (passedInTeam.WRTwo.name === SanitizedPlayerName) {
+        //     passedInTeam.WRTwo.fanduelSalary = +team['"FD Sal $"'].slice(1, -1);
+        //     tempPercentOfCap = +team['"FD Sal $"'].slice(1, -1) / 60000;
+        //     passedInTeam.WRTwo.percentOfSalaryCapFanduel = +(
+        //       tempPercentOfCap * 100
+        //     ).toFixed();
 
-            if (passedInTeam.WRThree.name === SanitizedPlayerName) {
-              passedInTeam.WRThree.fanduelSalary = +team['"FD Sal $"'].slice(
-                1,
-                -1
-              );
-              tempPercentOfCap = +team['"FD Sal $"'].slice(1, -1) / 60000;
-              passedInTeam.WRThree.percentOfSalaryCapFanduel = +(
-                tempPercentOfCap * 100
-              ).toFixed();
-            }
-          }
-        }
+        //     if (passedInTeam.WRThree.name === SanitizedPlayerName) {
+        //       passedInTeam.WRThree.fanduelSalary = +team['"FD Sal $"'].slice(
+        //         1,
+        //         -1
+        //       );
+        //       tempPercentOfCap = +team['"FD Sal $"'].slice(1, -1) / 60000;
+        //       passedInTeam.WRThree.percentOfSalaryCapFanduel = +(
+        //         tempPercentOfCap * 100
+        //       ).toFixed();
+        //     }
+        //   }
+        // }
       });
 
       gppLeverageScoresAndProjOwnershipDraftkings.forEach(function (team) {
