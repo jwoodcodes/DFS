@@ -1219,29 +1219,32 @@ const populateTeamObjects = function (passedInTeam) {
   const setFanduelSalaryPercentOfCapAndProjectedOwnership = function (team) {
     gppLeverageScoresAndProjOwnershipFanduel.forEach(function (teamObj) {
       let tempTeamName = '';
+      // console.log(teamObj)
+      if(teamObj['"Team"']) {
       // console.log(teamObj['"Tm"'].length);
-      if (teamObj['"Tm"'].length === 5) {
-        tempTeamName = teamObj['"Tm"'].slice(1, 4);
+      if (teamObj['"Team"'].length === 5) {
+        tempTeamName = teamObj['"Team"'].slice(1, 4);
       } else {
-        tempTeamName = teamObj['"Tm"'].slice(1, 3);
+        tempTeamName = teamObj['"Team"'].slice(1, 3);
       }
 
-      if (
-        tempTeamName === passedInTeam.teamABV &&
-        teamObj['"Pos"'] === '"DEF"'
-      ) {
-        fanduelsalary = +teamObj['"FD Sal $"'].slice(1, 5);
+      // if (
+      //   tempTeamName === passedInTeam.teamABV &&
+      //   teamObj['"Pos"'] === '"DEF"'
+      // ) {
+      //   fanduelsalary = +teamObj['"FD Sal $"'].slice(1, 5);
 
-        passedInTeam.teamDefFanduelSalary = fanduelsalary;
+      //   passedInTeam.teamDefFanduelSalary = fanduelsalary;
 
-        let rawfdPercentOfCap = fanduelsalary / 60000;
-        let fdPercentOfCap = (rawfdPercentOfCap * 100).toFixed(1);
+      //   let rawfdPercentOfCap = fanduelsalary / 60000;
+      //   let fdPercentOfCap = (rawfdPercentOfCap * 100).toFixed(1);
 
-        passedInTeam.percentOfSalaryCapFanduel = +fdPercentOfCap;
+      //   passedInTeam.percentOfSalaryCapFanduel = +fdPercentOfCap;
 
-        fdOwnership = +teamObj['"Projected Own%"'].slice(1, 4);
-        passedInTeam.fanduelProjectedOwnership = fdOwnership;
-      }
+      //   fdOwnership = +teamObj['"Projected Own%"'].slice(1, 4);
+      //   passedInTeam.fanduelProjectedOwnership = fdOwnership;
+      // }
+    }
     });
   };
   setFanduelSalaryPercentOfCapAndProjectedOwnership(passedInTeam);

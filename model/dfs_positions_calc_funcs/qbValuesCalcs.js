@@ -2011,6 +2011,12 @@ async function propsData() {
     // if(player.teamName === 'Ravens') {
     //   console.log(player);
     // }
+
+    // console.log(player)
+
+    if(player.playerName !== "" && player.playerName !== 'Davis Mills' && player.prjcompletions) {
+      // console.log(player)
+    
     
     class ProjectionsObject {
       constructor(
@@ -2132,6 +2138,7 @@ async function propsData() {
     );
   
     allQBProjectionsObjects.push(qbProjectionsObject);
+  }
   });
   return allQBProjectionsObjects
 }
