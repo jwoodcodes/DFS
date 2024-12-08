@@ -1439,15 +1439,15 @@ async function propsData() {
 
           //  console.log(rb.playerName, rb.udCarriesProp.prop, rb.appProjectedCarriesThisWeek, rb.prjCarries )
           if (
-            rb.prjCarries - rb.udCarriesProp.prop > 2.5 &&
-            rb.appProjectedCarriesThisWeek - rb.udCarriesProp.prop > 2.5
+            rb.prjCarries - rb.udCarriesProp.prop > 3 &&
+            rb.appProjectedCarriesThisWeek - rb.udCarriesProp.prop > 3
           ) {
             rb.udCarriesProp.isOverRecomended = true;
             // console.log(rb.playerName, rb.udCarriesProp.prop, rb.appProjectedCarriesThisWeek, rb.prjCarries )
           }
           if (
-            rb.prjCarries - rb.ppCarriesProp.prop > 2.5 &&
-            rb.appProjectedCarriesThisWeek - rb.ppCarriesProp.prop > 2.5
+            rb.prjCarries - rb.ppCarriesProp.prop > 3 &&
+            rb.appProjectedCarriesThisWeek - rb.ppCarriesProp.prop > 3
           ) {
             rb.ppCarriesProp.isOverRecomended = true;
             // console.log(rb.playerName, rb.ppCarriesProp.prop, rb.appProjectedCarriesThisWeek, rb.prjCarries )
@@ -1501,15 +1501,15 @@ async function propsData() {
           // }
           //  console.log(rb.playerName, rb.udRushYardsProp.prop, rb.appProjectedrushYardsThisWeek, rb.prjRushYards )
           if (
-            rb.udRushYardsProp.prop - rb.prjRushYards > 2 &&
-            rb.udRushYardsProp.prop - rb.appProjectedrushYardsThisWeek > 2
+            rb.udRushYardsProp.prop - rb.prjRushYards > 7 &&
+            rb.udRushYardsProp.prop - rb.appProjectedrushYardsThisWeek > 7
           ) {
             rb.udRushYardsProp.isUnderRecomended = true;
             // console.log(rb.playerName, rb.udRushYardsProp.prop, rb.appProjectedrushYardsThisWeek, rb.prjRushYards )
           }
           if (
-            rb.ppRushYardsProp.prop - rb.prjRushYards > 2 &&
-            rb.ppRushYardsProp.prop - rb.appProjectedrushYardsThisWeek > 2
+            rb.ppRushYardsProp.prop - rb.prjRushYards > 7 &&
+            rb.ppRushYardsProp.prop - rb.appProjectedrushYardsThisWeek > 7
           ) {
             rb.ppRushYardsProp.isUnderRecomended = true;
             // console.log(rb.playerName, rb.ppRushYardsProp.prop, rb.appProjectedrushYardsThisWeek, rb.prjRushYards )
@@ -1706,15 +1706,15 @@ async function propsData() {
           //  console.log(rb.playerName, rb.udReceptionsProp.prop, rb.appProjectedreceptionsThisWeek, rb.prjReceptions )
           //  console.log(rb.playerName, rb.ppReceptionsProp.prop, rb.appProjectedreceptionsThisWeek, rb.prjReceptions )
           if (
-            rb.udReceptionsProp.prop - rb.prjReceptions > 0.5 &&
-            rb.udReceptionsProp.prop - rb.appProjectedreceptionsThisWeek > 0.5
+            rb.udReceptionsProp.prop - rb.prjReceptions > 1 &&
+            rb.udReceptionsProp.prop - rb.appProjectedreceptionsThisWeek > 1
           ) {
             rb.udReceptionsProp.isUnderRecomended = true;
             // console.log(rb.playerName, rb.udReceptionsProp.prop, rb.appProjectedreceptionsThisWeek, rb.prjReceptions )
           }
           if (
-            rb.ppReceptionsProp.prop - rb.prjReceptions > 0.5 &&
-            rb.ppReceptionsProp.prop - rb.appProjectedreceptionsThisWeek > 0.5
+            rb.ppReceptionsProp.prop - rb.prjReceptions > 1 &&
+            rb.ppReceptionsProp.prop - rb.appProjectedreceptionsThisWeek > 1
           ) {
             rb.ppReceptionsProp.isUnderRecomended = true;
             // console.log(rb.playerName, rb.ppReceptionsProp.prop, rb.appProjectedreceptionsThisWeek, rb.prjReceptions )
