@@ -466,5 +466,4 @@ const allQBGLSP = [
 	},
 	
 ]
-
 module.exports = allQBGLSP;

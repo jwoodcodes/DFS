@@ -184,7 +184,7 @@ const amountToBeAddedToPlayersAgeToKnowWhatAgeTheyWillBeNextMarch =
 //       console.log('Connected correctly to server');
 //       const db = client.db(dbName);
 
-//       // Use the collection "weeklyPropData"
+     
 //       const col = db.collection('prizepicksWeeklyPropsData');
 //       console.log(res.data);
 //       let data = res.data;

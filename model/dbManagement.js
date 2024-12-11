@@ -328,6 +328,9 @@ async function qbFunction() {
         }
 
         // console.log(player)
+        // if(player.propsRecs){
+        // console.log(player.name, player.propsRecs)
+        // }
 
         player.pos = 'QB';
 
@@ -584,6 +587,9 @@ async function someFunction() {
       //
 
       // console.log(player)
+      // if(player.propsRecs){
+      //   console.log(player.name, player.propsRecs)
+      //   }
 
       player.passAttempts = 0;
       player.completions = 0;
@@ -1397,9 +1403,9 @@ async function processData() {
 
   //
   astroCSVArray = allAstroProjectionsArray.map(obj => {
-    if (obj.propsRecs) {
-      // console.log(obj.name, obj.propsRecs)
-    }
+    // if (obj.propsRecs) {
+    //   console.log(obj.name, obj.propsRecs)
+    // }
     return {
       name: obj.name,
       pos: obj.pos,
@@ -1453,7 +1459,7 @@ async function processData() {
 
     try {
       const csv = parse(array, opts);
-      fs.writeFileSync('week14-24-superFlexProjectionArray.csv', csv);
+      fs.writeFileSync('week15-24-earlyAstroFlexProjectionArray.csv', csv);
       console.log('CSV file successfully created');
     } catch (err) {
       console.error(err);
@@ -1469,7 +1475,7 @@ async function processData() {
   // arrayToCSV(tePPRCSVArray);
   // arrayToCSV(flexCSVArray);
   // arrayToCSV(superFlexCSVArray);
-  // arrayToCSV(astroCSVArray);
+  arrayToCSV(astroCSVArray);
   //
   //
 
