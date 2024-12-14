@@ -219,3 +219,58 @@ export async function getStaticProps() {
     console.error(e);
   }
 }
+
+
+// import { getProjectionsForGrid } from 'backend/projections';
+
+// $w.onReady(function () {
+//     console.log('Page ready');
+    
+//     const htmlElement = $w('#html1');
+//     if (htmlElement) {
+//         console.log('HTML element found');
+//         htmlElement.onMessage((event) => {
+//             console.log('Message received:', event.data);
+//             if (event.data && event.data.type === 'setHeight') {
+//                 htmlElement.height = event.data.height;
+//             }
+//         });
+
+//         htmlElement.width = "100%";
+//         htmlElement.show();
+//         console.log('About to load grid data');
+//         loadGridData();
+//     } else {
+//         console.error('HTML element not found');
+//     }
+// });
+
+// async function loadGridData() {
+//     try {
+//         console.log('Starting data load');
+//         const data = await getProjectionsForGrid();
+//         console.log('Data received:', {
+//             isArray: Array.isArray(data),
+//             length: data?.length,
+//             firstItem: data?.[0]
+//         });
+
+//         if (Array.isArray(data)) {
+//             console.log('Posting data to iframe');
+//             $w('#html1').postMessage(data);
+//             console.log('Data posted to iframe');
+//         } else {
+//             console.error('Invalid data structure:', data);
+//         }
+//     } catch (error) {
+//         console.error('Error loading data:', {
+//             message: error.message,
+//             stack: error.stack
+//         });
+//     }
+// }
+
+// export function refreshButton_click() {
+//     console.log('Refresh button clicked');
+//     loadGridData();
+// }
