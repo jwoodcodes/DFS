@@ -1459,7 +1459,7 @@ async function processData() {
 
     try {
       const csv = parse(array, opts);
-      fs.writeFileSync('week15-24-finalAstroProjectionArray.csv', csv);
+      fs.writeFileSync('week16-24-earlyAstroflexProjectionArray.csv', csv);
       console.log('CSV file successfully created');
     } catch (err) {
       console.error(err);
