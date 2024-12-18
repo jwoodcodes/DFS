@@ -154,7 +154,7 @@ const amountToBeAddedToPlayersAgeToKnowWhatAgeTheyWillBeNextMarch =
 // PropsDataFetch();
 
 //
-/// fetching prizepicks props from API and sending to db
+// / fetching prizepicks props from API and sending to db
 
 // const prizepicksPropsDataFetch = async function () {
 //   const res = await axios.get(
