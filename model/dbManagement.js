@@ -155,7 +155,7 @@ async function qbFunction() {
       // let tempSuggestedPropsArray = [];
       // player.recsObject = {}
       player.propsRecs = '';
-      // console.log( player);
+      // console.log( player.completions);
       if (player.name) {
         if (player.name !== 'Davis Mills') {
           // console.log('ran');
@@ -1459,7 +1459,7 @@ async function processData() {
 
     try {
       const csv = parse(array, opts);
-      fs.writeFileSync('week16-24-earlyAstroflexProjectionArray.csv', csv);
+      fs.writeFileSync('week16-24-midastroflexProjectionArray.csv', csv);
       console.log('CSV file successfully created');
     } catch (err) {
       console.error(err);
